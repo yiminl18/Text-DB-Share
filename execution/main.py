@@ -151,8 +151,8 @@ def evaluate_predicate_paper(udfs, text_files, text_folder_paper):
 
 
 
-def evaluate_SQL_civic(text_files):
-    strategy = 'LlamaIndex_tree' #GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree 
+def evaluate_SQL_civic(text_files,strategy):
+    #strategy = 'LlamaIndex_tree' #GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree 
     data = 'civic' #paper,civic,NoticeViolation
     entity_mention = 'paper' #natural language description of an entity 
     desp = UDF_registration.civic_attr_desp()
@@ -298,8 +298,7 @@ def evaluate_SQL_civic(text_files):
         query_interface.write_2_json(result, path3)
         #break
 
-def evaluate_SQL_notice(text_files):
-    strategy = 'textdb_summary' #GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary 
+def evaluate_SQL_notice(text_files, strategy):
     data = 'notice' #paper,civic,NoticeViolation
     entity_mention = 'violation document' #natural language description of an entity 
     
@@ -481,8 +480,8 @@ def evaluate_SQL_notice(text_files):
         #break
 
 #seperate for different datasets since the projection is a little bit different 
-def evaluate_SQL_paper(text_files):
-    strategy = 'textdb_summary' #GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary 
+def evaluate_SQL_paper(text_files,strategy):
+    #strategy = 'textdb_summary' #GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary 
     data = 'paper' #paper,civic,NoticeViolation
     entity_mention = 'paper' #natural language description of an entity 
     
@@ -688,12 +687,14 @@ def parse_response(response):
 
 if __name__ == "__main__":
     data = 'NoticeViolation'
+    strategy = 'textdb_summary' #GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary 
     text_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/' + data + '/extracted_data'
     tree_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/' + data + '/runtime_data'
 
     text_files = model_build.scan_files(text_folder)
-    evaluate_SQL_notice(text_files)
-    #evaluate_SQL_paper(text_files)
+    evaluate_SQL_notice(text_files,strategy)
+    #evaluate_SQL_paper(text_files,strategy)
+    #evaluate_SQL_civic(text_files,strategy)
     
 
 
