@@ -1,0 +1,22 @@
+Table of Contents
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Background
+    5.1 Individual-Competence and Social-Relatedness
+    5.2 Putting Social-Relatedness before Individual-Competence
+6. Pass The Ball
+    6.1 The Iterative Design Process and Initial Findings
+7. User Trial
+    7.1 Method
+    7.2 Participants
+8. Findings
+    8.1 Social Relatedness
+    8.2 Individual Competence
+9. Lessons Learned from Prioritizing Social-Relatedness Over Individual-Competence
+10. General Implications
+11. Conclusion
+12. Acknowledgments
+13. References

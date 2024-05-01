@@ -1,0 +1,1758 @@
+Entangled with Numbers: Quantified Self  
+and Others in a Team-Based Online Game  
+
+YUBO KOU, Florida State University, USA 
+XINNING GUI, University of California, Irvine, USA 
+
+Quantification  is  a  process  that  produces  and  communicates  numbers,  imbued  with  the  expectation  of 
+generating  knowledge  and  optimizing  human  behavior  and  social  process.  In  this  paper,  we  explore  how 
+quantification  mediates  virtual  teamwork  through  an  ethnographic  study  of  quantification  in  League  of 
+Legends, a popular team-based  online game with a highly competitive  culture. In the game, rich statistics 
+about  each  individual  player’s  gaming  history  and  performance  are  publicly  available,  analyzed  and 
+displayed  on  numerous  third-party  sites.  We  describe  how  players  were  entangled  with  numbers.  They 
+derived knowledge from numbers but struggled with proper ways of interpretation. They utilized numbers 
+to quantify teammates and opponents, but in-game tensions and conflicts easily ensued. They noticed how 
+quantification became burdensome and stressed the importance of proper use. We discuss how this case of 
+quantified  self  and  others  manifests  complex  relationships  between  self-knowledge,  numerical  authority, 
+and virtual teamwork.1  
+
+CCS Concepts: • Human-centered computing → Human computer interaction; Empirical studies in HCI 
+
+KEYWORDS 
+Quantification,  quantified  self,  quantified  others,  self-knowledge,  numerical  authority,  interpretive 
+flexibility, communicative trust, virtual team, League of Legends, multiplayer online battle arena, MOBA 
+
+ACM Reference format: 
+Yubo Kou and Xinning Gui. 2018. Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game.. In 
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, CSCW, Article 93 (November 2018). ACM, New York, NY. 
+25 pages. https://doi.org/10.1145/3274362 
+
+1  INTRODUCTION 
+Different  from  collocated  collaboration,  in  virtual  teams,  geographically  distributed  team 
+members  often  face  social  challenges  developing  mutual  trust  and  shared  understanding  [60]. 
+Computer-supported  cooperative  work  (CSCW)  research  has  explored  ways  of  conceptualizing 
+and designing to support critical social elements in virtual collaboration, such as awareness [20] 
+and  social  translucence  [24].  As  a  way  of  enhancing  social  awareness,  considerable  work  has 
+discussed  how  means  of  representation  such  as  a  virtual  profile  might  facilitate  virtual 
+collaboration  [20,32,68].  Joining  this  stream  of  research,  this  paper  analyzes  how  numerical 
+representations of  people,  produced via quantification,  impact  virtual  teamwork.  Quantification 
+in this paper refers to the general social phenomenon of producing and communicating numbers 
+[26]. 
+
+93 
+
+Author’s addresses: Y. Kou, Florida State University, 142 Collegiate Loop, Tallahassee, FL 32304 email: ykou@fsu.edu; X. Gui, University of 
+California, Irvine, Irvine, CA 92617 email: guix@uci.edu. 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for  personal  or  classroom  use  is  granted  without  fee  provided  that 
+copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. 
+Copyrights  for  components  of  this  work  owned  by  others  than  the  author(s)  must  be  honored.  Abstracting  with  credit  is  permitted.  To 
+copy  otherwise,  or  republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior  specific  permission  and/or  a  fee.  Request 
+permissions from Permissions@acm.org.  
+2573-0142/2018/November - 93 $15.00 
+Copyright is held by the owner/author(s). Publication rights licensed to ACM.    https://doi.org/10.1145/3274362 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+                                                                 
+93:2 
+
+  Y. Kou & X. Gui 
+
+Quantification has become a prevalent practice, as increasingly more  computing systems are 
+made available to generate and analyze numbers about many aspects of a person’s work and life. 
+Famously, the Quantified Self movement denotes a trend to use technology to acquire data about 
+manifold aspects of people’s daily life. The movement, manifested in the self-tracking of health-
+related aspects such as eating [13] and footsteps [31], has received lots of attention from HCI and 
+CSCW researchers.  Other  studies  have examined academic scholars’ self-quantification through 
+numbers  of  publications  and  citations  [33,34,36].  However,  quantification  has  been  examined 
+primarily as individuals’ acts with a focus on developing self-knowledge. Little attention has been 
+paid  to  how  quantification  structures  the  relationship  between  people  and  numbers  in  virtual 
+teams. 
+
+We study quantification in virtual teams in League of Legends (LoL), currently one of the most 
+popular  multiplayer  online  games  in  the  world  with  more  than  100  million  monthly  active 
+players  [76].  LoL’s  API  supports  numerous  third-party  websites  to  obtain  rich  data  about  and 
+establish  profiles  for  every  single  player.  Players  can  use  these  quantification  tools  to  closely 
+monitor  their  own  as  well  as  their  teammates’  numerous  gameplay  aspects  such  as  gaming 
+history  and  in-game  performance.  Drawing  from  an  ethnographic  study  including  participant 
+observation, collection and analysis of player online discussion, and semi-structured interviews, 
+we  describe  how  players  quantified  themselves  and  others  in  the  context  of  virtual  teamwork. 
+Quantification  has  become  an  integral  gameplay  component  as  players  ascribed  authority  to 
+performance-based numbers  and constantly performed evaluations of self and others.  However, 
+the  interpretation  of  numbers  was  inherently  flexible,  relying  heavily  upon  players’  situated 
+knowledge of the game and the community. Quantification also intensified virtual teamwork as 
+players  frequently  quantified  and  passed  judgments  on  others,  including  teammates  and 
+opponents. Players also experienced stress and anxiety associated with their perceived misuse of 
+quantification.  Based  on  these  findings  we  discuss  the  complex  relationship  between 
+quantification, self-knowledge, and virtual teamwork. 
+
+Our contributions to the CSCW literature are three-fold: First, we deepen the understanding of 
+quantification by describing a highly developed culture of quantification in a community where 
+all the members’ data has been public available, calculated, and analyzed across multiple years; 
+Second, we contribute to studies of virtual teams by discussing the use of quantification in virtual 
+teamwork; Third, we analyze how quantification mediates collaborative play in online gaming. 
+
+2 BACKGROUND 
+League  of  Legends  (LoL)  is  a  multiplayer  online  battle  arena  (MOBA)  game  developed  by  Riot 
+Games located in Santa Monica, California, United States. It is currently one of the most played 
+games  in  the  world  with  reportedly  100  million  monthly  players  around  the  world  [64].  Its 
+annual eSports  World Championship hosted by  Riot Games attracted 60 million people in  2017 
+[50]. 
+
+LoL’s core gameplay style is to arrange a five-versus-five match. Prior to the start of a match, 
+each team of five players would first enter the “Champion Select Lobby,” where they meet each 
+other for the first time, discuss later gameplay strategies, and select a champion out of more than 
+130  available  champions  in  LoL.  A  typical  match  lasts  between  20  minutes  to  50  minutes.  Two 
+teams  are  generated  from  a  large  pool  of  available  players  based  on  their  skill,  measured  by 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:3 
+
+matchmaking  rating  (MMR),  so  as  to  create  a  balanced  match2.  Given  the  massive  player  base, 
+players assembled into a team rarely know their teammates, and must cooperate with the other 
+four strangers within a short time. An exception is that a player can “duo” with one friend, but 
+the rest three teammates are strangers. Previous work on LoL has found that these pickup groups, 
+or temporary teams, face enormous challenges in creating smooth cooperation, and conflicts and 
+tensions could easily erupt [43,48,71]. 
+
+While MMR is what Riot Games considers as the true skill rating of a player, it is not visible to 
+players.  LoL  has  two  game  modes:  normal  and  ranked.  In  this  paper,  we  focus  on  players 
+practices related to the ranked mode. Only in the ranked mode does LoL use a league system to 
+rank and represent players’ skill level. This skill representation is visible to players. The league 
+system  consists  of  seven  leagues,  including  Bronze  (22.06%  of  all  the  players),  Silver  (49.54%), 
+Gold (19.69%), Platinum (7.18%), Diamond (1.43%), Master (0.05%), and Challenger (0.02%)3. Each 
+of  the  first  five  leagues  also  contains  five  divisions,  each  of  which  has  100  league  points  (LP). 
+Players accumulate or lose LP by winning or losing matches. Upon reaching 100 LP in a division, 
+the player enters a promotion series of several matches that determines whether the player can 
+be promoted to the next division. Players can be demoted to a lower division if they reach 0 LP. 
+
+Through  the past  few years, the LoL game  client had  intermittent support for  the display  of 
+player  performance-based  data.  In  Patch  8.15  released  in July  2018,  the  LoL  client  added  a  new 
+feature  named  “stats”  displaying  a  wide  range  of  performance-based  data.  By  the  time  of  this 
+study, players have relied upon third-party quantification tools that collect and analyze data from 
+LoL’s  API  to  gauge  player  performance.  LoL  players  use  these  tools  to  monitor  their  own 
+gameplay history [46] and inform their collaboration with teammates [44]. 
+
+Players  can  encounter  discussions  or  recommendations  of  these  apps  in  player  online 
+communities and websites related to the game, such as LoL eSports teams’ official websites. For 
+instance,  in  a  blog  published  on  the  website  of  the  eSports  team  dignitas4,  more  than  80  tools 
+were  listed  and  analyzed.  The  first  tool,  for  example,  is  described  as  “Mobalytics  -  A  personal 
+performance analytics tool for League of Legends that gives detailed visualized data on all aspects 
+of your play.”  
+
+Figure  1  is  a  screenshot  of  one  of  the  most  common  tools  (http://op.gg)  that  players  use  to 
+learn  about  their  and  their  teammates’  performance.  As  shown  in  Figure  1,  for  each  single 
+champion that a player has played, the statistics include the number of matched played with the 
+champion, win rate of each champion, kill/death/assist ratio (KDA), average gold, average creep 
+score  (CS),  an  MMR  score  predicted  by  the  tools,  and  so  forth.  Besides  the  information  in  this 
+screenshot,  op.gg  is  highly  developed  with  numerous  tabs  leading  to  a  wealth  of  information 
+regarding  different  aspects  of  a  player’s  current  and  past  performance,  such  as  win  rate  in  the 
+past seven days and top played champions.  
+
+2 Official Explanation from Riot Games at: https://nexus.leagueoflegends.com/en-us/2018/02/dev-matchmaking-real-talk/ 
+3 Percentages collected on March 2, 2018 from http://na.op.gg/statistics/tier/ 
+4 http://team-dignitas.net/articles/blogs/League-of-Legends/9966/a-complete-list-of-league-of-legends-tools-sites-to-improve-your-game 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+                                                                 
+93:4 
+
+  Y. Kou & X. Gui 
+
+Figure 1. Screenshot of the first author’s gameplay profile on op.gg (taken on September 15, 2018). 
+1) Player ranks in the past several seasons in 2014, 2016, and 2017. 2) Player ranks in each month 
+from October 2017 to September 2018. 3) Tabs for gameplay data from season 1 in 2011 to season 8 
+in 2018. 4) A partial list of all the champions played in season 8 and rich gameplay statistics. 
+
+3 RELATED WORK 
+
+3.1 Knowing through Quantification 
+Quantification  is  a  “constitutive  feature  of  modern  science  and  social  organization”  [26].  It 
+prevails  in  increasingly  more  aspects  of  our  contemporary  society  such  as  manufacture, 
+education,  politics,  economics,  and  health.  It  can  also  be  viewed  as  a  form  of  “technique”  in 
+Jacques Ellul’s term that is “rationally arrived at and having absolute efficiency (for a given stage 
+of development) in every field of human activity” [23]. 
+
+Particularly, self-quantification as a technique  to develop  knowledge about the self has been 
+often  traced  back  to  Foucault’s  writings  on  the  ethics  of  care  of  the  self  [53].  For  Foucault, 
+individuals should constantly engage in a moral and ethical project to achieve happiness, wisdom, 
+health, and wellbeing [27]. When Foucault conceived the idea of self-knowledge and care of the 
+self [27], he pointed to individuals’ agency in developing knowledge about themselves against the 
+backdrop of the prevalence of power relations. Foucault further discussed technologies of the self 
+through  which  individuals  could develop self-knowledge,  such  as self-examination with  respect 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:5 
+
+to thoughts in correspondence to reality, the way our thoughts related to rules, and the relation 
+between the hidden thought and an inner impurity [28]. Building upon the idea of technologies 
+of the self, researchers have explored how digital technologies could become a technology of the 
+self as people exert their agency in discovering and transforming their selves [41,52].  
+
+In  personal  informatics,  one  primary  application  field  of  the  practices  of  self-quantification, 
+individuals  collect,  analyze,  and  reflect  upon  many  types  of  personal  information  such  as  bank 
+statements,  email  history,  and  health  information  [49].  Particularly  in  self-tracking,  individuals 
+start  to  quantify  and  monitor  themselves  for  many  reasons  such  as  better  health  condition, 
+physical or mental performance, new stimuli, or socializing [12,53]. 
+
+But numerical representation, the output of quantification, has long been cited for issues such 
+as  a  reductionist  approach  [65,66],  removal  of  contextual  information  [21],  and  complex 
+psychological  processes  related  to  interpretation  of  the  data  [11].  Ultimately,  quantification 
+entails categorization and involves qualitative judgment [10,14,63], demanding closer attention to 
+the entanglement between quantification and the values beneath design decisions [7]. 
+
+Inspired  by  John  Langshaw  Austin  who  analyzed  words  as  deeds  [3],  Espeland  and  Stevens 
+suggested  that  numbers  should  be  regarded  as  deeds  as  well  [26]. According  to  them,  numbers 
+are acts of  communication whose meanings and functions depend deeply  upon ‘grammars’ and 
+‘vocabularies’  developed  over  time  through  use,  and  should  not  be  reduced  to  a  narrow 
+instrumentality  [26].  They  proposed  one  important  distinction  between  forms  of  quantification 
+which is those that mark and those that commensurate. Numbers that mark are used to identify 
+entities,  such  as  numbers  on  a  license  plate.  Numbers  that  commensurate  are  to  evaluate  or 
+measure different objects with a common metric [25]. For Espeland and Stevens, commensuration 
+is a process that creates a specific relationship among objects by transforming all difference into 
+quantity, thus requiring considerable social and intellectual investment [25]. Measures can thus 
+influence  and  discipline  people,  or  shape  and  reinforce  existing  categories  [26].  Therefore, 
+quantification  can  have  multiple  meanings  and  purposes  across  contexts.  To  understand  a 
+specific form of quantification, we shall study the context through which numbers are generated, 
+sorted, and interpreted through numeracy and broadly shared methodological standards. 
+
+3.2 Trust and Collaborative Traces in Virtual Teamwork 
+Understanding  challenges  and  design  opportunities  for  supporting  virtual  teams  has  been  a 
+primary research strand in both CSCW and organizational studies for a long time. An important 
+foundational element for successful virtual teamwork is trust. Tseng and Fogg considered trust as 
+“a positive belief about the perceived reliability of, dependability of, and confidence in a person, 
+object,  or  process”  [75].  In  virtual  teams,  members  may  not  have  a  history  of  interpersonal 
+interactions  and  communication  through  which  trust  is  developed  in  collocated  collaboration. 
+Thus  organizational  and  management  research  has  explores  many  facets  of  trust  formation  in 
+virtual  teams,  such  as  managers’  and  leaders’  strategic  actions  [30],  goal  setting  [35],  the 
+interplay between the cognitive and affective dimensions [40], functional diversity [62], and the 
+relationship between monitoring and trust [18,67]. 
+
+To  foster  trust  in  virtual  teamwork,  a  rising  body  of  CSCW  research,  often  focused  on  the 
+setting  of  global  software  development,  has  turned  to  mechanisms  that  support  teammates  to 
+follow  and monitor  one another’s  work status  and history. For  example, Froehlich  and Dourish 
+implemented a visualization  system that provided a view  of  the dynamic software process, and 
+reported  that  this  system  providers  developers  meaningful  information  and  context  of 
+development process [29]. Marlow et al.’s qualitative investigation of GitHub, an online software 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:6 
+
+  Y. Kou & X. Gui 
+
+development  community,  reported  that  activity  traces  such  as  history  across  development 
+projects could inform how people assess expertise and shape social interactions [55]. Regarding 
+these various mechanisms, Trainer et al. discussed the notion of “collaborative traces” [74], which 
+refer to representations of the past and current activity of a group of virtual teammates. Trainer 
+et  al.  showed  that  tools  that  adopt  collaborative  traces  could  support  the  development  of  trust 
+[74].  Similar  to  the  idea  of  collaborative  traces,  quantification  tools  in  LoL  used  a  rich  set  of 
+numbers to show teammates’ past and current gaming activities. In this paper, we examine how 
+collaborative traces intersected with LoL players’ trust in their virtual collaboration. 
+
+3.3 Participatory Surveillance in Online Games 
+As  players  use  quantification  tools  to  monitor  both  their  and  their  teammates’  performance, 
+quantitative  measures  support  simplifying,  classifying,  comparing,  and  evaluating,  the  core 
+means of disciplinary power [69]. Particularly, LoL can be analyzed from the lens of “surveillance 
+games,” which Albrechtslund and Dubbeld defined as ones “that use data processing technologies 
+to  provide  or  enhance  entertainment,  thereby  appropriating  surveillance  devices  for  their  own 
+hedonistic purposes” [2]. Later Albrechtslund proposed the notion of participatory surveillance [1] 
+to  argue  for  the  social  and  playful  aspects  of  surveillance,  which  has  been  less  discussed  in 
+previous surveillance literature that focuses primarily upon the negative and repressive aspect of 
+surveillance. 
+
+However,  video  games  are  not  just  for  play,  entertainment,  and  relaxation.  Yee  noted  that 
+video  games  blur  the  boundaries  of  work  and  play  as  online  games  players  invest  lots  of  time 
+(average  20  hours  a  week),  perform  “an  assortment  of  clerical  tasks,  logistical  planning  and 
+management,” the very  same  thing they do in their offices [80]. Extensive video game research 
+has reported how  players carried out systematic and carefully planned efforts in order to make 
+progressions  and  achievements  [4,44,57,72].  Video  game  research  in  the  CSCW  literature  has 
+developed a deep understanding of video game play as a form of collaborative work [37,58,59]. 
+
+Putting  together  the  idea  of  participatory,  playful  surveillance  and  that  of  the  blurring 
+boundary of work and play, we observe a tension between the pleasurable and the serious, work-
+like  framings  of  monitoring  self  and  teammates.  Stressing  the  importance  of  willingness  to 
+participate  in  surveillance,  Whitson  noted  that  “the  moment  you  understand  that  you  are 
+working,  you  are  not  playing…  But  for  it  to  be  experienced  as  play,  everyone  needs  to  be  a 
+willing participant” [79]. LoL players cannot be considered as “willing participants,” as the game 
+company, Riot Games, owns and decides to make available players’ data. In this regard, our paper 
+contributes to a deeper understanding of the relationship between work and play in the context 
+of surveillance practice. 
+
+4  METHODS 
+This  paper  is  based  upon  a  multi-year  ethnographic  study  of  League  of  Legends  from  October 
+2011 to the time of this study. The ethnographic project was initiated with a general purpose of 
+understanding players’ social experiences within the game community. The project has gradually 
+developed into two distinct but related strands including governance [45] and player experience 
+[43,44].  This  paper  belongs  to  the  second  strand.  The  first  author  conducted  participant 
+observation  in  the  game’s  North  American  server  as  well  as  numerous  related  online  venues, 
+following the idea of multi-sited ethnography [54]. The first author played between 700 to 1000 
+ranked or normal matches per year since 2011 (except the year of 2015), ranked at Platinum by 
+the time of this study, and participated in and observed player discussions in LoL-focused online 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:7 
+
+forums  hosted  on  Riot  Games’  server  as  well  as  general  social  media  sites  such  as  Reddit.  The 
+first author also frequented  video-based social media platforms such  as YouTube and Twitch, a 
+living  streaming  site,  which  were  frequently  discussed  among  players  as  primary  venues  for 
+watching and learning from the gameplay of professional eSports or highly skilled players. The 
+first author obtained knowledge of these quantification tools through this long-term engagement 
+in  the  game,  and  frequently  used  these  tools  to  inform  his  own  play.  Extensive  fieldnotes  and 
+screenshots were taken regarding numerous aspects of social life and player experience with the 
+game through participant observation. 
+
+The project was not about quantification from the very beginning. While doing ethnographic 
+work,  the  first  author  also  conducted  two  rounds  of  interviews  prior  to  this  study  of 
+quantification.  The  first  round  was  conducted  in  2012  and  2013  with  a  focus  on  how  player 
+perceived  collaboration  in LoL. The second round was  conducted  in 2014 and 2015, concerning 
+how  players  learned  and  improved  their  ranks  in  game.  Both  served  as  individual  research 
+projects. It is important to note that the first two rounds prior to this study did not have a focus 
+on quantification. However,  the opening questions  such  as how you improved your  skill in the 
+game  often  encouraged  players  to  talk  about  their  experiences  with  numerous  quantification 
+tools that they had used, with op.gg being the latest and most frequently cited among the study 
+participants.  The  first  two  rounds  of  interviews,  as  well  as  the  first  author’s  own  experience, 
+inspired this study to investigate how LoL players used quantification in their play.  
+
+The latest round of interview was conducted in February and March 2018, with a focus on the 
+use of quantification tools in gameplay. During this round, we conducted semi-structured, open-
+ended interviews with 22 LoL players with diverse ranks distributed across Bronze, Silver, Gold, 
+Platinum, and Diamond. They all reported playing for at least one year and being familiar with 
+one  or  more  quantification  tools.  The  interviews  were  started  with  the  following  open-ended 
+questions:  1)  can  you  talk  about  when  you  started  playing  the  game?  2)  how  do  you  improve 
+your skill in the game? 3) how did you come to know the existence of the quantification tools? 4) 
+when  do  you  use  these  tools?  5)  how  do  these  tools  influence  your  gameplay?  6)  how  do  you 
+know other players use these tools? 
+
+The interviews were conducted either through in-game messaging function, email, or skype in 
+English,  and  lasted  between  20  and  40  minutes.  We  manually  transcribed  these  interviews  for 
+interviews  where  players  mentioned  their  use  of 
+later  analysis.  Combining  previous 
+quantification tools, and the latest round of 22 interviews focused on these tools, we had a total 
+number  of  68  interview  transcripts.  A  substantial  portion  of  the  68  interviews  mentioned 
+quantification.  However,  when  reporting  data  in  this  paper,  we  draw  primarily  from  the  latest 
+round of 22 interviews, as well as one from an interview conducted in 2015, because of their data 
+richness  and  topical  relevance.  Due  to  the  limit  of  space,  Table  1  only  introduces  the 
+demographic information of 23 participants whose interviews were actually used in this paper. 
+
+We  used  thematic  analysis  [6]  to  analyze  our  data  in  an  inductive  approach  [61]  to  identify 
+themes that are strongly linked to the data themselves. The dataset for analysis included all the 
+68  interview  transcripts,  as  well  as  forum  discussions,  fieldnotes,  screenshots  taken  in  the  past 
+few  years.  Two  researchers  (including  the  first  author)  familiar  with  LoL  participated  in  this 
+analysis process. We first familiarized ourselves with data with the initial analytic interests in the 
+role of quantification in supporting gameplay. Each researcher immersed himself or herself in the 
+data  through  reading  back  and  forth  and  marking  ideas.  During  this  iterative  process,  the  two 
+researchers  had  regular  meetings  on  a  daily  basis  to  discuss  ideas.  Each  of  us  then  started 
+generating an individual list of initial codes through our whole dataset, after which we compared 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:8 
+
+  Y. Kou & X. Gui 
+
+and combined our initial code lists through discussion. Following the suggestion of coding for as 
+many  potential  themes  as  possible  [6],  we  generated  over  290  codes.  An  example  is  the  data 
+extract “Looking at op.gg is good if you use it correctly” which was coded for “positive review of 
+quantification” and “knowledge about how to use.” After generating the initial code list, we re-
+focused  our  analysis  at  the  broader  level  of  themes,  using  rounds  of  discussions  to  consolidate 
+our codes into an overarching theme. During this process, we also went back and forth between 
+the  generated  themes  and  the  dataset  to  refine  the  themes,  with  the  goal  of  ensuring  internal 
+homogeneity and external heterogeneity [61]. Our final satisfactory thematic map includes three 
+primary  themes:  how  players  developed  knowledge  through  their  situated  interpretation  of 
+numbers,  how  players  used  their  interpretation  of  numbers  to  improve  performance  and  make 
+gameplay  strategies,  and  their  reflections  on  the  negative  aspects  of  quantification  and  what 
+constitutes proper relationship with quantification.  
+Note:  Player  rank  information  was  collected  by  the  time  of  interview.  In  recruiting  methods  “unfamiliar 
+contact” refers to the situation that the first author and a player added each other on their contact lists for a 
+long  time,  but  there  was  no  communication  between  them.  This  pattern  is  common  within  the  LoL 
+community,  where  players  simply  send  a  friend request  to  whom  they  just  played  with  or  against.  Many 
+players  have  a  long  contact  list  containing  hundreds  of  players,  but  are  not  in  active  contact  with  the 
+majority of the contact list. P23 was interviewed in 2015 before the latest round of 22 interviewees. “N/A” 
+means the interviewee did not disclose this information to us during the interview. 
+
+Table 1. Participants’ demographic information.  
+
+22 
+19 
+N/A 
+24 
+N/A 
+20 
+21 
+28 
+28 
+22 
+24 
+29 
+19 
+20 
+22 
+24 
+26 
+23 
+
+  Age  Gender  Years 
+in LoL 
+6 
+2 
+4 
+4 
+3 
+7 
+5 
+6 
+5 
+4 
+3 
+6 
+5 
+4 
+2 
+4 
+5 
+3 
+4 
+5 
+3 
+4 
+2 
+
+M 
+P1 
+M 
+P2 
+M 
+P3 
+M 
+P4 
+F 
+P5 
+M 
+P6 
+M 
+P7 
+M 
+P8 
+M 
+P9 
+F 
+P10 
+M 
+P11 
+M 
+P12 
+M 
+P13 
+F 
+P14 
+F 
+P15 
+M 
+P16 
+M 
+P17 
+M 
+P18 
+M 
+P19  N/A 
+M 
+P20  N/A 
+P21 
+N/A 
+P22  N/A  N/A 
+P23  N/A  N/A 
+
+24 
+
+Years of using 
+quantification 
+
+4 
+1 
+4 
+3 
+2 
+5 
+4 
+6 
+3 
+3 
+1 
+6 
+3 
+1 
+1 
+3 
+2 
+3 
+4 
+4 
+3 
+3 
+N/A 
+
+Player 
+rank 
+
+Silver 
+Gold 
+Platinum 
+Platinum 
+Gold 
+Platinum 
+Gold 
+Gold 
+Silver 
+Silver 
+Silver 
+Diamond 
+Silver 
+Silver 
+
+Bronze 
+Platinum 
+Silver 
+Gold 
+Gold 
+Platinum 
+Silver 
+
+Bronze 
+Gold 
+
+Recruiting methods 
+
+Direct contact 
+Unfamiliar contact 
+Unfamiliar contact 
+Direct contact 
+Unfamiliar contact 
+Direct contact 
+Snowball sampling 
+Unfamiliar contact 
+Snowball sampling 
+Snowball sampling 
+Direct contact 
+Direct contact 
+Unfamiliar contact 
+Snowball sampling 
+Snowball sampling 
+Unfamiliar contact 
+Direct contact 
+Unfamiliar contact 
+Direct contact 
+Direct contact 
+Unfamiliar contact 
+Snowball sampling 
+Forum recruiting 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+ 
+ 
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:9 
+
+When  reporting  interview  quotes,  we  use  P1,  P2,  etc.  to  denote  different  study  participants. 
+We have obtained the IRB approval from our institution prior to collecting and using online data 
+for  this  work.  In  considering  ethical  concerns  [9],  when  reporting  online  data,  we  paraphrased 
+quotes from forum discussions to disguise the data and reduce their searchability.  
+
+5  FINDINGS 
+League  of  Legends  players  used  various  quantification  tools  to  quantify  themselves  as  well  as 
+others for the purpose of progression in the game. Players frequently engaged in interpretation 
+and  re-interpretation  of  their  numbers,  as  well  as  negotiation  of  numbers’  meanings  in  team 
+communication.  Quantification  and  interpretation  involved  much  cognitive  work  and  invoked 
+emotional  reactions,  and  sometimes  disrupted  virtual  teamwork.  Some  players  reflected  upon 
+what constituted proper use of quantification. 
+
+5.1 Nuanced and Situated Interpretation of Numbers 
+LoL players acknowledged the great diversity in the numbers provided by the quantification tools. 
+They, however, stressed that numbers were not self-evident. Players saw various meanings and 
+implications  of  numbers.  They  tried  to  interpret  numbers  by  drawing  from  their  situated 
+knowledge in LoL. 
+
+5.1.1 Capturing Various Meanings and Implications of Numbers 
+We  observed  that  numbers  were  frequently  cited  as  markers  of  skill  and  performance.  Each 
+participant  that  we  interviewed  had  developed  standards  for  determining  the  meaning  of  a 
+number. For example, a participant told us: 
+
+I had 85% win rate on Ekko [a LoL champion], it was amazing… until they [Riot Games] made the 
+changes  [new  game  patch]  to  remnants  of  the  watchers  [an  in-game  item].  My  KDA 
+[kill/death/assist ratio] before the changes were 4.50. [P1] 
+In this quote, P1 explained how his numbers associated with Ekko were negatively influenced 
+by  LoL’s  recent  patch.  He  also  expressed  high  satisfaction  with  his  previous  records  associated 
+with Ekko, where he considered ‘85% win rate’ and ‘4.5 KDA’ indicators of good performance.  
+
+In a similar vein, P2 asked us to visit his op.gg profile by saying “check my lux [a LoL champion] 
+win rate on op.gg… over 60%!”  P3  told  us  that  “200 CS [creep score] in 20 minutes… it is my best 
+record.” In these cases, numbers that fell within certain ranges had supplied players joy and pride, 
+because these numbers were considered both “good” and difficult to achieve. 
+
+According to our study participants, numbers did not just represent gaming skills. They could 
+also  reveal  other  qualities  such  as  temperament,  mindset,  motivation,  and  desire  to  win.  For 
+example, a participant noted how she sometimes could discern players’ mental stability: 
+
+If you see a player on a massive loss streak like 1:8, likely that the player is tilted… Your game is 
+not going to end up well. [P5] 
+“Tilt” or “tilted” means that a player’s mental state is declining, which is likely to negatively 
+impact player performance. For P5, the numbers of wins and losses in the recent match history of 
+a  player  did  not  simply  communicate  the  player’s  previous  performance.  The  numbers  also 
+strongly  suggested  the  likelihood  of  the  player’s  chance  to  win  in  next  match.  Many  of  our 
+participants  expressed  a  similar  viewpoint  with  P5  that  a  player  who  was  experiencing  or  had 
+just experienced was likely to do badly in game. Beneath this logic was players’ many personal 
+experiences  with  a  “vicious  cycle,”  that  losing  a  game  caused  negative  emotions  such  as 
+distresses and frustrations, which in turn impacted their future games in negative ways. 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:10 
+
+  Y. Kou & X. Gui 
+
+5.1.2 Interpreting Numbers in Light of Situated Knowledge 
+Our participants stressed that situated knowledge of the game was key to proper interpretation 
+of numbers. One type of situated knowledge of the game commonly cited by our participants is 
+the knowledge regarding the different modes of the game. P7 said: 
+
+A high KDA in normal is nice, but it says little about skill… [players] don’t try hard in normals. 
+[p7] 
+“Normals” refer to the normal game mode that is not ranked, in which players tend to be more 
+casual. In normal mode, players tended to try new play styles and care less about winning, and 
+high  KDA  could happen because the player was  trying  powerful champions while others  weak 
+ones.  Experienced  players  like  P7  were  acutely  aware  of  the  distinction  between  the  two  game 
+modes, and utilized this situated knowledge to make more accurate assessment. 
+
+Another type of situated knowledge of the game frequently brought up by our participants is 
+the  knowledge  of  different  champion’s  mechanism.  When  asked  what  “win  rate”  would  look 
+good, P5 explained: 
+
+It  depends  on  the  champion…  I  have  above  55%  win  rate  with  Zyra  [a  LoL  champion]  and 
+generally feel like I’m carrying with her… but a Yasuo [a LoL champion] below 60% win rate is 
+bad. Yasuos either solo win the game… or feed and ruin the game. [P5] 
+In LoL, Zyra and Yasuo have different play styles, with the latter being high-risk, high-reward. 
+Therefore,  Yasuo’s  impact  on  match  results  tends  to  be  highly  polarized.  With  knowledge  of 
+different champions, P5 had developed more situated interpretations taking into account different 
+play  styles  associated  with  champions.  In  this  way,  a  number  like  55%  win  rate  could  have 
+different meanings per context. In addition, P5’s explanation indicated how she gradually learned 
+how  to  interpret  numbers  through  her  own  experiences.  Her  general  observation  that  she 
+contributed a lot to teamwork (i.e. “carrying”) was an important reason behind her belief that 55% 
+was a good number for Zyra. Similarly, her experiences with Yasuo teammates deeply influenced 
+her interpretation of Yasuo win rate. 
+
+In  addition,  our  participants  also  stressed  that  gameplay  across  the  wide  spectrum  of  ranks 
+was vastly different in terms of player decision making, team composition, and competitiveness. 
+Therefore,  they  described  how  their  understanding  of  these  differences  influenced  their 
+interpretation of numbers. For example, P14 told us: 
+
+My Diamond friend dies averagely 6-7 times…he said he had to takes risks… [but] he almost never 
+dies playing on my account [in Silver]. [P14] 
+P14  narrated  a  sharp  distinction  between  Diamond  and  Silver,  and  how  such  distinction  in 
+gameplay could result in different numbers: Diamond matches are more competitive and intense, 
+leaving little room for players’ decision making. Therefore, P14’s friend could perceive more risks 
+when playing at Diamond. However, the same player encountered few challenges at Silver, and 
+thus “almost never dies.” P17 remembered that his average CS decreased as he climbed from Gold 
+to  Platinum,  because  he  encountered  more  “aggressive lane opponents”  that  would  prevent  him 
+from getting more CS. Like P14 and P17, many of our participants noted how the intensity and 
+competitiveness of different ranks could influence numbers. 
+
+Through playing LoL, players kept learning about various aspects of LoL that would offer new 
+angles  to  interpret  numbers.  Each  player’  set  of  situated  knowledge  was  gradually  built  upon 
+their  own  experiences.  Therefore,  the  derivation  of  qualitative  insights  from  numbers  was 
+cognitively  challenging  to  many  players.  Online  forums  became  a  place  where  players  learned 
+from  each  other  about  how  to  interpret  numbers.  We  learned  about  this  social  activity  on  the 
+‘/r/leagueoflegends’ subreddit from several of our participants. Here is an example: 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:11 
+
+Post: Post a link to your OP.GG profile and get advice from the community! 
+I believed it could be nice if high elo players could share some advice to low elo scrubs like myself 
+:) 
+Player 1: My CS is trash [shared link to a op.gg player profile; removed for anonymity] 
+Player 2: Miss fortune [LoL champion] and Ashe [LoL champion] were good picks for your rank. 
+But you should consider playing more Annie [LoL champion] instead of Orianna [LoL champion]. 
+This way you can both improve CS and focus more on the game rather than csing. 
+Elo is an alternative term for player rank. In this excerpt, Player 1 invited critique upon their 
+own  profile.  While  Player  1  expressed  one  of  their  numbers  (i.e.,  CS)  was  poor,  Player  2  gave 
+concrete advice on improving CS as well as more general suggestions regarding how to improve 
+skill. Player 2’s analysis was based on a combination of Player 1’s numbers as well as Player 2’s 
+understandings of different champions’ strengths and weaknesses. 
+
+5.2 Using Quantified Data to Strategize Gameplay 
+Through the interpretation of publicly available data, LoL players conveniently reflected on their 
+own performance, and learnt about their teammates and opponents. They used this knowledge to 
+inform their gameplay. They could coordinate with their teammates to optimize their gameplay 
+strategies. 
+
+LoL players’ reliance on quantification for  gameplay  was manifested  in a  common linguistic 
+pattern in the community. We observed numerous instances where terms denoting quantification 
+tools  such  as  ‘op.gg’  and  ‘lolking’  were  used  as  not  only  nouns  but  also  as  verbs.  Players 
+frequently used “op.gg me” or “lolking the player” to denote the practice of checking someone on 
+specific  quantification  tools.  An  example  is  “If you op.gg me, you can see I win almost 70% of my 
+Jarvan IV [a LoL champion] games.” 
+
+5.2.1 Developing Self-Knowledge and Improving Performance 
+As  players  believed  that  these  numbers  indicated  their  own  performance  and  skill,  they  took 
+advantage of the quantification tools to develop insights into their own gameplay. P1 told us that 
+“I mainly use op.gg to check my KDA, win rate, and .... I just like to track my progress to get better.” 
+In this way, players sought to develop self-knowledge through quantification. On Reddit, a player 
+shared their op.gg profile, and narrated a story of progression through numbers: 
+
+Just  climbed  from  Plat  4  to  Diamond  5  playing  only  Fiddlestick  (86%  winrate  over  28  games) 
+[shared  link  to  a  op.gg  player  profile;  removed  for  anonymity]  ...  started  tryharding  with  my 
+beloved main and had this massive win streak (24 W - 4 L). 
+“Main” refers to the champion that a player plays the most. In  the above quote, the player’s 
+
+main was Fiddlestick. The player expressed excitement about improvement in the game. 
+
+All  of  our  participants  mentioned  using  quantification  to  keep  informed  and  seek  self-
+
+improvement. For instance, P11 said: 
+
+My Janna’s [a LoL champion] KDA was embarrassing with 5.1 deaths per game… because most 
+jannas have less than three deaths. My janna died too much because I played in a wrong way… I 
+watched guides to learn builds, matchups, and itemization. 
+According to P11, his interpretation of his Janna KDA was that his performance was poor and 
+
+he needed improvement. He proceeded to learn and improve himself. 
+
+5.2.2 Assessing and Choosing Teammates 
+Participants  used  numbers  to observe the status and skill  level of  their friends. They then used 
+this observation to invite skilled friends to play together. For example, P4 said: 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:12 
+
+  Y. Kou & X. Gui 
+
+I have made some friends in league…I would look them up [on quantification tools]. I know their 
+best roles in the game… who I want to duo [playing with a friend] with for my placements…who I 
+only play norms [normal mode] with. [P4] 
+P4  shared  with  us  how  he  used  quantification  to  develop  knowledge  about  his  friends. 
+Placements refer to placement matches that have a major influence over players’ rank. Building 
+on the knowledge of his friends, P4 would strategize his play for the purpose of progression in 
+game.  In  competitive  matches,  especially  placements  where  stakes  were  higher,  he  wanted  to 
+play with friends who he believed to be highly skilled. In casual scenes, he would be more open 
+to playing with friends of different skill levels. 
+
+Players  could  perceive  whether  their  teammates  desired  to  win  through  interpretation  of 
+numbers.  For  example,  P10  said that “you  know your teammates don’t want to win  when they 
+pick a champ they are bad at. Chances are you already lost in champion select.” 
+
+Players also mentioned how numbers told them whether their teammates could be potentially 
+toxic in game. In an interview via the in-game messaging tool of LoL client, P1 sent the URL to an 
+op.gg profile and said: 
+
+Just check this guy. His Teemo [a LoL champion] has over 8 deaths each game with only two or 
+three kills… Those players just feed and flame junglers [a role in game] all time. When he locked 
+in Teemo, I insta dodged.” 
+“Dodge,” or “queue dodge,” refers to the action of closing the game client to cancel a match. 
+Dodge is not against LoL’s terms of service, but it wastes the computing resources for generating 
+a match and causes delays to other players. Riot Games discourages this behavior by deducting a 
+small amount of ranking points per time of dodge, which is less consequential than the decrease 
+of  ranking points  if  losing a  match. Therefore,  players  would calculate benefits  and risks when 
+deciding  whether  to  dodge.  Without  actually  playing  the  game  with  his  teammate,  P1  was 
+already  confident  in  telling  about  a  teammate’s  potential  negative  behaviors  in  game. 
+Interpretation  of  the  numbers  associated  with  Teemo  suggested  the  teammate’s  potential  poor 
+performance in the next game. Such interpretation, combined with past experiences with Teemo 
+players, supported P1’s reasoning process leading to the conclusion that his teammate could be a 
+toxic  player  that  he  would  avoid  teaming  up  with,  and  thus  he  decided  to  dodge  the  game  to 
+avoid the risk of losing ranking points. 
+
+5.2.3 Negotiating with Teammates 
+Participants used their numbers as evidence to support their verbal claim for certain roles in team. 
+P13 shared his story with us: 
+
+In  champ  select  lobby  I  would  say  can  I  mid?  I’m  really  good  at  a  couple  ap  carries  [roles  in 
+game]. You can look me up on on.gg. Then I tell them I couldn’t do anything else... I also paste my 
+op.gg link so they can click. Sometimes it works, my teammates would give their role to me… not 
+every time though. [P13] 
+In  this  example,  P13  talked  about  how  he  shared  his  profile  with  his  teammates  in  order  to 
+convince  his  teammates  that  he  should  play  the  role  of  mid5.  Quantification  here  was  used  to 
+enhance  the  legitimacy  of  his  claim.  For  this  use  of  quantification  to  work,  the  player  must  be 
+aware  of  the  generally  accepted  criteria,  or  the  common  ground,  for  determining  high  or  low 
+performance of particular champions and roles. Having experienced similar situations but on the 
+other  side,  P7  told  us  that  “I use op.gg when someone is asking for my role. If they have a good win 
+
+5 There are five roles on a team: top, jungle, middle, bottom, and support. The “Middle” role’s typical function is to deal lots of damage. 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+                                                                 
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:13 
+
+rate with champions in that role, that’s fine. But if someone wants to mid  with a 11% Kass [a LoL 
+champion], then I’m sorry.” 
+
+Players also used quantification to persuade their teammates into certain actions for perceived 
+
+better winning chances. A player wrote on the official forum that: 
+
+I  use  it  to  try  to  encourage  teammates  to  play  the  champs  they  are  actually  good  with…For 
+example,  I  would  say:  o?  you  have  227  games  with  jinx  [a  LoL  champion]  adc  and  a  solid  68 
+percent  wr and  are instead  deciding  to just  try  out vayne [a LoL champion]  adc with  10 games 
+and 20 percent win rate?...DAMN MAN YOUR JINX IS SEXY AS FUCK!...they will likely pick jinx 
+just to show how sexy their jinx is XD 
+In  this  excerpt,  the  player  vividly  described  a  scenario  where  they  tried  to  persuade  their 
+teammate  to  pick  a  champion  that  the  latter  was  good  at,  evidenced  in  the  combination  of 
+number of games and win rate. For this player, these combined measures unambiguously pointed 
+to a much better qualitative choice in champion selection. Therefore, the player took action for 
+the purpose of improving their winning chance.  
+
+Lastly,  quantification  supported  them  to  strategize  their  gameplay  for  the  best  chances  of 
+winning games. Most of our participants looked up their teammates and used this knowledge to 
+customize their play style. For example, P12 told us that: 
+
+As a jungle [a role in game] main, I found op.gg extremely useful… I had a game with Nasus [a 
+champion] top. He had 75% win rate over 45+ games. I knew if I could give him a good start, he 
+would be able to snowball and carry the game. That’s what I did. I came to his lane right after my 
+red  buff  and  gave  him  a  kill….  He  and  I  carried  the  game,  even  though  other  lanes  were  a  bit 
+behind. [P12] 
+The jungle role in LoL is a leadership role, requiring the player to decide which teammates to 
+help  with  and  what  objectives  to  pursue  for  the  best  outcome.  For  P12,  the  analysis  of  his 
+teammate’s statistics informed his play style. The subsequent win confirmed his previous theory 
+about how to strategize gameplay based on interpretation of teammates’ numbers. 
+
+5.2.4 Exploiting and Constraining Opponents 
+Our participants talked about various ways of drawing from quantification to tailor strategies to 
+constrain  their opponents. On the one hand, P17 told us that “I’m gonna try hard to not lose to my 
+lane opponent who is having a losing streak.” In  this  example,  P17  described  a  scenario  where  he 
+noticed his lane opponent’s losing streak, and surmised that his lane opponent might be “tilted.” 
+P17 wanted to take advantage of this perceived weakness of the lane opponent. 
+
+On  the  other  hand,  players  could  perceive  their  opponents  as  skillful  and  superior.  This 
+perception  encouraged  players  to  adjust  their  play  styles  to  be  more  conservative.  Here  is  an 
+excerpt from an online forum conversation: 
+
+If  I  see  they  have  300  games  played  with  said  champ  in  rank,  I  know  they're  at  minimum 
+experienced.  If I see KDAs that go  along the lines  of 15/4/10 for that champ after  an average of 
+10+ games, I know to play safe, because that user has proven to be good with that champ multiple 
+times. 
+Here the player listed several convincing numbers such as “300 games” and “15/4/10,” which 
+indicated a strong opponent. In such case, the player made the decision of “play safe,” meaning 
+the adopting of a low-risk play style. 
+
+Besides  adjusting 
+
+individual  strategies,  quantification  of  opponents  also  supported 
+coordination  between  teammates.  For  example,  P18  said  that  “I’m currently gold 3. If I know my 
+opponent is plat 5, I will ask my jungler to camp my lane.”  Camp  describes  a  tactic  that  a  player 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:14 
+
+  Y. Kou & X. Gui 
+
+stays  close  to  their  teammate  without  being  noticed  by  opponents.  The  camper  could  then 
+surprise and kill opponents with ease. When P18 noticed the quantified rank difference between 
+him and his opponent, he expected his opponent to be more skilled than him. Not wanting to lose 
+on his role, he would coordinate with his teammate to constrain his opponent in game. 
+
+Players shared with their teammates what they learned from quantification of their opponents, 
+
+so that the whole team could be mindful of the opponent team’s unique strengths. P19 noted: 
+
+I can tell who is good on the enemy team. I would warn my team, especially if there are smurfs 
+[new, low ranking accounts owned by high ranking players] on the opposing side. We can make a 
+plan to shut them down early so they don’t get to carry the game. [P19] 
+P19  explained  how  he  helped  make  gameplay  strategies  based  on  his  understanding  of  the 
+opponents. He first made an inference about whether his opponent was a smurf. He could notice 
+if a player’s numbers were unusually stronger than average players in his rank. This knowledge 
+informed how he strategized his gameplay. 
+
+5.3 Negotiating with Quantification 
+In  the  first  two  sections,  we  reported  how  LoL  players  sought  to  rationalize  and  utilize  their 
+interpretation of numbers, for the purpose of progression in game and optimization of teamwork. 
+However, beyond the rational and instrumental use of quantification, players also had emotional 
+investment  into  their  numbers.  We  observed  that  many  players  struggled  to  strike  a  balance 
+between their amount of attention to their numbers and just having “fun” in game. Many of our 
+study participants mentioned what constituted the proper use of quantification. 
+
+5.3.1 Experiencing Negative Consequences Associated with Quantification 
+Our study participants stressed that using quantification was useful in competitive play, and they 
+felt the social pressure to do so. P11, for instance, stated that: 
+
+I have  to use these tools to compete with  people  who already  use them… it is publicly available 
+and whoever doesn’t use it is at a disadvantage. [P11] 
+From  a  practical  point  of  view,  P11  stressed  how  quantification  was  already  an  integral 
+component of ranked gameplay in LoL. As an individual, he could only comply with this practice 
+to keep up with other LoL players. 
+
+Our study participants also perceived various negative consequences associated with their use 
+of quantification.  At the individual level, misuse of quantification could cause negative emotions 
+such  as  distress  and  anxiety  among  players.  At  the  team  level,  discussions  of  numbers  could 
+cause conflicts and tensions.  
+Stress and Anxiety among Individual Players 
+Players viewed numbers as direct indicators of their performance, and developed judgements as 
+to  what  numbers  were  superior.  Pursuit  of  better  numbers  became  their  conscious  goal  while 
+playing  games.  For  instance,  P6  mentioned  that  “I try to keep my deaths under 4 each game. Good 
+players don’t die a lot.” Like  P6  said,  qualitative  marks  such  as  “good  players”  were  consciously 
+related  to  a  specific  numerical  range.  Poor  numbers,  on  the  other  hand,  could  cause  negative 
+emotions  among  players.  P14  told  us  that  “I have an embarrassing win rate with Dr Mundo… under 
+40%… I’m terrible with tanks.” 
+
+The  attention  on  numbers  and  improving  numbers  also  caused  much  stress  and  anxiety 
+
+among several participants. P19 told us: 
+
+Most times I’m good… But it was so stressful when I noticed that my recent win rate has dropped 
+below 40%... I feel I suck at this game. [P19] 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:15 
+
+As P19 articulated, undesired numbers (low recent win rate) could cause stressful experiences 
+
+for him. 
+
+As many players were concerned with their numbers, some of our participants mentioned the 
+practice  of  KDA  padding,  similar  to  stat  padding  in  sports  where  players  focus  on  activities  of 
+improving their statistics that do not contribute to actual results. P8 said: 
+
+No one would admit it but you know it exists… yesterday they [the enemy team] were winning so 
+hard that they could end the game any time, but they didn’t kill the nexus [totally destroying the 
+enemy base and thus ending game]. They just kept killing us when we came back alive. [P8] 
+In this example, P8 suspected that his five opponents were padding their KDAs, drawing from 
+his  observation  of  a  mismatch  between  the  opponents’  overwhelming  advantage  in  game  and 
+their unwillingness to end the game. He also suggested certain level of social stigma associated 
+with  this  kind  of  behavior,  as  such  behavior  does  not  align  well  with  the  competitive  eSports 
+culture  that  both  the  player  community  and  Riot  Games  valued.  One  of  our  participants,  P9 
+expressed  strong  disdain  for  KDA  padding,  saying  that  “KDA  players  just  stupidly  ignored 
+objectives like turrets and dragons... They are after kills.” A  player  on  Reddit  suggested  a  more 
+nuanced view towards KDA padding, saying: 
+
+KDA  padding  is  always  fun,  if  you're  into  that  kind  of  stuff  (as  do  I).  However,  practically 
+speaking it can often be a poor indicator for general performance… A kill on a specific opponent 
+becomes less significant for the gold bounty. After you have done with the maths, it doesn't make 
+as much of a difference in your economy as you think it does, compared to other play style. 
+“Gold  bounty”  is  the  virtual  reward  for  killing  an  opponent.  In  this  excerpt,  the  player 
+suggested  that  number  could  become  an  end  in  itself,  because  better  numbers  were  desirable. 
+However, an overemphasis on numbers was said to have an adverse effect on decision-making in 
+game,  when  players  favored  strategies  that  could  improve  their  numbers  instead  of  those  that 
+could help win the match. In this way, the player indicated that the existing set of statistics did 
+not fully align with the actual effects of particular in-game actions, and therefore players should 
+be cautious when using these statistics to prescribe their actions. 
+Conflicts and Tensions within Teams 
+Participants  also  mentioned  checking  their  teammates,  and  sometimes  became  unsatisfied  by 
+teammates’  numbers.  Such  dissatisfaction  could  surface  in  communication  with  teammates, 
+causing conflicts and tensions within teams. For example, P21 mentioned: 
+
+I was constantly checking both teams on op.gg. I found it actually hurt my mentality going into 
+the game believing that your team is gonna suck. I could easily start flaming my teammates for 
+small mistakes, and I became the biggest reason my team lost. [P21] 
+P21 described how frequent use of quantification started to incur negative consequences over 
+his in-game mood and make him distressed. In some matchups, through interpreting teammates’ 
+numbers and predicting match results prior to the start of the match, he already foresaw a loss 
+and  attributed  it  to  his  teammates.  Such  practice  would  negatively  influence  teamwork  as  he 
+became  intolerant  to  teammates’  “small  mistakes,”  which  in  turn  contributed  to  a  loss.  Similar 
+experiences were discussed on Reddit, where a player wrote: 
+
+Checking  stats  is  tilting  for  many.  If  you're  prone  to  stat  anger,  you  should  just  block  all  those 
+websites in your browser. There is useful info there but avoid  it if you can't control focusing  on 
+what actually may  be useful in it. If you are busy calling out people about previous games and 
+why their itemization is wrong according to the pros, you are not focusing on your playing or the 
+game you're in. 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:16 
+
+  Y. Kou & X. Gui 
+
+“Stat anger” refers to players’  self-perceived anger triggered by  finding out teammates’ poor 
+statistics. The above quote suggests that players who are likely to grow negative feelings should 
+stop  using  quantification.  The  quote  further  explains  that  when  players  become  aggressive 
+towards  teammates  because  of  their  poor  statistics,  they  are  not  focusing  on  the  right  things 
+(themselves and the game). 
+
+Players also mentioned their negative experiences with being judged based on their numbers. 
+Our  study  participant  P15  complained  that  “teammates abused me very early on saying that my 
+KDA was bad. It is unfair to judge me like that. The game is teamplay-based.”  As  P15  described,  her 
+teammates  harassed  her  because  they  determined  her  numbers  to  be  poor.  In  this  way 
+quantification  actually  intensified  disagreement  between  teammates,  and  even  helped  spur 
+aggressive  behavior  within  team.  P16  mentioned  a  similar  incident  that  occurred  between  him 
+and his  teammates  in a recent game. He said that “I just had a bad nid [a LoL champion] game. My 
+teammates told me something like ‘wish you realized maybe you shouldn't play nid after you have a 
+38% win rate on it over 70 games.’” 
+
+Misuse of quantification could also fuel aggression between opponents. For example, P13 told 
+us  that  “if I beat a smurf that brags a lot early game, I would mess around at the end and tease him 
+about his win rate.”  According  to  many  of  our  study  participants,  most  of  the  time provocations 
+took place when the match result was almost certain. For instance, P20 described: 
+
+One day I was really annoyed by a guy checking my profile and assuming that I was bad. I just 
+straight up beat his ass, follow him everywhere, take all his buffs, and defeat all his ganks. Later 
+in  post-game  chat  I  told  him  that  hope  ‘op.gg  people’  works  for  you  in  future  games.  That  was 
+fun. [P20] 
+P20  described  how  both  he  and  his  opponents  used  quantification  to  provoke  each  other  in 
+
+game. Such exchange tended to intensify the communication between two teams. 
+
+5.3.2 Exploring Proper Relationships with Quantification 
+
+Some LoL players  perceived  the downside of  using quantification. They started  to stress the 
+idea  of  using  quantification  properly.  P17,  for  example,  said  that  “[you] can’t be obsessed with 
+op.gg. It’s just a tool. It’s only useful if you know what it is and how to use it.”  P17  discussed  the 
+proper  relationship  between  player  and  quantification.  He  noticed  the  potential  psychological 
+burden  associated  with  use  of  quantification  if  a  player  dedicated  too  much  attention  to  it.  He 
+pointed to the instrumental value of quantification, and stressed players’ own responsibility and 
+capacity in proper use. 
+
+One common way our participants used to cope with the psychological burden was non-use. 
+For  example,  P6  noted  that  “stop using it if it psychs you out.”  P6  saw  non-use  as  a  way  of 
+avoiding negative emotions. Some players reported concrete benefits of non-use. P21 told us that 
+“I  simply  stopped.  I  am  feeling  much  better  now  and  my  rank  has  moved  up  as  well.”  Another 
+participant P22 reported: 
+
+I used to check my teammates and got tilted a lot. Nowadays I don’t do it any more… I start to 
+focus on my own play because this is the only thing I can control and improve... I learn more each 
+game. [P22] 
+Both  P21  and  P22  had  been  frequent  users  of  quantification.  However,  they  changed  their 
+behavior upon noticing the negative aspects of overusing quantification, in order to take care of 
+their  own  psychological  wellbeing.  Their  descriptions  sought  to  articulate  a  causal  relationship 
+between non-use and subsequent positive experiences, in terms of increased rank and learning. 
+
+While  non-use  was  on  the  extreme  end  in  terms  of  the  relationship  between  the  self  and 
+
+quantification, some players proposed a more nuanced approach. For instance, P23 told us that: 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:17 
+
+It is very hard to balance. If I use it too much, it starts to get to me… My principle is that I won’t 
+bother  as  long  as  the  team  comp  looks  decent.  But  if  I  see  some  picks  that  are  far  from  meta 
+[widely  accepted  champion  select  strategy],  like  ashe  jungle,  I  gotta  make  sure  that  he  is  not 
+trolling. [P23] 
+P23  admitted  the  psychological  toll  of  misusing  quantification.  However,  he  did  not  simply 
+stop  using,  or  constantly  use,  quantification  tools.  He  adopted  a  case-by-case  approach  with 
+consideration of specific conditions. 
+
+6 DISCUSSION 
+In this paper, we reported an ethnographic account of quantification in the player community of 
+League of Legends. The player community celebrates a highly competitive culture where players 
+aspire  to  higher  ranks,  and  admire  high-ranking  players,  especially  professional  players,  which 
+has been commonly found in eSports gaming communities [39,44,73,77]. Therefore, it is perhaps 
+unsurprising that numbers and quantification play an indispensable role in this community. The 
+complexity  of  quantification  practices  is  conditioned  by  the  publicity  of  every  single  member’s 
+statistics accumulated across multiple years, an abundance of advanced quantification tools, and 
+years  of  development  of  a  culture  of  interpretation  of  numbers.  All  players  are  involved, 
+regardless  of  their  willingness.  Players  who  refuse  to  use  quantification  are  still  subject  to  the 
+quantification, evaluation, and judgment from their teammates and opponents.  
+
+In many ways, players’ own accounts and forums discussions are in alignment with the ideal 
+of developing “self-knowledge through numbers,” as they adeptly used quantification to develop 
+knowledge about themselves as well as their teammates and opponents in order to win matches 
+and subsequently improve ranks. However, quantification could also take a toll on players, both 
+cognitively and emotionally, as players also struggled to find a balance in their relationship with 
+numbers,  realizing  that  improper  use  of  quantification  could  can  distress  them  and  negatively 
+impact  virtual  teamwork.  Next,  we  discuss  implications  of  the  multiplicity  of  perspectives  on 
+numbers, the relationship between quantification and trust, and players’ notion of proper use in 
+relation to self-knowledge. 
+
+6.1 A Complex Dance Between Interpretive Flexibility and Numerical Authority 
+Our findings about the nuances and complexities in players’ experiences with numbers resonates 
+with  Espeland  and  Stevens  that  numbers  have  multiple  meanings  and  purposes  [26].  Numbers 
+generated  through  quantification  had  multiple  meanings  to  participants.  These  meanings  were 
+constructed  based  on  players’  interpretations,  experiences,  and  discussions  with  other  players 
+within  the  community.  The  numbers  could  be  an  explicit  representation  of  player  skill  and 
+performance,  evident in how study  participants  took pride in their high  win rate  champions in 
+interviews. Participants also believed that they could capture many other personal qualities such 
+as  mental  state  and  desire  to  win  through  scrutiny  of  statistics  such  as  win  rate  and  match 
+history. 
+
+Numbers  also  possessed  multiple  types  of  purposes,  which  could  analyzed  as  “deeds”  [26]. 
+They not only described what a player had achieved in the past, but also advised in-game actions, 
+and predicted whether the player would either succeed or fail in the future. Our findings reported 
+many accounts where numbers inspired players to predict match results and strategize gameplay. 
+In Table 2, we summarize representative types of numbers and their purposes. (A comprehensive 
+list of types is infeasible due to page limit.) However, it is important to note that numbers did not 
+work alone, and sometimes players triangulated multiple numbers to develop an explanation. For 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:18 
+
+  Y. Kou & X. Gui 
+
+instance, we discussed how P19 used both long-term statistics and his own rank to infer that his 
+opponent was probably a smurf. 
+
+Codes for purposes: 1: self-evaluation; 2: inferring about others’ skill; 3: inferring about others’ mentality; 4, 
+strategizing gameplay 
+
+Table 2. Representative types of numbers and purposes.  
+
+Purposes  Description 
+1, 2, 4 
+
+Types 
+Player ranks such as 
+Gold and Diamond 
+
+Long-term stats on a 
+champion such as 
+KDA, win rate, and 
+CS 
+Recent match history 
+(esp., the win/loss 
+ratio) 
+
+1, 2, 4 
+
+3, 4 
+
+Player rank was the primary if not the most important 
+indicator of player skill (1, 2). Players respected and 
+followed higher-ranked players (4). 
+These cumulative averages indicated how good a player 
+was at this champion (1,2), and supported strategizing 
+gameplay around teammates who picked familiar 
+champions (4). 
+A loss streak in recent matches could cause anxiety and 
+frustrations (3). To win, players could make plans to 
+constrain and frustrate an opponent who was already 
+frustrated (4). 
+
+Such  multiplicity  of  meanings  and  purposes  highlights  the  vast  flexibility  of  interpreting 
+numbers  in  LoL.  Such  interpretive  flexibility  of  numbers  is  rooted  in  players’  diverse  sets  of 
+situated knowledge. For example, P5 and Yasuo players would have very different opinions about 
+whether a win rate of 55% was good enough on Yasuo. P15 once disagreed with her teammates 
+upon the interpretation of KDA.  
+
+Importantly,  beneath  these  disagreements  over  how  to  interpret  numbers  was  in  fact  the 
+authority  many  LoL  players  granted  to  the  numbers  and  quantification  tools.  Authority, 
+according  to  Weber,  is  a  form  of  power  that  is  legitimate  without  either  coercion  or  threat  of 
+violence  [78].  Such  numerical  authority  resided  in  many  characteristics  of  quantification  tools: 
+the  overwhelming  amount  of  numbers  that  implied  their  comprehensiveness,  the  archival  of 
+complete  historical  data  that  expressed  a  sense  of  continuum,  and  the  fast  response  time  that 
+communicated reliability. Numerical authority also rested in players’ own practices, such as their 
+sustained  use  and  learning  to  use,  and  their  discussions  with  others  regarding  how  to  use 
+quantification. 
+
+Numerical  authority  guided  players  to  develop  categories  such  as  the  dichotomy  between 
+“good”  and  “bad,”  albeit  in  a  distributed  and  informal  fashion.  Still,  players’  classification 
+activities  resonated  with  what  Bowker  and  Star  warned  about  the  ramifications  of 
+institutionalized  and  formalized  classification  systems  [5].  For  example,  the  South  Africa  racial 
+classification  system  sorted  individuals  into  four  major  racial  groups  which  intrinsically 
+supported the ruling classes’ identity and legitimacy, but Bowker and Star found individual cases 
+that did not comply with the legal and technical-scientific delineations [5]. In our study, players 
+agreed  upon  the  purposes  of  various  numbers,  but  were  rarely  unanimous  on  how  to  interpret 
+them. Classification activities were constantly carried out at the individual level and met constant 
+pushback  as  players  rejected  to  be  classified  as  “bad”  players.  Without  institutional  push  and 
+practical  needs,  it  is  possible  that  players’  classification  activities  are  in  in  a  constant  flux, 
+manifesting a complex dance between interpretive flexibility and numerical authority. 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+ 
+ 
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:19 
+
+6.2 Quantification and the Communicative Aspect of Trust  
+Resonating with  many  game scholars’ observation of  the  blurring  boundary between  work and 
+play  [56,57,80],  LoL  players’  participation  also  involved  intense  work  in  terms  of  the  sheet 
+amount  of  knowledge  to  learn  about,  necessary  attention,  energy,  and  techniques  to  guarantee 
+their  performance.  Therefore,  quantification  did  not  simply  enhance  or  challenge  LoL’s  virtual 
+teamwork.  Rather,  it  had  an  intensifying  and  complicating  effect  by  demanding  cognitive 
+engagement  from  all  players  who  were  already  “working.”  Therefore,  there  were  parallels 
+between  the  use  of  quantification  in  LoL  teams  and  collaborative  traces  in  global  software 
+development. 
+
+Building  upon  prior  discussions  of  the  utility  of  collaborative  traces  in  developing  trust  in 
+virtual  teams  [55,74],  in  this  paper,  we  found  similar  cases  such  as  P12’s  example  where  LoL 
+players  developed  better  understandings  of  and  trust  in  their  teammates,  and  proceeded  to 
+strategize  around  competent  teammates.  However,  these  cases  were  oftentimes  ideal  scenarios 
+where  teammates  perceived  each  other’s  numbers  in  an  acceptable  range  and  were  willing  to 
+coordinate. 
+
+Discussing how trust can be developed or enhanced by quantification speaks to the notion of 
+instrumental  trust  [8].  Instrumental  trust  rests  upon  instrumental  rational  efficiency  of  the 
+system, or the instrumental value of quantification to players in our study. However, Brown sees 
+trust as “inherently irrational and affective,” because trust is a response to uncertainty, which is 
+then  linked  to  potential  anxiety  [8].  Therefore,  the  instrumental  perspective  is  insufficient  in 
+understanding  the  relationship  between  quantification  and  trust.  Players  could  easily  develop 
+trust  or  expectations  in  their  teammates  with  superior  numbers  that  had  a  convincing  power. 
+However,  our  findings  about  individuals’  anxiety  as  well  as  team-level  tensions  and  conflicts 
+reflected  the  inherent  irrationality  and  affection  in  the  process  in  which  players  used 
+quantification  with  ensuing  trust  or  distrust.  Therefore,  our  findings  point  to  nuances  and 
+complexities of trust beyond the instrumental perspective. 
+
+Niklas  Luhmann  proposed  the  notion  of  communicative  trust  [51].  According  to  Luhmann, 
+communicative trust has three qualities: the process of trust requires mutual commitment as two 
+sides  must  be  involved;  the  building  up  of  trust  depends  on  easily  interpretable  situations  and 
+possibility  of  communication;  and  trust  can  only  be  offered  and  accepted,  not  demanded  [51]. 
+Indeed,  our  findings  resonate  with  this  communicative  aspect  of  trust.  To  cope  with  the  trust 
+issues in their teamwork, players frequently performed various communicative acts. They could 
+draw upon their own numbers to legitimize a claim, to confront their teammates’ decisions which 
+they  deemed  unhelpful  to  team,  or  to  negotiate  strategies.  Through  communication,  trust  and 
+distrust could be expressed, established, enhanced, or diminished. 
+
+The communicative aspect of trust was heightened in LoL teams in comparison to previously 
+studied global software development teams, for several reasons. First, despite the many parallels 
+between  work  and  play,  LoL’s  teamwork  environment  often  lacks  professional  etiquette  and 
+courtesy that would be more typical in workplace [17]. By contrast, LoL is an online game where 
+interpersonal aggression is a common theme [43,48,71]. Therefore, it is perhaps unsurprising that 
+almost  all  of  our  participants  reportedly  spoke  out  in  game,  expressing  concerns  about  trust. 
+Second,  LoL  is  a  highly  competitive  team-based  game,  and  players  need  to  rely  on  their 
+teammates  to  win  [43].  Therefore,  players  often  have  scrupulous  attention  to  their  teammates’ 
+performance and status. Third, LoL players considered their numbers as part of their identity and 
+endeavored to improve them [44], much like prior studies of how social media users made efforts 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:20 
+
+  Y. Kou & X. Gui 
+
+to improve their numerical representations [22,38]. Taking pride in their own numbers, players 
+might defend against teammates’ questions and doubts. 
+
+The  perspective  of  communicative  trust  also  invites  reflections  upon  possible  hidden 
+disagreements and tensions when researching and implementing collective traces for trust. It is 
+likely  that  people  have  diverse  interpretations  of  capacity  and  performance,  even  in  ideal 
+scenarios where through predefined measurements collective traces are reported to enhance trust. 
+Unrecognition  of  invisible  disagreements  and  tensions  could  have  a  deteriorating  effect  in  the 
+long run. It  is important to investigate what  narratives  or perspectives are  preferred,  and what 
+are rendered invisible or marginalized. 
+
+6.3 Proper Use of Quantification 
+Our  findings  reported  a  variety  of  negative  consequences  and  burdens  as  perceived  by  our 
+participants. There were stress and anxiety as the individual level, and conflicts and tensions at 
+the  team  level.  These  negative  consequences  echoed  a  few  HCI  studies  of  self-tracking  that 
+reported  on  emotional  burdens  [15,42].  When  players  ascribed  much  authority  to  numbers  and 
+believed in numbers’ explanatory and prescriptive power, the power relation was produced and 
+reproduced between people and technology. But in this power relation, it is quantification tools 
+that discipline and punish people, instead of people consciously manage technology use. 
+
+In self-tracking the notion of self-knowledge was often traced back to Foucault to discuss how 
+self-tracking  technologies  could  help  the  production  of  self-knowledge  [49,53].  However, 
+Foucault stressed the importance of human agency in discovering self-knowledge, and examined 
+how  self-examination  such  as  confession  and  reflective  writing  constituted  technologies  of  the 
+self [28]. That is, the discovery of self-knowledge is only enacted when people keep interrogating 
+themselves  about  their  relationships  with  any  entities  beyond  the  self,  including  the  numbers. 
+However,  when  quantification  tools  acquired  numerical  authority  from  players,  it  became 
+epistemologically  dangerous  if  players  blindly  bestowed  trust  in  quantification  tools.  The 
+numerical authority prescribed player actions towards caring about numbers, improving numbers, 
+and judging others based on numbers. 
+
+It  is  against  this  backdrop  that  certain  players  became  aware  of  the  ramifications  of 
+quantification.  They  stressed  proper  use  of  quantification.  By  proper  use  we  mean  players 
+individually developed normative judgments on how and when to use quantification tools. They 
+did not presume knowledge obtained from quantification was the absolute truth. They perceived 
+limitations  of  numbers  and  knew  that  they  should  use  quantification  in  a  proper  way  so  as  to 
+avoid  negative  consequences  such  as  frustration,  anxiety,  and  aggression  towards  teammates. 
+Therefore, proper use of quantification in our study has two orientations: one towards the inner 
+self where players took care of their own mind and emotion, and one towards the social where 
+they  tried  to  sort  out  the  proper  relationships  with  other  players.  Both  orientations  were 
+intertwined and together constituted proper use of quantification in players’ terms.  
+
+The inward and outward orientations manifested themselves both cognitively and emotionally. 
+Along the inward orientation, cognitive proper use suggested that players could reasonably and 
+logically develop understanding of their own skill and performance. For example, a player would 
+not make judgments about their skill based on bad KDA in one single match, but would perform 
+detailed  analysis  to  cultivate  deeper  understanding  of  themselves  and  the  game,  drawing  from 
+their situated knowledge. Emotional proper use suggested that players could effectively manage 
+their emotions when watching their own numbers. They would easily cope with frustrations and 
+anxiety.  Along  the  outward  orientation,  cognitive  proper  use  suggested  that  players  could 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:21 
+
+reasonably and logically reason about another players’ capacity. Emotional proper use suggested 
+that  players  would  not  perform  aggressive  behaviors  such  as  harassment  towards  their 
+teammates and opponents. 
+
+Importantly, what constituted proper use of quantification was highly individualistic. Players 
+might have vastly different ideas of what constituted their own proper use. For example, we have 
+several  players  who  reportedly  felt  comfortable  checking  every  single  opponent  and  teammate 
+during a match. But we also have P21 and P22 who refrained from doing so to take care of their 
+own mind.  
+
+7 IMPLICATIONS FOR DESIGN 
+The findings in this paper seek to present a holistic narrative of quantification use in a site, and is 
+intended  to  propose  “new  ways  of  imagining  the  relationship  between  people  and  technology” 
+[19]. Drawing from previous literature and our findings, we discuss several design implications. 
+First,  while  players  granted  numerical  authority  to  quantification  tools,  mutual  understanding 
+and  shared  ways  of  interpretation  are  still  missing.  This  is  in  sharp  contrast  to  the  maturized 
+player  statistical  analysis  and  measurement  systems  in  sports,  such  as  sabermetrics  in  baseball 
+and APBRmetrics in basketball [16,70]. Contested interpretations and understandings resulted in 
+diverse play preferences that players disagreed a lot upon. Therefore, for eSports games to move 
+forward,  it  is  perhaps  helpful  if  authorities  such  as  game  developers  could  carry  out  efforts  in 
+standardizing and classifying player metrics. However, from a critical point of view, they should 
+also be aware of the potential ramifications of establishing a centralized, formalized classification 
+system  (see  [5,63]).  For  example,  the  diversity  of  player  experience  might  suffer  as  players  are 
+further  motivated  to  choose  only  top-ranked  play  styles  such  as  champion  picks,  team 
+composition, and in-game strategies. 
+
+Second, in terms of the amount of numbers for acquiring self-knowledge, more is not better. 
+Statistics,  measurements,  analyses  on  the  third-party  websites  were  already  extensive  and 
+complicated,  but  they  did  not  fulfil  players’  needs  in  understanding  themselves  or  their 
+teammates.  Players  had  the  burden  of  combing  through  all  the  statistics  to  come  up  with  their 
+own ways of explanation, often intuitively. One possible solution is to improve the visualization 
+of these quantification tools, like many collective trace tools already explored [29,74]. Currently 
+many  quantification  tools  merely  present  numerous  tables  showing  all  the  player  data  (e.g., 
+Figure 1). 
+
+Third, the wide range of situated knowledge necessary for making sense of numbers demands 
+players, especially beginners, to learn how to interpret numbers and derive insights. Our findings 
+showed that players utilized online forums to seek help. Currently most quantification tools only 
+provide raw data in forms of table. They could bridge this knowledge gap by employing advanced 
+data analytic techniques to provide certain insights into how to improve gameplay. 
+
+Fourth,  players  needed  to  switch  windows  between  their  game  client  and  third-party 
+quantification tools to get informed. This is consistent with the contemporary industry practices 
+of commercial game companies that rely upon enthusiastic players to voluntarily develop third-
+party  tools  and  in-game  add-on  items  [47].  However,  it  creates  additional  labor  for  players. 
+Future game design could consider presenting more statistics for players. 
+
+Lastly,  our  discussion  of  communicative  trust  suggested  that  it  is  important  to  attend  to 
+individual teammates’ interpretations and potential disagreements. Design of collaborative traces 
+could  consider  ways  of  encouraging  direct  communication  of  trust  and  distrust,  and  resolving 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:22 
+
+  Y. Kou & X. Gui 
+
+potential  tensions  at  an  early  stage.  For  example,  a  communication  channel  could  be  opened 
+whether interpretations of traces could be exchanged and explained. 
+
+8 LIMITATION AND FUTURE WORK 
+With  a  primary  focus  on  the  role  of  quantification  in  virtual  teams  in  League  of  Legends,  this 
+study  left many  underexplored areas  that warrant future analysis. One such  area is the privacy 
+concerns of LoL players as the owner of League of Legends publicizes their personal data. In the 
+main  body  of  this  paper,  we  analyzed  how  players  held  a  pragmatic  attitude  towards  such 
+publicity,  but  such  acceptance  was  also  contested,  as  a  few  players  did  express  certain  privacy 
+concerns. Future work can be done towards a more systematic analysis. Another underexplored 
+area  is  the  aesthetics  of  quantification,  manifested  in  LoL  players’  consumption  of  the  charts, 
+graphs,  and  tables  presented  by  quantification  tools.  Espeland  and  Stevens  suggested  two 
+universal  aesthetic  ideals  for  numerical  pictures  which  are  clarify  and  parsimony  [26].  We 
+observed that players were aware of the great variety of available tools, and talked about whether 
+the views presented by particular tools were “messy” or aesthetically pleasing. Future work can 
+compare different tools along this aesthetic dimension. 
+
+9 CONCLUSION 
+In this paper, we reported an ethnographic account of quantification in League of Legends. We 
+analyzed  how  quantification  was  adopted  as  an  integral  part  of  the  highly  competitive  gaming 
+culture.  We  observed  the  complicated  relationship  between  players  and  numbers  comprised  of 
+interpretation and negotiation. By analyzing numbers as deeds, we started to see how numbers 
+gained authority and exerted influence over players. This case of quantification use in an online 
+game  community  also  inspired  us  to  reflect  on  broader  issues  such  as  what  constitutes  self-
+knowledge  obtained 
+interplay  between  quantification  and 
+surveillance, and the role of quantification in virtual teams. We thus caution against an optimistic 
+tone  of  narrating  quantification  as  a  way  of  empowering,  and  stress  a  reflection  on  the  proper 
+use  of  quantification  against  the  backdrop  of  the  increasing  prevalence  of  personal  informatics 
+systems. 
+
+through  quantification, 
+
+the 
+
+ACKNOWLEDGMENTS 
+
+We thank our participants for sharing their thoughts and experiences with us. We are grateful to the 
+anonymous reviewers and the associate chairs for their generous and constructive feedback. Their cogent 
+and detailed suggestions helped us improve the article in significant ways. 
+
+REFERENCES 
+[1]  Anders Albrechtslund. 2008. Online social networking as participatory surveillance. First Monday 13, 3 (2008). 
+[2]  Anders Albrechtslund and Lynsey Dubbeld. 2005. The Plays and Arts of Surveillance: Studying Surveillance as Entertainment. 
+
+[3] 
+[4] 
+
+Surveill. Soc. 3, 2/3 (2005), 216–221. 
+John Langshaw Austin. 1975. How to do things with words. Clarendon Press. 
+Jeffrey  Bardzell,  Jeffrey  Nichols,  Tyler  Pace,  and  Shaowen  Bardzell.  2012.  Come  Meet  Me  at  Ulduar:  Progression  Raiding  in 
+World of Warcraft. In Proceedings of the ACM 2012 conference on Computer Supported Cooperative Work- CSCW ’12, 603–612. 
+
+[5]  Geoffrey C. Bowker and Susan Leigh Star. 2000. Sorting Things Out: Classification and Its Consequences. MIT Press. 
+[6]  Virginia Braun and Victoria Clarke. 2006. Using thematic analysis in psychology. Qual. Res. Psychol. 3, 2 (January 2006), 77–101. 
+
+DOI:https://doi.org/10.1191/1478088706qp063oa 
+
+[7]  Andrea Mubi Brighenti. 2018. The Social Life of Measures: Conceptualizing Measure–Value Environments. Theory, Cult. Soc. 35, 
+
+1 (January 2018), 23–44. DOI:https://doi.org/10.1177/0263276416689028 
+
+[8]  Patrick R. Brown. 2008. Trusting in the New NHS: instrumental versus communicative action. Sociol. Health Illn. 30, 3 (2008), 
+
+349–363. 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:23 
+
+[9]  Amy Bruckman. 2002. Studying the amateur artist: A perspective on disguising data collected in human subjects research on the 
+
+Internet. Ethics Inf. Technol. 4, 3 (2002), 217–231. 
+
+[10]  Michel Callon and John Law. 2005. On Qualculation, Agency, and Otherness. Environ. Plan. D Soc. Sp. 23, 5 (October 2005), 717–
+
+733. DOI:https://doi.org/10.1068/d343t 
+
+[11]  Rafael  A.  Calvo  and  Dorian  Peters.  2013.  The  irony  and  re-interpretation  of  our  quantified  self.  In  Proceedings of the 25th 
+Australian Computer-Human Interaction Conference on Augmentation, Application, Innovation, Collaboration - OzCHI ’13,  367–
+370. DOI:https://doi.org/10.1145/2541016.2541070 
+
+[12]  Eun  Kyoung  Choe,  Nicole  B  Lee,  Bongshin  Lee,  Wanda  Pratt,  and  Julie  A  Kientz.  2014.  Understanding  Quantified-selfers’ 
+Practices  in  Collecting  and  Exploring  Personal  Data.  In  Proceedings of the 32Nd Annual ACM Conference on Human Factors in 
+Computing Systems (CHI ’14), 1143–1152. DOI:https://doi.org/10.1145/2556288.2557372 
+
+[13]  Chia-Fang Chung, Elena Agapie, Jessica Schroeder, Sonali Mishra, James Fogarty, and Sean A Munson. 2017. When Personal 
+Tracking  Becomes  Social:  Examining  the  Use  of  Instagram  for  Healthy  Eating.  In  Proceedings of the 2017 CHI Conference on 
+Human Factors in Computing Systems (CHI ’17), 1674–1687. DOI:https://doi.org/10.1145/3025453.3025747 
+
+[14]  Franck  Cochoy.  2008.  Calculation,  qualculation,  calqulation:  shopping  cart  arithmetic,  equipped  cognition  and  the  clustered 
+
+consumer. Mark. Theory 8, 1 (March 2008), 15–44. DOI:https://doi.org/10.1177/1470593107086483 
+
+[15]  Felicia  Cordeiro,  Daniel  A  Epstein,  Edison  Thomaz,  Elizabeth  Bales,  Arvind  K  Jagannathan,  Gregory  D  Abowd,  and  James 
+Fogarty. 2015. Barriers and Negative Nudges: Exploring Challenges in Food Journaling. In Proceedings of the 33rd Annual ACM 
+Conference on Human Factors in Computing Systems (CHI ’15), 1159–1162. DOI:https://doi.org/10.1145/2702123.2702155 
+
+[16]  Gabriel  B.  Costa,  Michael  R.  Huber,  and  John  T.  Saccoman.  2008.  Understanding sabermetrics : an introduction to the science of 
+
+baseball statistics. McFarland & Co. 
+
+[17]  Michael Curtin. 1985. A Question of Manners: Status and Gender in Etiquette and Courtesy. J. Mod. Hist. 57, 3 (September 1985), 
+
+396–423. DOI:https://doi.org/10.1086/242859 
+
+[18]  Alan R. Dennis, Lionel P. Robert, Aaron M. Curtis, Stacy T. Kowalczyk, and Bryan K. Hasty. 2012. Trust Is in the Eye of the 
+Beholder: A Vignette Study of Postevent Behavioral Controls’ Effects on Individual Trust in Virtual Teams. Inf. Syst. Res. 23, 2 
+(June 2012), 546–558. DOI:https://doi.org/10.1287/isre.1110.0364 
+
+[19]  Paul Dourish. 2006. Implications for design. In Proceedings of the SIGCHI conference on Human Factors in computing systems - CHI 
+
+’06, 541–550. DOI:https://doi.org/10.1145/1124772.1124855 
+
+[20]  Paul Dourish and Victoria Bellotti. 1992. Awareness and Coordination in Shared Workspaces. In proc. of CSCW 1992, 107–114. 
+
+DOI:https://doi.org/10.1145/143457.143468 
+
+[21]  Paul  Dourish  and  Scott  D.  Mainwaring.  2012.  Ubicomp’s  colonial  impulse.  In  Proceedings of the 2012 ACM Conference on 
+
+Ubiquitous Computing, 133–142. DOI:https://doi.org/10.1145/2370216.2370238 
+
+[22]  Nicole Ellison, Rebecca Heino, and Jennifer Gibbs. 2006. Managing Impressions Online: Self-Presentation Processes in the Online 
+
+Dating Environment. J. Comput. Commun. 11, 2 (January 2006), 415–441. DOI:https://doi.org/10.1111/j.1083-6101.2006.00020.x 
+
+[23]  Jacques Ellul. 1964. The Technological Society. Vintage Books. 
+[24]  Thomas  Erickson  and  Wendy  A.  Kellogg.  2000.  Social  translucence:  an  approach  to  designing  systems  that  support  social 
+
+processes. ACM Trans. Comput. Interact. 7, 1 (March 2000), 59–83. 
+
+[25]  Wendy  Nelson  Espeland and Mitchell  L.  Stevens.  1998.  Commensuration  as  a  Social  Process.  Annu. Rev. Sociol.  24,  1  (August 
+
+1998), 313–343. DOI:https://doi.org/10.1146/annurev.soc.24.1.313 
+
+[26]  Wendy  Nelson  Espeland  and  Mitchell  L.  Stevens.  2008.  A  Sociology  of  Quantification.  Eur. J. Sociol. / Arch. Eur. Sociol. / Eur. 
+
+Arch. für Soziologie 49, (2008), 401–436. DOI:https://doi.org/10.2307/23998802 
+
+[27]  Michel Foucault. 1988. The History of Sexuality, Vol. 3: The Care of the Self (First Vint ed.). Vintage. 
+[28]  Michel  Foucault.  1998.  Technologies  of  the  self.  In  Ethics: Subjectivity and Truth (Essential Works of Foucault, 1954-1984, Vol. 1), 
+
+Paul Rabinow (ed.). The New Press, New York, 223–252. 
+
+[29]  Jon Froehlich and Paul Dourish. 2004. Unifying Artifacts and Activities in a Visual Tool for Distributed Software Development 
+
+Teams. In Proceedings of the 26th International Conference on Software Engineering, 387–396. 
+
+[30]  Penelope  Sue Greenberg,  Ralph  H.  Greenberg,  and  Yvonne  Lederer  Antonucci. 2007.  Creating  and  sustaining trust  in  virtual 
+
+teams. Bus. Horiz. 50, 4 (July 2007), 325–333. DOI:https://doi.org/10.1016/J.BUSHOR.2007.02.005 
+
+[31]  Xinning Gui, Yu Chen, Clara Caldeira, Dan Xiao, and Yunan Chen. 2017. When Fitness Meets Social Networks: Investigating 
+Fitness  Tracking  and  Social  Practices  on  WeRun.  In  Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems  - 
+CHI ’17, 1647–1659. DOI:https://doi.org/10.1145/3025453.3025654  
+
+[32]  Carl  Gutwin  and  Saul  Greenberg.  1998.  Design  for  individuals,  design  for  groups:  tradeoffs  between  power  and  workspace 
+awareness.  In  Proceedings  of  the  1998  ACM  conference  on  Computer  supported  cooperative  work    -  CSCW  ’98,  207–216. 
+DOI:https://doi.org/10.1145/289444.289495 
+
+[33]  B.M.S.  Hammarfelt,  S. de  Rijcke,  and  A.D.  Rushforth.  2016.  Quantified  academic  selves:  The  gamification of  science  through 
+
+social networking services. Inf. Res. 21, 2 (2016). 
+
+[34]  Linda Henderson, Eileen Honan, and Sarah Loch. 2016. The production of the academicwritingmachine. Reconceptualizing Educ. 
+
+Res. Methodol. 7, 2 (December 2016). DOI:https://doi.org/10.7577/rerm.1838 
+
+[35]  Guido  Hertel,  Udo  Konradt,  and  Borris  Orlikowski.  2004.  Managing  distance  by  interdependence:  Goal  setting,  task 
+interdependence,  and  team-based  rewards  in  virtual  teams.  Eur.  J.  Work  Organ.  Psychol.  13,  1  (March  2004),  1–28. 
+DOI:https://doi.org/10.1080/13594320344000228 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+93:24 
+
+  Y. Kou & X. Gui 
+
+[36]  Eileen Honan, Linda Henderson, and Sarah Loch. 2015. Producing Moments of Pleasure within the Confines of an Academic 
+
+Quantified. Creat. Approaches to Res. 8, 3 (2015), 44–62. 
+
+[37]  Yun  Huang,  Wenyue  Ye,  Nicholas  Bennett,  and  Noshir  Contractor.  2013.  Functional  or  Social?:  Exploring  Teams  in  Online 
+
+Games. In (CSCW ’13), 399–408. DOI:https://doi.org/10.1145/2441776.2441822 
+
+[38]  Jin  Yea  Jang,  Kyungsik  Han,  Patrick  C.  Shih,  and  Dongwon  Lee.  2015.  Generation  Like:  Comparative  Characteristics  in 
+Instagram.  In  Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems - CHI ’15,  4039–4042. 
+DOI:https://doi.org/10.1145/2702123.2702555 
+
+[39]  Dal Yong Jin. 2010. Korea’s Online Gaming Empire. MIT Press, Cambridge, Mass. 
+[40]  Prasert  Kanawattanachai  and  Youngjin  Yoo.  2002.  Dynamic  nature  of  trust  in  virtual  teams.  J. Strateg. Inf. Syst.  11,  3–4 
+
+(December 2002), 187–213. DOI:https://doi.org/10.1016/S0963-8687(02)00019-7 
+
+[41]  Nedim  Karakayali,  Burc  Kostem,  and  Idil  Galip.  2018.  Recommendation  Systems  as  Technologies  of  the  Self:  Algorithmic 
+3–24. 
+
+Theory,  Cult. 
+
+of  Music 
+
+(March 
+
+Taste. 
+
+2018), 
+
+and 
+
+Soc. 
+
+35, 
+
+2 
+
+Control 
+DOI:https://doi.org/10.1177/0263276417722391 
+
+Formation 
+
+the 
+
+[42]  Dmitri S. Katz, Blaine A. Price, Simon Holland, and Nicholas Sheep Dalton. 2018. Data, Data Everywhere, and Still Too Hard to 
+
+Link: Insights from User Interactions with Diabetes Apps. In CHI’2018. 
+
+[43]  Yubo Kou and Xinning Gui. 2014. Playing with strangers: understanding temporary teams in League of Legends. In Proceedings 
+of  the  first  ACM  SIGCHI  annual  symposium  on  Computer-human  interaction  in  play  -  CHI  PLAY  ’14,  161–169. 
+DOI:https://doi.org/10.1145/2658537.2658538 
+
+[44]  Yubo Kou, Xinning Gui, and Yong Ming Kow. 2016. Ranking Practices and Distinction in League of Legends. In Proceedings of 
+4–9. 
+
+on  Computer-Human 
+
+Interaction 
+
+-  CHI 
+
+PLAY 
+
+Play 
+
+’16, 
+
+in 
+
+2016  Annual 
+
+the 
+DOI:https://doi.org/10.1145/2967934.2968078 
+
+Symposium 
+
+[45]  Yubo Kou, Xinning Gui, Shaozeng Zhang, and Bonnie Nardi. 2017. Managing Disruptive Behavior through Non-Hierarchical 
+Governance:  Crowdsourcing  in  League  of  Legends  and  Weibo.  Proc. ACM Human-Computer Interact.  1,  CSCW  (2017),  62. 
+DOI:https://doi.org/10.1145/3134697 
+
+[46]  Yubo Kou, Yao Li, Xinning Gui, and Eli Suzuki-Gill. 2018. Playing with Streakiness in Online Games: How Players Perceive and 
+React  to  Winning  and  Losing  Streaks  in  League  of  Legends.  In  Proceedings of the 2018 CHI conference on Human Factors in 
+Computing Systems - CHI ’18, Paper No. 578. DOI:https://doi.org/10.1145/3173574.3174152 
+[47]  Yong Ming Kow and Bonnie Nardi. 2010. Who owns the Mods? First Monday 15, 5 (2010). 
+[48]  Haewoon Kwak and Jeremy Blackburn. 2014. Linguistic Analysis of Toxic Behavior in an Online Video Game. In International 
+
+Conference on Social Informatics. 
+
+[49]  Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A stage-based model of personal informatics systems. In Proceedings of the 2010 CHI 
+
+conference on Human factors in computing systems - CHI ’10, 557-566. DOI:https://doi.org/10.1145/1753326.1753409 
+
+[50]  Xing Li. 2017. The League of Legends Worlds final reached 60 million unique viewers. dotesports. 
+[51]  Niklas Luhmann. 2018. Trust and power. John Wiley & Sons. 
+[52]  Deborah  Lupton.  2013.  Understanding  the  Human  Machine  [Commentary].  IEEE  Technol.  Soc.  Mag.  32,  4  (2013),  25–30. 
+
+DOI:https://doi.org/10.1109/MTS.2013.2286431 
+
+[53]  Deborah Lupton. 2014. Self-tracking cultures: towards a sociology of personal informatics. In Proceedings of the 26th Australian 
+77–86. 
+
+Interaction  Conference  on  Designing  Futures 
+
+the  Future  of  Design 
+
+-  OzCHI 
+
+’14, 
+
+Computer-Human 
+DOI:https://doi.org/10.1145/2686612.2686623 
+
+[54]  George Marcus. 1995. Ethnography in/of the World System: The Emergence of Multi-Sited Ethnography. Annu. Rev. Anthropol. 
+
+24, (1995), 95–117. 
+
+[55]  Jennifer Marlow, Laura Dabbish, and Jim Herbsleb. 2013. Impression formation in online peer production: activity traces and 
+personal  profiles  in  github.  In  Proceedings of the 2013 conference on Computer supported cooperative work - CSCW ’13,  117–128. 
+DOI:https://doi.org/10.1145/2441776.2441792 
+
+[56]  Ethan R. Mollick and Nancy Rothbard. 2013. Mandatory Fun: Gamification and the Impact of Games at Work. SSRN Electron. J. 
+
+(September 2013). DOI:https://doi.org/10.2139/ssrn.2277103 
+
+[57]  Bonnie Nardi. 2010. My Life as a Night Elf Priest: An Anthropological Account of World of Warcraft. University of Michigan Press. 
+[58]  Bonnie Nardi and Justin Harris. 2006. Strangers and friends: collaborative play in world of warcraft. In Proceedings of the 2006 
+
+20th anniversary conference on Computer supported cooperative work, 149–158. 
+
+[59]  Kenton  O’Hara,  Maxine  Glancy,  and  Simon  Robertshaw.  2008.  Understanding  collective  play  in  an  urban  screen  game.  In 
+
+(CSCW ’08), 67–76. DOI:https://doi.org/10.1145/1460563.1460576 
+
+[60]  Gary  Olson  and  Judith  Olson.  2000.  Distance  Matters.  Human-Computer  Interact.  15,  2  (September  2000),  139–178. 
+
+DOI:https://doi.org/10.1207/S15327051HCI1523_4 
+
+[61]  Michael Quinn Patton. 1990. Qualitative evaluation and research methods. Sage Publications, Thousand Oaks. 
+[62]  Linda  Peters  and  Ronald  J.  Karren.  2009.  An  Examination  of  the  Roles  of  Trust  and  Functional  Diversity  on  Virtual  Team 
+
+Performance Ratings. Gr. Organ. Manag. 34, 4 (August 2009), 479–504. DOI:https://doi.org/10.1177/1059601107312170 
+
+[63]  Kathleen  H  Pine  and  Max  Liboiron.  2015.  The  Politics  of  Measurement  and  Action.  In  Proceedings of the 33rd Annual ACM 
+
+Conference on Human Factors in Computing Systems (CHI ’15), 3147–3156. DOI:https://doi.org/10.1145/2702123.2702298 
+
+[64]  Matt  Porter.  2016.  League  of  Legends  Surpasses  100  Million  Monthly  Active  Players.  ign.com.  Retrieved  from: 
+
+http://www.ign.com/articles/2016/09/14/league-of-legends-surpasses-100-million-monthly-active-players 
+
+[65]  Neil Postman. 1993. Technopoly: The Surrender of Culture to Technology (1st ed.). Vintage. 
+[66]  Neil Postman. 2006. Amusing ourselves to death : public discourse in the age of show business. Penguin. 
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+Entangled with Numbers: Quantified Self and Others in a Team-Based Online Game    
+
+93:25 
+
+[67]  Lionel P Robert. 2016. Monitoring and Trust in Virtual Teams. In Proceedings of the 19th ACM Conference on Computer-Supported 
+
+Cooperative Work & Social Computing - CSCW ’16, 244–258. DOI:https://doi.org/10.1145/2818048.2820076 
+
+[68]  Ellen  Rusman,  Jan  van  Bruggen,  Peter  Sloep,  Martin  Valcke,  and  Rob  Koper.  2013.  The  Mind’s  Eye  on  Personal  Profiles:  A 
+Cognitive  Perspective  on  Profile  Elements  that  Inform  Initial  Trustworthiness  Assessments  and  Social  Awareness  in  Virtual 
+Project Teams. Comput. Support. Coop. Work 22, 2–3 (April 2013), 159–179. DOI:https://doi.org/10.1007/s10606-012-9171-5 
+[69]  Michael Sauder and Wendy Nelson Espeland. 2009. The Discipline of Rankings: Tight Coupling and Organizational Change. Am. 
+
+Sociol. Rev. 74, 1 (February 2009), 63–82. DOI:https://doi.org/10.1177/000312240907400104 
+
+[70]  Robert  P.  Schumaker,  Osama  K.  Solieman,  and  Hsinchun  Chen.  2010.  Data  Sources  for  Sports.  Sports Data Mining.  Springer, 
+
+Boston, MA, 23–28. DOI:https://doi.org/10.1007/978-1-4419-6730-5_3 
+
+[71]  Kenneth B. Shores, Yilin He, Kristina L. Swanenburg, Robert Kraut, and John Riedl. 2014. The identification of deviance and its 
+impact on  retention  in  a multiplayer  game.  In  Proceedings of the 17th ACM conference on Computer supported cooperative work & 
+social computing - CSCW ’14, 1356–1365. DOI:https://doi.org/10.1145/2531602.2531724 
+
+[72]  T. L. Taylor. 2006. Play between worlds: exploring online game culture (First Edit ed.). MIT Press. 
+[73]  T. L Taylor. 2012. Raising the stakes: e-sports and the professionalization of computer gaming. MIT Press, Cambridge, Mass. 
+[74]  Erik H. Trainer, Ban Al-Ani, and David F. Redmiles. 2011. Impact of collaborative traces on trustworthiness. In Proceeding of the 
+’11,  40–47. 
+
+international  workshop  on  Cooperative  and  human  aspects  of  software  engineering 
+
+-  CHASE 
+
+4th 
+DOI:https://doi.org/10.1145/1984642.1984649 
+
+[75]  Shawn  Tseng  and  B.  J.  Fogg.  1999.  Credibility  and  computing  technology.  Commun.  ACM  42,  5  (May  1999),  39–44. 
+
+DOI:https://doi.org/10.1145/301353.301402 
+
+[76]  Pete Volk. 2016. League of Legends now boasts over 100 million monthly active players worldwide. riftherald.com. Retrieved from 
+
+http://www.riftherald.com/2016/9/13/12865314/monthly-lol-players-2016-active-worldwide 
+
+[77]  Michael G Wagner. 2006. On the Scientific Relevance of eSports. In International Conference on Internet Computing. 
+[78]  Max Weber. 1978. Economy and society : an outline of interpretive sociology. University of California Press. 
+[79]  Jennifer R. Whitson. 2013. Gaming the Quantified Self. Surveill. Soc. 11, 1/2 (May 2013), 163–176. 
+[80]  Nick Yee. 2006. The Labor of Fun: How Video Games Blur the Boundaries of Work and Play. Games Cult. 1, 1 (January 2006), 68–
+
+71. DOI:https://doi.org/10.1177/1555412005281819 
+
+Received April 2018; revised July 2018; accepted September 2018.  
+
+Proceedings of the ACM on Human-Computer Interaction, Vol. 2, No. CSCW, Article 93, Publication date: November 2018. 
+
+ 
+ 
+ 
+

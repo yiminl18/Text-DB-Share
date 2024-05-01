@@ -1,0 +1,1442 @@
+Social Fabric Fitness: The Design and Evaluation of 
+Wearable E-Textile Displays to Support Group Running 
+
+Matthew Louis Mauriello1, Michael Gubbels2, Jon E. Froehlich1 
+Makeability Lab | Human-Computer Interaction Lab 
+Department of Computer Science1, College Of Information Studies2 
+University of Maryland, College Park 
+{mattm401, mgubbels, jonf}@umd.edu 
+
+ABSTRACT 
+Group  exercise  has  multiple  benefits  including  greater 
+adherence to fitness regimens, increased enjoyment among 
+participants, and enhanced workout intensity. While a large 
+number  of  technology  tools  have  emerged  to  support  real-
+time  feedback  of  individual  performance,  tools  to  support 
+group fitness are limited. In this paper, we present a set of 
+wearable e-textile displays for running groups called Social 
+Fabric  Fitness  (SFF).  SFF  provides  a  glanceable,  shared 
+screen  on  the  back  of  the  wearer’s  shirt  to  increase 
+awareness and motivation of group fitness performance. We 
+discuss  parallel  prototyping  of  three  designs—one  flexible 
+e-ink  and  two  flexible  LED-based  displays;  the  selection 
+and refinement of one design; and two evaluations—a field 
+study of 10 running groups and two case studies of running 
+races.  Our  qualitative  findings  indicate  that  SFF  improves 
+awareness  of  individual  and  group  performance,  helps 
+groups  stay  together,  and  improves  in-situ  motivation.  We 
+close with reflections for future athletic e-textile displays. 
+
+ACM Classification Keywords 
+H5.m. Information interfaces and presentation (e.g., HCI). 
+
+INTRODUCTION 
+Since  the  1990s,  running  has  experienced  unprecedented 
+growth  in  the  US  [25,27].  Although  typically  seen  as  an 
+individual  activity,  a  growing  number  of  runners  are 
+choosing to run in groups and/or joining running clubs [2]. 
+Sports  psychologists  and  coaches  cite  multiple  benefits  of 
+group  exercise,  including  greater  adherence  to  exercise 
+regimens, increased commitment to reach shared goals, and 
+more intense workouts [13,14,24,33]. While a large number 
+of  tools  have  emerged  to  support  real-time  feedback  of 
+individual  performance  (e.g.,  Runkeeper,  Nike+),  we  are 
+unaware  of  work  that  investigates  real-time  tracking  and 
+feedback to support collocated group fitness activities.  
+
+In  this  paper,  we  introduce  a  set  of  wearable  electronic 
+textile  (e-textile)  displays—called  Social  Fabric  Fitness 
+(SFF)—designed  to  increase  performance  awareness  and 
+motivation for group fitness (Figure 1). SFF is worn by one 
+
+Permission to make digital or hard copies of all or part of this work for personal or 
+classroom use is granted without fee provided that copies are not made or distributed 
+for  profit  or  commercial  advantage  and  that  copies  bear  this  notice  and  the  full 
+citation on the first page. Copyrights for components of this work owned by others 
+than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, 
+or  republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior  specific 
+permission and/or a fee. Request permissions from permissions@acm.org. 
+CHI 2014, April 26—May 01 2014, Toronto, ON, Canada 
+Copyright 2014 ACM 978-1-4503-2473-1/14/04…$15.00. 
+http://dx.doi.org/10.1145/2556288.2557299  
+
+Figure 1: SFF visualize real-time run-tracking information on shared,
+glanceable wearable displays to increase group awareness and  fitness
+performance. See also the video in our supplementary materials.  
+
+or  two  pace  leaders  in  a  running  group;  the  displays 
+wirelessly  communicate  with  the  wearer’s  mobile  phone, 
+and  present  real-time  feedback  about  the  group’s  activity 
+(e.g., average pace, distance, and duration). Based on work 
+in  behavioral  science  related  to  the  motivational  effects  of 
+goal-setting  and  public  commitment  [15,26],  SFF  also 
+compares  recent  pace  averages  to  a  group-set  target  pace. 
+While  a  number  of  projects  in  ubiquitous  computing  and 
+HCI  have  focused  on  on-body  sports  sensing  (e.g., 
+[6,18,30]),  only  a  few  have  provided  real-time  textile-
+mediated  feedback  [16,22].  None  have  explored  a  shared, 
+wearable  display  for  runners  aimed  at  enhancing  group 
+awareness, cohesiveness, and motivation. 
+
+As  the  first  work  exploring  e-textile  information  displays 
+for runners, our research questions are largely exploratory, 
+including: what impact, if any, does SFF have on the wearer 
+in  terms  of  comfort,  performance,  self-awareness,  and 
+mental  affect?  How  does  SFF  impact  the  group  running 
+experience—does  it  help  support  group  awareness  and/or 
+cohesiveness?  Finally,  how  does  SFF  compare  to  other 
+tracking sources (e.g., watch, mobile phone)?  
+
+To examine these questions, we first designed, iterated on, 
+and informally evaluated three flexible e-textile prototypes: 
+two  LED-based  and  one  e-ink-based.  During  our  iterative 
+process, we focused primarily on viewability, comfort, size, 
+weight, and display content. We then selected and refined a 
+final prototype and performed a field study with 10 running 
+groups and two small race case studies. For the field study, 
+we  recruited  pre-existing  running  groups  with  at  least  4 
+members  to  run  with  two  SFF  prototypes  along  a  regular 
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2833  
+ 
+ 
+run route of  their  choosing for 30  mins  or longer;  in  total, 
+19 wearers and 33 non-wearers participated (N=52). For the 
+second study, we evaluated SFF in race environments—an 
+8K  trail  run  and  a  10K  road  race  (N=4).  For  both  studies, 
+we  collected  data  with  pre-  and  post-study  questionnaires, 
+semi-structured post-study interviews, and observations.  
+
+We found that both non-wearers and wearers felt that SFF 
+improved  their  awareness  of  their  group’s  performance, 
+helped  motivate  them  to  run  at  the  group-set  target  pace, 
+and  helped  keep  the  group  together.  Surprisingly,  only  a 
+few  wearers  were  concerned  with  publicly  revealing  their 
+run  data.  When  asked,  44  of  52  participants  (85%) 
+expressed interest in using SFF again (90% of wearers).  
+
+In  summary,  the  contributions  of  this  paper  are:  (i)  an 
+exploration of three e-textile designs built to support group 
+fitness  activities;  (ii)  findings  from  a  field  study  of  10 
+running  groups  and  two  case  studies  of  race  events;  (iii) 
+design  reflections  and  directions  for  future  athletic  jerseys 
+for  runners  and  other  sports  applications  (e.g.,  bicycling); 
+(iv) the idea of and new directions for the reappropriation of 
+quantified self systems for co-located shared activities.  
+
+RELATED WORK 
+We  discuss  benefits  of  group  exercise  and  sports 
+performance  feedback  before  covering  technology  tools  to 
+support running and e-textiles for athletics. 
+
+The Benefits of Group Exercise 
+Sports  psychologists  and  fitness  coaches  emphasize  that 
+exercising  in  groups:  (i)  helps  participants  adhere  to 
+training  regimens;  (ii)  provides  educational  benefits  since 
+the community can share knowledge on training approaches 
+increases  enjoyment  and 
+and  athletic  events; 
+engagement  in  the  activity  itself;  and  (iv)  aids  training 
+intensity  as  group  members  push  each  other  beyond 
+preconceived limits [2,5,13,14,24,33]. 
+
+(iii) 
+
+For  point  (iv)  sports  psychologists  often  refer  to  social 
+facilitation theories, which posit that the presence of others 
+can  increase  a  person’s  general  drive  and  focus  [5,29]. 
+Bond  [3]  reframes  this  phenomena  in  terms  of  Goffman’s 
+presentation  of  self  [12]  where  the  individual  is  motivated 
+to project an image of competence in the presence of others, 
+which can have a positive impact on performance. For tasks 
+perceived  to  be  too  difficult,  however,  performance  may 
+actually  decline  as  the  individual  becomes  self-conscious. 
+In relation to SFF, there is a potential dichotomy of effects: 
+the  wearer  could  feel  motivated  to  reach  fitness  goals 
+because their performance is externalized and viewable, but 
+also feel additional pressure or stress impairing them from 
+reaching their potential. We explore both in our paper. 
+
+Sports Performance Feedback 
+Feedback  is  essential  to  athletic  performance  [1].  Sport 
+scientists  distinguish  between 
+types  [10,23]:  (i) 
+inherent  feedback  from  an  individual’s  own  sensory 
+mechanisms  (e.g.,  awareness  of  breathing  rate)  and  (ii) 
+augmented feedback from outside sources such as a coach, 
+
+two 
+
+video, or other technology. Augmented feedback—which is 
+our  focus—has  multiple  benefits  that  include  helping 
+athletes  develop  performance  strategies  (e.g.,  to  conserve 
+energy),  providing  motivation,  and  increasing  workout 
+intensity  [1,23].  These  effects  are  moderated  by  the 
+feedback’s  frequency,  content,  and  concurrency  with  the 
+action  itself  (i.e.,  real-time).  Though  research  into  shared 
+feedback  systems  is  limited,  Williams  et  al.  found  that 
+swimmers  were  faster  in  relays  than  individual  events  but 
+only if individual scores were released for each leg [32]. In 
+our work, we were interested in investigating whether SFF 
+wearers—who provide performance feedback for the entire 
+group  via  their  displays—feel  an  increased  sense  of 
+responsibility or drive for their group’s performance. 
+
+Tools to Support Running 
+With 
+the  emergence  of  small,  sensor-rich  devices—
+including  watches  and  smartphones—there  has  been  huge 
+growth 
+(e.g.,  Nike+, 
+RunKeeper, and MapMyRun). Although some applications 
+support  social  goals,  challenges,  and  sharing  workouts  via 
+social  media  they  are  not  designed  for  shared,  collocated 
+experiences, which is the intent of SFF. 
+
+run-tracking 
+
+applications 
+
+in 
+
+In  the  HCI  research  community,  there  has  been  similar 
+interest  in  tools  to  support  runners,  including  adapting 
+music  automatically  to  support  pace  goals  [21],  playing 
+auditory  signals  to  improve  running  cadence  [11],  and 
+transforming  the  run  into  an  adaptive  fitness  game  [4]. 
+However, the focus is on personal tracking and motivation. 
+One  exception  is  from  Mueller  et  al.,  who  explored  how 
+mobile  technology  can  support  shared jogging  experiences 
+between  remote  partners  (e.g.,  partners  are  geographically 
+dispersed  but  running  in  synchrony)  [19,20].  Our  work 
+shares  the  goal  of  transforming  the  social  experience  of 
+running, but, again, we are interested in collocated groups. 
+We  also  focus  on  glanceable,  visual  displays  compared  to 
+Mueller et al.’s auditory modalities. 
+
+E-Textiles and Sports 
+Most  e-textile  athletic  wear  has  focused on data  collection 
+with  post-hoc  analysis  by  coaches  and  athletes  rather  than 
+an integrated sensing and visualization system (e.g., [7]). A 
+few newer systems such as the Adidas miCoach Elite [31] 
+and  the  Under  Armour  E39  smart  jersey  [28]  sense  and 
+transmit  the  wearer’s  physiological  and  movement  data  in 
+is  not 
+real-time.  Again,  however, 
+integrated  into  the  e-textile. In  contrast,  the  recent  Reebok 
+CheckList both senses and visualizes potentially concussive 
+hits directly on the helmet [16]. Similarly, SFF senses and 
+visualizes a runner’s movement and heart rate on the body 
+within an integrated wearable platform.  
+
+the  visualization 
+
+As  a  group-based  e-textile  information  display  for  fitness, 
+our  work  is  most  similar  to  Page  and  Vande  Moere’s 
+TeamAwear “smart” basketball jerseys [22]. Both SFF and 
+TeamAwear surface otherwise latent information on shared 
+displays  directly  on  the  athletes  themselves;  however, 
+TeamAwear  was  meant  to  help  coordinate  action  and 
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2834(a) Prototype 1: Custom LED matrix on flexible PCB 
+
+(b) Prototype 2: Flexible e-Ink Display by Plastic Logic
+Figure 2: We built and informally evaluated three flexible, e-textile prototype displays. The top row describes the displays, the requisite hardware 
+including microcontroller and power, and the fabric enclosures. The bottom row highlights the flexibility of the prototypes.  
+improve in-game decisions among athletes in a competitive 
+sport context. In contrast, SFF is designed to improve group 
+awareness,  cohesiveness,  and  motivation.  Further,  their 
+evaluation  consisted  of  only  a  15-minute  case  study,  in 
+contrast  to  our  evaluations  of  SFF:  a  field  study  with  10 
+pre-existing running groups and two case studies. 
+
+Prototype 3: 
+Erogear Flex LED 
+2 x 3.7V Lithium Ion; 2200 
+mAh 
+8” x 3” (8” x 6”)  
+
+2 x 3.7V Lithium Ion 
+Polymer; 2000 mAh 
+8.4 “x 2.4” (8.4” x 4.8”) 
+
+(c) Prototype 3: Flexible LED matrix by Erogear
+
+Power / 
+Battery 
+Physical 
+Dimensions 
+
+Prototype 1:  
+Custom Flex LED  
+
+Prototype 2:  
+PL Flex e-Ink 
+
+4 x 1.5V AA; 2000 mAh 
+
+8.4 “x 2.4” (8.4” x 4.8”) 
+
+HW Specs 
+
+DESIGN PROCESS AND GOALS 
+The construction and design of the SFF display used a three 
+stage human-centered, iterative approach. We first designed 
+and built lo-fidelity mockups using materials such as fabric, 
+foam,  and  Velcro.  Here,  we  were  interested  in  examining 
+wearable  attributes  such  as  shape,  size,  and  weight  of 
+display.  In  stage  two,  we  built  and  informally  evaluated 
+three  interactive  flexible  prototypes  in  parallel  (Figure  2): 
+(i)  a  custom  LED  matrix  display;  (ii)  an  electronic  ink  (e-
+ink)  display;  and  (iii)  a  second  higher-resolution  LED 
+matrix display. Parallel prototyping, which allows designers 
+to  compare  and  contrast  design  ideas  during  the  design 
+process,  has  recently  received  increased  attention  in  the 
+CHI  community  and  has  been  shown  to  produce  diverse, 
+high-quality design outcomes (e.g., [9]). In the third stage, 
+we selected the best performing prototype and updated our 
+final design based on our pilot study results. 
+
+Design  goals.  Our  design  goals  fall  into  four  categories: 
+comfort,  display  content,  robustness,  and  overall  user 
+experience.  For  comfort,  we  wanted  prototypes  that  were 
+lightweight  and  unobtrusive  (i.e.,  that  did  not  physically 
+interfere with the wearer’s run). The display content should 
+be  real-time,  informative,  and  motivational  as  well  as 
+viewable across multiple lighting conditions (e.g., in shade 
+or direct sunlight) and legible from a distance (~12m). The 
+design should also be  robust to withstand exercise activity 
+and  resistance  to  sweat/moisture.  Finally,  for  overall  user 
+
+Thickness  2.85 – 13.47mm 
+Flexibility  High 
+Resolution  24 x 6 (24 x 12) 
+
+Pixel Density  ~16 ppi 
+
+Color  Single color per panel 
+
+2.78 – 4.86mm 
+Medium 
+320 x 240 
+85 ppi 
+Grayscale 
+
+Refresh Rate  5 Hz 
+
+Controller  2 x Arduino Pro Mini 
+w/ATmega168 8MHz 
+Built into fabric panel 
+enclosure 
+
+Controller 
+Location 
+
+~1.1 Hz 
+BeagleBone w/ custom PL 
+display driver 
+Connected via extension 
+cable & worn on waist 
+
+2.19 – 4.79mm 
+High 
+32 x 8 (32 x 16) 
+~12 ppi 
+Single color per panel 
+w/65k illumination levels 
+38 Hz 
+2 x 32-bit MCU, 16-bit 
+PWM LED matrix driver 
+Built into fabric panel 
+enclosure 
+
+Weights 
+
+Battery  61.0 grams 
+
+Controller  24.8 g 
+
+Display*  66.9 g 
+
+Holder (Belt)  N/A 
+Interconnects  0.2 g 
+
+Total  152.9 g (0.34 lbs) 
+
+121.6 grams 
+127.2 g 
+
+25.4 g 
+136.2 g 
+1.3 g 
+411.7 g (0.91 lbs) 
+
+114.3 grams 
+N/A (could not be 
+separated from display) 
+46.8 g 
+N/A 
+0.1 g 
+161.2 g (0.36 lbs) 
+
+Table 1: Hardware specifications and weights of the three prototypes. 
+A precision scale was used (0.1 g rating). *Includes fabric enclosure. 
+experience,  our  goal  was  to  design  a  system  that  was  fun, 
+enjoyable, and helped support the group run experience.  
+
+THE THREE INTERACTIVE PROTOTYPES 
+Here,  we  describe  our  three  interactive  prototypes,  which 
+embody different aspects of our design goals (e.g., different 
+sizes, weights, display technology, aesthetic qualities, etc.). 
+
+Prototype 1: Custom Flexible LED Matrix 
+Our  first  prototype  is  a  custom  LED  matrix  display  made 
+from a flexible printed circuit board (PCB). This design was 
+the  lightest  of  the  prototypes  (including  all  components), 
+had  intermediate  brightness  and  “pixel”  density,  and  the 
+lowest resolution (Table 1). As this was the only prototype 
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2835 
+ 
+ 
+ 
+ 
+We sourced a 4.7” monochrome flexible e-ink display with 
+a  resolution  of  320x240  (85  ppi)  from  Plastic  Logic.  The 
+system  consisted  of  an  “engineering  sample”  display,  a 
+BeagleBone  Linux  computer,  and  a  custom  daughterboard 
+display  driver.  For  rendering,  we  wrote  a  custom 
+application  in  C  to  display  fonts/images.  Unlike  the  other 
+prototypes, the hardware components (e.g., microcontroller, 
+display  driver)  were  not  integrated  into  the  display. 
+Consequently,  this  design  had  two  potential  comfort 
+advantages:  without  integrated  hardware,  the  shirt  display 
+itself was very lightweight (25.4 g) and the hardware could 
+be  moved  to  more  insensitive  load-bearing  parts  of  the 
+body.  However,  the  components  themselves  were  heavier 
+and required an additional belt (Figures 2b and 3b). 
+
+Prototype 3: Erogear Flexible LED Matrix 
+For  our  3rd  prototype,  we  collaborated  with  a  small  e-
+textiles  start-up  company,  Erogear  (erogear.com),  who 
+provided  us  with  a  set  of  pre-release  flexible  LED  matrix 
+displays.  These  displays  are  similar  to  those  described  in 
+Prototype 1 except that the Erogear versions have a higher 
+resolution  (32x16  per  panel  vs.  24x6),  higher  refresh  rate 
+(38Hz vs. 5Hz), contain brighter LEDs, and have a thinner 
+profile. To program the displays, we used the Erogear SDK 
+for Android, which provides an API to render bitmaps and 
+full-motion video in Java (Figures 2c and 3c). 
+
+SFF SYSTEM OVERVIEW 
+Though  each  of  our  designs  differed  in  terms  of  display 
+technology and hardware platform, the system architecture 
+was  the  same:  (i)  smartphone-based  software  that  tracked 
+runs and wirelessly transmitted this data over Bluetooth in 
+real-time; (ii) an embedded hardware system that processed 
+the  data  and  interfaced  with  a  display  controller;  (iii)  the 
+display prototype; and (iv) an optional wireless chest-worn 
+heart rate monitor by Polar (Figure 4). 
+
+For 
+the  run-tracking  software,  we  collaborated  with 
+RunKeeper, a company that makes a popular mobile phone-
+based  fitness-tracking  application  with  the  same  name. 
+RunKeeper developed a custom version of their application 
+to  interface  with  our  Android  SFF  software.  This  version 
+appeared  to  the  user  as  a  normal  RunKeeper  application, 
+but  also  broadcasts  via  Android  intents:  run  information 
+(e.g.,  pace,  duration,  distance),  the  runner’s  heart  rate  as 
+sensed by the Polar sensor, and user interactions (e.g., start, 
+
+Figure 4: The general system architecture of SFF composed of three 
+main components. The wireless heart rate (HR) monitor is optional. 
+
+(a) Prototype 1 
+
+(b) Prototype 2 
+Figure  3:  (Top)  The  required  components  of  the  three  prototypes. 
+(Middle  rows)  Two  of  the  four  display  screens  along  with  fabric 
+enclosures.  Not  shown:  duration  and  distance.  Sizes  are  relative. 
+(Bottom) Prototypes in action during our internal pilot studies. 
+
+(c) Prototype 3 
+
+completely constructed in our lab, we also had more control 
+over its design and individual components. 
+
+Initially,  we  created  early  versions  of  Prototype  1  with 
+breadboards,  LEDs,  and  Arduino  Unos.  With  these  early 
+prototypes,  we 
+investigated  different  LED  matrix 
+configurations,  tested  their  impact  on  brightness  and 
+outdoor  viewability,  and  implemented  early  font  sets  and 
+visual  feedback  designs.  Because  Arduinos  have  a  limited 
+number  of  I/O  pins,  we  used  a 
+technique  called 
+charlieplexing,  which  takes  advantage of  the  tri-state  logic 
+capabilities  of  microcontrollers  to  efficiently  multiplex  the 
+output signal (e.g., [8]). Charlieplexing, however, increases 
+circuit  complexity,  has  dimmer  visual  output,  and  greater 
+susceptibility  to  failure.  After  multiple  iterations,  we 
+created a final design with a 24x6 LED matrix. To produce 
+the  prototype  used  in  our  pilot  studies,  we  sent  a  custom-
+built flexible PCB schematic to outside manufacturing. We 
+stitched  two  flexible  PCB  panels  together  (one  blue,  one 
+green)—each  driven  by  an  Arduino  Pro  Mini  integrated 
+with the enclosure (Figures 2a and 3a).  
+
+Prototype 2: Plastic Logic Flexible e-Ink Prototype 
+For  our  2nd  prototype,  we  investigated  flexible  e-ink 
+displays  because  of  their  size,  thinness,  weight,  wide-
+viewing angles, superior viewability in direct sunlight, and 
+low-power  requirements.  In  comparison  to  our  other 
+prototypes, this design was the thinnest and offered the best 
+outdoor  viewability.  However,  it  also  had  the  smallest 
+physical  dimensions—which  affected  viewing  distance—
+the  slowest  refresh  rate,  and  no  self-illumination  (i.e.,  it 
+could not be seen in low-light conditions). 
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2836 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+stop). Our custom software sniffed these intents, processed 
+them, and wirelessly transmitted the running and heart rate 
+data  via  Bluetooth  to  the  display’s  embedded  hardware 
+system  (which  was  either  integrated  into  the  display  itself 
+or linked via a flexible wire; see Figure 3).  
+
+Display screens. All three prototypes auto-rotated through 
+four screens: pace, duration, distance, and heart rate. These 
+screens represent the key metrics of a run and are used by 
+most  run  trackers  (e.g.,  Nike+,  Garmin).  By  virtue  of  the 
+wearer running with others, pace, duration, and distance are 
+shared  across  the  running  group;  however,  heart  rate  is 
+not—it is our sole egocentric measure. We were interested 
+in  exploring  how  wearers  would  feel  revealing  their 
+physiological  data  and  how  others  in  the  group  would 
+respond to seeing another runner’s heart rate. As heart rate 
+is correlated to exertion level [17], SFF visualizes how hard 
+the wearer is working at the current pace. 
+
+SFF  shirt.  We  explored  three  primary  characteristics:  the 
+placement  of  the  display  on  the  back,  the  attachment 
+mechanism,  and  how  the  size,  shape,  and  weight  of  the 
+display  interacted  with  placement  and  attachment  during 
+runs.  While  we  ultimately  envision  an  SFF  jersey  with  a 
+seamlessly  integrated  e-textile  display,  we  pursued  a  more 
+modular  design  for  our  prototypes.  The  displays  were 
+attached using various Velcro configurations. 
+
+PILOT STUDIES AND FINAL DESIGN 
+During  the  design  process,  we  performed  11  internal  pilot 
+studies  with  members  of  our  lab.  Pilots  were  with  one  to 
+four runners; most were with two. Whenever possible, two 
+runners  would  wear  a  display.  These  informal  pilots  were 
+intermittently  spaced  to  test  new  prototype  iterations  and 
+aimed  at:  (i)  determining  how  display  weight,  component 
+distribution,  and  placement  affect  running;  (ii)  examining 
+the  viewability  of  the  displays  under  different  conditions; 
+(iii)  gaining  qualitative  reactions  from  our  participants 
+about  the  aesthetics,  function,  and  design  of  the  displays. 
+The results were used to select and refine our final design. 
+
+We  quickly  determined  that  even  a  moderately  weighted 
+display could pull the shirt neckline uncomfortably against 
+the  throat  and  that  the  original  placement—on  the  upper 
+backside of the shirt close to the name lettering location on 
+professional  sports  jerseys—affected  the  movement  of  the 
+runner’s  shoulder  blades.  As  a  result,  we  began  further 
+optimizing for weight—including the amount of fabric used 
+for  the  enclosures  and  attachment  materials.  We  also 
+created  a  Velcro  rail  system  so  that  a  display  could  be 
+easily  moved  to  fit  the  runner’s  preference.  Generally,  the 
+most  comfortable  placement  was  about  3/5ths  down  the 
+back  (opposite  the  sternum).  Based  on  feedback,  we  also 
+built protective fabric around the waist-worn battery clips to 
+reduce discomfort. Wiring was eventually routed through a 
+sleeve in the left Velcro rail so that it was hidden. 
+
+In  terms  of  the  prototypes  themselves,  while  we  were 
+initially concerned with the e-ink display’s smaller physical 
+dimensions,  we  found  that  the  increased  resolution  was 
+
+in 
+
+true 
+
+conditions 
+
+largely  compensatory.  However,  the  viewing  distance  was 
+still  less  than  the  two  LED  matrix  prototypes.  This  was 
+especially 
+(shadows, 
+low-light 
+morning/evening  runs).  And,  though  the  e-ink  display  had 
+greater viewability in direct sunlight particularly compared 
+to  Prototype  1  (the  custom  LED  matrix),  we  found  that 
+Prototype  3  (the  Erogear  LED  matrix)  was  sufficiently 
+bright  to  work  in  most  lighting  conditions.  In  addition, 
+Prototype 3’s large, illuminated lettering was viewable from 
+the greatest distance. Of the three colors tested (red, green, 
+and blue), green had the best outdoor viewability. 
+
+With  regards  to  comfort,  all  three  prototypes  performed 
+well.  The  Velcro  rail  attachment  system  greatly  reduced 
+complaints  about  discomfort  from  the  displays.  Most 
+criticisms  were  directed  toward  components  worn  at  the 
+waist,  especially  for  the  e-ink  prototype,  which  required  a 
+running belt to hold components.  
+
+Final SFF System 
+Based on our pilot studies, we determined that Prototype 3, 
+the  Erogear  display,  had  the  most  potential.  It  was  bright, 
+lightweight,  comfortable,  and  had  good  visibility  under 
+most  lighting  conditions.  Additionally,  based  on  feedback 
+from our pilot participants, we decided to add an additional 
+display  screen:  a  social  support  goal-system.  With  this 
+feature, a running group decides on a target pace and enters 
+it  before  the  run.  The  wearable  display  then  compares  the 
+group’s  recent  average  pace  with  the  target  pace  via  a 
+moving bar graph visualization (Figure 5). As mentioned in 
+the  introduction,  this  feature  was  primarily  aimed  at 
+motivating runners to achieve their target pace and remain 
+together  as  a  group.  Goal-setting  is  a  well-known  strategy 
+in  the  behavioral  and  sports  science  literature  for  training 
+[1,15]. And, since the target pace is collectively set by the 
+group,  it  serves  as  a  public  commitment  [26]  that  is 
+continuously visualized throughout the run. 
+
+FIELD STUDY OF RUNNING GROUPS 
+To examine the impact of the final SFF prototype design on 
+group  running  dynamics  and  performance,  we  conducted 
+two  exploratory  evaluations:  a  field  study  of  ten  running 
+groups and two case study deployments in races. 
+
+Field Study Method 
+Participants 
+Running  groups  were  recruited  via  mailing  lists,  word-of-
+
+Figure 5: The target pace visualization animates across three screens
+comparing  the  group’s  average  pace  to  the  target  pace  over  the  last
+nine minutes (each bar represents the average pace for one minute). 
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2837mouth,  and  direct  contact  with  running  clubs.  Our 
+recruitment material specified that we were looking for pre-
+existing running groups of at least 4-10 runners, all over the 
+age  of  18,  to  take  part  in  a  study  of  wearable  running 
+displays.  Session  slots  were  filled  on  a  first-come,  first-
+served basis. Each participant was paid $20 for their time. 
+
+We recruited eleven groups; the first served as an external 
+pilot (their results are not reported here). The remaining ten 
+groups  had  a  total  of  52  participants  (35  female)  with  an 
+average  age  of  42  (SD=14.69).  See  Table  2.  The  average 
+group  size  was  5.2  (SD=1.87)—87%  participants  reported 
+running  at  least  occasionally  with  their  respective  group. 
+Professions varied from graphic designer to chief financial 
+officer; 12 were students and four reported no employment 
+(e.g., retired). Participants had active lifestyles: 50 out of 52 
+(96%) reported working out once a week or more.  
+
+In terms of group running and run tracking behavior, 43 out 
+of  52  participants  (82.6%)  reported  that  they  ran  at  least 
+occasionally  with  one  or  more  other  people  (24  stated 
+include 
+almost  every 
+run).  The 
+socialization,  motivation, 
+fun. 
+Participants  reported  their  typical  running  group  size  as 
+avg=6.4 (Median=5, SD=6.94). Most participants reported 
+tracking their runs (92%); 71% do so almost every run. The 
+most  popular  tracking  tools  included  Garmin  watches 
+(40%), followed by a tie between the Nike+ and RunKeeper 
+(19%); 11 participants (21%) reported using pen and paper.  
+
+reasons  provided 
+accountability, 
+
+and 
+
+Procedure 
+Each  running  group  was  sent  an  informational  flyer,  a 
+consent  form,  and  the  pre-study  questionnaire  in  advance. 
+Upon arrival at the study session, participants were greeted 
+by  one  or  two  research  assistants  who  handed  out 
+clipboards  with  the  aforementioned  materials.  The  consent 
+process and pre-study questionnaire took approximately ten 
+minutes.  Afterward,  we  demonstrated  the  SFF  system 
+including  each  display  screen.  If  the  group  did  not  have 
+regular  pace  leaders,  we  asked  for  two  volunteers  to  wear 
+the  SFF  system,  including  the  shirt,  display,  battery  pack, 
+heart  rate  monitor,  Android  phone,  and  armband.  Wearers 
+were  also  asked  if  they  would  like  to  disable  any  of  the 
+display screens (e.g., heart rate, distance). All declined. 
+
+Before the run, each group was asked to collectively decide 
+on a target pace, which was entered into the SFF software 
+on  both  wearers’  phones.  Our  aim  here  was  not  to  study 
+whether  SFF  enabled  groups  to  reach  their  goals—a 
+different, more controlled study design would be necessary 
+here—but  rather  to  qualitatively  examine  the  perceived 
+benefits  and/or  limitations  of  SFF  on  the  group  running 
+experience.  Groups  were  asked  to  run  for  at  least  30 
+minutes. We also explained that a research assistant would 
+follow  the  group  from  a  distance  on  a  bicycle  in  case  of 
+technology failure or emergency. All participants, including 
+the wearers, were welcome to use their own trackers as well 
+during the study (although unfortunately we did not collect 
+precise  data  on  this).  After  the  run,  the  wearers  and  non-
+
+Group 
+ID 
+
+# of Participants 
+(Females) 
+
+Avg  
+Age 
+
+Study Target 
+Pace (per mi) 
+
+Study Run 
+Distance (mi) 
+
+Study Run  
+Time 
+
+G1 
+G2 
+G3 
+G4 
+G5 
+G6 
+G7 
+G8 
+G9 
+G10 
+AVG 
+Table 2: Demographics and run data from the 10 field study groups. 
+
+00:35:03 
+00:34:41 
+00:32:12 
+00:38:46 
+00:34:53 
+00:58:28 
+00:32:18 
+00:31:35 
+00:44:43 
+00:31:00 
+00:36:04 
+
+10:20 
+11:30 
+08:30 
+10:15 
+09:00 
+10:30 
+12:00 
+10:30 
+09:45 
+10:00 
+10:14 
+
+4 (4) 
+6 (4) 
+4 (0) 
+4 (4) 
+4 (0) 
+8 (5) 
+9 (9) 
+5 (5) 
+4 (2) 
+4 (2) 
+5 (3) 
+
+3.04 
+3.12 
+3.99 
+3.34 
+2.93 
+5.29 
+2.98 
+3.02 
+4.42 
+2.49 
+3.46 
+
+31.0 
+50.0 
+21.2 
+49.2 
+20.7 
+54.2 
+47.1 
+43.6 
+43.0 
+22.0 
+40.7 
+
+wearers  were  provided  with 
+separate  post-study 
+questionnaires,  which  took  ~12  minutes  to  complete.  We 
+also  recorded  informal  verbal  comments  during  this  time. 
+Though our target study session length was 60 minutes, this 
+varied depending on run length. 
+
+trailing 
+
+research 
+
+assistant 
+
+Data and Analysis 
+In summary, our data includes responses from the pre- and 
+post-study questionnaires, verbal comments  made after the 
+run, and pictures captured at 2-3 points during each run by 
+the 
+(Figure  6).  Both 
+questionnaires  included  Likert  scale  questions  and  short 
+open-form responses. The pre-study questionnaire gathered 
+data about demographics, exercise routines, running habits, 
+and  use  of  run-tracking  tools.  As  noted  above,  different 
+post-study questionnaires were provided to the wearers and 
+non-wearers. Both questionnaires  included questions  about 
+the  perceived 
+impact  of  SFF  on  motivation,  group 
+cohesiveness, mental affect, group- and self-awareness, and 
+questions  about  the  display.  The  wearer questionnaire  also 
+asked how wearing the SFF system affected the participant 
+physically and mentally. As an exploratory study, we report 
+on descriptive statistics indicating trends in our data, which 
+are contextualized with participant quotes.  
+
+Field Study Results 
+For Likert questions, unless otherwise specified we used 7-
+point  agreement  scales  ordered  strongly  disagree  (1)  to 
+strongly agree (7); 4 was neutral. We report means (M=X) 
+and standard deviation (SD=X). Due to a dead battery, one 
+group  (G8)  ran  with  only  one  display.  Thus,  we  had  19 
+wearers  and  33  non-wearers.  We  use  group  ‘G’  and 
+participant ‘P’ to refer directly to a participant. Wearers are 
+indicated with a ‘-W’ suffix (e.g., G1P1-W). 
+
+in  providing 
+
+feedback  about 
+
+Reactions to Visual Content 
+Overall  screen  preferences.  Most  participants  found  the 
+displays  useful 
+their 
+performance. In terms of the individual screens themselves, 
+participants  ranked  the  order  of  importance  of  each  screen 
+from  ‘1’  to  ‘5’  (‘1’  was  most  important)  on  two  criteria: 
+helping them meet the target group pace and most valuable 
+overall. For both aspects, average pace was ranked as most 
+useful  followed  by  distance  and  duration  (Table  3).  For 
+example: 
+“The pace and distance helped motivate me more to reach the 
+goal time; other displays were just nice to have.” (G10P1-W) 
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2838(a) G4 (N=4) 
+Figure 6: We conducted field trials of SFF with 10 running groups; a subset is shown above. See Table 2. 
+
+(b) G9 (N=4) 
+
+(c) G6 (N=8) 
+
+(d) G2 (N=6) 
+
+(e) G7 (N=9) 
+
+“Pace is important to keep me on track but duration is next to 
+important  because  it  tells  me  how  much  time  I  have  left  to 
+reach my goal.” (G10P2-W) 
+While we developed the target pace visualization (Figure 5) 
+specifically  to  help  group  members  reach  their  goal,  most 
+found it confusing or unnecessary—as they could mentally 
+compare  the  average  pace  screen  with  their  goal  pace: 
+“[The]  graph  was  hard  to  read  and  get  value  out  of.” 
+(G3P4).  One  participant  (G6P2-W)  commented  that  the 
+SFF  system  did  not  incorporate  running  up  or  down  hills, 
+which  impacts  pace.  Unsurprisingly,  the  heart  rate  screen 
+was deemed least important as represented by G4P4: “I am 
+not concerned about someone else’s heart rate.” 
+
+Importance for Helping 
+Meet Target Pace 
+Average Pace 
+Distance 
+Duration 
+Pace Visualization 
+Heart Rate 
+
+Avg. Rank 
+(SD) 
+1.3 (0.83) 
+2.5 (0.9) 
+3.1 (0.8) 
+3.9 (1.3) 
+4.3 (1.0) 
+
+Importance in Providing 
+Useful Run Feedback 
+Average Pace 
+Distance 
+Duration 
+Heart Rate 
+Pace Visualization 
+
+Avg. Rank 
+(SD) 
+1.5 (0.8) 
+2.2 (0.9) 
+3.1 (0.8) 
+3.9 (1.1) 
+4.3 (1.1) 
+
+Table 3: Results of participants rank ordering the display screens. 
+
+in 
+
+their 
+
+responses. 
+
+SFF vs. other run-trackers. Although we did not explicitly 
+ask  participants  to  compare  SFF  to  their  experiences  with 
+other run tracker applications, many participants drew these 
+Interestingly,  even 
+comparisons 
+participants using their own tracking applications during the 
+study found value in the display: 
+ “It  was  fun  having  the  display  and  being  able  to  see  it  on 
+someone [rather] than [on] my wrist app.” (G1P3)  
+“Was looking at it instead of my Garmin.” (G6P5) 
+Others specifically mentioned how the SFF display offered 
+a common, shared screen and that this changed the dynamic 
+of the information: 
+“I  assumed  my  phone  app  was  sufficient  but  this  added  an 
+extra challenge with the group.” (G1P3) 
+“Most [of us] use Garmin for tracking, this introduced a shared 
+screen vs. independent watching; this felt very novel” (G4P4) 
+Still,  some  questioned  whether  SFF  offered  significant 
+value over watch or smartphone applications that provided 
+the same information: “maybe not useful to the run if you’re 
+used to using them [other technology]” (G4P4).   
+
+Enjoyment/fun.  All  of  the  wearers  (N=19)  reported 
+enjoying  wearing  the  display,  rating  it  on  average  5.2 
+(SD=0.9) on a 7-pt scale. Reasons included making the run 
+
+more fun, social, and motivational (e.g., G9P1-W: "I think 
+it  is  useful  and  made  the  run  fun.").  A  number  of 
+participants  mentioned  that  SFF  prompted  group  members 
+to  “call  out”  information  when  it  was  displayed:  “The 
+display encouraged me to meet my goals because everyone 
+read the information to me.” (G1P2-W). 
+
+Awareness and Motivation 
+Motivation.  A  majority  of  participants  (65%)  agreed  that 
+SFF motivated them to run at or faster than the target group 
+pace.  The  average  agreement  rating  was  4.8  (SD=1.7). 
+Reasons included increased determination and focus: 
+ “Motivated me to go faster than the pace displayed.” (G7P7)  
+“Made  me  feel  like  I  was  pushing  my  efforts,  which  is  good. 
+Challenged myself.” (G7P8) 
+Interestingly, a number of wearers cited additional reasons 
+such as feelings of accountability and pressure to perform: 
+“It made me feel that I had a responsibility to run a target 
+pace for the group” (G3P2-W). One non-wearer also stated 
+that  she  “felt  more  stress  to  perform”  (G9P5).  For  those 
+participants  that  did  not  feel  increased  motivation  (N=18) 
+common  reasons  included  feeling  little  difference  from  a 
+normal  run,  feeling  distracted  by  the  displays,  and/or  not 
+seeing value over personal run trackers. 
+Group cohesiveness. A majority of participants (62%) felt 
+that  the  display  motivated  the  group  to  stay  together.  The 
+average  agreement  rating  was  4.8  (SD=1.5).  G3P3,  for 
+example, noted: “Yes, it was different. It made me want to 
+keep  up  with  the  others.”  However,  11  participants  (21%) 
+disagreed, most often because they felt no difference. 
+Performance  awareness.  Participants  reported  feeling 
+more  aware  of  both  their  individual  performance  (M=5.1; 
+SD=1.7)  as  well  as  the  group’s  performance  (M=5.2; 
+SD=1.5).  As  G2P2-W  stated:  “It  made  me  more  aware  of 
+our  pacing  and  kept  me  more  focused  on  the  run  itself...” 
+Again, those who disagreed (N=7 for individual awareness; 
+N=6 for group) commonly felt no difference. 
+
+Wearers Only: Self-Consciousness and Comfort 
+We also asked the 19 wearers about the physical and mental 
+impact of the display.  
+
+Self-consciousness.  Overall,  wearers  did  not  feel  self-
+conscious wearing the display or in revealing their running 
+data  to  their  group  or  onlookers  (e.g.,  from  passing  cars, 
+others  on  the  run  route).  When  asked  about  feeling  self-
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2839 
+conscious, most wearers disagreed (M=2.7; SD=0.4—recall 
+that 1 is strongly disagree); for example, “Yes, I expected to 
+feel  more  conspicuous;  didn’t  really  mind  it.”  (G2P2-W). 
+However, five wearers did feel self-conscious, one of whom 
+indicated that it was because of insecurity regarding pace. 
+
+Relatedly,  we  specifically  asked  about  comfort  level  in 
+revealing heart rate, the  most personal metric, vs. all other 
+running  data  to  two  audiences:  the  running  group  and  to 
+coincident  onlookers.  Generally,  wearers  were  not 
+concerned about either although heart rate data did seem to 
+cause  slightly  more  tension.  Only  two  wearers  (G1P1-W, 
+G6P1-W)  reported  feeling  uncomfortable  revealing  their 
+heart rate to both audiences. In addition, G6P1-W reported 
+discomfort revealing the other running data to her group.  
+
+Physical  comfort.  Most  wearers  did  not  find  the  SFF 
+display  or  the  requisite  components  physically  obtrusive 
+during the run. Each component was rated individually on a 
+7-Point Likert scale (7 is best). The battery pack was rated 
+most  comfortable  (M=5.5,  SD=2.1)  followed  by  the  e-
+textile  display  (M=5.2,  SD=2.1),  the  HR  monitor  (M=5.1, 
+SD=2.0),  and  then  the  armband  and  phone  (M=4.0, 
+SD=2.1).  When  first 
+introduced,  most  wearers  were 
+concerned  with  the  number  of  required  items;  however, 
+after the run, these concerns abated: 
+“I  thought  it  would  be  uncomfortable;  it  turned  out  to  be 
+unnoticed.” (G5P2-W) 
+“Arm band is heavy; other [equipment] was fine; cotton t-shirt 
+is uncomfortable.” (G2P1-W) 
+
+This  latter  quote  represents  a  common  feeling  about  the 
+armband, especially for those not used to running with any 
+equipment.  Additionally,  as  most  of  our  study  sessions 
+occurred in temperatures of 80-90F (27-35C), the cotton t-
+shirt was also a common complaint. Women, in particular, 
+requested  a  “synthetic  performance”  shirt;  we  created  one 
+and made it available after the sixth study session. This was 
+preferred in later sessions. 
+
+Summary of Field Study Results 
+In summary, our field study participants enjoyed SFF: they 
+reported  feeling  more  aware  of  their  own  performance  as 
+well as the group’s performance, and felt motivated to reach 
+the group-set target pace. Interestingly, as Bond’s [3] self-
+presentation  theory  would  suggest,  some  wearers  felt 
+increased pressure to perform and two reported discomfort 
+revealing  their  heart  rate  to  others.  Still,  however,  a  large 
+majority  of  participants  indicated  interest  in  wearing  SFF 
+again (85% overall and 90% of wearers). 
+
+CASE STUDIES: TWO SFF RACE DEPLOYMENTS 
+To examine the impact of SFF on runners in a race context, 
+we conducted two case study deployments: an 8K race with 
+189  runners  and  a  10K  race  with  364  runners.  Races  are 
+unique because racers start together in mass and then break 
+organically  into  pace  groups.  Four  new  participants  (3 
+male) were recruited from those who had responded to our 
+initial  field  study  advertisement  (Table  4;  Figure  8).  Our 
+
+(a) R1P1 waiting for race to start 
+
+(b) R2P1 races by 
+
+Figure 8: Four racers participated in our case studies; 2 shown above. 
+
+case  study  procedures  were  similar  to  the  field  study  with 
+slightly  modified  pre-  and  post-study  questionnaires  (e.g., 
+removed  group  running  questions,  added  race-specific 
+questions).  In  addition,  these  participants  did  not  run  with 
+their  own  running  groups  but  with  fellow  racers.  All 
+participants ran at different speeds; thus, they could not see 
+each  other’s  displays.  Below,  we  briefly  summarize  the 
+results that intersect with the field study before emphasizing 
+new themes that emerged. 
+
+Part. ID 
+R1P1 
+R1P2 
+R2P1 
+R2P2 
+
+Race 
+County 8K 
+County 8K 
+Labor Day Classic 
+Labor Day Classic 
+
+Age 
+34 
+33 
+26 
+18 
+
+ Gender  Target Pace  Distance  Time 
+29:30.0 
+41:13.0 
+22:45.2* 
+55:38.6 
+
+6:15 
+8:20 
+7:45 
+8:30 
+
+8K 
+8K 
+5K 
+10K 
+
+M 
+F 
+M 
+M 
+
+Table  4:  Case  study  participants  for  our  two  race  deployments. 
+*R2P1 took 1st place in his division while wearing SFF. 
+
+Summary  of  results.  There  were  no  major  differences  in 
+the racers’ preferences for the display screens compared to 
+the  field  study.  Similarly,  all  participants  felt  that  SFF 
+motivated them to perform. For example, R2P1 stated “[it] 
+made  me  want  to  run  faster  because  my  performance  was 
+on  display”  and  R1P2  reported  feeling  “slightly  more 
+pressure  to  perform.”  R2P2  participant  noted  feeling  self-
+conscious  about  their  “performance  being  shared  with 
+others  (strangers).”  This  same  participant  also  felt 
+concerned about what other racers thought of his pace.  
+
+Race-specific  results.  Participants  enjoyed  how  SFF 
+increased their interactions with racers and race volunteers. 
+For example: “The finish line announcer saw me and read 
+out my Heart Rate, 192, as I crossed.” (R1P1). Indeed, all 
+participants  mentioned 
+that  SFF  elicited  excitement, 
+curiosity,  and  encouraging  reactions  from  other  racers  and 
+race watchers: 
+“I interacted with about 6-7 people, all of which gave positive 
+response. They mentioned how the information was motivating 
+them  to  run  faster  than  me.  A  lot  of  people  made  comments 
+such  as  ‘that's  cool’  or  encouraging  comments—which 
+motivated me.” (R2P2) 
+After the races, a number of racers approached the research 
+team  and  explained  that  they  thought  the  information  was 
+useful  during  the  run  emphasizing  that  it  was  helpful  to 
+have  a  “pacer”  during  the  race.  Another  participant 
+commented that a fellow racer passed him mentioning that 
+“it was like a car dashboard [for running].” At both events, 
+race  organizers  expressed  interest  in  SFF.  One  organizer 
+repeatedly  asked  if  he  could  use  SFF  prototypes  for  the 
+official pacers in an upcoming marathon. 
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2840 
+Summary of Case Study Results 
+In contrast to the field study, wearers in our case studies did 
+not run with a pre-existing group but instead a large group 
+of  racers.  Although  the  wearers  could  not  see  their  own 
+display (or the display of another wearer), they still reported 
+increased  motivation  to  perform.  All  participants  were 
+particularly  enthusiastic  with  how  it  increased  social 
+interactions  during  the  race;  they  also  felt  like  they  were 
+providing an informational service to other racers. 
+
+DISCUSSION AND CONCLUSION 
+As  the  first  paper  exploring  shared,  wearable  feedback 
+displays  for  group  fitness  performance,  we  found  support 
+for  the  motivational  properties  of  SFF,  both  in  terms  of 
+encouraging  runners  to  meet  their  group’s  target  pace  and 
+to  stay  together  as  a  group.  Wearers  and  non-wearers  also 
+reported feeling more aware of their performance as well as 
+that  of  the  group.  However,  more  controlled  studies  are 
+necessary  to  determine  if  there  is  an  actual  performance 
+impact rather than simply a perceived impact.  
+
+Limitations 
+As with any study, there are limitations. First, groups only 
+used  SFF  on  one  occasion  and,  thus,  could  be  reacting  to 
+the  novelty  of  the  system.  Second,  our  participants  may 
+have been susceptible to observation biases. Just as Bond’s 
+theory  [3]  would  predict,  the  presence  of  the  research 
+assistant—and the staging of the study itself—may  impact 
+behavior,  particularly  performance,  which  is  exactly  what 
+we explored here. Despite these limitations, we believe SFF 
+shows 
+the  promise  of  a  new  domain  of  work—
+reappropriating personal tracking data for collocated group 
+fitness  activities.  Future  work  should  explore 
+the 
+longitudinal impact of SFF on group behavior and/or more 
+controlled  experiments 
+textile 
+displays to other forms of feedback.  
+
+to  compare  glanceable 
+
+Design Reflections and Future Work 
+Motivational  Properties  of  Group  Feedback  Displays. 
+The bar graph visualization depicting current vs. goal pace 
+was intended to motivate runners to meet their target pace, 
+but  many  participants  found  it  confusing.  Instead,  the 
+practice  of  collectively  agreeing  on  a  target  pace  at  the 
+beginning  of  the  run  along  with  real-time  pace  feedback 
+seemed  to  sufficiently  motivate  participants.  More  work  is 
+necessary  to  uncover  how  group  goals  can  be  better 
+supported through the wearable displays themselves. 
+
+Without prompting, a number of participants mentioned the 
+desire  to  have  words  of  encouragement  in  SFF,  such  as 
+‘good  job’  or  ‘keep  going’.  One  participant  also  proposed 
+using  tortoise  and  rabbit  symbols  to  depict  the  group’s 
+speed, along with jokes. These comments suggest not only 
+that adding encouraging messages would be useful, but also 
+that  playfulness  and  fun  are  important  attributes  of  a 
+workout that could be supported by the technology.   
+
+Comfort. We had initially planned to position the displays 
+across  the  upper  part  of  the  back,  which  was  aesthetically 
+pleasing  (i.e.,  where  jersey  lettering  is  located).  Pilot 
+
+Figure 9: Our original SFF shirt 
+design (left) had a statically 
+positioned attachment on the 
+upper-back. Our final prototype 
+(right) used a Velcro rail system 
+that allowed more flexible 
+placement. Most participants 
+preferred the mid-lower back.  
+
+participants,  however,  reported  that  this  location  was 
+uncomfortable.  Our  final  design  had  a  Velcro  rail  system 
+that allowed flexible placement; most participants preferred 
+the  lower  back  (Figure  9).  As  well,  although  participants 
+welcomed  the  switch  from  cotton  t-shirts  to  performance 
+fabric,  the  synthetic  material  was  far  lighter  and  more 
+sensitive  to  the  additional  weight  of  SFF.  At  46.8  grams, 
+the  Erogear  display  was  already  quite  light,  but  we 
+speculate that its weight would need to be 10-20% lower to 
+integrate well with the lighter fabric. Finally, though many 
+participants  were  suspect  of  wearing  additional  equipment 
+during their runs, these impressions were abated by actually 
+running  with  the  system.  Regardless,  limiting  the  amount 
+and weight of equipment is an important future goal. 
+
+Pressure to Perform. As Bond’s self-presentation framing 
+of  social  facilitation  theory  would  predict  [3],  we  found 
+evidence  that  some  runners  felt  additional  pressure  to 
+perform  with  SFF.  Surprisingly,  however,  only  a  small 
+number of wearers were uncomfortable revealing their heart 
+rate  or  pace.  More  work  is  necessary  to  identify  why 
+participants  reacted  differently  and  to  examine  potential 
+correlates  such  as  personality  factors,  runner’s  self-image 
+and  fitness  level.  In  addition,  we  expected  but  did  not  see 
+differences  between  revealing  performance  information  to 
+the group vs. other runners on the trail. This is somewhat in 
+contrast to our own experiences with SFF. 
+
+Though  SFF  was  designed  for  group  contexts,  we  often 
+wore  the  displays  ourselves  for  individual  runs  to  assess 
+comfort and to test our prototypes. Interestingly, we all felt 
+increased pressure to perform because of the externalization 
+of  our  activity.  If  a  fellow  (random)  runner  passed,  we 
+knew  that  s/he  had  seen  our  statistics.  With  SFF,  it  was 
+harder for us to self-rationalize, such as, “I must have been 
+running for a longer period than the person that passed me 
+by”  or  “I  just  slowed  down  briefly.”  The  truth  of  such 
+statements  was  now  readily  apparent,  which  made  an 
+ordinarily relaxing run into a stressful one. This feeling of 
+exposure  and  self-consciousness  points  to  an  avenue  of 
+research  investigating  the  boundaries  of  reappropriating 
+personal  tracking  data  for  public-facing  applications  and 
+how these boundaries change across deployment contexts. 
+
+SFF  in  Race  Deployments.  We  believe  SFF  has  many 
+potential  applications  in  races.  For  example,  a  number  of 
+participants  mentioned  that  official  race  ‘pace  leaders’ 
+could wear SFF. SFF could also support Twitter integration 
+so  that  friends  and  family  could  send  supportive  messages 
+to the wearer and runners around them. Finally, SFF could 
+show  positional  information  (e.g.,  8th  place)  and  update  it  
+throughout the race.  
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2841 
+Conclusion 
+In conclusion, this paper contributes new knowledge to two 
+rapidly  growing  areas:  personal-tracking  (e.g.,  Quantified 
+Self) and wearables. Through parallel prototyping, iterative 
+design,  and our  exploratory field  studies, we  demonstrated 
+the  potential  of  using  shared,  glanceable  displays  to 
+motivate individual and group fitness performance, increase 
+group  cohesiveness,  and  enhance  group  awareness.  Future 
+work  should  investigate  fully  integrated  jersey  displays, 
+new  types  of  visual  content  and  motivational  strategies 
+(e.g., encouragement), and the use of shared, glanceable e-
+textile displays in other athletic contexts (e.g., bicycling).  
+
+ACKNOWLEDGEMENTS 
+We  thank  Runkeeper  and  Erogear  for  their  technical 
+partnerships,  Jonah  Chazan  for  help  developing  fonts,  and 
+our participants. This project was funded in part by Nokia. 
+
+REFERENCES 
+1.  Anshel, M.H. Sport Psychology: From Theory to Practice 
+
+(5th Edition). Benjamin Cummings, 2011. 
+
+2.  Barder, O. and Knight, D. Running for Fitness. 2010. 
+3.  Bond, C.F. Social facilitation: A self-presentational view. 
+
+J. Person. & Soc. Psych. 42, 6 ('82), 1042–1050. 
+
+4.  Buttussi, F. and Chittaro, L. Smarter Phones for Healthier 
+Lifestyles: An Adaptive Fitness Game. IEEE Pervasive 
+Computing 9, 4 (2010), 51–57. 
+
+5.  Carron, A. V., Hausenblas, H.A., and Mack, D. Social 
+
+influence and exercise: A meta-analysis. Journal of Sport 
+& Exercise Psychology 18, 1 (1996), 1–16. 
+
+6.  Chi, E.H., Song, J., and Corbin, G. “Killer App” of 
+
+wearable computing. Proc. UIST'04, 277. 
+
+7.  Connaghan, D., Hughes, S., May, G., et al. A Sensing 
+
+Platform for Physiological and Contextual Feedback to 
+Tennis Athletes. Workshop on Wearable & Implantable 
+BSNs 2009, 224–229. 
+
+8.  Cornelius, R. Controlling 20 LEDs From 5 Arduino Pins 
+
+Using Charlieplexing. instructables.com, 2011.  
+
+9.  Dow, S.P., Glassco, A., Kass, J., Schwarz, M., Schwartz, 
+D.L., and Klemmer, S.R. Parallel prototyping leads to 
+better design results, more divergence, & increased self-
+efficacy. ACM TOCHI'10 17, 4, 1–24. 
+
+10. Eriksson, M., Halvorsen, K.A., and Gullstrand, L. 
+
+Immediate effect of visual and auditory feedback to control 
+the running mechanics of well-trained athletes. Journal of 
+Sports Sciences 29, 3 (2011), 253–262. 
+
+11. Fortmann, J., Pielot, M., et al. PaceGuard: improving 
+
+running cadence by real-time auditory feedback. Proc. of 
+MobileHCI’12, 5. 
+
+12. Goffman, E. The Presentation of Self in Everyday Life. 
+
+Anchor, 1959. 
+
+13. Hanc, J. Run Together. Runner’s World, 2005. 
+
+http://www.runnersworld.com/workouts/run-together. 
+14. Kolata, G. To Train Harder, Consider a Crowd. The New 
+
+York Times, 2009.  
+
+15. Locke, E.A. and Latham, G.P. Building a Practically 
+Useful Theory of Goal Setting and Task Motivation. 
+American Psychologist 57, 9 (2002), 705–717. 
+
+16. Luna, T. Mass. companies team up to prevent head injuries. 
+
+The Boston Globe, 2013. http://goo.gl/VkVLWF. 
+
+17. Mayo Clinic. Exercise intensity: Why it matters, how it’s 
+
+measured. Mayo Clinic Health Information, 2011. 
+http://www.mayoclinic.com/health/exercise-
+intensity/SM00113. 
+
+18. Michahelles, F. & Schiele, B. Sensing and Monitoring 
+
+Professional Skiers. IEEE Perv. Comp 4, 3 (2005), 40–46. 
+
+19. Mueller, F., Vetere, F., Gibbs, M.R., Edge, D., 
+
+Agamanolis, S., and Sheridan, J.G. Jogging over a distance 
+between Europe and Australia. UIST'10, 189. 
+
+20. O’Brien, S. and Mueller, F. “Floyd.” Jogging the distance. 
+
+CHI  ’07, 523–526. 
+
+21. Oliver, N. and Flores-Mangas, F. MPTrain. Proc. 
+
+MobileHCI  ’06, 21. 
+
+22. Page, M. and Vande Moere, A. Evaluating a Wearable 
+
+Display Jersey for Augmenting Team Sports Awareness. 
+Pervasive Computing '07, 91–108. 
+
+23. Pérez, P., Llana, S., Brizuela, G., and Encarnación, A. 
+Effects of three feedback conditions on aerobic swim 
+speeds. J.Sports Science & Medicine 8, 1 (2009), 30–36. 
+24. Robbins, L. The Benefits of Group Running. The New York 
+
+Times, 2009. http://well.blogs.nytimes.com/ 
+2009/06/25/the-benefits-of-group-running/. 
+
+25. Running USA. 2013 State of the Sport – Part II: Running 
+
+Industry Report. 2013. http://www.runningusa.org/state-of-
+sport-2013-part-II. 
+
+26. Schienker, B.R., Dlugolecki, D.W., and Doherty, K. The 
+Impact of Self-Presentations on Self-Appraisals and 
+Behavior: The Power of Public Commitment. Personality 
+& Social Psychology 20, 1 (1994), 20–33. 
+
+27. Sports & Fitness Industry Association (SFIA). Fitness, 
+
+Family, and Social Activities Drive Sports Participation. 
+http://www.sfia.org/press/133_Fitness,-Family,-&-Social-
+Activities-Drive-Sports-Participation. 
+
+28. Stack, K. NFL Prospects to Wear Smart, Data Gathering 
+
+Workout Shirt. Gizmodo, 2011. 
+http://gizmodo.com/5769728/nfl-prospects-to-wear-smart-
+data-gathering-under-armour-shirt. 
+
+29. Strauss, B. Social facilitation in motor tasks: a review of 
+
+research and theory. Psychology of Sport and Exercise 3, 3 
+(2002), 237–256. 
+
+30. Strohrmann, C., Harms, H., Tröster, G., Hensler, S., and 
+Müller, R. Out of the lab and into the woods: kinematic 
+analysis in running using wearable sensors. Proc. UbiComp 
+'11, 119–122. 
+
+31. Vazquez, S. Adidas miCoach Elite System Provides 
+
+Trainers and Players With Real-Time Performance Metrics. 
+Sport Techie, 2013. http://goo.gl/qECxs3. 
+
+32. Williams, K.D., Nida, S.A., Baca, L.D., and Latane, B. 
+
+Social Loafing and Swimming: Effects of Identifiability on 
+Individual and Relay Performance of Intercollegiate 
+Swimmers. Basic & Appl. Soc. Psych 10, 1 ('89), 73–81. 
+33. Youngren, J. Next-Level Training: Club or Coach. Running 
+
+Times, 2009. http://www.runnersworld.com/ race-
+training/next-level-training-club-or-coach.  
+
+Session: Exergaming for Health and FitnessCHI 2014, One of a CHInd, Toronto, ON, Canada2842

@@ -1,0 +1,1702 @@
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Personalization Revisited: A Reflective Approach Helps 
+People Better Personalize Health Services and Motivates 
+Them To Increase Physical Activity 
+Min Kyung Lee1, Junsung Kim2, Jodi Forlizzi1, Sara Kiesler1 
+
+1HCI Institute, Carnegie Mellon University 
+Pittsburgh, PA, USA 
+{mklee, forlizzi, kiesler}@cs.cmu.edu  
+
+2Ottomatika Inc. 
+Pittsburgh, PA, USA 
+junsung@ottomatika.com 
+
+ABSTRACT 
+Current  approaches  to  personalization  either  presuppose 
+people’s needs and automatically tailor services or provide 
+formulaic  options  for  people  to  customize.  We  propose  a 
+complementary  approach  to  personalization:  a  reflective 
+strategy that helps people realize what matters to them and 
+enables  them  to  better  personalize  services  themselves.  To 
+design  this  strategy,  we  first  studied  the  practices  of  eight 
+personal  health  service  providers.  We  then  tested  the 
+strategy’s  efficacy  by  building  a  Fitbit  Plan  website  that 
+encouraged  Fitbit  users  to  customize  a  plan  or  accept  an 
+automatically  tailored  plan.  For  one  group  of  users,  the 
+website used the reflective strategy to assist in the plan set-
+up process. A two-week between-subjects field experiment 
+showed that the reflective strategy helped motivate users to 
+carry out their plans, increasing their average daily steps by 
+2,425 steps. Without the reflective strategy, users either set 
+easy  goals  or  failed  to  carry  out  system-created  plans, 
+ultimately  showing  no  change  in  their  average  daily  steps. 
+This  work  suggests  that  helping  people  reflect  on  and 
+connect with their own goals in using a personalized service 
+could advance the effectiveness of the service.  
+
+Author Keywords 
+Reflective personalization; service; behavior change; 
+health; fitness; personal informatics; activity tracker 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous. 
+
+INTRODUCTION 
+Personalization has become an integral part of technology-
+based  services,  with  an  ever-growing  influence  on  the 
+decisions  that  people  make  and  the  content  and  services 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  the  author(s)  must  be 
+honored.  Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or 
+republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+specific  permission 
+from
+permissions@acm.org. 
+UbiComp '15, September 7–11, 2015, Osaka, Japan. 
+Copyright  is  held  by  the  owner/author(s).  Publication  rights  licensed  to
+ACM. 
+ACM 978-1-4503-3574-4/15/09…$15.00. 
+http://dx.doi.org/10.1145/2750858.2807552 
+
+fee.  Request  permissions 
+
+and/or 
+
+a 
+
+feeds 
+
+access.  Social  media 
+
+they 
+on  Facebook, 
+advertisements  on  Amazon,  search  results  on  Google, 
+physical  activity  goals  on  the  Apple  Watch,  and  even 
+interactions at Disney parks are automatically personalized 
+based  on  people’s  behavior  traces,  including  browsing, 
+purchasing,  and  communication  records  physical  activity 
+levels,  and  locations  [2,  6,  13,  40,  62].  In  addition  to  this 
+system-driven  personalization,  many  technologies  allow 
+people  to  directly customize  service  features  [5,  47]  or  the 
+user models on which personalization is based [63], making 
+the  personalization  process  user-driven.  Prior  research  has 
+shown that personalization in general offers many benefits: 
+reduced  cognitive  and  physical  overloads,  faster  task 
+completion,  and  increased  persuasion,  satisfaction,  and 
+loyalty to services [4, 5, 19, 26, 27, 30, 34, 59]. However, 
+we argue that personalization can be further improved.  
+
+In  system-driven  personalization,  systems  infer  what  users 
+want  and  need  based  on  the  assumption  that  their  user 
+models  accurately  represent  real  users.  However,  this 
+assumption  is  often  false  as  the  models  are  based  on 
+specific,  limited  instances  and  treat  users  as  objects  of 
+algorithmic  optimization  [32,  40].  The  limitations  of  the 
+user  models  can  result  in  irrelevant  or  even  offensive 
+personalization  outcomes  [11].  The  automatic–and  thus 
+often 
+system-driven 
+personalization  exacerbates 
+the  problem.  The  hidden 
+assumptions  of  user  models  may  unconsciously  bias 
+decision-making [55], habituate people to follow directions 
+mindlessly [7, 48], or make them focus only on things they 
+already like [44, 58].  
+
+imperceptible–implementation  of 
+
+User-driven  personalization  (also  known  as  customization) 
+offers  alternatives  for  people  to  choose  from  and  tailor. 
+However,  the  choices  are  often  formulaic  and  superficial; 
+previous  research  reveals  many  reasons  why  people  may 
+not  be  able  to  customize  or  tailor  options  to  best  satisfy 
+their needs [46, 53]. People may feel overwhelmed or even 
+experience  decreased  satisfaction  when  presented  with  too 
+many choices [23]. 
+
+We  propose  an  alternative  approach  to  personalization, 
+services 
+which  helps  people 
+themselves.  Rather  than  assuming  what  will  work  best  for 
+people  or  presenting  them  with  options  from  which  to 
+choose,  our  approach  prompts  people  to  reflect  on  their 
+
+to  better  personalize 
+
+743
+
+ 
+ 
+goals and priorities, so that they can focus on what is most 
+important to them when using and modifying services. We 
+envision  personalization  as  a  form  of  empowerment, 
+helping  people  realize  what  outcomes  matter  to  them  and 
+giving them the agency to prioritize those outcomes. 
+
+In  this  paper,  we  designed  a  reflective  personalization 
+approach  informed  by  interviews  with  personal  service 
+providers. We tested the efficacy of the reflective approach 
+using Fitbit [14], a fitness service that tracks steps. Among 
+many  services  that  could  benefit  from  the  reflective 
+approach,  we  focused  on  goal  setting  as  it  is  a  ubiquitous 
+feature  in  technology  services  with  a  cascading  effect  in 
+later  service  use.  We  chose  a  personal  health  service 
+because health is one of the domains where personalization 
+is increasingly seen as a transformative factor.  
+
+We built Fitbit Plan, a website that let Fitbit users set step 
+goals  and  track  their  progress.  Fitbit  Plan  allowed  users  to 
+either  create  their  own  goals  or  follow  suggested  plans 
+based  on  their  performance  over  the  previous  two  weeks. 
+The  reflective  strategy  was  used  during  the  set-up  process 
+to  encourage  some  users  to  think  deeply  about  why  they 
+wanted  to  increase  their  daily  steps.  We  conducted  a  2 
+(Reflective vs. Non-reflective strategy) x 2 (User-driven vs. 
+System-driven  personalization)  field  experiment  for  two 
+weeks  to  test  the  reflective  strategy.  The  results  show  that 
+adding  the  reflective  strategy  motivated  users  to  increase 
+their daily steps by 2,425 steps on average over two weeks. 
+Without the reflective strategy, users either set easy goals or 
+failed  to  carry  out  the  plans  that  the  system  suggested, 
+ultimately showing no change in their average daily steps. 
+
+This  paper  makes  two  contributions.  First,  we  introduce  a 
+new  approach  to  personalization  that  broadens  the  design 
+space. Second, we demonstrate the efficacy of this approach 
+in  a  field  study  and  discuss  design  implications  for  both 
+reflective  service  personalization  and  future  research  on 
+personalization and behavior change in HCI.  
+
+learning 
+
+REFLECTIVE APPROACHES IN HCI 
+There is a long history of HCI research on how more active 
+user participation and reflection play out in such domains as 
+office  technology  design  [10],  end-user  programming  and 
+development 
+[42], 
+[15],  computer-supported 
+reflective  design  [3,  51],  slow  technology  [18],  online 
+discussion  participation  [28],  sustainability  [60],  and 
+personal health [21, 38, 49]. Collectively, this work reveals 
+the  benefits  of  empowering  users  by  giving  them  the 
+freedom  to  interpret  technologies  and  to  appropriate  them 
+for their own use. Yet, this line of work has not influenced 
+and 
+how  personalization  has  been 
+implemented  in  the  fields  of  HCI,  business,  or  computer 
+science.  Drawing  from  this  body  of  work,  we  explore  a 
+reflective  approach  to  personalization,  in  which  users  are 
+given  opportunities  to  think  about  what  matters  to  them 
+with  the  guidance  of  technology-based  services.  When 
+given  this  agency,  people  may  be  better  able  to  create 
+personalized services that work best for them.  
+
+conceptualized 
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+EXPLORING  THE  PERSONALIZATION  STRATEGIES  
+OF HUMAN SERVICE PROVIDERS 
+To  create  our  model  for  personalization  technology,  we 
+studied  personal  service  providers.  Services  were  being 
+personalized long before computers were invented. Service 
+roles  such  as  aide-de-camp,  court  jester,  tutor,  and  butler 
+existed  centuries  ago  for  high-status  and  wealthy  people. 
+Today,  personal  service  providers  perform  a  myriad  of 
+personalized  services  at  many  levels  of  society.  In  this 
+paper,  we  ask  how  personal  service  providers  have 
+navigated  the  problems  of  determining  and  adapting  to 
+people’s preferences. Prior work suggests that practitioners 
+use  principled  approaches  to  understand  unique  problem 
+situations and optimize solutions for each problem [50]. 
+
+Method 
+We  interviewed  eight  personal  service  providers  (five 
+women)  who  offered  expert  services  to  improve  clients’ 
+physical and mental wellbeing in an Eastern city in the U.S. 
+The providers included two personal trainers, two physical 
+therapists,  a  chiropractor,  a  counselor,  a  massage  therapist 
+and a personal tutor. They had worked in their occupations 
+for 15.6 years on average. We recruited them using referrals 
+from  clients  and  snowball  sampling.  We  also  directly 
+contacted professionals whose business contact information 
+was publicly available. We aimed to recruit providers with 
+experience,  as  experts  are  reported  to  provide  better  care 
+than novices [24].  
+
+Interview protocol 
+The  hour-long  interview  began  with  questions  about  the 
+professionals’  work  contexts  and  services,  their  typical 
+relationships  with  clients,  and  whether  any  of  their  work 
+was  tailored  to  different  individuals.  Further  questions 
+probed  what  information  the  professionals  needed  to  do  a 
+good  job  with  their  clients,  how  they  listened  to  feedback 
+and  observed  cues  in  their  clients’  behavior,  and  how  they 
+handled breakdowns in interactions with their clients. 
+
+into 
+
+instances 
+
+Analysis 
+The interview recordings were transcribed for analysis. We 
+grouped  personalization 
+three  coding 
+categories,  based  on  how  service  providers  collected 
+information  about  a  client,  tailored  services  to  the  client, 
+and  evaluated  their  services  and  used  client  feedback  [13]. 
+We  also  added  codes  that  described  details  of  how 
+providers  personalized  their  services  and  the  reasons  they 
+gave  for  doing  so  [56].  We  re-grouped  lower-level  codes 
+into clusters that reflected themes of personalization across 
+the  three  stages,  and  used  the  themes  to  consider  current 
+practices of technology–based personalization. 
+
+Results 
+Two  key  results  informed  the  design  of  our  reflective 
+strategy. 
+
+Providers act as catalysts for reflective service processes 
+When  clients  lacked  knowledge  and  expertise  about  a 
+service  domain,  service  providers  played  active  roles  in 
+personalizing the service. The clients provided information 
+
+744
+
+SESSION: PERSUASIVE AND PERSONAL
+
+about their goals and motivations, but it was the provider’s 
+role to devise a program with specific tasks. For example, a 
+physical therapist created a simple storefront mockup for a 
+client  who  wanted  to  return  to  her  cashier  job  in  a  bakery 
+after  her  injury.  Together,  they  practiced  sales  interactions 
+and  monitored  the  client’s  progress  in  managing  the 
+demands  of  the  job.  After  the  therapist  understood  the 
+client’s  goals,  the  client’s  initial  preferences  regarding  the 
+service  played  a  comparatively 
+in 
+determining the ultimate nature of the service. 
+
+insignificant  role 
+
+and  maintaining 
+
+engagement  over 
+
+Providers help clients realize deeper goals and motivations 
+The  success  of  the  services  that  we  studied  depended  on 
+clients’  presence  and  active  participation.  Providers 
+explained  that  understanding  clients’  goals  was  critical  for 
+time. 
+eliciting 
+Sometimes, however, clients did not think about or initially 
+share their deeper motivations with service providers. Here, 
+providers  guided  clients  to  think  more  deeply  about  their 
+goals  and  motivations,  so  that  they  could  personalize  their 
+interactions  and  sustain  client  motivation  over  time.  For 
+example,  a  personal  trainer  said  he  tried  to  understand  the 
+deeper  motivations  of  his  clients,  even  when  they  initially 
+appeared to have well-defined goals:  
+
+(My clients) may say that their goal is to lose ten pounds, or 
+lower  their  BMI,  blood  pressure  or  to  be  more  fit  or 
+healthy;  these  are  very  generic  goals,  and  are  not  what 
+truly motivates them. For example…  they have known that 
+they may die early if they do not change their lifestyles, but 
+this  did  not  prompt  or  motivate  them  to  change  and  come 
+here.  There  is  always  something  more  emotional  and 
+motivating for different individuals, even though it may not 
+be related to their biggest problem (threats to their health). 
+So I keep asking ‘why’ to truly understand that motivation. 
+At the end, they say it is to fit into their jeans that they used 
+to  wear  when  they  were  young…  or  look  better  to  their 
+husband, or get over the break-up.  
+
+What  is  noteworthy  here  is  that  the  service  provider’s  role 
+is to repeatedly ask questions to get at hidden motivations. 
+Providers  used  this  information  to  tailor  service  offerings 
+and interactions. For example, the personal trainer used this 
+information  to  personalize  his  exercise  programs  and  his 
+feedback  to  clients,  so  that  he  could  support  the  goals  that 
+clients  cared  most  about.  A  personal  tutor  used  his 
+understanding  of  a  student’s  goal  of  going  to  pharmacy 
+school  in  tailoring  examples  that  he  used  to  explain  math 
+and chemistry concepts. These shared experiences made the 
+client-provider relationship more collaborative and caring. 
+
+DESIGNING REFLECTIVE PERSONALIZATION 
+Our  study  of  human  service  providers  shows  that  service 
+providers  seek  to  understand  clients’  deeper  goals  and 
+motivations, and use this knowledge to create personalized 
+plans  and  maintain  motivation  through  tailored  feedback. 
+What is critical in this process is the very first step in which 
+providers  guide  their  clients  to  reflect  on  and  articulate 
+what  motivates  them,  so  that  clients  can  orient  themselves 
+
+745
+
+to  their  underlying  needs  and  goals.  This  focus  contrasts 
+starkly  with  how  computer-based  services  are  currently 
+personalized.  Most  current  technology  services,  such  as 
+online shopping and education websites, product and news 
+recommendations, and health management tools do not help 
+users  determine  their  goals.  Instead,  they  either  prescribe 
+services  that  systems  think  will  work  best  for  users,  or 
+allow  users  to  personalize  the  solution  spaces  of  their 
+services on the assumption that the users’ goals at the time 
+of  personalization  are  fully  realized.  This  insight  played  a 
+key role in designing the reflective strategy, which prompts 
+users to think more deeply about their goals through a series 
+of questions. 
+
+How questions facilitate reflective personalization  
+The  reflective  strategies  and  processes  that  human  service 
+providers use are greatly nuanced. These processes include 
+rapport  and  trust  creation  through  shared  goals,  and 
+interactive,  dialogue-based  goal  and  reflection  elicitation. 
+We  distilled  these  processes  into  open-ended  questions, 
+focusing  particularly  on  the  “why”  question,  to  translate 
+human  conversational  strategies  into  computational  ones. 
+The  simplicity  and  feasibility  of  open-ended  questions 
+allow  for  the  flexible  application  of  the  strategy  in  a  wide 
+array of tasks and domains. We then turned to the literature 
+on  reflection  in  order  to  gain  insights  into  the  effects  of 
+reflection beyond those we observed in our interview study. 
+
+Why “why” works 
+Previous  research  suggests  that  asking  reflective  questions 
+can help people articulate their underlying needs and goals 
+and increase their motivation to use a service. The reflective 
+strategy  may  elicit  contemplative  [25]  or  metacognitive 
+[16]  thinking,  allowing  people  to  think  about  their  needs 
+and  wants  beyond  the  first  answers  that  come  to  mind. 
+Research suggests that asking people their reasons for doing 
+an  activity  triggers  their  underlying  motivations  and  leads 
+them to focus on higher-level goals [8, 61]. This reasoning 
+can help people overcome potential decision biases [41] and 
+give people opportunities to personalize service features to 
+better satisfy their underlying needs and goals.  
+
+Reflective strategies may encourage people to focus on the 
+long-term  consequences  of 
+their  choices  and  make 
+decisions that are more in line with their ideal selves. In one 
+study, people who were asked to think about why they eat 
+snacks before making a choice were more likely to choose 
+healthy  options  [17].  In  another  study,  people  exerted 
+greater  self-control  tolerating  physical  discomfort  when 
+they were reminded of the purpose of the activity [17, 61]. 
+This  suggests  that  a  reflective  strategy  can  be  particularly 
+useful  for  services  in  which  people  might  benefit  from 
+orienting themselves to long-term, deeper goals. 
+
+Greater  awareness  of  underlying  needs  and  goals  attached 
+to ideal selves can increase people’s motivation for using a 
+service. Research shows that people are motivated to satisfy 
+their own needs [39] and to work on tasks that match their 
+identities  [1,  52].  In  the  absence  of  the  reflective  strategy, 
+
+people  may  not  consider  their  individual  motivations  and 
+goals when personalizing services. 
+
+How to ask “why” to elicit reflection 
+The  success  of  reflective  questions  depends  on  whether 
+they  elicit  deeper  reflection.  When  service  providers 
+interact  with  clients,  they  often  ask  follow-up  questions. 
+There  is  also  social  pressure  for  clients  to  cooperate  with 
+the  providers.  Without  the  dialogue  and  social  pressure, 
+people may be less inclined to comply with computer-based 
+services, and provide only superficial answers to questions. 
+In order to address these challenges, we reviewed previous 
+research 
+techniques  were  used 
+successfully  and  adopted  several  of  these  in  our  design. 
+These 
+twice  [17], 
+instructing  clients  to  take  more  time  to  think  about  the 
+question,  and  asking  clients  to  write  longer  answers  than 
+they usually would do [54]. 
+
+included  asking  “why”  questions 
+
+in  which 
+
+reflective 
+
+Goal-setting and planning in personal health tracking 
+We  evaluated  the  efficacy  of  the  reflective  strategy  in  the 
+task of creating personalized plans for health. We built the 
+Fitbit  Plan  website,  where  Fitbit  users  could  set  up 
+personalized two-week plans for increasing their daily steps 
+with the reflective strategy.  
+
+Goal-setting and planning 
+Among  the  many  service  aspects  that  can  be  personalized, 
+we  focused  on  goal-setting  and  planning.  Goal-setting  and 
+planning  are  widely-used  service  features  in  a  number  of 
+domains  [37].  They  are  only  a  small  part  of  the  larger 
+service process, generally taking place once at the start of a 
+service,  but  they  are  a  critical  part  of  the  service  process. 
+They  can  have  a  cascading  effect;  once  people  set  their 
+goals, they tend not to change the settings over the duration 
+of the usage [48, 58]. In addition, allowing for goal-setting 
+and  planning  has  been  shown  to  improve  people’s  service 
+adherence and motivation [37]. 
+
+The domain of personal health tracking 
+Many  digital  technologies  are  currently  changing  how 
+people  manage  their  health  by  offering  aggregated  sensor 
+data  and  tools  to  document  and  manage  health-related 
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+behavior.  Much  HCI  research  has  investigated  different 
+ways  to  use  digital  technologies  to  improve  how  people 
+manage their health [9, 12, 19, 20, 29, 36, 38, 43, 49]. 
+
+We used Fitbit [14], a physical activity tracker, as the basis 
+for  our  personalized  service  design.  Walking  is  a  critical 
+activity in personal health, as walking 10,000 steps or more 
+daily  has  been  shown  to  offer  many  health  benefits  [22]. 
+The  Fitbit  website  offers  both  user-driven  and  system-
+driven  personalization  features  for  goal  setting  and 
+planning.  Fitbit  users  can  set  up  a  single  goal  for  their 
+activity  by  typing  in  the  number  of  steps  they  desire  to 
+achieve. If Fitbit users want to set up a plan to increase their 
+daily  steps,  they  can  enroll  in  a  “personal  trainer”  service 
+with a yearly subscription fee. This feature presents a plan 
+in  which  daily  step  goals  increase  from  a  current  baseline. 
+Users can follow the plan to increase physical activity. 
+
+Fitbit Plan Website 
+On the Fitbit Plan website, Fitbit users could set up a two-
+week  goal  and  track  their  progress  (Figure  1).  The  Fitbit 
+Plan  was  built  on  Google  App  Engine  using  Fitbit 
+Developer API. Highcharts JS was used to visualize users’ 
+progress,  and  a  portion  of  back-end  implementation  was 
+adopted from [12]. Once users signed up to the website and 
+gave their consent, Fitbit Plan automatically retrieved users’ 
+daily step data from their Fitbit accounts. Fitbit Plan asked 
+six reflective questions designed to guide people in thinking 
+about  their  underlying  motivations  and  goals,  and  to 
+discover  easy  ways  to  implement  them  and  remove  any 
+barriers  to  healthier  lifestyles.  Users  could  then  create 
+personalized  two-week  plans.  Alternatively,  Fitbit  Plan 
+recommended  a  personalized  plan  based  on  baseline  steps 
+and recommended guidelines.  
+
+EVALUATING REFLECTIVE PERSONALIZATION 
+We  conducted  a  2x2  between-subjects  field  experiment. 
+The effect of the reflective strategy was evaluated with two 
+main  personalization  methods  –  user-driven  and  system-
+driven  personalization.  Recruitment  and  administration  of 
+the  study  took  place  entirely  online  through  email  and  on 
+the Fitbit Plan website. 
+
+Figure 1. ©Min Kyung Lee. Fitbit Plan website 
+
+746
+
+SESSION: PERSUASIVE AND PERSONAL
+
+Hypotheses 
+Based  on  our  goals  of  articulating  needs  and  increasing 
+motivation  to  use  a  personalized  service,  we  explored  the 
+following hypotheses in the study:  
+
+Hypothesis  1.  The  reflective  strategy  will  help  people 
+articulate their underlying needs, goals and motivations for 
+increasing physical activities. 
+
+Hypothesis  2.  People  will  be  more  motivated  to  carry  out 
+the  personalized  health  plan  by  a  technology  system  that 
+employs the reflective strategy than by one that does not. 
+
+Participants 
+We recruited Fitbit users who wanted to increase their daily 
+steps  and  try  a  daily-steps  planning  website.  We  posted  a 
+call  for  research  participation  on  online  Fitbit  community 
+boards,  and  on  Facebook,  Craigslist,  and  Twitter  using  the 
+Fitbit  hashtag.  We  used  a  pre-survey  to  limit  participation 
+to those who were older than 18 years, resided in US, were 
+not  pregnant,  were  proficient  English  speakers,  self-
+reported  that  they  wore  their  Fitbit  almost  everyday,  and 
+intended to increase their daily steps. In total, we recruited 
+62  Fitbit  users  (74%  female,  age  ranges  from  19.5  to  68 
+(M=38.7  (SE=1.62)).  37  were  Caucasian,  9  were  Asian 
+American, 2 were Hispanic, 2 were of mixed origins, 1 was 
+African  American,  and  the  rest  did  not  wish  to  report.  On 
+average, participants had used Fitbit for 8 months (SE=1.44 
+month).  Participants  who  completed  the  two-week  long 
+study were compensated with a $10 Amazon gift card. 
+
+Experimental conditions  
+The  experiment  manipulated  whether  or  not  participants 
+answered  reflective  questions  and  who  personalized  the 
+two-week plan, the user or the system (Table 1). 
+
+User-driven 
+System-driven 
+
+Reflective 
+N=15 (11) 
+N=17 (11) 
+
+Non-reflective 
+N=14 (11) 
+N=16 (7) 
+
+Table 1. Field experiment conditions and participant numbers. 
+The first numbers indicate participants who set up their plans 
+and filled out the Day 0 survey. The numbers in parentheses 
+indicate participants who used Fitbit Plan and filled out the 
+Day 14 survey. 
+
+Reflective strategy conditions 
+Six  reflective  questions  were  presented  right  before 
+participants  were  asked  to  construct  their  plans.  The  first 
+question  asked  why  they  wanted  to  increase  their  daily 
+steps. The second question asked them to elaborate on their 
+first  answers  (“OK.  Think  about  what  you  just  described. 
+Why  is  this  important  to  you?”).  We  encouraged  them  to 
+think about this question for at least one minute, but we did 
+not  force  them  using  a  timer.  The  next  questions  asked 
+about easy ways to start moving toward their goal, expected 
+barriers,  and  their  plans  for  addressing  those  barriers,  in 
+order  to  help  them  think  about  realistic  goals.  Finally,  we 
+asked how many minutes they could spend walking without 
+disrupting  their  routines.  Participants’  answers  to  these 
+
+questions were displayed on the page along with a graph of 
+their goals and progress. 
+
+Personalization conditions 
+In the user-driven condition, Fitbit Plan asked users to type 
+in  daily  step  goals  for  two  weeks.  As  a  baseline  and  a 
+reference,  the  page  showed  their  average  steps  during  the 
+previous  two  weeks.  We  asked  them  to  create  a  plan  that 
+was  challenging  (more  than  their  baseline),  yet  realistic 
+(achievable  without  requiring  major  effort).  To  encourage 
+success,  we  also  told  them  to  try  to  accommodate  their 
+schedules.  Once  they  typed  in  their  goals,  the  goals  were 
+presented as a graph on the next page. 
+
+In  the  system-driven  condition,  Fitbit  Plan  devised  a 
+personalized  two-week  plan  by  following  US  Health 
+agency recommendations, as well as guidelines for walking 
+programs  used  in  academic  research  and  suggested  by 
+popular  health  information  resource  sites  such  as  Mayo 
+Clinic. Fitbit Plan used the participant’s average number of 
+steps  for  the  previous  two  weeks  as  a  baseline.  We  told 
+participants 
+followed  US  Health  agency 
+recommendations to create a challenging yet realistic plan. 
+The  system  gradually  increased  their  daily  steps,  raising 
+their  baselines  by  2,000  additional  steps  by  the  end  of  the 
+first  week  and  by  an  additional  1,500  by  the  end  of  the 
+second week. This resulted in a 3,500 daily step increase on 
+the  last  day  of  the  two  weeks,  with  an  average  daily  step 
+time  –  approximately 
+increase  of  2,000  during 
+equivalent to an additional 20 minutes of walking each day. 
+
+that  we 
+
+that 
+
+Once participants set up a two-week plan, they could track 
+their progress in relation to their goals on Fitbit Plan. They 
+were  not  able  to  modify  the  plan  during  the  two-week 
+period.  We  made  this  choice  intentionally;  the  two-week 
+plan is a good way for participants to explore their limits. If 
+they  wanted  to  continue  to  increase  their  daily  steps  or 
+maintain  their  increased  steps,  they  could  make  changes 
+after  two  weeks.  This  also  allowed  us  to  control  the 
+experimental manipulation. 
+
+Procedure 
+People who contacted the study organizer were asked to fill 
+out  a  pre-survey.  Qualified  participants  were  randomly 
+assigned  to  one  of  the  four  conditions.  We  created  four 
+versions  of  Fitbit  Plan,  in  order  to  satisfy  each  condition. 
+The  study  organizer  sent  each  participant  an  email  with  a 
+link to an online consent form and the instructions on how 
+to  set  up  a  two-week  long  plan  to  increase  daily  steps  on 
+Fitbit Plan. Then participants were asked to fill out the Day 
+0 survey. After two weeks of using Fitbit Plan, participants 
+were asked to fill out the Day 14 survey, and compensated. 
+No  reminders  were  sent  to  the  participants  during  the  two 
+weeks of the study period. 
+
+Data sources and measures 
+We  collected  behavioral  and  subjective  data  from  the 
+website’s plan and daily step logs and from the surveys. 
+
+747
+
+ 
+Two-week plan and daily step logs 
+We  used  daily  step  logs  on  Fitbit  Plan  to  understand  how 
+well  the  participants  carried  out  their  plans.  To  calculate 
+changes  in  daily  steps,  we  compared  their  daily  average 
+over  two  weeks  of  study  participation  with  their  baseline, 
+which  was  their  daily  average  from  the  two  weeks  before 
+the  study.  There  were  no  differences  in  the  baseline 
+numbers  of  daily  steps  across  the  conditions  (Daily 
+M=9,801 (SD=5,541)). To calculate each participant’s plan 
+completion  rate,  we  averaged  the  ratio  of  the  step  goal  in 
+the plan with the actual steps that the participant walked for 
+each day over two weeks. For participants who created their 
+own plans (user-driven), we analyzed the goals that they set 
+for  two  weeks  by  calculating  how  many  daily  steps,  on 
+average, participants planned to increase over two weeks.  
+
+to 
+
+Answers to reflective questions 
+We  examined  participants’  answers 
+the  reflective 
+questions to see whether the questions elicited reflection on 
+then 
+their  underlying  motivations  and  goals.  We 
+categorized  their  answers  by  the  types  of  reasons  that 
+participants provided, how they felt their goals contributed 
+to their identities, and whether their reasoning was based on 
+emotion, past experience, or knowledge. We also calculated 
+the length of the answers. 
+
+Surveys 
+We  conducted  an 
+initial  Day  0  survey  right  after 
+participants  set  up  their  plan,  and  an  exit  Day  14  survey 
+after  their  two-week  usage.  We  asked  the  same  question 
+sets  as  repeated  measures  to  detect  changes.  All  questions 
+used 7-point Likert-type scales, unless noted otherwise. 
+
+Initial  survey  (Day  0).  We  asked  about  participants’ 
+experiences of setting up the plan. 
+
+Perceived  control  over  the  personalization  process.  Two 
+items asked whether people felt that they had an appropriate 
+level of control over the process (Cronbach’s α=.8): “I felt 
+that I had an appropriate level of control over the process of 
+setting  up  the  plan”  and  “I  felt  that  I  could  influence  the 
+process and outcome of setting up the plan.” 
+
+Engagement  with  the  personalization  process:  Two  items 
+measured  how  engaged  people  were  in  creating  the  plan  
+(Cronbach’s  α=.8):  “I  was  highly  motivated  to  pay  close 
+attention  to  this  plan,”  and  “While  creating  this  plan,  I 
+could have worked harder on it.” 
+
+Motivation  to  carry  out  the  personalized  plan:  Five  items 
+adopted  from  [57]  measured  how  motivated  participants 
+were to follow the plan that they created at the moment of 
+creation  (Cronbach’s  α=.7):  “Doing  well  on  this  plan  is 
+important  to  me,”  “I  will  put  in  good  effort  throughout 
+following  this  plan,”  “I  am  not  concerned  about  how 
+successfully I will carry out this plan,” “I will put forward 
+my  best  effort  in  carrying  out  this  plan,”  and  “While 
+following this plan, I will persist to completion of the plan.” 
+
+748
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Perception of services being personalized: Two items asked 
+how personalized the participants felt their plans were [27] 
+(Cronbach α=.82): “The plan is personalized for me and my 
+context,” and “This plan accommodates what I want.” 
+
+Perceived  difficulty  of  and  satisfaction  with  the  plan:  One 
+question asked how much effort participants would need to 
+put  into  completing  the  plan.  We  also  asked  how  satisfied 
+participants were with the plan. 
+
+Manipulation checks: We asked how helpful Fitbit Plan had 
+been  in  guiding  participants  to  think  about  their  goals  and 
+constraints,  and  how  evenly  participants  felt  the  work  of 
+setting  up  the  plan  had  been  divided  between  themselves 
+and the Fitbit Plan website.  
+
+Exit  survey  (Day  14).  The  questions  in  the  Day  0  survey–
+motivation  to  carry  out  the  plan,  perceived  level  of 
+personalization  and  difficulty,  and  satisfaction  with  the 
+plan– were rephrased to measure how participants felt while 
+carrying out their plan rather than at the moment of creation. 
+Additional questions asked how often they had remembered 
+their daily goals, how much they enjoyed following the plan, 
+and  whether  they  wanted  to  decrease,  maintain  or  increase 
+their daily steps going forward. 
+
+Results 
+The  study  evaluated  the  effects  of  adding  a  reflective 
+strategy to prevalent personalization strategies – user-driven 
+and  system-driven  personalization.  Both  of  our  hypotheses 
+were  supported,  suggesting  that  the  reflective  strategy  can 
+help users of personalized services achieve their goals. 
+
+(Reflective=4.78 
+
+Manipulation check 
+Our  manipulations  were  successful.  Participants  in  the 
+reflective conditions felt that Fitbit Plan helped them think 
+about  their  motivations  and  goals  before  setting  up  their 
+plans 
+(SE=.26),  Non-reflective=3.1 
+(SE=.27),  F(1,60)=20.17,  p<.0001).  Participants  in  the 
+system-driven  conditions  felt  that  Fitbit  Plan  did  most  of 
+the  work  (User-driven=2.28  (SE=.3),  System-driven=5.33 
+(SE=.28), F(1, 60)=55.8, p<.0001; 1=“I did the most work” 
+and 7=“Fitbit Plan did the most work.”) 
+
+Effects of reflective personalization on thinking about goals 
+Participants  in  the  reflective  condition  gave  a  variety  of 
+reasons for wanting to increase their daily steps which were 
+consistent  with  previous  research  [45].  When  asked  “Why 
+do  you  want  to  increase  your  physical  activity,  especially 
+walking?”  participants  gave  short  and  generic  answers 
+using  a  few  phrases  (M=14.7  words  (SD=13)).  The  most 
+commonly-mentioned  reasons  were  “weight  loss”  (N=16) 
+and  “improved  health”  (N=13),  followed  by  “improved 
+mood or energy” (N=9), “fitness (N=5),” and other smaller 
+categories. 
+
+Asking the why question again–“Ok. Think about what you 
+just  described.  Why  is  this  important  to  you?”–was 
+effective  in  encouraging  participants  to  think  about  their 
+motivations  more  deeply.  Participants  were  asked  to 
+
+SESSION: PERSUASIVE AND PERSONAL
+
+elaborate on their reasons by giving three examples, which 
+resulted  in  an  average  of  111.6  words  (SD=57)  in  total. 
+Each  reason  fell  into  at  least  one  of  three  categories  based 
+on whether it concerned the participant’s individual, social, 
+frequently,  participants 
+or  environmental  self.  Most 
+mentioned 
+their  work 
+they  wanted 
+productivity,  athletic  ability,  mindfulness,  self-confidence 
+based on appearance, feelings of achievement, or longevity. 
+Some  participants  mentioned  social  reasons,  such  as 
+becoming better parents or having good times with friends. 
+A  few  participants  mentioned  experiencing  their  cities  and 
+becoming closer to nature.  
+
+improve 
+
+that 
+
+to 
+
+response,  which 
+
+More interesting, however, was the richness and uniqueness 
+of  each  participant’s 
+in 
+categorization.  Many  participants  described  very  personal 
+contexts,  experiences,  and  emotions.  The  quotes  below 
+exemplify  how  participants  expanded  their  initial  answers, 
+such  as  weight  loss  or  improved  health,  to  elaborate  what 
+they wanted to achieve by being physically active: 
+
+lost 
+
+is 
+
+Better  relationships  -  I  feel  that  people  judge  me  because 
+I'm  so  skinny  without  being  athletic.  I  almost  feel  more 
+unathletic  than  the  majority  of  my  peers  and  that  worries 
+me; I get anxious if I get invited to any athletic event and I 
+want that to stop. (P30) 
+
+I'm 49 years old and I can feel my memory and as a result 
+my cognition slowly declining. I want to do everything I can 
+to  make  it  through  my  80s  with  most  of  my  marbles  --  I 
+especially  don't  want  my  kids  to  have  to  be  burdened  with 
+taking  care  of  me  if  I  have  Alzheimer’s  or  other  senility.  I 
+would like to be strong and playing with my grandkids! (P3) 
+
+Being  connected  with  nature  is  also  important  to  me, 
+because I spend all too much time indoors with my day job.  
+Having a moment to reconnect with the outdoors helps me 
+to  be  a  more  grounded,  centered  person  with  the  proper 
+perspective  on  life.  Whether  outdoors  near  the  lake  or  in 
+the  garden,  having  that  perspective  really  helps  me  stay 
+sane. (P31) 
+
+When I have more energy I can be productive at work. I can 
+think clearer and have better ideas, and not just go through 
+a day supported by caffeine. (P16) 
+
+Being more active will help [me] keep up with my son. He 
+is  a  very  active  boy  and  there  are  days  I  cannot  keep  up 
+with him. I want him to be proud of me. (P8) 
+
+While  most  participants  described  what  they  wanted  to 
+achieve,  some  participants’  sought  to  avoid  potential 
+negative  consequences  of  not  being  physically  active.  For 
+example,  P13  said:  A  close  family  member  recently  had  a 
+heart  attack  and  passed  away.  He  never  took  super  good 
+care of himself, and I'd really like to avoid that. 
+
+P15  said:  My  family  has  a  pretty  bad  health  history:  high 
+blood pressure, lots of cancer. I don't want to be like them 
+and getting more activity may help.  
+
+749
+
+A  few  participants  described  scientific,  mechanical,  or 
+numeric views of their goals. For example, P6 explained: by 
+moving  more  I  burn  more  calories  during  the  day  and  so 
+can  sustain  a  greater  amount  of  food  intake  (and  I  like  to 
+eat). P22 wanted to increase physical activity to “lower my 
+cholesterol  which  is  extremely  high,”  and  P29  hoped  “my 
+heart rate and blood pressure will drop.” 
+
+Some  participants  reflected  on  their  personal  observations 
+and on lessons learned from past experiences. For example, 
+P18  said:  I find that I can wake up early on any day and in 
+a  good  mood  after  I  sleep  well,  which  in  turn  correlates 
+with how much physical exercise I did the preceding day.  
+
+P5 said: If I don't exercise for a while, I feel weak and might 
+gasp  after  just  [a  few  minutes’]  walk.  Also,  if  I  sit  or  stay 
+motionless for [a] long time, I feel sleepy. 
+
+A  few  participants  also  mentioned  plans  for  change.  For 
+example,  P11  said:  I know working out, especially walking 
+outdoors,  always  improves  my  mood.  Why  is  it  then,  that 
+days  can  go  by  when  I  lack  motivation  and  don't  walk? 
+Inertia sets in. I really need to have a daily plan. 
+
+Effects  of  reflective  personalization  on  the  experience  of 
+plan creation 
+The  analysis  of  the  initial  Day  0  survey  suggests  that  the 
+reflective  strategy  mitigated  some  negative  impacts  of 
+system-driven  personalization  on  how  participants  felt 
+about  their  plans.  The  reflective  strategy  increased  the 
+extent  to  which  participants  felt  that  the  system-generated 
+plans  had  been  personalized  for  them  and  how  satisfied 
+they were with the system-generated plans (Table 2).  
+
+Reflective 
+
+Non-reflective 
+
+Perceived level of 
+personalization 
+Satisfaction 
+
+5.32(.34) 
+
+5.29(.31) 
+
+4.25(.35)*1 
+
+4.38(.32)*2 
+
+Table 2. Effect of reflective, system-driven personalization on 
+a) perceived level of personalization of the plan and b) 
+satisfaction with the plan (The numbers show the least squared means and the 
+standard error in parentheses. *p < .05, 1F(1,31) = 4.75, 2F(1,31) = 4.21 ) 
+
+User-driven 
+
+System-driven 
+
+Reflective 
+
+5.07(.33) 
+
+Non-
+reflective 
+6.14(.34)*1 
+
+Reflective 
+
+4.82(.31) 
+
+Non-
+reflective 
+3.06(.31)***2 
+
+Perceived 
+control 
+
+Table 3. Effect of reflective, system-driven personalization on 
+perceived control (The numbers show the least squared means and the standard error in 
+parentheses. *p < .05, ***p < .001, 1F(1,58) = 5.2, 2F(1,58) = 15.84) 
+
+There  was  an  interaction  effect  (F(3,  58)=15.35,  p<.001) 
+between  the  use  of  the  reflective  strategy  and  the  type  of 
+personalization on perceived control over the set-up process 
+(Table  3).  With  the  system-generated  plans,  participants 
+reported  perceiving  very  limited  control  over  the  set-up 
+process.  However,  answering  reflective  questions  before 
+receiving the plan significantly increased participants’ sense 
+of  control  throughout  the  process.  The  opposite  effect  was 
+observed  with  the  user-created  plans.  Participants  reported 
+
+ 
+ 
+ 
+perceiving  greater  control  when  they  did  not  answer 
+reflective  questions  than when  they  did.  This  suggests  that 
+participants may have felt the questions were guiding their 
+thoughts and plan creation experiences. 
+
+However,  neither  the  reflective  strategy  nor  the  type  of 
+impact  on  how  motivated 
+personalization  had  any 
+participants  felt  to  follow  their  plans  at  the  moment  of 
+creation.  Participants 
+in  all  conditions  were  highly 
+motivated  (M=5.9  (SE=.1)).  There  were  also  no  statistical 
+differences  in  the  perceived  difficulty  of  successfully 
+carrying  out  the  plan  (M=3.74  (SE=.18)  or  engagement 
+with the personalization process (M=4.53 (SE=.15)). 
+
+Effects of reflective personalization on plan creation 
+In the system-driven personalization condition, the plan was 
+created to help participants increase 2,000 steps on average. 
+In  the  user-driven  personalization  condition,  those  who 
+answered  reflective  questions  aimed  to  increase  their  steps 
+by a marginally greater amount than did those who did not 
+(Reflective  &  User-
+answer 
+driven=3,198 
+(SE=738),  Non-reflective  &  User-
+driven=1,133 (SE=764), F(1,27)=3.77, p=.06) (Figure 2a).  
+
+reflective 
+
+questions 
+
+Effects of reflective personalization on plan completion 
+22 participants stopped logging into the Fitbit Plan website, 
+but  the  number  of  dropouts  did  not  significantly  differ 
+across  conditions  (Table  1).  The  following  analysis  was 
+done  with  the  remaining  40  participants.  The  average 
+number of daily steps for this sample was 9,311 (SE=700).  
+
+the 
+
+To  examine  whether 
+reflective  strategy  helped 
+participants  increase  their  daily  steps,  we  conducted  a 
+MANOVA 
+that  compared  each  participant’s  baseline 
+number of daily steps to their average number of daily steps 
+over two weeks in each condition. The results suggest that 
+the  reflective  strategy  effectively  motivated  participants  to 
+walk  more  (Figure  2b).  Participants  who  answered 
+their  plans 
+reflective  questions  before 
+significantly took more steps compared to their baseline on 
+average,  regardless  of  whether they  customized  their  plans 
+themselves  (Reflective  &  User-driven:  Baseline=10,589 
+(SE=1,741), 
+Two-week  M=12,543 
+(SE=1,830), 
+F(1,10)=14.49,  p=.004)  or  received  their  plans  from  the 
+(Reflective  &  System-driven:  Baseline=8,666 
+system 
+
+they  set  up 
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+(SE=1,159), 
+(SE=1,022), 
+Two-week  M=11,564 
+F(1,10)=10.12, p<.01). Participants who did not answer the 
+reflective  questions  showed  no  significant  changes  in  their 
+average daily steps as compared to baseline (Non-reflective 
+&  User-driven:  Baseline=9,733  (SE=1,241),  Two-week 
+M=10,420  (SE=1,335),  p=n.s.;  Non-reflective  &  System-
+driven:  Baseline=7,652  (SE=916),  Two-week  M=8,556 
+(SE=847), p=n.s.).  
+
+All  participants  completed  their  goals  fairly  well.  In  the 
+user-driven  conditions,  participants  who  answered  the 
+reflective questions walked 93% (SE=7.23%) of their daily 
+goals on average, while those who did not answer questions 
+walked  95.26%  (SE=5.86%)  of  their  goals.  In  the  system-
+driven conditions, participants who answered the reflective 
+(123.3% 
+questions 
+(SE=17.7%)),  whereas  those  who  did  not  answer  the 
+questions walked 92.8% (SE=8.09%) of their goals.  
+
+their  goals 
+
+exceeded 
+
+actually 
+
+Effects  of  reflective  personalization  on  the  experience  of 
+carrying out the plan 
+We  ran  a  regression  analysis  of  the  Day  14  survey  to 
+understand  participants’  experiences  of  carrying  out  their 
+plans  across  the  different  conditions.  All  participants 
+equally reported that they remembered their goals and plan 
+often  (M=4.45  (SE=.27),  4=“often”,  5=“very  often”),  and 
+wanted  to  maintain  or  increase  their  daily  steps  after  the 
+study  (M=2.42  (SE=.1),  2=“maintain  my  current  daily 
+steps,” 3=“further increase my daily steps”).  
+
+We  used  MANOVA  to  analyze  the  repeated  measures  in 
+both  the  Day  0  and  Day  14  surveys,  in  order  to  compare 
+participants’  expectations  about  their  plans  to  their  actual 
+experiences.  The  results  suggest  that  participants  in  the 
+reflective  conditions  found  their  plans  more  difficult,  and 
+felt  that  it  had  taken  them  more  effort  to  successfully 
+complete  their  plans  than  they  had  initially  thought  (Table 
+4a).  When  no  reflective  strategy  was  used,  participants’ 
+expectations and actual experiences of the difficulty of their 
+plans  did  not  differ.  Consistent  with 
+this  perceived 
+difficulty,  participants  in  the  reflective  conditions  reported 
+less enjoyment in the experience of carrying out their plans 
+in  the  Day  14  survey  (Reflective=4.7  (SE=.27),  Non-
+reflective=5.53 (SE=.3),  F(1, 37) = 4.59, p=.04).  
+
+Figure 2. a) The effect of reflective personalization on the goals that participants set up in the user-driven personalization. b) The 
+effects of reflective personalization on how participants carried out their plans. 
+
+750
+
+ 
+ 
+SESSION: PERSUASIVE AND PERSONAL
+
+User-driven 
+
+System-driven 
+
+Reflective 
+
+Non-reflective 
+
+Reflective 
+
+Non-reflective 
+
+a) Difficulty  
+b) Motivation 
+
+Day 0 
+4.18(.3) 
+5.66(.2) 
+
+Day 14 
+5.1(.43)*1 
+4.66(.37)*** 3 
+
+Day 0 
+3.8(.33) 
+5.8(.18) 
+
+Day 14 
+4.4(.44) 
+5.38(.37) 
+
+Day 0 
+3.54(.6) 
+5.87(.2) 
+
+Day 14 
+4.8(.41)t2 
+5.23(.36)* 4 
+
+Day 0 
+3.57(.57) 
+6.2(.2) 
+
+Day 14 
+4.1(.52) 
+5.4(.45)* 5 
+
+Table 4. a) Perceived (Day 0) vs actual (Day 14) effort required to carry out the plan, b) Participant motivation at the time of 
+the plan creation (Day 0) vs while carrying out the plan (Day 14) (The numbers show the least squared means and the standard error in parentheses. tp < .1, *p < .05, 
+*** p < .001, 1F(1,9) = 7.5, 2F(1,10) = 4.43, 3F(1,9) = 25, 4F(1,10) = 7.75, 5F(1,6) = 9.6 ) 
+
+Most  participants,  with  the  exception  of  those  in  the  non-
+reflective,  user-driven  condition,  reported  that  they  were 
+less  motivated  than  they  anticipated  right  after  they  set  up 
+the plans (Table 4b). Only participants in the non-reflective 
+user-driven  condition,  who  set  easier  goals,  felt  that  they 
+were  as  motivated  to  successfully  carry  out  their  plans  as 
+they  had  expected  to  be.  Participants’  satisfaction  with  the 
+plans  and  the  extent  to  which  they  felt  the  plans  had  been 
+personalized  did  not  change  over  time  and  did  not  differ 
+across  conditions  (Satisfaction=4.8  (SE=.26);  Perceived 
+personalization=4.89 (SE=.26)).  
+
+Discussion 
+
+How reflective personalization worked 
+The  results  suggest  that  the  reflective  personalization 
+increased people’s daily walking with both user-driven and 
+system-driven  personalized  plans.  Participants  spent  fewer 
+than  10  minutes  answering  questions  before  setting  up  the 
+two-week plan, yet the simple reflection strategy seemed to 
+have an impact on participants’ later behaviors. 
+
+When  participants  customized  their  plans,  the  reflective 
+strategy  influenced  them  to  set  ambitious  goals,  and  they 
+successfully  completed,  on  average,  93%  of  these  goals. 
+Without  the  reflective  strategy,  participants  created  easier 
+and less ambitious plans than did those using the reflective 
+strategy  or  those  using  plans  created  by  Fitbit  Plan,  which 
+were  based  on  physical  activity  guidelines.  Even  though 
+these participants completed 95% of their goals, their daily 
+activity did not significantly increase as they aimed small.  
+
+When  the  service  personalized  plans  for  participants,  the 
+reflective strategy caused them to overachieve and actually 
+walk  more  than  the  system  had  suggested.  Without  the 
+reflective  strategy,  participants  completed  93%  of  their 
+goals  on  average,  which  did  not  result  in  a  statistically 
+significant increase in their daily steps. 
+
+Consistent with the literature on reflection presented in the 
+beginning  of  the  paper,  we  believe  that  participants’ 
+reflection  on 
+their 
+their  underlying  goals 
+motivation to set up and carry out their ambitious plans, and 
+even to walk more than system-generated plan suggested.  
+
+improved 
+
+Although  reflective  personalization  was  successful 
+in 
+increasing  participants’  daily  steps,  the  survey  results 
+suggest that participants in the reflective condition felt their 
+plans  were  more  difficult  than  they  had  expected.  They 
+enjoyed  following  the  plans  less  than  those  in  the  non-
+reflective  condition  did.  Except  for  the  participants  in  the 
+
+non-reflective,  user-driven  condition,  who  set  easier  goals, 
+participants  felt  that  they  were  less  motivated  when 
+carrying  out  their  plans  than  they  had  initially  anticipated. 
+We  believe  that  system-created  and  reflection-based  goals 
+were  more  challenging  than  the  goals  that  participants 
+created  without  reflection.  These  goals  therefore  required 
+participants  to  put  in  more  effort  than  they  had  expected, 
+and led them to feel less motivated to complete their goals. 
+Nevertheless,  participants 
+the  reflective  condition 
+in 
+successfully  increased  their  daily  steps,  and  were  just  as 
+likely  as  other  participants  to  want  to  maintain  or  increase 
+their daily steps after the study.  
+
+No effect of user vs. system-driven personalization 
+The  type  of  personalization  did  not  significantly  influence 
+participants’  motivations  to  carry  out  their  plans.  This  is 
+consistent  with  previous  research  on  goal-setting,  which 
+shows  that  while  having  a  goal  matters,  whether  people 
+create  the  goal  or  have  the  goal  assigned  makes  little 
+difference in terms of motivation [37].  
+
+Reflecting with technology vs. with human service providers 
+We  translated  a  human-human  interaction  strategy  into  a 
+self-guided,  reflective  process.  Unlike  the  human  service 
+providers in our interview studies, Fitbit Plan did not offer 
+opportunities  to  create  rapport,  bond  over  shared  goals,  or 
+hold  participants  accountable  through  social  pressure  and 
+encouragement. While this translation sacrificed the human 
+aspects  of  the  reflective  strategy,  reflection  guided  by  the 
+website may have helped people be more honest with their 
+answers  and  prompted  self-reflection,  thus  improving  their 
+motivation to follow their plans. 
+
+LIMITATIONS 
+The  experiment  only  lasted  two  weeks  and  was  conducted 
+with  a  small  sample  of  existing  Fitbit  users  with  different 
+levels  of  physical  activity.  The  reflective  strategy  was 
+successful in motivating these relatively active participants. 
+It  is  unknown  whether  the  strategy  can  effectively  modify 
+the  behaviors  of  more  sedentary  populations.  While  the 
+two-week long trial offers initial evidence that the reflective 
+strategy can prompt behavior change, it is unclear whether 
+the  effect  can  be  sustained  beyond  the  two  weeks.  It  is 
+possible  that  the  reflective  questions  would  need  to  be 
+asked  multiple  times  in  order  to  achieve  a  longer-lasting 
+effect.  The  results  of  our  study  therefore  need  to  be 
+validated  through  a  longer-term  study  with  a  larger  and 
+more  general  sample.  The  dropout  rate  was  higher  in  our 
+study than in most other studies in which the experimenter 
+interacted  with  participants  face-to-face  or  distributed 
+
+751
+
+ 
+devices. We attribute this higher dropout rate to the fact that 
+the  study  was  administered  entirely  through  email  and  the 
+Fitbit Plan website, that no reminders were used during the 
+study,  and  that  participants  used  their  own  Fitbit  devices. 
+The lack of interaction with the experimenter or liability for 
+the  device  may  have  caused  participants  to  feel  less 
+committed to the study. This dropout rate also suggests that 
+the reflective strategy might be more effective with people 
+with stronger motivation for behavior change. 
+
+IMPLICATIONS  
+
+of 
+
+that 
+
+Empowering people to better personalize 
+Our  work  broadens  the  current  scope  and  focus  of 
+personalization.  We  are  not  arguing 
+reflective 
+personalization  should  replace  current  ways  of  technology 
+of  personalization;  rather,  we  argue  that  the  reflective 
+strategy can be used to complement and strengthen existing 
+methods 
+automatically 
+personalization.  While 
+personalizing digital environments and goals and providing 
+options  for  users  to  customize  is  a  good  start,  it  is  equally 
+important 
+to  better  understand 
+themselves.  This  is  an  element  of  personalization  that 
+digital behavior traces cannot capture. As a community, we 
+in  HCI  must  think  about  how  we  can  empower  people  to 
+personalize  for  themselves.  The  work  presented  in  this 
+paper  offers  one  such  methods  of  personalization,  and  the 
+results of our field study suggest that this strategy can work 
+in  combination  with  other  methods  of 
+effectively 
+personalization as well.  
+
+to  empower  people 
+
+Designing for motivation and reflection 
+Our  work  offers  a  reflective  strategy  that  can  be  used  in 
+many  areas  where  individuals’  motivation  and  goal-setting 
+matter  for  the  success  of  the  service,  such  as  education, 
+health,  sustainability,  and  finance.  For  example,  our  work 
+suggests  that  Fitbit’s  current  Personal  Trainer  feature  may 
+become  more  effective  if  it  guides  people  to  write  down 
+why tracking daily steps matters to them, and displays these 
+motivations as a reminder. Asking students in a MOOC or 
+users  of  Mint,  a  personal  finance  management  app,  to 
+reflect  on  their  goals  and  then  choose  how  they  create  the 
+curriculum or savings plan may improve their motivation to 
+learn and finish the program. Our work suggests that, rather 
+than lists of pre-defined, generic goals that users can choose 
+from, services should offer a space for individuals to write 
+down  the  unique  significance  that  achieving  a  chosen  goal 
+would have for them. Personal informatics can also benefit 
+from  the  reflective  strategy.  Previous  research  has  shown 
+that  reflecting  on  collected  data  is  just  as  important  as 
+collecting data itself for the success of personal informatics 
+tools  [33].  “Why”  questions  can  be  used  to  improve 
+people’s  adherence  to  data  collection  or  to  elicit  deeper 
+understanding of their collected data. 
+
+Modeling human practices as a design approach 
+Modeling  human  behaviors  is  a  common  way  of  inspiring 
+nascent  computing  applications,  as  with  the  early  desktop 
+metaphor  for  GUI  and  robots  [31].  It  is  less  common  for 
+
+752
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+more  mature  computing  applications  such  as  apps  and 
+websites.  Designers  for  these  applications  study  human 
+practices to create tools that support those practices, but not 
+to use them as design inspiration. This work suggests that, 
+even  for  technology  with  well-established  design  patterns, 
+human practices can serve as the bases of new and effective 
+design interventions. 
+
+FUTURE WORK 
+Our work points to many open spaces for future research. In 
+our  study,  the  reflective  strategy  was  used  at  the  initial 
+goal-setting  and  planning  stage.  However,  there  are  many 
+other points of intervention in service, such as while people 
+are  carrying  out  their  plans,  or  when  they  become 
+disengaged and lose motivation. Future work could explore 
+how reflective questions can improve these different stages 
+of  service.  In  our  work,  we  explored  motivation  and 
+behavior change as the main service outcomes to improve. 
+Future  research  can  explore  whether  and  how  reflective 
+questions can be used to improve other outcomes, tackling 
+issues such as anchoring biases or the “filter bubble” effect 
+[35].  In  addition,  with  advancement  in  natural  language 
+understanding,  further  work  can  explore  how  interactive 
+dialogues  such  as  ELIZA  [64],  rather  than  self-guided 
+processes, can be used to elicit deep reflection in users. 
+
+CONCLUSION 
+Personalization  is  a  pervasive,  integral  part  of  people’s 
+lives, with an ever-growing influence on the decisions that 
+people  make  and  the  content  and  services  that  people 
+access.  We  envision  personalization  as  a 
+form  of 
+empowerment, helping people realize what matters to them 
+and giving them the agency to prioritize it. In this paper, we 
+have presented a reflective personalization strategy with the 
+goal  of  helping  people  better  personalize  services 
+themselves  through  reflection.  We  interviewed  human 
+health 
+such 
+service  providers  as  one  model  of 
+personalization  and  adapted  their  strategies  to  technology-
+based services. To evaluate the reflective strategy, we built 
+Fitbit  Plan,  where  Fitbit  users  could  set  up  a  personalized 
+two-week  plan  to  gradually  increase  their  daily  steps.  The 
+two-week  field  experiment  suggests  that  the  reflective 
+strategy  motivated  users  to  increase  their  daily  steps, 
+regardless  of  who  (user  or  system)  personalized  the  plan. 
+These results suggest that we may benefit from broadening 
+the  focus  and  implementation  of  personalization.  We  hope 
+this  study  will  influence  the  ways  in  which  we  design 
+personalized environments, so that people are not treated as 
+mere recipients of services, but rather as active participants 
+who can best realize their own needs, goals, and problems, 
+and have the power to create their own solutions.  
+
+ACKNOWLEDGEMENT 
+This  research  was  supported  by  NSF  grants  0624275  and 
+709077  and  the  first  author’s  KwanJeong  Lee  Jong  Hwan 
+Scholarship  and  Siebel  Scholarship.  The  second  author 
+conducted  this  research  while  he  was  at  CMU.  We  thank 
+Leila  Takayama  and  John  Zimmerman  for  their  comments 
+on this work. 
+
+SESSION: PERSUASIVE AND PERSONAL
+
+REFERENCES 
+1.  Akerlof, G. A., & Kranton, R. (2010). Identity 
+economics. The Economists' Voice, 7(2). 
+
+2.  Balabanovic, M. & Shoham, Y. (1997). Fab: content-
+
+based, collaborative recommendation. Commun. ACM 
+40, 66-72. 
+
+3.  Baumer, E. P., Khovanskaya, V., Matthews, M., …. & 
+
+Gay, G. K. (2014). Reviewing Reflection: On the Use of 
+Reflection in Interactive System Design. In Proc. of 
+DIS’14, 93-102. 
+
+4.  Berkovsky, S., Freyne, J., & Oinas-Kukkonen, H. 
+
+(2012). Influencing individually: Fusing persuasion and 
+personalization. ACM TiiS. 2(2), 9-16. 
+
+5.  Blom, J. & Monk, A. F. (2003). Theory of 
+
+personalization of appearance: Why users personalize 
+their PCs and mobile phones. Human-Computer 
+Interaction, 18(3), 193-228. 
+
+6.  Brusilovsky, P., Kobsa, A., & Nejdl, W. (2007). The 
+
+adaptive web: Methods and strategies of web 
+personalization. (Vol. 4321) Springer Science & 
+Business Media. 
+
+7.  Carr, N. (2014). The glass cage: automation and us. 
+
+WW Norton & Company. 
+
+8.  Carver, C. S., & Scheier, M. F. (2000). Autonomy and 
+self-regulation. Psychological Inquiry, 11, 284–290. 
+
+9.  Consolvo, S., Klasnja, P., McDonald, D. W.,... & 
+Landay, J. A. (2008). Flowers or a robot army?: 
+Encouraging awareness & activity with personal, mobile 
+displays. In Proc. of Ubicomp’10, 54-63. 
+
+10. Dourish, P. (1997). Accounting for system behaviour: 
+Representation, reflection and resourceful action. 
+Computers and Design in Context, MIT Press, 
+Cambridge, MA, USA, 145-170. 
+
+11. “Facebook apologizes for highlighting painful memories 
+with ‘Year in Review’ feature” on CBC news blogs, 
+http://www.cbc.ca/newsblogs/yourcommunity/2014/12/f
+acebook-apologizes-for-highlighting-painful-memories-
+with-year-in-review-feature.html, retrieved in July, 
+2015. 
+
+12. Fan, C., Forlizzi, J., & Dey, A. K. (2012). A spark of 
+activity: Exploring informative art as visualization for 
+physical activity. In Proc. of Ubicomp’12, 81-84. 
+
+13. Fan, H., & Poole, M. S. (2006). What is 
+
+personalization? Perspectives on the design and 
+implementation of personalization in information 
+systems. Journal of Org. Computing and Electronic 
+Commerce, 16(3-4), 179-202. 
+
+14. Fitbit. http://www.fitbit.com 
+
+15. Fischer, G., Giaccardi, E., Ye, Y., Sutcliffe, A.G. & 
+Mehandjiev, N. (2004) Meta-design: a manifesto for 
+end- user development. Commun. ACM, 47, 33–37. 
+
+16. Flavell, J. H. (1979). Metacognition and cognitive 
+
+monitoring: A new area of cognitive–developmental 
+inquiry. American psychologist, 34(10), 906-911. 
+
+753
+
+17. Fujita, K., & Han, A. (2009). Moving beyond 
+
+deliberative control of impulses: The effect of construal 
+levels on evaluative associations in self-control 
+conflicts. Psychological Science, 20, 799-804. 
+
+18. Hallnäs, L., & Redström, J. (2001). Slow technology–
+designing for reflection. Personal and ubiquitous 
+computing, 5(3), 201-212. 
+
+19. Halko, S., & Kientz, J. A. (2010). Personality and 
+
+persuasive technology: an exploratory study on health-
+promoting mobile applications. In Proc. of 
+Persuasive’10, 150-161. 
+
+20. Hsieh, G., Munson, S. A., Kaptein, M. C., … & Nov, O. 
+(2014). Personalizing behavior change technologies. In 
+Proc. of CHI'14 Extended Abstracts, 107-110. 
+
+21. Isaacs, E., Konrad, A., Walendowski, A.,… & 
+
+Whittaker, S. (2013). Echoes from the past: how 
+technology mediated reflection improves well-being. In 
+Proc. of CHI’13, 1071-1080. 
+
+22. Iwane, M., Arita, M.,.,…& Nishio, I. (2000). Walking 
+10,000 steps/day or more reduces blood pressure and 
+sympathetic nerve activity in mild essential 
+hypertension. Hypertension research: official journal of 
+the Japanese Society of Hypertension, 23(6), 573-580. 
+
+23. Iyengar, S. S., & Lepper, M. R. (2000). When choice is 
+
+demotivating: Can one desire too much of a good 
+thing?. Journal of personality and social psychology, 
+79(6), 995-1006. 
+
+24. Jensen, G. M., Gwyer, J., Shepard, K. F., & Hack, L. M. 
+(2000). Expert practice in physical therapy. Physical 
+Therapy, 80(1), 28-43. 
+
+25. Kahneman, D. (2003). Maps of bounded rationality: 
+Psychology for behavioral economics. The American 
+Economic Review, 93(5), 1449-1475. 
+
+26. Kaptein, M., Ruyter, B. D., Markopoulos, P., & Aarts, 
+E. (2012). Adaptive persuasive systems: A study of 
+tailored persuasive text messages to reduce snacking. 
+ACM TiiS, 2(2), 10-34. 
+
+27. Komiak, S. Y., & Benbasat, I. (2006). The effects of 
+
+personalization and familiarity on trust and adoption of 
+recommendation agents. Mis Quarterly, 941-960. 
+
+28. Kriplean, T., Toomim, M., Morgan, J., Borning, A., & 
+Ko, A. (2012). Is this what you meant?: promoting 
+listening on the web with reflect. In Proc. of CHI’12, 
+1559-1568. 
+
+29. Lacroix, J., Saini, P., & Goris, A. (2009). Understanding 
+
+user cognitions to guide the tailoring of persuasive 
+technology-based physical activity interventions. In 
+Proc. of Persuasive’09, 9. 
+
+30. Lee, M. K., Forlizzi, J., Kiesler, S., … & Savetsila, S. 
+(2012). Personalization in HRI: A longitudinal field 
+experiment. In Proc. of HRI’12, 319-326. 
+
+31. Lee, M. K., Forlizzi, J., …& Kiesler, S. (2009). The 
+
+snackbot: documenting the design of a robot for long-
+term human-robot interaction. In Proc. of HRI’09, 7-14. 
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+32. Lee, M. K., Kusbit, D., Metsky, E., & Dabbish, L. 
+(2015). Working with machines: The impact of 
+algorithmic and data-driven management on human 
+workers. In Proc. of CHI’15, 1603-1612. 
+
+33. Li, I., Dey, A.K., & Forlizzi, J. (2010). A stage-based 
+model of personal informatics systems. In Proc. of 
+CHI’10, 557-566. 
+
+48. Samuelson, W., & Zeckhauser, R. (1988). Status quo 
+
+bias in decision making. Journal of risk and uncertainty, 
+1(1), 7-59. 
+
+49. Sanches, P., Höök, K., Vaara, E., ... & Sjölinder, M. 
+(2010). Mind the body!: Designing a mobile stress 
+management application encouraging personal 
+reflection. In Proc. of DIS’10, 47-56. 
+
+34. Liang, T-P., Lai, H-J., & Ku, Y-C. (2006). Personalized 
+
+50. Schon, D. A. (1982). The Reflective Practitioner.  
+
+content recommendation and user satisfaction: 
+Theoretical synthesis and empirical findings. Journal of 
+Management of Information Systems, 23(3), 45-70.  
+
+35. Liao, Q. V., & Fu, W. T. (2014). Can you hear me 
+
+now?: Mitigating the echo chamber effect by source 
+position indicators. In Proc. of CSCW’14, 184-196. 
+
+36. Lin, J. J., Mamykina, L., … & Strub, H. B. (2006). 
+Fish’n’Steps: Encouraging physical activity with an 
+interactive computer game. In Proc. of Ubicomp’06. 
+
+37. Locke, E. A., & Latham, G. P. (2002). Building a 
+practically useful theory of goal setting and task 
+motivation: A 35-year odyssey. American psychologist, 
+57(9), 705-717. 
+
+38. Mamykina, L., Mynatt, E., Davidson, P., & Greenblatt, 
+
+D. (2008). MAHI: Investigation of social scaffolding for 
+reflective thinking in diabetes management. In Proc. of 
+CHI’08, 477-486. 
+
+39. Maslow, A. H. (1943). A theory of human motivation. 
+
+Psychological review, 50(4), 370-396. 
+
+40. Mayor-Schonberger, V., & Cukier, K. (2013). Big Data: 
+A Revolution That Will Transform How We Live, Work, 
+and Think. Eamon Dolan / Houghton Mifflin. 
+
+41. Milkman, K. L., Chugh, D., & Bazerman, M. H. (2009). 
+How can decision making be improved?. Perspectives 
+on Psychological Science, 4(4), 379-383. 
+
+42. Miyake, N. (2007). Computer supported collaborative 
+learning. The SAGE handbook of e-learning research, 
+248-265. 
+
+43. Munson, S. A., & Consolvo, S. (2012). Exploring goal-
+
+setting, rewards, self-monitoring, and sharing to 
+motivate physical activity. In Proc. of 
+PervasiveHealth’12, 25-32. 
+
+44. Pariser, E. (2011). The filter bubble: How the new 
+
+personalized web is changing what we read and how we 
+think. NY, USA: Penguin Group. 
+
+45. Richard, M., Christina, M. F., Deborah, L. S., … & 
+
+Kennon, M. S. (1997). Intrinsic motivation and exercise 
+adherence. Int J Sport Psychology, 28, 335-354. 
+
+46. Riquelme, H. (2001). Do consumers know what they 
+
+want? Journal of Consumer Marketing, 18(5), 437-448. 
+
+47. Saari, T. & Turpeinen, M. (2004). Towards 
+
+psychological customization of information for 
+individuals and social groups. In Designing 
+Personalized User Experiences in eCommerce , 19-37.  
+
+51. Sengers, P., Boehner, K., David, S., & Kaye, J. J. 
+
+(2005). Reflective design. In Proc. of the 4th decennial 
+conference on Critical computing: between sense and 
+sensibility, 49-58. 
+
+52. Sheldon, K. M. (2014). Becoming Oneself: The central 
+role of self-concordant goal selection. Personality and 
+Social Psychology Review, 349-365. 
+
+53. Simonson, I. (2005). Determinants of customers’ 
+
+responses to customized offers: Conceptual framework 
+and research propositions. Journal of Marketing, 32-45. 
+
+54. Spalding, E., Wilson, A., & Mewborn, D. (2002). 
+Demystifying reflection: A study of pedagogical 
+strategies that encourage reflective journal writing. The 
+Teachers College Record, 104(7), 1393-1421. 
+
+55. Strack, F., & Mussweiler, T. (1997). Explaining the 
+enigmatic anchoring effect: Mechanisms of selective 
+accessibility. Journal of Personality and Social 
+Psychology, 73(3), 437-446. 
+
+56. Strauss, A., & Corbin, J. M. (1990). Basics of 
+
+qualitative research: grounded theory procedures and 
+techniques. 
+
+57. Sundre, D. L., & Moore, D. L. (2002). The Student 
+Opinion Scale: A measure of examinee motivation. 
+Assessment Update, 14(1), 8-9. 
+
+58. Sunstein, C. R. (2009). Republic.com 2.0.  
+
+59. Teevan, J., Dumais, S., & Horvitz, E. (2010). Potential 
+
+for personalization. ACM TOCHI, 17(1), 1-31. 
+
+60. Thieme, A., Comber, R., Miebach, J., … & Olivier, P. 
+
+(2012). We've bin watching you: Designing for 
+reflection and social persuasion to promote sustainable 
+lifestyles. In Proc. of CHI’12, 2337-2346. 
+
+61. Trope, Y. & Liberman, N. (2010). Construal-level 
+
+theory of psychological distance. Psychological Review, 
+440-463. 
+
+62. Tuzhilin, A. (2009). Personalization: The state of the art 
+and future directions. In Admavicius, G. & Gupta, A. 
+(Eds.) Business Computing (pp. 3-43). 
+
+63. Wasinger, R., Wallbank, J., Pizzato, L., … & Kruger, A. 
+(2013). Scrutable user models and personalised item 
+recommendation in mobile lifestyle applications. In 
+User Modeling, Adaptation and Personalization, 77–88.  
+
+64. Weizenbaum, J. (1966). ELIZA—a computer program 
+for the study of natural language communication 
+between man and machine. Comm. of the ACM, 36-45.
+
+754
+
+ 
+

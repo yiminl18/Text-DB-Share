@@ -1,0 +1,1248 @@
+ Monitoring Children’s Physical Activity and Sleep:  
+A Study of Surveillance and Information Disclosure 
+Mikkel S. Jørgensen, Frederik K. Nissen, Jeni Paay, Jesper Kjeldskov, Mikael B. Skov 
+Department of Computer Science / Research Centre for Socio+Interactive Design 
+Aalborg University, Aalborg East, Denmark 
+{mikkel.skare, frederikkastrup}@gmail.com,{jeni, jesper, dubois}@cs.aau.dk  
+
+ABSTRACT 
+Children  and  parents  build  mutual  trust  through  voluntary 
+disclosure, but at the same time parents are guardians who 
+monitor  and  guide  children  as  they  grow  up.  Emerging 
+technologies offer new opportunities for parents to monitor 
+children while being separated. We investigated how sleep 
+and physical activity data from a Fitbit Flex wristband worn 
+by children (aged 9-12 years) were shared in families over 
+a five-week period. We discovered that the children would 
+optimize  their  data  as  they  learned  more  about  their  own 
+activities, and then started pleasing their parents as a result 
+of being under surveillance. Interestingly, we also saw that 
+parents used the physical activity and sleep data to question 
+children  about  specific  activities,  and  while  this  increased 
+parental  control,  it  reduced  spontaneous  and  voluntary 
+information  disclosure  from  the  children  about  their  daily 
+activities.  This  appeared  to  negatively  influence  the  trust 
+between the children and their parents. 
+
+Author Keywords 
+Surveillance,  children,  parents,  disclosure,  trust,  activity, 
+tracking, sleep 
+
+ACM Classification Keywords 
+H5.m.  Information interfaces and  presentation  (e.g.,  HCI): 
+Miscellaneous.  
+
+INTRODUCTION 
+As  we  leave  more  and  more digital  footprints  while  using 
+mobile  technology,  we  increasingly  face  issues  related  to 
+surveillance. In 2014, a survey showed that 40% of Danish 
+parents of children aged 0-15 years old found it acceptable 
+to  monitor  their  child’s  location  through  GPS  technology, 
+and 30% of these parents would actually consider installing 
+a  location-tracking  app  on  the  mobile  phones  of  their 
+children. While this  causes  controversy,  it  also  shows that 
+as mobile technology evolves and gives us new possibilities 
+for  monitoring  other  people,  we  are  faced  with  new 
+challenges  of  surveillance,  disclosure,  and  trust.  There  are 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  ACM  must  be  honored. 
+Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or  republish,  to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org. 
+OzCHI  '16,  November  29-December  02,  2016,  Launceston,  T  AS,
+Australia 
+© 2016 ACM. ISBN 978-1-4503-4618-4/16/11...$15.00 
+DOI: http://dx.doi.org/10.1145/3010915.3010936 
+
+1
+
+Figure 1: One of the participants wearing the Fitbit Flex™ 
+wristband during the study.  
+numerous  information  and  communication  technologies 
+that  enable  parents  to  monitor  children  without  the 
+children’s  knowledge.  Using  such  existing  technologies, 
+parents  (and  others)  can  get  information  and  data  about 
+children on for example their whereabouts, their activities, 
+or  their  actions.  As  an  example  of  a  commercial  product, 
+the  PC  Tattletale  (PC  Tattletale,  2016)  provides  parents 
+with the ability to record, monitor, or limit children’s online 
+activities,  stating  on  its  website  “…  your  son  or  daughter 
+will  have  no  idea  that  you  are  watching  their  every  move 
+…”.  Other  tools  provide  parents  with  data  about  their 
+children’s  location,  allowing  them  to  track  children’s 
+physical movements (Vasalou et al., 2012).  
+
+The use of monitoring technologies raises obvious concerns 
+in relation to trust. Family trust between children and their 
+parents is a vital part of family wellbeing, and parental trust 
+in  adolescents  is  often  based  on  knowledge  of  the  child’s 
+daily  activities  (Dalsgaard  et  al.,  2007;  Kerr  et  al.,  1999). 
+With  the  use  of  monitoring  or  surveillance  technologies, 
+parental knowledge can possibly be supplemented with, or 
+built on, monitored data.  
+
+While trust has long been a voiced concern within the field 
+of HCI (e.g. Graham et al., 2004; Torremante et al., 2015), 
+few  research  studies  investigate  the  impact  of  monitoring 
+technologies  in  real  life.  Until  now,  research  studies  have 
+considered digital parenting in relation to location tracking 
+(Boesen et al. 2010; Consolvo et al., 2005; Rode, 2009) or 
+to children’s digital lives (March and Fleuriot, 2006; Yardi 
+and  Bruckman,  2011)  and  more  recently  how  house  locks 
+and security cameras affect teens’ privacy (Ur et al., 2014), 
+but we have seen limited research focusing on surveillance 
+or  monitoring  of  children’s  more  daily  activities  using 
+technology and how this affects mutual trust.  
+
+In  response  to  this,  we  studied  sleep  and  physical  activity 
+data  from  an  activity-tracking  wristband  worn  by  children 
+
+ 
+ 
+ 
+  
+ 
+ 
+(aged  9-12  years)  and  shared  this  data  in  families  over  a 
+five-week  period  with  the  children’s  knowledge  of  what 
+was  being  shared.  We  were  particularly  interested  in 
+studying how monitoring affected the relationship between 
+children  and  parents,  how  parents  would  act  upon  such 
+data,  and  how  children  would  behave  knowing  that  their 
+parents were monitoring them. 
+
+Our  contributions  are  two-fold.  First,  we  provide  detailed 
+qualitative  insights  on  how  parents  engaged  with  the 
+collected Fitbit data and how they interpreted the children’s 
+activity and sleep data and question their children, but also 
+how  the  children  would  optimize  behaviour  and  actively 
+use  data  in  their  own  favour.  Secondly,  we  illustrate  how 
+trust is affected and discuss how the collected activity and 
+sleep data decreased parent uncertainty. At the same time, it 
+reduced spontaneous and voluntary information disclosure, 
+which seemed to negatively influence the trust between the 
+children and their parents. 
+
+RELATED WORK 
+In this section, we outline and discuss research on human-
+computer interaction and surveillance and trust particularly 
+in relation to children and parents.  
+
+Trust and Distrust between Children and Parents 
+Trust between parents and their children is crucial and has 
+been  investigated  in  several  studies.  As  an  example, 
+Vasalou  et  al.  (2012)  argue  that  when  moving  towards 
+adulthood,  children  must  develop  independence  both  in 
+thought  and  in  action,  and  normally  under  parental 
+direction and control. They explain that this is not a trivial 
+task  for  parents,  as they  must  balance  the  control  required 
+in  protecting  their  children  with  the  openness  that  allows 
+the  children  to  explore  their  environment  in  order  to 
+develop self-direction. Kerr et al. (1999) found that parents 
+who  gain  knowledge  about  their  children’s  daily  activities 
+trust  their  children  more,  but  this  is  only  the  case  if  the 
+knowledge  is  obtained  through  spontaneous  and  voluntary 
+disclosure from the  children. When behaviour is  regulated 
+through extrinsic forces (e.g. fear of punishment), children 
+are  less  likely  to  internalize  the  values  of  reliability  and 
+honesty  (Kerr  et  al.,  1999).  Further,  Mayer  (2003)  found 
+that uncertainty might also be essential in order to display 
+trustworthiness  in  the  first  place,  as  trustworthiness  can 
+only be displayed when the possibility of untrustworthiness 
+exists.  Thus,  parents  who  utilize  surveillance  technologies 
+as  part  of  parenting  may  actually  not  end  up trusting  their 
+children  more;  on  the  contrary  the  use  and  application  of 
+surveillance  technology  might  even  make  them  trust  their 
+children less. 
+
+Technologies and Surveillance in Families 
+Emerging technologies increasingly enable monitoring and 
+surveillance as they become mobile and portable, integrate 
+new  features  and  functionality,  e.g.  GPS,  accelerometers, 
+while at the same time being connected and online. Several 
+research  studies  have  investigated  the  role  of  technology 
+for  surveillance  in  families  and  often  studies  demonstrate 
+that surveillance technology is motivated by uncertainty or 
+
+2
+
+concern  about  children’s  safety  (e.g.  Czeskis  et  al.,  2010; 
+March  and  Fleuriot,  2006;  Rode,  2009;  Yardi  and 
+Bruckman, 2011, Ur et al., 2014). 
+
+Internet  use  by 
+
+Yardi and Bruckman (2011) discovered that parents find it 
+difficult  to  understand  or  interpret  how  and  why  children 
+use  technology,  and  thus  how  they  should  as  parents  set 
+rules and boundaries for effective parenting. Some parents 
+requiring  password 
+would  monitor 
+information  or  requiring  that  they  be  Facebook  friends. 
+Some  would  even  forward  children’s  emails  to  their  own 
+email  addresses  without  their  children’s  knowledge.  Rode 
+(2009)  found  in  a study  involving  12  families that  several 
+parents  found  their  child’s  Internet  activities  threatening 
+and therefore defined and declared off-limit activities. Rode 
+argues  that  the  perceived  gap  between  the  expertise  of 
+parents  and  children  undermines  parental  authority.  Also, 
+March  and  Fleuriot  (2006)  studied  teenage  girls’  online 
+communication  and  found  that  girls  preferred  non-public 
+PCs  when  communicating  privately  either  via 
+text 
+messages  or  using  instant  messaging  and  the  girls  found 
+their mobile phones to be private technologies. 
+
+But the use of technologies for monitoring and surveillance 
+is not uncomplicated. Gammon et al. (2005) discovered that 
+parents  were  likely  to  ask  their  children  about  diabetes 
+management  if  they  had  access  to  extra  information  and 
+that  surveillance  technology  used  to  track  diabetes  related 
+aspects of a child’s activities could represent an additional 
+source  of  tension  and  in  turn  a  negative  parent-child 
+relationship.  Toscos  et  al.  (2012)  argue  that  parents  using 
+these  new  tracking  developments  in  health  monitoring 
+technologies,  risk  crossing  personal  boundaries  that  might 
+cause  conflicts  in  the  parent-child  relationship.  However, 
+they  argue  that there  is  still much  to understand  about  the 
+impact  of  using  remote  health  monitoring  technologies 
+given the potential adverse effects on the family dynamics. 
+Mancini  et  al.  (2011)  stress  that  social  contracts  within 
+close relationships and tracking technology possibilities can 
+create  anxieties  and  inner  conflicts  that  may  compromise 
+relationships.  However,  other  studies  have  shown  that 
+monitoring technologies hold promising benefits as family 
+members  experience  positive  gains  from  aspects  of 
+reassurance,  connectedness,  identity  and  social  touch  [3]. 
+Thus,  equal  monitoring  can  promote  family  identity  and 
+connectedness.  
+
+Bentley et al. (2007) discovered that participants would use 
+certain  information  to  infer  location  and  activity  of  other 
+people.  As  with  the  study  by  Mancini  et  al.  (2011),  this 
+study  allowed  plausible  deniability,  as  it  could  not  supply 
+users  with  absolute  location  information  and  therefore  did 
+not  risk  making  people  feel  uneasy  about  the  privacy 
+implications.  As  such,  few  privacy  concerns  were  raised 
+during the study. In fact, as the participants were in close-
+tie  relationships, 
+to  share  even  more 
+information with each other.   
+
+they  wanted 
+
+ 
+Participant 
+(Girl/Boy) 
+
+Age 
+
+Sports 
+Activities 
+
+Parents in 
+household (age) 
+
+Parents Occupation 
+
+Fitbit 
+(duration) 
+
+Sync. 
+Device 
+
+G1 
+
+11 
+
+G2 
+
+G3 
+
+G4 
+
+B1 
+
+B2 
+
+B3 
+
+9 
+
+10 
+
+11 
+
+12 
+
+12 
+
+10 
+
+Soccer (2x/week) 
+Gymnastics (2x/week) 
+Swimming (1x/week) 
+
+Swimming (2x/month) 
+
+Mother (42) 
+Father (45) 
+
+Psychiatric nurse  
+and engineer 
+
+Mother (39) 
+Father (35) 
+
+Nurse and  
+renovation worker 
+
+Soccer (2x/week) 
+Swimming (1x/week) 
+
+Mother (48) 
+Father (49) 
+
+High school teacher and 
+academic worker 
+
+Soccer (2x/week) 
+Girl scouts (1x/week) 
+
+Badminton (4x/week) 
+Ice skating (1x/week) 
+
+Mother (39) 
+Father (42) 
+
+Mother (44) 
+Father (47) 
+
+Nurse and  
+chief of economy 
+
+Senior researcher and 
+marketing chief  
+
+30 days 
+
+28 days* 
+
+29 days 
+
+33 days 
+
+35 days 
+
+None 
+
+Mother (42) 
+
+Flexible job 
+
+19 days** 
+
+Karate (2x/week) 
+Skateboard (every day) 
+
+Mother (41) 
+
+Administrative officer 
+
+36 days 
+
+Own 
+(iPad Mini) 
+
+Mother’s 
+(iPhone 5) 
+
+Own 
+(iPad mini) 
+
+Own 
+(iPad 4) 
+
+Own  
+(iPhone 5) 
+
+Own 
+(iPhone 5 ) 
+
+Mother’s 
+(iPhone 4S) 
+
+Table 1: Demographics of participating children and parents. Remarks to the table: *Broke her arm after 4 days into the study 
+but participated in the entire period **Lost the Fitbit wristband after 19 days of use. 
+
+STUDY 
+The purpose of the study was to investigate monitoring and 
+information  disclosure  between  children  and  their  parents 
+and  more  specifically  to  study  sleep  and  physical  activity. 
+Inspired by a study on interpersonal trust between children 
+and  parents  (Rotenburg,  1995),  we  chose  preteen  children 
+(9-12  years)  as  in  this  age  group  they  become  more  and 
+more independent and spend an increasing amount of time 
+away  from  the  home  and  their  parents.  Therefore  parental 
+trust  usually  grows  in  importance  (Kerr  et  al.,  1999).  We 
+chose  an  off-the-shelf  wearable  mobile  activity  tracker 
+called  Fitbit  Flex™  (hereafter  referred to  as  Fitbit),  which 
+has  been  studied  for  example  self-trackers  (Choe  et  al., 
+2014;  Fritz  et  al.,  2014).  Fitbit  tracks  and  records  steps 
+taken, active minutes, and sleep. In many situations, parents 
+will monitor or guide physical activity (like active minutes) 
+or sleep as an integrated part of parental rules for children 
+in this age group. Therefore, we chose to include these two 
+aspects of children’s daily lives.  
+
+As our study involves surveillance and monitoring, we had 
+some  methodological considerations on ethics and consent 
+before  we started the  study.  For  example  it  was  important 
+to  us  that  the  participating  children  understood  what  they 
+were  to  participate  in.  We  recruited  the  children  and  their 
+families through postings on local public noticeboards and 
+extended  personal  networks,  and  none  of  the  recruited 
+families  were  acquainted  with 
+the  researchers  who 
+conducted  the  study  and  interviews.  First,  the  children 
+received a participant information statement about the study 
+before  agreeing to  participate (which  we also explained to 
+them  orally).  The  statement  included  information  about 
+their  role in the study,  e.g.  they  should  wear the  Fitbit for 
+approximately  one  month,  the  Fitbit  tracked  steps,  active 
+minutes,  and  sleep,  and  the  logged  data  would  be  shared 
+
+with their parents (and the researchers). Further, it outlined 
+the  interview  plan,  information  about  confidentiality,  and 
+that  they  could  quit  the  study  at  any  time.  Secondly,  the 
+children  signed  a  participant  consent  form  (or  an  assent 
+form  as  they  are  minors)  together  with  the  principal 
+researcher.  Afterwards,  parents  signed  the  form  as  legal 
+guardians, but also as study participants. 
+
+Participants 
+Seven children (four girls) from seven families with twelve 
+parents  participated  in  our  study.  The  children  were 
+between  9  and  12  years  old  (M=10.7)  and  they  lived  in 
+close  proximity  to  the  city  of  Aalborg,  Denmark.  They 
+were enrolled in primary schools from 3rd to 6th grade and 
+six  of  them  regularly  participated  in  sports  activities  after 
+school  (e.g.  swimming,  gymnastics).  In  two  families,  the 
+parents were divorced and the children lived primarily with 
+their mother. Six children had siblings (see table 1). 
+
+All children lived close to the school they attended (within 
+500m to 2km) and most of them either walked or biked to 
+school.  The  parents  worked  in  various  employments,  e.g. 
+nurse,  labourer,  engineer.  Five  children  used  their  own 
+smartphone or tablet for synchronization with Fitbit, while 
+two used their mother’s smartphone. See table 1 for further 
+details.  None  of  the  families  had  used  Fitbit  or  similar 
+technology prior to the study. The families received a 150kr 
+cinema voucher (~US$25) upon completion of the study.  
+
+Procedure and Data Collection 
+During  four  to  five  weeks,  the  seven  children  were 
+encouraged  to  wear  the  Fitbit  wristband  as  much  as 
+possible. Thus, they should try to wear it day and night and 
+only  take  it  off  when  recharging  the  battery.  The  parents 
+had  access  to  the  data  of  their  own  child  through  a  Fitbit 
+account  and  they  could  login  using  mobile  phones  or  PCs 
+to access the data at any time. During these weeks, we held 
+
+3
+
+ 
+three  meetings  or  interviews  with  the  families  where  six 
+families chose to be interviewed at home while one family 
+chose  to  be  interviewed  at  the  mother’s  workplace.  We 
+refer  to  these  interviews  as:  Deployment,  follow-up  and 
+steering, and collecting experiences. 
+
+(i) Deployment: The primary purpose of the first interview 
+was  to  introduce  the  families  to  the  study  and  the  Fitbit 
+wristband. As part of the deployment, we helped install the 
+Fitbit  application  on  their  smartphones  and  tablets.  The 
+child and the parents received information  about the study 
+and were asked to read and sign a consent form.  
+
+We conducted a semi-structured interview to gain an initial 
+understanding  of the  daily lives, activities, and routines of 
+the  participating  families. First we interviewed  the parents 
+about the child’s activities throughout the day and routines 
+surrounding  bedtimes.  Subsequently,  we  interviewed  the 
+child to get his or her perspective on the same issues. Here 
+we wanted to obtain an early impression of differences and 
+similarities  in  perceptions  of  activity  and  sleep.  The 
+interviews took between 20 and 35 minutes and were audio 
+recorded. We encouraged the parents to discuss experiences 
+with the Fitbit during the study with their child. In order to 
+help  the  families  remember  and  capture  their  experiences 
+using  the  Fitbit,  we  provided  them  with  a  personal  diary, 
+which we encouraged both parents and child to use.  
+
+(ii)  Follow-Up  and  Steering:  The  purpose  of  this  meeting 
+was to ensure that the families were using the Fitbit and to 
+solve any experienced technical problems. This part of the 
+study ran during the four weeks of the study, and was at a 
+slightly  different  time  for  each  family.  It  consisted  of  two 
+parts namely an interview and follow-up phone interviews. 
+The  primary  interview  was  held  approximately  one  week 
+into the study.  
+
+During the five weeks, we contacted the families by phone 
+if no activities were logged for the child over a whole day. 
+In  order  to  discover  this,  we  would  log  in  to  the  Fitbit 
+website  each  day  and  check  logged  activities  and  events. 
+Thus, in the end, we contacted the families twelve times (at 
+least one time for each family) during the study where the 
+primary  reason  for  no  activities  or  events  being  registered 
+with  the  system  was  that  the  children  had  forgotten  to 
+activate  or  deactivate  sleep  mode.  The  second  reason  was 
+that they forgot to charge either the Fitbit or the device for 
+synchronization  (e.g.  smartphone  or  tablet).  Additionally, 
+the families contacted us eight times during this part of the 
+study with questions on, for example, technical issues (e.g. 
+was  it  safe  to  wear  the  wristband  while  swimming)  and 
+practical  issues  (e.g.  one  child  broke  her  arm  during  the 
+study  and  they  wanted  to  change  which  arm  she  wore  the 
+wristband  on).  Finally,  we  texted  facts  from  logged  Fitbit 
+usage data to the parents in order to encourage them to stay 
+engaged  in the  study.  These  facts  were  playful  in the  way 
+they were presented, based on the data logged and tailored 
+to the individual family. 
+
+(iii) Collecting Experiences: The purpose of this interview 
+was  to  understand  the  experiences  the  families  had  with 
+
+Participant 
+
+Steps  
+
+Active minutes 
+
+Sleep  
+
+Average per day (SD) 
+
+G1 
+
+G2* 
+
+G3 
+
+G4 
+
+B5 
+
+B6** 
+
+B7 
+
+9.229 steps 
+(7063) 
+
+5 hrs. 22 min 
+(141) 
+
+9 hrs.  
+(58 min) 
+
+7.909 steps 
+(4195) 
+
+5 hrs. 1 min 
+(117) 
+
+8 hrs. 24 min  
+(102 min) 
+
+12.213 steps 
+(6502) 
+
+6 hrs. 6 min 
+(139) 
+
+8 hrs. 42 min 
+(60 min) 
+
+6.643 steps 
+(4272) 
+
+4 hrs. 2 min 
+(82) 
+
+9 hrs. 6 min  
+(30 min) 
+
+12.582 steps 
+(9166) 
+
+5 hrs. 16 min 
+(148) 
+
+8 hrs. 30 min 
+(54 min) 
+
+10.224 steps 
+(7064) 
+
+4 hrs. 30 min 
+(89) 
+
+8 hrs. 24 min 
+(36 min) 
+
+8.156 steps 
+(5520) 
+
+3 hrs. 50 min 
+(111) 
+
+9 hrs. 54 min 
+(177 min) 
+
+Table 2: Logged data about steps, active minutes, and sleep for 
+the participating children 
+
+Fitbit.  We  collected  the  previously  supplied  diaries  at  the 
+beginning of each interview. These diaries helped shape the 
+interview  as  several  parents  had  noted  challenges  when 
+using  the  Fitbit.  We  conducted  semi-structured  interviews 
+around  five  overall  themes:  functionality  of  Fitbit,  usage 
+patterns, interpretation of the data, impact of having access 
+to the data, and sharing the  data.  The children and parents 
+were  both  home  when  we interviewed  them,  but  often  the 
+parents would attend to other things around the house while 
+we interviewed the child, but they could oversee the session 
+as guardians. All interviews were audio-recorded. 
+
+Subsequently, interviews were fully transcribed (188 pages 
+total)  and  we  immersed  ourselves  in  the  data  through 
+reading  the  transcriptions  several  times.  We  conducted  a 
+cooperative  inductive  thematic  analysis  to  infer  patterns 
+and  recurring  themes  in  the  data,  which  were  later 
+candidates 
+further  qualitative  analysis.  Through 
+repeated assessment, several topics and themes emerged.  
+
+for 
+
+in 
+
+FINDINGS 
+In this section, we present the findings from the study. All 
+the  names 
+the  participating  families  have  been 
+anonymized, girls given a G prefix, and boys a B. Six of the 
+participating children wore the wristband between 19 to 36 
+days  (M=30), while  one of the  participating  children wore 
+the  wristband  for  19  days  (he  lost  the  wristband  during 
+school hours). During  the study, the  children would check 
+the  Fitbit  data  several  times  each  day.  One  even  reported 
+that  he  would  check  it  up  to  five  times  a  day.  All  parents 
+and children reported that they would look at the data both 
+alone and together with others.  
+
+In  the  following  we  describe  the  steps  taken,  active 
+minutes, and hours slept by the participants while wearing 
+the  Fitbit.  The  data  can  also be  seen in  table 2. We  found 
+that  the  average  amount  of  steps  taken  per  day  varied 
+greatly  between  the  children  ranging  from  6643  steps  to 
+
+4
+
+ 
+ 
+12582  steps.  Active  minutes  per  day  also  varied  between 
+the  children  ranging  from  3  hours  and  50  minutes  to  6 
+hours and 6 minutes. The highest number of steps taken and 
+active  minutes  for  one  day  was  39685  steps  and  12  hours 
+respectively, which were logged during a day of badminton 
+tournaments by B5. The lowest number of steps taken and 
+active  minutes  were  logged  by  B6  and  occurred  on  the 
+same day, and he reported that he had spent an entire day in 
+bed due to illness.  We also identified days where no steps 
+or active minutes had been  registered, which was reported 
+by the four families that it occurred with as being a result of 
+the Fitbit wristband running out of power.  
+
+We  found  that  the  average  amount  of  hours  slept  per  day 
+varied between the children ranging from between 8 hours 
+and  24  minutes  to  9  hours  and  54  minutes.  The  highest 
+number of hours slept was 13 hours and 45 minutes by B7 
+and  the  lowest  number  of  hours  slept  was  2  hours  and  30 
+minutes  (G3).  There  where  days  where  no  sleep  had  been 
+registered,  which  we  have  taken  to  be  an  equipment  issue 
+(e.g., forgetting to activate sleep mode) and these have been 
+omitted in the calculations below.   
+
+Getting Familiar with and Using the Wristband 
+All  seven  children  found the Fitbit  wristband  enjoyable  to 
+use and described the experience with words like “fun”  or 
+“cool”. In particular, they liked to reach goals (e.g., 10,000 
+steps),  as it  made  the  LEDs  on the  wristband light up  and 
+made it  vibrate.  G3  explained  how  she  felt  when  reaching 
+the 10,000 steps for the day:  
+
+It  was  like:  ‘Now  I’ve  reached  the  goal  for  today!’  That 
+was cool! G3 
+
+While  all  children  found  the  wristband  enjoyable  to  use, 
+some of them (2/7) expressed that the novelty faded after a 
+few  weeks  mainly  due  to  the  fact  that  they  could  easily 
+reach  the  goals  in  Fitbit  (10,000  steps).  But  five  children 
+found the wristband and application interesting throughout 
+the  entire  study.  Here  some  of  them  argued  that  they  had 
+more data for comparison towards the end of the study: 
+
+I did not know much about it [how many steps he took] in 
+the  beginning,  but  at  the  end  it  becomes  more  exciting 
+because I had learned something about it B7 
+
+The children described how they were trying to understand 
+how  Fitbit  translated  different  types  of  activities  (e.g., 
+jumping on a trampoline) into steps and active minutes. For 
+instance,  they  experimented  with  the  Fitbit  to  see  how 
+many  steps  running  around  the  table  produced,  and  how 
+many  active  minutes  could  be  achieved  at  different  sports 
+activities.  The  children  also  investigated  how  fast  their 
+actions would be synchronized to their smartphone or tablet 
+and  how  shaking  their  arms  would  be  interpreted  as  steps 
+by the wristband.  
+
+The  children  and  their  parents  experienced  a  number  of 
+problems in the beginning of the study primarily related to 
+charging the battery and activating sleep mode. As we had 
+instructed  the  children  to  wear  the  wristband  as  much  as 
+possible, it became difficult to find a suitable time slot for 
+
+charging the battery. While two parents mentioned that they 
+would  charge  it  during  idle  times  (e.g.,  watching  TV), 
+many of the parents (5/7) said that they would charge it late 
+in  the  evenings  and  then  slip  it  onto  their  sleeping  child’s 
+wrist when it was fully charged. Another challenge was the 
+sleep  mode  where  we  found  that  only  one  family  had 
+managed  to  activate  and  deactivate  sleep  mode  each  day 
+throughout  the  entire  study  period.  This  is  perhaps  not 
+surprising, as this requires new routines and behaviors.  
+
+Data Surveillance versus Activity Surveillance 
+We observed that parents would monitor their children and 
+they often attempted to use the Fitbit data to infer or learn 
+about the children’s activities or even mood. As part of the 
+study, we enabled monitoring for the parents, as they could 
+look  up  three  different  data  sources  of  their  children’s 
+activities, namely steps taken, active minutes, and sleep. As 
+such,  it  is  not  surprising  that  we  observed  this  kind  of 
+monitoring  or  even  surveillance.  Surveillance  is  typically 
+the  monitoring  of  behavior,  activities,  or  other  changing 
+information of other people for the purpose of influencing, 
+managing, directing, or protecting them (Lyon, 2007).  
+
+Most parents (6/7) explained that they had been curious as 
+to how active their children were while at school, and that 
+the  Fitbit  data provided them  with these  kinds  of insights. 
+One of them even mentioned that these insights allowed her 
+to manage and potentially direct her child, which resonates 
+with  Lyon’s  definition  of  surveillance  (Lyon,  2007).  We 
+found  that  most  parents  used  the  Fitbit  data  to  infer  or 
+interpret  the  wellbeing  of  their  children  (e.g.  mood, 
+distress, and tiredness). For example, one mother explained 
+how she used the data to infer her son’s mood: 
+
+Well, if  he logged  in  at school  then  I  knew.  If it  had been 
+good, then he is happy when he gets home. And then I knew 
+that  he  came  home  and  was.  When  it  had  vibrated  or 
+something like that B6 (mother) 
+
+Parents would also attempt to infer or understand distress in 
+their children from the data. For instance, the parents of G1 
+explained  during  the  interviews  how  they  observed  that 
+their daughter had been restless for 45 minutes during one 
+night,  which  made  them  anxious  and  wonder  what  had 
+happened. But the daughter had just been to the bath, and if 
+she had not told them, they would have kept speculating: 
+
+If  she  had  not  said  anything,  then  we  might  have  kept 
+wondering what happened … did she have a nightmare or 
+was it something else that caused her to wake up during the 
+night G1 (mother)  
+
+Incomplete  and  abstract  data  made  the  parents  worry,  as 
+they  were  not  able  to  infer  the  reason  behind  it.  This 
+showed that the low-level Fitbit data is sometimes difficult 
+to understand and act upon. This also became evident as the 
+parents  were  much  more  interested  in  talking  about  the 
+activities  behind  the  data  instead  of  the  actual  data  itself 
+(e.g.,  talking  about  an  active  football  practice  instead  of 
+5,000 steps). For instance, the mother of B5 described how 
+she  valued  the  steps  her  son  took  at  badminton  practice 
+
+5
+
+ 
+higher  than  the  steps  he  took  at  home,  as  she  knew  they 
+were two very different things activity wise.  
+
+Parents  assigned  meta-information  (e.g.,  context  and  prior 
+knowledge  about  the  child)  to  the  Fitbit  data  in  order  to 
+infer what the children were doing or how they were doing. 
+Two of the parents explained that having access to the data 
+gave  them  a  greater  understanding  of  why  their  children 
+behaved  the  way  they  did  (e.g.,  why  a  child  was  tired 
+during the day or in a bad mood), as they were able to map 
+wellbeing  to  specific  levels  of  activity  and  amounts  of 
+sleep. As such, these parents mentioned that the data could 
+prepare  them  to  deal  with  future  scenarios  involving 
+(amongst other things) the tiredness of their children, as the 
+parents  would  be  able  to  predict  these  situations  by 
+monitoring their children’s data beforehand. 
+
+Being under Surveillance: Action and Response 
+While all children mentioned that they would start to forget 
+wearing the wristband after a couple of days, we identified 
+a number of situations where the children were reminded of 
+the wristband. Sometimes other children would comment or 
+identify  the  wristband  and  also  the  wristband  itself  would 
+vibrate  when  reaching  certain  goals  (10,000  steps),  which 
+would  make  the  children  aware  of  wearing  the  wristband. 
+The  more  they  became  aware  of  wearing  the  Fitbit,  the 
+more they started to think about being monitored.  
+
+We found that the children responded in two different ways 
+to their parents being able to monitor their data and activity. 
+Some  children  stated  that  they  did  not  like  it  (3/7),  while 
+others indicated that they felt indifferent (4/7). Three of the 
+children explicitly mentioned that they were uncomfortable 
+about the fact that their parents were monitoring them and 
+were able to see how active they had been during the day or 
+how they slept at night. For instance, B7 explained that his 
+mother  was  sometimes  monitoring  his  data  on  steps  and 
+active  minutes in  order to  see  “how  much  he  was  doing”, 
+and he characterized it as “scary”. He later compared it to 
+“stalker-like” behavior: 
+
+It is like when you stalk someone, and then you know what 
+he or she is doing. It is like she [his mother] stalks me when 
+she monitors what I am actually doing. B7 
+
+Another  example  was  B6  who  described  that  his  mother 
+had started to come into his bedroom just before bedtime to 
+ask  him  about  the  Fitbit  data,  and  he  said  that  she  would 
+either cheer or scold him “then she makes a cheering sound 
+or she makes a yelling sound.” 
+
+We  were  surprised  to  observe  that  four  children  did  not 
+mind that their parents had access to the logged data. These 
+children  did  not  themselves  mention  anything  related  to 
+being under surveillance. For example, when asked how he 
+felt about his parents having data access, B5 explained: 
+
+Well, I thought it was ok that they could also manage it [a 
+Fitbit]  and  the  sorts.  Also,  if  I  did  not  have  access  to  my 
+phone then I could use theirs to check the data. I found that 
+to be cool. B5  
+
+From our interviews it became clear, that these children did 
+not mind being monitored or under surveillance as they did 
+not  experience  any  consequences  of  the  monitoring.  The 
+parents of two children rarely asked their children about the 
+Fitbit  wristband  and  the  data  collected.  One  of  them  (G2) 
+mentioned,  “Dad  does  not  actually  know  what  to  do  with 
+the wristband”. Thus, these children never experienced any 
+consequences of wearing the wristband in terms of parents 
+questioning them or placing restrictions: 
+
+Well, I did not require it of him.  It  was not like  he had to 
+find something to do or something. Well, it was just to see 
+what he did. It was not to twist his arm around his back and 
+tell  him  to  walk  10,000  steps  tomorrow.  I  did  not demand 
+this of him B6 (mother) 
+
+Finally,  some  children used the  data to support their  story 
+or convince their parents about behavior. For instance,  B7 
+explained that he used the data to “prove” to his mother that 
+he  was  actually  awake  at  night,  something  his  mother  did 
+not believe.  
+
+She believes much more in me after this. I might as well say 
+she  believes  me a  100%  more  than  she  did  before.  Before 
+she did not even think about that I told her the truth about 
+me waking up at night at 5am. B7 
+
+We  found  that  the  children  had  two  different  reactions  to 
+their  parents  potentially  monitoring  their  data.  First,  this 
+knowledge  could  trigger  the  children  to  start  being  more 
+active  and  thus  get  more  exercise  (e.g.,  walking  longer 
+routes  to  school)  in  order  to  raise  their  number  of  steps 
+taken  or  number  of  active  minutes.  For  instance,  B6 
+explained how his mother would either cheer or scold him 
+depending  on  his  level  of  activity  shown  by  the  Fitbit 
+application.  This  made  him  go  for  long  walks  with  the 
+family dog in order to increase the number of  steps taken. 
+His  mother  told  us that  she  did  not  consider  this  behavior 
+normal. She explained that he would usually only walk the 
+dog when specifically told to do so:   
+
+No,  he  would  only  have  done  it  [walked  the  dog]  in  the 
+past, if he had been told to do so B6 (mother) 
+
+The  second  reaction  was  that  the  children  would  start  to 
+optimize their behavior (e.g., utilizing shortcuts for raising 
+number of steps taken). For instance, G2 explained that she 
+found  that  taking  “small  steps”  and  “running  on  the  spot” 
+generated  a  high  number  of  steps,  which  she  could  then 
+present to her mother.  
+
+Trust and Distrust 
+Parental trust in adolescents is usually based on knowledge 
+and more specifically on knowledge of the child's past and 
+present behaviors (Kerr et al., 1999). Our study showed that 
+parents  used  the  Fitbit  data  to  learn  about  their  children’s 
+sleep  and  physical  activities,  and  they  would  also  use  the 
+data to  facilitate  parental  control  (i.e.,  impose  and  support 
+rules  and  restrictions). Kerr  et  al.  (1999)  describe  parental 
+control  as  imposing  rules  and  restrictions  that  would 
+require  children  to  give  their  parents  information  about 
+their whereabouts and associations before making plans.  
+
+6
+
+ 
+We  observed  that  Fitbit  supplied  parents  with  data  that 
+could  potentially  be  used  to  impose  rules  and  restrictions 
+(e.g., bedtimes and not sitting in front of the computer the 
+whole  day)  that  would  usually  require  their  children  to 
+disclose  this  information.  Parents  of  six  of  the  children 
+described how they would monitor and compare data from 
+the beginning of the study to data from the end of the study, 
+which  increased  their  awareness  of  the  child’s  day-to-day 
+activities (e.g., how active they were during lunch breaks).  
+
+These parents  would  confront  their  children  with the data, 
+if  they  somehow  felt  the  child  was  not  disclosing  such 
+information. For instance, the mother of  B6 had asked her 
+son to walk the dog, but then she noticed that he had been 
+particularly inactive one day (i.e., only walked a couple of 
+steps). This made her think that he could not possibly have 
+walked  the  dog.  Later,  she  explained  how  she  felt  more 
+confident in her son actually walking the dog when she told 
+him  to.  This  resonates  well  with  Kerr  et  al.  (1999)  that  a 
+high  degree  of  control  might  make  parents  more  trusting 
+because  they  feel  that  the  child's  behavior  is  highly 
+predictable as it is under their control.  
+
+Parents  of two of the  children  argued that  Fitbit  presented 
+them  with  an  opportunity  to  change  their  children’s 
+routines  (e.g.,  bedtimes).  However,  sometimes  the  data 
+allowed  parents  to  see  that  their  children  were  actually 
+telling  the truth.  For  instance,  the  mother  of  G1  asked  her 
+daughter  how  much  she  had  slept  during  a  gymnastics 
+camp.  The  mother  then  proceeded  to  look  at  the  logged 
+sleep data in order to verify that this was really the case, as 
+no strict bed times were enforced at the gymnastics camp: 
+
+Then  she  had  this  weekend  with  gymnastics  camp  and 
+sleepover. We picked her up Sunday morning and checked 
+when  we  got  home.  She  told  us  that  she  had  had  seven 
+hours of sleep. Then we talked about the fact that we could 
+check  whether  it  was  consistent  with  what  she  had  been 
+telling  us.  Because  we  have  not  been  able  to  have  any 
+control while she was out there. G1 (mother) 
+
+Parental  trust  is  also  strongly  linked  to  spontaneous  child 
+disclosure  (Lyon,  2007).  B5’s  mother  described  how  they 
+used Fitbit as a common project. B5 was an elite badminton 
+player,  which  requires  a  certain  amount  of  training.  She 
+mentioned how her  son told her about his training and the 
+corresponding data from Fitbit. 
+
+We  talked  a  lot  about  it.  It  was  a  little  project  we  had 
+together. I thought it went very well and B5 is very good at 
+telling me and good at doing all these things. B5 (mother) 
+
+DISCUSSION 
+Our findings show that parents and children became aware 
+of and used  the possibilities of monitoring daily activities. 
+Not surprisingly, the  data sometimes reassured the parents 
+on the children’s physical activity and sleep, e.g. what they 
+were doing or had been doing. This confirms findings from 
+previous studies  e.g.  Mancini  et al. (2011)  who found that 
+location tracking of children reassured parents. Also, often 
+the  children  felt  under  surveillance  and  several  of  them 
+
+were  very  uncomfortable  about  this  –  again  this  is  not 
+surprising  and  has  been  shown  in  previous  studies,  for 
+example  (Boesen  et  al.,  2010;  Vasalou  et  al.,  2012,  Ur  et 
+al., 2014). 
+
+Most  previous  family  monitoring  research  has  considered 
+location  tracking  (Boesen  et  al.  2010;  Consolvo  et  al., 
+2005;  Rode,  2009,  digital  lives  of  children  (March  and 
+Fleuriot,  2006;  Yardi  and  Bruckman,  2011),  or  home-
+entryway  surveillance  and  privacy  (Ur  et  al.,  2014).  We 
+studied  daily  non-digital  activities  of  children  and  found 
+two  observations  that  were  surprising  and  that  illustrate 
+parts  of  our  contribution.  Firstly,  it  was  interesting  to 
+observe  how  deeply  engaged  some  parents  would  be  with 
+the data on sleep and physical activity, and how the parents 
+would  in  fact  use  the  data  to  question  their  children  and 
+sometimes request additional information and even impose 
+new  parental  rules.  Secondly,  while  some  children  were 
+uncomfortable with the fact that they were being monitored 
+closely  by  their  parents,  it  was  surprising  and  somehow 
+interesting  to  observe  that  some  children  found  the 
+monitoring acceptable and even took advantage of it, either 
+because the monitoring had no immediate consequences for 
+them (no new imposed rules) or because the children used 
+the data in their own favour, e.g. to prove their own case. In 
+contrast, Ur et al. (2006) found that girls would avoid using 
+public family PCs for private communication.  
+
+While these insights provide one contribution of our study, 
+in  the  following  we  will  illustrate  how  such  monitoring 
+technology  influences  spontaneous  information  disclosure 
+and  trust  and  how  such  data  and  data  sharing  affected 
+children’s behaviour and mobility. 
+
+Information Disclosure and Monitoring Technology 
+Our study highlighted aspects of information disclosure and 
+perhaps the lack of voluntary and spontaneous information 
+disclosure. In summary, we discovered that the monitoring 
+technology  led  to  fewer  opportunities  for  building  trust 
+between the children and the parents because it decreased 
+the children’s possibilities for being untrustworthy. We will 
+elaborate in the following. 
+
+As we discussed earlier parental trust becomes increasingly 
+important, as children grow up and spend more time away 
+from  home.  Kerr  et  al.  (1999)  argue  that  parental  trust 
+builds on knowledge of daily activities and this knowledge 
+should  come  from  voluntary  and  spontaneous  child 
+disclosure. However, because our parents had access to the 
+Fitbit  data,  they  already  had  knowledge  about  activities 
+such as when and if their children had been active. Parents 
+used  this  data  to  infer  what  their  children  were  doing,  or 
+had been doing, and sometimes this would trigger them to 
+ask the children questions or enforce rules or restrictions. 
+
+The monitoring using Fitbit data meant that the parents no 
+longer  needed  to  gain  their  children’s  trust  in  order  to  get 
+access to activity information or sleep information. We saw 
+that it would occasionally prohibit spontaneous information 
+disclosure from the child, but provide the parents some sort 
+of control. The latter resonates well with parental control as 
+
+7
+
+ 
+illustrated  by  Kerr  et  al.  (1999)  who  argue  that  a  high 
+degree of control might make parents more trusting because 
+they feel that the child's behavior is highly predictable as it 
+is under their control. This was identified in more situations 
+for our participants. But it seems to come at a cost, namely 
+that monitoring can lead to fewer opportunities for building 
+trust between children and parents because trustworthiness 
+can only be displayed if the possibility of untrustworthiness 
+(2003).  Our  study 
+exists  –  as  argued  by  Mayer 
+demonstrated  that  monitoring  technologies  decrease  the 
+possibilities for being untrustworthy. 
+
+Mobility and Monitoring Technology 
+The  pervasiveness  of  wearable  and  mobile technology  has 
+resulted in several opportunities for both tracking and self-
+tracking,  e.g.  research  studies  have  investigated  wearable 
+technology for self-tracking of fitness and physical activity 
+(e.g. Choe et al., 2014; Fritz et al., 2014).  
+
+We  adapted  the  wearable  fitness  tracker  (Fitbit)  for  our 
+study  and  thus,  the  Fitbit  wristband  became  a  monitoring 
+technology that enabled the parents to track their children’s 
+physical activity and sleep, but it also enabled the children 
+to self-track. Both the former and latter influenced how the 
+children acted and behaved. 
+
+Boesen  et  al.  (2014)  studied  location  tracking  in  families 
+and  found  that  knowledge  of  location  within  families  and 
+the use of such knowledge are highly complex and cyclical. 
+We observed similar aspects in our study and while we did 
+not  include  direct  location  tracking,  data  on  activity  and 
+sleep  can  also  be  interpreted  and  was  often  linked  to 
+location  or  whereabouts.  For  example,  when  a  child  was 
+doing  sports,  parents  assumed  that  this  could  be  directly 
+seen  in  the  data.  Therefore,  some  children  optimized  their 
+data by  walking  longer walks with the dog or when  going 
+home from school.  
+
+CONCLUSION 
+We studied sleep and physical activity data of children and 
+shared these  data  in their  families to investigate how  such 
+data  sharing  influenced  the  relationship  between  children 
+and their parents. We were particularly interested in seeing 
+how  this  could  affect  parental  trust.  Our  study  presented 
+insights  into  how  parents  interpret  children’s  activity  and 
+sleep data and how this would trigger them to question their 
+children.  This  led  to  increased  parental  control  as  they 
+could control or verify children’s responses to the collected 
+data.  However,  it  also  reduced  spontaneous  and  voluntary 
+information disclosure from the children. 
+
+Our  study  suffers  from  a  number  of  limitations.  First,  we 
+interviewed  the  children  while  their  parents  were  home  at 
+the same time. This was necessary for ethical reasons, but it 
+could  have  influenced  the  children’s  answers  even  though 
+the  parents  typically  weren’t  directly  present  or  in  close 
+proximity.  Secondly,  the  relatively  short  duration  of  our 
+study  is  another  limitation  in  terms  of  how  generalizable 
+the  results  are.  We  clearly  identified  some  novelty  effects 
+of the Fitbit technology. Finally, children (9-12 years) will 
+clearly  have  an  effect  on  the  findings,  because  children 
+
+8
+
+grow  up  and  they  become  more  independent.  Therefore, 
+older  children  might  have  exhibited  different  attitudes  if 
+being  monitored  by  their  parents.  Future  studies  could 
+consider  age  issues  and  differences  for  surveillance  in 
+families. 
+
+We  discovered  that  our  study  clearly  introduced  new 
+aspects  of  surveillance in the  participating  families,  which 
+should not be done without some ethical considerations. In 
+this respect, it was important for us that the children were 
+aware of  what data was being collected, and that they had 
+equal access to the data, and in fact used it as much as their 
+parents throughout the study. 
+
+ACKNOWLEDGMENTS 
+We  would  like  to  thank  the  participants  in  our  study  and 
+comments  from  several  anonymous  reviewers  in  previous 
+drafts of the paper.  
+
+REFERENCES 
+Bentley, F. R. and Metcalf, C.J. Sharing Motion 
+
+Information with Close Family and Friends. In Proc. CHI 
+2007, ACM (2007), 1361-1370. 
+
+Boesen, J., Rode, J. and Mancini, C. The Domestic 
+
+Panopticon: Location Tracking in Families. In Proc. 
+UbiComp 2010, ACM (2010), 65-74. 
+
+Brown, B., Taylor, A. S. Izadi, S., Sellen, A., Kaye, J. and 
+Eardley, R. Locating family values: A field trial of the 
+Whereabouts Clock. In Proc. UbiComp 2007, ACM 
+(2007), 354-371.  
+
+Choe, E. K., Lee, N. B., Lee, B., Pratt, W. and Kientz, J.A. 
+Understanding quantified-selfers' practices in collecting 
+and exploring personal data. In Proc. CHI 2014, ACM 
+(2014), 1143-1152.  
+
+Consolvo, S., Smith, I. E., Mathhews, T., LaMarca, A., 
+
+Tabert, J. and Powledge, P. Location Disclosure to Social 
+Relations: Why, When, and What People Want to Share. 
+In Proc. CHI 2005, ACM (2005), 81-90. 
+
+Czeskis, A., Dermendjieva, I., Yapit, H., Borning, A., 
+
+Friedman, B., Gill, B. and Kohno, T. Parenting from the 
+pocket: value tensions and technical directions for secure 
+and private parent-teen mobile safety. In Proc. SOUPS 
+2010, ACM (2010), article 15.  
+
+Dalsgaard, T., Skov, M. B. and Thomassen, B. eKISS: 
+
+sharing experiences in families through a picture blog. In 
+Proc. BCS-HCI 2007, ACM (2007), 67-75.  
+
+Fritz, T.,. Huang, E.M., Murphy, G. C. and Zimmermann, 
+T. Persuasive Technology in the Real World: A Study of 
+Long-Term Use of Activity Sensing Devices for Fitness. 
+In Proc. CHI 2014, ACM (2014), 487-496.  
+
+Gammon, D., Årsand, E., Walseth, O. E., Andersson, N., 
+
+Jenssen, M. and Taylor, T. Parent-child interaction using 
+a mobile and wireless system for blood glucose 
+monitoring. Journal of Medical Internet Research, 7, 5 
+(2005), e57.  
+
+ 
+Graham, C., Cheverst, K., Howard, S., Kjeldskov, J. and 
+Vetere, F. Trust in mobile guide design: exploiting 
+interaction paradigms. In Proc. OzCHI 2004, CHISIG 
+(2004). 
+
+Kerr, M., Stattin, H. and Trost, K. To know you is to trust 
+
+you: Parents' trust is rooted in child disclosure of 
+information. Journal of Adolescence, 22, 6 (1999), 737-
+752.  
+
+Lyon, David. Surveillance studies: An overview. Polity, 
+
+2007. 
+
+Mancini, C., Rogers, Y., Thomas, K., Joinson, A. N., Price, 
+B. A., Bandara, A. K., Jedrzejczyk, L. and Nuseibeh, B. 
+In the best families: tracking and relationships. In Proc. 
+CHI 2011,  ACM (2011), 2419-2428.  
+
+March, W. and Fleuriot, C. Girls, Technology and Privacy: 
+“Is My Mother Listening?” In Proc. CHI 2006, ACM 
+(2006), 107-110. 
+
+Mayer, R. N. Technology, Families, and Privacy: Can We 
+Know Too Much About Our Loved Ones? Journal of 
+Consumer Policy, 26, 4 (2003), 419-439.  
+
+PC Tattletale. http://www.pctattletale.com. 
+
+Rode, J. A. 2009. Digital parenting: designing children's 
+
+safety. In Proc. BCS-HCI 2009, ACM (2009), 244-251.  
+
+Rotenberg, K. J. 1995. The Socialisation of Trust: Parents’ 
+and Children’s Interpersonal Trust. International Journal 
+of Behavioral Development, 18, 4 (1995), 713-726.  
+
+Torremante, L., Koester, A. and Heinze, J. Mobile 
+
+Recommender Systems: Trust and Context-Awareness. 
+In Proc. MobileHCI 2015, ACM (2015), 781-788.  
+
+Toscos, T., Connelly, K. and Rogers, Y. Best intentions: 
+
+health monitoring technology and children. In Proc. CHI 
+2012, ACM (2012), 1431-1440.  
+
+Yardi, S. and Bruckman, A. Social and technical challenges 
+in parenting teens' social media use. In Proc. CHI 2011, 
+ACM (2011), 3237-3246.  
+
+Ur, B., Jung, J., and Schechter, S. Intruders versus 
+
+intrusiveness: teens' and parents' perspectives on home-
+entryway surveillance. In Proc. UbiComp 2014, ACM 
+(2014), 129-139. 
+
+Vasalou, A., Oostveen, A-M. and Joinson, A. N. A case 
+
+study of non-adoption: the values of location tracking in 
+the family. In Proc. CSCW 2012, ACM (2012), 779-788.  
+
+9
+
+ 
+ 
+ 
+

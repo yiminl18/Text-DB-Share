@@ -1,0 +1,1272 @@
+Designing a Wellness Self-Management Tool for Older 
+Adults – Results from a Field Trial of YourWellness 
+Julie Doyle, Lorcan Walsh, Antonella Sassu, Teresa McDonagh, 
+CASALA, Dundalk Institute of Technology,  
+
+Dublin Rd., Dundalk, Ireland 
+{first.last@casala.ie} 
+
+ABSTRACT
+It is recognized that empowering individuals to manage their own 
+health and wellbeing will result in more cost-effective healthcare 
+systems,  improved  health  outcomes  and  will  encourage  healthy 
+individuals to remain that way. With the advent of the quantified-
+self  movement  in  recent  years,  there  has  been  an  increase  in 
+technology  applications  supporting  wellness  self-management. 
+Such  applications  allow  people  to  self-track  and  self-report,  with 
+many providing feedback. However, little research in this area has 
+examined  how  best  to  support  older  adults  in  health  self-
+management.  This  paper  reports  findings  from  a  5-month  home 
+deployment of YourWellness – an application that supports older 
+adults  in  self-reporting  on  their  wellbeing  and  provides  feedback 
+to  promote  positive  wellbeing  management.  Our  findings 
+contribute to a greater understanding of older adults’ attitudes and 
+behaviours  in  relation  to  wellbeing  self-management  that  can 
+facilitate  the  creation  of  new,  personalized  health  and  wellbeing 
+interventions for this population. 
+
+Keywords
+Older adults; wellness; self-management; feedback 
+
+1. INTRODUCTION
+Countries  globally  have  been  experiencing  an  unprecedented 
+increase in the number of older adults. From 2006 to 2026, within 
+the  65  and  over  age  group,  the  dependency  ratio1  is  expected  to 
+increase  from  16.4%  to  25.1%  for  Ireland,  and  increase  from 
+25.2%  to  36.6%  for  the  EU  25  [4].  In  the  US,  the  dependency 
+ratio was 22% in 2010 and is estimated to climb to 35% in 2030 
+[27]. Older adults are a diverse group and many enjoy long-term, 
+good  health.  However,  to  varying  degrees,  national  health  and 
+social care systems are preparing for potentially higher incidences 
+of chronic disease, such as diabetes, arthritis and COPD (chronic 
+obstructive  pulmonary  disease)  and 
+resulting  dependency 
+problems. For example, the incidence of diabetes is set to double 
+between  2005  and  2030  to  an  estimated  number  of  366  million 
+people living with diabetes in 2030 [29]. There is a cost element. 
+Across  developed  countries  approximately  half  of  healthcare 
+spending  is  attributed  to  older  adults.  In  the  UK,  hospital 
+
+1 The old dependency ratio is the ratio of those over 65 over the working 
+
+population (15-64 years old). 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+(cid:51)(cid:72)(cid:85)(cid:80)(cid:76)(cid:86)(cid:86)(cid:76)(cid:82)(cid:81)(cid:3)(cid:87)(cid:82)(cid:3)(cid:80)(cid:68)(cid:78)(cid:72)(cid:3)(cid:71)(cid:76)(cid:74)(cid:76)(cid:87)(cid:68)(cid:79)(cid:3)(cid:82)(cid:85)(cid:3)(cid:75)(cid:68)(cid:85)(cid:71)(cid:3)(cid:70)(cid:82)(cid:83)(cid:76)(cid:72)(cid:86)(cid:3)(cid:82)(cid:73)(cid:3)(cid:68)(cid:79)(cid:79)(cid:3)(cid:82)(cid:85)(cid:3)(cid:83)(cid:68)(cid:85)(cid:87)(cid:3)(cid:82)(cid:73)(cid:3)(cid:87)(cid:75)(cid:76)(cid:86)(cid:3)(cid:90)(cid:82)(cid:85)(cid:78)(cid:3)(cid:73)(cid:82)(cid:85)
+personal or classroom use is granted without fee provided that copies are 
+(cid:83)(cid:72)(cid:85)(cid:86)(cid:82)(cid:81)(cid:68)(cid:79)(cid:3)(cid:82)(cid:85)(cid:3)(cid:70)(cid:79)(cid:68)(cid:86)(cid:86)(cid:85)(cid:82)(cid:82)(cid:80)(cid:3)(cid:88)(cid:86)(cid:72)(cid:3)(cid:76)(cid:86)(cid:3)(cid:74)(cid:85)(cid:68)(cid:81)(cid:87)(cid:72)(cid:71)(cid:3)(cid:90)(cid:76)(cid:87)(cid:75)(cid:82)(cid:88)(cid:87)(cid:3)(cid:73)(cid:72)(cid:72)(cid:3)(cid:83)(cid:85)(cid:82)(cid:89)(cid:76)(cid:71)(cid:72)(cid:71)(cid:3)(cid:87)(cid:75)(cid:68)(cid:87)(cid:3)(cid:70)(cid:82)(cid:83)(cid:76)(cid:72)(cid:86)
+not made or distributed for profit or commercial advantage and that copies 
+(cid:68)(cid:85)(cid:72)(cid:3)(cid:81)(cid:82)(cid:87)(cid:3)(cid:80)(cid:68)(cid:71)(cid:72)(cid:3)(cid:82)(cid:85)(cid:3)(cid:71)(cid:76)(cid:86)(cid:87)(cid:85)(cid:76)(cid:69)(cid:88)(cid:87)(cid:72)(cid:71)(cid:3)(cid:73)(cid:82)(cid:85)(cid:3)(cid:83)(cid:85)(cid:82)(cid:73)(cid:76)(cid:87)(cid:3)(cid:82)(cid:85)(cid:3)(cid:70)(cid:82)(cid:80)(cid:80)(cid:72)(cid:85)(cid:70)(cid:76)(cid:68)(cid:79)(cid:3)(cid:68)(cid:71)(cid:89)(cid:68)(cid:81)(cid:87)(cid:68)(cid:74)(cid:72)(cid:3)(cid:68)(cid:81)(cid:71)(cid:3)(cid:87)(cid:75)(cid:68)(cid:87)
+bear this notice and the full citation on the first page. To copy otherwise, 
+(cid:70)(cid:82)(cid:83)(cid:76)(cid:72)(cid:86)(cid:3)(cid:69)(cid:72)(cid:68)(cid:85)(cid:3)(cid:87)(cid:75)(cid:76)(cid:86)(cid:3)(cid:81)(cid:82)(cid:87)(cid:76)(cid:70)(cid:72)(cid:3)(cid:68)(cid:81)(cid:71)(cid:3)(cid:87)(cid:75)(cid:72)(cid:3)(cid:73)(cid:88)(cid:79)(cid:79)(cid:3)(cid:70)(cid:76)(cid:87)(cid:68)(cid:87)(cid:76)(cid:82)(cid:81)(cid:3)(cid:82)(cid:81)(cid:3)(cid:87)(cid:75)(cid:72)(cid:3)(cid:73)(cid:76)(cid:85)(cid:86)(cid:87)(cid:3)(cid:83)(cid:68)(cid:74)(cid:72)(cid:17)(cid:3)(cid:55)(cid:82)(cid:3)(cid:70)(cid:82)(cid:83)(cid:92)
+or  republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+(cid:82)(cid:87)(cid:75)(cid:72)(cid:85)(cid:90)(cid:76)(cid:86)(cid:72)(cid:15)(cid:3)(cid:87)(cid:82)(cid:3)(cid:85)(cid:72)(cid:83)(cid:88)(cid:69)(cid:79)(cid:76)(cid:86)(cid:75)(cid:15)(cid:3)(cid:87)(cid:82)(cid:3)(cid:83)(cid:82)(cid:86)(cid:87)(cid:3)(cid:82)(cid:81)(cid:3)(cid:86)(cid:72)(cid:85)(cid:89)(cid:72)(cid:85)(cid:86)(cid:3)(cid:82)(cid:85)(cid:3)(cid:87)(cid:82)(cid:3)(cid:85)(cid:72)(cid:71)(cid:76)(cid:86)(cid:87)(cid:85)(cid:76)(cid:69)(cid:88)(cid:87)(cid:72)(cid:3)(cid:87)(cid:82)(cid:3)(cid:79)(cid:76)(cid:86)(cid:87)(cid:86)(cid:15)
+specific permission and/or a fee. 
+(cid:85)(cid:72)(cid:84)(cid:88)(cid:76)(cid:85)(cid:72)(cid:86)(cid:3)(cid:83)(cid:85)(cid:76)(cid:82)(cid:85)(cid:3)(cid:86)(cid:83)(cid:72)(cid:70)(cid:76)(cid:73)(cid:76)(cid:70)(cid:3)(cid:83)(cid:72)(cid:85)(cid:80)(cid:76)(cid:86)(cid:86)(cid:76)(cid:82)(cid:81)(cid:3)(cid:68)(cid:81)(cid:71)(cid:18)(cid:82)(cid:85)(cid:3)(cid:68)(cid:3)(cid:73)(cid:72)(cid:72)(cid:17)
+Conference’10, Month 1–2, 2010, City, State, Country. 
+(cid:51)(cid:72)(cid:85)(cid:89)(cid:68)(cid:86)(cid:76)(cid:89)(cid:72)(cid:43)(cid:72)(cid:68)(cid:79)(cid:87)(cid:75)(cid:3)(cid:21)(cid:19)(cid:20)(cid:23)(cid:15)(cid:3)(cid:48)(cid:68)(cid:92)(cid:3)(cid:21)(cid:19)(cid:16)(cid:21)(cid:22)(cid:15)(cid:3)(cid:50)(cid:79)(cid:71)(cid:72)(cid:81)(cid:69)(cid:88)(cid:85)(cid:74)(cid:15)(cid:3)(cid:42)(cid:72)(cid:85)(cid:80)(cid:68)(cid:81)(cid:92)
+Copyright 2010 ACM 1-58113-000-0/00/0010 …$15.00. 
+(cid:38)(cid:82)(cid:83)(cid:92)(cid:85)(cid:76)(cid:74)(cid:75)(cid:87)(cid:3)(cid:107)(cid:3)(cid:21)(cid:19)(cid:20)(cid:23)(cid:3)(cid:44)(cid:38)(cid:54)(cid:55)(cid:3)(cid:28)(cid:26)(cid:27)(cid:16)(cid:20)(cid:16)(cid:25)(cid:22)(cid:20)(cid:28)(cid:19)(cid:16)(cid:19)(cid:20)(cid:20)(cid:16)(cid:21)
+(cid:39)(cid:50)(cid:44)(cid:3)(cid:20)(cid:19)(cid:17)(cid:23)(cid:20)(cid:19)(cid:27)(cid:18)(cid:76)(cid:70)(cid:86)(cid:87)(cid:17)(cid:83)(cid:72)(cid:85)(cid:89)(cid:68)(cid:86)(cid:76)(cid:89)(cid:72)(cid:75)(cid:72)(cid:68)(cid:79)(cid:87)(cid:75)(cid:17)(cid:21)(cid:19)(cid:20)(cid:23)(cid:17)(cid:21)(cid:24)(cid:23)(cid:28)(cid:24)(cid:19)
+1 The old dependency ratio is the ratio of those over 65 over the working 
+
+population (15-64 years old). 
+
+(cid:20)(cid:22)(cid:23)
+
+readmission  has  risen  by  over  30%  due  to  lack  of  appropriate 
+support  at  home  [26].  There  is  thus  a  paradigm  shift  towards 
+moving from the current, reactive model of healthcare to one that 
+is  more  proactive  and  preventative.   A  critical  challenge  thus 
+exists in supporting older adults to manage their wellbeing within 
+their home environment. 
+
+This  shift  towards  preventative  health  care  has  resulted  in  a 
+growing  interest  in  home-based  assisted  living  technologies, 
+designed for and with older adults [6], [14]. These include a broad 
+spectrum:  from  remote  health  monitoring,  electronic  sensors  and 
+equipment such as fall detectors and bed alerts, to information and 
+communication  technologies  (ICT)  and  environmental  control 
+systems  (ECS).  There  has  been  a  surge  in  the  design  of 
+technology-based  wellness  applications  that  support  people  in 
+actively  monitoring  their  wellbeing,  largely  due  to  the  wide 
+availability  of  smart  phones  embedded  with  powerful  sensors 
+[15], [20]. Such applications promote wellbeing by providing the 
+individual  with  some  level  of  feedback  based  on  collected  data. 
+However,  there  are  issues  with  the  majority  of  the  technologies 
+described above. Often they are not designed with older adults in 
+mind,  and  critically,  any  data  collected  is  typically  sent  to  carers 
+or clinicians rather than to the older adult themselves. Thus, little 
+is  known  about  how  older  adults  might  self-manage  their  own 
+wellbeing and what might motivate them to do so. 
+
+This paper describes YourWellness, an iPad application designed 
+to support older adults in self-reporting on their wellbeing and to 
+provide feedback on such, in terms of showing an overview of an 
+individual’s  wellbeing,  trends  of  their  data  over  time  and 
+information  and  education  on  how  to  maintain  or  return  to  a 
+healthy  state  of  being.  The  overall  aim  of  the  application  is  to 
+provide a holistic approach to wellbeing self-management. While 
+incidences  of  chronic  illness  are  high  in  older  adults,  and  while 
+monitoring of physiological symptoms is important, what is often 
+ignored are the associated health issues, such as effects on mood, 
+social interactions, physical activity or sleep.  
+
+to  gauge  opinions  on  whether 
+
+In  this  paper,  we  present  findings  from  a  5-month  field  trial  of 
+YourWellness  with  older  adults.  The  purpose  of  this  trial  was  to 
+examine  long-term  adherence  to  self-reporting  in  an  older 
+population, 
+the  application 
+increased  awareness  of  one’s  wellbeing,  whether  it  encouraged 
+people  to  alter  their  behaviour  in  some  way  and  whether  people 
+found  the  application,  particularly  the  feedback  provided,  useful 
+and usable. For this particular trial, following from a focus group 
+discussion  on  parameters  of  wellness  that  older  adults  find 
+important  and  are  interested  in  managing  [8],  we  focused  on  3 
+areas of wellbeing, mood, sleep and social interactions. However, 
+the  application  and  its  management  system  as  described  in  the 
+paper, support management of any area of wellbeing of interest to 
+the  person.  Since  this  trial,  we  have  added  categories  of  falls 
+prevention, nutrition, physical activity, blood pressure and weight 
+management,  with  the  user  provided  with  a  ‘menu’  of  wellness 
+
+ 
+parameters from which they can choose which categories they are 
+interested in.  
+
+We  found  that  older  adults  are  interested  in  self-managing  their 
+wellness, they want to be more aware of their health and they are 
+motivated  to  use  such  applications  provided  they  are  useful  to 
+them.  Other  results  around  how  best  to  design  wellness  self-
+management  applications  for  this  population  are  presented.  We 
+consider  our  main  contribution  to  be  an  increased  understanding 
+of  older  adults’  attitudes  and  behaviours  in  relation  to  wellbeing 
+self-management  and  factors  that  affect  acceptance  and  adoption 
+of such, that can facilitate the creation of new, personalized health 
+and  wellbeing  interventions  for  this  population.  Specifically,  we 
+found that older adults found line graphs to be intuitive and useful 
+representations of their data and used these to dig down into their 
+data and self-reflect; answering questions, in addition to receiving 
+feedback,  increased  self-awareness;  however  ensuring  these 
+questions are not too repetitive, combined with maintaining fresh 
+and  engaging  educational  feedback/advice 
+to 
+encourage long-term adherence to wellness self-management. We 
+also found that supporting the provision of context is important to 
+allow people to make sense of anomalies in their data. 
+
+is  necessary 
+
+2.  Background and Related Work 
+Recent  times  have  seen  the  advent  of  the  quantified-self 
+movement,  whereby  individuals  have  begun  to  use  technology 
+devices  to  ‘self-track’.  Self-tracking  typically  involves  recording 
+some aspect of your life, including your work, sleep, exercise, diet 
+or  mood  and  supports  self-management  of  such  through  the 
+provision  of  feedback.  This  feedback  is  typically  persuasive  and 
+aims  to  help  the  person  to  change  their  behaviour  to  live  the 
+lifestyle  they  wish  to  lead  [10].  Some  of  these  ‘lifestyle’ 
+management  applications  include  UbiFit  [3],  BeWell  [15]  and 
+Fish  ‘n’  Steps  [19]  and  have  been  designed  for  general 
+populations,  not  necessarily  older  adults.  Li  has  examined  how 
+such  technologies  can  support  self-reflection  and  the  types  of 
+questions  people  ask  themselves  while  reflecting  [18].  Such 
+questions  involved  current  status,  history,  goals,  discrepancies, 
+context  and  factors  (long-term  behavioural  factors).  Self-
+management applications have also begun to appear in the health 
+and  wellness  space.  Monarca  is  a  persuasive  monitoring  and 
+feedback system for mental illness and is an excellent example of 
+a closed feedback loop to patients [1, 20]. There are also a number 
+of  noteworthy  commercial  applications,  including  Fitbit  and  the 
+Nike+ Sportband.   
+
+The  majority  of  health  management  applications  focus  on 
+management  of  chronic  illnesses,  such  as  COPD,  chronic  heart 
+failure,  diabetes  or  blood  pressure  management  [11,  21].  These 
+support  self-tracking,  typically  with  wearable  sensors  such  as  a 
+pulse  oximeter  or  blood  pressure  cuff.  They  provide  a  limited 
+form  of  feedback  to  the  user  (e.g.  today’s  blood  pressure  value), 
+but  the  goal  is  typically  to  provide  feedback  to  a  clinician  to 
+support remote management of health.  
+
+There  is  also  much  research  in  the  space  of  health  applications 
+targeted  specifically  at  older  people  including  those  to  support 
+functional  ability  [16]  physical  [7,  29],  social  [9]  or  cognitive 
+wellbeing [12]. While some of these systems provide feedback to 
+support  health  improvement,  their  long-term  usage  in  real 
+environments  is  limited.  Furthermore,  they  tend  to  focus  on  one 
+aspect  of  wellbeing,  rather  than  providing  a  holistic  approach  as 
+outlined in [26]. Lee and Dey [16] describe a sensorised system to 
+monitor pill taking and phone usage in older populations, the aim 
+of  which  is  to  increase  participant  awareness  of  their  habits  and 
+
+anomalies in their habits (such as forgetting to take a pill or mis-
+dialing  phone  numbers).  The  authors  highlight  design 
+recommendations  for  such  systems, 
+including  highlighting 
+anomalies and supporting the retrieval of context. However, their 
+work  is  based  on  case  studies  from  just  two  participants  both  of 
+whom  interacted  with  visualisations  of  their  recorded  data  only 
+once. 
+
+3.  The YourWellness Framework 
+This section describes the YourWellness framework, consisting of 
+an  end-user  mobile  application,  a  Web-based  management 
+application and a cloud-based service supporting communication. 
+The framework supports the collection of data, feeds results back 
+to end users and delivers educational content and advice.  
+
+integrated  and 
+
+3.1  YourWellness Mobile Application 
+For  the  purpose  of  this  trial,  participants  self-reported  on  their 
+mood,  sleep  and  social  interactions.  Additional  categories  of 
+the  application 
+wellness  have  since  been 
+framework is flexible, supporting the addition of any further areas 
+of  wellbeing  that  may  be  important  to  a  particular  individual. 
+YourWellness  has  been  fully  co-designed  with  older  adults.  We 
+have conducted interviews, focus groups, workshops and usability 
+testing  and  received  feedback  from  older  adults  on  attitudes 
+towards  wellness  management,  preferred  methods  for  inputting 
+information,  preferred  visualisations  of  feedback  and  the  type  of 
+content  that  would  be  required  for  such  an  application.  We  also 
+ran workshops with clinicians to ensure the application’s validity 
+as  a  wellness  tool.  Details  on  our  design  process  are  described 
+elsewhere [8]. Information gathered during this process was used 
+to design the first prototype, as described below. 
+
+Each  day,  users  of  YourWellness  answer  8-10  questions  about 
+their  wellbeing  and  receive  real-time  feedback.  At  the  highest 
+level,  a  feedback  ‘wheel’  provides  a  quick-glance  overview  of 
+wellbeing (Fig. 1a). The wheel is divided into segments, based on 
+the parameters of wellness that are being monitored and uses the 
+traffic light metaphor as a high level indicator of wellbeing status. 
+Thus,  the  interior  part  of  the  segment  is  coloured  green  if  the 
+individual  is  self-reporting  that  they  are  feeling  well;  orange  if 
+they are scoring relatively low; and red if they score very low. In 
+collaboration  with  clinical  specialists  and  taking  into  account 
+existing  guidelines  such  as  the  NHS  NICE  guidelines  [23],  we 
+have  developed  a  scoring  algorithm  that  calculates  a  wellness 
+score for determining whether a green, orange or red alert should 
+be provided.  
+
+Clicking  a  particular  segment  of  the  feedback  wheel  brings  the 
+user  to  a  graph  of  their  self-report  data  to  date  (Fig.  1b). 
+Educational/advice  content  is  also  provided  as  a  series  of 
+messages  delivered  daily  (Fig.  1c).  These  messages  are  targeted 
+towards the user’s current wellbeing state. For example, if a user 
+is  scoring  in  the  orange  zone  for  sleep  they  will  get  a  message 
+with  a  tip  informing  them  how  to  improve  their  sleep  hygiene. 
+Such  content  has  been  defined  for  each  type  of  alert  in  each 
+category  of  wellbeing  (i.e.  sleep,  mood  and  social), 
+in 
+collaboration  with  clinicians  and  by  examining  existing 
+guidelines,  for  example  from  the  NHS2  and  the  Harvard  Sleep 
+Centre3. Examples of such message are shown in Table 1. In the 
+social  category,  we  suggest  local  classes  and  events  that  the 
+person might be interested in. The overall aim of such feedback is 
+
+2 http://guidance.nice.org.uk/PH16 
+3 http://healthysleep.med.harvard.edu/ 
+
+(cid:20)(cid:22)(cid:24)
+
+                                                                    
+to  promote  awareness  of  wellbeing  and  support  improvement. 
+While  the  goal  of  our  research  is  to  support  self-management  of 
+wellbeing  in  an  older  population,  the  YourWellness  framework 
+also supports sharing of data, thus it could potentially be used in 
+various contexts, as explained in the next section. 
+
+Table 1. Examples of Advice/Educational Messages 
+
+Sleep
+
+Sleep 
+
+Sleep 
+
+Mood 
+
+Mood 
+
+Mood 
+
+Avoid  caffeine,  alcohol,  nicotine  and  other  chemicals  that 
+interfere with sleep for 4-6 hours before bedtime 
+
+It  may  help  to  limit  your  bedroom  activities  to  sleep.  Keeping 
+computers,  TVs  and  work  materials  out  of  the  room  will 
+strengthen  the  mental  association  between  your  bedroom  and 
+sleep 
+
+Light reading before bed is a good way to prepare yourself for 
+sleep 
+
+Dehydration  makes  a  person  tired  and  cranky.  Sense  of  thirst 
+decreases with age, even for healthy older people. Therefore it 
+is important to drink water before you feel thirsty 
+
+Learning a new skill or achieving a goal, however minor, boosts 
+self-esteem and motivation 
+
+Research  has  shown  that  if  you  go  for  daily  10-minute  walks, 
+overall energy levels and mood will be lifted within 3 weeks 
+
+Social  You might be interested in a 6-week course of tai chi for older 
+adults  that  is  beginning  next  week  in  your  local  community 
+centre. The details are…. 
+
+Social  Did you know that the local swimming pool offers free passes 
+
+to senior citizens every Tuesday?  
+
+3.2 YourWellness Management System 
+Alongside  the  mobile  user  application,  a  web-based  application 
+has  been  developed  to  support  its  management.  This  system  is 
+cloud-based  and  provides  a  framework  for  easy  management  of 
+the  application.  Key  features  include:  the  ability  to  add  question 
+sets  related  to  any  area  of  wellbeing  and  push  these  to  the  user; 
+the ability to define how each question is weighted to generate an 
+overall  score  for  each  category;  the  ability  to  add  multimedia 
+educational  content  (such  as  videos,  interactive  images  and 
+articles) related to an area of wellbeing and push these to the user; 
+the  ability  to  manage  the  frequency  of  question  delivery  to  the 
+user;  the  ability  to  manage  and  sort  user  responses,  provide  an 
+overview of their state of wellbeing, their adherence to answering 
+questions etc.   
+
+While  this  tool  has  initially  been  setup  to  support  the  research 
+trial,  it  has  potential  to  be  used  by  clinicians  and  caregivers.  For 
+example,  geriatric  consultants  who  we  have  consulted  have  said 
+
+that they would use such an application in conjunction with tele-
+health  equipment  as  part  of  early  discharge  from  hospital,  to 
+monitor not only patients’ physiological vital signs, but also how 
+they are feeling post-discharge. The management system supports 
+the  addition  of  any  question  set  specific  to  an  individual  and 
+feedback  can  be  defined.  The  management  system  thus  makes  it 
+easy for clinicians or carers to set up the user application for that 
+user’s specific needs. 
+
+4.  Home Deployment Study Design 
+At time of writing, YourWellness has been deployed for a total of 
+7  months.  However,  the  evaluation  described  in  this  paper  was 
+conducted at the end of month 5 of the deployment. The purpose 
+of  the  evaluation  was  to  (1)  Determine  older  adults’  opinions  on 
+the  usefulness  of  the  application,  particularly  the  feedback;  (2) 
+Examine motivations to use such an application; (3) Examine the 
+usability  of  the  application  and  how  easily  older  adults  could 
+interpret their data; (4) Examine whether it increased awareness of 
+wellbeing. 
+
+4.1  Participants and Procedure 
+We  recruited  8  older  adult  participants  to  take  part  in  the  study 
+(5M  and  3F).  However,  one  of  the  female  participants  withdrew 
+due to illness. Participant demographics are shown in Table 1. Our 
+exclusion  criteria  were  those  under  the  age  of  60  and  those  who 
+couldn’t provide informed consent. Of the 7 participants who took 
+part, 4 had their own iPad and 3 had never used an iPad before. Of 
+these 3, 2 had previously used laptops or desktops to some extent 
+(p59,  p66).  None  of  the  7  participants  had  previously  used  any 
+health  related  application  or  used  any  form  of  technology  for 
+health  purposes.  However,  2  of  the  participants  recorded  their 
+blood  pressure  in  notebooks  (p65,  p69)  while  one  recorded  his 
+blood sugars (p65).  
+
+We  visited  participants  in  their  home  to  install  the  application, 
+provide  a  tutorial  on  it  and  to  carry  out  pre-trial  interviews.  We 
+informed participants that they would have a new set of questions 
+to  answer  daily,  but  that  they  should  answer  the  questions 
+whenever  they  liked,  as  we  were  interested  in  real-world  usage 
+rather than forced daily usage. We asked participants to self-report 
+honestly and highlighted that their responses were not being sent 
+to  anyone  other  than  themselves.  We  also  informed  participants 
+that the study period was 2 months, but that they would have the 
+opportunity to continue with the trial, using the application, for an 
+ongoing  period  if  they  chose.  We  called  participants  after  the 
+initial 2-month period to ask if they were interested in continuing 
+with the trial and all but one (p60) continued. Reasons for this are 
+explained in the Adherence subsection of the results. 
+
+Figure  1.  (a)  Overview  feedback  wheel  (b)  Graph  data  for  a  person’s  self-reported  quality  of  social  interactions  (c)  Examples  of 
+educational advice messages for sleep 
+
+(cid:20)(cid:22)(cid:25)
+
+ 
+the 
+
+throughout 
+
+trial;  (3)  Post-trial 
+
+4.2  Data Captured 
+We  collected  the  following  data  for  evaluation  purposes:  (1) 
+Adherence  to  self-reporting.  For  this  study,  participants  self-
+reported  on  3  areas  of  wellbeing  –  mood,  sleep  and  social 
+interactions  and  also  answered  a  daily  trivia  question.  Mood 
+questions were asked each day and social and sleep on alternative 
+days. (2) Responses to questions. From this we calculated whether 
+participants  were  in  the  green,  orange  or  red  zone  for  each 
+wellbeing  parameter  measured  as  well  as  changes  between  these 
+zones 
+interviews  with 
+participants.  Data  collected  was  qualitative.  Transcription  of 
+responses yielded data for content analysis. Two coders identified 
+important  themes  based  on  the  frequency  and  intensity  of 
+the 
+participant 
+interview 
+the 
+participant  was  asked  to  complete  a  number  of  tasks  on  the 
+application  and  researchers  observed  their  interactions  and 
+recorded their speech and (b) System Usability Questionnaire [2]; 
+(5)  Motivation  to  use  and  continue  using  such  an  application, 
+measured  through  the  Intrinsic  Motivation  Inventory  (IMI)  [5]. 
+Intrinsic  motivation  is  defined  as  an  end-user’s  propensity  to 
+engage  in  activities  of  interest  and  the  resultant  promotion  in 
+learning  and  expansion  of  the  individual’s  capacities  [25].  We 
+examined 4 subscales of the IMI - Interest/Enjoyment, Perceived 
+Competence,  Pressure/Tension  and  Value/Usefulness.  This  was 
+administered  during  the  post-trial  interviews.  Our  findings  are 
+outlined in the following section. 
+
+(4)  Usability,  measured  during 
+(a)  Think-aloud  protocol  whereby 
+
+responses; 
+through 
+
+5.  Results 
+Table  2  shows  participant  demographics  as  well  as  scores  for 
+usability  (SUS)  and  motivation  to  continue  using  (IMI  subscales 
+Int/Enj,  Perc  Comp,  Pres/Tens  and  Val/Use).  Before  we  discuss 
+these results, we examine adherence. 
+
+Table  2.  Participant  demographic  information  and  results 
+from the SUS (where 100 is highest score) and IMI (where 7 is 
+highest score, except for Pres/Tens scale where 1 is best score) 
+
+P ID  G  Age 
+
+Own 
+iPad 
+
+SUS 
+
+Int  / 
+Enj 
+
+Perc 
+Comp 
+
+Pres  / 
+Tens 
+
+Val  / 
+Use 
+
+59 
+
+60 
+
+64 
+
+65 
+
+66 
+
+67 
+
+69 
+
+M  67 
+
+F  69 
+
+M  77 
+
+M  75 
+
+M  68 
+
+F  65 
+
+M  73 
+
+N 
+
+N 
+
+Y 
+
+Y 
+
+N 
+
+Y 
+
+Y 
+
+90 
+
+75 
+
+60 
+
+90 
+
+84 
+
+93 
+
+93 
+
+Avg 
+
+70.6 
+
+83.6 
+
+4.7 
+
+5 
+
+5.2 
+
+6 
+
+4.8 
+
+7 
+
+5.5 
+
+5.5 
+
+6.8 
+
+6 
+
+5.4 
+
+7 
+
+7 
+
+7 
+
+6.4 
+
+6.5 
+
+1 
+
+1 
+
+1.4 
+
+3.4 
+
+1 
+
+1 
+
+2.6 
+
+1.6 
+
+6.25 
+
+6.75 
+
+5 
+
+7 
+
+6.5 
+
+7 
+
+7 
+
+6.5 
+
+5.1  Adherence 
+We  collected  data  on  adherence  to  self-reporting.  The  graph  in 
+Figure  2  indicates  compliance  to  answering  questions  (i.e.  self-
+reporting),  calculated  as  the  number  of  days  in  each  month  that 
+questions were asked over the number of days in each month that 
+questions  were  answered.  As  expected,  adherence  to  self-
+reporting  was  highest  during  the  first  month,  with  an  average  of 
+79.2%  adherence  across  participants.  This  dropped  to  63.1%  in 
+month 2. After month 2, participant 60 dropped out of the trial as 
+she  felt  that  the  categories  of  wellness  were  not  relevant  for  her. 
+
+(cid:20)(cid:22)(cid:26)
+
+She  felt  managing  nutrition  and  physical  activities  would  be  of 
+more benefit for her personally. Since the trial, we have included 
+other  parameters  of  wellness  and  can  now  provide  users  with  a 
+choice of categories. We have included data from p60 here as she 
+took  part  in  the  post-trial  evaluations.  Otherwise,  all  participants 
+wanted  to  continue  using  the  application  past  the  initial  2-month 
+study  period.  A  technical  issue  with  regard  to  participant  69 
+occurred during month 3 whereby this participant’s iPad went into 
+‘recovery mode’ which effectively wiped his iPad and all its data. 
+During  the  evaluation  stage,  the  application  was  therefore 
+evaluated with mock-data to prompt discussion. Participant 69 has 
+since asked for the application to be loaded onto his iPad again so 
+that he can continue using it. 
+
+Figure 2. Adherence data throughout the trial 
+
+During  month  5,  there  was  a  period  of  10  days  when  the  server 
+hosting  the  application  was  offline  due  to  technical  difficulties, 
+which accounts for the sharp drop in self-reporting for this month. 
+The  end  of  month  5  also  marked  the  end  of  the  trial,  when 
+interviews were carried out with participants. So we can see that 3 
+participants  have  continued  to  use  the  application  following  the 
+official  end  of  the  trial  and  at  time  of  writing,  participant  69  has 
+also  started  to  use  the  application  again.  Thus,  while  there  were 
+technical  issues  that  impacted  on  the  trial,  this  is  the  nature  of 
+longitudinal studies and such issues must be catered for. 
+
+5.2  Usability 
+The  average  usability  score  for  each  participant  as  measured  by 
+the  SUS  is  shown  in  Table  2.  The  highest  possible  score  on  this 
+scale is 100. The average score across all participants is 83.6, with 
+a  range  from  60  to  93  indicating  that  participants  found  the 
+application  usable.  During  the  post-trial  usability  test  where  we 
+employed  the  think-aloud  method  we  observed  all  participants 
+were  easily  able  to  use  and  navigate  the  application.  We  asked 
+participants  to  complete  tasks  that  would  require  them  to  answer 
+questions  on  the  application,  browse  and  navigate,  look  at  their 
+overview data (the feedback wheel), their graphs and their advice 
+messages.  
+
+Only  two  participants  (59  and  65)  understood  the  concept  of  the 
+traffic  light  metaphor  –  i.e.  the  use  of  green  to  indicate  positive 
+wellbeing,  orange  to  indicate  medium  etc.  All  participants 
+understood  the  graph  and  the  advice  messages  and  found  this 
+information  very  useful.  This  will  be  examined  further  in  the 
+Discussion section. 
+
+5.3  Motivation 
+5.3.1  Interest and Enjoyment 
+Interest  and  enjoyment  are  the  most  integral  factors  of  intrinsic 
+motivation.  The  mean  interest  and  enjoyment  score  was  5.5 
+(standard deviation 0.8), where 7 is the highest possible score. In 
+terms  of  the  individual  subscales  used  to  assess  motivation, 
+interest and enjoyment had the lowest score. This was somewhat 
+
+ 
+ 
+ 
+ 
+ 
+expected  as  it  is  unlikely  that  participants  would  ‘enjoy’  using  a 
+reflected  by 
+wellness  management  application.  This  was 
+participant 
+IMI  whereby 
+participants  reported  finding  the  application  of  interest,  not  ‘fun’ 
+or ‘enjoyable’.  
+
+responses  when  completing 
+
+the 
+
+5.3.2  Perceived Competence 
+Perceived  competence  within  the  IMI  relates  to  an  individual’s 
+perception of how capable they are at performing a certain task. In 
+our  study,  this  refers  to  the  older  adult’s  perception  of  how  well 
+they  can  use  the  YourWellness  application.  The  mean  perceived 
+competence  was  6.5  out  of  7  (standard  deviation  0.6).  The  high 
+scores  in  perceived  competence  were  reflected  in  the  post-trial 
+interviews and application walk-through, whereby we observed no 
+issues with user interaction.  
+
+5.3.3  Pressure/Tension 
+The  pressure/tension  subscale  assesses  the  level  of  tension  a 
+person  feels  while  performing  a  certain  task  and  is  a  negative 
+predictor of intrinsic motivation. We felt it important to assess this 
+for YourWellness as answering potentially sensitive questions on 
+health  and  wellbeing  might  be  stressful  for  some  individuals. 
+Furthermore,  becoming  more  aware  of  one’s  wellbeing  may  also 
+cause tension, particularly if that person is not doing so well. The 
+mean score for pressure/tension was 1.6 (standard deviation 0.97), 
+where  a  score  of  1  is  a  positive  score,  indicating  that  users  felt 
+quite relaxed while using YourWellness. 
+
+5.3.4  Value/Usefulness 
+A  person’s  perception  of  the  value  or  usefulness  of  using  an 
+application  such  as  YourWellness  can  act  as  a  significant 
+motivator  for  them  to  not  only  initially  adopt  it,  but  also  to 
+continue using it. The mean value/usefulness score was 6.5 out of 
+7  (standard  deviation  0.7),  indicating  that  our  participants  would 
+find  it  useful  to  continue  using  YourWellness  in  the  future.  This 
+scale  on  the  IMI  also  asked  participants  (1)  why  they  found  the 
+application  useful  and  (2)  why  they  think  the  application  is 
+important.  Some  responses  to  (1)  included  “making  you  more 
+aware  of  your  wellbeing”,  “learning  things  about  yourself  that 
+you normally take for granted”, “keeping an eye on your health” 
+and “helping you take control of your health”. With regard to (2) 
+participants felt that such an application was important because it 
+can  “help  you  to  understand  how  you’re  doing”  and  “improve 
+your life”. 
+
+5.4  Other Findings 
+We  asked  participants  to  name  3  good  and  3  not  so  good  things 
+about  the  application.  Positive  aspects  related  to  ease  of  use  (7 
+participants),  the  usefulness  of  the  feedback  (5),  the  inclusion  of 
+relevant  questions  (2)  and  the  inclusion  of  mood  as  a  wellbeing 
+parameter  (2).  With  regard  to  negative  aspects,  most  responses 
+related  to  the  repetitiveness  of  questions  (5),  the  inclusion  of 
+parameters  of  wellbeing  that  the  individual  wasn’t  necessarily 
+interested in (3), and the lack of facility to ‘go back’ and change 
+your answer when answering questions (2).  
+
+6.  Discussion 
+6.1  Understanding Feedback 
+During  the  post-trial  interview,  all  participants  commented  on 
+how  essential  feedback  on  wellbeing  is  to  using  an  application 
+like  YourWellness.  During  interviews  we  asked  participants  to 
+explain to us their understanding of the various feedback elements 
+in the application. We began with the feedback wheel to gain an 
+insight into whether participants had understood the use of green, 
+
+this 
+
+thing 
+
+orange  and  red  in  the  interface.  We  found  that  the  use  of  the 
+traffic  light  metaphor  was  only  understood  by  two  participants, 
+p59 and p65, despite this being highlighted during the deployment 
+and  initial  training  of  the  application.  “You’re  doing  the  traffic 
+lack  of 
+there,  no?”  (p59).  We  assume 
+light 
+understanding was present throughout the trial. Some participants 
+associated colours with the different parameters of wellbeing: “Is 
+red sleep and yellow mood? No, sleep is yellow and red is social”, 
+(p67)  while  others  thought  they  were  just  part  of  a  ‘fancy’ 
+interface  or  that  they  reflect  ‘your  personality’  –  “Would  they 
+relate to your personality or something? Well, usually nice bright 
+colours are associated with lively people, who want to be involved 
+in  things”  (p60).  This  lack  of  understanding  or  interpretation 
+didn’t appear to have any negative effect on participants’ desire or 
+ability  to  use  the  application  –  participants  weren’t  confused  or 
+weren’t  striving  to  understand  what  the  colours  might  mean 
+during  the  trial.  As  highlighted  below,  participants  used  the 
+graphs to interpret and understand their own data, rather than the 
+feedback wheel. 
+
+Following the study, to facilitate interpretation we have integrated 
+an  information  box  that  appears  when  the  feedback  wheel  is 
+launched, providing a textual explanation along the lines of “Did 
+you  know  that  this  petal  can  be  green,  orange  or  red?  Green 
+means….” While we don’t want to dwell on aspects of the design 
+that were particular to the YourWellness application, we think it is 
+important  to  highlight  some  of  these  issues  to  other  designers  of 
+such  applications  for  older  adults.  While  nice  aesthetics  are 
+important  in  any  application,  ensuring  data  is  easily  interpreted 
+and  can  be  acted  upon  is  critical.  There  is  also  balance  to  be 
+attained,  between  designing  something  that  is  easily  understood 
+and thus requires little iterative explanation or ‘help’ guidance and 
+ensuring  that  participants  gain  maximum  benefit  from  the 
+application. Customisation seems a potential solution, for example 
+allowing  users  to  ‘switch  off’  instructions  or  help  prompts  when 
+they  are  comfortable  that  they  fully  understand  the  application. 
+The downside is that another level of complexity is introduced for 
+older  adults,  in  terms  of  additional  functionality  that  they  must 
+learn. 
+
+Graph  data  was  well  understood  by  all  participants,  as  were 
+messages.  “Oh  the  graph  is  good,  it  tells  you  how  you’re  doing. 
+I’ve always been a good sleeper, but if for some reason I wasn’t 
+I’d want to know why. I’d prefer to see it in the 70s and 80s (% on 
+the graph) than in the 30s and 40s and I’d go through the motions 
+of getting it (the graph) back up there” (p64). “It was good to see 
+the  graph,  you  know  and  some  days  you  were  a  way  down  and 
+you’d  say  to  yourself  ‘I’ve  got  to  pick  myself  up  a  little  bit  here 
+and I just have to get out’. Cos there are days you just don’t feel 
+like  it.  You’d  sit  in  your  pyjamas  all  day  long  and  you’d  say  to 
+yourself after that ‘It’s time I bucked myself up here. So you’d find 
+you were moping about less. It was like a little prompter” (p69). 
+Not  only  were  the  graphs  understandable,  they  provided  the 
+greatest awareness of wellbeing. 
+
+6.2  Increased Awareness of Wellbeing 
+The  main  reason  provided  as 
+to  why  participants  found 
+YourWellness  useful  is  that  it  increases  one’s  awareness  of 
+wellbeing.  All  seven  participants  commented  that  the  application 
+increased their awareness of their wellbeing, and all stated that in 
+general, they want to be more aware: “I think a lot of people take 
+(health)  things  for  granted,  including  myself.  You  think  you  feel 
+fine  and  everything’s  going  ok.  But  it’s  no  harm  to  see  these 
+things”  (p60).  The  first  level  of  awareness  that  arose  from 
+participant evaluations was that of simply answering the questions 
+
+(cid:20)(cid:22)(cid:27)
+
+daily.  It  was  felt  that  the  questions  that  were  asked  were 
+“perceptive and focused” and “they got to the heart of the matter 
+and  made  you  think.”  Participants  found  the  graphs  particularly 
+useful for reviewing data “to see if your patterns have changed”. 
+Participants reported reflecting on those days or weeks when their 
+scores were lower than normal and trying to remember what had 
+happened  during  this  time  that  might  have  caused  the  low  score. 
+The  advice  messages  were  overall  thought  to  be  very  useful  and 
+provided  an  awareness  of  “best  practice”  with  regard  to 
+maintaining healthy behaviours. “I think the advice, for me, that’s 
+the best part of it. There’s brilliant advice there. And stuff I didn’t 
+know  myself”  (p66).  “They’re  useful  and  they’re  common  sense, 
+though I wouldn’t have necessarily known all that stuff” (p59).  
+
+6.3  Participant Behaviours 
+Evaluating  behaviour  change  is  challenging  and  complex.  As 
+highlighted by Klasnja, Consolvo and Pratt “Behaviour change is 
+a  complex,  long-term  process  with  high  relapse  rates.  To 
+convincingly demonstrate that a technology contributed to such a 
+process  requires  large-scale,  long-term  studies  than  can  typically 
+not  be  done  with  early-stage  and  error-prone  systems  frequently 
+developed  in  HCI”  [13].  Thus  while  we  were  interested  in  how 
+participants  might  have  altered  their  behaviours  during  the  trial, 
+we were not evaluating behaviour change in the traditional sense.  
+
+During  interviews  participants  were  asked  whether  they  altered 
+their  behaviour,  or  tried  new  actions  based  on  the  feedback 
+provided  by  the  application.  All  participants  said  they  read  the 
+advice messages regularly. However, not all followed the advice. 
+Some  felt  they  were  already  following  many  of  them.  For 
+example, those who were particularly active felt they didn’t need 
+to  do  anything  additional  to  what  they  were  already  doing.  Yet 
+they  still  reported  finding  the  messages  useful  with  one  person 
+stating that they “reinforced my confidence in what I was already 
+doing” (p66). 
+
+Participants  reported  following  the  sleep  messages  more  so  than 
+mood  or  social.  This  was  expected,  as  all  but  two  of  the 
+participants  reported  poor  sleep  hygiene.  “I  could  see  through  it 
+(the  app)  that  I  don’t  really  sleep  enough.  It  made  me  realize  I 
+was  only  sleeping  5-6  hours  and  I’d  think  it  shouldn’t  really  be 
+that bad” (p59). Three participants reported actively following an 
+advice  message.  Participant  69  said  “some  of  the  sleep  stuff  was 
+good, like not drinking coffee or alcohol before bed. I gave them a 
+try.”  He  also  spoke  of  how  viewing  the  graph  data  on  his  mood 
+made him “buck up” and that “you’d find you were moping about 
+less”. 
+
+Participant  64  said  the  questions  on  social  interaction  prompted 
+him to be more socially active: “If you weren’t talking to someone 
+for  a  while,  the  questions  would  make  you  think  of  that  and  that 
+you  should  go  talk  to  that  person.  They  were  good  prompts”. 
+Participant  65  reported  changing  his  sleeping  pattern:  “I  did 
+(follow the messages). One of them especially. Not to drink tea or 
+coffee before you go to bed. I used to drink tea about 11.30 or 12 
+at  night  before  I  went  to  bed.  So  I  stopped  that  and  now  I  sleep 
+better.  I’d  have  water  now  instead.”  Future  work  will  evaluate 
+sustained behaviour change over longer time periods. 
+
+6.4  Maintaining Motivation 
+Given  that  one  of  the  primary  goals  of  health  self-management 
+applications  is  to  maintain  a  healthy  state  of  wellbeing  and 
+prevent  decline,  it  is  important  that  people  are  motivated  to  use 
+these applications for the long term. Some studies have examined 
+older  adults’  acceptability  of  web-based  health  applications  and 
+found  that  factors  such  as  perceived  usefulness,  ease  of  use  and 
+
+(cid:20)(cid:22)(cid:28)
+
+healthcare knowledge are important indicators of acceptance [22]. 
+In  this  section  we  discuss  how  motivation  and  long-term 
+adherence  might  be  achieved  by  highlighting  potential  positive 
+motivators as well as negative. Participants who continued to use 
+the application past the initial 2-month trial period reported doing 
+so  because  of  the  usefulness  of  the  application  in  terms  of  it 
+increasing their awareness of wellbeing and because the messages 
+were useful for keeping an eye on your health. The questions were 
+highlighted as the primary reason, however, for drops in level of 
+adherence to self-reporting.  
+
+the  way 
+
+Interest/enjoyment scored lowest in terms of the motivation items 
+assessed  using  the  IMI.  Both  the  types  of  questions  being  asked, 
+and  their  frequency,  had  a  negative  effect  on  motivation.  It  was 
+also  felt  that  some  of  the  questions  were  too  ‘clinical’  and 
+“slightly  complicated 
+they  were  worded”  (p67). 
+Participants  also  expressed  concern  that  some  older  adults  might 
+become  upset  or  distressed  when  answering  some  of  the  mood 
+related  questions.  Following  our  workshops  with  clinicians,  we 
+had  decided  to  use  the  Center  for  Epidemiological  Studies 
+Depression  Scale  (CES-D)  [24]  to  assess  mood,  as  this  would 
+provide  a  valid  clinical  measurement,  which  clinicians  felt  was 
+desirable  (if  participants  might  want  to  at  some  point  share  this 
+information  with  a  clinician).  However,  we  have  since  decided 
+that these might not be the most feasible or the best questions to 
+ask daily in the home. For example, one of the question items in 
+the  CES-D  asks  how  often  in  the  past  week  you  have  felt 
+depressed, while another asks how often you felt your life was a 
+failure. For someone who is feeling down, these questions might 
+have the effect of causing further distress. We have thus decided 
+to 
+‘how 
+happy/sad/anxious/angry  do  you  feel  today)  with  more  clinical 
+measures  such  as  the  CES-D  only  being  used  to  gain  a  more  in-
+depth picture if a person is continually reporting low mood. 
+
+daily  mood 
+
+questions 
+
+‘global’ 
+
+(e.g. 
+
+ask 
+
+Participants found the questions repetitive: “I found that daily you 
+were asked the same questions. I don’t think there would be that 
+much change from day to day” (p64). We asked participants how 
+often they felt they should answer such questions, but no general 
+consensus  emerged.  The  advice  messages  were  also  described  as 
+too repetitive. While the content of the messages varied, they were 
+all  in  text  format.  Participants  suggested  adding  videos,  links  to 
+documentaries or articles they could read and these are integrated 
+in the new design.  
+
+While participants didn’t find the activity of using the application 
+to  be  enjoyable,  they  also  didn’t  feel  it  was  a  ‘boring’  activity: 
+“Gosh no, it wasn’t boring. I didn’t look at it as enjoyable. It was 
+something you did every day and you got your answers back and 
+that”  (p69).  Participants  also  reported  that  it  was  not  a  ‘fun’ 
+activity.  This  raises  a  question  around  whether  health  apps  for 
+older adults should be fun, or whether usefulness and competence 
+are  sufficient  to  maintain  motivation  and  long  term  use.  In  other 
+studies  we  conducted  as  part  of  the  design  of  YourWellness, 
+participants reported that they felt it important that a health related 
+application should retain a level of seriousness and should not be 
+game-like.  Thus,  we  integrated  a  daily  trivia  question  into  the 
+application  as  while  participants  might  find  this  a  fun  activity,  it 
+was  also  considered  a  way  of  keeping  the  brain  “ticking  over”. 
+Future  work  will  consider  further  ways  to  introduce  hedonics 
+aspects into wellness applications to encourage long-term usage.  
+
+scores 
+
+recorded 
+
+High 
+that 
+participants  would  like  to  use  such  an  application  again  in  the 
+future.  Some  participants  also  highlighted  other  uses  for  the 
+application, or mentioned other people they thought might benefit 
+
+for  value/usefulness 
+
+indicate 
+
+from  it.  Some  of  the  younger  participants  (p59,  p66)  stated  they 
+would like their parents to fill in something like this, and to share 
+the  results  with  family  members.  Another  (p60)  commented:  “I 
+have  neighbours  it  would  be  brilliant  for,  especially  men.” 
+Another felt it would have been great for his mother when she was 
+alive, as all his siblings were living away from her: “If she could 
+have kept track of her mood it could have been communicated to 
+us or her GP then we might have understood her better. We could 
+have said ‘look, we have to do something here, she’s not a happy 
+camper’” (p66). 
+
+Given  our  findings,  it  is  likely  we  can  increase  interest  and  thus 
+motivation  to  use  the  application  by  personalizing  it  to  include 
+areas of wellbeing of interest to particular individuals, as well as 
+through  greater  variation  of  content.  Our  next  deployment  will 
+examine  this  and  the  impact  it  has  on  increasing  adherence  and 
+motivation.  
+
+older 
+
+applications 
+
+6.5  Design Implications 
+Our findings have a number of implications for the design of self-
+management 
+adults.  Regarding 
+for 
+YourWellness,  a  number  of  redesigns  or  system  changes  have 
+been  made.  Firstly,  our  ‘database’,  maintained  through  the 
+management  system,  now  has  a  much  wider  variety  of  question 
+sets  (i.e.  not  only  mood,  sleep  and  social,  but  physical  activity, 
+falls,  diet  management)  and  also  a  larger  variety  of  questions 
+within  each  of  these  sets.  Our  educational/advice  feedback  has 
+also  been  updated  to  include  multimedia  content  such  as  videos, 
+interactive images and practical information (such as local classes 
+or events). Each day a person receives one new piece of feedback, 
+relevant  to  their  current  health  state.  This  information  is  then 
+archived into categories, such as mood, sleep etc. (see Figure 1c). 
+The  ability  to  add  annotations  to  graph  data  to  provide  context 
+was requested and has been integrated into our graph interface. 
+
+We  recognize  that  there  are  limitations  to  our  study.  We  had  a 
+relatively  small  sample  size,  due  mainly  to  having  a  limited 
+number  of  devices.  However,  we  have  since  received  additional 
+funding to expand this trial. More details on how participants used 
+the  app  would  have  been  useful,  such  as  how  often  they  viewed 
+the  feedback  wheel,  graph  and  messages.  Our  new  trial  will 
+examine  these  features.  There  were  also  technical  issues  during 
+the  trial  that  affected  participants’  usage  of  the  application. 
+However,  this  research  has  provided  us  with  an  increased 
+understanding of older adults’ attitudes and behaviours in relation 
+to  wellbeing  self-management  that  can  facilitate  the  creation  of 
+new,  personalized  health  and  wellbeing  interventions  for  this 
+population. 
+
+7.  Conclusion and Future Work 
+There are a number of things we have learned from this study that 
+we believe are applicable to designing wellness self-management 
+applications for older adults in general. We believe this paper will 
+provide  researchers  with  a  greater  understanding  of  how  older 
+adults interpret wellbeing feedback over a longitudinal period and 
+thus how best to design feedback for this population. Specifically, 
+we  believe  the  following  points  will  be  useful  to  other  designers 
+of  wellness 
+to  ensure  such 
+applications are accepted and adopted: 
+
+technologies  for  older  adults 
+
+• 
+
+Self-reporting  increases  awareness  of  wellbeing  and  is 
+viewed  as  a  positive  thing.  Much  research  in  this  area 
+aims to reduce user involvement, through using sensors 
+to gather data for example, to ensure minimal burden on 
+the  user.  However,  our  research  found  that  self-
+(actually  answering  questions)  supports 
+reporting 
+
+(cid:20)(cid:23)(cid:19)
+
+is 
+
+important 
+
+reflection,  which 
+in  wellness  self-
+management  and  which  can  thus  potentially  promote 
+acceptance  and  adoption.  Research  by  Li  found  that 
+maintaining a diary alongside sensorised data collection 
+of activity levels made participants more aware of their 
+physical activity levels [17, Chapter 3]. Thus supporting 
+active  input  of  information  from  people  may  increase 
+awareness  beyond  that  which  passive  data  collection 
+provides. However, such reporting should not place too 
+much  burden  on  the  person  as  this  might  affect  long-
+term usage. 
+
+• 
+
+Long-term  adherence  is  likely  going  to  be  achieved  by 
+keeping  the  application  personal  and  ‘fresh’  –  i.e. 
+ensuring  questions  and  feedback  are  not  repetitive,  are 
+engaging and introducing something new each day, such 
+as an interesting quote, joke or trivia question. 
+
+•  Older  adults  are  interested  in  self-managing  their 
+wellness,  but  aspects  that  are  important  to  them 
+personally. There must be a gained benefit. Providing a 
+‘menu’  of  wellness  parameters  to  monitor  may  support 
+this. 
+
+•  Clinically  worded  questions  may  cause  confusion  or 
+may  stir  up  negative  emotions.  They  may  therefore  be 
+difficult  to  answer  outside  of  a  clinical  setting.    Self-
+report  applications  for  older  adults  should  be  mindful 
+that the language used is easily understandable and does 
+not lead to upsetting emotions.  
+
+•  Designing  feedback  that  is  easily  interpretable  is 
+important.  In  the  case  of  YourWellness,  line  graphs 
+were  easily  understood  and  the  preferred  method  of 
+feedback.  Graphs  allowed  participants  to  ‘dig  deeper’ 
+into their wellbeing trends and to reflect on anomalies in 
+the data. 
+
+• 
+
+Supporting  the  provision  of  context,  through  user 
+annotations  for  example,  is  important  to  facilitate 
+reflection  on  past  events  that  might  have  caused  a 
+change  in  reported  wellbeing.  The  importance  of 
+context  in  supporting  interpretation  of  anomalies  in 
+behaviour has been highlighted in previous studies [16]. 
+
+The real benefit of wellness self-management applications such as 
+YourWellness  can  only  be  realized  if  they  are  used  long-term. 
+While  this  study  didn’t  evaluate  the  health  benefits  of  the 
+application,  we  did  discover  that  it  increased  peoples’  awareness 
+of  their  wellbeing  and  that  they  found  the  advice/educational 
+feedback to be useful. In terms of future work, the application will 
+again  be  deployed  for  long-term  use  in  a  number  of  contexts.  In 
+future  trials,  we  will  evaluate  health/wellness  benefits  through 
+standard clinical questionnaires administered pre- and post- trial. 
+
+8.  ACKNOWLEDGMENTS 
+The  authors  would  like  to  acknowledge  Enterprise  Ireland  who 
+funded  CASALA  under  the  Applied  Research  Enhancement 
+programme. 
+
+9.  REFERENCES 
+[1]  Bardram, J.E., Frost, M., Szanto, K., Faurholt-Jepsen, M., 
+
+Vinberg, M. and Vedel Kessing, L. Designing mobile health 
+technology for bipolar disorder: A field trial of the 
+
+MONARCA system. In Proc. CHI 2013, ACM press (2013), 
+2627-2635. 
+
+[2]  Brooke, J. SUS – A quick and dirty usability scale. In 
+
+[17] Li, I. Personal informatics and context: Using context to 
+reveal factors that affect behaviour. PhD thesis, Carnegie 
+Mellon University. 
+
+Usability Evaluation in Industry, 189, Taylor & Francis. 
+
+[18] Li, I., Dey, A.K. and Forlizzi, J. Understanding my data 
+
+[3]  Consolvo, S. and Landay, J.A. Designing for behaviour 
+change in everyday life. In IEEE Computer, 42, 6. 
+
+[4]  CSO Ireland report Ageing in Ireland, 2007. 
+
+[5]  Deci, E.L. and Ryan, R.M. Intrinsic motivation and self-
+determination in human behaviour. Springer, 1985. 
+
+[6]  Dewsbury, G., Clarke, K., Rouncefield, M. and Sommerville, 
+I. Depending on digital design in inclusivity: extending 
+inclusivity. In Housing Studies, 19, (5), 2004, 811-825. 
+
+[7]  Doyle, J., Bailey, C., Dromey, B. and Ni Scanaill, C. BASE 
+– An interactive technology solution to deliver balance and 
+strength exercises to older adults. In Pervasive Health, 2010. 
+
+[8]  Doyle, J., O’Mullane, B., McGee, S. and Knapp, B. 
+
+YourWellness: Designing an application to support positive 
+emotional wellbeing in older adults. In British Computing 
+Society HCI, 2012. 
+
+[9]  Doyle, J., Skrba, Z., McDonnell, R. and Arent, B. Designing 
+a touch screen communication device to support social 
+interaction amongst older adults. In BCS HCI, 2010. 
+
+[10] Fogg, B.J., Eckles, D., Bogost, I. et al. Mobile Persuasion: 20 
+Perspectives of the Future of Mobile Behaviour Change, 
+2007. 
+
+[11] Gellis, Z.D., Kenaley, B., McGinty, J. et al. Outcomes of a 
+
+telehealth intervention for homebound older adults with heart 
+or chronic respiratory failure: A randomized control trial. In 
+The Gerontologist, 134, 2012. 
+
+[12] Jimison, H., Pavel, M., Hatt, W.J., Chan, M., Larimer, N. and 
+
+Yu, C.H. Delivering a multi-faceted cognitive health 
+intervention to the home. In Gerontechnology, 9, 2, 2010, 
+224. 
+
+[13] Klasnja, P., Consolvo, S. and Pratt, W. How to evaluate 
+
+technologies for health behaviour change research. In CHI 
+’11, 2011. 
+
+[14] Koch, S. Home tele-health current state and future trends.  
+
+International Journal of Medical Information, 75, 2006, 565-
+576. 
+
+[15] Lane, N.D., Mohammod, M., Lin, M. et al. BeWell: A 
+smartphone application to monitor, model and promote 
+wellbeing. In Pervasive Health ’11, 2011. 
+
+myself: Supporting self-reflection with ubicomp 
+technologies. In UbiComp ’11, 2011. 
+
+[19] Lin, J.J., Mamykina, L., Lindtner, S., Delajoux, G. and Strub, 
+H.B. Fish ‘n’ Steps: Encouraging physical activity with an 
+interactive computer game. In UbiComp ’06, Springer, 261-
+278. 
+
+[20] Marcu, G., Bardram, J.E. and Gabrielli, S. A framework for 
+overcoming challenges in designing persuasive monitoring 
+and feedback systems for mental illness. In Pervasive Health 
+’11, 2011. 
+
+[21] McCullagh, P.J., Nugent, C.D., Zheng, H. et al. Promoting 
+behaviour change in long term conditions using a self-
+management platform. In Designing Inclusive Interactions, 
+2010, Springer, 229-238. 
+
+[22] Or, C., Karsh, B-T., Severtson, D.J. et al. Factors affecting 
+home care patients’ acceptance of a web-based interactive 
+self-management technology. In JAMIA, 18, 2011, 51-59. 
+
+[23] NHS National Institute for Health and Care Excellence 
+
+(NICE). http://www.nice.org.uk/ 
+
+[24] Radloff, L.S. The CES-D scale. A self-report depression 
+
+scale for research in the general population. In Applied 
+Psychological Measurement, 1, (3), pp. 385-401, 1977. 
+
+[25] Ryan, R.M. and Deci, E.L. When rewards compete with 
+nature: The undermining of intrinsic motivation and self-
+regulation. Intrinsic and Extrinsic Motivation: The Search for 
+Optimal Motivation and Performance. San Diego: Academic 
+Press, 2000. 
+
+[26] Thomson, H.J., Demeris, G., Rue, T. et al. A holistic 
+
+approach to assess older adults’ wellness using e-health 
+technologies. In Telemedicine Journal and e-Health, 17, 10, 
+2011, 794-800. 
+
+[27] Turner, K. et al., Arnott, A. et al., Gray, P.D. et al. Grand 
+
+challenge in assisted living – Home care technologies. Match 
+Consortium, UKCRC Grand Challenges in Computing 
+Research, 2010, Edinburgh. 
+
+[28] US Census Bureau, National Population Projections, 2008.  
+
+[29] Uzor, S. and Baillie, L. Exploring and designing tools to 
+
+enhance falls rehabilitation in the home. In Proc CHI 2013, 
+ACM press (2013), 1233-1242. 
+
+[16] Lee, M.L. and Dey, A.K. Reflecting on pills and phone use: 
+Supporting awareness of functional abilities for older adults. 
+In CHI 2011, pp. 2095-2104. 
+
+[30] World Health Organisation. Diabetes action now: An 
+initiative of the world health organization and the 
+international diabetes federation. WHO Library, 2000. 
+
+(cid:20)(cid:23)(cid:20)
+
+ 
+ 
+ 
+ 
+

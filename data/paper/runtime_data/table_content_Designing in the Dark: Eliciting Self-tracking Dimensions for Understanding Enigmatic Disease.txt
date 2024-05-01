@@ -1,0 +1,24 @@
+1. Introduction
+2. Background and Related Work
+   2.1 Self-tracking
+   2.2 Characterizing Diseases Across Groups
+   2.3 Endometriosis: An Example of Enigmatic Disease
+3. Methods: Data Collection and Analysis
+   3.1 Method 1: Preliminary Interviews
+   3.2 Method 2: Focus Groups
+   3.3 Method 3: Online Surveys
+   3.4 Method 4: Content Analysis
+4. Results: Identifying Dimensions of Disease Relevant to Self-Tracking
+   4.1 Interviews
+   4.2 Focus Groups
+   4.3 Online Surveys
+   4.4 Content Analysis
+5. Discussion
+   5.1 A Holistic, Patient-Aligned View of Endometriosis
+   5.2 From Patient Experience to Self-Tracking Variables
+   5.3 Characterizing Disease from Self-Tracking Data at Scale
+   5.4 Implications for Design of Self-Tracking Apps for Enigmatic Diseases
+6. Limitations
+7. Conclusion
+8. Acknowledgments
+9. References

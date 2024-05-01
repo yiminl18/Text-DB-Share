@@ -1,0 +1,18 @@
+1. Introduction
+2. Background and Related Work
+   2.1 Evaluation and Treatment of Parkinson’s Disease
+   2.2 Self-Tracking in the Context of Chronic Illness
+   2.3 HCI Research on Parkinson’s Disease
+3. Methods
+4. Findings
+   4.1 Current Tracking Habits and Attitudes Towards Tracking
+   4.2 Self-Tracking to Support Planful Problem Solving
+   4.3 Self-Tracking to Escape ’Escape-Avoidance’ Coping
+   4.4 Ambiguous Symptoms and the Role of Care Partners
+5. Discussion
+   5.1 Designing to Support Planful Problem-Solving
+   5.2 Designing to Help Avoid Escape-Avoidance Coping
+   5.3 Designing for Ambiguous Symptoms and Care Partners
+6. Limitations and Future Work
+7. Conclusion
+8. Acknowledgments

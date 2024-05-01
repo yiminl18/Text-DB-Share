@@ -1,0 +1,24 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Background
+    5.1 Eating Disorders
+    5.2 Sociocultural Perspective of Eating Disorders
+    5.3 Health Apps for Weight Loss, Diet, and Exercise
+6. Methods
+    6.1 Participants and Recruitment
+    6.2 Data Collection Sessions
+    6.3 Analysis
+7. Findings
+    7.1 Participants
+    7.2 Patterns of Use
+    7.3 Disordered Use of Weight Loss Apps
+    7.4 Making a change
+    7.5 Falling Back into Old Habits
+8. Discussion
+    8.1 Troubling the Binary View of Technology
+    8.2 Weight Loss App Design
+9. Conclusion
+10. Acknowledgments
+11. References

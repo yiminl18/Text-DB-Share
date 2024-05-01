@@ -1,0 +1,16 @@
+Table of Contents:
+
+1. Notice of Probable Violation and Proposed Compliance Order
+2. Inspection and Alleged Violations
+   2.1. § 195.446 Control room management - Failure to test and verify internal communication plan
+   2.2. § 195.446 Control room management - Failure to test backup SCADA systems
+   2.3. § 195.446 Control room management - Failure to monitor content and volume of general activity
+3. Proposed Civil Penalty
+4. Proposed Compliance Order
+5. Response to this Notice
+6. Contact Information and Enclosures
+7. Proposed Compliance Order Details
+   7.1. Remedial Requirement A - Amendment and testing of internal communications plan
+   7.2. Remedial Requirement B - Amendment and testing of backup SCADA systems
+   7.3. Remedial Requirement C - Amendment and review of controller activity monitoring
+   7.4. Remedial Requirement D - Request for documentation of safety improvement costs.

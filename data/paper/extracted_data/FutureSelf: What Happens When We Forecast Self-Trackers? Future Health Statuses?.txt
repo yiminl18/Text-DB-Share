@@ -1,0 +1,1488 @@
+FutureSelf: What Happens When We Forecast 
+Self-Trackers’ Future Health Statuses?
+
+Saeyoung Rho, Injung Lee, Hankyung Kim, Jonghyuk Jung, 
+Hyungi Kim, Bong Gwan Jun, Youn-kyung Lim
+KAIST (Korea Advanced Institute of Science and Technology)
+Daejeon, Republic of Korea
+{saeyoung.rho, edndn, hkkim31, jonghyuk101, roy83kim, bonggwan, younlim}@kaist.ac.kr
+
+ABSTRACT
+The  adoption  of self-tracking services  to  improve  health-
+related behavior is increasing. Although psychologists claim 
+that thinking about the future has a motivational impact on 
+current  behavior  and  cognition,  few  studies  have  explored
+using future forecast in self-tracking services. In this paper, 
+we explore how future forecast information can be used in
+the  design  of self-tracking  services.  We  conducted a  four-
+week study that qualitatively investigated  11  participants’
+perceptions of and practices with future forecast information.
+Participants  used the  FutureSelf  app that we  developed, 
+which  forecasts  dieters’ future  weights and expected goal 
+achievement  rates based  on  their  current  behavior. The 
+findings reveal that predicting future weight based on prior 
+performance  induced  participants  to  imagine  their  future 
+selves and reminded them of their ultimate goals. In fact, the 
+predictions  became  the  participants’  primary  source  of 
+motivation.  We  also  suggest  design  implications  for self-
+tracking services that forecast users’ future statuses.
+
+Author Keywords
+Consequence Information; User Experience; Design; Health; 
+Activity Tracker; Self-Tracking; Personal Informatics.
+
+ACM Classification Keywords
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous.
+
+INTRODUCTION
+As  Ebenezer  Scrooge  says  after  seeing  the  Ghost  of 
+Christmas  Yet  to  Come  in  the  novel  A  Christmas  Carol,
+“Men's  courses  will  foreshadow  certain  ends,  to  which,  if 
+persevered in, they must lead, but if the courses be departed 
+from, the ends will change. Say it is thus with what you show 
+me  [9].”  After  being  visited  by  ghosts  showing  his  future, 
+Scrooge  realizes  that  he  will  meet  with  a  tragic  end  if  he 
+continues to be cold and miserly, and it transforms him into 
+
+Permission to make digital or hard copies of all or part of this work for personal 
+or  classroom  use  is  granted  without  fee  provided  that  copies  are  not  made  or
+distributed for profit or commercial advantage and that copies bear this notice 
+and the full citation on the first page. Copyrights for components of this work
+owned by others than the author(s) must be honored. Abstracting with credit is
+permitted. To copy otherwise, or republish, to post on servers or to redistribute
+to lists, requires prior specific permission and/or a fee. Request permissions from 
+Permissions@acm.org.
+DIS 2017, June 10-14, 2017, Edinburgh, United Kingdom 
+Copyright is held by the owner/author(s). Publication rights licensed to ACM.
+ACM 978-1-4503-4922-2/17/06…$15.00 
+DOI: http://dx.doi.org/10.1145/3064663.3064676
+
+a changed man. He compares his future image as shown to 
+him by ghosts to what he actually wants to be. The difference 
+between these two images acts as a new stimulus, persuading 
+him to change his behavior. This phenomenon was already 
+studied  by  psychologists;  they report  that  considering 
+possible 
+individual’s  current 
+influences  an 
+cognitive/emotional state and goal-setting behavior [17]. 
+
+futures 
+
+Designers  in  the  human-computer  interaction  (HCI)  field 
+have  studied  how  to  design  self-tracking  services  to  better 
+induce, improve, and maintain health behavior change. One 
+popular approach is to express self-tracking data in a more 
+understandable and actionable way for users. Since thinking 
+about the future affects motivation, predicting the future can 
+be a viable approach to helping health behavior change. Self-
+tracking services also offer the potential to predict the future 
+of the user. Self-tracking services store a wealth of personal 
+health  data  that  can  be  used  to  generate  predictions  by 
+adopting  advanced  medical  understanding.  However,  the 
+information provided by current services is mainly related to 
+past performance, not allowing people to imagine the future.
+
+To  explore  how people’s  experiences  with  self-tracking 
+services change as they gain access to predictive information, 
+we devised a study in the form of a four-week weight-loss 
+program and recruited 11 people who wanted to lose weight.
+Participants  were  asked  to  track  their  activities  and  food 
+intake  using  a  wearable  activity  tracker  and  to  use  the
+FutureSelf app, which forecasts the future consequences of 
+continuing current behavior by analyzing the collected data. 
+Interviews  and  journaling  were  employed  to  qualitatively 
+probe participants’ experiences both with and without future 
+consequence  information  with  respect  to  how  they  set  and
+changed goals, how they planned strategies to satisfy these 
+goals, and what motivated them to engage in certain behavior 
+to  achieve  their  goals.  As  a  result,  we  determined  that 
+forecasting future weight based on current self-tracked data 
+motivates users to change their behavior.
+
+This paper makes following contributions: First, we suggest 
+a  new  type  of  information  to  represent  self-tracked  data, 
+which we term consequence information, i.e., the predicted 
+future  information  based  on  collected  data. Second,  we 
+reveal that this type of information can help increase users’ 
+motivation  to  engage  in  healthy  behavior through  in-depth 
+qualitative  user  studies,  and propose  several  points  to 
+consider when designing such type of information.
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK637RELATED WORK
+
+Potential of Imagining the Future in Behavior Change
+Psychologists have already sought to bridge the gap between 
+people’s conceptions of the future and their current statuses. 
+There  are  two  different  ways that  people  conceive  their 
+futures. One way is to imagine possible selves, conjecturing 
+how they might act, look, or feel in the future [7]. People may 
+construct positive (want to achieve) or feared (want to avoid) 
+selves, and individuals’ knowledge, moods, and expectations 
+affect  the  construction  of  those  possible  selves.  In  this 
+process, people who imagine the future more explicitly are 
+more confident that the future event will happen and tend to 
+do more things that can catalyze it [1, 30]. In addition, people 
+felt  more  motivated  when  a  fictional  future  story  was 
+described from the third-person perspective rather than from 
+the first-person perspective [35]. Additionally, Oettingen et 
+al.  distinguished  expectation  from  fantasy,  verifying  that 
+expectation  has  a  greater  motivational  impact  [21].  These 
+studies imply that a conception of the future based on more 
+objective criteria can better motivate people.
+
+The second way that people can imagine their futures is to be 
+reminded  of  their  goals.  When  people  set  a goal,  they 
+fabricate  several  possible  futures,  select  the  one  they  most 
+prefer, and conceive a plan to achieve that end state [3, 20]. 
+Thus, a goal is a representation of a desired future and can 
+motivate  people,  guide  their  behavior,  and  elicit  better 
+performance  [2,  11].  “The  future,  as  represented  by  goals, 
+exerts a major influence on current behavior [17, p. 595].” 
+Based on the potential of predicting people’s future behavior 
+changes, we suggest that the investigation of how people’s 
+experience  is  influenced  when  images  of  their  futures  are 
+conceived in an objective and unbiased manner is important.
+
+Limitations in Self-Tracked Data Interpretation
+A large number of self-tracking services are available in the 
+form  of  activity  trackers  and  diet  logging  apps  that  help 
+people  collect  and  reflect  on  their  personal  information  to 
+foster  health  behavior  changes.  However,  limitations  exist 
+regarding how  people  interpret  self-tracked data. Although 
+the ultimate goal of health behavior change occurs over the 
+long  term,  self-tracked  data  are  currently  employed  with 
+reference  to  short-term  goals  and  decision-making  [29].  In 
+addition,  people  cannot  fully  exploit  the  data  to  gain 
+insights—not due to a lack of collected data, but because they 
+lack the methodology for proper interpretation [8].
+
+Providing  people  with  the  expected  consequences  of 
+continuing their current behavior based on self-tracked data 
+may eliminate the limitations in interpreting the data. If we 
+forecast  a  dieter’s  future  weight,  that  forecast  can  be 
+connected to a long-term goal (to lose weight), rather than to 
+a  short-term  goal  (to  have  salad  for  lunch).  Additionally, 
+people do not need to contemplate their self-tracked data to 
+conjecture  the  consequences  of  their  current  behavior; 
+instead,  the  system  can  analyze  the  self-tracked  data  and 
+make predictions for them.
+
+Forecasting the Future in Current Self-Tracking Services
+Although  many  self-tracking  services  help  users  set  and 
+attain  their  goals,  current  self-tracking  services  do  not 
+attempt to forecast a user’s future status based on his or her 
+current  behavior.  A  few  services  provide  some  futuristic 
+information; however, they do not reflect the consequences 
+of  users  continuing  their  current  behavior.  “Noom  Coach
+(https://www.noom.com/about/)”,  which  is  a  smartphone 
+app for dieters intended to help them develop better eating 
+habits and lose weight, provides a tailored plan for users to 
+follow  after  they  set  a  goal  weight.  The  plan  includes 
+suggestions such as how many steps to walk. The app tells 
+users that if they stick to the plan, they will be able to reach 
+their goal. However, it does not predict the future based on a 
+user’s current behavior.
+
+Another  application  is  “UP  by  Jawbone (https://jawbone.
+com/up)”, which is a smartphone app that gathers data from 
+users’ fitness trackers to analyze and display information. It 
+offers a “Smart Coach” function that provides personalized 
+advice to help users make better choices. For instance, the 
+Smart  Coach  might  say  “It’s  almost  time  for  bed.  Getting 
+ready now will help you get in bed by your 23:15 bedtime.” 
+Smart Coach analyzes a user’s current behavior to deliver the 
+best advice and meaningful insights but delivers it more as a 
+suggestion  than  as  a  predicted  consequence  of  a  user’s 
+behavior.
+
+Suggesting  healthier  behavior  can  be  helpful,  but  many 
+scholars in the HCI field have discussed the subject of user 
+autonomy in ubiquitous technology. Rogers has pointed that 
+we  are  becoming  more  dependent on  technology;  thus, we 
+need to design new technologies to encourage people to be 
+proactive in their lives [28]. Forecasting future consequences 
+has  the  potential  to  provide  users  with  opportunities  to  set 
+their own goals; rather than assigning a goal, the technology 
+provides  information  to  aid  users’  own  goal  setting. 
+Forecasting benefits from  technology being  able  to predict 
+the  future,  but  leaves  the  goal-setting  process  to  the 
+individuals.
+
+DEFINITION  OF  CONSEQUENCE  INFORMATION (CI)
+AND PERFORMANCE INFORMATION (PI)
+To clarify what we have termed “the future consequence”, 
+we define Consequence Information (CI) as follows:
+
+(cid:121) CI: Information showing a consequence of an anticipated
+activity,  measured  from the  average  speed  of  an 
+activity observed from the past up to the present.
+
+As  opposed  to  the  concept  of  CI,  we  refer  to  the  user 
+performance  data accumulated  from  the  past  up  to  the 
+present,  which  is  the  most  common  method  for  reporting 
+self-tracked  data  in  existing  services,  as  Performance 
+Information (PI) and define it as follows:
+
+(cid:121) PI:  Information  showing  a  person’s  performance  of  an 
+activity completed from the past to the present.
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK638FutureSelf App Development
+In the FutureSelf app system, the activity tracker Fitbit Flex 
+was  employed  to  log  the  participants’  daily  activities  and 
+food intake using built-in functions, and the messaging app 
+Telegram was employed to send messages (Figure 2). First, 
+users manually input their age, gender, current weight, height, 
+goal calorie intake/burn, and wakeup/bedtime information to 
+the FutureSelf app. Next, the FutureSelf app connects to the 
+user’s Fitbit server to collect caloric intake/consumption data. 
+Then, it generates messages based on those data. To contrast 
+experiences  with  and  without  CI,  the  FutureSelf  app 
+produces  not  only  the  CI  messages  but  also  messages  that 
+report  only the  accumulated  user  performance  data  (e.g., 
+caloric intake). It sends the messages to users at designated 
+times.  To  reduce  bias  from  visual  elements or  a  nuance, 
+information was delivered as short text messages in a neutral 
+tone, without any compliment or criticism.
+
+Figure 2. Data flow diagram of the FutureSelf app
+
+To obtain PI, we need to select a certain point of time in the 
+past. For instance, if we choose the timepoint as 00:00 today, 
+PI corresponds to what Sarah has completed from 00:00 up 
+to the present. If she walked 7,000 steps during that interval, 
+her performance can be described as follows: 1) Sarah has 
+walked 7,000 steps so far; and 2) she has achieved 70% of 
+her daily step goal if her goal was to walk 10,000 steps a day.
+
+The FutureSelf app generates PI and two types of CI (Figure 
+3). The PI describes caloric intake/consumption because this 
+information  is  a  fundamental  factor  with  regard  to  weight 
+loss. Since we initially did not know how CI would work, we 
+created  two  types  of  CI  and  aimed  to  explore  how  the 
+participants  experience  two  types  of  CI:  goal  achievement 
+rate CI (Rate CI) and future weight CI (Weight CI). Rate CI 
+is  calculated  by  comparing  a  user’s  goal  for  caloric 
+intake/consumption  to  that  user’s  expected  future  caloric 
+intake/consumption. This calculation assumes that a user will 
+make a linear progression during waking hours. Weight CI is 
+produced  using  the  weight-loss  calculator, which  predicts 
+future weight by modeling the correlations between people’s 
+weight changes and information about age, gender, current 
+weight, height, and calorie reductions/increases [34].
+
+The  FutureSelf  app  sends  push  notifications  30  minutes 
+before sending PI and CI to induce manual logging (Figure 
+3)  [4].  The  FutureSelf  app  creates  its  messages  based  on 
+users’ updated Fitbit data, and the time lag between the actual 
+behavior and the logging is reduced to avoid recall bias and
+produce more accurate data [6].
+
+Figure 1. Definition of Consequence Information (CI)
+
+The average speed of an activity (e.g., walking 10,000 steps
+per day) means the pace at which behavioral data have been
+accrued—such as a person’s number of steps per day or daily 
+caloric intake—from a past timepoint to the present (Figure 
+1). This value is used as a base to predict one’s future activity; 
+we  assume  that  a user  will  maintain  the  same  speed of 
+activity up to  a  certain  moment  in  the  future.  Given  this 
+information,  we  can  obtain  CI  by  predicting the  future 
+consequences based on the speed of the expected activities.
+
+Consider Sarah (female, 60 kg), who tracks her step count. 
+She walked between 7,000 and 12,000 steps each day, and 
+her average step count per day over the past week was 10,000 
+steps per day. Thus, if we assume that Sarah will maintain 
+the same speed of activity, she will walk 70,000 steps during 
+the next week. A variety of consequences can be expected
+from  this  prediction:  1)  she  will  reach  70%  of  her  weekly 
+step goal if her goal was to walk 100,000 steps in a week; 2) 
+she  will  burn  approximately  3,000 kcal  if  she  maintains  a 
+pace of 5 km/h [16]. She can obtain different types of CI by 
+tracking diverse health-related data. By  defining  CI  in  this 
+manner, we can predict individuals’ possible futures that are 
+grounded in self-tracked data. CI is not a lie; it is a probable 
+future state that can act to amplify the effect of a person’s 
+past performance. The future prediction length is adjustable
+to vary the size of amplification.
+
+STUDY DESIGN
+We  devised  a  study  to  probe  how  the  participants  interact 
+with  CI;  the  study  focused  on  the  weight-loss-related 
+behavior of dieters. CI can be clearly expressed for weight 
+loss  because  people  trying  to  lose  weight  tend  to  quantify 
+their  desired  weight  goals  (e.g.,  50  kg).  Furthermore,  a 
+wearable activity tracker can provide adequate information 
+to predict  future weight,  e.g.,  caloric  intake  and burn  data. 
+The FutureSelf app was developed as an example of how a 
+self-tracking  service  can  provide  CI  to  dieters.  The 
+FutureSelf  app  accesses  a  user’s  personal  data,  generates 
+messages  based  on  these  data  and  sends  the  messages  to 
+users. By adopting the FutureSelf app, the study was devised 
+as a one-month weight-loss program, and people who wanted 
+to lose weight by tracking their daily activity and food intake 
+were recruited. During the study, journaling and five semi-
+structured interviews were conducted. And a year after the 
+study,  one  follow-up  interview was conducted in  order  to 
+enable the participants to provide more objective reflection 
+of their experience of this concept. 
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK639Group
+
+P#
+
+P1
+P2
+P3
+P4
+P5
+P6
+P7
+P8
+P9
+
+Group 
+A
+
+Group 
+B
+
+BMI (Weight)
+
+Age, 
+gender
+23, M 22.34 (78.3 kg)
+23, F
+20.60 (54.4 kg)
+25, M 23.20 (77.7 kg)
+22.73 (58.2 kg)
+23, F
+29, M 24.49 (74.9 kg)
+23, F
+20.22 (56.6 kg)
+22, M 21.40 (67.8 kg)
+28, F
+20.73 (51.1 kg)
+28, M 24.18 (70.7 kg)
+
+P10
+
+P11
+
+25, F
+
+21.33 (54.6 kg)
+
+27, M 24.58 (65.3 kg)
+
+Table 1. Participants’ information
+
+Weight-
+loss goal
+-1.0 kg
+-2.0 kg
+-4.7 kg
+-3.0 kg
+-5.0 kg
+-1.6 kg
+-1.0 kg
+-1.0 kg
+-1.0 kg
+
+-1.5 kg
+
+-5.0 kg
+
+Study Setup
+In  the  beginning  of  the  study,  we  planned  to  observe  two 
+weeks first, and then change into the most suitable settings 
+to  inquire  design  implications for  CI. Participants  were 
+divided into two groups in order to clearly understand how 
+the experience of CI is different from the experience without 
+CI. During the first three weeks of the study, we provided CI 
+only  to  Group  B  and  concentrated  on  comparing  the 
+experience between Groups A and B to find out the unique 
+potential  of  CI.  After  two weeks of observation, we  found 
+that the participants experienced Weight CI and Rate CI in
+profoundly  different  ways.  Weight  CI  led  participants  to 
+believe that their weight-loss goal was more attainable and, 
+thus, motivated them, whereas Rate CI did not show such an 
+impact: (P10, week 1; CI provided) “I liked the percent value 
+(Rate  CI),  but,  it  seemed natural after  few  days. However, 
+after seeing this digitized value (Weight CI), I thought, oh, 
+really?  Can  I  lose  weight  if  I  continue  this?  No,  but,  no  I 
+didn’t agree, I doubted it, but I became strong-minded. I was 
+very motivated to do so.”
+
+in  what  ways Weight  CI motivated 
+
+Thus, in the third week, we changed the CI setup to better 
+investigate 
+the 
+participants to keep exercise and control diet. In the last week, 
+Group B stopped receiving CI, whereas Group A started to 
+receive  CI.  Each  group’s  interview  results of  the  4th week
+were compared to the interview results of that same group’s 
+first three weeks, rather than making a comparison between 
+Groups A  and  B. In  this way,  all  participants were  able  to 
+experience  both  situations—both  with  and  without  CI.  We 
+asked participants in Group B what they missed most in the 
+last  week  without  CI  and  asked  Group  A  what  they  found 
+most interesting in the last week with CI.
+
+Message Generation (CI setup)
+The FutureSelf  app  sends  push  notifications  to  users  four 
+times a day; twice (15:00 and 24:00) to provide PI and/or CI 
+and twice (14:30 and 23:30) to request Fitbit synchronization 
+and  manual 
+times  were  selected  by 
+considering  participants’  normal  routines;  all  participants 
+typically went to bed after midnight, had lunch between 12 
+
+logging.  These 
+
+Figure 3. Examples of FutureSelf app message (screenshot)
+
+Participant Recruiting
+To observe various situations in which CI is addressed, we 
+aimed to recruit participants with diverse qualities in terms 
+of current weight, body mass index (BMI), and weight-loss 
+goal. Five selection conditions were imposed on participants 
+by conducting a preliminary survey. First, people who were 
+already  on  a  diet  were  excluded  because  time  factors  may 
+affect  people’s  engagement  levels  of  weight  loss  [33]. 
+Second, people who require clinical support were excluded 
+since the goal was to observe how people manage their health 
+behavior using their volition. Thus, people with a BMI that 
+exceeded  25  were  not  selected  because 
+they  were 
+recommended  to consider  clinical  support  [10,  33].  Third, 
+people with a BMI less than 18.5 after achieving their goal 
+weight were not selected because the prediction tool that we 
+employed  did  not  offer  predicted  weight  values  for  BMI 
+values  less  than  18.5,  which  indicates  that  a  person  is 
+underweight. Fourth, people in approximately the same age 
+range  were  selected  since  physical  condition  can  affect 
+weight-loss  performance.  Last,  people  with  similar 
+lunchtimes  and  bedtimes  were  selected  since  message 
+receiving times may affect the use of information.
+
+This  study  was  advertised  on  online  communities  where 
+many  local  people  spend  time.  All  the  participants  were 
+required  to  accomplish  and  adhere  to  four  major  tasks;  1) 
+track daily activity and food intake using Fitbit, 2) check all
+messages from the FutureSelf app, 3) complete a short diet 
+journal using online notes, and 4) participate in five weekly 
+interviews.  As  a  reward,  those  who  completed  the  study 
+received the activity trackers we provided for the study. Six
+men  and  six  women  in  their  twenties  were  recruited  from 
+among 110 applicants and were divided into two groups with 
+even  distributions  of  age,  gender,  and  BMI  (Table  1). 
+However, one participant dropped out due to lack of active 
+participation; therefore, the final analysis included data for 
+11  participants.  The  average  BMI  was  22.3  in  Group  A 
+(SD=1.62) and 22.4 in Group B (SD=1.81).
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK640PM to 2 PM, and did not eat a regular breakfast. Thus, we 
+aimed to have them check the first message after finishing 
+lunch and the second message before going to bed. The CI 
+included in messages varied between weeks and the time at 
+which the messages were sent (Table 2).
+
+In the first two weeks, we sent Rate CI from Sunday to Friday 
+because we assumed no large differences among the Weight 
+CI  if  we  provided  it  every  day. Messages  sent  at  15:00 
+predicted  participants’  daily  goal  achievement  rates,  and 
+messages  sent  at  24:00  predicted  their  weekly  goal 
+achievement rates. By doing this, we expected participants to 
+plan the remainder of their day at 15:00 and to plan the rest 
+of  the  week  at  24:00.  On  Saturdays,  we  sent  Weight  CI 
+messages, which predicted participants’ future weights at the 
+end  of  the  study.  These  weights  were  calculated  on  the 
+assumption  that  the  participant  would  repeat  the  same 
+performance as during the past week.
+
+In  the  last  two  weeks,  we  decided  to  focus  on  Weight  CI 
+because  we  found that  Weight  CI  has  greater  motivating 
+power than Rate CI. Thus, we sent Weight CI at 24:00 every 
+day to predict a person’s weight at the end of the study based 
+on  their  performance  for  this  day.  To  investigate  the 
+influence of  time  represented  in  Weight  CI  on  the  user 
+experience, we provided Weight CI predicting body weight 
+two  months  after  the  start  date  based  on  this  week's 
+performance on Saturday.
+
+Journaling, Interviews, and Data Analysis
+We  conducted  six  personal  semi-structured 
+interview 
+sessions per participant: five during the study and one a year
+after the study. The first five interviews were conducted at 
+one-week intervals. The first interview was conducted face-
+to-face  on  the  day  before  the  program  began.  Participants 
+were asked to measure their body composition and bring the 
+result  sheet  to  this  interview.  A  moderator  asked  the 
+participants questions about their previous experiences with 
+weight  loss,  other  health-related  self-tracking  services  that 
+they had used, and why they wanted to lose weight. Then, 
+each  participant  set  a  calorie  intake/burn  goal  with  the 
+moderator’s help based on their body composition data.
+
+During  the  four  weeks,  participants  were  asked  to  write  a 
+short diet journal at the end of each day using a shared online 
+notebook  (Evernote)  so  that  we  could  conduct  interviews 
+based on the journal entries. In the journal, participants were 
+Time period selected to calculate 
+the average speed of activity
+
+Week
+
+Time
+
+Week 
+1&2
+
+Week 
+3&4
+
+15:00
+
+24:00
+
+24:00, Sat.
+
+15:00
+
+24:00
+
+24:00, Sat.
+
+15 hours
+
+A day
+
+A week
+
+15 hours
+
+A day
+
+A week
+
+asked  to  write  down  the  most  impressive  FutureSelf 
+messages,  their  daily  diet/workout  goal,  their  strategy  to 
+meet that goal, and reasons for each response. In the three 
+subsequent interviews, which were conducted by phone, we 
+asked  what  the  participants  did  after  they  checked  the 
+messages, how they utilized the information in the messages, 
+whether they instituted any changes in their way of thinking 
+or  their  lives  due  to  the  messages,  what  metaphors they 
+would use to describe their impressions of the FutureSelf app, 
+if they encountered any changes in their goals and diet plans, 
+and  how  satisfied  they  were  with  their  previous  week’s 
+performance.
+
+In the fifth face-to-face interview, in addition to asking the 
+same questions as in the previous telephone interviews, we 
+requested participants to compare the experiences of weeks 
+3 and 4 regarding their confidence, motivation, and pictured 
+future  self-image.  We  conducted  a  generative  session  to 
+discuss  redesigning  FutureSelf  messages  to  investigate 
+participants’ underlying needs for another type of CI or their 
+preferences for message settings.
+
+interview 
+
+took  place  one  year  after 
+
+The  final 
+the 
+discontinuation  of  the  FutureSelf  app.  This  follow-up 
+interview was conducted in the summer, just like the main 
+study,  so  participants  were  considering  diet.  Through  this 
+interview  session,  we  investigated  how  participants  were 
+affected by their previous CI experience when they were not 
+exposed to CI. We also observed the participants' objective 
+responses to their CI experience. Ten of the 11 participants 
+responded to the interview request, and each interview lasted 
+approximately 30 minutes.
+
+Audio recordings were made of all interviews (27+ hours), 
+and  the  recordings  were  transcribed  within  2  days  of each 
+interview session. We separately analyzed the data collected 
+when  CI  was  provided  and  the  data  when  CI  was  not 
+provided, and extracted the influence of CI on weight-loss-
+related behavior by comparing those two groups of data. Our 
+data  were  iteratively  open  and  axial  coded  until  we  had 
+clearly 
+that  emerged.  Affinity 
+issues 
+diagramming was also conducted to categorize those issues. 
+Three  of  the  authors  who  conducted  the  interviews  were 
+mainly  responsible  for  analyzing  the  data;  after  individual 
+analysis, the three interviewers analyzed all the data together.
+
+identified 
+
+the 
+
+Future timepoint represented in CI
+
+Type of CI (unit)
+
+24:00 (the end of the day)
+
+Saturday (the end of the week)
+
+A month after the start date
+
+24:00 (the end of the day)
+
+A month after the start date
+
+2 months after the start date
+
+Rate CI (%)
+
+Weight (kg)
+
+Rate CI (%)
+
+Weight (kg)
+
+Table 2. How we generated CI
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK641FINDINGS
+We  determined  that  Weight  CI  was  imperative  for  dieters; 
+one participant who was not given CI messages during the 
+first two weeks tried to calculate his CI from PI: (P1, week 3; 
+CI  not  provided)  “Every  day,  my  caloric  intake  is  400 
+calories  less  than  caloric  burn,  and  if  I  assume  only 
+carbohydrates burn, I’m supposed to lose 100 g. That will be 
+3 kg in a month. I don’t think that’s accurate, but I think I 
+will lose at least 1 kg.”
+
+In  the  following  section,  we  present  findings  from  the 
+interview analysis regarding how Weight CI, Rate CI, and PI
+were utilized during self-management of health behavior.
+
+Weight CI Makes Participants Imagine the Future Self
+Motivational  impact  of  Weight  CI  originated  from  the 
+participants’ imagination of their future selves. Since Weight 
+CI directly shows the weight (kg), participants were able to 
+easily  create  their  future  self-images  when  Weight  CI  was 
+given.  Since  participants  did  not  have  to  translate  or  re-
+calculate given information, participants were able to acquire 
+their future self-images in a concrete manner compared with 
+when  they  had  to  estimate  how  their  body  would  change 
+based on information other than Weight CI. This imagination 
+led participants to be more confident in their ability to lose 
+weight and resulted in increased motivation. This finding is 
+consistent  with  previous  research  findings,  which  indicate 
+that  people  who  explicitly  imagine  the  future  are  more 
+confident  that  the  future  event  will  occur  and  tend  to  do 
+things that can catalyze it compared with people who do not 
+explicitly  imagine  the  future  [1,  30]:  (P6,  week  4;  CI 
+provided:  commenting  on  Weight  CI)  “This  week’s  alarm 
+was much more helpful than the one from week 3 (CI was not 
+provided). When I step on the scales, I see kg, not calories. 
+[…] I can picture detailed images and I feel more likely that 
+I  will  really  lose  weight.  I  also  thought  I  should  work  out 
+more, and become more determined.”
+
+Accordingly, some of the participants mentioned that having 
+their  weight  forecast  too  far  into  the  future  may  not  be 
+desirable  because  of  the  many  possible  variables  that  can 
+influence events during that time. Those variables disrupt the 
+clear  envisioning  of  future  self-images:  (P9,  week  3;  CI 
+provided:  commenting  on  Weight  CI)  “I’m  not  certain  of 
+what  will  happen  in  two  months.  Thus,  I  think  predicting 
+[weight]  a  month  later  [but  not  two  months]  is  most 
+appropriate since I can plan my schedule and imagine that I 
+will lose some weight if I continue what I’ve done last week.”
+
+Weight CI Reminds Participants of Their Ultimate Goal
+In  addition,  because  Weight  CI  represents  information 
+related  to  the  dieters’  ultimate  goals,  it  naturally  evoked 
+participants’  thoughts  about  their  ultimate  goals.  What  P6 
+conceived  in  the  aforementioned  quote  corresponds  to  the 
+ultimate goal (to lose weight) rather than a means to an end 
+(to  restrict  calorie  intake).  After  receiving  Weight  CI, 
+participants  tried  to  imagine  their  changed  body,  which 
+spontaneously  sparked  recall  of  their  ultimate  goals. 
+Remembering one’s goal is important as a starting point in 
+
+the cognitive process of behavior change; “Thinking begins 
+with goals and cannot move without them” [31, p. 19].
+
+Therefore, participants also wanted to be able to personalize 
+the forecast date based on their goal dates. In this case, it was 
+reasonable  to  forecast  weight  after  a  month  because  at  the 
+beginning of the study we asked participants to set a weight-
+loss goal for a month later. Likewise, participants wanted to 
+be able to get specific forecasts targeting a specific goal date 
+they  had  in  mind:  (P4,  wrap-up  interview: commenting  on 
+Weight  CI)  “The  weight  forecast  should  tell  me  my  future 
+weight on my goal date, not on some arbitrary date such as 
+three months from the start. Let’s say I’m on a diet for my 
+wedding.  I’m  going  to  be  interested  in  my  weight  on  my 
+wedding day, not other days!”
+
+Accordingly,  participants  wanted  CI  to  predict  something 
+related  to  their  ultimate  goal,  not  necessarily  limited  to 
+weight  (kg)  information.  Although  the  ultimate  goal  of  all 
+the participants was to lose weight, they approached it from 
+different  aspects:  some  wanted  to  reduce  body  fat,  while 
+others aimed to fit into smaller jeans. Participants perceived 
+that  CI  directly  refers  to  their  ultimate  goal  to  be  more 
+intuitive: (P8, week 3; CI provided: commenting on Weight 
+CI) “The weight forecast was useful, but it may also be good 
+to forecast my clothing size. […] Saying ‘you will be able to 
+fit into your size 24 jeans!’ will make me say ‘wow!’ and I 
+will diet even harder.”
+
+The  Use  of  Weight  CI  Depends  on  the  Individual’s 
+Ultimate Goal
+The impact of Weight CI on participants’ experience differed 
+according  to  their  ultimate  goals.  Weight  CI  was  more 
+important  for  participants  who  wanted  to  lose  weight  than 
+participants who wanted to maintain their current weight. In 
+the follow-up interviews, some participants' diet goal was not 
+to reduce but to maintain current weight. In this case, Weight 
+CI was not as influential as it was during the diet program. 
+Since they were not expecting a change in the value, to step 
+on a scale every day and confirm that their weight was within 
+the  acceptable  range  was  an  easier  way  to  manage  their 
+weight. If a person’s goal is to “maintain" a certain value, CI 
+is  not  the  best  form  to  present  this  value:  (P1,  follow-up
+interview:  commenting  on  Weight  CI)  “Now  my  goal  is  to 
+maintain  this weight, not  losing or gaining  too much.  […] 
+There is a scale at the gym, and it shows my weight if I step 
+on it. […] So, information that I will be xx kg in the future is 
+not really relevant to me. I can check my weight right now, 
+so there is no need to know my weight a week later.”
+
+P6 wanted to incorporate Weight CI in her daily life, even 
+when she is not on a diet to ensure that she is alerted before 
+she gains weight. She regarded weight as a simple indicator 
+to keep an eye on her health. Thus, after she stopped using 
+the  FutureSelf  app,  she  tried  to  use  her  knowledge  from 
+Weight  CI  to calculate  her Weight  CI  each  day. However, 
+since her weight changed, she could not use this knowledge 
+anymore. Therefore, she wanted Weight CI to act as an alarm 
+clock to warn her that she needed to be careful: (P6, follow-
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK642up: commenting on Weight CI) “I want FutureSelf to exist in 
+my usual life, not only for a diet but for checking my health 
+condition before it actually goes bad. Like an alarm clock. If 
+I skip exercise or sleep less, then I have to change my lifestyle, 
+and  FutureSelf  can  predict  the  consequences  of  that  and 
+alert me to control my habits.”
+
+When  the  participants’  ultimate  goal  is  to  lose  weight, 
+Weight  CI  predictions  that  are  closer  to  the  goal  weight 
+tended to boost their confidence. Weight CI close to the goal 
+weight convinced participants that they would lose weight as 
+long as they continued the same behavior, which motivated 
+them to meet their sub-goals. This is in accord with Locke’s 
+description: people’s commitments to goals increase with the 
+belief  that  those  goals  are  attainable  [19]: (P1,  week  4; CI 
+provided: commenting on Weight CI) “The forecast said 77 
+kg and I thought I could reach that goal. Just 1 kg more to 
+go.  It  was  too  vague  at  first,  but  after  I  got  the  messages 
+[containing Weight CI] in Week 4, I became confident. All I 
+had to do was just to keep going.”
+
+However, Rate CI Is Not Construed as a Prediction
+Participants discovered that Rate CI was less easy to imagine 
+in the future perspective. After receiving Rate CI at 15:00, 
+some  participants  divided  the  number  in  half  and  tried  to 
+construe it as an “achievement rate so far”. Other participants 
+perceived  that  they  had  done  120%  of  the  activity  amount 
+that should be done by 15:00 when their Rate CI value was 
+120%. This representation of achievement rate can hardly be 
+regarded  as  a  prediction  for  the  future:  (P8,  week  2;  CI 
+provided:  commenting  on  Rate  CI)  “But,  when  I  tried  to 
+understand the achievement rate prediction, if it said 80%, I 
+divided it in half and thought I did about 40% so far. But I 
+don’t know why I did so. It doesn’t make sense.”
+
+Goal achievement rate information (%) was preferred to kcal 
+information  since  percent  value  has  a  standard  to  be 
+compared. However, no participant wanted this information 
+to be presented in the future perspective; they all wanted to 
+know  “what  percentage  of  the  goal  they  have  achieved  so 
+far”.  This  observation  demonstrates 
+the  goal 
+achievement rate indicated by Rate CI is consumed not in the 
+future  perspective  but  in  the  present  perspective.  The  goal 
+achievement rate represents the activity amount, and thus it 
+is utilized while making a decision on how much more/less 
+to do a certain activity. Therefore, when participants received 
+Rate CI, they had to somehow translate it into “achievement 
+rate so far” to use the information to plan their activities.
+
+that 
+
+Weight CI and PI Collaborate with Each Other
+Weight CI motivated the participants, but it did not provide 
+enough information to plan detailed strategies to meet their 
+goals; it did not indicate how much more to exercise or how 
+many  calories 
+intake. Thus,  participants  needed 
+information  regarding  “activity”  to  organize  a  weight-loss 
+plan and set sub-goals to hit the ultimate goal. For example, 
+one  day,  P3  received  Weight  CI  predicting  that  he  would 
+meet his weight-loss goal, and he tried to repeat that day’s 
+activity. However, he could not acquire enough information 
+
+to 
+
+from  CI,  so  he  checked  Fitbit  to  find  more  detailed 
+information  to  plan  his  strategy,  how  he  should  behave  to 
+lose  weight.  The  information  he  found  in  Fitbit  can  be 
+regarded as PI: (P3, week 4; CI provided) “My goal for this 
+week was to eat the same as on Monday and Tuesday. On 
+Monday  and  Tuesday,  I  received  a  forecast  saying  that  I 
+would be 74 kg. So I thought I was doing well. I checked the 
+data on those days on Fitbit and set them as a standard.”
+
+We observed two types of collaboration between Weight CI 
+and PI. First, as you can see from the example above, Weight 
+CI  served  as  a  criterion  that  helped  people  evaluate  their 
+current  performance.  This  is  beneficial  because  taking  a 
+subjective  view  of  health-related  symptoms  is  risky  and 
+easily biased [27]. People may notice their obesity only after 
+they have already become obese, without having a chance to 
+prevent it. Thus, it is important to be vigilant to health-related 
+symptoms  and  to  take  an objective  view  of  them. Using 
+Weight CI as an objective criterion, participants reinterpreted 
+PI to set a sub-goal; this phenomenon was observed in every 
+case, whether the predicted weight was higher or lower than 
+the participants’ goal weight:
+
+(P9, week 3; CI provided: commenting on Weight CI) “One 
+day I ate so little and my forecast said 60 kg. I thought that 
+was too small, so I planned to eat more.”
+
+(P2, week 4; CI provided: commenting on Weight CI) “It was 
+shocking.  I am  participating  in  a  one-month  diet  program 
+and I am hardly losing any weight. I thought I ate a bit much 
+that day and decided to change my diet the next day.”
+
+Second, PI acted as evidence of CI. Providing both PI and CI 
+together helped P8 imagine how CI was calculated; therefore, 
+CI  seemed  more  plausible  and  credible.  This  perception  is 
+important  because it  is  difficult  to  trust  questionable  data, 
+and  distrust  may  decrease  the  impact  of  data  on  behavior 
+change [13]: (P8, wrap-up: commenting on CI) “Starting a 
+report with a fact is very convincing. Saying ‘You did this, 
+and  you  did  that  [PI]’  before  telling  me  the  important 
+information [CI] was like an introduction.”
+
+they 
+
+intake  or  consumption  as 
+
+Consequently,  through  gradual  learning,  participants  were
+able to discover whether they would gain or lose weight from 
+a  certain  behavior.  Participants  who  were  initially  clueless 
+about  caloric  information  became  able  to  estimate  their 
+caloric 
+repeatedly 
+synchronized and checked the Fitbit app. Additionally, they 
+began to compare the difference between their caloric intake 
+and  their  consumption  each  day  with  the  Weight CI 
+predictions to calculate how large the difference should be to 
+achieve their goal weight. As a result, participants learned to 
+judge whether they were losing or gaining weight: (P9, week 
+4:  commenting  on  Weight  CI  received  in  week  3)  “Now  I 
+have my own way of estimating calories while eating. It’s like, 
+‘I feel like I’m going to get fat because I ate this much,’ or, 
+‘eating this much is okay.’ It’s embodied cognition.”
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK643Tolerance for Imperfect Prediction of Weight CI
+Participants’  attitude  toward  the  prediction  accuracy  of  CI 
+differed  greatly  depending  on  the  type  of  CI.  When 
+participants were  asked  in  the  follow-up  interviews  if  they 
+would use the FutureSelf service again, most of them did not 
+want  to  receive  Rate  CI  since  it  includes  an  irrational 
+assumption:  people  do  not  repeat  their  daily  experiences. 
+Although this assumption is also made in the prediction of 
+Weight  CI,  all  participants  indicated  in  the  follow-up 
+interviews that they wanted to receive Weight CI.
+
+Three participants  mentioned  that  they  distrusted  Rate  CI 
+because  the  prediction  assumes  that  they  will  repeat  their 
+experiences  at  the  same  rate  in  the  future,  which  is  not 
+guaranteed. Because  goal  achievement  rate  information  is 
+employed in the present perspective, the prediction of Rate 
+CI,  which  inevitably  entails  reducing  the  credibility  of 
+information, was not necessary. Even if prediction accuracy 
+was  increased  by  adopting  a  personalized  prediction 
+the 
+algorithm with  machine-learning 
+participants  continued  to reject  Rate  CI:  (P1,  follow-up: 
+commenting  on  Rate  CI) “I  think  I  am  not  going  to  use  it 
+[Rate CI] even if it adopts deep learning. Prediction quality 
+may become better than before, but I don’t think my lifestyle 
+is that predictable.”
+
+technology, 
+
+Five  participants  questioned  the  prediction  algorithm  of 
+Weight CI; in this case, however, they gained confidence and 
+motivation. For instance, P5 became so skeptical that he tried 
+to find the calculation algorithm, but was unable to find the 
+right answer. Although he remained doubtful, he continued 
+to be impacted by Weight CI: he believed that he could lose 
+weight when he saw the Weight CI. This phenomenon was 
+shared by another participant, P3, who regularly (3 times per 
+week)  weighed  himself.  He  said  that  the  gap  between 
+measured  weight
+(76  kg,  measured  on  Monday) and 
+predicted weight (74.4 kg, his Saturday forecast, received on 
+Monday) was so large that he could not trust the forecast, but 
+he still gained hope and confidence from it.
+
+As  these  two  examples  show,  participants  tended  to 
+understand the technical limitations of the weight forecast. 
+To benefit from the positive impact of Weight CI, they were 
+willing to tolerate some inaccuracy: the participants wanted 
+to  feel  hopeful  and  maintain  a  positive  attitude rather  than 
+focus on exact numbers. However, they still wanted CI to be 
+more  credible.  Thus,  we  consider  that  the  participants 
+tolerated  inaccuracy  as  compensation  for  positive  impacts 
+rather  than  preferring  low  accuracy.  In  particular,  P6 
+described this feature of forecast as a “fortune teller:” (P6, 
+week 4; CI provided: commenting on Weight CI) “Predicting 
+my weight was amazing but not that credible. It was like a 
+fortune teller. […] But my future self-image changed along 
+with kg. Last week [CI was not provided], I thought I would 
+‘probably’ lose weight. But this week [CI was provided], I 
+could really imagine my future image specifically.”
+
+DESIGN IMPLICATIONS AND DISCUSSION
+Based  on  these  findings,  we  discuss  several  points  that 
+designers should consider when producing and delivering CI 
+in self-tracking services.
+
+What Type of Information Should CI Indicate to Stimulate 
+Future Envisioning? 
+When people receive CI that illustrates activity amount data, 
+such  as  Rate  CI,  they  have  difficulty  imagining  what  CI 
+actually  means  in  the  future  perspective  because  activity 
+amount data are consumed in the present perspective: first, 
+to analyze what they have done so far, and second, to plan 
+detailed  strategies  to satisfy sub-goals (e.g.,  how  to satisfy 
+the  daily  goal  before  the  end  of  the  day).  Thus,  if  activity 
+amount data are presented in the future perspective, as in CI, 
+people  have  to  reinterpret  the  future  perspective  in  the 
+present perspective. Since this reinterpretation process may 
+confuse  users,  we  should  avoid  presenting  activity  amount 
+data as CI.
+
+By  contrast,  when  people  receive  CI  that  illustrates  status 
+change data, such as Weight CI, they can easily imagine their 
+future  body  state.  Because  this  type  of  CI  helps  people 
+delineate  the  future  self-image  more  explicitly,  people 
+become more confident and more inclined to meet their goals 
+[1, 30]. Consequently, they begin to believe that their goal is 
+attainable, strengthen their self-efficacy, and gain motivation. 
+These changes in a user’s attitude are difficult to achieve but 
+are  required  to  produce  sustainable  behavior  change,  as 
+previous research findings illustrate [22]. 
+
+Therefore,  we  should  design  CI  to  indicate  status  change 
+data rather than activity amount data to help users change 
+their attitudes and maintain changes in their behavior. As an 
+example,  if  a  user’s  workout  goal  is  to  increase  muscle, 
+workout  hours  could  be  used  as  an  example  of  activity 
+amount data, and muscle mass could be used as an example 
+of  status  change  data.  If  we  present  workout  hours  in  the 
+form of CI, it will be “if you continue your workouts, you
+will  have  worked  out  for  100  hours  in  one  month”.  Users 
+cannot intuitively understand what this sentence means, and 
+since it is not construed in the future perspective, there is no 
+impact as CI. However, if we illustrate muscle mass in the 
+form of CI, it will be “your muscle mass will be 40 kg in a 
+month.” This  CI  causes  users  to  conjecture  their  changed 
+future  self-images  and  subsequently  gain  hope  and
+confidence.
+
+The  same  data  can  be  transformed  into  various  types  of 
+information, resulting in various types of CI. Some types of 
+data become more negative when presented as CI, whereas 
+other  types  of  data  can  produce  new  positive  impacts  that 
+were not observed when the data were not presented as CI. 
+These impacts align with previous research findings, which 
+indicate that the form in which data are presented is crucial 
+in behavior changes since it impacts how users understand 
+the  data  [25].  Recently,  S  Health  by  Samsung  provided 
+estimated  active  minute 
+to  users,  which 
+corresponds to Rate CI. Although providing a novel type of 
+
+information 
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK644information  is  a  good  attempt,  this  information  would  not 
+have  been  construed  in  the  future  perspective.  Thus, 
+designers  should  carefully  select  the  type  of  information 
+presented in CI.
+
+How Can We Design a CI System to Better Assist Users 
+in Recalling Their Ultimate Goals?
+CI with  forecast  content,  which  directly  refers  to  users’ 
+ultimate  goals,  intuitively  sparked  recall  of  their  ultimate 
+goals.  This  finding  is  important  in  behavior  changes  since 
+reminding  people  about  a  goal  can  motivate  people  [17]. 
+Conversely,  when  people  receive  CI  that  does  not  directly 
+correspond  to  their  ultimate  goals,  they  are  forced  to 
+reinterpret  the  information  to  compare  their  ultimate  goals 
+with  the  provided  forecast. Therefore,  designers  should 
+carefully select forecast content of CI that is related to users’ 
+ultimate goals. Many types of status change data, from which 
+we should choose data that represent users’ ultimate goals, 
+are possible.
+
+the 
+
+in  CI  should  be 
+time  represented 
+Content  and 
+personalized  based  on  users’  goal  dates.  Although  the  app 
+can be designed to predict CI for any future date, people with 
+a  specific  goal  date  are  particularly  stimulated  by  CI  that 
+targets  this  date.  Thus,  we  recommend  designing  CI  to 
+forecast the future regarding the fixed goal date. In this way, 
+people can better observe their progress toward the specific 
+goal date. Furthermore, if we do not provide CI prediction 
+for the user’s goal date, the user may have to reinterpret the 
+given  CI  to  guess  the  CI  on  the  goal  date,  which  is  an 
+unnecessary and inaccurate process.
+
+However, if the goal of a user is too distant, she or he may 
+have difficulty conjecture the future self-image even though 
+the  prediction  is  personalized  to  the  user’s  ultimate  goal.
+Since  the  motivational  impact  of  CI  is  attributable  to  the 
+imagination of future selves, the time represented in the CI 
+should be in the foreseeable future. People often had stable 
+schedules  within  a  one-month  period,  but  there  were  too 
+many  variables  over  a  two-month  period.  They  found  it 
+easier to imagine a future only one month away and therefore 
+preferred one-month forecasts to two-month forecasts. The 
+ideal  prediction  timeframe  can  differ  from  individual  to 
+individual; however, the bottom line is that CI should predict 
+an imaginable future that is not too far away.
+
+To  bolster  motivational  impacts  of  CI,  we  can  design  a 
+system to help users divide a distant goal into several short-
+term goals. If a user’s goal date is too distant to imagine, the 
+system  can  break  down  the  distant  goal  into  several  time 
+points. For example, if the goal date is one year from now, 
+we  can  split  one  year  into  twelve  individual  months  and 
+assign twelve monthly goals that the user should achieve to 
+satisfy the goal. In this case, the inclusion of CI prediction 
+both on the original goal date and the newly formulated goal 
+date is recommended because the imagination of the future 
+self on the goal date is still needed.
+
+However, we need a different approach for users whose goal 
+is  to  maintain  their  current  statuses  rather  than  to  make  a 
+behavior change. For these users, CI is not the best method 
+for making them imagine their future selves and reminding 
+about  ultimate  goals.  In  this  case,  CI  can  be  designed  to 
+notify  users  of  seemingly  benign  symptoms  that  they 
+neglected.  Specifically,  CI  can  act  as  objective  criteria  to 
+alert  users  that  they  have  to  be  careful  by  amplifying  the 
+consequence of a small change that users would have ignored.
+This action may enable CI to be used even when no specific 
+goals are established.
+
+How Can We Create an Actionable CI System?
+To make CI actionable, we need to consider not only CI but 
+also  the  whole  system  delivering  CI.  To be  specific,  we 
+should provide PI that shows the raw data for the prediction 
+along with CI in the system. Specifying the PI used to predict 
+CI  has  two  consequences.  First,  an  environment  in  which 
+both CI and PI exist creates a synergistic effect of CI and PI: 
+CI is utilized as a reminder of ultimate goals, and the PI is 
+utilized in setting sub-goals. Second, PI acts as evidence of 
+CI, making CI more credible.
+
+Create a Synergistic Effect of CI and PI
+By providing PI that shows base material for CI prediction,
+we can inform users about the most important behaviors for 
+changing  CI.  PI  indicating  raw  data  for  the  prediction 
+corresponds to Factors, which is defined as what influences 
+behavior over a long period of time by Li et al. [18]. Li et al. 
+expounded  on  the  importance  of  knowing  factors  since  it 
+allows people to assess those factors to change their behavior. 
+Thus, providing PI that illustrates Factors of CI helps users 
+understand what behavior they have to control.
+
+In this way, we can design PI to be useful in setting sub-goals 
+and planning detailed strategies. In addition, well-designed 
+CI can support motivation and remind users of their ultimate 
+goals. Consequently, we can create an environment in which 
+CI  and  PI  collaborate  to  create  a  synergy  effect.  Since  a 
+person that is motivated by CI will check their PI, we can use 
+CI as a trigger to promote PI exploration. This environment 
+can be interpreted using Fogg’s model [14]. Fogg explains 
+that while people must have both enough motivation and the 
+ability to perform a specific behavior, they need a trigger to 
+spark a behavioral change. When both CI and PI are provided, 
+CI will increase motivation and PI will provide information 
+to help people find out what they need to do to reach their 
+goal, increasing their ability. While analyzing PI, CI may act 
+as  an  objective  criterion  for  evaluating  performance  and 
+planning strategies. Additionally, CI can act as a spark as a 
+trigger, to motivate people by eliciting hope and fear. Hence, 
+CI designed to motivate people and PI designed to be easily 
+exploited for sub-goal setting will create a persuasive service 
+environment.
+
+Current  research  on  self-tracking  services  focuses  on  how 
+people engage with their sub-goals but is less concerned with 
+their ultimate goals [18, 29]. We surmise that the reason for 
+this focus is that the information provided by the current self-
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK645tracking services is primarily composed of PI. However, if 
+we adopt both PI and CI in self-tracking services, we will be 
+able  to  impact  not  only  people’s  sub-goals  but  also  their 
+ultimate goals.
+
+rather than a weight loss. In changing health behavior, both 
+positive and negative feedback have different impacts [12]. 
+Thus,  the  question  remains  whether  we  should  provide  CI 
+when the forecast is negative.
+
+Increase the Credibility of CI
+Since questionable information may reduce the impact of this 
+information on behavior changes, the information should be 
+designed to be defensible [13]. This is particularly important 
+in producing CI because CI may arouse user’s questions on 
+how it is predicted, which may result in low credibility of the 
+information. One certain way to produce believable CI is to
+improve the quality of prediction by increasing the prediction 
+accuracy, such as by developing a better weight-loss model 
+or  personalizing  the  prediction algorithm.  Although  these 
+solutions  require  additional  studies,  we  can  make  CI  more 
+credible  by  designing  the  presentation  of  CI  to  users  to 
+include the base materials employed for predicting CI.
+
+By  simultaneously  providing  both  CI  and PI,  we  can 
+adumbrate  how  CI  was  predicted.  PI  that  illustrates  raw 
+material  for  CI  prediction  serves  as  evidence  of  CI  and 
+enables  users  to  assume  the  prediction  algorithm.  This 
+finding  makes  the  black-box  prediction  system  more 
+guessable and consequently increasing the credibility of CI 
+to  some  degree.  This  adumbration  is  also  important  since 
+users  can  be  motivated  to  adopt  misguided  workarounds 
+when  the  calculation  algorithm  is  unclear  [36].  Thus, CI 
+should  be  accompanied  by  sufficient  explanation to help 
+users unveil the CI prediction process.
+
+CONCLUSION AND FUTURE WORK
+This  paper  proposed the  concept  of  predicting  the  future 
+weight of a dieter. By exploring how people experience and 
+interact  with these  predictive  information,  we  presented 
+design considerations that can practically help designers use 
+this  information  in  their self-tracking  service  design.
+Findings  from  the  4-week  study  and  follow-up  interviews
+revealed that the forecasts of users’ future weight based on 
+their  current  behavior  had  unique 
+it  made 
+participants  imagine  their  future  selves,  reminded  them  of 
+their  ultimate  goals,  gave  them  hope  that  they  could  reach 
+their goals, and motivated them to be more conscientious in 
+making that future come true. Based on these findings, we 
+suggested design  implications  to bolster  these  impacts: the 
+consequences should represent status change data rather than 
+activity  amount  data  and  refer to  an  individual’s  ultimate 
+goal. We hope this research will be a step toward the next 
+generation  of  self-tracked  information representations that 
+will change people’s attitude toward their health behavior.
+
+impacts:
+
+there  are  still  unsolved  questions  around 
+However, 
+generating CI. In this study, all participants received reduced 
+future  weights  because  the  participants  were  actively 
+engaged in a diet program. This result may simply show that 
+CI was successful in keeping the participants working hard 
+to reduce their weight. However, it also means this study had 
+no chance of discovering how people would have behaved if 
+they received a negative forecast that predicted a weight gain 
+
+In addition, the selection criteria imposed on the participant
+recruitment may have affected the results. First, we observed 
+the motivational impact of CI, but it is unclear whether the 
+participants had previous  issues  related  to motivation.
+Second, participants may have already had a fairly positive 
+self-image because their weight loss goals were not too bold. 
+This modest goal also indicates that participants do not need 
+to guess a self-image that is very different from the current 
+image. Thus, the process of imagining their future self could 
+have been quite pleasurable and easy. Thus, future iteration 
+of this study with different group of people will be necessary.
+
+Furthermore,  CI  may  have  different  impacts  on  different 
+individuals due to individual differences in susceptibility to 
+the  consideration  of  future  consequences.  People  differ  in 
+their  degree  of  sensitivity  to  distant  behavioral  outcomes. 
+Strathman et al. assessed this as the Consideration of Future 
+Consequence (CFC) Scale [32]. An individual’s tendency to 
+value  the  immediate  or  distant  outcomes  of  behaviors  can 
+interfere  with  the  use  of  CI  [23].  Thus,  we  still  have  to 
+investigate whether CI is beneficial across the CFC Scale.
+
+There is also the question of how the impact of CI will differ 
+when  users  do  not  have  a  specific  goal.  Most  people  who 
+adopt self-tracking services to become healthy have specific 
+health-related  goals  [8].  However,  the  system  can  also  be 
+employed as a tool for preventive healthcare, as one of the 
+participants commented. In this case, we need to investigate 
+differences  in  how  CI  influences  users  and,  consequently, 
+how it should be designed when users do not have specific 
+goals because the production of CI was strongly related to 
+users’  ultimate  goals.  Thus,  our  future  research  will 
+investigate how CI influences users without specific health-
+related goals.
+
+We  glimpsed  opportunities  to  provide  CI  using  more 
+concrete methods or metaphors but the design of CI requires 
+careful consideration since the manner in which we present 
+CI may influence its impact. Previous research suggests an 
+avatar as an effective method for communicating risk [24]. 
+Visual representation enables users to communicate with the 
+information  in  a concrete  manner.  Therefore,  CI  could  be 
+delivered  in  various  forms  such  as  avatars,  caricatures  or 
+realistic  images. However,  we could  not  conclude whether 
+providing  more  detailed  descriptions  of  CI  in  the  form  of 
+images  and  avatars  is  superior  to  providing  weight  values 
+and  maintaining  the  imagination  gap.  Such  presentation 
+techniques warrant further study.
+
+ACKNOWLEDGEMENT
+We  thank  all  the  participants  of  the  study for  their  active 
+engagement  in  every  task. This  research  was  supported by 
+“High  Risk  High  Return  Project”  Funded  by  KAIST 
+(N10150037).
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK646REFERENCES
+1. Craig A. Anderson. 1983. Imagination and expectation: 
+the effect of imagining behavioral scripts on personal 
+influences. J Personal Soc Psychol 45, 2: 293-305.
+
+2.
+
+James T. Austin, Jeffrey B. Vancouver. 1996. Goal 
+constructs in psychology: structure, process, and 
+content. Psychol Bull 120, 3: 338-375.
+
+3. Albert Bandura. 1990. Self-regulation of motivation 
+
+through anticipatory and self-reactive mechanisms. In 
+Perspectives on Motivation: Nebraska Symposium on 
+Motivation 38: 69-164.
+
+4. Frank Bentley, Konrad Tollmar. 2013. The power of 
+mobile notifications to increase wellbeing logging 
+behavior. In Proceedings of the SIGCHI Conference on 
+Human Factors in Computing Systems (CHI '13), 
+1095-1098. DOI: 10.1145/2470654.2466140
+
+5. Frank Bentley, Konrad Tollmar, Peter Stephenson, 
+
+Laura Levy, Brian Jones, Scott Robertson, Price, 
+Richard Catrambone, Jeff Wilson. 2013. Health 
+mashups: presenting statistical patterns between 
+wellbeing data and context in natural language to 
+promote behavior change. ACM. Trans Comput-Hum 
+Interact 20, 5: 30.
+
+6. Gordon D. Brown and Nick Chater. 2001. The 
+
+chronological organization of memory: common 
+psychological foundations for remembering and 
+timing. In Time and Memory: Issues in Philosophy and 
+Psychology. Christoph Hoerl and Teresa McCormack 
+(eds.). Clarendon Press, Oxford. 77-110.
+
+7. Nancy Cantor, Hazel Markus, Paula Niedenthal, Paula 
+
+Nurius. 1986. On motivation and the self-concept. In 
+Handbook of Motivation and Cognition: Foundations 
+of Social Behaviour. Guilford, New York, NY, 96-121.
+
+8. Eun Kyoung Choe, Nicole B Lee, Bongshin Lee, 
+
+Wanda Pratt, Julie A Kientz. 2014. Understanding 
+quantified-selfers' practices in collecting and exploring 
+personal data. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing (CHI 
+'14), 1143-1152. DOI: 10.1145/2556288.2557372
+
+9. Charles Dickens. 1843  Christmas Carol. Chapman & 
+
+Hall, Boca Raton, FL.
+
+10. Pamela A. Dyson. 2010. The therapeutics of lifestyle 
+management on obesity. Diabetes Obes Metab 12, 11:
+941–946.
+
+11. Andrew Elliot, Mandy M. Shell, Kelly Bouas Henry, 
+
+Markus A. Maier. 2005. Achievement goals, 
+performance contingencies, and performance 
+attainment: an experimental test. J Educ Psychol 97, 4:
+630-640.
+
+12. Ayelet Fishbach, Tal Eyal, Stacey R. Finkelstein. 2010. 
+How positive and negative feedback motivate goal 
+pursuit. Soc Personal Psychol Compass 4, 8: 517-530.
+
+13. B. J. Fogg. 2002. Persuasive technology: using 
+
+computers to change what we think and do. Ubiquity 
+December: 89-120. DOI: 10.1145/764008.763957 
+
+14. B. J. Fogg. 2009. A behavior model for persu asive 
+design. In Proceedings of the 4th International 
+Conference on Persuasive Technology (Persuasive '09) 
+Article 40, 7 pages. 
+http://doi.acm.org/10.1145/1541948.1541999.
+
+15. Thomas Fritz, Elaine M Huang, Gail C Murphy, 
+
+Thomas Zimmermann. 2014. Persuasive technology in 
+the real world: a study of long-term use of activity 
+sensing devices for fitness In Proceedings of the 
+SIGCHI Conference on Human Factors in Computing 
+Systems (CHI '14), 487-496. 
+http://doi.acm.org/10.1145/2556288.2557383
+
+16. M. Jetté, K. Sidney, G. Blümchen. 1990. Metabolic 
+equivalents (METS) in exercise testing, exercise 
+prescription, and evaluation of functional capacity. 
+Clin Cardiol 13, 8: 555-565.
+
+17. Rachel Karniol, Michael Ross. 1996. The motivational 
+impact of temporal focus: thinking about the future and 
+the past. Annu Rev Psychol 47, 1: 593-620.
+
+18. Ian Li, Anind Dey, Jodi Forlizzi. 2011. Understanding 
+my data, myself: supporting self-reflection with 
+ubicomp technologies. In Proceedings of the 
+Conference on Ubiquitous Computing (UbiComp '11), 
+405-414. DOI: 10.1145/2030112.2030166
+
+19. Edwin A. Locke, Gary P. Latham. 1990. A Theory of 
+Goal Setting & Task Performance. Prentice-Hall, Inc., 
+Upper Saddle River, NJ.
+
+20. Edwin A. Locke. 1996. Motivation through conscious 
+
+goal setting. Appl Prev Psychol 5, 2: 117-124.
+
+21. Gabriele Oettingen, Doris Mayer. 2002. The 
+
+motivating function of thinking about the future: 
+expectations versus fantasies. J Personal Soc Psychol
+83, 5: 1198–1212.
+
+22. Harri Oinas-Kukkonen. 2013. A foundation for the 
+study of behavior change support systems. Personal 
+Ubiquitous Comput. 17, 6 (August 2013), 1223-1235. 
+http://dx.doi.org/10.1007/s00779-012-0591-5
+
+23. Sheina Orbell, Marco Perugini, and Tim Rakow. 2004. 
+
+individual differences in sensitivity to health 
+communications: consideration of future consequences. 
+Health Psychol 23, 4: 388-396.
+
+24. Perry Parks, Rosanna Cruz, Sun Joo Grace Ahn. 2014. 
+Don’t hurt my Avatar: the use and potential of digital 
+self-representation in risk communication. International 
+Journal Robots, Education and Art 4, 2: 10.
+
+25. Bernd Ploderer, Wolfgang Reitberger, Harri Oinas-
+Kukkonen, and Julia Gemert-Pijnen. 2014. Social 
+interaction and reflection for behaviour 
+change. Personal Ubiquitous Comput. 18, 7 (October 
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK64732. Alan Strathman, Faith Gleicher, David S. Boninger, C. 
+Scott Edwards. 1994. The consideration of future 
+consequences: weighing immediate and distant 
+outcomes of behavior. J Personal Soc Psychol 66, 4:
+742-752.
+
+33. The Korean Society for the Study of Obesity. 2012. 
+
+Guidelines for Managing Overweight and Obesity.
+KOSSO, Selangor, Malaysia.
+
+34. Diana M. Thomas, Dale A. Schoeller, Leanne A. 
+
+Redman, Corby K. Martin, James A. Levine, Steven B. 
+Heymsfield. 2010. A computational model to 
+determine energy intake during weight loss. Am J Clin 
+Nutr 92, 6: 1326-1331.
+
+35. Noelia A. Vasquez, Roger Buehler. 2007. Seeing future 
+
+success: does imagery perspective influence 
+achievement motivation? Personal Soc Psychol 
+Bull 33, 10: 1392-1405.
+
+36. Rayoung Yang, Eunice Shin, Mark W. Newman, Mark 
+S. Ackerman. 2015. When fitness trackers don’t ‘Fit’: 
+end-user difficulties in the assessment of personal 
+tracking device accuracy. In Proceedings of the 
+Conference on Pervasive and Ubiquitous Computing
+(UbiComp '15), 623-634.
+
+2014), 1667-1676. http://dx.doi.org/10.1007/s00779-
+014-0779-y
+
+26. James O Proschaska. 2013. Transtheoretical model of 
+behavior change. In Encyclopedia of Behavioral 
+Medicine. Springer Verlag, New York, NY, 1997-
+2000.
+
+27. Rebecca M. Puhl,Corinne A. Moss-Racusin, Marlene 
+B. Schwartz, Kelly D. Brownell. 2008. Weight 
+stigmatization and bias reduction: perspectives of 
+overweight and obese adults. Health Educ Res 23, 2:
+347-358.
+
+28. Yvonne Rogers. 2009. The changing face of human-
+computer interaction in the age of ubiquitous 
+computing. In HCI and Usability for e-Inclusion. 
+Andreas Holzinger, Klaus Miesenberger (eds.). 
+Springer Verlag, Berlin, 1–19.
+
+29. John Rooksby, Mattias Rost, Alistair Morrison, 
+
+Matthew Chalmers Chalmers. 2014. Personal tracking 
+as lived informatics. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI '14), 1163-1172. 
+http://doi.acm.org/10.1145/2556288.2557039.
+
+30. Steven J. Sherman, Richard B. Skov, Esther F. Hervitz, 
+
+Caryl B. Stock. 1981. The effects of explaining 
+hypothetical future events: from possibility to 
+probability to actuality and beyond. J Exp Soc Psychol
+17, 2: 142-158.
+
+31. Herbert A. Simon. 1994. The bottleneck of attention: 
+connecting thought with motivation. Nebr Symp Motiv
+41: 1-21.
+
+Quantified SelfDIS 2017, June 10–14, 2017, Edinburgh, UK648

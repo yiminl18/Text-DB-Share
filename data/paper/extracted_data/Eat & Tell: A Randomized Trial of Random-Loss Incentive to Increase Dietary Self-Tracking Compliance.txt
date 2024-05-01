@@ -1,0 +1,1524 @@
+Eat & Tell: A Randomized Trial of Random-Loss Incentive to
+Increase Dietary Self-Tracking Compliance
+
+Palakorn Achananuparp
+Singapore Management University
+Singapore
+palakorna@smu.edu.sg
+
+Vibhanshu Abhishek
+Carnegie Mellon University
+Pittsburgh, PA
+vibs@andrew.cmu.edu
+
+Ee-Peng Lim
+Singapore Management University
+Singapore
+eplim@smu.edu.sg
+
+Tianjiao Yun
+Singapore Management University
+Singapore
+pepperyun@smu.edu.sg
+
+ABSTRACT
+A growing body of evidence has shown that incorporating behav-
+ioral economics principles into the design of financial incentive
+programs helps improve their cost-effectiveness, promote individ-
+uals’ short-term engagement, and increase compliance in health
+behavior interventions. Yet, their effects on long-term engagement
+have not been fully examined. In study designs where repeated
+administration of incentives is required to ensure the regularity of
+behaviors, the effectiveness of subsequent incentives may decrease
+as a result of the law of diminishing marginal utility. In this paper,
+we introduce random-loss incentive – a new financial incentive
+based on loss aversion and unpredictability principles – to address
+the problem of individuals’ growing insensitivity to repeated in-
+terventions over time. We evaluate the new incentive design by
+conducting a randomized controlled trial to measure the influences
+of random losses on participants’ dietary self-tracking and self-
+reporting compliance using a mobile web application called Eat &
+Tell. The results show that random losses are significantly more
+effective than fixed losses in encouraging long-term engagement.
+
+CCS CONCEPTS
+• Applied computing → Health informatics; Consumer health;
+
+KEYWORDS
+Health; Quantified Self; Food Logging; Incentives; Loss Aversion;
+Unpredictability; Randomized Controlled Trial
+
+ACM Reference Format:
+Palakorn Achananuparp, Ee-Peng Lim, Vibhanshu Abhishek, and Tianjiao
+Yun. 2018. Eat & Tell: A Randomized Trial of Random-Loss Incentive to
+Increase Dietary Self-Tracking Compliance. In DH’18: 2018 International
+Digital Health Conference, April 23–26, 2018, Lyon, France. ACM, New York,
+NY, USA, 10 pages. https://doi.org/10.1145/3194658.3194662
+
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for profit or commercial advantage and that copies bear this notice and the full citation
+on the first page. Copyrights for components of this work owned by others than ACM
+must be honored. Abstracting with credit is permitted. To copy otherwise, or republish,
+to post on servers or to redistribute to lists, requires prior specific permission and/or a
+fee. Request permissions from permissions@acm.org.
+DH’18, April 23–26, 2018, Lyon, France
+© 2018 Association for Computing Machinery.
+ACM ISBN 978-1-4503-6493-5/18/04. . . $15.00
+https://doi.org/10.1145/3194658.3194662
+
+1 INTRODUCTION
+Persistent collection of individuals’ lifestyle and behavior data is
+instrumental in realizing precision medicine’s visions of providing
+treatments and healthcare specifically tailored to individuals [7].
+Recent advances in mobile sensors, wearable technologies, and
+applications (also known as apps) have greatly facilitated active
+and passive self-tracking of a wide range of individual behaviors,
+including physical activities, sleep, and dietary intake. Despite the
+increasing ease of tracking one own’s data, continued engagement
+with self-tracking technology is not likely to persist long term
+unless the issues of individual motivation, incentives, and habit
+formation are also addressed. Recent findings [6, 8] have revealed
+that a vast number self-tracking technology adopters eventually
+lost their interest in self-tracking over time, leading to reduced
+compliance and increased abandonment rate. Many users tended
+to use the self-tracking data for short-term goals and migration
+between tools was fairly common [28].
+
+To promote continued engagement with self-tracking health
+technologies, various financial and non-financial incentive designs
+have been proposed. For example, the designs of self-tracking appli-
+cations can be improved by providing more meaningful behavioral
+insights from the data [6, 8] and improving social sharing to sup-
+port observational learning [6]. In the context of randomized health
+intervention trials, financial incentives have been commonly used
+to motivate health behavior changes and promote self-tracking
+compliance [15, 25]. Several researchers [4, 16, 32, 33] argued that
+financial incentive is a strong motivator for improving many health-
+related behaviors with little to no crowding-out effect [4, 17, 26].
+However, a few studies [15, 33] have also shown that achieving ef-
+fective results comes with a heavy cost. In the past few years, there
+is a growing body of evidence supporting the use of behavioral
+economics principles, such as loss aversion [20], in the design of
+cost-effective incentive programs [23, 25, 32]. Particularly, financial
+incentives framed as loss have been proven to be a stronger motiva-
+tor of health behaviors than those typically framed as gain [25, 32]
+(henceforth loss-framed and gain-framed incentives, respectively).
+This is explained by the fact that people are more likely to act to
+avoid loss than to acquire gain as the pain of losing is psycholog-
+ically twice as powerful as the pleasure of gaining [20]. In many
+longitudinal health studies where participants are expected to be
+repeatedly administered interventions, e.g., being compensated on
+
+Session: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France45a daily basis over a long period of time, the decline in intervention
+effectiveness may occur due to the law of diminishing marginal
+utility, leading to reduced compliance. The cost-effective design
+of repeated financial incentives has not been fully explored, espe-
+cially in the context of loss-framed incentives. Furthermore, data
+about individuals’ day-to-day dietary choices and habits – captured
+via self-tracking and self-reporting – are challenging to acquire
+even in non precision medicine cases. The demanding nature of
+dietary data collection underscores the importance of incentive
+programs necessary for sustaining individual engagement. To our
+knowledge, few studies have directly examined the effectiveness
+of financial incentives in increasing individuals’ engagement with
+dietary self-tracking and self-reporting tasks.
+
+Given the research gaps, we propose a new financial incentive
+design called random-loss incentive to address the issue of de-
+clining effectiveness of repeated financial incentives. The proposed
+incentive incorporates the unpredictability principle, commonly
+used in Gamification [5] and behavioral reinforcement [13], into
+the design of a loss-framed incentive. Specifically, we hypothesize
+that random losses are more effective than fixed losses in promoting
+sustained engagement and reducing insensitivity to repeated inter-
+ventions as people tend to be overpessimistic about their chance of
+suffering higher-than-expected losses.
+
+We conducted a randomized controlled trial to investigate the
+effectiveness of the random-loss incentive to improve individuals’
+engagement with dietary self-tracking and self-reporting via a new
+mobile web application, developed as part of our research, called
+the Eat & Tell app. The app is specifically designed to facilitate the
+collection of dietary self-tracking and self-reported data through
+the food diary data import and the self-report survey components.
+It is also randomized trial friendly. Potential participants were asked
+to contribute their dietary self-reported data over a period of 30
+days. Upon the successful enrollment, participants were randomly
+assigned to either the treatment group (random-loss incentive) or
+the control group (fixed-loss incentive). At the start of the study,
+they were given an initial S$35 worth of credit through the app,
+redeemable for a cash payout after 30 days. The final credit value
+was determined by their level of compliance with the study protocol.
+In the treatment condition, a random amount between S$0 to S$3
+was deducted from the credit balance each day if participants failed
+to report their dietary intake and behavior on time. On the other
+hand, control participants were subjected to a fixed S$1 deduction
+amount if the same daily requirements had not been met. The
+sum of all deductions was controlled to never exceed S$35 in both
+conditions.
+
+The main contributions of our work are: (1) presenting the Eat &
+Tell app as a unified research platform to study individuals’ day-to-
+day dietary habits by leveraging the quantified-self ecosystems of
+food logging apps, integrated self-report surveys, and incentive pro-
+grams; (2) introducing a comprehensive set of one-time self-report
+surveys to collect individual data, e.g., demographic attributes and
+personality measures, as well as recurring self-report surveys to
+collect various meal-specific contexts and daily reflection; and (3)
+introducing a new random-loss incentive that has been shown via
+a randomized trail of 245 participants to increase the compliance
+of dietary self-tracking and self-reporting over the fixed-loss incen-
+tive.
+
+2 RELATED WORK
+2.1 Lifestyle Data and The Quantified Self
+Our study is generally related to the quantified self movement [30],
+an emerging practice of collecting and analyzing one’s own data
+using a wide variety of tools and technologies, including but not
+limited to modern wearable devices and mobile sensors, to gain a
+better understanding of and improve certain aspects of daily life.
+Recently, several studies have explored the use of smartphone, mo-
+bile sensing, and wearable technologies to monitor individuals’
+physical activities and well-being. For instance, Fernandez-Luque
+et al. [12] examined the feasibility of capturing the quantified-self
+data from wearable devices and mobile applications in a weight
+loss camp for overweight children in Qatar. Kato-Lin et al. [21]
+evaluated the effectiveness of visual-based dietary tracking mobile
+apps in healthy eating intervention. Rahman et al. [27] proposed a
+sensing framework based on signal processing and machine learn-
+ing to predict about-to-eat moments for just-in-time interventions.
+Wang et al. [34] presented the StudentLife project which employed
+a variety of smartphone-based mobile sensing techniques to pas-
+sively and actively track well-being and academic performance of
+college students. Another related body of work focuses on analyz-
+ing self-tracking data in conjunction with other data sources, e.g.,
+social media messages, to learn about individuals’ health-related
+behaviors. For example, De Choudhury et al. [9] proposed compu-
+tational methods to predict individuals’ diet compliance success
+using linguistic, activity, and social capital features extracted from
+their Twitter messages. Wang et al. [35] studied weight updates
+automatically shared on Twitter from a Withings smart scale. In
+addition, social media content alone has been shown to be a use-
+ful data source for a population-level dietary lifestyle monitoring
+[1, 22]. Unlike recent digital health research which utilized obser-
+vation data to study health-related behaviors, the results of our
+randomized trial are less susceptible to confounding factors.
+
+A common issue in many health monitoring and intervention
+studies is the decline in self-tracking compliance over time [12, 21,
+34]. One reason is that such self-tracking incentive was deliber-
+ately omitted to avoid its confounding effects on the intervention
+outcomes [21, 34]. Additionally, study participants are likely to
+experience tracking fatigue due to the demanding nature of the
+tasks, resulting in reduced compliance [8]. Unlike previous self-
+tracking studies which focus primarily on health outcomes, such
+as weight loss, we aim to directly address the declining compliance
+problem through loss-framed financial incentives. The primary
+goal of our study is to investigate the effectiveness of different
+loss-framed incentives in improving self-tracking and reporting
+compliance in a randomized trial. Compared to past self-tracking
+studies [12, 21, 34], our Eat & Tell app is the first to demonstrate
+an integrative approach to link self-tracking data with context-
+specific self-report surveys via the use of a unified research and
+data collection platform, leading to improved user experience.
+
+2.2 Incentives for Health Behavior Change
+Past studies have shown strong evidence of financial incentives
+in promoting changes in health behaviors, such as smoking cessa-
+tion [16, 33], weight loss [32], exercising [4], and physical activity
+
+Session: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France46Figure 1: An example of data integration flow in the Eat & Tell app
+
+[14, 15, 25]. Amongst these studies, behavioral economics princi-
+ples, such as loss aversion [20] and commitment devices [3, 23],
+have been incorporated into the incentive designs to further nudge
+individuals toward positive behavior changes. For example, Volpp
+et al. [32] showed that individuals who were administered deposit
+contract and lottery incentives significantly lost more weights than
+non-incentivized individuals. In a recent study by Patel et al. [25],
+loss-framed financial incentives were more effective in promoting
+physical activity than gain-framed incentives. Milkman et al. [23]
+introduced a novel commitment device called temptation bundling
+which was shown to be effective in increasing gym attendance.
+
+The design of our random-loss incentive is built upon the appli-
+cation of behavioral economics principles, specifically loss aversion
+and framing, in influencing health-related behavior change [25]. To
+our knowledge, this study is the first randomized trial to examine
+the impacts of unpredictability in loss-framed financial incentives
+on the individuals’ continued engagement with dietary self-tracking
+and self-reporting. Prior work [19, 32] has utilized unpredictability-
+based designs in gain-framed incentives (e.g., lottery incentives) to
+exploit individuals’ tendency to overestimate small probabilities of
+large potential rewards [20], albeit with mixed results [19]. Unlike
+lottery incentives where the likelihood of a payout is randomly
+determined, we opt for a fixed reward scheduling and introduce
+unpredictability during the payout stage similar to Random Re-
+wards in Gamification [5], i.e., a randomly determined deduction
+amount is made for every non-compliance behavior. Lastly, our
+study is the first to comprehensively evaluate the influences of the
+incentives in dietary self-tracking studies by controlling for various
+personal characteristics including self-efficacy [21], grit [11], age,
+and gender, which intrinsically determine individuals’ motivation
+and engagement levels.
+
+3 EAT & TELL APP
+We begin by describing the Eat & Tell app1, a mobile web applica-
+tion built by the authors as a research platform for studying daily
+eating habits and behavior change intervention. To facilitate the
+data collection process and taking advantage of the quantified self
+and self-tracking ecosystems, the app integrates data from popular
+
+1 https://eatntell.sg
+
+mobile food diary apps to generate personalized self-report surveys
+for each user based on their food diary records. These surveys are
+instrumental in capturing additional behavioral and contextual in-
+formation beyond what is provided by the self-tracking data. For
+instance, did they have breakfast alone or with other people? Did
+they go to a restaurant for lunch? Did they choose to have a partic-
+ular meal for dinner because of sensory appeals or convenience?
+
+3.1 Food Diary Data Integration
+Food diary data from 3 mobile health and fitness apps, i.e, MyFit-
+nessPal, Fitbit, and Healthy 3652 can be automatically synchronized
+to the Eat & Tell app via web-based application programming in-
+terfaces (APIs). These mobile apps were chosen based on their
+popularity amongst users in Singapore where the study took place.
+MyFitnessPal is a popular mobile calorie counter which allows
+users to track their caloric balance through food and exercise di-
+aries. Next, Fitbit is a well-known commercial service helping its
+users to track their physical activities, sleep, and food intakes via its
+activity trackers and mobile app. Lastly, Healthy 365 is a free-to-use
+health and diet tracking mobile app created by the Health Promo-
+tion Board of Singapore. Upon successful data synchronization, a
+set of self-report surveys are dynamically generated for each user
+based on the predefined question templates and their food diary
+data. Each survey is associated with meal of the day (i.e., breakfast,
+lunch, dinner, and snack) and contains a set of questions about
+meal contexts (e.g., venue, meal time, eating companions, etc.), food
+choices, and food items logged in the meal. Figure 1 shows an ex-
+ample of the data integration flow starting from (1) a user logs
+what he/she had for lunch in the Fitbit app, (2) the Lunch survey
+is generated in the Eat & Tell app from his/her Fitbit data, and (3)
+the user responds to the questions about the food items and (4) the
+meal itself.
+
+3.2 Self-Report Surveys
+We administer two major types of self-report surveys in the Eat &
+Tell app: One-time surveys and daily surveys. Firstly, one-time
+surveys are intended to be completed once and consist of standard
+
+2 https://www.healthhub.sg/apps/25/healthy365
+
+Session: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France47questionnaires about demographic information (e.g., gender, age,
+household income level), general health status (e.g., weight, height,
+blood pressure), physical activity level, and personality measures.
+To assess the physical activity level, we adopt questions from the
+Rapid Assessment of Physical Activity (RAPA) [31] for their brevity.
+Next, two personality measures, personality traits and grit, are
+administered by 50-item IPIP Big-Five Factor Markers [18] and 12-
+item Grit Scale [11], respectively. All users have access to the same
+set of one-time surveys.
+
+Secondly, daily surveys are intended to be filled out on a daily
+basis and comprise: (1) a set of dynamically generated surveys
+(also known as food diary surveys) based on the connected food
+diary data; and (2) an end-of-day reflection survey. Questions about
+individual food items and meals of the day are included in the food
+diary surveys. At a food-item level, we ask users to rate each item
+in their diary on a 5-point Likert scale about taste (1 = hated it to 5
+= loved it), healthfulness (1 = very unhealthy to 5 = very healthy),
+and affordability (1 = very expensive to 5 = very cheap). To lessen
+the self-reporting burden, our app keeps track of the users’ most
+frequently-logged items and assign default ratings to similar items.
+Next, at a meal level, users provide: (1) responses to questions about
+meal contexts, such as time of the day, type of venue/meal location,
+eating companions, etc.; and (2) reasons for which a particular
+meal was chosen in the Food Choice questionnaire [29]. Lastly, the
+end-of-day surveys include self-assessment questions about the
+users’ subjective well-being and perceived difficulty (self-efficacy)
+in logging food diary and completing surveys, among others. The
+subjective well-being questions are adopted from a 12-item Scale
+of Positive and Negative Experience (SPANE) [10], whereas the 5-
+point scale self-efficacy questions are adapted from the similar self-
+efficacy questionnaires used in [21]. The survey template containing
+all items used in this study is accessible online3.
+
+4 RANDOM-LOSS INCENTIVE
+In this section, we describe random-loss incentive, a new loss-
+framed financial incentive program designed to address the issue
+of declining incentive efficacy caused by repeated administration
+of financial incentives over time. In certain longitudinal-study de-
+signs where participants are compensated on a regular basis, such
+as getting paid each day for achieving the goal of 10,000 steps of
+physical activity a day, the effectiveness of subsequent payouts of
+the same amount may be decreasing according to the law of dimin-
+ishing marginal utility. At the start of the study, a participant may
+be significantly motivated to act in exchange for the first $5 payout.
+However, as the participant’s financial gain is accumulating over
+the course of the study, the next $5 payout has a proportionately
+smaller contribution to the total gain and his/her marginal utility.
+Before intrinsic motivation and habit are properly developed, the
+same fixed-value payout may have less effect on his/her behavior
+than past payouts. Similar effects may also apply to loss-framed
+incentives. In addition to the use of standard behavioral economics
+principles [20], including loss aversion, the endowment effect, and
+framing, the design of our random-loss incentive is also inspired by
+Random Rewards in Gamification [5] which is based on the princi-
+ples of unpredictability and curiosity. The underlying assumption of
+
+3 http://bit.ly/2zHcD9X
+
+our random-loss incentive is that people tend to be overpessimistic
+and emotional about their chance of suffering higher-than-expected
+losses and are more likely to act to avoid further misfortune than
+when facing predictable losses.
+
+Let m be the length of study (m=30 days) and p be the total daily
+deduction budget (p=S$30), the steps to assign random losses for
+each treatment participant are as follows. First, we generate a prob-
+ability vector l of m entries where each entry li is a random positive
+real number between 0 and 1 and the sum of all entries is one. Next,
+each random loss is computed by multiplying each vector entry li
+by p. Finally, we derive for the participant a sequence of m random
+losses which add up S$30. This method results in a non-uniform
+distribution of random losses which are biased toward less extreme
+values, making them characteristically different from lottery-based
+incentives. The histogram in Figure 2 shows the distribution of
+daily deduction amounts (SD = 0.5838) pre-generated under the
+random-loss incentive program for all treatment participants at
+the start of the study. As we can see, all random-loss based daily
+deductions are between S$0 and S$3.
+
+Figure 2: Distribution of daily deductions.
+
+5 STUDY DESIGN AND PROCEDURES
+5.1 Recruitment
+The study was approved by the Institutional Review Board at Sin-
+gapore Management University. In total, 245 participants were
+recruited online through the Facebook advertising platform. An
+advertisement campaign was launched to target Facebook users
+in Singapore who were 18 years or older, with access to an An-
+droid or iOS smartphone, and generally interested in mobile food
+diary, self-tracking, and wearable technology. To target these sets
+of Facebook users based on their topics of interests, the following
+keywords were used: "MyFitnessPal", "Fitbit", "Health Promotion
+Board, Singapore", "Activity Tracker", "Smartwatch", and "Wearable
+Technology". Based on these criteria, the campaign approximately
+reached 400,000 potential audience according to estimates provided
+by the Facebook platform. The advertisements described an op-
+portunity to participate in a one-month research project to study
+individuals’ daily eating habits and food choices in exchange for a
+cash compensation of up to S$35 and a chance to win a smartwatch
+(approximately S$500 in value) at the end of the study. Clicking
+on the advertisements redirected the users to the study website
+where study details, requirements to participate, and a link to the
+registration page were shown. The campaign ran for 24 days from
+May 30 - June 23, 2017. In total, the advertisements were shown
+86,533 times (impressions) to 53,635 unique users (reach) yielding
+
+01020300.00.51.01.52.0Daily deduction (S$)CountSession: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France482,934 clicks on the ads or 5.47% click-through rate (CTR) per unique
+user. More than 80% of Facebook users who clicked on the ads were
+women. Ultimately, 257 website visitors from Facebook signed up
+to participate yielding 8.76% conversion rate per website visit at a
+conversion cost of S$3.84 campaign spending per sign up. Amongst
+the potential participants, 5 people failed to complete the registra-
+tion process, whereas 7 people eventually dropped out a few days
+into the study by revoking their consent.
+
+5.2 Procedures
+To register for the study, participants filled out an online registration
+form on the Eat & Tell study website. First, they had to give consent
+to participate, allowing the research team to collect their personal
+data, online food diary records, and survey responses. Next, they
+provided their first name, last name, email address, and PayPal
+account (for receiving compensation) in the registration form. In
+addition, they were required to connect their online food diary
+account from one of the supported applications (MyFitnessPal,
+Fitbit, and Healthy 365) to the Eat & Tell app, giving the app a
+permission to access their food diary data. If they had never used an
+online food diary before, they were allowed to sign up for a new food
+diary account before resuming the registration process. To complete
+the registration, participants were required to confirm their identity
+by clicking on the verification link sent to their registered email
+address. No multiple sign-ups, e.g., duplicate email addresses or
+food diary accounts, were allowed. Additionally, we required a
+smartwatch winner to present a valid national identification card
+as proof of identity when picking up the prize in person.
+
+Upon successful registration, participants were randomly as-
+signed to one of the two experimental groups: treatment (random-
+loss incentive) or control (fixed-loss incentive), after which an
+introductory email was sent to their registered email address de-
+scribing the start and end dates of the study and the study proce-
+dures. All participants were first instructed to log in to the Eat & Tell
+app and fill out a set of 5 one-time surveys about their demographic
+and health information, personality traits, and grit. Next, for each
+day in the study, participants were asked to complete a daily task
+involving (1) logging their food and drink intakes throughout the
+day in the registered food diary app; (2) synchronizing the food
+diary data with the Eat & Tell app and filling out surveys about food
+choices made in the corresponding diary entries; and (3) filling out
+a reflection survey about their subjective well-being and perceived
+task difficulty (self-efficacy) which was accessible after 5:00 PM. In
+total, it took about 15 - 20 minutes to complete the daily task.
+
+Both treatment and control participants were then informed in
+the introductory email that a $35 online credit had been deposited
+to their Eat & Tell account. The credit was redeemable for real
+money of the same value at the end of the study, paid to them
+via the online payment platform Paypal. However, their online
+credit was still subjected to being deducted during the course of
+the study depending on the completion of the one-time surveys
+and the daily tasks. First, $1 would be deducted from their credit
+balance for each incomplete one-time survey for all participants.
+All one-time surveys were accessible until the end of the study.
+Next, participants in each group were told about the deduction
+amount for each incomplete daily task specific to their assigned
+
+Table 1: Characteristics of participants.
+
+Treatment Control All
+
+Variable
+
+Gender
+
+Age
+
+Ethnicity
+
+Education
+
+Employment
+
+Marital status
+
+Female
+Male
+
+18 - 24
+25 - 34
+35 - 44
+45 - 54
+55 - 64
+65 or older
+
+Chinese
+Indian
+Malay
+Others
+
+Secondary (O or N level)
+Junior college (A level)
+Vocational certificate
+Polytechnic diploma
+University or higher
+
+Full-time employment
+Part-time employment
+Entrepreneur
+Student
+Homemaker
+Unemployed
+Retired
+
+Married
+Living with a partner
+Divorced
+Never been married
+
+BMI (mean)
+
+Grit score (mean)
+
+Pre-treatment logging days (mean)
+
+85
+31
+
+19
+55
+21
+6
+3
+1
+
+111
+3
+1
+1
+
+8
+7
+1
+17
+80
+
+78
+4
+1
+17
+3
+3
+1
+
+39
+2
+2
+70
+
+23.16
+
+2.73
+
+1.12
+
+66
+22
+
+22
+40
+14
+6
+0
+0
+
+83
+4
+0
+1
+
+3
+5
+4
+14
+62
+
+57
+4
+2
+14
+5
+4
+0
+
+27
+0
+0
+60
+
+151
+53
+
+41
+95
+35
+12
+3
+1
+
+194
+7
+1
+2
+
+11
+12
+5
+31
+142
+
+135
+8
+3
+31
+8
+7
+1
+
+66
+2
+2
+130
+
+22.49
+
+22.88
+
+2.78
+
+1.53
+
+5.81
+
+2.75
+
+1.3
+
+6.06
+
+Number of diary entries logged per day (mean)
+
+6.23
+
+Caloric intake (kcal) per day (mean)
+
+1249.05
+
+1263.05
+
+1254.85
+
+Number of participants (N )
+Number of intervention participants (N ′)
+
+135
+
+111
+
+110
+
+91
+
+245
+
+202
+
+N also includes participants who did not answer/partially answered one-time survey questions.
+Intervention participants are those who were successfully enrolled into the study and received
+at least 1 deduction.
+
+condition: (1) a random deduction between S$0 to and S$3 for the
+treatment group; and (2) a S$1 deduction for the control group. All
+daily tasks had to be completed within the next 48 hours (calendar
+time). Any overdue surveys were automatically made inaccessible to
+participants after its deadline had passed. Next, all participants were
+instructed that the total deduction amount would never exceed S$35
+(S$5 for one-time surveys and S$30 for all daily tasks). In addition,
+their chance of winning a smartwatch was also proportional to
+their task completion rate. This was done to discourage anyone
+who signed up just to be in the smartwatch sweepstake but never
+intended to contribute to the study.
+
+5.3 Automated Email Notifications
+To facilitate participants’ compliance with the study protocol, the
+Eat & Tell app sent an automated email reminder at 7:00 PM every
+day to any participants who had not yet completed the daily task,
+notifying them about the remaining time and a potential credit
+
+Session: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France49Figure 3: Distribution of daily diary entries logged.
+
+Figure 4: Distribution of daily caloric intakes (kcal).
+
+loss. Participants were allowed to change the schedule of the email
+reminder by specifying the preferred time in the app. In total, two
+email reminders were sent before the daily task’s due date. Ulti-
+mately, if participants did not complete the daily task on time, they
+would receive another automated email message at 8:00 AM the
+next day after the due date, notifying them about the recent deduc-
+tion and offering short motivational messages and helpful tips on
+how to make the daily tasks less tedious.
+
+5.4 Participants
+All 245 participants who successfully enrolled in the study were ran-
+domly assigned to one of the two experimental groups: treatment
+(N =135) and control (N =110). Participant characteristics are shown
+in Table 1. Despite the S$5 incentive to filling out one-time surveys,
+not all participants complied and thus some of the participant de-
+mographics and characteristics were missing. A large portion of
+the study participants were female (74.02%), which was in line with
+other studies of the same nature [21]. There were no significant
+differences in the gender distribution between the conditions. Next,
+50.8% of participants were 25 - 34 years old. Almost all participants
+(95.1%) were Chinese, which was overly represented compared to
+the population of Singapore [24]. Next, 70.65% of participants had
+a university degree or higher and 69.95% had a full-time employ-
+ment. More than half of the study participants (65%) had never been
+married. Next, the average body mass index (BMI), calculated from
+participants’ self-reported weight and height, of the study partici-
+pants was 22.88 (SD = 5.34), which was near the normal weight and
+overweight boundary for Asian populations. Additionally, the BMI
+distribution was left-skewed, i.e., there were more normal-weight
+participants than overweight and obese ones. Next, the average
+grit score of participants in our study was 2.75 (SD = 0.58), which
+is considered to be moderate. Lastly, only a small portion of par-
+ticipants (N =25; 10.2%) had regularly logged food diaries prior to
+joining the study. On average, all participants logged 1.3 days (SD =
+4.3; median = 0) of food diary in the last 30 days before enrolling in
+the study. There were no significant differences in BMI, grit score,
+and pre-treatment logging experience between the experimental
+groups.
+
+Next, we examine the participants’ food logging and eating be-
+havior during the study. The distribution of the number of diary
+entries logged per day is shown in Figure 3 where the mean is 6.06
+entries (SD = 3.64). On average, treatment participants logged 6.23
+entries per day (SD = 3.81), whereas control participants logged
+5.81 entries per day (SD = 3.38) as shown in Table 1. There is a
+significant difference between the experimental groups according
+
+to the Mann-Whitney U test of diary entries (U =2704500, p<0.01).
+Next, to examine the participants’ daily caloric intakes, we first
+removed 3 outlying data points whose daily caloric intakes (e.g.,
+more than 100K kcal consumed in a single day) were higher than
+two standard deviations away from the participants’ mean caloric
+intake. Upon further inspection, we found that the outliers were
+caused by the inaccuracy in the user-contributed food databases.
+Figure 4 displays the distribution of the amount of caloric intake
+per day. As we can see from Table 1, on average, all participants
+consumed 1254.85 kcal per day (SD = 508.83), whereas treatment
+and control participants consumed 1249.05 kcal (SD = 520.14) and
+1263.05 kcal (SD = 492.4) per day, respectively. Although control par-
+ticipants had a slightly higher mean caloric intake than treatment
+participants, the difference is not statistically significant.
+
+Lastly, at the end of the study, 202 participants (111 and 91 in
+the treatment and the control conditions, respectively) were con-
+sidered intervention participants, i.e., those who received at least
+1 deduction and therefore not having full compliance. There is no
+significant difference in the numbers of intervention participants
+between the two experimental groups.
+
+6 ANALYSIS AND RESULTS
+The primary goal of our study is to evaluate the effectiveness of
+random-loss and fixed-loss incentives by measuring the partici-
+pants’ self-tracking and self-reporting (i.e., daily task) compliance
+during the 30-day intervention period. Moreover, our secondary
+goal is to examine the effects of the two incentive programs in pro-
+moting sustained behavior change after the inventions are removed.
+The analysis was conducted on a modified intention-to-treat (mITT)
+basis. Specifically, we exclude 43 participants (24 from the treatment
+group and 19 from the control group) who did not receive full inter-
+ventions from the analysis, i.e., those who were only briefed about
+the financial incentive program at the start of the study but never
+received any deductions and related email messages throughout
+the study due to full compliance. Ultimately, 202 participants are
+included in the analysis.
+
+6.1 Preliminary Analysis
+We first present a preliminary analysis to examine the participants’
+compliance in completing the daily tasks across the experimental
+groups. Our outcomes of interest are compliance days, defined as
+the number of days a participant completed his/her daily task, and
+daily compliance users, defined as the percentage of participants
+who completed the daily task on a specific day. The distribution of
+the number of days of completed daily tasks by participants from
+
+0500100001020Diary entries per dayCount01002003004000100020003000Calorie intake per dayCountSession: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France50both treatment and control conditions is shown in Figure 5. The
+median number of days of completed daily tasks is 19. In total, 37
+participants (18%) did not complete any daily tasks.
+
+Figure 5: Distribution of the number of days participants
+completed daily tasks.
+
+Figure 6: Compliance days by experimental group.
+
+Figure 6 shows a box plot of compliance days for the two experi-
+mental groups. As we can see, treatment participants generally have
+a higher level of compliance with the study protocol than control
+participants. The medians compliance days of the treatment and
+the control groups are 22 and 15, respectively. The nonparametric
+Mann-Whitney U test of compliance days in the two conditions
+over the 30-day period shows a significant difference (H0: treatment
+= control; U =4142, p<0.05). Uncontrolled, the analysis suggests that
+our random-loss incentive is more effective than the fixed-loss in-
+centive in improving participants’ daily task completion over 30
+days.
+
+have the similar daily compliance users (73.87% and 70.33% for
+treatment and control, respectively). However, the compliance trend
+continues to decrease over time as the study progresses. This is not
+surprising since the declining in compliance is consistent with past
+studies on longitudinal health behaviors [21, 23, 25]. Over the 30-
+day period, the treatment condition has consistently shown higher
+daily compliance users than the control condition. As we can see,
+45.95% of treatment participants completed the daily task on the
+last day of the study, whereas only 28.09% of control participants
+did so.
+
+6.2 Effectiveness of the random-loss incentive
+In this section, we present the regression analysis to assess the
+effectiveness of our random-loss incentive. Due to the repeated
+measures design of the study, we model participants’ daily compli-
+ance using mixed effects logistic regression, taking into account
+that data points from the same participant are not independent.
+The binary dependent variable in our models is the participants’
+day-to-day compliance status (1 = a participant completed the task
+in time on a given day, otherwise 0). Main effects for experimen-
+tal condition (binary predictor; 1 = treatment, otherwise 0) and
+interactions between experimental condition and other predictors
+(e.g., the number of days into the study for a given participant) are
+included. Next, the models control for each participant’s number
+of days into the study (from 1 to 30). To adjust for individuals’ pre-
+treatment differences in self-tracking experience and self-efficacy,
+we also control for the number of food-diary logging days in the
+past 30 days before the study started and self-reported perceived
+task difficulty for a given day in the study, respectively. Lastly, per-
+sonal characteristics, such as gender (binary predictor; 1 = male,
+otherwise 0), age, and self-reported grit score (from 1 to 5), are also
+controlled for. All analyzes were performed using the lme4 package
+(version 1.1.14) [2] in R (version 3.4.2).
+
+The results are presented in Table 2. First, the uncontrolled
+baseline model (Model 1) shows that, on any given day, treatment
+participants are significantly more likely (p<0.05) to complete the
+daily tasks compared to control participants. This suggests that the
+random-loss incentive is generally more effective than the fixed-
+loss incentive in influencing the participants’ engagement. The
+result is also in line with the Mann-Whitney U test of aggregated
+participant compliance presented in the preliminary analysis.
+
+Figure 7: Daily compliance users over time.
+
+Figure 7 depicts the percentages of daily compliance users from
+the start to the end of the study. On the first day, both conditions
+
+Figure 8: Interaction effect of interventions and days into
+the study.
+
+01020300102030Compliance (days)Count0102030TreatmentControlExperimental groupCompliance (days)0204060800102030Days into the study% of participantsConditionTreatmentControl0.00.40.81.20102030Days into the studyTask completion probabilityConditionTreatmentControlSession: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France51Table 2: Mixed-effects logistic regressions for daily task completion.
+
+Variables
+
+FIXED EFFECTS:
+
+(Intercept)
+Primary predictor variables
+
+Treatment
+Days into the study × Treatment
+Male × Treatment
+Age × Treatment
+Grit score × Treatment
+
+Control variables
+
+Days into the study
+Pre-treatment logging days
+Perceived task difficulty
+Male
+Age
+Grit score
+
+-
+-
+-
+-
+-
+-
+
+Model 1 Model 2
+
+Model 3
+
+Model 4
+
+Model 5
+
+Model 6
+
+Model 7
+
+Model 8
+
+ESTIMATE
+-0.71485∗
+
+0.78933∗
+
+0.90950∗
+-
+-
+-
+-
+
+1.01532∗
+-
+-
+-
+-
+
+1.00936∗∗
+
+0.80661∗
+
+5.77789∗∗
+
+7.88429∗∗
+
+5.88135∗
+
+5.63715
+
+0.60770
+0.02566∗
+-
+-
+-
+
+0.62142
+0.02585∗
+-
+-
+-
+
+-0.10215∗∗
+-
+-
+-
+-
+-
+
+-0.11662∗∗
+-
+-
+-
+-
+-
+
+-0.11674∗∗
+0.11290∗
+-
+-
+-
+-
+
+-1.63751†
+0.09089∗∗
+-
+-
+-
+
+-0.16769∗∗
+-0.03017
+1.45901∗∗
+-
+-
+-
+
+-2.45735∗
+0.08749∗
+2.84370
+-
+-
+
+-0.17019∗∗
+-0.03697
+0.99555†
+-2.52521
+-
+-
+
+0.93464
+0.07013∗
+2.14528
+-0.10341
+-
+
+-0.70462
+0.06986∗
+2.32768
+-0.09940
+0.52969
+
+-0.13508∗∗
+-0.04176
+1.12445∗∗
+-1.30442
+0.00871
+-
+
+-0.13469∗∗
+-0.04022
+1.14025∗∗
+-1.24929
+0.09400
+0.05229
+
+RANDOM EFFECTS:
+
+VARIANCE
+
+Subjects (intercept)
+Perceived task difficulty (slope)
+
+Model statistics
+
+AIC
+BIC
+Number of observations
+Number of subjects
+
+8.415
+-
+
+4779.5
+4799.6
+6050
+202
+
+10.47
+-
+
+4354.4
+4381.3
+6050
+202
+
+10.52
+-
+
+4350.8
+4384.3
+6050
+202
+
+10.26
+-
+
+4347.8
+4388
+6050
+202
+
+9.806
+3.073
+
+824.8
+879.8
+3316
+168
+
+12.223
+2.206
+
+772.1
+838.5
+3114
+150
+
+3.241
+1.334
+
+703
+780.1
+2774
+136
+
+3.028
+1.312
+
+706.6
+795.5
+2774
+136
+
+Significance thresholds are † p<0.1, * p<0.05, and ** p<0.01.
+
+Next, we evaluate the significance of the decline in compliance
+over time, as shown in Figure 7, by controlling for the number of
+days since a participant has engaged with the study (Model 2) and
+its interaction with the experimental condition (Model 3). Figure
+8 displays the interaction effect of interventions and days into
+the study on the participants’ likelihood of completing the daily
+tasks. A significant interaction term (p<0.05), introduced in Model 3,
+indicates that the benefits of the treatment condition depend on the
+number of days a participants spent in the study. As participants
+spend more time in the study, their compliance tends to decline
+across the experimental groups. However, treatment participants
+are more likely to complete the tasks than control participants
+as the study progresses. That is, a one day increase results in the
+odds ratios of 0.91305 and 0.88992 for the treatment condition and
+the control condition, respectively. Note that the odds ratios are
+obtained from exponentiating the sum of the logistic regression
+coefficients for days into the study and its treatment interaction term
+In Models 4 and 5, we further assess the main and interaction
+effects of the inventions by adding control variables for the par-
+ticipants’ prior food logging experience (Model 4) as well as their
+current experience in engaging with the daily tasks (Model 5). Af-
+ter controlling for these factors, the treatment interaction effect
+remains significant (p<0.01) and the results suggest that the effec-
+tiveness of our intervention is robust even after adjusting for past
+experience and self-efficacy. Moreover, the difference in the odds
+ratios between the experimental conditions increases by 9.5% in
+Model 5, a considerable gain from the baseline models. As the study
+progresses one more day, the odds ratios of the treatment condition
+
+and the control condition are 0.92608 and 0.84562, respectively. Un-
+surprisingly, we find that self-efficacy has a positive effect (p<0.01)
+on the participants’ likelihood of completing the tasks, i.e., partici-
+pants who consider the task to be easy/very easy on a specific day
+are more likely to finish it and vice versa. Interestingly, past logging
+experience has no significant effect on daily task completion. This
+may be explained by the fact that logging food diary is merely a part
+of the requirements for completing the daily task. Remembering to
+filling out all daily surveys in time is perhaps more demanding to
+most participants. Thus, having some familiarity with food logging
+is not an major contributor to the participants’ compliance.
+
+Lastly, we examine the main effects of personal characteristics,
+i.e., gender, age, and grit, and their treatment interaction effects
+on the participants’ day-to-day compliance. These variables are
+included in Models 6, 7, and 8 as shown in Table 2. Unlike past
+studies [21], none of the personal characteristics have any signifi-
+cant impact on the likelihood of completing the daily tasks after
+adjusting for other factors. Although participants with higher grit
+scores are more likely to complete the daily tasks than those with
+lower scores, grit does not significantly impact the participants’
+compliance, which is surprising. As suggested by Duckworth et al.
+[11], grit constitutes perseverance and passion for long-term goals.
+Therefore, one possible explanation is that, even though the par-
+ticipants have voluntarily signed up for our study, they may not
+have strong passion for the day-to-day self-tracking and reporting
+tasks, making grit less effective in this context. Overall, the full
+model (Model 8) shows an encouraging result indicating that the
+effects of our random-loss incentive on day-to-day compliance is
+significant even after controlling for all other factors. According to
+
+Session: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France52the full model, the odds of completing the daily tasks for treatment
+participants and control participants when the time of the study
+increases by 1 day are 0.93723 and 0.87399, respectively.
+
+6.3 Post-intervention self-tracking behavior
+In this section, we examine the intervention effects on the par-
+ticipants’ change in their dietary self-tracking habit before the
+interventions were administered and after they were removed. Ap-
+proximately one month after the last participant had completed
+the study, we collected the food logging data from all participants
+in the following 30 days after their study period was over. Table
+3 displays the participants’ food logging behavior in the last 30
+days before and after the intervention. First, there is a significantly
+larger number of food loggers during the post-intervention than
+the pre-intervention phases (40 versus 25; χ 2=3.991, p<0.05). The
+gain is due to changes in the participants’ logging habits whereby
+25 participants who had never logged any diaries during the pre-
+intervention phase continued to log their food intake after the study
+was over, whereas 10 participants who had previously logged food
+diaries during the pre-intervention phase became inactive there-
+after. However, there is no significant difference in the numbers of
+active food loggers (defined as those who logged at least 7 days of
+food diary in the last 30 days) between the two periods. Amongst
+the treatment and the control conditions, we found no significant
+differences in the numbers of food loggers (21 versus 19 and) and
+active loggers (9 versus 10) post-intervention. Lastly, on average,
+all participants logged their diaries more frequently during the
+post-intervention than the pre-intervention phases (2.29 versus
+1.3) but the difference is not significant. Within a subset of partici-
+pants (N =92) who logged their diaries during both periods, there
+is a significant increase in the average food diary days from the
+pre-intervention to the post-intervention phases (3.47 versus 6.09;
+V =1414, p<0.01) but there is no difference between the conditions.
+
+Table 3: Pre/post-intervention logging behavior.
+
+Pre-intervention
+
+Treatment Control All
+
+Number of food loggers
+Number of active food loggers
+Number of logged diary days (mean)
+
+Post-intervention
+
+Number of food loggers
+Number of active food loggers
+Number of logged diary days (mean)
+
+Pre/post-intervention changes
+
+13
+5
+1.12
+
+21
+9
+1.84
+
+Number of new food loggers
+Number of new active food loggers
+Number of existing food loggers who gave up
+
+12
+2
+4
+
+12
+7
+1.53
+
+19
+10
+2.84
+
+13
+6
+6
+
+25
+12
+1.3
+
+40
+19
+2.29
+
+25
+8
+10
+
+Active food loggers are defined as users who recorded at least 7 days of food diary in
+the last 30 days.
+
+7 CONCLUDING DISCUSSION
+To our knowledge, this study is the first randomized trial to demon-
+strate that framing financial incentives as random loss is effective
+in increasing individuals’ engagement with dietary self-tracking
+and self-reporting. Particularly, we show that a small unpredictable
+loss can serve as a fairly powerful motivator to promote compliance
+
+and alleviate participants’ insensitivity to repeated interventions.
+The results are encouraging especially since it is well-established
+that loss-framed incentive is a strong motivator for health behavior
+change [25, 32]. Our results indicate that individuals who were in
+the random-loss incentive program are significantly more likely
+to complete the daily tasks than those who were in the fixed-loss
+incentive program after controlling for time spent in the study
+and other personal characteristics, such as gender, age, prior self-
+tracking experience, self-efficacy, and grit. Unlike previous work
+[21], we found that the heterogeneity of participants did not affect
+the outcomes of the interventions. For instance, male and female
+participants did not differ significantly in their likelihood to com-
+plete daily tasks. More surprisingly, there is no significant difference
+in compliance amongst individuals with differing self-tracking ex-
+perience and grit. This may be explained by the facts that: (1) prior
+food logging experience marginally contributes to the success of
+completing self-report surveys, which is arguably a more demand-
+ing requirement of the study; and (2) highly gritty participants may
+not necessarily be more passionate about self-tracking and self-
+reporting due to its tediousness nature and therefore are not more
+likely to persistently pursue the goals than less gritty participants.
+At the post-invention phase, we found no significant difference in
+the effectiveness of the incentives in sustaining self-tracking behav-
+ior for the next 30 days after the interventions were discontinued.
+Although there was an initial increase in the number of food loggers
+and self-tracking activities during the first post-intervention week,
+these numbers substantially declined in the subsequent weeks as
+more individuals disengaged from dietary self-tracking. The fact
+that the self-tracking behavior was not sustained post-intervention
+is not surprising. Unlike typical health intervention studies, partici-
+pants in our study were not instructed to use self-tracking tools as a
+means to achieve specific health goals nor were they motivated be-
+yond the primary scope of the study, i.e., contributing their lifestyle
+data to research about dietary habits. Consistent with recent studies
+[15, 25], our results confirm the importance of a long-term financial
+incentive program in self-tracking studies.
+
+The results have several implications for future precision medicine
+and mobile-health (mHealth) studies and interventions. First, our
+random-loss incentive is proven to be effective in promoting long-
+term engagement with self-tracking regardless of individuals’ per-
+sonal characteristics, making it suitable for population-level in-
+tervention programs. Next, the cost-effectiveness of our incentive
+implies that improved compliance is attainable with relatively mod-
+est cost thanks to the effects of loss aversion and unpredictability.
+In our setting, the mean cost per participant, including both the
+cash and the smartwatch rewards, is less than S$40. Lastly, in terms
+of data integrity, we observe very little noise in the food diary en-
+tries and survey responses contributed by participants in our study.
+Apart from inaccurate nutritional facts of some food items which
+we discussed earlier, we find no evidence of misbehavior by our
+participants.
+
+Limitations: Our study design specifically focused on dietary
+self-tracking and self-reporting compliance in healthy individuals
+and did not consider health outcomes, e.g., improved BMI, which
+might serve as additional motivation for participants. Understand-
+ably, this would have required a different study design and pop-
+ulation. Although we initially aimed to representatively recruit
+
+Session: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France53participants from Facebook users in Singapore, the majority of par-
+ticipants eventually enrolled were female working adults which
+may potentially bias the generalizability of the findings. Lastly, fu-
+ture studies should further examine the effects of unpredictability
+(i.e., the Random Rewards design) on gain-framed and loss-framed
+incentives in the same settings.
+
+8 ACKNOWLEDGEMENT
+This research is supported by the National Research Foundation,
+Prime Minister’s Office, Singapore under its International Research
+Centres in Singapore Funding Initiative.
+
+REFERENCES
+[1] Sofiane Abbar, Yelena Mejova, and Ingmar Weber. 2015. You Tweet What You
+Eat: Studying Food Consumption Through Twitter. In Proceedings of the 33rd
+international conference on Human factors in computing systems - CHI ’15. ACM
+Press, New York, New York, USA, 3197–3206. https://doi.org/10.1145/2702123.
+2702153
+
+[2] Douglas Bates, Martin Mächler, Ben Bolker, and Steve Walker. 2015. Fitting
+Linear Mixed-Effects Models using lme4. Journal of Statistical Software 67, 1 (oct
+2015), 1–48. https://doi.org/10.18637/jss.v067.i01 arXiv:1406.5823
+
+[3] Gharad Bryan, Dean Karlan, and Scott Nelson. 2010. Commitment Devices.
+Annual Review of Economics 2, 1 (sep 2010), 671–698. https://doi.org/10.1146/
+annurev.economics.102308.124324
+
+[4] Gary Charness and Uri Gneezy. 2009. Incentives to Exercise. Econometrica 77, 3
+
+(2009), 909–931. https://doi.org/10.3982/ECTA7416
+
+[5] Yu-Kai Chou. 2015. Actionable Gamification: Beyond Points, Badges, and Leader-
+
+boards. Octalysis Media.
+
+[6] James Clawson, Jessica A. Pater, Andrew D. Miller, Elizabeth D. Mynatt, and
+Lena Mamykina. 2015. No Longer Wearing: Investigating the Abandonment
+of Personal Health-Tracking Technologies on Craigslist. In Proceedings of the
+2015 ACM International Joint Conference on Pervasive and Ubiquitous Computing -
+UbiComp ’15. ACM, 647–658. https://doi.org/10.1145/2750858.2807554
+
+[7] Francis S. Collins and Harold Varmus. 2015. A New Initiative on Precision
+Medicine. New England Journal of Medicine 372, 9 (feb 2015), 793–795. https:
+//doi.org/10.1056/NEJMp1500523
+
+[8] Felicia Cordeiro, Elizabeth Bales, Erin Cherry, and James Fogarty. 2015. Rethink-
+ing the Mobile Food Journal: Exploring Opportunities for Lightweight Photo-
+Based Capture. In Proceedings of the 33rd Annual ACM Conference on Human
+Factors in Computing Systems - CHI ’15. ACM Press, New York, New York, USA,
+3207–3216. https://doi.org/10.1145/2702123.2702154
+
+[9] Munmun De Choudhury, Mrinal Kumar, and Ingmar Weber. 2017. Computational
+Approaches Toward Integrating Quantified Self Sensing and Social Media. In
+Proceedings of the 2017 ACM Conference on Computer Supported Cooperative Work
+and Social Computing - CSCW ’17. ACM Press, New York, New York, USA, 1334–
+1349. https://doi.org/10.1145/2998181.2998219
+
+[10] Ed Diener, Derrick Wirtz, William Tov, Chu Kim-Prieto, Dong-won Choi, Shige-
+hiro Oishi, and Robert Biswas-Diener. 2010. New Well-being Measures: Short
+Scales to Assess Flourishing and Positive and Negative Feelings. Social Indicators
+Research 97, 2 (jun 2010), 143–156. https://doi.org/10.1007/s11205-009-9493-y
+
+[11] Angela L. Duckworth, Christopher Peterson, Michael D. Matthews, and Dennis R.
+Kelly. 2007. Grit: Perseverance and passion for long-term goals. Journal of
+Personality and Social Psychology 92, 6 (2007), 1087–1101.
+
+[12] Luis Fernandez-Luque, Meghna Singh, Ferda Ofli, Yelena A Mejova, Ingmar Weber,
+Michael Aupetit, Sahar Karim Jreige, Ahmed Elmagarmid, Jaideep Srivastava,
+and Mohamed Ahmedna. 2017. Implementing 360° Quantified Self for childhood
+obesity: feasibility study and experiences from a weight loss camp in Qatar. BMC
+Medical Informatics and Decision Making 17, 1 (dec 2017), 37. https://doi.org/10.
+1186/s12911-017-0432-6
+
+[13] C. B. Ferster and B. F. Skinner. 1957. Schedules of reinforcement. Appleton-
+Century-Crofts, East Norwalk, CT, US. https://doi.org/10.1037/10627-000
+[14] Eric A. Finkelstein, Derek S. Brown, David R. Brown, and David M. Buchner.
+2008. A randomized study of financial incentives to increase physical activity
+among sedentary older adults. Preventive Medicine 47, 2 (aug 2008), 182–187.
+https://doi.org/10.1016/J.YPMED.2008.05.002
+
+[15] Eric A Finkelstein, Benjamin A Haaland, Marcel Bilger, Aarti Sahasranaman,
+Robert A Sloan, Ei Ei Khaing Nang, and Kelly R Evenson. 2016. Effectiveness
+of activity trackers with and without incentives to increase physical activity
+(TRIPPA): a randomised controlled trial. The Lancet Diabetes & Endocrinology 4,
+12 (oct 2016), 983–995. https://doi.org/10.1016/S2213-8587(16)30284-4
+
+[16] Xavier Giné, Dean Karlan, and Jonathan Zinman. 2010. Put Your Money Where
+Your Butt is: A Commitment Contract for Smoking Cessation. American Economic
+
+Journal: Applied Economics 2, 4 (jul 2010), 213–235. https://doi.org/10.1257/app.2.
+4.213
+
+[17] Uri Gneezy, Stephan Meier, and Pedro Rey-Biel. 2011. When and Why Incentives
+(Don’t) Work to Modify Behavior. Journal of Economic Perspectives 25, 4 (nov
+2011), 191–210. https://doi.org/10.1257/jep.25.4.191
+
+[18] Lewis R. Goldberg. 1999. A broad-bandwidth, public-domain, personality inven-
+tory measuring the lower-level facets of several five-factor models. Personality
+Psychology in Europe 7 (1999), 7–28.
+
+[19] Scott D Halpern, Rachel Kohn, Aaron Dornbrand-Lo, Thomas Metkus, David A
+Asch, and Kevin G Volpp. 2011. Lottery-based versus fixed incentives to increase
+clinicians’ response to surveys. Health Services Research 46, 5 (oct 2011), 1663–74.
+https://doi.org/10.1111/j.1475-6773.2011.01264.x
+
+[20] Daniel Kahneman and Amos Tversky. 1979. Prospect Theory: An Analysis of
+Decision Under Risk. Econometrica 47, 2 (jul 1979), 263–291. https://doi.org/10.
+1142/9789814417358_0006
+
+[21] Yi-Chin Kato-Lin, Vibhanshu Abhishek, Julie S. Downs, and Rema Padman. 2016.
+Food for Thought: The Impact of m-Health Enabled Interventions on Eating
+Behavior. SSRN Electronic Journal (feb 2016). https://doi.org/10.2139/ssrn.2736792
+[22] Yelena Mejova, Hamed Haddadi, Anastasios Noulas, and Ingmar Weber. 2015.
+#FoodPorn: Obesity Patterns in Culinary Interactions. In Proceedings of the 5th
+International Conference on Digital Health 2015 - DH ’15. ACM Press, New York,
+New York, USA, 51–58. https://doi.org/10.1145/2750511.2750524
+
+[23] Katherine L. Milkman, Julia A. Minson, and Kevin G. M. Volpp. 2014. Holding
+the Hunger Games Hostage at the Gym: An Evaluation of Temptation Bundling.
+Management Science 60, 2 (feb 2014), 283–299. https://doi.org/10.1287/mnsc.2013.
+1784
+
+[24] Department of Statistics Singapore. 2017. Population Trends. (2017). Retrieved
+from http://www.singstat.gov.sg/docs/default-source/default-document-library/
+publications/publications_and_papers/population_and_population_structure/
+population2017.pdf.
+
+[25] Mitesh S. Patel, David A. Asch, Roy Rosin, Dylan S. Small, Scarlett L. Bellamy, Jack
+Heuer, Susan Sproat, Chris Hyson, Nancy Haff, Samantha M. Lee, Lisa Wesby,
+Karen Hoffer, David Shuttleworth, Devon H. Taylor, Victoria Hilbert, Jingsan Zhu,
+Lin Yang, Xingmei Wang, and Kevin G. Volpp. 2016. Framing Financial Incentives
+to Increase Physical Activity Among Overweight and Obese Adults. Annals of
+Internal Medicine 164, 6 (mar 2016), 385. https://doi.org/10.7326/M15-1635
+[26] Marianne Promberger and Theresa M Marteau. 2013. When do financial in-
+centives reduce intrinsic motivation? comparing behaviors studied in psycho-
+logical and economic literatures. Health Psychology 32, 9 (sep 2013), 950–7.
+https://doi.org/10.1037/a0032727
+
+[27] Tauhidur Rahman, Mary Czerwinski, Ran Gilad-Bachrach, and Paul Johns. 2016.
+Predicting "About-to-Eat" Moments for Just-in-Time Eating Intervention. In
+Proceedings of the 6th International Conference on Digital Health - DH ’16. Montreal,
+Canada.
+
+[28] John Rooksby, Mattias Rost, Alistair Morrison, and Matthew Chalmers. 2014.
+Personal tracking as lived informatics. In Proceedings of the 32nd international
+conference on Human factors in computing systems - CHI ’14. ACM Press, New
+York, New York, USA, 1163–1172. https://doi.org/10.1145/2556288.2557039
+[29] Andrew Steptoe, Tessa M. Pollard, and Jane Wardle. 1995. Development of
+a Measure of the Motives Underlying the Selection of Food: the Food Choice
+Questionnaire. Appetite 25, 3 (dec 1995), 267–284. https://doi.org/10.1006/appe.
+1995.0061
+
+[30] Melanie Swan. 2013. The Quantified Self: Fundamental Disruption in Big Data
+Science and Biological Discovery. Big Data 1, 2 (jun 2013), 85–99. https://doi.
+org/10.1089/big.2012.0002
+
+[31] Tari D Topolski, James LoGerfo, Donald L Patrick, Barbara Williams, Julie Wal-
+wick, and Marsha B Patrick. 2006. The Rapid Assessment of Physical Activity
+(RAPA) among older adults. Preventing Chronic Disease 3, 4 (oct 2006), A118.
+[32] Kevin G. Volpp, Leslie K. John, Andrea B. Troxel, Laurie Norton, Jennifer Fass-
+bender, and George Loewenstein. 2008. Financial incentive-based approaches
+for weight loss: A randomized trial.
+JAMA 300, 22 (dec 2008), 2631–2637.
+https://doi.org/10.1001/jama.2008.804
+
+[33] Kevin G. Volpp, Andrea B. Troxel, Mark V. Pauly, Henry A. Glick, Andrea Puig,
+David A. Asch, Robert Galvin, Jingsan Zhu, Fei Wan, Jill DeGuzman, Elizabeth
+Corbett, Janet Weiner, and Janet Audrain-McGovern. 2009. A Randomized, Con-
+trolled Trial of Financial Incentives for Smoking Cessation. New England Journal
+of Medicine 360, 7 (feb 2009), 699–709. https://doi.org/10.1056/NEJMsa0806819
+[34] Rui Wang, Fanglin Chen, Zhenyu Chen, Tianxing Li, Gabriella Harari, Stefanie
+Tignor, Xia Zhou, Dror Ben-Zeev, and Andrew T. Campbell. 2014. StudentLife:
+Assessing Mental Health, Academic Performance and Behavioral Trends of Col-
+lege Students using Smartphones. In Proceedings of the 2014 ACM International
+Joint Conference on Pervasive and Ubiquitous Computing - UbiComp ’14. ACM
+Press, New York, New York, USA, 3–14. https://doi.org/10.1145/2632048.2632054
+[35] Yafei Wang, Ingmar Weber, and Prasenjit Mitra. 2016. Quantified Self Meets
+Social Media: Sharing of Weight Updates on Twitter. In Proceedings of the 6th
+International Conference on Digital Health Conference - DH ’16. ACM Press, New
+York, New York, USA, 93–97. https://doi.org/10.1145/2896338.2896363
+
+Session: Information Recording & SeekingDH’18, April 23-26, 2018, Lyon, France54

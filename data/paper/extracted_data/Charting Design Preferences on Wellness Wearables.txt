@@ -1,0 +1,497 @@
+Charting Design Preferences on Wellness Wearables  
+
+Juho Rantakari1, Virve Inget2, Ashley Colley1, Jonna Häkkilä1 
+
+1University of Lapland 
+Yliopistokatu 8 
+96400 Rovaniemi, Finland 
+firstname.lastname@ulapland.fi 
+
+2Center for Ubiquitous Computing 
+P.O Box 4500 
+90014 University of Oulu, Finland 
+firstname.lastname@oulu.fi 
+
+ABSTRACT 
+This paper presents a study on people’s preferences with wearable 
+wellness  devices.  The  results  are  based  on  an  online  survey 
+(n=84),  where  people  assessed  different  features  in  wearable 
+wellness devices. Our salient findings show that the highest rated 
+features were the comfort of wearing the device and long battery 
+lifetime.  Altogether,  factors  related  to  the  form  factor  and 
+industrial  design  were  emphasized,  whereas  social  sharing 
+features attracted surprisingly little attention.   
+
+CCS Concepts 
+• Human-centered computing - Empirical studies in HCI.  
+
+Keywords 
+Wellness; wearable computing; user studies; design. 
+
+1.  INTRODUCTION 
+Even though wearable computing is largely still taking baby steps 
+as consumer products, it has already emerged to mass markets in 
+some  forms, one of these areas being wearable wellness devices. 
+in 
+Different  user  groups  ranging  from  people 
+quantified-self  data  [3]  to  ordinary  weight-watchers  are  using 
+various wellness devices to track their sports performance as well 
+as their everyday wellness data. The design of wearable wellness 
+devices has evolved  from combinations of a heart rate chest belt 
+and a smartwatch towards embedded and more sophisticated form 
+factors,  such  as  sensors  integrated  to  shoes,  as  in  the  Nike+  or 
+bracelets  such  as  Fitbit.  An  overview  of  different  possible  form 
+factors available today for wearable wellness devices is illustrated 
+in figure 1. 
+
+interested 
+
+Earlier research has especially addressed mobile phones as a tool 
+for  supporting  wellness  and  physical  exercise.  Tacking  outdoor 
+sports  with  a  mobile  phone’s  integrated  sensors  has  been  found 
+convenient, e.g., as users state that they carry the phone with them 
+anyway  [1].  Also  playful  design  is  often  utilized  [4].  Whereas 
+research has introduced general guidelines for designing wellness 
+technologies  [5],  we  focus  on  perceptions  of  wearable  wellness 
+devices. Especially, we are interested in industrial design aspects, 
+which  has  so  far  been  an  under-explored  area.  Our  findings  are 
+based  on  an  online  survey,  where  people  assessed  and  ranked 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  ACM  must  be  honored. 
+Abstracting  with credit  is permitted. To  copy  otherwise,  or  republish, to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org. 
+AH 2016, February 25-27, 2016, Geneva, Switzerland 
+© 2016 ACM. ISBN 978-1-4503-3680-2/16/02…$15.00 
+DOI: http://dx.doi.org/10.1145/2875194.2875231 
+
+different  design  features  for  wellness  applications.  Similar 
+methodology  has  been  used  to  chart  people’s  preferences  for 
+jewelry type wearable computing [6]. 
+
+Figure 1. Illustration of various different wearable wellness 
+device form factors 
+
+2.  DATA COLLECTION 
+2.1  Online Survey 
+To evaluate and define users’ requirements for wearable wellness 
+devices  we  implemented  an  online  survey.  The  survey  was 
+designed  in  a  Web-based  survey  tool  and  was  open  for  answers 
+for a period of six  weeks  from early  August to September 2015. 
+The survey was distributed at two university campuses in different 
+cities,  via  social  media,  and  through  a  citizen  participation  Web 
+portal  hosted  by  the  city.  Our  core  target  group  for  study 
+participants was young adults either studying or working, because 
+we  considered  them  as  being  interested  in  their  personal  health 
+and  already  used 
+to  using  different  gadgets  and  mobile 
+applications. 
+
+2.2  Survey Design 
+The survey had a total of 10 questions, and took 10-15 minutes to 
+complete.  First,  demographic 
+regarding  age, 
+occupation and location was asked, as well as current experiences 
+with  wearable  wellness  devices  and  opinions  on  their  usage.  We 
+asked the participants whether they own a wearable device and, if 
+so, do they still use it and how has the usage changed over time. 
+
+information 
+
+In the second part of the survey we asked the users to rate various 
+features  and  aspects  of  wearable  health  devices  by  distributing 
+100  points  between  22  different  requirements  for  wearable 
+wellness  devices.  The  requirements  are  listed  in  table  1.  The 
+number of points awarded to various features gave us insight into 
+what  people  consider  as  being  the  most  important  aspects  in  the 
+design of wearable wellness devices. 
+
+ 
+ 
+ 
+ 
+Table 1. Requirements for wearable health devices in the 
+survey. 
+
+Form factor 
+
+FF1 
+
+FF2 
+
+FF3 
+
+FF4 
+
+FF5 
+
+The device looks good 
+
+The device is small 
+
+The device is lightweight 
+
+The device is tough 
+
+The device is comfortable to wear 
+
+Functionality 
+
+FU6 
+
+FU7 
+
+The device battery lasts for at least 24 hours 
+
+The  device  offers  several  functions  e.g.  feedback 
+on physical activity and heart rate monitoring 
+
+Body location 
+
+BL8 
+
+BL9 
+
+The  device  can  be  worn  somewhere  else  than  the 
+wrist 
+
+The device can be worn on the wrist 
+
+Customizability 
+
+CU10 
+
+I can change the device’s appearance 
+
+CU11 
+
+I can configure how the information is presented on 
+the device’s screen 
+
+Interaction design 
+
+ID12 
+
+ID13 
+
+The device can be operated unobtrusively 
+
+I can operate it quickly and with little effort 
+
+Context-awareness 
+
+CA14 
+
+CA15 
+
+CA16 
+
+The  display  adapts 
+to  my  environment,  e.g. 
+brightness  of  the  light  display  adapts  to  lighting 
+conditions 
+
+The  display  adapts  to  my  situation,  e.g.  display  is 
+deactivated  while  driving;  light  display  is  dimmed 
+during a meeting 
+
+The  device  automatically  recognizes  my  activity 
+type and I don't have to set it to do so 
+
+Feedback and sharing 
+
+FS17 
+
+FS18 
+
+FS19 
+
+The  device  gives  instant  feedback  based  on  my 
+performance during exercise or activity 
+
+The  device  gives  detailed 
+performance during exercise or activity 
+
+feedback  on  my 
+
+Without  further  knowledge,  people  nearby  cannot 
+understand 
+the  displayed 
+information from the device 
+
+the  meaning  of 
+
+FS20 
+
+I can easily share the results with other people 
+
+FS21 
+
+FS22 
+
+I  can  easily  compare  my  performance  to  other 
+people's performances 
+
+I  can  compare  my  performance  to  my  previous 
+performances 
+
+2.3  Participants 
+We  received  altogether  123  responses  to  the  survey,  however, 
+only 84 answered all the questions as instructed. In the following, 
+the  results  are  reported  based  the  sample  size  that  answered  the 
+individual questions. The demographics were as follows for the 84 
+
+participants. Of these, 54 (64%) were female and 30 (36%) male. 
+The average age of the participants was 29 years, ranging from 20 
+to 61 years (SD = 9.8), and 90% of them came from Finland. 
+
+3.  RESULTS 
+In  the  first  section  we  detail  the  answers  from  the  questions 
+regarding  the  participants’  use  of  wearable  wellness  devices  in 
+their everyday life. In the second section we describe the results of 
+the  survey  question  #9,  where  users  had  to  allocate  100  points 
+between  different  features  of  wearable  wellness  devices.  In  the 
+last section we make note of additional comments and information 
+received from the participants during the study. 
+3.1  Current Wearable Wellness Device Usage 
+From  the  123  test  participants  26%  owned  at  least  one  wearable 
+health device and 11% owned more than one. Of the people who 
+owned  a  wearable  health  device,  46%  used  it  everyday,  13% 
+every  week and 15% about once a month. A total of 27% of the 
+participants  had  stopped  using  their  devices  altogether.  When 
+asking  specifically  about  the  continuation  of  the  use  with 
+device(s),  45%  of  the  participants  who  owned  the  devices 
+continued  to  use  them,  29%  had  seen  their  usage  decrease  over 
+time, and 30% of the participants who used their wearable devices 
+had  stopped  using  them  completely  after  a  while.  The  slight 
+incongruity  between  the  results  may  be  due  to  some  participants 
+owning multiple devices. 
+
+The main reason for stopping using the devices was that users felt 
+that  they  did  not  get  relevant  feedback  from  the  devices  (53%).  
+One participant commented that: “… It would give me "inactivity 
+alerts"  when  I  was  driving  or  in  long  meetings,  which  felt  like  I 
+was  being  punished  for  being  inactive  in  situations  I  could  not 
+avoid” (#28, male, 26 years).  Also usability problems, mismatch 
+with  context,  and  interoperability  issues  were  brought  up.  One 
+participant commented on their stopped usage: “The device didn’t 
+work  well  enough  with  my  other  devices  and  the  operation  took 
+too much manual control through bad user interfaces, the device’s 
+quality wasn’t tough and good enough.” (#33, male, 28 years) 
+
+3.2  Overall Ratings of Requirements 
+Figure  2  shows  the  overall  ratings  participants  gave  to  the  22 
+different requirements. The results are aggregated total points for 
+each  requirement  and  sorted  based  from  the  highest  to  lowest 
+number of points. The most important features are, that the device 
+battery lasts for at least 24 hours (FU6) and that the device should 
+be comfortable to wear (FF5). The least prioritized features were, 
+the ability to share results with other people (FS20) and the ability 
+to  compare  your  performance  with  other  people’s  performances 
+(FS21).  However,  social  aspects  and  sharing  came  up  in 
+comments:  “People  want  to  share  their  information  on  social 
+media at least during the initial phase of usage, especially young 
+users.  After  it  evens  out  and  they  may  use  the  devices  more  to 
+observe  their  health,  improve  it  and  gain  insight  into  it.”  (#71, 
+male, 26 years). 
+
+Overall, all requirements related to the form  factor (5 items) and 
+functionality (2 items) were ranked in the top half, i.e. among the 
+11  highest  prioritized  features  of  the  total  of  22.  Hence,  the 
+industrial design aspects in the design requirements for  wearable 
+wellness technologies were emphasized. Additionally, in the free 
+text comments, the industrial design and form factor aspects also 
+gained  attention,  e.g.:  “Intelligence  in  fabrics  and  clothing  and 
+also in smartphones is interesting. The design in the device should 
+be of really good quality. More jewel-like options.” (#52, female, 
+51 years). 
+
+Figure 2. Aggregated points of the 22 requirements sorted from the most to least important. Abbreviations of requirements are 
+described Table 1. Bar colours indicate categories. 
+
+Figure 3 shows the relative perceived importance for each of the 
+total of six categories of requirements, gathered by tallying up the 
+points for each category and divided by the requirements in each 
+category.  The  figure  shows  that  overall  concern  when  regarding 
+the  requirements  for  wearable  health  devices  was  given  to 
+functionalities and form factor.  
+
+In general it may be noted that female participants tended to give 
+higher  scores  on  design  requirements  related  to  effortless  use  of 
+the  device  (FU6,  ID13)  and  ‘self’  focused  aspects  –  privacy  and 
+comparison  to  one’s  own  performance  (F19,  FS22).  Male 
+participants  paid  more  attention  to  technical  aspects,  such  as  the 
+configuration  of  the  device,  automatic  activity  recognition  and 
+detailed feedback. 
+
+Figure 3. Normalized aggregated points for the 7 categories. 
+(Total points / number of requirements per category.) 
+
+3.3  Gender Aspects 
+Figure  4  presents  the  results  of  the  prioritized  features  separated 
+by  gender.  The  design  requirements  are  presented  in  the  same 
+order as in Figure 2, i.e. based on the cumulative total score. The 
+scores  in  Figure  4  are  normalized,  by  dividing  the  cumulative 
+score for each gender by the number of participants of that gender.  
+
+To  identify  significant  differences  between  male  and  female 
+participants’ views on each criterion, independent samples t-tests 
+were  conducted.  Applying  a  significance  level  threshold  of  0.1, 
+the  following  were  identified  as  significant.  Battery  lifetime  was 
+significantly more important for women than men, p = .057 (FU6: 
+The  device  battery  lasts  for  at  least  24  hours).  Sharing  and 
+competitive  features  were  rated  significantly  higher  by  men  than 
+women  (FS20  p  =  .0735  and  FS21  p  =  .0138).  In  particular,  for 
+FS21  (FS21:I  can  easily  compare  my  performance  to  other 
+people's  performances)  the  difference  between  genders  was 
+significant at the p<0.05 level. 
+
+Figure 4. Mean score for each feature, separated by gender. 
+Error bars indicate standard error of mean. 
+
+3.4  Other User Comments 
+In  the  freeform  comment  section  at  the  end  of  the  survey, 
+sustainability and green values were raised as an additional theme.  
+Participants  wondered  about  the  ethical  and  ecological  issues 
+related  to  the devices:  “…  the device  should  be as  recyclable  as 
+possible  and  safe  to  the  users  and  the  surrounding  environment 
+…” (#123, male, 22 years) and: “The ethics and ecological issues 
+(of the products)? How do you dispose or get rid of the device?” 
+(#111, male, 21 years).  
+
+In addition, some participants commented on the technical aspects 
+and  data  analyzing  capabilities  of  the  devices:  “The  current 
+devices can’t refine good enough information from the measured 
+
+ 
+ 
+ 
+ 
+ 
+ 
+data,  too  many  services  provide  just  measured  data  to  the  user 
+and leave the interpretation to the user even though analyzing the 
+data and making compilations of it should be the main focus of the 
+companies”  (#47,  male,  27  years).  Moreover,  the  viewpoint  of 
+multiple device ownership was  mentioned:  “[The device] should 
+integrate itself into my device ecosystem” (#1, male, 30 years).  
+
+- User Experience Perspective. In Proceedings of the 
+European Conference on Ambient Intelligence (AmI '08), 
+Emile Aarts, James L. Crowley, Boris Ruyter, Heinz 
+Gerhäuser, Alexander Pflaum, Janina Schmidt, and Reiner 
+Wichert (Eds.). Springer-Verlag, Berlin, Heidelberg, 192-
+209. http://dx.doi.org/10.1007/978-3-540-89617-3_13 
+
+related 
+
+requirements 
+
+4.  DISCUSSION 
+Interestingly,  design 
+to  sharing  and 
+comparing  results  received  a  surprisingly  small  amount  of 
+attention were given a low priority. This is a somewhat surprising 
+result  considering  the  earlier  research  on  wellness  technologies, 
+which  has  emphasized  social  and  sharing  aspects,  e.g.  [2].  We 
+speculate  that  one  reason  for  the  result  might  be  that  earlier 
+research has focused much on utilizing mobile phones, a domain 
+with  a  vast  number  of  wellness  applications  [7].  Mobile  phones 
+are by nature regarded as social communication devices. It may be 
+that,  in  users’  perception,  wearable  wellness  devices  relate  to 
+other  types  technologies,  e.g.,  health  devices  such  as  blood 
+pressure  monitors  or 
+sharing  and 
+communication  features  are  not  perceived  as  being  inherently  a 
+part  of  them.  We  consider  this  finding  interesting,  as  it  suggests 
+that user’s expectations and priorities with wearable devices may 
+be different from those of phone-based wellness applications. 
+
+step  counters,  and 
+
+The priority given to features related to the form factor indicates 
+that industrial design plays a major role in the appeal of wearable 
+wellness  devices.    Based  on  the  results,  we  participants  wanted 
+wearable  devices  to  be  lightweight,  comfortable,  durable,  and  to 
+look  good.  Attention  to  industrial  design  also  changes  the 
+emphasis  in  the  design  space  compared  to  mobile  phone  based 
+apps,  where  graphical  UI  design  has  dominated.  The  top 
+requirements,  i.e.  long  battery  life  and  comfort  of  wearing  the 
+device,  show 
+is  expected  and  highly 
+appreciated.  
+
+that  effortless  use 
+
+Our  study  is  limited  by  its  method  (online  survey)  and  sample 
+size.  For  instance,  observations  in  the  field  would  have  given 
+deeper  insight  into  the  phenomenon  and  preferences.  Moreover, 
+the majority of study participants did not own a wearable wellness 
+gadget.  However,  we  believe  our  findings  are  interesting  for  the 
+growing number of designers working on wellness technologies. 
+
+5.  ACKNOWLEDGEMENTS 
+This  research  has  been  supported  by  a  grant  from  Tekes  –  the 
+Finnish Funding Agency  for Innovation as part of Digital Health 
+Revolution programme. 
+
+6.  REFERENCES 
+[1]  Ahtinen,A., Isomursu, M., Huhtala, Y., Kaasinen, J., 
+
+Salminen, J., and Häkkilä, J. 2008. Tracking Outdoor Sports 
+
+[2]  Anderson, I., Maitland, J., Sherwood, S., Barkhuus, L., 
+
+Chalmers, M., Hall, M., Brown, B. and Muller, H. 2007. 
+Shakra: tracking and sharing daily activity levels with 
+unaugmented mobile phones. Mob. Netw. Appl. 12, 2-3 
+(March 2007), 185-199. http://dx.doi.org/10.1007/s11036-
+007-0011-7 
+
+[3]  Choe, E. K., Lee, N. B., Lee, B., Pratt, W. and Kientz, J. A. 
+
+2014. Understanding quantified-selfers' practices in 
+collecting and exploring personal data. In Proceedings of the 
+32nd annual ACM conference on Human factors in 
+computing systems (CHI '14). ACM, New York, NY, USA, 
+1143-1152. http://doi.acm.org/10.1145/2556288.2557372 
+
+[4]  Consolvo, S., Klasnja, P., McDonald, D. W., Avrahami, D., 
+Froehlich, J., LeGrand, L., Libby, R., Mosher, K. and 
+Landay, J. A. 2008. Flowers or a robot army?: encouraging 
+awareness & activity with personal, mobile displays. In 
+Proceedings of the 10th international conference on 
+Ubiquitous computing (UbiComp '08). ACM, New York, 
+NY, USA, 54-63. 
+http://doi.acm.org/10.1145/1409635.1409644 
+
+[5]  Consolvo, S., Everitt, K., Smith, I. and Landay, J. A. 2006. 
+Design requirements for technologies that encourage 
+physical activity. In Proceedings of the SIGCHI Conference 
+on Human Factors in Computing Systems (CHI '06), Rebecca 
+Grinter, Thomas Rodden, Paul Aoki, Ed Cutrell, Robin 
+Jeffries, and Gary Olson (Eds.). ACM, New York, NY, USA, 
+457-466. http://doi.acm.org/10.1145/1124772.1124840 
+
+[6]  Fortmann, J., Heuten,W. and Boll, S. 2015. User 
+
+requirements for digital jewellery. In Proceedings of the 
+2015 British HCI Conference (British HCI '15). ACM, New 
+York, NY, USA, 119-125. 
+http://doi.acm.org/10.1145/2783446.2783573 
+
+[7]  Häkkilä, J., Colley, A., Inget, V., Alhonsuo, M. and 
+
+Rantakari, J. (2015). Exploring Digital Service Concepts for 
+Healthy Lifestyles. In Proceedings of HCI International 
+2015, Springer, 470-480. DOI: 10.1007/978-3-319-20886-
+2_44 
+
+ 
+ 
+ 
+

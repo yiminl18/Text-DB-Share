@@ -1,0 +1,1849 @@
+A Wee Bit More Interaction: Designing and Evaluating  
+an Overactive Bladder App
+
+Ana-Maria Salai 
+ Heriot-Watt University 
+ Edinburgh, UK 
+ as152@hw.ac.uk 
+
+Lynne Baillie 
+ Heriot-Watt University 
+ Edinburgh, UK 
+ l.baillie@hw.ac.uk
+
+ABSTRACT 
+
+Overactive  Bladder  (OAB)  is  a  widespread  condition, 
+affecting  20%  of  the  population.  Even  though  it  is  a 
+treatable  condition,  people  often  do  not  seek  treatment.  In 
+this paper, we  describe how we co-designed and evaluated 
+with  30  stakeholders  (9  medical  professionals  and  21  end-
+users)  an  OAB  mobile  health  application  that  aims  to 
+increase  adherence  to  self-managed  treatment.  Our  results 
+support previous research that visualizing progress, setting 
+goals, receiving reminders and feedback  increases  use.  We 
+discovered  that  games  could  be  used  successfully  as  a 
+distraction technique for urge suppression. Contrary to the 
+current research direction, automatically calculated features 
+could  be  a  detriment  to  app 
+interaction.  Regarding 
+evaluation,  we  found  that  designers  may  not  want  to  rely 
+only  on  questionnaires  when  assessing  the  success  of  a 
+game and its emotional impact on users. 
+
+CCS CONCEPTS 
+• Human-centered  computing  ~  User  studies;  Usability  Testing; 
+Field Studies 
+
+KEYWORDS 
+Mobile  Health  Applications;  Assistive  Technology;  Co-Design; 
+Interviews; Usability; Overactive Bladder 
+
+ACM Reference format: 
+
+Ana-Maria  Salai  and  Lynne  Baillie.  2019.  A  Wee  Bit  More  Interaction: 
+Designing  and  Evaluating  an  Overactive  Bladder  App.  In  2019  CHI 
+Conference on Human Factors in Computing Systems Proceedings (CHI 2019), 
+May 4–9, 2019, Glagsow, Scotland, UK. ACM,  NY,  NY,  USA.  Paper  703,  13 
+pages. https://doi.org/10.1145/3290605.3300933 
+
+Permission to make digital or hard copies of all or part of this work for personal or 
+classroom use is granted without fee provided that copies are not made or distributed 
+for profit or commercial advantage and that copies bear this notice and the full citation 
+on the first page. Copyrights for components of this work owned by others than ACM 
+must  be  honored.  Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or 
+republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior  specific 
+permission and/or a fee. Request permissions from permissions@acm.org). 
+CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK. 
+© 2019 Copyright is held by the owner/author(s). Publication rights licensed to ACM. 
+ACM ISBN 978-1-4503-5970-2/19/05...$15.00. 
+DOI: https://doi.org/10.1145/3290605.3300933 
+
+1  INTRODUCTION 
+The  number  of  people  suffering  from  Overactive  Bladder 
+(OAB)  worldwide  is expected  to reach 20.1% by  the end of 
+2018  [31].  The  condition 
+incurs  high  direct  costs 
+(treatment), indirect costs (low productivity) and intangible 
+costs  (quality  of  life)  [18].  OAB  is  a  treatable  condition  as 
+70%  of  people  can  be  cured  or  have  their  symptoms 
+ameliorated  [1].  However,  it  remains  undertreated  due  to 
+people not seeking treatment, lack of proactive questioning 
+by physicians and embarrassment [1]. Moreover, traditional 
+treatment requires  motivation  and  involvement, leading to 
+a  drop  out  whenever  results  are  not  quickly  seen  [10,  56]. 
+Smartphones  are  popular  ubiquitous  devices,  with  78%  of 
+UK  adults  using  one  [53].  By  often  interacting  with  them, 
+people create a personal bond with the devices [60]. Given 
+their  computing  capabilities,  smartphones  can  recognize 
+behavior patterns and provide real-time interventions [36]. 
+As  people  with  OAB  need  assistance  wherever  they  are,  a 
+mobile health (mHealth) app could be an appropriate tool to 
+increase  adherence  to  self-managed  treatment  and  raise 
+awareness of symptoms.   
+
+Since the app intends to act as a personal tool, we followed 
+a  co-design  methodology  to  investigate  what  features 
+would best fit OAB users’ needs. This approach has proved 
+successful 
+in  health  areas  such  as  falls  [58],  knee 
+rehabilitation [2], and cancer treatment [33]. We conducted 
+three  studies  with  key  stakeholders:  people  with  OAB, 
+continence  specialist  nurses,  and  medical  consultants.  We 
+wished  to  answer  the  following  research  questions  (RQ): 
+RQ1: What key features should an OAB mHealth app have 
+to  support  people  during  self-managed  treatment?  RQ2: 
+How  might  an  OAB  app  help  people  self-manage  their 
+treatment  and  raise  awareness  of  symptoms?  RQ3:  Does 
+context have an impact on how users engage with the app?  
+
+This paper is structured as follows. We start by providing a 
+background  overview  of  OAB  and  mHealth  app  research 
+studies.  We  then  present  the  three  studies  we  conducted: 
+Study  1:  requirements  gathering  interviews  with  all 
+stakeholders;  Study  2: 
+interviews  whilst  stakeholders 
+interacted  with  the  proposed  app  prototype;  and  Study 3: 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 1 
+evaluating the app’s usability and the user experience (UX) 
+during  a  short exploratory field  study  with end-users.  The 
+outcomes  from  the  three  studies  are  then  discussed  in  the 
+context  of  our three RQs,  before  outlining  our conclusions 
+and  proposed  future  work.  Some  of  the  findings  from  the 
+first  two  studies  have  been  published  in  [51].  University 
+ethical approval was granted for all studies. We will refer to 
+people  with  OAB  symptoms  taking  part  in  the  studies  as 
+user participants (UP) and medical participants as MP. 
+
+2  BACKGROUND 
+In  this  section,  we  present  the  OAB  condition  and  its 
+treatment. We then outline the current research in the area 
+of  mHealth  apps.  Finally,  derived  from  the  literature,  we 
+highlight key issues surrounding OAB that could be used to 
+support users.  
+
+2.1  Overactive Bladder 
+
+OAB  is  defined  as  frequency  (more  than  eight  voids  per 
+day),  urgency (with  or  without  incontinence)  and nocturia 
+(more  than  two voids per night) [20].  The first assessment 
+stage  consists  of  bladder  diaries  and  quality  of  life 
+questionnaires  [20].  Patients  are  asked  to  fill  in  a  paper-
+based bladder diary (Fig. 6 right) for three consecutive days, 
+in  which  they  record:  when,  what,  and  how  much  liquid 
+they  drank  (mls  or  cups),  when  and  how  much  they 
+urinated (mls), the urge to urinate, and any leakages [20].  
+
+Although  drugs  are  available  to  ameliorate  the  symptoms, 
+due  to  their  side-effects  (dry  mouth,  constipation,  blurred 
+vision)  [1],  medical  staff  are  advised  to  suggest  non-
+pharmacological  therapies  first  (e.g.,  lifestyle  changes, 
+Pelvic  Floor  Muscle  (PFM)  training,  and  bladder  training). 
+The  lifestyle changes  consist  of  avoiding  bladder  irritants 
+(certain  food  and  drinks)  and  consuming  a  proper  amount 
+of liquid per day. The PFM training consists of performing 
+daily PFM exercises. The bladder training is composed of 
+extending  the  time  between  voids  by  applying  urge 
+suppression  techniques  to  try  and  avoid  rushing  to  the 
+toilet  whenever  there  is  an  urge  to  urinate.  These 
+techniques are divided into brain distraction techniques (e.g., 
+trying to take the mind off the urge), and performing quick 
+PFM contractions [20].   
+
+2.2  Mobile Health Applications 
+Different  approaches  have  been  used  when  designing  and 
+evaluating mHealth apps. Geurts et al. [22] designed an app 
+for cardiac patients with medical staff. Owen et al. [44] used 
+scenarios  based  on  prior  health  research  when  developing 
+an  app  to  support  the  self-management  of  people  with 
+chronic conditions. Although they evaluated the apps with 
+
+end-users,  they  did  not  involve  them  in  the  design. 
+Hakobyan et al. [26] developed an app for older adults with 
+age-related  macular  degeneration  and 
+involved  both 
+medical  staff and end-users  in  the  design phase. Later,  the 
+authors  evaluated  the  app  by  conducting  both  controlled 
+and  field  studies.  Micallef  et  al.  [38]  co-designed  an  app 
+with stroke survivors to assist with upper arm therapy. The 
+authors  conducted  a  design  workshop  with  end-users  and 
+medical  staff  and  evaluated  the  app’s  usability  in  a 
+controlled field study. Matthews et al. [37] co-developed an 
+app  with  people  with  bipolar  disorder  and  highlight  that 
+people are aware of the stigma surrounding their condition.  
+
+Given the new technological possibilities, smartphones can 
+provide  personalized  context,  understand  the  user  and  the 
+environment to offer better UX [19]. The Mobilyze! system 
+[11]  collects  accelerometer,  GPS,  Bluetooth,  WIFI,  and 
+ambient light to determine the physical and social behavior 
+of patients with depression. In the MONARCA project [48], 
+the smartphone collected data such as speech duration and 
+number  of  calls  to  determine  the  social  activity,  and 
+acceleration  for  the physical activity recognition of bipolar 
+disorder patients.  
+
+Several OAB apps referring to either bladder diaries or PFM 
+exercises  are  currently  available  on  the  market.  Although 
+some have involved medical staff in the design process [55], 
+none  of  them  mention  any  end-user  involvement  [35,  43]. 
+PFM  exercise  apps  provide  customizable  exercises  plans 
+[55], professional video tutorials on how to do the exercises 
+[43, 55], discreet reminders [43, 35], show progress [43, 55], 
+and  encourage  users  to  stay  motivated  by  unlocking 
+achievements  [43,  35].  The  bladder  diary  apps  track 
+progress by showing a comparison between pre- and post-
+therapy results [57] and require precise urine quantities [57, 
+30].  Our  app  differs  from  the  other  OAB  apps  in  the 
+following  ways:  (1)  it  has  been  co-designed  with  potential 
+end-users,  (2)  it  brings  together  several  parts  of  the  non-
+pharmacological  treatment  and  diagnosis,  (3)  it  aims  to 
+collect  environmental  sensors  data  that  could  offer  a  high 
+level of personalization, (4) it offers a variety of distractions 
+such  as  games,  (5)  it  uses  urine  quantity  approximations 
+and (6) provides reminders for more than one function.  
+
+2.3  Key Concepts to Support in an OAB App 
+
+treatments  are  well 
+Although  non-pharmacological 
+accepted  by  medical  staff,  they  are  time-consuming  and 
+require motivation. Therefore, people often fail to adhere to 
+the  treatment  [10,  56].  Moreover,  people  with  OAB  often 
+feel  embarrassed  and  would  prefer  to  keep  the  condition 
+private  [10].  Below  we  discuss  issues  highlighted  in  the 
+literature that could be part of an OAB app. 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 2 
+ 
+Progress: Low adherence to treatment is an issue not only 
+related  to  OAB,  as  other  research  investigating  knee  [2], 
+falls  [58]  and  stroke  rehabilitation  [38]  provided  similar 
+findings.  To  overcome  this,  Ayoade  and  Baillie  [2] 
+recognized  the  importance  of  showing  progress  and 
+improvement 
+to  patients.  Similarly,  displaying  user 
+achievements  also proved effective  for  people  with bipolar 
+disorder [37]. Choe et al. [15] reviewed self-tracking apps to 
+understand  what  data  people  track  and  discovered  that 
+visualizing data using line and bar charts is very useful.  
+
+Reminders:  Another  method  of  increasing  adherence  to 
+treatment is by providing users with reminders. Reminders 
+proved  effective  in  increasing  medication  adherence  for 
+HIV patients [49],  increasing exercise adherence for stroke 
+survivors  during  rehabilitation  [38],  and  in  persuading 
+people  to  drink  a  proper  amount  of  water  [14].  Min  et  al. 
+[41] show how mobile instant messengers (e.g., WhatsApp) 
+do  not consider  social  appropriateness, making people  feel 
+embarrassed by  an  unexpected exposure of  their  incoming 
+messages. Matthews et al. [37] discovered that people with 
+bipolar  disorder  are  embarrassed  by  their  condition  and 
+would like reminder alerts to be discreet when using an app 
+for their condition.  
+
+Since  urge 
+
+suppression 
+Distraction  Techniques: 
+techniques  are  very  important  for  a  successful  bladder 
+training,  we  considered  it  useful  to  investigate  what 
+activities  we  could  provide  to  distract  people.  Games,  for 
+example,  have  proved  to  be  successful  in  rehabilitation 
+areas such as  falls [59] or  in promoting healthier  lifestyles 
+[25, 14]. Ploderer et  al. [46] developed an app that enabled 
+people  trying  to  quit  smoking  to  access  and  share 
+distractions  and  tips.  However,  these  did  not  work  as  the 
+smokers  said  that  they  were  not  distracting  enough,  and 
+they continued to smoke while using the app.  
+
+Embarrassment: Embarrassment is an important emotion 
+that  plays  a  significant  role  in  how  people  interact  in  a 
+society  [40].  Healey  et  al.  [29]  evaluated  various  graphical 
+user  interfaces  for  capturing  emotions  on  a  smartphone. 
+Wilson  et al. [62]  investigated  the  modalities of conveying 
+emotions  by  means  of  visual,  thermal  and  vibrotactile 
+feedback.  Although  technology  is  evolving,  more  research 
+needs to be conducted in the HCI community in the area of 
+emotions  [16].  Given  the  fact  that  people  do  not  seek 
+medical  help  due  to  embarrassment  and  prefer  to  remain 
+anonymous [52], we decided to investigate if people would 
+like any elements to be designed discreetly.  
+
+Location: People with OAB tend to perform their activities 
+close to toilet locations to avoid leakages and embarrassing 
+
+situations [32]. Considering  this,  we  wanted  to discuss  the 
+issue of toilets and location, and how the app could assist.  
+
+Bladder Diary: A bladder diary is a form of assessment. A 
+drawback to this practice is that people often show a lack of 
+interest  in  filling  in  health  diaries  [61].  We  wanted  to 
+understand whether people fail in filling in bladder diaries.   
+
+3  STUDY 1 – REQUIREMENTS GATHERING 
+
+INTERVIEWS 
+
+We  conducted 
+interviews  with  MPs  and  co-design 
+interviews  with  UPs  to  discuss  the  main  functions  and 
+features  derived  from  literature  review  and  to  understand 
+what  additional  features  would  be  best  for  OAB  users. 
+Interviews  were  composed  of  both  quantitative  and 
+qualitative  questions.  Qualitative  answers  were  analyzed 
+using  an  adapted  version  of  the  Constant  Comparative 
+Method  [4],  initially  part  of  Grounded  Theory  [23].  We 
+used this method to avoid exclusions on thematic grounds. 
+
+3.1  Medical Participants 
+
+3.1.1 Methodology. We  started  with  MPs  interviews  as  we 
+wished  to  understand  whether  they  agreed  with  the 
+concepts  derived  from  the  literature  and  whether  they 
+would  suggest  additional  ones.  We  interviewed  four  MPs: 
+two  medical  consultants 
+two  urinary 
+continence specialist nurses (MP3-4). Three interviews were 
+conducted  via  telephone  and  one  face-to-face  (MP2).  Each 
+interview lasted one hour and was divided into three phases 
+(Table 1). 
+
+(MP1-2)  and 
+
+3.1.2  Findings.  Phase  1:  People  delay  seeking  treatment 
+because  they  develop  their  own  way  of  dealing  with  the 
+condition.  For  example,  they  either  tend  to  change  their 
+daily  routine  to  avoid  embarrassing  incidents  in  public 
+spaces:  “Going  from  toilet  to  toilet.  Use  pads.”  (MP4)  or 
+drastically  reduce  their  fluid  intake:  “Some people end up 
+dehydrated.”  (MP3).  MPs  believe  people  mostly  want  an 
+easy  treatment  with  a  quick  outcome:  “Patients want  an 
+easy answer to their problem – magic solution, magic tablet.” 
+(MP2),  leading  to  a  low  adherence  to  treatment  [10,  56]: 
+“Frustration that it doesn’t work fast or at all.” (MP1). 
+
+Phase 2:  As  indicated  in  [20],  in  the  UK,  urologists  often 
+use  bladder  diaries  and  questionnaires  for  diagnosis.  As 
+shown in [61], people fail to fill in these diaries.  
+
+Phase 3: All MPs interviewed agreed with the app concepts 
+obtained from our literature review. The only contradiction 
+found  was  regarding  the  toilet  mapping  concept,  where 
+both  nurses  disagreed  with  the  medical  consultants  and 
+questioned  the  usefulness  of  the  concept:  “It should be used 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 3 
+ 
+ 
+ 
+as a backup plan and not to ease their access to toilets. Going 
+to the toilet just in case needs to be avoided.”  (MP3).  Finally, 
+MPs  requested  that  we  include  a  treatment  description  in 
+our app. 
+
+Table 1. Medical Participants – Interview Structure. 
+
+Phase 
+
+Content 
+Phase 1 OAB Condition 
+Issues and challenges. 
+Treatment and diagnosis. 
+Phase 2 Treatment 
+Phase 3 Mobile Phone App  Literature review concepts. 
+
+3.2  User Participants 
+
+3.2.1 Methodology.  During  our  MPs  interviews,  we  asked 
+about how we should approach our co-design with UPs. We 
+were advised to use single or same gender paired interviews 
+and  not  to  use  any  group-based  techniques  (e.g.,  focus 
+group, design  workshops). We interviewed nine UPs  -  two 
+males and seven females (UP1-9) since the OAB prevalence 
+is  higher  in  women  [17].  UPs’  age  range  was  23-80,  mean 
+age  51.  Their  symptoms  varied  from  mild  (voiding 
+just  outside  the  normal  parameters,  mild 
+frequency 
+urgency,  and  no  leakages)  to  severe  (increased  number  of 
+voids,  high  urgency,  and  leakages).  Most  UPs  (8/9)  were 
+confident in using a smartphone. Each interview lasted two 
+hours and was divided into three parts (Table 2). UPs were 
+recruited via newsletter and research contacts. 
+
+Table 2. User Participants – Interview Structure. 
+
+Phase 
+
+Content 
+
+Phase 1 Experiences  Open-ended questions. 
+
+Phase 2 Screenshots 
+
+Phase 3 Sketches 
+
+Screenshots illustrating literature 
+review concepts. 
+UPs’ drawings of possible app 
+functionalities. 
+
+The first phase was the same as for the MPs - aimed to gain 
+a deeper  understanding of  the condition. However, for  the 
+remaining two phases we focused more on getting detailed 
+design  ideas,  instead  of  validating  the  proposed  app 
+concepts.  Similar  to  Uzor  et  al.  [58],  during  the  second 
+phase of the interview, we presented UPs with paper-based 
+bladder  diaries,  icons,  and  screenshots  depicting  literature 
+review concepts and asked them to provide feedback. In the 
+third phase, UPs were asked to design or suggest their own 
+version  of  functions  or  to  recommend  new  features.  The 
+motivation  behind  this  was  to  encourage  the  more  visual 
+participants to engage in the app design [4].  
+
+Before  the  UPs  interviews,  our  MPs  validated  that  our 
+interview  plan  was  appropriate.  We  also  wanted  to  make 
+sure  that  the  interview  structure  did  not  cause  any 
+
+emotional  distress.  Therefore,  we  used  Baillie  et  al.’s 
+emotion  wheel  [5],  an  adapted  version  of  Russel’s  [50],  to 
+capture  UPs’  emotions  during  different  phases.  This 
+approach has proved successful when investigating players’ 
+emotional  reactions  towards  location-based  games  [5]  and 
+viewing  and  augmenting  emotional  perception  when 
+viewing images [3]. 
+
+3.2.2 Findings. Phase 1: Two  UPs  did  not  consider  seeking 
+help  as  they  felt  the  condition  is  not  troublesome.  Only 
+three  UPs  had  filled  in  a  bladder  diary  before.  As 
+highlighted  by  MPs,  two  had  problems  with  filling  it  in 
+completely  due  to  a  busy  lifestyle  or  forgetfulness:  “Yes, I 
+kept delaying filling it in because of lack of time. I used to do 
+it based on memory. And it's so unpractical on paper.” (UP6). 
+Confirming  MP3’s  statement,  most  UPs  (6/9)  restrict  their 
+daily fluid intake.  
+
+Phase  2  and  3:  A  contradiction  was  found  between  the 
+two  stakeholder  categories  with  respect  to  one  of  the 
+functionalities  proposed.  As  opposed  to  nurses’  view 
+regarding  the  toilet  map,  all  UPs  agreed  with  the  feature: 
+“That would be more than helpful. It would be indispensable 
+in  an  area  that  is  completely  unfamiliar  to  me.”  (UP1). 
+Regarding 
+interest, 
+whenever in need of a toilet, UPs tend to go to restaurants 
+and  bars  (4/9),  coffee  shops  (3/9)  and  public  toilets  on  the 
+street (2/9).  
+
+information/points 
+
+location 
+
+of 
+
+Figure 1: Examples of possible distraction techniques. 
+
+(e.g.,  animals,  states),  countdown 
+
+We  presented  UPs  with  screenshots  depicting  possible 
+distraction techniques (Fig. 1). Most UPs (7/9) agreed that a 
+game  can  be  a  viable  distraction  technique,  with  complex 
+ones,  that  “make  your  brain  work  hard”  (UP4)  being 
+preferred.  As  other  distractions,  UPs  mentioned  naming 
+objects 
+from  100, 
+multiplications, or simply visualizing names that pop up on 
+a screen. We also asked our UPs where they would play the 
+game,  with  home  being  the  preferred  location  (5/9), 
+followed by office (2/9) and commuting (1/9).  
+All  UPs  agreed  with  the  progress  feature  as  exciting  -  “it 
+would stimulate me” (UP2). We  also  discovered  that UPs  are 
+more  interested  in  visualizing  their  progress  in  terms  of 
+physical rehabilitation and not lifestyle changes. As a goal, 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 4 
+ 
+ 
+ 
+ 
+ 
+ 
+UPs  would  mostly  want  to  reduce  their  number  of  voids 
+(6/9) and leakages (3/9). UP4 drew the progress feature as a 
+bar  chart  [15],  with  both  leakages  and  number  of  voids 
+being represented. According to them, the progress should 
+be shown daily and differentiate between working days and 
+weekends. The number of voids and leakages could also be 
+coded by sad/happy  icons (e.g., a day  in  which  the person 
+has  an 
+leakages/voids  can  be 
+categorized as a ‘sad’ day). 
+
+increased  number  of 
+
+view regarding the PFM reminder icon. We presented them 
+with various screenshots (Fig. 4), from which Fig. 4 left (4/9) 
+and Fig. 4 right (3/9) were the preferred ones by 7/9 UPs. 
+
+A new function was suggested by UP6, as an official permit 
+to help people gain quick toilet access in public spaces. The 
+motivation  behind  this  is  that  certain  public  spaces  (e.g., 
+shops) do not allow non-customer toilet access.  
+
+Figure 2: Fluid intake and voiding drawings made by UPs. 
+
+We also discussed the possibility of having a bladder diary 
+and what representations would be best. For the fluid intake 
+input, UPs indicated a mug (Fig. 2 left - UP7), whilst for the 
+voiding one, a toilet representation (Fig. 2 right - UP4). 
+
+We also discussed the app icon and having security/privacy 
+features.  We  presented  UPs  with  various  icons,  some  that 
+aimed  not  to  draw  attention  (Fig.  3  left)  and  some  OAB 
+related (Fig. 3 right). No major preference was found as four 
+UPs would prefer the non-OAB icon and five the OAB one 
+as  “you can say it’s a water app.”  (UP6).  However,  5/9  UPs 
+would  like  a  security  feature  such  as  a  password  (2)  or 
+quick lock (1). UPs’ view varied from “I would most probably 
+delete  the  app  if  someone  would  take  my  phone  and  find  it 
+there.”  (UP2)  to  “No extra level of protection. Keep it as simple 
+as possible.” (UP8). 
+
+Figure 3: Example of icon representations: non-OAB related 
+icon (left) and slightly OAB related icon (right). 
+
+All UPs agreed with receiving PFM exercises reminders and 
+8/9 would also like an alert reminding them to drink more 
+liquids.  As  a  modality  to  receive  reminders,  vibration  was 
+chosen by all UPs, followed by sound (4/9) and silent (3/9). 
+Confirming one of our initial hypotheses that people might 
+perceive  the  app  as  being  embarrassing,  UP1  suggested 
+hiding  the  reminder:  “Consider  the  fact that  you  are home 
+and you have a visitor.  You wouldn't  like  anything  audio or 
+with  sound.”,  with  UP2  adding:  “No  pop-up  notification  – 
+What if your phone is in front of someone?”.  In  addition  to 
+fluid  intake reminders,  we also wanted to  understand UPs’ 
+
+Figure  4:  Example  of  PFM  exercises  reminder  screenshots: 
+PFM related icon (left) and slightly PFM related icon (right). 
+
+Regarding  the  emotion  wheel  feedback,  UPs  mostly 
+expressed  positive  emotions  such  as  ‘Relaxed’,  ‘Calm’  and 
+‘Happy’.  This  suggests  that  interviews  might  be  a  suitable 
+method  for  gathering  requirements  with  participants 
+suffering from a sensitive condition. During the third phase, 
+we  encountered  11  positive  and  7  negative  emotions.  This 
+might  be  because,  although  some  UPs  were  pleased  with 
+their  contribution “I like drawing!” (UP4),  some  did not like 
+drawing: “I don’t like drawing things.” (UP9). 
+
+3.3  Design Decisions 
+
+Based on the design findings from this study, we developed 
+the  first  prototype  on  a  Samsung  Galaxy  S6  smartphone, 
+with the following main functions: 
+
+Progress:  Considering  UP4’s  drawing  and  other  UPs’ 
+comments,  we  decided  to  design  the  progress  function  by 
+means  of  charts,  with  both  happy  and  sad  icons.  Users 
+would also have the option of setting up a goal in terms of 
+the number of voids they would like to achieve in a day. 
+
+Reminders and Disguise:  As  no  agreement  was  reached, 
+we decided to re-visit these features during Study 2.  
+
+Distraction:  We  settled  upon  three  techniques  for 
+distraction:  two  games  and  one  non-game  oriented.  The 
+first  game  was  Tetris  [21]  (Fig.  5  right)  as  puzzle  games 
+increase users’ level of attention [8, 13] and can be an ideal 
+distraction  technique.  Tetris  also  proved  successful  when 
+dealing  with  Post-Traumatic  Stress  Disorder  as  it  requires 
+attention  and  information  processing  [21]  –  which  further 
+strengthens 
+its  use  as  a  way  of  distraction.  Since 
+multiplications were also suggested, we considered that the 
+mathematical game 2048 [63] (Fig. 5 left) would be another 
+suitable  distraction.  Finally,  as  UPs  also  suggested 
+distractions that do not require any interaction and the fact 
+that  they  wouldn’t  be  able  to  play  games  all  the  time  at 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 5 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+work,  we  implemented  the  concept  of  doing  quick  PFM 
+contractions as a distraction. 
+
+Figure 5: The two  games  proposed  in the  application:  2048 
+(left) and Tetris (right). 
+
+Map:  The  map  feature  is  a  customized  version  of  the 
+Google  Maps  application  [24]  that  includes  only  the 
+locations  mentioned  by  UPs  during  the  interviews  (e.g., 
+restaurants,  bars)  which  might  have  toilets.  The  function 
+also provides directions together with duration to reach the 
+destination.  
+
+Bladder Diary:  We  decided  to  implement  the  fluid  intake 
+representation  as  in  Fig.  2  left.  UP4’s  suggestion  was  to 
+design  the  voids  screen  as  a  toilet  (Fig.  2  right).  However, 
+we felt as this representation would remind people of their 
+condition  and  due  to  privacy  concerns,  we  decided  to  use 
+the same design as for the fluid intake screen (e.g., a mug). 
+Precise urine quantities are required when filling in paper-
+based  bladder  diaries  or  in  existing  OAB  apps  [30,  57], 
+forcing people to use a receptacle each time to measure the 
+outcome.  Intuitively,  this  becomes  inconvenient  when  in 
+public  spaces  or  even  at  home.  We,  therefore,  decided  to 
+use approximations to avoid users having to measure urine 
+and instead implemented it as clickable images (Fig. 6 left). 
+As in the paper-based diary, our representation also records 
+when, their urge, and how much they urinated. 
+
+Treatment  Description:  This 
+contains  a 
+description  of  the  condition  and  its  treatment,  gathered 
+from medical leaflets designed for people with OAB.  
+
+feature 
+
+Toilet  Pass:  A  simple  screen  with  text  and  images, 
+specifying the person has OAB and needs toilet access.  
+
+4  STUDY 2 – PROTOTYPE INTERVIEWS 
+After  the  development  phase,  we  wanted  to  validate  our 
+prototype by interviewing again MPs and UPs. Both sets of 
+interviews  consisted  of  open-ended  questions;  data  were 
+analyzed in the same way as before. 
+
+Figure  6:  Our  voids  representation  (left)  as  opposed  to  the 
+paper-based bladder diary (right). 
+
+4.1  Medical Participants  
+
+4.1.1  Methodology.  The  app  complies  with  UK  OAB 
+guidelines  and  we  also  confirmed  with  MPs  that  it  is 
+suitable for their patients. MPs were presented with the app 
+installed  on  a  Samsung  Galaxy  S6  device  and  asked  to 
+comment  on  the  features.  In  total  four  semi-structured 
+interviews  were  conducted  with  one  medical  consultant 
+(MP2) and four urinary continence specialist nurses (MP3 - 
+6). MP2 and MP3  took part  in  Study 1 under  the  same MP 
+number. MP4 and MP3 were partially interviewed together 
+as  MP4  had  to  leave  during  the  interview.  All  interviews 
+were conducted face to face and notes were taken down.  
+
+4.1.2 Findings. MPs agreed with the functionalities presented 
+and  provided  suggestions  on  how  to  improve  them. 
+Regarding  the  progress,  MP2  suggested  providing  only 
+happy  icons  as  positive  reinforcement.  Although  the 
+information  provided  in  the  treatment  description  was 
+chosen  from valid  leaflets, providing  images  and links was 
+suggested. In line with the literature stating that OAB is an 
+embarrassing  condition  [10],  two  nurses  suggested  to  not 
+specify  the name  of the condition  in the  toilet pass due to 
+confidentiality  reasons  or  personal  preferences  “People 
+might not like that it states it's OAB.” (MP5).  
+
+Contradictions  were  also  found  between  the  feedback 
+provided  in  Study  1  and  the  findings  of  this  study.  For 
+example,  all  MPs  now  agreed  with  the  map  feature  with 
+MP3  stating:  “Depends on the regime, I don't think it's a bad 
+feature.”,  whilst  MP4  mentioned:  “I  understand  the 
+contradiction as the map can increase the perception of going 
+to  the  toilet.  However,  I  agree  with  the  feature  as  it  reduces 
+anxiety  -  it  provides  reassurance  and  helps  people  adjust  to 
+the  regime  better.”.  Another  contradiction  found  was 
+regarding the bladder diary. Whilst two nurses emphasized 
+the  fact  that precise  urine quantities  are needed otherwise 
+the  diary  would  be  meaningless,  MP2  agreed  with  using 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 6 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+approximations  as  “Measuring  urine  is  not  easy  and  this 
+would increase compliance.”.  
+
+3  right)  as  “it's descriptive but doesn't offer  too much info.” 
+(UP10).  
+
+4.2  User Participants  
+
+4.2.1 Methodology. As  with  the  MPs  interviews,  UPs  were 
+presented  with  the  updated  app  and  asked  to  provide 
+feedback.  In  addition,  they  were  presented  with  possible 
+embarrassing  situations  and  asked  if  they  might  want  the 
+app to be discreet. We interviewed six people (UP9-14) with 
+OAB  symptoms  of  various  ranges,  five  females  and  one 
+male, age range 35 - 73, mean age 54.6. UP9 also  took part 
+in  Study  1.  All  UPs  either  agreed  or  strongly  agreed  that 
+they  are  confident  using  a  smartphone.  With  respect  to 
+OAB  apps,  only  one  UP  is  using  the  Squeezy  [55]  app  for 
+PFM  exercises.  Only  one  interview  was  conducted  face  to 
+face and all others via Skype. Among the online interviews, 
+three UPs were presented with app screenshots as they did 
+not  own  an  Android  OS  device.  As  the  purpose  of  this 
+interview  was to collect qualitative data regarding  the app 
+design,  we  felt  that  presenting  the  prototype  in  various 
+ways  did  not  influence  UP’s  view.  We  recruited  UPs  via 
+contact provided in an online bladder diary questionnaire. 
+
+4.2.2  Findings.  All  UPs  agreed  with  the  functionalities 
+implemented.  Several  improvements  were  suggested  such 
+as  displaying  only  one  location  at  a  time  on  the  map 
+“because  sometimes  the  icons  are  too  close  to  each  other” 
+(UP13) or to revise the urine quantity representation in the 
+bladder  diary.  In  line  with  the  MPs’  comments,  two  UPs 
+suggested  improving  the  treatment  description  with  more 
+information  on  the  PFM  topic.  UPs  would  mostly  play  the 
+games at home (5/6), followed by on the bus (3/6) and work 
+(1/6). Nearly all UPs (5/6) mentioned the same locations for 
+both games. Candy Crush [12] and Solitaire [54] were other 
+games suggested. Some of the other distraction techniques, 
+e.g., countdown from 100 and naming objects did not meet 
+with  much  approval  with  half  or  less  saying  these  were 
+suitable. As for the MPs’ feedback regarding the toilet pass, 
+two  UPs  suggested  changing  the  OAB  terminology  to 
+“sensitive  bladder”  (UP11)  because  “OAB  symptoms  seems 
+like a medical term.” (UP15). 
+
+The progress icons generated mixed feedback with one UP 
+stating:  “The sad face shows you’ve failed but it might not be 
+the case. For example, for me, the urge is worse when it’s cold 
+outside and it’s not my fault.”  (UP10).  Regarding  the  privacy 
+aspect, only UP10 asked for a password to open the app. All 
+other UPs suggested avoiding this functionality as: “It would 
+only  overcomplicate  things”  (UP11),  “It's  not  that  sensitive 
+info, it's not a major priority”  (UP13),  and,  “It would be too 
+complicated  and  if  I  have  the  urge  an  extra  layer  would 
+annoy me.” (UP14). All UPs voted for the same app icon (Fig. 
+
+Although  all  UPs  agreed  that  it  would  be  useful  having  a 
+PFM  exercises  reminder,  no  agreement  was  achieved 
+regarding  the  modalities  by  which  to  send  the  reminder, 
+when  to  send  it  or  its  icon.  Whilst  two  UPs  did  not  want 
+any icon, two preferred Fig. 4 left and two Fig. 4 right.  
+
+Contradicting  the  literature  review  and  Study  1  findings 
+regarding  embarrassment  and  stigma,  no  ideas  for  making 
+the  design  more  discreet  were  generated  or  asked  for  by 
+UPs during this study. 
+
+4.3  Design Decisions 
+
+We  took  on  board  the  new  suggestions  and  decided  to 
+implement several changes. Firstly, with respect to the map, 
+we  settled  upon  displaying  only  one  location  at  a  time, 
+giving the option to users to see additional toilet locations if 
+they  wished.  Secondly,  the  progress  was  changed  to  only 
+show positive icons, which are generated based on the goal 
+(Fig. 7). We decided to represent the first three days of the 
+progress based on the data entered into the diary (as this is 
+a common practice in the UK [20]). However, as people fail 
+to  fill  in  diaries,  we  felt  it  would  be  appropriate  to 
+automatically calculate the progress for the remaining days 
+according  to  distraction  techniques  usage  and  other 
+notifications  sent  by  the  app.  Thirdly,  small  changes  were 
+made  in  the  bladder  diary  function  regarding  the  urine 
+quantities.  Fourthly,  the  text  in  the  toilet pass function  was 
+changed based on recommendations. 
+
+Figure 7: Original (left) and New (right) Progress Chart. 
+
+Lastly,  we  changed  some  information  in  the  treatment 
+description  provided  and  added  two  videos.  The  only 
+function  remaining  the  same  is  the  games  as  no  changes 
+were suggested. No privacy feature was implemented as no 
+agreement  could  be  reached  during  Study  1  and  only  one 
+UP  wished  one  in  Study  2.  Finally,  we  settled  upon  Fig.  3 
+right  as  the  app’s  icon,  Fig.  4  right  as  the  PFM  exercises 
+reminder  icon  and  letting  users  decide  by  which  modality 
+they wish to receive a reminder. 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 7 
+ 
+ 
+ 
+ 
+5  STUDY 3 – SHORT FIELD STUDY 
+Kjeldskov  and  Skov  [47]  and  Baillie  and  Schatz  [6] 
+underline  the  importance  of  conducting  short  in  situ 
+evaluations  as  lab-based  ones  could  leave  usability  or  UX 
+issues  unrevealed. We, therefore, evaluated the  app  during 
+a  short  field  study  with  UPs.  When  evaluating  an  app  for 
+older  adults  with  age-related  macular  degeneration, 
+Hakobyan  et  al.  [26]  conducted  a  preliminary  7  days 
+evaluation  study  before  carrying  on  with  a  6  weeks 
+longitudinal  field  one.  Previous  sensor  research  [34,  39] 
+found  differences  between  weekdays  and  weekends  and 
+recommend undertaking a study which lasts at least a week 
+(best  9-11  days)  and  collects  both  weekday  and  weekend 
+data. Given this, we ran the study for 9 days. 
+
+5.1  Methodology 
+The  study  was  divided  into  three  phases  (Table  3)  and 
+aimed to discover app usability issues, collect sensor data to 
+understand  how  people  interact  with  the  app  in  the  field, 
+and  understand  if  users’  design  decisions  from  previous 
+studies hold when using the app in a real-life context. 
+
+Table 3. User Participants – Study 3 Structure. 
+
+Phase 
+Phase 1 Set Up  
+
+Phase 2 Field 
+Study 
+Phase 3 
+Uninstallation 
+
+Content 
+App installation and usability 
+evaluation. 
+Nine days uncontrolled field study. 
+
+App uninstallation and usability 
+evaluation. 
+
+We started by posting invitations on social media and flyers 
+around  universities,  libraries  and  leisure  centers.  We  also 
+emailed prostate cancer support groups. As people were not 
+coming  forward,  we  also  advertised  the  study  over  the 
+radio.  We  recruited  six  UPs  (UP15-20),  three  males  and 
+three females, age range 26 – 66, mean age 54.6. Most UPs 
+(5/6) agreed or strongly agreed they were confident using a 
+smartphone. No UP was aware of other OAB apps. 
+The  first  phase  was  a  face  to  face  or  Skype  interview  in 
+which  the  app  was  installed  on  UPs’  phone.  After 
+installation,  UPs  were  asked  to  interact  with  the  app  by 
+conducting  tasks  related  to  the  features  (e.g.,  set  up  the 
+desired  preferences,  input  data  into  the  diary  and  inspect 
+the  map).  After  each  task,  UPs  evaluated  the  workload 
+using  the  standard  NASA-TLX  questionnaire  [42,  27].  We 
+provided  UPs  with  tasks  and  NASA-TLX  questionnaire  as 
+we  wanted  to evaluate  the  app  and  the  mental  load of  the 
+
+games  (since  we  were  using  them  as  a  suppression 
+technique).  This  measure  has  proved  successful  when 
+evaluating other mHealth apps [28, 38]. Again, we used the 
+emotion  wheel  by  Baillie  et  al.  [5]  to  capture  players’ 
+emotions  regarding  the  games.  We  administered  a  wheel 
+before  playing  the  game  to  capture  their  initial  emotions 
+and  a  second one after to understand whether  this type of 
+distraction had an emotional impact on users. 
+
+The  second  phase  was  a  9  days  field  study  in  which  UPs 
+interacted with the app  freely  in the field. As  suggested  in 
+[39],  we  collected  sound,  light  and  magnetic  field  data  to 
+capture  environment  data,  WIFI  (connected  and  visible 
+hotspots name) to determine location and accelerometer to 
+determine  motion.  Additionally,  we  collected  app  log  data 
+(number of accesses per feature and duration) from all UPs. 
+We collected the environment and other data as we wished 
+to  investigate  how  an  algorithm  could  be  used  to  improve 
+app functions such as distraction techniques durations and 
+frequency  of  reminders.  Data  were  automatically  collected 
+and uploaded to a server. No personal information such as 
+photos, messages, and contacts was accessed or collected.  
+
+After the field study, UPs were asked to participate again in 
+a  short  interview  (Phase  3).  As  we  wanted  to  determine 
+whether using the app in the field has an impact on the way 
+users  perceive  it,  the  same  procedure  as  in  the  first  phase 
+was  applied.  Additionally,  UPs  were  asked  to  fill  in  a  SUS 
+questionnaire 
+[9]  and  answer  additional  questions, 
+composed of 5-point Likert scales. These data were needed 
+to understand whether the app was usable, if the UPs were 
+satisfied  with  the  features  and  if  they  would  recommend 
+the  app  to  other  people  with  OAB.  At  the  end  of  the 
+interview, the app was uninstalled from their phone. Apart 
+from  UP16  who  owned  a  Huawei  device,  all  other  UPs 
+owned a  Samsung Galaxy smartphone, same  as  the  device 
+used  for  development.  Full  data  (including  sensor  data) 
+were  collected  from  UP15,  UP17,  UP18,  and  UP19.  Due  to 
+technical  issues,  only  interview  and  app  interaction  usage 
+data were collected from UP16 and UP20. 
+
+5.2  Findings 
+
+Although  evaluated  by  only  six  UPs,  the  85.8  SUS  score 
+indicates that the app usability can be classified as excellent 
+[7].  This  is  also  reflected  in  the  fact  that  all  UPs  would 
+recommend the app to other OAB people and all would like 
+to be informed when the new app version is available. UP20 
+emphasized  the  benefits  of  using  the  app:  “The more I used 
+the  application,  the  better.  I  feel  more  relaxed  about  it.  It 
+helped  me  to  take  more  control.  I'm  going  to  the  toilet  less, 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 8 
+ 
+Distraction 
+
+UP 
+
+Location 
+
+Movement 
+
+Environment 
+
+2048 
+
+Tetris 
+
+Quick 
+Contraction
+s 
+
+UP15 
+
+UP17 
+
+UP18 
+
+UP19 
+
+UP20 
+
+UP15 
+
+UP17 
+
+UP18 
+
+UP19 
+
+UP20 
+
+UP15 
+
+UP17 
+
+UP18 
+
+UP19 
+
+UP20 
+
+Home, 
+Travelling 
+
+Still, On Foot 
+
+- 
+
+Home 
+
+Home 
+
+- 
+
+- 
+
+Still 
+
+Still 
+
+- 
+
+Home, 
+Travelling 
+
+On foot, In 
+Vehicle 
+
+Quiet/Loud, 
+Dark/Bright 
+
+- 
+
+Quiet, Dark 
+
+Quiet, Dark/Bright 
+
+- 
+
+Quiet, Dark/Bright 
+
+Home 
+
+Home 
+
+Home 
+
+- 
+
+Home 
+
+Home 
+
+- 
+
+Home 
+
+- 
+
+Still 
+
+Still 
+
+Still 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+Quiet, Bright 
+
+Quiet, Dark 
+
+Quiet, Bright 
+
+- 
+
+Quiet, Bright 
+
+Quiet, Bright 
+
+- 
+
+Quiet, Bright 
+
+- 
+
+Total 
+No. 
+Days 
+
+Total No. 
+Accesses 
+
+1 
+
+1 
+
+8 
+
+3 
+
+2 
+
+4 
+
+3 
+
+8 
+
+3 
+
+7 
+
+1 
+
+1 
+
+3 
+
+1 
+
+6 
+
+4 
+
+3 
+
+33 
+
+4 
+
+4 
+
+5 
+
+3 
+
+22 
+
+3 
+
+16 
+
+1 
+
+1 
+
+6 
+
+1 
+
+15 
+
+Duration  
+
+1 – 8 mins 
+
+1 min 
+
+5 – 41 mins 
+
+3 – 10 mins 
+
+3 secs - 18 mins 
+
+7 secs - 16 mins 
+
+2 mins 
+
+16 secs - 47 mins 
+
+2 – 3 mins 
+
+1 secs - 22 mins 
+
+12 secs 
+
+8 secs 
+
+0 - 23 secs 
+
+12 secs 
+
+1 secs - 2 mins 
+
+Figure 9. Users’ engagement with the distraction techniques.
+
+am  less  anxious.  I  managed  to  drop  2  runs  to  the  toilet  per 
+day.  It  helped  me  make  a  routine  of  avoiding  going  to  the 
+toilet, especially by doing the PFM exercises.” 
+
+Progress:  UPs  mostly  checked  their  progress  at  home, 
+during  the  first  three  days  and  after  entering  voiding  data 
+into the diary. This could reflect the fact that people like to 
+visualize  their  progress.  The  number  of  instances  for 
+checking  their  progress  decreased  significantly  after  the 
+first  three  days  in  which  they  were  asked  to  fill  in  the 
+bladder diary (Fig. 8). This might mean that UPs questioned 
+or  did  not  understand  the  accuracy  of  the  automatically 
+calculated progress or perhaps more interaction is required 
+to keep them motivated.  
+
+Figure  8:  Total  number  of  accesses  per  day  regarding  the 
+progress feature over the course of the study.  
+
+UPs  perceived  the  overall  workload  between  0%-5%, 
+indicating  that  reading  the  progress  chart  was  easy  to  do. 
+Most  UPs  (4/6)  were  satisfied  with  the  feature  and  5/6 
+strongly  agreed  or  agreed  that  seeing  their  progress  was 
+motivational. Regarding setting up a goal, all UPs strongly 
+agreed or agreed it was motivational. Half UPs managed to 
+achieve  their  goal,  from  whom  two  strongly  agreed  that 
+seeing the happy icons in the progress was motivational: “It 
+made me aware that I made my target.” (UP17).  
+
+Reminders: According  to  their preferred settings, 5/6 UPs 
+consider the PFM reminder as being important and did not 
+have an issue with the notification being displayed on their 
+screen  when  the  phone  is  locked.  This  finding  contradicts 
+the  discreetness  suggestions  provided  in  Study  1.  As 
+previously  found  [38,  14],  4/6  UPs  stated  the  reminders 
+helped in adhering to their exercise and fluid intake regime: 
+“Think it is a good feature, it was helpful.”  (UP20),  “The whole 
+app made me aware of the exercises and the fluids.”  (UP17). 
+Only  two  UPs  are  not  drinking  the  right  amount  of  fluids 
+per  day  and  received  the  reminder.  Among  them,  one 
+mentioned it helped them drink a proper amount of fluids. 
+
+Distractions: All UPs  agree or strongly agree when asked 
+if  they  are  satisfied  with  the  games:  “Now I found  I  can 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 9 
+ 
+ 
+distract myself-not totally, but I can take my mind out of the 
+urge  and  go  continue  with  other  things.”  (UP18).  The 
+complexity of the games played an important role, as UP20 
+commented  about  the  game  2048:  “I get totally caught into 
+this.  I  find  it  very  absorbing.”  and  added,  “Your  games  are 
+complicated which is good on one hand.”  
+
+Most  UPs  perceived  the  mental  workload  on  the  NASA-
+TLX as being high (70%-90%) and showed an increased level 
+of  Frustration  (e.g.,  90%):  “It's not easy. I enjoyed playing this 
+one  but  it's  again  frustrating.”  (UP19  regarding  2048).  For 
+Tetris,  the  temporal  demand  and  the  level  of  effort  were 
+marked with a workload between 20%-100%.  
+
+The emotion wheels  provided before  and after playing  the 
+games show a change in emotions in 2/6 UPs (from Amused 
+and  Happy  to  Frustrated).  Contradictions  were  also  found 
+between  the  feedback  provided.  UP19  felt  approximately 
+30%-35% Frustrated but selected positive emotions (Relaxed 
+and  Amused)  in  the  emotion  wheel  after  playing  2048. 
+UP18’s  emotions 
+in 
+contradiction with feeling 25%-30% Frustrated after playing 
+Tetris.  As games (especially  Tetris)  might cause  anxiety  in 
+its  players  [13],  we  asked  our  UPs  whether  they 
+encountered similar experiences. No UP mentioned that the 
+games caused anxiety while playing. Although the feedback 
+collected  in  the  emotion  wheels  and  the  NASA-TLX 
+questionnaire  show  some  emotion  changes,  none  of  them 
+relates to anxiety.  
+
+(Satisfied  and  Amused)  are 
+
+UPs’ engagement with the games varies as some (e.g., UP18) 
+played  multiple  times  per  day  in  8/9  days  of  the  study, 
+whilst  others  (e.g.,  UP20  and  UP19)  played  for  two-three 
+days. Location is also an important factor as all UPs mostly 
+played  the games  at home. This is  strengthened by UP19’s 
+comment  that  “Games helped me. But they do not work when 
+I am out and about and walking.” and  UP20  who  is  “More 
+confident in using the distractions when at home or at work.”. 
+Fig.  9  shows  how  each  UP  interacted  with  the  distraction 
+techniques during the study (UP16 only played Tetris once 
+for 6 minutes). 
+
+Regarding  the  quick  PFM  contractions,  UPs  evaluated  the 
+overall  workload  between  0%-5%,  indicating  that  reading 
+the  instructions  is  easy.  This  distraction  met  with  higher 
+approval  among  female  UPs  (2/3):  “The most successful in 
+terms  of,  let's  say  discreet  and  less  time  required.  It's  quite 
+efficient for me.” (UP20). 
+
+Map:  UPs  evaluated  the  overall  workload  of  interacting 
+with  the  feature  to  be  low  on  all  NASA-TLX  scales 
+(between  0%-10%).  Contrary  to  our  expectations,  UPs  did 
+not use the feature at all during the field study. One reason 
+for this might be the fact that UPs used the app for a short 
+
+period  of  time  in  known  locations  and  did  not  find 
+themselves  in  a  situation  where  they  needed  to  use  the 
+map. Although nurses declared in Study 1 that a toilet map 
+would  stop people  from  adhering  to  treatment  as  it would 
+facilitate toilet access, the feature is perceived as providing 
+assurance:  “Like  to  know  in  the  back  of  my  head  there  is  a 
+toilet.”  (UP20).  So  contrary  to  our  original  thoughts,  the 
+main function  of the  map could be reassurance,  indicating 
+that lack of interaction does not mean lack of user need for 
+the function.  
+
+Bladder Diary:  All  UPs  evaluated  the  overall  NASA-TLX 
+workload  to  be  0%-5%,  indicating  that  inputting  data  is 
+trivial.  This  is  validated  by  the  fact  that  all  UPs  strongly 
+disagreed  that  inserting  data  was  difficult.  The  following 
+comment validates the literature [61] and Study 1-Findings 
+and explains why UPs mostly inserted data when at home: 
+“I strongly agree it's difficult remembering to input data. I did 
+best on my routine days but during weekends it’s different. It's 
+hard to remember to record something that is natural and not 
+a big event.” (UP20). 
+
+Most  UPs  (4/6)  filled  in  the  diary  only  for  the  three 
+requested  days,  although  some  did  it  for  more  days.  For 
+most UPs, the accuracy of the data inserted is questionable 
+as  the  timings  for  inputting  fluid  and  void  data  coincide. 
+This  is  also  reflected  in  the  fact  that  UPs  mostly  inputted 
+the data at home, which means it was not in real time. We 
+wanted to make filling in the diary as easy as possible and 
+decided  to  automatically  save  the  time  when  users  input 
+data. However, our  findings  show  that UPs would actually 
+like  altering  the  timings:  “The possibility of altering the time 
+for  the  bladder  diary  as  it's  not  always  possible  to  record 
+things  straight  away.  I  used  to  do  a  mental  record  and  then 
+fill it in.”  (UP16).  This  might  also  be  the  reason  why  the 
+timings  for  inputting  fluid  intake  and  void  data  coincide. 
+Regarding  approximating  the  urine  quantity,  4/6  UPs 
+strongly disagreed or disagreed it is difficult to do.  
+
+found  the 
+
+Treatment Description: All  UPs  evaluated  the  workload 
+between  0%-5%.  All  UPs  strongly  agree  or  agree  with  the 
+feature  and 
+information  provided  useful. 
+Although it has been suggested to include videos, only one 
+male  UP  watched  the  two  available  videos.  UP17,  already 
+familiar  with  the  exercises  declared  “I  didn't  watch  the 
+videos as I am already doing them. Maybe to refresh but after 
+3 years I think I'm doing them right.”. 
+
+Toilet  Pass:  Half  of  the  UPs  strongly  agree  with  it. 
+Although it has been accessed multiple times, no UP used it 
+in  unknown  places:  “It might be useful. I have a card in my 
+wallet, but I would use that one first.” (UP16). 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 10 
+ 
+6  DISCUSSION 
+In  this  section,  we  discuss  the  outcomes  from  the  three 
+studies and how they address our research questions. 
+
+RQ1:  What key features should an OAB mHealth app have to 
+support people during self-managed treatment? 
+
+Progress:  We  wanted  to  understand  whether  we  should 
+allow  users  to  set  goals,  show  their  progress  and  provide 
+positive  feedback  when  the  goal  is  reached.  Although  the 
+progress  feature  was  met  with  high  approval  during  the 
+first two studies, we obtained mixed results during the field 
+study.  For  the  first  three  days,  the  progress  was  displayed 
+based  on  the  data  inputted  in  the  bladder  diary.  In  the 
+following six days, it was automatically calculated based on 
+distraction techniques usage and other notifications sent by 
+the app. In comparison to the first three days, we found that 
+in  this part of  the  study (in which no  user interaction was 
+needed)  the  progress  checking  dropped  significantly.  This 
+seems  to  suggest  that  either  UPs  did  not  understand  how 
+the  app  was  automatically  calculating  progress  or  that  a 
+minimal  level of  interaction  is required,  such as filling out 
+the bladder diary daily in order to keep users motivated in 
+tracking  their  progress.    In  our  next  app  version,  we  will 
+ask  users  to  keep  on  entering  data  into  the  diary  (as  the 
+findings  showed  this  was  quick  to  do  and  required  low 
+workload). 
+
+Reminders:  Performing  daily  PFM  exercises 
+is  an 
+important  part  of  the  bladder  retraining  regime  as  well  as 
+drinking  a  proper  amount  of  fluids  per  day.  Our  results 
+show  that  reminders  help  people  with  their  PFM  exercise 
+regime and in promoting a healthier lifestyle.  
+
+to 
+
+implement  distraction 
+Distraction:  We  wanted 
+techniques from going to the toilet when there is an urge to 
+urinate.  Mobile  phone  games  have  proved  successful  in 
+promoting healthier lifestyles such as teaching people how 
+to make healthier meal choices [25] or  motivating them to 
+have  a  healthy  water  intake  [14].  On  the  other  hand, 
+interactive  games  did  not  prove  successful  in  helping 
+people  quit  smoking  [46].  Given  UPs’  comments  and 
+interactions  during  the  field  study,  our  results  tally  with 
+[25]  and  indicate  that  games  could  be  a  successful 
+distraction  technique,  if  users  find  it  engaging.  Given  the 
+high  perceived  workload  in  the  Mental  Demand  scale 
+the  NASA-TLX,  playing  mentally 
+measured  using 
+demanding  games  could  also  be  a  successful  urge 
+suppression  technique.  The  NASA-TLX  also  showed  that 
+there  was  a  high  level  of  frustration  after  playing  the 
+games.  However,  the  emotion  wheel  results  indicate  that 
+users  were  amused  and  satisfied.  This  could  suggest  that 
+designers  should  not  rely  only  on  the  NASA-TLX 
+
+questionnaire  if  they  want  to  have  a  full  picture  of  users’ 
+feelings towards a certain interaction.   
+
+Embarrassment: We wanted to know if the app needed to 
+be disguised or have additional access permissions because 
+of  potential  embarrassment  concerns.  Contradicting 
+literature  findings,  our  results  show  that  embarrassment 
+was not a major factor for our UPs. Whilst discreetness and 
+increased privacy ideas were suggested during Study 1, UPs 
+in  Study  2  said  that  an  additional  level  of  security  could 
+over complicate things, causing annoyance when quick app 
+access  is  needed.  It  is  therefore  clear  there  may  be 
+competing  demands  when  it  comes  to  an  OAB  app  e.g., 
+security could be an impediment to quick access.   
+
+Location: We  investigated the possibility of having a map 
+displaying  the nearest points of  interest that  might have  a 
+toilet. Although contradictions were found between the two 
+stakeholder  categories,  UPs  emphasized  the  importance  of 
+having  such  a  feature  and  therefore,  we  decided  to 
+implement it. Although UPs did not interact with it during 
+the  field  study,  we  found  that  they  said  that  it  provided 
+reassurance.  We  would  like  to  dig  deeper  into  this 
+interesting  aspect  for  design  and  re-evaluate  the  feature 
+during a longitudinal field study.  
+
+Bladder Diary:  A  bladder  diary  is  a  form  of  assessment. 
+During  the field  study, UPs  tended  to check their progress 
+immediately  after  entering  data  in  the  diary.  This  might 
+indicate that people like to track their symptoms. Therefore, 
+we  think  that  providing  users  with  a  direct  interaction 
+process  that  then  is  reflected  in  their  progress  may  be 
+important 
+that  graphical 
+representations of the assessment data should be provided. 
+
+for  a  mHealth  app  and 
+
+RQ2:  How might an OAB app help people self-manage their 
+treatment and raise awareness of symptoms?   
+
+One  way  of  increasing  adherence  is  by  showing  progress, 
+providing  reminders  and  allowing  users  to  set  goals  [45, 
+38]. Our results show that these findings could also hold for 
+embarrassing conditions. Previous research [45, 37] showed 
+the  importance  of  progress  and  positive  feedback,  such  as 
+scores  or  badges  to  help  people  adhere  to  treatment. 
+However, although linked, the two are usually displayed on 
+separate  screens.  Our  results  show  that  combining  happy 
+icons  (the  user  reached  their  voids  goal)  and  displaying 
+them directly  within  the progress  screen (number  of  voids 
+in the past week) motivates people. Therefore, mHealth app 
+designers could consider bringing together the progress and 
+the goals onto the same screen.  
+
+Confirming  other  literature  findings  [38,  14],  our  data 
+showed  that reminders helped  our UPs  with their exercise 
+regime and in consuming proper amount of liquid per day. 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 11 
+ 
+ 
+ 
+Although  in  previous  research  reminders  were  focusing 
+only  in  one  area  (e.g.,  exercise  adherence  [38],  or  lifestyle 
+changes  [14]),  we  show  that  having  more  than  one 
+reminder type is not annoying and could encourage people 
+with  their  self-managed  treatment.  Therefore,  designers 
+may consider using more than one reminder type.  
+
+During  Study  1,  it  was  suggested  to  us  to  include  a 
+treatment  outline.  This  feature  met  with  high  approval 
+during  Study  2  and  had  a  high  number  of  accesses  during 
+Study  3.  Moreover,  given  the  fact  that  UPs  stated  the  app 
+made them more aware of their exercises and fluid intake, it 
+can  be  concluded  that  the  app  also  has  the  potential  of 
+increasing awareness of OAB symptoms. 
+
+RQ3:  Does context have an impact on how users engage with 
+the app? 
+
+As  suggested  in  the  literature  [6,  47],  both  lab  and  field 
+studies  are  needed  to  properly  evaluate  the  usability  of  a 
+mobile  phone  app.  Our  data  validate  this  finding  as  we 
+discovered  design  issues  with  some  features  (e.g.,  bladder 
+diary,  location  map,  and  games)  that  were  not  highlighted 
+during  the  first  two  studies.  Our  results  also  show  that 
+context  plays  an  important  role  in  the  app  interaction  as 
+our UPs mostly interacted with it at home. There are only a 
+few  instances  where  people  used  the  app  in  different 
+locations, such as being in a vehicle. This can reflect the fact 
+that people would mostly use the app in a comfortable but 
+also safe environment. 
+
+7  LIMITATIONS AND FUTURE WORK 
+One limitation of our work is the low number of UPs in our 
+field  study.  Despite  using  all  the  usual  routes  and  OAB 
+association  websites,  we  encountered  major  recruitment 
+issues. As we are planning in our next studies to make the 
+app  freely  available  for  download,  we  hope  to  achieve 
+higher numbers. Our next step is to conduct a longer-term 
+field study to evaluate if the app can increase adherence to 
+self-managed treatment and raise awareness of symptoms.  
+
+8  CONCLUSION 
+This paper  presents  an  exploratory study  in  which  we  co-
+designed  and  then  evaluated  with  people  with  OAB  and 
+health professionals an OAB mHealth app. We commenced 
+with an  OAB and  mHealth  app literature review and  used 
+this as the basis for our requirements gathering interviews. 
+Based on the data collected we designed the first prototype 
+and validated it again with the same stakeholder categories. 
+Given  the  second  round  of  feedback,  we  improved  the 
+design of the app and evaluated it in a field study for nine 
+days with people with OAB.  
+
+Our  findings  show  that,  visualizing  progress  and  setting 
+goals  can  be  viewed  on  the  same  screen  and  could 
+encourage  people  to  continue  using  the  app.  Regarding 
+reminders, having more than one type of reminder does not 
+increase annoyance and could encourage adherence to self-
+managed  treatment.  Regarding  games,  users  found  them 
+engaging and useful in their goal of suppressing the urge to 
+visit  the  bathroom.  We  found  that  designers  may  want  to 
+consider using more than one technique when assessing the 
+success  of  a  game  and  its  emotional  impact  on  users. 
+Contrary  to  the  current  research  direction,  we  discovered 
+that automatically calculating progress may be a detriment 
+to  app  interaction.  We  found  that  an  OAB  mobile  phone 
+app  has  the  potential  to  increase  observance  to  self-
+managed treatment and raise awareness of symptoms.  
+
+REFERENCES 
+[1]   Association  of  Reproductive  Health  Professionals.  2011.  Diagnosis 
+
+and Management of Overactive Bladder. 
+
+[2]   Mobolaji Ayoade and Lynne Baillie. 2014. A novel knee rehabilitation 
+
+system for the home. In Proc CHI '14.  
+
+[3]   Moses Akazue, Martin Halvey and Lynne Baillie. 2017. Using thermal 
+stimuli  to  influence  affect  in  different  picture  display  sizes. Personal 
+and Ubiquitous Computing. 
+
+[4]   Lynne Baillie. 2002. The home workshop: a method for investigating 
+
+the home. Ph.D. Dissertation. Edinburgh Napier University. 
+
+[5]   Lynne Baillie, Lee Morton, David C. Moffat and Stephen Uzor. 2011. 
+Capturing the response of players to a location-based game. Personal 
+and Ubiquitous Computing 15.1. 
+
+[6]   Lynne Baillie and Raimund Schatz. 2005. Exploring multimodality in 
+the laboratory and  the  field.  In Proceedings of  the  7th international 
+conference on Multimodal interfaces. 
+
+[7]   Aaron  Bangor,  Philip  T.  Kortum  and  James  T.  Miller.  2008.  An 
+Empirical  Evaluation  of  the  System  Usability  Scale.  International 
+Journal  of  Human-Computer 
+(6):  574–594. 
+doi:10.1080/10447310802205776 
+
+Interaction.  24 
+
+[8]   Walter  R.  Boot, Arthur  F.  Kramer, Daniel  J.  Simons, Monica  Fabiani 
+and Gabriele  Gratton.  2008.  The  effects  of  video  game  playing  on 
+attention,  memory,  and  executive  control.  Acta  psychologica 129.3: 
+387-398. 
+
+[9]   John Brooke. 1996. SUS -  A Quick and Dirty Usability Scale. Usability 
+
+evaluation in industry, 189(194), pp.4–7. 
+
+[10]   Kathryn L. Burgio, Patricia S. Goode, Julie L. Locher, Mary G. Umlauf, 
+David  L.  Roth,  Holly  E.  Richter,  Edward  Varner  and  Keith  Lloyd. 
+2002.  Behavioural  Training  With  and  Without  Biofeedback  in  the 
+Treatment  of  Urge  Incontinence  in  Older  Women:  A  Randomized 
+Controlled Trial. Journal of the American Medical Association 
+[11]  Michelle  N.  Burns,  Mark  Begale,  Jennifer  Duffecy,  Darren  Gergle, 
+Chris J. Karr, Emily Giangrande and David C. Mohr. 2011. Harnessing 
+for 
+context 
+depression. Journal of medical Internet research, 13(3). 
+
+intervention 
+
+a  mobile 
+
+develop 
+
+sensing 
+
+to 
+
+[12]   Candy Crush, https://candycrushsaga.com/en/ 
+[13]  Guillaume  Chanel,  Cyril  Rebetez,  Mireille  Bétrancourt  and  Thierry 
+Pun.  2008.  Boredom,  engagement  and  anxiety  as  indicators  for 
+adaptation  to  difficulty  in  games.  In Proceedings  of  the  12th 
+international  conference  on  Entertainment  and  media 
+in  the 
+ubiquitous era. ACM. 
+
+[14]   Meng-Chieh Chiu, Shih-Ping Chang, Yu-Chen Chang, Hao-Hua Chu, 
+Cheryl Chia-Hui Chen, Fei-Hsiu Hsiao and Ju-Chun Ko. 2009. Playful 
+bottle:  a  mobile social  persuasion system  to  motivate  healthy water 
+international  conference  on 
+intake. Proceedings  of 
+Ubiquitous computing.  
+
+the  11th 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 12 
+ 
+[15]   Eun  Kyoung  Choe,  Nicole  B.  Lee,  Bongshin  Lee,  Wanda  Pratt  and 
+Julie  A.  Kientz.  2014.  Understanding  quantified-selfers'  practices  in 
+collecting  and  exploring  personal  data. Proceedings  of  the  32nd 
+annual ACM conference on Human factors in computing systems.  
+
+[16]   Sebastian  Deterding,  Andrés  Lucero,  Chulhong  Min,  Adrian  Cheok, 
+Annika  Waern  and  Steffen  Walz.  2015.  Embarrassing  interactions. 
+In Proceedings  of  the  33rd  Annual  ACM  Conference  Extended 
+Abstracts  on  Human Factors  in  Computing Systems (pp.  2365-2368). 
+ACM. 
+
+[17]   Julie A. Couture and Luc Valiquette. 2000. Urinary Incontinence. The 
+
+Annals of Pharmacotherapy. 
+
+[18]   Karin  S.  Coyne,  Alan  Wein,  Sean  Nicholson,  Marion  Kvasz,Chieh-I 
+Chen  and  Ian  Milsom.  2014.  Economic  burden  of  urgency  urinary 
+incontinence  in  the  United  States:  a  systematic  review. Journal  of 
+Managed Care Pharmacy. 
+
+[19]   Graham  Dove,  Kim  Halskov,  Jodi  Forlizzi  and  John  Zimmerman. 
+2017.  UX  Design  Innovation:  Challenges  for  Working  with  Machine 
+Learning  as  a  Design  Material.  In Proceedings  of  the  2017  CHI 
+Conference on  Human  Factors  in  Computing  Systems (pp.  278-288). 
+ACM. 
+
+[20]  European  Association  of  Urology,  International  Consultation  on 
+
+Urological Diseases. 2013. Incontinence. 
+
+[21]   Final  Blog  Post:  TETRIS  and  Other  Videogames’  Effects  on PTSD. 
+March 2013. https://chcgamestudies.wordpress.com/2013/03/18/2973/ 
+[22]  Eva  Geurts,  Mieke  Haesen,  Paul  Dendale,  Kris  Luyten  and  Karin 
+Coninx. 2016. Back on bike: the BoB mobile cycling app for secondary 
+prevention  in  cardiac  patients. Proceedings of  the  18th International 
+Conference  on  Human-Computer  Interaction  with  Mobile  Devices 
+and Services. 
+
+[23]   Barney  G.  Glaser  and  Anselm  L.  Strauss.  1967.  The  discovery  of 
+Grounded  Theory:  Strategies  for  Qualitative  Research.  Transaction 
+Publishers. 
+
+[24]   Google Maps, https://en.wikipedia.org/wiki/Google_Maps? 
+[25]   Andrea  Grimes,  Vasudhara  Kantroo  and  Rebecca  E.  Grinter.  2010. 
+Let’s  play!:  mobile  health  games  for adults.  Proceedings  of  the  12th 
+ACM international conference on Ubiquitous computing, Pages 241-
+250. 
+
+[26]   Lilit Hakobyan, Jo  Lumsden,  Rachel Shaw   and  Dympna  O'Sullivan. 
+2016.  A  longitudinal evaluation  of  the  acceptability  and impact of  a 
+for  older  adults  with  age-related  macular 
+diet  diary  app 
+degeneration.   Proceedings  of  the  18th  International  Conference  on 
+Human-Computer Interaction with Mobile Devices and Services. 
+[27]   Sandra G.  Hart.  2006.  NASA-task  load  index (NASA-TLX);  20  years 
+later.  In Proceedings  of  the  human  factors  and  ergonomics  society 
+annual meeting (Vol.  50,  No.  9,  pp.  904-908).  Sage  CA:  Los  Angeles, 
+CA: Sage Publications. 
+
+[28]   Richard  Harte,  Leo  R  Quinlan,  Liam  Glynn,  Alejandro  Rodríguez-
+Molinero,  Paul  MA  Baker,Thomas  Scharf and Gearóid  ÓLaighin. 
+2017.  Human-centered  design  study:  enhancing  the  usability  of  a 
+mobile phone app in an integrated falls risk detection system for use 
+by older adult users. JMIR mHealth and uHealth.  
+
+[29]  Jennifer  Healey,  Pete  Denman,  Haroon  Syed,  Lama  Nachman  and 
+Susanna  Raj.  2018.  Circles  vs.  scales:  an  empirical  evaluation  of 
+emotional assessment GUIs for mobile phones. In Proceedings of the 
+20th International Conference on Human-Computer Interaction with 
+Mobile Devices and Services (p. 12). ACM. 
+
+[30]   iP  Voiding  Diary.  2017.  https://itunes.apple.com/us/app/ip-voiding-
+
+diary/id482034478?mt=8 
+
+[31]   Debra E. Irwin, Zoe S. Kopp, Barnabie Agatep, Ian Milsom and Paul 
+Abrams. 2011. Worldwide prevalence estimates of lower urinary tract 
+symptoms,  overactive  bladder,  urinary  incontinence  and  bladder 
+outlet obstruction. BJU International. 
+
+[32]  Simon  Jackson.  1997.  The  Patient  with  an  overactive  bladder  – 
+
+symptoms and quality-of-life issues. Urology. 
+
+[33] Maia Jacobs, James Clawson and Elizabeth D. Mynatt. 2016. A Cancer 
+Journey  Framework:  Guiding  the  Design  of  Holistic  Health 
+Int’l  Conf.  Pervasive  Computing 
+Technology. Proc.  10th  EAI 
+Technologies for Healthcare.  
+
+[34]  Hilmi  Güneş  Kayacik,  Mike  Just,  Lynne  Baillie,  David  Aspinall, 
+Nicholas  Micallef.  2014.Data  driven  authentication:  On 
+the 
+effectiveness  of  user  behaviour  modelling  with  mobile  device 
+sensors. In  Proceedings  of  the  Third  Workshop  on  Mobile  Security 
+Technologies arXiv:1410.7743. 
+Trainer 
+
+[35]  Kegel 
+
+exercises. 
+
+Pelvic 
+
+2017. 
+
+floor 
+
+- 
+
+https://itunes.apple.com/gb/app/kegel-trainer-pelvic-
+floor/id578148339?mt=8 
+
+[36]  Paul  Lukowicz,  Tnde  Kirstein  and  Gerhard  Troster.  2004.  Wearable 
+systems  for  health  care  applications.  Methods  of  information  in 
+Medicine. 
+
+[37]  Mark  Matthews,  Stephen  Voida,  Saeed  Abdullah,  Gavin  Doherty, 
+Tanzeem  Choudhury,  Sangha  Im  and Geri  Gay.  2015. In situ design 
+for  mental  illness:  considering  the  pathology  of  bipolar  disorder  in 
+mHealth design. Proceedings of the 17th International Conference on 
+Human-Computer Interaction with Mobile Devices and Services.  
+[38]  Nicholas  Micallef,  Lynne  Baillie  and  Stephen  Uzor.  2016.  Time  to 
+Exercise!  An  Aide-Memoire  Stroke  App  for  Post-Stroke  Arm 
+Rehabilitation. In Proc. ACM MobileHCI. 
+
+[39]   Nicholas Micallef, Mike Just, Lynne Baillie, Martin Halvey and Hilmi 
+Güneş  Kayacik.  2015.  Why  aren't  Users  Using  Protection? 
+Investigating  the  Usability  of  Smartphone  Locking.  Proceedings  of 
+the  17th  International  Conference  on  Human-Computer  Interaction 
+with Mobile Devices and Services, Pages 284-294 
+and 
+
+behavior. 
+1996. Emotions 
+Embarrassment: Poise and peril in everyday life. New York, NY, US: 
+Guilford Press. 
+
+[40]  Rowland 
+
+S.  Miller. 
+
+social 
+
+[41]  Chulhong  Min,  Saumay  Pushp,  Seungchul  Lee,  Inseok  Hwang, 
+Youngki  Lee,  Seungwoo  Kang and Junehwa  Song.  2014.  Uncovering 
+embarrassing  moments  in  in-situ  exposure  of  incoming  mobile 
+messages.  In Proceedings  of  the  2014  ACM  International  Joint 
+Conference  on  Pervasive  and  Ubiquitous  Computing:  Adjunct 
+Publication. 
+
+[42]  Hendrik  Müller,  Aaron  Sedley  and  Elizabeth  Ferrall-Nunge.  Survey 
+research in HCI. Ways of Knowing in HCI. Springer, New York, NY, 
+2014. 229-266. 
+
+[43]  My  pelvic  floor  Fitness.  2016.  http://www.lightsbytena.co.uk/my-
+
+pelvic-floor-fitness/app-info/ 
+
+[44]  Tom  Owen,  Jennifer  Pearson,  Harold  Thimbleby  and  George 
+Individual 
+Buchanan.  2015.  ConCap:  Designing 
+Reflection on Chronic Conditions using Mobile Apps. Proceedings of 
+the  17th  International  Conference  on  Human-Computer  Interaction 
+with Mobile Devices and Services. 
+
+to  Empower 
+
+[45]  Jeni  Paay,  Jesper  Kjeldskov,  Umachanger  Brinthaparan,  Lars  Lichon, 
+Stephan Rasmussen, Nirojan Srikandaraja, Wally Smith, Greg Wadley 
+and  Bernd  Ploderer.  2014.  Quitty:  using  technology  to  persuade 
+smokers  to  quit.  In Proceedings  of  the  8th  Nordic  Conference  on 
+Human-Computer Interaction: Fun, Fast, Foundational. ACM. 
+
+[46]  Bernd  Ploderer,  Wally  Smith,  Jon  Pearce  and  Ron  Borland.  2014.  A 
+mobile  app  offering  distractions  and  tips  to  cope  with  cigarette 
+craving: a qualitative study. JMIR mHealth and uHealth 2.2. 
+
+[47]   Jesper Kjeldskov and Mikael B. Skov. 2014. Was it worth the hassle?: 
+ten  years  of  mobile  HCI  research  discussions  on  lab  and  field 
+evaluations.  In: Proceedings  of  the  16th  international  conference  on 
+Human-computer interaction with mobile devices & services. ACM. 
+
+[48]   Alessandro  Puiatti,  Steven  Mudda,  Silvia  Giordano  and  Oscar 
+Mayora.  2011.  Smartphone-centred  wearable  sensors  network  for 
+monitoring patients with bipolar disorder. In Engineering in Medicine 
+and Biology Society, EMBC, 2011 annual international conference of 
+the IEEE. 
+
+[49]   William T. Riley, Daniel E. Rivera, Audie A. Atienza, Wendy Nilsen, 
+Susannah M. Allison and Robin Mermelstein. 2011. Health behaviour 
+models in the age of mobile interventions: are our theories up to the 
+task?. Translational Behavioural Medicine, Volume 1, Issue 1. 
+
+[50]   James A. Russell and Merry Bullock. 1985.Multidimensional scaling of 
+emotional facial expressions of emotion. J Pers Soc Psychol 48:1290–
+1298 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 13 
+ 
+ 
+ 
+ 
+[51]   Ana-Maria  Salai  and  Lynne  Baillie.  2018.  Exploring  the  Key  Design 
+Functions  of  an  Overactive  Bladder  Mobile  Health  Application. 
+In Proceedings  of  the  20th  International  Conference  on  Human-
+Computer Interaction with Mobile Devices and Services Adjunct (pp. 
+229-236). ACM.  
+
+[52]  Chris  Shaw.  2001.  A  review  of  the  psychosocial  predictors  of  help‐
+seeking  behaviour  and  impact  on  quality  of  life  in  people  with 
+urinary incontinence. Journal of Clinical Nursing.  
+
+[53]   Smartphone adoption in the United Kingdom (UK) from 2011 to 2018. 
+https://www.statista.com/statistics/271460/smartphone-
+
+2018. 
+adoption-in-the-united-kingdom-uk/ 
+
+[54]   Solitaire, https://en.wikipedia.org/wiki/Patience_(game) 
+[55]   Squeezy  -  the  NHS  Physiotherapy  App  for  Pelvic  Floor  Muscle 
+https://itunes.apple.com/gb/app/squeezy-nhs-
+
+Exercises. 
+2015. 
+physiotherapy/id700740791?mt=8 
+
+[56]   David  O.  Sussman.  2007.  Overactive  Bladder:  Treatment  Options  in 
+Primary  Care  Medicine.  The  Journal  of  the  American  Osteopathic 
+Association, Vol 107, No 9. 
+
+[57]  UroToday 
+
+Bladder 
+
+Diary 
+
+App. 
+
+2015. 
+
+http://www.urotoday.com/about/1214-site-pages/53578-urotoday-
+bladder-diary-app.html 
+
+[58]  Stephen  Uzor,  Lynne  Baillie  and  Dawn  Skelton.  2012.  Senior 
+to  Design  Enjoyable  Falls 
+
+Designers:  Empowering  Seniors 
+Rehabilitation Tools. In Proc. ACM CHI’12. 
+
+[59]   Stephen Uzor and Lynne Baillie. 2018. Exploring the Communication 
+of  Progress  in  Home-based  Falls  Rehabilitation  using  Exergame 
+Technologies.  Proceedings  of  the  ACM  on  Interactive,  Mobile, 
+Wearable and Ubiquitous Technologies.  
+
+[60]   Leena  Ventä, Minna  Isomursu, Aino  Ahtinen  and Shruti  Ramiah. 
+2008. My Phone is a Part of My Soul – How People Bond with Their 
+Mobile Phones. In Proc. ACM MobileHCI’08. 
+
+[61]   Lois M. Verbrugg 1980. Health diaries. Medical care 18.1: 73-95. 
+[62]  Graham  Wilson  and  Stephen  A.  Brewster.  2017.  Multi-Moji: 
+Combining  Thermal,  Vibrotactile  &  Visual  Stimuli  to  Expand  the 
+Affective Range of Feedback. In Proc. CHI’17. 
+
+[63]   2048, https://en.wikipedia.org/wiki/2048_(video_game) 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 703Page 14 
+ 
+ 
+ 
+ 
+

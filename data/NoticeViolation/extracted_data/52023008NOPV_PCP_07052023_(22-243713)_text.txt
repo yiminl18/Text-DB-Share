@@ -1,0 +1,438 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+VIA ELECTRONIC MAIL TO: alimmer@harvestmidstream.com 
+
+July 5, 2023 
+
+Mr. Andrew Limmer 
+Vice President 
+Harvest Alaska, LLC 
+3800 Centerpoint Dr., Suite 1000 
+Anchorage, AK 99503 
+
+Dear Mr. Limmer: 
+
+CPF 5-2023-008-NOPV 
+
+Between July 25 and July 29, 2022, a representative of the Pipeline and Hazardous Materials 
+Safety Administration (PHMSA), pursuant to Chapter 601 of 49 United States Code (U.S.C.), 
+inspected your Northstar Gas Transmission Pipeline in Anchorage, Alaska. 
+
+As a result of this inspection, it is alleged that you have committed probable violations of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR). The items inspected 
+and the probable violations are: 
+
+1. 
+
+§ 192.605  Procedural manual for operations, maintenance, and emergencies. 
+
+(a)  . . . . 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+(c)  Abnormal operation.  For transmission lines, the manual required by paragraph 
+of this section must include procedures for the following to provide safety when 
+operating design limits have been exceeded: 
+(1) Responding to, investigating, and correcting the cause of: 
+(i)  . . . . 
+(iii)  Loss of communications; 
+
+Harvest Alaska, LLC (Harvest) failed to provide a record documenting that an abnormal 
+operating condition (AOC) had occurred after a loss of communications was discovered.  During 
+the PHMSA records inspection, it was discovered that Harvest failed to record an AOC after one 
+of its employees discovered the position switch for shutdown valve (SDV), SDV-9420 was not 
+accurately communicating with the supervisory control and data acquisition (SCADA) system on 
+June 5, 2022.  On the Valve Inspection and Maintenance form dated June 5, 2022, Exhibit B-1, 
+the employee described the condition as "Valve functions properly. When opening, the valve 
+never gave control room an open status.  Had IE-Tech come out and adjust it".  The discovery 
+that the remote monitoring unit was not communicating the valve’s accurate position to the 
+SCADA system constituted a loss of communications; therefore, an AOC should have been 
+initiated until the issue was resolved. 
+
+On June 5, 2022, during Harvest’s routine valve maintenance inspection of valve SDV-9420, the 
+SCADA operator attempted to operate the valve remotely from the closed to the open position.  
+After the valve was commanded open, the SCADA operator never received a confirmation 
+notification indicating the valve was in the open position. Harvest field personnel stated that the 
+valve itself operated correctly with full close-to-open travel. It appears the valve’s switch 
+indication to the SCADA system did not accurately report the correct travel of the valve, which 
+required adjustment by a qualified individual. The adjustment and return-to-service was 
+completed by the electrical technician immediately after discovery, and the valve was retested 
+satisfactorily. 
+
+2. 
+
+§ 192.805  Qualification program. 
+
+Each operator shall have and follow a written qualification program. The program 
+shall include provisions to: 
+(a)  . . . . 
+(b)  Ensure through evaluation that individuals performing covered tasks are 
+qualified; 
+
+A Harvest contractor completed a valve inspection of shutdown valve SDV-9420 on August 26, 
+2020 prior to being qualified to complete this task.  Review of Operator Qualification (OQ) 
+records demonstrated the individual was not currently qualified to complete the covered task of 
+“Inspect, Maintain, and Operate Valves.” 
+
+The NorthStar DOT Valve Inspection Report dated August 26, 2020 for valve SDV-9420 is 
+Exhibit A-1, and an image of the Harvest contractor’s OQ records is Exhibit A-2.  The NorthStar 
+DOT Valve Inspection Report documented the valve inspection that occurred on August 26, 
+2020, and the valve inspection record indicated in the left-hand column “OQ CT” required task 
+
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+for this maintenance activity was “716OP or 720OP”.  The OQ records provided for the 
+contractor’s employee showed that the employee was not qualified for Task ID 716 or 720 until 
+August 28, 2020.  Harvest provided records which showed the contractor was qualified to 
+perform valve inspections on August 28, 2020, but Harvest did not have records indicating the 
+operator was qualified to complete OQ-covered task number 716 or 720 prior to August 28, 
+2020.  The valve inspection completed on August 26, 2020 was a covered task, requiring 
+qualification for task 716 or 720, and was done by an unqualified individual. 
+
+Harvest received a warning for a similar violation in 5-2022-002-NOPV.  They were cited under 
+§ 195.505 on their Northstar hazardous liquid line for unqualified operators completing covered 
+tasks. 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a 
+related series of violations. For violation occurring on or after March 21, 2022 and before 
+January 6, 2023, the maximum penalty may not exceed $239,142 per violation per day the 
+violation persists, up to a maximum of $2,391,412 for a related series of violations. For violation 
+occurring on or after May 3, 2021 and before March 21, 2022, the maximum penalty may not 
+exceed $225,134 per violation per day the violation persists, up to a maximum of $2,251,334 for 
+a related series of violations. For violation occurring on or after January 11, 2021 and before 
+May 3, 2021, the maximum penalty may not exceed $222,504 per violation per day the violation 
+persists, up to a maximum of $2,225,034 for a related series of violations. For violation 
+occurring on or after July 31, 2019 and before January 11, 2021, the maximum penalty may not 
+exceed $218,647 per violation per day the violation persists, up to a maximum of $2,186,465 for 
+a related series of violations. For violation occurring on or after November 27, 2018 and before 
+July 31, 2019, the maximum penalty may not exceed $213,268 per violation per day, with a 
+maximum penalty not to exceed $2,132,679. For violation occurring on or after November 2, 
+2015 and before November 27, 2018, the maximum penalty may not exceed $209,002 per 
+violation per day, with a maximum penalty not to exceed $2,090,022. 
+
+We have reviewed the circumstances and supporting documentation involved for the above 
+probable violations and recommend that you be preliminarily assessed a civil penalty of $ 33,500 
+as follows: 
+
+Item number 
+2 
+
+PENALTY 
+$ 33,500 
+
+Warning Item 
+
+With respect to item 1, we have reviewed the circumstances and supporting documents involved 
+in this case and have decided not to conduct additional enforcement action or penalty assessment 
+proceedings at this time.  We advise you to promptly correct the item. Failure to do so may result 
+in additional enforcement action. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators 
+in Enforcement Proceedings.  Please refer to this document and note the response options.  All 
+material you submit in response to this enforcement action may be made publicly available.  If 
+you believe that any portion of your responsive material qualifies for confidential treatment 
+under 5 U.S.C. §552(b), along with the complete original document you must provide a second 
+copy of the document with the portions you believe qualify for confidential treatment redacted 
+and an explanation of why you believe the redacted information qualifies for confidential 
+treatment under 5 U.S.C. § 552(b). 
+
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a waiver of your right to contest the allegations in this Notice and authorizes the Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region 
+Director may extend the period for responding upon a written request timely submitted 
+demonstrating good cause for an extension. 
+
+In your correspondence on this matter, please refer to CPF 5-2023-008-NOPV and, for each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Dustin Hubbard 
+Director, Western Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosure: Response Options for Pipeline Operators in Enforcement Proceedings 
+
+cc: 
+
+PHP-60 Compliance Registry 
+PHP-500 C. Dolchok, M. Yeager (#22-243713) 
+Ben Hagedorn, ben.hagedorn@harvestmidstream.com 
+Harold Colgrove, harold.colgrove@harvestmidstream.com 
+
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

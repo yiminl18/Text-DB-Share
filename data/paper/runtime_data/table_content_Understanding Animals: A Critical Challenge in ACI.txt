@@ -1,0 +1,31 @@
+Table of Contents:
+
+
+2. Abstract
+3. Author Keywords
+4. ACM Classification Keywords
+5. Introduction
+6. Related Work
+   6.1 Methods to include animals' needs in design
+   6.2 Kinesthetic empathy and the animals’ perspectives
+7. Method and Setting
+   7.1 Dog profiles on Instagram and Facebook
+   7.2 A qualitative content analysis of posts by dog profiles
+   7.3 Sampling and data
+   7.4 Coding and analyze
+   7.5 Ethical considerations
+8. Results and Findings
+   8.1 Physical facets
+   8.2 Temporal facets
+   8.3 Relational facets
+   8.4 Situational facets
+   8.5 Bodily facets
+   8.6 Inner facets
+   8.7 Superficial facets
+9. Discussion
+   9.1 Kinesthetic empathy in dog blogging
+   9.2 Limitations in seeing dog blogs as kinesthetic empathy
+   9.3 Design inspiration for quantified dog applications
+10. Conclusion
+11. Acknowledgments
+12. References

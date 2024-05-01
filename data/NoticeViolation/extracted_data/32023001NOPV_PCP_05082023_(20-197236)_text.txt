@@ -1,0 +1,529 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+VIA ELECTRONIC MAIL TO:  aaron.milford@magellanlp.com; 
+Katie.McCullough@MagellanLP.com; mark.materna@magellanlp.com; 
+mike.pearson@magellanlp.com 
+
+May 8, 2023 
+
+Aaron L. Milford 
+Chief Executive Officer 
+Magellan Midstream Partners, LP 
+P.O. Box 22186 
+Tulsa, Oklahoma 74121 
+
+Dear Mr. Milford: 
+
+CPF 3-2023-001-NOPV 
+
+From December 4, 2020, through August 13, 2021, a representative of the Pipeline and 
+Hazardous Materials Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant 
+to Chapter 601 of 49 United States Code (U.S.C.), investigated a spill on Magellan Midstream 
+Partners, L.P.’s (Magellan) 6-inch nominal diameter hazardous liquid pipeline system in 
+Commerce City, Colorado, a suburb of Denver.  The rupture of the pipeline on December 4, 
+2020, resulted in the release of a reported 487 barrels of diesel fuel in a high consequence area 
+(HCA). 
+
+The 6-inch pipeline originates from Magellan’s Commerce City pump station at the Suncor 
+Energy Refinery and transports refined products to a terminal near Fountain, Colorado.  At the 
+time of the spill the pipeline was delivering product to the Fountain Terminal when the pipe 
+ruptured at 5:16 a.m. Mountain Standard Time (MST) at Milepost 0.17 along 56th Avenue, less 
+than 1,000 feet from the Commerce City pump station discharge.  The pipeline was controlled 
+and monitored remotely by Magellan personnel using a Supervisory Control and Data 
+Acquisition (SCADA) system. 
+
+Upon occurrence of the pipeline rupture, the SCADA system indicated pressure and flow 
+deviations in the Magellan control center, and the pipeline was shutdown (First Shutdown) at 
+
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+5:17 am MST.  The operational deviations indicated by SCADA included decreasing pressure 
+along with an increasing flow rate at the Commerce City pump station. 
+
+Twenty-two (22) minutes after the First Shutdown, at approximately 5:39 am MST, the pipeline 
+was restarted (Restart) by the Magellan control center, and flow resumed from Commerce City.  
+Pumping from the Commerce City pump station continued for approximately seven (7) minutes 
+until the pump was shutdown at approximately 5:46 am MST (Second Shutdown). 
+
+Fifty-five (55) minutes after the Second Shutdown, at approximately 6:42 am MST, an 
+emergency was announced in the control room, initiating Magellan’s response plans.  The total 
+elapsed time from the First Shutdown until the control room announcement of an emergency on 
+the pipeline was approximately 1 hour and 25 minutes. The National Response Center was called 
+at approximately 7:08 am MST, 1 hour and 52 minutes after the First Shutdown occurred. 
+
+The origin of the rupture was a 6-inch-long split in the long seam of the pipe.  The failed pipe 
+was removed and sent for metallurgical analysis where the apparent cause of the rupture was 
+determined to be selective seam weld corrosion. 
+
+As a result of the investigation, it is alleged that Magellan has committed probable violations of 
+the Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR).  The items 
+investigated and the probable violations are: 
+
+1. 
+
+§ 195.401  General requirements. 
+(a)  No operator may operate or maintain its pipeline systems at a level of safety 
+lower than that required by this subpart and the procedures it is required to 
+establish under § 195.402(a) of this subpart. 
+
+On December 4, 2020, Magellan operated the 6-inch Commerce City to Fountain Terminal 
+pipeline at a level of safety lower than required by part 195 subpart F – Operation & 
+Maintenance when the pipeline was re-started (Restart) after the First Shutdown and ran for 
+approximately seven minutes while discharging diesel fuel into a high consequence area through 
+a rupture in the pipe.  Logs of the flow rate at Commerce City showed the flow averaged 763 
+barrels per hour during the 7 minutes of operation after the Restart.  Operating the pipeline from 
+the time of the Restart (5:39 a.m. MST) until the Second Shutdown (5:46 a.m. MST) was also 
+not in accordance with Magellan procedures. 
+
+Just prior to the rupture, the pipeline had been operating in steady state with 1,330 psi discharge 
+pressure at Commerce City.  After the Restart began at 5:39 am MST, the discharge pressure at 
+Commerce City briefly reached a high of only 146 psi, as shown in a log of recorded pressures. 
+This available information in Magellan’s control room indicated that the pipeline was not safe 
+for continued operation after the Restart. 
+
+To provide for a controller’s prompt and appropriate response to operating conditions, the 
+control room management regulations of § 195.446(b) require definition of a controller’s 
+authority and responsibility to make decisions, take actions, and communicate with others.  
+These responsibilities and authority were mentioned in Magellan’s procedures (e.g., Normal 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Operations and Line Monitoring Procedure 9.02-ADM-017) for monitoring and responding to 
+pipeline conditions, including the authority to take actions such as shutdown and isolation of 
+pipelines, or delaying startup of pipelines under their control.  Restarting and continuing to run 
+the pipeline for seven minutes after it had ruptured was not an appropriate response to the 
+SCADA-indicated abnormal operating conditions. 
+
+As denoted in the written 30-day report (Form PHMSA F 7000.1), Magellan initiated an 
+investigation into whether the controller(s) or control room issues were the cause of, or a 
+contributing factor, to the accident.  Magellan determined that the SCADA and CPM 
+(computational pipeline monitoring) systems were operating and fully functional, and their 
+investigation identified that “incorrect controller action or controller error” had occurred. 
+
+2. 
+
+§ 195.402  Procedural manual for operations, maintenance, and emergencies. 
+(a)  General.  Each operator shall prepare and follow for each pipeline system a 
+manual of written procedures for conducting normal operations and maintenance 
+activities and handling abnormal operations and emergencies. 
+
+Magellan did not follow its procedures for handling abnormal operations when it failed to 
+investigate and correct the cause of abnormal operation between the time of the First Shutdown 
+at 05:17 am MST and prior to the Restart at 05:39 am MST.  Section 195.402(d)(1) requires 
+responding to, investigating, and correcting the cause of an increase or decrease in pressure or 
+flow outside normal operating limits.  Section 195.402(d)(2) requires checking variations from 
+normal operation after an abnormal operation at sufficient critical locations in the system to 
+determine continued integrity and safe operation. 
+
+According to logs of pressure and flow, prior to the time of the rupture at 5:16 a.m., the pipeline 
+was running in a steady state mode with the Commerce City discharge pressure consistently at 
+1,330 psi while the flow was approximately 843 barrels per hour.  At the time of the failure, the 
+SCADA system showed a sharp drop in pressure and a sudden increase in flow rate at the 
+Commerce City pump station, indicating a rupture had occurred. 
+
+Magellan failed to follow its Startup and Shutdown Procedure 9.02-ADM-002, which required a 
+review of static line conditions for pipeline integrity prior to restarting the line.  The procedure 
+further stated that if the static line pressure was not above minimum pressures, then a pressure 
+test was necessary.  After the First Shutdown, the Commerce City discharge pressure fell to less 
+than 20 psi while the suction pressure at the Russellville pump station downstream was 0 psi. 
+These low pressures, recorded between the First Shutdown and the Restart, were further 
+indications of a failed pipeline that did not have continued integrity for safe operation. 
+
+After the First Shutdown at 5:17 am, the Magellan control room contacted the refinery to 
+ascertain if the supply of diesel fuel to Magellan’s pump station had been interrupted.  After the 
+refinery reported back to Magellan that there were no issues in the refinery at 5:37 am MST, the 
+Commerce City pump station was started (Restart) by Magellan two minutes later at 5:39 am.  
+Despite this, the Magellan control room staff did not conclude there was an issue (i.e., a pipe 
+rupture) on the 6-inch pipeline, as indicated in the SCADA operating data.  It was not until 5:48 
+am MST, after the Second Shutdown at 5:46, that control room staff contacted a local field 
+
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+technician to investigate further at the Commerce City pump station.  As such, the cause of the 
+abnormal operation was not adequately investigated by Magellan, and was not corrected between 
+the time of the First Shutdown and the Restart. 
+
+3. 
+
+§ 195.402  Procedural manual for operations, maintenance, and emergencies. 
+(a) General.  Each operator shall prepare and follow for each pipeline system a 
+manual of written procedures for conducting normal operations and maintenance 
+activities and handling abnormal operations and emergencies. 
+
+Magellan did not follow its procedures for handling emergencies when it failed to initiate its 
+Code Red Event Procedure 9.02-ADM-011 for approximately 1 hour and 25 minutes after the 
+First Shutdown at 5:17 am MST.  Code Red is a term Magellan used for an emergency, including 
+SCADA-indicated pipeline ruptures, and notifications reporting a pipeline fire, or explosion, etc. 
+The Code Red was initiated from the control room at 6:42 am MST. 
+
+Section 195.402(e) requires procedures to provide safety when an emergency condition occurs, 
+including a prompt and effective response to an accidental release of hazardous liquid from a 
+pipeline [see § 195.402(e)(2)].  In Magellan’s Code Red Event Procedure 9.02-ADM-011, the 
+controller of the console experiencing the emergency event had the role of initiating the 
+procedure, and was to immediately announce “Code Red” within the control room.  Other 
+immediate actions included emergency shutdown of the pipeline and closure of valves. 
+
+Per the written 30-day report (Form PHMSA F 7000.1) submitted by Magellan, “CPM leak 
+detection system or SCADA-based information (such as alarm(s), alert(s), event(s), and/or 
+volume calculations)” was how the pipeline accident was identified.  At multiple times on the 
+morning of December 4, 2020, sufficient information was available in Magellan’s control room 
+to initiate a Code Red emergency.  The pipe failure at 5:16 am MST exhibited characteristics of a 
+rupture in the SCADA system, including a sudden loss of pressure accompanied by increased 
+flow rate.  At 5:43 am MST it was observed in the control room that pressures and flows were 
+not rising after the Restart. After the Second Shutdown at 5:46 am MST, pressures at Commerce 
+City dropped again.  At 6:19 am MST, the refinery contacted the Magellan control room and 
+reported a possible leak on Magellan’s pipeline.  At 6:32 am MST, the refinery called the 
+Magellan control room to report that spilled product was located at the fence line with diesel fuel 
+on the road at 56th Avenue.  At 6:40 am MST a Magellan technician called the control room to 
+report that the spill was from Magellan’s pipeline, and the controller initiated the Code Red 
+Event procedure at 6:42 am MST.  In summary, Magellan did not initiate an emergency response 
+promptly in accordance with its Code Red Event procedure. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a 
+related series of violations.  For violation occurring on or after March 21, 2022 and before 
+January 6, 2023, the maximum penalty may not exceed $239,142 per violation per day the 
+violation persists, up to a maximum of $2,391,412 for a related series of violations.  For violation 
+occurring on or after May 3, 2021 and before March 21, 2022, the maximum penalty may not 
+exceed $225,134 per violation per day the violation persists, up to a maximum of $2,251,334 for 
+a related series of violations.  For violation occurring on or after January 11, 2021 and before 
+May 3, 2021, the maximum penalty may not exceed $222,504 per violation per day the violation 
+persists, up to a maximum of $2,225,034 for a related series of violations.  For violation 
+occurring on or after July 31, 2019 and before January 11, 2021, the maximum penalty may not 
+exceed $218,647 per violation per day the violation persists, up to a maximum of $2,186,465 for 
+a related series of violations.   For violation occurring on or after November 27, 2018 and before 
+July 31, 2019, the maximum penalty may not exceed $213,268 per violation per day, with a 
+maximum penalty not to exceed $2,132,679.  For violation occurring on or after November 2, 
+2015 and before November 27, 2018, the maximum penalty may not exceed $209,002 per 
+violation per day, with a maximum penalty not to exceed $2,090,022. 
+
+We have reviewed the circumstances and supporting documentation involved for the above 
+probable violation(s) and recommend that you be preliminarily assessed a civil penalty of 
+$655,941 as follows: 
+
+Item number 
+1 
+2 
+3 
+
+PENALTY 
+$218,647 
+$218,647 
+$218,647 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators 
+in Enforcement Proceedings.  Please refer to this document and note the response options. All 
+material you submit in response to this enforcement action may be made publicly available.  If 
+you believe that any portion of your responsive material qualifies for confidential treatment 
+under 5 U.S.C. 552(b), along with the complete original document you must provide a second 
+copy of the document with the portions you believe qualify for confidential treatment redacted 
+and an explanation of why you believe the redacted information qualifies for confidential 
+treatment under 5 U.S.C. 552(b). 
+
+Following the receipt of this Notice, you have 30 days to submit written comments, or request a 
+hearing under 49 CFR § 190.211.  If you do not respond within 30 days of receipt of this Notice, 
+this constitutes a waiver of your right to contest the allegations in this Notice and authorizes the 
+Associate Administrator for Pipeline Safety to find facts as alleged in this Notice without further 
+notice to you and to issue a Final Order.  If you are responding to this Notice, we propose that 
+you submit your correspondence to my office within 30 days from the receipt of this Notice. 
+This period may be extended by written request for good cause. 
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+In your correspondence on this matter, please refer to CPF 3-2023-001-NOPV and, for each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Gregory A. Ochs 
+Director, Central Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+cc: 
+
+Katie McCullough, P.E. Manager, Integrity Management and Regulatory Compliance, 
+Katie.McCullough@MagellanLP.com 
+Mark Materna, Director Pipeline Integrity, mark.materna@magellanlp.com 
+Mike Pearson, Sr. VP Technical Services, mike.pearson@magellanlp.com 
+
+Enclosure:  Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+

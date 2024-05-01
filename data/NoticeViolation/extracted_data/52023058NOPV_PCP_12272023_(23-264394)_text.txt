@@ -1,0 +1,577 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+VIA ELECTRONIC MAIL TO: skolassa@harvestmidstream.com 
+
+December 27, 2023 
+
+Mr. Sean Kolassa  
+President 
+Harvest Alaska, LLC 
+1111 Travis St. 
+Houston, TX 77002 
+
+Dear Mr. Kolassa: 
+
+CPF 5-2023-058-NOPV 
+
+From April 3 through September 15, 2023, a representative of the Pipeline and Hazardous 
+Materials Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 
+601 of 49 United States Code (U.S.C.), inspected your Cook Inlet Pipeline (CIPL). 
+
+As a result of the inspection, it is alleged that you have committed probable violations of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR). The items inspected 
+and the probable violations are: 
+
+1. 
+
+§ 195.262 – Pumping Equipment. 
+
+(a) . . . . 
+(b) The following must be provided in each pump station: 
+(1) Safety devices that prevent overpressuring of pumping equipment, including the 
+auxiliary pumping equipment within the pumping station. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Harvest Alaska, LLC (Operator) failed to provide an overpressure prevention safety device for 
+an auxiliary pump within a pump station as is required by § 195.262.  Inspectors from PHMSA 
+visited the Granite Point pump station for the CIPL on May 14, 2023.  Inspectors observed an 
+auxiliary positive displacement style pump utilized for pig trap drain down and reinjection that 
+had no apparent overpressure protection. When onsite, the Operator indicated that the pump was 
+used as needed for pig trap drain down during pigging operations.  The Operator failed to 
+provide an overpressure protection safety device for the auxiliary pump utilized for pig trap drain 
+down at the Granite Point pump station as is required.  Accordingly, the Operator is in violation 
+of § 195.262.  However, the Operator installed a Pressure Safety Valve (PSV) in July 2023 
+because of PHMSA’s inspection. 
+
+2. 
+
+§ 195.428 – Overpressure safety devices and overfill protection systems. 
+
+(a) Except as provided in paragraph (b) of this section, each operator shall, at 
+intervals not exceeding 15 months, but at least once each calendar year, or in the 
+case of pipelines used to carry highly volatile liquids, at intervals not to exceed 7 ½ 
+months, but at least twice each calendar year, inspect and test each pressure limiting 
+device, relief valve, pressure regulator, or other item of pressure control equipment 
+to determine that it is functioning properly, is in good mechanical condition, and is 
+adequate from the standpoint of capacity and reliability of operation for the service 
+in which it is used. 
+
+The Operator failed to conduct testing and inspection of the overpressure control device PIT-16 
+at least once each calendar year and at an interval not to exceed 15 months as is required by § 
+195.428.  Specifically, the Operator provided record of inspection and testing of PIT-16 for 
+calendar years 2021 and 2023 but did not provide record of inspection and testing of PIT-16 for 
+the year 2022. 
+
+PIT-16 is located upstream of the CIPL, and the device is owned and operated by another 
+operator that provides crude oil directly piped into the CIPL.  Piping and instrumentation 
+diagrams provided by the upstream operator indicate that PIT-16 is located downstream of three 
+centrifugal pumps piped in series.  PIT-16 is configured to shut down all three upstream pumps 
+and shut in Shutdown Valve 7006 (SDV-7006) when PIT-16 senses a high pressure of 245psig. 
+MOP for CIPL is 285psig. 
+
+The Operator was previously warned for a similar issue in CPF 5-2021-015-WL, which cited 
+195.428(c) for “failing to conduct the required inspections of the overfill protection devices on 
+the crude oil relief tank (Tank 001) at the KPL Junction Facility, where the Cook Inlet Pipeline 
+and Swanson River Pipeline systems interconnect.” 
+
+CIPL Operator failed to perform inspection and testing of pressure control device PIT-16 in 2022 
+and accordingly, is in violation of §195.428(a).   
+
+3. 
+
+§ 195.452 – Pipeline integrity management in high consequence areas. 
+
+(a) . . . . 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(e) What are the risk factors for establishing an assessment schedule (for both the 
+baseline and continual integrity assessments)? 
+(1) An operator must establish an integrity assessment schedule that prioritizes 
+pipeline segments for assessment (see paragraphs (d)(1) and (j)(3) of this section). 
+An operator must base the assessment schedule on all risk factors that reflect the 
+risk conditions on the pipeline segment. The factors an operator must consider 
+include, but are not limited to:... 
+
+The Operator failed to provide evidence of consideration of mandatory risk factors when 
+extending the continual integrity assessment schedule for the CIPL as is required by § 195.452. 
+
+In 2020, the Operator changed the integrity assessment schedule for the 20” segment of the CIPL 
+from a four-year to a five-year schedule, resulting in an assessment due in 2021 rather than 2020.  
+The provided record of the decision to increase the interval included consideration of some of the 
+required risk factors; however, there was no record of the consideration of all required minimum 
+factors.  Risk factors not found in the record of consideration included (but are not limited to): 
+defect growth rate, pipe coating type and condition, leak history, repair history, cathodic 
+protection history, and geotechnical hazards.  The Operator failed to provide record of 
+consideration of minimum required risk factors when extending an assessment schedule and 
+accordingly is in violation of § 195.452. 
+
+4. 
+
+§ 195.452 – Pipeline integrity management in high consequence areas. 
+
+(a) . . . . 
+(i) What preventive and mitigative measures must an operator take to protect the high 
+consequence area? 
+(1) General requirements. An operator must take measures to prevent and mitigate 
+the consequences of a pipeline failure that could affect a high consequence area. 
+These measures include conducting a risk analysis of the pipeline segment to 
+identify additional actions to enhance public safety or environmental protection. 
+Such actions may include, but are not limited to, implementing damage prevention 
+best practices, better monitoring of cathodic protection where corrosion is a 
+concern, establishing shorter inspection intervals, installing EFRDs on the pipeline 
+segment, modifying the systems that monitor pressure and detect leaks, providing 
+additional training to personnel on response procedures, conducting drills with local 
+emergency responders and adopting other management controls. 
+
+The Operator failed to consider measures to prevent consequences of a pipeline failure in a high 
+consequence area as is required by § 195.452. 
+
+PHMSA Inspectors observed the CIPL exposed to the atmosphere (uncovered) at the bottom of a 
+bluff immediately upstream of the CIPL’s Cook Inlet crossing.  The bluff appeared to 
+historically shed large boulders from higher elevations near the exposed portion of the CIPL. 
+Logs were observed to be stacked over the exposed portion of the CIPL, as well as the 
+neighboring gas pipeline that was also exposed.  It was unknown to the Operator representatives 
+if the placed logs were being utilized to help protect the pipeline in some way.  A review of the 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+Operator’s 2022 Comprehensive Risk Assessment and Preventative and Mitigative Measures 
+Evaluation did not mention preventative measures with regard to this location and circumstances. 
+The Operator failed to consider measures to prevent consequences of a pipeline failure in a high 
+consequence area and accordingly, is in violation of § 195.452 
+
+Proposed Civil Penalty 
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a 
+related series of violations.  For violation occurring on or after March 21, 2022, and before 
+January 6, 2023, the maximum penalty may not exceed $239,142 per violation per day the 
+violation persists, up to a maximum of $2,391,412 for a related series of violations.  For violation 
+occurring on or after May 3, 2021, and before March 21, 2022, the maximum penalty may not 
+exceed $225,134 per violation per day the violation persists, up to a maximum of $2,251,334 for 
+a related series of violations.  For violation occurring on or after January 11, 2021, and before 
+May 3, 2021, the maximum penalty may not exceed $222,504 per violation per day the violation 
+persists, up to a maximum of $2,225,034 for a related series of violations.  For violation 
+occurring on or after July 31, 2019, and before January 11, 2021, the maximum penalty may not 
+exceed $218,647 per violation per day the violation persists, up to a maximum of $2,186,465 for 
+a related series of violations.  For violation occurring on or after November 27, 2018, and before 
+July 31, 2019, the maximum penalty may not exceed $213,268 per violation per day, with a 
+maximum penalty not to exceed $2,132,679.  For violation occurring on or after November 2, 
+2015, and before November 27, 2018, the maximum penalty may not exceed $209,002 per 
+violation per day, with a maximum penalty not to exceed $2,090,022. 
+
+We have reviewed the circumstances and supporting documentation involved for the above 
+probable violations and recommend that you be preliminarily assessed a civil penalty of $ 63,300 
+as follows: 
+
+Item number 
+2 
+
+PENALTY 
+$ 63,300 
+
+Warning Items 
+With respect to items 1, 3, and 4, we have reviewed the circumstances and supporting documents 
+involved in this case and have decided not to conduct additional enforcement action or penalty 
+assessment proceedings at this time.  We advise you to promptly correct these items.  Failure to 
+do so may result in additional enforcement action. 
+
+Response to this Notice 
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators 
+in Enforcement Proceedings.  Please refer to this document and note the response options.  All 
+material you submit in response to this enforcement action may be made publicly available.  If 
+you believe that any portion of your responsive material qualifies for confidential treatment 
+under 5 U.S.C. §552(b), along with the complete original document, you must provide a second 
+copy of the document with the portions you believe qualify for confidential treatment redacted 
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+and an explanation of why you believe the redacted information qualifies for confidential 
+treatment under 5 U.S.C. § 552(b). 
+
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a waiver of your right to contest the allegations in this Notice and authorizes the Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region 
+Director may extend the period for responding upon a written request timely submitted 
+demonstrating good cause for an extension. 
+
+In your correspondence on this matter, please refer to CPF 5-2023-058-NOPV,  and for each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Dustin Hubbard 
+Director, Western Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+cc: 
+
+PHP-60 Compliance Registry 
+PHP-500 H. Keogh (#23-264394) 
+Harold Colgrove, Compliance Manager, harold.colgrove@harvestmidstream.com 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+

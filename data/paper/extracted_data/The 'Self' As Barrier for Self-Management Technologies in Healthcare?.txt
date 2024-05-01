@@ -1,0 +1,1588 @@
+The ‘Self’ as Barrier for Self-Management Technologies in 
+Healthcare? 
+
+Bert	Vandenberghe 
+Meaningful	Interactions	Lab,	
+KU	Leuven	-	imec 
+Leuven 
+Belgium 
+bert.vandenberghe@kuleuven.be 
+
+Jasper	Vanhoof 
+Academic	Centre	for	Nursing	and	
+Midwifery,	KU	Leuven 
+Leuven 
+Belgium 
+jasper.vanhoof@kuleuven.be 
+
+Roos	Voorend 
+Meaningful	Interactions	Lab,	
+KU	Leuven	-	imec 
+Leuven 
+Belgium 
+roos.voorend@kuleuven.be 
+
+David	Geerts 
+Meaningful	Interactions	Lab,	
+KU	Leuven	-	imec 
+Leuven 
+Belgium 
+david.geerts@kuleuven.be 
+
+Fabienne	Dobbels 
+Academic	Centre	for	Nursing	and	
+Midwifery,	KU	Leuven 
+Leuven 
+Belgium 
+fabienne.dobbels@kuleuven.be 
+
+ABSTRACT	
+Self-management	technologies	are	promising	in	healthcare.	In	
+the	 name	 of	 patient	 empowerment,	 they	 can	 address	 an	
+important	 challenge:	 how	 to	 meet	 an	 increasing	 demand	 for	
+care	without	additional	resources.	We	designed	and	evaluated	
+the	 PICASSO-Tx	 system:	 a	 technology	 solution	 to	 support	
+transplant	 patients	 and	 their	 self-management	 of	 diet,	
+physical	activity	and	medication	adherences.	In	a	Sield	study,	
+19	 patients	 used	 the	 system	 for	 two	 weeks	 at	 home.	 We	
+discovered	 that	 although	 we	 intended	 patients	 to	 become	
+actors	 in	 the	 management	 of	 their	 own	 health,	 they	 saw	
+themselves	 rather	 as	 a	 subject,	 leaving	 the	 active	 role	 for	
+caregivers.	 In	 this	 paper,	 we	 describe	 how	 patients	expected	
+their	 data	 to	 be	 shared	 with	 others,	 how	 they	 perceived	 the	
+system	 as	 a	 tool	 for	 monitoring	 by	 caregivers,	 and	 what	
+expectations	towards	these	caregivers	this	perception	brings.	
+Furthermore,	we	discuss	the	barriers	we	encountered	caused	
+by	 the	 ‘self’	 and	 conclude	 with	 design	 recommendations	 for	
+
+Permission	to	make	digital	or	hard	copies	of	all	or	part	of	this	work	for	personal	
+or	classroom	use	is	 granted	 without	fee	provided	that	copies	are	 not	made	 or	
+distributed	for	profit	or	commercial	advantage	and	that	copies	bear	this	notice	
+and	the	full	citation	 on	the	first	page.	 Copyrights	for	components	 of	this	 work	
+owned	by	others	than	the	author(s)	must	be	honored.	Abstracting	with	credit	is	
+permitted.	To	copy	otherwise,	or	republish,	to	post	on	servers	or	to	redistribute	
+to	 lists,	 requires	 prior	 specific	 permission	 and/or	 a	 fee.	 Request	 permissions	
+from	Permissions@acm.org.	
+
+PervasiveHealth	'18,	May	21–24,	2018,	New	York,	NY,	USA	
+©	2018	Copyright	is	held	by	the	owner/author(s).	Publication	rights	licensed	to	
+ACM.	
+ACM	978-1-4503-6450-8/18/05…$15.00		
+https://doi.org/10.1145/3240925.3240974	
+
+self-management	 technologies	 in	 healthcare	 related	 to	 these	
+expectations,	perceptions,	and	barriers.	
+
+CCS	CONCEPTS	
+•	 Human-centered	 computing	 →	 User	 studies	 •	 Applied	
+computing	→	Health	informatics	
+
+KEYWORDS	
+Chronic	 health	 conditions;	 healthcare;	 patients,	 personal	
+informatics;	quantiSied	self;	self-management;	user	experience	
+
+1	
+
+lifestyle	 is	 required,	 especially	 after	
+
+INTRODUCTION	
+Evolutions	in	healthcare	make	people	live	longer,	yet,	with	
+increasing	age,	 the	 prevalence	 of	 chronic	 diseases	 is	 steadily	
+rising.	 In	 order	 to	 prevent	 or	 manage	 chronic	 diseases,	 a	
+life-saving	
+healthy	
+interventions	 such	as	 organ	transplantation.	Patients	 are	 not	
+cured	after	transplantation	but	remain	in	long-term	follow-up	
+within	 the	 transplant	 center	 with	 regular	 check-up	 visits	
+taking	place.	Moreover,	patients	need	to	adhere	to	a	complex	
+therapeutic	 regimen.	 For	 example,	 patients	 have	 to	 take	
+immunosuppressive	drugs	at	fixed	time	points.	Omitting	doses	
+or	 irregular	 time	 of	 intake	 might	 endanger	 the	 patient,	 as	
+transplant	 rejection	 and	 eventually	 loss	 of	 the	 transplanted	
+organ	might	occur.	 Not	 only	 poor	medication	adherence,	but	
+also	 the	 lack	 of	 sufficient	 physical	activity	 and	a	 healthy	diet	
+have	a	substantial	influence	on	the	long-term	survival	rate.	
+
+Inspired	by	the	quantified	self	movement,	technology	can	
+be	 deployed	 to	 provide	 people	 with	 data	 about	 their	 own	
+behavior.	Providing	personalized	feedback	on	their	monitored	
+
+ 
+ 
+ 
+	
+	
+	
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+B. Vandenberghe et al. 
+
+data	 can	 make	 people	 more	 aware	 of	 their	 behavior	 and	
+enable	 them	 to	 improve	 or	 maintain	 a	 healthy	 lifestyle.	 Self-
+management	 is	 an	 attractive	 approach	 for	 hospitals	 to	
+empower	patients	[35,	36]	and	it	could	help	save	resources	as	
+patients	 are	 less	 dependent	 on	 the	 availability	 of	 caregivers	
+[37].	
+
+Self-management	 in	 healthcare	 puts	 responsibility	 of	
+adherence	with	patients.	Hence,	it	is	of	utmost	importance	to	
+design	self-management	technology	that	is	being	accepted	by	
+the	 patients 1 .	 Therefore,	 we	
+investigated	 how	 self-
+management	technology	is	adopted	and	perceived	by	patients.	
+We	aimed	to	answer	this	research	question	by	designing	and	
+evaluating	 a	 platform	 to	 support	 solid	 organ	 transplant	
+patients	 (heart,	 lung,	 liver,	 and	 kidney)	 with	 the	 self-
+management	 of	 their	 diet,	 physical	 activity	 and	 medication	
+adherences.	
+
+We	 followed	 a	 human-centered	 design	 approach	 in	 the	
+design	 and	 development	 of	 the	 user	 interface.	 First,	 we	
+learned	 about	 the	 daily	 habits	 of	 the	 user	 regarding	 diet,	
+physical	 activity	 and	 medication	 adherences	 through	 diary	
+studies	 and	 	 contextual	 interviews.	 Next,	 the	 user	 interface	
+was	 designed	 through	 iterative	 prototyping.	 Finally,	 a	 field	
+usability	study	wrapped	up	the	design	phase.	
+
+We	intended	the	patient	to	be	an	actor	in	the	management	
+of	their	own	health	and	explained	the	aims	of	the	technology	
+to	 all	 of	 our	 patients.	 However,	 in	 the	 concluding	 interviews	
+we	 discovered	 that	 patients	interpreted	 the	 system	 as	a	 tool	
+for	monitoring	by	caregivers	and	perceived	themselves	rather	
+as	a	subject,	leaving	the	active	role	for	caregivers.	In	contrast	
+with	 our	 expectations	 this	 was	 not	 perceived	 as	 something	
+negative	by	the	patients.	
+
+We	 argue	 that	 this	 mismatch	 between	 design	 intentions	
+and	patients’	perceptions	can	lead	to	the	abandonment	of	the	
+technology	or	even	non-use,	which	is	by	no	means	the	fault	of	
+the	patient.	The	contributions	of	this	paper	are	insights	in	how	
+patients	 perceived	 self-management	 technology	 and	 their	
+expectations	 towards	 these	 technologies.	 Moreover,	 we	
+describe	 the	 context-specific	 barriers	 for	 self-management	
+give	 design	
+technology	 we	
+recommendations	
+in	
+healthcare	based	on	our	findings.		
+
+encountered	
+for	
+
+self-management	
+
+technology	
+
+and	 we	
+
+2	 RELATED	WORK	
+
+In	 this	 section,	 we	 discuss	 quantified	 self,	 the	availability	
+of	 health	 information,	 and	 the	 paradigm	 shift	 in	 healthcare	
+towards	 patient	 empowerment.	 We	 describe	 how	 this	
+inspired	 self-management	 technologies	 in	 HCI	 research	 and	
+
+1	For	 clarity,	 we	 consistently	 use	 the	 word	 ‘patient’	 throughout	 this	 paper	 for	
+technology	users	and	participants	in	this	study	as	well.	
+
+2 
+
+conclude	 with	 related	 work	 about	 technology	 appropriation	
+and	non-use	of	technology.	
+
+2.1	 Quantified	Self,	Health	Information,	and	
+
+Patient	Empowerment	
+
+Quantified	self	(QS)	refers	to	collecting	information	about	
+people’s	 body	 vitals	 and	 daily	 habits	 on	a	regular	basis	 [27].	
+The	 information	 can	 be	 biological,	 physiological,	 behavioral,	
+or	environmental	and	is	collected	in	a	proactive	way	[39].	One	
+example	 of	 self-quantification	 devices	 is	 the	 weight	 scale.	
+Since	 the	 late	 19th	 century	 it	 has	 enabled	 people	 to	 reflect	
+upon	their	weight	[39].		
+
+More	 recently	 the	 number	 of	 tools	 and	 devices	 used	 for	
+self-quantification	that	people	wear	(wearables)	or	carry	with	
+them	(including	smartphone	applications)	has	grown	rapidly.	
+Wearables	 are	 worn	 on	 the	 body	 and	 they	 automatically	
+collect	 data	 such	 as	 physical	 activity,	 pulse,	 heart	 rate,	 body	
+temperature,	calories	burned,	and	sleep	patterns	[30].	Fitbit	is	
+known	 for	 creating	 wearable	 technologies.	 In	 2008	 they	
+launched	 a	 clip-on	 device	 used	 to	 measure	 steps,	 calories,	
+activity	 intensity,	 and	 sleep;	 Later	 in	 2013	 they	 launched	 a	
+wristband	 version	 and	 other	 companies	 such	 as	 Nike	 and	
+Jawbone	 created	 similar	 technologies	 [9].	 Also	 clothes	 are	
+equipped	 with	 sensors	 to	 measure	 body	 vitals	 [8].	 The	
+adoption	of	the	smartphone	has	facilitated	people	to	quantify	
+themselves	using	smartphone	applications	(apps).	These	apps	
+enable	 people	 to	 automatically	 or	 manually	 monitor	 sport	
+exercises	 and	 performances,	 daily	 steps,	 sleep	 patterns,	 and	
+food	intake	[30].		
+
+Self-quantification	 enables	 people	 to	 collect	 information	
+about	 themselves	 and	 act	 upon	 this	
+information.	 This	
+facilitates	 self-knowledge,	 awareness,	 self-control,	 self-
+improvement,	 and	 self-reflection.	 People	 use	 their	 data	 to	
+improve	
+improve	
+performance.	 They	 can	 share	 their	 data	 easily	 with	 peers,	
+sports	coaches,	and	medical	staff.		
+
+concentration,	 and	
+
+increase	
+
+sleep,	
+
+Here,	people's	experience	of	their	self	is	(partially)	shaped	
+by	the	use	of	technology	applications	that	measure	body	vitals	
+and	 daily	 habits.	 In	 the	 design	 process,	 social,	 political,	
+economic,	 and	 technical	 influences,	 shape	 the	 features	 and	
+functions	 of	 technology	 applications	 [5].	 They	 assume	
+functions	 and	 desires	 of	 users,	 and	 force	 meaning	 and	
+subjectivity	 on	 the	 users	 by	
+interpreting	 data	 about	
+descriptions	 of	 the	 body	 [25].	 Also,	 health	 promoters	 may	
+contribute	 to	 negative	 feelings	 of	 shame	 and	guilt	 by	forcing	
+an	 ideal	 of	 a	 healthy	 lifestyle	 on	 users	 through	 technology	
+applications	[26].	
+
+While	quantified	self	is	about	people	gathering	their	own	
+information,	health	information	in	general	is	becoming	more	
+accessible	 to	 patients	 as	 well	 through	 the	 growing	 use	 of	
+information	
+in	
+healthcare.	 Information	 that	 used	 to	 be	 available	 only	 via	
+
+technologies	 and	 online	
+
+technologies	
+
+  
+	
+ 
+                                                
+The ‘Self’ as Barrier for Self-Management Technologies in 
+Healthcare? 
+
+medical	 specialists,	 is	 now	 widely	 available	 online.	 [26].	
+Health	information	is	one	of	the	topics	that	is	most	frequently	
+searched	for	online.	It	can	improve	a	patients’	understanding	
+of	their	medical	condition	[29].		
+
+The	 disclosure	 of	 health	 information	 has	 facilitated	 a	
+paradigm	 shift	 in	 healthcare.	 Traditionally	 a	 paternalistic	
+model	was	common	in	which	the	patient	passively	accepts	the	
+doctor’s	 authority	 and	 choice	 of	 treatment.	 New	 forms	 of	
+healthcare	 delivery	models	 are	 developed	 that	are	 grounded	
+in	 collaboration	 and	 in	 which	 a	 partnership	 between	 the	
+doctor	 and	 the	 patient	 is	 established	 [6,	 10,	 29].	 The	 old	
+thinking	 in	 which	 patients	 placed	 the	 responsibility	 of	 their	
+health	with	the	doctor	is	changing	to	a	new	thinking	in	which	
+patients	 take	 responsibility	 to	 manage	 their	 own	 health	 and	
+they	have	the	tools	to	do	so	[38].	
+
+2.2	 Self-Management	Technologies	in	HCI	
+
+Self-management	 technology	 is	 widely	 discussed,	 both	 in	
+medical	 as	 well	 as	 in	 HCI	 literature.	 Several	 barriers	 for	 the	
+sustainable	use	of	self-management	technologies	have	already	
+been	identified:	
+
+The	work	of	Bhachu	et	al.	[3]	showed	that	elderly	people	
+are	 willing	 to	 accept	 technology	 for	 self-managing	 chronic	
+health	conditions,	if	it	benefits	their	health	condition.		
+
+Simm	 et	 al.	 [35]	 presented	 Snap,	 a	 wearable	 to	 self-
+manage	anxiety	for	people	with	autism.	The	authors	suggest	a	
+DIY	 co-development	 approach	 to	 design	 technology	 for	 self-
+management	 of	 anxiety,	 as	 it	 removes	 the	 focus	 from	 the	
+diagnosis	and	emphasizes	a	holistic	approach	to	the	user.	
+
+Other	 examples	 include	 the	 work	 on	 diabetes	 self-	
+management	by	Maniam	et	al.	[28]	that	identifies	financial	and	
+privacy	 aspects	 for	 technology	 acceptance	 and	 the	 work	 of	
+Doyle	 et	 al.	 [13]	 on	 smart	 home	 data	 for	 ambient-assisted	
+living	that	emphasized	the	importance	of	education	and	goal-
+setting.		
+
+Harrison	et	al.	[19]	described	how	accuracy	and	aesthetics	
+are	 important	 barriers	 for	 quantified	 selfers	 using	 activity	
+trackers.	Li	et	al.	[23,24]	studied	lead	users—early	adopters	of	
+technology,	 who	 might	 not	 be	 representative	 for	 a	 whole	
+population—and	
+design	
+recommendations	 for	 personal	 informatics.	 They	 present	 an	
+iterative	 stage-based	 model	 (including	 reflection	 and	 action)	
+and	 found	 that	 barriers	 such	 as	 accuracy,	 time	 constraints,	
+and	difficulties	understanding	visualizations,	cascade	through	
+stages.		
+
+identified	
+
+barriers	
+
+and	
+
+Despite	 this	 knowledge	 on	 barriers,	 sustainable	 use	 of	
+quantified	 self	 tools	 in	 the	 long-term	 remains	 difficult,	 even	
+for	lead	users	[2].	Furthermore,	when	introducing	quantified	
+self	approaches	to	atypical	audiences	(other	than	middle-aged	
+white	 men)	 new	 challenges	 emerge	 as	 these	 atypical	 end-
+in	 their	 natural	
+users	 often	
+
+lack	 required	 resources	
+
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+environment	 [22].	 Also,	 there	 might	 be	 a	 misalignment	
+between	 designer	 intentions	 and	 end-user	 views	 when	
+thinking	about	a	quantified	life	[18].	
+
+Next	 to	 the	 known	 barriers,	 we	 argue	 that	 in	 binding	
+applications	 of	 quantified	 self	 such	 as	 self-management	
+applications	in	healthcare,	the	inherent	curiosity	of	quantified	
+selfers	 might	 be	
+lacking	 as	 compared	 to	 non-binding	
+applications	of	quantified	self	such	as	sports	activity	trackers	
+or	mindfulness	training.	Non-binding	applications	start	with	a	
+deliberate	 choice	 and	 freedom	 as	 they	 are	 aimed	 at	 healthy	
+individuals	that	want	to	initiate	or	keep	up	a	certain	lifestyle.	
+Whereas	 most	 of	 this	 related	 work	 involves	 the	 caregivers’	
+perspective,	 or	 used	 focus	 groups	 as	 method,	 we	 focus	 on	
+patients’	 experiences	 after	 they	 use	 the	 self-	 management	
+technology	 for	 two	 weeks	 in	 their	 own	 home.	 We	 are	
+interested	in	how	patients	perceive	the	technology	after	using	
+it,	and	the	barriers	they	encounter.		
+
+2.3	 Technology	appropriation	and	Non-use	
+
+Ever	 since	 products	 are	 designed	 they	 are	 used	 in	 ways	
+they	are	intended	to	and	in	new	ways	[4].	Appropriation	is	a	
+creative	use	of	a	product	where	the	user	adopts	a	new	use	of	
+the	 product	 [33].	 Appropriation	 is	 found	 in	 a	 variety	 of	
+products	 such	 as	 digital	 camera’s	 [33],	 online	 learning	
+platforms	[11],	and	mobile	banking	[31].			
+
+Users’	 values	 affect	 their	 experiences	 with	 products	 or	
+services	 [21].	 Every	 product,	 whether	 intentionally	 designed	
+or	 not	 can	 trigger	 associations	 that	 depend	 on	 social	 and	
+cultural	 norms	 [4]	 and	 through	 use,	 users	 construct	 new	
+meanings	on	the	technologies	they	use	[11].	
+
+Designers	 have	 specific	
+
+intentions	 when	 designing	
+products,	 these	 intentions	 are	 embedded	 in	 the	 product	 as	
+features	and	affordances	[11].	When	a	product	is	designed,	the	
+features	 and	 functions	 are	 shaped	 by	 social,	 political,	
+economic,	and	technical	influences	[5].	Also,	technologies	are	
+designed	around	assumptions	about	what	needs	to	be	done	to	
+establish	 an	 action,	 but	 often	 they	 are	 wrong	 [17].	
+Appropriation	is	critical	to	the	adoption	and	thus	success	of	a	
+technology.	 Therefore	
+to	 understand	
+it	
+appropriation	for	those	who	develop	technology	[12].		
+
+crucial	
+
+is	
+
+New	 appropriations	 of	 design	 do	 not	 necessarily	 need	 to	
+be	a	problem.	It	can	be	seen	as	a	phenomenon	that	provides	
+opportunities	 to	 learn	 about	 the	 user	 as	 appropriations	
+capture	 the	 needs	 of	 the	 users.	 Carroll	 [5]	 argues	 that	
+appropriation	 is	 part	 of	 the	 design	 and	 that	 the	 uses’	
+appropriation	of	technology	may	be	viewed	as	a	completion	of	
+the	
+technology	 perspective	
+appropriation	 can	 provide	 user	 requirements	 for	 future	
+products	or	versions	[12].	However,	in	certain	domains	such	
+as	 banking	 where	 a	 system	 may	 be	 used	 for	 fraud	 or	 in	
+healthcare	where	a	doctor	may	need	to	use	a	tool	the	way	that	
+
+innovation	 cycle.	 From	 a	
+
+3 
+
+	
+ 
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+B. Vandenberghe et al. 
+
+it	 is	 intended	 to,	 appropriation	 is	 not	 desirable	 as	 the	
+anticipated	outcome	is	something	that	is	relied	upon.	
+
+An	 important	 field	 of	 study	 in	 this	 light	 is	 non-use.	 If	
+technologies	 do	 not	 get	 appropriated	 or	adopted	 in	 the	 long	
+term,	why	are	they	abandoned,	or	not	even	considered	for	use	
+in	 the	first	 place?	 As	 Satchell	 and	 Dourish	 [34]	 argue,	 use	 is	
+only	 one	 kind	 of	 relating	 with	 technology	and	 non-users	 are	
+not	 bad	 users.	 The	 study	 of	 non-use	 can	 equally	 bring	 up	
+insights	regarding	the	design	of	technology	[34].	Fuchsberger	
+et	al.	[16]	consider	non-use	as	an	activity.	They	too	call	for	a	
+different	way	of	seeing	non-users,	as	if	these	users	are	in	need	
+for	something	[16].	As	Baumer	et	al.	[1]	describe,	use	and	non-
+use	could	even	be	considered	as	a	non-binary	spectrum.		
+
+Havlucu	et	al.	[20]	studied	the	abandonment	of	wearables	
+with	 tennis	 players;	 They	 found	 that	 generic	 feedback	 that	
+lacks	qualitative	interpretation	of	the	data	and	the	absence	of	
+coaches	on	the	platform	leads	to	this	abandonment.		
+
+Epstein	 et	 al.	 [14]	 studied	 abandonment	 of	 personal	
+informatics	 too;	 They	
+identified	 the	 cost	 of	 tracking,	
+discomfort	with	the	information,	and	concerns	regarding	data	
+quality	 as	 reasons	 for	 abandonment.	 Furthermore,	 they	
+studied	 what	 happens	 after	 abandonment:	 Their	 findings	
+point	at	feelings	 of	 guilt	 and	 frustration,	 but	also	 at	freedom	
+after	 abandoning	 personal	 informatics	 tools.	 To	 conclude,	 as	
+Clawson	et	al.	[7]	illustrate	with	their	work	on	abandonment	
+of	 personal	 health-tracking	 technologies,	 abandonment	 and	
+non-use	 are	 complex	 stories.	 Abandonment	 can	 also	 be	 a	
+consequence	 of	 people	 having	 upgraded	 devices	 or	 achieved	
+their	goals.		
+
+3	 CASE	STUDY	
+
+The	 PICASSO-Tx	 project	
+
+tests	 a	 self-management	
+intervention	 with	 or	 without	 interactive	 health	 technology	
+
+option	depending	on	the	patient’s	preference.	It	aims	to	study	
+whether	patients’	preference	for	technology	to	support	them	
+and	 manage	 their	 condition	 impacts	 health	 outcomes.	 Self-
+management	 through	 technology	 is	 a	 promising	 way	 to	
+provide	 support	 to	 patients	 next	 to	 the	 regular	 visits	 to	 the	
+hospital.	 The	 system	 was	 built	 using	 off-the	 shelf	 hardware	
+and	a	custom	designed	software	component.	The	PICASSO-Tx		
+platform	 will	 be	 deployed	 in	 a	 clinical	 trial	 to	 answer	 the	
+question	about	preference.	
+
+3.1	 System	Overview	
+
+The	 goal	 of	 the	 PICASSO-Tx	 project	 was	 to	 develop	 an	
+open	system,	that	is	free	of	any	judgment.	Patients	can	use	this	
+system	 to	 measure	 their	 own	 behavior	 and	 gain	 insights	 in	
+their	behavior	and	themselves.	The	system	is	not	intended	to	
+be	 used	 by	 doctors	 in	 the	 light	 of	 self-management	 and	
+considering	the	increasing	amount	of	workload	of	doctors.		
+
+The	 PICASSO-Tx	 project	 combines	 three	 smart	 devices	
+tracking	 the	 patient’s	 behavior:	 a	 Fitbit	 One	 stepcounter2,	 a	
+Fitbit	Aria	smart	scale3,	and	a	smart	pill	box4.	The	data	that	is	
+collected	 with	 these	 devices	 is	 presented	 on	 a	 dedicated	
+website	where	patients	get	feedback	about	their	adherence	to	
+medication	(see	Figure	1	for	an	example	about	medication).	
+
+As	 there	 was	 a	 clear	 need	 for	 education	 to	 overcome	
+existing	 health	 beliefs,	 the	 website’s	 landing	 page	 offers	
+patients	 challenging	 true	 or	 false	 questions	 about	 diet,	
+physical	activity,	and	medication	routines.	
+
+ The	website	offers	patients	insight	in	their	step	count	on	a	
+bar	 graph	 in	 a	 seven-day	 timeframe.	 This	 timeframe	 allows	
+bad	 days	 to	 be	 compensated,	 but	 does	 not	 highlight	 when	 a	
+patient’s	condition	gets	worse	(e.g.	due	to	a	relapse).	
+
+Below	 the	 seven-day	 graph,	 the	 cumulated	 distance	 of	
+their	 steps	 is	 presented	 on	 a	 map.	 The	 platform	 allows	
+patients	 to	 set	 a	 goal	 for	 them	 to	 reach,	 e.g.	 Santiago	 De	
+Compostela	[40].	Then	on	a	traditional	weight	graph,	patients	
+can	 track	 their	 weight.	 The	 graph	 highlights	 zones	 based	 on	
+BMI	 by	 default,	 but	 can	 be	 customized	 by	 the	 doctor	 if	
+required.	
+
+For	medication	adherence,	the	platform	can	be	customized	
+per	patient.	Most	patients	need	to	take	their	medication	every	
+twelve	hours,	within	a	window	of	one	hour.	We	plot	the	times	
+they	 took	 their	 medication	 and	 added	 a	 color	 gradient	 to	
+indicate	 the	 deviation	 from	 the	 prescribed	 moment	 (see	
+Figure	1).	The	more	accurate,	the	greener	the	dot	gets.	Once	
+the	medication	was	taken	too	early	or	too	late,	the	dots	turn	
+red.	 The	 gradient	 emphasizes	 the	 fact	 that	 it	 there	 is	 some	
+margin,	but	the	more	accurate,	the	better.	
+
+Figure	1:	PICASSO-Tx	website,	giving	feedback	on	
+medication	intake	
+
+2	http://www.Sitbit.com/one	
+3	http://help.fitbit.com/?p=aria	
+4	http://www.aardexgroup.com/products/mems-cap	
+
+4 
+
+  
+	
+ 
+                                                
+The ‘Self’ as Barrier for Self-Management Technologies in 
+Healthcare? 
+
+Finally,	 the	 website	 also	 gives	 recommendations	 on	
+healthy	diet.	This	consisted	of	general	diet	recommendations	
+based	 on	 the	 Belgian	 diet	 guidelines.	 This	 information	 was	
+also	 shared	after	 transplantation	 by	 a	 dietarian	and	 patients	
+received	a	hard	copy	of	this	information	once.		
+
+We	 designed	
+
+3.2	 Human-Centered	Design	Process	
+the	 PICASSO-Tx	 platform	
+
+in	 close	
+collaboration	 with	 the	 academic	 center	 for	 nursing.	 We	
+started	 the	 project	 collecting	 insights	 about	 the	 current	
+practices	 of	 patients	 using	 diary	 studies	 and	 contextual	
+interviews.	Based	on	the	behavior	model	of	BJ	Fogg	[15],	we	
+asked	 19	 patients	 to	 keep	 track	 of	 their	 self-management	
+practices	 related	 to	 our	 PICASSO-Tx	 project.	 In	 a	 booklet,	
+patients	 tracked	 their	 activities	 and	 experience	 during	 one	
+week	 and	 on	 dedicated	 forms	 patients	 tracked	 their	 diet,	
+physical	 activity,	 and	 medication	 adherence.	 We	 concluded	
+the	diary	study	with	a	contextual	interview	at	patients’	homes	
+to	discuss	their	current	practices.		
+
+The	 results	 showed	 that	 the	 main	 reason	 for	 non-
+adherence	 to	 medication	 was	 the	 interruption	 of	 daily	
+routines.	 For	 example	 when	 the	 weather	 is	 good	 patients	
+leave	 their	 house	 to	 go	 out	 but	 forget	 to	 bring	 their	
+medication.	Another	insight	was	that	people	hold	false	beliefs	
+about	diet.		
+
+Based	 on	 the	 insights	 collected	 with	 the	 diary	 study	 and	
+the	contextual	interviews,	we	started	an	iterative	prototyping	
+phase	and	made	our	first	sketches	of	the	PICASSO-Tx	website.	
+We	invited	patients	to	our	lab,	to	test	different	approaches	to	
+give	 feedback	 on	 steps,	 weight,	 medication	 adherence,	 and	
+healthy	 diet.	We	repeated	 this	 process	 using	 digital	 sketches	
+and	an	interactive	mockup.	In	total,	we	included	12	patients	in	
+3	 rounds.	 All	 evaluations	 were	 conducted	 in	 our	 lab	 at	 the	
+university	campus.	
+
+After	 the	 developers	 implemented	 our	 findings,	 we	
+conducted	 a	 field	 evaluation	 of	 the	 PICASSO-Tx	 platform.	
+Initially,	 20	 patients	 were	 recruited	 to	 use	 the	 PICASSO-Tx	
+platform	 at	 home.	 One	 patient	 was	 excluded,	 as	 he	 did	 not	
+have	a	working	internet	connection.	Finally,	19	patients	were	
+included	in	the	study.		The	findings	presented	in	this	paper	are	
+based	on	this	final	phase	of	the	project.	
+
+All	 studies	 within	 the	 project	 were	 approved	 by	 the	
+medical	ethical	board	of	the	university	hospital	in	Leuven.	As	
+most	 patients	 were	 willing	 to	 participate	 the	 project,	 we	
+included	 new	 patients	 for	 every	 study	 or	 round.	 In	 every	
+round,	 we	 balanced	 patients	 from	 the	 different	 solid	 organ	
+transplant	departments	(heart,	lung,	liver,	and	kidney),	as	well	
+as	 condition	
+time	 since	
+related	 variables	 such	 as	
+transplantation	and	demographic	variables	were	balanced.	
+
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+4	 METHOD	
+
+4.1	 Sample	
+
+We	 conducted	 a	 field	 evaluation	 with	 19	 patients	 (11	
+males,	8	females;	aged	21–69	with	an	average	age	of	52).	The	
+patients	 in	 this	 study	 were	 recruited	by	 the	 academic	center	
+for	nursing.	We	included	five	patients	of	the	heart,	kidney,	and	
+lung	 transplant	 departments,	 and	 four	 patients	 of	 the	 liver	
+transplant	 department.	 We	 balanced	 patients	 who	 claimed	
+they	 do	 or	 do	 not	 self-manage	 one	 or	 multiple	 of	 our	 target	
+behaviors	(diet,	physical	activity,	and	medication	adherence).	
+Next	to	that,	we	aimed	to	balance	time	since	transplantation,	
+sex,	age,	marital	status,	education,	and	employment.	We	used	
+several	inclusion	criteria:	patients	needed	to	be	fit	enough	to	
+participate,	live	in	or	close	to	Leuven	(Belgium),	and	be	able	to	
+understand	and	sign	the	informed	consent	forms.		
+
+4.2	 Procedure	
+
+We	first	visited	patients	at	home	to	install	the	equipment	
+and	explain	the	platform	to	the	patients.	During	this	first	visit,	
+we	 also	 conducted	 a	 usability	 evaluation	 of	 the	 final	 system.	
+This	allowed	us	to	tweak	the	platform	before	deploying	it	on	
+large	scale	in	a	clinical	trial.	This	visit	took	one	to	two	hours	
+per	patient.	
+
+Patients	 used	 the	 PICASSO-Tx	 platform	 for	 two	 weeks	 at	
+home.	 The	 platform	 supported	 their	 self-management	 of	
+physical	activity,	healthy	eating,	and	medication	adherence.		
+
+After	 10	 days	 they	 were	 contacted	 to	 arrange	 a	 second	
+home	 visit.	 During	 that	 visit,	 the	equipment	 was	 uninstalled,	
+and	we	conducted	a	closing	interview.	The	interview	focused	
+on	 the	 patients’	 user	 experience	 after	 using	 the	 platform	for	
+two	weeks.	
+
+4.3	 Analysis	
+
+The	 interview	 data	 were	 analyzed	 using	 content	 analysis	
+while	 specifically	 focusing	 on	 the	 barriers	 and	 enablers	 that	
+the	patients	encountered	while	using	the	PICASSO-Tx	system.	
+During	 the	 analysis,	 we	 noticed	 that	 patients	 formed	 mental	
+models	 of	 the	 platform	 that	 differed	 substantially	 from	 how	
+we	designed	the	platform.	This	resulted	in	a	new	approach	for	
+the	 analysis	 to	 answer	 the	 question:	 What	 are	 expectations	
+patients	have	about	the	platform	and	how	do	they	perceive	the	
+system?	We	revisited	the	recordings	of	the	closing	interviews	
+and	 coded	 the	 interviews	 from	 that	 perspective.	 The	 results	
+below	 discuss	 the	 outcomes	 of	 this	 selective	 coding	 of	 the	
+closing	interviews.	
+
+5 
+
+	
+ 
+	
+	
+	
+	
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+B. Vandenberghe et al. 
+
+5	 RESULTS	
+
+During	 the	 analysis	 of	 the	 closing	 interviews	 we	 focused	
+on	 patients’	 expectations	 towards	 the	 system	 and	
+its	
+implementation,	 perceptions	 of	 the	 platform,	 and	 potential	
+barriers	 related	 to	 these	 expectations	 and	 perceptions	 after	
+using	the	PICASSO-Tx	system	for	two	weeks	at	home.		
+
+5.1	 Patients’	Expectations	
+
+5.1.1	 Expectations towards  the system.	 Patients	 expected	
+their	 data	 to	 be	 shared	 with	 others	 such	 as	 caregivers,	
+although	we	were	explicit	about	the	fact	that	only	the	patient	
+could	 see	 their	 data.	 They	 perceived	 the	 PICASSO-Tx	 system	
+as	a	tool	for	monitoring	by	the	caregiver	and	talked	about	how	
+it	 would	 be	 used	 by	 physicians	 or	 nurses	 for	 follow-up.	
+Although	we	expected	strong	and	negative	opinions	about	the	
+idea	 of	 monitoring	 by	 the	 caregiver	 through	 the	 technology,	
+patients	perceived	this	to	be	rather	positive:	“Now	the	doctor	
+can	 see	 the	 evolution	 of	 a	 patient	 [...]	 What	 an	 improvement!	
+Now	 they	 can	 rely	 on	 technology	 to	 follow-up	 on	 patients.”—
+P13	
+
+Our	 patients	 saw	 little	 problems	regarding	 privacy	 about	
+sharing	 this	 behavioral	 data.	 The	 caregivers	 in	 the	 hospital	
+already	ask	how	things	are	going,	and	they	are	expected	to	be	
+honest	 about	 their	 adherence,	 so	 why	 would	 anyone	 bother	
+about	this?	“It’s	a	fundamental	principle	to	help	the	patient.	If	it	
+can’t	 happen	 openly,	 then	 the	 patient	 should	 not	 engage	 in	
+it.”—P19	
+
+However,	 we	 did	 notice	 that	 our	 patients	 were	 hesitant	
+about	 sharing	 the	 aspects	 they	 had	 most	 difficulties	 with:	
+“Maybe	 the	 number	 of	 steps	 shouldn’t	 be	 shared,	 otherwise	
+the	doctors	become	too	much	like	the	police.	Of	course,	weight	
+and	medication	would	be	fine,	as	you	have	to	do	these	things	
+anyway.”—P5	
+
+This	patient	did	not	have	problems	with	taking	medication	
+and	 used	 the	 scales	 every	 day,	 but	 found	 it	 hard	 to	 be	
+physically	 active.	 With	 other	 patients,	 we	 encountered	
+objections	 against	 different	 aspects	 of	 the	 platform	 being	
+shared	 with	 caregivers,	 mostly	 depending	 on	 how	 well	 (or	
+bad)	they	did.		
+
+5.1.2	 Expectations  towards  caregivers.	 Since	 our	 patients	
+understood	 the	 platform	 as	 a	 way	 to	 organize	 monitoring,	
+they	 had	 certain	 expectations	 towards	 caregivers	 related	 to	
+this	 as	 well.	 Our	 patients	 expressed	 how	 they	 totally	
+understood	why	physicians	would	want	or	even	need	to	have	
+access	 to	 the	 data.	 In	 the	 interviews,	 they	 described	 how	
+physicians	 would	 benefit	 from	 their	 data	 being	 included	 in	
+their	 patient	 file:	 “It	 would	 be	 nice	 if	 they,	 from	 the	 hospital,	
+would	 be	 able	 to	 track	 when	 things	 go	 wrong.	 For	 example	
+when	you've	had	enough	and	no	longer	take	the	medication.”—
+P8	
+
+6 
+
+Patients	 also	 saw	 how	 the	 platform	 would	 make	 the	
+contact	 between	 caregivers	 and	 patients	 more	 time-efficient	
+while	using	it	for	monitoring	them	and	follow-up:	“If	I	become	
+ill,	I	call	the	hospital.	These	are	long	and	technical	conversations	
+because	 I	 have	 to	 go	 through	 everything	 I	 did	 in	 the	 previous	
+days.	Now	they	could	look	at	this	system.	It's	interesting	because	
+all	information	is	at	one	place.”—P19	
+
+Next	 to	 monitoring	 and	 follow-up,	 patients	 expected	 an	
+active	role	for	caregivers	in	the	implementation	of	the	system.	
+The	patients	expressed	their	appreciation	for	physicians,	how	
+the	 caregivers	 would	 coach	 patients	 and	 how	 the	 system	
+would	 support	 the	 dialogue	 between	 the	 patients	 and	 their	
+physicians:	 “I	think	I've	done	bigger	blunders	than	what	is	on	
+there,	no,	the	better	I	got	coached,	the	more	I'll	gain”—P19	
+
+Some	 patients	 even	 expressed	 their	 disappointment	
+because	this	interaction	with	caregivers	was	not	implemented	
+in	our	prototype	yet—while	we	deliberately	never	intended	to	
+implement	 this	 in	 the	 light	 of	 self-management.	 When	
+evaluating	 the	 system	 as	 an	 improvement	 of	 the	 current	
+situation,	they	assumed	the	interaction	with	physicians	would	
+be	available	in	the	‘real’	platform.	The	patients	found	that	the	
+presence	 of	 these	 caregivers	 on	 the	 platform	 would	 add	
+credibility	to	it.	
+
+Patients	appropriated	the	system	as	a	tool	for	monitoring	
+by	 the	 caregivers	
+in	 their	 treatment.	 When	 we	 use	
+appropriation	as	a	tool	to	learn	more	about	the	users’	needs,	
+this	shows	how	patients	value	a	strong	role	of	their	caregivers	
+in	 their	 treatment.	 Patients	 expressed	 their	 respect	 for	 the	
+professors	and	their	teams	at	the	university	hospital,	as	they	
+the	reason	they	were	still	alive.	
+
+5.2	 Patients’	Perceptions	
+
+Patients	 perceived	 themselves	 as	 a	 subject,	 leaving	 the	
+active	 role	 of	 monitoring	 by	 the	 caregiver.	 This	 was	 not	
+necessarily	 a	 bad	 thing,	 as	 patients	 expressed	 how	 they	
+believed	this	would	improve	their	situation.	They	mentioned	
+how	 the	 platform	 helped	 them	 to	 adhere	 to	 the	 therapy	and	
+the	benefit	of	a	caregiver	monitoring	their	behavior:	“You	are	
+more	 careful	 when	 you're	 being	 monitored.	 I	 woke	 up	 at	 7:30	
+am	to	take	my	pills.	I	thought,	I	have	to	make	sure	everything's	
+fine	 while	 they	 monitor	 me.	 It	 certainly	 makes	 you	 more	
+aware.”—P8	
+
+The	perception	of	the	system	in	which	the	patient	is	being	
+monitored	by	the	caregiver,	with	an	active	role	for	caregivers	
+was	articulated	in	the	tendency	of	our	patients	to	justify	their	
+data.	 Throughout	 the	 field	 evaluation	 study,	 patients	 made	
+notes	 about	 the	 recorded	 data.	 As	 this	 functionality	 was	 not	
+part	of	the	system,	to	minimize	the	burden	on	patients	in	long-
+term,	several	patients	used	the	paper	booklet	we	gave	them	to	
+note	feedback	on	the	system	to	annotate	the	data.	
+
+In	 several	 situations,	 our	 patients	 wanted	 to	 clarify	 why	
+they	 did	 not	 follow	 the	 dietary	 advice	 (e.g.	 because	 they	
+
+  
+	
+ 
+	
+The ‘Self’ as Barrier for Self-Management Technologies in 
+Healthcare? 
+
+celebrated	 a	 birthday	 at	 a	 restaurant),	 why	 they	 had	 fewer	
+steps	(e.g.	because	they	forgot	the	stepcounter,	or	they	were	
+ill),	or	how	they	actually	took	it	from	their	other	pillbox	and	
+not	through	the	new	system.	“One	time,	it	said	I	did	not	take	my	
+medication	while	I	did.	Another	time,	I	took	my	medication	from	
+my	 other	 pillbox,	 so	 not	 from	 yours.	 I	 would	 like	 to	 add	 this	
+feedback	to	the	system.	The	system	says	that	we	did	not	take	it,	
+but	 I	 would	 like	 to	 indicate	 that	 I	 did	 take	 it,	 so	we	 can	 cover	
+ourselves.”—P8	
+
+Most	patients	automatically	started	justifying	their	data	to	
+us	 and	 wanted	 to	do	 so	 to	 their	 caregivers	as	 well	(with	 the	
+expectation	that	the	caregivers	would	also	be	able	to	see	the	
+data).	When	we	asked	patients	why	they	would	want	to	justify	
+their	data,	they	responded	that	the	physicians	might	draw	the	
+wrong	conclusions	based	on	the	recorded	data:	“If	you	visit	the	
+doctor	 after	 three	 months	 and	 he	 asks	 why	 you	 did	 not	 take	
+your	 medication	 or	 why	 you	 were	 too	 late,	 he	 doesn't	 know	
+what	really	happened.”—P5	
+
+This	 tendency	 to	 justify	 the	 data	 to	 others	 emerged	
+interviews,	 as	 patients	 felt	
+persistently	 throughout	 the	
+caregivers	would	monitor	the	patients’	behavior	through	the	
+system.		
+
+5.3	 The	‘Self’	as	Barrier	for	Self-Management	
+
+Technologies	
+
+In	 our	 field	 study,	 we	 observed	 several	 situations	 where	
+patients	became	a	barrier	for	their	own	self-management.	Our	
+for	 self-management	
+analysis	 showed	 several	 barriers	
+technologies	related	to	the	‘self’:	
+
+1.  Confrontation	with	the	self		
+2.  Feelings	of	shame	
+3.  Lack	of	identification	
+
+5.3.1	 Confrontation  with  the  self.	 In	 several	 situations,	 a	
+gap	between	the	system	and	the	‘self’	emerged,	opposing	each	
+other	 and	 raising	 barriers.	 Patients	 have	 to	 deal	 with	 their	
+condition	and	its	consequences	24/7.	Patients	acknowledged	
+that	 therapy	 adherence	 was	 challenging.	 Also,	 as	 patients	
+often	 were	 in	 a	 very	 bad	 condition	 before	 they	 received	 a	
+transplant	 organ,	 their	 current	 situation	 is	 experienced	 as	
+better.	 Several	 patients	 acknowledged	 how	 time	 softens	
+memories	about	their	pre-transplant	condition:	“We	feel	good	
+and	 we	 feel	 healthy,	 then	 it's	 easy	 to	 forget	 where	 we	 came	
+from.”—P19.	But	non-adherence	could	bring	patients	back	to	
+similar	 or	 even	 worse	 conditions.	 On	 top,	 most	 patients	
+experience	 severe	 side	 effects	 from	 their	 medication,	 while	
+the	 benefit	 of	 not	 becoming	 ill	 is	 something	 you	 cannot	feel.	
+On	 the	 contrary,	 patients	 often	 feel	 better	 when	 they	 don’t	
+take	 their	 medication:	 “There	 is	 no	 immediate	 effect	 of	 the	
+medication,	I	feel	nothing	if	I	don't	take	it.	At	a	certain	moment,	
+
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+you	feel	good,	and	you	just	forget	it.”—P8.	Therefore,	patients	
+doubted	 that	 putting	 more	 responsibility	 with	 the	 patients	
+themselves	 would	
+improve	 therapy	 adherence.	 As	 we	
+discussed	 earlier,	 the	 patients	 call	 for	 an	 active	 role	 for	
+caregivers.	
+
+Quantifying	patients’	behavior	confronted	them	with	their	
+condition,	which	was	often	worse	than	it	used	to	be.	Patients	
+indicated	 that	 they	 experienced	 the	 system	 as	 an	 additional	
+reminder	 of	 their	 condition,	 which	 was	 not	 desirable.	
+Generally,	 when	 using	 QS	 applications	 people	 will	 feel	
+confronted	with	their	self.	In	the	case	of	healthy	people,	they	
+may	be	able	to	improve	their	situation,	however	in	the	case	of	
+transplant	 patients	 their	 situation	 is	 more	 chronically	 and	
+there	may	be	a	lot	harder	to	improve	the	situation.			
+
+Most	 patients	 felt	 disappointed	 about	 their	 step	 count,	
+when	 comparing	 it	 to	 others	 by	 asking	 fellow	 patients,	
+caregivers,	 our	 us	 during	 the	 interview.	 Also,	 most	 patients	
+were	aware	of	the	general	advise	of	taking	10.000	steps	a	day,	
+which	was	far	more	than	their	personal	step	count	which	was	
+typically	 2.000	 to	 4.000	 steps	 a	 day,	 with	 some	 exceptions	
+taking	18.000	steps	a	day.	“I	felt	the	tendency	to	be	more	active	
+while	wearing	the	step	counter,	because	I	found	the	number	of	
+steps	I	took	rather	small.	Is	that	a	positive	or	negative	thing?”—
+P1.	
+
+the	
+
+This	 seems	 positive	 at	 first,	 because	 our	 patients	 are	
+motivated	
+initial	
+to	 do	 more	 steps.	 However,	
+disappointment	might	be	reinforced	in	the	long-term,	as	it	is	
+unlikely	that	the	patients’	condition	will	improve	substantially	
+due	to	the	nature	of	the	condition.	Generally,	people	in	may	be	
+disappointed	 initially	 when	 confronted	 with	 the	 number	 of	
+steps.	 However,	 for	 healthy	 individuals	 it	 will	 be	 easier	 to	
+increase	the	number	of	steps	whereas	in	the	case	of	transplant	
+patients,	it	is	unlike	that	the	initial	steps	might	be	reinforced	
+in	the	long	term	due	to	the	nature	of	the	condition.	
+
+Although	we	encouraged	small	changes,	as	these	are	more	
+sustainable	than	sudden	big	changes,	this	does	require	some	
+patience:	 “The	 weight	 is	 far	 above	 the	 upper	 limit,	 but	 in	 a	
+downward	 trend.	 It	 should	 be	 green	 instead	 of	 red,	 because	
+red	 is	 demotivating	 while	 it	 is	 actually	 going	 down.	 This	
+should	be	encouraged!	[...]	If	the	graph	is	not	good,	it	will	not	
+be	pleasant	to	use	it.”—P6.	This	patient	had	a	BMI	over	40,	so	
+his	 graph	 was	 colored	 dark	 red.	 He	 found	 the	 graph	
+demotivating	 because	it	confronted	him	 time	and	time	 again	
+with	 the	 fact	 that	 he	 should	 lose	 a	 lot	 of	 weight,	 which	 felt	
+unreasonable	to	him.	
+
+Other	 patients	 set	 irrational	 goals	 for	 themselves:	 “I	 had	
+my	 goals,	 but	 it	 doesn't	 work	 in	 such	 a	 short	 timeframe	
+[disappointed]”—P11.	 These	 disappointments	 of	 not	 meeting	
+(unreasonable	 high)	 targets	 could	 lead	 to	 non-use	 of	 the	
+system	in	long-term.	
+
+7 
+
+	
+ 
+	
+	
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+B. Vandenberghe et al. 
+
+The	system	was	designed	as	a	companion	for	the	patients	
+in	 their	 daily	 endeavor	 of	 managing	 their	 health.	 In	
+constructing	new	routines	by	using	the	system,	patients	felt	it	
+becoming	compulsory	and	the	initial	excitement	of	starting	to	
+use	a	new	system	faded.		was	replaced	by	some	reservations.	
+“In	the	long	run	it	becomes	compulsory,	we	have	to	do	this	and	
+then	that.	It	becomes	too	much	for	the	patient.”—P4	
+
+5.3.2	 Feelings  of  shame.	 In	 some	 cases,	 patients	 were	
+reluctant	 to	 use	 the	 technology	 due	 to	 feelings	 of	 shame.	 	 “I	
+now	paid	attention,	but	I	know	that	this	won't	solve	anything	in	
+the	long	term.	Maybe	it	would	help	if	my	bowel	problems	[side	
+effect	of	medication]	would	be	solved.	I	already	experimented	a	
+lot	with	medication,	for	example	by	not	taking	it	for	weeks.	At	a	
+certain	 moment	 I	 decided	 to	 tell	 it	 anyway	 in	 the	 university	
+hospital,	because	you	can't	keep	walking	around	with	it.”—P14.	
+In	this	example,	the	patient	used	to	hide	information	from	his	
+caregivers	by	not	telling	them	specific	details.		
+
+Several	 patients	 indicated	 that	 they	 saw	 the	 system	 as	 a	
+new	way	to	hide	or	manipulate	information	for	the	caregivers:	
+“I	 hear	 so	 many	 lies	 patients	 tell	 to	 their	 doctors.	 They	 can	
+manipulate	this	system,	so	it's	useless.”—P13	
+
+Some	 patients	 felt	 ashamed	 about	 aspects	 of	 their	
+condition.	We	received	a	lot	of	feedback	from	patients	on	the	
+size	of	the	pillbox,	and	how	it	exposes	them	as	a	patient	to	the	
+outside	 world:	 “The	 pill	 box	 is	 too	 big.	 I	 like	 to	 have	 a	 little	
+privacy,	and	you	don't	flaunt	with	all	the	medication	you	need	
+to	 take.”—P5.	 Several	 patients	 searched	 for	 workarounds	 to	
+deal	with	the	conflict	between	the	desire	to	perform	well	on	
+the	platform	and	the	desire	of	hiding	their	condition	in	social	
+situations.	In	this	example,	the	patient	took	his	medication	at	
+home	 before	 he	 left,	 so	 he	 did	 not	 have	 to	 take	 the	 pill	 box	
+with	him.	This	patient	also	requested	the	functionality	to	add	
+comments	 to	 the	 tracked	 data,	 so	 he	 could	 indicate	 it	 was	 a	
+deliberate	action.	He	would	also	consider	this	intake	as	ok,	as	
+to	him	he	had	no	other	choice	than	taking	it	early.	The	system	
+left	him	no	choice.	
+
+5.3.3  Lack of  identification  with  the  system.	 Patients	 often	
+felt	that	the	system	did	not	apply	to	them	and	they	could	not	
+identify	themselves	with	the	target	audience	of	the	system.	
+
+including	 the	
+
+Throughout	 the	 whole	 project,	
+
+field	
+evaluation	study,	we	encountered	patients	declaring	they	did	
+quite	 well.	 Other	 patients	 had	 troubles	 adhering	 to	 the	
+prescribed	 therapy,	 so	 they	 were	 happy	 to	 help	 us	 with	 the	
+design	 of	 this	 system,	 so	 these	 other	 patients	 could	 be	
+supported.	 After	 using	 the	 system,	 the	 numbers	 were	 not	
+always	in	accordance	to	what	the	patients	told	us	during	the	
+first	 home	 visit,	 but	 they	 could	 explain	 this.	 Patients	 told	 us	
+they	were	not	impressed	by	the	system,	as	they	were	aware	of	
+their	 behavior	 already.	 Also,	 patients	 had	 very	 specific	 or	
+complex	guidelines	that	did	not	match	the	system,	so	even	if	
+
+8 
+
+they	 wanted	 to	 use	 the	 system,	 it	 would	 not	 work	 out.	 But,	
+most	 patients	 had	 no	 difficulties	 in	 coming	 up	 with	 other	
+groups	of	patients	who	would	benefit	from	using	the	system.	
+In	 their	 conviction	 that	 they	 did	 well,	 our	 patients	 often	
+expressed	 how	 they	did	 not	 understand	 how	 someone	could	
+not	adhere	to	the	therapy,	considering	how	important	it	is—	
+their	 lives	 depend	 on	 it.	 “The	 death	 rate	 seems	 to	 be	 above	
+20%,	because	of	people	not	taking	their	medication	correctly	or	
+alcohol	abuse.	Then	I	think,	but	that's	in	your	own	power!	[...]	I	
+wonder,	 what	 is	 the	 kind	 of	 people	 who	 don't	 adhere	 to	 their	
+therapy?”—P19	
+
+When	the	tracked	data	was	not	as	perfect	as	our	patients	
+predicted	 them	 to	 be,	 they	 had	 all	 kinds	 of	 explanations:	
+“Having	 few	 steps	 does	 not	 mean	 you're	 not	 active.	 For	
+example,	 after	 cleaning	 the	 house,	 I	 had	 less	 steps	 but	 was	
+more	tired.	If	you	would	track	this,	you	would	think	I	wasn't	
+active,	but	I	was	busy	the	whole	day.”—P2.	They	interpreted	
+this	as	that	it	wasn’t	meant	for	them	or	stated	that	the	system	
+was	inaccurate.	
+
+Other	patients	found	conflicts	in	the	provided	information	
+on	the	system	and	their	personal	prescribed	guidelines.	“The	
+section	about	nutrition	does	not	appeal	to	me.	You	would	have	
+to	 adapt	 it	 for	 every	 person,	 because	 one	 person	 has	 this	
+guideline	and	the	others	that	guideline.	I	don't	have	to	worry	
+about	sugar,	but	I	can't	eat	crudités.	[...]	Also,	this	changes	over	
+time.	Earlier,	I	could	eat	crudités	though,	that	was	ok	for	both	
+my	liver	and	my	kidney.”—P15	
+
+Also,	 in	 their	 final	 verdict,	 our	 patients	 doubted	 whether	
+the	 system	 was	 meant	 for	 them.	 Although	 some	 patients	
+admitted	they	were	surprised	at	some	time	during	the	study,	
+it	 was	 often	 attributed	 to	 inaccuracies	 of	 the	 system.	 Our	
+patients	 indicated	 that	 they	 actually	 were	 aware	 of	 their	
+behavior,	and	that	the	system	did	not	change	much	about	this:	
+“I	 won't	 use	 the	 step	 counter,	 I	 know	 what	 I	 do.”—P5;	
+“Eventually,	you	know	what	you	do.	It's	your	own	body.”—	P6	
+
+As	 patients	 were	 talking	 how	 this	 monitoring	 by	 the	
+caregiver	system	would	improve	the	situation	in	general,	we	
+were	wondering	how	they	saw	it	working	for	themselves.	As	
+most	patients	believed	they	did	well	on	the	aspects	that	really	
+mattered,	 they	 saw	 the	 platform	 of	 little	 use	 for	 themselves.	
+However,	patients	could	think	of	different	other	groups	of	our	
+patients	 like	 elderly	 or	 new	 patients	 for	 whom	 it	 would	 be	
+useful:	 “I	 don’t	 think	 it	 would	 be	 useful	 for	 me,	 but	 what	 if	 I	
+can’t	 do	 it	 anymore	 in	 ten	 years?	 [...]	 I	 think	 it	 could	 be	 very	
+useful	 for	 people	who	 can’t	 check	 upon	 their	 own	 behavior”—
+P13	
+
+This	 feedback	 returned	 throughout	 the	 project	 and	 our	
+interviews	 in	 the	field	 study.	 Our	 patients	 did	 come	 up	 with	
+groups	 of	 our	 patients	 who	 might	 benefit	 from	 using	 the	
+system.	 The	 overall	 suggestion	 by	 patients	 was	 to	 focus	 the	
+project	 on	 these	 groups.	 The	 most	 commonly	 heard	
+suggestions	were	new	patients	–	also	from	patients	who	were	
+
+  
+	
+ 
+	
+	
+The ‘Self’ as Barrier for Self-Management Technologies in 
+Healthcare? 
+
+only	recently	transplanted	patients	–	and	elderly	–	again,	even	
+our	oldest	patients	stated	that	older	patients	would	need	this.	
+“I	 would	 recommend	 it	 for	 someone	 who	 is	 starting.	 For	 me,	
+who	 has	 her	 routines,	 I	 don't	 think	 we	 should	 be	 forced	 to	
+change	 it.	 But	 they	 could	 follow-up	 on	 new	 patients	 using	 the	
+system	right	away.”—P2	
+
+“It	 can	 only	 serve	 people	 who	 aren't	 able	 to	 control	
+
+themselves	anymore”—P13	
+
+6.	 DISCUSSION	
+
+towards	
+
+The	 field	 evaluation	 showed	 that	 using	 self-management	
+their	
+technology,	 patients	 hold	 expectations	
+caregivers:	 they	 expect	 their	 caregivers	 to	 look	 over	 their	
+shoulder	 at	 the	 data	 and	 even	 intervene	 when	 things	 go	
+wrong.	 In	 this	 way,	 the	 technology	 is	 considered	 as	 a	
+companion	 to	 the	 caregiver	 rather	 than	 to	 the	 patient.	
+Comparing	 this	 with	 our	
+initial	 perspective	 on	 self-
+management	 (the	 patient	 as	 actor	 in	 his	 or	 her	 own	 care),	
+patients	 see	 themselves	 rather	 as	 subject	 and	 in	 a	 more	
+passive	role.	In	patients’	perceptions,	caregivers	still	have	an	
+important	 active	 role.	 There	 is	 a	 discrepancy	 between	 the	
+patients’	 mental	 model	 the	 self-management	 technology	
+assumes	and	the	mental	model	that	the	patient	has.		
+
+One	can	argue	that	across	countries	the	usage	of	the	health	
+care	 delivery	 model	 varies	 as	 the	 clinical	 decision-making	
+process	 is	 influenced	 by	 cultural	 norms.	 The	 way	 how	
+information	about	the	patient	and	the	wishes	of	the	patient	is	
+collected	 and	 used	 varies	 across	 countries.	 For	 example,	 in	
+Russia,	a	country	that	is	authoritarian	of	nature,	doctors	tend	
+to	 take	 into	account	 patient’s	 wishes	 less	 often	 compared	 to	
+other	countries	such	as	Germany	and	Sweden,	countries	that	
+are	 less	 authoritarian	 of	 nature	 [32].	 Self-management	 in	
+healthcare	 enables	 patients	 to	 be	 less	 dependent	 on	 their	
+caregivers	and	empower	the	patient	to	take	a	more	active	role	
+in	 the	 health	 care	 process.	 For	 the	 above	 reasons,	 self-
+management	 in	 healthcare	 may	 be	 more	 natural	 in	 cultures	
+that	 are	 less	 authoritarian	 versus	 cultures	 that	 are	 more	
+authoritarian	 of	 nature.	 In	 Belgium,	 healthcare	 is	 strongly	
+hierarchical,	which	could	have	influenced	our	results.	Still,	we	
+argue	that	taking	into	account	patients’	expectations	towards	
+caregivers	 should	 not	 be	 ignored	 when	 designing	 and	
+implementing	self-management	technologies	in	any	case.	
+
+In	 our	 study,	 patients	 often	
+
+felt	 bad	 due	 to	 the	
+confrontation	 with	 the	 fact	 that	 they	 are	 patients,	 who	 are	
+chronically	ill.	Their	complex	therapy,	which	is	hard	to	adhere	
+to,	is	utterly	important	as	it	is	keeping	them	alive.	Technology	
+to	 support	 these	 patients	 risks	 to	isolate	 them	 even	more	 as	
+patients,	while	we	heard	so	many	times	that	patients	just	want	
+to	be	normal.	Also,	patients	often	assess	their	own	condition	
+or	 behavior	better	 than	it	actually	 is.	A	 platform	that	targets	
+patients	 who	 need	 support	 for	 diet,	 physical	 activity	 and	
+
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+medication	 adherences	 often	 does	 not	 match	 patients’	
+perceptions	of	themselves.	
+
+We	argue	 that	the	 design	of	 self-management	 technology	
+should	 be	 inclusive	 and	 flexible.	 By	 targeting	 its	 users	 as	
+people,	not	patients	suffering	from	a	specific	condition,	more	
+patients	 might	 identify	 themselves	 as	 target	 users.	 This	
+connects	with	the	modular	DIY	co-development	approach	for	
+the	 self-	 management	 of	 anxiety	 by	 Simm	 et	 al.	 [35].	 Also,	
+family	 members	 could	 use	 the	 system	 as	 well.	 In	 our	 study,	
+family	 members	 often	 asked	 us	 whether	 they	 could	 use	 the	
+system	to	support	the	patient	or	because	they	were	interested	
+in	their	own	behavior	as	well.	In	our	current	implementation	
+of	 the	 PICASSO-Tx	 system,	 the	 whole	 family	 could	 use	 the	
+scales,	 but	 only	 the	 weight	 of	 the	 patient	 was	 recorded.	 In	
+several	 households,	multiple	 family	members	 reported	 using	
+the	scales.	
+
+We	wanted	to	avoid	that	the	system	would	resemble	as	a	
+tool	for	monitoring	and	did	not	open	up	the	data	for	anyone	
+else	 but	 the	 patient,	 as	 we	 feared	 that	 patients	 would	 be	
+uncomfortable	with	this	idea.	However,	patients	did	perceive	
+the	 system	 this	 way.	 To	 our	 surprise,	 they	 did	 not	 consider	
+this	as	a	bad	thing.	On	the	contrary,	they	perceived	the	system	
+as	 a	 perfect	 tool	 for	 their	 caregivers	 to	 improve	 care.	 The	
+system	was	considered	a	companion	for	the	caregivers,	rather	
+than	for	the	patient.	Our	patients	did	not	bother	much	about	
+the	 system,	as	 long	 as	 it	 serves	caregivers	 in	 providing	 care.	
+Based	 on	 these	 findings,	 we	 suggest	 to	 clearly	 indicate	 what	
+data	 is	 private	for	 the	 patient,	 and	 what	 data	 is	 shared	 with	
+other	parties	(even	if	all	data	is	kept	private,	as	in	our	system).	
+Doing	 so,	 the	 privacy	 concerns	as	 described	by	 Maniam	 [28]	
+can	 be	 addressed.	 Also,	 allowing	 patients	 to	 justify	 the	
+recorded	 data	 (both	 for	 private	 and	 shared	 data)	 might	
+increase	patients’	feeling	of	comfort	with	the	data	and	enable	
+them	to	reflect	upon	their	data.	
+
+6.1	 Summary:	Design	Recommendations	
+
+1.	Specify	and	explicate	the	presence	and	role	of	caregivers	
+on	 the	 platform.	 This	 information	 adds	 credibility	 to	 the	
+platform	and	allows	patients	to	adjust	their	expectations	both	
+towards	 the	 system	and	their	caregivers	 Because	 the	 system	
+was	 used	 in	 the	 hospital	 context,	 patients	 assumed	 that	 all	
+caregivers	 in	 this	 context	 were	 able	 to	 access	 the	 platform.		
+When	 this	 is	 not	 the	 case,	 it	 is	 important	 to	 explicate	 the	
+absence	 of	 caregivers,	 given	 that	 the	 system	 is	 used	 in	 this	
+hospital	context.		
+
+2.	Allow	relatives	to	join	the	platform	as	well.	This	would	
+bring	 patients	 and	 relatives	 closer	 together,	 breaking	 the	
+perceived	isolation	of	patients	as	patient.	
+
+9 
+
+	
+ 
+	
+	
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+B. Vandenberghe et al. 
+
+3.	Indicate	what	information	is	private	and	what	is	shared	
+with	others,	such	as	caregivers	or	family	members.	Also,	allow	
+patients	 to	 decide	 themselves	 what	 is	 being	 shared	 through	
+the	platform.	Again,	not	sharing	specific	aspects	also	provides	
+valuable	 information	 to	 the	 caregivers,	 that	 can	 be	 taken	 up	
+during	 personal	contacts.	This	 will	 increase	the	 autonomy	of	
+the	 patient	 and	 puts	 the	 needs	 of	 the	 patient	 central.	 Some	
+people	may	feel	the	need	to	share	with	caregiver	and	family,	
+but	others	not.	This	increases	flexibility	of	the	system.	
+
+4.	 Allow	 patients	 to	 justify	 the	 recorded	 data,	 both	 for	
+themselves	and	for	their	environment.	For	example,	by	adding	
+notes	 to	missing	 data	 and/or	 outliers.	 	 This	 enables	 them	 to	
+correct	 for	 errors,	make	mental	 notes	and	 reflect	 upon	 their	
+data	and	hence	manage	their	own	condition	better.	
+
+6	 Conclusion	
+
+In	 the	 line	 of	 research	 on	 technology	 appropriation,	 and	
+Satchell	 and	 Dourish	 [34]	 their	argument	 that	 non-users	 are	
+not	 bad	 users,	 we	 argue	 there	 is	 no	 wrong	 use	 of	 self-
+management	 technology	 by	 the	 patient.	 However,	 design	
+could	be	improved	in	some	cases	which	could	fit	the	end-user	
+better,	taking	into	account	the	patients	mental	model	of	care	
+and	how	the	technology	fits	in	there.	While	this	study	is	about	
+use,	we	do	argue	our	findings	contain	predictors	for	non-use	
+or	 abandonment	 because	 of	 a	 mismatch	 of	 the	 design	
+intentions	and	user	perceptions.	We	do	not	call	for	ways	to	fix	
+‘the	mistake	at	the	end-users’s	side’	but	do	argue	for	awareness	
+regarding	our	findings	when	thinking	about	self-management	
+technologies.	 In	 this	 way,	 the	 patients’	 expectations	 and	
+perceptions	of	the	PICASSO-Tx	system	can	guide	future	design	
+of	self-management	technologies.	
+
+We	 saw	 how	 patients	 still	 have	 certain	 expectations	
+towards	 their	 caregivers	 when	 using	 self-management	
+technologies.	 Based	 on	 these	 findings,	 we	 argue	 that	 self-
+management	 technologies	 can	 be	 successful	 in	 the	 aim	 for	
+better	care	if	the	platform	is	not	targeting	its	users	as	patients,	
+who	 are	 ill,	 but	 as	 people,	 and	 if	 it	 balances	 the	 benefits	 for	
+both	its	users	and	their	environment.	
+
+As	for	the	PICASSO-Tx	system,	this	will	now	be	evaluated	
+in	a	randomized	controlled	trial	to	investigate	the	efficacy	of	
+the	self-management	technology.	Also,	a	cost-efficiency	study	
+will	 examine	 whether	 the	 system	 –	 including	 the	 remaining	
+human	effort	–	is	beneficial	from	an	economical	perspective.	If	
+both	 studies	 have	 positive	 outcomes,	 the	 system	 will	 be	
+adopted	in	regular	post-transplant	care.	
+
+ACKNOWLEDGMENTS	
+The	 research	 described	 is	 part	 of	 the	 PICASSO-Tx	 project,	
+funded	by	Bijzonder	Onderzoeksfonds	KU	Leuven	(OT	project	
+OT13/101).	We	would	like	to	thank	Sabina	De	Geest,	Thierry	
+Troosters,	 Patrick	 De	 Mazière,	 Pieter	 Philippaerts,	 Dirk	
+
+10 
+
+Kuypers,	 Frederik	 Nevens,	 Johan	 Vanhaecke,	 Geert	 Verleden,	
+Lieven	Dupont,	Diethard	Monbaliu,	Jacques	Pirenne,	Dirk	Van	
+Raemdonck,	Johan	Van	Cleemput,	Robin	Vos,	Annette	De	Vito	
+Dabbs,	John	Hughes,	and	Bernard	Vrijens.		
+
+REFERENCES	
+[1]	 Eric	P.S.	Baumer,	Phil	Adams,	Vera	D.	Khovanskaya,	Tony	C.	Liao,	Madeline	
+E.	 Smith,	 Victoria	 Schwanda	 Sosik,	 and	 Kaiton	 Williams.	 2013.	 Limiting,	
+Leaving,	and	 (Re)Lapsing:	An	Exploration	of	Facebook	Non-use	Practices	
+and	 Experiences.	 In	 Proceedings	 of	 the	 SIGCHI	 Conference	 on	 Human	
+Factors	in	Computing	Systems	(CHI	’13).	ACM,	New	York,	NY,	USA,		3257–
+3266.	DOI:https://doi.org/10.1145/2470654.2466446	
+
+[2]	 Niels	 van	 Berkel,	 Chu	 Luo,	 Denzil	 Ferreira,	 Jorge	 Goncalves,	 and	 Vassilis	
+Kostakos.	 2015.	 The	 Curse	 of	 Quantified-self:	 An	 Endless	 Quest	 for	
+Answers.	In	Proceedings	 of	the	 2015	ACM	 International	Joint	Conference	
+on	Pervasive	and	Ubiquitous	Computing	and	Proceedings	of	the	2015	ACM	
+International	 Symposium	 on	 Wearable	 Computers	 (UbiComp	 ’15).	 ACM,	
+New	
+973–978.	
+DOI:https://doi.org/10.1145/2800835.2800946	
+
+York,	
+
+USA,	
+
+NY,	
+
+[3]	 Amritpal	Singh	Bhachu,	Nicolas	Hine,	 and	John	Arnott.	2008.	Technology	
+Devices	 for	 Older	 Adults	 to	 Aid	 Self	 Management	 of	 Chronic	 Health	
+Conditions.	 In	 Proceedings	 of	 the	 10th	 International	 ACM	 SIGACCESS	
+Conference	 on	Computers	and	Accessibility	(Assets	’08).	ACM,	New	York,	
+NY,	USA,	59–66.	DOI:https://doi.org/10.1145/1414471.1414484	
+
+[4]	 Uta	Brandes,	Sonja	Stitch,	 and	Miriam	Wender.	2008.	Design	by	Use:	The	
+Everyday	 Metamorphosis	 of	 Things.	 Birkhäuser	 GmbH,	 Basel	 Boston,	
+Mass.	Berlin.	
+Jennie	 Carroll.	 2004.	Completing	 design	in	use:	Closing	the	appropriation	
+cycle.	ECIS	2004	Proceedings.	44.	
+
+[5]	
+
+[7]	
+
+[6]	 C.	Charles,	T.	Whelan,	and	A.	Gafni.	1999.	What	do	we	mean	by	partnership	
+in	making	decisions	about	treatment?	BMJ	319,	7212	 (September	1999),	
+780–782.	
+James	Clawson,	Jessica	A.	Pater,	Andrew	D.	Miller,	Elizabeth	D.	Mynatt,	and	
+the	
+Lena	 Mamykina.	 2015.	 No	 Longer	 Wearing:	
+Abandonment	 of	 Personal	 Health-tracking	 Technologies	 on	 Craigslist.	 In	
+Proceedings	of	the	2015	ACM	International	Joint	Conference	on	Pervasive	
+and	Ubiquitous	Computing	(UbiComp	’15).	ACM,	New	York,	NY,	USA,		647–
+658.	DOI:https://doi.org/10.1145/2750858.2807554	
+
+Investigating	
+
+[8]	 Shirley	 Coyle,	 Yanzhe	 Wu,	 King-Tong	 Lau,	 Danilo	 De	 Rossi,	 Gordon	
+Wallace,	 and	 Dermot	 Diamond.	 2007.	 Smart	 Nanotextiles:	 A	 Review	 of	
+Materials	 and	 Applications.	 MRS	 Bulletin	 32,	 5	 (May	 2007),	 434–442.	
+DOI:https://doi.org/10.1557/mrs2007.67	
+
+[9]	 Kate	 Crawford,	 Jessa	 Lingel,	 and	 Tero	 Karppi.	 2015.	 Our	 metrics,	
+ourselves:	 A	 hundred	 years	 of	 self-tracking	 from	 the	 weight	 scale	 to	 the	
+wrist	wearable	 device.	European	Journal	 of	Cultural	Studies	(June	2015).	
+DOI:https://doi.org/10.1177/1367549415584857	
+
+[10]	 Danielle	 D’Amour,	Lise	Goulet,	Jean-François	Labadie,	Leticia	 San	Martín-
+Rodriguez,	 and	 Raynald	 Pineault.	 2008.	 A	 model	 and	 typology	 of	
+collaboration	 between	 professionals	 in	 healthcare	 organizations.	 BMC	
+Health	
+188.	
+Res	
+DOI:https://doi.org/10.1186/1472-6963-8-188	
+
+(September	
+
+2008),	
+
+Serv	
+
+8,	
+
+[11]	 Jan	Derboven.	2017.	Beyond	Designer’s	Intentions.	A	Semiotic	Exploration	
+of	 Technology	 Interpretation	 and	 Appropriation.	 (April	 2017).	 Retrieved	
+January	
+from	
+17,	
+https://lirias.kuleuven.be/handle/123456789/579302	
+
+2018	
+
+[12]	 Paul	Dourish.	2003.	The	Appropriation	of	Interactive	Technologies:	Some	
+Lessons	 from	 Placeless	 Documents.	 Computer	 Supported	 Cooperative	
+465–490.	
+(December	
+12,	
+Work	
+DOI:https://doi.org/10.1023/A:1026149119426	
+
+(CSCW)	
+
+2003).	
+
+4	
+
+[13]	 Julie	Doyle,	Niamh	Caprani,	and	Rodd	Bond.	2015.	Older	Adults’	Attitudes	
+to	Self-management	of	Health	and	Wellness	Through	Smart	Home	Data.	In	
+Proceedings	 of	the	9th	 International	Conference	on	Pervasive	Computing	
+Technologies	 for	 Healthcare	 (PervasiveHealth	 ’15).	 ICST	 (Institute	 for	
+Computer	
+and	 Telecommunications	
+Engineering),	ICST,	Brussels,	Belgium,	Belgium,	129–136.	
+
+Social-Informatics	
+
+Sciences,	
+
+[14]	 Daniel	 A.	 Epstein,	 Monica	 Caraway,	 Chuck	 Johnston,	 An	 Ping,	 James	
+Fogarty,	and	Sean	A.	Munson.	2016.	Beyond	Abandonment	to	Next	Steps:	
+Understanding	and	Designing	for	Life	After	Personal	Informatics	Tool	Use.	
+In	 Proceedings	 of	 the	 2016	 CHI	 Conference	 on	 Human	 Factors	 in	
+Computing	 Systems	 (CHI	 ’16).	 ACM,	 New	 York,	 NY,	 USA,	 1109–1113.	
+DOI:https://doi.org/10.1145/2858036.2858045	
+
+[15]	 BJ	Fogg.	2009.	A	Behavior	Model	for	Persuasive	Design.	In	Proceedings	of	
+the	 4th	 International	 Conference	 on	 Persuasive	 Technology	 (Persuasive	
+
+  
+	
+ 
+	
+	
+The ‘Self’ as Barrier for Self-Management Technologies in 
+Healthcare? 
+
+’09),	40:1–40:7.	DOI:https://doi.org/10.1145/1541948.1541999	
+
+[16]	 Verena	Fuchsberger,	Martin	Murer,	and	Manfred	Tscheligi.	2014.	Human-
+computer	Non-interaction:	The	Activity	of	Non-use.	In	Proceedings	of	the	
+2014	 Companion	 Publication	 on	 Designing	 Interactive	 Systems	 (DIS	
+Companion	
+57–60.	
+DOI:https://doi.org/10.1145/2598784.2602781	
+
+York,	
+
+ACM,	
+
+USA,	
+
+New	
+
+’14).	
+
+NY,	
+
+[17]	 Susan	 Gasson.	 2003.	 Human-centered	 vs.	 user-centered	 approaches	 to	
+information	 system	 design.	 JITTA :	 Journal	 of	 Information	 Technology	
+Theory	and	Application;	Hong	Kong	5,	2	(2003),	29–46.	
+
+[18]	 Kevin	Gaunt,	Júlia	Nacsa,	and	Marcel	Penz.	2014.	Baby	Lucent:	Pitfalls	of	
+Applying	Quantified	Self	to	Baby	Products.	In	CHI	’14	Extended	Abstracts	
+on	 Human	 Factors	 in	 Computing	 Systems	 (CHI	 EA	 ’14).	 ACM,	 New	 York,	
+NY,	USA,	263–268.	DOI:https://doi.org/10.1145/2559206.2580937	
+[19]	 Daniel	 Harrison,	 Paul	 Marshall,	 Nadia	 Bianchi-Berthouze,	 and	 Jon	 Bird.	
+2015.	 Activity	 Tracking:	 Barriers,	 Workarounds	 and	 Customisation.	 In	
+Proceedings	of	the	2015	ACM	International	Joint	Conference	on	Pervasive	
+and	Ubiquitous	Computing	(UbiComp	’15).	ACM,	New	York,	NY,	USA,	617–
+621.	DOI:https://doi.org/10.1145/2750858.2805832	
+
+[20]	 Hayati	 Havlucu,	 Idil	 Bostan,	 Aykut	 Coskun,	 and	 Öuzhan	 Özcan.	 2017.	
+Understanding	 the	 Lonesome	 Tennis	 Players:	 Insights	
+for	 Future	
+Wearables.	In	Proceedings	of	the	2017	CHI	Conference	Extended	Abstracts	
+on	 Human	 Factors	 in	 Computing	 Systems	 (CHI	 EA	 ’17).	 ACM,	 New	 York,	
+NY,	USA,	1678–1685.	DOI:https://doi.org/10.1145/3027063.3053102	
+[21]	 Sari	Kujala	and	Kaisa	Väänänen-Vainio-Mattila.	2008.	Value	of	Information	
+Systems	and	Products:	Understanding	the	Users’	Perspective	and	Values.	
+JITTA :	 Journal	 of	 Information	 Technology	 Theory	 and	 Application;	 Hong	
+Kong	9,	4	(2008),	23–39.	
+
+[22]	 Victor	R.	Lee	and	Mary	Briggs.	2014.	Lessons	Learned	from	an	Initial	Effort	
+to	Bring	a	Quantified	Self	“Meetup”	Experience	to	a	New	Demographic.	In	
+Proceedings	of	the	2014	ACM	International	Joint	Conference	on	Pervasive	
+and	 Ubiquitous	 Computing:	 Adjunct	 Publication	 (UbiComp	 ’14	 Adjunct).	
+ACM,	
+707–710.	
+DOI:https://doi.org/10.1145/2638728.2641321	
+
+York,	
+
+USA,	
+
+New	
+
+NY,	
+
+[23]	 Ian	Li,	Anind	Dey,	and	Jodi	Forlizzi.	2010.	A	Stage-based	Model	of	Personal	
+Informatics	Systems.	In	Proceedings	of	the	 SIGCHI	Conference	on	Human	
+Factors	 in	 Computing	 Systems	 (CHI	 ’10).	 ACM,	 New	 York,	 NY,	 USA,	 557–
+566.	DOI:https://doi.org/10.1145/1753326.1753409	
+
+[24]	 Ian	 Li,	 Anind	 K.	 Dey,	 and	 Jodi	 Forlizzi.	 2011.	 Understanding	 My	 Data,	
+Myself:	 Supporting	 Self-reflection	 with	 Ubicomp	 Technologies.	
+In	
+Proceedings	 of	 the	 13th	 International	 Conference	 on	 Ubiquitous	
+Computing	 (UbiComp	
+’11).	 ACM,	 New	 York,	 NY,	 USA,	 405–414.	
+DOI:https://doi.org/10.1145/2030112.2030166	
+
+PervasiveHealth 2018 – IMPAcT Workshop 
+
+digital	cameras.	J.	Am.	Soc.	 Inf.	 Sci.	62,	12	(December	2011),	2347–2363.	
+DOI:https://doi.org/10.1002/asi.21643	
+
+[34]	 Christine	Satchell	and	Paul	Dourish.	2009.	Beyond	the	User:	Use	and	Non-
+use	in	HCI.	In	Proceedings	of	the	21st	Annual	Conference	of	the	Australian	
+Computer-Human	 Interaction	 Special	 Interest	 Group:	 Design:	 Open	 24/7	
+9–16.	
+ACM,	
+(OZCHI	
+DOI:https://doi.org/10.1145/1738826.1738829	
+
+York,	
+
+USA,	
+
+New	
+
+’09).	
+
+NY,	
+
+[35]	 Will	Simm,	Maria	Angela	Ferrario,	Adrian	Gradinar,	Marcia	Tavares	Smith,	
+Stephen	Forshaw,	Ian	 Smith,	and	Jon	Whittle.	2016.	Anxiety	 and	Autism:	
+Towards	 Personalized	 Digital	 Health.	 In	 Proceedings	 of	 the	 2016	 CHI	
+Conference	on	Human	Factors	in	Computing	Systems	(CHI	’16).	ACM,	New	
+1270–1281.	
+NY,	
+York,	
+DOI:https://doi.org/10.1145/2858036.2858259	
+
+USA,	
+
+[36]	 Thor	 Jarle	 J.	 Skinstad	 and	 Babak	 A.	 Farshchian.	 2016.	 Empowerment	 or	
+Concealed	 Compliance?:	 A	 Review	 of	 Literature	 on	 Mobile	 ICT	 Solutions	
+for	 Patient	 Empowerment.	 In	 Proceedings	 of	 the	 9th	 ACM	 International	
+Conference	on	PErvasive	Technologies	Related	to	Assistive	Environments	
+(PETRA	’16).	ACM,	New	York,	NY,	USA,	Article	54,	4	pages.	
+DOI:https://doi.org/10.1145/2910674.2910710	
+
+[37]	 Melanie	 Swan.	 2009.	 Emerging	 patient-driven	 health	 care	 models:	 an	
+examination	 of	 health	 social	 networks,	 consumer	 personalized	 medicine	
+and	 quantified	 self-tracking.	 Int	 J	 Environ	 Res	 Public	 Health	 6,	 2	 (2009),	
+492–525.	DOI:https://doi.org/10.3390/ijerph6020492	
+
+through	 Crowdsourcing,	
+
+[38]	 Melanie	 Swan.	 2012.	 Health	 2050:	 The	 Realization	 of	 Personalized	
+Medicine	
+the	
+Participatory	 Biocitizen.	 J	 Pers	 Med	 2,	 3	 (September	 2012),	 93–118.	
+DOI:https://doi.org/10.3390/jpm2030093	
+Melanie	 Swan.	 2013.	 The	 Quantified	 Self:	 Fundamental	 Disruption	 in	 Big	
+Data	 Science	 and	 Biological	 Discovery.	 Big	 Data	 1,	 2	 (June	 2013),	 85–99.	
+DOI:https://doi.org/10.1089/big.2012.0002	
+
+the	 Quantified	 Self,	 and	
+
+[39]
+_	
+
+[40]		 Bert	 Vandenberghe,	 Jasper	 Vanhoof,	 Fabienne	 Dobbels,	 David	 Geerts.	
+2015.	Rome	Wasn’t	Reached	in	 a	Day:	How	to	Motivate	Patients	to	Keep	
+Walking?	In	INTERACT	2015	Adjunct	Proceedings.	University	of	Bamberg	
+Press,	Bamberg,	Germany.	399-403	
+
+[25]	 Deborah	Lupton.	2012.	Medicine	as	Culture:	Illness,	Disease	and	the	Body	
+from	
+
+(3rd	
+http://sk.sagepub.com/books/medicine-as-culture-3e	
+
+Retrieved	
+
+London.	
+
+January	
+
+2018	
+
+ed.).	
+
+23,	
+
+[26]	 Deborah	Lupton.	2012.	M-health	and	health	promotion:	The	digital	cyborg	
+and	surveillance	society.	Soc	Theory	Health	10,	3	(August	2012),	229–244.	
+DOI:https://doi.org/10.1057/sth.2012.6	
+
+[27]	 Deborah	 Lupton.	 2013.	 Quantifying	 the	 body:	 monitoring	 and	 measuring	
+health	 in	 the	 age	 of	 mHealth	 technologies.	 Critical	 Public	 Health	 23,	 4	
+(December	
+393–403.	
+2013),	
+DOI:https://doi.org/10.1080/09581596.2013.794931	
+
+[28]	 Ananthidewi	Maniam,	Jaspaljeet	Singh	Dhillon,	and	Nilufar	Baghaei.	2015.	
+Determinants	 of	 Patients’	 Intention	 to	 Adopt	 Diabetes	 Self-Management	
+Applications.	 In	 Proceedings	 of	 the	 15th	 New	 Zealand	 Conference	 on	
+Human-Computer	 Interaction	 (CHINZ	 2015).  ACM,	 New	 York,	 NY,	 USA,		
+43–50.	DOI:https://doi.org/10.1145/2808047.2808059	
+
+[29]	 Miriam	 McMullan.	 2006.	 Patients	 using	 the	 Internet	 to	 obtain	 health	
+information:	how	this	affects	the	patient-health	professional	relationship.	
+Patient	
+24–28.	
+Couns	
+DOI:https://doi.org/10.1016/j.pec.2005.10.006	
+
+(October	
+
+2006),	
+
+Educ	
+
+1-2	
+
+63,	
+
+[30]	 Jean-Francois	 De	 Moya	 and	 Jessie	 Pallud.	 2017.	 QUANTIFIED	 SELF:	 A	
+LITERATURE	 REVIEW	 BASED	 ON	 THE	 FUNNEL	 PARADIGM.	 Research	
+Papers	(June	2017),	1678–1694.	
+
+[31]	 Toluwalogo	B.	Odumosu.	2009.	Interrogating	mobiles:	A	story	of	Nigerian	
+appropriation	 of	 the	 mobile	 phone.	 Rensselaer	 Polytechnic	 Institute,	
+from	
+United	 States	
+https://search.proquest.com/docview/304986497/abstract/494CD3A2F
+484F9CPQ/1	
+
+--	 New	 York.	 Retrieved	
+
+January	 17,	 2018	
+
+[32]	 J.	 Richter,	 M.	 Eisemann,	 and	 E.	 Zgonnikova.	 2001.	 Doctors’	
+authoritarianism	
+in	 end-of-life	 treatment	 decisions.	 A	 comparison	
+between	 Russia,	 Sweden	 and	 Germany.	 J	 Med	 Ethics	 27,	 3	 (June	 2001),	
+186–191.	DOI:https://doi.org/10.1136/jme.27.3.186	
+
+[33]	 Antti	 Salovaara,	 Sacha	 Helfenstein,	 and	 Antti	 Oulasvirta.	 2011.	 Everyday	
+appropriations	 of	 information	 technology:	 A	 study	 of	 creative	 uses	 of	
+
+11 
+
+	
+ 
+	
+	
+	
+

@@ -1,0 +1,2256 @@
+Trajectories of Engagement and Disengagement with a 
+Story-Based Smoking Cessation App 
+Wally Smith1, Bernd Ploderer2, Greg Wadley1, Sarah Webber1 and Ron Borland3 
+
+ 1School of Computing & Information 
+  Systems, University of Melbourne,  
+Australia 
+  {wsmith, greg.wadley, s.webber} 
+
+2Queensland University of 
+Technology, Brisbane,  
+Australia 
+b.ploderer@qut.edu.au 
+
+3Cancer Council Victoria, 
+Melbourne, 
+Australia 
+Ron.Borland@cancervic.org.au 
+
+@unimelb.edu.au  
+
+ABSTRACT 
+Strong  user  engagement  with  digital  technologies  for 
+behaviour  change  is  often  taken  as  a  precursor  to  their 
+longer-term efficacy. We critically examine this assumption 
+through  a  qualitative  study  of  a  smoking  cessation  app, 
+called  NewLeaf,  which  allows  quitters  to  swap  personal 
+stories.  The  study  examined  what  influenced  people  to 
+engage  or  disengage  with  NewLeaf,  and  how  the  app  was 
+deployed in quit attempts during a  four week trial. Several 
+properties  of  swapped  stories  were  reported  to  promote 
+currency, 
+engagement, 
+contextualization  of  advice,  and  evoking  a  sense  of 
+community.  But  while  the  resulting  engagement  was 
+in  supporting  quitting,  other 
+sometimes  productive 
+trajectories 
+involving 
+observed 
+counterproductive  engagement,  and  a  surprising  pattern  of 
+productive  disengagement  especially  among  stronger 
+quitters.  We  discuss  how 
+this  analysis  of  different 
+trajectories problematizes any simple interpretation of user 
+engagement  as  an  early  indicator  of  success  for  behaviour 
+change technologies. 
+
+authenticity, 
+
+use  were 
+
+including: 
+
+of 
+
+Author Keywords 
+smoking  cessation;  health  behavior  change;  engagement; 
+qualitative research 
+
+ACM Classification Keywords 
+H.5.3  Group  and  Organization  Interfaces:  Web-based 
+interaction. 
+
+INTRODUCTION 
+Persuasive  technology  has  been  a  prominent  area  of  HCI 
+research with more than 100 papers at CHI over the last 10 
+years  focused  on  behaviour  change  in  health  and  other 
+domains  [15].  While  the  key  idea  of  designing  for 
+behaviour  change  has  been  popular,  the  original  notion  of 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  ACM  must  be  honored. 
+Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or  republish,  to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org. 
+CHI 2017, May 06-11, 2017, Denver, CO, USA  
+© 2017 ACM. ISBN 978-1-4503-4655-9/17/05…$15.00  
+DOI: http://dx.doi.org/10.1145/3025453.3026054 
+
+persuasive technology [11] has been critiqued on a number 
+of  fronts  [5].  One  is  its  prescriptive  stance  on  what 
+behaviours  are  deemed  desirable,  often  with  a  lack  of 
+consideration  for  personal  needs  and  desires  [2],  and  for 
+individual  circumstances  [9].  There  has  been  debate  about 
+whether 'one size fits all', or whether more sensitive design 
+is needed for varying motivations of individuals at different 
+stages of change [14]. 
+
+also 
+
+faces 
+
+In  the  area  of  health  behaviour  change,  research  into  new 
+technologies 
+significant  methodological 
+challenges [17,30]. It is typically beyond the scope of HCI 
+research to measure final health outcomes for a population, 
+or even for a sample of study participants. Reasons include, 
+as  Klasnja  et  al.  [17]  have  cogently  argued,  that  the 
+timeframe of health interventions can be several months or 
+years, and that generalizable outcomes are best established 
+through  randomized  control  trials  (RCT)  as  favoured  by 
+medical  research.  Although  possible 
+in  principle,  a 
+longitudinal RCT can lead to a different research focus that 
+takes emphasis away from  HCI design. Instead, Klasnja et 
+al.  argue  in  favour  of  HCI  researchers  using  intermediate 
+indicators of success. 
+
+To contribute to the understanding of this burgeoning class 
+of  digital  technology,  our  aim  here  is  not  to  measure  the 
+effectiveness  of  a  particular  technology  or  technique,  but 
+rather  to  provide  a  qualitative  account  of  How  and  why 
+people  engage  with  digital  tools  in  their  attempt  to 
+than  seeking  a 
+undertake  behaviour  change.  Rather 
+normative  account,  we  are  concerned  with  the  variety  and 
+even  idiosyncrasies  of  users  and  uses.  Implicit  in  much 
+health app design, and related HCI research (including that 
+of  the  authors),  is  what  can  be  called  the  engagement-
+efficacy perspective: the belief that greater engagement with 
+a  health  technology  is  a  precursor  to  its  longer-term 
+efficacy in addressing the targeted health condition. Taking 
+this  perspective  does  not  assume  that  engagement  is 
+sufficient  to  achieve  efficacy,  nor  even  that  it  is  a  causal 
+antecedent, but simply that greater engagement is a positive 
+early indicator, in the sense described by Klasnja et al [17], 
+and therefore a good outcome for HCI design. 
+
+researchers 
+
+Some 
+the 
+engagement-efficacy  perspective,  identifying  cases  where 
+people disengage from a technology as part of the positive 
+
+counter-findings 
+
+report 
+
+to 
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3045 
+ 
+ 
+ 
+continuation  of  their  behaviour  change,  including  the 
+'gateway  effect'  [29],  'happy  abandonment'  [7]'  for  various 
+reasons  [10].  We  aim  to  build  on  these  accounts  and  to 
+further  critically  examine  the  nature  and  significance  of 
+engagement with behaviour change applications. 
+
+The study we report here focuses on smoking cessation. We 
+designed  a  mobile  app,  called  NewLeaf,  and  evaluated  it 
+with  23  people  who  were  attempting  to  quit  smoking. 
+Despite  many  developments  in  recent  decades  to  restrict 
+and  curtail  the  smoking  of  cigarettes  in  several  countries, 
+almost 6 million people are estimated to die each year from 
+smoking-related  disease  worldwide,  with  forecasts  of  8 
+million  deaths  per  year  by  2030  [35].  Smoking  cessation 
+has  therefore  been  one  of  the  targets  of  HCI  researchers 
+interested in persuasive technology [21, 23, 24, 26].  
+
+Underlying  our  study  is  a  shift  away  from  the  persuasive 
+technology  paradigm  which  puts  emphasis  on  whether  a 
+tool can 'persuade' people to change. Instead, our premise is 
+that digital tools are better seen as resources. Whether users 
+of NewLeaf would successfully embark on a quit attempt is 
+the  result  of  many  external  factors  relating  to  personal 
+motivation  and  circumstances.  Our  concern  is  not  whether 
+NewLeaf acts as the driver of success, but rather with how 
+people  might  engage  with  its  suite  of  resources,  and  how 
+they  might  deploy  them  positively,  or  otherwise,  in  their 
+quit attempts. And within this, we ask whether engagement 
+with  the  app  is  associated  with  positive  experiences  of 
+attempting to quit. 
+
+NewLeaf  was  designed  with 
+three  potential  quitting 
+resources.  Chief  among  these  was  an  online  forum  for 
+people  to  exchange  their  personal  stories  of  attempting  to 
+quit, widely believed to be a powerful and engaging health 
+resource  [18].  For  comparison,  NewLeaf  also  provided 
+expert  health  tips,  and  online  distractions  to  combat 
+cravings.  The  app  thereby  provided  multiple  options  for 
+engagement, thus serving the aims of our study. 
+
+BACKGROUND & RELATED LITERATURE 
+
+is 
+
+the  much  broader 
+
+Engagement and behaviour change technology 
+Engagement  is  a  vital  but  notoriously  hard  to  define 
+concept in HCI. For Sutcliffe, it is what makes a technology 
+'attractive' and 'fun' to use [32], while for O'Brien and Toms 
+it 
+'quality  of  user  experience 
+characterized  by  attributes  of  challenge,  positive  affect, 
+endurability,  aesthetic  and  sensory  appeal,  attention, 
+feedback,  variety/novelty,  interactivity,  and  perceived  user 
+control.'  [20].  Turner  has  emphasised  the  centrality  of  the 
+'affective'  dimension  of  engagement  'consistent  with  both 
+our contingent identities and our wider purposes' [33] 
+
+Although  our  study  was  designed  to  examine  the  affective 
+experiences  of  users  of  NewLeaf,  we  use  the  term 
+'engagement' here to mean the degree to which people use a 
+digital aid in a way that relates to the purpose of behaviour 
+change. Thus engagement refers to the extent and manner in 
+which  people  actively  used  the  resources  of  NewLeaf  to 
+
+them  quit 
+
+help 
+term 
+'disengagement'  is  used  to  mean  withdrawing  from  active 
+use of the tool. 
+
+smoking.  Conversely, 
+
+the 
+
+In the case of smoking cessation, much research shows that 
+smokers  are  highly  reluctant  to  engage  with  online  social 
+support  tools  because  of  concerns  about  self-presentation, 
+and embarrassment of failure [19]. It is not surprising, then, 
+that  designers  and  researchers  set  user  engagement  as  a 
+desirable goal. Hence, the engagement-efficacy perspective 
+is implicit in much research and development. 
+
+As an illustration, studies in this area are often premised on 
+the  reasonable  assumption  of  making  apps,  or  other 
+technologies,  more  engaging  to  increase  the  likelihood  of 
+behaviour change down the track.  For example, Paay et al 
+[21],  through  a  design  workshop  with  smokers,  report  that 
+they desire advice that is personalized  for their  needs, that 
+they  can  relate  to  and  which  is  tailored  to  their  stage  of 
+quitting (e.g., intending  to quit, or currently  making a quit 
+attempt).  Similarly,  Agapie  et  al  [1]  designed  a  system  to 
+help  people  create  behaviour  change  plans  with  strangers 
+and friends.  Interviews showed that participants responded 
+to  plans  more  positively  when  they  were  tailored  to  their 
+goals,  routines  and  preferences.  Reno  and  Poole  [26] 
+examined  whether  and  how  people  would  respond  to  a 
+request for social support to quit smoking on Facebook, and 
+found that people are 10 times more likely to offer support 
+to friends and family members compared to strangers.  
+
+Disengagement and behaviour change technology 
+However, there is also a growing  number of counterpoints 
+to the engagement-efficacy perspective. Rooksby et al. [27] 
+used an interview study to uncover a variety of motivations 
+for  engaging  with  personal  health  apps  and  devices. 
+Alongside  productive  uses,  were  non-productive  forms  of 
+engagement,  e.g.,  a  desire  to  document  one’s  lifestyle, 
+collect  rewards,  or  simply  a  fetish  for  gadgets  and 
+technology.  A  recurring  finding  of  studies  of  wearable 
+health  and  activity  monitors  is  that  they  are  typically 
+abandoned  after  a  few  months  because  motivation  drops, 
+needs  are not  met, or  because  people change to a different 
+system [7,12]. Schwanda et al. [29] have termed this latter 
+outcome  the  ‘gateway  effect’,  showing  that  persuasive 
+technology can work as a conduit to new activities, and thus 
+reduced  engagement  with  a  tool  is  not  always  a  sign  of 
+failure.  
+
+In the context of personal energy  use,  He  et al. [14] argue 
+that  the  design  of  new  technologies  aiming  to  support 
+behaviour change should consider differences among users. 
+In particular, they draw on the transtheoretical model [25], 
+to  argue  that  technologies  should  engage  adaptively  to 
+people  at  different  stages  of  behaviour  change,  from  pre-
+contemplation,  contemplation,  preparation,  action  and 
+finally maintenance of the change. He et al. conclude that 'if 
+technologies are adaptive, a dynamic component should be 
+present  (e.g.,  social  networks),  as  technologies  cannot  be 
+expected to keep up with complex human motivations'.  
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3046The value of personal narratives in behaviour change 
+An important element of our study  was the use of personal 
+stories  as  a  powerful  form  of  content  to  engage  users  in 
+behaviour  change  [13].  By  focusing  specifically  on  how 
+personal stories might engage quitters, we are drawing on a 
+long history of research into the benefits of health advice in 
+narrative  form  [22].  For  example,  Mamykina  et  al.  [18] 
+designed a story-based mobile health application for people 
+with  diabetes,  and  demonstrated  its  value  for  users  to 
+maintain a positive self-image, to reassert their competence 
+and to maintain continuity in their self-image over time. 
+
+More  generally,  many  researchers  report  that  role  models 
+and  norms  conveyed  through  narratives  can  influence 
+behaviour  change  [16].  Borland  [3]  argues  that  habitual 
+behaviours  like  smoking  can  be  effectively  influenced 
+through  stories,  because  they  influence  our  actions  on  an 
+unconscious level. However, there is also a line of evidence 
+that shared stories may work to protect people's connection 
+to  social  situations  in  which  the  adverse  behaviour  is 
+prevalent, as in DeSantis’ [8] account of cigar smokers. 
+
+STUDY METHOD 
+
+The NewLeaf smoking cessation app 
+To  explore  our  questions,  we  designed  and  built  a 
+smartphone  app,  called  NewLeaf  (see  Figure  1),  which 
+allows smokers to share personal quit stories. Unlike many 
+of  the  studies  reviewed  above,  which  used  interviews, 
+design workshops, and hypothetical responses, our aim was 
+to study the role of NewLeaf in  real-life quit attempts that 
+took place over the first four weeks following a decision to 
+quit. 
+
+Ploderer et al. [24] studied a quit app that presented expert 
+tips about quitting and distractions to cope with cravings for 
+cigarettes.  We  included  these  two  kinds  of  content  in 
+NewLeaf to serve as comparisons with the personal stories. 
+Most  prior  work  on  the  power  of  narratives  for  health 
+behaviour change has focused on the use of professionally-
+authored content [16]. In contrast, we were interested in the 
+kinds  of  engagement  achieved  by  community-generated 
+stories written and shared by smokers and quitters.  
+
+To  ensure  that  we  had  a  thriving  community  from  the 
+outset,  we  drew  content  from  the  forum  'StopSmoking' 
+hosted on the Reddit website. This forum receives about 30 
+posts a day from smokers and ex-smokers and is moderated 
+by  long-term  quitters.  Reddit  has  a  publicly  available  API 
+that  makes  it  possible  to  pass  content  to  and  from  the 
+Reddit  server.  StopSmoking  is  pseudonymous  and  authors 
+are not required to identify themselves. It is known that the 
+anonymity of Reddit contributes to increased self-disclosure 
+in online discussions about  sensitive issues  such as  mental 
+health problems [6]. 
+
+some  stories remained visible for longer.  For consistency, 
+both expert tips and distractions were presented in the same 
+way  as  stories,  with  comment  trails  following  each  item. 
+The  expert  tips  were  sourced  from  counsellors  at  Quit 
+Victoria,  a  smoking  cessation  agency  at  which  one  of  the 
+authors  is  based.  To  source  distractions,  we  allowed  users 
+to choose a  Reddit forum of  non-smoking content relevant 
+to  their  interests;  examples  chosen  included  jokes,  world 
+news, science, contemporary art. 
+
+Figure 1. Screen-shot from the NewLeaf app showing a listing 
+of stories, and buttons along the bottom to reach expert tips, 
+distractions and home 
+
+Participants and the study procedure 
+Thirty  participants  were  recruited  into  the  study  via  an 
+advertisement. Seven did not return for a second interview, 
+leaving  23  participants  aged  between  23-50,  split  11/12 
+between  males  and  females.  They  were  recruited  on  the 
+basis  of  two  criteria:  being  adult  smokers  who  were 
+considering a quit attempt, and being smartphone users.  
+
+A first interview was held with each participant to find out 
+their  smoking  history  and  quit  intentions,  and  to  introduce 
+the  app  and  configure  the  distractions  page  to  a  forum  of 
+their  choice.  Participants  were  then  left  to  use  the  app  as 
+they  wished  over  the  following  four  weeks.  A  second  in-
+depth  interview  was  held  towards  the  end  of  the  fourth 
+week  to  probe  experiences  of  quitting  and  the  nature  of 
+tips  and  distractions. 
+engagement  with 
+Participants  were  compensated  $25  per  interview  for  their 
+time  and  travel  costs.  We  took  strong  steps  to  reduce  the 
+potential  bias  of  participants  believing  they  needed  to  be 
+positive about the app. They were encouraged to be critical, 
+and emphasis was placed on comparing their experience of 
+stories, tips and distractions. 
+
+the  stories, 
+
+Our  NewLeaf  app  presented  quitter  stories  from  the 
+StopSmoking  forum  and  allowed  users  to  read  and  post 
+content.  We  removed  many  of  the  features  of  the  full 
+Reddit site, and reduced the rapid turnover of posts so that 
+
+A  thematic  analysis  drawing  on  the  techniques  of  Braun 
+and  Clarke  [4]  was  carried  out,  using  transcribed  audio-
+recordings of the in-depth second interviews, to identify the 
+nature  and  forms  of  engagement  and  disengagement  with 
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3047 
+NewLeaf.  We  also  tracked  usage  patterns  by  recording 
+every 'click' in NewLeaf made during the 4 week trial. 
+
+FINDINGS 
+A common criterion for successful quitting is to be smoke-
+free  for  6  months  [34].  It  was  not  possible  therefore  to 
+examine  participants'  success  of  smoking  cessation,  but 
+rather  we  focussed  on  how 
+their  quit  attempt  was 
+proceeding and their engagement with the app. 
+
+Based  on  the  second  interviews  at  week  4  of  the  trial, 
+participants  were  classified  according  to  the  reported 
+success  of  their  quit  attempt  so  far.  We  first  distinguished 
+between  those  who  presented  as  'Succeeding'  so  far  (S) 
+from those who presented as 'Not-Succeeding' (N). Among 
+those  Succeeding,  we  further  distinguished  between  those 
+who had totally abstained from smoking throughout the trial 
+(S1-S8)  from  those  with  a  qualified  report  (S9-S16)  in 
+which they  had either cut-down and  were  on track  to quit, 
+or  were  quitting  but  had  experienced  minor  relapses. 
+Among  those  who  were  Not-Succeeding,  we  distinguished 
+those who had not managed to make any quit attempt (N1-
+N4) from those who had tried but relapsed (N5-N7). 
+
+Light smokers, who smoke 5 or less cigarettes per day [28], 
+are  likely  to  find  quitting  less  challenging  than  heavier 
+smokers.  Given  our  intention  to  explore  the  variety  of 
+experiences  we included them in our  study, but  to provide 
+greater context we label them with the letter L, e.g., S6L.  
+
+Participants were asked directly in interviews if they had an 
+overall  positive,  negative  or  neutral  experience  of  using 
+each  of  the  three  resources  in  NewLeaf:  stories,  tips  and 
+distractions.  These  affective  responses  are  summarized  in 
+the  top  rows  of  Figure  2  (heavy  smokers)  and  Figure  3 
+(light  smokers).  Positive  experience  (shown  as  +)  implies 
+that participants spoke of valuing the resource and believing 
+it to be useful for quitting. Negative reactions (shown as x) 
+implies  that  participants  reported  that  the  resource  was 
+annoying, off-putting, pointless, or similar. Figures 2 and 3 
+show that there was a variety of reactions to the three forms 
+of  content.  Figure  2  indicates  that,  among  the  heavier 
+smokers, stories were more likely to have produced positive 
+affect  (shown  as    +  in  Figure  2)  by  participants  who 
+reported  that  they  were  Succeeding  in  their  quit  attempt 
+than by those  who  were Not-Succeeding. This pattern  was 
+not evident among the light smokers (Figure 3). 
+
+The  lower  panels of  Figures  2 and 3 show the intensity of 
+usage  of  NewLeaf  over  the  first  3  weeks  of  the  trial, 
+measured by the number of significant interactions with the 
+app.  We  do  not  include  the  fourth  week  where  there  was 
+often  a  spike  of  usage  during  and  around  the  second 
+interview.  A  significant  interaction  was  defined  as  one  of 
+the following: the opening of a specific content item (story, 
+tip or distraction); posting of an item of content; favouriting 
+or  unfavouriting  of  an  item;  upvoting  or  downvoting  an 
+item;  a  login.  A  score  of  1  in  Figures  2  and  3  thus 
+represents a simple login to the app, and might involve the 
+
+undetected  browsing  of  content  lists,  but  did  not  involve 
+opening  of  specific  items  or  responding  to  them.  Scores 
+above  1  indicate  the  inclusion  of  some  of  these  more 
+significant interactions, up to the highest daily score of 405 
+which  implies  a  prolonged  session  of  many  significant 
+interactions. 
+
+Most striking in Figures 2 and 3 is that there is no apparent 
+association  between  the  intensity  of  using  NewLeaf  and 
+either the status of participants as being Succeeding or Not-
+Succeeding,  or  the  affective  responses  of  participants  to 
+stories,  tips  and  distractions.  Succeeding  participants  S2 
+and S12, for example, show high intensity usage over the 3 
+weeks,  but  Not-Succeeding  N4L,  N5,  N6  also  show 
+moderately  high  usage.  Conversely,  the  lowest  usage  is 
+shown by 3 Succeeding participants, S7L, S3 and S11, with 
+the  Not-Succeeding  N3  and  N7L  also  being  relatively  low 
+intensity  users.  This  qualitative  dissociation  between 
+intensity  of  use  and  the  status  of  quit  attempts  is  a 
+significant  observation  which  informs  our  discussion  of 
+engagement patterns below. 
+
+Trajectories of engagement and disengagement  
+Thematic analysis of the second interviews revealed a  rich 
+variety  of  experiences  in  using  NewLeaf,  including  both 
+positive  and  negative  reactions  to  the  app  and  its  value  in 
+supporting  a  quit  attempt.  Figure  4  shows  a  conceptual 
+model  that  was  developed  through  our  analysis  to  classify 
+patterns  of  engagement  and  disengagement.  We  will 
+overview  this  model  first,  before  describing  the  evidence 
+that underpins it. 
+
+The  model  in  Figure  4  depicts  attempts  to  undergo 
+digitally-mediated  behaviour  change  as  a  journey,  or 
+trajectory,  from  a  current  to  a  desired  behaviour  state;  in 
+this  case,  from  being  a  smoker  to  being  a  non-smoker.  In 
+between are various intermediate states defined by different 
+forms  of  engagement  or  disengagement  with  the  digital 
+tool. Alternative trajectories of attempted behaviour change 
+are  shown  in  the  form  of  paths  that  people  might  follow 
+through  these  various  states.  Each  person's  trajectory  may 
+contain  a  mixture  of  'steps  forward'  towards  the  desired 
+state,  or  'steps  backward'  towards  the  current  state.  The 
+trajectories in Figure 4 are not meant to be exhaustive, but 
+rather they reflect prominent observed patterns in our study 
+participants. 
+
+The  model  thus  shows  how  attempts  at  digitally-mediated 
+behaviour  change  might  progress  along  very  different 
+trajectories. From the current state as a smoker, each person 
+undertakes  exploratory  engagement  with  the  app,  a  step 
+which  was  induced  by  the  procedure  of  the  first  interview 
+of our study. Once into the trial, a participant may then shift 
+to  a  state  that  we  describe  as  productive  engagement 
+meaning that they  are actively consulting and applying the 
+resources  of  the  app  to  quitting.  However,  as  our  model 
+shows  we  observed  other  states  that  allow  for  alternative 
+trajectories: counterproductive engagement, non-productive 
+disengagement,  and  productive  disengagement.  In  the 
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3048Participant 
+
+Base rate cig/day 
+
+S2 
+
+20 
+
+S12 
+
+S5 
+
+10 
+
+8 
+
+S1 
+
+30 
+
+S9 
+
+20 
+
+S4 
+
+10 
+
+S10 
+
+20 
+
+S3 
+
+12 
+
+S11  N5  N6  N1 
+
+10 
+
+20 
+
+6 
+
+10 
+
+N2 
+
+10 
+
+N3 
+
+7 
+
+Succeeding  
+
+Not-Succeeding 
+
+Stories 
+
+Tips 
+
+Distractions 
+
+Week 1     1 
+2 
+3 
+4 
+5 
+6 
+7 
+Week 2     8 
+9 
+10 
+11 
+12 
+13 
+14 
+Week 3   15 
+16 
+17 
+18 
+19 
+20 
+21 
+
++ 
+
+x 
+
+x 
+
+405 
+224 
+175 
+111 
+134 
+109 
+75 
+46 
+73 
+67 
+55 
+24 
+97 
+58 
+32 
+27 
+30 
+55 
+48 
+21 
+34 
+
++ 
+
++ 
+
++ 
+
+70 
+18 
+16 
+3 
+14 
+3 
+6 
+
+4 
+2 
+21 
+3 
+4 
+
+13 
+
+11 
+2 
+11 
+1 
+4 
+
+Affective response to NewLeaf resources:   +  positive       x  negative   
+(blank indicating neither) 
+
++ 
+
++ 
+
++ 
+
+x 
+
++ 
+
+x 
+
++ 
+
+x 
+
++ 
+
+x 
+
++ 
+
+x 
+
++ 
+
++ 
+
+x 
+
+x 
+
+x 
+
+x 
+
+x 
+
++ 
+
+x 
+
+x 
+
+Intensity of Use: Counts of significant interactions with NewLeaf  
+34 
+11 
+47 
+15 
+
+30 
+36 
+14 
+
+20 
+15 
+10 
+
+108 
+26 
+
+44 
+1 
+
+25 
+
+26 
+
+15 
+59 
+25 
+9 
+
+12 
+24 
+57 
+26 
+1 
+
+16 
+34 
+
+6 
+
+4 
+
+13 
+12 
+
+22 
+2 
+
+4 
+
+6 
+1 
+
+2 
+
+2 
+
+1 
+
+6 
+3 
+
+28 
+6 
+5 
+
+15 
+16 
+5 
+
+4 
+
+19 
+
+3 
+1 
+1 
+
+18 
+9 
+
+12 
+
+16 
+1 
+
+13 
+
+3 
+
+Figure 2. Data for heavy smokers: Base rates of smoking (top panel); Participants' affective response to stories, tips and 
+distractions in the NewLeaf app (middle panel); and tracking data of the total number of significant interactions with the NewLeaf 
+app by each participant during the study (lower panel) (See Findings section for the definition of significant interactions.) 
+
+following sections we explain and describe these states, the 
+evidence for them, and the resulting trajectories. 
+
+Productive engagement 
+Productive engagement is a state envisaged, and hoped for, 
+under the engagement-efficacy perspective. While we argue 
+here is that there are other significant states and trajectories 
+that  arise,  productive  engagement  is  nevertheless  a  very 
+important  state.  This  section  now  considers  the  shape  that 
+productive engagement took in our study by identifying the 
+characteristics of stories, and sometimes expert health tips, 
+that  were  reported  as  eliciting  meaningful  and  positive 
+engagement with NewLeaf. 
+
+Authenticity, currency and contextualized advice 
+Participants  who  were  positive  about  posted  stories  spoke 
+of them as being more authentic than the expert health tips. 
+Curiously,  although  the  stories  were  themselves  simply 
+textual posts, they were experienced as somehow more 'real' 
+
+and  alive  than  expert  health  advice:  'it’s  perspective  from 
+real  people,  real  time  rather  than  you’re  reading  a  blog 
+post on the internet' (S2); 'I mean the tips are just tips, like 
+expert tips but the things people post they are real and this 
+actually  happened  to  them'  (S12).  Just  four  Succeeding 
+quitters  and  two  Not-Succeeding  quitters,  reported  that 
+expert  tips  were  valuable  because  of  the  credibility  of  the 
+source  (S11,  S12,  N2,  N6).  But  there  was  less  need  to 
+engage with tips frequently as a Not-Succeeding participant 
+pointed out: 'the first few days I saw all the  tips  that were 
+there  ...  so it’s not like I’m going to be using that feature 
+every day' (N2).  
+
+Related  to  the  sense  of  the  authenticity  around  stories, 
+participants were positive about their currency; that is, they 
+recognised that the stories were recently created, a result of 
+the  high  turnover  of  posts  and  growing  comment  trails.  In 
+contrast, the expert tips were more static: 'if I jumped back 
+in it’s like ‘oh, I’ve seen that one already.  Why is that still  
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3049  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+Participant 
+
+S15L  S13L 
+
+S6L 
+
+S16L 
+
+S8L 
+
+S14L 
+
+S7L  N4L  N7L 
+
+Base rate cig/day 
+
+3 
+
+5 
+
+3 
+
+0.5 
+
+1 
+
+3 
+
+2 
+
+2 
+
+4 
+
+Succeeding 
+
+Not- 
+Succeeding 
+
++ 
+
+x 
+
+13 
+
+21 
+
+2 
+
+6 
+
+Affective response to NewLeaf resources:  
+ +  positive   x  negative  (blank indicating neither) 
+
++ 
+
+x 
+
++ 
+
++ 
+
+x 
+
+x 
+
++ 
+
++ 
+
++ 
+
+x 
+
++ 
+
+x 
+
++ 
+
+Intensity of Use: Counts of significant interactions with NewLeaf 
+
+36 
+
+31 
+
+13 
+
+54 
+
+27 
+
+6 
+
+37 
+
+18 
+
+6 
+
+2 
+
+2 
+
+30 
+
+2 
+
+1 
+
+1 
+
+4 
+
+2 
+
+9 
+
+3 
+
+19 
+
+8 
+
+12 
+
+9 
+
+3 
+
+15 
+
+16 
+
+5 
+
+8 
+
+19 
+
+21 
+
+12 
+
+20 
+
+14 
+
+4 
+
+13 
+
+16 
+
+2 
+
+2 
+
+31 
+
+34 
+
+4 
+
+14 
+
+3 
+
+Stories 
+
+Tips 
+
+Distractions 
+
+Week 1     1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+Week 2     8 
+
+9 
+
+10 
+
+11 
+
+12 
+
+13 
+
+14 
+
+Week 3   15 
+
+16 
+
+17 
+
+18 
+
+19 
+
+20 
+
+21 
+
++ 
+
++ 
+
+51 
+
+1 
+
+1 
+
+8 
+
+48 
+
+6 
+
+14 
+
+14 
+
+1 
+
+10 
+
+4 
+
+Figure 3. Data for light smokers: Base rates of smoking (top panel); Participants' affective response to stories, tips and distractions 
+in the NewLeaf app (middle panel); and tracking data of the total number of significant interactions with the NewLeaf app by each 
+participant during the study (lower panel) (See Findings section for the definition of significant interactions.) 
+
+sitting  there?’    It  was  mainly  to  hear  what  other  people 
+were saying' (N6). 
+
+The  greater  attraction  to  stories  over  expert  tips  was  not 
+because  participants  were  avoiding  practical  support.  On 
+the  contrary,  and  consistent  with  the  notion  of  productive 
+engagement,  most  participants  strongly  preferred  stories 
+that  contained  specific  advice  that  was  contextualized 
+within the personal narrative: 'I’d prefer that someone who 
+is say on the same page as I am gives me that information 
+rather  than  a  doctor  ...  '  (S5).  As  suggested  by  one 
+participant,  the  attraction  of  authenticity,  currency  and 
+contextualized  advice  was  that  they  created  a  sense  of 
+agency  in  the  quitter;  a  feeling  that  the  decision  to  quit 
+comes from the quitter themself, and not through obedience 
+
+to a health expert: 'there's still a lot of people out there that 
+are  trying  to  quit,  not  because  we're  forced  to  quit  but 
+because it's our own decision to do it' (S9). 
+
+further 
+
+critical 
+
+Identifying with the story poster 
+A 
+aspect  underpinning  productive 
+engagement  was  whether  participants  could  identify  with 
+the poster's situation and experience: 'Oh, some of them are 
+textbook cases of me, it's like I could have written it' (S3). 
+For  most  participants,  identifying  with  others  at  the  same 
+stage  of  quitting  was  powerful:  'it’s  like  relating  your 
+experience  to  theirs  and  trying  to  find  what  you  can  do 
+about  it.'  (S12).  Some  participants  noted  specifically  how 
+similar experiences elicited a particular kind of empathetic 
+engagement: 'for me it was helpful because I started going  
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3050 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+  
+ 
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+COUNTER-
+PRODUCTIVE 
+ENGAGEMENT 
+
+PRODUCTIVE 
+ENGAGEMENT 
+
+CURRENT 
+BEHAVIOUR 
+STATE 
+
+EXPLORATORY 
+ENGAGEMENT 
+
+DESIRED 
+BEHAVIOUR 
+STATE 
+
+NON-PRODUCTIVE 
+DISENGAGEMENT 
+
+PRODUCTIVE 
+DISENGAGEMENT 
+
+Figure 4. A conceptual model of alternative trajectories of digitally-mediated behaviour change. Solid arrows indicate progress 
+towards the desired behaviour state (of being a non-smoker), while dotted arrows show regression back to the current behaviour 
+state (of being a smoker)  
+
+through  a  lot  of,  like,  the  panic  stuff  and  the  anxiety  stuff 
+and all of that came up for me that’s never been there.  So it 
+was good to read.' (S2). 
+
+family, 
+
+their  everyday  world  of 
+
+Limits of productive engagement 
+Nearly  all  participants  valued  the  fact  that  the  online 
+community of quitters presented by NewLeaf was separate 
+from 
+friends  and 
+colleagues.  They  valued  their  anonymity,  with  many 
+commenting  that  they  would  not  want  to  conduct  this 
+activity  in  Facebook.  But  although  they  felt  secure  in  the 
+anonymity  of  NewLeaf,  there  was  extreme  reluctance  to 
+post content, even among the Succeeding quitters who were 
+productively engaged: 'I know its anonymous but I'm hiding 
+from  myself.'  (S3);  'I  guess  because  there  is  always  that 
+chance  that  you  might  not  succeed  and  you  don’t  want  to 
+put it out there in the public domain.' (S13L). Others posted 
+with trepidation: 'At first I was like one of those shy people 
+"Should  I  say  something?  Should  I  not  say  something? 
+What are they going to think of what I've said?" ... and so I 
+ummed and ahhed for a while before I hit the  button' (S9). 
+One  clear  exception  to  this  was  the  intensely  productive 
+engager  S2  who  did  post  and  interact  successfully:  '…  it 
+was  quite  good  and  it  was  when  I  started  ...  and  it  was 
+really  rough  and  they  kept  checking  in,  “How  are  you 
+doing now?" ' (S2). 
+
+Non-productive  disengagement  and  counterproductive 
+engagement 
+As  captured  in  our  model  in  Figure  4,  however,  not  all 
+resembling  productive 
+participants  achieved  anything 
+engagement.  For  some,  lack  of  interest  in  the  stories,  tips 
+and distractions meant that the app simply failed to provide 
+any  support for a quit attempt,  a state  we describe as non-
+
+reported 
+
+the  Not-
+productive  disengagement.  For  example, 
+Succeeding  N2 
+exploratory 
+engagement led to non-productive disengagement: 'it really 
+was really informative and it reminds you of how difficult it 
+is, at the end of the day, to quit ... I’m not the sort of person 
+who engages that much with initiatives like that' (N2) 
+
+initial 
+
+how 
+
+More  interestingly,  we  also  observed  counterproductive 
+engagement  with NewLeaf  which involved  more  sustained 
+use  of  its  quit  resources,  but  with  the  opposite  of  the 
+intended  effect.  This  was  often  expressed  as  antipathy 
+towards  success  stories  posted  by  ex-smokers,  that  grew 
+into  a  stance  against  the  spirit  of  NewLeaf  and  against 
+quitting  generally.  N6,  for  example,  was  a  relatively 
+frequent  user  of  the  app  and  a  keen  reader  of  stories.  But 
+while  liking  some  stories,  she  experienced  ex-smoker 
+stories  negatively:  'they’re  doing  it  to  help  and  give  you 
+encouragement, but I didn’t see it that way.  I saw it as  "I 
+can’t believe you have time that you can be bothered doing 
+this"  and  it  didn’t  make  me  feel  "oh,  one  day  I’ll  feel  like 
+that" '. (N6) Unusually, N6 went from smoking 6 cigarettes 
+per  day  to  20  by  the  second  interview,  reporting  this  as 
+being  related  to  other  circumstances;  again  confirming  the 
+importance of external factors in participant outcomes. 
+
+Also  illustrating  counterproductive  engagement,  the  light 
+smoker  N4L  was  a  relatively  steady  engager  with  stories. 
+But  for  him  the  experience  was  overall  very  negative: 
+'reading  some  of  the  guys'  successful  experience  is...  you 
+know, it's like torture to me, because I’m a failure, I didn’t 
+make  it  happen'  (N4L).  Further,  N4L  was  adamantly 
+opposed  to  the  potential  for  social  interaction  through 
+NewLeaf:  '...  I  really  don't  want  you  guys  to  make  this  ... 
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3051 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+like  a social app, like Facebook  or Twitter ... I don't want 
+two-way.  Yeah, one-way is enough...' (N4L). Such negative 
+experiences  were  high  among 
+the  Not-Succeeding 
+participants.  N1  found  it  too  difficult  to  engage  with  any 
+story:  'I  just  couldn't  really  relate  to  myself  ...  It's  like  I 
+don't know, ... I don't even know who they are'. And the idea 
+of posting was repugnant: 'I don't want to expose myself in 
+that sense to others, or strangers, and saying like oh I can't 
+do  this  or  whatever'  (N1).  For  N5,  who  had  successfully 
+quit in previous years but since relapsed, this sentiment was 
+even  stronger:    '…  to  read  people's  stories  who'd  been 
+really successful and gotten a year of not smoking and had 
+really  progressed  ...  I  remember  what  that  was  like  but  it 
+was  a  little  bittersweet  to  read  them  because  I  don't  know 
+that I had a great deal of faith in myself to be able to get to 
+that point again.' (N5). N5 did post a story, but the limited 
+response led to more discouragement:  'The responses I got 
+from the big long post were fine but it was all kind of short' 
+(N5). 
+
+Productive disengagement 
+We  now  come  to  the  identification  of  a  fourth  significant 
+state  in  the  trajectories  of  some  participants,  that  of 
+productive  disengagement.  This  describes  situations  where 
+participants,  who were productively engaging with the app 
+and  embarked  on  a  succeeding  quit  attempt,  then  actively 
+decided to disengage with the app because it was reminding 
+them of smoking. This was the most striking and surprising 
+observation of our study in which reduced engagement with 
+NewLeaf  was  associated  with  a  strong  quit  attempt. 
+Productive disengagement is related to phenomena like the 
+gateway effect [29] in which a tool outlives its usefulness or 
+where people progress from one behaviour change resource 
+to  another.  But 
+it  significantly  different.  Productive 
+disengagement  was  not  simply  NewLeaf  reaching  the  end 
+of its relevance, but involved the active decision to suppress 
+all  reminders  of  the  behaviour  state  of  smoking,  including 
+quit resources.  
+
+Productive  disengagement  was  evidenced  primarily  in 
+interview reports, but it is also supported by the usage logs, 
+particularly  for  heavier  smokers  (Figure  2).  It  can  be  seen 
+that  while  S2  and  S12  maintained  productive  engagement 
+across  the  3  weeks  of  the  trial,  the  other  7  Succeeding 
+quitters  stopped  almost  abruptly  during  the  first  week.  As 
+one put it: 'I think an app like this has to be something you 
+can use and stop using .. there are some people who clearly 
+come back to this forum years after they've quit but I think 
+most  people  would  rather  get  that  over  with'  (S9).  The 
+problem of giving up smoking was transferred to, or at least 
+combined with the problem of giving up the app. For some, 
+productive  disengagement  was  not  just  with  the  app,  S1 
+reported  the  same  for  nicotine  chewing  gum:  'I  just  didn’t 
+want to have to be to a schedule like smoking cos I’d just be 
+thinking about smoking every time I was doing something.' 
+(S1). 
+
+The state  of productive disengagement  was noted as being 
+different  from  the  earlier  attraction  to  the  app  during 
+productive engagement when the aim was ' just keeping the 
+idea  of  quitting  alive  in  your  brain  ...  like  it’d  just  keep 
+reminding you' (S10). For participant S9, the realisation that 
+she  would  need  to  productively  disengage  with  NewLeaf 
+appeared to occur relatively early on at the outset of the quit 
+attempt. It co-existed with the initial desire to productively 
+engage, and this set up a conflicting initial experience: '… it 
+was  just  conscious  sitting  on  my  mind  that  I  want  a 
+cigarette  but  I  should  use  the  app.    Then  using  the  app  is 
+actually  reminding  me  of  a  cigarette'  (S9).  This  conflict 
+underlay  caution  about  posting  her  own  stories,  because  it 
+could  seem  to  lock  in  a  form  of  engagement:  'I  have  to 
+remember to go back and read what I wrote and did I have 
+replies  and  that's  more  of  "You're  thinking  of  cigarettes" 
+sort of a thing.' (S9). Many participants spoke of a desire to 
+go back to the app in the  distant but not immediate  future:  
+'you  don’t  want  to  be  reminded.    However,  I  would  still… 
+like to check stories of people who have quit for as long as I 
+have  or  even  longer,  so  I  can  …  I  can  look  beyond,  you 
+know, and aim for like a bigger goal.' (S5) 
+
+The  active  maintenance  of  productive  engagement  and 
+productive disengagement 
+What  characterized  the  Succeeding  quitters  in  our  study 
+from  those Not-Succeeding was the way they  were able to 
+actively follow a trajectory of productive engagement, often 
+followed  closely  by  productive  disengagement.  They 
+appeared to use adaptive strategies to stick to this trajectory 
+and 
+to  avoid  counterproductive  engagement  or  non-
+productive disengagement. This was despite the Succeeding 
+quitters  suffering  many  of  the  same  negative  reactions  to 
+stories in NewLeaf as the Not-Succeeding participants.  
+
+For  example,  even  among  the  Succeeding  quitters,  there 
+was  discomfort  with  the  perceived  triumphalism  of  ex-
+smokers, particularly if they did not express the struggle to 
+reach success: the stories ... helps you in understanding or 
+helping  you  through  your  quit  process  ...  well  yeah 
+everything except the ones that say "a hundred days" (S12). 
+The  health  tips  in  NewLeaf  could  also  provoke  negative 
+reactions:  'We  all  know  how  lung  cancer  looks  like  ...  It’s 
+not  like  we’re  back  in  the  40s  and  the  doctor  would  open 
+the  consulting  room  with  a  cigarette  in  his  mouth  and  tell 
+you smoking is good for you. We know that it’s not good for 
+you.' (S5) 
+
+But  Succeeding  quitters  typically  avoided  moving  into  a 
+sustained  form  of  counterproductive  engagement,  by 
+selecting stories that fitted their stage of quitting and which 
+they  could  relate  to  and  use  productively:  '…  there’s  a  lot 
+that  "I’ve  had  a  cigarette  and  I’ve  relapsed"  I  don’t  read 
+those  ...    I  do  not  need  verification  that  you  could  go 
+backwards.'  (S2);  'So  on  the  first  days  I  would  click  on 
+stories going my first week as non-smoker, and these days I 
+would  go  more  for  like  one  month'  (S5).  Only  two  of  the 
+Succeeding  quitters  (S3,  S10)  broke  with  this  pattern  and 
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3052were keen on reading the fully variety of stories: 'it's human 
+and  it's  good  to  see  the  fails  as  well  as  the  successes 
+because  the  fails  reminds  you  that  even  though  a  person 
+can fail they know what they want to do, they know what's 
+right' (S3).  
+
+It  was  through  the  Succeeding  quitters'  disposition  to 
+engage  productively  with  NewLeaf  that  some  experienced 
+through the app a world of people who did not smoke: 'And 
+you  see  that  there  are  certain  people  that  are  very,  very 
+prominent already that people mention and go back to and 
+they comment on nearly everything, they’re quite active.  So 
+it’s  nice  to  know  that  they’re  there,  I  guess.'  (S2).  This 
+sense of another world appeared to grow from the engaging 
+characteristics  of  stories,  especially  their  authenticity  and 
+currency.  Succeeding  quitters  spoke  of  this  world  as  one 
+they might soon join. S9 put it: 'Not a quitting club but part 
+of  a  nice,  big  group'.    As  these  quitters  productively 
+disengaged  with  the  app,  there  were  signs  that  they  were 
+not  rejecting  that  online  world,  but  rather  attempting  to 
+transplant  it  on  to  their  real  lives.  S5  spoke  of  going  to 
+music  festivals,  a  major  trigger  for  smoking,  and  how  she 
+would  in  future,  as  a  non-smoker,  have  an  altered 
+engagement  with  people,  and  how  the  stories  on  the  app 
+helped  her  to  see  that  more  positively:    'So  when  you  feel 
+like you’re going to lose that, so it’s good to feel that you’re 
+gaining,  you’re  part  of  another  community  that  you  just 
+didn’t know about it or you didn’t think about it basically.' 
+(S5)  Conversely,  for  the  Not-Succeeding  quitters,  who  did 
+not  enjoy  the  story  forum,  it  was  a  counterproductive 
+rejection of any future scenario of being a non-smoker that 
+often  underlay  their  reaction.  Participant  N5,  who  made  a 
+serious  attempt  to  engage  and  quit  before  relapsing, 
+reported:  'maybe it felt a little bit too distant for me like… I 
+don't think I was willing to engage in some sort of solidarity 
+with other people in it.' (N5). 
+
+DISCUSSION 
+From  our  study  of  23  people's  real-life  attempts  to  quit 
+smoking, we have presented a picture of the rich variety of 
+their  responses  to  using  an  app  for  behaviour  change.  The 
+model  in  Figure  4  offers  a  way  to  interpret  this  variety  by 
+conceptualizing  alternative  trajectories  that  people  might 
+take,  passing  through  different  states  of  engagement  and 
+disengagement  with  the  digital  aid. The  trajectories  shown 
+in Figure 4 depict the key paths observed in our study. 
+
+Importantly,  our  model  expresses  a  dissociation  between 
+the  intensity of using a digital tool and progress towards a 
+desired  behaviour  state.  Four  states  of  the  model  express 
+this  dissociation.  Productive  engagement  entails  positive 
+progress  in  behaviour  change  coupled  with  high  app  use, 
+while  non-productive  disengagement  entails  negative 
+progress  with  low  use.  Together  these  are  the  expected 
+outcomes  under  the  engagement-efficacy  perspective  that 
+we  argued  is  implicit  in  much  design  and  research. 
+However,  two  other  states  captured  in  our  model  are 
+inconsistent  with  it.  Counterproductive  engagement  entails 
+
+negative  progress  in  behaviour  change  coupled  with  high 
+app  use,  and  productive  disengagement  entails  positive 
+progress with low use. 
+
+Our  account  is  supported  by  the  lack  of  a  qualitative 
+association  between  the  intensity  of  people's  interactions 
+with  the  NewLeaf  app  and  the  reported  success  of  their 
+ongoing  quit  attempts  during  the  first  3  weeks.  For  the 
+heavier  smokers 
+the  Succeeding 
+(Figure  2),  2  of 
+participants  (S2  and  S12)  used  the  app  intensively  for  the 
+whole  trial  and  continued  for  several  days  after.  But  the 
+other  7  Succeeding  participants  used  the  app  intensively 
+only on the first few days of  the trial but then used it very 
+little if at all. Our interpretation, as expressed in the model 
+of Figure 4, is that while S2 and S12 engaged productively 
+with  NewLeaf  throughout  the  trial,  many  of  the  other 
+Succeeding  quitters  moved  along  a 
+trajectory  from 
+exploratory to productive engagement, then after a few days 
+on to productive disengagement.  
+
+Among  the  Not-Succeeding  participants  there  was  also 
+great  variation  in  the  intensity  of  interaction  with  the  app, 
+but more intermittent use of it across the trial. Some of the 
+Not-Succeeding  participants  exhibited  quite  high  levels  of 
+use  but  this  was  often  in  a  state  of  counterproductive 
+engagement,  particularly  N5,  N6  and  N4L.  These 
+participants were consumed by an antagonistic reception of 
+other  peoples'  quitting  stories,  especially,  but  not  only, 
+those of triumphant ex-smokers. This was distinct from the 
+other  Not-Succeeding  participants  who  were  not 
+antagonistic  but  merely  failed  to  engage,  a  reaction  which 
+we describe as non-productive disengagement in Figure 4.  
+
+Productive  disengagement  is  a  surprising  and  striking 
+observation  of  our  study.  It  is  related  to,  but  nevertheless 
+distinct  from, other  reported  forms of reduced engagement 
+during  behaviour  change,  such  as  the  'gateway  effect'  [29] 
+and 'happy abandonment' [7]. These effects imply situations 
+where  people  have  succeeded  with  their  change,  or  switch 
+to  upgraded  or  different 
+technologies.  Productive 
+disengagement  as  observed  here,  in  contrast,  involved  the 
+active  attempt  to  banish  thoughts  about  smoking,  and  this 
+required  not  thinking  about  quitting  too.  The  timing  of 
+transitions  from  productive  engagement  to  disengagement 
+were variable but could happen after as little as one or two 
+days; time for a quitter to gain enough motivation, through 
+the  app  or  elsewhere,  and  then  proceed  to  a  state  of  not 
+thinking about smoking or quitting. 
+
+This  interpretation,  of  a  form  of  active  and  productive 
+disengagement,  as  opposed  to  losing  interest,  is  confirmed 
+by the fact that 8 of the 9 Succeeding quitters in the heavier 
+smoking  group  (Figure  2)  were  very  positive  about  the 
+value of stories. They valued them as authentic and current, 
+and  preferred  them  as  a  source  of  advice  over  the  expert 
+health tips. Conversely, 4 out of 5  Not-Succeeding heavier 
+smokers had a  negative reaction to stories  which led some 
+on  a  trajectory  from  exploratory  to  counterproductive 
+to  simply 
+engagement,  and  others  from  exploration 
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3053disengaging non-productively as they gave  up the  tool and 
+their quit attempt. All returned to the current state of being 
+a  smoker  and  not  attempting  to  change,  at  least  for  now. 
+While  we do not claim any causal connection between  the 
+use of stories and quitting, interview testaments, at least for 
+the  heavier  smokers,  were  consistent  with  the  idea  that 
+engaging productively with stories in NewLeaf was a likely 
+characteristic  of  people  embarked  on  a  Succeeding  quit 
+attempt,  and  not  engaging  productively  with  stories  more 
+often characterized those who were Not-Succeeding.  
+
+These  finding  can  be  considered  in  terms  of  the  trans-
+theoretical or stages  model of quitting. Consistent  with He 
+et  al’s  [14]  argument  that  behaviour  change  apps  should 
+tailor  their  content  to  people's  stage  of  change,  most 
+participants  in  our  study  preferred  to  engage  with  stories 
+from people in a similar situation to themselves. Moreover, 
+their  preferences  changed  as  they  moved  from  being  'just 
+quit'  to  maintaining  an  ongoing  quit  attempt.  It  was  also 
+evident that the Succeeding quitters were able to adaptively 
+select stories to match their situation, suggesting that a story 
+in  some 
+forum  can  provide  ‘one  size 
+circumstances.  To  do 
+ready 
+this, 
+identification of the poster's stage of quitting. It was notable 
+that may Not-Succeeding participants were not able to find 
+suitable stories, and many were fixated on stories that they 
+found off-putting. 
+
+to  fit  all’ 
+it  must  support 
+
+Implications of the trajectories model 
+As  noted  earlier,  Klasnja  et  al  [17]  argue  that  HCI 
+researchers  working  on  health  technologies  cannot  easily 
+measure  their  success  by  final  health  outcomes,  so  instead 
+they should use intermediate  indicators, such as the uptake 
+of  behaviours  believed  to  have  a  positive  influence. 
+Engagement  with  the  technology  may  appear  at  first  to  be 
+one such intermediate indicator, in terms of the strength  of 
+affective  response  or  in  terms  of  intensity  of  use.  While 
+engagement is of course important,  our study  points to the 
+dangers  of  relying  on  strong  user  engagement  with  a 
+behaviour change app as an indicator of success. 
+
+The  model  of  alternative  trajectories,  developed  here 
+(Figure  4),  offers    a  set  of  potentially  valuable  sensitizing 
+concepts  for  designers  of  behaviour  change  technologies, 
+especially  for  addiction  support.  The  notion  of  productive 
+disengagement,  in  particular,  suggests  that  users  need  the 
+utmost  control  over  when and how they use  these  devices, 
+and  points  to  the  dangers  of  conventional  prompts  like 
+notifications  that  seek  to  remind  or  otherwise  draw  users 
+back into direct engagement. Rather, the user should be free 
+to  disengage  and  stay  disengaged  and  this  should  not  be 
+treated  as  a  failure  of  either  user  or  technology.  Equally, 
+users should be free to lurk and observe without even gentle 
+coercion 
+to  post  content  or  comments.  Again  such 
+interactions  can  be  perceived  as  locking  in  a  form  of 
+engagement  that  was  not  attractive  to  participants  in  our 
+study, including those who were Succeeding so far in their 
+quit attempts. 
+
+to 
+
+technologies 
+
+These implications of productive disengagement are mostly 
+that  help  people  combat 
+applicable 
+addictions like smoking, gambling, alcohol and drug use. In 
+these  situations,  it  is  desirable  to  reach  a  state  of  not 
+thinking  about  the  objects  of  addiction.  Other  kinds  of 
+behaviour  change,  such  as  energy  conservation,  are  less 
+relevant perhaps and  involve  valid  goals to  make the  need 
+for  change  an  ongoing  awareness.  Yet  even  in  these 
+situations,  the  notion  of  productive  disengagement  has 
+relevance,  in  that  users  should  preferably  internalize  new 
+ways  of  thinking  and  new  habits,  so  that  they  become 
+independent  of 
+this 
+approach  for assistive technology;  for example, Stawarz  et 
+al  [31],  working  on  medication  reminder  tools,  argue  for 
+technology-independent  habit 
+designs 
+formation as opposed to ongoing technology-dependence.   
+
+tools.  Recent  research  supports 
+
+achieve 
+
+that 
+
+CONCLUSION 
+Our study offers new evidence about the variety of forms of 
+engagement  and  disengagement  with  digital  tools  for 
+behaviour  change.  It  reveals  how  strong  user  engagement 
+can  sometimes  be  a  positive  sign,  but  only  if  the  user  is 
+productively  engaged  with  the  tool.  However,  engagement 
+may be counterproductive, as with antagonistic reactions to 
+content  that  push  users  away  from  their  original  goal. 
+Equally,  users  may  undertake  a  counter-intuitive  form  of 
+productive disengagement in which they actively decide to 
+discontinue using a digital tool. This is not a rejection of the 
+value  of  the  tool,  but  rather  a  strategy  to  banish  thinking 
+about  adverse  behaviours  in  a  positive  continuation  of  the 
+attempt to change.  
+
+Our 
+resulting  model  of  alternative 
+trajectories  of 
+therefore 
+engagement  and  disengagement  (Figure  4) 
+suggests  caution  against  any  simplistic  interpretation  of 
+usage  tracking  data  as  an  indicator  of  success  for  HCI 
+design  of  tools  for  behaviour  change.  People's  trajectories 
+in  this  domain  are  typically  too  complex  and  subtle  to  be 
+captured in a numerical log of usage frequency or intensity. 
+At  least  in  the  context  of  addiction  support,  our  model 
+suggests that behaviour change apps should be designed to 
+give users maximum control over their level of engagement 
+and disengagement and avoid features such as notifications 
+that seek to trigger or even lock in particular patterns of use. 
+
+Finally,  our  study  illustrates  a  different  perspective  to  that 
+of  persuasive  technology.  Whether  people  embark  on 
+behaviour  change  is  a  result  of  many  external  factors,  of 
+personal  motivation  and  circumstances.  Rather  than  our 
+NewLeaf  tool  being  seen  to  persuade  people,  it  is  better 
+understood  as  a  resource  that  allowed  Succeeding  quitters 
+to channel their various sources of motivation to embark on 
+an attempted behaviour change.  
+
+ACKNOWLEDGEMENTS 
+This  research  was  funded  by  Cancer  Council  Victoria  and 
+the  Australian  Research  Council 
+grant 
+LP110100046. We are also grateful for input from smoking 
+cessation counsellors from Quit Victoria. 
+
+(ARC) 
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3054REFERENCES 
+1.  Elena Agapie, Lucas Colusso, Sean A. Munson, and 
+
+Gary Hsieh. 2016. PlanSourcing: Generating Behavior 
+Change Plans with Friends and Crowds. In 
+Proceedings of the 19th ACM Conference on 
+Computer-Supported Cooperative Work & Social 
+Computing (CSCW '16). ACM, New York, NY, USA, 
+119-133. DOI: 
+http://dx.doi.org.ezp.lib.unimelb.edu.au/10.1145/28180
+48.2819943   
+
+2.  Eric P.S. Baumer, Sherri Jean Katz, Jill E. Freeman, et 
+al. 2012. Prescriptive Persuasion and Open-ended 
+Social Awareness: Expanding the Design Space of 
+Mobile Health. In Proceedings of the ACM 2012 
+Conference on Computer Supported Cooperative 
+Work, ACM, 475–484. 
+http://doi.org/10.1145/2145204.2145279 
+
+3.  Ron Borland. 2013. Understanding Hard to Maintain 
+Behaviour Change: A Dual Process Approach. John 
+Wiley & Sons, Somerset, UK. 
+
+4.  Braun, V. and Clarke, V. 2006. Using thematic analysis 
+
+in psychology. Qualitative Research in Psychology 3, 
+2, 77-101. 
+
+5.  Hronn Brynjarsdottir, Maria Håkansson, James Pierce, 
+Eric Baumer, Carl DiSalvo, and Phoebe Sengers. 2012. 
+Sustainably Unpersuaded: How Persuasion Narrows 
+Our Vision of Sustainability. In Proceedings of the 
+SIGCHI Conference on Human Factors in Computing 
+Systems, ACM, 947–956. 
+http://doi.org/10.1145/2207676.2208539 
+
+6.  Munmun De Choudhury and Sushovan De. 2014. 
+
+Mental Health Discourse on reddit: Self-Disclosure, 
+Social Support, and Anonymity.In Proceedings of 8th 
+International AAAI Conference on Weblogs and Social 
+Media. Retrieved September 22, 2015 from 
+http://www.aaai.org/ocs/index.php/ICWSM/ICWSM14
+/paper/view/8075 
+
+7.  James Clawson, Jessica A. Pater, Andrew D. Miller, 
+Elizabeth D. Mynatt, and Lena Mamykina. 2015. No 
+Longer Wearing: Investigating the Abandonment of 
+Personal Health-tracking Technologies on Craigslist. In 
+Proceedings of the 2015 ACM International Joint 
+Conference on Pervasive and Ubiquitous Computing, 
+ACM, 647–658. 
+http://doi.org/10.1145/2750858.2807554 
+
+8.  Alan D. DeSantis. 2002. Smoke screen: an 
+
+ethnographic study of a cigar shop’s collective 
+rationalization. Health Communication 14, 2: 167–198. 
+http://doi.org/10.1207/S15327027HC1402_2 
+
+9.  Paul Dourish. 2010. HCI and Environmental 
+
+Sustainability: The Politics of Design and the Design 
+of Politics. In Proceedings of the 8th ACM Conference 
+on Designing Interactive Systems, ACM, 1–10. 
+http://doi.org/10.1145/1858171.1858173 
+
+10.  Epstein, D. A., Caraway, M., Johnston, C., Ping, A., 
+Fogarty, J., and Munson, S. A. 2016. Beyond 
+Abandonment to Next Steps: Understanding and 
+Designing for Life after Personal Informatics Tool Use. 
+In Proceedings of the 2016 CHI Conference on Human 
+Factors in Computing Systems (pp. 1109-1113). ACM. 
+
+11.  B. J. Fogg. 2003. Persuasive Technology: Using 
+
+Computers to Change What We Think and Do. Morgan 
+Kaufmann,  Boston. 
+
+12.  Thomas Fritz, Elaine M. Huang, Gail C. Murphy, and 
+
+Thomas Zimmermann. 2014. Persuasive Technology in 
+the Real World: A Study of Long-term Use of Activity 
+Sensing Devices for Fitness. In Proceedings of SIGCHI 
+Conference on Human Factors in Computing Systems, 
+ACM, 487–496. 
+http://doi.org/10.1145/2556288.2557383 
+
+13.  Melanie C. Green. 2008. Research challenges in 
+
+narrative persuasion. Information Design Journal 16, 
+1: 47–52. http://doi.org/10.1075/idj.16.1.07gre 
+
+14.  Helen Ai He, Saul Greenberg, and Elaine M. Huang. 
+2010. One Size Does Not Fit All: Applying the 
+Transtheoretical Model to Energy Feedback 
+Technology Design. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems, 
+ACM, 927–936. 
+http://doi.org/10.1145/1753326.1753464 
+
+15.  Eric B. Hekler, Predrag Klasnja, Jon E. Froehlich, and 
+Matthew P. Buman. 2013. Mind the Theoretical Gap: 
+Interpreting, Using, and Developing Behavioral Theory 
+in HCI Research. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems, 
+ACM, 3307–3316. 
+http://doi.org/10.1145/2470654.2466452 
+
+16.  Leslie J. Hinyard and Matthew W. Kreuter. 2007. 
+
+Using Narrative Communication as a Tool for Health 
+Behavior Change: A Conceptual, Theoretical, and 
+Empirical Overview. Health Education & Behavior 34, 
+5: 777–792. http://doi.org/10.1177/1090198106291963 
+
+17.  Predrag Klasnja, Sunny Consolvo, and Wanda Pratt. 
+
+2011. How to evaluate technologies for health behavior 
+change in HCI research. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems, 
+ACM, 3063–3072. 
+http://doi.org/10.1145/1978942.1979396 
+
+18.  Lena Mamykina, Andrew D. Miller, Elizabeth D. 
+
+Mynatt, and Daniel Greenblatt. 2010. Constructing 
+identities through storytelling in diabetes management. 
+In Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems, ACM, 1203–1212. 
+Retrieved September 22, 2015 from 
+http://dl.acm.org/citation.cfm?id=1753507 
+
+19.  Mark W. Newman, Debra Lauterbach, Sean A. 
+
+Munson, Paul Resnick, and Margaret E. Morris. 2011. 
+It’s not that I don’t have problems, I’m just not putting 
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3055them on Facebook: challenges and opportunities in 
+using online social networks for health. In Proceedings 
+of the ACM 2011 conference on Computer supported 
+cooperative work, ACM, 341–350. 
+http://doi.org/10.1145/1958824.1958876 
+
+20.  O'Brien HL, Toms EG. 2008. What is user 
+
+engagement? A conceptual framework for defining 
+user engagement with technology. Journal of the 
+American Society for Information Science and 
+Technology, 59(6), 938-55. 
+
+21.  Jeni Paay, Jesper Kjeldskov, Mikael B. Skov, Lars 
+
+Lichon, and Stephan Rasmussen. 2015. Understanding 
+Individual Differences for Tailored Smoking Cessation 
+Apps. In Proceedings of the 33rd Annual ACM 
+Conference on Human Factors in Computing Systems, 
+ACM, 1699–1708. 
+http://doi.org/10.1145/2702123.2702321 
+
+22.  James W. Pennebaker and Janel D. Seagal. 1999. 
+Forming a story: The health benefits of narrative. 
+Journal of clinical psychology 55, 10, 1243–1254. 
+
+27.  John Rooksby, Mattias Rost, Alistair Morrison, and 
+
+Matthew Chalmers. 2014. Personal Tracking As Lived 
+Informatics. In Proceedings of the 32nd Annual ACM 
+Conference on Human Factors in Computing Systems, 
+ACM, 1163–1172. 
+http://doi.org/10.1145/2556288.2557039 
+
+28.  Schane, R. E., Ling, P. M. and Glantz, S. A. Health. 
+2010. Effects of Light and Intermittent Smoking: A 
+Review. Circulation, 121, 13, 1518-1522. 
+
+29.  Victoria Schwanda, Steven Ibara, Lindsay Reynolds, 
+
+and Dan Cosley. 2011. Side Effects and “Gateway” 
+Tools: Advocating a Broader Look at Evaluating 
+Persuasive Systems. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems, 
+ACM, 345–348. 
+http://doi.org/10.1145/1978942.1978991 
+
+30.  Katie A. Siek, Gillian R. Hayes, Mark W. Newman, 
+
+and John C. Tang. 2014. Field Deployments: Knowing 
+from Using in Context. In Ways of Knowing in HCI. 
+Springer, New York, 119–142. 
+
+23.  Bernd Ploderer, Wally Smith, Jon Pearce, and Ron 
+
+31.  Katarzyna Stawarz, Anna L. Cox, and Ann Blandford. 
+
+Borland. 2014. A mobile app offering distractions and 
+tips to cope with cigarette craving: A qualitative study. 
+JMIR mHealth and uHealth 2, 2,  1-23. 
+http://doi.org/10.2196/mhealth.3209 
+
+24.  Bernd Ploderer, Wally Smith, Jon Pearce, and Ron 
+Borland. 2015. An Object-Centred Approach to 
+Encourage Online Participation in the Context of 
+Behaviour Change. Computer Supported Cooperative 
+Work (CSCW) 24, 1,  39-6433. 
+
+2015. Beyond Self-Tracking and Reminders: 
+Designing Smartphone Apps That Support Habit 
+Formation. In Proceedings of the 33rd Annual ACM 
+Conference on Human Factors in Computing Systems, 
+ACM, 2653–2662. 
+http://doi.org/10.1145/2702123.2702230 
+
+32.  Sutcliffe, A. 2009. Designing for User Engagement: 
+Aesthetic and Attractive User Interfaces. Synthesis 
+Lectures on Human-Centered Informatics, 2, 1, 1-55. 
+
+25.  J. O. Prochaska and W. F. Velicer. 1997. The 
+
+33.  Phil Turner. 2010. The anatomy of engagement. In 
+
+transtheoretical model of health behavior change. 
+American journal of health promotion: AJHP 12, 1: 
+38–48. 
+
+26.  Corbin Reno and Erika S. Poole. 2016. It Matters If My 
+Friends Stop Smoking: Social Support for Behavior 
+Change in Social Media.  In Proceedings of the 2016 
+CHI Conference on Human Factors in Computing 
+Systems, ACM, New York, NY, USA,  5548-5552. 
+http://dx.doi.org.ezp.lib.unimelb.edu.au/10.1145/28580
+36.2858203 
+
+Proceedings of the 28th Annual European Conference 
+on Cognitive Ergonomics (ECCE '10). ACM, New 
+York, NY, USA, 59-66. 
+DOI=http://dx.doi.org/10.1145/1962300.1962315 
+
+34.  West, R., Hajek, P., Stead, L., and Stapleton, J. 2005. 
+Outcome criteria in smoking cessation trials: proposal 
+for a common standard. Addiction 100, 3, 299–303. 
+
+35.  World Health Organisation. 2011. WHO report on the 
+global tobacco epidemic. WHO. Retrieved September 
+24, 2015 from 
+http://www.who.int/tobacco/global_report/2011/en/
+
+Enabling Healthy BehaviorsCHI 2017, May 6–11, 2017, Denver, CO, USA3056 
+ 
+ 
+ 
+ 
+

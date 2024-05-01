@@ -1,0 +1,1457 @@
+MoodLight: Exploring Personal and Social Implications of 
+Ambient Display of Biosensor Data  
+
+Jaime Snyder°, Mark Matthews°, Jacqueline Chien°, Pamara F. Chang*,  
+Emily Sun°, Saeed Abdullah°, Geri Gay°* 
+Cornell University 
+°Information Science Department 
+*Department of Communication 
+{js2829, mark.matthews,  jtc229, pfc46, es765, sma249, gkg1} @cornell.edu 
+
+ABSTRACT 
+MoodLight  is  an  interactive  ambient  lighting  system  that 
+responds  to  biosensor  input  related  to  an  individual’s 
+current  level  of  arousal.  Changes  in  levels  of  arousal 
+correspond to fluctuations in the color of light provided by 
+the  system,  altering  the  immediate  environment  in  ways 
+intimately related to the user’s private internal state. We use 
+this intervention to explore personal and social implications 
+of  the  ambient  display  of  biosensor  data.  This  study 
+provides  greater  understanding  of  the  ways  in  which  the 
+representations  of  personal  informatics,  with  a  focus  on 
+ambient  feedback,  influence  our  perceptions  of  ourselves 
+and those around us.  
+
+Author Keywords 
+Personal informatics; self-discovery; biofeedback; stress 
+management; light; color; ambient display. 
+
+ACM Classification Keywords  
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous. 
+
+INTRODUCTION 
+
+“To  reveal  is  to  allow  to  be  known  what  has 
+heretofore been hidden (a passive act)…and to 
+disclose 
+to  make  known  an 
+occurrence  that  has  been  under  consideration 
+but,  for  valid  reasons,  has  been  kept  under 
+wraps” [22, p. 238]. 
+
+to  act, 
+
+is 
+
+We are now several years into an era of biosensor research 
+in  the  field  of  human  computer  interaction  [cf.  19].  The 
+devices  for  gathering  micro-metric  data  about  even  the 
+smallest  fluctuations  in  our  biological  forms  are  shrinking 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  ACM  must  be  honored. 
+Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or  republish,  to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org. 
+CSCW '15, March 14-18, 2015, Vancouver, BC, Canada. 
+Copyright 2015 ACM 978-1-4503-2922-4/15/03…$15.00. 
+http://dx.doi.org/10.1145/2675133.2675191 
+
+in  size,  becoming  more  reliable  and  are  increasingly  and 
+seamlessly integrated into our environments. 
+
+Much  of  the  research  in  this  area  has  been  motivated  by  a 
+desire  to  reveal  more  about  ourselves  and  to  provide  users 
+with tools to cultivate an increased sense of self-awareness. 
+For example, Affective Health [10; 31] is a bio-sensing tool 
+designed to support stress management by helping people to 
+track  trends  associated  with  the  response  the  body  has  to 
+day-to-day  activities  and  environments.  Like  similar 
+systems  [e.g.,  5;  26],  Affective  Health  uses  a  combination 
+of skin conductance, heart rate and accelerometer sensors to 
+collect data that are displayed on a user’s mobile phone in 
+real-time. The designers of this system have explained that 
+“by  finding  patterns  in  their  own  behavior,  users  can  start 
+[to  figure]  out  both  what  stresses  them  and  how  to  cope” 
+[31, p. 48].  
+
+this  and  similar  work,  we  created 
+Extending  from 
+Moodlight,  an  interactive  ambient  lighting  system  that 
+responds  to  an  individual’s  physiological  markers  of 
+arousal.  We  were  interested  in  learning  more  about  the 
+mechanics  of  self-awareness  provided  by  real-time  display 
+of  an  individual’s  biosensor  data,  particularly  in  social 
+contexts.  We  wanted  to  investigate  how  the  representation 
+of  self  that  is  offered  by  these  systems  interacts  with  and 
+influences  an  individual’s  own  sense  of  wellbeing.  Bio-
+sensor  systems  for  self-awareness  carry  the  benefits  of 
+ubiquitous  and  automatic  data  collection  but  also  embody 
+real risks associated with removing control from users [16; 
+19].  These  systems  challenge 
+the  ways  we  have 
+traditionally  thought  about  the  process  of  self-discovery 
+[33] and  intentionality of self-disclosure [21]. 
+
+MOTIVATION 
+The motivation for MoodLight grew out of two focus group 
+sessions  and  a  series  of  conversations  with  clinicians  who 
+provide  mental  health  counseling  to  college  students,  a 
+population  particularly  susceptible  to  stress  [9;  34].  For 
+these  mental  health  practitioners,  working  with  students  to 
+cultivate  successful  stress  management  skills  typically 
+involves  assessing 
+levels,  encouraging  non-
+judgmental  self-awareness  through  talk  therapy,  teaching 
+
+stress 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada143 
+ 
+ 
+ 
+traditional  relaxation  tools  such  as  deep  breathing  and,  in 
+particular,  mindfulness  meditation,  a  stress  management 
+technique  which  places  an  emphasis  on  developing  a 
+detached awareness of momentary cognitive and emotional 
+experience.  Research 
+that 
+cultivating  a  sense  of  non-judgmental  mindfulness  or 
+awareness  of  present-moment  experience  can  produce 
+substantial 
+in  wellbeing,  especially  for 
+people suffering from pain and distress [1; 4].  
+
+in  psychology  has  shown 
+
+improvements 
+
+that  many  students  find 
+
+it 
+The  counselors  reported 
+extremely  challenging  to  practice  relaxation  techniques, 
+like mindfulness meditation, both at home and in the clinic. 
+One  counselor  explained:  “Students  can  self-experiment 
+with some of the therapeutic exercises but I don’t feel that 
+they actually reflect on these experiments, It would be nice 
+to have a way to help them reflect, [to] provide convincing 
+evidence [that it works].”   
+
+Another therapist mentioned the benefits of supporting self-
+discovery  in  social  contexts  by  making  feelings  and 
+emotions  “more  concrete,”  visually  representing  them  not 
+only to the individual but also to others in a group session, 
+thereby helping session members validate and acknowledge 
+the  feelings  of  others.  She  anticipated  that  a visual  display 
+might  be  particularly  helpful  for  students  who  lacked  or 
+were  in  the  process  of  developing  a  vocabulary  for  their 
+emotions.  A  third  clinician  commented  that  the  visual 
+representation  of  an  internal  state  could  provide  the 
+opportunity  for  students  to  reflect  on  and  accept  even 
+negative  emotions  (their  own  or  others)  without  judgment, 
+shutting  down  or  denying 
+thereby 
+supporting healthy self-discovery in the future.  
+
+their  existence, 
+
+With  input  from  these  clinicians,  a  design  probe  was 
+deployed  to  observe  MoodLight  being  used  by  college 
+students  singly  and  in  pairs.    During  the  study  we  spoke 
+with  the  students  about  the  experience  of  seeing  their 
+internal,  affective  state  represented  in  an  ambient  display. 
+The  practical  goal  of  the  study  was  to  explore  the 
+possibility  of  using  MoodLight  in  clinical  and  home 
+settings to cultivate mindfulness, provide a novel outlet for 
+stress  management 
+enhance 
+self-discovery, 
+interventions  by  supporting  social  engagement.  Our  more 
+formative  goal  was  to  use  this  domain  to  look  more 
+reflectively  at  the  process  of  self-represention  through  the 
+use of biosensor data and the ways in which this influences 
+our perceptions of ourselves and those around us.  
+
+and 
+
+RELATED WORK 
+
+Technology for mindfulness  
+A  variety  of  intervention  techniques  have  been  used  to 
+encourage self-awareness including mindfulness meditation 
+[13],  breathing  exercises,  progressive  muscle  relaxation 
+[25], and acceptance and commitment therapy [30].  Many 
+people, however, find mindful practices such as meditation 
+difficult  to  learn  and  apply  in  daily  life  [4].  Also,  many 
+traditional  approaches  to  self-awareness  are  practiced  in 
+
+isolation,  making  it  challenging  to  support  the  stress 
+management process through positive social engagement. 
+
+One  prominent  example  of  technology-based  interventions 
+to support self-reflection and relaxation is biofeedback [33]. 
+This  technique  involves  using  sensor  technologies  to 
+measure  and  represent  changes  in  typically  automatic 
+biological  signals  like  heart  rate,  skin  conductance  and 
+brain  activity  in  order  to  learn  how  to  voluntarily  control 
+them.  Biofeedback  research  in  the  domain  of  human 
+computer  interaction  typically  involves  designing  systems 
+that  combine  one  or  more  of  these  detection  techniques  in 
+order  to  provide  users  with  an  enhanced  ability  to  track 
+their own behaviors and activities. For example, Microsoft 
+Research’s Food and Mood project [5] deploys biofeedback 
+in  the  service  of  intervention  and  behavior  change.  Users 
+wear  sensors  embedded  in  their  clothing  in  order  to  track 
+behaviors  and  affective  states  associated  with  emotional 
+eating  so  that  they  can  curb  undesirable  habits.  The 
+Affective Health project mentioned above uses a similar set 
+of biometric collection points with the goal of empowering 
+users  with  the  ability  to  interpret  and  find  their  own 
+meaning in the signals as a reflective practice. 
+
+Biofeedback and similar affective systems are often screen-
+based,  providing  sensor  output  via  a  digital  graphical 
+display. Some systems present feedback through traditional 
+data  visualizations  while  others  use  visual  metaphors.  For 
+example,  AffectAura  measures  head  position,  posture, 
+voice  activity,  electrodermal  activity  (EDA),  and  GPS  to 
+provide participants with an interactive visualization of the 
+user’s  predicted  affective  state  [26].The  team  involved  in 
+designing and developing the Affective Health system have 
+explored more lyrical expressions of the temporal aspect of 
+biosensor data through displays based on layers and spirals 
+[36].  
+
+As the devices for collecting and displaying biosensor data 
+become more refined, attention is shifting to the position of 
+these  systems  within  social  contexts.  Although  not  yet  a 
+standard component of  collaborative work interfaces, there 
+is  great  potential  for  biosensor  feedback  to  be  used  as  a 
+means for cultivating co-presence and awareness, especially 
+in  distributed  contexts.  For  example,  mood  sharing 
+applications  like  MobiMood  [6]  and  the  MoodJam  project 
+[27]  encourage  awareness  of  the  emotion  climate  or 
+collective mood of a shared space.  
+
+Self-revelation and automated disclosure 
+We  chose  an  ambient  output  for  our  system  in  order  to 
+explore  both 
+impacts  of 
+the  personal  and  social 
+representations of self generated from biosensor data. Based 
+on ubiquitous computing investigations of the mechanics of 
+automated  disclosure  [21;  32],  we  anticipated  that  there 
+would  be  interesting  tensions  between  the  passive  and 
+automatic process of self-revelation provided by the sensing 
+device  and  traditional  practices  of  self-disclosure  that  are 
+typically  characterized  by  intentionality.  In  particular,  we 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada144found  through  the  process  of  designing  the  MoodLight 
+system  that  our  own  understanding  of  the  nature  of  these 
+practices of revelation and disclosure were challenged.  
+
+Self-revelation  refers  to  the  passive  and  often  inadvertent 
+act of exposing something about yourself in a tacit manner 
+[11;  22].  For  example,  we  reveal  clues  about  personality, 
+preferences  and  disposition  through  body  language,  the 
+arrangement  of  our  personal  spaces,  and  even  through  the 
+silences in our speech patterns. Levenson [22] describes the 
+process  of  self-revelation  in  social  situations  as  inevitable, 
+inadvertent and continuous. The practice of recognizing and 
+interpreting  the  unconscious  self-revelations  of  others  is 
+poetically  referred  to  by  Levenson  as  “exquisite  attention” 
+[22, p. 239]. In this sense, biosensor tools offer us a means 
+to  cast  “exquisite  attention”  on  ourselves,  enabling  us  to 
+notice  subtle  and  unattended  details  that  signal  internal 
+states of being.  
+
+sharing 
+
+research 
+
+personally 
+
+sensitive 
+that 
+
+On the other hand, self disclosure traditionally refers to “an 
+interaction  between  at  least  two  individuals  where  one 
+intends  to  deliberately  divulge  something  personal  to 
+another” [12, p. 411]. In spite of cultural and social taboos 
+against 
+information, 
+self-disclosure, 
+indicates 
+psychology 
+especially  to  friends  and  family  members,  can  play  an 
+important role in constructing relationships and coping with 
+stressful  or  traumatic  events  [cf.  12].  Greene  et  al.  [12] 
+posit  that  nondisclosure,  especially  in  stressful  situations 
+such  as  being  informed  of  a  serious  illness,  correlates  to 
+psychological 
+cognitive 
+processing  and  other  physical  symptoms  of  anxiety.  Not 
+only do mindfulness practices help us to mitigate stress by 
+encouraging  non-judgmental  self-awareness  of  negative 
+feelings, but they can also lead to the intentional expression 
+these emotions to others [1; 4].  
+
+suppression 
+
+inhibition, 
+
+of 
+
+Recent  research  looking  at  computer-mediated  interactions 
+has  shown  that  the  perceived  anonymity  offered  by  online 
+environments  can  affect  our  disclosure  practices,  often 
+encouraging  more  spontaneous  sharing  of  personal  details 
+[17;  35].  While  users  largely  remain  in  control  of  self-
+disclosure  decisions  on  social  media  sites  through  the 
+voluntary  nature  of  posts,  with  sensor-based  systems  that 
+can  passively  and  continuously  track  personal  information 
+there are risks associated with automated disclosure [cf. 21; 
+32].  Managing  disclosure  in  daily  life  “is  an  intuitive, 
+situated  social  process”  [21,  p.  2]  while  managing 
+disclosure  in  ubiquitous  computing  is  complicated  by  the 
+seamlessness  with  which  these  systems  strive  to  operate. 
+Lederer  et  al.  looked  at  ways  to  support  intentional 
+disclosure  in  ubiquitous  systems,  particularly  where  the 
+data  may  be  disclosed  automatically  [20;  21].  They 
+identified  a  tension  between  the  risk  of  unintentional 
+revelation of personal information and the burden of having 
+users  provide  permission  for  the  release  of  each  piece  of 
+information  about  themselves  to  which  the  system  has 
+access.  
+
+intentional  acquiescence 
+
+Our  study  was  designed  to  probe  representations  of  self 
+through  biosensor  data  by  focusing  on  the  blurred  line 
+between  inevitably  inadvertent  self-revelation  and  the 
+mechanics  of  automated  disclosure.  When  users  make  the 
+explicit  choice  to  use  sensing  technology,  this  can  be  seen 
+as 
+to  automated  disclosure 
+(especially  when  the  system  is  embedded  in  a  social 
+context). However, in many current systems, users quickly 
+lose  control  of 
+their  personal 
+those  data  points  as 
+information is fed into a complex system [16]. What might 
+have  begun  as  an  act  of  intentional  disclosure  becomes  an 
+experience  of  passive  self-revelation 
+[22,  p.  240]. 
+Understanding  this  shift  should  be  of  particular  concern  to 
+researchers 
+the  CSCW  community  who  envision 
+exploiting  affective  and  bio-sensing  technologies  in  the 
+service  of  establishing  and  maintaining  trust,  cohesion  and 
+coordination in distributed teams. 
+
+in 
+
+Summary 
+The capacity for bio-sensing tools to support self-awareness 
+has  been  the  subject  of  previous  work.  However,  as  these 
+tools  become  more  seamlessly  embedded  in  our  everyday 
+lives, the data and representations of self that they offer are 
+increasingly  integrated  into  our  social  landscape.  We 
+contribute  to  this  work  by  viewing  representations  of  self 
+that are offered by bio-sensing systems in terms of not just 
+self-awareness  and  mindfulness  practices,  but  also  within 
+the  context  of  more  socially  grounded  practices  of  self-
+revelation and evolving notions of automated disclosure. 
+
+DESIGN OF MOODLIGHT 
+
+is  no 
+
+longer  a  specialized 
+
+Design considerations 
+The  first  design  consideration  we  addressed  dealt  with  the 
+recent  surge  of  interest  in  personal  informatics  systems 
+driven  by  low-level  biometric  and  movement  sensors  [38]. 
+Biofeedback 
+therapeutic 
+technique.  Readily  available  sensor-based  activity  trackers 
+like the Basis wristwatch (http://www.mybasis.com) enable 
+individuals  to  use  high-frequency  sampling  of  low-level 
+outputs  in  order  to  see  a  view  of  themselves  that  was 
+previously  unavailable.  This  information  provides  new 
+opportunities  for  self-awareness:  Do  I  recognize  myself  in 
+this  micro-level  data?  We  were  interested  in  investigating 
+these representations in the context of self-discovery.  
+
+Second, we were sensitive to students’ vulnerabilities when 
+it  comes  to  the  relationship  between  avoidance  behaviors 
+and technology use [23]. Avoidance behavior, a by-product 
+of stress, refers to any activity a person engages in to avoid 
+facing a source of stress, resulting in a negative impact on 
+everyday 
+include  gambling,  watching 
+television,  and  playing  computer  games.  According  to  the 
+American  Psychiatric  Association’s  Diagnostic 
+and 
+Statistical  Manual  of  Mental  Disorders  (DSM-5),  newly 
+identified conditions such as Internet addiction could be the 
+result of a strong relationship between technology use and a 
+range  of  avoidance  behaviors.  Because  of  this  connection, 
+
+life.  Examples 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada145the  design  for  MoodLight  system  needed  to  remove  the 
+screen  and  introduce  an  element  of  ambient  experience  to 
+users. 
+
+Third,  in  order  to  support  social  engagement,  we  designed 
+the  system  around  the  notion  of  playful  interaction,  with 
+two  modes:  single  play  and  paired  play.  It  is  a  passive, 
+ambient  display  that  encodes  output  as  colored  light. 
+During  single  play,  the  system  responds  to  input  from  an 
+individual.  In  the  paired  play,  biometric  data  from  both 
+participants is combined to produce a visible representation 
+of  their  shared  interaction.  We  did  not  present  a  specific 
+goal to participants, but encouraged open-ended exploration 
+of the system.  
+
+System description 
+The  MoodLight  system  consists  of  EDA  sensors,  an 
+android  device,  a  series  of  commercially  available 
+programmable  light  bulbs  produced  under  the  HUE  brand 
+by Philips, and a set of desk lamps. Using this technology, 
+it is possible to change the color and/or intensity of the light 
+cast by the bulbs in response to changes in arousal. 
+
+in 
+
+the  MoodLight  system, 
+
+Measuring arousal 
+The  Personal  Input  Pod  (PiP),  a  commercially  available 
+sensor  used 
+is  a  novel 
+implementation  of  standard  EDA  technology  (Figure  1, 
+left).  The  PiP  sensors  are  about  2cm  wide  by  3cm  long, 
+non-invasive  and  are  held  lightly  between  the  participant's 
+thumb and forefinger (Figure 1, left). When the participant 
+makes contact with two separate metal plates on either side 
+of  the  device,  a  safe  and  imperceptible  electric  charge  (13 
+microamps)  is  passed  through  the  fingers.  The  level  of 
+conductance  is  then  measured.  Readings  are  taken  at 
+regular intervals in order to establish trends of increasing or 
+decreasing arousal for an individual. 
+
+EDA  sensors  can  detect  changes  in  an  individual's  arousal 
+levels  via  the  autonomic  nervous  system  by  measuring 
+subtle changes in skin conductivity [8]. The amplitude and 
+rise  time  of  EDA  pulses  vary  between  individuals  making 
+direct comparisons challenging. The algorithm for assessing 
+changes in individual EDA levels takes this into account by 
+applying  Least  Means  Squares  (LMS)  on  successive 
+windows of data to determine the slope of the EDA curve, 
+and also uses a threshold up/down counter to reject spurious 
+peaks/troughs.  An  accumulator  is  used  to  increment  the 
+arousal  trend  in  one  direction  (stressed)  or  the  other 
+(relaxed).  While  EDA  sensors  can  detect  arousal,  or  a 
+heightening  response  to  stimuli,  they  cannot  disambiguate 
+whether an individual perceives that sensation of arousal as 
+positive  or  negative.  EDA  levels  between  individuals  can 
+vary greatly depending on age, skin type and other factors. 
+For  initial  testing,  the  system  used  a  generic  profile  for 
+interpretation of EDA data. 
+
+Figure 1. PiP (left) and setup (right) 
+
+Interactive lighting 
+MoodLight  uses  the  Philips  HUE  interactive  lighting 
+system  hardware  and  API  [29].  The  system  includes 
+programmable  LED  light  bulbs  and  a  wireless  bridge  that 
+enables  the  lights  to  communicate.  Three  types  of  LED, 
+producing a relatively wide range of colors and intensities, 
+define  the  color  profile  of  the  lights.  MoodLight  has  been 
+initially  optimized  to  work  within  the  range  of  colors 
+available through this system, mapping to ten discrete hues 
+(Figure  2),  with  transitions  moving  from  magenta-red  to 
+blue-violet (discussed below). 
+
+Figure 2. Ten hues representing the MoodLight color range, 
+with red at the top of the circle, moving clockwise to orange, 
+yellow, green, white and blue-violet 
+
+EDA readings are sent via bluetooth to an Android device, 
+which  in  turn  sends  a  signal  to  the  programmable  light 
+bulbs.  This  information  is  used  to  control  the  hue  of 
+ambient 
+room,  essentially 
+controlling  the  output  of  the  lights  with  input  representing 
+the participant’s current level of arousal.  
+
+lighting  conditions 
+
+in  a 
+
+During  use,  a  participant  holds  the  PiPs  between  their 
+fingers  (Figure  1, 
+left).  The  EDA  sensors  pick  up 
+levels  of  arousal. 
+increasing,  decreasing  or  stable 
+Depending  on  the  signal,  the  lights  change  color,  with 
+increasing  arousal  triggering  a  transition  to  warmer  (red) 
+end  of  the  spectrum  and  decreasing  arousal  signaling  the 
+lights  to  transition  to  the  cooler  (blue-violet)  end  of  the 
+spectrum.  When  either  end  of  the  scale  is  reached,  a  soft 
+chime sounds. 
+
+Light, color and affect 
+There  are  multiple  theories  regarding  color,  emotion, 
+culture and physiology [cf. 3; 40]. Researchers have shown 
+that exposure to light has both visual and biological effects 
+[18;  37];  there  are  non-visual,  biological  impacts  of  being 
+exposed  to  certain  colors  or  levels  of  light  under  different 
+circumstances.  One  example  of  this  type  of  effect  is  the 
+influence  of  light  on  circadian  rhythms.  There  is  also 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada146 
+ 
+support for a positive association between arousal and color 
+wavelength.  Walters  et  al.  [37]  showed  that  subjects  who 
+made  color  preferences  throughout  the  day  exhibited  a 
+systematic  tendency  for  long-wavelength  colors  (towards 
+the  red  end  of  the  spectrum)  to  induce  feelings  of  high 
+arousal  and  short-wavelength  colors  (towards  blue)  to 
+induce feelings of low arousal.  
+
+Supported  by  this  research  and  a  pilot  study  exploring 
+associations  between  different  colors  of  light  and  levels  of 
+stress  and  relaxation,  we  designed  MoodLight  with  the 
+anticipation  that  most  participants  would  associate  relaxed 
+states  with  cooler  colors 
+like  blue  and  purple  and 
+heightened  levels  of  arousal  with  warm  colors  such  as  red 
+and orange. 
+
+METHOD 
+There is limited research that makes an association between 
+face-to-face  public  display  of  personal  information  and 
+social  dynamics  of  self-discovery;  therefore,  we  designed 
+an  open-ended  protocol  that  would  allow  us  to  observe 
+participants  using  the  system  both  on  their  own  and  in  the 
+presence of a friend or acquaintance.  
+
+Our  study  included  four  stages:  1)  a  preliminary  interview 
+during  which  we  learned  about  participants’  relationship 
+with  stress;  2)  interaction  with  the  MoodLight  system 
+singly  providing  an  opportunity  to  explore  the  relationship 
+between  the  system  and  self-discovery;  3)  interaction  with 
+the  system  in  pairs  during  which  we  observed  a  range  of 
+behaviors  associated  with  emergent  self-awareness  in  a 
+social  context;  and  4)  an  exit  interview  during  which  we 
+asked  participants  to  reflect  on  their  experience  with 
+MoodLight.  
+
+Each  recruit  for  the  study  was  asked  to  bring  a  friend  or 
+acquaintance when they came to the lab to participate in the 
+study.  All  individuals  completed  a  preliminary  interview 
+and individual session, and those who were able to bring a 
+companion also participated in the second paired session. 
+
+Setup 
+Two empty offices in an academic department close to the 
+center  of  campus  were  used  to  run  the  study.  Decorations, 
+personal items and unneeded furniture were removed from 
+the rooms. A table was set up in each room with a chair on 
+either  side,  one  for  the  researcher  and  one  for  the 
+participant.  A  plain  white  cloth  was  spread  over  each 
+desktop. There was a laptop computer in each room, as well 
+as two desk lamps, each utilizing a programmable light bulb 
+(Figure 1, right). 
+
+Protocol 
+
+Preliminary interviews 
+A preliminary interview gathered information about typical 
+experiences  of  stress  and  actions  taken  to  mitigate  stress. 
+We asked participants about typical sources of stress, steps 
+
+taken  to  mitigate  negative  feelings  and  the  role  that  social 
+interaction played in their approach to stress management.  
+
+including  an  explanation  of 
+
+Single and Pair Play 
+Individual  sessions  began  with  a  brief  introduction  to  the 
+MoodLight  system, 
+the 
+relationship  between  typical  experiences  of  stress  and 
+relaxation in relation to the arousal data used in the system. 
+Individual participants were asked to playfully interact with 
+the MoodLight system by trying to make the lights respond 
+to  their  EDA  input  (Figure  3).  Most  participants  engaged 
+with  the  system  for  approximately  10  minutes  before 
+indicating  that  they  were  ready  to  move  on  to  the  next 
+phase  of  the  study.  At  that  point,  a  partner  participant  was 
+brought into the room.  
+
+For  the  paired  interactions  with  the  MoodLight  system 
+(Figure 4), each individual held one of the PiPs. The lights 
+were  controlled  using  the  aggregate  of  EDA  input  from 
+both  participants.  We  chose  to  combine  the  signals  in  the 
+output in order to emulate the experience of being involved 
+in  a  face-to-face  conversation  where  it  is  not  always 
+completely clear who contributes what to the overall tone or 
+mien of the discussion. For example, it is not uncommon to 
+find  oneself  in  a  tense  discussion  with  a  spouse  or  partner 
+and  have  competing  beliefs  about  who  instigated  the 
+conflict. 
+
+During  paired  interactions,  the  color  encoding  used  was 
+similar  to  that  of  the  individual  version,  signaling  changes 
+in level of arousal with warmer color for increasing arousal 
+and  cooler  color  for  decreasing  arousal.  For  the  pairs,  we 
+added  an  additional  representation  of  synchronicity.  When 
+both  participants  were  “in  sync,”  meaning  both  were 
+simultaneously experiencing either increasing or decreasing 
+arousal,  the  light  became  brighter.  This  was  intended  to 
+function  similarly  to  the  many  ways  we  typically  signal 
+conversational  coordination  and  involvement,  such  as 
+mirroring  body  language,  aligning  speech  patterns  and 
+synchronizing vocabulary. 
+
+Participants were not asked to complete a specific task, but 
+were encouraged to playfully engage the system with their 
+partner. Many participants began by negotiating a goal; for 
+example,  whether 
+to  cooperate  by 
+simultaneously  trying  to  reach  an  aroused  or  un-aroused 
+state  or  try  to  compete  by  trying  to reach  opposite  ends  of 
+the  spectrum.  When  the  paired  participants  had  exhausted 
+their play, they moved on to individual exit interviews. 
+
+they  would 
+
+try 
+
+Exit interview 
+At the conclusion of their session, participants were asked a 
+series  of  questions  about  their  interactions  with  the 
+MoodLight  system.  They  were  asked  to  reflect  on  their 
+abilities  to  control  the  lights,  the  appropriateness  of  colors 
+in  reflecting  momentary  experiences  of  arousal,  and  how 
+they might use MoodLight in their day-to-day lives. 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada147Figure 3. Single play, light transitioning from blue (far left) to green (center) to red (right) 
+
+Figure 4. Pair play, light transitioning from red (left) to blue-violet (center) to white (right) 
+
+reasonably 
+
+Participants 
+Thirty participants were recruited at a large university in the 
+northeast  of  the  US.  During  recruitment,  participants  were 
+asked  to  bring  a  friend  for  the  paired  observations. 
+Although  not  all  were  able  to  do  so,  many  of  the  paired 
+participants  were  friends  or  acquaintances  prior  to  joining 
+the study. This was a convenience sample, yet participants 
+were 
+the  underlying 
+representative  of 
+population.  Our  sample  consisted  of  68.8%  undergraduate 
+postdoctoral 
+students, 
+postgraduates, 
+researchers 
+(underlying 
+population: 66% undergrad, 33.5% postgrad). Genders were 
+evenly  distributed  at  50%,  compared  to  underlying  sample 
+of  51.5%  male,  48.5%  female.    Most  participants  (87.5%) 
+were  in  the  18  to  25  age  range,  with  the  rest  being  26-34 
+years of age. The ethnic background of participants (59.5% 
+American,  28.1%  non-American  and  rest  unknown)  is 
+similar  to  the  underlying  population  (64.7%  American, 
+29.6% non-American and rest unknown).  
+
+3.1% 
+staff  members 
+
+and  9.5% 
+
+21.8% 
+
+All 30 individuals completed the preliminary interview and 
+were observed interacting with the MoodLight individually; 
+and 22 were observed using the system in groups of two (11 
+pairs).  
+
+Analysis 
+Qualitative analysis of individual and paired play involved 
+reviewing field notes from all sessions; audio recordings of 
+interviews 
+interviews  and  27  exit 
+recording 
+interviews  due 
+equipment); and video recordings when available (26 single 
+play videos, 9 pair play videos).  
+
+(30  preliminary 
+
+issues  with 
+
+technical 
+
+to 
+
+practices 
+
+RESULTS 
+Our  analysis  focused  on  (1)  observing  verbal  and  non-
+verbal 
+during 
+engagement with the MoodLight system singly and in pairs; 
+and (2) specific statements made by participants during play 
+with the system or interviews in response to emergent self-
+awareness, self-discovery and representations of self.  
+
+self-revelation 
+
+related 
+
+to 
+
+Engagement with MoodLight 
+All participants were able to intentionally change the color 
+of  the  lights  either  by  relaxing  or  stressing.  Participants 
+reported  that  in  order  to  reach  the  high-arousal  end  of  the 
+continuum, they tried to think about a stressful situation in 
+their  current  or  recent  experiences  (62%);  made  a  mental 
+to-do  list  (15%);  performed  physical  activities  such  as 
+jumping,  running  in  place  or  doing  push-ups  (15%);  or 
+think about relationships (12%). When attempting to reach 
+the low-arousal end of the scale, participants indicated that 
+they  tried  some  sort  of  deep  breathing  technique  (54%), 
+followed in frequency by thinking about something relaxing 
+or  enjoyable  (42%)  like  visits  with  family  or  trips  to  the 
+beach. Others talked about trying to clear their minds (19%) 
+or thinking about nothing (12%). Only one person used the 
+term “meditating” to describe these activities.  
+
+Interestingly, there were a small number of people who said 
+that they did not need to try to reduce their level of arousal 
+(12%),  it  just  happened  naturally.  An  equal  number 
+attempted to relax their neck and shoulders by rolling their 
+head  or 
+(12%).  A  smaller 
+their  posture 
+percentage  of  participants  told  us  that  they  simply  thought 
+about  some  form  of  physical  activity  that  they  found 
+relaxing (8%). 
+
+loosening 
+
+As  participants  tried  to  control  the  lights,  they  manifested 
+outward, non-verbal indicators of their internal state. When 
+attempting  to  become  increasingly  aroused,  they  exhibited 
+some  common  physical  characteristics:  rapid  blinking, 
+sitting  forward  in  their  chair,  staring  intently,  short  or 
+constricted  breathing,  clenched  jaw,  and  increased  micro-
+movements  or  fidgeting.  Participants  who  were  attempting 
+to decrease arousal tended to close their eyes, to lean back 
+in their chair, to keep their head/gaze turned downward, or 
+to be very still. 
+
+The  paradigm  of  playful  engagement  with  the  system 
+enabled us to provide a minimal amount of structure to the 
+paired  interactions  without  drawing  attention  to  a  specific 
+goal.  In  fact,  most  paired  play  sessions  began  with  a 
+negotiation  between  participants  regarding  whether  they 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada148would try to get “stressed” or “relaxed,” or if they would try 
+to  reach  opposite  ends  of  the  continuum.  While  social 
+interactions  “in  the  wild”  do  not  always  explicitly  begin 
+with 
+this  sort  of  alignment  work,  we  know  from 
+sociolinguistic  research  that  similar  implicit  coordination 
+behaviors are highly typical in face-to-face interactions [14; 
+39].  Regardless  of  the  strategy  selected,  during  the  paired 
+play,  participants  used  many  of  the  same  techniques  they 
+had  tried  during  single  play  (deep  breathing  to  decrease 
+arousal,  fidgeting  or  other  tense  physical  movements  to 
+increase arousal).  
+
+During the single play observations, social interactions such 
+as  asking  participants  to  describe  aloud  what  they  were 
+experiencing  or  participants  asking 
+the  researcher  a 
+question  appeared  to  increase  the  arousal  level  of  some 
+participants.  In  contrast,  during  paired  play,  informal 
+chatting  appeared  to  reduce  arousal  in  some  people.  We 
+observed  a  distinct  pattern  in  physical  proxemics  [24] 
+between the pairs. When attempting to become increasingly 
+aroused,  participants  were  more  likely  to  confront  each 
+other, look each other in the eye, be facing each other, and 
+mirror  each  other’s  movements.  When  attempting  to 
+become less aroused, the pairs were more likely to sit at an 
+angle  to  each  other,  to  not  make  direct  eye  contact  and  to 
+curtail mimicking or mirroring behaviors. 
+
+rewards  of 
+
+technology-mediated  self-
+
+Risks  and 
+discovery 
+Participant  quotes  from  exit  interviews  provided  some  of 
+the  richest  insights  related  to  user  attitudes,  assumptions 
+and  expectations  about  the  intersection  of  emergent  self-
+the 
+discovery  and  social  engagement  provided  by 
+MoodLight  system.  Therefore,  we  focus  the  remainder  of 
+the results on reporting these qualitative observations. 
+
+Is that me? 
+Through behaviors such as peeking at the lights after sitting 
+with  eyes  closed  for  a  period  of  time,  it  was  clear  that 
+participants  used  the  light  for  feedback  about  how  they 
+were doing, as a tool for achieving the “exquisite attention” 
+described by Levenson as a hallmark of self-revelation [22]. 
+Although  the  majority  of  students  in  the  study  told  us  that 
+they  know  when  they  are  stressed,  there  was  still  curiosity 
+about  how  the  lights  would  represent  their  momentary 
+arousal  level  and  transitions  between  states.  In  this  sense, 
+the color of the light revealed to the participant information 
+about  his  or  her  own  internal  affective  state.  A  student 
+explained,  “When  I  saw  the  red  lights,  I  was,  like,  happy 
+and I thought I was achieving what I wanted to do, so then I 
+could relax and just take a deep breath.”  
+
+Another  participant  also  expressed  a  belief  that  the  system 
+would help her to see herself more clearly, imagining using 
+the lights at home: “I can't fall asleep when I'm stressed and 
+that'd  be  a  good  indicator  because  sometimes  I'm  not 
+always aware."   
+
+For some of the students, the representation of their internal 
+state  was  not  a  welcome  discovery.  They  were  susceptible 
+to a negative feedback loop created by the red light not only 
+revealing  a  state  of  high  arousal,  but  at  times  causing 
+elevations  in  stress  levels:  “Looking  at  the  light  makes  me 
+stressed, so I am not going to look at it!” When asked about 
+using  MoodLight  at  home,  a  participant  articulated  the 
+tension  between 
+the  unconscious  experience  of  self-
+revelation  and  the  intentional  act  of  self-disclosure  by 
+remarking that he did not “want to wear my emotions on my 
+sleeve.”    Another  student  expressed  her  hesitation  by 
+explaining:  “I  already  know  I'm  stressed  and  I  have 
+these...lights  that  are  reflecting  how  I  feel  and  I  already 
+know I'm having a bad day." 
+
+thought 
+
+During  exit  interviews  there  was  a  range  of  responses 
+regarding  whether  people 
+the  hue  was 
+representative  of  how  they  were  feeling.  While  some 
+thought the red and blue extremes accurately depicted their 
+maximum  stress  and  relaxation  states,  others  thought  the 
+colors  should  be  different.  One  participant  said  she  would 
+have  preferred  a  soft  green  instead  of  blue-violet  at  the 
+relaxed  end  since  she  considers  blue  to  be  sad  and  dark. 
+Another participant thought the white color was equally as 
+stressful as red.  
+
+Although the students talked about customizing the color of 
+the  lights,  surprisingly,  none  of  them  questioned  whether 
+the  lights  were  accurately  representing  their  internal  state. 
+Based  on  our  observations,  participants  had  different 
+understandings  about  how  the  system  worked,  typically 
+erring on the side of attributing omniscience to MoodLight, 
+even when the output of the lights contrasted or conflicted 
+with the way they were currently feeling. For example, one 
+participant  felt  that  she  was  highly  aroused,  “stressed”  in 
+her  words,  although  the  output  of  the  lights  was  a  steady 
+blue-violet.  Rather  than  questioning  the  accuracy  of  the 
+reading,  she  concluded,  “I  guess  I've  gotten  better  at  not 
+being totally enraged.” 
+
+two  pairs  continued 
+
+Which one of us is that? 
+Typically, participants initiated a paired session with a brief 
+conversation  about  their  experience  interacting  with  the 
+system singly and then decided on an approach to the paired 
+session. Conversation generally dropped off after this initial 
+coordination;  however, 
+to  chat 
+informally  about  a  range  of  topics  not  related  to  the  study 
+for  the  duration  of  the  paired  play.  These  exchanges  were 
+characterized  by  a  willingness  to  share  details  about  their 
+personal  experiences  and  preferences,  clear  examples  of 
+traditional  socially  driven  self-disclosure  that  stood  in 
+contrast to the automated disclosure provided by the lamps. 
+In  both  cases,  the  lights  indicated  a  high  degree  of 
+coordination  and  steady  decrease  in  level  of  arousal.  The 
+relaxed  state  achieved  by  the  two  chatting  pairs  supports 
+observations  by  psychologists  that  healthy  self-disclosure 
+has measurable physiological implications [12]. 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada149In  the  majority  of  other  cases,  as  talking  decreased  there 
+was  a  reduction  in  standard  markers  of  conversational 
+involvement  such  as  mirroring  of  gestures  and  body 
+position,  eye  contact,  leaning  towards  each  other  [15;  24]. 
+Particularly when trying to decrease arousal, participants in 
+a pair would often become silent, physically turn away from 
+each  other  and  turn  gazes  downward  indicating  internal 
+reflection.  During  exit  interviews,  we  learned  that,  in  fact, 
+many  of  these  participants  were  engaged  in  a  form  of 
+indirect  coordination.  Although  eyes  might  appear  closed, 
+they  were  often  just  softened,  allowing  the  participants  to 
+use  the  colored  light  reflecting  off  the  walls  and  ceiling  to 
+gather  information  about  the  state  of  their  joint  interaction 
+[7]. 
+
+During  paired  interactions,  variations  in  the  lights  became 
+not  only  an  external  representation  of  the  pairs  combined 
+arousal  level,  but  also  a  collaborative  platform  for  the 
+practice  of  passive  self-revelation  in  a  social  context.  This 
+became  evident  through  statements  such  as,  “One  of  us  is 
+getting stressed, that’s for sure!” as the room filled with a 
+red-orange  glow.  Along  with  this  passive  self-revelation 
+came a sense of responsibility: “I don’t want to be the one 
+who turns it red.”  
+
+We  saw  evidence  of  a  continuum  between  self-revelation 
+and  automated  disclosure  through  statements  such  as,  "I 
+don't want to be the person to just make the...light bad— or 
+like  stressed  out,  so  I  tried  to  relax  myself  even  more."  
+Another  student  felt  that  the  presence  of  another  person 
+inhibited her ability to use the light in a reflective way:  
+
+“I  just  felt  like  everything  that  we  tried  to  do  together 
+we'd  get  like  the  opposite.  We  tried  to  relax  and  it  was 
+stressful  lighting,  and  tried  to  get  pale  lighting  and  it 
+was  a  dark  purplish.  So  it  was  kind  of  the  opposite  of 
+what I was trying to achieve. But when I was by myself, 
+I  was  like,  'I  want  a  pale  green,'  and  I  could  almost 
+imagine what it would take to get that color."  
+
+linguistic  adjustments 
+
+The  passive  nature  of 
+the  display  prompted  some 
+participants  to  think  more  explicitly  about  their  role  in  the 
+to 
+conversation.  While  subtle 
+increase 
+rapport  or  alignment  are  common  during 
+predominantly verbal conversations, the feedback provided 
+by  the  lights  highlighted  the  fact  that  a  participant  was 
+getting 
+their 
+conversation  partner,  to  which  they  were  not  accustomed. 
+One participant explained,  
+
+information  about  both 
+
+themselves  and 
+
+"When  both  of  us  talk  and  like  the  colors  suddenly 
+change, it also affects me because I start thinking about 
+why it's changing: is it because of me, or is it because of 
+my  partner,  what  is  he  thinking,  what  am  I  thinking?  I 
+also think the color affects me a lot."   
+
+Another  student  articulated  the  way  in  which  the  lights 
+made  him  aware  of  the  fact  that  he  and  his  partner  were 
+actually at odds with each other:  
+
+"Or,  I  guess  with  the  changing  intensity  thing...I  don't 
+know,  I  felt  like  that  was  harder  to—  'cause  it  was 
+somebody  else  too,  so  it  was  harder  to  gauge  what 
+was...affecting  the  lights,  you  know  what  I  mean?  I 
+didn't  know  if—'cause  it  was  dim  for  a  lot  of  it,  which 
+means  that  [maybe]  he  was  more  stressed  and  I  was 
+going the other way trying to relax." 
+
+These  findings  are  closely  related  to  statements  from  the 
+therapists  in  our  focus  group  who  expressed  an  interest  in 
+visually  and  externally  representing  the  effects  of  self-
+awareness in group settings. In the MoodLight system, the 
+automatic  nature  of  data  collection  and  representation 
+removes  the  locus  of  choice  from  the  user  and  places  it  in 
+the  system,  while  the  representation  of  self  offered  by  that 
+system  still  performs  some  of  the  social  functions  of 
+traditional  self-disclosure.  Statements  from  participants 
+reflect  tensions  between  the  inadvertent  act  of  self-
+revelation  and  automated  disclosure  practices  when  bio-
+sensing  devices  are  used  for  self-awareness  in  social 
+contexts.  
+
+LIMITATIONS 
+As  mentioned  above,  there  are  limitations  to  the  current 
+system  related  to  1)  the  system-wide  representation  of  the 
+arousal  matrix,  2)  individual  differences  in  associations 
+between  colors  and  affective  states,  and  3)  the  ability  of 
+EDA  technology  to  measure  nuances  in  an  individual’s 
+experience  of  arousal.  However,  observing  participants 
+engage  with  MoodLight  during  this  design  probe  study 
+provided  the  opportunity  to  engage  with  these  limitations, 
+as  discussed  in  the  next  section.  Now  we  move  on  to 
+implications  of  this  work  for  the  display  of  personal 
+information through low-level biometric data. 
+
+DISCUSSION 
+One  of 
+the  most  promising  aspects  of  bio-sensing 
+technology lies in the potential for these devices to help us 
+see  ourselves  more  clearly  and  more  completely.  This  was 
+at  the  heart  of  our  interest  in  developing  the  MoodLight 
+system  to  assist  therapists  in  their  work  introducing  stress 
+management  techniques  to  college  students.  However,  the 
+representation of self that is offered through biosensors and 
+other affective systems can be problematic: “A central issue 
+faced by affective computing systems is how to balance the 
+personal, subjective nature of experienced human emotions 
+with  the  external,  objective  representations  of  emotions 
+which computers require to function” [19, p. 425]. 
+
+Further  complicating  this  issue  is  the  likelihood  that,  as 
+low-level biometric sensors become more deeply embedded 
+in  our  environments,  the  resulting  data  will  find  its  way 
+more  quickly  into  social  media  channels  and  ubiquitous 
+displays.  This  convergence  of  personal  information  and 
+increasingly  public  display  will  require  a  more  refined 
+understanding of the dynamics of technology-mediated self-
+revelation  and  an  appreciation  of  the  risks  of  minimally 
+controlled automated disclosure [21; 32].  
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada150revelation  and 
+
+technology-mediated 
+
+Dialectics  of 
+disclosure  
+Psychologists refer to the process of deciding what personal 
+information  to  share  with  whom  as  the  dialectics  of  self-
+disclosure  [28].  Making  a  conscious  decision  to  reveal 
+information  about  oneself  can  be  an  important  part  of 
+building  lasting  relationships.  However,  not  all  forms  of 
+disclosure are beneficial or healthy. Sharing personal details 
+too soon in a relationship or sharing information that is too 
+private  can  be 
+inappropriate,  especially  when  not 
+reciprocated.  Our  study  revealed  tensions  between  these 
+dialectics and the passive revelation offered by “always-on” 
+activity  trackers  and  biometric  sensors.  The  process  of 
+intentionally  deciding  what  to  reveal  and  to  whom  is 
+disrupted  because  the  system  has  the  ability  to  display 
+personal  information  that  users  might  not  be  aware  of 
+themselves.  
+
+By  using  a  very  simple  game-like  paradigm  for  the  design 
+probe,  we  were  able  to  highlight  basic  social  practices  of 
+coordination  and  alignment  that  we  typically  perform 
+throughout  our  daily  interactions,  often  unconsciously. 
+Some  users  of  MoodLight  approached 
+the  passive 
+revelation offered by the system as an opportunity for self-
+reflection  and  self-discovery.  In  the  context  of  paired 
+interactions, the momentary display of arousal level through 
+the  colored  lights  provided  real  time  feedback  about  the 
+current  state  of  their  social  interaction,  enabling  users  to 
+adjust themselves to try to optimize their shared experience. 
+The  aggregated  nature  of  the  display  also  provided  an 
+opportunity  for  participants 
+their  own 
+complicity  in  co-constructing  the  overall  tone  of  their 
+conversation. From a therapeutic perspective, the process of 
+untangling  who  contributes  what  to  an  exchange  is  an 
+important  step  to  exploring  a  range  of  interpersonal 
+dynamics. 
+
+to  reflect  on 
+
+to 
+
+the 
+
+from 
+
+separate 
+
+intellectual 
+
+Höök  et  al.  talk  about  this  in  terms  of  affective  loop 
+experiences,  described  as  “experiences  where  it  is  not 
+possible 
+sensual 
+experiences,  nor  to  single  out  what  is  [an]  individual 
+experience from the overall experience arising in a dialogue 
+with a friend or in dialogue with a system” [16, p. 248]. In 
+observing  participants  interacting  with  each  other  through 
+the  MoodLight  system,  we  saw  these  affective  loop 
+experiences 
+complex  when 
+participants were involved in dialogue with a friend and in 
+dialogue  with  the  system.  The  simplicity  of  our  system 
+enabled  us  to  begin  to  grapple  with  the  ways  that  the 
+representation  of  biosensor  data  played  a  role  in  these 
+dynamics. 
+
+increasingly 
+
+become 
+
+The use of ambient colored light also allowed us to observe 
+the ways in which the form and format of the representation 
+of personal information could serve as both description and 
+inadvertent  intervention.  Negative  feedback  loops  occurred 
+when  some  participants  experienced  high  levels  of  arousal 
+that  triggered  the  lights  to  transition  to  the  red  end  of  the 
+
+spectrum.  Immersive  exposure  to  the  red  light  heightened 
+arousal  further,  making  it  very  difficult  for  these  users  to 
+break  out  of  what  they  perceived  as  an  undesirable  cycle. 
+Although Höök et al. talk about loop experiences as being a 
+constructive  feature  of  affective  systems,  our  study 
+highlights  the  potential  of  interactional  loops  to  be  a 
+negative experience for users.  
+
+Agency, skepticism and uncertainty 
+Although  students  had  varying  opinions  about  the  hue 
+associated  with  their  level  of  arousal,  surprisingly  no  one 
+questioned  the  authority  of  the  system  itself.  There  was  a 
+marked  lack  of  skepticism  about  the  omniscience  of  the 
+system.  This  may  be  due,  at  least  in  part,  to  working  with 
+students in a research lab setting, lending the experience an 
+overall  sense  of  credibility.  However,  this  observation  did 
+prompt  us  to  review  interviews  and  video  recordings  of 
+interactions  with  the  system  with  a  particular  eye  to 
+understanding  the  ways  in  which  the  students  assumed  the 
+system worked. 
+
+In  many  ways,  the  design  of  the  MoodLight  system  aligns 
+with  principles  of  empowerment  through  affective  tools 
+advocated  by  Höök  et  al.  [16],  Leahu  et  al.  [19],  and 
+Boehner et al. [2]. From this perspective, affective systems 
+have 
+the  potential  “to  embody  a  different  kind  of 
+interaction,  one  that  positions  the  user  as  an  expert  who 
+makes sense of his or her emotional states with the help of 
+the system, in contrast to a more rigid interaction between a 
+passive user and an expert system” [19, p. 433].  
+
+In  spite  of  the  relatively  open-ended  ambient  display,  the 
+interactive  nature  of  the  system,  and  the  co-constructed 
+aggregated  signals  in  the  paired  interactions,  we  did  not 
+reach  a  state  of  pervasive  interpretive  and  interactive 
+empowered across all of our participants.  In fact, many of 
+the students in our design probe abdicated the role of self-
+awareness  to  the  system,  seeming  to  expect  (and  trust)  the 
+lights  to  tell  them  how  they  were  feeling.  There  was  a 
+tendency  to  give  more  credit  to  the  system  than  to 
+themselves  in  terms  of  knowing  how  they  were  feeling  in 
+the  moment.  This  was  true  even  in  cases  when  subjective 
+feelings  contradicted  the  information  displayed  via  the 
+lights. 
+
+These  issues  raise  questions  about  the  ways  in  which  we 
+present  low-level  biometric  feedback  to  participants  and 
+responsibly  explain  the  uncertainty  and  complexity  that 
+underlies  much  of  this  information.  When  working  with 
+biometric  data,  readings  need  to  be  made  consistently  and 
+analysis  depends  on  identifying  patterns  in  the  data.  It  is 
+rarely a case of definitive black and white declaration, and 
+more  typically  an  instance  of  identifying  a  trend  in  a 
+particular direction. This is due as much to the nature of the 
+signals  themselves  as  to  the  specifics  of  the  sensing 
+technology.  
+
+While  it  is  relatively  easy  to  spot  check  the  accuracy  of 
+some types of activity monitors, such as step trackers, it is 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada151not  as  easy  for  users  to  check  the  reliability  of  biometric 
+sensors  such  as  EDA.  Arousal  is  a  complex  physical  and 
+psychological  phenomenon  that  some  users  in  our  study 
+tended  to  reduce  to  a  binary  stress-relaxation  axis.  Future 
+iterations  of  the  MoodLight  system  will  seek  to  represent 
+emotion  as  a  balance  of  subjective  and  objective 
+interpretation  [19]  co-constructed  through  interaction  with 
+the  system  and  the  revelations  provided  by  it  [2],  taking 
+into  consideration  the  social  influences  on  this  process 
+identified through this design probe.  
+
+DESIGN IMPLICATIONS 
+
+Ephemerality of Ambient Light 
+The use of ambient light is a particularly promising medium 
+to  cultivate  healthy  self-awareness  in  social  contexts, 
+including  both  therapeutic  and  home  settings.  Feedback  in 
+the  form  of  ambient  light  places  minimal  constraints  on 
+users: they can maintain a conversation, remain facing each 
+other  and  sustain  eye  contact  –  all  common  features  of 
+therapeutic  work.  In  particular,  the  use  of  ambient  light 
+supported a rich variety of physical positioning, in ways not 
+possible  via  screen-based  displays.  Pairs  were  able  to 
+remain connected even with their eyes almost shut or when 
+facing  away  from  each  other.  Additionally,  there  are 
+distinguishing  qualities  to  light  that  are  particularly  suited 
+to supporting mindfulness practice.  Ambient light provides 
+momentary  feedback  with  an  emphasis  on  the  present 
+moment.  Unlike  a  graph,  the  past  is  invisible,  thereby 
+placing  a  focus  on  the  present,  a  key  aspect  of  therapeutic 
+mindful,  meditative  and  reflective  practices.  Lastly,  this 
+technology  can  be  embedded  in  everyday  environments 
+(e.g.,  a  therapeutic  clinic,  a  living  room,  a  bedroom)  and 
+serve multiple purposes, enabling individuals to easily pick 
+up  the  system  for  brief  periods  of  use  without  any  prior 
+setup, and then to easily return to prior activities. 
+
+technology-mediated 
+
+Understanding the signals 
+Mindfulness  involves  being  aware  of  a  broad  range  of 
+mental components and associations that make up everyday 
+perception and experience [4]. Effective design of affective 
+systems  that  rely  on  biosensor  data  means  ensuring  that 
+users  have  the  information  and  freedom  they  need  to 
+interpret 
+of 
+themselves.  It  also  means  enabling  users  to  negotiate 
+inadvertent  self-revelation  and  the  risks  of  automated 
+disclosure. Based on the findings of this design probe study 
+we  believe  MoodLight  will  be  most  effective  when  used 
+alongside  or  after  a  period  of  training  during  traditional 
+face-to-face  therapeutic  sessions.  The  system  is  currently 
+being  piloted  by  clinicians  in  this  context  as  a  tool  for 
+introducing self-awareness practices to their patients.  
+
+representations 
+
+Individual Control 
+To  account  for  individual  and  cultural  differences  and 
+variance,  monitoring/feedback  systems  should  allow  users 
+to  choose  the  display  parameters  that  are  meaningful  to 
+them.  For MoodLight, this entails allowing users to choose 
+
+the  hues  that  are  meaningful  to  them.  Choosing  the  colors 
+that represent arousal states acts essentially as a private key 
+that  only  the  individual  knows,  preventing  others  from 
+interpreting  the  meaning  behind  the  signal.  Enabling  color 
+choice  is  not  just  about  supporting  personal  preference. 
+Perhaps more importantly, it returns a measure of control to 
+the  individual  over  self-revelation  that  was  taken  away  by 
+the  mediation  of  technology.  Although  it  is  possible  with 
+most  personal  informatics  to  turn  sensors  off  or  opt  out  of 
+sharing  data,  for  biofeedback  systems  measuring  and 
+representing  underlying  physiological  factors  in  real-time, 
+this  output  is  less  controllable  by  users.  As  reflected  by 
+Höök  et  al.’s  work  on  interactional  empowerment  [16], 
+giving  individuals  the  ability  to  be  involved  in  the 
+representation  of  this  information  ensures  the  locus  of 
+control remains with them.  
+
+CONCLUSION 
+The passive nature of data capture and the ambient display 
+of personal information provided a compelling opportunity 
+for  observing  the  mechanics  of  technology-mediated  self-
+awareness  and  the  negotiation  of  automated  disclosure  in 
+face-to-face  social  engagement.  Data  are  only  meaningful 
+and useful when the user has the ability to understand what 
+is being represented about him or herself. Our design probe 
+showed  that  the  display  of  momentary  arousal  levels  via 
+ambient  light  supports  self-discovery,  enabling  students  to 
+develop  awareness  of  communication  practices  related  to 
+self-revelation.  The  study  also  revealed  tensions  between 
+control  over  presentation  of  self  and  passive  sensing 
+devices  that  will  be  increasingly  important  to  address  in 
+personal  informatics  displays  designed  to  be  embedded  in 
+daily work and living environments.  
+
+REFERENCES 
+[1]  Bishop, S.R., Lau, M., Shapiro, S., Carlson, L., 
+
+Anderson, N.D., Carmody, J., Segal, Z.V., Abbey, S., 
+Speca, M., and Velting, D., 2004. Mindfulness: A 
+proposed operational definition. Clinical Psych: Sci 
+and Prac, 11, 3, 230-241. 
+
+[2]  Boehner, K., Depaula, R., Dourish, P., and Sengers, 
+
+P., 2007. How emotion is made and measured. IJHCS, 
+65, 4, 275-291. 
+
+[3]  Butterfield, J., 1996. The art of light and space. 
+
+Abbeville. 
+
+[4]  Carmody, J., 2009. Evolving conceptions of 
+mindfulness in clinical settings. J Cogn 
+Psychotherapy, 23, 3, 270-280. 
+
+[5]  Carroll, E.A., Czerwinski, M., Roseway, A., Kapoor, 
+A., Johns, P., Rowan, K., and Schraefel, M.C., 2013. 
+Food and Mood: Just-in-Time Support for Emotional 
+Eating. Humaine Assoc ConfAffective Computing and 
+Intelligent Interaction. 
+
+[6]  Church, K., Hoggan, E., and Oliver, N., 2010. A study 
+of mobile mood awareness and communication 
+through MobiMood. Proc NordiCHI, 128-137. 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada152[7]  Clark, H.H., 1996. Using Language. Cambridge 
+
+[23]  Malaney, G.D., 2004. Student use of the internet. J 
+
+University Press, NY. 
+
+[8]  Cohen, S., Kessler, R.C., and Gordon, L.U., 1995. 
+Measuring Stress: A Guide for Health and Social 
+Scientists. Oxford Unive Press, Oxford, UK. 
+[9]  Darling, C.A., Mcwey, L.M., Howard, S.N., and 
+Olmstead, S.B., 2007. College student stress: the 
+influence of interpersonal relationships on sense of 
+coherence. Stress and health 23, 4, 215-229. 
+
+Educ Tech Sys 33, 1, 53-66. 
+
+[24]  Manusov, V. and Patterson, M.L., 2006. The Sage 
+Handbook of Nonverbal Communication. Sage 
+Publications, Thousand Oaks, CA. 
+
+[25]  Matsumoto, M. and Smith, J.C., 2001. Progressive 
+
+muscle relaxation, breathing exercises, and ABC 
+relaxation theory. J Clinical Psych, 57, 12, 1551-
+1557. 
+
+[10]  Ferreira, P., Sanches, P., Höök, K., and Jaensson, T., 
+
+[26]  Mcduff, D., Karlson, A., Kapoor, A., Roseway, A., 
+
+2008. License to chill!: how to empower users to cope 
+with stress. Proc NordiCHI, 123-132. 
+[11]  Frank, K.A., 1997. The role of the analyst's 
+
+inadvertent self‐revelations. Psychoanalytic Dialogues 
+7, 3, 281-314. 
+
+[12]  Greene, K., Derlega, V.J., and Mathews, A., 2006. 
+
+Self-disclosure in personal relationships. In The 
+Cambridge Hdbk of Personal Relationships, 409-427. 
+[13]  Grossman, P., Niemann, L., Schmidt, S., and Walach, 
+H., 2004. Mindfulness-based stress reduction and 
+health benefits: A meta-analysis. J Psychosomatic 
+Res, 57, 1, 35-43. 
+
+[14]  Gumperz, J.J., 1982. Discourse Strategies. Cambridge 
+
+Univ Press, Cambridge, UK. 
+
+[15]  Harrigan, J.A., 2005. Proxemics, Kinesics and Gaze. 
+In The New Handbook of Methods in Nonverbal 
+Behavior Research, J.A. Harrigan, R. Rosenthal and 
+K.R. Scherer Eds. Oxford Univ Press, NY, 137-198. 
+[16]  Höök, K., Ståhl, A., Sundström, P., and Laaksolaahti, 
+J., 2008. Interactional Empowerment. Proc SIGCHI, 
+647-656. 
+
+[17]  Joinson, A.N., 2001. Self‐disclosure in computer‐
+
+mediated communication: The role of self‐awareness 
+and visual anonymity. Euro J Soc Psych, 31, 2, 177-
+192. 
+
+[18]  Knez, I., 2001. Effects of colour of light on nonvisual 
+
+psychological processes. J Envir Psych, 21, 2, 201-
+208. 
+
+[19]  Leahu, L., Schwenk, S., and Sengers, P., 2008. 
+
+Subjective objectivity: negotiating emotional 
+meaning. Proc DIS, 425-434. 
+
+[20]  Lederer, S., Mankoff, J., and Dey, A.K., 2003. Who 
+wants to know what when? privacy preference 
+determinants in ubiquitous computing. Proc SIGCHI, 
+724-725. 
+
+[21]  Lederer, S., Mankoff, J., Dey, A.K., and Beckmann, 
+C., 2003. Managing personal information disclosure 
+in ubiquitous computing environments. Report No. 
+UCB/CSD-3-1257. Computer Science Division 
+(EECS), Univ. of California Berkeley. 
+
+[22]  Levenson, E.A., 1996. Aspects of self-revelation and 
+
+self-disclosure. Contemp Psychoanalysis 32, 2, 237-
+248. 
+
+and Czerwinski, M., 2012. AffectAura: an intelligent 
+system for emotional memory. Proc SIGCHI, 849-
+858. 
+
+[27]  Moodjam.Org, Verified 9/23/2010.   
+[28]  Petronio, S. and Bantz, C., 1991. Controlling the 
+ramifications of disclosure:" Don't tell anybody 
+but…". J Lang and Soc Psych. 10, 263. 
+
+[29]  http://developers.meethue.com/coreconcepts.html. 
+[30]  Powers, M.B., Zum Vörde Sive Vörding, M.B., and 
+Emmelkamp, P.M.G., 2009. Acceptance and 
+commitment therapy: A meta-analytic review. 
+Psychotherapy and psychosomatics 78, 2, 73-80. 
+[31]  Sanches, P., Höök, K., Vaara, E., Weymann, C., 
+
+Bylund, M., Ferreira, P., Peira, N., and Sjölinder, M., 
+2010. Mind the body!: designing a mobile stress 
+management application encouraging personal 
+reflection. Proc DIS, 47-56. 
+
+[32]  Sapuppo, A. and Seet, B.C., 2012. An Empirical 
+
+Investigation of Disclosure of Personal Information in 
+Ubiquitous Social Computing. Intl J Computer Theory 
+& Eng, 4, 3. 
+
+[33]  Schwartz, M.S. and Andrasik, F.E., 2003. 
+
+Biofeedback: A practitioner's guide. Guilford Press. 
+[34]  Smith, A., Rainie, L., and Zickuhr, K., 2011. College 
+
+students and technology. Pew Internet & American 
+Life Project 19. 
+
+[35]  Suler, J., 2004. The online disinhibition effect. 
+Cyberpsychology & Behav, 7, 3, 321-326. 
+
+[36]  Vaara, E., Silvăşan, I., Ståhl, A., and Höök, K., 2010. 
+Temporal Relations in Affective Health. Proc 
+NordiCHI, 833-838. 
+
+[37]  Walters, J., Apter, M.J., and Svebak, S., 1982. Color 
+preference, arousal, and the theory of psychological 
+reversals. Motivation and Emotion 6, 3, 193-215. 
+
+[38]  Waltz, E., 2012. How i quantified myself. IEEE 
+
+Spectrum 49, 9, 42-47. 
+
+[39]  Wardhaugh, R., 1985. How Conversation Works. 
+
+Blackwell, NY. 
+
+[40]  Ware, C., 2012. Information Visualization: Perception 
+
+for Design. Elsevier. 
+
+Mood and EmotionCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada153 
+

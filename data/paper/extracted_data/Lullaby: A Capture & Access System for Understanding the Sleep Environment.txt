@@ -1,0 +1,1286 @@
+Lullaby: A Capture & Access System for Understanding 
+the Sleep Environment 
+
+Matthew Kay, Eun Kyoung Choe, Jesse Shepherd, Benjamin Greenstein, 
+Nathaniel Watson, Sunny Consolvo, Julie A. Kientz 
+University of Washington 
+{mjskay, eunky, nwatson, jkientz}@uw.edu, 
+jesse.david.shepherd@gmail.com, ben@bengreenstein.org, sunny@consolvo.org 
+
+ABSTRACT 
+The bedroom environment can have a significant impact on 
+the quality of a person’s sleep. Experts recommend sleeping 
+in a room that is cool, dark, quiet, and free from disruptors 
+to  ensure  the  best  quality  sleep.  However,  it  is  sometimes 
+difficult  for  a  person  to  assess  which  factors  in  the  envi-
+ronment  may  be causing disrupted sleep. In this paper, we 
+present the design, implementation, and initial evaluation of 
+a  capture  and access  system,  called  Lullaby.  Lullaby  com-
+bines  temperature,  light,  and  motion  sensors,  audio  and 
+photos, and an off-the-shelf sleep sensor to provide a com-
+prehensive  recording  of  a  person’s  sleep.  Lullaby  allows 
+users to review graphs and access recordings of factors re-
+lating to their sleep quality and environmental conditions to 
+look for trends and potential causes of sleep disruptions. In 
+this paper, we report results of a feasibility study where par-
+ticipants (N=4) used Lullaby in their homes for two weeks. 
+Based  on  our  experiences,  we  discuss  design  insights  for 
+sleep  technologies,  capture  and  access  applications,  and 
+personal informatics tools.  
+
+Author Keywords 
+Sleep,  capture  and  access,  ubiquitous  computing,  health, 
+health informatics, personal informatics, lifelogging 
+
+ACM Classification Keywords 
+H5.m.  Information  interfaces  and  presentation  (e.g.,  HCI): 
+Miscellaneous 
+
+General Terms 
+Design, Human Factors 
+
+INTRODUCTION 
+Research  has  shown  that  environmental  factors  can  be  a 
+major cause of poor sleep quality and interrupted sleep [19], 
+which  can  contribute  to  daytime  sleepiness  and  fatigue.  In 
+particular, a room that is too warm [23], has improper light-
+ing [17],  is  noisy  [3,13],  or  has  poor  air  quality  [29]  can 
+negatively impact sleep. While some of these environmen-
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for
+personal or classroom use is granted without fee provided that copies are
+not made or distributed for profit or commercial advantage and that copies
+bear this notice and the full citation on the first page. To copy otherwise,
+or  republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior
+specific permission and/or a fee. 
+UbiComp ’12, Sep 5 – Sep 8, 2012, Pittsburgh, USA. 
+Copyright 2012 ACM 978-1-4503-1224-0/12/09...$15.00. 
+
+tal factors are observable, others may be subtle or difficult 
+to recognize. Thus, individuals who have poor sleep quality 
+often have trouble evaluating the cause or severity of their 
+sleep difficulties [7]. 
+
+While  clinical  sleep  centers  can  evaluate  an  individual’s 
+sleep quality effectively [8], these evaluations do not occur 
+in  individuals’  actual  homes.  Thus,  they  cannot  directly 
+identify  environmental  factors  that  might  contribute  to  re-
+duced  sleep  quality.  Similarly,  commercial  personal  infor-
+matics  devices,  such  as  Zeo (http://myzeo.com/)  and  Fitbit 
+(http://fitbit.com/),  help  identify  when  a  person  has  had 
+poor sleep or when they awaken. The devices generally re-
+port  measures  like  the  proportion  of  time  in  bed  actually 
+spent asleep (sleep efficiency), when during the night sleep 
+has  been  disturbed,  or  the  user’s  sleep  stages  (e.g.,  light, 
+deep, or REM sleep) These measures provide some indica-
+tion  of  sleep  quality,  but  give  little  concrete  guidance  for 
+sleep environment improvement. 
+
+Ubiquitous  computing  technology  that  helps  people  track 
+both their sleep habits and environmental factors that affect 
+their  sleep  quality  could  help  people  identify  why  their 
+sleep was interrupted, not just when. Thus, we have devel-
+oped  Lullaby,  an  application  that  includes  a  suite  of  envi-
+ronmental  sensors—sound,  light,  temperature,  and  mo-
+tion—that helps users assess the quality of their sleep envi-
+ronments.  Using  a  tablet  device  kept  by  the  user’s  bed, 
+Lullaby displays this environmental data together with data 
+from an off-the-shelf sleep tracking device. It aims to help 
+people  better  understand  their  sleep,  to  understand  what 
+goes  on  in  their  sleep  environment  while  they  are  uncon-
+
+Touch screen
+device
+
+Sensor
+suite
+
+Data
+collection
+computer
+
+Figure 1. The Lullaby device concept. The sensor suite has 
+multiple sensor pods that can be oriented independently. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+scious, and to help them make improvements in their sleep 
+habits. Lullaby opens new possibilities for studying capture 
+and  access  of  an  unconscious  experience,  such  as  sleep. 
+This creates novel challenges in designing an effective way 
+for people  to  access  captured  data  and  ensure privacy. We 
+explored  these  issues  through  a  feasibility  study  in  the 
+homes of four participants over a two-week period and pre-
+sent results of their experiences using Lullaby. 
+
+In the rest of this paper, we describe the design of the sen-
+sor  suite,  user  interface,  and  how  Lullaby  can  help  people 
+understand  their  sleep  environments.  We  also  describe  our 
+feasibility  study  and  discuss  considerations  and  opportuni-
+ties  for  future  work.  The  contributions  of  this  research  are 
+the  design,  implementation,  and  initial  exploration  of  a 
+novel  system  for  capturing  sleep  environment  information 
+and providing access to an unconscious experience.  
+
+RELATED WORK 
+In this section, we outline related work in the areas of cap-
+ture  and  access  and  sleep  tracking.  We  also  describe  how 
+Lullaby fits into the space of self-tracking and capture and 
+access systems. 
+
+Capture and Access 
+There are a range of automated and semi-automated record-
+ing technologies under the umbrella of capture and access. 
+These technologies aid human memory by recording the de-
+tails  of  peoples’  experiences.  Truong  and  Hayes  provide  a 
+comprehensive review of this space [28], so for our purpos-
+es, we summarize the most relevant work here. 
+
+Lifelogging tools aim to capture audio, video, biological da-
+ta, and information on users’ experiences as they go about 
+their daily lives—what Truong and Hayes [28] call contin-
+uous  personal  capture.  An  example  of  such  a  tool  is  My-
+LifeBits [9], which aims to record all digital media, audio, 
+and video from a single person’s life and demonstrates that 
+such  recording  can  be  done  within  contemporary  drive 
+space  constraints.  Also  offering  continuous  recording, 
+SenseCam  [12]  is  a  portable  device  worn  around  the  neck 
+that records audio and video and has a light sensor, passive 
+infrared (PIR) sensor, accelerometer, and GPS (global posi-
+tioning  system).  SenseCam  offers  playback  of  audio  and 
+images with associated sensor readings and was initially in-
+tended for use as a memory aid.  
+
+Contrasting these more general recording approaches, Lull-
+aby is intended for use in a specific context: the bedroom. 
+We  chose  sensors  to  capture  known  sleep  disruptors.  This 
+allows us to categorize some sensor data as good or bad ra-
+ther than simply displaying it neutrally. Other work has ex-
+plored  specific  contexts  of  use,  such  as  classrooms  [1,11], 
+young  children  [14,26],  surgery  [10],  and  meetings  [22]. 
+Lullaby is the first capture and access system to explore the 
+home sleep environment. 
+
+Unlike continuous personal capture, Lullaby’s intended use 
+is not as a memory aid. Lullaby also differs from those sys-
+
+tems  with  more  specific  contexts  of  use  in  both  intended 
+use—monitoring  sleep  and  the  sleep  environment—and  in 
+that  the  data  captured  generally  does  not  represent  con-
+scious human memories or experiences: most of the data is 
+captured  while  users  are  asleep.  Lullaby’s  data  represents 
+unconscious  experience  and  may  not  benefit  from  users 
+having consciously experienced the recorded data they wish 
+to search through. This presents new challenges for provid-
+ing users with a meaningful frame of reference for access-
+ing their data. 
+
+One field with a history of recording subconscious actions 
+is  microteaching,  an  instructional  technique  used  to  train 
+teachers  [2].  In  this  technique,  teachers  are  shown  video 
+playback of their lectures to allow them to more easily iden-
+tify errors. Kpanga [18] compared the use of microteaching 
+with  and  without  such  video,  finding  that  teachers  who 
+were instructed using the video technique scored higher on 
+tests  of  instructional  ability.  Video  instruction  allowed 
+teachers to see subconscious behaviors they engaged in dur-
+ing their lectures (such as hand gestures), making them bet-
+ter able to self-improve [18]. This suggests more generally 
+the potential of exposing people to previously unnoticed as-
+pects  of  their  lives  to  improve  self-understanding.  Lullaby 
+explores  and  expands on  this  idea  through  the  capture  and 
+access of unconscious experience. 
+
+Self-Tracking for Sleep 
+Choe  et  al.  [7]  conducted  an  in-depth  literature  review  on 
+technologies  for  tracking  sleep. Here  we  will  highlight  the 
+most  relevant  findings.  Many  commercial  products  have 
+been developed for tracking one’s sleep, including Zeo, Fit-
+bit,  and  SleepCycle  (http://mdlabs.se/sleepcycle/).  These 
+tools primarily focus on tracking actual sleep behaviors (i.e., 
+sleep  times,  amount  of  time  in  bed,  sleep efficiency,  num-
+ber  of  awakenings),  but  not  on  sleep  environment.  While 
+Zeo provides a tool for describing environmental disruptors, 
+it  relies  on  users’  self-reporting  and  does  not  involve  the 
+use  of  automatic  sensing.  Applications  in  this  space  from 
+the research community have primarily focused on sharing 
+sleep data with a social network [15,27] to help people feel 
+connected or for encouraging behavior change. 
+
+Self-tracking  of  sleep  also  falls  into  the  realm  of  personal 
+informatics.  In  developing  a  model  for  the  design  and  un-
+derstanding  of  personal  informatics  systems,  Li  et  al.  [21] 
+distinguished  between  uni-faceted  and  multi-faceted  sys-
+tems—those that do or do not combine multiple streams of 
+a  user’s  data.  They  noted  that  while  multi-faceted  systems 
+are  more  difficult  to  engineer  (echoing  Abowd’s  [1]  point 
+that  standard  formats  for  capture  and  access  streams  are 
+needed  if  combining  multiple  streams  is  to  be  realized  ef-
+fectively),  they  have  great  potential  for  allowing  users  to 
+make associations between data. However, in reviewing ex-
+isting personal informatics systems, Li et al. note that mul-
+tifaceted systems often show each facet in separate visuali-
+zations, despite users’ desire to see multiple facets simulta-
+neously in order to see the relationships between them [21]. 
+
+ 
+ 
+There  is  therefore  an  opportunity  to  explore  how  unified 
+visualizations might allow people to better understand asso-
+ciations in multi-faceted data collected about them. In look-
+ing at uni-faceted data, Li et al. found that users will try to 
+make  explanatory  inferences  about  their data  (e.g.,  a  spike 
+in  step  count  that  corresponds  to  a  known  event,  such  as 
+dancing [20]). However, it is unclear how users might make 
+similar  inferences  when  multiple  data  streams  are  shown 
+simultaneously  and when  the  recorded  events  were  largely 
+unseen by users (because, for example, they were sleeping). 
+
+Li  et  al.  also  note  that  personal  informatics  systems,  to  be 
+effective  vehicles  for  behavior  change,  must  strike  a  bal-
+ance  between  automatic  and  manual  data  collection  [20]. 
+Automating the collection of contextual information has the 
+potential to reduce user engagement, but it can also increase 
+the usefulness of collected data [20]. 
+
+LULLABY DESIGN 
+The  design  of  Lullaby  was  inspired  by  previous  work  in 
+understanding opportunities for sleep behavior, the sleep re-
+search  literature,  and  in  collaboration  with  clinicians  and 
+researchers  affiliated  with  the  University  of  Washington 
+Sleep Center.  
+
+Design Requirements 
+We  imagine  a  scenario  in  which  a  person  having  trouble 
+sleeping might approach their doctor for help. Their doctor 
+could loan them a Lullaby device, which they would use for 
+2  weeks  (this  duration  is  commonly  used  for  collecting 
+baseline  sleep  data,  e.g.  in  treatment  for  insomnia  [24]). 
+Throughout the two weeks, this person would be able to see 
+feedback  on  their  sleep  quality  and  sleep  environment, 
+helping them identify possible sleep disruptors. At the end 
+of  the  two  weeks,  they  could  review  their  data  with  their 
+doctor, who might recommend changes to their sleep envi-
+ronment  or  sleep  habits.  This  last  aspect  of  the  scenario 
+makes it particularly important that we consider users’ pri-
+vacy  in  the  design  of  Lullaby.  While  notions  of  privacy 
+may  differ  culturally,  the  bedroom  is  often  considered  a 
+private space [7]. Although the above scenario was our mo-
+tivating factor, we note that Lullaby can also have the usage 
+scenario  of  being  used  as  a  long-term  lifelogging  tool  for 
+people interested in personal informatics. 
+
+In previous work [7], Choe et al. surveyed 230 people about 
+sleep behaviors and their attitudes toward sleep technology. 
+Results  of  the  survey  identified  temperature,  loud  noise, 
+other  household  members,  and  pets  as  common  sleep  dis-
+ruptors for respondents. Results also found that the recom-
+mendation of optimal bedroom conditions and tracking and 
+reviewing  sleep  patterns  over  time  were  among  the  most-
+requested features for sleep technology [7]. The sleep litera-
+ture  also  discusses  that  a  bedroom  should  be  free  of  light 
+and  noise  and  at  a  comfortable  temperature  [19].  While  a 
+comfortable range of light, sound, or temperature can vary 
+by  individual, the  National  Sleep  Foundation  suggests  that 
+sounds  at  40–70  decibels  can  be  disruptive  [23]  and  that 
+
+Figure 2. Lullaby deployed on bedside table. Visible here are 
+the touchscreen tablet mounted in a stand for easy access from 
+the bed and the sensor box with pivoting sensor enclosures. 
+The sensor suite itself is about the size of a bedside lamp. 
+
+temperature should be between about 54–75°F [23]. Abrupt 
+changes  in  sound pressure  can  also disrupt sleep [3].  Con-
+crete  recommendations  on  light  levels  are  less  clear,  but 
+there is a known association between high levels of light—
+particularly blue light—and disruptions in circadian rhythm 
+[17].  Air  quality  has  also  been  identified  as  a  possible 
+source of sleep disruption through an increase in sleep ap-
+nea  (interrupted  breathing)  [29].  These  factors  make  good 
+candidates for inclusion in a system that aims to character-
+ize the quality of the sleep environment.  
+
+Choe et al. found that respondents were most interested in a 
+technology form factor that was unobtrusive and that intro-
+duced  a  minimum  of  additional  devices  [7],  e.g.,  by  using 
+existing  cell  phones.  To  facilitate  tracking  and  reviewing 
+over 
+to  make  all  data  collected—
+environmental  factors,  household  members,  audio/video, 
+and sleep tracking data—accessible from a unified user in-
+terface to allow users to better understand and make infer-
+ences from their data, as recommended by Li et al. [21]. 
+
+time,  we  aimed 
+
+To summarize our design requirements based on the previ-
+ous literature and guidance from sleep expert collaborators, 
+Lullaby should: 
+
+  Track environmental factors associated with sleep disrup-
+tion, such as light, sound, temperature, and air quality 
+
+  Track disruptions caused by others in the household, such 
+
+as roommates, family members, and pets 
+
+  Give recommendations for optimal bedroom conditions 
+
+  Be inexpensive and unobtrusive, possibly by re-using ex-
+isting technology (e.g. cell phones) and infrastructure 
+
+  Allow tracking and reviewing of data over time 
+
+  Offer a unified visualization of the various factors influ-
+encing sleep and sleep quality itself so that users can un-
+derstand their relationships 
+
+ 
+ 
+ 
+We originally included a consumer-grade ($200) air quality 
+monitor  that  can  estimate  PM10  (the  quantity  of  airborne 
+particulate matter <10μm in size). Higher PM10 is associat-
+ed with sleep apnea (interrupted breathing) [29]. However, 
+piloting revealed that this unit’s fan is loud enough to dis-
+turb some people’s sleep, so we did not include it in our de-
+ployment.  In  the  future,  we  may  explore  other  options  for 
+estimating air quality measurements, such as running the air 
+quality monitor during the day only or by taking municipal 
+air quality measurements as a proxy. 
+
+Data Collection Computer 
+We use a Linux-based mini-PC designed for quiet operation 
+(a Zotac mini-PC) as the data collection computer. The sen-
+sor  suite,  webcam,  and  Fitbit  base  station  connect  to  the 
+computer over USB. We could not find robust Linux Fitbit 
+drivers, so we run the Fitbit software on a Windows XP vir-
+tual  machine.  Our  software  pulls  the  Fitbit  data  from  their 
+website  and  imports  it  into  our  database.  This  setup  high-
+lights a known barrier to building multi-faceted personal in-
+formatics  systems  [21,25]:  the  lack  of  standardized  data 
+formats  hinders  integration.  Our  approach  allowed  us  to 
+quickly  prototype  the  system  without  reverse-engineering 
+the  Fitbit  device  itself,  but  would  not  be  suitable  in  a  fin-
+ished product. Finally, a background rsync process regular-
+ly  uploads  logfiles  from  the  data  collection  computer  to  a 
+server over an SSH channel so we can ensure the system is 
+running  correctly.  In  case  of  technical  problems,  an  SSH 
+tunnel allows us to remotely administer the system. 
+
+Touch Screen Interface 
+The touchscreen device communicates with the data collec-
+tion computer over Wi-Fi. It allows the user to control the 
+recording  state  and  see  current  sensor  readings  (Figure  3), 
+explore the data collected on previous nights (Figure 4 and 
+Figure 5), and delete recorded data (Figure 6). We replaced 
+the  default  Android  home  screen  with  our  software  so  the 
+tablet  functions  solely  as  Lullaby’s  interface.  The  tablet  is 
+positioned  on  a  stand  next  to  the  sensor  unit  so  it  can  be 
+manipulated  much  like  an  alarm  clock,  though  there  is  no 
+reason the tablet cannot be used anywhere in the home.  
+
+Usage 
+As  per  our  design  requirements,  Lullaby  provides  recom-
+mendations of optimal bedroom conditions and allows users 
+to review collected data to better understand their sleep en-
+vironment.  The  sensor  indicators  on  the  home  screen  give 
+recommendations  for  optimal  bedroom  conditions  (Figure 
+3).  These  indicators  turn  red  when  current  conditions  are 
+outside the recommended range. This may prompt the user, 
+for  example,  to  adjust  their  climate  control  if  the  room  is 
+too hot or too cool. Lullaby uses the commercially available 
+Fitbit  sleep  tracking  device,  which  users  wear  on  their 
+wrist. Fitbit requires a button press before and after sleep to 
+demarcate sleep periods. Once a new sleep period is availa-
+ble, the tablet downloads the sleep and environmental data 
+from  the  data  collection  computer.  The  user  can  then 
+
+Figure 3. The home screen, with clock, current sensor state, 
+and controls. Each sensor has a sparkline of recent readings, 
+colored red if those readings are outside recommended 
+thresholds for a good sleep environment. 
+
+  Have privacy protections as a fundamental part of its de-
+sign  due  to  the  potentially  sensitive  nature  of  recording 
+bedroom activity 
+
+Implementation 
+Given the above requirements, we implemented Lullaby as 
+a bedside sensor suite controlled by software on an Android 
+tablet.  Our  goal  was  to  make  a  device  about  the  size  of  a 
+bedside  lamp  that  would  collect  data  with  little  or  no  user 
+intervention. Lullaby consists of four components: the sen-
+sor  suite,  a  data  collection  computer,  a  commercial  sleep 
+tracking device (currently a Fitbit), and a touchscreen tablet 
+for control and feedback. 
+
+Sensor Suite 
+The sensor suite is contained in a single unit that sits on the 
+user’s nightstand and, to be as unobtrusive as possible, has 
+no  external  lights.  It  consists  of  several  sensors,  each  of 
+which can be oriented independently to best capture its data 
+(Figure 2): 
+
+   An infrared (IR) camera, pointed toward the user’s bed, 
+takes  a  photo  every  15  seconds.  This  interval  is  an  at-
+tempt to balance the usefulness of the data against priva-
+cy concerns.  
+
+  Two Passive Infrared (PIR) motion detectors capture dis-
+ruptions  caused  by  household  members.  One  of  these  is 
+pointed at the bed to detect movement of the participant, 
+a partner, or pet, and the other is pointed elsewhere in the 
+room, such as at a doorway.  
+
+  Two upward-facing light sensors, with a combined field-
+of-view of 180°, are oriented to track daylight and indoor 
+lights.  
+
+  A microphone with flat frequency response captures dis-
+
+ruptive noise.  
+
+  A temperature sensor attached to the outside of the sen-
+sor base,  close  to bed-level  (assuming  a bedside  table  at 
+approximately bed height) records ambient temperature.  
+
+ 
+ 
+ 
+Figure 4. The history screen showing readings from the previous night combined with data from the sleep tracking device. 
+
+Figure 5. Playback of audio and images corresponding to the 
+data on the timeline. Touching and/or dragging on the timeline 
+scrubs playback. Users can also pinch to zoom in/out on the 
+graphs for more fine-grained control of the playback. 
+
+browse  through  their  sleep  periods  on  the  history  screen 
+(Figure 4). Touching the graph shows the specific numeri-
+cal  readings  taken  at  that  point.  Readings  that  are  outside 
+the recommended range are highlighted in red on the graph. 
+To give more concrete context, users can play back record-
+ed  images  and  audio  corresponding  to  the  data  (Figure  5). 
+Due to space constraints, the images and audio are streamed 
+from  a  lightweight  HTTP  service  on  the  data  collection 
+computer rather than downloaded in advance. 
+
+Privacy Controls 
+Lullaby supports three principle forms of privacy controls: 
+recording control, targeted deletion, and recent deletion.  
+
+  Recording control refers to the ability of users to turn off 
+recording at any time, either of all data collection or just 
+
+Figure 6. The deletion screen (for targeted deletion), showing a 
+15-minute block. Tapping on an image enlarges it. Tapping on 
+the button in the lower right deletes the entire block. When 
+scrubbing the timeline, a single enlarged image is shown to 
+improve navigation. 
+
+the camera. This is implemented as two toggle buttons at 
+the top-right of the home screen (Figure 3).  
+
+  Targeted  deletion  refers  to  the  ability  of  users  to  selec-
+tively delete blocks of recorded data. This is implemented 
+through  a deletion  screen  (Figure 6)  that  allows  users  to 
+browse and delete data in 15-minute chunks using images 
+as reference points. This interface resulted from a need to 
+balance three concerns: privacy, the value of the data col-
+lected,  and  the  ease  of  fine-grained  targeting  on  a  tablet 
+interface. From Choe et al.’s survey of privacy concerns 
+in the home [6], we expected most deletion would be tar-
+geted at smaller, single events, such as instances of nose-
+picking or sexual activity. We chose 15-minute blocks so 
+that  most  activities  would  not  consist  of  too  many 
+chunks,  but  for  small  activities  (such  as  nose-picking  or 
+
+ 
+ 
+ 
+ 
+ 
+changing  clothes)  the  amount  of  extraneous  data  deleted 
+would not be too high.  
+
+  Recent  deletion  refers  to  an  option  on  the  main  screen 
+where the user can quickly choose to “delete last hour.”  
+
+Sex 
+
+Age 
+
+Dianna  Nathan 
+
+Josh 
+
+Andrew 
+
+female  male 
+
+male 
+
+male 
+
+30-40 
+
+30-40 
+
+20-30 
+
+20-30 
+
+Minimizing Lullaby’s Sleep Disruption 
+There are significant challenges to instrumenting a person’s 
+sleep environment unobtrusively. Since modern technology 
+is  often  the  source  of  the  very  environmental  factors  we 
+seek  to  measure—e.g.,  LED  indicator  lights,  computer 
+fans—there is some irony in outfitting a person’s bedroom 
+with such technology in order to measure those factors. As 
+such,  we  took  care  to  ensure  that  our  equipment  does  not 
+significantly  increase  light  or  sound  levels  in  participants’ 
+bedrooms. 
+
+A number of pieces of equipment used (such as DC adapt-
+ers and our data collection computer) have LED indicators 
+that  we  were  either  able  to  deactivate  or  tape  over  with 
+black electrical tape. In addition, we configured the backlit 
+Android  tablet  to  dim  to  its  lowest  brightness  after  30  se-
+conds  of  inactivity.  Early  pilot  testing  suggested  the  dim 
+setting may also be too bright in a dark bedroom; thus, we 
+deactivated  the  default  Android  lock  screen  so  that  users 
+can simply push the screen power button to turn the screen 
+on  and  off.  To  minimize  sound,  we  used  a  mini-PC  de-
+signed  for  quiet  operation.  As  already  discussed,  we  also 
+opted to leave out the air quality monitor since its fan was 
+deemed too loud in pilot testing.  
+
+FEASIBILITY STUDY 
+To  understand  how  Lullaby  would  be  used  in  real  world 
+settings  and  to  test  its  feasibility  and  usefulness  as  a  feed-
+back device, we deployed Lullaby in the homes of four par-
+ticipants. 
+
+Study Design 
+The  study  consisted  of  an  initial  interview  followed  by  14 
+nights’ use of Lullaby and then an exit interview, all in the 
+participants’ homes. This length of time was chosen to mir-
+ror the two-week period used to collect baseline data in in-
+somnia  treatment  [24].  The  initial  interview  included  a 
+standardized  questionnaire  on  sleep  quality  (the  Pittsburgh 
+Sleep  Quality  Index  [4])  and  questions  on  demographics, 
+sleep habits, and sleep quality. We then conducted a semi-
+structured  interview  further  examining  sleep  habits  and 
+goals  for  sleep  improvement.  Lullaby  was  installed  at  this 
+time, and participants were instructed on its use. A printed 
+manual  was  also  left  with  them,  along  with  contact  infor-
+mation  for  troubleshooting.  We  gave  participants  a  paper 
+sleep diary to verify sleep periods identified by the Fitbit.  
+
+At  the  end  of  the  fourteen  nights,  we  conducted  a  semi-
+structured exit interview that explored their experiences us-
+ing Lullaby, what data (if any) they found useful, and their 
+experiences  browsing  data  and  using  the  privacy  controls. 
+The  study  was  reviewed  and  approved  by  our  university’s 
+human subjects review board. 
+
+Occupation 
+
+Admin.  Self-
+
+Typically sleeps for  6 h 
+
+Sleep partner? 
+
+PSQI ( / 21 ) 
+> 5 ⇒ poor sleep 
+
+No 
+
+8 
+
+employed 
+
+8 h 
+
+No 
+
+5 
+
+Student  Web 
+Dev. 
+
+6.5 h 
+
+6.5 h 
+
+Yes 
+
+Yes 
+
+7 
+
+7 
+
+Table 1. Summary of participants’ data from initial ques-
+tionnaire. Names have been changed to preserve anonymity. 
+
+We  chose  this  smaller  feasibility  study  rather  than  a  con-
+trolled efficacy trial based on Klasnja et al.’s [16] model for 
+early  stage  evaluations  of  novel  health  behavior  change 
+technologies in HCI. The need for this step is echoed in the 
+medical  literature  and  their  recommendation  to  focus  on 
+how  technologies  fit  into  users’  lives.  Campbell  et  al.  [5] 
+state a need for an “understanding of the components of an 
+intervention  and  their  interrelationships”  prior  to  conduct-
+ing  efficacy  studies  through  qualitative  testing,  focus 
+groups, preliminary surveys, or case studies. Our evaluation 
+focused on the feasibility of our system, a potentially inva-
+sive monitoring technology for the bedroom, which is often 
+a very private space. The intention of this study is therefore 
+not  efficacy  (proof  of  which  typically  requires  a  random-
+ized  control  trial),  but  to  inform  the  design  and  evaluation 
+of future sleep monitoring technology. 
+
+Participants 
+We  recruited  our  four  participants  (Table  1)  via  Craigslist 
+and  word-of-mouth.  We  primarily  screened  for  a  self-
+reported desire to improve sleep, which we feel is appropri-
+ate for a feasibility study, and for participants with Internet 
+access  at  home.  We  compensated  participants  up  to  $200 
+USD  in  gift  cards  in  appreciation  for  their  time,  pro-rated 
+based on the number of nights of use.  
+
+RESULTS AND DISCUSSION 
+In this section, we describe salient findings from the feasi-
+bility  study  and  discuss  their  implications  for  future  re-
+search in this space. 
+
+Overall Usage 
+In total, we collected data from 59 sleep periods (15 for Di-
+anna, 16 for Nathan, 14 each for Josh and Andrew) over 68 
+days. Some gaps in continuous use were caused by partici-
+pants  forgetting  to  use  one  of  the  sleep  tracking  devices, 
+technical  issues,  or  participants  having  other  sleeping  ar-
+rangements.  Event  traces  of  participants’  interactions  with 
+Lullaby  can  be  seen  in  Figure  7.  From  the  traces,  we  can 
+see  that  all users  made  regular use  of Lullaby, particularly 
+around  bedtime—the  events  shown  on  these  graphs  occur 
+only  through  direct  user  interaction.  In  total,  Dianna  inter-
+acted  with  Lullaby  for  164  minutes  over  the  study  period, 
+
+ 
+ 
+ 
+a
+n
+n
+a
+D
+
+i
+
+n
+a
+h
+t
+a
+N
+
+h
+s
+o
+J
+
+w
+e
+r
+d
+n
+A
+
+d
+n
+e
+g
+e
+L
+
+Thu
+
+Sun Wed
+
+Sat
+
+Tue
+
+Fri Mon
+
+Thu
+
+Sun
+
+Sun
+
+Tue
+
+Thu
+
+Sat Mon Wed
+
+Fri
+
+Sun
+
+Tue
+
+Thu
+
+Sat
+
+Mon
+
+Wed
+
+Fri
+
+Sun
+
+Tue
+
+Sat
+
+Mon
+
+Wed
+
+Fri Sat
+
+Mon
+
+Wed
+
+Sleep period
+
+Home screen
+
+History screen
+
+Delete screen
+
+Figure 7. Chromograms of usage over the entire study period. 
+Shaded areas indicate sleep periods as recorded by sleep 
+tracking devices or the diary. Colored lines correspond to ac-
+tive use of the tablet on one of the three interface screens. 
+
+Nathan for 53 minutes, Josh for 179 minutes, and Andrew 
+for  202  minutes  (see  Table  2  for  interaction  times  broken 
+down by screen). 
+
+Dianna, Andrew, and Josh had the most regular use of the 
+history screen. Andrew described the process he took to in-
+vestigate his data: 
+
+It was fun to go through the data in the morning, and I 
+kept on trying to find myself snoring—whenever I saw 
+the noise graph jump a little bit I would go to that spot 
+and play through. 
+
+Josh  had  a  similar  approach  to  looking  at  playback  sur-
+rounding sleep disturbances as reported by the sleep track-
+ing device. He noted that he primarily looked at the history 
+“to see if it agreed with me on how many times I woke up 
+during the night.” Nathan, who made less use of the history 
+screen  on  a  regular  basis, noted  “the first  couple of days I 
+glanced at it, and realized, oh, I actually need to take some 
+time  to  stop  and  study  this,  and  really  look  through,  and  I 
+just never managed to make the time to do that.” 
+
+Participants used the environmental sensor feedback in dif-
+ferent ways. Surprisingly, the light sensor data was largely 
+not  useful  for  any  of  the  participants.  Josh,  Andrew,  and 
+Dianna primarily slept when it was dark outside and did not 
+notice  significant  light  levels  during  sleep.  Andrew  found 
+that  the  light  sensors  did  not  pick  up  some  disturbances, 
+such as his phone screen coming on when he received a text 
+message during the night. This represents one limitation of 
+
+  Dianna 
+
+Nathan 
+
+Josh 
+
+Andrew 
+
+Screen use time
+home=
+history=
+delete=
+
+164 min 
+ 53 min 
+ 35 min 
+ 75 min 
+
+53 min 
+26 min 
+26 min 
+~1 min 
+
+179 min 
+131 min 
+ 41 min 
+  6 min 
+
+202 min 
+152 min 
+ 47 min 
+  2 min 
+
+Table 2. Summary of usage 
+
+the current design, as the light sensors are oriented upwards 
+to capture overhead light and daylight. 
+
+Dianna found the sound data to be useful in identifying her 
+coughing  at  night  and  how  consistently  it  happened.  An-
+drew was able to use the sound to find moments of interest, 
+such  as  him  or  his  partner  getting  out  of  bed  during  the 
+night, although he was not able to find instances of snoring 
+as he wanted to (although he noted that he did not snore as 
+much as usual: “My partner, who slept here probably 80% 
+of  the  time,  said  that  she  never  heard  me  snoring,  at  all. 
+That’s unusual for me.”). 
+
+Dianna and Andrew both found that they moved more than 
+they  thought  in  their  sleep;  Dianna  expressed  surprise  that 
+she  moved  so  much  while  unconscious.  Josh  also  noted  a 
+fair amount of movement, but was unsurprised by it as his 
+wife has previously told him he moved during his sleep.  
+
+Dianna’s  temperature  data  showed  that  there  were  several 
+nights where the room was hotter than the suggested maxi-
+mum. Because she did not have air conditioning, she used a 
+fan on those nights to cool down. Interestingly, this moved 
+the  sound  levels  to  above  the  recommended  threshold,  alt-
+hough it was a white noise. Another interesting factor was 
+that the temperature sensor does not register the room being 
+cooler when the fan is in use, since it only has the effect of 
+making  Dianna  feel  cooler.  Thus,  Lullaby's  temperature 
+sensing may not be sophisticated enough to account for all 
+changes a person makes to their environment. 
+
+Deleting Private Moments 
+Use of the deletion functionality varied. None of our users 
+deleted  data  from  when  they  were  sleeping.  All  four  users 
+except Nathan fell into a regular pattern of turning the log-
+ging  on  when  going  to  sleep  and  off  when  they  woke  up, 
+mitigating  the  need  to  go  back  and  delete  data.  Dianna 
+made  use  of  the  delete  functionality  on  11  separate  occa-
+sions, using the “delete last hour” function 9 times and tar-
+geted deletion 6 times (sometimes she used both). The bulk 
+of her deletions were made at two points: the first occurred 
+when she forgot to turn off the recording while not sleeping 
+at the start of the study (she waited to start recording for a 
+few  days),  and  the  second  occurred  near  the  end  of  the 
+study  when  she  looked  for  earlier  instances  where  she 
+meant to turn off the recording but forgot. All told, she de-
+leted approximately 86 hours of data, but did not delete any 
+data recorded during her sleep. By contrast, the other partic-
+ipants made little to no use of deletion: Josh deleted a total 
+of 45 minutes (three chunks of data using the targeted dele-
+tion interface). He deleted this data because he and his wife 
+
+ 
+ 
+ 
+ 
+were  talking  while  in  bed  and  did  not  realize  that  Lullaby 
+was recording: 
+
+In  general,  my  wife  was  always  hypersensitive  to  the 
+fact  that  there  was  a  camera  in  the  bedroom…  [She 
+said],  “Well,  can  you  not  turn  it  on  for  the  first  ten 
+minutes while we’re in bed so I can talk to you without 
+being recorded.” 
+
+Like Dianna, this data was outside any sleep period. Neither 
+Nathan nor Andrew deleted any of their data.  
+
+In  terms  of  what  was  deleted,  participants  reported  mostly 
+being  concerned  about  private  activities  surrounding  (but 
+not during) sleep, such as sexual activity, changing clothes, 
+or private conversations. This confirms findings from Choe 
+et al.’s study on private moments in the home [6] in which 
+participants  predicted  that  intimacy  and  self-appearance 
+(which  includes  changing  clothes)  were  the  most  sensitive 
+activities  they  would  not  want  recorded.  If  other  types  of 
+activities reported in Choe et al.’s study occurred but were 
+not deleted, it is possible that the data was too overwhelm-
+ing—that finding an instance of picking one’s nose, for ex-
+ample, is the proverbial needle in the haystack, and the time 
+it would take to sift through the entire data set is not worth 
+the  small  privacy  invasion.  This  mirrors  other  issues  we 
+found  (that  the  data  is  overwhelming  in  general,  and  that 
+users would benefit from some higher-level views, summar-
+ies, or other navigational tools). If users were given compu-
+tational help in finding potentially sensitive moments, such 
+as  using  simple  computer  vision  frame  differencing  algo-
+rithms, they might find greater use for deletion within sleep 
+times.  The  low-resolution  images  captured  by  our  camera 
+may also not have been enough for our participants to wor-
+ry about smaller private moments. 
+
+Dianna did express a desire for more accurate deletion, stat-
+ing that she would like to be able to delete single images ra-
+ther than 15-minute chunks in order to preserve data where 
+possible.  It  is  possible  that  privacy  concerns  in  our  study 
+were  more  prominent,  since  our  participants  knew  that 
+whatever data they  did not delete  could be seen  by  the  re-
+search  team.  If  Lullaby  was just a  tool  for  personal  use,  it 
+may  be  less  necessary  to  have  similar  privacy  controls. 
+However, in the case where Lullaby would be used by a pa-
+tient with their sleep clinician, the danger of having others 
+see their data would again be prominent. It is important to 
+note  that  the  focus  of  our  designs  thus  far  is  on  end-user 
+feedback, and that sleep clinicians would likely value a dif-
+ferent presentation of the data (our experience suggests they 
+would  value  high  level  summaries  of  behaviour  and  com-
+parisons of data over time, e.g. week-to-week). It should be 
+possible to create such summaries while respecting the pri-
+vacy of the user. 
+
+Proper treatment of privacy is important when designing an 
+application  for  bedroom  use.  Our  goal  was  to  understand 
+how  to  acceptably  integrate  capture  and  access  into  a  pri-
+vate space to support continued and valuable use, which our 
+
+results  support:  users  were  primarily  concerned  with  and 
+only  deleted  data  from  non-sleep  periods,  which  tended  to 
+be not useful data for participants. Thus, future versions of 
+Lullaby could be designed to automatically delete data be-
+tween sleep periods, or record only while the user has indi-
+cated that they were sleeping instead of continuously. This 
+approach  has  the  added  benefit  of  reducing  the  amount  of 
+data storage required. 
+
+Browsing Outside the Bedroom 
+Contrary to our initial expectations, use of the tablet inter-
+face for browsing sleep data in the bedroom was not univer-
+sally seen as a plus by our participants. Dianna, for exam-
+ple, chose not to browse her data immediately before or af-
+ter  sleep,  but  would  come  back  to  it  at  other  times  of  the 
+day.  By  contrast,  Andrew  was  happy  with  the  tablet  inter-
+face being in the bedroom, stating that he did not expect he 
+would  use  it  elsewhere  in  the  house.  Dianna  and  Nathan 
+suggested that being able to browse their data on a website 
+would be preferable; Andrew also thought he would like to 
+be able to access the data via a website. 
+
+At  the  same  time,  Dianna  considered  use  of  the  tablet  for 
+control of the bedside device, such as for turning on and off 
+the recording, important. However, she also normally has a 
+smartphone  in  her  bedroom.  When  we  suggested  that  the 
+smartphone might be an alternative for the Lullaby UI, she 
+stated  this  would  be  a  good  idea  so  long  as  she  could 
+browse her data on the computer (since, with the tablet, she 
+appreciated  the  large  screen  for  looking  at  data).  We  feel 
+this might offer a good compromise: limited data browsing 
+using  a  phone  at  the  bedside  (primarily  for  control  of  the 
+device and checking its status), with more in-depth analysis 
+and browsing functionality available on a website. 
+
+Capturing Unconscious Experiences 
+While  previous  work  has  looked  at  automated  capture  of 
+spontaneous  or  unplanned  events  [12,14],  there  are  addi-
+tional  challenges  to  capture  and  access  when  the  events 
+captured  occur  while  the  participant  is  unconscious.  When 
+capturing  spontaneous  events,  arguably  users  are  aware  of 
+the occurrence of such an event as it happens or shortly af-
+ter—there  is  no  need  subsequently  to  discover  it.  In  con-
+trast, the domain of sleep is one where events of interest are 
+not known by users until well after their occurrence—until 
+the time at which the user goes looking for such events. As 
+a result, a (largely) automated capture process is necessary. 
+Users  must  also  sift  through  data  with  little  or  no 
+knowledge of what they seek or when it occurred, so help-
+ing them discover salient data is very important. 
+
+To  aid  this  discovery,  we  gave  users  a  wider  context  in 
+which to view their data by highlighting data that is out-of-
+range  (and  therefore  possibly  of  interest)  and  by  showing 
+all  collected  data  together,  chunked  by  sleep  period.  Both 
+Josh  and  Andrew  used  this  out-of-range  data  to  find  mo-
+ments of interest; Josh used out-of-range sleep tracking data 
+and  Andrew  used  audio  data,  suggesting  that  this  context 
+
+ 
+ 
+was  helpful.  The  play  back  of  sound  and  images  corre-
+sponding to the sensor data also helped provide a more con-
+crete frame of reference. 
+
+Our  participants  found  this  unconscious  data  compelling. 
+As  we  noted  above,  Andrew  and  Dianna  both  found  that 
+they moved more than they thought in their sleep (Andrew 
+was “startled by how much motion there was”). Prior to us-
+ing Lullaby, Dianna was aware that she coughed occasion-
+ally during sleep, both because she would sometimes awak-
+en coughing and because others had told her. However, she 
+found from the Lullaby data that she coughed more than she 
+suspected: “I knew... but I didn’t know the extent.” Chronic 
+coughing  is  a  symptom  of  sleep  apnea,  a  widely  undiag-
+nosed condition largely for the same reasons that motivate 
+Lullaby:  its  immediate  symptoms  are  difficult  for  the  suf-
+ferer  to  observe.  A  greater  awareness  of  the  extent  of  her 
+cough might prompt her to seek a doctor’s advice. 
+
+Nathan  described  his  own  unconscious  experiences—
+sleepwalking: 
+
+One really interesting thing I did find is [...] I had two 
+sleepwalking episodes two nights in a row and I man-
+aged to actually find that, okay this is when I actually 
+ended up leaving the bed. 
+
+All users made fairly continuous use of Lullaby. This is un-
+usual: as Truong & Hayes [28] note, access of captured data 
+is  typically  low  except  in  high-need  cases.  One  reason  for 
+this may be that our users all had a self-selected interest in 
+improving sleep; we believe this may also be a result of us-
+ers’  curiosity  about  unconscious  moments.  However,  it  is 
+clear  from  our  results  that  further  work  is  needed  to  help 
+users  grasp  these  unconscious  events  through  higher  level 
+summary data or other inferences.  
+
+Drawing Inferences from Data 
+One of the goals of Lullaby was to help people identify the 
+things  that  are  causing disruption  to  their  sleep. Some  dis-
+ruptors  might  be  easy  to  see  just  by  looking  at  the  graphs 
+and  in  tandem  with  the  audio/visual  stream,  such  as  a  co-
+occurrence between awakenings and motion caused by cats 
+entering  or  exiting  the  bed;  this  was  also  a  compelling  as-
+pect  of  the  data  for  Dianna:  “I  was  curious  about  what 
+matched up with what.” However, more subtle causes may 
+be difficult to determine just by reviewing the data manual-
+ly.  For  example,  a  user  may  want  to know if  they  awaken 
+more frequently while the temperature is warmer over a pe-
+riod of several nights. With enough captured data, Lullaby 
+could help identify such relationships by running statistical 
+analyses on the data to determine if there are any significant 
+correlations. This type of inference might be useful for oth-
+er  types  of  self-monitoring  applications,  such  as  determin-
+ing the cause of increases in blood sugar levels for diabetes 
+patients or determining causes of headaches for a headache 
+diary tool. 
+
+To investigate the potential for higher-level summaries and 
+inferences, we followed up with three participants after the 
+study ended to present mockups of possible future summar-
+ies  (Dianna,  Andrew,  and  Josh).  These  mockups  ranged 
+from scatterplots of potentially related factors, to aggregate 
+statistics  of  various  measures  (for  example,  the  amount  of 
+time  spent  out  of  range  for  each  sensor),  to  one-sentence 
+summaries of factors influencing sleep (for example, “Over 
+the past two weeks, higher temperature has been associated 
+with  worse  sleep”).  All  three  responded  very  positively  to 
+the single-sentence summaries. 
+
+For  both  Dianna  and  Andrew  we  were  able  to  populate 
+these mockups with their own data pulled from the Lullaby. 
+In Andrew’s case, we found a possible weak association be-
+tween  temperature  and  sleep  disturbance  (R2=0.2808, 
+p=0.0625).  Presented  as  a  scatterplot  with  a  trendline,  he 
+found this to be an interesting finding; as a single-sentence 
+summary, he said “that would be really cool.” Dianna was 
+also  very  enthusiastic  about  one-sentence  summaries,  stat-
+ing  that  they  were  the  type  of  overview  of  her  data  she 
+would most like to see. 
+
+In comparing one high-level summary of data to the exist-
+ing interface, Andrew noted: 
+
+This  would  tell  me  maybe  that  my  restlessness  or  my 
+sleep  interrupt  is  coming  from  noise,  but  it  wouldn’t 
+tell  me  that  that  noise  is  happening  […]  when  I’m 
+snoring. 
+
+This suggests a need to support some kind of drill-down or 
+other ways of connecting high-level summaries to the low-
+level data in order to further support the kind of data explo-
+ration that our participants wanted. 
+
+CONCLUSIONS AND FUTURE WORK 
+We  have  described  the  design,  implementation,  and  initial 
+evaluation of Lullaby, a capture and access system for help-
+ing  people  record  and  review  their  sleep  environments  to 
+help them identify sleep disruptors. Lullaby combines inex-
+pensive  consumer-grade  sensors  with  an  interface  that  al-
+lows  users  to  explore  their  sleep  history.  We  have  consid-
+ered privacy aspects of the design from the beginning, tak-
+ing care to ensure that users can pause collection or delete 
+sensitive data. Our current design helps users identify con-
+nections  between  sleep  disruptions  and  environmental  fac-
+tors. The findings from this study have implications for per-
+sonal  informatics,  capture  and  access,  and  sleep  technolo-
+gies.  Future  work  will  use  new  designs  based  on  lessons 
+learned here and will involve studies with more participants 
+to explore efficacy in behavior change and that are longer-
+term to explore how it could be used for those interested in 
+lifelogging.  One  of  the  co-authors  is  a  sleep  clinician,  and 
+we will recruit through his clinic for future studies of effi-
+cacy.  These  studies  will  complement  this  initial  work  and 
+help validate people’s receptiveness to environmental sleep 
+data collection, privacy issues, and the usefulness of Lulla-
+by’s  data  and  visualizations.  We  will  also  use  the  sensor 
+
+ 
+ 
+and  sleep  data  collected  from  this  study  to  develop  more 
+improved  data  analyses,  recommendations,  and  visualiza-
+tions. 
+
+ACKNOWLEDGMENTS 
+The  authors  wish  to  thank  Jared  Bauer  for  his  early  assis-
+tance with this work. We also thank Jonathan Schooler for 
+his  development  work,  Louis  LeGrand  for  his  advice  on 
+sensor  programming,  and  Patrick  Kelley  for  his  design  in-
+put. We also thank Intel and the Natural Sciences and Engi-
+neering Research Council of Canada for providing funding 
+for this work. The work was completed at the University of 
+Washington and Intel Labs Seattle and was approved by the 
+University of Washington Human Subjects Department. 
+
+REFERENCES 
+1.  Abowd,  G.  Classroom  2000:  An  experiment  with  the 
+instrumentation  of  a  living  educational  environment. 
+IBM Systems Journal, (1999), 1-52. 
+
+2.  Allen,  D.W.  and  Ryan,  K.  Microteaching.  Addison-
+
+Wesley Pub. Co., 1969. 
+
+3.  Basner,  M.,  Müller,  U.,  and  Elmenhorst,  E.M.  Single 
+and  combined  effects  of  air,  road,  and  rail  traffic  noise 
+on sleep and recuperation. Sleep 34, 1 (2011), 11. 
+
+4.  Buysse,  D.J.,  Reynolds,  C.F.,  Monk,  T.H.,  Berman, 
+S.R.,  and  Kupfer,  D.J.  The  Pittsburgh  Sleep  Quality 
+Index:  a  new  instrument  for  psychiatric  practice  and 
+research. Psychiatry research 28, 2 (1989), 193-213. 
+
+5.  Campbell,  M.,  Fitzpatrick,  R.,  Haines,  A.,  and 
+Kinmonth,  A.  Framework  for  design  and  evaluation  of 
+complex  interventions  to  improve  health.  BMJ  321, 
+September (2000). 
+
+6.  Choe,  E.K.,  Consolvo,  S.,  Jung,  J.,  Harrison,  B.,  and 
+Kientz,  J.A.  Living  in  a  Glass  House:  A  Survey  of 
+Private Moments in the Home. UbiComp 2011, 41-44. 
+
+7.  Choe,  E.K.,  Consolvo,  S.,  Watson,  N.F.,  and  Kientz, 
+J.A.  Opportunities  for  Computing  Technologies  to 
+Support Healthy Sleep Behaviors. CHI 2011. 
+
+8.  Douglas, N.J., Thomas, S., and Jan, M.A. Clinical value 
+of  polysomnography.  The  Lancet  339,  8789  (1992), 
+347-350. 
+
+9.  Gemmell,  J.,  Bell,  G.,  Lueder,  R.,  Drucker,  S.,  and 
+Wong,  C.  MyLifeBits:  fulfilling  the  Memex  vision. 
+ACM Multimedia 2002, 235–238. 
+
+10. Hansen,  T.R.  and  Bardram,  J.E.  ActiveTheatre  –  A 
+Collaborative, Event-Based Capture and Access System 
+for the Operating Theatre. UbiComp 2005, 375-392. 
+
+11. Hayes, G.R., Gardere, L.M., Abowd, G.D., and Truong, 
+K.N.  CareLog:  a  selective  archiving  tool  for  behavior 
+management in schools. CHI  2008, 685-694. 
+
+12. Hodges, S., Williams, L., Berry, E., et al. SenseCam: A 
+retrospective memory aid. UbiComp 2006, 177-193. 
+
+13. Hume,  K.I.  Noise  pollution:  a  ubiquitous  unrecognized 
+
+disruptor of sleep? Sleep 34, 1 (2011), 7-8. 
+
+14. Kientz,  J.  KidCam:  toward  an  effective  technology  for 
+the capture of children’s moments of interest. Pervasive 
+Computing, (2009), 115-132. 
+
+15. Kim, S., Kientz, J.A., Patel, S.N., and Abowd, G.D. Are 
+you sleeping?: sharing portrayed sleeping status within a 
+social network. CSCW  2008, 619-628. 
+
+16. Klasnja, P., Consolvo, S., and Pratt, W. How to evaluate 
+in  HCI 
+
+technologies  for  health  behavior  change 
+research. CHI  2011, 3063. 
+
+17. Kozaki, T., Kitamura, S., Higashihara, Y., Ishibashi, K., 
+Noguchi,  H.,  and  Yasukouchi,  A.  Effect  of  Color 
+Temperature  of  Light  Sources  on  Slow-wave  Sleep.  J 
+Physiol Anthropol Appl Hum Sci 24, 2 (2005), 183-186. 
+
+18. Kpanja, E. A study of the effects of video tape recording 
+in microteaching training. BJET 32, 4 (2001), 483–486. 
+
+19. Kryger,  M.H.,  Roth,  T.,  and  Dement,  W.C.  Principles 
+and  practice  of  sleep  medicine.  W.  B.  Saunders  Co., 
+Philadelphia, 2000. 
+
+20. Li,  I.,  Dey,  A.,  and  Forlizzi,  J.  Using  Contextual 
+Information to Improve Awareness of Physical Activity. 
+Engaging Data Forum 2009, (2009). 
+
+21. Li, I., Dey, A., and Forlizzi, J. A stage-based model of 
+
+personal informatics systems. CHI 2010, 557-566. 
+
+22. Lipford,  H.R.  and  Abowd,  G.  Reviewing  Meetings  in 
+TeamSpace. Human-Computer Interaction 23, 4 (2008). 
+
+23. National  Sleep  Foundation.  The  Sleep  Environment. 
+
+http://www.sleepfoundation.org/article/how-sleep-
+works/the-sleep-environment. 
+
+24. Perlis, M.L., Jungquist, C., Smith, M.T., and Posner, D. 
+Cognitive Behavioral Treatment of Insomnia: A Session-
+by-Session Guide. Springer, 2005. 
+
+25. Price, B.A., Petre, M., and Rogers, Y. Some Challenges 
+in  Activity  and  Sleep  Monitoring 
+for  Personal 
+Informatics. CHI  2011 Personal Informatics Workshop. 
+
+26. Roy,  D.,  Patel,  R.,  DeCamp,  P.,  et  al.  The  Human 
+Speechome  Project.  Symbol  Grounding  and  Beyond, 
+Springer Berlin Heidelberg (2006), 192-196. 
+
+27. Schmidt,  A.  Network  alarm  clock 
+
+(The  3AD 
+International  Design  Competition).  Personal  and 
+Ubiquitous Computing 10, 2-3 (2005), 191-192. 
+
+28. Truong,  K.N.  and  Hayes,  G.R.  Ubiquitous  Computing 
+for Capture and Access. Foundations and Trends in HCI 
+2, (2009), 95–171. 
+
+29. Zanobetti,  A.,  Redline,  S.,  Schwartz,  J.,  et  al. 
+Associations  of  PM10  with  Sleep  and  Sleep-disordered 
+Breathing in Adults from Seven U.S. Urban Areas. Am. 
+J. Respir. Crit. Care Med. 182, 6 (2010), 819-825. 
+
+ 
+ 
+ 
+

@@ -1,0 +1,2119 @@
+From “nobody cares” to “way to go!”: A Design 
+Framework for Social Sharing in Personal Informatics 
+
+Daniel A. Epstein1, Bradley H. Jacobson2, Elizabeth Bales1,2, 
+David W. McDonald2, Sean A. Munson2 
+1Computer Science & Engineering, 2Human Centered Design & Engineering 
+DUB Group, University of Washington 
+{depstein, lizbales}@cs.washington.edu, {bhjacobs, dwmc, smunson}@uw.edu 
+
+ABSTRACT 
+Many  research  applications  and  popular  commercial 
+applications include features for sharing personally collected 
+data with others in social awareness streams. Prior work has 
+identified  several  barriers  to  use  as  well  as  discrepancies 
+between designer goals and how these features are used in 
+practice.  We  develop  a  framework  for  designing  and 
+evaluating  these  features  based  on  an  extensive  review  of 
+prior literature. We demonstrate the value of this framework 
+by  analyzing  physical  activity  sharing  on  Twitter,  coding 
+4,771 tweets and their responses and gathering 444 reactions 
+from  97  potential  tweet  recipients,  learning  that  specific 
+user-generated content leads to more responses and is better 
+received by the post audience. We conclude by extending our 
+findings to other sharing problems and discussing the value 
+of our design framework. 
+
+Author Keywords 
+Personal Informatics; Social Sharing; Self-Tracking; Health; 
+Social Network Sites; Social Awareness Streams 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI). 
+
+INTRODUCTION 
+Technological devices and applications for tracking personal 
+data have become increasingly ubiquitous. The motivations 
+for tracking vary by application and person, from curiosity 
+and fascination with data [32] to having a record [19,33,36] 
+to  motivating  behavior  change  [19,42]  to  engaging  with 
+others [3,24,46]. 
+
+Many  applications,  both  research  (e.g.  [11,15,27,35])  and 
+commercial  (e.g.,  FitBit,  Spotify,  FourSquare),  have 
+integrated  features  for  sharing  this  data  with  others. 
+Considerable research attention has been paid to sharing with 
+others  who  have  similar  goals  or  who  are  in  the  same 
+situation (referred to in this paper as peer support networks). 
+In  particular,  research  has  considered  online  support 
+communities [26,51] and in-application comparison features 
+[11,56], and has identified several best practices [47]. This 
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for  personal  or 
+classroom use is granted without fee provided that copies are not made or distributed for
+profit or commercial advantage and that copies bear this notice and the full citation on the
+first page. Copyrights for components of this work owned by others than ACM must be
+honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on
+servers or to redistribute to lists, requires prior specific permission and/or a fee. Request
+permissions from permissions@acm.org. 
+CSCW 2014, March 14–18, 2015, Vancouver, BC, Canada. 
+Copyright © 2014 ACM 978-1-4503-2922-4/15/03...$15.00. 
+http://dx.doi.org/10.1145/2675133.2675135 
+
+form of sharing specifically articulates a set of friends who 
+will  share  data  with  each  other.  Within  the  group,  known 
+individuals directly share information with each other. 
+
+A second form of sharing – sharing through social awareness 
+streams (SAS) such as timelines and newsfeeds in Twitter or 
+Facebook – is also commonly used in practice. The use of 
+SAS is a more indirect form of sharing amongst individuals 
+who  may  or  may  not  be  known  to  each  other.  Sharing 
+personal  informatics  data  (defined  by  Li  et  al.  as  personal 
+information collected for self-reflection [32]) through SAS 
+can  help  people  reach  friends,  family,  acquaintances, 
+coworkers  and  others  with  whom  they  wish  to  stay 
+connected. People who collect and post personal informatics 
+data (referred to in this paper as sharers) often hope to gain 
+emotional support or communicate their identity as someone 
+engaged  in  these  activities  [20,24,44,55].  This  form  of 
+sharing  can  also  help  identify  potential  activity  partners 
+[18,42],  create  sources  of  accountability  and  motivation 
+[43,44], and elicit advice from people who know them and 
+their context [44,51]. 
+
+Despite  reported  interest  in  and  a  prevalence  of  features 
+supporting sharing personal data through SAS, these features 
+often find limited or problematic use. While usage data from 
+commercial  systems  is  hard  to  obtain,  the  record  from 
+research  literature  is  clear:  most  study  participants  ignore 
+social sharing features, have concerns that prevent their use, 
+or are disappointed by the reactions they receive when they 
+are  used  [35,37,42,56].  Prior  work  (e.g.,  [11,35,42])  has 
+identified several barriers to their use, including not wanting 
+to share a trivial accomplishment and feeling uncomfortable 
+sharing with an unfamiliar audience. Other work has pointed 
+out the importance of finding an appropriate audience [21] 
+or that the responsibility of choosing to ignore or engage with 
+shared content is left to the recipient [55]. 
+
+In this paper, we reconcile the gap between social sharers’ 
+aspirations  and  their  actual  behaviors  and  outcomes.  We 
+develop a descriptive framework of social sharing research, 
+consolidating  findings 
+identifying 
+underexplored design alternatives. We demonstrate the value 
+of  this  framework  by  using  a  subset  of  the  dimensions  to 
+analyze how and why people use one popular application to 
+share physical activity information on Twitter and how the 
+details  of  the  sharing  affect  responses.  We  consider 
+perspectives of both sharers and their audiences, conducting 
+
+this  space  and 
+
+in 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1622 
+ 
+two studies to learn what sharers post to SAS and how the 
+audience views these posts. This combined analysis allows 
+us  to  make  design  recommendations  for  sharing  physical 
+activity 
+broader 
+recommendations  for  sharing  personal  informatics  data, 
+including how  the design  framework  we developed  can  be 
+used in future studies. 
+
+information 
+
+Twitter 
+
+and 
+
+on 
+
+Specifically, we address the following questions: 
+
+RQ1: What design space of social sharing has been explored 
+by  prior  research  and  practice  in  personal  informatics  and 
+what conclusions can be drawn from this body of work? 
+
+RQ2: How do self-trackers presently share physical activity 
+data in SAS, and how do recipients respond to seeing posts 
+with this content? 
+
+RQ3: How do potential recipients feel about seeing this data 
+in  SAS,  and  what  content  features  elicit  replies  or  other 
+positive reactions? 
+
+In  the  remainder  of  this  paper,  we  review  motivations  and 
+benefits  associated  with  social  sharing,  the  ways  in  which 
+systems  support  this  form  of  sharing,  and  how  well  these 
+features support sharers’ goals and how they break down. To 
+support  our  discussion,  we  draw  on  prior  work  on  people 
+who socially share personal informatics data and an analysis 
+of  tweets  from  the  popular  fitness  application  RunKeeper. 
+We  conclude  by  discussing  possible  implications  of  these 
+findings  for  other  sharing  domains  within  personal 
+informatics. 
+
+SOCIALLY SHARING PERSONAL INFORMATICS DATA 
+While the majority of personal informatics research focuses 
+on  helping  individuals  improve  themselves  by  reducing 
+barriers to collecting and making sense of data, research and 
+commercial  applications  have  included  features  to  share 
+collected  data  with  others.  In  this  paper,  we  consider  the 
+sharing of self-tracked data to online social networks with a 
+target audience of friends and family. 
+
+Many  systems  support  symmetric  sharing  among  groups 
+[4,26,51] or pairs [40] in peer support networks. With peer 
+groups,  people  can  receive  and  offer  experience-based 
+advice,  identify  mentors  and  other  motivators,  and  have  a 
+sense of shared experience. The audience – other members 
+of the group – has personal experience with the sort the data 
+shared. This helps people share it without needing to provide 
+much  additional  context  about  the  data.  Sharing  with  peer 
+strangers,  on  the  other  hand,  may  mean  that  they  have  to 
+provide additional context about themselves. 
+
+Sharing  personal  informatics  data  through  SAS  creates 
+opportunities not possible in peer support networks, such as 
+reaching  an  audience  of  people  whose  opinions  matter  for 
+emotional  support.  However,  this  space  has  challenges 
+distinct from those in peer support networks, such as how to 
+frame  data  for  an  audience  potentially  unfamiliar  with  the 
+domain or goals. We continue to compare sharing personal 
+informatics  data  through  SAS  to  peer  support  networks 
+
+throughout  this  paper,  but  focus  on  design  issues  and 
+opportunities for SAS. 
+
+Why people share 
+People  have  many  reasons  for  sharing  their  personal 
+informatics data with peers and with their support networks 
+of  friends,  family,  and  colleagues  [41].  In  many  domains, 
+such  as  health,  social  support  is  an  important  factor  in 
+behavior  change  [31,51].  In  this  section,  we  review  the 
+reasons for social sharing in personal informatics identified 
+in prior work, including sharing intended to support behavior 
+change and other uses of the data. 
+
+Request for information 
+Many  people  share  their  data  and  experiences  to  receive 
+some form of information from their audience. People turn 
+to their social networks for recommendations, advice on how 
+to improve, or for something new to try [39,44,51]. This is a 
+common practice in – and often the expressed goal of – peer 
+support networks, as the audience has a shared experience to 
+draw upon and offer recommendations from [26,51]. 
+
+Desire for emotional support 
+Sharers also seek emotional support, both from peers going 
+through  a  similar  experience  and  from  caring  friends  and 
+family [44,51]. For example, the HeartLink system enabled 
+a  social  network  to  cheer  on  participants  running  a  race, 
+which  participants  found  motivating  [15].  In  controlled 
+studies, participants enjoyed receiving and felt motivated by 
+encouraging messages sent from others in the study [11,56]. 
+
+Seeking motivation or accountability from audience 
+Sharers may seek motivation and accountability by making 
+commitments public, identifying potential activity partners, 
+or creating competitions [42,44]. Collaborating in a shared 
+activity  can  create  a  source  of  accountability  [40].  Some 
+people  post  their  plans  and  goals  to  Twitter  to  create  a 
+commitment mechanism that helps motivate them to remain 
+active and achieve their goals [55]. 
+
+Motivating or informing the sharing audience 
+Some people also strive to motivate or inform their audience 
+by  sharing  their  experiences  collecting  personal  data  [10]. 
+People  also  share  records  of  activities  and  goals,  such  as 
+eating  healthy  or  exercising,  to  motivate  others  to  act 
+similarly  [7].  In  location-sharing  applications,  people  may 
+broadcast  their  location  to  recommend  a  cool  place  they 
+found or to potentially meet up with nearby friends [36]. 
+
+Impression management 
+People use social sharing to communicate an identity to their 
+social networks and achieve impression management goals 
+[20,44],  but  this  also  leads  to  curation  and  concerns  about 
+self-presentation [44,58]. Posts about runs or workouts can 
+communicate that the sharer is an active, fit individual; feeds 
+of  music  can  communicate  one’s  tastes.  This  also  creates 
+challenges;  for  example,  people  may  curate  their  music 
+listening histories to remove guilty pleasures [50]. 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1623 
+DEVELOPING A DESIGN FRAMEWORK 
+While  substantial  prior  work  has  explored  social  sharing 
+within  personal  informatics,  it  remains  disparate  and 
+unorganized. Systems share data in a multitude of ways, but 
+system  evaluations  often  lack  integration  with  other  prior 
+work because each evaluation focuses on a single approach 
+to data sharing. We develop a design framework by looking 
+across  many  different  studies,  integrating  and  synthesizing 
+results.  
+
+The  framework  can  facilitate  analysis  of  new  sharing 
+features  by  isolating  a  single  design  choice  to  vary  in 
+evaluation. We describe these different design choices along 
+several  dimensions,  discussing  factors  of  social  sharing 
+across  one  dimension.  The  six  dimensions  developed  and 
+discussed are: 
+•  Data Domain: the type of data collected and shared 
+•  Preprocessing: transformations applied prior to sharing 
+•  Sharing Trigger: what causes the data to be shared 
+•  Persistence: how long the share is visible 
+•  Post Content: what information is shared 
+•  Audience: who receives the post 
+
+We  summarize  these  dimensions  and  a  selection  of  prior 
+work representing them in Table 1. These dimensions were 
+created 
+though  a  bottom-up  consideration  of  related 
+literature;  three  members  of  the  research  team  categorized 
+and  named  identified  dimensions.  While  the  literature 
+surveyed  is  not  exhaustive,  it  represents  some  of  the  most 
+seminal and influential work on this topic in the CSCW and 
+HCI  communities.  We  believe  that  other  prior  work  and 
+future  work  on  shared  personal  informatics  data  can  be 
+categorized according to these dimensions. 
+
+Data Domain 
+Self-tracking occurs in a wide variety of domains as people 
+look to quantify various aspects of their lives. Many systems 
+have been built to examine physical activity [11,35,38,56], 
+bioinformatics  data  such  as  heart  rate  and  ECG  data 
+[15,16,40,49], 
+location  [6,27,54],  ecologically  friendly 
+activities  [22,37],  and  music  [20,50].  These  domains  are 
+tracked for a variety of reasons, including to make healthier 
+decisions  or  track  health  factors  [8,38,41,55]  or  simply  to 
+know thyself [19,32,33]. 
+
+Others  have  studied  the  use  of  commercial  applications 
+across  these  domains  as  well.  Location  sharing  has  been 
+studied in FourSquare [14,36] and Google Latitude [46], now 
+integrated into Google+. Teodoro and Naaman report on the 
+use of Twitter to share physical activity [55] while Fritz et al. 
+[21] and Rooksby et al. [48] consider other sharing networks. 
+Last.fm  has  been  studied  for  how  people  share  music 
+listening practices [20,50]. 
+
+When deciding what is appropriate to share, designers should 
+consider the norms attached to that type of data. For example, 
+biometric  data  is  perhaps  more  personal  than  someone’s 
+music listening history, and thus is more influenced by other 
+
+dimensions. Sharing hourly data about music listening might 
+be acceptable, while this might be an invasion of privacy for 
+biometric data. 
+
+Preprocessing 
+Personal  informatics  data  can  go  through  a  series  of 
+transformations  prior  to  sharing,  such  as  filtering  or 
+aggregating by time. Some systems immediately share raw 
+data as it is collected [7,15,18,20,40,46], while others share 
+aggregate daily totals [7,11,18,35,42,56]. Other times, shares 
+communicate  achievement  of  a  specific  goal  or  milestone 
+[42]. Sharing high level syntheses from the raw data has been 
+considered, such as a sentence describing a trend in activity 
+[19] or a story drawn from collected data [23]. 
+
+Preprocessing of data occurs for a variety of reasons. One is 
+to  maintain  privacy,  as  aggregation  can  hide  potentially 
+private events, such as specific purchases. Social sharing has 
+considered transforming raw data prior to sharing [18,29,30]. 
+Designers  of  other  systems  have  discussed  electing  not  to 
+disclose  potentially  sensitive  events  [37]  or  sharing  less 
+specific  information  (e.g.  a  generic  place  like  “Grocery 
+Store” or city-level information) [3,12,54]. 
+
+Preprocessing  data  can  also  prevent  inundating  recipients 
+with large amounts of data or frequent posts. Prior work on 
+physical  activity  tracking  has  recommended  that  designers 
+avoid sharing mechanisms that overwh the recipient [18,21]. 
+It is common for people to self-censor in these networks [52] 
+or post something that they later regretted [53]. 
+
+Sharing Trigger 
+Another important dimension to consider is what triggers a 
+share. Many applications stream data constantly, viewable in 
+a  profile  or  on  a  webpage.  This  streaming  data  may  be 
+collected  and  updated  in  the  background  as  long  as  the 
+application is enabled (e.g. steps [18], location [46]) or may 
+be  limited  to  during  a  specific  activity  (e.g.  while  running 
+[15,40],  while  listening  to  music  [20]).  Other  applications 
+share  when  a  self-tracker  arrives  at  a  designated  location 
+[3,5]  or  arrives  near  another  self-tracker  [34].  In  other 
+applications,  shares  are  triggered  automatically  once  a  day 
+[11,35,56]. 
+
+All  of  the  above  systems  implement  automatic  sharing  of 
+activity, but another class of features enable the self-tracker 
+to  trigger  sharing  on  their  own  [14,36,42].  Other  systems 
+enable recipients to solicit data from the sharer, giving the 
+sharer the choice to respond [11,27]. 
+
+lose 
+
+their  data  and 
+
+In  applications  that  share  automatically,  the  sharer  can 
+become  disconnected  from 
+the 
+opportunity to explain its significance. By requiring the self-
+tracker to share manually, they are required to both reflect 
+upon the data collected and decide whether the post is worth 
+making. However, when sharing is automatic, self-trackers 
+may share more and thus receive more benefits from sharing. 
+For  example,  automatic  sharing  may  be  particularly 
+important  for  creating  accountability.  To  our  knowledge, 
+researchers  have  not  systematically  studied  the  tradeoffs 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1624 
+Dimension 
+
+Definition 
+
+Points Within Dimensions 
+
+Prior Work 
+
+Data Domain 
+
+Preprocessing 
+
+Sharing Trigger 
+
+What causes the 
+data to be shared 
+
+Type of data 
+collected and 
+shared 
+
+Transformations 
+applied prior to 
+sharing 
+
+Physical activity 
+Biometrics 
+Location 
+Pictures 
+Other, including environment, food, and music 
+Raw data 
+Aggregate daily totals 
+Goal achievement 
+Summarization into trends 
+Automatic or manual naming of data 
+Always-on passively streaming 
+Streaming during a special activity or event 
+Arrival at or departure from a location 
+Once per day 
+Determined by the self-tracker 
+Request by the sharing audience 
+Transient 
+For the lifetime of the system 
+For the lifetime of the social network 
+Self-tracker can delete content 
+System-generated text 
+Numerical summaries 
+User-generated text 
+Graphs or other visualizations 
+Passive notification (noise, vibration) 
+Broader social network 
+Dedicated social network 
+Strangers involved in a study 
+Friends involved in a study 
+Family or significant others involved in a study [3,9,38] 
+Table 1. We develop a design dimension framework for sharing personal informatics data by extensively considering 
+prior work and the points explored within the space. 
+
+[2,10,11,18,19,21,35,38,40,42,48,55,56] 
+[10,15,16,40,49] 
+[3,5,6,9,12,14,17,19,23,24,27,28,29,30,34,36,45,46,54]
+[7,13,23,25] 
+[7,10,20,22,37,50,51] 
+[7,10,12,15,18,19,20,23,24,25,36,46,49,50] 
+[2,10,11,18,35,56] 
+[2,11,21,35,42,56] 
+[10,19] 
+[3,5,9,12,27,54] 
+[5,9,18,20,28,46,50] 
+[15,16,40,49] 
+[3,6,34] 
+[18,21,56] 
+[2,7,11,13,14,17,21,23,24,25,27,36,37,42,54,55,56] 
+[12,27] 
+[3,5,11,12,13,27,40,49] 
+[7,9,35,56] 
+[14,15,16,18,20,42,46,50,55] 
+[18,20,25,50,55] 
+[2,5,11,12,19,42] 
+[2,11,15,16,35,37,42,56] 
+[2,9,11,38,54,55,56] 
+[2,10,15,16,19,23,37,42,49] 
+[3,34] 
+[15,16,18,19,21,28,37,42,55] 
+[14,20,21,24,36,46,50] 
+[7,35] 
+[2,5,6,11,12,13,27,34,38,40,56] 
+
+What information 
+is shared 
+
+Who is receiving 
+the post 
+
+How long the 
+share is visible 
+
+Post Content 
+
+Persistence 
+
+Audience 
+
+between  encouraging  automatic  posts  and  self-tracker 
+initiated posts. 
+
+Persistence 
+Applications can also vary how long shared data is available. 
+CoupleVibe automatically shared messages about a remote 
+partner’s location using short vibrations. If the recipient did 
+not notice when it occurred, the old location was lost forever 
+[3].  This  approach  is  especially  applicable  for  other  time-
+dependent  systems,  where  the  relevant  data  to  share  is 
+occurring at the current moment. 
+
+Other  research  applications,  including  Chick  Clique  and 
+Fish’N’Steps, implement shares persisting for the life of the 
+system [35,56]. Posts of personal informatics data made to a 
+social network (versus a research prototype), including from 
+[36,42,55], exist for as long as the network is relevant. Both 
+groups of systems preserve a record of previous shares for 
+browsing or searching. These systems  may  also enable the 
+self-tracker to delete a prior share [55]. 
+
+People sometimes post data to social network sites to create 
+a private record of events in their lives [58]. This, combined 
+with  being  aware  of  and  finding  patterns  in  their  activity 
+[8,19],  demonstrates  the  value  of  sharing  to  a  persistent 
+social  network  even  when  another  record  does  not  exist. 
+Enabling the deletion of shares is important for impression 
+management,  and  deletion  is  a  common  strategy  for 
+managing regretful posts to social networks [53]. 
+
+Post Content 
+Application designers have explored different types of share 
+content.  Systems  have  supported  sharing  personally 
+collected  data through  numerical  summaries  [11,35],  maps 
+[36,46], and graphs [15,18,37]. These have varied in level of 
+detail,  ranging  from  a  vague  statement  that  an  activity  has 
+been  completed  to  a  detailed  post,  including,  for  example, 
+distance, route, time, and location of a run, as well as heart 
+rate and mood [38, RunKeeper]. People have also expressed 
+an  interest  in having  the  details  hosted outside of  the SAS 
+and  posting  only  a  link.  Apart  from  providing  more  detail 
+than possible in a SAS post, people rarely use these features 
+because they lead to uninteresting posts [38]. 
+
+Some  applications  encourage  users  to  annotate  the  tracked 
+data  with  information  about  its  significance,  provide  more 
+details,  or  photos  [13,23].  This  content  conveys  more 
+context, but also requires user time and effort to generate. 
+
+Prior work has not explored the importance of post content. 
+It  is  unclear  when  it  is  necessary  for  the  self-tracker  to 
+provide  self-generated  content  versus  system-generated 
+content  to  receive  feedback.  Furthermore,  what  self-
+generated content posters should add has not been studied; 
+we explore this later in this paper, considering both how self-
+trackers  currently  curate  their  posts,  as  well  as  how  the 
+audience views these posts. 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1625 
+Audience 
+Sharers  and  system  designers  must  also  decide  who  will 
+receive posts. Systems have connected sharers with a variety 
+of audiences, including pre-organized teams of random co-
+workers at a large corporation [35] to people who are friends 
+or otherwise  already  know  each other  [11,27,56]  to  family 
+and  significant  others  [3,9].  In  each  of  these  systems  and 
+evaluations, all users were also participating in the activity. 
+Thus,  they  saw  each  other  as  peers  with  similar  goals  and 
+shared experiences [42]. 
+
+Other  systems  and  studies  explored  posting  to  a  broader 
+social  network,  such  as  Facebook  [42]  and  Twitter  [55]. 
+GoalPost participants could share physical activity goals and 
+journals  to  Facebook,  but  many  worried  about  posting 
+to  others. 
+that  would  seem 
+accomplishments 
+Participants were also underwhelmed and discouraged when 
+their  posts  received  few  responses  [42].  Teodoro  and 
+Naaman found people posted to Twitter to feel accountable 
+to  their  audience  and  did  not  express  concern  about  their 
+audience’s opinion on their posts [55]. 
+
+trivial 
+
+One  way  of  negotiating  post  audience  is  to  use  a  popular 
+social network site to distribute the posts, but to restrict its 
+distribution to a subset of the network. Prior work has limited 
+the audience on these social network sites by building apps 
+on the platform [37] or restricting post visibility to a list of 
+supportive  friends  identified  by  the  user  [42].  Groups  also 
+self-organize  on  these  networks,  such  as  by  creating 
+Facebook groups with shared step goals or utilizing the same 
+Twitter hashtag. 
+
+Post  audience  in  prior  work  has  varied  from  other  study 
+participants (both friends and strangers) to social networks 
+(both  specific  to  the  data  being  tracked  and  broad).  The 
+norms  of  each  of  these  audiences  vary.  In  self-contained 
+studies where the audience is a part of the study, the audience 
+can relate with the sharer through their joint experience [44]. 
+
+Despite hopes for using social network sites to share personal 
+informatics data [43,55], there remain many challenges and 
+best practices are not yet well understood [42]. Some social 
+networks  include  features  to  help  both  sharers  and  their 
+audience  navigate  sharing  challenges.  For  example, 
+Facebook  and  some  Twitter  clients  enable  hiding  posts 
+originating  from  a  certain  application  or  with  a  certain 
+hashtag. 
+
+Individual  preferences  and  comfort  with  different  sharing 
+audiences are heterogeneous. For example, some people are 
+comfortable sharing their fine-grained physical activity with 
+their entire social network, while others were only willing to 
+share with close friends, or no one at all [18]. In the GoalPost 
+study,  some  participants  configured  a  “support  group”  of 
+Facebook friends who could view their posts. Some included 
+no one in their support group – making their posts a private 
+record  for  themselves  –  and  others  shared  with  supportive 
+friends, partners, or teammates; many other participants just 
+chose to share with their entire Facebook network [42]. 
+
+APPLYING THE DESIGN FRAMEWORK DIMENSIONS 
+To demonstrate the value of using these sharing dimensions 
+as  an  analytical  framework,  we  apply  the  dimensions  to  a 
+case  study  of  physical  activity  shares  from  the  RunKeeper 
+application  posted  on  Twitter.  RunKeeper  is  a  commercial 
+smartphone physical activity tracker with 25 million users, 
+with runners logging over 2 million miles per day through 
+the application at the time of this publication. 
+
+RunKeeper automatically records distance, time, and route, 
+and  enables  posting  to  Twitter  either  automatically  or 
+manually  after  each  exercise  session.  The  user  can  add 
+personalized  text  or  a  picture  to  each  tweet.  The  app  also 
+enables sharing of runs, walks, or bike rides in real time. 
+
+This  analysis  focuses  on  unpacking  the  dimension  of  Post 
+Content to answer the question: How does the content of a 
+RunKeeper  post  to  Twitter  influence  follower  impressions 
+and responses? The results of our analysis are generalized to 
+the other sharing dimensions of our design framework in the 
+discussion section below. 
+
+(Twitter)  constrain 
+
+The  combination  of  application  (RunKeeper)  and  social 
+awareness  stream 
+remaining 
+dimensions: 
+•  Data Domain: physical activity, specifically RunKeeper 
+•  Preprocessing:  minimal,  configurable 
+text  around 
+
+the 
+
+activity, pace, distance, and cumulative time 
+
+•  Sharing Trigger: posted at the conclusion of an activity, 
+either  automatically  or  manually  triggered  by  the  user. 
+Live events are shared at the beginning of the activity with 
+a link to follow activity progress 
+
+•  Persistent: exist as long as the social network does or until 
+
+the poster deletes it 
+
+•  Audience:  followers  on  Twitter  social  network  and 
+
+anyone following the “#RunKeeper” hashtag 
+
+Focusing  on  the  content  dimension  and  fixing  the  other 
+dimensions in this way facilitated a more tractable analysis. 
+
+Framework evaluation methods 
+We  conducted  two  evaluations  of  tweets  made  through 
+RunKeeper, supported by a formative survey on sharer goals 
+and desired reactions. We first learn about the posts people 
+make  by  analyzing  recent  tweets  made  via  RunKeeper, 
+characterizing the types of posts people make as well as what 
+posts  generate  responses  (referred  to  as  the  Collected 
+Tweets, or CT study). We then evaluated audience reactions 
+to similar tweets by generating a set of tweets representing a 
+variety of commonly shared content and then conducting a 
+survey  to  elicit  audience  feedback  (referred  to  as  the 
+Generated Tweets, or GT study). 
+
+Formative survey: sharer goals and desired reactions 
+To  identify  desirable  reactions  to  sharing,  we  conducted  a 
+formative  survey  about  self-tracker’s  experiences  sharing 
+physical  activity  on  a  social  network.  32  respondents 
+recruited  from  University  mailing  lists  and  self-tracking 
+forums (26 female, 6 male; average age 35.3, median 31, min 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1626 
+21,  max  63)  described  their  best  and  worst  sharing 
+experiences. Likes, comments, and in-person conversations 
+were  mentioned  important  characteristics  of  their  best 
+experiences sharing personal informatics data by 14, 14, and 
+2  respondents,  respectively.  Twelve  respondents  described 
+their  worst  experience  sharing  their  physical  activity;  the 
+remainder  either  stated  that  they  had  not  had  a  negative 
+experience  or  left  the  question  blank.  Eight  respondents 
+mentioned receiving no feedback (e.g. likes or comments) as 
+part of what made the experience their worst. 
+
+From  this  survey,  we  learn  that  self-trackers  positively 
+correlate comments or likes to how positive of an experience 
+they  had  making  the post.  R39  mentions  how  feedback on 
+their  physical  activity  made 
+them  feel:  “likes  and 
+encouraging comments make me feel good about what I did.” 
+R19  strongly  stated  his  feelings  when  his  posts  did  not 
+receive feedback: “If a tweet falls in a timeline and nobody's 
+there to hear it... No feedback is the worst feedback!” These 
+results,  and  their  consistency  with  prior  work  [42,43], 
+encouraged us to use SAS feedback mechanisms (e.g., likes 
+or  favorites,  comments  or  replies)  as  measures  for  how 
+positively a sharer evaluates the success of their posts. 
+
+Collected Tweets (CT) study 
+We  began  our  CT  study  analysis  by  randomly  sampling 
+5,000 tweets from all public tweets posted with the hashtag 
+“#RunKeeper” between late-December 2013 and mid-April 
+2014.  Approximately  652,000  public  tweets  were  posted 
+with  this  hashtag  during  this  span,  so  our  initial  sample 
+represents 0.77% of all tweets posted in this span with the 
+hashtag “#RunKeeper”. 
+
+We coded each tweet for 10 features, described in Table 2. 
+These features were selected to characterize the variability in 
+the post content, highlighting common trends when posting 
+to Twitter from RunKeeper. We additionally coded for the 
+number of replies, favorites, and retweets.  
+
+Two researchers coded each tweet. When the assigned codes 
+differed, a third researcher coded the tweet and the dispute 
+was resolved by majority vote. 4,256 of the 5,000 tweets had 
+agreement  across  all  codes  after  two  coders.  19  of  the 
+remaining  744  tweets  still  had  disagreement  after  three 
+coders (each of these disagreements occurred as a result of 
+the  dimension  having  more  than  two  levels),  and  were 
+resolved through group discussion by five coders. 
+
+Eight  people  coded  unequal  portions  of  the  tweets.  To 
+measure the agreement among the coders, each person coded 
+a  set  of  100  tweets  presented  in  a  random  order.  We  used 
+Fleiss’ Kappa to assess inter-coder reliability among our 10 
+subjective, nominal codes. We received high agreement for 
+“live  event”,  “not  an  activity  share”,  “activity  type”, 
+“broken”,  and  “zero  minutes  ran”  (1.00,  1.00,  0.97,  0.96, 
+0.87) and moderate agreement for “post type”, “non-English 
+tweet content”, “negative emotion”, and “positive emotion” 
+(0.79,  0.76,  0.64,  0.56).  Mentions  of  another  user  did  not 
+occur in the set sampled for inter-coder reliability. 
+
+Tweet Feature 
+
+1.  Tweet content type 
+
+Coding 
+Any combination of: default 
+text, user-generated text, 
+user-generated picture 
+Walk, run, bike, other  
+
+2.  Activity type 
+3.  Tweet contains a positive emotion 
+4.  Tweet contains a negative emotion 
+5.  Tweet link still exists 
+6.  Tweet contains non-english text 
+7.  Activity lasts for 0 minutes, 0 seconds 
+8.  Tweet @mentions another user 
+9.  Tweet is not an activity share 
+10.  Tweet is a live event 
+Table 2. Coding scheme for tweet features in the CT study. 
+
+Yes or No 
+
+We excluded a portion of these tweets from analysis. Tweets 
+were  captured  in  real-time,  so  if  the  tweeter  changed  their 
+profile settings to make their tweets private or deleted their 
+account or the specific tweets, the tweet became no longer 
+publically accessible. We removed 189 tweets not publically 
+accessible as of mid-May 2014. We additionally removed 13 
+tweets where the tweeter had no followers, as these tweets 
+were unlikely to receive responses. Finally, we removed 27 
+tweets  not  posted  by  the  RunKeeper  application  (such  as 
+recommendations to friends to install RunKeeper or links to 
+news articles mentioning RunKeeper). These tweets differed 
+content and goals from posts made using the RunKeeper app. 
+
+Removing all tweets with these characteristics reduced our 
+sample to 4,771 tweets, and our remaining analysis considers 
+only these tweets. 
+
+Statistical methods in the CT study 
+We used regression analyses to characterize the correlations 
+between different tweet attributes and responses. We used a 
+Poisson model for the number favorites and retweets because 
+each  favorite  or  retweet  came  from  one  unique  user.  For 
+replies, however, we used a negative binomial model for if a 
+tweet received replies or not:  many tweets received a high 
+number of replies but involved only a small number of users 
+or  quickly  went  off  topic,  and  so  additional  replies  rarely 
+offered further support. In all models, we used log(followers) 
+as  an  offset  (exposure)  variable,  because  one’s  follower 
+count limited their potential for replies. 
+
+To differentiate between excess zeros caused by attributes of 
+the user’s account and zeros caused by attributes of the tweet, 
+we used zero inflated model in all three analyses, due to the 
+fact that 4,362 of the 4,771 tweets (91.4%) did not receive 
+any response from Twitter users. We used the presence of the 
+default  image  and  the  log  of  the  user’s  tweet  frequency  to 
+predict the excess zeros. 
+
+For  the regression  analysis, we  removed  an  additional  432 
+tweets  containing  non-English  text  because  we  were  not 
+confident in our ability to code emotion in these tweets. A 
+robustness check – including these tweets and repeating our 
+analysis – does not alter the results. 
+
+Descriptive findings of the CT study 
+From  our  analysis  of  these  tweets,  a  few  common  trends 
+emerged. Most (74.0%) of the tweets included only system-
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1627 
+Figure 1. Tweets generated for the GT study varied on several dimensions, allowing us to separately evaluate the role 
+of each of these features. 
+
+generated content. Of the tweets that included user-generated 
+text, 22.0% contained positive or negative emotion. We also 
+observed  tweets  containing  descriptions  of  the  weather, 
+asking for advice or support, and additional information such 
+as heart rate or run intervals. 299 runners added pictures in 
+their  tweets,  which  were  typically  landscapes,  pictures  of 
+their shoes, or selfies. 
+
+Prior work has studied the sharer perspective for generating 
+such posts [11,38,42,56]. Because sharers in prior work and 
+in our survey of goals and desired responses emphasize the 
+importance of audience responses for feeling that they have 
+achieved their posting goals, we focus on audience reactions 
+and  opinions.  We  analyzed  these  tweets  for  audience 
+response, including replies, favorites, and retweets. 
+
+Analysis  of  tweets  in  this  study,  however,  only  takes  into 
+account  the  observable  responses.  It  cannot  measure 
+unobservable  actions  or  audience  members’  opinions  and 
+reactions that did not result in a favorite, reply, or retweet. 
+That  is,  from  the  CT  study  we  can  learn  what  tweets  get 
+replies, favorites, or retweets by not why or any other ways 
+in which people may have reacted. 
+
+Generated Tweets (GT) study 
+With the limitations of the CT study in mind, we conducted 
+a second study to better understand how a post about physical 
+activity  to  a  SAS  would  be  interpreted  by  potential 
+consumers or readers. We used the descriptive findings from 
+the CT study to generate parameters for a system to randomly 
+generate tweets similar to those we coded in the CT study. 
+Three tweets generated by our system appear in Figure 1. 
+
+We varied nine parameters when generating tweets. Tweets 
+could contain a milestone event (half marathon, return from 
+surgery, or a long-term goal), one of four types of requests to 
+the  audience  (asking  for  a  recommendation,  support, 
+accountability,  or  an  activity  partner),  or  details  about  the 
+sharer’s  run.  The  details  about  the  run  included  positive 
+emotion (e.g., “felt good”, “best run in a while”), negative 
+emotion 
+(e.g.,  “that  sucked”,  “knee  hurt”),  and/or 
+information  about  the  weather  (e.g.,  “weather  is  great”,  “a 
+little chilly”). The distance of the run was random between 2 
+and 15 miles, and could be either live or have already taken 
+place.  Finally,  the  post  could  include  a  photo  of  either  a 
+runner’s  shoes  or  a  landscape  depicting  the  run’s  location. 
+
+For  the  posts  that  did  not  include  a  photo,  RunKeeper’s 
+default Twitter card was displayed with statistics about pace 
+(an  8:30  per  mile  pace  regardless  of  distance)  and  calorie 
+consumption  (calculated  using  the  American  College  of 
+Sports Medicine metabolic consumption rate formula [1] for 
+a person weighing 150 pounds). 
+
+Some  parameters  affected  what  we  displayed  for  other 
+parameters.  For  example,  if  the  tweet  communicated  poor 
+weather and a picture was to be shown, the picture changed 
+to a rainy park or wet shoes. We additionally removed certain 
+combinations of parameters that did not make sense, such as 
+displaying  distance  or  calorie  information  for  a  tweet 
+announcing  the  beginning  of  a  live  run.  To  ensure  short, 
+realistic-sounding  tweets,  specific  information  was  not 
+combined with life event information or audience requests; 
+otherwise generated tweets could exceed 140 characters. We 
+sought  to preserve grammar,  with  tenses  corrected for  live 
+tweets  (e.g.,  “great  run”  for  a  previously-occurring  tweet 
+versus “excited to run” for a live tweet) and appropriate use 
+of conjunctions (e.g., “that sucked, but happy I did it” for a 
+tweet containing a positive and negative emotion). 
+
+recruited 
+
+Varying  all  of  these  parameters  resulted  in  102  possible 
+styles of tweets, plus additional variation in exact wording, 
+content ordering, and run distance. We used a factorial study 
+design  to  obtain  responses  to  these  tweets,  surveying  97 
+respondents 
+from  Twitter,  Facebook,  and 
+University  mailing  lists;  respondents  were  entered  into  a 
+raffle  for  one  $50  or  two  $25  Amazon  gift  cards.  Each 
+respondent  saw  five  tweets.  Each  tweet  contained  a 
+randomly-ordered  gender-neutral  name 
+(Alex,  Jamie, 
+Cameron,  Kendall,  and  Taylor),  a  randomly  composed 
+Twitter  username  (supplementing  the  name  with  letters  or 
+numbers), and a random profile picture (a landscape). These 
+three parameters had no statistically significant effects on our 
+responses, and we exclude them from further analysis. 
+
+The  five  tweets  that  each  respondent  saw  were  selected  to 
+overlap on four or fewer parameters to avoid the feeling that 
+respondents  were  seeing  the  same  tweets  multiple  times. 
+Finally, our survey enforced that no two tweets among the 
+five generated for an individual contained the same picture. 
+As a result, tweets containing RunKeeper Twitter cards were 
+oversampled in our analysis. 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1628 
+b) Favorites (Poisson) 
+Count Model Coefficients 
+Estimate  Std. Error  p 
+
+c) Retweets (Poisson) 
+
+Count Model Coefficients 
+Std. Error  p 
+
+Estimate 
+
+ a) Tweet received replies (Negative Binomial)  
+
+  Count Model Coefficients 
+
+0.953 
+
+Variable  Estimate  Std. Error  p 
+-8.789
+0.063
+1.147
+-0.533
+-0.116
+0.326
+-13.851
+0.070
+-0.346 
+
+(Intercept) 
+Default text
+User text 
+User picture 
+Positive 
+Negative 
+Tweet is live 
+@mentions
+0:00
+
+1.092 <0.001***  
+1.073
+0.248  <0.001***  
+0.190  
+0.407
+0.409
+0.777 
+0.604  0.590 
+0.984  
+671.103
+0.600
+0.907 
+0.629  0.582  
+
+-7.811
+0.098
+0.806
+-0.170
+-0.153
+0.496
+-0.093
+-0.403
+-1.483
+
+0.901 
+
+0.801 <0.001***  
+0.788
+0.154 <0.001 ***  
+0.208
+0.200
+0.375
+0.466
+0.289
+0.787
+
+0.413 
+0.442 
+0.187 
+0.841 
+0.163 
+0.060 
+
+  Zero-inflation model coefficients
+
+  Zero-inflation model coefficients
+
+Variable   Estimate  Std. Error  p 
+-0.011
+0.392
+13.456  877.604
+
+0.979 
+0.988 
+
+(Intercept) 
+Egg image
+log(tweet frequency) 
+
+0.440 
+
+0.114  <0.001***  
+
+Estimate  Std. Error  p 
+
+-0.351
+-2.095
+0.473
+
+0.088 
+0.828 
+
+0.205
+9.624
+0.076 <0.001***  
+
+-6.860
+-2.056
+0.283
+-0.053
+0.833
+-13.250
+0.383
+1.586
+0.440
+
+0.828 <0.001***
+0.009** 
+0.787
+0.601 
+0.543
+0.934 
+0.641
+0.200 
+0.650
+0.988 
+895.397
+0.742 
+1.163
+0.057 
+0.832
+0.709 
+1.180
+
+Zero-inflation model coefficients
+Std. Error  p 
+Estimate 
+
+1.552
+-14.428
+0.141
+
+0.581
+434.771
+
+0.008***
+0.974 
+0.135  0.294 
+
+*** p<0.001     ** p<0.01     * p< 0.05 
+Table 3. Results from regression models on a) whether a Tweet received replies, b) the number of favorites received, 
+and c) the number of retweets received. 
+
+For each tweet, we asked respondents to select from a list of 
+reasons  why  they  believed  the  poster  shared.  This  list  was 
+motivated by prior work [44,55]. Reasons included to receive 
+emotional support, to be held more accountable, and to boast 
+or show off. Respondents were asked to describe their initial 
+reaction  to  the  tweet  in  a  freeform  text  box.  They  were 
+additionally  asked  to  indicate  on  four  5-item  Likert-scales 
+whether they agreed with being happy or annoyed that their 
+friend  made  the  post  and  whether  they  found  the  post 
+interesting or boring. Finally, they were asked whether they 
+would reply to the post, and to describe how they would reply 
+or why they would not reply using an open-ended text box. 
+
+97 people responded to at least one tweet in the survey; 83 
+responded to all five they were presented (mean: 4.58, stdev: 
+1.06), resulting in 444 total responses to the tweets. Sixty-
+two respondents identified as female, thirty-four male, and 
+one did not provide a response. Respondent average age was 
+28.49 (stdev: 7.79, median: 26, min: 18, max: 63). 45 stated 
+they  ran  regularly,  and  14  of  these  respondents  regularly 
+posted their runs to social media. 18 respondents had used 
+RunKeeper to track their runs before, and 56 used Twitter. 
+
+Seven  researchers  used  affinity  diagramming  to  categorize 
+respondent  reactions  and  reply  descriptions  into  similar 
+themes. Two researchers further refined these initial groups, 
+and the qualitative results from this refinement are presented 
+in the results section. 
+
+the  correlations  between  different 
+
+Statistical methods in the GT study 
+We  used  similar  regression  analyses  to  the  CT  study  to 
+characterize 
+tweet 
+attributes and audience reactions. We used Ordinal Logistic 
+Regression on responses to the 5-item Likert questions about 
+whether respondents found the tweet interesting or boring, or 
+whether they would be happy or annoyed if a friend made the 
+tweet.  We  perform  multilevel  modeling  by  respondent  to 
+control for intrinsic respondent opinions. 
+
+Limitations 
+Even with two studies, there remain some limitations in our 
+analysis.  Because  we  only  analyzed  tweets  that  were 
+publically  available  in  mid-May  2014  in  the  CT  study, we 
+did not analyze any that a sharer removed after receiving no 
+response or a negative response, an impression management 
+strategy identified in prior work [53]. We additionally did not 
+collect any replies, favorites, or retweets occurring after that 
+point, though we anticipate that there were very few, as all 
+tweets  had  been  shared  for  at  least  30  days  before  we 
+collected the reply data. Since followers can change at any 
+time, the audience count we use may differ somewhat from 
+their count at the time they shared. We also noticed some of 
+the tweeters had been followed, favorited, and/or retweeted 
+by bots, and these are included in our analysis even though 
+they  may  not  result  in  the  same  feelings  of  support  as 
+reactions from real people. 
+
+The  tweets  in  the  GT  study  were  all  hypothetical,  so 
+respondents’  actual  behavior  may  differ  from  what  they 
+described  in  the  survey  and  respondents  may  or  may  not 
+actually respond to the tweets posed if they were presented 
+in  context.  Given  the  frank  nature  of  the  responses,  we 
+believe respondent reactions to tweets seen in the study were 
+authentic.  As  discussed  later,  many  respondents  indicated 
+their  response  would  depend  on  their  relationship  with  the 
+tweeter.  Neither  our  study  of  actual  tweets  nor  our  survey 
+measured the influence of these factors. 
+
+RESULTS 
+We triangulate the results from CT and GT studies to create 
+a  more  complete  understanding  of  how  people  post  and 
+respond to posts from RunKeeper to Twitter. Results from 
+the regressions analyses of the CT and GT study data appear 
+in tables 3 and 4, respectively. 
+
+System-generated content 
+Analysis of tweets from our CT study shows that tweets with 
+user-generated text receive more replies (Z = 4.63, p < 0.001, 
+95% CI: 1.94-5.12 more replies) and how many favorites a 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1629 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Bored 
+
+Annoyed 
+F2,356 = 0.53 
+F1,360 = 0.19 
+F1,356 = 0.84 
+F1,372 = 0.58 
+F1,374 = 0.73 
+F2,353 = 2.13 
+
+Interesting 
+F2,358 = 4.58* 
+User picture
+F1,363 = 0.17 
+Positive
+F1,358 = 3.17 
+Negative
+F1,377 = 0.99 
+Tweet is live
+F1,378 = 0.04 
+Distance
+F2,355 = 1.54 
+Weather
+Specific F1,363 = 15.84***F1,365 = 10.35**  F1,365 = 15.09***F1,366 = 6.47* 
+F1,365 = 4.67* 
+F1,348 = 6.89**
+
+Happy 
+F2, 358 = 8.50*** F2,358 = 2.58 
+F1,362 = 1.68 
+F1,362 = 1.74 
+F1,357 = 0.04 
+F1,358 = 0.55 
+F1,375 = 2.79 
+F1, 376 = 0.11 
+F1,377 = 1.43 
+F1,378 = 0.77 
+F2,354 = 1.30 
+F2,355 = 0.11 
+
+F1,364 = 7.05**  F1,364 = 2.06 
+F1,348 = 8.08**  F1,348 = 0.003 
+
+F1,362 = 5.58* 
+Contains ask
+Number seen  F1,347 = 3.83 
+
+*** p<0.001     ** p<0.01     * p< 0.05 
+Table  4.  Results  from  regression  model  on  how  tweet 
+characteristics impacted respondent opinions.
+
+tweet receives (Z = 5.25, p < 0.001, 95% CI: 0.51-1.11 more 
+favorites),  while  tweets  containing  any  system-generated 
+text  receive  fewer  retweets  (Z  =  -2.61,  p  <  0.01,  95%  CI: 
+0.51-3.60  fewer  retweets)  than  those  that  do  not.  This 
+suggests that adding content to a tweet, even when combined 
+with system-generated content from an application, is more 
+likely to generate responses. 
+
+The  factorial  design  in  the  GT  study  resulted  in  only  13 
+respondents  viewing  a  tweet  containing  only  system-
+generated  content.  Three  of  these  respondents  said  such 
+tweets felt automatic: “there’s no comment attached to this - 
+just an automatic posting” (GT80). GT49 reacted negatively 
+to the tweet as a result, saying, “this looks more canned, like 
+maybe the app shot it off without Cameron knowing about 
+it… very impersonal.” 
+
+Even when a tweet contained user-generated content, some 
+GT  study  respondents  reacted  negatively  to  the  system-
+generated content. GT2 saw a tweet containing a request for 
+a running buddy, and reacted, “I wouldn't take the ‘run with 
+me  next  time’  thing  seriously.  It  feels  impersonal  mostly 
+because it's not some kind of direct message to me, but also 
+because it's part of a canned tweet. Even if they really mean 
+it, I don’t believe they do.”  
+
+We conducted a secondary analysis on the 27 tweets in the 
+CT study made with the RunKeeper hashtag not containing 
+any system-generated text, which were previously excluded. 
+These  tweets were  more  likely  to  receive responses (χ2 (1, 
+N  =  4798)  =  28.14,  p  <  0.001),  favorites  (χ2  (1, 
+N  =  4798)  =  15.63,  p  <  0.001),  and  retweets  (χ2  (1, 
+N  = 4798)  = 65.75,  p  <  0.001)  than  tweets  posted  through 
+RunKeeper.  However,  this  is  dependent  on  a  small 
+proportion of tweets without any system-generated text. 
+
+Details about activity are well-received 
+Many  tweeters  in  the  CT  study  included  additional  details 
+about  the  weather  in  their  tweets,  such  as  CT4756:  “Just 
+completed a 10.26 mi run - A cold wind and lovely sunshine” 
+and CT2912: “Just completed a 7.49 km run - 6°C, WC: 2°C, 
+20km/h WSW, 81%”. Others supplemented their posts with 
+additional  statistics  about  their  run,  such  as  biometrics  or 
+how they were training in CT1843: “Just completed a 2.24 
+mi run - 6x400, pace 09:34 /mile, max HR 169”. 
+
+Figure 2. Respondents  agreed  that both posts  lacking 
+pictures  and  posts  with  pictures  of  shoes  were  more 
+boring than pictures of landscapes. 
+RunKeeper includes distance as part of the system-generated 
+content in the tweets. Twitter users occasionally responded 
+to  this  distance,  such  as  in  CT2250,  which  received  the 
+response “only 2.71? ... And you were giving me grief for 4 
+;p”. Twelve GT study respondents explicitly reacted to the 
+distance  of  a  run.  Most  were  impressed  by  the  tweeter, 
+including  GT67:  “Holy  shit  he  ran  9  miles?”  Other 
+respondents  acknowledged  the  significance  of  the  event  in 
+their response, such as GT23 who wrote “4 miles for a first 
+run sounds impressive.”  
+
+The content of the tweet influenced GT study respondents’ 
+opinions of the tweet. When a post included a specific reason 
+for  the  run,  respondents  found  the  post  less  annoying 
+(F1,363  =  15.84,  p  <  0.001),  less  boring  (F1,365  =  10.35, 
+p < 0.01), and more interesting (F1,366 = 6.47, p < 0.05), and 
+were happier to see it (F1,365 = 15.09, p < 0.001). Consistent 
+with  suggestions  from  prior  work  [42,44],  when  a  post 
+contains  a  request  of  the  audience,  respondents  found  the 
+post  less  annoying  (F1,362  =  5.57,  p  <  0.05),  less  boring 
+(F1,364 = 7.05, p < 0.01), and more interesting (F1,365 = 4.67, 
+p < 0.05). 
+
+Pictures in posts are seen as valuable 
+In  the  CT  study,  we  did  not  find  a  significant  effect  of 
+pictures on whether a tweet receives replies (Z = −1.31, n.s.) 
+or how many favorites (Z = −0.82, n.s.) or retweets (Z = -
+0.08,  n.s.)  a  post  receives.  The  GT  study  identified  a 
+significant  effect  of  picture  on  whether  a  post  was  boring 
+(F2,355  =  8.50,  p  <  0.001)  and  interesting  (F2,356  =  4.58, 
+p  <  0.05),  displayed  in  Figure  2.  While  a  picture  may  not 
+trigger more feedback, the tweet audience still values posts 
+with photos more. 
+
+The content of the picture also affected audience responses. 
+We  used  a  Wilcoxon  signed  rank  test  to  compare  the 
+impressions of the 54 audience respondents who saw both a 
+landscape  and  a  shoe  picture.  Shoe  pictures  were  more 
+boring (Z = 2.36, p < 0.01, 95% CI: 0.25-4 on a 5-item Likert 
+scale)  than  pictures  of  landscapes.  However,  there  was  no 
+difference  in  how  interesting  participants  found  these  two 
+types of pictures  (Z  = -0.49, n.s.).  Both  received primarily 
+positive  reactions  from  the  audience,  with  respondents 
+reacting  to  the  “nice  shoes”  (GT50;  sentiment  shared  by 
+GT57, 64, 76),  “liking  the  setting  that  is pictured”  (GT14; 
+shared  by  GT5,  41,  50,  56,  57,  64,  65,  74,  88),  and  even 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1630 
+ 
+“Makes  me  want  to  go  walk  the  same  location”  (GT55). 
+Others  wondered,  “Why  are  you  showing  me  a  picture  of 
+your shoes?” (GT93). 
+
+Live events do not receive feedback 
+Live  tweets  were  not  more  likely  to  receive  responses 
+(Z  =  −0.02,  n.s.)  or  influence  the  number  of  favorites 
+(Z=−0.20, n.s.) or retweets (Z = 0.33, n.s.); none of the 123 
+live tweets in the CT set received replies. Eight of the ninety-
+four GT study respondents who saw a live tweet stated they 
+would follow the link to watch their friend run live. Seven 
+others did not see value in watching someone else run, such 
+as GT96: “I have better things to do than watch someone's 
+run online”. 
+
+Positive outcomes from sharing 
+Both the CT and GT study found positive experiences that 
+could  result  from  sharing,  for  both  the  tweeter  and  the 
+audience. 
+
+Positive impressions of the tweeter 
+GT study respondents were “happy for” the tweeter (GT8, 9, 
+10,  14,  32,  79).  GT66  elaborated  more  on  this  sentiment, 
+being  “glad  that  my  friend  is  making  a  commitment  to  be 
+active.” Providing context for a run tended to support these 
+feelings:  “Good  to  see  them  back  on  their  feet”  (GT62,  a 
+sentiment  shared  by  GT24,  45)  and  “Oh  good,  they're 
+running  a  half  marathon.  I  hope  they  do  well.”  (GT74,  a 
+sentiment shared by GT80, who stated “I am grinning just 
+looking at this”). While these respondents may not reply or 
+interact  with  the  tweeter  within  the  social  network,  these 
+positive  impressions  indicate  a  potential  for  in-person 
+conversations  about  running  that  might  not  have  occurred 
+without the share. We do not evaluate impressions generated 
+from the CT set, as this would not be feasible. 
+
+Favoriting 
+Favoriting  a  tweet  requires  little  effort  from  followers  but 
+provides  an  easy  way  to  provide  emotional  support  or 
+motivate the poster without taking as much effort as a reply. 
+Six  GT  study  respondents  said  that  they  would  favorite  a 
+tweet, with GT18 noting the lower threshold: “just a favorite. 
+I don't reply to anything often.” 
+
+User-generated text in a tweet seemed to give followers more 
+to respond  to. This  could  be a  positive  sentiment:  CT4204 
+received  four  favorites  for  stating  a  run  was  “Easy  Peasy 
+Lemon  Squeezy”,  a  negative  sentiment:  one  favorite  for 
+adding “#dying #turtlesrunfaster” (CT4678), or simply what 
+the  runner  was  thinking:  one  favorite  for  “Push  it  to  the 
+limits” (CT508).  
+
+Replying 
+Twenty-seven  GT  study  respondents  indicated  they  would 
+reply to at least one of the tweets that they saw. These replies 
+fell into three general categories. Congratulating the runner 
+was a common type of support with “good job!” (GT1, 8, 10, 
+31,  42,  67,  85,  97;  replies  to  CT1221,  1661,  2311,  3570, 
+4419),  “congrats!”  (GT15,  81,  replies  to  CT2160,  3755), 
+“great  work!”  (replies  to  CT563,  1607,  4170,  4454,  4533, 
+
+Figure  3.  Respondents  indicated  that  they  were  more 
+likely to respond to posts that included information about 
+a  run,  a  request  for  a  running  partner,  a  request  for 
+support, or if they were a runner or a Twitter user. 
+4832) or simply “yay!” (GT11, reply to CT4382) or “wow!” 
+(replies to CT1128, T4423, T4907). Others encouraged the 
+runner, with “come on!” (GT1, 10), “you can do it!” (reply 
+to  CT1121)  or  “keep  at  it!”  (GT8,  85).  Finally,  GT  study 
+respondents  responded  expressing  care  for  the  runner:  “be 
+careful” (GT1, 59 in response to runners who were injured 
+or recovering for injury). 
+
+Forty-three  tweets  in  our  CT  set  received  more  than  two 
+replies.  These  posts  show  conversations  occurring  over 
+Twitter  as  a  result  of  the  post.  These  conversations  were 
+often follow-ups about how the runner was feeling, such as  
+“How’s the hammy?” (reply to CT1779) and “How are you 
+feeling  now?”  (reply  to  CT4170).  GT  study  respondents 
+similarly  replied  with  questions  for  the  tweeter,  such  as 
+“Where are you running?” (GT85). These questions serve as 
+an effective way to engage the runner and can provide useful 
+advice for other followers. 
+
+ GT study respondents said they would offer or solicit advice 
+in response to several hypothetical tweets. GT8, 35, and 71 
+offered  recommendations  on  routes,  with  GT35  saying,  “I 
+might think of my favorite running routes and suggest one to 
+them”,  and  GT7  indicated  they  might  reply  “if  I  wanted 
+advice  on  getting  a  better  time”.  The  original  tweeter  of 
+CT4423 offered advice to one of their followers who stopped 
+running: “joining the running club & #parkrun have got me 
+back into it, I’m loving it!” 
+
+Figure 3 presents how characteristics of the tweet and of the 
+respondent  vary  GT  study  respondents’  likelihood  of 
+responding.  Runners  are  slightly  more  likely  to  respond  to 
+tweets than non-runners (χ2  (1, N = 444)=2.34, p < 0.1), but 
+Twitter  users  were  no  more  likely  to  respond  than  non-
+Twitter  users  (χ2    (1,  N  =  444)=0.15,  n.s.).  Sharing  the 
+interest  or  experience  increases  a  follower’s  likelihood  of 
+reply, and responses may increase with an audience who can 
+better relate to the post content. 
+
+Responding beyond Twitter 
+Nine GT study respondents indicated that they would want 
+to run with the tweeter in the future, some in direct response 
+to  a  request  for  a  running  buddy  “Let  me  join  next  time?” 
+(GT45, similar replies by GT1, 35, 47, 77), or following up 
+from an injury recovery “Oh cool, he’s back from surgery, 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1631 
+let’s  go  on  a  run  together”  (GT24).  CT3969  received  a 
+response asking to run together: “nice run, up for 15 [miles] 
+this Sunday?” 
+
+wondered  why  this  content  appeared  on  Twitter:  “I  scoff 
+because  why  do  they  need  to  tweet  this.”  GT74  and  GT93 
+wondered, “why would I want to watch you run?” 
+
+Finally, posts sometimes motivated their audience to go run 
+themselves, such as GT88, “I wanna go for a run”. Others 
+posted concerns about their own running habits. A reply to 
+CT763  expressed  concerns  about  starting  to  run:  “wish  I 
+could get myself motivated and off my ass to start running 
+mate. Can’t get started.” The original tweeter then offered 
+encouragement back to the replier. 
+
+Connecting with the tweeter 
+When tweets made an audience member think of their own 
+experiences, the audience member felt more connected with 
+the  tweeter  and  was  more  inclined  to  respond.  GT80 
+reminisced about her own running experiences: “I remember 
+when I was in that place, posting short runs with pictures and 
+training for my first half!”, and indicated she would want to 
+reply  with  saying  “I  empathize  with  this  situation  and  I'd 
+want to encourage this person to keep working toward their 
+goal.” 
+
+Other  GT  study  respondents  discussed  relating  to  or 
+commiserating with the tweeter. GT19 commented “Seeing 
+as  I  have  knee  pain  from  time  to  time,  I'd  be  pretty 
+sympathetic to this individual.” GT92 similarly related to the 
+runner, commenting, “I would commiserate, as I also rarely 
+look forward to runs.” 
+
+The  CT  set  also  contained  several  examples  of  shared 
+experiences  between  tweeters  and  an  audience  member. 
+People encouraged their teammates and people who they ran 
+with, such as CT4705 “motor on teammate!!!” and CT469 
+“great,  we  have  to  keep  the  momentum.”  Some  tweeters 
+added text to indicate who they were with, e.g., “With Dave 
+& Matty” (CT123) and “Walking with Vinny” (CT3922) or 
+@mentioning  the  others,  including:  “Thanks  @[removed] 
+for getting me out of bed!!” (CT4074). 
+
+Undesired consequences to sharing 
+A large portion of GT study respondents reacted negatively 
+to  some  or  all  of  the  tweets  they  saw.  In  this  section,  we 
+describe  negative  repercussions  of  sharing  and  how  some 
+audience members react to seeing these posts. 
+
+Our  CT  study  analysis  is  unable  to  capture  many  of  the 
+potential  negative  reactions:  we  were  unable  to  observe 
+reactions such as unfollowing a person, hiding posts from the 
+RunKeeper app, feeling bored, or forming a more negative 
+impression about the sharer. Thus, to characterize potential 
+negative reactions, we use data from the GT study. 
+
+Tweets are ignored by the audience 
+Thirteen  out  of  the  ninety-seven  GT  study  respondents 
+indicated they would ignore at least one the tweets, with eight 
+others reacting to a tweet with “meh.” Seventy-three of the 
+respondents agreed or strongly agreed with the statement “I 
+found  this  post  boring”  for  at  least  one  tweet,  suggesting 
+survey  respondents  did  not  care  for  this  content.  GT52 
+
+Fifty-five  respondents  agreed  or  strongly  agreed  with  the 
+statement “I would be annoyed if a friend shared this” to at 
+least  one  tweet.  In  the  free  response  section,  sixteen 
+respondents described being annoyed by at least one tweet, 
+with  eleven  reacting  “ugh”. GT16  reacted “annoyed, don’t 
+care” and “I don’t want to encourage posts like this.” GT70 
+commented, “Really, bro, no one cares.” Four respondents 
+said they would unfollow the poster or try to hide the post. 
+
+This sentiment did not come through in our CT study, likely 
+because  Twitter  followers  did  not  want  to  post  negative 
+replies publically. GT62 stated, “I dislike this post and would 
+want  to  keep  that  negativity  off  their  account.”  GT2  felt 
+similarly: “I wouldn't reply because if I did it'd be something 
+really rude so it's better to just keep it to myself. Or maybe 
+it's better to unfollow the person.” 
+
+An audience member ignoring or being annoyed by a tweet 
+often  has  the  same  outcome  to  the  tweeter:  they  do  not 
+respond.  Given  that  people  generally  correlate  responses 
+with positive sharing experiences, a large audience ignoring 
+these tweets is counter to people’s goals for posting. A lack 
+of  response  also  makes  it  difficult  for  the  tweeter  to  learn 
+how to regulate their posting habits. Learning that followers 
+are annoyed by certain posts may lead to changes in tweeting 
+behavior, but this sentiment is rarely publically expressed. 
+
+In  our  CT  study  analysis,  we  observed  that  some  tweeters 
+created  separate  accounts  for  posting  only  their  physical 
+activity.  This  can  complicates  the  process  of  following 
+people on Twitter – how do you learn a Twitter user has a 
+separate physical  activity  feed  – but  it  also  gives  audience 
+members more control because they can choose whether to 
+follow such accounts and receive physical activity tweets. 
+
+Negative impressions of the tweeter 
+Some  GT  study  respondents  also  expressed  negative 
+opinions  of  the  tweeter  because  of  the  tweet.  Some 
+respondents  believed  that  the  tweeter  was  posting  to  brag 
+about  their  success.  GT48  reacted,  “someone  likely  wants 
+attention,” with GT49 stating, “it looks like he’s just showing 
+off.” GT35 and GT74 thought that the tweeter was “fishing 
+for compliments”. 
+
+DISCUSSION 
+In our analysis of the CT and GT studies, we identified both 
+successes in sharing and problems with many shares. In this 
+section, we describe some potential causes for the disparity, 
+offer  design  recommendations,  and  relate  our  findings  to 
+social sharing in personal informatics more broadly. 
+
+System vs. Sharer-generated content 
+GT  study  respondents  reacted  negatively  to  tweets  they 
+believed RunKeeper had automatically generated. GT66 was 
+“annoyed that they didn’t customize their automatic tweets”, 
+with GT22 and GT44 suggesting that the tweet “looks like an 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1632 
+advertisement”.  Respondents also  appeared to fatigue  after 
+seeing multiple tweets, reporting later tweets seen as more 
+boring  and  less  interesting.  We  believe  respondents  got 
+bored  seeing  the  same  or  similar  content  repeatedly,  a 
+byproduct  of  the  prevalence  of  automatically  generated 
+content. 
+
+GT  study  respondents  desired  more  information  about  the 
+importance of the run when deciding whether to reply, and 
+often  responded  positively  when  this  information  was 
+provided. GT45 decided to root for a runner “because it’s her 
+first run back from surgery.” GT46 contemplated replying, 
+stating  “If  they  were  working  towards  a  goal,  I’d  be  more 
+likely  to  reply.”  GT92  reports  both  extremes  in  their 
+response: “I don’t give a shit about watching people’s live 
+runs unless they’re in an important race or they’re doing an 
+event in which they need support.” 
+
+We note that posts were better received in the GT study when 
+they  contained  a  request  of  the  audience  or  the  context  of 
+why  a  run  was  significant.  While  not  every  run  can  be  a 
+personal best or major milestone, we believe that describing 
+the importance of a run will lead to more positive responses 
+and support. 
+
+these 
+
+Design  recommendation:  Together, 
+findings 
+demonstrate the importance of supplementing the details of 
+a  run  with  sharer-generated  content  or  possibly  carefully 
+crafted automatically-generated context (such as reporting a 
+personal  best).  A  system  can  encourage  this  by  prompting 
+the  runner  to  take  a  picture  or  answer  a  question  prior  to 
+sharing,  and  including  this  content  in  the  post.  Facebook 
+recently took steps toward this. They noticed that people are 
+more likely to engage with posts shared explicitly rather than 
+automatically  from  within  apps,  and  encourage  application 
+developers to share more personal content [57]. 
+
+GT study respondents wanted to know the context of a run to 
+determine  whether  to  reply.  GT43  reacted,  “It  needs  more 
+context.  Was  this  related  to  an  event?  Or  was  it  a  major 
+training run? There is nothing really personal about it. It's 
+just a robot post.” A sharing application could easily prompt 
+the user with, “why did you run today?” as part of the sharing 
+process. 
+
+Audience and post frequency 
+Twitter is broad social network where followers range from 
+close friends to total strangers. We expect that it is difficult 
+to  frame  a  post  about  physical  activity  to  match  the 
+expectations of everyone in this audience. 
+
+In  the  GT  study,  thirty-three  respondents  said  that  their 
+willingness to reply depended on how well they knew them. 
+This ranged  from  “If  I  know  the  person or  not” (GT14)  to 
+“Only  if  it’s  a  close  friend”  (GT23).  On  a  whole,  our 
+audience seemed more willing to respond to posts made by 
+close friends or family members. 
+
+Five  GT  study  respondents  emphasized  the  importance  of 
+“how  often  they  post  content  like  this”  (GT62,  sentiment 
+
+shared by GT10). After seeing multiple posts, GT97 notes, 
+“the  sense  of  novelty  is  wearing  off,”  and  was  left  less 
+enthusiastic  about  posting  support.  Audience  fatigue  may 
+play  a  role,  especially  if  this  genre  of  posts  appears 
+frequently  in  a  Twitter feed. A highly  motivated  audience, 
+such  as  one  of  close  friend  or  one  that  can  relate  to  the 
+poster’s challenges, might suffer from less poster fatigue. 
+
+Design  recommendation:  Despite  –  or  because  of  –  the 
+ability to reach a wide audience, Twitter may not be the best 
+venue  for  regularly  sharing  everyday  physical  activity  or 
+other  personal  informatics  information.  One  potentially 
+improved system would enable sharing physical activity with 
+a  smaller  audience  of  close  friends  or  family  members 
+through  lists  within  a  broader  social  network,  though 
+previous  work  has  found  that  many  users  do  not  want  to 
+spend  the  effort  to  configure  such  lists  [42].  Another 
+approach  would  be  to  share  only  to  people  interested  in 
+running, either through a dedicated social network, lists of a 
+subset of friends or followers, or dedicated accounts. 
+
+The  responses  to  our  GT  study  indicate  that  people  are 
+willing to offer support to a close friend even if they are not 
+self-trackers 
+to  close, 
+themselves.  Routing  messages 
+supportive  friends  and  to  people  who  have  an  interest  in 
+running or self-tracking may result in a better experience for 
+sharers and their SAS audiences. 
+
+Twitter  may  still  be  an  appropriate  venue  for  sharing 
+significant  achievements,  such  as  returning  from  injury  or 
+running  a  race.  An  application  could  recommend  sharing 
+these activities to Twitter while dissuading others, changing 
+the interaction from automatically generating tweets to one 
+that recommends tweeting if the content supports this. 
+
+Mismatch between sharer goal and audience interpretation 
+Sharers  have  a  variety  of  goals  for  posting  their  personal 
+informatics data to a social networking site, but these reasons 
+are not always apparent to the post audience. Followers are 
+often  left  wondering  “why  would  someone  post  this?” 
+(GT57)  or believing  that  there  is  “nothing  to  say”  in reply 
+(GT72, sentiment expressed by GT32, 65) and thus elect not 
+to provide any feedback. 
+
+GT90 alludes to another problem: even when a poster does 
+not desire specific replies to meet their goal, their post may 
+have harmful side effects, such as causing them to be seen as 
+a braggart, especially when the post is not clear about why 
+about the sharer’s goals. 
+
+I think it's great when people share this kind of stuff because it 
+helps  hold  them  accountable  (accountability  is  the  positive 
+byproduct).  However,  most  people  are  probably  posting  this 
+because they want to brag about their physical activity and the 
+sweet views they get while running, but that's not a bad thing 
+either if it motivates other people to hit the streets, too. 
+
+For each tweet, respondents were asked to speculate why the 
+tweet was posted from a list of reasons. Respondents marked 
+55.0% of tweets as posted “to receive emotional support” and 
+50.9% as posted “to boast/show off”, (25.3% were perceived 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1633 
+as  motivated  by  both  goals).  This  shows  two  different 
+audience interpretations, which have conflicting sentiments 
+about  the  tweeter.  Bragging  might  be  accepted  and  even 
+encouraged  in  peer  support  communities,  which  GT21 
+implies:  “I  kind  of 
+ignore  [posts]  unless  on 
+[MyFitnessPal] because it is FOR bragging about exercise 
+;)”, but less well-received on general-purpose SAS.  
+
+just 
+
+Design recommendation: Personal informatics applications 
+should  encourage  sharers  to  be  more  explicit  about  what 
+feedback  they  are  looking  for  when  they  decide  to  share. 
+Prior to sharing, sharers could be asked to answer “why are 
+you making this post?” Posting this answer along with the 
+original post could give the post audience enough context to 
+provide meaningful feedback for the sharer. 
+
+While  we  focus  our  analysis  on  audience  reactions  in  the 
+form of replies, favorites, and retweets, some goals may not 
+be  better  achieved  through  more  replies.  For  example, 
+someone  seeking  advice  may  need  just  one  or  two 
+informative  replies,  rather  than  a  variety  of  less  accurate 
+replies. Furthermore, for some goals, no specific reply may 
+be necessary. Posts made to foster an impression of oneself 
+as  an  active,  athletic  individual  might  not  need  replies  to 
+achieve  their  goal.  People  also  post  physical  activity  and 
+other  goals  to  social  networks  to  feel  more  accountable  to 
+those goals. If posting alone is sufficient for people to feel 
+more committed to their goal, they may not require feedback 
+from their audience. 
+
+Extending beyond RunKeeper and Twitter 
+We  believe  that  many  of  the  design  recommendations  we 
+developed for sharing RunKeeper data on Twitter apply for 
+other domains in which people self-track data and for other 
+SAS. For example, GT study respondents felt that that many 
+posts were made to brag or show off. We expect this occurs 
+regularly  when  sharing  personal  informatics  data,  such  as 
+when someone shares that they consumed fewer calories, lost 
+weight,  or  cut  unnecessary  spending  habits.  However,  this 
+might not be true for all domains. Some types of data, such 
+as personal finances or health results, may be seen as more 
+private,  but  in  some  cases  some  members  of  the  audience 
+may  have  a  greater  desire  to  see  regular  updates,  such  as 
+when  someone  has  had  an  ongoing  struggle  to  manage  a 
+chronic illness [44]. Future work should more fully explore 
+heterogeneity between different domains of shared data. 
+
+Regardless of the data presented, we believe automatic posts 
+from self-tracking applications are likely to receive negative 
+reactions from audience members. While perhaps some types 
+of personal data are less annoying or more interesting in a 
+SAS – something future work should assess – we anticipate 
+that adverse reactions to automatically generated posts will 
+still be common. 
+
+Audience  reactions  to  personal  informatics  posts  may 
+correlate  to  how  frequently  these  posts  appear.  Current 
+commercial  self-tracking  applications  including  Strava, 
+Last.fm,  FourSquare  and  RunKeeper,  encourage  self-
+
+trackers to post to SAS regularly. We believe changes to the 
+design  of  these  applications  to  encourage  fewer,  more 
+meaningful posts and descriptions of the post's importance or 
+what sharers hope to gain from posting, will result in better 
+sharing experiences for both sharers and their audiences. 
+
+It not always correct to design personal informatics sharing 
+features  to  maximize  post  audience.  Applications  should 
+help sharers route frequent posts to the right audience. These 
+posts should target people who will respond positively to the 
+content and can offer reactions the sharers need, be tolerant 
+or  even  desiring  of  seeing  it  more  frequently,  and  have 
+sufficient  context  to  understand  it.  For  more  significant 
+events, they might encourage posters to share more broadly 
+and  to  provide  sufficient  context  so  the  audience  will 
+understand why they are sharing. 
+
+Use of the design dimension framework 
+In this paper, we describe a framework for evaluating sharing 
+features  in  personal  informatics  studies.  Use  of  this 
+framework can help designers consider each design choice 
+they  make  when  creating  a  sharing  feature  for  a  personal 
+informatics application. 
+
+We demonstrate the value of our design framework with a 
+relatively simple and constrained sharing problem, varying 
+only a single dimension (shared content) in our experiments. 
+Thorough, empirical evaluation of a range of design options 
+can  inform  the  design  of  such  features.  This  level  of 
+evaluation  may  not  always  scale  to  investigating  to  less 
+explored,  less  constrained  design  questions.  In  those 
+situations, we believe that our framework and corresponding 
+review  of  previous  literature  can  guide  designers  to  select 
+and evaluate a smaller number of options. 
+
+to  best  share  personal 
+
+CONCLUSION 
+This  paper  presents  a  sharing  dimension  framework  that 
+characterizes  different  design  choices  for  features  that 
+support socially sharing personal informatics data. Designers 
+can  use  this  framework  determine  the  impact  of  a  single 
+factor 
+informatics  data,  and 
+researchers can use it to identify unanswered questions and 
+guide future study designs. We characterize prior work into 
+these  dimensions  and  summarize  findings  made  in  each 
+dimension. We offer design recommendations for improving 
+sharing of physical activity on Twitter through two studies 
+of RunKeeper, and extend these findings to other domains. 
+
+ACKNOWLEDGMENTS 
+Lindsey  Brockish,  Danni  Hu,  Sara  Jennings,  Chuck 
+Johnston, Rahul Mehan, An Ping, Sreedev Sidharthan, and 
+Melinda  Yang  contributed  to  this  work  through  coding 
+tweets, affinity diagramming, and thoughtful discussion. We 
+also thank Felicia Cordeiro, James Fogarty, and Nicole Lee 
+for their feedback throughout this project. We also thank the 
+University of Washington Statistical Consulting Program for 
+advice  on  the  statistical  methods.  Finally,  we  thank 
+participants  in  the  CHI  2014  Workshop  on  Beyond 
+Quantified Self for their feedback on an early version of this 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1634 
+project, and Andrew Miller for several helpful suggestions. 
+This  work  is  sponsored  in  part  by  the  Intel  Science  and 
+Technology  Center  for  Pervasive  Computing,  Microsoft, 
+Facebook,  and  the  National  Science  Foundation  under 
+awards OAI-1028195 and SCH-1344613. 
+
+REFERENCES 
+1.  ACSM  and  Pescatello,  L.S.  ACSM’s  Guidelines  for 
+Exercise  Testing  and  Prescription.  Lippincott  Williams 
+& Wilkins, 2014. 
+
+2.  Al Ayubi, S.U., Parmanto, B., Branch, R., and Ding, D. 
+A  Persuasive  and  Social  mHealth  Application  for 
+Physical  Activity:  A  Usability  and  Feasibility  Study. 
+JMIR 2, 2 (2014), e25. 
+
+3.  Bales,  E.,  Li,  K.A.,  and  Griswold,  W.  CoupleVIBE: 
+Mobile implicit communication to improve awareness for 
+(long-distance) couples. CSCW 2011, 65–74. 
+
+4.  Bales,  E.  Supporting  Implicit  Mobile  Communication: 
+Harnessing Ubiquitous Sensors for Context and Content 
+to Support Social Connection. 2013, 127–136. 
+
+5.  Barkhuus, L., Brown, B., Bell, M., Hall, M., Sherwood, 
+S.,  and  Chalmers,  M.  From  Awareness  to  Repartee: 
+Sharing Location within Social Groups. CHI 2008, 497–
+506. 
+
+6.  Barkhuus,  L.  and  Dey,  A.  Location-Based  Services  for 
+Mobile Telephony: A Study of Users’ Privacy Concerns. 
+Interact 2003, 207–212. 
+
+7.  Baumer,  E.P.,  Katz,  S.J.,  Freeman,  J.E.,  Adams,  P., 
+Gonzales, A.L., Pollak, J.P., Retelny, D., Niederdeppe, J., 
+Olson,  C.M.,  Gay,  G.K.,  and  Ave,  C.  Prescriptive 
+persuasion and open-ended social awareness: Expanding 
+the design space of mobile health. CSCW 2012, 475–484. 
+8.  Bentley, F., Tollmar, K., Stephenson, P., Levy, L., Jones, 
+B., Robertson, S., Price, E., Catrambone, R., and Wilson, 
+J.  Health  Mashups :  Presenting  statistical  patterns 
+between wellbeing data and context in natural language 
+to promote behavior change. TOCHI 20, 5 (2013), 1–27. 
+9.  Brown,  B.,  Taylor, A.S.,  Izadi,  S.,  Sellen, A.,  Kaye,  J., 
+and Eardley, R. Locating family values: A field trial of 
+the Whereabouts Clock. UbiComp 2007, 354–371. 
+
+10. Choe, E.K., Lee, N.B., Lee, B., Pratt, W., and Kientz, J.A. 
+in 
+Understanding  Quantified-Selfers’ 
+Collecting  and  Exploring  Personal  Data.  CHI  2014, 
+1143–1152. 
+
+Practices 
+
+11. Consolvo,  S.,  Everitt,  K.,  Smith,  I.,  and  Landay,  J.A. 
+Design  Requirements  for  Technologies  that  Encourage 
+Physical Activity. CHI 2006, 457–466. 
+
+12. Consolvo,  S.,  Smith,  I.E.,  Matthews,  T.,  LaMarca,  A., 
+and  Tabert,  J.  Location  Disclosure  to  Social  Relations: 
+Why, When, & What People Want to Share. CHI 2005, 
+81–90. 
+
+13. Cowan,  L.,  Griswold,  W.G.,  Barkhuus,  L.,  and  Hollan, 
+J.D. Engaging the Periphery for Visual Communication 
+on Mobile Phones. HICSS 2010, 1–10. 
+
+14. Cramer, H., Rost, M., and Holmquist, L.E. Performing a 
+Check-in : Emerging Practices, Norms and ‘Conflicts’ in 
+
+Location-Sharing  Using  Foursquare.  MobileHCI  2011, 
+57–66. 
+
+15. Curmi,  F.,  Ferrario,  M.A.,  Southern,  J.,  and  Whittle,  J. 
+HeartLink :  Open  Broadcast  of  Live  Biometric  Data  to 
+Social Networks. CHI 2013, 1749–1758. 
+
+16. Curmi, F., Ferrario, M.A., and Whittle, J. Sharing Real-
+Time  Biometric  Data  Across  Social  Networks: 
+Requirements for Research Experiments. DIS 2014, 657–
+666. 
+
+17. Elhamshary, M. and Youssef, M. CheckInside : A Fine-
+Indoor  Location-based  Social  Network. 
+
+grained 
+UbiComp 2014, 607–618. 
+
+18. Epstein, D.A., Borning, A., and Fogarty, J. Fine-Grained 
+Sharing of Sensed Physical Activity: A Value Sensitive 
+Approach. UbiComp 2013, 489–498. 
+
+19. Epstein,  D.A.,  Cordeiro,  F.,  Bales,  E.,  Fogarty,  J.,  and 
+Munson,  S.A.  Taming  Data  Complexity  in  Lifelogs: 
+Exploring Visual Cuts of Personal Informatics Data. DIS 
+2014, 667–676. 
+
+20. Fitzpatrick,  C.  Scrobbling 
+
+Impression 
+Management on Last.fm. Technomusicology: a Sandbox 
+Journal 1, 2 (2008). 
+
+Identity: 
+
+21. Fritz, T., Huang, E.M., Murphy, G.C., and Zimmermann, 
+T. Persuasive Technology in the Real World : A Study of 
+Long-Term Use of Activity Sensing Devices for Fitness. 
+CHI 2014, 487–496. 
+
+22. Froehlich,  J.,  Dillahunt,  T.,  Klasnja,  P.,  Mankoff,  J., 
+Consolvo, S., Harrison, B., and Landay, J.A. UbiGreen: 
+Investigating a Mobile Tool for Tracking and Supporting 
+Green Transportation Habits. CHI 2009, 1043–1052. 
+23. Gemmell, J., Aris, A., and Lueder, R. Telling Stories with 
+Mylifebits.  2005  IEEE  International  Conference  on 
+Multimedia and Expo, (2005), 1536–1539. 
+
+24. Guha,  S.  and  Birnholtz,  J.  Can  You  See  Me  Now? 
+Location, Visibility and the Management of Impressions 
+on foursquare. MobileHCI 2013, 183–192. 
+
+25. Hoyle,  R.,  Templeman,  R.,  Armes,  S.,  Anthony,  D., 
+Crandall,  D.,  and  Kapadia,  A.  Privacy  Behaviors  of 
+Lifeloggers  using  Wearable  Cameras.  UbiComp  2014, 
+571–582. 
+
+26. Hwang,  K.O.,  Ottenbacher,  A.J.,  Green,  A.P.,  Cannon-
+Diehl,  M.R.,  Richardson,  O.,  Bernstam,  E.  V,  and 
+Thomas, E.J. Social Support in an Internet Weight Loss 
+Community. 
+of  Medical 
+Informatics 79, 1 (2010), 5–13. 
+
+International 
+
+Journal 
+
+27. Iachello,  G.,  Smith,  I.,  Consolvo,  S.,  Abowd,  G.D., 
+Howard, J., Potter, F., Scott, J., Sohn, T., Hightower, J., 
+and 
+and 
+LaMarca,  A.  Control,  Deception, 
+Communication:  Evaluating 
+the  Deployment  of  a 
+Location-Enhanced Messaging Service. UbiComp 2005, 
+213–231. 
+
+28. Kostakos, V., Venkatanathan, J., Reynold, B., Sadeh, N., 
+Toch, E., Shaikh, S.A., and Jones, S. Who’s Your Best 
+Friend?  Targeted  Privacy  Attacks  In  Location-Sharing 
+Social Networks. UbiComp 2011, 177–186. 
+
+29. Krumm,  J.  Inference  Attacks  on  Location  Tracks. 
+
+Pervasive 2007, 127–143. 
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1635 
+30. Krumm, J. A Survey of Computational Location Privacy. 
+Personal and Ubiquitous Computing 13, 6 (2008), 391–
+399. 
+
+31. Leahy-Warren,  P.  Theories  Guiding  Nursing  Research 
+and Practice: Making Nursing Knowledge Development 
+Explicit. Springer, 2014. 
+
+32. Li, I., Dey, A., and Forlizzi, J. A Stage-Based Model of 
+Personal Informatics Systems. CHI 2010, 557–566. 
+33. Li,  I.,  Dey,  A.K.A.,  and  Forlizzi,  J.  Understanding  my 
+data,  myself:  supporting  self-reflection  with  ubicomp 
+technologies. UbiComp 2011, 405–414. 
+
+34. Li,  K.A.,  Sohn,  T.Y.,  Huang,  S.,  and  Griswold,  W.G. 
+PeopleTones:  A  System 
+the  Detection  and 
+Notification  of  Buddy  Proximity  on  Mobile  Phones. 
+MobiSys 2008, 160–173. 
+
+for 
+
+35. Lin, J.J., Mamykina, L., Lindtner, S., Delajoux, G., and 
+Strub, H.B. Fish’n'Steps: Encouraging Physical Activity 
+with  an  Interactive  Computer  Game.  UbiComp  2006, 
+261–278. 
+
+36. Lindqvist,  J.,  Cranshaw,  J.,  Wiese,  J.,  Hong,  J.,  and 
+Zimmerman, J. I’m the Mayor of My House: Examining 
+Why  People  Use  foursquare-a  Social-Driven  Location 
+Sharing Application. CHI 2011, 2409–2418. 
+
+37. Mankoff,  J.,  Fussell,  S.R.,  Dillahunt,  T.,  Glaves,  R., 
+Grevet, C., Johnson, M., Matthews, D., Matthews, H.S., 
+Mcguire,  R.,  Thompson,  R.,  Shick,  A.,  and  Setlock,  L. 
+StepGreen.org: Increasing Energy Saving Behaviors via 
+Social Networks. ICWSM 2010, 106–113. 
+
+38. Miller,  A.D.  and  Mynatt,  E.D.  StepStream:  A  School-
+based  Pervasive  Social  Fitness  System  for  Everyday 
+Adolescent Health. CHI 2014, 2823–2832. 
+
+39. Morris,  M.R.,  Teevan,  J.,  and  Panovich,  K.  What  Do 
+People Ask Their Social Networks, and Why? A Survey 
+Study  of  Status  Message  Q&A  Behavior.  CHI  2010, 
+1739–1748. 
+
+40. Mueller,  F.,  Vetere,  F.,  Gibbs,  M.R.,  Edge,  D., 
+Agamanolis,  S.,  and  Sheridan,  J.G.  Jogging  over  a 
+distance between Europe and Australia. UIST 2010, 189–
+198. 
+
+41. Munson,  S.A.,  Cavusoglu,  H.,  Frisch,  L.,  and  Fels,  S. 
+Sociotechnical  challenges  and  progress  in  using  social 
+media for health. JMIR 15, 10 (2013), e226. 
+
+42. Munson, S.A. and Consolvo, S. Exploring Goal-Setting, 
+Rewards,  Self-Monitoring,  and  Sharing  to  Motivate 
+Physical Activity. PervasiveHealth 2012, 25–32. 
+
+43. Munson,  S.A.,  Lauterbach,  D.,  Newman,  M.,  and 
+Resnick,  P.  Happier  Together:  Integrating  a  Wellness 
+Application  into  a  Social  Network  Site.  Persuasive 
+Technology, (2010), 27–39. 
+
+44. Newman, M., Lauterbach, D., Munson, S.A., Resnick, P., 
+and Morris, M.E. It’s not that I don't have problems, I'm 
+just  not  putting  them  on  Facebook:  Challenges  and 
+Opportunities  in  Using  Online  Social  Networks  for 
+Health. CSCW 2011, 341–350. 
+
+45. Page, X., Knijnenburg, B., and Kobsa, A. What a Tangled 
+Web  We  Weave:  Lying  Backfires  in  Location-Sharing 
+Social Media. CSCW 2013, 273–284. 
+
+46. Page,  X.  and  Kobsa,  A.  Navigating  the  Social  Terrain 
+
+with Google Latitude. iConference 2010. 
+
+47. Resnick, P.J., Janney, A.W., Buis, L.R., and Richardson, 
+C.R.  Adding  an  Online  Community  to  an  Internet-
+Mediated  Walking  Program.  Part  2:  Strategies  for 
+Encouraging  Community  Participation.  JMIR  12,  4 
+(2010), e72. 
+
+48. Rooksby, J., Rost, M., Morrison, A., and Chalmers, M. 
+Personal  Tracking  as  Lived  Informatics.  CHI  2014, 
+1163–1172. 
+
+49. Schnädelbach, H., Egglestone, S.R., Reeves, S., Benford, 
+S.,  Walker,  B.,  and  Wright,  M.  Performing  thrill: 
+designing telemetry systems and spectator interfaces for 
+amusement rides. CHI 2008, 1167–1176. 
+
+50. Silfverberg, S., Liikkanen, L.A., Lampinen, A., and Hall, 
+S. “I’ll press Play, but I won't listen”: Profile Work in a 
+Music-focused  Social  Network  Service.  CSCW  2011, 
+207–216. 
+
+51. Skeels,  M.M.,  Unruh,  K.T.,  Powell,  C.,  and  Pratt,  W. 
+Catalyzing  Social  Support  for  Breast  Cancer  Patients. 
+CHI 2010, 173–182. 
+
+52. Sleeper,  M.,  Balebako,  R.,  Das,  S.,  Mcconahy,  A.L., 
+Wiese,  J.,  and  Cranor,  L.F.  The  post  that  wasn’t: 
+exploring  self-censorship  on  facebook.  CSCW  2013, 
+793–802. 
+
+53. Sleeper, M., Cranshaw, J., Kelley, P.G., Ur, B., Acquisti, 
+A.,  Cranor,  L.F.,  and  Sadeh,  N.  “I  read  my  Twitter  the 
+next  morning  and  was  astonished”:  A  Conversational 
+Perspective on Twitter Regrets. CHI 2013, 3277–3286. 
+54. Tang,  K.P.,  Lin,  J.,  Hong,  J.I.,  Siewiorek,  D.P.,  and 
+Sadeh,  N.  Rethinking  Location  Sharing:  Exploring  the 
+Implications  of  Social-Driven  vs.  Purpose-Driven 
+Location Sharing. UbiComp 2010, 85–94. 
+
+55. Teodoro,  R.  and  Naaman,  M.  Fitter  with  Twitter : 
+Understanding  Personal  Health  and  Fitness  Activity  in 
+Social Media. ICWSM 2013, 611–620. 
+
+56. Toscos,  T.,  Faber,  A.,  Connelly,  K.,  and  Upoma,  A.M. 
+Encouraging Physical Activity in Teens: Can Technology 
+Help Reduce Barriers to Physical Activity in Adolescent 
+Girls? PervasiveHealth 2008, 218–221. 
+
+57. Yang,  P.  Giving  people  more  control  over  when  they 
+share  from  apps.  Facebook  Developers  Blog,  2014. 
+https://developers.facebook.com/blog/post/2014/05/27/
+more-control-with-sharing/. 
+
+58. Zhao, X., Salehi, N., Naranjit, S., Alwaalan, S., Voida, S., 
+and  Cosley,  D.  The  Many  Faces  of  Facebook : 
+Experiencing Social Media as Performance, Exhibition, 
+and Personal Archive. CHI 2013, 1–10.  
+
+Collaborative Design ApproachesCSCW 2015, March 14-18, 2015, Vancouver, BC, Canada1636 
+ 
+

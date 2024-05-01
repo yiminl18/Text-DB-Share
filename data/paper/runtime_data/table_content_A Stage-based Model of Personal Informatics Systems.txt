@@ -1,0 +1,33 @@
+Table of Contents:
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. General Terms
+5. Introduction and Motivation
+6. A Definition of Personal Informatics
+7. Related Work
+8. Method
+    8.1 Survey
+    8.2 Participants
+9. Results
+    9.1 Collected Personal Information
+    9.2 Tools Used
+    9.3 Reasons for Tracking
+10. Stages and Barriers
+    10.1 Preparation Stage
+    10.2 Collection Stage
+    10.3 Integration Stage
+    10.4 Reflection Stage
+    10.5 Action Stage
+11. Properties of the Stages
+    11.1 Barriers Cascade
+    11.2 Stages are Iterative
+    11.3 User-driven vs. System-driven
+    11.4 Facets
+12. Limitations of the Survey and Model
+13. Case Studies
+14. Discussion
+15. Conclusion
+16. Acknowledgments
+17. References

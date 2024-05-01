@@ -1,0 +1,211 @@
+NOTICE OF PROBABLE VIOLATION 
+PROPOSED CIVIL PENALTY 
+and 
+PROPOSED COMPLIANCE ORDER 
+
+VIA ELECTRONIC MAIL 
+
+March 24, 2023 
+
+Michael Jennings 
+President, Holly Energy Partners 
+Holly Energy Partners – Operating, L.P. 
+2828 N. Harwood Street 
+Suite 1300 
+Dallas Texas 75201 
+
+Dear Mr. Jennings: 
+
+CPF 4-2023-041-NOPV 
+
+From February 28 to December 7, 2022, a representative of the Pipeline and Hazardous Materials 
+Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 601 of 49 
+United  States  Code  (U.S.C.)  inspected  the  following  Holly  Energy  Partners  –  Operating,  L.P. 
+(Holly)  assets:  Osage  Pipeline  Company,  LLC  in  Oklahoma,  and  Kansas;  El  Dorado  Tanks  in 
+Kansas; and UNEV Pipeline, LLC in Nevada, and Utah.   
+
+As a result of the  inspection, it is alleged that Holly has committed a probable violation of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR).  The item inspected and 
+the probable violation is: 
+
+ 
+ 
+ 
+ 
+ 
+ 
+1. 
+
+§ 195.583 What must I do to monitor atmospheric corrosion control? 
+
+(a) You must inspect each pipeline or portion of pipeline that is 
+exposed  to  the  atmosphere  for  evidence  of  atmospheric  corrosion,  as 
+follows: 
+
+(b) During inspections you must give particular attention to pipe at 
+soil-to-air  interfaces,  under  thermal  insulation,  under  disbonded 
+coatings, at pipe supports, in splash zones, at deck penetrations, and in 
+spans over water.  
+
+Holly failed to inspect each pipeline or portion of the pipeline that is exposed to the atmosphere 
+for evidence of atmospheric corrosion at least once every 3 calendar years, but with intervals not 
+exceeding 39 months, paying particular attention to pipe under thermal insulation in accordance 
+with  §  195.583(a)  and  (b)  and  its  procedures:  EP  21-7-1  Atmospheric  Corrosion  Monitoring, 
+Inspection, and Mitigation Procedure, dated  06/01/2021.  Specifically, Holly  failed to  conduct 
+adequate atmospheric corrosion control inspections in 2017 and 2020 because it failed to install 
+access plug flanges (APFs) for corrosion monitoring locations and failed to remove the thermal 
+insulation to conduct its inspections. 
+
+Holly’s  atmospheric  corrosion  control  procedure  requires  installation  of  inspection  access  plug 
+flanges (APFs) for corrosion monitoring locations.  The APFs should be 2.5 inches in diameter 
+with silicone rubber plugs to allow for inspection of the pipe within the thermal insulation.    During 
+the field inspection for the Osage Pipeline, PHMSA observed a receiver in El Dorado, Kansas that 
+was enclosed in thermal insulation with jacketing installed from the mainline receiver isolation 
+valve to the trap door.  PHMSA could not identify any APFs allowing for inspection of the pipe 
+or  any  corrosion  monitoring  locations.    Without  any  APFs,  the  pipe  cannot  be  inspected  for 
+corrosion due to the thermal insulation. 
+
+As indicated in the atmospheric corrosion inspection records for 2017 and 2020, Holly failed to 
+remove the thermal insulation to inspect the pipe, as required by § 195.583(b).  Therefore, the pipe 
+under  the  thermal  insulation  was  not  inspected  in  2017  and  2020,  and  the  inspection  interval 
+exceeded the 39-month requirement. 
+
+This is a repeat of a violation in CPF 4-2018-5005, Item #7. 
+
+Therefore, Holly failed to inspect each pipeline or portion of the pipeline that is exposed to the 
+atmosphere for evidence of atmospheric corrosion at least once every 3 calendar years, but with 
+
+If the pipeline is located:Then the frequency of inspection is:OnshoreAt least once every 3 calendar years, but with intervals not exceeding 39 months.OffshoreAt least once each calendar year, but with intervals not exceeding 15 months. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+intervals not exceeding 39 months, paying particular attention to pipe under thermal insulation in 
+accordance with § 195.583(a) and (b) and its procedures. 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 
+2023, the maximum penalty may not exceed $239,142 per violation per day the violation persists, 
+up to a maximum of $2,391,412 for a related series of violations.  For violation occurring on or 
+after May 3, 2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 
+per violation per day the violation persists, up to a maximum of $2,251,334 for a related series of 
+violations.    For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day  the  violation  persists,  up  to  a  maximum  of  $2,186,465  for  a related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable violations and recommend that you be preliminarily assessed a civil penalty of $108,700 
+as follows:  
+
+Item number 
+1 
+
+PENALTY 
+$108,700 
+
+Proposed Compliance Order 
+
+With respect to Item 1 pursuant to 49 U.S.C. § 60118, the Pipeline and Hazardous Materials Safety 
+Administration proposes to issue a Compliance Order to Holly Energy Partners.  Please refer to 
+the Proposed Compliance Order, which is enclosed and made a part of this Notice. 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.   Please  refer  to  this  document  and  note  the  response  options.   All 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. § 552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  4-2023-041-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Bryan Lethcoe 
+Director, Southwest Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Proposed Compliance Order 
+
+Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROPOSED COMPLIANCE ORDER 
+
+Pursuant  to  49  United  States  Code  §  60118,  the  Pipeline  and  Hazardous  Materials  Safety 
+Administration (PHMSA) proposes to issue to Holly Energy Partners (Holly) a Compliance Order 
+incorporating  the  following  remedial  requirements  to  ensure  the  compliance  of  Holly  Energy 
+Partners with the pipeline safety regulations: 
+
+A. 
+
+B. 
+
+In  regard  to  Item  1  of  the  Notice  pertaining  to  Holly’s  failure  to  inspect  each 
+pipeline or portion of pipeline that is exposed to the atmosphere for evidence of 
+atmospheric corrosion at least once every 3 calendar years, but with intervals not 
+exceeding 39 months, paying particular attention to pipe under thermal insulation, 
+Holly must identify all jurisdictional pipelines with thermal insulation.  If access 
+plug flanges (APFs) are installed, Holly must provide PHMSA with pictures of the 
+APFs and the last two cycles of atmospheric corrosion inspections that specifically 
+detail the condition of the pipe underneath the thermal insulation.  If APFs are not 
+installed, Holly must follow its procedure and install APFs at identified corrosion 
+monitoring  locations.    After  installation  of  the  APFs,  Holly  must  conduct 
+atmospheric  corrosion  inspections  of  those  pipelines  and  provide  those  records, 
+including APF installation records and pictures, to the Director, Southwest Region, 
+PHMSA within 120 days of issuance of the Final Order. 
+
+It  is requested (not mandated) that Holly Energy Partners maintain documentation 
+of the safety improvement costs associated with fulfilling this Compliance Order 
+and submit the total to Bryan Lethcoe, Director, Southwest Region, Pipeline and 
+Hazardous  Materials  Safety  Administration.    It  is  requested  that  these  costs  be 
+reported  in  two  categories:  1)  total  cost  associated  with  preparation/revision  of 
+plans,  procedures,  studies  and  analyses,  and  2)  total  cost  associated  with 
+replacements, additions and other changes to pipeline infrastructure. 
+
+ 
+ 
+ 
+ 
+ 
+

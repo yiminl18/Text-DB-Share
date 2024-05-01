@@ -1,0 +1,24 @@
+1. Introduction
+2. Related Work
+    2.1 Sedentary Behavior
+    2.2 Promoting Breaks in Workplaces
+3. Time for Break
+    3.1 Design Goals
+    3.2 Time for Break Design
+    3.3 Implementation
+4. Method
+    4.1 Participants
+    4.2 Study Procedure
+    4.3 Data Analysis
+5. Results
+    5.1 RQ1: Information Workers’ Intended Work & Break Duration and Their Actual Practices
+    5.2 RQ2: The Contexts Around Information Workers’ Break-Taking Intentions & Practices
+    5.3 RQ3: Relationships Between Habit Strength, Self-Regulation, Break-Taking Intentions & Practices
+6. Discussion
+    6.1 Consider Long-term Health as an Important Design Value
+    6.2 Support Creating Work & Break Rhythm
+    6.3 Promote Moving Breaks in Workplaces
+    6.4 Limitations and Future Work
+7. Conclusion
+8. Acknowledgment
+9. References

@@ -1,0 +1,22 @@
+1. Introduction
+2. Background
+3. Design Process and Implementation
+   3.1 Situated Self-Reporting Devices
+   3.2 Implementation
+4. Evaluation
+   4.1 Study 1: Activity and Social Context Reporting
+   4.2 Study 2: Stress and Sleepiness Reporting
+5. Data Analysis
+   5.1 Participant Overview
+6. Results
+   6.1 Overview of Participants’ Reports
+   6.2 Preference of Heed for Self-Initiated Reports
+   6.3 Influence of the Attributes of Heed on Self-Reporting
+   6.4 Influence of Device Proximity on Self-Reporting
+   6.5 Influence of Location on Self-Reporting
+   6.6 Unexpected Social Consequences
+7. Discussion
+   7.1 Implications for Design of Situated Self-Report Devices
+   7.2 Future Directions
+   7.3 Limitations
+8. Conclusion

@@ -1,0 +1,30 @@
+Table of Contents:
+
+1. Abstract
+2. Introduction
+3. Related Work
+    3.1 Activity Tracking
+    3.2 Climbing and HCI
+4. Climbing Data Collection
+    4.1 Climbing Sensor Hardware
+    4.2 Participants and Task
+    4.3 Procedure
+    4.4 Results
+5. ClimbSense System
+    5.1 Preprocessing
+    5.2 Climb Segmentation and Grip Detection
+    5.3 Feature Extraction
+    5.4 Matching
+6. Analysis
+    6.1 Grip Detection
+    6.2 Route Recognition
+    6.3 One Handed Recognition
+7. Discussion
+    7.1 Grip Detection
+    7.2 Route Recognition
+    7.3 One Handed Route Recognition
+    7.4 Prerequisites
+    7.5 Limitations
+8. Conclusion and Outlook
+9. Acknowledgments
+10. References

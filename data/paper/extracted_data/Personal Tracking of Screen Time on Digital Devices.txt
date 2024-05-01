@@ -1,0 +1,1803 @@
+Personal Tracking of Screen Time on Digital Devices  
+
+John Rooksby, Parvin Asadzadeh, Mattias Rost, Alistair Morrison, Matthew Chalmers 
+School of Computing Science 
+University of Glasgow, UK 
+{firstname.lastname}@glasgow.ac.uk 
+
+ABSTRACT 
+Numerous  studies  have  tracked  people’s  everyday  use  of 
+digital devices, but without consideration of how such data 
+might  be  of  personal  interest  to  the  user.  We  have 
+developed a personal tracking application that enables users 
+to  automatically  monitor  their  ‘screen  time’  on  mobile 
+devices  (iOS  and  Android)  and  computers  (Mac  and 
+Windows).  The  application  interface  enables  users  to 
+combine  screen  time  data  from  multiple  devices.  We 
+trialled  the  application  for  28+  days  with  21  users, 
+collecting  log  data  and  interviewing  each  user.  We  found 
+that  there  is  interest  in  personal  tracking  in  this  area,  but 
+that 
+in 
+quantifying  their  overall  screen  time  than  in  gaining  data 
+about  their  use  of  specific  devices  and  applications.  We 
+found  that  personal  tracking  of  device  use  is  desirable  for 
+goals including: increasing productivity, disciplining device 
+use, and cutting down on use.   
+
+the  study  participants  were 
+
+interested 
+
+less 
+
+Author Keywords 
+Personal 
+Qualitative Interviews; Lived Informatics; Design.  
+
+tracking;  Multi-device  Use;  Software  Trial; 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous. 
+
+INTRODUCTION 
+Many  people  now  regularly  use  several  screen-based 
+devices  in  their  everyday  lives.  These  include  mobile 
+phones,  tablets  and  laptop  computers.  Recently,  several 
+personal tracking applications have been released that give 
+people feedback on the use of an individual smartphone or 
+tablet.  For  example,  Quality  Time  [39]  is  an  app  for 
+Android  devices  that  logs  and  sets  limits  for  time  spent 
+using  the  device,  and  Moments  [23]  is  an  app  for  iOS 
+devices that emphasises the times and locations devices are 
+used.  Some  productivity  tools,  such  as  Rescue  Time  [43], 
+also support tracking of multiple device use.  
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. Copyrights for 
+components of this work owned by others than the author(s) must be 
+honored. Abstracting with credit is permitted. To copy otherwise, or 
+republish, to post on servers or to redistribute to lists, requires prior specific 
+permission and/or a fee. Request permissions from Permissions@acm.org 
+
+CHI'16, May 07 - 12 2016, San Jose, CA, USA. Copyright is held by the 
+owner/author(s). Publication rights licensed to ACM. 
+ACM 978-1-4503-3362-7/16/05(cid:1)$15.00 
+DOI: http://dx.doi.org/10.1145/2858036.2858055 
+
+Despite there being a sizeable body of academic research in 
+which  people’s  everyday  digital  device  use  is  logged,  for 
+example  Böhmer’s  study  of  app  launches  on  Android 
+devices  [4],  little  consideration  has  been  made  of  whether 
+and  how  data  about  everyday  device  use  might  be  of 
+personal interest and value to the user.  
+
+This  paper  describes  the  development  and  evaluation  of 
+ScreenLife,  a  personal  tracking  application  that  enables 
+users to collect and view data about the use of their digital 
+devices (e.g. time spent on a laptop, a mobile phone and a 
+tablet).  We  chose  to  present  feedback  in  the  ScreenLife 
+application  using  a  metaphor  of  ‘screen  time’,  showing  to 
+the user when their devices were on and in active use. We 
+have  trialled  ScreenLife  in  the  wild  over  a  28-day  period 
+with 21 users, gaining objective and subjective feedback in 
+the form of log traces and interview data.  
+
+The  findings  we  report 
+this  paper  are  primarily 
+in 
+qualitative,  taking  interest  in  what  people  made  of  a 
+representation  of  their  personal  screen  time.  We  find  that 
+there  are  many  potential  purposes  for  personal  tracking  of 
+this  form  of  data,  and  that  people  will  likely  have  diverse 
+preferences  for  accessing  and  viewing  this  data.  We  find 
+that  getting  an  overall  figure  for  screen  time  is  less 
+important  than  supporting  people  in  understanding  the 
+details  of  certain  devices.  We  also  find  that  this  kind  of 
+tracking  data,  and  even  the  gaps  in  the  data,  can  reveal 
+many aspects of an individual’s life.    
+
+BACKGROUND 
+For decades, if not centuries, people have tracked aspects of 
+their own lives: what they eat and drink, what they weigh, 
+the  physical  activity  they  engage  in,  and  much  more  (see 
+[10,40]).  The  rise  of  smartphones  has  made  it  easier  to 
+automate  data  collection  and  to  present  data  back  to  the 
+user.  Smartphones have led to renewed interest in personal 
+tracking, and have opened up various new possibilities (see 
+[31,38]).  Personal  tracking  is  often  associated  with  health 
+and wellness (see e.g. [8,20,48]) but is by no means limited 
+to  that  domain.  One  may  track,  for  example,  what  books 
+one  reads  [36],  places  one  visits  [9]  and  myriad  other 
+things.  
+
+Tracking digital device Use 
+A  growing  body  of  research  in  HCI  is  based  upon  the 
+collection  of  user  log  traces  from  mobile  phones,  tablets 
+and  computers.  Studies  based  upon  logging  the  time  spent 
+using  computers  and/or  specific  applications  have  been 
+around for quite some time (e.g. [32,41,42]). More recently, 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA284 
+ 
+everyday connectivity [30]; and of people’s locations when 
+using  devices  [13].  Church  et  al.  [7]  give  an  overview  of 
+this  area  of  research  and  discuss  how  these  studies 
+contribute  to  a  broader  understanding  of  device  usage 
+behaviours.  
+
+Most studies in this area are conducted by installing logging 
+software  on  users’  devices.  This  software  need  not 
+necessarily  have  a  user  interface,  and  there  have  been 
+several  studies  in  which  none  is  given  (e.g.  Do  et  al.  [13], 
+Falaki et al. [15], Karlson et al. [26], Lord et al. [30], Lee et 
+al.  [28]).  In  other  cases,  particularly  where  an  app  is  to  be 
+released through an app store and no incentive is given for 
+installing  the  app,  an  interface  has  been  provided  (and 
+indeed  the  interface  serves  as  the  incentive  to  install  and 
+retain the app [7]). Böhmer et al. [4] and Parate et al. [37] 
+created  recommender  widgets  for  users  to  launch  apps, 
+Ferreira et al. [16] and Athukorala et al. [2] created battery 
+tracking  software  for  end  users,  and  Wagner  et  al.  [49] 
+created a personal analytics style interface offering a range 
+of information about the use of one’s device. 
+
+for 
+
+interfaces 
+
+With  the  exception  of  Ferreira  et  al.  ([16][17])  and 
+Athukorala  et  al.’s  [2]  discussions  of  the  design  of  battery 
+these 
+the  user 
+tracking  applications, 
+applications  are  not  typically  discussed  and  evaluated  in 
+depth. There are some other studies in which data has been 
+shown  to  users  in  an  interview  situation,  for  example  the 
+work  of  Carrascal  et  al.  [5]  and  Lord  et  al.  [30].  A 
+consequence of the lack of work here is that little is known 
+about what information users might want to see about their 
+everyday  device  use.  A  better  understanding  of  this  would 
+not only help us create better personal tracking applications, 
+but  as  Church  et  al.  [7]  point  out,  is  also  likely  to  help 
+persuade  more  users  to  install  and  use  apps  developed  for 
+tracking studies in HCI. 
+
+Tracking multiple digital device use  
+The  work  in  HCI  and  related  fields  on  tracking  digital 
+device  use  predominantly  focuses  on  individual  devices. 
+Karlson et al.’s [26] study of the use of mobile and desktop 
+Windows devices by information workers is one exception, 
+although  no  user  interface  was  provided  and  only  four  of 
+their participants were interviewed.  
+
+Multi-device  use  has  been  more  roundly  explored  in 
+qualitative studies: Jokela et al. [25] have conducted a diary 
+study of multi-device use; Rooksby et al. [47] and Holz et 
+al. [21]  have looked at how mobile devices are used when 
+watching 
+television;  Oulasvirta  &  Sumari  [35]  and 
+Dearman  &  Pierce  [12]  have  studied  multi-device  use  by 
+information workers. Whereas much of the design emphasis 
+in  HCI  has  been  on  integrating  devices  and  media,  studies 
+of  multi-device  use  find  that  devices  are  often  used  in 
+parallel or sequence for unrelated tasks.  
+
+Personal tracking 
+Personal  tracking  is  often  associated  with  three  areas:  the 
+quantified self, personal informatics and behaviour change. 
+
+Figure 1: ScreenLife in Browser Window (P11’s data shown). 
+
+several  studies  have  collected  data  about  how  mobile 
+devices  are  used,  especially  smartphones.  For  example 
+are 
+there  have  been 
+unlocked/locked  and  what  apps  are  launched  [28,4,5];  of 
+how  battery  power  is  consumed  [16,17,15];  of  people’s 
+communication patterns [49]; of security preferences [1]; of 
+
+studies  of  when  devices 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA285 
+ 
+their  own 
+
+The quantified self is typified, in Choe et al.’s [6] words, by 
+“extreme users” who wish to track and quantify as much as 
+possible  about 
+lives.  Similarly,  personal 
+informatics, as set out by Li et al. [29], suggests that people 
+should collect as much data as possible and then use this to 
+make  insights  into  their  lives.  In  previous  work,  we  [46] 
+have pointed out that mainstream, everyday use of trackers 
+does not necessarily resemble the quantified self or personal 
+informatics. Data is rarely separated from applications, and 
+people  do  not  engage  in  a  dispassionate  data  science  of 
+everyday  life  (and  indeed  sometimes  get  things  wrong 
+[27]).  Rather,  personal  tracking  is  enmeshed  in  people’s 
+everyday  lives,  outlooks  and  desires  [14].  We  have  also 
+pointed  out  that  there  is  much  more  to  tracking  than 
+behaviour change, with people finding all sorts of interests 
+and uses in trackers.  
+
+With ScreenLife we are not trying to encourage end users to 
+become data scientists or to modify their behaviour. Rather 
+we  have  developed  an  application  that  presents  data  that 
+can be flexibly interpreted by users, and upon which we can 
+gain  feedback  and  criticism.  ScreenLife  resembles  what 
+Hutchinson et al. [22] term a ‘technology probe’ in that (a) 
+we  kept  the  functionality  intentionally  basic  (e.g.  by 
+providing  simple  visualisations  of  screen  time,  as  opposed 
+to detailed information about app launches, location and so 
+on)  and  (b)  the  design  does  not  emphasise  particular 
+purposes  such  as  productivity  or  reducing  device  use.  As 
+such, ScreenLife should not be considered a prototype, but 
+as a disposal probe that is used to gather data and opinion. 
+The  complexity  of  developing  for  four  operating  systems, 
+and  of  combining  and  presenting  data  consistently,  made 
+this  a  probe-based  approach  appropriate  for  our  study  (as 
+opposed 
+release  as 
+recommended by McMillan et al. [33,34]). 
+
+to  using  a  general  app  store 
+
+We conducted a trial of ScreenLife “in the wild” on users’ 
+own  devices  as  they  go  about  their  everyday  activities.  As 
+Brown  et  al.  [3]  argue,  the  purpose  of  such  trials  is  not  to 
+gauge users’ ‘likes and dislikes’ or to assess the usability of 
+the application, but to gain feedback and insight.  
+
+interface 
+
+SCREENLIFE  
+The ScreenLife application has two general components: a 
+logger  that  monitors  and  records  when  a  device  is  in  use, 
+and  an 
+to  provide  users  with  a  visual 
+representation  of  screen  time  across  their  logged  devices. 
+We  implemented  ScreenLife  loggers  for  four  platforms: 
+iOS, Android, Mac, and Windows (meaning it will work on 
+iPhones,  iPads,  Android  phones,  Android  tablets,  Mac 
+computers,  and  Windows  computers).  The  visual  interface 
+is implemented in HTML5 and JavaScript. The logger and 
+interface  are  packaged  together  on  mobile  devices  in  the 
+form of an app. On computers, the logger is installed as an 
+app and the interface is accessed via a web browser.  
+
+Logging screen time 
+ScreenLife has been designed to collect data about when a 
+device is ‘in use’. Compared to related studies that analyse 
+
+individual  app  launches  or  attempt  to  classify  types  of 
+behaviour  this  is  a  relatively  high  level  abstraction  about 
+device use, although one that readily allows the comparison 
+and juxtaposition of different classes of devices.  
+
+On  mobile  platforms,  we  consider  a  device  to  be  in  use  if 
+the  screen  is  on.  This  led  us  to  collect  data  on  when  the 
+screen wakes and sleeps, and when the device is locked and 
+unlocked.  On  Mac  and  Windows  computers,  we  are 
+conscious that a screen can be on without the device being 
+in  active  use.  We  therefore  collect  sleep  and  wake  events 
+but  also  data  about  whether  the  keyboard,  mouse,  or 
+speakers  are  in  use.  After  a  minute  passes  without  any 
+events on these I/O channels, we consider the device not to 
+be in use until the occurrence of the next event.  
+
+ScreenLife loggers run continuously in the background and 
+automatically  launch  at  startup  on  each  device  to  ensure 
+continuous  logging.  However,  users  are  able  to  disable  or 
+enable logging through the app’s settings. Such continuous 
+monitoring is not readily supported on iOS, and the method 
+we  use  to  keep  ScreenLife  running  has  a  battery  cost  on 
+these  devices.  Otherwise  the  application  is  (in  theory)  of 
+low  cost  to  the  battery  and  processors.  Each  logger 
+periodically uploads usage logs securely to our server. 
+
+The Interface: Quantifying screen time 
+ScreenLife creates a visual presentation showing usage data 
+for  each  of  the  user’s  devices,  and  can  display  this 
+aggregated  data  on  any  platform  (e.g.  if  the  user  has 
+ScreenLife  loggers  on  three  devices,  she  can  view  the 
+combined  data  on  any  of  these).  On  mobile  platforms, 
+ScreenLife is installed as an app that can be launched from 
+the  home  screen,  and  within  which  the  interface  is 
+displayed. On Macs and PCs, a ScreenLife icon is inserted 
+into the OS’s menu bar or system tray, so that clicking upon 
+it opens the interface in a browser.  
+
+these 
+
+On  first  launch  of  ScreenLife,  a  user  is  asked  to  create  a 
+username  and  password,  and  is  directed  to  a  device 
+registration  form.  On  launching  ScreenLife  on  additional 
+devices 
+login  credentials  are  entered  during 
+registration,  allowing  us  to  associate  multiple  devices  with 
+a  single  account.  Through  registration,  the  user  is  also 
+asked to provide a name for each of his/her devices. Users 
+are not required to provide credentials on later openings of 
+the web interface.  
+
+The main interface for ScreenLife is shown in Figure 1. A 
+summary  table  at  the  top  of  the  page  lists  the  registered 
+devices  of  the  user,  showing  usage  of  each  device  in  the 
+current  day  and  the  average  daily  usage  during  the  past 
+seven days. Each device’s data is presented with a different 
+colour in a separate row, with the same colour being used to 
+display data associated with this device in all sections of the 
+interface.  Under  the  summary  table  is  a  month  view,  each 
+square cell of which corresponds to a single day within that 
+month.  Within  each  day  cell,  vertical  bars  show  each 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA286device’s  usage.  Using  the  left  and  right  arrows  on  the  top, 
+users can navigate between different months.  
+
+This month view presents a high level overview of activity, 
+but  users  are  able  to  drill  down  into  particular  periods  of 
+interest. Each day cell in the month view is clickable, which 
+loads  a  more  detailed  view  of  the  selected  day’s  usage  at 
+the  bottom  of  the  page.  The  day  view  is  presented  with 
+rows  of  24  squares,  each  row  corresponding  to  one  of  the 
+user’s  devices  and  each  square  corresponding  to  device 
+usage in a single hour of the day, starting on the left with 12 
+am. The colour of each square reflects the amount of device 
+usage within that hour. A grey cell shows an inactive hour, 
+while an active hour is coloured with a shade of the device 
+colour,  with  the  lightest  shade  corresponding  to  1  to  15 
+minutes and the darkest corresponding to 45 to 60 minutes. 
+Users  can  also  drill  down  further  to  the  active  minutes 
+within  each  hour,  with  the  minute-square  colours  again 
+corresponding  to  the  activity  within  that  minute.  Finally, 
+clicking on a minute reveals the active seconds within that 
+minute. 
+
+The period during which audio was playing on each device 
+is shown by a red line below each cell in the hours, minutes 
+and seconds views of the interface. 
+
+Design choices made in developing Screenlife 
+The  ostensibly  simple  idea  of  displaying  when  a  screen  is 
+on or off necessitated us to make several design choices that 
+have  had  consequences  for  the  study.  These  have  included 
+whether  to  include  device  wake  events  occasioned  by  a 
+notification  arriving  as  screen  time.  It  also  led  us  to 
+consider  active  screen-time  of  a  computer  as  opposed  to 
+time away.  
+
+In  audience 
+
+In  this  paper,  we  conceptualise  the  time  using  devices  as 
+‘screen  time’.  Our  use  of  the  term  relates  primarily  to  the 
+use of computers and mobile devices. We acknowledge that 
+this  term  is  often  associated  with  watching  television.  For 
+example in public health research, screen time is seen as a 
+sedentary  behaviour  and  studies  often  ask  people  to  self–
+report  their  time  spent  watching  a  television  and  using  a 
+research,  more  sophisticated 
+computer. 
+methods  have  been  created  for  logging  television  use,  and 
+latterly,  digital  devices.  Effective  advertising  is  a  key 
+concern  in  that  area.  Screens  are  ubiquitous  in  developed 
+countries  [19,24]  and  it  is  difficult  if  not  impossible  to 
+quantify  our  overall  screen  time.  Moreover,  judgements 
+about  what  counts  need  to  be  made.  Even  when  we  are  in 
+the presence of screens we do not necessarily look at them 
+[11], and what and how to log the usage of screens in part 
+comes  down  to  the  purpose  of  logging.  In  our  study  we 
+have  chosen  to  log  time  when  a  screen-based  device  is 
+being ‘actively used’.  
+
+THE STUDY 
+We  undertook  a  trial  of  ScreenLife  in  Summer  2015.  We 
+recruited 21 students (10 male, 11 female) to install the app 
+and use it for 28 full days or more. The app was installed on 
+
+r
+e
+d
+n
+e
+G
+
+D
+
+I
+
+e
+g
+A
+
+Summer  activity  (all 
+participants students) 
+
+p
+o
+t
+p
+a
+L
+
+e
+n
+o
+h
+P
+
+M 
+
+24  Employed: office 
+
+Mac  And. 
+
+21  Employed: developer  Mac  And. 
+
+t
+e
+l
+b
+a
+T
+
+- 
+
+- 
+
+34  Dissertation project 
+
+Win. 
+
+- 
+
+iOS 
+
+27  Dissertation project 
+
+Win.  And. 
+
+19  Employed: electronics  Win.  And. 
+
+- 
+
+- 
+
+23  Trainee at hospital 
+
+- 
+
+iOS  And. 
+
+20  Employed: nightclub   Win.  And. 
+
+- 
+
+25  Unemployed 
+
+22  Unemployed 
+
+Mac 
+
+iOS 
+
+iOS 
+
+Win.  And.  And. 
+
+24  Dissertation project                       
+
+Mac  And. 
+
+- 
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+10 
+
+F 
+
+F 
+
+M 
+
+M 
+
+F 
+
+F 
+
+F 
+
+M 
+
+F 
+
+11  M 
+
+23  Dissertation project 
+
+12  M 
+
+23  Dissertation project 
+
+13 
+
+14 
+
+F 
+
+F 
+
+22  Unemployed 
+
+21  Dissertation project 
+
+15  M 
+
+24  Dissertation project 
+
+16  M 
+
+18  Employed: factory 
+
+17 
+
+F 
+
+25  Dissertation project 
+
+18  M 
+
+24  Dissertation project 
+
+Mac  And. 
+
+iOS 
+iOS3 
+Win.  And.  And. 
+
+Win.  And. 
+
+- 
+
+Win.  And. 
+Win.1  And.  And. 
+Mac 
+iOS 
+Mac3  And. 
+Win.  And. 
+
+- 
+
+- 
+
+19  M 
+
+21  Employed: tutor 
+
+Win.  And. 
+
+20 
+
+21 
+
+F 
+
+F 
+
+22  Employed: manual 
+
+Mac  And. 
+
+22  Employed: developer  Win. 
+
+iOS 
+
+- 
+iOS2 
+iOS2 
+iOS 
+
+Table 1: Trial Participants (Notes: 1dual boot window/linux; 2iPad 
+shared between P19 & 21; 3failed installations (x2); Win = 
+Windows; And = Android) 
+
+a  total  of  48  devices  (see  table  1).  Participants  were 
+compensated with a £25 payment, which was given to them 
+at  the  interview  before  we  asked  any  questions.  The  study 
+was granted ethical approval by the University of Glasgow 
+College of Science and Engineering.  
+
+We  selected  the  participants  from  a  pool  of  76  applicants. 
+The  key  selection  criteria  were  that  a)  the  trial  should  be 
+gender balanced, b) participants should own and use two or 
+more eligible devices, and c) the participants should be able 
+to travel to our laboratory for deployment and an interview. 
+The  participants  were  not  representative  of  the  applicants 
+(of  which  64%  were  male,  72%  used  a  Windows  laptop, 
+and  50%  used  both  a  Windows  laptop  and  Android 
+smartphone). Our sample is one that we believe is sufficient 
+to  gain  insight  into  multi-device  personal  tracking,  but 
+clearly  it  is  right  to  be  cautious  about  how  our  work  may 
+generalise.  It  should  also  be  noted  that  the  timing  of  the 
+study  meant  that  the  undergraduate  students  were  on  their 
+summer break, and the postgraduate students were working 
+on  their  dissertation  projects.  The  study  also  overlapped 
+with Ramadan, which was observed by several participants. 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA287 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Data collection and interview 
+We collected two kinds of log data from participants during 
+the  trial.  Firstly,  the  data  logged  by  ScreenLife  itself  in 
+order to display usage back to the user was collected by us 
+and  used  as  research  data. We  also  logged  user  interaction 
+(UI) events while users used the interface.  
+
+interviewed  after  having 
+
+Each  participant  was 
+run 
+ScreenLife  for  28  full  days  or  more.  20  interviews  were 
+carried  out  face-to-face  and  the  other  using  a  video 
+conferencing tool. The interviews were semi-structured. An 
+interview  schedule (i.e.  a  list  of  questions) was  developed, 
+but  was  not  used  to  direct  the  interview.  The  interviews 
+began with an open question “What did you think of the app 
+and our study?”, and the schedule was checked at the end to 
+see if anything was missed.  
+
+Analysis 
+All  the  interviews  were  transcribed  and  were  triangulated 
+with the log data we had collected. The interview data was 
+analysed  using  a  framework  approach  [18,44].  This 
+approach  has  been  developed  for  use  by  multidisciplinary 
+teams  collecting  heterogeneous  data.  It  is  qualitative-
+researcher 
+involve  and  be 
+is  designed 
+accountable to people with expertise in other areas (such as 
+software development). We began with open coding of the 
+interviews,  and  then  created  a  framework  with  six  broad 
+codes  and  twenty-five  sub-codes.  The  analytic  themes 
+presented  in  the  next  section  have  been  worked  up  from 
+framework.  
+
+led,  but 
+
+to 
+
+FINDINGS 
+Before  we  present  findings  relating  directly  to  ScreenLife 
+itself,  we  will  give  some  relevant  contextual  information 
+about  how  device  use  was  organised  by  the  participants.  
+Our  findings  here  echo  those  from  studies  by  Jokela  et  al 
+[25], Dearman & Pierce [12], and Oulasvirta & Sumari [35] 
+on multi-device use.  
+
+We  found  it  is  not  specifically  an  inherent  quality  of  a 
+device  that  entails  it  is  used  for  a  particular  task  at  a 
+particular  time.  The  fact  is  that  most  of  the  people  in  the 
+study had a choice of devices. For example one could write 
+on their laptop or on a library computer, one could read or 
+watch  a  film  on  one’s  laptop  or  a  tablet,  one  could  access 
+social  media  and  news  sites  on  any  device.  However,  we 
+noticed  that  people  had  preferences  for  using  particular 
+devices for particular tasks, and that these preferences were 
+regularly contingent on: 
+
+•  The physicality of a device 
+•  The age and state of repair of their devices 
+•  The risk of a device being damaged or failing 
+
+Echoing  Oulasvirta  and  Sumari  [35],  we  found  physicality 
+was an important determining factor in multiple device use. 
+Several  participants  in  the  study  discussed  not  wanting  to 
+carry  a  laptop  with  them  because  of  the  weight.  Therefore 
+they would use tablets or University computers when out of 
+the house, even if their laptops were superior to those. One 
+
+participant also described preferring to work at desktops to 
+laptops because it was better for her posture. Another factor 
+was  the  age  and  state  of  repair  of  a  device.  All  but  two  of 
+the participants did not own a set of new, up-to-date, high-
+end equipment. Rather they had devices in various states of 
+repair.  Devices  do  not  seem  to  be  bought  all  at  once,  but 
+rather  a  laptop  might  be  bought  one  year,  a  mobile  device 
+another,  and  so  on.  For  example,  P15’s  laptop  battery  was 
+broken  and  so  he  would  use  his  tablet  when  out  of  the 
+house.  P14’s  laptop  fan  was  too  noisy,  making  that  device 
+useless  for  Skype  and  watching  videos  and  so  she  would 
+use  her  phone.  P20  had  problems  with  the  audio  on  her 
+mobile phone and so used her iPod Nano for music. P3 had 
+abandoned  her  iPhone  because  it  was  old,  slow  and  had 
+broken audio; she found her iPad mini could meet her needs 
+until  she  could  afford  a  new  phone.  P13  had  a  cracked 
+screen  on  her  phone,  and  so  would  play  games  on  her 
+tablet. For other participants, the organisation of device use 
+had more to do with risk. P18 used University computers to 
+write  his  dissertation  because  he  worried  his  laptop  might 
+fail. P21 had bought a new laptop, and so started to use her 
+iPad  when  cooking  because  it  became  her  less  valuable 
+device. 
+
+What  Jokela  et  al.  [25]  term  “sequential  use”  of  devices 
+characterises  the  majority  of  multiple  device  use  by  our 
+participants.  Particularly  for  those  who  had  jobs  or  were 
+working on dissertation projects, the participants seemed to 
+move  through  sequences  (e.g.  of  using  a  device  on  the 
+move, of using another at work, and then perhaps another in 
+the evenings). There were also examples of what Jokela et 
+al.  term  “parallel  unrelated”  use.  For  example  some 
+participants  would  use  one  device  to  listen  to  music  while 
+using  another  to  do  something  else,  and  many  said  they 
+checked  social  media  on  a  mobile  device  while  using  a 
+computer.  When  it  came  to  social  media,  there  were  some 
+striking  differences  in  outlook  on  multi-device  use.  Some 
+preferred to view social media such as Facebook within the 
+web client, whereas others preferred to use their phone (or 
+were  blocked  from  using  social  media  on  work  computers 
+by their employer). For some, having a mobile device near 
+a  computer  is  a  convenience,  yet  for  others  other,  a 
+distraction. 
+
+“If  I’m  working  on  the  laptop  I  might  be  emailing  on  my 
+phone  because  it’s  more  convenient,  or  Facebook  or 
+messenger … I’ll check my phone rather than checking the 
+email on my laptop because its more convenient“ (P10) 
+
+“It’s like I use the iPad for a few minutes and then put the 
+iPad away cos its distracting me” (P12) 
+
+“Parallel  related”  use  was  less  common.  P3  spoke  about 
+using her tablet to read PDFs while writing on a laptop, and 
+three  participants  spoke  about  talking  with  family  and 
+partners  on  Skype  using  a  mobile  device  resting  against 
+their  laptop  screen.  P12  spoke  of  staying  up  until  3am  to 
+watch his national team play football in the Copa America. 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA288“I said to my girlfriend, ayy, lets watch Columbia’s match 
+[together  on  Skype].  So  she  was  watching  it  on  the  TV.  I 
+was watching on the laptop.” (P12) 
+
+together,  and  how 
+
+The organisation of device use in everyday life then, is not 
+a matter of one kind of device being good for one thing, and 
+another kind of device being good for another. Rather how 
+devices  are  used 
+they  are  used 
+sequentially  during  the  day  is  contingent  upon  user 
+preferences,  their  life  world,  their  willingness  to  carry 
+equipment, and the various states of repair of their devices. 
+The  issue  here  is  that  the  appropriateness  and  value  of  the 
+use  of  a  particular  device  at  a  particular  time  is  not  an 
+inherent  quality  of  the  device’s  functionality,  but  rather 
+manifests  according  to  a  range  of  factors  including  the 
+individual  user’s  values  and  preferences.  These  values  and 
+preferences  pervaded  our  participants’  opinions  and 
+perspectives on personal tracking of digital device use.   
+
+The value of tracking screen time 
+When  we  installed  ScreenLife,  we  did  not  advise  the 
+participants  on  there  being  any  correct  way  or  purpose  for 
+using  it.  Rather  we  told  them  they  were  “free  to  use  it  as 
+much or as little as you want” and that we were “interested 
+in  what  you  think  about  it”.  The  initial  question  of  the 
+interview  “what  did  you  think  of  the  app  and  our  study?” 
+was also designed to be as open as possible to opinions and 
+ideas. 
+
+We found in the interview that the participants had flexibly 
+and  diversely  interpreted  what  the  purpose  of  ScreenLife 
+was or could be. The interviewees discussed: 
+
+•  Understanding device time 
+•  Cutting down on device use 
+• 
+Increasing device use 
+•  Disciplining device use 
+•  Managing devices  
+•  Tracking everyday activities 
+
+Understanding  device  time:  All  but  two  of  the  participants 
+had never used a tracker similar to ScreenLife before (P18 
+had  used  Quality  Time,  and  P12  had  used  a  productivity 
+tool).  So,  for  most  participants  this  was  the  first  time  they 
+had  been  confronted  with  data  about  their  use  of  their 
+devices.  For  participants  such  as  P20,  the  data  was 
+“shocking”.  For  others  such  as  P2  and  P21  the  data  was 
+“interesting”.  P21  in  particular  spent  a  lot  of  time 
+scrutinising her data.  
+
+For  P2  and  P5,  there  was  no  further  purpose  for  the  app 
+other than gaining an understanding of device time.  
+
+“I noticed that it’s pretty much the same every day. There’s 
+no sort of variant. So after that was just sort of like, well, I 
+know.” (P5) 
+
+For the other nineteen participants, the data pointed to some 
+purpose beyond merely quantifying time spent on devices. 
+
+Figure 2: Interactions with ScreenLife. Each marked square 
+represents a day that the ScreenLife interface was opened at least 
+once. Day zero is relative to the day we installed the app. 
+
+Cutting  down  on  device  use:  Many  of  the  participants 
+thought  they  could  or  should  cut  down  on  technology  use. 
+For P1 this was to cut down on overall amount of time he 
+spent looking at screens. He explained this in terms of “my 
+eyes”,  specifically  mentioning  YouTube  and  Facebook  as 
+things  he  ought  to  spend  less  time  looking  at.  P1  thought 
+that things such as listening to music on his devices should 
+not  be  counted,  as  this  is  not  using  his  eyes.  P1  explained 
+that  cutting  down  on  viewing  time,  as  opposed  to  cutting 
+down on using devices to listen to music, would enable him 
+to  spend  more  time  reading  a  textbook  for  an  exam  he 
+would take at the end of the summer. 
+
+P1’s  perspective  was  fairly  unusual,  in  that  every  other 
+person  that  wanted  to  cut  down  on  technology  use  wanted 
+to  cut  down  specifically  on  the  use  of  their  smartphone  or 
+tablet. For example, P12 explained: 
+
+“I’m not as critical of my time I spend on my laptop as I do 
+on  my  other  devices.  Any  time  I  do  on  my  laptop,  I’m 
+usually  working  or  watching  a  movie,  so  I’m  not  doing 
+anything  that’s  a  huge  time  sink.  Most  times  I’m  on  my 
+phone it’s just games and social media, and I’m just critical 
+of those activities.” (P12) 
+
+time. 
+
+increasing  device 
+
+Increasing  device  use:  Several  participants  also  talked 
+about 
+In  particular,  several 
+participants  felt  they  ought  to  be  spending  more  time 
+working.  This  was  generally  something  that  went  hand  in 
+hand  with  spending  less  time  on  mobile  devices,  although 
+in some cases participants also felt they could read more on 
+their  tablets.  This  perspective  was  held  by  the  participants 
+that were working on their dissertation projects: 
+
+“The  laptop,  you  see  how  many  times  you  are  spending 
+really, in your studies. … I need to increase .hhhh” (P3) 
+
+This perspective was also held to an extent by the students 
+that were unemployed during the summer. The unemployed 
+students would express guilt about the lack of laptop use. 
+
+Disciplining device use: Several participants also discussed 
+the  appropriate  use  of  technology.  This  was  neither  to  cut 
+down  nor  to  increase,  but  to  not  use  a  device  in  certain 
+situations.  One  example,  in  which  ScreenLife  was  of  little 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA289 
+ 
+ 
+use, was P7 and P20 thinking they and their friends should 
+be spending less time on devices when socialising. But two 
+cases that were brought up where ScreenLife might at least 
+have  potential  were  a)  eliminating  phone  use  during  the 
+night, b) eliminating phone use when doing a work related 
+task on a computer, but not when watching a film. 
+
+Managing device use: P6 felt that ScreenLife gave her little 
+value in thinking about her everyday life, but thought it had 
+potential  as  something  to  help  her  manage  her  devices.  In 
+particular  she  wanted  to  use  something  like  ScreenLife  to 
+correlate app use and battery time.   
+
+“It’s  interesting.  It  might  be  of  a  curiosity,  but  it  has  no 
+impact  on  how  I  would  change  my  behaviours  …  it  would 
+be interesting if it was connected to battery life.” (P6) 
+
+terms  of 
+
+everyday  activities:  Others 
+in 
+
+talked 
+about 
+Tracking 
+ScreenLife 
+their  activities.  An 
+unanticipated use stated by P16 was that ScreenLife served 
+him as a memory aid—he was doing shift work at a factory, 
+and he could see what days he had worked and when he left 
+the house.  
+
+tracking 
+
+“I  think  most  of  the  time  I  used  it  for  erm,  if  I  couldn’t 
+remember what time I did something. But I know if I looked 
+at  it  I  could  figure  out  what  that  was.  That’s  probably  not 
+as intended.” (P16) 
+
+Others  also  talked  about  being  able  to  see  and  remember 
+things  they  had  done,  for  example  when  they  had  gone  to 
+bed or woken up or when they had had time away.  
+
+These  purposes  of  ScreenLife  were  not  necessarily 
+mutually  exclusive.  Nor  were  these  purposes  necessarily 
+borne  out  by  the  participants;  the  ScreenLife  design  was 
+minimal  and  did  not  offer  anything  but  basic  support  for 
+things  participants  were 
+the 
+participants gave us advice on how to improve the app with 
+relevance  to  their  favoured  purposes,  such  as  support  for 
+goal  setting,  or  for  enabling  users  to  define  the  activities 
+they had used their devices for. A common suggestion was 
+that ScreenLife should offer more detail, particularly about 
+what apps and websites were used.  
+
+interested 
+
+Indeed 
+
+in. 
+
+Making sense of screen time data 
+Figure 2 shows the days on which the ScreenLife interface 
+was  viewed  on  one  of  the  participant’s  devices  at  least 
+once.  In  this  section  we  will  explore  when  and  why 
+ScreenLife was accessed, and what was looked at. 
+
+Interest in overall time spent: Several participants reported 
+being mainly interested in the overall figures for daily and 
+weekly device use, rather than the drill-down detail. P18 for 
+example  was  specifically  interested  in  the  amount  of  time 
+he  spent  each  day  on  his  smartphone.  He  wanted  to  use 
+ScreenLife  to  reduce  the  use  of  his  smartphone  during  the 
+summer months. 
+
+“I  thought  going  to  check  every  time  like,  every  days,  …  I 
+must  do  discipline  yes…  Basically  to  see  how  much  time  I 
+spent” (P18) 
+
+In  the  end  however,  P18  was  neither  disciplined  with  his 
+use  of  his  device  or  with  ScreenLife  itself.  He  said  we 
+should have provided notifications every day to remind him 
+he  needs  to  focus.  Similarly,  P3  suggested  it  would  be 
+better  to  send  reports  rather  than  require  people  to 
+remember  to  check.  However,  her  idea  was  for  a  monthly 
+summary  rather  than  a  daily  nudge.  Her  rationale  for  a 
+monthly report was that it would help her know if she was 
+getting her money’s worth from her devices. 
+
+“It would be really good if by the end of the month lets say, 
+it gave you a report” (P3) 
+
+Interest  in  the  details  of  use:  Other  participants  were  far 
+more  interested  in  drilling  down  into  the  data  about  the 
+hours,  minutes  and  seconds  for  which  they  had  used  their 
+devices. P21 viewed ScreenLife very frequently for the first 
+half  of  the  trial,  probing  and  scrutinising  the  data.  She 
+explained: 
+
+“So I would go into the app, like every day to see if this is 
+working fine” (P21)  
+
+Other  interviewees  also  discussed  their  interest  in  drilling 
+down into the data, although they did not scrutinise it to the 
+extent  that  P21  did.  In  some  cases  the  drill  down  data 
+served a similar function to the daily total given at the top. 
+It allowed participants to see how much time they spent on 
+devices: 
+
+“Most of the time I just checked the blue, the blue whether 
+its very dark or…Yeah, or its like light blue.” (P17) 
+
+interesting  and  unexpected 
+this  hourly  view  of 
+
+repercussion  of  our 
+An 
+presenting 
+that 
+interaction  was 
+participants oriented to their use of devices not just in terms 
+of  an  overall  total  but  developed  the  concept  of  a  ‘free 
+hour’– this being a square on the hourly view that was not 
+coloured. 
+
+“I actually had no hour where I did not touch my phone.” 
+(P15) 
+
+This  idea  is  striking  for  us  because  it  is  contingent  on  our 
+design  decision  to  present  the  data  in  this  particular  way. 
+This  design  was  not  inevitable,  but  one  of  several  options 
+we  explored.  This  leads  us  to  wonder  what  different  ideas 
+or  practices  would  have  emerged  if  we  designed  the 
+interface in an alternative way. 
+
+Interest  in  the  general  idea:  For  P20,  ScreenLife  was  not 
+something  to  be  checked  regularly  or  scrutinised  in  detail, 
+but  rather  something  to  make  her  more  mindful  of 
+technology use. It was something to prompt thinking:  
+
+“I think I only checked it a few times in the beginning of the 
+study  …  I  sort  of  began  to  think  about,  more  about  how  I 
+use my computer and iPad and phone I’d say.” (P20) 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA290The calendar view: Several people were actually interested 
+in  both  the  overall  totals  and  the  drill-down  detail. 
+However, no one was particularly fond of the calendar view 
+in  the  centre.  It  did  lead  one  participant  to  discuss  being 
+able to mark up Ramadan and look for differences. For P2, 
+she  could  clearly  see  a  gap  of  a  few  days  where  she  had 
+taken a holiday. 
+
+“The month of fasting, Ramadan … I was using this phone 
+to like err watch news and stuff at night, so I was like 3am, 
+4am I was up … so during the day, just sleep ah hah” (P9) 
+
+Similarly,  P8  felt  she  had  to  explain  the  presence  of  data 
+during night time hours: 
+
+“My sleep pattern is weird so eh heh heh heh,” (49) 
+
+Problems making sense of the data: It must be said that not 
+all participants found the interface easy to understand. One 
+person  appeared  to  add  up  the  time  for  their  two  devices 
+when stating a figure for overall screen time. Some reported 
+problems  understanding  that  different  shades  were  used  in 
+the  hourly  view  to  represent  how  much  usage  there  had 
+been during that hour: 
+
+Seeing  detail  in  the  data  and  absences  of  data:  Although 
+ScreenLife  gave  a  high  level  representation  of  time  on 
+devices,  this  was  often  translatable  by  participants  to 
+specific  activities.  For  example,  P15  pointed  out  of  his 
+mobile phone data that “whenever I have a longer block in 
+one  go”  it  would  almost  certainly  be  him  on  Skype.  He 
+joked about using this as evidence in his relationship: 
+
+“It took me a while to know this all, this yellow is related to 
+this orange, and this yellow, and it is the notebook” (P14) 
+
+In  sum,  the  participants  developed  different  rhythms  and 
+practices  of  viewing  and  making  sense  of  the  data.  Some 
+oriented to different temporalities of tracking. Some wanted 
+an ‘everyday’ app to scrutinise and give reminders. Others 
+wanted something slow. Some wanted something to use for 
+a week or two out of interest, others something specifically 
+to help them through their busy dissertation period or slack 
+summer.  Others  saw  ScreenLife  as  something  that  accrued 
+and  fed  back  data  more  slowly.  Some  interpreted  the 
+interface  in  unexpected  ways,  for  example  orienting  to 
+having a ‘free hour’ from device use. 
+
+“Maybe  I  will  have  proof  for  my  girlfriend  that,  she’s 
+nagging I don’t Skype enough, and I could say see here, on 
+this date.” (P15) 
+
+However,  it  was  not  just  the  data  that  was  meaningful  to 
+participants.  The  absence  of  data,  the  blank  periods,  could 
+be  meaningful  too.  The  blanks  might  represent  breaks,  or 
+time spent on a work or library computer. Most remarkably, 
+the absences represented sleep: 
+
+“You see when one’s working, or sleeping” (P10) 
+
+“Yes  I’ve  been  sleeping  not  until  6am  eh  heh  heh  ha  ha 
+yeah.  I  may  have  a  shift  in  my  studying,  like  my  day  just 
+shifted.” (P14) 
+
+Seeing everyday life in screen time data (and non-data) 
+ScreenLife offers an abstract representation of screen time, 
+showing  the  times  when  a  device  is  in  active  use. 
+Nevertheless, the participants were able to see many aspects 
+of their everyday life in the data.  
+
+It is remarkable that it is not just the presence but also the 
+absence  of  data  that  speaks  of  daily  activities-  the  blank 
+periods of sleep, followed by the use of a smartphone in the 
+morning,  and  the  closing  of  a  laptop  before  going  to  work 
+or going to bed. 
+
+Seeing  everyday  routine:  Firstly,  routine  was  grossly 
+apparent  in  the  data  for  many  participants.  This  was 
+particularly  true  for  those  that  were  working.  Routine  was 
+apparent  in  the  sense  that  participants  could  recognise  and 
+account  for  the  overall  look  of  their  day-to-day  data,  for 
+example  going  to  and  from  work,  watching  films,  and 
+taking breaks: 
+
+“That’s my internship day, so I use it in the morning when I 
+wake up at breakfast, and when I get back after work” (P2) 
+
+“My  commute  is  about  two  or  three  hours  long,  and  I’m 
+pretty much on my phone the entire time” (P1) 
+
+Seeing a lack of routine: For other participants, particularly 
+the  unemployed  students,  the  absence  of  routine  was 
+grossly apparent and something that they seemed to want to 
+explain or excuse. P8 explained that not only was she using 
+her  laptop  very  little,  but  also  that  her  data  from  her 
+pedometer  and  cycle  tracker  were  also  down.  She  was 
+becoming sedentary and unproductive over the summer. P9 
+explained, very apologetically, about his absence of laptop 
+use during the summer. He also gave a reason for using his 
+phone at night rather than during the day:  
+
+Privacy  concerns:  Perhaps  unsurprisingly  most  of  the 
+participants felt that the data was private or personal. 
+
+“They might know whether I’m going to sleep. When I woke 
+up or something like that.” (P11).  
+
+“I  wouldn’t  share  it  but  err,  yeah,  but  in  the  same  breath 
+I’d want to see what others do.” (P5) 
+
+This  said,  one  participant  felt  it  might  be  helpful  if  her 
+parents  could  see  the  data  in  order  that  she  stays 
+disciplined. 
+
+“I don’t know if for your parents for instance can, huh huh 
+monitor  how  many  units  that  you  use.  …  of  course  I 
+wouldn’t like it, but I think it would be helpful you know, to 
+force you to study.” (P17) 
+
+We  do  not  wish  to  claim  that  everything  recorded  in 
+ScreenLife was readily explainable, but it was striking how 
+the  abstract  data  we  collected  and  presented  could  be 
+related to specific activities. It also striking how readily the 
+data  could  (rightly  or  wrongly)  be  used  to  question  the 
+morality  of  the  person’s  everyday  life  –  one’s  sleep 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA291patterns,  how  long  one  spends  working,  and  more.  The 
+ScreenLife data revealed much more about the participants 
+than we initially anticipated.  
+
+Perspectives on imperfect screen time data 
+We began this study knowing full well that it is impossible 
+to capture perfect information on screen time. Therefore an 
+aspect  of  our  evaluation  has  been  to  explore  and  articulate 
+how the users encounter and make sense of imperfect data. 
+The data was imperfect because a) not all devices could be 
+logged, b) there were some bugs and failures. 
+
+research 
+
+Not  everything  can  be  logged:  We  failed  to  install 
+ScreenLife  on  two  devices,  an  iPad  owned  by  P12  and  a 
+laptop  owned  by  P17.  Both  continued  in  the  study,  and 
+neither  appeared  to  miss  having  data  about  these  devices. 
+We also decided not to log a laptop owned by P6 for ethical 
+reasons  (she  was  using  it  while  working  with  data  about 
+vulnerable people, and so was not appropriate for inclusion 
+in  an  exploratory 
+trial).  Moreover,  many 
+participants used screen-based devices that we simply could 
+not  log.  Some  of  these  were  devices  compatible  with 
+ScreenLife  but  not  managed  by  participants.  For  example 
+many  of  the  students  would  use  laboratory  computers,  and 
+those  with  jobs  would  use  work  computers.  Participants 
+also  used  devices  incompatible  with  ScreenLife.  Several 
+participants  had  televisions,  with  one  participant  regularly 
+using  it  to  play  console  games.  P20,  a  music  student, 
+to  play  music.  They 
+regularly  used  an 
+recognised that these other devices would be interesting to 
+log,  but  no  one  seemed  to  think  that  ScreenLife  was 
+incomplete or missing something.  
+
+iPod  Nano 
+
+An  interesting  issue  we  encountered  was  that  P15  had  a 
+dual  boot  Windows/Linux  laptop.  ScreenLife  only  logged 
+when  he  was  using  Windows,  thus  delivering  partial 
+information about when the device was in use. 
+
+“it was interesting to see especially for my windows laptop 
+… because I only use it for one purpose, gaming. Err so I 
+could track myself while doing my Masters Thesis. On how 
+much I wasted my time.”(P15) 
+
+P15  felt  the  data  would  be  less  meaningful  if  it  had 
+combined  his  screen  time  for  both  Linux  and  Windows, 
+saying that if ScreenLife did work for Linux it should treat 
+the laptop as a separate device for each OS. 
+
+What  seems  to  be  at  issue  here  is  that  having  a  complete 
+picture  of  all  screen  time  across  every  device  is  not 
+necessarily  desirable.  The  participants  were  not  generally 
+interested  in  overall  screen-time,  but  needed  the  details  of 
+to  make 
+what 
+judgements about productivity, overuse and so on. 
+
+they  were  doing  with 
+
+their  devices 
+
+Imperfect  logs:  There  were  also  several  intermittent  or 
+partial  failures  in  the  study.  Firstly,  we  found  ScreenLife 
+had  two  bugs  that  caused  it  to  occasionally  display  tablets 
+as  being  on  for  up  to  24  hours.  We  discovered  these  bugs 
+were  associated  with  a)  turning  a  device  off,  and  b)  the 
+
+that 
+
+tablets, 
+
+realised 
+
+but  we 
+
+battery  depleting.  This bug was present for phones as well 
+tablets  were 
+as 
+disproportionately  affected,  not  for  technical  reasons,  but 
+because  tablets  are  managed  in  different  ways  to  phones  –  
+they  are  not  charged  every  day,  and  sometimes  they  are 
+turned  off  (whereas  phones  generally  are  not).  We  also 
+noticed  that  ScreenLife  would  sometimes  be  ‘killed’  on 
+iPads. P3 said she sometimes did this for all iPad apps, and 
+that she did not realise this would stop ScreenLife logging. 
+
+If we think of apps such as ScreenLife as a data collection, 
+it  is  reasonably  straightforward  to  detect  and  discard 
+‘outlier’ events such as 12 hours of apparent use of an iPad. 
+Yet  from  a  user’s  perspective,  these  outliers  are  extremely 
+apparent  –  particularly  on  the  calendar  view.  For  some 
+users,  they  were  fine  about  something  being  “obviously 
+wrong”  (P15),  particularly  as  it  was  tablet  data  which  no 
+one  thought  was  the  most  important.  But  two  participants, 
+P8  and  P21,  repeatedly  stated  in  interview  that  they  were 
+upset  about  their  inaccurate  iPad  data.  On  discovering 
+problems with their tablet data they felt unable to trust any 
+of their data. For P21, it meant she no longer wanted to use 
+the app. 
+
+“I looked at it here, and I thought … this is not right at all. 
+So, after I didn’t check it very often.” (P21) 
+
+Faults  and  failures  are  common  in  field  trials.  It  is 
+particularly  striking  that  the  users  had  a  very  different 
+experience  of  the  particular  bugs  that  manifested  in 
+ScreenLife  to  our  own  experience  in  the  lab  (where 
+boxplots  would  make  the  outlier  data  invisible).  It  is  also 
+notable  that  the  differing  practices  people  have  around 
+particular  devices  also  leads  to  software  faults  turning  to 
+failures.  
+
+Screen time on shared devices 
+A  final  point  of  interest  is  that  some  of  the  devices  in  the 
+study were shared: primarily the tablet computers. P19 and 
+P20 were a couple and shared an iPad (we did not know this 
+when they were recruited, and we did their installations and 
+interviews  separately).  P15  and  P21  also  talked  about  how 
+they shared their tablets with their partners. The tablets also 
+had  complex  ownership  stories,  for  example  P19  and  20’s 
+tablet  actually  belonged  to  P20s  mother,  but  had  been 
+abandoned  by  her.  P15’s  tablet  was  on  long-term  loan  to 
+him  from  a  friend  who  had  bought  a  new  iPad.  P13  had 
+borrowed her tablet from her sister after breaking the screen 
+on  her  phone.  She  was  waiting  for  her  contract  to  end 
+before buying a new phone and returning the tablet. Not all 
+tablets  were  shared,  but  on  the  whole,  their  status  was 
+markedly different to mobile phones and laptops. 
+
+When  it  came  to  sharing  mobile  phones  and  laptops,  these 
+were  typically  shared  very  rarely  and  only  in  the  presence 
+of  the  owner.  For  example  couples  or  housemates  might 
+watch  a  video  on  a  laptop  together.  Couples  seemed  more 
+relaxed about sharing devices than others. 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA292The  issue  raised  here  is  of  the  very  relevance  of  personal 
+tracking  to  devices  that  are  and  are  not  personal.  It  makes 
+sense in the main to have a personal record of a smartphone 
+or  a  laptop,  but  a  tablet  is  often  not  a  personal  device.  In 
+this case the log becomes a log not of the person’s life but 
+of the use of the device by various people. For this reason, 
+and  because  tablets  are  used  so  irregularly,  the  study 
+participants  were  far  less  interested  in  the  data  from  these. 
+P21 did remark that even if it is not personal data, it can be 
+helpful to know about the life of the device itself. However, 
+viewing  this  alongside  personal  data  about  a  phone  and  a 
+laptop was not necessary.  
+
+LESSONS LEARNED 
+In  this  study  we  were  reminded  that  the  ways  in  which 
+digital devices are used are not technology-determined, but 
+are  a  practical  matter  in  people’s  everyday  lives.  Not  all 
+devices are equal, but rather they have values and meanings 
+imbued  in  them  by  their  users.  Our  key  lessons  learned 
+from  this  study  therefore  concern  both  the  design  and  the 
+practices of personal tracking of screen time.  
+
+Personal  tracking  of  screen  time  can  support  varied 
+purposes:  These  purposes  include  cutting  down  on  device 
+use,  becoming  more  productive,  monitoring  devices,  and 
+keeping a record of everyday life. Different trackers might 
+be  designed  for  these  purposes.  It  might  be  that  some 
+trackers  are  used  over  short-term  periods,  e.g.  during 
+religious observances, busy periods, or breaks.     
+
+There cannot be ‘raw’ screen time data: Our intention was 
+to  provide  simple  and  consistent  data,  but  we  found 
+ourselves  having  to  make  many  design  choices.  We  also 
+found that ‘innocent’ design ideas such as segmenting time 
+by  hours  led  users  to  develop  concepts  such  as  the  ‘free 
+hour’.  Some  users  wanted  to  build  ‘slow’  long-term  data, 
+whereas others wanted regular notifications and reminders. 
+Representation  of  screen  time  is  therefore  unavoidably  a 
+design  issue  and  a  dialogue  between  representation  and 
+practice. 
+
+People  can  see  everyday  life  in  screen  time  data:  The 
+participants  could  clearly  see  their  routines  and  often 
+explain  of  the  data  what  it  was  they  were  doing.  The 
+absences  of  data  also  held  meaning,  for  example  showing 
+sleep.  This  is  potentially  both  a  strength  and  weakness  of 
+personal  tracking  applications  in  this  domain.  Data  about 
+everyday device use can reveal much about someone’s life, 
+to the point that it raises privacy concerns. 
+
+Depth rather than breadth of screen time data is important: 
+The participants were generally not interested in gaining an 
+overall  figure  for  the  time  they  spent  on  screen-based 
+devices,  but  were  more  interested  in  using  data  to  see  and 
+organise their use of individual devices. If they were upset 
+it was not about missing devices, but misrepresentation of a 
+specific device.  
+
+Tracking  of  screen  time  is  less  meaningful  on  shared 
+tablets)  are 
+devices:  Not  all  devices  (in  particular 
+
+necessarily personal, and so the data generated from these is 
+not necessarily personal. Data from shared devices was not 
+valued  as  much  as  from  personal  devices  in  this  study 
+although  it  raises  some  interesting  possibilities  for  shared 
+tracking.  
+
+The study we have presented does have limitations. Firstly, 
+some of the people we recruited may never have thought to 
+look for and download a device tracker:  
+
+“I  liked  it,  I  really  did  cos  I  never  thought  of  having  some 
+kind of app like that “ (P14);  
+
+Secondly,  many  of  the  participants  would  probably  have 
+removed the application sooner if given a choice:  
+
+“I feel like if it was an app that I just err say found online 
+and  if  I  just  downloaded  it,  and  wanted  to  try  it  out,  I 
+probably,  in  the  shape  its  in  right  now  I’d  probably  stop 
+using it in a week.” (P8).  
+
+Finally, the recruitment and timing of the study meant that 
+our participants were all students at transitory points in their 
+lives.  Trials  such  as  ours  are  an  important  part  of 
+understanding  and  working-up  design  knowledge  [3,45]. 
+Our  particular  cohort  is  as  valid  as  any  for  generating 
+insight.  We  do  suggest  though,  that  further  work  might 
+reasonably explore the opinions and perspectives of various 
+other types of user.  
+
+CONCLUSION 
+Our  study  shows  that  there  is  great  deal  of  potential  for 
+personal  tracking  of  digital  devices,  either  of  individual 
+devices  or  multiple  devices.  Personal  tracking  need  not  be 
+limited  to  health  and  wellbeing  but  can  be  of  value  and 
+interest  in  many  aspects  of  people’s  lives.  In  this  research 
+we have found that the concept of screen time is of interest 
+to  users  when  tracking  their  devices,  but  far  from  fully 
+sufficient for the range of purposes for which people would 
+like to put a device tracker.  
+
+innovation  of  personal 
+
+In  evaluating  ScreenLife  we  have  learned  lessons  and 
+gained  many  insights  that  we  believe  are  valuable  for  on-
+going  design  work  in  this  area.  We  believe  there  is  much 
+tracking 
+potential  for  further 
+applications  that  give  insight  into  everyday  device  use.  As 
+Church  et  al  [7]  say,  improved  user  interfaces  and  user 
+experience  is  likely  to  result  in  better  data  collection  in 
+device  tracking  studies.  However,  we  suggest  that  HCI’s 
+interest  in  personal  tracking  should  not  be  limited  to  and 
+need not be led by data collection. It is important to address 
+and support how people make sense of, take interest in, and 
+organise their everyday personal lives.  
+
+ACKNOWLEDGEMENTS 
+We  thank  Dr  Oana  Andrei  and  Dr  Marek  Bell  for  their 
+contributions  to  this  work,  and  the  anonymous  reviews  for 
+valuable  feedback.  This  research  was  funded  by  EPSRC 
+(EP/J007617/1). The dataset that underpins this research is 
+deposited  in  Enlighten:  Research  Data  at  the  University  of 
+Glasgow http://dx.doi.org/10.5525/gla.researchdata.248 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA293REFERENCES 
+1.  Yuvraj Agarwal and Malcolm Hall. 2013. 
+
+ProtectMyPrivacy: detecting and mitigating privacy 
+leaks on iOS devices using crowdsourcing. 
+In Proceeding of the 11th annual international 
+conference on Mobile systems, applications, and 
+services (MobiSys '13). 97-110. 
+http://doi.acm.org/10.1145/2462456.2464460 
+
+2.  Kumaripaba Athukorala, Eemil Lagerspetz, Maria von 
+Kügelgen, Antti Jylhä, Adam J. Oliner, Sasu Tarkoma, 
+and Giulio Jacucci. 2014. How carat affects user 
+behavior: implications for mobile battery awareness 
+applications. In Proceedings of the 32nd annual ACM 
+conference on Human factors in computing 
+systems (CHI '14). 1029-1038. 
+http://doi.acm.org/10.1145/2556288.2557271 
+
+3.  Barry Brown, Stuart Reeves, and Scott Sherwood. 
+
+2011. Into the wild: challenges and opportunities for 
+field trial methods. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI '11). 1657-1666. 
+http://doi.acm.org/10.1145/1978942.1979185 
+
+4.  Matthias Böhmer, Brent Hecht, Johannes Schöning, 
+Antonio Krüger, and Gernot Bauer. 2011. Falling 
+asleep with Angry Birds, Facebook and Kindle: a large 
+scale study on mobile application usage. 
+In Proceedings of the 13th International Conference on 
+Human Computer Interaction with Mobile Devices and 
+Services (MobileHCI '11). 47-56. 
+http://doi.acm.org/10.1145/2037373.2037383 
+
+5. 
+
+Juan Pablo Carrascal and Karen Church. 2015. An In-
+Situ Study of Mobile App & Mobile Search 
+Interactions. In Proceedings of the 33rd Annual ACM 
+Conference on Human Factors in Computing 
+Systems (CHI '15). 2739-2748. 
+http://doi.acm.org/10.1145/2702123.2702486 
+
+6.  Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, 
+
+Wanda Pratt, and Julie A. Kientz. 2014. Understanding 
+quantified-selfers' practices in collecting and exploring 
+personal data. In Proceedings of the 32nd annual ACM 
+conference on Human factors in computing 
+systems (CHI '14). 1143-1152. 
+http://doi.acm.org/10.1145/2556288.2557372 
+
+7.  Karen Church, Denzil Ferreira, Nikola Banovic, and 
+Kent Lyons. 2015. Understanding the Challenges of 
+Mobile Phone Usage Data. In Proceedings of the 17th 
+International Conference on Human-Computer 
+Interaction with Mobile Devices and 
+Services (MobileHCI '15). 504-514. 
+http://doi.acm.org/10.1145/2785830.2785891 
+
+8.  Felicia Cordeiro, Daniel A. Epstein, Edison Thomaz, 
+Elizabeth Bales, Arvind K. Jagannathan, Gregory D. 
+Abowd, and James Fogarty. 2015. Barriers and 
+Negative Nudges: Exploring Challenges in Food 
+
+Journaling. In Proceedings of the 33rd Annual ACM 
+Conference on Human Factors in Computing 
+Systems (CHI '15). 1159-1162. 
+http://doi.acm.org/10.1145/2702123.2702155 
+
+9.  Henriette Cramer, Mattias Rost, and Lars Erik 
+
+Holmquist. 2011. Performing a check-in: emerging 
+practices, norms and 'conflicts' in location-sharing 
+using foursquare. In Proceedings of the 13th 
+International Conference on Human Computer 
+Interaction with Mobile Devices and 
+Services(MobileHCI '11). 57-66. 
+http://doi.acm.org/10.1145/2037373.2037384 
+
+10.  Kate Crawford, Jessa Lingel, Terra Karppi. 2015. Our 
+metrics, ourselves: A hundred years of self-tracking 
+from the weight scale to the wrist wearable device. 
+European Journal of Cultural Studies 18,4-5: 479-496 
+DOI: 10.1177/1367549415584857 
+
+11.  Nicholas S. Dalton, Emily Collins, and Paul Marshall. 
+2015. Display Blindness?: Looking Again at the 
+Visibility of Situated Displays using Eye-tracking. 
+In Proceedings of the 33rd Annual ACM Conference 
+on Human Factors in Computing Systems (CHI '15). 
+3889-3898. 
+http://doi.acm.org/10.1145/2702123.2702150 
+
+12.  David Dearman and Jeffery S. Pierce. 2008. It's on my 
+other computer!: computing with multiple devices. 
+In Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI '08). ACM, New 
+York, NY, USA, 767-776. 
+DOI=http://dx.doi.org/10.1145/1357054.1357177 
+
+13.  Trinh Minh Tri Do, Jan Blom, and Daniel Gatica-
+
+Perez. 2011. Smartphone usage in the wild: a large-
+scale analysis of applications and context. 
+In Proceedings of the 13th international conference on 
+multimodal interfaces (ICMI '11). 353-360. 
+http://doi.acm.org/10.1145/2070481.2070550 
+
+14.  Daniel A. Epstein, An Ping, James Fogarty, and Sean 
+A. Munson. 2015. A lived informatics model of 
+personal informatics. In Proceedings of the 2015 ACM 
+International Joint Conference on Pervasive and 
+Ubiquitous Computing (UbiComp '15). 731-742. 
+http://doi.acm.org/10.1145/2750858.2804250  
+
+15.  Hossein Falaki, Ratul Mahajan, Srikanth Kandula, 
+Dimitrios Lymberopoulos, Ramesh Govindan, and 
+Deborah Estrin. 2010. Diversity in smartphone usage. 
+In Proceedings of the 8th international conference on 
+Mobile systems, applications, and services (MobiSys 
+'10). 179-194. 
+http://doi.acm.org/10.1145/1814433.1814453 
+
+16.  Denzil Ferreira, Anind K. Dey, and Vassilis Kostakos. 
+
+2011. Understanding human-smartphone concerns: a 
+study of battery life. In Proceedings of the 9th 
+international conference on Pervasive 
+computing (Pervasive'11). 19-33.  
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA29417.  Denzil Ferreira, Eija Ferreira, Jorge Goncalves, 
+
+Vassilis Kostakos, and Anind K. Dey. 2013. Revisiting 
+human-battery interaction with an interactive battery 
+interface. In Proceedings of the 2013 ACM 
+international joint conference on Pervasive and 
+ubiquitous computing (UbiComp '13). 563-572. 
+http://doi.acm.org/10.1145/2493432.2493465 
+
+18.  Nicola K Gale, Gemma Heath, Elaine Cameron, Sabina 
+Rashid and Sabi Redwood. 2013. Using the framework 
+method for the analysis of qualitative data in multi-
+disciplinary health research. BMC Medical Research 
+Methodology, 13:117  DOI:10.1186/1471-2288-13-117 
+
+19.  Google (2012) The New Multiscreen World: 
+
+Understanding Cross-Platform Consumer Behaviour. 
+Think With Google Newsletter, August 2012. 
+
+20.  Victoria Hollis, Artie Konrad, and Steve Whittaker. 
+
+2015. Change of Heart: Emotion Tracking to Promote 
+Behavior Change. In Proceedings of the 33rd Annual 
+ACM Conference on Human Factors in Computing 
+Systems (CHI '15). 2643-2652. 
+http://doi.acm.org/10.1145/2702123.2702196 
+
+21.  Christian Holz, Frank Bentley, Karen Church, and 
+
+Mitesh Patel. 2015. "I'm just on my phone and they're 
+watching TV": Quantifying mobile device use while 
+watching television. In Proceedings of the ACM 
+International Conference on Interactive Experiences 
+for TV and Online Video (TVX '15). 93-102. 
+http://doi.acm.org/10.1145/2745197.2745210 
+
+22.  Hilary Hutchinson, Wendy Mackay, Bo Westerlund, 
+Benjamin B. Bederson, Allison Druin, Catherine 
+Plaisant, Michel Beaudouin-Lafon, Stéphane Conversy, 
+Helen Evans, Heiko Hansen, Nicolas Roussel, and 
+Björn Eiderbäck. 2003. Technology probes: inspiring 
+design for and with families. In Proceedings of the 
+SIGCHI Conference on Human Factors in Computing 
+Systems (CHI '03). ACM, New York, NY, USA, 17-24. 
+DOI=http://dx.doi.org/10.1145/642611.642616 
+
+23.  https://inthemoment.io/  
+
+24.  Lucas D. Introna, Fernando M. Ilharco. 2006. On the 
+
+Meaning of Screens: Towards a Phenomenological 
+Account of Screenness. Human Studies 29, 1:  57-76. 
+DOI 10.1007/s10746-005-9009-y 
+
+25.  Tero Jokela, Jarno Ojala, and Thomas Olsson. 2015. A 
+Diary Study on Combining Multiple Information 
+Devices in Everyday Activities and Tasks. 
+In Proceedings of the 33rd Annual ACM Conference 
+on Human Factors in Computing Systems (CHI '15). 
+3903-3912. 
+http://doi.acm.org/10.1145/2702123.2702211 
+
+26.  Amy K. Karlson, Brian R. Meyers, Andy Jacobs, Paul 
+Johns, and Shaun K. Kane. 2009. Working Overtime: 
+Patterns of Smartphone and PC Usage in the Day of an 
+Information Worker. In Proceedings of the 7th 
+International Conference on Pervasive 
+
+Computing (Pervasive '09), Hideyuki Tokuda, Michael 
+Beigl, Adrian Friday, A. J. Brush, and Yoshito Tobe 
+(Eds.). Springer-Verlag, Berlin, Heidelberg, 398-405. 
+DOI=http://dx.doi.org/10.1007/978-3-642-01516-8_27 
+
+27.  Matthew Kay, Dan Morris, mc schraefel, and Julie A. 
+
+Kientz. 2013. There's no such thing as gaining a pound: 
+reconsidering the bathroom scale user interface. 
+In Proceedings of the 2013 ACM international joint 
+conference on Pervasive and ubiquitous 
+computing (UbiComp '13). 401-410. 
+http://doi.acm.org/10.1145/2493432.2493456 
+
+28.  Uichin Lee, Joonwon Lee, Minsam Ko, Changhun Lee, 
+Yuhwan Kim, Subin Yang, Koji Yatani, Gahgene 
+Gweon, Kyong-Mee Chung, and Junehwa Song. 2014. 
+Hooked on smartphones: an exploratory study on 
+smartphone overuse among college students. 
+In Proceedings of the 32nd annual ACM conference on 
+Human factors in computing systems (CHI '14). 2327-
+2336. http://doi.acm.org/10.1145/2556288.2557366 
+
+29.  Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A stage-
+based model of personal informatics systems. 
+In Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI '10). 557-566. 
+http://doi.acm.org/10.1145/1753326.1753409 
+
+30.  Carolynne Lord, Mike Hazas, Adrian K. Clear, Oliver 
+Bates, Rosalind Whittam, Janine Morley, and Adrian 
+Friday. 2015. Demand in My Pocket: Mobile Devices 
+and the Data Connectivity Marshalled in Support of 
+Everyday Practice. In Proceedings of the 33rd Annual 
+ACM Conference on Human Factors in Computing 
+Systems (CHI '15). 2729-2738. 
+http://doi.acm.org/10.1145/2702123.2702162 
+
+31.  Deborah Lupton. 2014. Self-tracking cultures: towards 
+a sociology of personal informatics. InProceedings of 
+the 26th Australian Computer-Human Interaction 
+Conference on Designing Futures: the Future of 
+Design (OzCHI '14). 77-86. 
+http://doi.acm.org/10.1145/2686612.2686623 
+
+32.  Gloria Mark, Yiran Wang, and Melissa Niiya. 2014. 
+Stress and multitasking in everyday college life: an 
+empirical study of online activity. In Proceedings of 
+the SIGCHI Conference on Human Factors in 
+Computing Systems (CHI '14). 41-50. 
+http://doi.acm.org/10.1145/2556288.2557361 
+
+33.  Donald McMillan, Alistair Morrison, Owain Brown, 
+Malcolm Hall, and Matthew Chalmers. Further Into 
+The Wild: Running Worldwide Trials of Mobile 
+Systems. In Proceedings of Pervasive 2010. 210-227. 
+DOI 10.1007/978-3-642-12654-3_13 
+
+34.  Alistair Morrison, Donald McMillan, Stuart Reeves, 
+Scott Sherwood, and Matthew Chalmers. 2012. A 
+hybrid mass participation approach to mobile software 
+trials. In Proceedings of the SIGCHI Conference on 
+Human Factors in Computing Systems (CHI '12). 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA295ACM, New York, NY, USA, 1311-1320. 
+DOI=http://dx.doi.org/10.1145/2207676.2208588 
+
+35.  Antti Oulasvirta and Lauri Sumari. 2007. Mobile kits 
+and laptop trays: managing multiple devices in mobile 
+information work. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI '07). ACM, New York, NY, USA, 1127-
+1136. 
+DOI=http://dx.doi.org/10.1145/1240624.1240795 
+
+36.  Alice Pagano, John Bird. 2015. Reading A Life 
+Through Books. In Proceedings of Workshop on 
+Beyond Personal Informatics, at CHI '15, Seoul, Korea, 
+18th April 2015.  
+
+37.  Abhinav Parate, Matthias Böhmer, David Chu, Deepak 
+Ganesan, and Benjamin M. Marlin. 2013. Practical 
+prediction and prefetch for faster access to applications 
+on mobile phones. In Proceedings of the 2013 ACM 
+international joint conference on Pervasive and 
+ubiquitous computing (UbiComp '13). 275-284. 
+http://doi.acm.org/10.1145/2493432.2493490 
+
+38.  Alex Pentland. 2014. Social Physics. How Good Ideas 
+Spread - The Lessons from a New Science. MIT Press. 
+
+43.  https://www.rescuetime.com  
+
+44.  Jane Ritchie and Jane Lewis. 2003. Qualitative 
+
+research practice: a guide for social science students 
+and researchers. London: Sage. 
+
+45.  Yvonne Rogers, Kay Connelly, Lenore Tedesco, 
+
+William Hazlewood, Andrew Kurtz, Robert E. Hall, 
+Josh Hursey, and Tammy Toscos. 2007. Why it's worth 
+the hassle: the value of in-situ studies when designing 
+Ubicomp. In Proceedings of the 9th international 
+conference on Ubiquitous computing (UbiComp '07). 
+336-353.  
+
+46.  John Rooksby, Mattias Rost, Alistair Morrison, and 
+
+Matthew Chalmers Chalmers. 2014. Personal tracking 
+as lived informatics. In Proceedings of the 32nd annual 
+ACM conference on Human factors in computing 
+systems (CHI '14). 1163-1172. 
+http://doi.acm.org/10.1145/2556288.2557039 
+
+47.  John Rooksby, Timothy E Smith, Alistair Morrison, 
+
+Mattias Rost and Matthew Chalmers. 2015 Configuring 
+Attention in the Multiscreen Living Room. In 
+Proceedings of ECSCW 2015, 19th - 23rd September, 
+Oslo. 
+
+39.  http://www.qualitytimeapp.com/ 
+
+48.  John Rooksby, Mattias Rost, Alistair Morrison, and 
+
+40.  Jill Walker Rettberg. 2014. Seeing Ourselves Through 
+
+Technology. Palgrave Pivot.  
+
+41.  Karen Renaud, Judith Ramsay, Mario Hair. 2006. 
+"You've got e-mail!"... shall I deal with it now? 
+Electronic mail from the recipient's perspective. 
+International Journal of Human-Computer Interaction, 
+21, 3: 313-332.   
+
+42.  Karen Renaud, Paul Gray. 2004. Making sense of low-
+level usage data to understand user activities. In P. 
+Kotze & G. Marsden (Eds.), In Proceedings of 
+SAICSIT 2004. 111–120. 
+
+Matthew Chalmers. 2015. Pass the Ball: Enforced 
+Turn-Taking in Activity Tracking. In Proceedings of 
+the 33rd Annual ACM Conference on Human Factors 
+in Computing Systems (CHI '15). 2417-2426. 
+http://doi.acm.org/10.1145/2702123.2702577 
+
+49.  Daniel T. Wagner, Andrew Rice, and Alastair R. 
+
+Beresford. 2014. Device analyzer: large-scale mobile 
+data collection. SIGMETRICS Perform. Eval. Rev. 41, 
+4: 53-56. http://doi.acm.org/10.1145/2627534.2627553 
+
+Behavioral Change#chi4good, CHI 2016, San Jose, CA, USA296 
+ 
+ 
+

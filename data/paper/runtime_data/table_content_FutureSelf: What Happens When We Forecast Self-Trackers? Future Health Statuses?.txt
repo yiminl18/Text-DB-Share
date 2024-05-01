@@ -1,0 +1,29 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work
+    5.1 Potential of Imagining the Future in Behavior Change
+    5.2 Limitations in Self-Tracked Data Interpretation
+    5.3 Forecasting the Future in Current Self-Tracking Services
+6. Definition of Consequence Information (CI) and Performance Information (PI)
+7. Study Design
+    7.1 FutureSelf App Development
+    7.2 Participant Recruiting
+    7.3 Study Setup
+    7.4 Message Generation (CI setup)
+    7.5 Journaling, Interviews, and Data Analysis
+8. Findings
+    8.1 Weight CI Makes Participants Imagine the Future Self
+    8.2 Weight CI Reminds Participants of Their Ultimate Goal
+    8.3 The Use of Weight CI Depends on the Individual’s Ultimate Goal
+    8.4 However, Rate CI Is Not Construed as a Prediction
+    8.5 Weight CI and PI Collaborate with Each Other
+    8.6 Tolerance for Imperfect Prediction of Weight CI
+9. Design Implications and Discussion
+    9.1 What Type of Information Should CI Indicate to Stimulate Future Envisioning?
+    9.2 How Can We Design a CI System to Better Assist Users in Recalling Their Ultimate Goals?
+    9.3 How Can We Create an Actionable CI System?
+10. Conclusion and Future Work
+11. Acknowledgement
+12. References

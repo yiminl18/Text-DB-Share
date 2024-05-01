@@ -1,0 +1,1647 @@
+Quantifying the Body and Caring for the Mind:               
+
+Self-Tracking in Multiple Sclerosis 
+
+Amid Ayobi1, Paul Marshall1, Anna L Cox1, Yunan Chen2 
+1UCL Interaction Centre, University College London, WC1E 6EA, UK 
+2Department of Informatics, University of California, Irvine, 92697, USA 
+a.ayobi@cs.ucl.ac.uk, {paul.marshall; anna.cox}@ucl.ac.uk, yunanc@ics.uci.edu 
+
+that  when 
+
+ABSTRACT 
+Consumer  health  technologies  have  an  enormous  potential 
+to  transform  the  self-management  of  chronic  conditions. 
+However,  it  is  unclear  how  individuals  use  self-tracking 
+technologies to manage them. This in-depth interview study 
+explores self-tracking practices in multiple sclerosis (MS), a 
+complex  neurological  disease 
+that  causes  physical, 
+cognitive,  and  psychological  symptoms.  Our  findings 
+the  unpredictable  and 
+faced 
+illustrate 
+degenerative nature of MS, individuals regained a sense of 
+control  by  intertwining  self-care  practices  with  different 
+self-tracking 
+in  disease 
+technologies.  They  engaged 
+monitoring, fitness tracking, and life journaling to quantify 
+the  body  and  care  for  the  mind.  We  focus  attention  on  the 
+role of emotional wellbeing and the experience of control in 
+self-tracking  and  managing  MS.  Finally,  we  discuss  in 
+which  ways  self-tracking  technologies  could  support  the 
+foster  mindful 
+experiential  nature  of  control  and 
+experiences  rather  than  focusing  only  on  tracking  primary 
+disease indicators. 
+
+Author Keywords 
+Self-care  technologies;  personal  informatics;  self-tracking; 
+perceived control; chronic conditions; multiple sclerosis  
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous 
+
+INTRODUCTION 
+Consumer  health  technologies,  such  as  wearable  fitness 
+tracking devices, symptom journals, and mental health apps 
+have  an  enormous  potential  to  transform  self-management 
+and  empower  people  to  better  understand  and  live  with 
+chronic  conditions  [1,  39].  Previous  research  in  HCI  has 
+paid  significant  attention  to  understanding  the  use  and 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or  classroom use is granted  without  fee  provided  that  copies  are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  the  author(s)  must  be 
+honored.  Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or 
+republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+specific permission and/or a fee.  
+Request permissions from Permissions@acm.org.  
+CHI 2017, May 06 - 11, 2017, Denver, CO, USA  
+Copyright  is  held  by  the  owner/author(s).  Publication  rights  licensed  to 
+ACM. ACM 978-1-4503-4655-9/17/05…$15.00  
+DOI: http://dx.doi.org/10.1145/3025453.3025869 
+
+design  of  bespoke  medical  devices  and  disease  monitoring 
+applications that address common chronic conditions, such 
+as  diabetes  [28],  hypertension  [21],  and  asthma  [44]. 
+However,  the  role  of  both  contemporary  consumer  health 
+technologies and of self-tracking practices in chronic illness 
+management  that  go  beyond  disease  monitoring  have 
+received much less attention.  
+
+In  this  paper,  we  focus  on  MS,  the  most  common 
+inflammatory chronic condition in young adults. MS affects 
+the  central  nervous  system  causing  physical  impairments 
+and also symptoms related to vision, cognition, and mental 
+health [13]. Monitoring symptoms, being physically active, 
+and  pursuing  good  psychological  health  are  important  in 
+MS  self-management  [10,  13].  However,  studies  suggest 
+that  the  documentation  of  individual  symptoms,  continual 
+reporting of relapses, and balancing physical activity can be 
+tracking 
+challenging 
+technologies have the potential to empower people in self-
+managing  these  challenges.  Yet,  little  research  describes 
+how  individuals  with  MS  use  and  experience  self-tracking 
+technologies in everyday life.  
+
+[10,  11].  Contemporary  health 
+
+Here,  we  present  an  in-depth  interview  study  on  self-
+tracking  practices  in  MS  self-management.  Our  research 
+contributes to the body of research on self-care technologies 
+[34]  and  personal  informatics  in  HCI  [2].  Primarily,  this 
+research  provides  a  qualitative  account  of  the  motivations 
+for and roles of self-tracking practices in MS management. 
+We found that people living with MS experienced a lack of 
+control  when  coping  with  unpredictable  relapses  and  the 
+degenerative  nature  of  the  disease.  Despite  this,  our 
+participants  gained  a  sense  of  control  over  MS  by 
+intertwining  individual  self-care  practices  with  different 
+self-tracking  technologies  such  as  paper-based  symptom 
+diaries  and  wearable  fitness  tracking  devices.  This  study 
+draws  attention  to  the  role  of  emotional  wellbeing  in  self-
+tracking and highlights the role of self-tracking in regaining 
+a  sense  of  control  over  an  unpredictable  and  degenerative 
+disease.  Based  on  this  understanding,  this  study  discusses 
+design  considerations  to  facilitate  self-tracking  in  MS  and 
+similar  chronic  conditions,  namely:  supporting  self-
+exploration  before  self-diagnosis;  drawing  not  only  on 
+pathological  knowledge,  but  also  mediating  practice-based 
+health  expertise;  and,  rather  than  concentrating  only  on 
+tracking  primary  disease  indicators,  fostering  mindful 
+experiences. 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6889 
+ 
+BACKGROUND 
+To  provide  background  to  this  research,  we  begin  by 
+describing  seminal  work  on  self-monitoring  with  self-care 
+technologies  and  then  outline  emerging  research  on  self-
+informatics.  Next,  we 
+tracking  practices 
+introduce 
+interdisciplinary 
+research on health tracking technologies in MS.  
+
+in  personal 
+the  pathology  of  MS  and 
+
+Self-Monitoring with Self-Care Technologies  
+Much  research  in  HCI  has  focused  on  understanding  self-
+management practices and the use of self-care technologies 
+for common conditions [26, 34], such as diabetes [28, 36], 
+hypertension [21], and asthma [44].  
+
+Qualitative  studies  of  self-management  highlight 
+the 
+individual  experience,  idiosyncratic  character,  and  open-
+ended  nature  of  self-care  practices  in  everyday  settings 
+[42]:  Chen,  for  example,  sheds  light  on  the  varied  health 
+information  management  practices  of  diabetes  patients  and 
+stresses the need for individualised health technologies [6]. 
+Mamykina  et  al.  [28]  describe  how  experienced  diabetes 
+patients  appropriated  an  open-ended  and  flexible  self-
+monitoring  application  to  track  routines,  reflect  upon  their 
+personal stories, and perform identity construction work in 
+daily  self-management.  Park  and  Chen  [38]  provide  a 
+detailed  account  of  self-management  practices  performed 
+by  people  affected  by  migraines.  They  describe  how  the 
+unpredictability  and  intermittency  of  migraines  affected 
+people’s  efforts  to  identify  individual  triggers,  and  also 
+stress the importance of their need for social recognition.  
+
+Self-care  technologies  play  a  central  role  in  self-managing 
+chronic  conditions  [34].  They  are  not  limited  to  medical 
+devices,  such  as  blood  glucose  meters  [36],  but  include  a 
+wide  range  of  different  interactive  systems,  such  as  web 
+tools  for  capturing  and  exploring  health-related  data  [28] 
+and smartphone applications for monitoring symptoms [42]. 
+Typically,  self-care  technologies  enable  people  to  record 
+primary  disease  indicators,  which  is  often  described  as 
+‘self-monitoring’  [34].  For  example,  self-monitoring  blood 
+glucose  levels  in  diabetes  [6],  blood  pressure  by  people 
+with  hypertension  [21],  and  mood  in  those  affected  by 
+bipolar disorder [3], helped to develop understanding about 
+the  course  of  the  disease,  react  to  fluctuating  measures, 
+evaluate  health  behaviour,  and  adjust  to  the  respective 
+condition in everyday life.  
+
+Self-Tracking in Personal Informatics 
+In  recent  years,  there  has  been  a  notable  increase  in  both  
+consumer  self-tracking  technologies  and  related  research 
+endeavours in HCI [2]. Studies have explored different self-
+tracking  practices,  involving  physical  activity  [18],  food 
+intake [8], and sleeping behaviour [24]. Rooksby et al. [15] 
+characterise 
+these  self-tracking  practices  as  ‘lived’  - 
+enmeshed  in  everyday  life  -  and  reveal  five  overlapping 
+self-tracking styles. Through directive tracking people often 
+pursue a specific goal such as losing weight. Documentary 
+tracking  highlights  that  people  not  only  track  to  change 
+
+behaviour,  but  also  out  of  curiosity.  Diagnostic  tracking 
+aims to uncover relationships between different phenomena 
+such  as  diet  and  medication.  Collecting  rewards  refers  to 
+people’s will to compete and receive rewards. In fetishised 
+tracking  people  are  primarily  interested  in  the  appeal  and 
+functionality of technologies per se.  
+
+People  engage  in  self-tracking  because  they  gain  self-
+awareness of their health behaviours and can develop good 
+physical and nutritional practices [15, 22, 23]. Nevertheless, 
+studies  suggest  that  a  significant  proportion  of  people  stop 
+using  self-tracking  technologies  because  of  a  lack  of 
+actionable  insights,  poor  aesthetics,  and  unmanageable 
+maintenance [18, 22]. Notably, abandonment is not always 
+due 
+failure:  some  people  abandon  self-tracking 
+technologies after having developed a routine, while others 
+do  not  aim  to  reach  a  goal,  but  gain  a  new  awareness  of 
+their  behaviour;  and  a  few  people  lapse  and  resume  self-
+tracking over time because of shifting priorities [9, 15, 22].  
+
+to 
+
+These  findings,  based  primarily  on  healthy  populations, 
+also  point  to  challenges  and  opportunities  for  self-tracking 
+technologies  to  support  people  with  chronic  conditions  to 
+self-manage their health and wellbeing. For example, Felipe 
+and colleagues  [17] describe  roles for personal informatics 
+in  chronic  pain  and  MacLeod  et  al.  [27]  illustrate  the 
+potential  of  personal 
+illness 
+management,  stressing  opportunities  to  support  curiosity 
+and self-discovery rather than behaviour change.   
+
+in  chronic 
+
+informatics 
+
+Pathology of MS and Health Technologies in MS 
+MS  is  the  most  common  inflammatory  chronic  illness  in 
+young  adults.  It  is  not  curable,  but  is  manageable:  people 
+living with MS may obtain a satisfactory quality of life by, 
+for example, engaging in regular exercise, good nutritional 
+practice, and mental health management [13]. 
+
+MS  affects  the  central  nervous  system,  including  both  the 
+brain and spinal cord. Neurons are the core components of 
+the central nervous system and transmit signals to and from 
+the  brain,  other  neurons,  sensory  organs,  and  muscles.  MS 
+is  an  autoimmune  condition,  in  which  the  immune  system 
+mistakenly damages the myelin - the insulating layer of the 
+neurons  -  and,  consequently,  disrupts  the  communication 
+between the brain and body, leading to a complex range of 
+symptoms, 
+involving  cognitive,  visual,  and  physical 
+impairments  [24].  Most  people  with  MS  develop  the 
+relapsing  remitting  type,  which  is  characterised  by  periods 
+of  relapses,  when  symptoms  occur  for  a  few  days  or 
+months,  and  remissions,  when  symptoms  are  mild  or 
+disappear  for  several  months.  Approximately  65%  of 
+people with relapsing remitting MS are also diagnosed with 
+secondary  progressive  MS,  a  condition  in  which  the 
+severity  of  symptoms 
+the  periods  of 
+remissions decline [13]. MS leads to increased physical and 
+time.  Treatment  for  MS 
+cognitive 
+symptoms includes both drug and non-drug based therapies, 
+such as physiotherapy and psychotherapy [10].  
+
+impairments  over 
+
+increases  and 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6890There  are  different  lines  of  research  that  have  addressed 
+MS.  Medically  informed  studies  highlight  that  a  healthy 
+lifestyle might alleviate several MS symptoms and foster an 
+increased  quality  of  life  [10],  but  maintaining  physical 
+activity  is  considered  to  be  a  key  challenge  [41].  Studies 
+within  health  informatics  have  explored  whether  wearable 
+physical  activity  tracking  devices  could  be  leveraged  to 
+measure gait patterns and assess the progression of MS. For 
+example,  Shammas  et  al.  [41]  used  3D  accelerometers  to 
+track  changes  in  disabilities  more  effectively  than  clinical 
+methods,  such  as  standardised  walking  tests.  McIninch  et 
+al.  [31]  evaluated  the  use  of  a  consumer  activity  tracker 
+with MS patients for a period of three weeks, reporting that 
+the overall “user experience was extremely positive and MS 
+patients found the FitBit One device a useful aid in helping 
+quantify their walking.” HCI research with MS patients has 
+focused  on  the  clinical  assessment  of  disability  with  the 
+help  of  Microsoft  Kinect  [32]  and  personalisation  in  MS 
+rehabilitation training in laboratory settings [35]. 
+
+chronic 
+
+conditions,  which  often 
+
+In summary, previous HCI research has paid much attention 
+to  self-management  practices  and  self-care  technologies  in 
+common 
+involve 
+monitoring disease indicators [26]. Prior studies on personal 
+informatics  offer  valuable  models  and  descriptions  of  how 
+and  why  primarily  healthy  adults  use  and  abandon 
+consumer  health  technologies  [15,  22,  40].  However,  the 
+felt  experience  [30]  of  contemporary  consumer  health 
+technologies  and  self-tracking  practices  in  chronic  illness 
+management  that  go  beyond  disease  monitoring  has  not 
+been examined closely enough. This study focuses on MS, 
+a  chronic  condition  that  requires  a  high  level  of  self-
+management  to  support  medical  treatment,  cope  with  the 
+degenerative  progression  of  the  disease,  and  gain  a 
+satisfactory quality of life. In this study, we aim to explore 
+the  wider  experience  of  self-tracking 
+in  MS  self-
+management: what are the motivations for engaging in self-
+tracking  and  how  do  people  living  with  MS  use  and 
+experience self-tracking tools in everyday life? 
+
+people  with  diverse  backgrounds  participated  in  our  study, 
+from individuals who have been newly diagnosed with MS 
+to  those  with  long-term  experience  in  self-managing  the 
+disease.  Among  our  participants,  eleven  were  female  and 
+four male, which mirrors the 3:1 prevalence ratio of women 
+to men in MS [13]. Most participants were passionate about 
+pursuing a healthy lifestyle and all engaged in self-tracking 
+practices of their own volition.  
+
+Data Collection and Analysis  
+In order to gain a deeper understanding of our participants’ 
+experiences  of  living  with  MS  and  their  self-tracking 
+practices,  we  conducted  in-depth  interviews  [4].  Questions 
+covered the following topics: diagnosis; symptoms; relapse 
+experience;  lifestyle  routines;  and  self-tracking  tools  and 
+practices,  and  focused  on  attitudes,  goals,  challenges,  and 
+learnings.  Participants  chose  the  time  and  place  of  the 
+interviews. Twelve interviews were conducted via Skype or 
+FaceTime,  two  interviews  in  person  at  the  university,  and 
+one  interview  over  the  phone.  Interviews  took  between  40 
+and 135 minutes and were audio recorded. 
+
+Analysis  started  after  the  first  interview  and  guided 
+interview  questions.  The  qualitative  data 
+subsequent 
+analysis  software  NVivo  was  used  to  transcribe  the  audio 
+recordings and thematically code data [5]. The data corpus 
+was  iteratively  analysed  in  an  inductive,  ‘bottom  up’ 
+fashion  drawing  on  open  and  axial  coding.  We  focused  on 
+the  individual  experience  of  each  participant  who  had  a 
+unique  presentation  of  MS,  individual  coping  strategies, 
+and  particular  ways  of  using  self-tracking  tools.  At  later 
+stages, the mind mapping software SimpleMind was used to 
+create  mind  maps  visualising  emerging  themes,  associated 
+categories,  and  sample  quotes  in  order  to  support  axial 
+coding 
+in  motivations, 
+entanglements  between  different  self-tracking  styles,  and 
+descriptions  covering  reflective  thinking  practices.  Mind 
+maps also supported the discussion of quotes and emerging 
+themes within the research team. 
+
+differences 
+
+explore 
+
+and 
+
+METHODOLOGY 
+To  explore  the  questions  described  above,  fifteen  in-depth 
+interviews were conducted with people diagnosed with MS. 
+The study had institutional research ethics approval.  
+
+interest  was 
+
+Participants  
+Since  our 
+in  understanding  people’s 
+experiences  with  self-tracking  technologies,  the  study 
+focused  on  people  diagnosed  with  MS  who  use  or  have 
+used  any  kind  of  tools  (e.g.  paper  diaries,  spreadsheet 
+software,  mobile  apps,  fitness  tracking  devices,  etc.)  to 
+track their health and wellbeing. Participants were recruited 
+with the help of charities, including MS Society UK and MS 
+Trust  UK,  which  published  our  study  advert  on  their 
+the  online 
+websites.  Furthermore,  administrators  of 
+community shift.ms, and the MS meet-up group My Spirited 
+Friends  shared  the  advert  with  their  members.  Fifteen 
+
+the  participants 
+
+FINDINGS  
+in  our  study 
+We  first  report  how 
+experienced  a  lack  of  control  over  the  unpredictable  and 
+degenerative  nature  of  MS.  Subsequently,  we  describe 
+motivations  for  beginning  to  self-track  and  illustrate  the 
+ways  people  regained  a  sense  of  control  over  MS  through 
+intertwining  individual  self-care  practices  with  different 
+self-tracking  technologies,  namely:  (1)  gaining  knowledge 
+about the pathology of MS and self-knowledge about their 
+own MS through disease monitoring; (2) pursuing a healthy 
+lifestyle  and  self-tracking  physical  activities  and  dietary 
+habits; (3) maintaining mental health management practices 
+involving  life-journaling;  and  (4)  engaging  in  reflective 
+thinking across tracked personal data and health behaviour. 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6891Lack of Control in Adjusting to MS 
+People  affected  by  MS  reported  experiencing  a  lack  of 
+control  when  going  through  unpredictable  relapses,  coping 
+with the uncertain and degenerative progression of MS, and 
+dealing with the resulting psychological burden.  
+
+is  characterised  by  unpredictable 
+
+Dealing with Ambiguous and Unpredictable Relapses   
+MS 
+relapses  and 
+remissions.  A  clinical  relapse  is  defined  as  “either  the 
+appearance of new symptoms related to MS or very definite 
+worsening  of  old  symptoms,  which  lasted  for  at  least  24h 
+and occurred after the patient had been stable for at least a 
+month (with the absence of raised temperature, infection, or 
+any other health problem).” [11]  
+
+Identifying  relapses  was  not  only  important  to  adapting 
+medication  and  document  the  progression  of  the  disease, 
+but  also  to  experience  clarity,  assurance,  and  some  degree 
+of  control  over  the  uncertainty  of  the  disease,  as  P8 
+expressed:  “I  think  [I  track  a  relapse]  for  peace  of  mind. 
+[…] For me it’s important to know. I would prefer to know 
+and deal with something rather than be in ambiguity.” (P8)  
+
+Some  participants  claimed  confidence  in  their  own  ability 
+to identify, document, and report relapses. However, newly 
+diagnosed individuals considered recognising relapses to be 
+challenging. In particular, people reported facing challenges 
+when  distinguishing  between  clinical  relapses  and  pseudo-
+relapses,  since  both  types  lead  to  an  increase  of  MS 
+symptoms.  Pseudo-relapses  are  not  caused  by  new  lesions 
+in  the  central  nervous  system  but,  for  example,  by  heat 
+sensitivity or infections, and can often be resolved within a 
+short  period  of  time.  However,  pseudo-relapses  might  also 
+trigger  clinical  relapses.  For  example,  P8  expressed 
+uncertainty  when  distinguishing  between  infections  and 
+relapses:  “The  answer  is:  I  don’t  know.  I  don't  think  that 
+anybody  does  […].  I  can  never  be  sure  because  if  I  catch 
+things like a cold it will bring all of my symptoms. So, I am 
+never quite sure.” (P3)  
+
+Moreover, participants faced a lack of control when coping 
+with  the  unpredictability  of  relapses,  which  can  cause  a 
+sudden  loss  of  bodily  functions  and  lead  to  significant 
+physical deficits, as the following example shows: “And at 
+any  point  in  time,  my  life  could  change  because  I  have  a 
+relapse.  You  could  lose  your  eyesight,  use  a  wheelchair; 
+that possibility never escapes from your head. […] I never 
+know when it’s going to strike.” (P7)  
+
+Coping with Mental Health Conditions 
+MS  cannot  be  reduced  to  only  physical  disabilities,  but 
+affects  people’s  “mental  health  as  well.  That’s  equally  if 
+not  more 
+(F5)  Specifically,  participants 
+highlighted  that  the  uncertain  and  degenerative  nature  of 
+MS  depicts  a  major  psychological  challenge,  as  this  quote 
+exemplifies:  “For  me  the  biggest  thing  about  living  with 
+MS  is  coping  with  the  knowledge  that  you  have  something 
+
+important.” 
+
+that  is  going  to  get  worse  in  time.  And  there  is  a  lot  of 
+uncertainty  ahead.  And  that  psychological  burden  is  the 
+biggest one to deal with.” (P13) 
+
+Many  participants  reported  receiving  therapy  to  cope  with 
+mental  conditions,  such  as  anxiety,  stress,  and  depressive 
+episodes,  and  managing  their  fears  of  losing  physical 
+abilities,  autonomy,  and  social  life  at  some  point.  For 
+example, P5 reported experiencing anxiety, especially when 
+dealing with the constantly changing character of MS: “So, 
+when something new happens, or changes, or alters, I have 
+to  get  used  to  that  change.  And  that's  something  I  can 
+struggle  with.  And  I  actually  have  had  CBT  [cognitive 
+behavioural therapy] to support me with that.” (P5).  
+
+P2  was  seeing  a  psychologist  who  specialised  in  the 
+specific  needs  of  MS  patients  in  order  to  cope  with  the 
+many  mental  challenges:  “I  felt  like  a  CBT  therapist  was 
+not good enough; they were overwhelmed when I told them 
+what I’ve to deal with regarding my MS. I had to apply for 
+a  proper  MS  psychologist  to  cope  with  feelings  such  as 
+anger, loneliness, uselessness, frustration, and sadness.” 
+
+Motivations to Engage in Self-Tracking  
+In order to cope with the lack of control and uncertainties in 
+self-managing MS, most participants developed a proactive 
+attitude and engaged in different self-care practices, such as 
+learning  about  the  pathology  of  MS,  maintaining  regular 
+physical  activity  and  good  nutritional  practices,  and  caring 
+for their mental wellbeing. Notably, the use of self-tracking 
+tools,  such  as  paper  diaries  and  wearable  fitness  tracking 
+devices,  was  enmeshed  in  their  self-care  practices.  These 
+were  motivated  by  the  following  factors  across  our 
+to  secondary 
+participants:  wanting 
+progressive  MS  and  being  afraid  of  losing  their  physical 
+and  cognitive  abilities  at  some  later  point  in  life;  being 
+proud  to  be  physically  active  -  to  be  able  to  walk,  run, 
+cycle,  swim,  and  lift  -  despite  having  MS;  thinking 
+prospectively  about  the  potential  effects  of  a  healthy 
+lifestyle and preventing future regret of not having made all 
+possible  efforts;  as  well  as  wanting  to  stay  as  healthy  as 
+possible to be eligible for a cure in the near future.  
+
+to  delay  moving 
+
+Similar to lifestyle changes, self-tracking often started upon 
+diagnosis, when people tried to grasp the complex nature of 
+MS  and  to  gain  some  scaffolding  by  reading  about  it  and 
+using  different  tools,  such  as  paper  diaries:  “I  didn't  know 
+what was going on, I didn’t know where I was going next. I 
+suppose that I just started to write stuff down as some sort 
+of record, really, of what was happening to me.” (P11)  
+
+Since presently neither drug-based treatment nor non-drug-
+based  strategies  can  cure  MS,  many  participants  had 
+reservations  about  clinicians,  questioned  the  ways  MS  is 
+treated, and in an act of defiance focused on and believed in 
+their own self-care skills to explore and adjust to MS, as the 
+following examples illustrate:  
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6892Figure 1. Participants used paper diaries, PC software (e.g. MS Excel), tablets (e.g. timer), fitness trackers (e.g. Fitbit), smart 
+phones (e.g. Headspace), and smart scales to engage in disease monitoring, fitness tracking, and mental health management. 
+
+ “And  they  have  treatment,  but  they  do  not  know  how  to 
+cure  it.  And  they  do  not  really  know  what  causes  it.  That 
+doesn’t  fill  you  full  of  confidence,  anyway.  [...]  And  they 
+are sceptical of the drugs, and the drugs are not the whole 
+answer, but I decided to take the drugs and do everything I 
+can [to self-manage MS].” (P7) 
+
+“So, I feel like I need to have a better idea of what is going 
+on  in  my  body  […]  Because  I  don’t  feel  like  my  medical 
+professionals do. That gives me even more motivation to go 
+and find out. I feel like I need to be an expert in myself and 
+be an expert in my condition.” (P8) 
+
+Self-Tracking Practices in MS 
+Participants  in  our  study  engaged  in  a  wide  range  of 
+different  self-tracking  practices  (see  Figure  1).  They  used 
+various  tools  from  traditional  paper  diaries,  spreadsheet 
+software, and web applications, to wearable fitness tracking 
+devices  and  diverse  mobile  applications.  In  the  following 
+sections, we focus on entanglements between different self-
+care  practices  and  self-tracking  tools  addressing  emotional 
+wellbeing and the experience of control.  
+
+Disease Monitoring: Understanding MS Symptoms  
+Diagnostic  practices  were  often  conducted  using  paper-
+based health diaries, mobile food logging applications, and 
+consumer fitness tracking devices. Individuals reported that 
+their  emotional  wellness: 
+disease  monitoring  affected 
+sometimes  this  was  in  negative  ways  because  of  overly 
+focusing  on  symptoms,  and  sometimes  positively  when 
+exploring  causal  relationships  and  developing  a  sense  of 
+control over MS triggers and symptoms. 
+
+Participants  had  been  encouraged  -  often  over  a  short, 
+defined period of time - to use structured pain, bladder, and 
+bowel diaries provided by clinicians to document symptoms 
+and inform clinical decision making. Some filled out these 
+types  of  diaries  methodically,  others  on  the  fly  before 
+appointments. Most participants kept their own paper-based 
+
+health dairies for their “own benefit” appreciating that there 
+is  “no  one  over  [their]  shoulder.”  (P5)  Drawing  on  our 
+participants’  descriptions  and  photos  of  symptom  diaries, 
+we have identified three different types of entries: the first 
+was  self-reported  descriptions  of  symptoms,  such  as 
+“double  vision,”  “pins  and  needles  types  of  sensation,” 
+“head of cotton wool and porridge,” “mood, like anxiety,” 
+“energy  levels,”  “spine  feels  like  I  have  sunburn,”  and 
+“heavy  and  useless  legs.”  People  tended  to  use  self-
+designed  scales  based  on  their  own  words  rather  than 
+medical scales to define the severity of their symptoms. The 
+second type of entry was measures from external tools. For 
+example,  participants  manually  transferred  selected  data 
+from  weight  scales,  thermometers,  and  blood  pressure 
+monitors to their diaries in order to visualise, annotate, and 
+compare  the  recorded  metrics  with  symptoms,  medication 
+intake,  and  life-events.  The  third  type  of  entry  covered 
+narratives  of  everyday  life,  including  mundane  activities 
+and  sketched  thoughts.  Impressionistic  notes,  such  as 
+“Really  struggled  today  -  heat?”  (P11,  paper  diary) 
+contextualised  the  tracked  actions  and  helped  people  to 
+revisit past experiences. Participants also used health diaries 
+to prepare themselves for medical appointments in order to 
+be  able 
+to  effectively  communicate  symptoms  and 
+demonstrate competence. 
+
+In  addition  to  paper-based  health  diaries,  people  employed 
+food logging apps to monitor and understand MS symptoms 
+and  triggers  related  to  their  wellbeing.  Some  participants 
+explored  relationships  between  food  intake  and  symptoms, 
+such as fatigue. Others already made some findings, such as 
+P4,  who  found  a  relationship  between  sugar  intake  and 
+quality  of  sleep:  “If  I  have  too  much  sugar  it  keeps  me 
+awake at night and it’s not good for my sleep.”  
+
+Moreover,  wearable  consumer  fitness  tracking  devices 
+participants 
+supported 
+associated  physical  activity  data  of  fitness  trackers  with 
+periods  of  increased  or  decreased  severity  of  symptoms. 
+
+practices.  Some 
+
+diagnostic 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6893Others 
+fitness 
+interpreted  physiological  measures  of 
+tracking  devices  as  indicating  illness.  For  example,  when 
+reflecting  on  her  heart  rate  data,  P8  considered  the 
+possibility that she was getting a cold: “Actually, my heart 
+rate  is  up  a  little  bit  and  maybe  I  am  coming  down  with 
+something.”  Based  on  her  past  experience,  she  explained 
+further: “If you are coming down with a cold, that two days 
+prior my cold started, my heart rate went up by average 5 
+beats per minute a day.”  
+
+reactions 
+
+in  everyday 
+
+life.  Notable,  a 
+
+Monitoring  MS  symptoms  and  triggers  helped  especially 
+newly  diagnosed  individuals  to  better  understand  their 
+bodily 
+few 
+participants revealed that disease monitoring sometimes led 
+to  unintended  effects:  focusing  on  a  predefined  list  of 
+symptoms  might  lead  to  “worry  unnecessarily  about 
+symptoms  they  don’t  have”  (P5)  and  also  monitoring 
+symptoms  in  open-ended  ways  caused  sometimes  negative 
+feelings,  as  P4  describes:  “I  guess  sometimes,  I  feel  a  bit 
+obsessed  with  it.  Maybe,  I  should  not  be  thinking  about  it 
+too much and just getting on with life. But I think that could 
+come later on [...]. But I’ve had MS just since 2015, so I am 
+still learning the ways how my body is.” 
+
+Finding  a  balance  between  monitoring  and  an  excessive 
+focus  on  symptoms  involved  different  coping  strategies, 
+such  as  developing  a  mindful  attitude  and  intertwining 
+different self-tracking styles. Exploring causal relationships 
+between  MS  symptoms  and  different  factors,  such  as 
+physical  activity,  diet,  and  sleep,  provided,  all  together,  a 
+sense  of  having  some  degree  of  control  over  the  disease. 
+For  example,  P8  explained  that  using  a  Fitbit  Charge  HR 
+device to monitor her heart rate and cope with stressful life 
+events  provided  a  sense  of  control  over  MS:  “Because 
+research does say that there is correlation between MS and 
+stress,  I  am  like,  well  if  I  manage  my  stress,  I’ll  be 
+managing  my  MS.  Obviously,  this  is  not  a  complete  truth 
+but in my head it gives me control over something.” 
+
+Activity Tracking: Maintaining One’s Physical Abilities 
+When  using  wearable  activity  tracking  devices  a  few 
+participants  reported  feeling  pressure  to  perform  despite 
+their  physical  limitations,  but  many  explained  having 
+gained  an  increased  bodily  self-awareness  and  a  sense  of 
+control  over  the  physical  symptoms,  especially,  when 
+identifying  short-term 
+improvements  and  periods  of 
+stabilisation in the long-term. 
+
+All  participants  stressed  that  being  physically  active  was 
+essential  in  everyday  life:  it  affected  mood  and  energy 
+levels  (P1),  made  people  “feel  happy”  (P2),  provided 
+“mental  space”  and  was  a  “stress  reliever”  (P8), 
+strengthened  muscles,  improved  balancing  (P11),  and 
+helped  to  reduce  fatigue  (P4).  Using  fitness  tracking 
+devices  (e.g.  Fitbit  Charge  HR)  and  various  fitness  apps 
+(e.g.  Argus),  people  tracked  physical  activities,  such  as 
+yoga, walking in everyday situations, walking and running 
+defined  routes,  balance  exercises,  indoor  and  outdoor 
+
+cycling, and weight lifting (e.g. Wendler Log). Furthermore, 
+they  also  manually  captured  certain  activities,  such  as 
+sedentary behaviour and meditation. 
+
+Most  people  in  our  study  suggested  that  wearable  fitness 
+tracking  devices  play  a  crucial  role  in  maintaining  their 
+physical  and  psychological  wellbeing.  For  example, 
+participants used measures, such as steps and heart rate, in 
+order  to  gain  an  awareness  of  their  physical  abilities,  and 
+tried to avoid overdoing it in order to prevent potential MS 
+symptoms caused by overexertion, such as double vision. 
+
+and 
+
+goals, 
+
+rewards, 
+
+receiving 
+
+improve  weight 
+
+lifting,  walking,  and 
+
+Core functionalities of fitness tracking applications, such as 
+setting 
+exploring 
+visualisations of tracked data, led to mixed experiences. On 
+the one hand, goal-setting functionalities were used by three 
+participants  who  had  minimal  physical  symptoms  in  order 
+to 
+running 
+performances.  Measures  of  activities  made  short-term 
+achievements  tangible  and  participants  felt  proud  to  be 
+physically active despite of being affected by MS: “Also, as 
+a  positive  thing,  say,  you  know,  I  have  MS  but  I  can  still 
+bench  press  so  many  kg.”  (P8)  On  the  other  hand,  many 
+tried to meet well known fitness norms, such as the 10000 
+steps  per  day  goal,  which  could  cause  pressure  and  “be 
+quite  discouraging  when  you  know  that  you  can  only  walk 
+so  far.”  (P10)  Rather  than  increasing  performances,  most 
+participants,  especially  with  physical  impairments,  were 
+interested  in  recovering  and  maintaining  their  physical 
+capabilities. P9, who used an indoor exercise bike, revealed 
+this  attitude  in  the  following  way:  “I’ve  found  setting  a 
+target of exercising every day with MS is not feasible. It just 
+seemed  like  pointless  pressure.  Now  if  I  feel  like  it,  I 
+exercise  but  it’s  more  to  do  with  maintaining  flexibility 
+rather than achieving targets.”  
+
+A few participants were not keen on receiving  rewards for 
+their  healthy  lifestyle  choices  in  in  fitness  apps.  They 
+expressed  that  they  “don’t  care  to  get  a  badge”  (P9)  and 
+focus rather on other functionalities such as using heart rate 
+measures to inform diagnostic practices. In contrast to this, 
+many  participants  stressed  the  importance  of  receiving 
+rewards  for  their  effort  and  work  to  maintain  their  fitness. 
+For  example,  P7  explained:  “Everyday  I  look  at  the  score 
+card and I want to check that I got a gold star. And than it 
+reminds  me  that  I’ve  done  everything  I  can  on  that  day  to 
+be healthy and that I can do no more.” 
+
+Charts that visualised low steps counts and negative trends 
+were  sometimes  perceived  as  discouraging  due  to  the 
+progressive  physical  decline  that  people  with  MS  have  to 
+cope with. For example, P10 described: “The graphs for me 
+are kind of counterintuitive.  […] For someone with MS or 
+for someone has got mobility issues, it can be another sign 
+that you are not the same person you were a few years ago. 
+If you are already feeling like it is an uphill struggle, then 
+having something like that discourages you even more.” 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6894feel  more 
+
+In  contrast  to  this  point  of  view,  visual  representations  of 
+mobility  data  -  recorded  over  the  long-term  -  could  be  a 
+helpful tool to cope with the progressive decline of physical 
+abilities.  Long-term  activity  data  revealed  periods  of 
+improvement, stabilisation and stagnation and, in doing so, 
+made  people 
+rational,  experience  hope, 
+motivation, and vindication for their efforts, and a sense of 
+control  over  the  progressive  nature  of  the  disease.  For 
+example,  P11  had  recorded  her  walking  performance  and 
+balancing  exercises  in  a  paper  diary  for  over  five  years. 
+Reflecting  upon  her  data  she  explained:  “When  it’s  going 
+badly,  I  feel,  it’s  helping  me  to  see  how  fast  it's  getting 
+worse  and  it  sort  of  gives  me  some  sense  to  try  to  slow  it 
+down which is better than the feeling, not having any data; 
+it’s  going  to  be  hopeless.  I  can  look  at  the  graph  and  go: 
+actually,  over  that  period  of  time  of  five  years,  I  definitely 
+improved my condition. So, I feel some form of vindication 
+that the effort that I put into it, made some difference. [...] 
+For  me  documenting  stuff  is  being  partly  about  staying  in 
+control, knowing what is happening to me.” 
+
+Food Logging: Improving Wellbeing through Mindful Eating 
+Most people explored different diets over time and aimed to 
+“avoid food that has been shown by MS research studies to 
+have  negative  effects  on  MS,”  as  P8  representatively 
+explained.  They  tried  to  avoid  wheat,  gluten,  dairy,  meat, 
+and  sugar  in  order  to  follow  an  “anti-inflammatory”  diet. 
+People  engaged  in  food  logging  because  of  the  increased 
+priority  “to  look  after  the  body”  after  diagnosis  (P5);  to 
+lose  or  maintain  weight  in  order  to  be  “able  to  exercise 
+better”  (P11),  and  to  gain  weight  because  “under  weight 
+persons  are  more  vulnerable  to  infections,  which  can 
+trigger relapses” (P4). 
+
+In the past, participants had used paper-based health diaries 
+to  document  their  dietary  practices  including  detailed 
+information from consumed products to the specific amount 
+of  saturated  and  unsaturated  fat  which  required  manual 
+calculation.  Many  switched  from  keeping  paper-based 
+diaries to food logging apps over time in order to reduce the 
+manual  work  of  tracking.  One  participant  switched  from 
+using  a  food  journaling  app  to  a  lightweight  paper  diary 
+which  she  placed  in  the  kitchen  in  order  to  collaboratively 
+manage a healthy diet with her family.  
+
+Most  participants,  who  tracked  their  nutritional  practices 
+and  physical  exercises,  connected  the  two:  food  journaling 
+apps  were  often  linked  to  physical  activity  tracking 
+applications  to  determine  the  relationship  between  calorie 
+intake  and  calories  burned  (e.g.  Weight  Watchers).  Some 
+registered physical activities manually in food logging apps 
+(e.g.  MyFitnessPal)  because  they  were  not  accurately 
+recorded  by  fitness  tracking  devices,  such  as  yoga  or 
+individual balance exercises.  
+
+Compared  to  the  perceived  benefits  of  being  physically 
+active,  most  participants  explained  that  it  was  not  clear  to 
+them  whether  pursing  a  healthy  diet  significantly  affected 
+
+the  presentation  of  MS.  However,  they  emphasised  that 
+engaging  proactively  in  good  nutritional  practices  fostered 
+certainly  positive  emotional  wellbeing  which  “itself  is  a 
+good  thing.”  (P11)  Both,  food  and  physical  activity 
+tracking  were  considered  as  “fundamental  part[s]  of 
+maintaining on a healthy path” (P7).  
+
+Life Journaling: Coping with Everyday Life   
+Most people started to engage in mental health management 
+practices,  such  as  life  journaling  and  the  use  of  meditation 
+apps  (e.g.  Headspace),  when  they  tried  to  cope  with  the 
+disruptive changes and psychosocial impacts caused by MS. 
+Life  journaling  involved  the  use  of  paper  diaries,  gratitude 
+journals,  and  digital  smart  journals  (e.g.  Five  Minute 
+Journal).  They  used  diaries  in  order  to  capture  MS-related 
+experiences,  non-MS-related  thoughts,  and  specifically 
+positive feelings. Many perceived the process of writing as 
+enjoyable  and 
+journal  helped 
+therapeutic.  Keeping  a 
+individuals  to  cope  with  and  be  in  control  of  negative 
+thoughts related to the unpredictable implications of living 
+with MS. For example, P11 perceived her diary as a way to 
+‘talk  to  herself’  within  a  private  and  protected  space:  “I 
+suppose that it’s also a part of escape for me, because it’s 
+the  one  place  I  can  talk  about  MS  without  burdening 
+anybody else with the problems of it.” 
+
+Aside  from  addressing  MS,  many  other  topics  and  life 
+events  were  recorded.  P7  stated  that,  in  contrast  to  the 
+fitness  tracking  and  food  logging  applications,  her  paper 
+diary  is  less  about  the  physical,  but  more  about  the 
+emotional  issues  she  faced  in  life:  “I  would  just  capture 
+some of the thoughts that I had about losing my mother and 
+how that feels. Not just about my MS.”  
+
+Moreover,  some  participants  recorded  specifically  “things 
+you are positive about […] and grateful for in life” (P8) or 
+“something  very  small  that  other  people  might  just  look 
+over”  (P5),  such  as  having  a  catch  up  at  Starbucks  with 
+friends,  learning  some  new  stretches  at  a  ballet  class,  and 
+taking  time  to  use  the  Headspace  app  to  meditate. 
+Participants  looked  back  at  these  captured  experiences 
+when they went through the ‘bad days’ of living with MS.    
+
+Keeping diaries or gratitude journals seemed to help people 
+to  cope  with  everyday  life,  develop  confidence,  and  gain 
+optimism  and  hope.  P11,  who  recorded  her  walking 
+performances,  experiences,  and  thoughts  in  her  diary, 
+explained that the experience and practice of writing can be 
+a motivational coping strategy: “If you had a bad day, you 
+just  write  it  down,  you  close  that  book,  and  go:  all  right 
+that’s  fine,  I  am  done,  tomorrow  I  will  try  again.”  In  a 
+similar way, P5 reported that having filled out her gratitude 
+journal  after  her  symptom  diary,  helped  her  to  avoid 
+focusing  on  symptoms  and  negative  experiences: “Kind  of 
+ending  the  day  on  a  positive  note,  rather  than  thinking 
+about stuff that stresses me out.” 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6895Reflective Thinking through Self-Tracking  
+Participants  in  our  study  reported  engaging  in  reflective 
+thinking across different self-tracking tools and practices. In 
+doing  so,  they  explored  causal  relationships  between 
+symptoms  and  everyday  actions,  dealt  with  uncertainty  in 
+self-tracked data and the unpredictability of MS, and gained 
+self-awareness and health expertise over time.  
+
+Varied Interest in Reflection 
+People  with  MS  had  a  diverging  interest  and  expressed  a 
+varying  degree  of  engagement  in  exploring  tracked  health 
+data.  For  example,  P8  took  a  look  at  the  tracked  data  only 
+occasionally  and  briefly  when  there  was  some  time 
+available  (“I  don’t  really  look  back  at  it  either,  to  be 
+honest. I roll back on the data when I’ve got a free couple 
+of minutes, when I am early for a dentist appointment.”) P7 
+seemed  to  spend  more  time  exploring  her  fitness  data  and 
+was driven by joy and passion (“And I enjoy looking at it. I 
+love tracking the charts and seeing how I am getting on.”). 
+P11  was  keen  on  conducting  self-experiments  in  order  to 
+investigate actions that had a positive impact on her MS in 
+everyday  life:  “Like  any  good  scientist,  I  went:  OK,  I  am 
+going to try this experiment now and I am going to record 
+what I measure and see if it helps.” 
+
+Connecting Self-Tracking Tools and Practices  
+Most  participants  connected  different  self-tracking  styles, 
+such  as  fitness  tracking  and  life  journaling.  For  example, 
+P11 explained that tracking physical activities helped her to 
+understand  and  adjust  to  MS  in  everyday  life,  whereas 
+capturing  her  thoughts  motivated  her  to  maintain  good 
+physical  practices:  “The  numbers  [of  tracked  steps]  are 
+there  to  really  help  me  to  retain  some  sort  of  control  and 
+help  me  to  practically  manage  my  condition  and  trying  to 
+do the things that make it less bad. It [life journaling] is the 
+emotional  will:  it  helps  you  for  your  motivation  to  go  on 
+and do the things that rationally, probably, I need to do to 
+stay as healthy as I can. So, it works together.” 
+
+and 
+
+seamless 
+
+connections 
+
+While making sense of different self-tracking practices and 
+personal  health  data,  most  participants  experienced  a  lack 
+across 
+of 
+technologies. Many stressed that they are the ones who are 
+not  only  connecting  but  also  contextualising  tracked  data 
+across  tools:  “I  don’t  think  there  are  connections  at  the 
+moment. Other than what I think is in my head, there is no 
+connection  between  the  data.  It  all  comes  together  to 
+become part of everyday.” (P8) 
+
+interactions 
+
+Causal Relationships and Uncertainty 
+Participants  in  our  study  developed  causal  relationships 
+across individual triggers, symptoms, and mundane actions 
+in  order  to  better  understand  their  unique  manifestation  of 
+MS and explore how to adjust to MS in everyday life. This 
+was  a  time-extensive  learning  process  in  which  people 
+developed 
+idiosyncratic  ‘best 
+practices.’  In  doing  so,  they  often  perceived  self-tracked 
+data as evidence for observed phenomena and assumptions 
+
+their  own  unique  and 
+
+they  made  while  being  aware  of  the  uncertain  and 
+constantly  changing  nature  of  MS.  P10,  for  example, 
+expressed  the  relationships  between  critical  dimensions, 
+such as time and the unpredictability of MS, and emotional 
+factors  such  as  being  proactive  and  gaining  a  sense  of 
+control,  when  exploring  causalities  in  everyday  life  in  the 
+following  way:  “I  have  also  realised  that  where  fatigue 
+happens  quite  immediately  after  something,  like  going  of 
+the  tube,  then  I  know,  there  is  a  more  direct  correlation 
+between one and the other. When it is something like stress 
+and how busy you are that’s harder because the cause and 
+effect is a greater distance in time. I try, I mean, that’s the 
+thing, you just don’t know. You can’t say exactly, hand on 
+heart, that’s exactly what it is. You do your best to try and 
+work it out because, I think, if I didn’t, I wouldn’t be feeling 
+like  I  was  being  proactive.  If  I  am  proactive  I  am  more  in 
+control and the bully [MS] is less in control.” 
+
+Notably,  inaccuracy,  uncertainty,  and  ambiguity  in  tracked 
+data  did  not  necessarily  lead  to  frustration,  but  sometimes 
+made room for speculations and explorations. For example, 
+P6  reflected  on  the  causal  relationships  she  anticipated  in 
+the  past  and  the  uncertainty  of  her  recently  increased 
+symptoms:  “But  actually,  if  I  was  able  to  answer  it 
+[reasons for increased severity of symptoms], would I even 
+want  to  know  the  answer  anyway?  Because  if  I  can’t  do 
+anything about it, then it would make it even worse. So, not 
+being  able  to  answer  it  and  trying  to,  that,  actually,  gives 
+me a purpose to explore it.”  
+
+Self-Knowledge and Health Expertise  
+Participants  claimed  to  have  gained  bodily  self-awareness, 
+self-knowledge, and health expertise regarding how to live 
+with  MS.  They  reported  obtaining  practical  knowledge 
+about  the  disease  and  self-knowledge  through  both  doing 
+research  online  and  self-tracking,  which  appeared  to  make 
+them  feel  more  rational,  self-confident,  and  accountable. 
+For  example,  before  keeping  a  bladder  diary,  P4  thought: 
+“If I don’t drink too much and I am going out, I won’t need 
+a toilet just halfway down the road.” After having kept the 
+diary, her thinking was to some extent medically informed 
+and more holistic in terms of the pragmatic implications of 
+being  hydrated:  “I’ve  to  think  of  the  bigger  picture  that 
+actually,  being  dehydrated  will  irritate  my  bladder  even 
+more.  […]  By  drinking  more  water  in  the  morning  rather 
+than  in  the  evening,  that  can  stop  me  from  going  to  the 
+toilet more at night; […] it flushes away toxins; it can help 
+your immune system.” 
+
+However,  people  with  MS  explained  that  they  were 
+sometimes  not  able  to  find  answers  for  their  health  related 
+questions, especially, when medical data was not available 
+or  accessible.  For  example,  P7  reported:  “I’ve  been 
+collecting data in my journal and now on my Fitbit, it’s not 
+the right data. It’s not all of the data.” In addition to fitness 
+data, she was interested in using annual MRI scans or blood 
+values  to  infer  whether  her  lifestyle  had  a  positive  impact 
+on the progression of her MS. 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6896DISCUSSION   
+This  study  has  investigated  self-tracking  practices  in  MS 
+self-management.  Below,  we  use  this  understanding  to 
+discuss the intertwined role of the experience of control and 
+mental  wellbeing  in  self-tracking  and  address  design 
+consideration for future self-tracking technologies.  
+
+Self-Tracking to Support the Experience of Control 
+Participants  in  our  study  reported  facing  a  lack  of  control 
+when  adjusting  to  the  ambiguous,  unpredictable,  and 
+degenerative  nature  of  MS  in  everyday  life.  Our  findings 
+suggest  that  people  regained  a  sense  of  control  over  MS 
+through  intertwining  individual  self-care  practices  with  a 
+wide range of different self-tracking technologies.  
+
+Perceived control is a seminal psychological construct that 
+is defined as the “belief that one can determine one’s own 
+internal states and behaviour, influence one’s environment, 
+and/or  bring  about  desired  outcomes.”  [43]  A  significant 
+body  of  interdisciplinary  research  suggests  that  perceived 
+control  is  an  important  factor  in  adopting  and  maintaining 
+good  physical  and  psychological  health  [37,  43].  Within 
+HCI,  Mamykina  et  al.  have  utilised  the  Health  Locus  of 
+Control  questionnaire  in  order  to  evaluate  the  application 
+MAHI  with  diabetes  patients  and  reported  an  increase  of 
+perceived  control  [29].  MAHI  supported  individuals  with 
+diabetes in changing their diet through self-monitoring and 
+social interaction with diabetes educators.  
+
+In  contrast  to  blood  glucose  values  in  diabetes  self-
+management,  there  is  no  primary  disease  indicator  in  MS 
+that  can  be  effectively  measured  and  controlled  through 
+self-care. Notably, MS is a degenerative and unpredictable 
+disease  that  is  neither  curable  nor  controllable.  The 
+experience of control that we encountered here appeared to 
+be  grounded  in  a  mindful  mindset  and  positive  wellbeing, 
+involved  coping  with  uncertainty  when  exploring  causal 
+relationships, and faded when experiencing relapses. Using 
+self-tracking  technologies  alone  did  not  support  people  to 
+gain a feeling of being in control. Our study illustrates that 
+the  experience  of  control  was  related  to  entanglements 
+between idiosyncratic self-care practices and different self-
+tracking tools, involving knowledge about the pathology of 
+MS  and  self-knowledge  about  MS  (disease  monitoring), 
+healthy 
+tracking),  mental  health 
+management (life-journaling), and reflective thinking across 
+personal  health  data  and  behaviour.  Altogether,  these  key 
+practices  empowered  people  to  regain  a  sense  of  control 
+over MS. 
+
+lifestyles 
+
+(fitness 
+
+Along  with  paper-based  diaries,  wearable  fitness  tracking 
+devices  played  an  important  role  in  empowering  people  to 
+self-manage MS. For example, participants used the ‘novel’ 
+physiological data of activity tracking devices, such as heart 
+rate,  to  not  only  maintain  their  fitness,  but  also  to  explore 
+triggers,  such  as  stress.  By  gaining  an 
+symptom 
+understanding of their body and exploring how to adjust to 
+these  triggers  they  gained  a  sense  of  control  over  the 
+
+complex  nature  of  MS.  In  contrast  to  prior  studies  [18], 
+accuracy  of  tracking  devices  and  uncertainty  in  personal 
+health  data  played  a  minor  role.  Most  participants  in  our 
+study did not conduct experiments like scientists (cf. [40]), 
+but  tracked  their  individual  symptoms  in  an  idiosyncratic, 
+open-ended  fashion  developing  their  own  personal  health 
+data  ecologies.  They  trusted  not  only  in  their  agency  to 
+develop 
+tracked 
+symptoms,  and  mundane  actions  but  also  stressed  the 
+benefits of the experience of the self-tracking practice itself, 
+and, most importantly, believed in their own interpretations 
+and assumptions they made.  
+
+‘mental  connections’  across 
+
+tools, 
+
+for 
+
+self-tracking 
+
+technologies 
+
+[19]  and  beyond 
+
+This  lived  character  of  tracking  practices  in  MS  reveals  a 
+critical  dimension  that  needs  to  be  considered  when 
+self-
+designing 
+experimentation  and  self-diagnosis,  which  are  increasingly 
+explored  within  HCI 
+[25].  Self-
+experimentation  tools  have  great  potential  to  support  self-
+tracking  practices  by  providing  guidance  and  evidence 
+when  identifying  not  only  correlational  but  also  causal 
+relationships  between 
+[20]. 
+Designing self-experimentation applications that encourage 
+users  to  formulate  a  valid  hypothesis,  identify  independent 
+and  dependent  variables,  and  choose  a  single  independent 
+variable to test in the real world, poses not only conceptual 
+challenges. Our findings suggest that pre-defined, dualistic, 
+and  deterministic  design  approaches  of  diagnosis  could 
+violate  people’s  agency  and  experience  of  control  in  self-
+managing their health.  
+
+symptoms  and 
+
+triggers 
+
+In  order  to  avoid  dictating  and  mindless  experiences,  self-
+tracking technologies could empower people to proactively 
+care  for  their  health  and  wellbeing  by  mediating  practice-
+based health expertise and fostering self-exploration. Rather 
+than focusing on binary outcomes, applications could focus 
+on  the  self-tracking  process  itself  in  order  to  support 
+people’s  reflective  thinking  and  opportunities  to  explore 
+what  health  behaviour  might  help  to  adjust  to  MS  in 
+everyday  life.  These  considerations  underpin  the  need  for 
+self-tracking  technologies  that  consider  the  individual’s 
+context [7],  support personalisation [42] and customisation 
+[18],  and  also  foster  self-discovery  [27].  However,  since 
+knowledge  about  the  complex  pathology  of  MS  was  key 
+when  engaging  in  diagnostic  tracking  and  gaining  a  sense 
+of  control  over  ‘the  unknown,’  self-tracking  technologies 
+could  provide  practice-based  health  expertise.  Relevant 
+pathological  knowledge,  such  as  scientifically  grounded 
+associations  between  MS  symptoms  and  health  behaviour, 
+can  be 
+to  common 
+language,  iteratively  elaborated,  and  evaluated  with  people 
+affected  by  MS  in  order  to  uncover  uncertainties  and 
+mismatches,  surface  their  hidden  health  competence,  and 
+together  co-create  informative  content  for  self-tracking 
+technologies. In this way, we could mediate practice-based 
+knowledge  concerning  why,  what,  and  how  to  self-track 
+and become more in control of “the bully MS.” (P10)  
+
+translated  from  medical  models 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6897Self-Tracking to Foster Mental Wellbeing   
+Most previous research in HCI has addressed mental health 
+tracking  and  management  in  populations  that  are  affected 
+primarily  by  mental  illnesses,  such  as  depression  [16]  and 
+bipolar disorder [3]. We would like to draw attention to the 
+role of self-tracking with the less visible but still significant 
+mental challenges that people experience when living with 
+unpredictable chronic conditions, such as MS.  
+
+Research  has  paid  much  attention  to  tracking  physical 
+mobility  in  order  to  assess  the  progression  [32]  and  foster 
+physical  activity  in  MS  [35].  Indeed,  many  participants  in 
+our  study  tracked  their  fitness  in  order  to  maintain  their 
+physical  abilities.  However,  our  findings  highlight  that 
+there  are  concerns  beyond  tracking  the  performance  of 
+primary  disease  indicators:  people  living  with  MS  had  to 
+deal with enormous mental challenges, such as dealing with 
+the  degenerative  course  of  the  disease  and  unpredictability 
+of  the  next  relapse,  and  being  afraid  of  not  being  able  to 
+participate  in  social  life  at  some  indeterminate  point.  Our 
+findings  illustrate  that  people  with  MS  were  able  to  cope 
+with  some  of 
+these  psychological  challenges  when 
+engaging in self-tracking their health and wellbeing. Similar 
+to Elsden et al.’s work [12], we found that keeping a diary 
+was  perceived  as  therapeutic  and  supported  people  in 
+coping  with  negative  thoughts.  In  addition,  our  findings 
+suggest that further self-tracking practices affected people’s 
+emotional  wellbeing  in  similar  ways.  For  example,  some 
+participants perceived documenting and identifying relapses 
+as depressing, while others explained that it was important 
+for  their  peace  of  mind.  Many  who  engaged  in  disease 
+monitoring  admitted  that  focusing  on  symptoms  could  be 
+sometimes hopeless but reported being proud and confident 
+when  they  identified  relationships  between  symptoms  and 
+triggers.  In  some  cases,  physical  activity  data  revealed 
+periods of stabilisation and enabled people to become more 
+in  control,  instead  of  being  led  by  fears  about  the 
+progression of physical impairments.  
+
+These  observations  suggest  that  the  design  of  self-tracking 
+technologies  should  not  only  consider  primary  disease 
+indicators but also needs to acknowledge the emotional and 
+mental  wellbeing  of  people  who  are  living  with  an 
+unpredictable  and  degenerative  condition.  Moreover,  these 
+findings  exemplify  that  mindful  self-tracking  depicts  a 
+powerful strategy to cope with the psychological challenges 
+people  experience  in  everyday  life.  Mindfulness,  the 
+“process of drawing novel distinctions,” enables people to 
+develop  sensitivity,  adopt  alternative  viewpoints,  adapt  to 
+constant  changes 
+the 
+life  and, 
+experience of control [37].  
+
+therefore,  fosters 
+
+in 
+
+facilitate open-ended self-tracking and imply in which ways 
+entanglements between different tracking styles, such as life 
+journaling,  fitness  tracking,  and  disease  monitoring,  could 
+be  supported.  In  this  way,  self-tracking  applications  could 
+stimulate  parallel  thinking  and  reduce  unintended  effects, 
+such as overly focusing on symptoms.  
+
+fitness 
+
+Moreover, 
+tracking  applications  could  help 
+individuals  with  MS  to  not  only  be  mindfully  active  but 
+also  cope  with  physical  decline  in  the  long-term.  Since 
+people  with  MS  had  relapses  and  remissions  over  time, 
+their experiences of being physical active were emotionally 
+rich.  Instead  of  focusing  on  increasing  performances, 
+design approaches of contemporary fitness tracking devices 
+and  applications  need  to  be  sensitive  to  considerable 
+in  physical  capabilities,  motivations,  and 
+fluctuations 
+engagement.  Tailored  framing  and  visual  cuts  in  data 
+representations have been shown to be valuable techniques 
+in the context of personal informatics [14] and offer further 
+design  opportunities  to  help  people,  who  are  affected  by 
+physical symptoms, not only to become aware of short-term 
+improvements but also to recognise periods of stabilisation 
+and  stagnation  in  the  long-term.  Furthermore,  drawing  on 
+fostering  an  awareness  of 
+biofeedback 
+physiological changes before, during, and after being active 
+could  support  people  in  recovering,  avoiding  overdoing  it 
+[33], and obtaining a balance between body and mind. 
+
+[37]  and 
+
+to 
+
+lack  of  control  due 
+
+CONCLUSION  
+Most  previous  research  has  focused  on  common  chronic 
+conditions  that  typically  involve  disease  monitoring.  This 
+study 
+investigates  different  self-tracking  practices  of 
+individuals  living  with  multiple  sclerosis,  a  complex 
+neurological  condition  causing  a  wide  range  of  physical, 
+cognitive,  and  psychological  impairments.  We  found  that 
+when  experiencing  a 
+the 
+unpredictable  and  degenerative  nature  of  MS,  individuals 
+through 
+their  sense  of  control  over  MS 
+regained 
+intertwining  individual  self-care  practices  with  different 
+self-tracking  tools  ranging  from  paper-based  diaries  to 
+wearable fitness tracking devices. In doing so, they engaged 
+in  disease  monitoring,  fitness  tracking,  and  life  journaling 
+to understand the body and care for the mind. In this paper, 
+we  have  focused  attention  on  the  role  of  emotional 
+wellbeing  in  self-tracking  and  the  role  of  self-tracking  in 
+regaining  a  sense  of  control  over  an  unpredictable  and 
+progressive disease. We have discussed in which ways self-
+tracking  technologies  could  support  the  experience  of 
+control  and,  rather  than  focusing  only  on  tracking  primary 
+disease indicators, foster mindful experiences.  
+
+In  order  to  aid  mindful  disease  monitoring,  the  design  of 
+health 
+tracking  applications  could,  for  example,  be 
+informed by an emerging class of hybrid systems that have 
+not  been  explored  in  the  context  of  chronic  illness:  smart 
+journals are autonomous life-logging applications that draw 
+on  personal  social,  fitness,  and  contextual  data  [12].  They 
+
+ACKNOWLEDGMENTS 
+Many thanks to all participants for sharing their experiences 
+and to Clara Marques Caldeira, Katarzyna Stawarz, and our 
+reviewers  for  providing  constructive  feedback  on  earlier 
+versions of this paper. Amid Ayobi is funded by an EPSRC 
+DTG studentship and Overseas Doctoral Award. 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6898REFERENCES 
+
+1. 
+
+Jessica S Ancker, Holly O Witteman, Baria Hafeez, 
+Thierry Provencher, Mary Van de Graaf, and Esther 
+Wei. 2015. “You Get Reminded You’re a Sick 
+Person”: Personal Data Tracking and Patients With 
+Multiple Chronic Conditions. Journal of Medical 
+Internet Research 17, 8. 
+https://doi.org/10.2196/jmir.4209 
+
+2.  Amid Ayobi, Paul Marshall, and Anna L. Cox. 2016. 
+
+Reflections on 5 Years of Personal Informatics: Rising 
+Concerns and Emerging Directions. In Proceedings of 
+the 2016 CHI Conference Extended Abstracts on 
+Human Factors in Computing Systems (CHI EA ’16), 
+2774–2781. https://doi.org/10.1145/2851581.2892406 
+
+3. 
+
+Jakob E. Bardram, Mads Frost, Károly Szántó, Maria 
+Faurholt-Jepsen, Maj Vinberg, and Lars Vedel 
+Kessing. 2013. Designing Mobile Health Technology 
+for Bipolar Disorder: A Field Trial of the Monarca 
+System. In Proceedings of the SIGCHI Conference on 
+Human Factors in Computing Systems (CHI ’13), 
+2627–2636. https://doi.org/10.1145/2470654.2481364 
+
+4.  Ann Blandford, Dominic Furniss, and Stephann Makri. 
+2016. Qualitative HCI Research: Going Behind the 
+Scenes. Synthesis Lectures on Human-Centered 
+Informatics 9, 1: 1–115. 
+
+5.  Virginia Braun and Victoria Clarke. 2006. Using 
+
+thematic analysis in psychology. Qualitative Research 
+in Psychology 3, 2: 77–101. 
+https://doi.org/10.1191/1478088706qp063oa 
+
+6.  Yunan Chen. 2010. Take It Personally: Accounting for 
+
+Individual Difference in Designing Diabetes 
+Management Systems. In Proceedings of the 8th ACM 
+Conference on Designing Interactive Systems (DIS 
+’10), 252–261. 
+https://doi.org/10.1145/1858171.1858218 
+
+7.  Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, 
+
+Wanda Pratt, and Julie A. Kientz. 2014. Understanding 
+Quantified-selfers’ Practices in Collecting and 
+Exploring Personal Data. In Proceedings of the 
+SIGCHI Conference on Human Factors in Computing 
+Systems (CHI ’14), 1143–1152. 
+https://doi.org/10.1145/2556288.2557372 
+
+8.  Felicia Cordeiro, Daniel A. Epstein, Edison Thomaz, 
+Elizabeth Bales, Arvind K. Jagannathan, Gregory D. 
+Abowd, and James Fogarty. 2015. Barriers and 
+Negative Nudges: Exploring Challenges in Food 
+Journaling. In Proceedings of the 33rd Annual ACM 
+Conference on Human Factors in Computing Systems 
+(CHI ’15), 1159–1162. 
+https://doi.org/10.1145/2702123.2702155 
+
+9.  A. L. Cox, J. Bird, and R. Fleck. 2013. Digital 
+
+Epiphanies: how self-knowledge can change habits and 
+our attitudes towards them. In Presented at: The 27th 
+
+International British Computer Society Human 
+Computer Interaction Conference: The Internet of 
+things, Brunel University, London, UK. (2013). 
+http://www.digitalepiphanies.org/publications.html 
+
+10.  Andrea Döring, Caspar F. Pfueller, Friedemann Paul, 
+and Jan Dörr. 2013. Exercise in Multiple Sclerosis – 
+An Integral Component of Disease Management. In 
+Neurodegenerative Diseases: Integrative PPPM 
+Approach as the Medicine of the Future, Silvia Mandel 
+(ed.). Springer Netherlands, 277–299. 
+https://doi.org/10.1007/978-94-007-5866-7_12 
+
+11.  Martin Duddy, Martin Lee, Owen Pearson, Esmaeil 
+
+Nikfekr, Abhijit Chaudhuri, Fran Percival, Megan 
+Roberts, and Carolyn Whitlock. 2014. The UK patient 
+experience of relapse in Multiple Sclerosis treated with 
+first disease modifying therapies. Multiple Sclerosis 
+and Related Disorders 3, 4: 450–456. 
+https://doi.org/10.1016/j.msard.2014.02.006 
+
+12.  Chris Elsden, Abigail C. Durrant, and David S. Kirk. 
+2016. It’s just my History isn’t it?: Understanding 
+Smart Journaling Practices. In Proceedings of the 2016 
+CHI Conference on Human Factors in Computing 
+Systems (CHI ’16), 2819–2831. 
+https://doi.org/10.1145/2858036.2858103 
+
+13.  Nikki Embrey. 2014. Multiple sclerosis: managing a 
+complex neurological disease. Nursing Standard 29, 
+11: 49–58. https://doi.org/10.7748/ns.29.11.49.e9190 
+
+14.  Daniel A. Epstein, Jennifer H. Kang, Laura R. Pina, 
+
+James Fogarty, and Sean A. Munson. 2016. 
+Reconsidering the device in the drawer: lapses as a 
+design opportunity in personal informatics. In 
+Proceedings of the 2016 ACM International Joint 
+Conference on Pervasive and Ubiquitous Computing, 
+829–840. http://dx.doi.org/10.1145/2971648.2971656 
+
+15.  Daniel A. Epstein, An Ping, James Fogarty, and Sean 
+A. Munson. 2015. A Lived Informatics Model of 
+Personal Informatics. In Proceedings of the 2015 ACM 
+International Joint Conference on Pervasive and 
+Ubiquitous Computing (UbiComp ’15), 731–742. 
+https://doi.org/10.1145/2750858.2804250 
+
+16.  Ramesh Farzanfar, Sophie Frishkopf, Robert 
+
+Friedman, and Kevin Ludena. 2007. Evaluating an 
+automated mental health care system: making meaning 
+of human–computer interaction. Computers in Human 
+Behavior 23, 3: 1167–1182. 
+https://doi.org/10.1016/j.chb.2004.11.015 
+
+17.  Sergio Felipe, Aneesha Singh, Caroline Bradley, 
+Amanda CdeC Williams, and Nadia Bianchi-
+Berthouze. 2015. Roles for Personal Informatics in 
+Chronic Pain. In Proceedings of the 9th International 
+Conference on Pervasive Computing Technologies for 
+Healthcare (PervasiveHealth ’15), 161–168. 
+http://dl.acm.org/citation.cfm?id=2826165.2826189 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA689918.  Daniel Harrison, Paul Marshall, Nadia Bianchi-
+
+Berthouze, and Jon Bird. 2015. Activity Tracking: 
+Barriers, Workarounds and Customisation. In 
+Proceedings of the 2015 ACM International Joint 
+Conference on Pervasive and Ubiquitous Computing 
+(UbiComp ’15), 617–621. 
+https://doi.org/10.1145/2750858.2805832 
+
+19.  Ravi Karkar, James Fogarty, Julie A. Kientz, Sean A. 
+Munson, Roger Vilardaga, and Jasmine Zia. 2015. 
+Opportunities and Challenges for Self-experimentation 
+in Self-tracking. In Adjunct Proceedings of the 2015 
+ACM International Joint Conference on Pervasive and 
+Ubiquitous Computing and Proceedings of the 2015 
+ACM International Symposium on Wearable 
+Computers (UbiComp/ISWC’15 Adjunct), 991–996. 
+https://doi.org/10.1145/2800835.2800949 
+
+20.  Ravi Karkar, Jasmine Zia, Roger Vilardaga, Sonali R. 
+Mishra, James Fogarty, Sean A. Munson, and Julie A. 
+Kientz. 2015. A framework for self-experimentation in 
+personalized health. Journal of the American Medical 
+Informatics Association: ocv150. 
+
+21.  Karina Kusk, Dorthe B. Nielsen, Troels Thylstrup, 
+
+Niels Holm Rasmussen, Jacob Jorvang, Christian F. 
+Pedersen, and Steffen Wagner. 2013. Feasibility of 
+using a lightweight context-aware system for 
+facilitating reliable home blood pressure self-
+measurements. In Pervasive Computing Technologies 
+for Healthcare (PervasiveHealth), 2013 7th 
+International Conference on, 236–239.  
+
+22.  Amanda Lazar, Christian Koehler, Joshua Tanenbaum, 
+and David H. Nguyen. 2015. Why we use and abandon 
+smart devices. In Proceedings of the 2015 ACM 
+International Joint Conference on Pervasive and 
+Ubiquitous Computing, 635–646. 
+http://dx.doi.org/10.1145/2750858.2804288 
+
+23.  Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A Stage-
+based Model of Personal Informatics Systems. In 
+Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI ’10), 557–566. 
+https://doi.org/10.1145/1753326.1753409 
+
+24.  Wanyu Liu, Bernd Ploderer, and Thuong Hoang. 2015. 
+In Bed with Technology: Challenges and Opportunities 
+for Sleep Tracking. In Proceedings of the Annual 
+Meeting of the Australian Special Interest Group for 
+Computer Human Interaction (OzCHI ’15), 142–151. 
+https://doi.org/10.1145/2838739.2838742 
+
+25.  Deborah Lupton and Annemarie Jutel. 2015. “It”s like 
+having a physician in your pocket!’A critical analysis 
+of self-diagnosis smartphone apps. Social Science & 
+Medicine 133: 128–135. 
+
+26.  Haley MacLeod, Kim Oakes, Danika Geisler, Kay 
+
+Connelly, and Katie Siek. 2015. Rare world: Towards 
+technology for rare diseases. In Proceedings of the 
+
+33rd Annual ACM Conference on Human Factors in 
+Computing Systems, 1145–1154. 
+http://dx.doi.org/10.1145/2702123.2702494 
+
+27.  Haley MacLeod, Anthony Tang, and Sheelagh 
+
+Carpendale. 2013. Personal informatics in chronic 
+illness management. In Proceedings of Graphics 
+Interface 2013, 149–156. 
+http://dl.acm.org/citation.cfm?id=2532155 
+
+28.  Lena Mamykina, Andrew D. Miller, Elizabeth D. 
+
+Mynatt, and Daniel Greenblatt. 2010. Constructing 
+identities through storytelling in diabetes management. 
+In Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems, 1203–1212. 
+http://dl.acm.org/citation.cfm?id=1753507 
+
+29.  Lena Mamykina, Elizabeth Mynatt, Patricia Davidson, 
+
+and Daniel Greenblatt. 2008. MAHI: Investigation of 
+Social Scaffolding for Reflective Thinking in Diabetes 
+Management. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems 
+(CHI ’08), 477–486. 
+https://doi.org/10.1145/1357054.1357131 
+
+30.  John McCarthy and Peter Wright. 2004. Technology as 
+
+experience. interactions 11, 5: 42–43. 
+
+31.  James McIninch, Shoibal Datta, Pronabesh 
+
+DasMahapatra, Emil Chiauzzi, Rishi Bhalerao, Alicia 
+Spector, Sherrie Goldstein, Liz Morgan, and Jane 
+Relton. 2015. Remote Tracking of Walking Activity in 
+MS Patients in a Real-World Setting (P3.209). 
+Neurology 84, 14 Supplement: P3.209. 
+
+32.  Cecily Morrison, Peter Culmer, Helena Mentis, and 
+
+Tamar Pincus. 2014. Vision-based body tracking: 
+turning Kinect into a clinical tool. Disability and 
+Rehabilitation: Assistive Technology: 1–5. 
+https://doi.org/10.3109/17483107.2014.989419 
+
+33.  Joseph W. Newbold, Nadia Bianchi-Berthouze, 
+
+Nicolas E. Gold, Ana Tajadura-Jiménez, and Amanda 
+CdC Williams. 2016. Musically Informed Sonification 
+for Chronic Pain Rehabilitation: Facilitating Progress 
+& Avoiding Over-doing. In Proceedings of the 2016 
+CHI Conference on Human Factors in Computing 
+Systems, 5698–5703. 
+https://doi.org/10.1145/2858036.2858302 
+
+34.  Francisco Nunes, Nervo Verdezoto, Geraldine 
+
+Fitzpatrick, Morten Kyng, Erik Grönvall, and Cristiano 
+Storni. 2015. Self-Care Technologies in HCI: Trends, 
+Tensions, and Opportunities. ACM Trans. Comput.-
+Hum. Interact. 22, 6: 33:1–33:45. 
+https://doi.org/10.1145/2803173 
+
+35.  Johanna Renny Octavia, Karin Coninx, and Peter Feys. 
+
+2012. As i am not you: accommodating user diversity 
+through adaptive rehabilitation training for multiple 
+sclerosis patients. In Proceedings of the 24th 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA690041.  Layal Shammas, Tom Zentek, Birte von Haaren, 
+
+Stefan Schlesinger, Stefan Hey, and Asarnusch Rashid. 
+2014. Home-based system for physical activity 
+monitoring in patients with multiple sclerosis (Pilot 
+study). BioMedical Engineering OnLine 13, 1: 1–15. 
+https://doi.org/10.1186/1475-925X-13-10 
+
+42.  Cristiano Storni. 2013. Design challenges for 
+
+ubiquitous and personal computing in chronic disease 
+care and patient empowerment: a case study rethinking 
+diabetes self-monitoring. Personal and Ubiquitous 
+Computing 18, 5: 1277–1290. 
+https://doi.org/10.1007/s00779-013-0707-6 
+
+43.  Kenneth A. Wallston, Barbara Strudler Wallston, 
+Shelton Smith, and Carolyn J. Dobbins. 1987. 
+Perceived control and health. Current Psychology 6, 1: 
+5–25. 
+
+44.  T. J. Yun, H. Y. Jeong, H. R. Lee, R. I. Arriaga, and G. 
+D. Abowd. 2010. Assessing asthma management 
+practices through in-home technology probes. In 2010 
+4th International Conference on Pervasive Computing 
+Technologies for Healthcare, 1–9. 
+https://doi.org/10.4108/ICST.PERVASIVEHEALTH2
+010.8839 
+
+Australian Computer-Human Interaction Conference, 
+424–432. http://dl.acm.org/citation.cfm?id=2414603 
+
+36.  Aisling Ann O’Kane, Yvonne Rogers, and Ann E. 
+Blandford. 2015. Concealing or Revealing Mobile 
+Medical Devices?: Designing for Onstage and Offstage 
+Presentation. In Proceedings of the 33rd annual ACM 
+conference on human factors in computing systems, 
+1689–1698. 
+http://dx.doi.org/10.1145/2702123.2702453 
+
+37.  Francesco Pagnini, Katherine Bercovitz, and Ellen 
+Langer. 2016. Perceived control and mindfulness: 
+Implications for clinical practice. Journal of 
+Psychotherapy Integration 26, 2: 91. 
+
+38.  Sun Young Park and Yunan Chen. 2015. Individual 
+
+and Social Recognition: Challenges and Opportunities 
+in Migraine Management. In Proceedings of the 18th 
+ACM Conference on Computer Supported Cooperative 
+Work; Social Computing (CSCW ’15), 1540–1551. 
+https://doi.org/10.1145/2675133.2675248 
+
+39.  Lukasz Piwek, David A. Ellis, Sally Andrews, and 
+Adam Joinson. 2016. The Rise of Consumer Health 
+Wearables: Promises and Barriers. PLOS Med 13, 2: 
+e1001953. 
+https://doi.org/10.1371/journal.pmed.1001953 
+
+40.  John Rooksby, Mattias Rost, Alistair Morrison, and 
+
+Matthew Chalmers Chalmers. 2014. Personal Tracking 
+As Lived Informatics. In Proceedings of the 32Nd 
+Annual ACM Conference on Human Factors in 
+Computing Systems (CHI ’14), 1163–1172. 
+https://doi.org/10.1145/2556288.2557039 
+
+Personal Informatics & Self-TrackingCHI 2017, May 6–11, 2017, Denver, CO, USA6901 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

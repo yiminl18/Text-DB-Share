@@ -1,0 +1,18 @@
+1. Abstract
+2. Introduction
+3. Related Work
+4. Design Space Exploration: Concepts and Qualities
+    4.1 Abstract
+    4.2 Integrates with existing activities
+    4.3 Support Comparisons to Targets and Norms
+    4.4 Actionable
+    4.5 Leads to checking habits
+    4.6 Acts as a proxy to further engagement
+5. Field Deployment of 4 Glanceable Interfaces
+    5.1 Interfaces
+    5.2 Participants
+    5.3 Procedure
+    5.4 Findings
+6. Discussion and Conclusion
+7. Acknowledgments
+8. References

@@ -1,0 +1,25 @@
+1. Introduction
+2. Related Work
+    2.1 Goal-setting Theory and Weight Loss
+    2.2 Implementing Goals in Activity Trackers
+    2.3 Adaptive Goals
+3. Dataset Description
+4. What Weight Goals Do People Choose?
+    4.1 Aiming Low: Initial Target Selection
+    4.2 Declining Ambition: User Age
+    4.3 Gender Matters: User Gender
+5. Do People Reach Their Goals?
+    5.1 How many people reach their goals?
+    5.2 How long does it take to reach your target?
+6. Early Warning Signs
+    6.1 Initial Weight Loss Patterns
+    6.2 Self-monitoring
+    6.3 Dietary Intake
+    6.4 Motivation
+7. Predicting Goal Achievement
+    7.1 Features Used For Learning
+    7.2 Experimental Setup
+    7.3 Results
+8. Discussion
+9. Conclusion
+10. Acknowledgements

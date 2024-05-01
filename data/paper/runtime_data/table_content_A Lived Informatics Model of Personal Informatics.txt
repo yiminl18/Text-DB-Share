@@ -1,0 +1,33 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Background
+    5.1 Models of Personal Informatics
+    5.2 Starting to Track
+    5.3 How People Track
+    5.4 Lapsing and Infrequent Use
+6. Methods
+    6.1 Survey Methods
+    6.2 Interview Methods
+    6.3 Limitations
+7. Development of a Lived Informatics Model
+    7.1 Deciding to Track
+    7.2 Selecting Tools
+    7.3 Tracking and Acting
+    7.4 Lapsing
+    7.5 Resuming
+8. Model Stages Across Domains
+    8.1 Different Motivations for Deciding to Track
+    8.2 Selecting Tools to Support Tracking Motivation
+    8.3 Using Tools for Value and Insight
+    8.4 Four Categories of Lapsing
+    8.5 Transitioning to a New Tool
+    8.6 Stopping Tracking
+9. Discussion
+    9.1 Returning to Tracking with the Same Tool after a Lapse
+    9.2 Effective Migration between Tools
+    9.3 Supporting Migration between Goals
+10. Conclusion
+11. Acknowledgments
+12. References

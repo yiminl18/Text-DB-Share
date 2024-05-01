@@ -1,0 +1,1365 @@
+NOTICE OF PROBABLE VIOLATION 
+PROPOSED CIVIL PENALTY 
+and 
+PROPOSED COMPLIANCE ORDER 
+
+VIA ELECTRONIC MAIL TO: dwortman@urc.com 
+
+May 5, 2023 
+
+Mr. Dave Wortman 
+Vice President, Supply and Transportation 
+Kiantone Pipeline Corp 
+15 Bradley Street 
+PO BOX 780 
+Warren, Pennsylvania 16365 
+
+Dear Mr. Wortman: 
+
+CPF 1-2023-013-NOPV 
+
+From  April  25,  2022  through  May  20,  2022,  a  representative  of  the  Pipeline  and  Hazardous 
+Materials  Safety  Administration  (PHMSA)  pursuant  to  Chapter  601  of  49  United  States  Code 
+(U.S.C.) conducted an inspection of Kiantone Pipeline Corp’s (Kiantone) procedures, records, and 
+field observations in Warren, Pennsylvania. 
+
+As  a  result  of  the  inspection,  it  is  alleged  that  you  have  committed  probable  violations  of  the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR).  The items inspected 
+and the probable violations are: 
+
+1. 
+
+§ 194.7 Operating restrictions and interim operating authorization. 
+
+(a) … 
+(b)  An  operator  must  operate  its  onshore  pipeline  facilities  in 
+
+accordance with the applicable response plan. 
+
+Kiantone failed to follow its response plan regarding response equipment testing.  Specifically, 
+Kiantone  failed  to  operate  its  facilities  in  accordance  with  its  response  plan  when  it  did  not 
+routinely test its spill response equipment at its Warren, Pennsylvania facility during 2020 and 
+2021 in accordance with the Facility Response Plan, dated 02/11/22 (FRP) under § 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+194.107(c)(1)(viii).  Section 194.107(c)(1)(viii) requires that a facility response plan must include 
+equipment testing. 
+
+During  the  inspection,  PHMSA  reviewed  the  FRP.  FRP  Section  3-E  stated  in  part  that 
+“Kiantone's/URC’s  response  equipment  is  exercised and maintained  by the spill response team 
+twice  a  year.  Inspections  and  inventory  are  made  monthly  and  logged  in  a  journal  kept  at  the 
+facility...” 
+
+PHMSA  requested  recent  records  for  the  spill  response  equipment  inspections  required  under 
+Section 3-E of the FRP in Warren, Pennsylvania.  Kiantone was unable to produce any response 
+plan inspection and equipment testing records for 2020 and 2021. 
+
+Therefore,  Kiantone  failed  to  follow  its  response  plan  regarding  response  equipment  testing  in 
+accordance with § 194.7(b). 
+
+2. 
+
+§ 195.402 Procedural manual for operations, maintenance, and emergencies. 
+
+(a) General. Each operator shall prepare and follow for each 
+
+pipeline system a manual of written procedures for conducting 
+normal operations and maintenance activities and handling abnormal 
+operations and emergencies. This manual shall be reviewed at 
+intervals not exceeding 15 months, but at least once each calendar 
+year, and appropriate changes made as necessary to insure that the 
+manual is effective. This manual shall be prepared before initial 
+operations of a pipeline system commence, and appropriate parts 
+shall be kept at locations where operations and maintenance activities 
+are conducted. 
+
+Kiantone  failed  to  follow  its  written  procedures.  Specifically,  Kiantone  failed  to  follow  its 
+Operations,  Maintenance  &  Emergency  Response  Procedures  Manual,  dated  03/07/22  (OME) 
+Section 19.3 and  Facility Response Plan, dated 02/11/22  (FRP)  regarding emergency  response 
+training in accordance with § 195.402(a). 
+
+Section 19.3 of the OME stated, in part, under “Training” that “Kiantone personnel receive training 
+in  the  use  of  Company  emergency  response  procedures.  The  training  includes  “table-top” 
+discussions of emergency scenarios.”  Section 19.3 further states“[s]imulated emergency response 
+drills are normally conducted twice per year, but at least annually, to further ensure appropriate 
+actions in the event of an emergency.” 
+
+Further, Section 7 of the FRP stated in  part that “It is  the responsibility of  management  of the 
+facility  to  ensure  that  the  response  resources  identified  in  this  plan  participate  in  an  annual 
+deployment drill.” 
+
+During the inspection, PHMSA requested records related to emergency response training at the 
+West Seneca, New York field unit.  Kiantone provided the  Spill Prevention Training and Spill 
+Response  Drills  (ERP  Records).  The  ERP  Records  indicated  that  the  West  Seneca  pipeline 
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+manager  did  not  attend  the  emergency  response  training  drills  during  calendar  years  2020  and 
+2021. 
+
+Therefore, Kiantone failed to follow its OME and FRP regarding emergency response training, in 
+accordance with § 195.402(a). 
+
+3. 
+
+§ 195.402 Procedural manual for operations, maintenance, and emergencies. 
+
+(a) General. Each operator shall prepare and follow for each 
+pipeline system a manual of written procedures for conducting 
+normal operations and maintenance activities and handling abnormal 
+operations and emergencies. This manual shall be reviewed at 
+intervals not exceeding 15 months, but at least once each calendar 
+year, and appropriate changes made as necessary to insure that the 
+manual is effective. This manual shall be prepared before initial 
+operations of a pipeline system commence, and appropriate parts 
+shall be kept at locations where operations and maintenance activities 
+are conducted. 
+
+Kiantone failed to follow its written procedures.  Specifically, Kiantone failed to follow its Annual 
+Cathodic  Protection  and  New  Cathodic  Protection  Systems  Survey,  dated  05/28/02  (BOT  CP) 
+Section II regarding conducting its breakout tank cathodic protection surveys in accordance with 
+§ 195.402(a). 
+
+Section II of the BOT CP stated, among other requirements, that Kiantone shall “Obtain and record 
+tank product level… Check and record rectifier operation… Report on all findings.  Compile a 
+report stating the results of the survey and list any deficiencies found…”  The BOT CP procedure 
+did not specify what form is to be utilized to record the required survey information or to report 
+its findings, including any deficiencies found. 
+
+During  the  inspection,  PHMSA requested  cathodic  protection records  for  the  breakout  tanks  at 
+West Seneca, New York (Tanks 701, 702, 703, 704) and at Warren, Pennsylvania (Tanks 650, 
+651, 652) for calendar years 2019 through 2021.  Kiantone provided the Tanks Potentials (BOT 
+CP Records) documents.  The BOT CP Records, however, failed to record pertinent information 
+as required by the BOT CP procedure such as the name of the tank, the facility/operator location, 
+the tank product level, who conducted and signed off on the inspection, as well as a report on any 
+findings.  The forms used to document these surveys varied by location and each lacked certain 
+data  fields  for  capturing  information  discussed  by  the  procedure.  When  PHMSA  requested 
+additional information on where this data was located, Kiantone stated it was included on the BOT 
+CP  Records.  Kiantone  was  unable  to  demonstrate  that  it  had  performed  and  documented  the 
+actions required by its BOT CP procedure. 
+
+Therefore, Kiantone failed to follow its procedures regarding conducting its breakout tank cathodic 
+protection surveys in accordance with § 195.402(a). 
+
+4. 
+
+§ 195.402 Procedural manual for operations, maintenance, and emergencies. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(a) General. Each operator shall prepare and follow for each 
+pipeline system a manual of written procedures for conducting 
+normal operations and maintenance activities and handling abnormal 
+operations and emergencies. This manual shall be reviewed at 
+intervals not exceeding 15 months, but at least once each calendar 
+year, and appropriate changes made as necessary to insure that the 
+manual is effective. This manual shall be prepared before initial 
+operations of a pipeline system commence, and appropriate parts 
+shall be kept at locations where operations and maintenance activities 
+are conducted. 
+
+Kiantone  failed  to  conduct  a  review  of  its  operations,  maintenance,  and  emergency  manual,  at 
+intervals  not  exceeding  15  months,  but  at  least  once  each  calendar  year,  and  make  appropriate 
+changes as necessary to insure that the manual is effective, in accordance with § 195.402(a). 
+
+During  the  inspection,  PHMSA  requested  the  annual  review  records  for  the  operations, 
+maintenance, and emergency manual for calendar years 2019 through 2021.  Kiantone provided 
+its Operations, Maintenance & Emergency Response Procedures Manual, dated 03/07/22 (OME) 
+– Appendix G. 
+
+Kiantone stated that Appendix G contained the revision logs for its OME.  However, the revision 
+logs failed to indicate that an annual review was conducted, who conducted the annual review, the 
+dates of the annual review, who signed off/approved the annual review and why changes were 
+made.  When the PHMSA inspector requested further information, Kiantone stated that each date 
+documents a change that was made to the manuals. 
+
+Therefore,  Kiantone  failed  to  conduct  an  annual  review  of  its  operations,  maintenance,  and 
+emergency  manuals  during  calendar  years  2019  through  2021  at  intervals  not  exceeding  15 
+months, but at least once each calendar year, in accordance with § 195.402(a). 
+
+5. 
+
+§ 195.403 Emergency response training. 
+
+(a) … 
+(c)  Each  operator  shall  require  and  verify  that  its  supervisors 
+maintain  a  thorough  knowledge  of  that  portion  of  the  emergency 
+response  procedures  established  under  195.402  for  which  they  are 
+responsible to ensure compliance. 
+
+Kiantone failed to require and verify that its supervisors maintain a thorough knowledge of that 
+portion  of  the  emergency  response  procedures  established  under  §  195.402  for  which  they  are 
+responsible  for  ensuring  compliance. 
+Specifically,  Kiantone  failed  to  provide  records 
+demonstrating compliance with § 195.403(c). 
+
+During the inspection PHMSA requested records related to § 195.403(c) for calendar years 2019 
+through 2021.  Kiantone was unable to produce any records related to its supervisors reviewing 
+the  emergency  response  procedures  or  otherwise  verifying  its  supervisors’  knowledge  of  the 
+emergency response procedures for which they are responsible to ensure compliance. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Therefore, Kiantone failed to require and verify that its supervisors maintain a thorough knowledge 
+of that portion of the emergency response procedures established under § 195.402 for which they 
+are responsible for ensuring compliance during calendar years 2019 through 2021 in accordance 
+with § 195.403(c). 
+
+6. 
+
+§ 195.406 Maximum operating pressure. 
+
+(a)  Except  for  surge  pressures  and  other  variations  from  normal 
+operations,  no  operator  may  operate  a  pipeline  at  a  pressure  that 
+exceeds any of the following: 
+
+(1)  The  internal  design  pressure  of  the  pipe  determined  in 
+accordance with § 195.106. However, for steel pipe in pipelines being 
+converted under § 195.5, if one or more factors of the design formula 
+(§ 195.106) are unknown, one of the following pressures is to be used as 
+design pressure 
+
+(i) Eighty percent of the first test pressure that produces yield under 
+section  N5.0  of  appendix  N  of  ASME/ANSI  B31.8  (incorporated  by 
+reference, see § 195.3), reduced by the appropriate factors in §§ 195.106 
+(a) and (e); or 
+
+(ii) If the pipe is 123⁄4 inch (324 mm) or less outside diameter and is 
+
+not tested to yield under this paragraph, 200 p.s.i. (1379 kPa) gage. 
+(2) The design pressure of any other component of the pipeline. 
+(3) Eighty percent of the test pressure for any part of the pipeline 
+
+which has been pressure tested under subpart E of this part. 
+
+(4) Eighty percent of the factory test pressure or of the prototype 
+test  pressure  for  any  individually  installed  component  which  is 
+excepted from testing under § 195.305. 
+
+(5) For pipelines under §§ 195.302(b)(1) and (b)(2)(i) that have not 
+been pressure tested under subpart E of this part, 80 percent of the test 
+pressure  or  highest  operating  pressure  to  which  the  pipeline  was 
+subjected for 4 or more continuous hours that can be demonstrated by 
+recording charts or logs made at the time the test or operations were 
+conducted. 
+
+Kiantone  failed  to  maintain  adequate  records  that  demonstrate  that  the  maximum  operating 
+pressure  (MOP)  of  its  jurisdictional  pipeline  segments  were  determined  in  accordance  with  § 
+195.406(a).  Specifically, Kiantone failed to maintain adequate records demonstrating the design 
+pressure of all pipeline components pursuant to § 195.406(a)(2) to support its MOP determination 
+for its West Seneca - Warren and Enbridge - West Seneca pipelines. 
+
+During  the  inspection,  PHMSA  requested  records  supporting  the  design  pressure  of  the 
+components of the Kiantone pipelines.  Kiantone provided the Calculation of Maximum Operating 
+Pressure  Record,  dated  05/17/22  (MOP  Calculation)  and  the  Kiantone  Pipeline  Corporation 
+Purchase  Order,  dated  03/12/71  (Valve  Purchase  Order).  Kiantone  did  not  provide  compliant 
+documentation  related  to  the  design  pressures  of  the  valves  in  the  pipeline  system.  The  MOP 
+Calculation did not demonstrate compliance to § 195.406(a)(2) as it failed to be supported and 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+verified by traceable and verifiable records. 
+
+The Valve Purchase Order was a purchase order for valves from 1971.  This Valve Purchase Order 
+was insufficient to verify the design pressures of all valves  on Kiantone’s pipeline and did not 
+verify an installation or design pressure of the current valves in the pipeline system.  Kiantone was 
+unable to provide any complementary records to verify the Valve Purchase Order ratings as those 
+of the valves in the system presently, and the ratings ultimately used in its MOP Calculation. 
+
+Therefore, Kiantone failed to maintain adequate records to support its MOP determination of the 
+West Seneca - Warren and Enbridge - West Seneca pipelines pursuant to § 195.406(a)(2). 
+
+7. 
+
+§ 195.410 Line markers. 
+
+(a)  Except  as  provided  in  paragraph  (b)  of  this  section,  each 
+operator  shall  place  and  maintain  line  markers  over  each  buried 
+pipeline in accordance with the following: 
+
+(1) Markers must be located at each public road crossing, at each 
+railroad crossing, and in sufficient number along the remainder of each 
+buried line so that its location is accurately known. 
+
+Kiantone  failed  to  maintain  line  markers  at  each  public  road  crossing  so  that  its  location  is 
+accurately known.  Specifically, Kiantone failed to maintain line markers at a public road crossing 
+in  the  north  and  south  directions  adjacent  to  mainline  valve  eight,  in  north  Warren  County, 
+Pennsylvania, in accordance with § 195.410(a). 
+
+During the inspection, PHMSA made observations of missing line markers in the north and south 
+directions near mainline valve eight and requested from Kiantone why there were missing line 
+markers.  Kiantone stated that the line markers were knocked down due to third-party construction 
+and logging activities and were not replaced. 
+
+Therefore, Kiantone failed to maintain line markers in the north and south directions adjacent to 
+mainline valve eight, in north Warren County, Pennsylvania, in accordance with § 195.410(a). 
+
+8. 
+
+§ 195.402 Procedural manual for operations, maintenance, and emergencies. 
+
+(a) General. Each operator shall prepare and follow for each 
+
+pipeline system a manual of written procedures for conducting 
+normal operations and maintenance activities and handling abnormal 
+operations and emergencies. This manual shall be reviewed at 
+intervals not exceeding 15 months, but at least once each calendar 
+year, and appropriate changes made as necessary to insure that the 
+manual is effective. This manual shall be prepared before initial 
+operations of a pipeline system commence, and appropriate parts 
+shall be kept at locations where operations and maintenance activities 
+are conducted. 
+
+Kiantone  failed  to  follow  its  written  procedures.  Specifically,  Kiantone  failed  to  follow  its 
+Operations,  Maintenance  &  Emergency  Response  Procedures  Manual,  dated  03/07/22  (OME) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+regarding  calibration  of  field  instrumentation  used  in  leak  detection,  in  accordance  with  § 
+195.402(a). 
+
+Kiantone’s OME, Section 6.4 Kiantone SCADA & CPM Systems, stated in part that “To ensure 
+compliance with API 1130 Computational Pipeline Monitoring (CPM), as required by 49 CFR 
+195.444, the Kiantone Pipeline Manager:  Ensures that transmitters providing input to the CPM 
+system are calibrated according to manufacturer’s recommendations.” Section 195.444 requires, 
+in part, that each CPM must comply with API RP 1130 (3rd Ed. 2007)  “in operating, maintaining, 
+testing,  record  keeping,  and  dispatcher  training  of  the  system.”  AP  RP  1130  addresses  the 
+“calibration and maintenance of the field instrumentation and the measurement that is necessary 
+to adequately support a CPM system”, including that an operator’s calibration procedures should 
+.  the  date,  time,  person’s  initials,  and  the  events  performed  during  the  test. 
+address  “.  .
+Instrumentation  and  measurement  should  be  calibrated  in  accordance  with  manufacturer’s 
+recommendations  and  calibrations  should  be  traceable  to  National  Institute  for  Standards  and 
+Testing.  Operating experience should provide the basis for determining an appropriate test and re-
+calibration fixed interval.” 
+
+During the inspection, PHMSA requested records regarding leak detection calibration equipment 
+for Kiantone’s West Seneca – Warren and Enbridge – West Seneca pipelines.  Kiantone provided 
+the  Mass  Flowmeter  Calibration  Certificates,  dated  2002  (Flowmeter  Records).  Furthermore, 
+Kiantone provided the Periodic Verification & Calibration of Micro Motion Coriolis Flow Meters, 
+dated 06/20/13 (Calibration Procedure). 
+
+The Calibration Procedure stated in part: 
+
+Calibration Interval - For customers that have not otherwise established a company 
+policy, and have no industry guidelines to follow, a 3‐year calibration interval is 
+suggested ‐ however, when equipped with Smart Meter Verification, this interval 
+may be extended indefinitely if tested regularly with a passing result ‐ at least once 
+every 3 months is recommended. 
+
+When the  PHMSA inspector  re-requested recent  calibration records, Kiantone  discussed  that  it 
+only has the original calibration certificates and has not calibrated the equipment since. 
+
+Therefore,  Kiantone  failed  to  follow  its  OME  regarding  calibration  of  field  instrumentation 
+equipment used in leak detection, in accordance with § 195.402(a). 
+
+9. 
+
+§ 195.452 Pipeline integrity management in high consequence areas. 
+
+(a) … 
+(l)  What  records  must  an  operator  keep  to  demonstrate 
+
+compliance? 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+(1)  An operator  must maintain, for the  useful  life  of  the pipeline, 
+records  that  demonstrate  compliance  with  the  requirements  of  this 
+subpart.  At  a  minimum,  an  operator  must  maintain  the  following 
+records for review during an inspection: 
+
+Kiantone failed to maintain records that demonstrate compliance with the requirements of subpart 
+F. Specifically, Kiantone failed to maintain documents of the evaluation of the capability of its 
+leak detection required by § 195.452(i)(3). 
+
+Section 195.452(i)(3) states: 
+
+(3) Leak detection. An operator must have a means to detect leaks on its pipeline 
+system. An operator must evaluate the capability of its leak detection means and 
+modify, as necessary, to protect the high consequence area. An operator's evaluation 
+must, at least, consider, the following factors—length and size of the pipeline, type 
+of product carried, the pipeline's proximity to the high consequence area, the 
+swiftness of leak detection, location of nearest response personnel, leak history, and 
+risk assessment results. 
+
+Kiantone’s pipeline facilities include locations within high consequence areas (See, e.g., Kiantone 
+Facility  Response  Plan,  dated  02/11/22).  During  the  inspection,  PHMSA  requested  records 
+demonstrating compliance with the requirements of § 195.452(i)(3). Kiantone failed to produce 
+any records for calendar years 2019 through 2021.  Subsequently, PHMSA requested records of 
+any  leak  evaluations ever  performed  and  Kiantone  discussed  that they  do  not  have  a record  or 
+evaluation on the leak detection system. 
+
+Therefore,  Kiantone  failed  to  maintain  records  of  an  evaluation  of  the  capability  of  its  leak 
+detection, in accordance with § 195.452(l)(1). 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 
+2023, the maximum penalty may not exceed $239,142 per violation per day the violation persists, 
+up to a maximum of $2,391,412 for a related series of violations.  For violation occurring on or 
+after May 3, 2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 
+per violation per day the violation persists, up to a maximum of $2,251,334 for a related series of 
+violations.  For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day the  violation  persists,  up to  a  maximum  of  $2,186,465  for  a  related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable violations and recommend that you be preliminarily assessed a civil penalty of $167,600 
+as follows: 
+
+Item number 
+1 
+5 
+8 
+9 
+
+PENALTY 
+$37,900 
+$40,500 
+$35,300 
+$53,900 
+
+Warning Items 
+
+With respect to items 2, 4, 6 and 7 we have reviewed the circumstances and supporting documents 
+involved in this case and have decided not to conduct additional enforcement action or penalty 
+assessment proceedings at this time.  We advise you to promptly correct these items.  Failure to 
+do so may result in additional enforcement action. 
+
+Proposed Compliance Order 
+
+With respect to items 3 and 9 pursuant to 49 U.S.C. § 60118, the Pipeline and Hazardous Materials 
+Safety Administration proposes to issue a Compliance Order to Kiantone Pipeline Corp.  Please 
+refer to the Proposed Compliance Order, which is enclosed and made a part of this Notice. 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.  Please  refer  to  this  document  and  note  the  response  options.  All 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. §552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  1-2023-013-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Sincerely, 
+
+Robert Burrough 
+Director, Eastern Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Proposed Compliance Order 
+
+Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROPOSED COMPLIANCE ORDER 
+
+Pursuant to 49 United States Code § 60118, the Pipeline and Hazardous Materials Safety 
+Administration (PHMSA) proposes to issue to Kiantone Pipeline Corp (Kiantone) a Compliance 
+Order incorporating the following remedial requirements to ensure the compliance of Kiantone 
+with the pipeline safety regulations: 
+
+A. 
+
+B. 
+
+C. 
+
+In regard to Item 3 of the Notice pertaining to breakout tank cathodic protection 
+survey records, Kiantone must revise its procedure(s) and/or record form(s) to 
+allow for consistent and complete capturing of information required for its 
+breakout tank cathodic protection surveys.  Kiantone must submit revised 
+procedure(s) and/or record form(s) to the Director – Eastern Region for review 
+and approval within 60 days of receipt of the Final Order. 
+
+In regard to Item 9 of the Notice pertaining to the failure to maintain records of an 
+evaluation of the capability of its leak detection system, Kiantone must complete 
+a leak detection evaluation on its associated pipeline system, in accordance with § 
+195.452(i)(3) and forward all documentation to the Director – Eastern Region 
+within 90 days of receipt of the Final Order. 
+
+It is requested (not mandated) that Kiantone maintain documentation of the safety 
+improvement costs associated with fulfilling this Compliance Order and submit 
+the total to Robert Burrough, Director, Eastern Region, Pipeline and Hazardous 
+Materials Safety Administration.  It is requested that these costs be reported in 
+two categories: 1) total cost associated with preparation/revision of plans, 
+procedures, studies and analyses, and 2) total cost associated with replacements, 
+additions and other changes to pipeline infrastructure. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

@@ -1,0 +1,1839 @@
+Understanding Animals: A Critical Challenge in ACI 
+
+Fredrik Aspling 
+Department of Computer and 
+Systems Sciences 
+Stockholm University, Sweden 
+aspling@dsv.su.se 
+
+Oskar Juhlin 
+Department of Computer and 
+Systems Sciences 
+Stockholm University, Sweden 
+oskarj@dsv.su.se 
+
+Heli Väätäjä 
+Tampere University of 
+Technology 
+Tampere, Finland 
+heli.vaataja@uta.fi 
+
+ABSTRACT 
+We  present  a  qualitative  content  analysis  of  visual-verbal 
+social  media  posts,  where  ordinary  dog  owners  pretend  to 
+be their canine, to identify meaningful facets in their dogs’ 
+life-worlds,  e.g.  pleasures  of  human-dog  relation,  dog-dog 
+relations, food etc. We use this knowledge to inform design 
+of “quantified pets”. The study targets a general problem in 
+Animal-Computer  Interaction  (ACI),  i.e.  to  understand 
+animals  when  designing  “for”  them,  although  lacking  a 
+common  language.  Several  approaches,  e.g.  ethnography 
+and participatory design, have been appropriated from HCI 
+without 
+a 
+methodological  creativity  and  pluralism  by  suggesting  an 
+additional  approach  drawing  on  “kinesthetic  empathy”.  It 
+implies  to  understand  animals  by  empathizing  with  their 
+bodily  movements  over  time  and  decoding  the  realities  of 
+their  life-worlds.  This,  and  other  related  approaches,  has 
+inspired animal researchers to conduct more or less radical 
+to 
+participant  observations  during  extensive  duration 
+understand  the  perspective  of  the  other.  We  suggest  that 
+dog owners whom share their lives with their dogs already 
+possess  a  similar  understanding  as  these  experts,  and  thus 
+uphold  important  experiences  of  canine  life  that  could  be 
+used to understand individual dogs and inspire design. 
+
+issue.  We  argue 
+
+exhausting 
+
+the 
+
+for 
+
+Author Keywords 
+Animal-Computer Interaction; Quantified Pets; Dog Blogs; 
+Social Media; Kinesthetic Empathy; Pet Dogs; 
+
+ACM Classification Keywords  
+H5.m.  Information  interfaces  and  presentation  (e.g.,  HCI): 
+Miscellaneous.  
+
+INTRODUCTION 
+In  recent  years,  we  have  seen an emergent design  interest 
+in  smart  computing  and  sensing  technologies  to  monitor 
+different  types  of  animals  (e.g.  [24]),  especially  pet  dogs 
+[2,  6,  7,  8,  9,  37,  50].  Ideas  for  such  systems  tend  to  be 
+generated  from  interviews  with  dog  owners  about  their 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  ACM  must  be  honored. 
+Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or  republish,  to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from permissions@acm.org. 
+
+NordiCHI'18, September 29-October 3, 2018, Oslo, Norway 
+ © 2018 Association for Computing Machinery. 
+ACM ISBN 978-1-4503-6437-9/18/09…$15.00 
+
+https://doi.org/10.1145/3240167.3240226 
+
+experiences and expectations of such technologies [43, 44]. 
+These studies revealed that the dog owners were interested 
+in  monitoring  physical aspects of  their  dogs, e.g.  physical 
+activity, barking, heart rate, stress level, body temperature, 
+hunger, growth, location, and what their dogs was doing in 
+home alone scenarios. Similar projects focus on monitoring 
+dogs’  caloric  input/outputs,  as  well  as  exercise  and 
+movement  habits  [41].  Other  topics  concern  identifying 
+physical  behaviors  such  as  chewing  barking,  pawing,  and 
+sniffing  with  collar-worn  sensors  [25],  or  computer  vision 
+[1].  Consumer  oriented  activity  trackers  directed  towards 
+companion dogs (e.g. FitBark, PetPace, Whistle) measures 
+physical  activity  and  wellbeing  of  pet  dogs  with  sensors 
+such  as  GPS,  accelerometer  and  gyroscope.  Other 
+commercially oriented sensing technologies even promises 
+to  report  on  the  dogs’  emotional  state  by  measuring  and 
+interpreting  tail  motion  (e.g.  TailTalk).  In  all,  the  general 
+motivation is to increase the dogs’ wellbeing, and advance 
+knowledge  for  caretakers  and  veterinarians  about  the 
+animals.  
+
+This  emergent  orientation  co-occurs  with  personal 
+informatics  and  the  so  called  “quantified  self”-movement 
+and  its  determination  to  generate  “self-knowledge  through 
+numbers”  [55].  It  engages  the  use  of  sensing  technologies 
+for  collecting  and  analyzing  quantitative  and  longitudinal 
+data of several aspect of behaviors and performances of the 
+human  self.  The  research  interest  in  this  movement,  has 
+been  to  understand  these  users  in  terms  of  their  practices, 
+motivations,  and  encountered  problems  to  generate  design 
+implications  (e.g.  [24;  31;  46]).  Given  this  desire  to 
+measure  human  life,  it  is  not  so  strange  that  animals  and 
+especially pet dogs whom many of us share our lives with, 
+are addressed. Although, currently in a constrained manner, 
+limited to a “physical health paradigm” or early ideas, such 
+as  measuring  dogs’  emotional  states.  However,  there  is 
+probably more to dogs’ wellbeing than physical health, and 
+likewise  a  need 
+their 
+to  explore  new 
+measurability. 
+
+topics  and 
+
+In  HCI,  there  is  a  growing  body  of  research  on  Animal-
+Computer  Interaction  (ACI)  where  the  specific  concern  of 
+widening  the  design  scope  in  “quantified  pets”  has  been 
+acknowledged (e.g. [25, 41, 43, 44]) and problematized [28, 
+29,  34].  From  a  critical  perspective  it  is  argued  that  such 
+technology  can  risk  to  decrease  or  even  replace  owners’ 
+ability  to  interpret  their  dogs’  behavior,  and  consequently 
+disrupt  human-animal  relationships  and  animal  welfare 
+
+ 
+ 
+ 
+ 
+[28].  Furthermore,  it is argued  that  commercially  available 
+products  lack  foundation  in  animal  behavior  science,  and 
+that  their  promises  tend  to  be  impractical  and  unreliable 
+(e.g.  measuring  dog  emotion)  [29]. There  is always a  need 
+to  be  skeptical  and  critical,  especially  of  risky  and 
+improbable 
+unintended 
+consequences. For quantified pets there is a need to be extra 
+cautious, especially if the systems lack validity and primary 
+becomes  gadgets 
+the  animals’ 
+perspectives and well-being becomes secondary.  
+
+for  humans  where 
+
+design 
+
+ideas 
+
+their 
+
+and 
+
+The 
+topic  of  designing  quantified  pets  depends  on 
+understanding  animals.  This  is  fundamental  for  ACI  that 
+even  has  extended  the  ambition  to  design  “for”  animals 
+[33], which in this case would translate to understand what 
+animals would like to convey to humans. Such a project is 
+obviously  difficult  due  to  interspecies  differences  and 
+communicative  barriers.  The  interaction  between  humans 
+and  canine 
+through  nonverbal 
+communications,  such  as  posture  and  gaze  (e.g.  [16]). 
+Lacking  a  common  language  is  a  challenge  when  figuring 
+out what would be a meaningful quantification. Despite the 
+epistemological and intrinsic problems of understanding the 
+wants and needs of animals, such as pet dogs, there is still a 
+need  for  the  field  to  seriously  consider  and  creatively 
+explore  the  opportunities  and  challenges  related  to  this 
+inquire.  
+
+foremost  pursued 
+
+is 
+
+As a way to address the challenge to unpack user demands, 
+and  similar to  research  within  HCI,  some  researchers  have 
+turned  to  participatory  design  (e.g.  [18,  53]).  The  method 
+suggests  to  overcome  the  challenge  by  involving  the  user 
+directly  in  the  design  process  rather  than  relying  on  the 
+designer's  knowledge  of  the  user  [18].  However,  the 
+reported 
+rather 
+superficially,  and  they  fail  to  explain  how  animals  act  as 
+designers.  We  argue  that  ACI  should  strive  to  creatively 
+and cautiously explore additional methods and approaches, 
+to  get  closer  to  an  understanding  of  what  animals  might 
+want and consider as meaningful, in order to ground design 
+closer to their own needs and interests.  
+
+articulate 
+
+demands 
+
+studies 
+
+user 
+
+An  important  point  of  inspiration  can  be  found  in  animal 
+studies, where several scholars take into account ‘the point 
+of  view’  of  the  animals  they  observe  (e.g.  [19,  39,  49]). 
+This  approach  has  developed  over  the  last  three  decades, 
+and  has  been  defined  as  a  radical  shift  by  philosopher 
+Vinciane  Despret  [10,  11].  It  provides  more  reliable 
+descriptions,  and  most  importantly  for  ACI,  they  identify 
+behaviors  that  presumably are the  most  meaningful  for  the 
+in  Shapiro’s 
+animals.  A  similar  approach 
+autoethnographic  work  and  his 
+idea  of  “kinesthetic 
+empathy”  [48],  in  which  a  person  attempts  to  empathize 
+with  an  animal  by  understanding  their  bodily  experiences 
+over  time  and  their  personal  history,  and  then  tries  to 
+understand  the  human-dog  relationship  from  the  dogs 
+perspective  (rather  than  the  other  way  around).  Such  an 
+approach,  where  understanding  rests  on  long  term  and 
+situated  experiences,  could  be  fruitful  to  generate  design 
+
+is  found 
+
+ideas  about  what  matters  for  animals  and  what  they 
+possibly could  find important. We  argue  that ordinary  dog 
+owners  develop  a  kind  of  kinesthetic  and  biographical 
+empathy  as  they  are  intimately  involved  in  long  term 
+interaction  with  their  canines.  They  are  naturally  involved 
+in  their  dogs’  lives  and  interact  with  them  under  similar 
+circumstances as with other family members.  
+
+Besides  discussing  how  such  a  methodology  could  be 
+useful  for  ACI,  we have  been interested  in analyzing  such 
+an  approach  when  its  adopted  by  ordinary  dog  owners  in 
+social  media  where  they  create  profiles  for  their  pets  and 
+share  posts  from  their  dogs’  “point  of  view”.  Although 
+being  problematic  in  terms  of  e.g.  being  anthropomorphic 
+and  humoristic  in  various  grades,  these  posts  offer  a  rich 
+empirical material of canine life. They involve detailed and 
+continual accounts of different significant aspects related to 
+canine life in a broad range of mundane everyday scenarios. 
+
+We  are  especially  interested  in  exploring  to  what  extent 
+these posts can help us to ask questions of what matters for 
+the animals, and to what extent they can help us to identify 
+what  that  possibly  can  be  important  when  it  comes  to 
+design  for  them.  Hence,  if  the  data  can  help  us  answer 
+questions on what to quantify in canine life that actually is 
+meaningful and could benefit the dogs. The analysis reveals 
+that the dogs’ perspectives and experiences, when imagined 
+by  their  owners,  is  concerned  with  ordinary  things  like 
+social  relations  with  other  dogs  as  well  as  humans; 
+spatiality  and  the  physical  environment;  physical  objects; 
+emotional  attitudes  and  various  set  of  ordinary  activities. 
+This  implies  that  design  of  “quantified  pets”  should  focus 
+on the mundane and ordinary aspects of everyday dog life. 
+Sensor  technologies can  potentially  be  an effective  way  to 
+slowly  build  an  increased  empathy  for 
+their  canine 
+companions, both in terms of a sensibility towards physical 
+expressions and experience, as well as building and logging 
+a biographical understanding over time.  
+
+RELATED WORK 
+In this section, we reflect upon methodological approaches 
+in  ACI  for  understanding  animals.  We  also  discuss  the 
+method  of  dwelling  into  the  presence  of  other  animals  to 
+reveal what they find important and meaningful.  
+
+to  design 
+
+is  a  growing 
+
+Methods to include animals' needs in design 
+There 
+information 
+interest 
+technology for animals of various kinds, as expressed in the 
+formulation  of  a  research  area  called  Animal-Computer 
+Interaction  (ACI).  An  important  design  intent,  is  the 
+ambition  to  design  for  and  with  animals  [33,  35,  36].  The 
+ambition  is  to  diverge  from  design  that  utilizes technology 
+and animals in the sole interest of humans. The ambition is 
+aligned  with  a  general  ambition  in  HCI  to  understand  and 
+capture  users'  needs  and  develop  them  into  systems 
+requirements  [45],  i.e.  to  identify,  describe  and  analyze 
+relevant  aspects  of  user  experiences  so  that  design  is 
+adequately  informed.  Obviously,  it  is  quite  a  challenge  to 
+understand  what  the  animals  want  to  have,  and  how 
+computer  systems  could  provide  such  services.  It  is  a 
+
+challenge  since  we  still  struggle  with  the  same  topic  also 
+when  it  comes  to  our  own  species.  Although  dogs  do  not 
+communicate with us in our language, we still communicate 
+with  each  other  with  various  signals,  vocalizations  and 
+body  postures,  for  example.  As  the  common  language  is 
+learned on both sides, this creates a challenge to overcome 
+in design activities (e.g. [15, 53]).  
+
+A  small  number  of  studies  in  ACI  focus  on  the  topic  of 
+unpacking  animal  practices  e.g  ethnographic  observations 
+of  hunting  [3,  52]  and  video  analysis  of  dog  walking  [2]. 
+Taken  together,  these  studies  reveal  interesting  aspects  of, 
+life.  At 
+in  particular,  canine 
+the 
+the  same 
+methodologies  have 
+their  weaknesses.  Ethnographic 
+observations  build  on  limited  experiences,  and  video 
+analysis  risks  missing  experiential  aspects,  which  are  not 
+empirically  available  in  interaction.  Interviews  with  e.g. 
+dog  owners  (e.g.  [28,  43,  44])  is  a  commonly  applied 
+method,  but it  risk to  provide  more  or less  anthropocentric 
+generalizations  with  limited  value  of  design,  or  not  being 
+valid descriptions.  
+
+time, 
+
+the 
+
+suggests 
+
+the  user 
+
+learn  about 
+
+Similar  to  research  within  HCI,  several  researchers  have 
+turned  to  design,  e.g.  participatory  design,  speculative 
+design and research through design, as a way to address the 
+challenge  of  unpacking  user  demands  at  the  same  time  as 
+designing  “for”  the  user.  Participatory  design  has  been 
+adopted  in  a  number  of  projects  (e.g.  [18,  35,  53]).  The 
+challenge  by 
+to  overcome 
+method 
+"…involving  the  user  directly  in  the  design  process  rather 
+than relying on the designer's knowledge of the user" [18]. 
+Such  co-design  builds  on  two  different  sharing  principles 
+i.e.  "…shared language between the  designer  and the  user, 
+or  on  that  the  designer  can  reasonably  transfer  her  own 
+experiences  with  a  designed  object  to  those  of  her  users" 
+[18].  The  designer  increases  the  understanding  of  the  user 
+by  observing  what  they  do  i.e.  participant  observation. 
+the  design 
+Equally,  important, 
+possibilities,  e.g.  new  technologies,  from  the  designer  and 
+can  thereby  themselves  articulate  their  demands  and 
+suggest  solutions.  Some  of these  ACI  studies  do  report  on 
+designers'  "observations"  [18],  such  as  the  practices  of 
+cancer 
+interaction. 
+Unfortunately,  such  learnings  are  not  in  focus  in  the 
+reported studies. More important, they lack articulations of 
+how  the  animals  express  their  demands  or  suggested 
+solutions.  Again,  it is  demonstrated that the  dogs  take  part 
+in joint activities, such as smelling cancer samples [20, 35] 
+or  creative  play  [53].  But  there  is  nothing  presented  that 
+in  doing  and 
+indicates 
+the  animals  are  active 
+in 
+contributing 
+participatory design. Hammeleff et al. [18] even note, in the 
+most  methodologically  elaborate  study  on  this  topic,  that 
+the animals'  engagement  "…  is  not  necessarily  in the  form 
+of intentional or functional alteration or modification but in 
+the  form  of  playful  exploration  of  the environment."  Thus, 
+the  reported  design  work  that  is  presented  as  "participant 
+design"  does  not  have  its  focus  on  articulating  user 
+
+to  design  work,  as 
+
+is  conceived 
+
+detection 
+
+playful 
+
+dogs 
+
+that 
+
+and 
+
+it 
+
+demands and at the same time conflate participation in play 
+with  participation  in  design,  which  leave  us  with  a 
+remaining problem of understanding the user.  
+
+reference 
+
+Another  way  of  handling  the  problem  is  to  avoid  attempts 
+to  understand  animals  in  advance  of  engaging  in  design. 
+This  approach  is  turned  speculative  design.  Lawson  et  al. 
+[28]  use  it  as  a  way  to  speculate  about  possible  systems 
+with 
+to  existing  commercial  products  of 
+quantified  pet  applications.  In  the  study,  they  explore 
+attitudes  towards  such  systems by  interviewing  pet owners 
+and  animal  experts.  It  revealed  that  pet  owners  were 
+uncritically interested in technologies that e.g. could detect 
+emotions  of their  dogs,  while animal experts  where  highly 
+critical  of  such  technologies.  However,  such  proposed 
+system is explicitly intended for dog owners and not for the 
+animals.  In  another  paper  [29],  Lawson  et  al.  speculate 
+about 
+technology  designed  by  dogs  and  how  such 
+technology could look like and be used. They ground their 
+speculations in dogs cognitive and communicative abilities. 
+This  approach  is  envisioned  to  explore  "how  technology 
+may  support  the  agency  of  the  animal,  so  that  they  can 
+genuinely  be  considered  users"  [Ibid.,  p.  40].  These 
+speculations are  intendedly close  to  the animal  as  user but 
+they  are  not  grounded 
+in  empirical  observations. 
+Speculative approaches  have also  been used  as a  means  to 
+imagine life as experienced by animals and design systems 
+meaningful  for  them  [42].  The  latter  two  papers  (i.e.  [29; 
+42])  are also argued as  a  way to  illustrate the  dangers and 
+absurdity of trying to co-design with the “voiceless”.  
+
+In  sum,  in  sharing  the  ambition  to  design  for  and  with 
+animals,  we  are  constrained  by  existing  ACI  methods  to 
+understand animals, or stuck between either speculations or 
+overstating  their  participation  in  design.  All  contributions 
+are  of  course  legitimate  since  the  challenge  is  hard.  This 
+leads us to call for increased methodological creativity. For 
+example, we suggest that an alternative approach to acquire 
+such  knowledge  can  be  found  by  articulating  human 
+experience of sharing life with canines. 
+
+Kinesthetic empathy and the animals’ perspectives 
+We have emphasized the need of understanding animals in 
+order  to  design  for them.  As  we have  seen  in  the  previous 
+section there are different methods and approaches of doing 
+so, such as participatory design (e.g. [18, 53]). Another way 
+is to imagine life from the dog’s perspective. As proclaimed 
+by  Despret  [10,  11],  observations  of  animals  with  such  an 
+approach  opens  up  for  different  questions  and  identifies 
+behaviors  that  presumably  are  of  meaningful  value  for  the 
+animals.  Thus,  to  develop  meaningful  design  for  animals 
+we should orient towards the animals’ subjective lifeworlds, 
+i.e.  “where  things,  activities,  relations,  and  events  have 
+experiential significance” [9, p. 89].  
+
+A  radical  example  is  explored  by  Foster  [14]  where  he 
+describes his experiences of trying to live as different wild 
+animal  in  their  natural  surroundings.  As  noted  by  Sanders 
+[47],  dwelling  into  other  animal’s  perspective  is  also  done 
+
+by  regular  dog  owners  as  they  sometimes  are  found  in 
+situations  where  they  must  “speak  for”  their  “mute” 
+companion.  As  such,  “they  make  use  of  a  rich  body  of 
+knowledge  derived  from  an  intimate  understanding  of  the 
+animal-other  built  up 
+the  course  of  day-to-day 
+experiences” [47, p. 17]. 
+
+in 
+
+is 
+
+Even if scientific advancement has increased the awareness 
+of animal consciousness and subjectivity [17], as well their 
+emotional lives [4], there is still skepticism regarding what 
+we can know what it is like to be another species (e.g. [40, 
+51]).  This 
+evidently 
+epistemological  dilemma 
+problematic  for  ACI  and  its  ambition  to  treat  animals  as 
+stakeholders of design. When designing for animals without 
+human  utilitarian  agendas  we  are  confronted  with  the 
+interpret  and 
+intriguingly  difficult  quest,  namely 
+evaluating their subjective experiences, individual demands 
+and likes. Something that to a large extent involves various 
+degrees of anthropomorphism. Instead of avoiding or taking 
+an  agnostic  approach  of  such  enquires,  we  should  at  least 
+aim  towards  an  open-minded  -  and  equally  skeptical  - 
+attitude to what they might be experiencing. In doing so we 
+should encompass and evaluate all possible resources.  
+
+to 
+
+it 
+
+inside 
+
+the  head, 
+
+Indeed,  it  is  impossible  to  completely  enter  the  mind  of 
+another  animal.  However,  symbolic  interactionism  and  as 
+well  as  social  phenomenology  argues  that  mind  is  not 
+exclusively 
+is  also  a  “social 
+accomplishment” [16,  p. 123].   Cognitive ethologists,  such 
+as  Beakoff,  argues  that  animals’  emotions  are  visible  for 
+observers  [4].  From  such  standpoints,  it  is  understood  that 
+action  always  is  minded  and  subjectively  meaningful,  and 
+that  such  meaning  is  accessible.  This  is  something  that  is 
+shared  by  ethnomethodology  (e.g.  [2;  16]),  where  the 
+subjective lifeworlds of actors (in terms of e.g. experiences 
+and  intentions)    are  not  restricted  to  being  inside  their 
+heads,  but  emerges  and  is  exposed  in  regular  interactions, 
+by  paying  close  attention  to  the  bodily  details.  Such 
+accounts  on  human-animal  interaction  have  previously 
+focused on leashed interaction [2, 27] and play [16].  
+
+Shapiro’s  idea  of  “kinesthetic  empathy”  combined  with  a 
+biographical  sensibility  [48],  broadens  such  accounts. 
+Sharing  a  close  attention  to  bodily  details,  kinesthetic 
+empathy  adds  a  biographical  understanding  of  individual 
+dogs.  It involves an  understanding  of individual  dogs’ and 
+their bodily expressions in specific contexts and over time. 
+It  adds  an  important  dimension  to  this  kind  of  enquires  of 
+understanding  and  observing  accountable  aspects  of  the 
+dogs’ experiential lifeworlds. Building an understanding of 
+canines’  bodily  expressions  in  shared  situations  over  time 
+increases the  bond and  understanding  for each  other  in  the 
+human-canine  relationship.  Ordinary  dog  owners  whom 
+closely share their lives and households with their canines, 
+potentially, and to various degree, develop such an empathy 
+with  their  dogs.  There  are  different  ways  of  embody  the 
+animals  experience,  e.g.  to  see  imagine  life  “from  inside” 
+with  minimal  or  none 
+increase 
+interference by “’undo and redo’ their own bodies in order 
+
+interference,  or 
+
+to 
+
+to  interact  more  closely  with  the  observed  animals  and 
+respond  to  them  more cautiously”  [11,  p.  51].  Dog owners 
+obviously  belongs  to  the  latter,  which  can  upsurge  a 
+kinesthetic empathy. 
+
+In  sum,  we  argue  for  a  need  of  grounding ideas  for  design 
+reveals 
+in  detailed  empirical  observations 
+that  e.g. 
+lifeworlds.  Such 
+the  animals’ 
+meaningful  facets  of 
+understanding 
+long-term 
+situated 
+in 
+experiences.  This  is  not  only  is  possessed  by  observing 
+scientists, such as ethologists and ethnographers, but is also 
+accessible to regular dog owners.  
+
+emerges 
+
+and 
+
+METHOD AND SETTING 
+We propose a new and additional methodological approach 
+to the field of ACI, which draws on the theory presented in 
+the  previous  section.  Instead  of  engaging  in  demanding 
+participant  observation  (e.g.  [16,  14]),  we  analyze  already 
+available  ethno-accounts.  We  provide  a  qualitative  content 
+analysis  of  social  media  posts  by  dog  profiles  where  dog 
+owners  give  voice  to  their  dog  by  interpreting  and 
+imagining 
+their  dogs’  perspectives.  As  a 
+methodological starting point, we considered these posts as 
+expressing  some  kind  of  kinesthetic  empathy  and  a 
+biographical  understanding  of  the  dogs,  which  could  be 
+worth to investigate and evaluate. In this paper, we focus on 
+investigating  what  core  facets  of  the  dogs’  lifeworld  that 
+can  be  identified  in  such  posts  when  looking  beyond  the 
+most obvious layers of anthropomorphism. We are doing so 
+to generate ideas for “quantified pets”. In the following we 
+describe the method and setting of the study in more detail.  
+
+life  from 
+
+Dog profiles on Instagram and Facebook 
+The phenomenon  sometimes  called “social  petworking”  or 
+“dog  blogging”,  where  dog  owners  create  a  social  media 
+profile  for  their  pet  and  imagine  life  from  their  point  of 
+view,  is  a  popular  trend  on  e.g.  Instagram  and  Facebook. 
+Typically, by sharing photographs of their dog in mundane 
+everyday scenarios with a caption that “gives voice to” and 
+imagines  life  from  “the  dogs’  perspective”.  Hence,  this 
+phenomenon is different compared to owners posting about 
+their pet from their personal social media account, or people 
+sharing  animal  memes  for  sole  humoristic  purposes  (e.g. 
+[12]).  
+
+There are no exact figures on the amount of dog profiles in 
+social  media.  In  a  survey  by  Mars  PetCare  US  [32]  from 
+2017, two thousand pet owners and social media users were 
+asked  about  how  their  pets  are  involved  in  social  media. 
+This  can  give  an  indication  of  the  proportion  of  the 
+phenomena.  Around 65 percent of them  posted about  their 
+pets twice a week. One out of six (21 per cent) had a profile 
+for their pet, and half of these stated that their pets get more 
+response  from  the  public  than  their  personal  profiles.  One 
+third  (33  per  cent)  reported  that  post  about  their  pets  as 
+much as they do about their human family, and 13 percent 
+admitted to posting about their pets even more than they do 
+about their  human  family.  Different  hashtags  on  Instagram 
+can also give an indication of the phenomenon’s proportion, 
+e.g.  #dogblog  and  #dogsofinstagram  had  about  200  000 
+
+respectively  over  100  million  posts  by  the  end  of  June 
+2018. However, not all the tagged posts are by dog profiles, 
+neither are all dog profiles filed under the same tag.  
+
+to 
+
+into 
+
+the  dwell 
+
+the  ambition 
+
+Despite 
+the  dogs’ 
+perspectives, dog blogging is obviously biased by a human 
+perspective.  It  is  doubtful  to  what  extent  they  reveal  the 
+truth  about  the  dogs,  and  if  the  interpretation  of  the  dogs’ 
+perspectives  is  valid.  It  is  also  unclear  if  the  dog  owners 
+themselves  consider  their  interpretations  as  valid  and  their 
+degree of seriousness in the activity. This human bias tends 
+to  be  exaggerated,  many  times  as  a  form  of  humor  that 
+could  be  defined  as  “joyful  anthropomorphism”,  which 
+simultaneously  expresses  a  large  proportion  of  love, 
+affection and care for the dogs.  
+
+Posts  by  dog  profiles  are  apparently  staged,  but  they  do 
+provide  naturalistic  data  of  people  pretending  to  be  their 
+pets, which is rare to find elsewhere. This practice is indeed 
+a  very  human  practice,  not  only  in  terms  of  being 
+anthropomorphic. It has also been argued that dog blogging 
+is anthropocentric, and is more about the humans than about 
+the  dogs  [30].  Besides  reporting  on  their  dogs’  lives, 
+activities,  experiences  and  emotions,  it  can  “convey  the 
+humans'  emotional  attachment  to  dogs,  and  to  provide 
+information  and  entertainment  to  likeminded  dog  lovers” 
+[Ibid.,  p.  64].  Dog  blogs  offers  an  additional  space  for 
+socializing  with  other  humans,  which  can  have  a  similar 
+effect as  the  social  benefits  of  pet  keeping  in  general  (e.g. 
+[54]).  Despite  this  anthropocentric  dimension  of  dog 
+blogging,  it  lets  the  owners  imagine  and  reflect  upon 
+themselves and their interactions with their dogs from “their 
+dogs’  perspectives”.  This  kind  of  imaginative  and  role-
+taking  exercise  can  disclose and  lead to  contemplations  on 
+what  kind  of  dog  owners  they  are  and  would  like  to  be? 
+Their engagement as caretakers? What they are doing with 
+their  dogs?  What  their  dogs  like  and  dislike?  It  is  a 
+reflective  practice  that  can  influence  their  behavior  and 
+identity  as  dog  owners,  as  well  as  their  kinesthetic  and 
+biographical empathy towards their dogs. 
+
+Dog  blogging  is  an  emerging  and  interesting  phenomenon 
+in  many  ways  which  needs  further  investigations.  In  this 
+study,  we  have  been  interested  in  what  kind  of  aspects  in 
+the  dogs’  life  that  the  visual-verbal  content  of  these  posts 
+expose.  When  dog  owners,  whom  intimately  are  sharing 
+their  lives  with  their  dogs  intend  to  dwell  into  their 
+presence,  what  aspects  of  the  dogs’  lifeworlds  do  they, 
+consciously or unconsciously, choose to reveal?  
+
+A qualitative content analysis of posts by dog profiles 
+Qualitative  content  analysis  is  a  research  method  to 
+systematically  analyze  and  identify  patterns  and  structures 
+in  different  types  of  content  [23].  In  HCI, this  method  has 
+foremost  been  used  to  categorize  and  analyze  user-
+generated  content  (e.g.  [22]),  but  also  to  apply  more 
+interpretative  and  humanistic  approaches  influenced  by 
+critical  theory  (e.g.  [5]).  Our  approach  makes  no  effort  to 
+go  beyond  the  content  to  analyze  the  discursive  means  of 
+
+how  dogs are  represented  in  these  posts  (e.g.  [30]).  In this 
+paper, we have bracketed such ambitions and restricted our 
+investigation  to  explore  what  core  facets  in  the  dogs 
+lifeworlds  that  can  be  identified  in  these  posts  when  the 
+most  obvious  layer  of  anthropomorphism  is  unwrapped. 
+This  focus  is  chosen  in  alignment  with  the  ambition  to 
+generate ideas and topics for “quantified pets” grounded in 
+what  may  be  interesting  and  meaningful  in  the  dogs 
+lifeworlds as imagined by their human caretaker. 
+
+Sampling and data 
+The  data  consists  of  60  systematically  sampled  visual-
+verbal posts by 20 public dog profiles on social media, i.e. 
+Instagram  and  Facebook,  with  a  symmetrical  distribution 
+embracing  10  profiles  from  each  application.  We  have 
+collected  the  last  three  posts  from  each  sampled  profile 
+the  25th  (Instagram)  and  26th 
+available  on  August 
+(Facebook), 2017. All profiles have been judged according 
+to  the  sampling  criteria  of  being  authored  by  dog  owners 
+pretending  to  be  their  dogs.  Posts  on  such  profiles  present 
+the  same  dog  in  a  multitude  of  settings  and  situations  and 
+use  the  dogs’  name  or  nickname.  There  are  commonly 
+details  about  the  dog  (e.g.  breed,  birthdate,  city,  caretaker) 
+in  the  profile  information.  Furthermore,  our  sampling 
+criteria  is  restricted  to  posts  where the  users  share a  single 
+image.  Posts  with  videos,  multiple  images,  only  text,  and 
+other  types  of  posts  have  been  excluded.  The  data  set 
+includes posts in terms of image, caption and comments by 
+other human and dog profiles. 
+
+The posts on both forums have been systematically sampled 
+through  a  “controlled  snowball  sampling”.  The  same 
+sampling  strategy  was  applied  for  both  applications.  First, 
+we  identified  relevant  hashtags  (e.g.  #dogblog,  #dogblogs, 
+#dogblogging and #dogsofinstagram) that we assumed that 
+posts by dog profiles could be ascribed with. It seemed that 
+a  large  variety  of hashtags  was  used  for  this  phenomenon. 
+Two weeks later, on the dates mentioned above, we started 
+the  data  collection  by  revisiting  each  forum  and  searched 
+for  the  hashtag  #dogblog.  We  used  the  first  dog  profile  in 
+the  search  result  that  fulfilled  our  sampling  criteria  as  the 
+point  of  departure  for our  data  collection,  and  sampled  the 
+latest  three  posts  from  that  profile.  The  next  profile  was 
+selected by visiting the newest of these posts and looked for 
+the very first dog profile in the commentary thread. We did 
+this process three times before actually sampling posts from 
+the  next  profile  to  generate  a  more  scattered  data  set.  We 
+continued  this  process  until  30  posts  for  each  application 
+was  reached.  It  could  have  been  possible  to  collect  a 
+randomized sample of posts under a specific hashtag, but it 
+would  restrict  the  data  to  a  specific  single  hashtag.  With 
+this  technique  we  could  capture  posts  filed  under  several 
+relevant hashtags. 
+
+Coding and analyze 
+The  data  was  coded  inductively  in  order  to  identify  what 
+facets  in  the  dogs’  lifeworld  these  posts  depicts  by 
+analyzing the content explicatory and semantically, without 
+any  intention  to  reveal  underlying  or  discursive  meanings. 
+
+Temporal 
+
+Relational 
+
+Bodily 
+
+Situational 
+
+FACETS IN DOG LIFE 
+
+- Body movement 
+- Body posture 
+- Facial expressions 
+
+- Activities 
+- Events 
+
+Inner 
+- Emotion/mood  
+- Attitudes 
+
+DATA 
+
+Verbal 
+
+Physical  
+- Physical surroundings  
+- Weather conditions 
+- Physical artifacts  
+- Food and treats 
+
+- Past 
+- Present 
+- Future 
+
+Visual 
+
+- Physical surroundings  
+- Weather conditions 
+- Physical artifacts  
+
+- N/A 
+
+- Dogs relation to    
+  humans 
+- Dogs relation to other   
+  dogs 
+- Dogs relation to other  
+  animals 
+- Single Dog 
+- Dog-dog/s 
+- Dog/s-human/s 
+- Dog-other animals 
+
+- N/A 
+
+- N/A 
+
+- Body movement 
+- Body posture 
+- Gaze 
+- Facial expressions 
+
+Superficial 
+
+- Breed 
+- Appearance 
+- Aesthetics 
+- Fashion 
+
+- Breed 
+- Appearance 
+- Fashion 
+
+Table 1: Overview of facets in dogs’ lifeworlds identified in posts by dog profiles on Instagram and Facebook. 
+
+The visual images and the verbal interpretations were coded 
+independently,  and  thereafter  categorized  in  accordance  to 
+find  a  comparable  categorical  language  for  both  types  of 
+data.  The  coding  and  categorizing  process  was  done 
+iteratively through intense collaborative sessions, as well as 
+individually  by  one  of  the  researchers  whom  was  main 
+responsible for the analysis. The discussions and analytical 
+work  from  the  joint  sessions  laid  the  foundation  for  the 
+coding scheme. It was applied and constantly improved by 
+the responsible coder, whom revisited and coded the rest of 
+the  material  in  between  the  collaborative  sessions.  A 
+randomized  sample  of  10  %  of  the  coded  material  was 
+examined 
+three 
+collaborating  researchers  using  Fleiss’  kappa,  κ  =  0.831, 
+which  denotes  an  almost  perfect  agreement  [26,  p.  165]. 
+The  same  sample  was  also  examined  for  individual 
+measures  of  intercoder  reliability  between  each  of  the 
+researchers, using Cohens’ kappa, κ = 0.771, κ = 0.813, and 
+κ  =  0.949,  which  indicates substantial to almost  perfect 
+agreements [Ibid]. 
+
+reliability  with 
+
+intercoder 
+
+the 
+
+for 
+
+Ethical considerations 
+Even  if  all  posts  in  the  data  are  publicly  available  and 
+associated  with  their  dog,  they can  still reveal  glimpses  of 
+the owners, and apparently also their dogs, private spheres. 
+Given  the  nature  of  information  in  the  posts,  they  are  not 
+likely  to  be  considered  as  sensitive  or  directly  harmful, 
+neither  for  the  humans  or  canines.  Rather,  they  could 
+benefit  from  it  given  the  aim  of  this  paper  and  ACI  as  a 
+field.  The  humans  behind  the  profiles  are  to  some  extent 
+already  anonymised  as  they  are  registered  in  their  dog’s 
+name.  Still,  we  have  excluded  profile  names,  images,  and 
+other personal information to strengthen anonymity.  
+
+When doing empirical studies in social media settings there 
+is  a  trade-off  between  keeping  data  naturalistic  without 
+interference,  and  to  reveal  oneself  as  a  researcher  and 
+ensure transparency and  participation  [13,  p.  25].  We  have 
+not informed the participant about their participation as we 
+have  strived  towards  naturalistic  data.  Moreover,  such 
+interaction  risk  to  influence  their  future  social  media 
+practices  and  behaviors,  e.g.  in  terms  of  being  more 
+restrictive and suspicious. 
+
+RESULTS AND FINDINGS 
+From  the  content  analysis  of  social  media  posts  by  dog 
+owners  pretending  to  be  their  dogs’  we  identified  seven 
+
+facets  relevant  to  the  lifeworld’s  of  the  dogs  (overview  in 
+table 1). In the following, these are presented in detail. 
+
+Physical facets 
+This  category  refers  to  the  environment  and  the  physical 
+manifestation  of  the  dogs’ 
+the 
+physical  surroundings  in  which  the  dogs  in  the  posts  are 
+situated,  weather  conditions,  food  and  treats,  as  well  as 
+physical  artifacts  that  appears  to  have  a  substantial  role  in 
+the posts. 
+
+life-worlds,  including 
+
+Physical surroundings 
+Information on the physical surroundings was existent in all 
+posts. The images  provided  a  basic  understanding,  such  as 
+if  they  were  located  outdoors,  and  additionally  if  the 
+outdoor  surrounding  was  urban  (e.g.  street,  park,  outside 
+shopping  window)  or  wild  (e.g.  up in the  mountains,  lake, 
+open  field,  beach).  Images  could  also  reveal  if  the  setting 
+was  indoors  and  in  what  type  of  room  (e.g.  kitchen,  hall, 
+living  room, bath  room)  the  depicted  situation  takes place. 
+The captions, and also the  comments, could  disclose  more 
+detailed information on the place or location, e.g. name of a 
+city,  or  street,  part  of  city,  park,  or  nature  reserve,  and  if 
+they  were  at  home,  in a  hotel  lobby  or at a  friend’s  place, 
+which wasn’t visually available in the images. It could also 
+provide with information on the dogs’ attitudes and feelings 
+towards  the  physical  surroundings.  For  example,  in  an 
+image  of  a  dog  running  unleashed  in  an  open  foggy  field 
+with the caption: “Sunrise fly in's are the best. Roaming the 
+beautiful nature adjacent to the lovely restaurant x in place 
+y, an incredible  (dog) friendly place  to  stay and  eat…”.  It 
+could  also,  as 
+involve 
+example  above, 
+recommendations to other dogs (and their owners).  
+
+this 
+
+in 
+
+Weather conditions 
+Both  the  verbal  and  visual  data  provided  with  information 
+on  the  weather  (e.g.  sunny,  warmth,  windy,  cloud,  rainy, 
+snowy).  The  verbal  data  offered  additional  details,  e.g. 
+temperature, and  could  provide  with information about  the 
+weather  even  when  it  was  visually  unavailable  (e.g.  in  the 
+posts  of  a  dog  inside  a  café  with  the  caption  “waiting  out 
+the rain”).  
+
+It  could  also  include  interpretations  on  the  dogs’  attitudes 
+towards the weather. Which, for example, can be illustrated 
+by  an  image  of  a  dog  standing  on  the  hind  legs  with  the 
+front paws on the owner’s knee with the caption “Enjoying 
+
+ 
+ 
+ 
+ 
+ 
+ 
+the lovely 70F weather!”, or a dog lying in the shade on the 
+grass together with a dog friend with the caption “Trying to 
+beat  the  summer  heat!”.  It  could  also  access  with 
+information on the dogs imagined attitudes towards e.g. wet 
+paws. As in the post with an image of a dog during an early 
+morning  walk  with  the  caption:  “When  you  have  to  get  to 
+the park sooo early in the morning before other dogs show 
+up  that  the  sprinklers  are  still  going  and  the  pavement  is 
+still wet. RUDE!”. 
+
+Physical artifacts  
+Several  artifacts  were  present  in  the  images  and  discussed 
+in the text, e.g. leashes, collars, toys, dog beds, clothing and 
+accessories. Collars and leashes were present in many of the 
+images, but these artifacts were seldom interpreted or dealt 
+with  in  the  verbal  data.  However,  being  “off  leash”  and 
+“roaming  free”  was positively  interpreted  as  an expression 
+for  freedom  and  joy.  Different  kinds  of  toys  (e.g.  frisbee, 
+ball, cuddle toy) and dog beds were visually available in the 
+images  and  considered  in  the  text.  For  example,  related  to 
+ownership and relations to specific toys, as in the image of 
+a dog lying down with a cuddle toy between the front paws 
+with  the  caption:  “You  better  not  take  my  favorite  toy”. 
+Clothing and accessories, e.g. bow ties, where observable in 
+a some of the images. These where foremost commented by 
+other  dog  and  human  profiles,  e.g.  “nice  bow  tie”,  rather 
+than by other dog profiles. Clothing also related to fashion, 
+where  different  brands,  fitting  of  dogs clothing  or  “matchy 
+outfits”, referring to either human-dog or dog-dog clothing, 
+were common topics.  
+
+Food and treats 
+The visual data rarely depicted any food or treats, but it was 
+frequently  discussed  in the commentary  threads,  especially 
+in  discussions  between  dog  profiles.  It  included  taste 
+preferences (e.g. “… Can I just have regular yellow cheese 
+please?  Partial  to  basic  cheddar  or  perhaps  Edam,  if  I’m 
+feeling  exotic”)  as  well  as  different  types  of  controversies 
+with  their owner around  food  (e.g. “I  mean,  you  should be 
+getting  extra  treats  every  day!  C’mon  humans  get  it 
+together!”). 
+
+Temporal facets 
+Temporality  (i.e.  past,  present  and  future)  was  only 
+depicted  in  the  written  text.  It  could  be  retrospective 
+reflections  referring  to  memorable  moments  they  had 
+during  the  day  or  from  their  young  puppy  days  and  e.g. 
+cover different types of achievements, or the first time they 
+encountered  snow.  Usually  with 
+the  hashtag  #tbt 
+(throwback  Thursday).  It  could  also  be  contemplations 
+about  the  future,  such  as  planning  or  longing  for  events 
+(e.g. breakfast,  the  weekend, taking  a  walk,  or for the  rain 
+to stop), or humoristic reflections about future careers. This 
+category  does  perhaps  most  clearly  illustrate  a  reflexivity 
+and  a  potentially  increased  biographical  understanding  of 
+the human users behind the dog profile.  
+
+Relational facets  
+This  category  refers  to  the  dogs’  social  life.  In  the  images 
+this  was  analyzed  by  the  visible  social  formations  (e.g. 
+
+single  dog,  dog-human,  dog-dog).  From  the  text,  we  could 
+analyze  the  details  of  the  relations  (e.g.  if  the  human  was 
+the owner, if the other dog was a sibling or a friend) and the 
+dogs’ thoughts and attitudes towards the others. 
+
+Relations to humans 
+Humans was seldom present in the images, but much talked 
+about in the text. In a few posts the dog was depicted with 
+their  owner,  sitting  next  to  each  other  or  where  the  dog  is 
+being held or sitting in the leap of a human. In a few other 
+posts  the  feet  and  legs  of  humans  was  visible  in  the 
+periphery. The dog was clearly the centre of the images and 
+this  included  reflections  about  their  human  fellows.  Even 
+when  images  depicted  single  dogs  it  was  commonly 
+discussed  in  the  text.  For  example,  a  close-up  of  a  dog 
+standing on the shore with his tongue out, with the caption: 
+“I  just  had  SUCH  a  good  day  with  my  Grandad  Cheese 
+(he’s  called  this  cos  he  always  feeds  me  ‘too  much 
+cheese’…)”.  
+
+including  conflicts  of 
+
+Captions  and  comments  provided a  rich  material  to  inform 
+about  the  details  of  the  relations,  such  as  what  type  of 
+relations  they  have,  their  feelings  and  thoughts  about  the 
+humans in their social life, what they are doing together. It 
+could  reveal  both  positive  and  negative  aspects  of  the 
+relations, 
+interests  and  power 
+relations, or controversies around different subjects, such as 
+being “too restricted with food”. In some occasions it could 
+also  reveal  loneliness,  e.g.  that  their  “dogmum”  left  them 
+home  alone,  or  jealousy  as  in  an  image  depicting  another 
+dog  with  the  caption  “why  is  dad  hanging  out  with  this 
+dood?!”.  Labeling  the  caretakers  as  mum  and  dad  was 
+common  in  the  posts.  It  was  evident  that  the  owners 
+consider  their  dogs  as  family  members  where  they  see 
+themselves as the parents, and the dogs as their kids.  
+
+Dogs  relation  to  other  humans  was  also  present  in  the 
+comments  by other  human  profiles. These comments  were 
+filled with positive emotions filled with love, affection and 
+aesthetic  admiration.  The  people  in  their  public,  despite  if 
+they have offline relations or not, evidently adore and show 
+love towards the dogs. 
+
+Relations to other dogs 
+Most  of  the  images  depicted  single  dogs,  but  it  was  also 
+common that other dogs were present. It could for example 
+be  images  of  dogs  lying  or  sitting  next  to  each  other,  or 
+images  capturing  the  dogs  while  playing  or  running 
+together.  Even  when  the  dogs  were  depicted  alone,  other 
+dogs  were  mentioned  and  discussed  in  the  text.  The  posts 
+revealed a lot of information about other dogs and the dogs’ 
+relation  to  them  in  terms  of  e.g.  if  they  are  siblings  or 
+friends and  their  shared  experiences.  As in  the  post of  two 
+dogs  lying  on  the  ground  looking  up  towards  humans 
+whose legs  only are  visible in  the  image,  with the caption: 
+“My  favorite  birthday  photo  with  my  brother.  We  are 
+waiting patiently for a birthday steak”. 
+
+There  were  also  discussions  between  dog  profiles  in  the 
+commentary  thread.  In  these  discussions  they  for  example 
+
+thread, 
+
+made  plans  and  arranged  future  meetings  of  walking 
+together.  It  could  also  be  different  types  of  invitations,  or 
+comments supporting the utterances in the original caption. 
+The  interpretations  were  commonly  exaggerated  along 
+discussion 
+than  providing  alternative 
+interpretations.  They  also  discussed  different  aspects  of 
+their owners, for example related to food/feeding and treats 
+as  in  the  comment:  “No  banana?!  Outrageous.  If  this 
+cruelty persists come over to our place… we have bananas 
+as well as peanut butter treats, carrots and apples and we’ll 
+share them with you ;)”.  
+
+rather 
+
+Relations to other animals 
+The  dogs’  relations  to  other  nonhuman  animals  was  also 
+identified in the material, however only to a limited extent. 
+It included other companion species such as cats, and wild 
+animals  such  as  geese.  The  former  was  exemplified  by  a 
+dog  standing  in  front of  a dog  bed  occupied  by a  cat  with 
+the  caption:  “Um,  excuse  me?  Isn’t  that  my  bed?”.  The 
+latter was exemplified by a dog was standing in a mountain 
+lake close to  flock  of  wild geese,  with  the  caption:  “When 
+you’re  chasing  geese  but  your  humans  tell  you  to  “leave 
+it”. Okay. I guess I’ll just stand here then”. This engaged a 
+discussion  about  the  dogs’  instinct  to  chase  other  animals, 
+in  this  case  geese, and the  owner’s  commands and control 
+of such instincts. In a sense, these conversations were more 
+about relations and controversies between the caretaker and 
+the dog rather than dog-other animal relations. 
+
+Situational facets 
+This  category  refers  to  the  many  situations,  in  terms  of 
+activities  and  events  that  the  dogs  were  faced  with  in  the 
+posts.  Typically,  this  was  connected  to  the  ordinary  and 
+mundane  aspects  of  everyday  life  of  canines,  e.g.  walking 
+with  their  caretakers,  playing  with  other  dogs  or  humans, 
+peeing  and  marking,  grooming,  sleeping  or  resting,  eating 
+or  waiting  for  food,  beach  trips,  bathing,  hiking,  being 
+unleashed  in  the  backyard,  sports  (e.g.  dock  diving)  and 
+specific events (e.g. birthdays).  
+
+In  a  few  posts, 
+the  situations  were  unnatural  and 
+exaggeratedly  staged  by  the  humans,  such  as  in  posts  of  a 
+dog in a bath tub with the caption: “I like to unwind with a 
+long hot bath and a glass of pinot grigio”, or an image of a 
+dog  lying  on  the  back  in  an  armchair  with  a  book  on  his 
+chest  and a  half  empty  glass of  wine  on  the table  with  the 
+caption:  “Because  ma  took  too  long  to  get  ready”.  These 
+posts 
+of 
+anthropomorphism  with  clear  humoristic  undertones. 
+However,  the  majority  of  the  posts  in  the  material  was 
+about  ordinary  everyday  situations,  depicting  mundane 
+activities  and  human-canine  interactions  without  such  an 
+exaggegerated perfomance. 
+
+examples 
+
+extreme 
+
+form 
+
+are 
+
+an 
+
+of 
+
+Bodily facets 
+A  number  of  physical  actions  was  identified  in  both  the 
+images  and  the  verbal  interpretations.  These  have  been 
+categorized  as  bodily  movements,  postures  and  gaze. 
+Examples  of  the  former  includes  e.g.  walking,  running, 
+standing  still,  and  for  latter  e.g.  sitting,  lying,  carried  by 
+
+human. In the images these where usually easy to identify, 
+and  in  the  captions,  these  could  be  exaggerated  as  when  a 
+jumping  dog  is  referred  to  as  flying  or  when  a  posture  is 
+interpreted  as  posing.  Exaggerations  tended  to  increase  in 
+the commentary thread and confirm the original caption and 
+could  end  up  in  a  dog  having  their  own  airline  or  being  a 
+pilot. In the images, we could also analyze the direction of 
+the dogs' gaze and what they possible were looking at. The 
+dogs  gaze  was  rarely  interpreted  in the  text  only  in a  very 
+few cases, but foremost the interpretations considered other 
+aspects.  
+
+Inner facets 
+This  category  refers  to  the  inner  lives  of  dogs  in  terms  of 
+their  thoughts, emotions  and  attitudes.    It  was  prevalent  in 
+most of the posts and is a central feature of dog blogging.  
+
+in 
+
+identified 
+
+Emotion and attitudes 
+The dogs’ emotions and moods to are expressed in a highly 
+anthropomorphized  manner.  Several  types  of  emotions 
+the  material,  both  positive  (e.g.  
+were 
+happiness, joy, love, freedom), and negative (e.g. boredom, 
+loneliness,  longing,  grumpiness,  anger,  jealousy).  The 
+former  can  be  exemplified  by  the  following  caption  to  a 
+close-up of a dog with his tongue hanging out: “Happy face 
+–  when  Mumma  brings  home  some  goodies” and the  latter 
+by  a  dog  with  a  similar  facial  expression  standing  in  a 
+bathtub filled with water covering her paws and the caption: 
+“I had to take a bath. I may be smiling, but it wasn’t fun”. 
+The  interpretation  of  the  mood  and  emotions  of  the  dogs 
+was  either  connected  to  the  facial  expressions  of  the  dogs 
+(as in the first example above, i.e. “happy face”) or related 
+to  specific  activities  or  events  (e.g.  a  feeling  of  sadness 
+when  being  ill  and  on  medication  or  the  joy  of  taking  a 
+morning  walk  or  hiking  up  in  the  mountains).  The  latter 
+could  also  have  been  something 
+that  owners  have 
+interpreted from previous bathing situations throughout the 
+years.  As  such  they  possess  some  kind  of  kinesthetic  and 
+biographical  knowledge  about  their  dogs  and  what  they 
+have over time learned (or at least think they have learned) 
+about  what  their  dogs  like  and  don’t  like  to  do.  Attitudes 
+towards  different  things  in  the  dogs  lifeworlds  e.g.  the 
+physical  surroundings,  weather,  artifacts,  food,  relations, 
+was  a  common  topic  in  the  posts.  It  permeates  all  of  the 
+identified categories  which  can  be  seen  in  several  excerpts 
+in many of the other categories.  
+
+the  dogs 
+
+Superficial facets 
+This category refers to the characteristics and appearance of 
+the dogs. It was most commonly expressed in comments on 
+the  perceived  aesthetics  of 
+(e.g.  “cute”, 
+“adorable”, “sweet”), mostly by other human profiles, but 
+in  a  few  cases  also  by  other  dog  profiles.  It  could  also  be 
+other  fundamental  features,  such  as  breed  and  typical 
+attributes  (e.g.  style  of  eyebrows,  moustache,  or  corgi 
+that  was 
+poses).  Clothing,  accessories  and 
+mentioned  under  the  category  physical  artifacts  is  also 
+related  to  the  superficial  facets.  It  was  also  common  with 
+comments  on the  photographical quality  of the images and 
+
+fashion 
+
+other aspects and technicalities related to photography. This 
+the  human 
+category 
+perceptions of the dogs. It is uncertain to what extent this is 
+positively meaningful for the dogs. 
+
+foremost  about 
+
+is  apparently 
+
+DISCUSSION 
+The  study  intends  to  increase  the  understanding  of  canine 
+life  in  the  area  of  Animal-Computer  Interaction  (ACI)  in 
+general, and extend its methodological toolbox. We suggest 
+to  draw  on  dog-owners  empathic  accounts  of  the  lives  of 
+their companion dogs in social media where they pretend to 
+be  them  and  imagines  life  from  their  perspectives.  This 
+approach  of  observing  people  that  pretend  to  be  their  pets 
+and imagines life from their perspective is not restricted to a 
+content analysis. It can be applied to various data collection 
+methods,  as  well  as  on  other  settings  than  dog  blogs.  It 
+complements  available  design  methods,  e.g.  interviews, 
+observations, speculative and participatory design, with the 
+idea  of  “kinesthetic  empathy”  [48].  This  methodological 
+the  dogs’ 
+approach  which  builds  on  dwelling 
+perspectives  by  people  living close  with their  pets have  its 
+obvious  limitations  but  opens  up  a  different  kind  of 
+knowledge, compared with e.g. interviews with dog owners 
+about  their  dogs,  or  ethnographic  observations  of  animals 
+and human-animal interaction in situ.  
+
+into 
+
+In  specific,  we  add  to  previous  research  on  “quantified 
+pets”, by investigating which topics that could be of interest 
+in designing such systems and how it could be measured. In 
+the  following  we  discuss  our  assumption  of  dog  posts  as 
+expressions  of  kinesthetic  empathy  as  well  as  the  design 
+implications of the is approach. 
+
+Kinesthetic empathy in dog blogging 
+There are several indications that blog posts are expressions 
+of  “kinesthetic  empathy”  [48].  As  discussed,  the  concept 
+refers  to  a  bodily  sensibility  of  mutually  accessible 
+experiencing  between  the  interactants.  As  such  it  shares 
+to 
+similarities  with  an  ethnomethodological  approach 
+studying  the  details  of  manifest  human-animal  interaction 
+in  concrete  and  ordinary  situations  (e.g.  [2;  16;  27]). 
+Kinesthetic  empathy  includes  a  biographical  and  historical 
+understanding  of  the  individual  animal.  This  is  central  for 
+the  dog  owners  who  shares  the  lives  with  their  pets  and 
+have  deeper  knowledge  and  experience  of  their  biography 
+than for example animal experts. In that biographical sense, 
+it is the dog owners that are the experts of their dogs.  
+
+The  biographical  aspect  of  kinesthetic  empathy  is  evident 
+when  it  comes  to  the  caretakers’  ambitions  to  understand 
+and  interpret  the  life  worlds  of  their  animals.  In  a  sense, 
+they  are  also  writing  their  dogs  biography  when  they  are 
+occupied  with  the  reflexive  and  social  practice  of  dog 
+blogging.  In  the  analysis,  we  identified  temporality  (i.e. 
+temporal facets) as important, it could for example be posts 
+where  they are  looking  back  to  their  years as a  puppy and 
+what  they  have  accomplished  so  far.  The  biographical 
+understanding  also involves  different types  of  facets  in  the 
+dogs’ lives,  such  as  their  social lives,  what they are doing, 
+and what they seem to like to do. 
+
+To  what  extent  does  the  dog  blogs  express  empathy  with 
+their dogs in terms of kinesthetic awareness of their bodily 
+experience?  The  captions  seem  to  a  large  extent  be 
+grounded,  or  at  least  they  refer  to,  bodily  aspects  such  as 
+postures,  movement,  and  facial  expressions  of  the  dogs. 
+They are also understood in a context to, e.g. what they are 
+doing  (i.e.  situational  and  activity  facets),  where  they  are 
+(i.e.  physical  facets),  whom  they  are  with  (i.e.  relational 
+facets).  This  is  something  that  can’t  be  revealed  without 
+that  sort  of  biographical  and  contextual  information.  The 
+dogs experience  (i.e. inner facets) of  all  these facets in  the 
+dogs’  life  worlds,  e.g.  what  they  are  thinking  and  feeling 
+towards  the  specific  places,  things,  dogs,  their  caretaker  or 
+other  people  etc.  either  seem  to  be  interpreted  based  on 
+bodily  movement,  postures  and  expressions  with  a 
+historical  awareness  of  previous  experiences.  The  dog 
+owners’  understanding  and  empathy  for  their  dogs  is  very 
+much  a  combination  of  a  bodily  and  biographical 
+awareness. However, their interpretations are not to be seen 
+as valid explanations of their dogs’ subjective lifeworlds. 
+
+This  kind  of  practice  can  also  be  understood  as  a  practice 
+which  would  increase  an  empathy  with  their  dogs  as  they 
+their  dogs’ 
+reflecting  and  adds 
+are  constantly 
+biographies. It is also in that sense that dog blogging can be 
+connected  to  quantified  pets  as  it  increases  the  knowledge 
+of their own dogs and likewise about the owners themselves 
+in their role of caretakers. 
+
+to 
+
+Limitations in seeing dog blogs as kinesthetic empathy  
+Our approach is grounded in an understanding of dog blogs 
+as  expressions  of  kinesthetic  empathy.  However,  such  an 
+approach  has  a  number  of  limitations  that  needs  to  be 
+recognized.  
+
+All attempts at getting “inside the mind” of another species 
+or observing and describing their behavior, constantly leads 
+us,  in  various  degrees,  to  subjective  anthropomorphizing 
+where the animals are portrayed with human-like qualities, 
+or  with  concepts  used 
+to  describe  human  behavior. 
+Companion  dogs,  who  live  close  upon  us  and  that 
+sometimes  are  considered  as  part  of  our  families,  are 
+especially subjected to anthropomorphism. 
+
+The  empirical  data  speaks  of  other  concerns  than  canine 
+empathy.  This  is  most  visible in the  numerous  jokes  made 
+on behalf of the animal. The blog posts are to a large extent 
+permeated  with  joyful  and  humoristic  anthropomorphism, 
+noticeably  in  combination  with  a  large  dose  of  love  and 
+affection  for  the  dogs  -  both  by  the  owners  pretending  to 
+their  dogs  and  in  comments  and  likes  from  other  dog  and 
+human  profiles.  However,  an  attraction towards humoristic 
+effects  can  lead  to  a  bias  in  what  facets  to  reveal  in  their 
+dogs’  lives,  that  fits  the  humoristic  line.  The  topics  and 
+situations  highlighted  in  the  posts  are  selected  and  staged 
+by  the  human  caretakers  and  does  not  reveal all aspects  in 
+their dogs’ lives.  
+
+Despite  the  caretakers’  ambition  of  expressing  their  dogs’ 
+large  extent 
+experiences,  dog  blogging 
+
+to  a 
+
+is 
+
+anthropocentric  [30].  Obviously,  an  orientation  to  other 
+concerns than the dog, make the material more problematic 
+as  an  expression  of  canine  user  demands.  It  can  either  be 
+either  misleading  and  lead  to  design  ideas  that  does  not 
+support  quantification  of  positive  dog  experiences.  In  the 
+worst case, it can lead to design that is bad for the animal, 
+in  the  sense  that  Lawson  et.  al.  [28,  29]  has  discussed. 
+Although we surely need to better understand dogs in order 
+to design for them, we suggest to see “kinesthetic empathy” 
+as a complementary approach to existing methods. 
+
+Design inspiration for quantified dog applications 
+We  argue  that  design  that  is  influenced  by  kinesthetic 
+emphatic  accounts  broaden  the  design  space  of  quantified 
+pets. In specific it opens a discussion on what, such as new 
+variables and aspects of dog life, to “quantify” and how to 
+do it. We will now discuss these suggestions more in detail 
+and also reconsider how to measure these new variables for 
+pet informatics.  
+
+First, we can use the study to discuss what is interesting to 
+quantify  beyond  the  “physical  health  paradigm”.  In  the 
+analysis,  we  identified  several  facets  of  the  dogs’  lives, 
+including  the  pleasures  of  human-dog  relation,  dog-dog 
+relations,  food, everyday activities,  seen from  an imagined 
+perspective  of  their  dogs.  It  covers  several  aspects  of  the 
+everyday  lifeworld  of  canines  where  “things,  activities, 
+relations,  and  events  have  experiential  significance”  [9,  p. 
+89].  
+
+Second,  the  study  reveals  a  broad  range  of  actions  where 
+technical  sensors  could  be  applied.  As  we  discussed,  the 
+dominant  form  of  technology  in  previous  research  is  the 
+accelerometer,  which  measure  changes in  movement  along 
+various axes. However, if we align our suggested categories 
+(presented  in  table  1)  with  common  sensor  technology,  a 
+number  of  other  sensorial  dimensions  are  revealed.  It 
+extends  the  technical  design  materials  to  other  types  of 
+available sensors, as described in the following:  
+
+Physical  and  temporal  facets:  A  GPS  would  sense  the 
+whereabouts of the canine; the weather could be sensed by 
+meteorological  sensors,  and  artifacts  could  be  interacted 
+with 
+is 
+obviously measured by a clock. 
+
+technology.  Temporality 
+
+through  e.g.  RFID 
+
+include  GPS 
+
+two  objects.  Such  sensors 
+
+Relational  and  situational  facets:  There  are  a  number  of 
+sensors that measure aspects of relations, such as proximity 
+between 
+in 
+combination  with  mobile  networks,  or  various  forms  of 
+short-range  communication 
+technologies  e.g.  Wi-Fi, 
+Bluetooth  or  NFC.  Information  on  activities  and  events 
+could  be 
+analyzing 
+combinations of different sensor data, e.g. whereabouts and 
+movement  patterns,  to  identify  a  specific  activity  such  as 
+dock diving or dog-dog play. 
+
+and  measured  by 
+
+identified 
+
+Bodily  and inner facets:  Present  quantified  pet  technology, 
+with its accelerometers, focus on physical activities such as 
+sitting, smelling, walking etc. Sensors mentioned above, as 
+
+well as tensiometers and biometrics can be used to quantify 
+physical  activity.  Although  mental  activity  and  what  the 
+dog  thinks,  is  common  in  the  dog  posts,  it  is  beyond  the 
+scope of present technology to quantify those. Nonetheless, 
+measuring dogs’ attitudes towards e.g. activities, places, or 
+social  relations,  would  of course  be  fruitful  knowledge  for 
+the dog owners. 
+
+In sum, a study of kinesthetic empathic expression broadens 
+the  scope  of  the  “quantified pet”  design agenda both  when 
+it  comes  to  what  is  interesting  to  quantify  and  how  to 
+measure  it.  Importantly,  our  study  does  not  specify  the 
+applications  in  detail.  Rather,  it  suggests  an  interesting 
+linkage  between  various  sensing  technologies  and  a  broad 
+spectrum  of  animal  relevant  “quantifiable”  aspects  of  life. 
+These can also be combined and correlated with each other 
+to increase understanding of individual dogs. 
+
+The  analysis  reveals  that  the  dogs’  perspectives  and 
+experiences,  when  imagined  by  their  owners,  is  concerned 
+with mundane things like social relations with other dogs as 
+well  as  humans;  spatiality  and  the  physical  environment; 
+physical  objects;  emotional  attitudes  and  various  set  of 
+ordinary  activities.  This  implies  that  design  of  “quantified 
+pets”  should  not  be  limited  towards  the  “physical  health 
+paradigm”.  But  rather  to  focus  on  the  mundane  and 
+ordinary  aspects  of  everyday  dog  life  that  possibly  can  be 
+important and meaningful for them. There is more to dog’s 
+wellbeing  than  physical  health,  e.g.  dog’s  social  life  with 
+other dogs and humans, is also an important aspect that can 
+be measured. 
+
+CONCLUSION 
+The interest in Animal-Computer Interaction (ACI), with a 
+focus  on  designing  for  animals,  is  growing,  although  the 
+development of methods in which to account for the users’ 
+demands is at the beginning. This situation is also reflected 
+in the design of “quantified pets” technology. We are faced 
+with a challenge to design for users that cannot speak with 
+human.  We  have  argued  for  an  increased  methodological 
+creativity and pluralism, and a need of grounding design in 
+detailed  empirical  studies  of  ordinary  dog  practices.  Our 
+suggestion is to turn towards those humans that live closely 
+with  the  animals,  but  not  just  interview  them.  Animals’ 
+demands are not easily articulated without serious effort. A 
+way  forward  is  to  piggy-back  on  those  accounts  in  social 
+media  where  the  caretakers  acts  out  as  animals  by 
+interpreting  the  subjective  lifeworlds  of  their  dogs.  By 
+taking  part  of  ordinary  dog  owners  that  have  an  intimate 
+day-to-day  relation  with  their  dogs,  and  their  spontaneous 
+reflections in social media about their dogs’ lives from their 
+dogs’  perspectives,  we  can  increase  our  understanding  of 
+what  might  be  important  and  meaningful  for  companion 
+dogs  as  well  as  for  their  owners  in  ordinary  dog-owner 
+relationship.  Quantified  pet  technologies  could  further 
+increase  such  knowledge  about  individual  dogs  for  the 
+owners  and  provide  means  for  reflection  about  dog’s  life, 
+which  in  turn  can  re-configure  their  everyday  lives  and 
+relationships. 
+
+ACKNOWLEDGMENTS 
+This  work  was  partly  funded  by Business  Finland  in  Turre 
+and Toivoset 2.0 project. 
+
+12.  Marta Dynel. 2016. “I Has Seen Image Macros!” 
+
+Advice Animal Memes as Visual-Verbal Jokes. In: 
+International Journal of Communication, 10, 660–688. 
+
+REFERENCES 
+1.  Shir Amir, Anna Zamansky, and Dirk van der Linden. 
+2017. K9-Blyzer: Towards Video-Based Automatic 
+Analysis of Canine Behavior. In: Proceedings of the 
+Fourth International Conference on Animal-Computer 
+Interaction (ACI2017). ACM, New York, NY, USA. 
+2.  Fredrik Aspling, Oskar Juhlin, and Elisa Chiodo. 2015. 
+
+Smelling, Pulling, and Looking: Unpacking 
+Similarities and Differences in Dog and Human City 
+Life. In: Proceedings of the 12th International 
+Conference on Advances in Computer Entertainment 
+Technology (ACE '15). ACM, New York, NY, USA. 
+
+3.  Fredrik Aspling, and Oskar Juhlin. 2017. Theorizing 
+
+Animal–Computer Interaction as Machinations. In: 
+International Journal of Human-Computer Studies, 98, 
+135–149.  
+
+4.  Marc Beakoff. 2007. The Emotional Lives of Animals. 
+A Leading Scientist Explores Animal Joy, Sorrow, and 
+Empathy – and Why They Matter. New World Library. 
+Novoto, California. 
+
+5.  Mark Blythe and Paul Cairns. 2009. Critical Methods 
+
+and User Generated Content: The iPhone on YouTube. 
+In: Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI '09). ACM, New 
+York, NY, USA, 1467-1476. 
+
+6.  Dorothy Cimino Brown, Raymon C. Boston and John 
+T. Farrar. 2010. Use of an activity monitor to detect 
+response to treatment in dogs with osteoarthritis. In: 
+Journal of the American Veterinary Medical 
+Association, 237(1), 66-70. 
+
+7.  Elisabeth A. Bruno, James W. Guthrie, Stephan A. 
+
+Ellwood, Richard J. Mellanby, and Dylan N. Clements. 
+2015. Global positioning system derived performance 
+measures are responsive indicators of physical activity, 
+disease and the success of clinical treatments in 
+domestic dogs. In: PloS one, 10(2), e0117094. 
+
+8.  Rita Brugarolas, James Dieffenderfer, Katherine 
+
+Walker, Ashley Wagner, Barbara Sherman, David 
+Roberts, and Alper Bozkurt. 2014. Wearable wireless 
+biophotonic and biopotential sensors for canine health 
+monitoring. In: Proceedings of IEEE SENSORS 2014, 
+2203–2206. 
+
+9.  Eileen Christ. 1999. Images of Animals: 
+
+Anthropomorphism and Animal Mind. Philadelphia: 
+Temple University Press. 
+
+10.  Vinciane Despret. 2013. From Secret Agents to 
+Interagency. In: History & Theory, 52(4), 29. 
+
+11.  Vinciane Despret. 2013. Responding Bodies and 
+Partial Affinities in Human–Animal Worlds. In: 
+Theory, Culture & Society, 30(7–8), 51–76.  
+
+13.  Rebecca Eynon, Jenny Fry and Ralph Schroder. 2016. 
+The Ethics of Internet Research. In Neil Fielding, 
+Raymond M. Lee and Grant Black (Eds.). The SAGE 
+Handbook of Online Research Methods (2nd Ed). 
+SAGE Publications Ltd. 
+
+14.  Charles Foster. 2016. Being a Beast: Adventures 
+
+Across the Species Divide. New York: Metropolitan 
+Books. 
+
+15.  Fiona French, Clara Mancini, and Helen Sharp. 2017. 
+
+Exploring Research through Design in Animal 
+Computer Interaction. In: Proceedings of the Fourth 
+International Conference on Animal-Computer 
+Interaction (ACI2017). ACM, New York, NY, USA, 
+Article 2, 12 pages.  
+
+16.  Goode, David. (2006). Playing with my dog Katie: An 
+
+Ethnomethodological Study of Dog-Human Interaction. 
+West Lafayette, Indiana: Purdue University Press. 
+
+17.  Donald, R. Griffin. 2002. Afterword: What Is It Like? 
+In: Marc Bekoff, et al. (Eds.). The Cognitive Animal: 
+Empirical and Theoretical Perspectives on Animal 
+Cognition. Cambridge: MIT press. 
+
+18.  Ida Kathrine Hammeleff Jørgensen and Hanna 
+
+Wirman. 2016. Multispecies methods, technologies for 
+play. In: Digital Creativity, 27:1, 37-51. 
+
+19.  Bernd Heinrich. 2000. Mind of the Raven. New York: 
+
+Harper Collins. 
+
+20.  Olivia Johnston-Wilder, Clara Mancini, Brendan 
+Aengenheister, Joe Mills, Rob Harris, and Claire 
+Guest. 2015. Sensing the shape of canine responses to 
+cancer. In: Proceedings of the 12th International 
+Conference on Advances in Computer Entertainment 
+Technology (ACE '15). ACM, New York, NY, USA. 
+
+21.  Admela Jukan, Xavi Masip-Bruin, and Nina Amla. 
+
+2017. Smart Computing and Sensing Technologies for 
+Animal Welfare: A Systematic Review. In: ACM 
+Computing Surveys (CSUR), 50(1), 10. 
+
+22.  Oskar Juhlin, Arvid Engström, and Reponen, E. 2010. 
+Mobile Broadcasting: The What’s and How’s of Live 
+Video as a Social Medium. In: Proceedings of the 12th 
+International Conference on Human Computer 
+Interaction with Mobile Devices and Services 
+(CHI’10). ACM. New York, NY, USA, 35–44. 
+
+23.  Klaus Krippendorff. 2004. Content Analysis: An 
+Introduction to Its Methodology. London: Sage. 
+
+24.  Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, 
+
+Wanda Pratt, and Julie A. Kientz. 2014. Understanding 
+quantified-selfers’ practices in collecting and exploring 
+personal data. In: Proceedings of the 32nd annual ACM 
+conference on Human factors in computing systems 
+(CHI '14). ACM, New York, NY, USA, 1143-1152. 
+
+25.  Cassim Ladha, Nils Hammerla, Emma Hughes, Patrick 
+Olivier, and Thomas Ploetz. 2013. Dog’s life: wearable 
+activity recognition for dogs. In: Proceedings of the 
+2013 ACM international joint conference on Pervasive 
+and ubiquitous computing (UbiComp '13). ACM, New 
+York, NY, USA, 415-418. 
+
+26.  Richard J. Landis and Gary G. Koch. 1977. The 
+
+Measurement of Observer Agreement for Categorical 
+Data. In: Biometrics. 159-174 
+
+27.  Eric Laurier, Ramia Maze, and Johan Lundin. 2006. 
+
+Putting the Dog Back in the Park: Animal and Human 
+Mind in Action. In: Mind, Culture, and Activity, 13(1), 
+2-24. 
+
+28.  Shaun Lawson, Ben Kirman, Conor Linehan, Tom 
+
+Feltwell and Lisa Hopkins. 2015. Problematising 
+Upstream Technology Through Speculative Design: 
+The Case of Quantified Cats and Dogs. In: Proceedings 
+of the 33rd Annual ACM Conference on Human 
+Factors in Computing Systems (CHI '15). ACM, New 
+York, NY, USA, 2663-2672. 
+
+29.  Shaun Lawson, Ben Kirman, and Conor Linehan. 2016. 
+
+Power, participation, and the dog internet. In 
+Interactions 23, 4 (June 2016), 37-41.  
+
+30.  Sirpa Leppänen. 2015. Dog Blogs as Ventriloquism: 
+Authentication of the Human Voice. Discourse, 
+Context & Media. Vol. 8, pp. 63–73.  
+
+31.  Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A stage-
+based model of personal informatics systems. In: 
+Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI ‘10). ACM, New 
+York, NY, USA, 557-566.  
+
+Computer Studies, Volume 98, February 2017, Pages 
+129-134. 
+
+37.  Sean Mealin, Mike Winters, Ignacio X. Domínguez, 
+Michelle Marrero-García, Alper Bozkurt, Barbara L. 
+Sherman, and David L. Roberts. 2015. Towards the 
+non-visual monitoring of canine physiology in real-
+time by blind handlers. In: Proceedings of the 12th 
+International Conference on Advances in Computer 
+Entertainment Technology (ACE '15). ACM, New 
+York, NY, USA, Article 66, 8 pages.  
+
+38.  Robert W. Mitchell. 1997. Anthropomorphism and 
+anecdotes: A guide for the perplexed. In Robert W. 
+Mitchell, Nicholas S. Thompson, and H. Lyn Miles 
+(Eds.), Anthropomorphism, anecdotes and animals, pp. 
+407-427. Albany, NY: SUNY Press. 
+
+39.  Cynthia Moss. 2000. Elephant Memories: Thirteen 
+Years in the Life of an Elephant Family. Chicago: 
+University of Chicago Press, 
+
+40.  Thomas Nagel. 1974. What Is It Like to Be a Bat? The 
+Philosophical Review. Vol. 83, No. 4 (Oct., 1974), pp. 
+435-450. 
+
+41.  Jonathan K. Nelson, and Patrick C. Shih. 2017. 
+
+CompanionViz: Mediated platform for gauging canine 
+health and enhancing human–pet interactions. In: 
+International Journal of Human-Computer Studies, 
+Vol. 98, pp. 169–178.  
+
+42.  Steve North. 2017. Hey, where's my hay?: design 
+
+fictions in horse-computer interaction. In: Proceedings 
+of the Fourth International Conference on Animal-
+Computer Interaction (ACI2017). ACM, New York, 
+NY, USA, Article 17, 5 pages.  
+
+32.  Mars PetCare US. 2016. Survey on Pets and Social 
+
+43.  Susanna Paasovaara, Mikko Paldanius, Petri Saarinen, 
+
+Media. Summary available at:  
+http://www.mars.com/nordics/en/press-center/press-
+list/news-releases.aspx?SiteId=94&Id=7159 (assessed 
+20180104). 
+
+33.  Clara Mancini. 2011. Animal-Computer Interaction: A 
+
+Manifesto. In: Interactions. 18(4). ACM. 
+
+34.  Clara Mancini, Janet van der Linden, Jon Bryan & 
+Andrew Stuart. 2012. Exploring Interspecies 
+Sensemaking: Dog Tracking Semiotics and 
+Multispecies Ethnography. In: Proceedings of the 2012 
+ACM Conference on Ubiquitous Computing, pp. 143–
+152. New York, NY, USA: ACM.  
+
+35.  Clara Mancini, Rob Harris, Brendan Aengenheister, 
+and Claire Guest. 2015. Re-Centering Multispecies 
+Practices: A Canine Interface for Cancer Detection 
+Dogs. In: Proceedings of the 33rd Annual ACM 
+Conference on Human Factors in Computing Systems 
+(CHI '15). ACM, New York, NY, USA, 2673-2682. 
+
+36.  Clara Mancini, Shaun Lawson, and Oskar Juhlin. 2017. 
+Animal-Computer Interaction: The emergence of a 
+discipline. In: International Journal of Human-
+
+Jonna Häkkilä, and Kaisa Väänänen-Vainio-Mattila. 
+2011. The secret life of my dog: design and evaluation 
+of paw tracker concept. In: Proceedings of the 13th 
+International Conference on Human Computer 
+Interaction with Mobile Devices and Services 
+(MobileHCI '11). ACM, New York, NY, USA, 231-
+240.  
+
+44.  Mikko Paldanius, Tuula Kärkkäinen, Kaisa Väänänen-
+Vainio-Mattila, Oskar Juhlin and Jonna Häkkilä. 2011. 
+Communication technology for human-dog interaction: 
+exploration of dog owners' experiences and 
+expectations. In: Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems 
+(CHI '11). ACM, New York, NY, USA, 2641-2650.  
+
+45.  Dave Randall, Richard Harper, and Mark Rouncefield. 
+2007. Fieldwork for Design: Theory and Practice. 
+London: Springer. 
+
+46.  John Rooksby, Mattias Rost, Alistair Morrison, and 
+Matthew Chalmers. 2014. Personal tracking as lived 
+informatics. In: Proceedings of the 32nd Annual ACM 
+Conference on Human Factors in Computing Systems 
+(CHI '15). New York, NY, USA: ACM.  
+
+47.  Clinton R. Sanders. 1999. Understanding dogs: Living 
+and working with canine companions. Philadelphia:  
+Temple University Press. 
+
+48.  Kenneth J. Shapiro. 1990. Understanding Dogs through 
+Kinesthetic Empathy, Social Construction, and History. 
+In; Anthrozoös. Vol. 3 (3).  
+
+49.  Shirley Strum. 1987. Almost Human. New York: 
+
+Random House. 
+
+50.  Gary M. Weiss, Nathan Ashwin, JB Kropp, and Jeffrey 
+W. Lockhart. 2013. WagTag: a dog collar accessory for 
+monitoring canine activity levels. In; Proceedings of 
+the 2013 ACM conference on Pervasive and ubiquitous 
+computing adjunct publication (UbiComp '13). ACM, 
+New York, NY, USA, 405-414. 
+
+51.  Kari Weil. 2012. Thinking Animals: Why Animal 
+
+Studies Now? New York: Colombia University Press. 
+
+52.  Alexandra Weilenmann & Oskar Juhlin. 2011. 
+Understanding people and animals: the use of a 
+positioning system in ordinary human-canine 
+interaction. In: Proceedings of the SIGCHI Conference 
+Human Factors in Computing Systems (CHI’11). New 
+York: ACM, pp. 2631-2640.  
+
+53.  Michelle Westerlaken, & Stefano Gualeni. 2016. 
+
+Becoming with: towards the inclusion of animals as 
+participants in design processes. In: Proceedings of the 
+Third International Conference on Animal-Computer 
+Interaction (ACI '16). ACM, New York, NY, USA. 
+
+54.  Lisa Wood, Karen Martin, Hayley Christian, Andrea 
+Nathan, Claire Lauritsen, Steve Houghto, Ichiro 
+Kawachi, and Sandra McCune. 2014. The Pet Factor - 
+Companion Animals as a Conduit for Getting to Know 
+People, Friendship Formation and Social Support. In; 
+PLoS ONE 10(4). 
+
+55.  Gary Wolf. 2009. Know Thyself: Tracking Every Facet 
+
+of Life, from Sleep to Mood to Pain, 24/7/365. Wired, 
+July 2009, pp. 92-95.  
+
+ 
+ 
+ 
+ 
+ 
+

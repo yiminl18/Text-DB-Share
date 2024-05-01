@@ -1,0 +1,1335 @@
+Opportunities for Oral Health Monitoring 
+Technologies Beyond the Dental Clinic 
+
+Adele Parsons 
+Human Centered Design and Engineering 
+University of Washington 
+Seattle Washington U.S. 
+adelepa@uw.edu 
+
+Chia-Fang Chung 
+Human Centered Design and Engineering 
+University of Washington 
+Seattle Washington U.S. 
+cfchung@uw.edu 
+
+Molly Donohue 
+Human Centered Design and Engineering 
+University of Washington 
+Seattle Washington U.S. 
+donoh95@uw.edu 
+
+Sean A. Munson 
+Human Centered Design and Engineering 
+University of Washington 
+Seattle Washington U.S. 
+smunson@uw.edu 
+
+Eric J. Seibel 
+Mechanical Engineering 
+University of Washington 
+Seattle Washington U.S. 
+eseibel@uw.edu 
+
+ABSTRACT 
+Personal  health  and  wellness  technologies  can  improve 
+people’s  care  at  home,  connect  everyday  activities  to 
+clinical  settings,  and  allow  more  efficient  use  of  clinical 
+resources.  Recently, 
+the  Human-Computer  Interaction 
+community has begun to develop tools to improve oral care. 
+In  this  research,  we  investigate  dental  practices  and 
+information  needs  through  surveys  and  interviews  with  a 
+range  of  patients  and  oral  health  providers.  We  find  that 
+personal  users  want  to  track  their  progress—or  lack 
+thereof—between  dental  visits  for  feedback,  so  they  can 
+adjust  their  home  care  routines,  or  so  they  can  seek  an 
+escalation  in  care  if  they  identify  a  problem.  Among 
+providers  and  clinical  health  workers,  there  exists  an 
+opportunity  for  better  screening  and  diagnostic  tools  to 
+identify dental caries at early stages. Providers in rural areas 
+desire better tools to communicate problem areas to patients 
+and their caregivers to bridge oral health care disparities in 
+areas with limited access to care. Our results can guide the 
+development  of  dental  technologies  that  can  address 
+currently unmet needs of patients and providers. 
+
+Author Keywords 
+Health, Oral Health, Personal Informatics.  
+
+ACM Classification Keywords 
+H.5.m. Information interfaces  and presentation  (e.g.,  HCI): 
+Miscellaneous  
+
+ACM Reference format: 
+PervasiveHealth '18, May 21–24, 2018, New York, NY, USA 
+© 2018 Copyright is held by the owner/author(s). Publication rights 
+licensed to ACM. ACM 978-1-4503-6450-8/18/05(cid:0)$15.00  
+https://doi.org/10.1145/3240925.3240973 
+
+to  oral  health  care  and 
+
+INTRODUCTION 
+Lack  of  access 
+inadequate 
+knowledge of proper oral hygiene leads to an abundance of 
+oral  diseases  in  the  United  States.   Education  about  proper 
+oral  hygiene  techniques  is  important  because  dental  caries 
+is the single most common chronic disease of children aged 
+6 to 19 years old and occurs in some degree to 9 out of 10 
+adults  over  the  age  of  20  [1].  Cost  is  one  of  the  main 
+reasons  that  prevents  adults  from  receiving  regular  dental 
+care,  along  with  proximity  to  dental  providers  [2].  Adults 
+and  children  living  in  rural  populations  with  increased 
+vulnerability  to  oral  health  diseases,  like  Alaskan  Native 
+communities,  experience  significant  disparities  in  oral 
+health  care  [3].  In  Alaska,  Dental  Health  Aide  Therapists 
+to  bridge  oral  health  disparities  by 
+(DHATs)  work 
+providing  preventative  care  and 
+to 
+children and adults [3]. While increasingly common, dental 
+caries  can  be  avoided  with  proper  oral  hygiene  techniques 
+and early detection methods. 
+
+tooth  extractions 
+
+New  oral  health  technologies  could  provide  patients  and 
+providers  with  valuable  communication,  education,  and 
+feedback leading to prevention of oral diseases. Monitoring 
+one’s  oral  health  outside  of  the  dental clinic is  uncommon 
+today, but 69% of adults track at least one health indicator 
+so  personal  informatics  technologies  are  used  for  many 
+other  health-related  goals  [4].  Researchers  in  Human-
+Computer  Interaction  (HCI)  has  proposed  some  ways  that 
+technology could  support  people  in their oral  health  goals, 
+including  Lumio,  DAYA,  Playful  Toothbrush,  and 
+Molarcropolis  [5,  6,  7,  8].  However,  there  remains  a  large 
+opportunity for technology to improve access to dental care 
+and decrease the incidence of oral diseases.  
+
+In  this  research,  we  examine  unmet  information  needs  in 
+oral  care  to  identify  opportunities  for  better  monitoring  at 
+home and in connecting home care with clinical care. To do 
+this,  we  first  gained  an  understanding  of  patient  and 
+1 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+provider  needs  for  an  oral  health  monitoring  technology 
+through  surveys  and  follow-up  interviews.  Then,  we 
+explored  how  clinical  health  workers  currently  bridge  oral 
+health  care  disparities  in  poor,  rural  areas  with  limited 
+access  to  care  by  interviewing  DHATs  in  Alaska,  school 
+nurses,  and  clinical  health  workers  in  low  socioeconomic 
+clinics,  and  dental  providers.  Together  with  a  review  of 
+literature 
+following 
+opportunities  for  applying  personal  health  informatics 
+techniques to oral health: 
+
+in  dentistry,  we 
+
+identify 
+
+the 
+
+•  Facilitating communication between patient and provider 
+•  Providing patient-centered care 
+•  Visualizing oral health data to ensure early diagnosis 
+•  Reducing oral health disparities 
+
+The  HCI and  Ubicomp  research  communities have  already 
+begun  work  on  some  of  these needs  pointing to  promising 
+future research directions.  Our  results  provide guidance  on 
+what new dental monitoring tools must do to succeed. 
+
+in 
+
+BACKGROUND AND MOTIVATION 
+In  this  section,  we  examine  causes  for  disparities  in  oral 
+health 
+the  United  States,  present  how  personal 
+informatics  technologies  in  other  health  conditions  to 
+promote  collaboration  between  patient  and  provider,  and 
+for  oral  health  monitoring 
+discuss 
+technologies by reviewing related literature in HCI. 
+
+the  opportunity 
+
+Oral health disparities in the United States 
+Among  children  aged  2-5,  23%  presented  dental  caries  in 
+their  primary  teeth,  and  60%  of  adolescents  aged  12-19 
+have dental caries in their permanent teeth [2]. The number 
+of people who annually visit the dentist declines from 85% 
+of  children  aged  2-17  to  64.0%  of  adults  aged  18-64,  and 
+only 62.7%  of adults  over  the age  of  65 [9].  Along  with  a 
+decline  in  dental  visits,  adults  aged  40-64  were  half  as 
+likely  (29%)  to  have  all  of  their  teeth  compared  to  adults 
+aged  20-39  [2,  10].  Age  is  not  the  only  factor.  Non-
+Hispanic white and Asian adults are on average 10% more 
+likely  to  have  very  good oral  health  compared to  Hispanic 
+or non-Hispanic black adults [11].  
+
+Dentists  are  expensive,  highly  trained,  and  are  uncommon 
+in rural areas. Among adults aged 18-64, 42% did not visit 
+the  dentist  due  to  cost  or  lack  of  insurance  [2].  Adults 
+without  Medicaid  are  half as  likely  to  visit  the  dentist and 
+are  five  times  as  likely  to  have  poor  oral  health  as  adults 
+with  private  health  insurance  [2].  Many  dental  patients, 
+however,  do  not  need  the  skill  of  a  dentist,  but  rather  a 
+hygienist or therapist [12]. Hygienists or therapists are less 
+expensive  than  dentists  to  train  and  employ,  and  so  there 
+can be more of them per capita. For example, Dental Health 
+Aide  Therapists  (DHATs)  in  Alaska  are  recruited  from 
+local  communities  and  travel  around  Alaska  from  sub-
+regional  clinics  to  spend  weeks  to  months  in  remote 
+villages  without  access  to  dental  providers.  DHATs  are 
+
+trained  to  perform  preventative  and  restorative  dental  care 
+and are supervised by a dentist working in a central city [3]. 
+Rural  dental  providers  often  face  problems  with  accessing 
+patient’s  previous  medical  history  and providing follow-up 
+care  [13].  In  communities  where  there  is  a  sub-regional 
+clinic, year-round DHATs are able to do more maintenance 
+and  sealants.  Also,  DHATs  provide  annual  screenings  of 
+every  school  child’s  teeth,  scheduling  them  for  follow-up 
+exams and extractions as needed throughout the year.  
+
+Collaboration with personal informatics 
+Personal informatics technologies provide a space for users 
+to  set  and  achieve  health-related  goals  while  promoting 
+healthy  lifestyles  changes  and  increasing  knowledge  about 
+personal  health.  Personal  informatics  technologies  seek  to 
+improve  quality  of  life  by  understanding  how  technology 
+can  influence  behavior  and  providing  tools  for  education 
+and  health  management 
+[14].  Furthermore,  personal 
+informatics  creates  opportunities  for  contextual  reflection, 
+treatment  adjustment,  and  communication  with  providers 
+[15].  Contextual information allows  the  user  to  understand 
+how  their  daily  life,  environment,  and  treatment  impact 
+their  overall  health  [15].  For  many  health  goals,  personal 
+informatics is most successful when continued for the long-
+term.  However,  keeping  users  motivated  to  track  proves 
+difficult when they feel uninterested or discouraged by their 
+data  [16].  Focusing  on  overall  wellness  in  informatics 
+technologies  keeps  users  engaged  by  emphasizing  that 
+health  tracking  is  not  just  about  fixing  a  specific  health 
+condition, but rather a tool for maintaining a healthy life [17]. 
+
+Personal  informatics  data  allows  patients  to  describe  their 
+everyday  behavior,  routine,  and  limitations  when  they 
+review  the  data  with  providers.  This  information  enables 
+providers  to  understand  patient  experience  better  and  to 
+develop  individualized diagnoses  and  treatment  plans  [18]. 
+Providers  can  also  use  patient-tracked  data  as  examples  to 
+educate patients on self-management skills [18, 19].  
+
+falls 
+
+short 
+
+In  oral  health  care,  communication  between  patients  and 
+providers 
+surrounding  patient  concerns, 
+education  on  proper  hygiene  techniques,  and  overall 
+knowledge  of  personal  oral  health.  The  lack  of  successful 
+communication  is  especially  problematic  for  parents  since 
+they need  to  know  how  to  properly educate their children. 
+Along  with  communication,  patient  follow-up  from  the 
+dentist  rarely  occurs  in  rural  locations.  One  of  the  main 
+reasons  for  difficulty  in  communication  between  patients 
+and  providers  is  the  inability  of  patients  to  properly 
+visualize  their  teeth  [16].  Allowing  patients  to  visualize 
+their teeth and understand their oral health is a current area 
+that needs more research [16]. 
+
+Oral monitoring research in HCI 
+Previous projects like LumiO, DAYA, Playful Toothbrush, 
+and  Molarcropolis  have  been  designed  to  help  individuals 
+spend more attention on areas of their mouth that most need 
+
+2 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+it and on helping parents monitor and encourage children's 
+brushing [5, 6, 7, 8].  
+
+LumiO  helps  patients  identify  problematic  areas  in  their 
+mouth by using quantitative light fluorescence to determine 
+how  much  plaque  exists  on  each  tooth  [5].  As  the  user 
+brushes  their  teeth  and  removes  the  plaque,  the  vibrations 
+on  the  toothbrush  decrease,  giving  the  user  immediate 
+feedback on the quality of their brushing. Informed by this 
+feedback,  people  using  LumiO  can  use  the  feedback  to 
+allow  their  toothbrush  to  linger  longer  on  teeth  that  have 
+more  plaque  and  thus  hopefully  improve  their  oral  health. 
+Three  other  systems  have  been  designed  to  help  parents 
+monitor  children’s  brushing  and  to  motivate  children  to 
+brush  properly.  DAYA  is  a  mobile  application  for  parents 
+and  a  toothbrush  that  monitors  how  their  children  brush. 
+The  DAYA  system  was  created  on  the  basis  that  children 
+do  not  understand  the  necessity  of  brushing  their  teeth, 
+children  are fearful  of the  dentist and cavities, and parents 
+share  the  same  concerns  as  their  children  but  fail  to  give 
+good instructions due to their lack of oral health knowledge 
+[6]. Playful Toothbrush seeks to engage children and instill 
+them  with  proper  oral  health  habits  by  means  of 
+gamification  [7].  The  Playful  Toothbrush  aims  to  target 
+children  who  are  not  interested  in  brushing  their  teeth  by 
+making  the  task  interactive  and  fun.  Also,  the  Playful 
+Toothbrush educates children  who  do  not  brush  their teeth 
+properly.  Along  with  Playful  Toothbrush,  Molarcropolis 
+engages  children  and  increases  oral  health  awareness  by 
+using  gamification 
+three  ways:  cause-and-effect 
+simulations,  suggestion,  and  attractiveness  [8].  Cause-and-
+effect simulations quickly show users how their teeth would 
+deteriorate  with  poor  oral  hygiene  habits,  suggestion 
+provides  an  educational  component,  and  the  attractiveness 
+of the system is tailored to the target audience. 
+
+in 
+
+RESEARCH GOALS 
+Existing  oral  health  monitoring  systems  address  important 
+oral  health  needs  beyond  the  dental  clinic.  They  can  help 
+people  monitor  and  self-regulate  the  frequency,  intensity, 
+and  duration  of  their  home  care.  New  research  prototypes 
+can  help  people  know  when  and  where  plaque  is  building 
+up in their mouth and provide assistance for immediate oral 
+health  needs.  Research 
+focused  on  motivating  and 
+educating  children  to  brush  well  has  the  potential  to  build 
+important habits at a formative time.  
+
+In this research, we sought to step back from the goals and 
+benefits  of  any  one  system 
+to  develop  a  better 
+understanding  of  unmet  information  needs  in  dental  care, 
+focusing  on  the  needs  of  adult  patients,  caregivers,  and 
+dental  providers. We  also  sought  to  examine  needs  among 
+underserved  populations.  While  the  prototype  systems 
+described  above  address  important  oral  health  concerns, 
+they  are  designed  for  individual  or  individual  family  use. 
+Pricey individual medical devices run the risk of “being out 
+of  reach  of  those  who  need  them  most”,  a  charge  that  has 
+
+been  leveled  in  public  discourse  against  wearables  and 
+other  personal  health  technologies  [20].  As  a  result,  we 
+sought to understand needs and opportunities for use of oral 
+health  monitoring  that  could  help  people  across  income 
+levels,  or  especially  people  who  are  currently  underserved 
+by dental health care.  
+
+As  we  conducted  our  research,  we  used  four  principles  of 
+the  quantified-self  movement  --  self-improvement,  self-
+discovery,  self-awareness,  and  self-knowledge  --  to  probe 
+for  opportunities,  as  they  represent  common  information 
+needs that can be supported by monitoring technology [21]. 
+We  also  sought to  identify  individual  patient  goals  beyond 
+the  oral  health  goals  recommended  by  The  Institute  of 
+Medicine  Committee  on  Future  of  Dental  Education. 
+Considering these goals, such as whiter teeth, better breath, 
+and reduced  sensitivity,  allowed  our  investigation  to  better 
+take into account individual priorities and motivations.  
+
+METHODS 
+To  explore  opportunities  for  oral  health  monitoring 
+technologies  beyond 
+the  dental  clinic,  we  gathered 
+perspectives  of  personal  users  and  medical  providers.  We 
+first  conducted  surveys  with  152  people  who  brush  their 
+teeth  at  least  once  a  day  and  followed-up  with  eight 
+participants  in  semi-structured  interviews.  To  include  a 
+provider  perspective,  we  conducted 
+semi-structured 
+interviews  with  twelve  medical  providers  including  six 
+school  nurses, two community  health  workers,  one  dentist, 
+one dental assistant, and two Dental Health Aide Therapists 
+who work in remote, rural populations.  
+
+Surveys and Interviews about personal use 
+To  investigate  opportunities  for  oral  health  monitoring  at 
+home,  we  first  conducted  a  survey  of  152  people  ranging 
+from  18 to over  75  years  old  that  brush their  teeth at  least 
+once a  day.  Table  1  shows  survey participants  grouped  by 
+age.  We  recruited  participants  through  university  mailing 
+lists  and  posting  the  survey  on  Facebook  and  community 
+groups. We included only participants over 18 years of age 
+and  who  brushed  their  teeth  at  least  once  a  day.  We 
+anticipated that people who do not already brush their teeth 
+
+Participant ID 
+
+Count 
+
+S0-S49 
+
+S50-S77 
+
+S78-S102 
+
+S103-S119 
+
+S120-S136 
+
+S137-146 
+
+S147-S152 
+
+50 
+
+28 
+
+25 
+
+17 
+
+17 
+
+10 
+
+5 
+
+Age 
+
+18-24 
+
+25-34 
+
+35-44 
+
+45-54 
+
+55-64 
+
+65-74 
+
+75+ 
+
+Table 1: Survey participants 
+
+3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+once  a  day  would  not  be  likely  to  be  interested  in  adding 
+personal  informatics  tools  to  their  oral  health  routine, 
+though their motivations and needs merit future study. Each 
+survey participant was entered into a raffle for one $100 gift 
+card  and  two  $50  gift  cards.  All  participant  data  remains 
+anonymous and participants could stop taking the survey or 
+not answer a question.  
+
+The  survey  allowed  us  to  ask  a  large  number  of  people 
+about  their  current  oral  health  behaviors  and  attitudes,  as 
+well as where they wanted more support or information. We 
+began  by  asking  participants  questions  about  their  current 
+oral care  practices,  their  satisfaction  with their  oral health, 
+and goals they might have with their oral health. Then, we 
+asked about the patient’s relationship with their dentists and 
+how  they  communicate  with  their  dentists.  The  following 
+section of the survey focused on how participants track any 
+other  health-related  goals  and  explored  if  oral  health 
+monitoring  would  be  of  interest.  Finally,  the  survey  asked 
+participants  with  children  at  home  about  their  experiences 
+with  helping  their  children  with  their  oral  care  and 
+maintaining good oral health. 
+
+Survey  responses  informed  the  design  of  the  follow-up 
+interviews  and  who  we  recruited.  Quantitative  data,  like  a 
+ranking  of  oral  health  satisfaction,  were  analyzed  by  with 
+descriptive  statistics  and  visualizations.  Qualitative  data, 
+like  open  response  questions,  were analyzed  by  coding  for 
+similar themes based on our research questions. 
+
+We selected follow-up interview participants to represent as 
+many age groups as possible that we saw in survey results, 
+and  we  randomly  selected  the  participants  within  each 
+group.  Table  2  shows  occupational  information  and  teeth 
+brushing frequency for interview participants. All follow-up 
+interview  participants  signed  a  consent  form  stating  that 
+their answers would be completely confidential, they could 
+choose  not  to  answer  any  question,  and  they  could 
+withdraw  from  the  study  at  any  time.  Each  interview 
+participant was compensated with a $25 gift card. The goal 
+of  the  thirty-minute  semi-structured  interview  was  to 
+determine  how  personal  informatics  fits  into  their  life, 
+understand what information they might want from an oral 
+health monitoring device, and get a sense of how oral health 
+
+Participant ID  Occupation  Teeth brushing freq  Age 
+
+P1 
+
+P2 
+
+P3 
+
+P4 
+
+P5 
+
+P6 
+
+P7 
+
+P8 
+
+Student 
+
+Once a day 
+
+Business 
+
+Twice a day 
+
+Researcher 
+
+Once a day 
+
+Engineer 
+
+Once a day 
+
+Student 
+
+Twice a day 
+
+Homemaker  Once a day 
+
+Researcher 
+
+Once a day 
+
+Student 
+
+Twice a day 
+
+18-24 
+
+55-64 
+
+25-34 
+
+35-44 
+
+18-24 
+
+45-54 
+
+25-34 
+
+18-24 
+
+monitoring might work best for them. 
+
+The  interview  was  semi-structured  so  that  each  participant 
+was  asked  the  same  questions,  but  as  new  needs  or  wants 
+became  apparent  they  could  be  explored  in  the  interview. 
+The interview began by asking participants about their oral 
+health  goals  and  knowledge  about  their  oral  health.  Next, 
+the  interview  asked  about  participant  experiences  with 
+dentists, including  receiving education and  recommendations. 
+Finally,  the  interview  sought  to  discover  how  participants 
+might use a wand that tracks the plaque load on their teeth. 
+We  asked  participants  more  about  how  they  track  other 
+health-related  goals  and  asked  them  to  describe  how  they 
+would  use  a  wand  that  helps  them  track  oral  health  goals, 
+easily  see  trends  in  the  graphical  data  from  quantitative 
+measures  of  bacterial  load,  and  monitor  any  therapeutic 
+gains  prescribed  by  their  dentist.  After  the  interviews, 
+quotes  were  coded  into  eleven  different  themes  based  on 
+apparent needs and wants of the participants. 
+
+treatment.  We 
+
+Interviews with oral health providers 
+In  our  interviews  with  health  providers,  we  included  both 
+current  oral  health  providers  and  potential  oral  health 
+the  potential  of  oral  health 
+providers.  This  reflects 
+technology to both improve existing oral health care and to 
+for  delivering  oral  health 
+create  new  opportunities 
+screening  and 
+interviewed  12  health 
+providers  with  a  variety  of  occupations  to  learn  about 
+opportunities  for  medical  providers  using  an  oral  health 
+monitoring device for children and adults without access to 
+regular  dental care. Table  3  shows  occupational  details  for 
+interview  participants.  The  semi-structured 
+interviews 
+roles  and 
+to  gather  baseline  data  on 
+allowed  us 
+responsibilities  for  each  community  health  worker  while 
+allowing  each  participant  to  go  in  a  direction  that  felt 
+important  to  them.  We  recruited  school  nurses  and 
+community  health  workers  through  online  searches  and 
+public-school directories. The recruitment email stated that 
+we  were  interested  in  learning about  their  experiences and 
+needs  as  a  school  nurse  and  how  an  oral  health-screening 
+device  might  fit  into  their  routines.  All  community  health 
+workers  and  school  nurses  signed  a  consent  form  stating 
+that  their  answers  would  be  completely  confidential,  they 
+could  choose  not  to  answer  any  question,  and  they  could 
+withdraw  from  the  study  at  any  time.  Each  interview 
+participant was compensated with a $25 gift card. 
+
+The  thirty-minute  interview  asked  school  nurses  and 
+
+Participant ID 
+
+Count  Occupation 
+
+M1-M6 
+
+M7-M8 
+
+M9-M10 
+
+M12 
+
+M13 
+
+6 
+
+2 
+
+2 
+
+1 
+
+1 
+
+School nurse  
+
+Dental Health Aide Therapist 
+
+Community health worker 
+
+Family dentist 
+
+Hospital dentistry special assistant 
+
+Table 2: Interview participants 
+
+Table 3: Provider participants 
+
+4 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+their 
+
+roles  and 
+community  health  workers  about 
+responsibilities,  how  often  they  have  dental  patients, 
+experiences  during  dental  visits,  and  how  an  oral  health 
+screening  and  tracking  device  might  fit  into  their  routine. 
+Community  health  workers  were  asked  about  how  often 
+dental  caries  is  present  in  their  patients  and  what  the 
+treatment  looks  like.  We  also  asked  about  how  the  school 
+nurses and community health workers educate their patients 
+and  what  recommendations they  give.  After  the  interviews 
+were  conducted,  the  interviews  were  coded  with  an  open 
+coding  method.  The  codes  were  discussed  and  iterated  as 
+new themes became apparent. 
+
+RESULTS 
+Overall,  participants described a  desire  for technology  that 
+could  assist  with  oral  health  education,  prevention, 
+detection, and  communication  among  family  members and 
+with oral health providers. Personal users were interested in 
+monitoring  their  oral  health  to  better  understand  their  oral 
+health,  achieve  personal  goals,  visualize  their  progress 
+between dental visits for feedback, and properly adjust their 
+home care routines. Among medical providers, there exists 
+an  opportunity  for  better  screening  and  diagnostic  tools  to 
+identify  dental  caries  at  early  stages  and  to  serve  as  a 
+communication  tool  for  patients  and  their  caregivers.  We 
+find  that  oral  health  monitoring  technologies  have  the 
+opportunities  to  facilitate  communication  and  coordination 
+between patients and providers and to provide personalized 
+education  and  feedback.  Our  results  also  show 
+that 
+monitoring oral health has the potential expanding access to 
+oral health care in rural, underserved areas. 
+
+their  patients, 
+
+to  communicate  with 
+
+Facilitating patient-provider communication 
+People face many barriers in communicating with their oral 
+health  providers.  Despite best efforts  to educate  patients,  a 
+dental  assistant  (M13)  reported  “we  give  these  patients  all 
+this education, and yet they come back and look exactly the 
+same.”  Medical  providers  also  expressed  difficulty  with 
+instructing  patients  about  diet  and  abstaining  from  sugary 
+sodas  to  reduce  cavities.  Despite  best  efforts from  medical 
+providers 
+the 
+information was often not received. A family dentist (M12) 
+reflected on communicating with their patients: “prevention 
+is  the key. People  don't  go  [to  the  dentist].  They  don't like 
+us. They don't like dental offices. They don't like dentists.” 
+When community health workers had time to do education, 
+they  primarily instructed  people  on how  to brush  and  floss 
+properly,  but  many  patients  learned  incorrect  brushing 
+techniques from their parents. Therefore, community health 
+they 
+workers  often  had 
+communicate  with  their  patients.  A  DHAT  (M7)  educated 
+their  patients  using  a  unique  method:  “Sometimes  I  use 
+metaphors,  like  ‘where  else  do  you  have  germs?  On  our 
+hands.  What  do you  do to  take  the  germs  off  your hands?’ 
+They  tell  me  they  wash  their  hands.  I  ask  them,  ‘what 
+happens  if  you  don't  wash  your  hands?’  They  usually  say 
+they get sick, and then I use that as a metaphor.” 
+
+to  be  creative  about  how 
+
+From a patient perspective, P5 found that their dentist “just 
+told  me  I  didn't  have  much  problems  and  they  gave  free 
+samples of floss and that's it. They didn't really tell me what 
+I  should  do  for  my  teeth  though.”  Finding  the  right 
+questions to ask their dentist is also hard for personal users, 
+so  many  resorted  to  asking  general  questions  like  “is 
+everything  ok?”  (P4).  While  providers  were  able  to  gather 
+information  from  a  visual  examination  of  the  mouth,  P4 
+found it frustrating that “they don't really ask if I'm flossing 
+or anything.” When reflecting on their communication with 
+their  dentist,  P8  recounted  that  their  “dentist  talks  kind  of 
+fast,  but  I  think  the  use  of  images  and  you  know  like  3D 
+modeling  or  things  like  that,  that  would  be  really  useful, 
+because  it's  hard for  me to, when  she  describes  teeth,  and 
+tries  to  kind  of  draw  it  out,  it’s  a  very  like  1D,  just  linear 
+tooth  model.  It's  really  difficult  for  me  to  visualize  which 
+tooth  she's  talking  about,  so  I  think  just  some  kind  of 
+visualization  product  would  be  really  cool  when  talking 
+about a patient's teeth.” 
+
+Providing personalized education and feedback 
+Personal  users  and  community  health  workers  expressed 
+concerns  about  lack  of  oral  health  knowledge.  Preventing 
+tooth decay is  the  number  one oral  health  goal  for  125 out 
+of  152  survey  respondents,  yet  86  survey  respondents 
+expressed 
+that  proper  home  care,  mainly  brushing 
+techniques  and  frequency  of  flossing,  remains  their  main 
+confusion  surrounding  oral  health.  76  out  of  152  survey 
+respondents  indicated  that  they  would  like  to  monitor  the 
+amount  of  plaque  buildup  on  their  teeth.  Specifically,  S87 
+responded that they would "like to know which teeth, if any, 
+are at risk for cavities, and how bad the damage is." Many 
+personal  users  rely  on  self-discovery  for  oral  health.  For 
+example, P4 recounted that they simply “know the areas of 
+my mouth that I need to give extra attention to.” 
+
+if 
+
+to 
+
+tell 
+
+information  about 
+
+Retaining  oral  health  knowledge  after  appointments  was 
+also  difficult.  P6  stated:  “right  after  I  finish  the  dentist,  I 
+know  quite  a  bit.  But  before  I  go  to  the  dentist,  not  as 
+much.” Personal users wanted more specific feedback from 
+the 
+their  dentist  and  were  not  able 
+recommendations  are  working.  P1  described  that  they 
+“want  much  more  practical 
+the 
+mechanics  of  flossing.  Does  it  appear  that  I'm  doing 
+something  right,  something  wrong?  I  don't  know.  Just  the 
+more  practical  advice  that  maybe  you've  always  just 
+assumed you know how to do something the right way and 
+maybe you don't.” Personal users were interested in gaining 
+oral  health  knowledge  for  increasing  overall  health  and 
+debunking  confusion  around  dental  visits.  P3,  who 
+struggled  with  extreme  dental  fear,  thought  “that  it  would 
+help  allay  some  of  my  dental fears if  I  actually knew  what 
+was  going  on,  like  if  I  walked  into  the  next  dental 
+appointment  and  wasn't  completely  freaked  out  by  the 
+unknown.”  Personal  users  were  also  interested  in  learning 
+about  their  oral  health  for  prevention,  P2  stated  “had  I 
+jumped  on  board  of  preventing  enamel  damage  earlier, 
+
+5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+rather  than  trying  to  just  put  a  Band-Aid  fix  now,  I  think 
+that that would have been really good.” 
+
+Community health workers focus on providing “basic oral 
+hygiene”  (M5)  due  to  an  almost  complete  lack  of  oral 
+health  knowledge  in  most  patients.  In  particular,  parents 
+often  do  not  have  sufficient  oral  health  knowledge  to  pass 
+on  to  their  children.  One  dentist  (M10)  noted  that  oral 
+health  knowledge  is  “lacking  in  80%.  Then,  so  I  give 
+advice.  Just  make  sure  your  child  brushes.  If  you  let  your 
+child brush his or her teeth, then, do it right. They do it the 
+best  they  can,  but  they  don't  know  what's  the  best.”  When 
+reflecting  on  the  ability  to  get  children  involved  in  proper 
+oral  hygiene,  one  school  nurse  (M6)  stated  that  “this  past 
+school year, I had a lot of trouble getting the middle school 
+boys  to  brush.  It  was  very  difficult  working  with  them  this 
+year.  So  I  gotta  try  to  figure  out  a  better  way  of  getting 
+them intrigued with taking care of their oral health.” 
+
+Monitoring oral health for early diagnostics 
+Community  health  workers  would  benefit  from  an  oral 
+health  monitoring  tool as  a better  diagnostic  tool of  dental 
+caries at an earlier stage. It is difficult for providers to tell if 
+a  tooth  is  just  discolored  or  if  there  is  decay  based  on  a 
+visual  assessment.  For  extreme  cases  of  caries,  such  as 
+those between the back teeth, it is also difficult to tell how 
+deep it is until the restorative treatment takes place. 
+
+An oral health monitoring system used as a diagnostic tool 
+would  allow community  health  workers  in rural  areas,  like 
+traveling  DHATs,  an  opportunity  to  easily  see  trends  in 
+patient  bacterial  load  on  each  tooth  and  make  early  and 
+accurate  diagnoses.  A  DHAT  (M8)  expressed  a  general 
+need  and  ability  to  incorporate  a  caries  detection  tool  in 
+their  day-to-day  work  due  to  the  volume  of  dental  caries 
+and  poor  oral  hygiene.  In  regard  to  providing  early 
+detection  of  caries  by  using  an  oral  health  monitoring 
+device to detect plaque loads, one community health worker 
+(M10)  said  “if  there  was  a  fairly  accurate,  I  would  say  I 
+would need to be at least 80% accurate or something that it 
+is  a  cavity  and  not  a  stain,  then  we  could  treat  cavities 
+when they're smaller. It's always easier to fix a tooth when 
+the  cavity's  small  than  when  it's  bigger.  So  essentially,  as 
+soon as you start getting a filling, like the rest of your life, 
+that tooth is probably going to need another thing later on 
+because fillings only last, I don't know, ten, fifteen years. If 
+you're  young,  eventually  it's  going  to  have  to  be  replaced 
+and every time it gets replaced, it gets bigger.”  
+
+Expanding access to oral health care 
+We found potential for expanding access to oral health care 
+with oral health monitoring by creating a low-cost, portable, 
+time-efficient  device.  Some  DHATs, 
+like  M7,  have 
+programs  to  work  in  schools  and  screen  every  student  in 
+their town, but in villages where the DHATs must travel to 
+have  less  care,  so  their  time  is  focused  on  providing 
+extractions rather than education and sealants. The ability to 
+provide  education  is  crucial,  because  most  oral  diseases, 
+
+including  dental  caries,  are  preventable  with  proper 
+education on basic hygiene practices. Both DHATs (M7 & 
+M8) expressed interest in a tool that monitors and educates 
+patients about their oral health. Adopting a new monitoring 
+device  for  rural  dental  providers  and  community  health 
+workers  can  be  difficult  due  to  poor  communication 
+infrastructure,  time  and  cost  of  technical  training,  and 
+installation  and  maintenance  costs.  However,  M8  talked 
+about how “if it was portable, or it could roll to the school, 
+'cause I do my school screenings in the school, I'd use it in 
+the  school  and  I'd  use  it  in  the  clinic.  Then  that  would  be 
+good  to help  monitor  if  the  decay is  getting  larger  or  it  is 
+porous. But  I  think  that's  a  really  good  idea and  I think it 
+would really help me.” M7 also stressed portability and the 
+need  for  an  oral  health  monitoring  device  to  be  small 
+“because you have to take it on a plane with you and there's 
+a  lot  of  gear  we  have  to  take”  when  travelling  to  remote 
+Alaskan villages. 
+
+to 
+
+it  difficult 
+
+Since education and prevention are paramount for good oral 
+health,  we  find  that  focusing  on  children  who  are  still 
+developing  oral  health  habits  to  be  the  population  in  most 
+need.  However,  all  6  school  nurses  interviewed  work  at 
+multiple  schools,  making 
+implement 
+consistent  education  and  prevention  programs.  Requiring 
+annual dental screenings is done by the state, and few states 
+have  chosen  to  require  such  screening.  Without  state 
+requirements,  busy  school  nurses  lack  time,  funding,  and 
+resources  to  incorporate  oral  health  monitoring  for  their 
+students.  One  school  nurse  (M1)  expressed  that  they  have 
+“too much work, not enough time. You can’t do everything, 
+because  it’s  not  possible.  So,  with  my  four  things  I  have 
+1400 kids for me. I just have to start letting things go.” 4 of 
+6 school nurses expressed being overwhelmed by mandated 
+responsibilities, and they have little time to do other things. 
+Schools  have  limited  funding,  and  expensive  equipment 
+makes  it  difficult  to  change  or  add  new  tools  into  school 
+nurses’  routines.  For example,  near  vision  screenings  have 
+been  added  to  the  list  of  Washington  State  mandated 
+screenings.  However,  the  tool  needed  to  for  the  vision 
+screening  is  too  expensive  for  every  school  to  buy.  With 
+funding  in  mind,  a  school  nurse  stated  that  they  are  “It’s 
+always  grant  writing  and  you  know  just  trying  to  scrape 
+together  money  because  our  health  services  don’t  really 
+have a budget aside from just to pay staff.” 5 school nurses 
+explained  how  their  schools  rely  on  outside  community 
+health  agencies  to  ensure  every  student  has  at  least  one 
+annual  dental  screening.  However,  school  nurse  (M3) 
+expressed  disappointed  that  another  parental  consent  was 
+required  for  the  dental  screenings  by  community  health 
+agencies, and so not all students were actually able to get a 
+dental  screening.  School  nurse  M2  spoke  about  their 
+sadness  and  frustration  regarding  the  lack  of  young  parent 
+oral  health  education  and  the  parents’  inability  to  stress 
+good oral health with their young kids: "Too many children 
+have  been  seen  in elementary  schools  with fillings  in  their 
+
+6 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+baby teeth, which sets them up to have more overall health 
+problems in the future."  
+
+Oral  health  monitoring  technologies  used  outside  of  the 
+dental clinic could reduce oral health disparities by increasing 
+access  to  dental  care.  While  lack  of  time  and  funding 
+presents problems for school nurses, oral health monitoring 
+technologies  can  aid  community  health  workers  who 
+provide dental screenings to schools or DHATs in Alaska. 
+
+DISCUSSION 
+We found that personal users and medical providers present 
+specific  wants  and  needs  regarding  oral  health  education, 
+communication, prevention, and diagnosis of oral diseases. 
+We discuss how monitoring of oral health by personal users 
+and medical professionals can reduce oral health disparities 
+by  providing  access  to  basic  oral  health  care,  streamlining 
+dental visits, and creating awareness of proper oral hygiene 
+practices in families and children. 
+
+Bridging dental expertise and personal practice 
+Currently,  dentists,  community  health  workers,  or  other 
+trained experts are necessary for people to assess their oral 
+health and monitor whether many problems, such as carries, 
+are  worsening  or  improving.  As  a  result,  patients  often 
+follow  their  home  care  routine  with  little  feedback  about 
+whether  they  are  doing  it  correctly  or  whether  it  is 
+achieving  the  desired  results.  They  may  not  discover 
+problems until more serious measures, such as a filling, are 
+needed.  From  an  oral  health  professional’s  perspective, 
+when  patients  arrive  at  the  clinic  appointment,  health 
+professionals can only see the results (e.g., whether patients 
+have cavities)  but  not  what  patients have tried  (e.g.,  if and 
+how well they use floss).  
+
+When describing what to do at home, oral health providers 
+often  rely  on  verbal  descriptions  and  demonstrations  on 
+themselves  or  the  patient.  This  in-person  demonstration 
+enables  patients  to  ask  questions,  but  the  details  may  be 
+hard  to  remember.  Once  home,  the  patient  may  forget 
+which  tooth  exactly  they  were  supposed  to  brush  better, 
+which  flossing  technique  their  hygienist  demonstrated,  or 
+the advice entirely. 
+
+Personal  health  technologies  can  help  bridge  the  gaps 
+between clinical encounters, home care, and other everyday 
+behaviors  (e.g.,  in  diabetes  [19],  IBS,  weight  management 
+[22]  and  Parkinson’s  disease  [23]).  Summaries  and  data 
+about  home  care  and  summaries  of  recommendations  made 
+during  a  clinical  encounter  can  help  make  work  that  both 
+patients and their providers do more effective.  
+
+Making better use of patient time and clinical resources 
+Bridging  home care and  the clinic  also  has the  potential  to 
+help  people  make  better  use  of  their  time  and  dental 
+resources.  Home  monitoring  or  monitoring  available  in  a 
+community  setting  (e.g.,  a  kiosk  in  a  pharmacy  or 
+community  center)  could  help  people  determine  whether 
+they need to see a dental provider. If patients become aware 
+
+of  developing  problems  in  time  and  can  adjust  their  care 
+routine  or  apply  a  therapy,  it  may  prevent  a  visit  as  well. 
+This  is  particularly  important  for  people  in  rural  areas, 
+where access to clinical care may cost significant time and 
+inconvenience.  Similar  techniques,  e.g.,  blood  pressure 
+kiosks  in  clinic  waiting  rooms  or  pharmacies  [22],  have 
+already  shown  promise  for  making  patients  more  engaged 
+with their health, helping patients access health resources at 
+convenient  locations  and  times,  and  allowing  health 
+professionals  to  spend  time  on  other  forms  of  care  rather 
+than routine measurements.  
+
+Collective Oral health  
+Our  results  also  support  HCI’s  focus  on  oral  health  as  a 
+family  concern  [24].  This  previous  research  focuses  on 
+encouraging  children  to  adopt  healthy  brushing  habits. 
+Inspired by recent research in family tracking [24] however, 
+we  believe  this  may  be  just  one  of  a  larger  set  of 
+opportunities for supporting oral health within families. 
+
+While  parents  can  monitor  children’s  oral  care,  shared 
+awareness  of  oral  care  could  also  create  the  sense  of  this 
+being  a  family  activity.  In  situations  when  one  family 
+member  has  a  particular  oral  health  concern,  technologies 
+might  be  designed  to  help  the  family  support  them  [24]. 
+More 
+to  understand 
+opportunities  here,  as  there  is  also  the  potential  for  this  to 
+become a nag, a surveillance tool, or another annoyance for 
+busy families to deal with.  
+
+is  needed, 
+
+research 
+
+though, 
+
+Tools that support monitoring in the home might also create 
+opportunities  for  parents  and  children  to  better  educate 
+themselves about the efficacy of different oral care routines. 
+If  sensitive  enough, 
+they  might  even  support  self-
+experiments [25]: which flossing technique is better for me? 
+How much better is my electric toothbrush than my manual 
+brush? If I remove carbonated drinks from my diet, do I see 
+an improvement?  
+
+Limitations 
+In our recruitment, we emphasized inclusion of parents and 
+oral  health  providers  who  could  offer  perspectives  on 
+working  in  rural  areas.  As  a  result,  our  participants 
+underrepresented  the  elderly  and  possibly  other  groups. 
+Additional  opportunities  may  exist 
+for  oral  health 
+challenges unique to or more prevalent in these groups, and 
+future  research  should  examine  their  needs  and  associated 
+opportunities in depth. 
+
+Researching  DHATs  in  Alaska  provided  insight  into  oral 
+health  monitoring  technologies  might  fit  into  a  clinical 
+setting,  but  there  is  a  large  scope  of  clinicians  and 
+community  health  workers  and  we  were  only  able  to 
+interview 
+few  domains.  Finally,  our  survey 
+methodology produces a limitation in that it is common that 
+what  people  say  they  do and  what they  actually  do tend  to 
+differ,  so  it  would  be  difficult  to  draw  specific  design 
+recommendations  from  this  data.  However,  we  believe 
+
+in  a 
+
+7 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+results are able to specify clear needs and opportunities for 
+future technologies to address. 
+
+Observational Quantitative Study. University of 
+Washington Press Release. 
+
+CONCLUSION 
+We  contribute 
+informatics 
+technologies by describing opportunities and limitations for 
+oral health monitoring technologies at home and beyond the 
+dental clinic. 
+
+the  field  of  personal 
+
+to 
+
+We surveyed 152 people that brush their teeth at least once 
+a  day  and  followed  up  with  8  semi-structured  interviews. 
+We also  interviewed  12  medical  providers  with a  range  of 
+professions in a semi-structured format. 
+
+We learned about the wants and needs of personal users by 
+they  keep  track  of  their  oral  health, 
+studying  how 
+understanding  successes  and  limitations  in  currently  used 
+personal  informatics  devices,  and  learning  about  how  oral 
+health  monitoring  might  fit  into  their  routines.  We  studied 
+the  wants  and  needs  of  medical  providers  for  oral  health 
+monitoring  technologies  by  understanding  their  roles  and 
+responsibilities,  discovering  how  they  interact  with  dental 
+patients,  and  gaining 
+into  how  oral  health 
+insights 
+monitoring would work best for their position. 
+
+We  found  four  distinct  opportunities  for  oral  health 
+monitoring  technologies  beyond  the  dental  clinic:  (1) 
+Facilitating  communication  between  patient  and  provider 
+(2)  Providing  personalized  education  and  feedback  (3) 
+Monitoring  oral  health  for  early  diagnostics  (4)  Expanding 
+access 
+further  discussed 
+opportunities  for  oral  health  monitoring  technologies  that 
+can  bridge  dental  expertise  and  personal  practice,  make 
+better  use  of  patient  time  and  clinical  resources,  and 
+promote oral health as a collective effort. 
+
+to  oral  health  care.  We 
+
+ACKNOWLEDGMENTS 
+This  research  was  funded  by  National  Science  Foundation 
+awards # IIP-1631146 and IIS-1553167. We thank Morgan 
+Duffy for preliminary work that laid important groundwork 
+for this research. 
+
+REFERENCES 
+1.  BA Dye, S Tan, V Smith, BG Lewis, LK Barker, G 
+Thornton-Evans, PI Eke, ED Beltran-Aguilar, AM 
+Horowitz, CH Li. 2007. Trends in oral health status, 
+United States, 1988-1994 and 1999-2004. Vital Health 
+Stat 11; (248):1-92. 
+
+2.  B Bloom, CM Simile, PF Adams, RA Cohen. 2012. 
+Oral health status and access to oral health care for 
+U.S. adults aged 18–64: National Health Interview 
+Survey, 2008. National Center for Health Statistics. 
+Vital Health Stat 10(253). 
+
+3.  Donald Chi, Dane Lenaker, Lloyd Mancl, Matthew 
+Dunbar, Machael Baab. 2017. Dental Utilization for 
+Communities Served by Dental Therapists in Alaska's 
+Yukon Kuskokwim Delta: Findings from an 
+
+4.  Susanna Fox, Maeve Duggan. 2013. Tracking for 
+
+Health. Pew Research Center. 
+http://www.pewinternet.org/2013/01/28/tracking-for-
+health/ 
+
+5.  Takuma Yoshitani, Masa Ogata, Koji Yatani. 2016. 
+
+LumiO: A Plaque Aware Toothbrush. Proceedings of 
+the 2016 ACM International Joint Conference on 
+Pervasive and Ubiquitous Computing: 605-615. 
+https://doi.org/10.1145/2971648.2971704 
+
+6.  Kejia Shao, Jiye Huang, Huaying Song, Runze Li, 
+
+Jinxi Wu. 2014. DAYA: a system for monitoring and 
+enhancing children’s oral hygiene. CHI ’14 Extended 
+Abstracts on Human Factors in Computing Systems: 
+251-256. https://doi.org/10.1145/2559206.2580927. 
+
+7.  Yu-Chen Chang, Jin-Ling Lo, Chai-Hu Huang, Nan-Yi 
+Hsu, Hai-Hua Chu, Hsin-Yen Wang, Pei-Yu Chi, Ya-
+Lin Hsieh. 2008. Playful Toothbrush: UbiComp 
+Technology for Teaching Tooth Brushing to 
+Kindergarten Children. Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems: 
+363-372. https://doi.org/10.1145/1357054.1357115 
+
+8.  Carmen Soler. Alejandra Zacarias, Andres Lucero. 
+
+Molarcropolis: a mobile persuasive game to raise oral 
+health and dental hygiene awareness. 2009. 
+Proceedings of the International Conference Advances 
+in Computer Entertainment Technology.: 388-391. 
+https://doi.org/10.1145/1690388.1690468 
+
+9.  BA Dye, X Li, G Thornton-Evans. 2012. Oral health 
+disparities as determined by selected Healthy People 
+2020 oral health objectives for the United States, 2009–
+2010. NCHS data brief, no 104. Hyattsville, MD: 
+National Center for Health Statistics. 
+
+10.  BA Dye, G Thornton-Evans, X Li, TJ Iafolla. 2015. 
+
+Dental caries and tooth loss in adults in the United 
+States, 2011–2012. NCHS data brief, no 197. 
+Hyattsville, MD: National Center for Health Statistics. 
+
+11.  BA Dye, G Thornton-Evans, X Li, TJ Iafolla TJ. 2015. 
+Dental caries and sealant prevalence in children and 
+adolescents in the United States, 2011–2012. NCHS 
+data brief, no 191. Hyattsville, MD: National Center 
+for Health Statistics. 
+
+12.  N. P. Monaghan, M. Z. Morgan. 2015. What 
+
+proportion of dental care in care homes could be met 
+by direct access to dental therapists or dental 
+hygienists? British Dental Journal: 531-534. 
+https://doi.org/10.1038/sj.bdj.2015.919. 
+
+13.  Hossein Pourezza, Sergio Camorlinga, Carson K.S. 
+Leung, Bruce Martin. 2010. An information and 
+communication technology system to support rural 
+
+8 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+healthcare delivery. Proceedings of the 1st ACM 
+International Health Informatics Symposium: 440-444. 
+https://doi.org/10.1145/1882992.1883059 
+
+14.  Francisco Nunes. 2015. Designing Self-care 
+
+Technologies for Everyday Life: A Practice Approach. 
+Proceedings of the 33rd Annual ACM Conference 
+Extended Abstracts on Human Factors in Computing 
+Systems: 215-218. 
+https://doi.org/10.1145/2702613.2702624 
+
+Network. The Journal of the American Board of 
+Family Medicine 29.5: 620-629. 
+
+23.  Helena Mentis, Anita Kolmlodi, Katrina Schrader, 
+Michael Phipps, Ann Gruber-Baldini, Karen 
+Yarbrough, Lisa Shulman. 2017. Crafting a View of 
+Self-Tracking Data in the Clinical Visit. Proceedings 
+of the 2017 CHI Conference on Human Factors in 
+Computing Systems: 5800-5812. 
+https://doi.org/10.1145/3025453.3025589 
+
+15.  Francisco Nunes, Nervo Verdezoto, Geraldine 
+
+24.  Laura Pina, Sang-wha Sien, Teresa Ward, Jason Yip, 
+
+Fitzpatrick, Morten Kyng, Erik Gronvall, Cristiano 
+Storni. 2015. Self-care Technologies in HCI: Trends, 
+Tensions, and Opportunities. Proceedings of the 
+Transactions on Computer-Human Interaction. 
+https://doi.org/10.1145/2803173. 
+
+16.  Amid Ayobi, Paul Marshall, Anna L. Cox. 2016. 
+
+Reflections on 5 Years of Personal Informatics: Rising 
+Concerns and Emerging Directions. Proceedings of the 
+2016 CHI Conference Extended Abstracts on Human 
+Factors in Computing Systems: 2774-2781. 
+https://doi.org/10.1145/2851581.2892406 
+
+17.  Rebecca E, Grinter, Katie A. Siek, Andrea Grimes. 
+
+2010. Wellness informatics: towards a definition and 
+grand challenges. CHI ’10 Extended Abstracts on 
+Human Factors in Computing Systems: 4505-4508. 
+https://doi.org/10.1145/1753846.1754185. 
+
+18.  Chia-Fang Chung, Kristin Dew, Allison Cole, Jasmine 
+Zia, James Fogarty, Julie Kientz, Sean Munson. 2016. 
+Boundary Negotiating Artifacts in Personal 
+Informatics: Patient-Provider Collaboration with 
+Patient-Generated Data. Proceedings of the ACM 
+Computer Supported Cooperative Work Conference.  
+
+19.  Lena Mamykina, Elizabeth Mynatt, Patricia Davidson, 
+Daniel Greenblatt. 2008. MAHI: Investigation of 
+Social Scaffolding for Reflective Thinking in Diabetes 
+Management Proceedings of the SIGCHI Conference 
+on Human Factors in Computing Systems: 477-486 
+
+20.  J Elias. 2015. Why Wearables are Out of Reach for 
+
+People Who Need Them Most. Forbes Magazine. 
+https://www.forbes.com/sites/jenniferelias/2015/10/27/
+the-leftovers-part-i-the-cost-of-
+activity/#791cd70d63c9.  
+
+21.  Gary Wolf. 2010. The Quantified Self. Ted @ Cannes. 
+https://www.ted.com/talks/gary_wolf_the_quantified_s
+elf 
+
+22.  Chia-Fang Chung, Sean A. Munson, Matthew 
+
+Thompson, Laura-Mae Baldwin, Jeffrey Kaplan, 
+Randall Cline, Beverly B. Green. 2016. 
+Implementation of a New Kiosk Technology for Blood 
+Pressure Management in a Family Medicine Clinic: 
+from the WWAMI Region Practice and Research 
+
+Sean Munson, James Fogarty, Julie Kientz. 2017. From 
+Personal Informatics to Family Informatics: 
+Understanding Family Practices around Health 
+Monitoring. Proceedings of the 2017 ACM Conference 
+on Computer Supported Cooperative Work and Social 
+Computing: 2300-2315. 
+https://doi.org/10.1145/2998181.2998362 
+
+25.  Ravi Karkar, Jasmine Zia, Roger Vilardaga, Sonali R 
+Mishra, James Fogarty, Sean A Munson, Julie A 
+Kientz; 2016. A framework for self-experimentation in 
+personalized health, Journal of the American Medical 
+Informatics Association, 23(3): 440–448. 
+https://doi.org/10.1093/jamia/ocv150 
+
+9 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

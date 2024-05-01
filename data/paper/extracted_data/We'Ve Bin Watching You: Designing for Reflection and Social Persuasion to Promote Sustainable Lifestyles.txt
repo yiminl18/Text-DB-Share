@@ -1,0 +1,1344 @@
+“We’ve Bin Watching You” – Designing for Reflection and 
+Social Persuasion to Promote Sustainable Lifestyles 
+
+1Culture Lab, School of 
+Computing Science
+
+Anja Thieme1, Rob Comber1, Julia Miebach2, Jack Weeden1, Nicole Krämer2, Shaun Lawson3 and 
+Patrick Olivier1 
+2Social Psychology: Media and 
+Communication, University of 
+Duisburg-Essen, GER 
+{julia.miebach@stud./ 
+nicole.kraemer@}uni-due.de 
+
+3Lincoln Social Computing 
+Research Centre (LiSC) 
+University of Lincoln, UK 
+ slawson@lincoln.ac.uk 
+
+{anja.thieme/robert.comber/jack
+.weeden/p.l.olivier}@ncl.ac.uk 
+
+University, UK
+
+Newcastle
+
+ABSTRACT 
+BinCam is a social persuasive system to motivate reflection 
+and  behavioral  change  in  the  food  waste  and  recycling 
+habits  of  young  adults.  The  system  replaces  an  existing 
+kitchen refuse bin and automatically logs disposed of items 
+through digital images captured by a smart phone installed 
+on  the  underside  of  the  bin  lid.  Captured  images  are 
+uploaded to a BinCam application on Facebook where they 
+can  be  explored  by  all  users  of  the  BinCam  system. 
+Engagement  with  BinCam  is  designed  to  fit  into  the 
+existing structure of users’ everyday life, with the intention 
+that  reflection  on  waste  and  recycling  becomes  a  playful 
+and shared group activity. Results of a user study reveal an 
+increase  in  both  users’  awareness  of,  and  reflection  about, 
+their  waste  management  and  their  motivation  to  improve 
+their  waste-related  skills.  With  BinCam,  we  also  explore 
+informational and normative social influences as a source of 
+change  (e.g.,  socially  evoked  feelings  of  ‘guilt’  for  non-
+recycling  or  food  disposal),  which  has  to  date  been 
+underexplored  in  persuasive  HCI.  Design  implications  for 
+reflection and social persuasion are proposed. 
+
+Author Keywords 
+Persuasive; 
+behavioral change; social networks; sustainable HCI. 
+
+technology;  social  persuasion; 
+
+reflection; 
+
+ACM Classification Keywords 
+H.5.m [Information interfaces and presentation (e.g., HCI)]: 
+Miscellaneous; 
+
+General Terms 
+Design, Human Factors. 
+
+INTRODUCTION  
+Recently,  significant  research  has  been  carried  out  in  HCI 
+into the potential of technology to change people’s beliefs, 
+to shape their attitudes, and to influence their behavior [12]. 
+Persuasive  technologies  [11]  are  now  applied  in  many 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. To copy otherwise, 
+or  republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+specific permission and/or a fee. 
+CHI’12, May 5–10, 2012, Austin, Texas, USA. 
+Copyright 2012 ACM 978-1-4503-1015-4/12/05...$10.00. 
+
+domains,  including  healthcare  (e.g.,  motivating  users  to 
+exercise,  to  make  healthier  food  choices  or  monitor  their 
+mood  states  [22]),  education  and  training  [12],  and 
+environmental  sustainability  where  it  has  been  used  for 
+instance to promote reductions in energy consumption [17] 
+and greener transportation habits [14].   
+
+This  paper  aims  to  contribute  to  an  understanding  of  how 
+technology  can  promote  ecological  awareness  and 
+environmentally  sustainable  lifestyles  in  individuals  [7]. 
+Numerous  previous  approaches  collect  information  about 
+an  individual’s  behavior  and  present  it  back  to  the 
+individual to increase their awareness and understanding of 
+such  behavior  and 
+through 
+processes of self-reflection [1,8,18]. Such approaches often 
+seek to foster a ‘personal morality’ and consider individuals 
+as  responsible  actors  who  make  rational  decisions  when 
+they  can  draw  on  accurate  information  about  themselves. 
+Typically  they  ignore  possible  restrictions  in  a  person’s 
+abilities and opportunities to choose freely as well as other 
+costs for change [e.g.,7,8,22,27].  
+
+its  environmental  impact 
+
+In  practice,  self-reflection  is  a  non-trivial  activity  that 
+requires both considerable effort on the part of the user and 
+an  interest  in  the  particular  behavior  or  topic  [cf18]. 
+Engaging  individuals  to  reflect  on  information  that  might 
+not  be  of  general  interest  to  them,  such  as  waste  disposal, 
+the  use  of  effective  motivational  strategies. 
+requires 
+Furthermore,  HCI  research  and  design  on  behavioral 
+change largely focuses on motivating the lone individual [8] 
+and  has  paid  little  regard  to  powerful  social  persuasive 
+strategies  [11],  such  as  informational  and  normative  social 
+influence.  Likewise,  the  use  and  study  of  social  media  to 
+motivate change is still relatively underexplored [13,21]. 
+
+BinCam  explores  these  issues  through  a  social  persuasive 
+system that provides users with a display of pictures of their 
+own, and others’, refuse bin contents on the social network 
+site  Facebook  to  passively  invite  reflections  on  their  own, 
+as  well  as  other  peoples’  recycling  and  food  waste 
+behaviors.  Facebook  has 
+support 
+engagement  with  BinCam,  but  can  also  be  leveraged  to 
+realize  various  forms  of  social  influence  to  motivate 
+change.  Since  the  management  of  waste  is  often  a  shared 
+
+the  potential 
+
+to 
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2337 
+ 
+ 
+ 
+ 
+effort  between  several  members  of  a  household,  we 
+embedded a BinCam bin in the kitchen of 4 households of 
+5-7  people  living  together.  Placing  the  system  within  the 
+existing  social  structure  of  the  household  extends  our 
+understanding  of  behavior  and  behavior  change  beyond 
+aspects  of  ‘personal  morality’.  In  addition,  the  collective 
+use  of BinCam  can  foster a sense of  group  membership in 
+each household to facilitate processes of social persuasion.  
+
+Although  we  address  with  BinCam  environmental  issues 
+related to recycling and food waste, the  present  work does 
+not  research  sustainability  per  se  but  instead  uses  it  as  an 
+application area to explore strategies borrowed from social 
+psychology  to  facilitate  reflection  and  behavioral  change 
+through  digital  design  [4,11].  As  such,  our  account  of  the 
+design and evaluation of BinCam reveals: (1) a new way of 
+engaging 
+their  waste 
+management  behaviors;  (2)  the  potential  for  employing 
+strategies  of  social  persuasion  –  using  the  social  network 
+site  Facebook  –  to  motivate  and  improve  environmentally 
+friendly  behaviors;  and  (3)  how  a  close  incorporation  of 
+such  a  system  within  individuals’  everyday  lives  may 
+support  engagement  with,  and  adherence  to,  interactive 
+systems designed to promote behavior change. 
+
+reflections  on 
+
+individuals 
+
+in 
+
+PERSUADING CHANGE IN BEHAVIORS 
+Persuasion  is  the  purposeful  attempt  to  change  a  person’s 
+attitude  or  behavior  [12].  To  this  end,  the  Theory  of 
+Planned  Behavior  (TPB)  [2]  provides  a  useful  conceptual 
+framework by  which  we can  explain and predict behavior. 
+It  has  previously  been  applied  to  the  study  of  recycling 
+behaviors and is well supported by empirical evidence [16]. 
+
+three  conceptually 
+toward 
+
+Determinants of Human Behavior  
+The  TPB  (see  Figure  1)  identifies  a  person’s  behavior  as 
+having 
+independent  determinants: 
+attitude 
+the  behavior,  subjective  norms  and 
+perceived  behavioral  control.  Attitudes  are  informed  by  a 
+person’s  expectations  of  a  favorable  behavioral  outcome 
+and  the  values  attached  to  this  outcome  (e.g.  important 
+contribution to the environment). Subjective norms relate to 
+the  degree  to  which  a  person  perceives  social  pressure  to 
+perform  the  behavior,  including  normative  beliefs  about 
+what important others expect of the person (e.g. would they 
+approve the behavior), and a person’s motivation to comply 
+with  these  expectations  [2,20,24].  The  third  component, 
+perceived  behavioral  control,  refers  to  whether  or  not  a 
+person feels able to perform the behavior; for instance if the 
+resources  (e.g.  recycling  facilities),  opportunities  or  skills 
+required for a particular action are available [20].  
+
+Attitude toward 
+the behavior 
+
+Subjective norm 
+
+Intention 
+
+Behavior 
+
+Perceived 
+behavioral 
+control 
+
+Figure 1. The Theory of Planned Behavior [2]. 
+
+All three components contribute to the behavioral intentions 
+that  inform  later  actions.  The  greater  the  intention  and  the 
+perceived ability to engage in the behavior, the more likely 
+it will be performed [2,12]. To date, a person’s attitudes, as 
+opposed  to  subjective  norms,  have  often  been  found  to 
+more  strongly  predict  intentions.  Research  by  Ybarra  and 
+Trafimow  [30]  however,  shows  that  increasing  a  person’s 
+sense  of  group  membership,  rather  than  attitude,  leads  to 
+higher  correlations  between  social  norms  and  behavioral 
+intentions. Even though, the relative importance of the three 
+determinants  of  intention  can  vary  across  situations  and 
+behaviors [2,20] each needs to be supported to increase the 
+target behavior. 
+
+It 
+
+regards 
+
+Strategies for Behavioral Change 
+While  valuable  in  identifying  the  determining  factors  of 
+human  behavior,  the  TPB  does  not  address  important 
+procedural  aspects  of  performing  a  specific  behavior. 
+Prochaska  et  al.’s  [24]  transtheoretical  model  (TTM) 
+provides stage-based strategies to support the individual in 
+gradually  achieving  change. 
+intentional 
+behavioral  change  as  a  process  encompassing  five  stages: 
+precontemplation,  contemplation,  preparation,  action  and 
+maintenance. In precontemplation, individuals are unaware 
+or  under-aware  that  a  particular  behavior  needs  changing 
+and  often  only  modify  their  behavior  because  they  are 
+pressured  by  others.  During  contemplation,  people  are 
+aware  and  seriously  consider  changing  their  behavior  but 
+are not yet ready to commit to it. The  preparation stage is 
+characterised  by  the  intention  to  change  and  making  the 
+first  small  changes.  The  actual  behavior  modification 
+occurs  during  the  action  stage  and  is  maintained  if  the 
+change is sustained.  
+
+Our  research  targets  young  people  between  the  age  of  18-
+35,  who  were  identified  by  [28]  to  be  either  recycling 
+unaware  or  are  not  seriously  contemplating  becoming 
+active in this regard. Early stages of change require specific 
+promotion strategies not only to overcome common barriers 
+to change, such as reluctance or inadequate motivation, but 
+also  to  raise  a  person’s  awareness  about  themselves  and 
+their  behaviors,  and  increase  the  possibility  to  experience 
+positive  emotions  related  to  a  target  behavior.  These 
+strategies allow  for a  re-evaluation of a person’s cognitive 
+and affective values towards a behavior, which can promote 
+intrinsic motivation and facilitate change [20,24].  
+
+Social Persuasion and Behavioral Motivation 
+While  the  suggested  strategies  for  behavioral  change 
+meaningfully inform persuasive designs, it has to be kept in 
+mind that the TTM presents an ideal. Individuals may find 
+themselves  in  various  stages  of  change  at  different  times 
+and  may  not  proceed  continuously  from  one  stage  to  the 
+next  [1].  Further,  the  TTM  is  aligned  to  individual 
+processes  of  behavioral  change,  in  which  social  processes 
+to  support  change  are  interwoven.  Thus,  the  next  sections 
+expand  on  how  behavior  can  be  regulated  through  social 
+influence and other forms of behavioral motivation.  
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2338 
+ 
+ 
+ 
+that  a  person’s 
+
+Considering 
+thoughts  and 
+behaviors are influenced by the presence of others, Deutsch 
+and  Gerard  [6]  distinguish  two  forms  of  social  influence: 
+informational and normative. 
+
+feelings, 
+
+Informational Social Influence  
+Other people can serve as a valuable source of information 
+to  accurately  evaluate  one’s  behavior.  This  is  particularly 
+relevant in situations where people are uncertain about how 
+to  behave.  To  overcome  the  natural  need  for  information, 
+they communicate with others, but also tend to observe and 
+copy the actual behavior of others [4]. Resulting changes in 
+a  person’s  attitudes  or  behaviors  can  be  deep-seated, 
+private  and  enduring  [6],  as  they  are  motivated  by  the 
+desire to behave appropriately in the target situation.   
+
+Normative Social Influence  
+Human  beings  also  have  a  fundamental  need  to  belong  to 
+others  [10].  Thus,  in  order  to  develop  and  preserve 
+meaningful relationships and to be socially accepted, people 
+have a tendency to agree on the values, beliefs, attitudes or 
+behaviors  of  others  [4].  The  normative  social  influence 
+arising  from  conforming  to  positive  expectations  of  others 
+is  stronger  the  more  important  these  people  are  to  the  self 
+(e.g.,  friends,  family)  [6].  Changes  in  the  expressions  of 
+attitudes  or  behaviors  as  a  result  of  obeying  to  normative 
+influences,  however,  do  not  necessarily  reflect  an  internal 
+change, but instead can be superficial, only publicly shown 
+and transitory. They are motivated by the person’s desire to 
+obtain social approval and avoid social rejection by others, 
+and usually persist only while the person is under a certain 
+level of social surveillance. 
+
+Behavioral Motivation 
+People  generally  engage  in  behaviors  that  are  either 
+intrinsically  rewarding  (e.g.  satisfaction  about  contributing 
+to  the  environment)  or  extrinsically  rewarding  (e.g.  a 
+reduced bill on waste), but also tailor their actions towards 
+avoiding  adverse  experiences  such  as  feelings  of  guilt  or 
+shame  [10].  While  strategies  for  rewarding  desirable 
+behaviors  are  often  applied  in  persuasive  computing 
+systems,  strategies  of  aversion  or  punishment  are  typically 
+criticized  as  being  inappropriate,  not  only  for  ethical 
+reasons  [11,12],  but  also  because  users  are  assumed  to 
+simply stop using a system if they are nagged or blamed by 
+it  [cf.,5].  Foster  et  al.  [13]  however,  have  shown  that 
+aversive feedback, if carefully and playfully presented, does 
+not necessarily disengage users, but functions as a valuable 
+tool for behavioral change. 
+
+Related Work  
+To  date,  a  number  of  designs  have  been  proposed  which 
+address  people’s  waste  management  and  sustainability 
+behavior.  Gartland  and  Piasek  [15]  describe  with  their 
+Weigh Your Waste system, an interactive disposal bin with 
+an integrated scale to weigh the amount of waste produced 
+by  a  household.  Both  the  weight  of  the  waste  and  its 
+financial cost are then displayed on a touch screen, together 
+with  further  information  on  how  general  waste  can  be 
+
+reduced. It was hoped that visualizing the financial benefits 
+of  producing  less  waste  would  motivate  environmentally 
+friendlier actions. Although a promising design concept, its 
+impact on people’s behavior has not been evaluated. 
+
+to 
+
+is  not  designed 
+
+Jetsam [23] is a public city trashcan, augmented to project a 
+visualization  of  collected  trash  items  to  urban  dwellers  on 
+the  street.  The  system 
+raise 
+environmental  awareness,  but  to  prompt  personal  and 
+collective sense of wonder as to aspects of urban life and to 
+provoke storytelling around the visualized trash. The idea to 
+stimulate  reflection  on  both  the  personal  and  communal 
+level  also  informed  the  design  of  the  Cleanly  system  [25] 
+which focused on educating citizens to avoid environmental 
+pollution  through  misplaced  trash.  For  this  purpose,  it 
+interactions  with  various  bins  and 
+tracked  people’s 
+displayed  these  on  wearable  smiley  badges,  in  monthly 
+personal reports and on public displays.  Even though both 
+Jetsam  and  Cleanly  consider  that  the  community  and  the 
+they  do  not 
+individual 
+explicitly  consider  the  community  as  a  source  for  social 
+influence.  They  also  have  not  been  evaluated  in  terms  of 
+their impact on people’s pro-environmental behavior. 
+
+inform  a  person’s  behavior, 
+
+THE DESIGN OF BINCAM  
+BinCam  is  a  two-part  system  consisting  of  a  BinCam  bin 
+and  a  custom  BinCam  application  (short  ‘App’)  on 
+Facebook.  Based  on  theories  of  behavioral  change,  the 
+system is designed to provide users with the opportunity to 
+evaluate  their  own,  as  well  as  other  people’s,  bin  related 
+behavior  through  information  contained  in  the  pictures 
+taken from a household’s rubbish bin. The BinCam system 
+facilitates  normative  social  influence  on  three  levels:  (i) 
+within  households;  (ii)  between  BinCam  households;  and 
+(iii)  amongst  a  potentially  wider  circle  of  friends  on 
+Facebook.  The  strategies  that  aim  to  motivate  and  engage 
+users with the system are introduced below.  
+
+The BinCam Bin 
+Information  about  one’s  own  waste  activities  are  of  little 
+interest  to  most  people,  in  particular  young  adults  [cf.,28], 
+and  this  poses  a  significant  design  challenge  for  the 
+collection  of  waste  related  data  [cf.,18,24]. To  address  the 
+lack  of  motivation,  and  the  time  required,  to  gather 
+information on the users’ part, the process of data collection 
+in  BinCam  is  entirely  automated.  In  addition,  seeking  to 
+design  BinCam  as  a  minimal  intervention  and  considering 
+that  recycling  facilities  in  UK  households  range  from 
+having at least one and up to five recycling containers,  we 
+found the refuse bin to be the only standard amongst all. It 
+provides  rich  data  about  individuals’  waste  behavior,  as  it 
+generally  captures  landfill  waste,  food  waste  as  well  as 
+misplaced  recyclables.  Thus,  the  BinCam  bin  simply 
+replaces  an  existing  kitchen  refuse  bin  and  automatically 
+captures  thrown  away  items  through  digital  images  taken 
+with  a  smart  phone  installed  on  the  underside  of  the  bin’s 
+lid  (see  Figure  2).  The  phone’s  accelerometer  senses 
+movement of the lid and triggers the  camera each time the 
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2339lid  is  opened  and  then  closed.  Using  either  a  3G  or  Wi-Fi 
+connection,  the  phone  uploads  captured  images  to  the 
+BinCam  application  on  Facebook  where 
+they  are 
+immediately  visible  to  all  BinCam  members.  This  system-
+driven  capture  of 
+individuals’  waste-related  behavior 
+significantly  eases  the  collection  of  personal  data  [18] 
+compared to existing methods such as ‘waste diaries’ [19].  
+
+The BinCam Application on Facebook 
+There  are  several  motivations  for  using  Facebook  as 
+BinCam’s  platform  for  reflection  on  personal,  as  well  as 
+other  people’s,  behavior.  Facebook  is  easy  to  access,  self-
+instructing and widely used and accepted by our target user 
+group.  It  provides  a  well-established  social  network 
+structure  which  enables  not  only  the  formation  and 
+preservation  of  connections  to  relevant  others  but  also 
+leverages  individuals’  strong  self-interest  to  be  socially 
+accepted  [10].  By  embedding  the  BinCam  application 
+within  Facebook,  we  aim  to  engage  individuals  in  regular 
+use  of  the  system,  but  also  to  promote  behavioral  change 
+through  the  social  dynamics  within  the  network  itself.  To 
+foster  day-to-day  engagement  and 
+to  enable  social 
+informational  and  normative  influences,  the  BinCam  App 
+includes  functionality,  which  we  termed  ‘BinPictures’  and 
+the ‘BinLeague’. 
+
+Figure 2. A BinCam bin augmented with a Sony Ericson 
+XperiaTM X10 mini smart phone. 
+
+Figure 3. Part of the BinCam interface showing images of the 
+bin responsibilities and bin spies to the left, and an enlarged 
+and tagged bin picture in the middle, with a message of 
+participants written on a banana skin. 
+
+BinPictures 
+On Facebook, pictures  from the  BinCam  bin are  presented 
+as  a  continuous  stream  of  photos  which  can  each  be 
+enlarged to furnish a better view of individual items in the 
+bin  (see  Figure  3).  The  interface  also  displays  the  owners 
+that  are  responsible  for  the  bin  and  its  contents  (‘Bin 
+Responsibilities’)  as  well  as  other  people  who  recently 
+viewed the pictures (‘Bin Spy’). As new pictures are added 
+to  the  photo  stream,  they  are  simultaneously  sent  to 
+Amazon’s Mechanical Turk crowd-sourcing service (AMT, 
+www.mturk.com),  an  online  labor  market  where  ‘workers’ 
+are  paid  small  amounts  of  money  to  complete  micro  tasks 
+(in  our  case  $0.02  per  image).  These  ‘tasks’  are  created 
+automatically for each bin picture and require workers, who 
+are given clear instructions, to  identify the total number of 
+items,  the  number  of  recyclable  items  and  the  number  of 
+food  items  in  each  photo.  Particularly  the  measurement  of 
+food waste is a novel aspect that none of the previous work 
+touched upon, and which is considerably difficult, i.e. when 
+compared  to  measures  of  energy  consumption.  Thus,  the 
+crowd  sourcing  technique  endeavored  to  help  detect  and 
+distinguish recyclable, non-recyclable and food waste items 
+in  the  pictures,  if  even  squashed  or  semi-covered  –  a 
+for  an  automatic 
+too  complex 
+problem  considered 
+computer-vision  based  solution.  Once  tagged  by 
+the 
+workers,  the  resulting  data  is  presented  alongside  the 
+respective picture. Bin owners can manually edit the tags if 
+items are incorrectly identified, and they can delete photos. 
+
+As  suggested  by  the  TTM  [24],  the  display  of  the 
+BinPictures  aims  to  increase  awareness  of  an  individual’s 
+waste  management.  To  further  facilitate  normative  social 
+influences,  the  pictures  taken  by  each  BinCam  bin  are  not 
+only  visible  to  all  members  of  one  household,  but  to  all 
+BinCam  users.  Although  access  to  the  App  is  provided  to 
+BinCam  users  only,  they  can  share  BinPictures  with  their 
+wider circle of friends by  linking selected pictures to their 
+own  Facebook  profile.  Inevitably,  the  display  of  such 
+personal  data  on  a  public  platform  like  Facebook  raises 
+privacy  and  ethics  issues.  Disposed  of  items  are  normally 
+objects  that  individuals  do  not  want  to  be  identified  with 
+anymore, and the publication of these pictures poses a risk 
+to  the  individual  of  being  publicly  humiliated.  This  risk, 
+however, is ameliorated by the deployment of BinCam only 
+in  shared  houses,  in  that  the  contents  of  a  bin  cannot  be 
+directly  attributed  to  any  particular  individual.  However, 
+such  decisions  are  part  of  a  design  trade-off,  as  this 
+aggregation  itself  also  makes  the  impact  of  individual’s 
+behavior  less  visible  and  as  a  consequence  may  lead  to  a 
+reduction in the social influence effects described earlier. 
+
+BinLeague 
+The  numeric  values  generated  by  AMT  contribute  to 
+weekly  calculations  of 
+league 
+visualizes  two  scores  for  each  bin:  (i)  for  recycling 
+achievements  visualized  as  ‘leaves  on  a  tree’;  and  (ii)  for 
+preventing food waste displayed as ‘gold bars’. A decrease 
+of recyclable materials in the bin leads to a growth of leaves 
+
+the  BinLeague.  This 
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2340 
+ 
+on  the  tree,  and  a  reduction  of  food  waste  increases  a 
+household’s  amount  of  gold.  Each  household  starts  at  a 
+baseline  of  5  leaves  and  5  gold  bars  (of  a  range  of  0-10). 
+From  one  week  to  the  next,  the  percentage  change  is 
+calculated and visualized for each household (see Figure 4). 
+The tree and gold images draw on common metaphors used 
+[cf.,17]  and  were  chosen  as 
+in  eco-visualizations 
+abstractions of each household’s performance on recycling 
+and  food  waste  behaviors.  They  may  also  compensate  for 
+what  Dourish  [8]  outlines  as  the  problem  of  scalability,  in 
+that the consequences of an individual’s contribution to the 
+overall environment are difficult to visualize.  
+
+The  BinLeague  aims  to  motivate  competition  between  the 
+BinCam  households  to  support  behavioral  change.  On  the 
+one  hand,  supporting  one’s  housemates  and  one’s 
+household achievements makes normative social influences 
+more  salient,  while  a  comparison  of  own  efforts  with  the 
+progress of other households presents a social informational 
+influence  [4,6].  On  the  other  hand,  the  element  of 
+competition  can  foster  desirable  behaviors  in  providing  a 
+positive outlook on winning, described by [2, p.184] as the 
+“incentive value of success”, but also motivates individuals 
+not to lose, and thus, to avoid feelings of failure [10].   
+
+EVALUATION OF BINCAM  
+In order to understand their potential and effectiveness, HCI 
+research  on  sustainability  [e.g.,8,27]  emphasizes 
+the 
+importance  of  designing  technologies  to  be  used  and 
+studied  in  everyday  life.  Thus,  to  gain  insight  into  how 
+individuals  interpret  the  BinCam  system  and  how  they 
+relate  to  its  different  features,  we  conducted  a  case  study 
+with  young  adults  (18-35  years),  living  together  in  shared 
+households  (5-7  occupants).  To  facilitate  engagement  with 
+the BinCam App, participants were also required to have a 
+Facebook account, which they access and use regularly.  
+
+Method 
+22 participants over the age of 18 were recruited (age  M = 
+23,  SD  =  4.6,  females  =  11)  through  posters,  flyers  and 
+personal contacts of a  member of the research team. In all 
+but one of the  four chosen  households,  gender  was  mixed. 
+Of  our  participants,  16  were  students  and  6  were  self-
+employed or unemployed.  
+
+Assessing  their  recycling  facilities  in  an  initial  visit,  we 
+found that all households had a recycling bin for cardboard, 
+plastic and metal, 3 of them had an additional recycling bin 
+for glass and 1 had an extra bin for compost. Refuse waste 
+for  each  household  is  collected  weekly  and  recycling 
+biweekly.  In  a  second  visit  two  weeks  later,  we  replaced 
+their existing kitchen bin with the BinCam bin, handed out 
+questionnaires and provided participants with the URL link 
+to the BinCam App. Their engagement with the App during 
+the  five-week  period  of  the  study  however  was  voluntary. 
+To facilitate appropriation of the BinCam bin and to foster 
+collaboration  between  members  of  each  household, 
+participants  were  asked  to  name  their  bin.  The  households 
+did not know each other from the outset of the study. 
+
+Figure 4. The BinLeague displaying all households’ recycling 
+achievements (leaves on a tree) and food waste savings (gold 
+bars) in comparison to other households and over time. 
+
+In  a  pre-questionnaire,  participants  were  asked  about  their 
+general  Facebook  use  habits  by  answering  the  Facebook 
+Intensity Scale created by Ellison et al. [9]. Results revealed 
+a strong use of the social network site. Participants had on 
+average 372 friends (SD = 251.4) and spent on average 86 
+min on the website per day. As part of the self-report data, 
+participants  further  indicated  that  Facebook  had  become 
+part  of  their  daily  routine,  that  they  used  the  platform  to 
+learn about others, to stay in  touch  with people  they know 
+or  met  socially  and  that  they  would  be  sorry  if  Facebook 
+closed down.  
+
+Before  the  start  of  the  BinCam  deployments,  participants 
+were  also  asked  about  their  general  attitude  and  behavior 
+related  to  recycling  and  food  waste.  Question  items  were 
+informed by [29]. In contrast to [28] which identified young 
+adults as recycling unaware, our participants indicated on a 
+5-point  scale  ranging  from  0  (not  at  all  important)  to  4 
+(very  important)  that  recycling  is  quite  important  to  them 
+with  M  =  3  (SD  =.8)  and  that  they  are  fairly  concerned 
+when they have to throw away food (M = 3, SD = .8). These 
+more  global  statements  were  supplemented  by  a  36-item 
+pre- and post- study questionnaire on participants’ recycling 
+and  food  waste  attitudes  and  behaviors.  Findings  of  this 
+quantitative  data,  however,  did  not  reveal  significant 
+changes over time and therefore are not presented.  
+
+At  the  end  of  the  five-week  study,  we  arranged  focus 
+groups  with  participants  in  their  residences,  lasting  on 
+average  51  min  (min  =  40,  max  =  77).  We  chose  this 
+method  to  capture  rich  and  insightful  data  evolving  from 
+interactive  group  discussions  about  their  experiences  of 
+BinCam.  We  found  post-study  focus  groups  to  be  less 
+intrusive  than  regular  observations  or  diary  keeping,  while 
+very suitable  for our research purpose to study BinCam  in 
+shared  households  of  individuals’  living  and  experiencing 
+the  system  together.  Focus  group  sessions  were  audio 
+recorded, transcribed and analyzed in-depth using thematic 
+analysis  [3].  Although  participation  was  voluntary,  each 
+participant  was  remunerated  for  filling  out  questionnaires 
+and taking part in the focus group with £10. The study was 
+approved by the institutional ethics committee at Newcastle 
+University. All names of participants have been changed.  
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2341 
+Results of the Focus Groups  
+Overall, participants liked the BinCam system, appraised  it 
+as  a  good  idea  and  would  recommend  it  to  friends.  The 
+system  was  described  as  a  useful  way  to  raise  an 
+individual’s  reflection  on  waste  management  while  being 
+experienced  as  fun;  turning  recycling  into  a  more  exciting 
+activity than it usually is. Yet, three participants stated that 
+they dislike the idea to be monitored in every aspect of their 
+life and although they generally  did not mind if somebody 
+saw pictures of their waste, they wouldn’t want the council 
+to  see  them.  These  privacy  concerns,  however,  were  not 
+associated with their temporary participation in the BinCam 
+project, which was both self-chosen and liked.  
+
+Integration of BinCam in Everyday Life 
+All participants appreciated that using the BinCam bin was 
+effortless and that they didn’t have to change their routine. 
+They  felt  that  the  bin  was  well  integrated  into  their 
+everyday life. The majority of our BinCam users were also 
+very  committed  to  Facebook  and  valued  the  incorporation 
+of  BinPictures  on 
+this  website.  In  one  household, 
+participants described themselves as less engaged Facebook 
+users and were critical of a number of qualities of Facebook 
+itself,  describing  the  platform  as  an  ugly  website  that  is 
+boring, uncreative and user unfriendly. These criticisms are 
+also applied to the BinCam App. Although they proposed to 
+replace  the  App  with  an  external  webpage  they  admitted 
+that they then “might have never looked at it” (Jill). 
+
+Exploration of Own and Other Household’s BinPictures 
+Despite  reporting  that  the  App  was  well-integrated  into 
+existing  routines,  participants  only  looked  at  the  pictures 
+taken of their own bin a few times (log file: min = 0, max = 
+27,  M  =  3.2)  and  mainly  at  the  start  of  the  study.  At  that 
+time,  curiosity  about  BinCam  was  highest  and  participants 
+were motivated to identify items disposed of by themselves 
+and  their  housemates.  Jill  states  for  instance:  “Oh  well,  I 
+tried to find things I’ve thrown away. I was like ‘Where is 
+that  item’”,  and  as  Anna  describes:  “You  could  identify 
+different food packages belonging to a different member in 
+the household.” Yet, after the first two  weeks, participants 
+either forgot about the BinCam App or simply lost interest 
+in  using  it.  Jim  explains:  “I  guess  it’s  still  important  but  I 
+mean I kind of get bored looking at rubbish after a while”. 
+Although  participants  admitted  to  have  been  a  little  nosy, 
+and curious about exploring other households’ BinPictures, 
+this voyeuristic opportunity was hardly ever taken (log file: 
+max = 6). Participants stated that pictures of other people’s 
+rubbish  were  not  of  much  interest  to  them  and  focused 
+mainly on those activities of their own bin and household. 
+
+The BinLeague and the Element of Competition 
+Participants’  opinions  on  the  BinLeague  were  mixed.  On 
+the  one  hand,  the  league  with  its  ‘tree’  and  ‘gold  bar’ 
+graphics was described as a nice and easy visualization for 
+tracking  a  household’s  progress  in  recycling  and  money 
+savings on food waste. On the other hand, the uncertainty as 
+to  how  the  league  positions  were  calculated  and  how 
+changes  could  be  achieved  led  to  confusion  among 
+
+participants. This was in part due to the fact that we found 
+the tags delivered through AMT to be largely incorrect. Of 
+a  random  picture  sample  of  20,  only  5  images  were 
+correctly  tagged.  Participants  also  expressed  the  wish  to 
+receive  feedback  more  frequently,  or  immediately,  when 
+they dispose of items. Similarly mixed were also the results 
+for  the  element  of  competition  stimulated  through  the 
+BinLeague.  While  some  participants  indeed  compared 
+league  achievements  with  other  households  and  felt 
+empowered  and  encouraged  to  improve,  others  were  less 
+keen  on  the  competition.  Sara  explains:  “The  competition 
+sounds  interesting  in  theory  but  I  don’t  know,  that’s  a 
+competition on Facebook, and I don’t think I ever really got 
+into it. I wouldn’t particularly try and get a bin award.”  
+
+Behavioral Change through BinCam 
+Confirming our pre-study questionnaire results, participants 
+reported  in  the  focus  groups  to  either  be  already  good 
+recyclers  or  at  least  contemplated  improving  their  waste 
+management. It is therefore not surprising that they did not 
+report changes in their attitude towards recycling and food 
+waste. Yet, findings show interesting social group effects as 
+well as an increase in individuals’ awareness, reflection and 
+perceived behavioral control related to their waste behavior.  
+
+The Role of Group Coherence in Collective Tasks  
+While the disposing of waste is in general an activity to be 
+performed by an individual alone, participants reported that 
+they sometimes looked at BinPictures together, named their 
+bin  collectively,  and  talked  with  each  other  about  the 
+project. They exchanged recycling tips and  made plans for 
+funny engagements with the bin such as leaving a message 
+on  a  banana  skin  in  the  bin  (cf.,  enlarged  BinPicture  in 
+Figure 3) or  talked about dismantling the phone  of the bin 
+to capture outdoor events to surprise each other. However, 
+the  coherence  of  group  efforts  with  regard  to  the  system 
+differed  greatly  between  households.  In  one  house,  we 
+found that only half of its members had a real interest in the 
+project, while in another household all members felt equally 
+committed  to  the  project.  That  there  have  been,  in  part, 
+effects of local group coherence is apparent in the following 
+statements: Tess: “You don’t want to let your house down”; 
+and Kate: “Yeah, I felt like we were a team.”  
+
+Social Surveillance  
+Moreover,  in  each  household,  participants  reported  having 
+felt  guilty  or  ashamed  if  they  disposed  of  recyclables 
+incorrectly or had to throw food away. For example, as Ben 
+explains:  “Looking at food waste that you’re guilty of and 
+your items that you’re guilty of and then thinking I’ve done 
+that and I’ve done that and this shouldn’t be in there.”; and 
+Beth says about BinCam: “It does make you feel guilty like 
+you  did  something  wrong”.  Such  feelings  of  guilt  were  
+found  to  be  evoked  by  (i)  the  visibility  of  one’s  own 
+behavior to oneself; (ii) the potential visibility of one’s own 
+behavior  to  housemates;  (iii)  unfortunate  results  of  one’s 
+household  on  the  BinLeague;  and  (iv)  the  perceived 
+presence of the BinCam bin.  
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2342In this context, participants also expressed feelings of being 
+observed  and  controlled.  Dave:  “I  think  like  every  person 
+individually  felt  a  bit  more  like  controlled  in  their 
+behavior.”  In  one  household  which  exhibited  stronger 
+group  coherence  participants  even  perceived  their  bin  as  a 
+social entity itself. For them, their bin “felt like a little flat 
+mate  sometimes”  (Mia).  They  also  used  personifying 
+attributes  in  their  bin  descriptions,  such  as  the  bin  thinks, 
+judges or cares. Lily expounded on this: “When I hid the jar 
+it  wasn’t  that  I  was  worried  that  these  guys  would  go  to 
+judge me for it. It was more like the BinCam was going to 
+judge me for it. I don’t care if these guys saw that I threw 
+away  a  jar  because  I  knew  that  they  wouldn’t  care  but  it 
+was like Osama [their name of the bin] would care.” 
+
+Awareness, Reflection and Perceived Behavioral Control 
+The  strongest  effect  of  the  BinCam  system  on  participants 
+is  related  to  raising  their  awareness,  and  stimulation  of 
+reflection, about recycling and food waste.  This awareness 
+was  sometimes  simply  triggered  through  a  quiet,  yet 
+audible, simulated camera shutter carried out each time the 
+BinCam bin took its picture. Dave tells: “It [the bin] makes 
+you  more  aware  because  you  hear  the  click  and  you  think 
+about  it  a  second  time.  Was  it  really  right  that  I  put  it  in 
+there  or  wasn’t  it?  And  yeah,  I  think  it  makes  you  more 
+aware.” Being reminded about one’s disposal behavior led 
+participants to reflect on their recycling skills and abilities. 
+Participants  became  more  aware  that  they  had  a  lack  in 
+knowledge  as  to  what  is  recyclable  and  what  isn’t.  Jodi 
+states: “And you like question yourself if you could actually 
+recycle what you just put in the bin.”;  and Sara says: “It’s 
+alright  to  sort  of  recycle  but  it’s  very  easy  to  recycle 
+wrong.”  This  uncertainty  as  to  how  to  recycle  properly 
+encouraged  self-education  among 
+the  young  adults. 
+Participants reported that they started to read the  labels on 
+the  back  of  packages  or  asked  their  housemates  for 
+recycling advice. Ben explains: “Erm, and then you sort of 
+get to read the back of the package and stuff like that and 
+start  looking  what  is  actually  recyclable  (...)  I  find  I  took 
+more time to differentiate between what was recyclable and 
+what wasn’t recyclable. It was useful for me.” 
+
+to 
+
+reflect  on 
+
+Despite  the  low  usage  of  the  BinPictures  and  BinLeague, 
+participants  were  still  persuaded 
+the 
+relationship  between 
+their  ‘food  waste’  and  ‘money 
+savings’. Tess explains: “I think it’s a money thing because 
+you  see  the  food  you  put  in  the  bin  and  it  makes  you 
+shocking  like  ’If  I  had  just  planned  better  I  could  have 
+saved  for  another  meal’.  But  now  I  have  to  go  and  spend 
+more  money  to  get  more  food.”  Apart  from  the  simple 
+skills, 
+food  and  one’s 
+awareness  about 
+participants  also  reflected  about  their  waste  management 
+facilities.  Although  willing to recycle, participants  felt that 
+there  is no  good  way of  managing  large amounts of bulky 
+cardboards  and  plastic  in  their  kitchen,  and  that  the 
+container  outside  their  house  fills  up  quickly,  sometimes 
+within a day, while only getting emptied every two weeks.  
+
+recycling 
+
+Other Anecdotal Evidence for Behavioral Change 
+Although  participants’  attitudes  towards  sustainable  waste 
+management  were  positive  from  the  outset,  and  their 
+recycling  knowledge  and  facilities  not  ideal,  participants 
+tried to improve their waste behavior by creating less food 
+waste,  said  that  they  started  sharing  food  left-overs  with 
+their  housemates,  were  trying  to  cook  more  appropriate 
+meal  portions  and  sometimes  simply  ate  more  instead  of 
+disposing the food.  Anna says for instance: “I kind of make 
+sure I didn’t cook too much like, erm, I’m better in judging 
+portions  than  I  was  before.”  Regarding  food  left-overs, 
+Beth states: “Because there’s lots of food in terms of like I 
+don’t  want  to  dispose  so  I  just  put  it  out  and  then  people 
+can eat it because it’s too much, (…) instead of chucking it 
+in the bin straight away”.  
+
+Participants also reported having recycled more and better, 
+for  example,  jars  and  tins  were  rinsed  and  washed  out 
+before  they  were  put  in  the  bin,  and  composite  packages 
+broken  down  into  their  recyclable  and  non-recyclable 
+components. Mia describes: “Since we had like the BinCam 
+project  bin,  erm,  we’ve  recycled  a  lot  more  than  we 
+normally  would,  like  generally  as  a  flat.”;  and  Ben 
+explains:  “I  am  much  more  aware  of  making  sure  that 
+everything I rinsed wasn’t just, erm, I didn’t put just water 
+on  it.  I  rinsed  it  -  I  made  sure  there’s  no  food  residue  or 
+anything  like  that.”  One  participant,  Lily,  even  took  out 
+items  from  the  BinCam  bin  that  didn’t  belong  in  it.    She 
+says:  “I  think  it  was  like  I  wouldn’t  have  given  it  a  rough 
+thought before the BinCam project, like there was no way I 
+was  going  to  our  bin  and  fishing  out  something  filthy  and 
+stuff.  That,  like,  yeah,  it  was  just  the  fact  that  I  was  more 
+aware about recycling and I was like, well if we gonna have 
+to recycle at least we do it properly.”  
+
+DISCUSSION & LESSONS LEARNED 
+BinCam  was  intended  as  a  social  persuasive  system  that 
+provides  a  playful  non-intrusive  opportunity  for  young 
+adults  to  engage  in  reflections  on  their  waste  management 
+behavior.  Findings  of  our  user  study  indicate  that  it  raised 
+individuals’ awareness of their recycling and  food  wasting 
+behaviors.  Invited  reflections  however  did  not  to  seem  to 
+impact  on  participants’  already  well-established  attitudes 
+and intentions to improve their behavior, but instead  made 
+more salient their perception of how much they control the 
+performance of the target behavior. This led participants to 
+view  their  disposal  facilities  to  be  insufficient  and  to 
+identify deficits in their  knowledge  about  what is or is not 
+recyclable.  As  a  result,  participants  started  to  educate 
+themselves about recycling properties, exchanged recycling 
+expertise  with  others,  and  improved  the  planning  and 
+sharing  of  their  food.  Moreover,  participants  responses 
+towards  BinCam  were  highly  heterogeneous  and  indicated 
+various  motivational  influences  on  both  an  individual  and 
+group  level.  These  are  outlined  in  Table  1  and  discussed 
+below  along  with  proposed  implications  for  the  design  of 
+systems  aiming  to  invite  reflection  and  to  promote  change 
+through social media and strategies of social persuasion.  
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2343Table 1. Persuasion in BinCam. 
+
+Identified individual, social & motivational influences in BinCam  
+
+Individual self-reflection 
+
+Informational social 
+influence  
+
+Normative social 
+influence  
+
+Extrinsic motivation 
+
+Intrinsic motivation 
+
+ 
+
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+Feedback about one’s own waste behavior 
+
+Feedback about waste behavior of others 
+Discussions and exchange of knowledge 
+with flat mates  
+
+Social presence of others offline & online 
+Social presence of the bin  
+
+Competition 
+Social surveillance 
+Signal trigger (BinCam camera sound) 
+(Potentially: notifications & reminder)  
+
+Avoidance of feelings of guilt 
+Fun experience 
+Attitudes & desire to behave appropriately 
+
+Informational Influence on Self and Others  
+To  facilitate  interaction  with  BinCam,  the  system  is 
+carefully  designed  to  fit  into  daily  routines  such  as  user’s 
+regular Facebook and bin use. They are left with the choice 
+whether  they  engage  with  the  BinCam  App.  While  this 
+voluntary  access  makes  it  easy  to  ignore  the  App,  it  turns 
+the act of looking at captured  images into a  conscious and 
+not  externally  enforced  activity.  Overcoming  the  natural 
+need  for  information,  user  can  access  the  App  to  receive 
+feedback about their behaviors and those of others [cf.,4].  
+
+Reflection on Behavior & Learning vs. Immediate Feedback 
+Although participants were presented through the App with 
+general information about their and other household’s waste 
+performances,  they  expressed  the  desire  for  practical 
+guidance and information as to how they can improve their 
+behavior. BinCam was not designed as a system to educate 
+its  users,  but  presents  individuals  with  an  engaging  and 
+playful platform for reflection and self-education in order to 
+break routines of non-recycling and food waste. To support 
+this  purpose  and  to  increase  engagement  with  the  App, 
+future  designs  should  enable  users  to  exchange  their 
+recycling advice and creative ideas with one another. 
+
+Our  participants  expressed  the  wish  to  receive  immediate 
+feedback  from  their  bin  about  whether  their  disposal 
+behavior  was  correct.  Although  this  functionality  is  likely 
+to  simplify  the  recycling  process  [10it  would  remove  both 
+the  need  for  self-motivated  in-depth  reflection  and  their 
+efforts  to  inform  themselves  and  learn  about  the  recycling 
+properties  of  their  waste  items.  Changes  in  attitudes  and 
+behaviors through reflection can result in an internal change 
+and  be  long-lasting  [cf.,24].  It  has  to  be  acknowledged, 
+however, that reflection is not only motivated by the factors 
+outlined  in  Table  1,  but  evoked  through  the  provocative 
+character  of  the  system  itself.  In  foregrounding  waste, 
+something that usually falls in oblivion once it is discarded, 
+it  increases  awareness  and  invites  reflection.  In  addition, 
+BinCam  has  been  designed  as  a  collaborative  project 
+exploring social processes of influence, whereas immediate 
+feedback only functions at the individual level.  
+
+To promote informational social influence, we suggest that 
+designs  provide  frequent  feedback  (e.g.  daily  instead  of 
+
+weekly) as  well as diverse  visualizations and opportunities 
+for comparisons of own and others’ behavioral data.  
+
+Other Invite Reflections: Abstract Visualizations and BinCam  
+While  captured  information  about  a  person’s  behavior 
+should  be  accurate  and  reliable,  their  presentation  design 
+seems  equally  important  for  it  to  be  understandable  to 
+users.  The  BinLeague  presents  through  tree  and  gold 
+graphics  an  abstract  and  highly  simplified  view  of  users’ 
+collective  recycling  achievements  and  food  savings,  both 
+further  limited  due  to  incorrect  taggings  of  collected 
+BinPictures  using  AMT.  This  explains  why  some  users 
+were  confused  or  dissatisfied  about  the  league  and  its 
+visualizations. Yet,  others  were  still able to  make  sense  of 
+the 
+their 
+league.  They  reflected  and  discussed  with 
+housemates  how  the  graphics  relate  to  their  behavior,  and 
+felt  motivated  to  improve.  We  assume  that  a  less  abstract 
+visualization of the tagging results would not have allowed 
+for the same fortunate interpretational scope [cf.,26].  
+
+Normative Social Influence 
+Overall, the normative social influence in BinCam was not 
+as salient as expected. This may be explained by a lack of 
+group  coherence  in  the  participating  houses  and  their  little 
+engagement with the BinCam App. It may also relate to the 
+fact  that  an  individual’s  contribution  to  the  household’s 
+waste was not perceived to be associated with the receipt of 
+social rewards nor to pose a real threat from housemates for 
+non-compliance (i.e. as compared to the council). 
+
+Social Presence of Others in the House – Group Coherence 
+Normative  social  influence  is  motivated  by  a  person’s 
+desire to obtain social approval from others while avoiding 
+being  socially  rejected.  The  influence  is  stronger  the  more 
+important  other  people  are  to  the  individual  [6].  Although 
+BinCam  was  perceived  as  a  collective  activity,  only  the 
+members  of  one  household  reported  true  commitment  to 
+each  other  and  felt  responsible  for  household-related 
+activities.  A  feeling  of  group  coherence  can  facilitate 
+normative social influences [4,6]. We therefore believe that 
+a  strong  sense  of  group  coherence,  the  sharing  of  a 
+persuasive  system  between  users  and  a  meaningful 
+connection  between  them  –  through  their  actions  and 
+commitments  –  has  the  potential  to  shape  a  collective 
+movement  towards  the  desirable  behavior  [cf.,8].  Thus,  to 
+support  group  coherence,  the  interaction  with  the  systems 
+should be more strongly designed as a group activity. How 
+can design  facilitate the creation of a team identity around 
+each  bin?  How  would  the  social  dynamics  in  BinCam 
+change  if  participants  of  all  households  knew  each  other 
+from  the  outset?  These  issues  deserve  more  attention  in 
+future  research,  in  particular  in  terms  of  motivating  group 
+commitment, social support or social movements [21].  
+
+Social Presence of Others on Facebook 
+Facebook was found to be an appropriate access channel for 
+the BinCam App, as it is used regularly and well integrated 
+in  the  existing  routines  of  young  adults.  Yet,  participants 
+did  not  engage  significantly  with  the  BinCam  App  itself. 
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2344Although  participants  looked  at  the  BinPictures  for  their 
+own  household  and  tried  at  times  to  identify  individual 
+‘misbehaviors’, the normative social influence was not very 
+strong.  To  increase  engagement  with  the  App  and  to  give 
+users  reason  to  explore  the  BinPictures,  we  suggest 
+designing challenges. Users could be instructed to place an 
+object  in  the  bin  to  be  discovered  by  other  households  or 
+take  over  the  task  of  tagging  the  BinPictures  as  a 
+collaborative  activity.  This  would  allow  for  more  social 
+control  and 
+to  users’  bin-related 
+contributions,  open  up  space  for  playful  or  competitive 
+engagements and social opportunities to trick and cheat. 
+
+transparency  as 
+
+Feelings of Guilt & Social Presence of the BinCam Bin 
+Participants  did  not  report  feeling  threatened  by  others 
+regarding  their  behavior,  but  mentioned  feeling  ‘guilty’  or 
+‘ashamed’ when disposing of food or recycling incorrectly. 
+It remains subject to future research whether these feelings 
+are  primarily  evoked  by  the  presence  of  the  BinCam  bin 
+itself,  participant’s  awareness  about  their  behavior  being 
+potentially visible to their housemates or the wider BinCam 
+community online. In one household, it was remarkable that 
+participants perceived their BinCam bin as a “social actor” 
+[11],  and  described  a  related  influence  on  their  behavior. 
+We believe that the presence of the bin and its ‘monitoring’ 
+of  what  a  person  discards  facilitate  individuals  to  perform 
+more socially desirable behaviors, in ways similar to having 
+a  housemate  in  the  kitchen  watching  the  person’s  actions 
+[12].  Despite  certain  inscrutability  about  the  source  of 
+authority, we confirm findings of [13] that evoking aversive 
+feelings can motivate compliance, if designed playfully. 
+
+Facilitators for Performing the Target Behavior 
+
+Facilities and Abilities to Perform the Behavior 
+In  addition  to  having  the  intention  to  perform  a  certain 
+behavior,  a  person  needs  to  have  the  ability  to  do  so 
+[cf.,2,20].  As  shown  with  BinCam,  this  includes  having 
+adequate  waste  management  facilities  as  well  as  the 
+appropriate  ‘know  how’  and  confidence  to  perform  the 
+behavior. BinCam successfully invited individuals to reflect 
+on  their  perceived  behavioral  control.  Being  situated  in 
+their  homes,  it  made  them  more  aware  of  ‘how’  they 
+manage  or  mismanage  their  waste  and  revealed  a  certain 
+complexity behind waste-related actions. 
+
+Trigger and Reminder 
+The sound of the BinCam bin camera was found to act as a 
+‘signal  trigger’,  reminding  participants  of  the  presence  of 
+the  BinCam  system  and  prompting  thoughts  about  their 
+waste management. According to Fogg’s Behavioral Model 
+[10],  triggers  are,  along  with  a  person’s  motivation  and 
+ability  to  perform  the  target  behavior,  the  most  powerful 
+element  to  change  behavior.  Despite  the  low  usage  of  the 
+BinCam App, its very existence – reflecting the potential of 
+one’s behavior being visible to others – added significance 
+to  the  ‘signal  trigger’.  However,  to  persuade  users  to  re-
+visit the BinCam App more regularly, the App should adapt 
+to  the  ecology  of  Facebook  and  more  closely  integrate  its 
+
+existing  interaction  and  persuasion  styles.  Future  versions 
+will  also  incorporate  reminders  and  notifications  about 
+interesting ongoing activities and users’ progress. 
+
+Flexibility towards Individual Preferences and Needs 
+The  heterogeneous 
+findings  of  how  BinCam  was 
+appropriated by its users show that persuasive technologies 
+should  be  adaptable  to  inter-individual  expectations  and 
+needs.  Users  differ  in  their  attitudes,  motives  and  habits 
+related  to  social  platforms,  like  Facebook,  and  they  have 
+different  preferences  for  the  frequency  and  presentation  of 
+feedback.  That  individuals  are  at  “different  stages  of 
+readiness,  willingness  and  ableness  to  change”  [1,  p.927] 
+also effects their receptiveness of persuasive influences.  In 
+order to appeal to a wide range of users and to successfully 
+informational  and 
+fulfill 
+motivational needs [24], persuasive designs  should employ 
+a combination of persuasive strategies to promote change.  
+
+their  constantly  changing 
+
+Ethical Issues  
+In BinCam, participants were more aware of their behavior 
+or  misbehavior,  while  the  interaction  with  the  system 
+evoked  feelings  of  guilt  or  shame.  Although  potentially 
+effective  [cf.,13],  it  raises  ethical  concerns  as  to  whether 
+persuasive  designs  should  employ  strategies  that  originate 
+aversive  emotions  to  induce  behavioral  change.  In  Fogg’s 
+[12] understanding, persuasion does  not include the  use of 
+force and is neither coercive, nor manipulative or deceitful. 
+Feelings  of  guilt  or  shame  in  BinCam,  however  were  not 
+directly evoked through the system or external pressures of 
+others  observing,  but  primarily  based  on  an  internal 
+evaluation resulting from users’ increased awareness of the 
+discrepancy  between 
+ideal 
+the  privacy 
+behavior.  Furthermore,  and  considering 
+concerns  raised,  BinCam  should  be  regarded  as  playful 
+reflection  stimulating  intervention  that  finds  temporarily 
+acceptance  in  peoples’  lives,  if  users  remain  in  control  of 
+their  data  and  know  to  whom  it  is  visible.  It  is  neither  an 
+obscure monitoring device nor to be used by third parties.  
+
+their  own  perceived  and 
+
+Limitations of the Evaluation 
+The  sample  of  our  study  was  small  and  participants,  from 
+the outset, reported being motivated to recycle and prevent 
+food  waste.  Since  participation  was  voluntary,  this  may 
+confirm a tendency identified by Strengers [27], where eco-
+feedback  systems  are  generally  more  appealing  to  people 
+who are environmentally motivated. In addition to recycling 
+constraints,  this  may  further  explain  why  our  quantitative 
+results  did  not  show  significant  effects.  Above  all,  our 
+results are solely based on individuals’ self-reports in focus 
+groups.  We  found  however  that  participants  responded 
+equally  and  were  notably  uninhibited  to  share  personal 
+feelings  of  guilt  or  of  being  observed  by  others.  Despite 
+these  limitations,  we  believe  that  the  exploratory  character 
+of  the  study,  the  authentic  deployment  of  the  BinCam 
+system  into  an  everyday  setting  as  well  as  reported  user 
+experiences  provide  a  valuable  lens  onto  the  potential  use 
+of social media and social group dynamics to engage people 
+in reflections on their behavior and to persuade change. 
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2345self-education 
+
+CONCLUSION  
+BinCam is a social persuasive system designed to playfully 
+engage  young  adults  collectively  in  reflections  on  their 
+waste management lifestyle. While deployments of BinCam 
+in shared households did not impact on participants’ already 
+well-established  attitudes  or  intentions  to  improve  their 
+behavior,  it  increased  their  perceived  behavioral  control. 
+Invited reflections helped identify barriers in their personal 
+abilities,  motivated 
+recycling 
+properties and improved their planning and sharing of food. 
+Behavioral feedback was presented through BinPictures and 
+the  BinLeague,  which  provide  a  source  for  informational 
+and normative social influences. At times, aversive feelings 
+of  guilt  for  non-recycling  or  the  disposal  of  food  were 
+evoked,  that  did  not  disengage  but  motivate  individuals  in 
+using  the  system  and  improving  their  behavior.  A  neat 
+integration  of  BinCam  into  the  existing  structures  of 
+individuals’ 
+logging,  access  and 
+exploration  of  collected  data.  We  envisage  our  work  will 
+motivate  future  HCI  research  bridging  social  media  and 
+strategies of social persuasion to promote change.  
+
+lives  facilitated 
+
+about 
+
+the 
+
+ACKNOWLEDGEMENTS 
+The  authors  thank  their  participants,  the  reviewers  of  the 
+paper as well as Stephen Lindsay, Daniel O’Connor, David 
+Kirk,  John  Shearer  and  Nick  Taylor.  This  work  was 
+supported  by  Microsoft  Research 
+its  PhD 
+Scholarship Programme.  
+
+through 
+
+REFERENCES 
+1.  Ai He, H., Greenberg, S., and Huang, E.M. One size does 
+
+not fit all: applying the transtheoretical model to energy 
+feedback technology design. Proc. CHI 2010, 927-936. 
+
+2.  Ajzen, I. The theory of planned behavior. Organizational 
+Behavior and Human Decision Processes, 1991, 50, 179-
+211. 
+
+3.  Braun, V., and Clarke, V. Using thematic analysis in 
+
+psychology. Qualitative Research in Psychology, 2006, 3, 
+77-101. 
+
+4.  Cialdini, R.B., and Goldstein, N.J. Social influence: 
+
+Compliance and conformity, Annual Reviews Psychology, 
+2004, 55, 591-621. 
+
+5.  Consolvo, S., McDonald, D.W., and Landay, J.A. Theory-
+driven design strategies for technologies that support 
+behavior change in everyday life. Proc. CHI 2009, 405-
+414. 
+
+6.  Deutsch, M., and Gerard, H.G. A study of normative and 
+informational social influence upon individual judgment. 
+Journal of Abnormal and Social Psychology, 1955, 51, 
+629-636. 
+
+7.  DiSalvo, C., Sengers, P., and Hrönn, B. Mapping the 
+landscape of sustainable HCI. Proc. CHI 2010, 1975-
+1984. 
+
+8.  Dourish. P. HCI and environmental sustainability: the 
+politics of design and the design of politic. Proc. DIS 
+2010, 1-10. 
+
+9.  Ellison, N.B., Steinfield, C., and Lampe C. The benefits of 
+facebook “friends”: Social capital and college students’ 
+use of online social network sites. Journal of Computer-
+Mediated Communication, 2007, 12(4), 1143-1168. 
+
+10.  Fogg, B.J. A behavioral model for persuasive design. 
+
+Proc. Persuasive 2006. 
+
+11.  Fogg, B.J. Persuasive Technology: Using computers to 
+
+change what we think and do, Morgan Kaufmann, 2003.  
+
+12.  Fogg, B.J., Cuellar, G., and Danielson, D.  Motivating, 
+
+influencing, and persuading users. In J. Jacko and A. 
+Sears (eds.), The human-computer interaction handbook: 
+Fundamentals, Evolving Technologies and Emerging 
+Applications, L. Erlbaum Associates Inc., 2002.  
+
+13.  Foster, D., Linehan, C., Lawson, J., and Kirman, B. Power 
+ballads: Deploying aversive energy feedback in social 
+media. Ext. Abst. CHI 2011, 2221-2226. 
+
+14.  Fröhlich, J., et al. UbiGreen: Investigating a mobile tool 
+for tracking and supporting green transportation habits, 
+Proc. CHI 2009, 1043-1052. 
+
+15.  Gartland, A., and Piasek, P. Weigh your waste: A 
+
+sustainable way to reduce waste. Ext. Abst. CHI 2009, 
+2853-2858.  
+
+16.  Godin, G., and Kok, G. The theory of planned behaviour: 
+A review of its applications to health-related behaviours. 
+American Journal of Health Promotion, 1996, 11(2), 87-
+98. 
+
+17.  Holmes, T. Eco-visualization: Combining art and 
+
+technology to reduce energy consumption. Proc. C&C 
+2007, 153-162. 
+
+18.  Li, I., Dey, A.K., and Forlizzi, J. A Stage-Based Model of 
+Personal Informatics Systems. Proc. CHI 2010, 557-566. 
+
+19.  Love Food Hate Waste. Last retrieved 05.12.2010, 
+
+www.lovefoodhatewaste.com 
+
+20.  Maio, G.R., and Haddock, G. The psychology of attitudes 
+and attitude change. London: SAGE, 2010, 67-77. 
+
+21.  Mankoff, J.C. et al. Leveraging Social Networks To 
+Motivate Individuals to Reduce their Ecological 
+Footprints. Proc. HICSS 2007, 1-10. 
+
+22.  Matthews, M., and Doherty, G. In the mood: Engaging 
+teenagers in psychotherapy using mobile phones. Proc. 
+CHI 2011, 2947-2956. 
+
+23.  Paulos, E., and Jenkins, T. Urban Probes: Encountering 
+our emerging urban atmospheres. Proc. CHI 2005, 341-
+350. 
+
+24.  Prochaska, J.O., DiClemente, C.C., and Norcross, J.C. In 
+Search of How People Change: Applications to Addictive 
+Behaviors, American Psychologist ,1992, 47(9), 1102-
+1114. 
+
+25.  Reif, I., et al. Cleanly – Trashducation urban system. Ext. 
+
+Abst. CHI 2010, 3511-3516.  
+
+26.  Sengers, P., and Gaver, B. Staying open to interpretation: 
+Engaging multiple meanings in design and evaluation. 
+Proc. DIS 2006, 99-108. 
+
+27.  Strengers, Y. Designing eco-feedback systems for 
+everyday life. Proc. CHI 2011, 2135-2144. 
+
+28.  Waste and Resources Action Programme. Last retrieved 
+
+29.12.2010 , www.wrap.org.uk 
+
+29.  WRAP. Research Guidance: Monitoring and evaluation 
+
+guidance (Annex 3). Last retrieved 27.06.2011, 
+www.wrap.org.uk/local_ authorities/research_ guidance 
+
+30.  Ybarra, O., and Trafimow, D. How priming the private 
+self or collective self affects the relative weights of 
+attitudes and subjective norms. Personality and Social 
+Psychology Bulletin, 1998, 362-370. 
+
+Session: Defying Environmental Behavior ChangesCHI 2012, May 5–10, 2012, Austin, Texas, USA2346

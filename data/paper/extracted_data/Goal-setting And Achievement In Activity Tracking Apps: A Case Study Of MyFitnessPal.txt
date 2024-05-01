@@ -1,0 +1,1297 @@
+Goal-setting And Achievement In Activity Tracking Apps: A Case
+Study Of MyFitnessPal
+
+Mitchell L. Gordon
+Stanford University
+mgord@cs.stanford.edu
+
+Tim Althoff
+University of Washington
+althoff@cs.washington.edu
+
+Jure Leskovec
+Stanford University
+jure@cs.stanford.edu
+
+ABSTRACT
+Activity tracking apps often make use of goals as one of their
+core motivational tools. There are two critical components to this
+tool: setting a goal, and subsequently achieving that goal. Despite
+its crucial role in how a number of prominent self-tracking apps
+function, there has been relatively little investigation of the goal-
+setting and achievement aspects of self-tracking apps.
+
+Here we explore this issue, investigating a particular goal setting
+and achievement process that is extensive, recorded, and crucial for
+both the app and its users’ success: weight loss goals in MyFitness-
+Pal. We present a large-scale study of 1.4 million users and weight
+loss goals, allowing for an unprecedented detailed view of how
+people set and achieve their goals. We find that, even for difficult
+long-term goals, behavior within the first 7 days predicts those who
+ultimately achieve their goals, that is, those who lose at least as
+much weight as they set out to, and those who do not. For instance,
+high amounts of early weight loss, which some researchers have
+classified as unsustainable, leads to higher goal achievement rates.
+We also show that early food intake, self-monitoring motivation,
+and attitude towards the goal are important factors. We then show
+that we can use our findings to predict goal achievement with an
+accuracy of 79% ROC AUC just 7 days after a goal is set. Finally,
+we discuss how our findings could inform steps to improve goal
+achievement in self-tracking apps.
+
+ACM Reference Format:
+Mitchell L. Gordon, Tim Althoff, and Jure Leskovec. 2019. Goal-setting And
+Achievement In Activity Tracking Apps: A Case Study Of MyFitnessPal.
+In Proceedings of the 2019 World Wide Web Conference (WWW ’19), May
+13–17, 2019, San Francisco, CA, USA. ACM, New York, NY, USA, 12 pages.
+https://doi.org/10.1145/3308558.3313432
+
+1 INTRODUCTION
+The purpose of an activity tracking app is to help users better
+understand their behavior. Health-focused apps and fitness devices
+are the most prevalent, often tracking activities like exercise, eating,
+and heart rate. Beyond physical health, other types of behaviors
+are becoming increasingly popular to track as well; for instance,
+iPhones now come pre-installed with an app that tracks screen time
+spent in other apps.
+
+In many cases, users wish not only to observe their behavior,
+but also to improve it [20, 43]. Activity tracking apps often aim to
+
+This paper is published under the Creative Commons Attribution 4.0 International
+(CC-BY 4.0) license. Authors reserve their rights to disseminate the work on their
+personal and corporate Web sites with the appropriate attribution.
+WWW ’19, May 13–17, 2019, San Francisco, CA, USA
+© 2019 IW3C2 (International World Wide Web Conference Committee), published
+under Creative Commons CC-BY 4.0 License.
+ACM ISBN 978-1-4503-6674-8/19/05.
+https://doi.org/10.1145/3308558.3313432
+
+help their users do this, and the guidance they provide can take
+many forms, ranging from general advice and tips from experts, peer
+pressure from social networking features, reminders or notifications
+that ask the user to take a specific timely action, and enforcement of
+explicitly articulated goals [44]. We think of all these mechanisms as
+methods to promote behavioral change [4]. They play an important
+role in people’s well-being, akin to the many methods for behavior
+change in the offline world that one is familiar with, which might
+include requests or demands from loved ones, medical professionals,
+bosses, or in the most extreme cases, governmental intervention
+via fines and criminal punishment.
+
+A nearly universal feature in activity tracking apps, goals are one
+of the most popular and effective methods for behavioral change
+[31, 45]. They take many forms. For instance, Apple Watch has
+three “rings” for the user to fill in, each representing a different daily
+behavioral goal: one for standing 12 times, one for total calories
+burned (set by the user), and one for 30 minutes of exercise. Other
+apps have focused on moderating digital behaviors by setting goals
+for the amount of time spent on social networking sites [2]. Perhaps
+the most well-known goal is walking 10,000 steps per day assigned
+by many fitness-focused activity trackers [7].
+
+Goals in activity tracking apps involve both the setting of a goal
+(the selection of a desired outcome) and also the achievement of
+that goal (the process of working towards the selected outcome).
+Setting a good goal is critically important for users’ success: too
+hard, and the user will become frustrated and give up. Too easy, and
+they won’t achieve as much health benefit as they could have [46].
+There has been interesting recent work on goals in activity tracking
+apps [5, 13, 25, 29, 36, 40, 48], but it remains a topic where there is
+still much to be understood – particularly on the issue of setting
+a good goal, since it can be difficult to find records of the process
+by which goals are both set and subsequently achieved, along with
+the behaviors that led to those goals being achieved. This has led
+to the problem that, despite the importance of goal-setting and
+achievement in activity tracking apps, users often receive limited
+guidance on selecting a goal that they will actually meet. While
+most activity trackers use general guidelines from relevant domain
+expertise combined with demographic information [10] to help
+users make a choice, after the initial goal is set they often provide
+limited on-going advice as to whether that goal choice is turning
+out to have been a good one. Some work has gone further and used
+current trajectory towards a goal to intervene. For instance, they
+can notify a user if they are not on track to meet their goal by a
+certain time frame if they keep that trajectory, or are consistently
+not meeting daily goals [1, 12, 22, 34, 38]. However, these methods
+do not consider a holistic view of the many important behaviors
+that lead to a goal being met, and make simplistic assumptions
+about linear progressions.
+
+571Present Work: Weight Loss Goals in MyFitnessPal. In this pa-
+per we consider the goal-setting aspects of activity tracking apps
+by focusing on a setting where detailed information on both how
+goals are selected and many related behaviors while attempting to
+achieve those goals can be studied. Our setting is the process of
+selecting and working towards weight loss goals in MyFitnessPal.
+This process has a clearly defined structure: first, upon creating
+a MyFitnessPal account, all users select weight loss goals, and do
+so without any guidance from the app. Users optionally provide a
+free-text reason for their selection of that goal. Users then may then
+use the app to log their food intake and weight to help them track
+their progress towards that goal. Meeting their weight loss goal is
+important for their health: achieving a self-determined weight goal
+has been linked to long-term weight loss, while the failure to reach
+a self-determined weight may discourage someone’s belief in their
+ability to control their weight, resulting in abandonment of weight
+loss behaviors and weight re-gain [14, 27].
+
+MyFitnessPal weight loss goals thus have the key ingredients
+we need: they take place in a goal-setting and achievement process
+carried out by users of a activity tracking app who are working
+towards meeting that goal, users use the app to help guide their
+lower-level behaviors that will help them to meet that goal, and
+given the nature of activity tracking, all of this is logged, making the
+analysis possible. It also serves as an instance of a broader type of
+goal-setting, familiar from the off-line world as well as the on-line
+world, in which people aim to lose weight by setting a weight loss
+goal.
+
+Both the process of goal-setting and the process of losing weight
+has been studied extensively in medical literature [14]. By contrast,
+because of our interest in the issue of goal-setting and achievement
+in activity tracking apps, we study the process from the perspective
+of early detection of goals that will never be met: we ask which
+goals users set, how users behave shortly after they set them, and
+how those behaviors lead to those goals being achieved. Because
+we are interested in exploring how activity tracking apps may
+be able to help users select better goals, we focus specifically on
+behavior that takes place during the first 7 days after a goal is set,
+and examine whether we might be able to detect early-on that a
+long-term weight loss goal will never be met. Such early-detection
+would enable an intervention warning a user that they are working
+towards a goal they are unlikely to meet, which means we may be
+able to encourage them to re-think a more realistic goal and prevent
+them from spending too much time working towards and becoming
+invested in that goal, only to ultimately become discouraged and
+re-gain weight because they did not meet it. This could potentially
+be considered a “just-in-time intervention” [33].
+
+Present work: Main Results. We analyze 2.8 million weight loss
+goals with 44.6 million weights logged over a period of three years.
+We begin by validating our dataset through a comparison of the
+goals the people set in MyFitnessPal to prior studies from before
+the age of activity trackers, finding that women set more ambitious
+goals than men and younger adults set more ambitious goals than
+older adults (Section 4). We also use the unprecedented size of
+our dataset to show that some findings in prior work are likely
+due to selection effects. We then analyze goal completion rates
+and duration, finding that men and older adults are more likely to
+
+meet their goals (even when accounting for goal difficulty), but that
+overall completion rates are low (Section 5).
+
+We then turn to the problem of early detection of goals that will
+never be met (Section 6). We investigate user’s behavior over the
+first seven days after they set their goal. We find that, contrary
+to what some prior clinical studies might suggest, there’s no such
+thing as “too much” early weight loss when it comes to meeting
+your goal (Section 6.1), and that people who log their weight more
+frequently within the first week are more likely to meet their goals
+(Section 6.2). We show that more calories reported per day during
+the first 7 days leads to a lower likelihood of meeting goals, but only
+for users who are committed loggers; surprisingly, for many users,
+logging more calories actually indicates a higher propensity to meet
+a weight loss goal (Section 6.3). We then turn to the motivations
+behind the goals that people set, introducing a novel application of
+topic modeling algorithms to identify four primary motivators and
+show how achievement rates vary with these motivators (Section
+6.4).
+
+Finally, we show that whether a user will achieve their target
+weight can be predicted just based on the initial behavior during
+the first few days after the target is set. We build a machine learning
+model to predict target achievement with promising accuracy. We
+conclude with a discussion of how these results can be translated
+into actionable suggestions for activity tracking apps as well as
+traditional offline weight loss programs.
+
+2 RELATED WORK
+
+Goal-setting Theory and Weight Loss. There is a vast body of
+work discussing the mechanics and psychological aspects of goals,
+as well as how goals can be used for health-related behaviors. Locke
+and Latham’s seminal work summarizes empirical research on goal-
+setting theory [27]. Other researchers have focused on how those
+findings apply specifically to health goals [19, 46].
+
+As with goal-setting theory, there is also a vast body of work
+discussing the mechanics of weight loss and weight loss goals. As
+weight loss goals tend to focus on longer term weight loss (as dis-
+cussed later, we find most people want to lose significant percent
+of their body weight), literature relating to longer-term weight
+loss and maintenance, such as Elfhag and Rossner conceptual re-
+view of the subject, is most relevant to our work [14]. Other work
+has focused on characterizing weight loss goals, both in terms of
+what goals people set and which goals are associated with the best
+outcomes [16, 24, 26, 27, 49].
+
+Our work first verifies that findings from these smaller-scale
+offline studies generally apply to our activity tracking dataset in
+terms of which goals people choose to set and their likelihood of
+meeting them, while also using the unprecedented scale of our
+dataset to present new insights. We then extend existing work by
+specifically investigating early behaviors that predict whether or
+not a user will meet their weight loss goal in an activity tracking
+app.
+
+Implementing Goals in Activity Trackers. Activity trackers
+provide users with an environment to both set goals and track
+their progress towards their goals. In the best case, they might
+also be described as systems to help people implement their goals
+[18]. Some work has looked at different higher-level strategies for
+
+572implementing goals in self-trackers, typically through qualitative
+small-scale studies [8, 11, 32]. Other work has investigated the role
+that goals play in changing behavior in self-trackers [9, 15, 15, 35].
+Rather than exploring the best way to implement goals in activity
+trackers, our work is a case study of one of the world’s most popular
+implementations: MyFitnessPal.
+
+Adaptive Goals. While goals in self-trackers frequently take into
+account one’s current size and weight, personalized or adaptive
+goals that take behavior in to account are used sparsely in practice
+[37]. Some researchers have sought to assign adaptive fitness goals
+based on a particular user’s historical data, in order to improve a
+goal that is too difficult or too easy. These typically employ simple
+algorithms that raise goals that the user is easily achieving, and
+lower goals that the user is struggling to achieve [1, 12, 22, 34, 38].
+MyBehavior, in a study of 17 users, suggested exercise or actions to
+take, but not goals [42]. Hermanny et al. explored using heart rate
+variability to set goals [21]. These adaptive goals can be considered
+part of a new class of “just-in-time interventions” [33].
+
+Critically, existing work has focused on measuring progress
+directly related to the goal (e.g. steps for step count goals, calories
+for calorie goals). Our work builds on a large dataset covering many
+behaviors related to achieving the goal and findings from work in
+goal-setting theory to understand whether a goal will be met by
+taking a holistic view of a user’s behavior. We are aware of one
+other paper which aimed to predict whether a weight loss goal will
+be met; however their model relied upon users having already been
+working towards their goal for at least two months and to have
+logged a large number of weights, meaning it was only applicable
+to less than 1% of the total number of users in their dataset [47].
+
+3 DATASET DESCRIPTION
+This section describes the mechanics of the activity tracking app
+MyFitnessPal, the dataset used in this paper.
+
+The Mechanics of MyFitnessPal. MyFitnessPal enables its users
+to track many health-related behaviors. Users can log their food
+intake, their exercise, and their weight. Users can also set health
+and behavioral goals. There are three main goals in the app: total
+weight loss, weekly weight loss, and calories per day. In this paper,
+we focus on the total weight loss goal: the weight that the user
+would like to achieve. All users enter a total weight loss goal upon
+creating a MyFitnessPal account. The app does not provide any
+guidance when a user is selecting their total weight loss goal. Users
+also decide upon a weekly weight loss goal between 0 and 2 lbs
+per week, in increments of half a pound. The default value for
+this field is 1 lb per week. Using this weekly weight loss goal and
+demographic information entered by the user (such as current
+weight and height), the app then automatically assigns the user a
+calories per day limit. Each food that a user logs is counted against
+this limit, while exercise is counted as burning off some of those
+calories.
+
+To log a food item, users type the name of what they ate into
+the app’s search bar, which will then return a list of matches from
+which the user can choose. Many of these items are branded and
+will contain full nutritional content supplied by their manufacturer
+(e.g. a McDonald’s Big Mac or Trader Joes Granola). Other generic
+items, such as eggs or chicken breasts, will also contain nutritional
+
+Table 1: Descriptive statistics from our dataset of MyFitness-
+Pal users.
+
+Characteristics
+
+Value
+
+# of users studied
+Observation period
+Weights logged
+Weight goals set
+Food items logged
+Free-text goal justifications
+Mean age
+% users female
+% users underweight
+% users normal weight
+% users overweight
+% users obese
+
+1,413,431
+August 2014 - April 2017
+44,568,749
+2,803,073
+8,785,560,832
+56,014
+38.69
+71.9
+0.34
+29.39
+36.28
+33.99
+
+content. If the user does not find a suitable match in the app’s
+database, they can optionally log their item manually and choose
+which, if any, nutrient content to provide. There are two methods
+for logging a weight. First, a user can manually enter their current
+weight into the app whenever they would like. Second, users can
+connect MyFitnessPal an many internet-connected “smart” scale,
+which automatically transfer weights they record to the app.
+
+Progress towards the calories per day limit is prominently dis-
+played on the main page of the app. Users can easily view their
+weight loss progress by clicking on a large icon in the bar at the
+bottom of the screen.
+
+The Dataset. We use a dataset of 1.4 million MyFitnessPal users
+over three years, from August 2014 through April 2017. Users set
+2.8 million goals, log 44.6 million weights, and eat 8.8 billion food
+items. Table 1 provides descriptive statistics for our dataset.
+
+In this paper, we focus on weight loss goals and ask the question
+of which users will ultimately achieve their goal. A user’s goal is
+considered achieved if, at some point in the future after setting the
+goal, the user logs a weight that is at least as low as that goal. As
+we are interested in users who showed at least some amount of
+interest in using the app to track their weight loss progress, we
+filter to users with at least 7 days between the first and last logged
+weight of their goal. To remove any minors, extreme outliers, or
+users who entered likely fake information, we also filter out users
+who entered a weight over 1000 pounds, an age less than 18 or over
+80, and who’s weight change goal was more than a 100% difference
+from of their current weight. This removed 3, 681 users users.
+
+4 WHAT WEIGHT GOALS DO PEOPLE
+
+CHOOSE?
+
+Performance towards a weight loss goal is, of course, significantly
+dependant upon the goal’s difficulty. This section focuses on goal
+selection. We aim to validate our dataset by comparing the weight
+loss goals that users set in MyFitnessPal to the weight loss goals
+that people set before the age of self-trackers. In particular, we
+study which goals users choose for themselves; stratifying by demo-
+graphic information. As mentioned earlier, MyFitnessPal provides
+no guidance when users are selecting weight targets, which enables
+
+573Figure 1: Histogram of weight loss goals as a percent of ini-
+tial weight. We see a somewhat skewed distribution (skewd-
+ness of -0.46), with a peak around 10% weight loss.
+
+an unbiased analysis. While we do note that there is likely a selec-
+tion bias in terms of who chooses to use MyFitnessPal, towards
+people who are interested in loosing weight, this bias towards users
+interested in self-improvement is likely present in many activity
+tracking apps.
+
+4.1 Aiming Low: Initial Target Selection
+We begin by plotting a histogram of weight loss goals, in terms of
+percent of current weight, in Figure 1. We find a somewhat skewed
+(skewedness = -0.46) distribution with a peak around 10% weight
+loss. We also see that a non-trivial portion of users are actually
+aiming to gain weight. We remove these users for our later analysis,
+as this is outside the scope of this paper.
+
+4.2 Declining Ambition: User Age
+In this section, we ask how ambition changes with age. To answer
+this question, we begin by plotting the amount of weight users aim
+to lose (as a percent of current weight) by age. We find a U-shaped
+curve, shown in Figure 2a. For instance, for women between the
+ages of 18 to 35, users aim to lose an increasingly large percent
+of their weight, moving from 13.2% to 15.7% loss (Mann-Whitney
+U p < 0.001). The number then stays relatively constant around
+15.7% up until the age of 60. However, after age 60, users aim to
+lose an increasingly smaller amount of weight, with users at age
+75 returning approximately to the same goal as those at age 18
+(Mann-Whitney U p < 0.001).
+
+To validate our results, we can compare them to a 1989 large-scale
+telephone-based survey of weight loss goals [49]. To our knowledge,
+this is the most recent such survey, though notably, it occurred
+long before the existence of activity tracking apps. The survey
+reports results from 21,109 American households, asking if they
+were currently aiming to lose weight. If the survey participant
+said yes, then the study included that goal in their results. This
+means that both this survey and our behavioral tracking dataset
+focus on users aiming to lose weight, thus removing the potential
+for selection bias on that co-variate. The survey reports results
+separately for men and women.
+
+Similarly to our results, the survey found a U-shaped curve, but
+with larger magnitudes. For women between ages 18-29, the survey
+reports a mean of 17.3 percent loss, compared to our 14.3. Between
+
+(a)
+
+(b)
+
+Figure 2: Weight loss goal as percent of current weight, by
+age. (A): Without stratification by BMI. We find a U-shaped
+curve in agreement with existing literature. The U is signifi-
+cantly deeper for women than for men. (B): With this strat-
+ification (results shown only for women), we now see that
+younger adults set the most ambitious goals, but get less am-
+bitious up until the age of 30, from which point goals stay
+relatively consistent. Then, around 60, older adults set in-
+creasingly less ambitious goals. Error bars in all plots corre-
+spond to bootstrapped 95% confidence intervals (here, they
+are mostly too small to be visible).
+
+ages 40-49, the survey reports a mean of 18.1, compared to our
+16.0. And between ages 70-79, the survey reports a mean of 14.9,
+compared to our 13.4. The similar shape of their curve to ours
+helped to validate our results, while at the same time showing that
+at all ages, users in MyFitnessPal are slightly less ambitious than
+those in the 1989 survey.
+
+Having validated our dataset, we now ask, how can we explain
+this U-shaped curve present in both our work and existing work?
+The U-shape seems to go against what we might expect, given the
+fact that younger people tend to be less conservative and take more
+risks than older people [16]. We note that neither we nor the work
+we validate our results against have thus far accounted for the fact
+that age is strongly correlated with whether someone is at a healthy
+
+574Figure 3: Women set more ambitious goals than men; when
+controlling for BMI, women aim to lose approximately 5%
+more weight.
+
+weight, with younger adults more likely to be at a healthy weight.
+We hypothesize that the U-shaped curve may be due to the fact that
+younger users will be healthier on average than older users, and
+thus simply need to lose less to reach a healthy weight. To test this,
+we take advantage of the unprecedented size of our dataset and
+stratify our earlier plot by BMI (Body Mass Index, a number based
+on height and weight used to determine if someone is classified
+as having a normal weight, overweight, or obese). We do so in
+Figure 2b. We now find that, when accounting for how healthy a
+user’s existing weight is, we see that younger users actually set
+significantly more ambitious weight loss goals than older users.
+
+4.3 Gender Matters: User Gender
+We now turn to gender differences. Given our findings from the
+previous section, In Figure 3 we again stratify by BMI to control
+for selection bias, as men tend to have a higher BMI than women.
+We find that women set more ambitious goals than men and that,
+regardless of BMI, this effect size is about a difference of 5% (Mann-
+Whitney U p =< 0.0001). This is somewhat in agreement with the
+1989 survey mentioned above, but with a larger magnitude (they
+saw a difference of at most 4.1%).
+
+5 DO PEOPLE REACH THEIR GOALS?
+Next, we explore goal achievement rates along with the amount
+of time taken for goal achievement. We find that overall, 18.2% of
+weight loss goals are met. This is remarkably close to an earlier
+finding from 2005 that approximately 20% of people overweight
+individuals are successful at long-term weight loss [50].
+
+5.1 How many people reach their goals?
+Clearly, goal difficulty should impact goal achievement. We hy-
+pothesize that more difficult goals are less likely to be achieved.
+Therefore, we start by breaking down target achievement as a func-
+tion of goal size. Figure 4 shows a cumulative distribution function
+(CDF) with a different line for target size buckets. The x-axis indi-
+cates percentage of target reached (x = 100 indicates that a target
+has been achieved). We find that target achievement is relatively
+low, and decreases as targets become more ambitious. People with
+the easiest goals (between 1 and 2 percent of their initial weight)
+are most likely to achieve their targets, with nearly 30% of these
+
+Figure 4: CDF of goal achievement, stratified by goal diffi-
+culty. X -axis indicates percent of goal achieved while y-axis
+indicates the portion of users who have achieved at least that
+amount of their goal. We find that across the board, goals
+are unlikely to be achieved. Only 30% of the easiest goals are
+ever reached, while less than 5% of the most difficult goals
+are ever reached.
+
+users reaching at least 100% of their initial weight loss goal. Of
+users with the most difficult goals (between 40 and 60 percent of
+their initial weight), only 10% are likely to achieve their target.
+
+The x-axis of the above plot begins at zero, indicating that a
+user’s weight has not changed. We note that the plotted y-value of
+our CDF does not begin at 1.0 for any of the goals; this is because
+a large portion of users end up gaining weight, putting their goal
+achievement progress to the left of our x-axis starting point. Inter-
+estingly, despite that fact that users who set easier goals are more
+likely to achieve them, we also find that users who set easier goals
+are more likely to go in the opposite direction and gain weight. For
+instance we see that only 40% of users with the easiest goals lose
+weight, while 90% of users with the hardest goals end up losing
+weight. This finding highlights the importance of not setting a goal
+that is “too easy” for a user.
+
+We also notice a blip at 100 percent achievement, indicating that
+while many users either change their target or stop using the app
+once they’ve reached their goal, others continue to lose weight
+even after achieving their target.
+
+We also find that men are more likely to meet their weight loss
+goals, even when accounting for the fact that men set easier goals:
+for instance, men who aim to lose 5-10% of their weight succeed
+28% of the time, while women who aim to lose 5-10% of their weight
+succeed 20% of the time.
+
+5.2 How long does it take to reach your target?
+Having established how many people reach their targets, we now
+ask how long it takes them to do so. In Figure 5, we show a CCDF
+of time taken to achieve a goal as function of goal difficulty. We
+find that more difficult goals take longer to achieve. For the easiest
+goals, half of all users who meet their goal do so within 100 days.
+For the most difficult goals, this number is closer to 300 days.
+
+575Figure 5: CCDF of days taken to achieve a goal, stratified
+by goal difficulty. More difficult goals take more time to
+achieve.
+
+6 EARLY WARNING SIGNS
+Having seen that few users ever meet their goals, we now ask
+what are the early behavioral factors that indicate a user will or
+won’t meet their goal? We ground our analysis in the existing
+body of literature on short and long term weight loss. We work to
+both answer open questions in the literature and to determine how
+existing findings apply specifically to early detection in weight loss
+target achievement.
+
+We focus specifically on the first seven days after the first weight
+of a goal has been logged. We find that even for difficult, long-term
+goals such as losing twenty pounds, behavioral differences observed
+during just the first seven days are indicative of large changes – up
+to double – the propensity to reach that goal.
+
+6.1 Initial Weight Loss Patterns
+
+Too much too fast?. Initial weight loss has been identified as a
+predictor for later weight loss, and also for weight loss maintenance
+[14]. Some studies have found that the greater the initial weight
+loss, the better the subsequent outcome [3]. However, other work
+has found that greater initial weight loss actually predicts future
+weight gain, explained by the fact that overly quick weight loss is
+considered unsustainable and clinically unhealthy [30].
+
+Goal-setting theory suggests that early progress towards a goal
+could serve to provide future motivation, while slow initial progress
+may cause frustration and ultimately lead to an abandonment of the
+goal [28]. This taken together with the clinical findings discussed
+above, make it uncertain as to whether there may be such a thing
+as “too much” initial progress towards a weight loss goal.
+
+To answer this question, first plot propensity to meet weight
+loss goal by weight change over the first seven days. Figure 6a
+shows that we find a U-shaped curve suggested by prior weight
+loss maintenance literature. On the right, we see that as people
+gain more weight during the first week, that are less likely to meet
+their weight loss goals. On the left we see that, as people lose more
+weight, they are also less likely to meet their goals. We note that
+the downward trend seems to start around -2 lbs per week, which
+is exactly what prior literature would suggested: 2 lbs per week of
+weight loss is often considered the maximum healthy amount [23].
+
+(a)
+
+(b)
+
+Figure 6: Propensity to meet weight loss goal by weight loss
+over the first week. (A): Without stratification by goal dif-
+ficulty, we find a U-shaped curve in agreement with exist-
+ing literature suggesting that “too much” early weight loss is
+unsustainable and leads to worse longer-term outcomes. (B):
+With stratification by goal difficulty, we now see that people
+who lose more weight in the first week are far more likely to
+reach their goals. Contrary to what medical literature might
+suggest, there is no such thing as “too much” unsustainable
+early weight loss which ultimately leads to worse results.
+
+However, we hypothesize that there may be a different reason
+for this U-shape curve than the idea that “too much” early weight
+loss is unsustainable and leads to weight gains, as suggested by
+prior literature. We hypothesize that this U-shaped curve may be
+due to the fact that people who lose less weight during the first
+week have also set easier goals on average. To test this, we can
+stratify our earlier chart by goal difficulty. We show this result in
+Figure 6b. We now find that there is in fact no amount of initial
+weight loss which reduces a user’s propensity to meet their weight
+loss goal. Further, see a large difference in propensity to meet goals
+based on initial weight loss: for instance, a user who loses between
+4-5 pounds over the first two weeks of their 20-40 pound loss goal
+is twice as likely meet that goal as one who loses between 1 and 2
+pounds (Mann-Whitney U p < 0.001). This finding suggests that
+follow-up studies to highly cited clinical weight loss papers may
+be warranted, to determine whether the idea of “too much early
+weight loss” is due to confounding by motivational reasons rather
+than physical limitations around unsustainable weight loss
+
+576Table 2: The four topics discovered from NMF topic model
+trained on weight loss goal reasons supplied by users when
+setting their goal. Each topic lists the top ten words associ-
+ated with it.
+
+1. Kids role model
+good
+example
+set
+family
+children
+kids
+daughter
+energy
+role
+model
+
+2. Lifestyle
+live
+life
+long
+longer
+enjoy
+happy
+family
+able
+kids
+time
+
+3. Health 4. Clothes
+shape
+health
+weight
+family
+need
+tired
+time
+lose
+kids
+energy
+
+fit
+clothes
+old
+able
+jeans
+wear
+energy
+cute
+size
+comfortable
+
+Figure 8 shows propensity to meet a weight loss goal by mean
+calories per day over the first 7 days, normalized by each user’s
+Basal Metabolic Rate (BMR, the amount of calories an individual
+consumes per day at rest), for both committed and uncommitted
+food loggers. To avoid confounding by goal difficulty, each chart
+contains only a specific range of goal weight losses. We find that,
+regardless of amount calories logged, committed food loggers are
+far more likely to meet their weight loss goals. We also see that, as
+committed loggers log more calories, they are less likely to meet
+their goals, which is what we would expect given that eating more
+calories results in worse weight loss. However, this effect only lasts
+up until around 110% BMR calories logged, after which more calo-
+ries logged actually seems to correspond with a higher propensity
+to meet the goal (though we note that confidence intervals all over-
+lap). This is likely explained by the fact that some of these users
+are not actually eating more, but rather are extreme loggers who
+log all food that they eat.
+
+For uncommitted loggers, we see a very slight curve for which
+more eating indicates a lower propensity to meet a goal, followed
+by a higher propensity. The difference between the top of the curve
+and the bottom of the curve is extremely small, which is likely
+because for these uncommitted loggers, more food loggers mostly is
+indicative of an increasingly higher commitment to logging, rather
+than more eating. Overall, we find that logging more calories leads
+to the expected reduction in propensity to meet a weight loss goal,
+but only for committed food loggers.
+
+6.4 Motivation
+When a user sets their target, MyFitnessPal optionally allowed
+users to fill in a free text form which asked why they were selecting
+their goal. We call this a “weight loss reason”. Attitude has been
+found to be important in weight loss maintenance [14], which
+suggests it may also be important in meeting weight loss goals. We
+hypothesize that the weight loss reason provided by a user may
+provide a glimpse into their mindset and attitude towards setting
+and meeting their goal. In this section, we examine these weight
+loss reasons to determine whether they are indicative of propensity
+to meet a weight loss goal.
+
+Figure 7: Propensity to achieve goal by number of days
+logged a weight over the first seven days, stratified by goal
+difficulty. We see that across all difficulty of goals, people
+who log weights more frequently over the first week are
+more likely to achieve their goal.
+
+6.2 Self-monitoring
+Self-monitoring means observing oneself and one’s behaviour. In-
+deed, this is the core purpose of an activity tracker. Most activity
+tracking apps today rely on their users manually choosing log
+many important behaviors. While step count is typically logged
+automatically, workouts, food intake, and weights often involve
+some amount of manual input.
+
+Regular self-monitoring of weight has been linked to long-term
+weight loss maintenance, which suggests that it may also be im-
+portant for meeting weight loss goals [6]. In Figure 7, we plot the
+number of days that a user logged their weight over the first 7 days
+of a goal. We see that, for all difficulty of weight goals, people who
+log more regularly over the first seven days are significantly more
+likely to ultimately meet their goal. For a goal between 40-80 lbs,
+users who log a weight all 7 days of their first week are more than
+twice as likely to ultimately meet their goal than those who log
+only once, moving from 10% to 20% likelihood (Mann-Whitney U
+p < 0.001). Similarly, for a goal between 10 and 20 lbs, we see a
+change between logging one weight and seven weights from 15%
+up to 35% (Mann-Whitney U p < 0.001).
+
+6.3 Dietary Intake
+One of the core features of MyFitnessPal is the ability to log food
+intake. Obviously, food intake is strongly associated with weight
+loss. Longer-term weight loss and maintenance has been linked to
+eating smaller portions and higher quality nutrients [14].
+
+In MyFitnessPal, users log individual food items, where each
+item has an associated calorie amount (typically populated by My-
+FitnessPal’s food database). We hypothesize that users might fall
+into two categories: uncommitted loggers, who likely aren’t par-
+ticularly motivated to log their food and don’t log everything they
+eat, and committed loggers, who are motivated to log what they
+eat. We assign users to groups based on total days logged over the
+first 7 days: users who logged at least one food item all 7 days are
+considered a committed logger, and users who did not are consid-
+ered an uncommitted logger. How likely are these groups to meet
+their weight loss goals?
+
+577(a) 5-10 lb goal loss.
+
+(b) 10-20 lb goal loss.
+
+(c) 20-40 lb goal loss.
+
+Figure 8: Committed food loggers during the first 7 days of a goal are much more likely to meet their weight loss goals than less
+committed loggers. Further, committed loggers who log more calories are less likely to meet their goal, while uncommitted
+loggers who log more calories are more likely to meet their goal.
+
+and, as we showed earlier, more difficult goals are less likely to be
+met.
+
+We now ask: what is different about the reasons given by people
+who meet their goals versus the people who don’t? We first find that
+people who meet their goals use 1.4 fewer words (Mann Whitney
+U p < 0.0001) than those who do meet their goals, at 19.2 words
+compared to 20.6 words. This is surprising, as one might expect
+that a longer reason indicates more commitment to the app or more
+thought-out reasons for losing weight. But how do these reasons
+differ in terms of the content’s subject matter?
+
+Topic Models. Studies have found that people who are motivated
+to lose weight by a desire for greater self-confidence or superficial
+considerations such as appearance (e.g. a “healthy narcissism”)
+are more successful at maintaining weight loss than those who
+are primarily motivated by medical concerns or from pressure by
+those around them [14]. To determine if we see a similar effect in
+propensity to meet weight loss goals, we would like to map each
+weight loss reason to an easily interpretable category. To do this,
+we propose a novel application of topic modeling algorithms.
+
+Topic models are an unsupervised learning approach to auto-
+matically infer interesting patterns in large text corpora [39]. We
+use this exploratory approach with the goal of understanding what
+topics are commonly discussed in goal reasons provided by users,
+with the aim of understanding how they differ in goals which are
+or are not achieved. Topic modeling has previously been used to
+extract health-related topics from Twitter [17, 39].
+
+We build our topic model using non-negative matrix factorization
+(NMF) on extracted term frequency-inverse document frequency (tf-
+idf) features from our corpus, which helps to select the most useful
+terms. We use the “English” stopwords list from scikit-learn [41]
+along with a few words we added manually: want, look, feel, better,
+healthy, healthier. We use these as stopwords because they were
+present in far too many articles, to the point that they dominated
+every topic generated, and in this situation a typical approach to
+improve topic models is to remove such words. We experiment
+with selecting a number of topics between k=3 and 20, ultimately
+selecting k=4 after finding them the most clearly interpretable and
+differentiated.
+
+Figure 9: Propensity to achieve goal by motivation. Motiva-
+tions derived from learning a topic model over free-text goal
+reasons provided by users and then assigning each goal a pri-
+mary topic.
+
+After filtering to users who choose to use this field, we end up
+with 56,014 goals associated with a reason. We first provide a few
+sample reasons to give a sense of the type of reasons provided
+by MyFitnessPal users (note that for anonymization, we slightly
+change the exact text while retaining the meaning). Many are some-
+what generic, with users writing that they are setting their goal “To
+feel better, and have more energy!” and “I would like to get in shape
+and get back to the weight where I felt comfortable with my body.”
+However, some reasons were quite specific to the user’s personal
+situation, such as “My dad’s adopted and doesn’t know his family
+history, but he had a heart attack at age 34 and a RI before age 46.
+I already have heart issues (which admittedly are well controlled
+with meds, but still.....”
+
+The choice to fill in this field seems likely to be related to propen-
+sity to self monitor and commitment to the app which, as discussed
+earlier, are linked to a higher propensity to achieve one’s goal. Sur-
+prisingly, we find that users who fill in a weight loss reason are
+less likely to meet their goals (20.5% vs 17.6%) (Mann-Whitney U
+p < 0.001). However, this difference can likely be explained by the
+fact that people who supply a weight loss reason aim to lose nearly
+50% more weight (33.8 lbs vs 24.6 lbs, Mann-Whitney U p < 0.001)
+
+578Table 2 presents the top 10 terms from each of the four discovered
+topics, along with our manually assigned topic labels. We assign
+each goal reason a “primary topic” by selecting the topic with the
+highest associated score from our NMF model, with a minimum
+required score of 0.01 (22.4% of goals did not meet this threshold
+for any of the four topics). We find the topics to be:
+
+(1) Role model for kids: users with a reason in this topic dis-
+cussed how they wished to set a better example for their
+children. Primary topic for 12.4% of users.
+
+(2) Lifestyle: users wanted to live longer, happier lives so that
+they’d have more time to spend with their family. Primary
+topic for 12.8% of users.
+
+(3) Health: users were concerned about their health and wanted
+to get in better shape. Primary topic for 36.9% of users.
+(4) Clothes: reasons in this topic discussed wanting to fit into
+older clothes that they used to be able to fit in to, or being able
+purchase and fit into new clothes that they found attractive.
+Primary topic for 15.4% of users.
+
+Now that we have learned topics for our goal reasons, we can
+examine which reasons reflect a higher propensity to meet one’s
+goal. To do this. In Figure 9, we plot propensity to meet goals by
+primary topic. We first note that, unlike in prior sections of this
+paper, we are unable to stratify by goal difficulty due to the smaller
+size of this dataset. This means that some results may be explained
+by the fact that, for instance, people who’s primary motivation is
+fitting in to clothes set slightly easier goals ( 2 lbs) than those who
+primary motivation is health. That said, we do find that people
+primarily motivated by health are more likely to meet their goals
+than people primarily motivated by clothing, which seemingly goes
+against what the prior work cited above would suggest.
+
+7 PREDICTING GOAL ACHIEVEMENT
+Next, we build on insights from previous sections to predict the
+likelihood that a user will ever achieve their goal after observing
+their behavior over the first 7 days.
+
+7.1 Features Used For Learning
+To illustrate the predictive power of the different feature sets re-
+ported earlier in this paper, we define a series of models, each with
+a different feature set corresponding to one of the goal-related
+behaviors. We focus on six types of features:
+
+(1) Weight loss goal: In Section 4, we saw propensity to meet
+a weight loss goal varied significantly with the difficulty of
+the goal, with easier goals more likely to be met.
+
+(2) Demographics: we found that propensity to meet a goal
+also varied with the user’s age and gender, with men and
+younger adults more likely to meet their goals.
+
+(3) Initial weight loss: In Section 5.1, we saw that people who
+lost more weight over the first 7 days were more likely to
+meet their goal.
+
+(4) Self-monitoring: In Section 5.2, we saw that users who log
+their weights more frequently over the first 7 days are more
+likely to meet their goals.
+
+(5) Calories logged and frequency of logging: In Section
+5.3, we saw that logging more calories indicates a lower
+likelihood of meeting a goal, but only for committed loggers.
+
+(6) Motivation: In Section 5.4, we analyzed free-text motivation
+provided by users. We use word-level TF-IDF results (for the
+top 5000 words) as features in this model. This is the same
+methodology used to train our topic models discussed in
+Section 5.4.
+
+7.2 Experimental Setup
+We aim to predict the likelihood that a user will ever achieve their
+weight loss goal, after observing their behavior only in the first 7
+days. As in Section 6, we filter to users for who there is at least 7
+days between the start of their goal and the last weight logged of
+their goal (though we do not require a minimum number of weight
+logged during this period). We also remove all users who have
+already met their goal within the first several days, as it would not
+be a fair task to predict goal achievement after a user has already
+achieved their goal. We note that, as shown in Figure 6, most users
+take far longer than 7 days to meet their goals. We also remove
+users who didn’t last at least 7 days to avoid users who download
+the app as a curiosity and use it very briefly without ever truly
+attempting to meet their goal. Further, we filter to users who use
+the features of the app that we discuss in this paper at least once:
+specifically, users must log at least one food item, and also must
+fill in the free-text motivation field when setting their goal. After
+applying these filters, we arrive at a dataset containing 33,642 goals.
+(This large reduction from our overall dataset is primarily due to
+the fact that most users chose not to provide a free-text weight
+loss reason, as the app provided no motivation for them to do
+so. Without that restriction, we would have over 900,000 goals in
+our prediction dataset, and we find that ROC AUC would be only
+slightly reduced).
+
+We experiment with several classification models, including Lin-
+ear Regression, Gradient Boosted Trees, Support Vector Machines,
+and Random Forests. We find that Random Forest models are the
+most effective for our task, and so we report results from only from
+those models. Because of the unbalanced dataset (only 18.6% of
+users achieve their goal) and the trade-off between true and false
+positive rate associated with prediction, we choose to compare mod-
+els using the area under the receiver operating characteristic (ROC)
+curve (AUC) which is equal to the probability that a classifier will
+rank a randomly chosen positive instance higher than a randomly
+chosen negative one. Thus, a random baseline will score 50% on
+ROC AUC. We use a 10-fold cross-validation for estimation. We
+standardize all features to have zero mean and unit variance.
+
+7.3 Results
+Figure 10 shows the prediction accuracy of our models. With a
+model trained on all available features, we achieve a an accuracy
+of 79% ROC AUC.
+
+We find the most predictive features to be the initial goal and
+the user’s motivation. Strikingly, motivation is significantly more
+predictive than eating patterns. We note that our motivation model
+was trained with a simple TF-IDF analysis of the words a user
+writes in their short free-text goal justification. Future work should
+explore more sophisticated models and more deeply analyze how
+free-text motivation for a goal can predict goal achievement rates.
+Surprisingly, we see that initial weight loss on its own was not
+
+579Implications And Future Work. In addition to uncovering im-
+portant factors in how people set and achieve their weight loss
+goals in an activity tracking app, our work also suggests several
+practical implications. Our work shows that it is possible to predict
+whether a user will achieve their weight loss goals after observing
+just their first week of behavior while attempting to meet that goal.
+This opens the door for activity tracking apps to build a new type
+of intervention which notifies a user that they seem unlikely to
+meet their long term goal. Such an intervention might enable users
+to decide that they should set an easier goal, before they become
+frustrated and drop out of the app.
+
+Future work should consider several important directions to de-
+termine both how to create such an intervention and to determine
+the effectiveness of such an intervention. First, work should investi-
+gate what a activity tracking app do when it recognizes that a goal
+will never be met, and how users respond to potential interventions.
+For instance, it is possible than if the user is told too forcefully that
+they will never meet their goal, perhaps they’ll just immediately
+give up without aiming for an easier goal. On the other hand, if a
+user is simply assigned an easier goal, it is possible that they will
+internally still be interested in meeting their first goal, and thus do
+not truly have an easier one.
+
+9 CONCLUSION
+We present a quantitative analysis of the weight loss goals that
+people set in MyFitnessPal, and the early behaviors that lead to the
+achievement of those goals. We find that women set more ambi-
+tious goals than men, and that younger users set more ambitious
+goals than older users. We find that most of these goals are never
+achieved, but that easier goals are far more likely to be achieved
+than harder ones. We then show that propensity to meet a goal
+varies significantly by behavior observed during the first week af-
+ter setting the goal, despite the fact that goals often take months
+or even years to achieve. We find that, contrary to what findings
+from medical studies on weight-loss maintenance might suggest,
+there is no amount of early weight loss which is “too much”; rather
+more early progress towards a goal predicts a higher propensity to
+achieve that goal. We also find that people who log more calories
+are less likely to meet their goal, but only when we account for
+commitment to logging. We introduce a novel application of topic
+modeling to show the four primary motivations that users have for
+selecting their goals. Finally, we show that the results presented in
+our paper are sufficiently strong to predict, after observing seven
+days of behavior, whether a user will ultimately meet their goal,
+with an accuracy of up to 79% ROC AUC. Our findings suggest that
+activity tracking apps may be able to help their users avoid the
+pitfalls of failing to meet their goals by asking them them select
+a more realistic goal after observing their holistic behavior and
+motivations early-on.
+
+ACKNOWLEDGEMENTS
+We thank Claire Donnat, Rok Sosic, Emma Pierson, and MyFit-
+nessPal. M.G. was supported by a Junglee Corporation Stanford
+Graduate Fellowship. This research has been supported in part by
+NSF OAC-1835598, ARO MURI, Stanford Data Science Initiative,
+and Chan Zuckerberg Biohub.
+
+Figure 10: ROC AUC for predicting whether a user will
+achieve their weight loss goal from observing their behavior
+over the first seven days after setting it. We report accuracy
+for each feature set individually and all features together.
+We reach 79% ROC AUC in a combined model with all fea-
+tures.
+
+a strong predictor of propensity to meet a goal, which is likely
+explained by the fact that initial loss is somewhat meaningless
+without knowing the goal that the loss is working towards.
+
+8 DISCUSSION
+Goals are a critical component of activity tracking apps. However,
+long-term goals such as weight loss are rarely met. This paper
+moves towards addressing this challenge by analyzing user behavior
+related to both setting and achieving their goals. In particular, we
+focus on how behavior during the first week after setting a goal
+predicts whether or not that goal will be achieved. We do so because
+early detection and notification of goals that are too hard may
+enable a new class of interventions where users can be encouraged
+make their goals easier before becoming frustrated and leaving the
+app. We identify a set of factors which predict goal achievement
+related to demographics, initial weight loss, self-monitoring, dietary
+intake, and motivation, summarized in Section 1.
+
+Limitations. There are several important limitations to our work,
+primarily related to generalizability and causality. First, we note
+that a weight loss goal is a long-term health goal, which we saw
+typically takes weeks, months, or even years to achieve. It is an open
+question as to whether the characteristics of users who achieve
+short-term goals, such as “walk 10 minutes today”, might differ.
+
+We also note that our results are correlational in nature. Ideally,
+the factors we analyze would represent causal effects to help us
+understand how to improve weight loss goal achievement. While in
+our analysis we both build off of prior causal findings and make ef-
+forts to reduce potential confounders, the factors that lead to weight
+loss are enormously complex and causal analysis is often extremely
+difficult or impossible. However, this is not a necessary requirement
+for such factors to be useful in machine learning models that predict
+whether or not a goal is likely to be met. We show that even simple
+models can predict goal achievement after observing just one week
+of behavior with reasonably high accuracy.
+
+580REFERENCES
+[1] Marc A Adams, James F Sallis, Gregory J Norman, Melbourne F Hovell, Eric B
+Hekler, and Elyse Perata. 2013. An adaptive physical activity intervention for
+overweight adults: a randomized controlled trial. PloS one 8, 12 (2013), e82901.
+[2] Tim Althoff, Pranav Jindal, and Jure Leskovec. 2017. Online actions with offline
+impact: How online social networks influence online and offline user behavior.
+In Proceedings of the Tenth ACM International Conference on Web Search and Data
+Mining. ACM, 537–546.
+
+[3] Arne Astrup and Stephan Rössner. 2000. Lessons from obesity management
+programmes: greater initial weight loss improves long-term maintenance. obesity
+reviews 1, 1 (2000), 17–19.
+
+[4] Albert Bandura. 1977. Self-efficacy: toward a unifying theory of behavioral
+
+change. Psychological review 84, 2 (1977), 191.
+
+[5] Thomas Bodenheimer and Margaret A Handley. 2009. Goal-setting for behavior
+change in primary care: an exploration and status report. Patient education and
+counseling 76, 2 (2009), 174–180.
+
+[6] Lora E Burke, Jing Wang, and Mary Ann Sevick. 2011. Self-monitoring in weight
+loss: a systematic review of the literature. Journal of the American Dietetic
+Association 111, 1 (2011), 92–102.
+
+[7] Bernard CK Choi, Anita WP Pak, and Jerome CL Choi. 2007. Daily step goal of
+10,000 steps: a literature review. Clinical & Investigative Medicine 30, 3 (2007),
+146–151.
+
+[8] Sunny Consolvo, Predrag Klasnja, David W McDonald, and James A Landay.
+2009. Goal-setting considerations for persuasive technologies that encourage
+physical activity. In Proceedings of the 4th international Conference on Persuasive
+Technology. ACM, 8.
+
+[9] Felicia Cordeiro, Daniel A Epstein, Edison Thomaz, Elizabeth Bales, Arvind K
+Jagannathan, Gregory D Abowd, and James Fogarty. 2015. Barriers and negative
+nudges: Exploring challenges in food journaling. In Proceedings of the 33rd Annual
+ACM Conference on Human Factors in Computing Systems. ACM, 1159–1162.
+[10] Siena F Davis, Marisa A Ellsworth, Hannah E Payne, Shelby M Hall, Joshua H
+West, and Amber L Nordhagen. 2016. Health behavior theory in popular calorie
+counting apps: a content analysis. JMIR mHealth and uHealth 4, 1 (2016).
+[11] Laura Dennison, Leanne Morrison, Gemma Conway, and Lucy Yardley. 2013.
+Opportunities and challenges for smartphone applications in supporting health
+behavior change: qualitative study. Journal of medical Internet research 15, 4
+(2013).
+
+[12] Rod K Dishman, Robert J Vandenberg, Robert W Motl, Mark G Wilson, and
+David M DeJoy. 2009. Dose relations between goal setting, theory-based correlates
+of goal setting and increases in physical activity during a workplace trial. Health
+education research 25, 4 (2009), 620–631.
+
+[13] Jeanne M Donaldson and Matthew P Normand. 2009. Using goal setting, self-
+monitoring, and feedback to increase calorie expenditure in obese adults. Behav-
+ioral Interventions 24, 2 (2009), 73–83.
+
+[14] Kristina Elfhag and Stephan Rössner. 2005. Who succeeds in maintaining weight
+loss? A conceptual review of factors associated with weight loss maintenance
+and weight regain. Obesity reviews 6, 1 (2005), 67–85.
+
+[15] Daniel A Epstein, Monica Caraway, Chuck Johnston, An Ping, James Fogarty,
+and Sean A Munson. 2016. Beyond abandonment to next steps: understanding
+and designing for life after personal informatics tool use. In Proceedings of the
+2016 CHI Conference on Human Factors in Computing Systems. ACM, 1109–1113.
+[16] Gary D Foster, Thomas A Wadden, Renee A Vogt, and Gail Brewer. 1997. What
+is a reasonable weight loss? Patients’ expectations and evaluations of obesity
+treatment outcomes. Journal of consulting and clinical psychology 65, 1 (1997),
+79.
+
+[17] Debarchana Ghosh and Rajarshi Guha. 2013. What are we ‘tweeting’ about obe-
+sity? Mapping tweets with topic modeling and Geographic Information System.
+Cartography and geographic information science 40, 2 (2013), 90–102.
+
+[18] Peter M Gollwitzer. 1999. Implementation intentions: strong effects of simple
+
+plans. American psychologist 54, 7 (1999), 493.
+
+[19] Peter M Gollwitzer and Gabriele Oettingen. 1998. The emergence and implemen-
+
+tation of health goals. Psychology and Health 13, 4 (1998), 687–715.
+
+[20] Mary Gowin, Marshall Cheney, Shannon Gwin, and Taylor Franklin Wann. 2015.
+Health and fitness app use in college students: a qualitative study. American
+Journal of Health Education 46, 4 (2015), 223–230.
+
+[21] Katja Herrmanny, Nils Beckmann, Katrin Nachbar, Hanno Sauer, Jürgen Ziegler,
+and Aysegül Dogangün. 2016. Using Psychophysiological Parameters to Support
+Users in Setting Effective Activity Goals. In Proceedings of the 2016 CHI Conference
+Extended Abstracts on Human Factors in Computing Systems. ACM, 1637–1646.
+[22] Katja Herrmanny, Jürgen Ziegler, and Aysegül Dogangün. 2016. Supporting
+users in setting effective goals in activity tracking. In International Conference on
+Persuasive Technology. Springer, 15–26.
+
+[23] Jack F Hollis, Christina M Gullion, Victor J Stevens, Phillip J Brantley, Lawrence J
+Appel, Jamy D Ard, Catherine M Champagne, Arlene Dalcin, Thomas P Erlinger,
+Kristine Funk, et al. 2008. Weight loss during the intensive intervention phase of
+the weight-loss maintenance trial. American journal of preventive medicine 35, 2
+(2008), 118–126.
+
+[24] Robert W Jeffrey, Rena R Wing, and Randall R Mayer. 1998. Are smaller weight
+losses or more achievable weight loss goals better in the long term for obese
+patients? Journal of consulting and clinical psychology 66, 4 (1998), 641.
+
+[25] Brian Yoshio Laing, Carol M Mangione, Chi-Hong Tseng, Mei Leng, Ekaterina
+Vaisberg, Megha Mahida, Michelle Bholat, Eve Glazier, Donald E Morisky, and
+Douglas S Bell. 2014. Effectiveness of a smartphone application for weight loss
+compared with usual Care in Overweight Primary Care PatientsA randomized,
+controlled TrialSmartphone application for weight loss in overweight primary
+care patients. Annals of internal medicine 161, 10_Supplement (2014), S5–S12.
+
+[26] JA Linde, RW Jeffery, RL Levy, NP Pronk, and RG Boyle. 2005. Weight loss goals
+and treatment outcomes among overweight men and women enrolled in a weight
+loss trial. International journal of obesity 29, 8 (2005), 1002.
+
+[27] Jennifer A Linde, Robert W Jeffery, Emily A Finch, Debbie M Ng, and Alexander J
+Rothman. 2004. Are unrealistic weight loss goals associated with outcomes for
+overweight women? Obesity Research 12, 3 (2004), 569–576.
+
+[28] Edwin A Locke and Gary P Latham. 2002. Building a practically useful theory of
+goal setting and task motivation: A 35-year odyssey. American psychologist 57, 9
+(2002), 705.
+
+[29] Suliman Mansi, Stephan Milosavljevic, Steve Tumilty, Paul Hendrick, Chris Higgs,
+and David G Baxter. 2015. Investigating the effect of a 3-month workplace-based
+pedometer-driven walking programme on health-related quality of life in meat
+processing workers: a feasibility study within a randomized controlled trial. BMC
+public health 15, 1 (2015), 410.
+
+[30] Maureen T McGuire, Rena R Wing, Mary L Klem, Wei Lang, and James O Hill.
+1999. What predicts weight regain in a group of successful weight losers? Journal
+of consulting and clinical psychology 67, 2 (1999), 177.
+
+[31] Kathryn Mercer, Melissa Li, Lora Giangregorio, Catherine Burns, and Kelly
+Grindrod. 2016. Behavior change techniques present in wearable activity trackers:
+a critical analysis. JMIR mHealth and uHealth 4, 2 (2016).
+
+[32] Sean A Munson and Sunny Consolvo. 2012. Exploring goal-setting, rewards,
+self-monitoring, and sharing to motivate physical activity. In Pervasive computing
+technologies for healthcare (PervasiveHealth), 2012 6th international conference on.
+IEEE, 25–32.
+
+[33] Inbal Nahum-Shani, Shawna N Smith, Bonnie J Spring, Linda M Collins, Katie
+Witkiewitz, Ambuj Tewari, and Susan A Murphy. 2017. Just-in-time adaptive
+interventions (JITAIs) in mobile health: key components and design principles
+for ongoing health behavior support. Annals of Behavioral Medicine 52, 6 (2017),
+446–462.
+
+[34] Matthew P Normand. 2008. Increasing physical activity through self-monitoring,
+goal setting, and feedback. Behavioral Interventions 23, 4 (2008), 227–236.
+[35] Faryle Nothwehr and Jingzhen Yang. 2006. Goal setting frequency and the use
+of behavioral strategies related to diet and physical activity. Health education
+research 22, 4 (2006), 532–538.
+
+[36] Ellinor K Olander, Helen Fletcher, Stefanie Williams, Lou Atkinson, Andrew
+Turner, and David P French. 2013. What are the most effective techniques
+in changing obese individuals’ physical activity self-efficacy and behaviour: a
+systematic review and meta-analysis. International Journal of Behavioral Nutrition
+and Physical Activity 10, 1 (2013), 29.
+
+[37] Harm op den Akker, Valerie M Jones, and Hermie J Hermens. 2014. Tailoring
+real-time physical activity coaching systems: a literature survey and model. User
+modeling and user-adapted interaction 24, 5 (2014), 351–392.
+
+[38] Harm op den Akker, Randy Klaassen, Rieks op den Akker, Valerie M Jones, and
+Hermie J Hermens. 2013. Opportunities for smart & tailored activity coaching. In
+Computer-Based Medical Systems (CBMS), 2013 IEEE 26th International Symposium
+on. IEEE, 546–547.
+
+[39] Michael J Paul and Mark Dredze. 2014. Discovering health topics in social media
+
+using topic models. PloS one 9, 8 (2014), e103408.
+
+[40] Erin S Pearson. 2012. Goal setting as a health behavior change strategy in over-
+weight and obese adults: a systematic literature review examining intervention
+components. Patient education and counseling 87, 1 (2012), 32–42.
+
+[41] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M.
+Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cour-
+napeau, M. Brucher, M. Perrot, and E. Duchesnay. 2011. Scikit-learn: Machine
+Learning in Python. Journal of Machine Learning Research 12 (2011), 2825–2830.
+[42] Mashfiqui Rabbi, Min Hane Aung, Mi Zhang, and Tanzeem Choudhury. 2015.
+MyBehavior: automatic personalized health feedback from user behaviors and
+preferences using smartphones. In Proceedings of the 2015 ACM International
+Joint Conference on Pervasive and Ubiquitous Computing. ACM, 707–718.
+[43] John Rooksby, Mattias Rost, Alistair Morrison, and Matthew Chalmers Chalmers.
+2014. Personal tracking as lived informatics. In Proceedings of the 32nd annual
+ACM conference on Human factors in computing systems. ACM, 1163–1172.
+[44] Stephanie Schoeppe, Stephanie Alley, Wendy Van Lippevelde, Nicola A Bray,
+Susan L Williams, Mitch J Duncan, and Corneel Vandelanotte. 2016. Efficacy
+of interventions that use apps to improve diet, physical activity and sedentary
+behaviour: a systematic review. International Journal of Behavioral Nutrition and
+Physical Activity 13, 1 (2016), 127.
+
+[45] Mical Kay Shilts, Marcel Horowitz, and Marilyn S Townsend. 2004. Goal setting
+as a strategy for dietary and physical activity behavior change: a review of the
+
+581literature. American Journal of Health Promotion 19, 2 (2004), 81–93.
+
+[46] Victor J Strecher, Gerard H Seijts, Gerjo J Kok, Gary P Latham, Russell Glasgow,
+Brenda DeVellis, Ree M Meertens, and David W Bulger. 1995. Goal setting as
+a strategy for health behavior change. Health education quarterly 22, 2 (1995),
+190–200.
+
+[47] Petar Veličković, Laurynas Karazija, Nicholas D Lane, Sourav Bhattacharya, Edgar
+Liberis, Pietro Liò, Angela Chieh, Otmane Bellahsen, and Matthieu Vegreville.
+2018. Cross-modal recurrent models for weight objective prediction from multi-
+modal time-series data. In Proceedings of the 12th EAI International Conference on
+Pervasive Computing Technologies for Healthcare. ACM, 178–186.
+
+[48] Dong Wen, Xingting Zhang, Xingyu Liu, and Jianbo Lei. 2017. Evaluating the
+Consistency of Current Mainstream Wearable Devices in Health Monitoring: A
+Comparison Under Free-Living Conditions. Journal of medical Internet research
+19, 3 (2017).
+
+[49] David F Williamson, Mary K Serdula, Robert F Anda, Alan Levy, and Tim Byers.
+1992. Weight loss attempts in adults: goals, duration, and rate of weight loss.
+American Journal of Public Health 82, 9 (1992), 1251–1257.
+
+[50] Rena R Wing and Suzanne Phelan. 2005. Long-term weight loss maintenance–.
+
+The American journal of clinical nutrition 82, 1 (2005), 222S–225S.
+
+582

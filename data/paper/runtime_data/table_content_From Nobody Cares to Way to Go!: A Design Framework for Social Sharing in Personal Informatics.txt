@@ -1,0 +1,35 @@
+1. Introduction
+2. Socially Sharing Personal Informatics Data
+    2.1 Why people share
+    2.2 Request for information
+    2.3 Desire for emotional support
+    2.4 Seeking motivation or accountability from audience
+    2.5 Motivating or informing the sharing audience
+    2.6 Impression management
+3. Developing a Design Framework
+    3.1 Data Domain
+    3.2 Preprocessing
+    3.3 Sharing Trigger
+    3.4 Persistence
+    3.5 Post Content
+    3.6 Audience
+4. Applying the Design Framework Dimensions
+    4.1 Formative survey: sharer goals and desired reactions
+    4.2 Collected Tweets (CT) study
+    4.3 Generated Tweets (GT) study
+5. Results
+    5.1 System-generated content
+    5.2 Details about activity are well-received
+    5.3 Pictures in posts are seen as valuable
+    5.4 Live events do not receive feedback
+    5.5 Positive outcomes from sharing
+    5.6 Undesired consequences to sharing
+6. Discussion
+    6.1 System vs. Sharer-generated content
+    6.2 Audience and post frequency
+    6.3 Mismatch between sharer goal and audience interpretation
+    6.4 Extending beyond RunKeeper and Twitter
+    6.5 Use of the design dimension framework
+7. Conclusion
+8. Acknowledgments
+9. References

@@ -1,0 +1,1741 @@
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+No Longer Wearing: Investigating the Abandonment of
+Personal Health-Tracking Technologies on Craigslist
+
+James Clawson, Jessica A. Pater, Andrew D Miller†, Elizabeth D. Mynatt, Lena Mamykina‡
+
+Georgia Institute of Technology
+{jamer,pater,mynatt}@gatech.edu
+
+†University of Washington
+millerad@uw.edu
+
+‡Columbia University
+om2196@cumc.columbia.edu
+
+ABSTRACT
+Personal health-tracking technologies have become a part
+of mainstream culture.
+Their growing popularity and
+widespread adoption present an opportunity for the design of
+new interventions to improve wellness and health. However,
+there is an increasing concern that these technologies are fail-
+ing to inspire long-term adoption. In order to understand why
+users abandon personal health-tracking technologies, we ana-
+lyzed advertisements of secondary sales of such technologies
+on Craigslist. We conducted iterative inductive and deduc-
+tive analyses of approximately 1600 advertisements of per-
+sonal health-tracking technologies posted over the course of
+one month across the US. We identify health motivations and
+rationales for abandonment and present a set of design im-
+plications. We call for improved theories that help translate
+between existing theories designed to explain psychological
+effects of health behavior change and the technologies that
+help people make those changes.
+
+Author Keywords
+technology abandonment; health-tracking; self-monitoring
+
+ACM Classiﬁcation Keywords
+H.5.m. Information Interfaces and Presentation: Misc.
+
+INTRODUCTION
+New advances in sensing technologies have exponentially in-
+creased their availability for individuals of all walks of life.
+As a result, individuals are capable of tracking and moni-
+toring a variety of activities and generate volumes of self-
+monitoring data. Self-monitoring enthusiasts, like quantiﬁed
+selfers [25], advocate the multiple beneﬁts of self-monitoring
+technologies and their ability to lead to insight and increased
+self-knowledge.
+
+One area where wearable self-monitoring technologies re-
+ceive particular attention is in the domain of health and well-
+ness. Physical-activity trackers (e.g., Fitbit), digital scales,
+bluetooth-equipped heart-rate monitors, and other emerging
+sensors give rise to mobile health (mHealth) applications to
+
+Permission to make digital or hard copies of all or part of this work for personal or 
+classroom use is granted without fee provided that copies are not made or distributed 
+for proﬁt or commercial advantage and that copies bear this notice and the full citation 
+on the ﬁrst page.  Copyrights for components of this work owned by others than the 
+author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or 
+republish, to post on servers or to redistribute to lists, requires prior speciﬁc permission 
+and/or a fee. Request permissions from Permissions@acm.org.
+UbiComp ’15, September 7-11, 2015, Osaka, Japan.
+Copyright is held by the owner/author(s). Publication rights licensed to ACM. 
+ACM 978-1-4503-3574-4/15/09...$15.00.
+http://dx.doi.org/10.1145/2750858.2807554
+
+647
+
+collect data about users’ activities and states with minimal
+burden, easing the process of self-monitoring [22]. Marketing
+research shows that these technologies have reached a wide
+level of adoption among American customers: as a product
+sector, predictions indicate that wearable personal-tracking
+technologies will eclipse $70 Billion by 2024 [20]. HCI re-
+search on self-tracking has made great strides towards under-
+standing the motivations that lead individuals to adopt novel
+sensing technologies into their daily lives [6, 38].
+
+However, together with this enthusiasm, there exists consid-
+erable and growing skepticism regarding these technologies
+and their ability to inspire and sustain individuals’ ongoing
+engagement with their everyday health and wellness [17]. A
+recent study suggests that one third of all Americans who pur-
+chased a wearable self-monitoring product abandoned it after
+only 6 months of use [23]. Many interpret these ﬁndings as
+indicative of the failure of wearable health technologies to
+inspire continuous engagement and interest from their users,
+and question the beneﬁts and even the survival of these tech-
+nologies [15, 19]. However, an in-depth account of the rea-
+sons why individuals abandon their wearable self-monitoring
+devices is lacking. This scholarship is important as it could
+enrich the existing knowledge on how individuals engage or
+fail to engage with self-monitoring technologies and suggest
+directions for future designs and research.
+
+In this paper we examine why users abandon self-monitoring
+technologies. This problem is challenging to study with
+traditional qualitative methods, such as interviews or focus
+groups, because of the potential bias in the sampling of par-
+ticipants. To address this limitation, we examined a less tra-
+ditional but potentially rich destination for ‘abandoned’ ﬁt-
+ness technologies: secondary sales in online marketplaces.
+Speciﬁcally, we focused on posts from the classiﬁed ad site
+Craigslist, collecting advertisements for sales of common
+consumer ﬁtness trackers that took place over the course of
+one month across the US. We analyzed and iteratively coded
+the approximately 1600 posts that matched our criteria to un-
+derstand sellers’ point of abandonment, motivation for dis-
+carding the technology, and any additional comments or sto-
+ries included in the posts. Throughout the analysis of our
+data, we adopted the assumption that, while there are def-
+inite outliers that are abandoning their technologies based
+on “positive” rationales, most abandoning of health-tracking
+technologies are ultimately a “negative” activity because the
+owner has not fully exploited the beneﬁts of using that tech-
+nology.
+
+The results of our study suggest a more optimistic view of the
+adoption potential of wearable self-monitoring technologies
+than recent studies and media reports may suggest. While
+the rate of abandonment may indeed be high, our analysis
+reveals that not all acts of technology abandonment are mo-
+tivated by a perceived lack of utility or borne out of frustra-
+tion with the device. We discovered abandonment happening
+due to a host of unassociated reasons. These include produc-
+tive rationales for abandonment (goals obtained, technolog-
+ical upgrades), rationales associated with one’s social envi-
+ronment or physical abilities (social connections, health con-
+ditions, changes in activities associated with device), and a
+mismatch between users’ expectations and the capabilities of
+the device - the most common rationale for abandonment in
+our dataset. This suggests that personal health-tracking tech-
+nologies are used in complex dynamic social environments
+and need to ﬁt within individuals existing, messy practices
+[2]. Based on our analysis, we propose enriching the contem-
+porary theoretical landscape with theories of sense-making,
+problem-solving, and experiential learning that can provide
+more direct guidance to the design of self-monitoring tech-
+nologies and expand capacity for users to gain deeper insight
+and discovery into their everyday health. Finally, we present
+a set of design recommendations to assist designers in cre-
+ating technologies that inspire sustained evolving adoption.
+As such, our work makes the following contributions to HCI
+research:
+• We present the ﬁrst investigation into the abandonment of
+wearable health-tracking technologies outside of a particu-
+lar intervention or technology.
+
+• We analyze people’s own accounts of personal-tracking
+technology abandonment through an exploration of sec-
+ondary sales on Craigslist.
+
+• We identify health motivations and rationales for abandon-
+ment and connect these actions to current theories in health
+behavior change.
+
+• We describe implications for designing health-tracking
+technologies that, in the future, will not be so easily aban-
+doned.
+
+RELATED WORK
+
+Health trackers and quantiﬁed self
+In recent years, the increasing availability of commercial
+activity monitoring devices has inspired interest from the
+research community regarding their ability to inspire self-
+reﬂection and positive behavior change. Even at this early
+stage, studies of activity-tracking technologies (e.g. pedome-
+ters) prove effective at improving individuals’ physical ac-
+tivity [7, 27, 32].
+In addition to studying these technolo-
+gies from the perspective of health and wellness [22, 28, 34],
+HCI researchers also study their potential for improving self-
+knowledge (personal informatics) [25, 26], augmenting mem-
+ory [18], and reducing environmental impact [10].
+
+More recently, wide adoption of such devices from Jawbone,
+FitBit and Nike created opportunities for interactive applica-
+tions that target a range of individuals’ behavioral goals and
+activities. These platforms allow for custom application de-
+velopment with a more sophisticated set of features through
+
+648
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+their coupling with smartphone applications and the fact they
+have open APIs. There is ongoing research focused on the
+accuracy of these devices [14, 43]. In addition, there are also
+early efforts to utilize these devices for delivery of behav-
+ior change interventions from increases in physical activity
+[24, 44] to improvement in quality of sleep [4, 5, 21, 39] to
+playful interaction through personal data [30]. The quantiﬁed
+self movement garnered attention in the research literature
+as well, as they represent early adopters of these behavior-
+tracking technologies [6, 25, 38, 42].
+
+Abandoning technology
+The abandonment of health technology is not a new phe-
+nomenon. However, few systematic studies exist of why
+people stop using health technologies. While the assistive
+technology community looks at adoption and abandonment
+of clinician-provided personal health technologies, their ﬁnd-
+ings do not fully capture today’s consumer-led health tracker
+market. For example, in a 1993 study of assistive technol-
+ogy abandonment, Phillips & Zhao describe four factors: 1)
+lack of consideration of user opinion in selecting the devices;
+2) poor device performance; 3) the ease of procuring the de-
+vices; and 4) change in user needs or priorities [35]. The ﬁrst
+two factors are less applicable in today’s consumer-focused
+health tracker industry: consumers often buy health trackers
+directly, and the devices themselves (particularly movement
+trackers) have become more robust and accurate over the last
+several years. However, the last two are still relevant today.
+Phillips & Zhao found that the easier it was for users to ac-
+quire a device, the quicker they were to abandon it. These
+days, a decent health-tracking device can be found for rela-
+tively little money at any number of stores or online retailers.
+
+More recently, the researchers within the CHI and Ubiquitous
+Computing communities have also started to explore aban-
+donment. For example, Cordeiro et al. surveyed food jour-
+nalers and examined forum posts to identify reasons people
+stop using food diaries [8] and Schwanda et al. explored rea-
+sons individuals abandon using the Wii Fit as health tech-
+nology while advocating that researchers and designers con-
+sider the role that persuasive technologies play in encourag-
+ing healthy habits [40].
+
+However, to date, there has been little work directly ex-
+amining the adoption and abandonment of wearable self-
+monitoring technologies [23]. While Fritz et al. explored
+the adoption of wearable health trackers [9], only an Inter-
+net study conducted by Endeavour Partners has investigated
+the abandonment of these technologies [23]. They report
+that one in ten Americans over 18 owned an activity tracker,
+such as Jawbone or Fitbit, suggesting that wearable devices
+are ﬁnally achieving mass market penetration. On the other
+hand, the study reports that a third of U.S. consumers who
+have owned one of these devices stopped using it within six
+months of receiving it. These numbers certainly inspire con-
+cern; however, while the report suggested many directions for
+improving adoption, it did not explicitly addressed the rea-
+sons why these devices are abandoned. The goal of our study
+focused on examining these reasons and drawing conclusions
+for the design of future wearable health-technologies.
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+Health behavior change theory
+When considering issues of technology adoption and aban-
+donment, it is important to reﬂect on the driving forces behind
+these technologies as well as the theoretical foundations that
+ground them. Many contemporary technologies for health
+self-monitoring and self-management are inspired by theories
+of health behavior change. For example, in Social Cognitive
+Theory, a health tracker can enable interpersonal interactions
+to facilitate observational learning [1]. Similarly, in individ-
+ual models such as the Theory of Planned Behavior, health
+trackers may succeed or fail an individual to the extent that
+they enable or inhibit a person’s perceived behavioral con-
+trol [11]. Goal Setting Theory predicts that an appropriately-
+targeted speciﬁc goal is more likely achievable than not [41].
+
+At both the interpersonal and individual level, health behav-
+ior change theories themselves give little advice to developers
+and researchers of health trackers on exactly how the tech-
+nologies can best take advantage of theory [37]. HCI re-
+searchers have begun to address this issue through empirical
+study (such as Munson & Consolvo’s research on goal-setting
+for physical activity [33]). Others have called for technolo-
+gists and health researchers to work closer together [16].
+
+METHODOLOGY
+The goal of this project is to better understand the ratio-
+nale behind why people abandon technology, more speciﬁ-
+cally health-tracking technologies. Even though people will
+certainly complain online through reviews and customer ser-
+vice platforms, those who abandon technology do not typi-
+cally discuss their abandonment decisions online in any cen-
+tralized forum. To that end, we chose to investigate aban-
+donment in the public marketplace. The marketplace chosen
+for this study is Craigslist. We posit that when an individual
+sells a health-tracking technology, they are actively abandon-
+ing said technology. To achieve our research objective ex-
+ploring why people choose to abandon technologies, we ﬁrst
+selected a set of popular health-monitoring technologies, col-
+lected sales posts associated with the selected technologies,
+and conducted a content analysis of the sales posts.
+
+Technology selection
+To begin, we researched the pervasiveness and popularity of
+health trackers. Based on their sales rankings on Amazon, we
+selected personal health-monitoring technologies as the ba-
+sis for data collection in this study. These technology brands
+included Fitbit, Jawbone, iHealth, Polar, Omron, Withings,
+Fuelband, and Eatsmart. We did not discriminate between
+speciﬁc technologies within these brands during the data col-
+lection instead choosing to be inclusive of all tracking tech-
+nologies within those brands. In total, we collected data on
+21 individual technologies (see Table 1).
+
+Data Collection
+We used the technology brands identiﬁed through Amazon
+as the seed terms to search Craigslist postings. We collected
+posts from July 1 to July 31, 2014 from all 416 U.S. Craigslist
+city directories. For each Craigslist posting added to our
+dataset, we collected information regarding the search term
+used to ﬁnd the advertisement, the state and city from which
+
+649
+
+Brand
+Eatsmart
+Fitbit
+iHealth
+Jawbone
+Nike
+Omron
+Polar
+Withings
+
+Technologies
+Scale
+Aria, Flex, Force, One, Ultra, Zip, unclassiﬁed
+Scale
+UP, UP24, unclassiﬁed
+Fuelband
+blood pressure, nebulizer, pedometer, scale
+heart rate monitor, watch
+blood pressure, scale
+
+Table 1. Selected Technologies
+
+the post originated, the text of the post, the post ID, and the
+hyperlink to the post. When we purged duplicate posts from
+the data, we were left with a total of 1561 results.
+
+The majority of the posts in our initial dataset represented
+traditional sales advertisements in that they provided no in-
+sight into why an individual would be selling/abandoning the
+health-tracking technology. The quote below is an example
+of a traditional advertisement.
+
+“I am selling my Nike Fuelband, its medium/large size
+and black.
+It comes with the box and all accessories.
+Can meet up around the metrotown area.”
+
+We found that traditional advertisements did little to help us
+understand abandonment and as such decided to remove these
+types of posts from our data. We reﬁned our dataset to only
+include posts that contained some sort of personal story at-
+tached to the advertisement. Posts with personal stories re-
+lated to the technology had the potential to provide informa-
+tion about why the individual was choosing to abandon their
+technology. We coded the dataset for personal stories result-
+ing in a dataset containing 462 posts.
+
+Code Book
+We used an inductive approach to analyzing the 462 posts that
+included a personal story. A team of three researchers inde-
+pendently open coded a randomized sample (10.0% ) of the
+personal story posts. We coded for general themes in the data.
+Next, we met as a group to discuss themes and further reﬁne
+the coding taxonomy. Technology use, rationale for sale, the
+time of ownership, and motivation for health use were the
+general themes that emerged.
+
+We developed a list of themes for our initial codebook (see
+Table 2 for the list of high-level themes).and each coder re-
+sampled another 10% of the data. The coding had an inter-
+rater reliability of 92.0%. The team met to discuss what types
+of categories were present in each of the themes and further
+reﬁned and expanded the codebook. A third and ﬁnal cod-
+ing exercise took place with a randomized 10.0% sample of
+the data. An inter-rater reliability of 96.0% was achieved be-
+tween the three researchers.
+
+Two researchers independently coded the reduced dataset us-
+ing the reﬁned codebook developed by the team. During
+this process, an additional 24 records were ﬂagged by the
+researchers as not having a personal story attached to the
+record. The team met, discussed each of these records, and
+agreed to take them out of the dataset. They also chose to
+
+Category
+Technology
+Technology Acquisition
+Condition
+Technology Count
+Abandonment Point: Time
+Abandonment Point: Use
+Abandonment Rationale
+Health Motivations
+
+Number of Codes
+23
+6
+5
+4
+7
+7
+15
+17
+
+Table 2. The categories that organized our codes
+
+remove all posts where a ﬁtness tracker was part of a bulk
+sale/yard sale because in these posts the seller typically lists
+a large number of items and the personal story relates to the
+sale of all items, not just the ﬁtness tracker. Finally, the team
+chose to remove all posts in which the seller was simply dis-
+cussing spare parts (wristbands, extra straps, or power chords
+for example). This process generated the ﬁnal dataset which
+contained 427 advertisements.
+
+In total, we found 1561 Craiglist posts met our criteria during
+the month of July 2014. Sampling that dataset to remove all
+posts that did not contain personal stories, resulted in a set of
+462 advertisements. Further sampling of the data to remove
+advertisements for parts and all posts where a ﬁtness tracker
+was part of a bulk/yard sale resulted in a ﬁnal dataset com-
+posed of 427 records.
+
+RESULTS
+We begin by describing the technologies present in the posts
+and then move on to discuss the acquisition of the technology,
+the condition of the technology, the abandonment point, the
+rationale behind the abandonment, and conclude with health
+motivations related to the abandonment of the technology.
+
+Health-tracking technologies for sale
+The ﬁnal dataset consisted of 427 Craigslists posts that con-
+tained advertisements for 470 health-tracking technologies.
+Several posts (3.6% of total posts) in our dataset were selling
+multiples of the same item or selling trackers in tandem, for
+example selling a smart scale and a ﬁtness tracker in the same
+advertisement. Taken together, the Fitbit (180), Nike Fuel-
+band (130) and Jawbone (111) technologies accounted for the
+vast majority of the technologies in the dataset (38.3%, 29.3%
+and 22.3% respectively). Wearables (436 items) accounted
+for 92.8% of all the advertisements in the dataset, while scales
+(18 items) comprised 3.8% of the data and blood pressure
+monitors (16 items) accounted for the remaining 3.4%. Table
+3 highlights the breakdown of these technologies.
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Number of Items for Sale % of total items
+
+Technology
+Eatsmart scale
+Fitbit (unclassiﬁed)
+Fitbit aria
+Fitbit ﬂex
+Fitbit force
+Fitbit one
+Fitbit ultra
+Fitbit zip
+iHealth
+Jawbone (unclassiﬁed)
+Jawbone UP
+Jawbone UP 24
+Nike fuelband
+Omron blood pressure
+Omron pedometer
+Omron scale
+Polar heartrate monitor
+Polar watch
+Withing blood pressure
+Total
+
+0.2%
+10.9%
+3.0%
+16.0%
+0.2%
+4.7%
+0.9%
+2.8%
+0.2%
+4.9%
+12.8%
+6.0%
+27.7%
+3.0%
+0.4%
+0.4%
+3.0%
+2.8%
+0.4%
+100%
+Table 3. Technology distributions across the craigslist posts
+
+1
+51
+14
+75
+1
+22
+4
+13
+1
+23
+60
+28
+130
+14
+2
+2
+14
+13
+2
+470
+
+Acquisition method
+Found
+Gift
+Purchased
+Won
+Employment/School program
+Not reported
+
+Technology count
+3
+88
+123
+18
+3
+238
+
+Technology %
+0.6%
+18.6%
+26.0%
+3.8%
+0.6%
+50.3%
+
+Table 4. Technology acquisition method
+
+Acquisition method turns out to be an interesting component
+of the advertisements when observed through an abandon-
+ment lens. Individuals who purchased their technology typ-
+ically had a greater sense of ownership over their device(s)
+than those who won or were given the technology. For ex-
+ample, a person who won a health-tracking technology was
+much more likely to abandon the technology immediately,
+sell it new in box, and explicitly abandon the technology
+for monetary reasons. Below is a typical advertisement for
+a health-tracking technology that someone won:
+
+“I just won a ﬁtbit ﬂex valued at $99.99 but I know I
+won’t use it and hope to make a fair deal with someone
+who would. Brand new not even opened”
+
+Compare that to a typical example of an advertisement in
+which the seller had purchased her technology.
+
+“Hi, I’m selling my Jawbone UP 24. Purchased brand
+new...No defects, works great...I am not using it like I
+thought I would so I ﬁgured I would re-sell and get some
+of my money back since I cannot return it.”
+
+Initial Technology Acquisition
+We coded each advertisement to note if there was a descrip-
+tion regarding how the individual seller had acquired their
+technology, as we were interested in the relationship between
+ownership, adoption, and abandonment. Roughly half of our
+posts (50.3%) described the method by which the seller came
+to own their technology. Table 4 reﬂects the breakdown of
+the posts in our dataset as it relates to the speciﬁc acquisition
+method.
+
+In the case of the individual who purchased the technology,
+they were at some point interested in using a personal health-
+tracking technology to collect health information. Though
+they did not sustain their initial interest in ﬁtness-tracking,
+they at least tried out the technology and owned the device for
+a period of time before deciding to abandon it. In contrast, the
+individual who won the technology had no interest in using
+the device at all: they simply won a new ﬁtness tracker and
+are taking advantage of that opportunity to make some money.
+
+650
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+Condition
+New
+Opened
+Used
+Damaged
+Not reported
+
+Technology count
+97
+32
+301
+3
+37
+Table 5. Technology condition
+
+Technology %
+20.6%
+6.8%
+64.0%
+0.6%
+7.9%
+
+Our data indicates that giving someone a health-tracking tech-
+nology as a gift can be a risky endeavor as there is a high
+probability of a mismatch between the giver’s idea of what
+a good health-monitoring technology is and receiver’s own
+idea. Given the multitude of available technologies, ﬁnding
+the right match is not always easy. We labeled advertisements
+as gifts if the individual selling the health tracker was either
+the recipient or the giver of a gift. The gift category is par-
+ticularly illuminating when considered in conjunction with
+Abandonment Rationale category (discussed in detail below).
+For example, 20.5% of people who received a health activity
+tracker as a present already owned a similar device (18 of
+88). Similarly, in 18.2% of the posts containing gifts (16 of
+88) there was an expectation mismatch between the giver and
+the receiver.
+
+When there was an expectation mismatch between the giver
+and the receiver, the advertisements were much more similar
+to posts in which the seller had won the technology than posts
+where they had purchased the technology. In both of these
+cases, the device was never really adopted by owner and the
+device was quickly abandoned.
+
+Technology Condition
+On the secondary market, health-tracking technologies are
+sold in various conditions ranging from unopened to well
+used and even occasionally broken. Table 5 shows the dis-
+tribution of products organized by their condition.
+
+Items were only labeled “new” if they were still in the origi-
+nal packaging. Posts were labeled as “used” if the advertise-
+ment said it was used or if the seller had discussed the use
+of the technology. Labeling posts as new and used was rela-
+tively straightforward, however, we did encounter an interest-
+ing edge case that we termed “Opened.” A device was labeled
+as “opened” if the technology was no longer contained within
+the original packaging and yet the seller had not actually used
+the device. Here is an example of such a post:
+
+“Nike fuel band here, was bought as a gift but it’s too
+small, still brand new only opened to try on was never
+turned on or synced to a computer asking $120”
+
+These are interesting posts from an abandonment perspective.
+The seller is abandoning the technology without having used
+it but, in most cases, the seller was interested in at least trying
+on the wearable. Below we discuss in detail various rationales
+for selling health-tracking devices on Craigslist. One of the
+rationales frequently mentioned is that the device in question
+did not ﬁt or that it was the wrong size. Of the 32 devices that
+were labeled as “opened,” 11 of the advertisements (34.4%)
+described sizing/ﬁt as the reason that the technology is for
+
+651
+
+sale. Though “opened” is a small category, it contains the
+largest number of posts where the rationale for selling the
+technology is because it did not ﬁt.
+
+Abandonment point
+“Abandonment point” is the term we coined to capture both
+the amount of time the individual had owned the device as
+well as the amount of use the device had seen while in pos-
+session of the owner. Essentially, we wanted to know when
+the individual decided to abandon the technology.
+
+Duration of time before abandonment
+Determining how long a piece of technology was owned prior
+to it being posted on Craigslist was challenging. Unfortu-
+nately, the majority of the posts (60.0%) did not contain time-
+related information. From the posts where we were able
+to ascertain this information, 29.4% of the items had been
+owned for weeks, months, or even years (see Table 6). On the
+surface, this observation appears to be an encouraging ﬁnd-
+ing. However, just because someone owns something for a
+long period of time doesn’t correlate to that individual using
+the technology to maximize the health utility afforded by its
+functions or designs. By design, most wearable health ﬁtness
+trackers are worn daily - not worn a few times and then, liter-
+ally, put on the shelf for a later date. For example:
+
+“Got this a year ago for Mother’s Day (I’d asked for it)
+but I’ve only used it for about 3 weeks - a year ago!
+Thus it is in mint condition, still in box with all the ac-
+cessories (charging cable and an extra bit to change the
+size). It’s looking for someone who will treat it better -
+likely someone more determined to get ﬁt!?”
+
+When examining posts in which it was clear that the indi-
+vidual was immediately abandoning the health technology, it
+was likely that the individual did not purchase the technology
+(only 5 of 23), that it was either new or opened but not used
+(20 of 23), and that the seller was abandoning the technology
+without using it (20 of 23).
+
+Abandonment point
+Immediate
+Day(s)
+Week(s)
+Month(s)
+Year(s)
+Vague
+Not reported
+Total
+
+Technology Count
+23
+13
+51
+77
+10
+17
+282
+470
+
+Technology %
+4.9%
+2.8%
+10.9%
+16.4%
+2.1%
+3.6%
+60.0%
+100%
+
+Table 6. The amount of time people report owning and using their de-
+vices before selling them.
+
+Frequency of use before abandonment
+In addition to tracking the amount of time an individual
+owned a health-tracking technology, we were also interested
+in determining the amount of use the technology had expe-
+rienced prior to abandonment.A quarter (23.4%) of the tech-
+nologies in our dataset were either completely unused or had
+been used only once. Here is an example of a post in which
+the seller is abandoning the technology immediately having
+never used it (“unused’).
+
+Abandonment Rationale
+Activity change
+Change in health status
+Expectation mismatch
+Experimentation
+Goal met
+Monetary
+Owns a similar device
+Peer inﬂuence
+Purchased/received wrong item
+Sizing/ﬁt
+Technical complexity
+Technology failure
+Upgrade
+Not reported
+Vague
+Total
+
+Technology Count
+21
+5
+119
+7
+5
+30
+44
+12
+10
+27
+10
+5
+48
+61
+66
+470
+
+Technology %
+4.5%
+1.1%
+25.3%
+1.5%
+1.1%
+6.4%
+9.4%
+2.6%
+2.1%
+5.7%
+2.1%
+1.1%
+10.2%
+13.0%
+14.0%
+100%
+
+Table 7. What motivated individuals to sell their activity tracker on
+Craigslist
+
+“I have two brand new Fitbit Flex activity monitors.
+These are unopened, brand new, unused... How clear
+can I be about it. They are NEW... I got these through
+my employers health plan so they are legitimate.”’
+
+Contrast that with a post in which the individual describes
+their investment in tracking their behavior and are abandoning
+their current technology for a technology that better matches
+their current needs.
+
+“Am selling both of the following Polar Heart Rate mon-
+itors along with the data transfer unit with which you
+can upload your workouts to Polar’s free weblog...The
+watches are 3 years old and we used them for 2 years.
+We really liked them while we used them, with just
+enough features to be neither too complicated nor too
+simple. They still work perfectly well, and we are sell-
+ing them as we decided to get GPS + HR watche.”
+
+Surprisingly, only 1.3% of the technology being abandoned
+had received moderate usage. Perhaps it is the nature of col-
+lecting abandonment data through an examination of second
+hand sales that we did not ﬁnd usage to be more evenly dis-
+tributed. Certainly individuals interested in selling a tech-
+nology will attempt to cast it in the best possible light and
+downplaying the amount of use is an easy way to do so.
+
+Abandonment Rationale
+Understanding the rationale behind abandoning these health
+behavior-tracking technologies is one of the primary goals of
+our work. We ended our inductive coding with 13 different
+rationale categories (15 in total including “Not reported” and
+“Vague”). See Table 7 for a list of all the categories as well
+as the distribution of technology advertisements amongst the
+categories.
+
+Posts were labeled as containing “activity change” when the
+seller indicates that something about his/her life or goals have
+changed such that the health behavior tracker is no longer
+tracking behaviors of interest.
+
+“I am selling a like-new Jawbone Up 24 is in perfect con-
+dition and works just like the day I bought it. ... There
+is nothing wrong with it, I am selling it so that I can
+
+652
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+purchase a waterproof ﬁtness tracker. I do a lot of swim-
+ming and scuba, and the Up isn’t waterproof...”
+
+Activity change however does not always mean that the seller
+is further engaging in tracking activity. Sometimes the activ-
+ity change relates to decreasing tracking activity.
+
+“Both of these [ﬁtbits] work great. My wife and I used
+them a year ago, but now we have a little one and have
+no need to know how much activity we are getting. We
+already know we are getting plenty.”
+
+We labeled posts with the “change in health status” category
+when individuals posted ads selling their technology because
+they could no longer use it due to a change in their health.
+
+“I am selling my UP24 Jawbone. It is a black medium
+band that is only a month old. I had shoulder surgery
+recently and anything on my wrist whether it be a watch
+or this aggravates my shoulder. Therefore I am selling it
+because I can’t wear it without being in pain...”
+
+Posts were labeled with “Expectation mismatch” when the
+seller is abandoning a technology because either the technol-
+ogy did not do what was expected or, much more common in
+the dataset, the individual is no longer using the device in the
+way that they anticipated when they ﬁrst acquired the tech-
+nology.
+
+“Not using it
+shouldn’t have these gadgets. Excellent condition...”
+
+like I thought I would...lazy people
+
+The “Experimentation” category was an unexpected ﬁnd. In
+each of the of these posts, the seller describes acquiring sev-
+eral different ﬁtness trackers in an effort to determine which
+tracker they will choose to keep and integrate into their lives.
+
+“I have both a brand new ﬁtbit ﬂex that was used for a
+month, and a jawbone up that was only opened to see
+how it would ﬁt and feel when worn. Both of them I am
+selling because I found a different ﬁtness band that will
+suit me better.”
+
+There were several straightforward categories such as “goal
+met” - the individual lost the weight they wanted to lose or
+achieved their desired number of steps and decided to sell
+the technology since they had accomplished their goal. The
+“Monetary,” “Owns a similar device,” “Purchased/received
+wrong item,” “Sizing/ﬁt,” and “Upgrade” categories are self-
+explanatory. The two technology categories “Technical com-
+plexity” and “Technology failure” are similar in that in both
+cases individuals are selling their technology due to their
+challenges interacting with the technology (either due to fail-
+ure on the part of the technology or failure on the part of the
+user to be able to comfortably interact with the technology).
+In both cases, the individuals are selling the technology out
+of frustration, the frustration comes from different places de-
+pending on where the fault lies.
+
+“Brand New ﬁtbit with rubber case!!! I dont have the
+I cant ﬁnd it so Id rather just
+charger with it though.
+sell it rather than going through the process of buying
+another charger.”
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+“...Like New Jawbone UP for sale...i Couldn’t ﬁgure out
+how to use it...I’m still old school and have trouble with
+my intelligent fhone.”
+
+The ﬁnal category worth detailing is “Peer inﬂuence.” There
+are clear implications for the design of personal ﬁtness-
+tracking technology contained in these posts. For an adver-
+tisement to be labeled “peer inﬂuence” there needed to be
+evidence that the seller was abandoning their current technol-
+ogy because it did not support their desire to compete with
+their friends who happen to be using a different platform.
+
+“Like new ﬁt bit ﬂex. had no issues with it, buddy had
+up24 and we wanted to compete so I switched over. but
+still great piece I have everything it comes with. also the
+large band still has original plastic over it.”
+
+Excluding posts in which the reason for abandoning the tech-
+nology was either “not reported” or was “vague” (accounting
+for 27.0% of the advertisements) “expectation mismatch” was
+the most popular reason for selling a health tracking technol-
+ogy on Craigslist (24.4%). The next most popular reasons
+for individuals to abandon technology was to “upgrade” their
+activity tracker (9.8%) or because they had received a new
+activity tracker but “already owned a similar device (9.1%).
+
+Assessing Health Motivation
+In our analysis, we tried to understand whether or not there
+was a health motivation behind the sale of a particular de-
+vice. In some cases, the sale of a device seemed to be associ-
+ated with a decrease in health motivation. Yet in others, sell-
+ers appeared to be discarding a particular device because the
+scaffolding afforded through the device was no longer nec-
+essary: they had either achieved their goal or needed a more
+sophisticated device to support changes associated with the
+increasing the level of activity in their lifestyle. We were in-
+terested in understanding if the motivation behind abandoning
+the technology was internal (self driven) or external (inﬂu-
+enced by others). Further, we were wanted to determine if the
+motivation was increasing, decreasing or unchanged. Table 8
+shows a complete breakdown of the health motivations coded
+in the dataset.
+
+Health Motivation
+Internal decrease
+Unchanged
+Internal increase
+External decrease
+External increase
+Internal change in goal
+Not reported
+Total
+
+Technology Count
+123
+85
+11
+13
+6
+3
+229
+470
+
+Technology %
+26.2%
+18.1%
+2.3%
+2.8%
+1.3%
+0.6%
+48.7%
+100%
+
+Table 8. A breakdown of the health motivations found in the dataset..
+
+Of the 470 technologies for sale in our dataset, almost half
+(48.7%) reported no health motivation for abandoning their
+technology. Furthermore, an additional 18.1% of the records
+showed an unchanged health motivation. An example of posts
+in this category:
+
+“Selling my nike fuelband. It’s the clear band. Just re-
+ceived one as a gift and don’t need two...I’ve only had it
+for 3 months.”
+
+653
+
+Looking at the remaining posts, 33.2% discuss an explicit
+change in health motivation underlying the abandonment of
+their technology. These can be divided into four distinct cat-
+egories: personal (internal) changes in health goals; personal
+(internal) changes in physical activity or capability; begin-
+ning a new ﬁtness program or gym membership and track-
+ing health with that institution instead of individually (exter-
+nal); or changing jobs/schools and being barred from using
+the technology in the new facility (external).
+
+Though often not speciﬁed in detail, many of the posts con-
+tain unique glimpses of sellers’ health motivation. Many sell-
+ers reported a decrease in health motivation over time. This
+ﬁnding is unsurprising given that many individuals initially
+adopt health-tracking technologies so that they can set and
+make progress towards goals that improve their health. How-
+ever, improving one’s health in this manner can be challeng-
+ing. Below is a typical post in this category.
+
+“Great Fuelband bought it about a month ago I just don’t
+use it enough...”
+
+Posts like this are open to many possible interpretations. It
+is possible the seller lost motivation to work out, or the seller
+may have lost interest in the device as a motivational tool for
+his or her workouts, or the seller may simply not be gaining
+enough beneﬁt for the cost of the device.
+
+However, a sale does not necessarily imply the failure of a
+particular device to motivate a change in health behavior. In
+some cases, the seller was ‘abandoning’ a device but contin-
+uing to track their health status through another device. A
+common abandonment rationale in this category is “upgrade”
+or “owns similar device.” In both of these instances, the seller
+is abandoning one health-tracking technology but intends to
+use a second health tracker to continue tracking her health.
+For example:
+
+“I am selling this because I had the ﬁrst generation
+model, and it was broken. After it broke I went and
+bought a new one from the store. Then realized my bro-
+ken one was still under warranty. Nike sent me a new
+one to replace my broken one, so now I have 2...”
+
+Though posts exhibiting an internal increase in health motiva-
+tion were relatively rare, these posts are of particular interest
+to the designers of mobile health technologies. In the case
+of an internal increasing health motivation, typically the in-
+dividual has experienced some degree of success with setting
+and maintaining goals in the past.
+
+“I’ve had this Fuelband for 4 months... I’m selling be-
+cause I need something more suited to triathalon train-
+ing.”
+
+The externally motivated examples almost entirely are tied
+to either an individuals work/school needs or are linked to a
+users gym or workout center.
+
+“Fitbit zip.Got it as a gift, but just got a gym member-
+ship, so that’s what I’m tracking...”
+
+The ﬁnal code in this category pertains to the attainment of
+goals. Though this code is similar to the “goal met” code
+
+in the Abandonment Rationale category, here, we are specif-
+ically interested in the health motivation associated with ac-
+complishing or abandoning a health goal.
+
+“This ﬁtbit is in perfect condition...I am no longer count-
+ing my steps and actually trying to gain weight so I do
+not have use for this anymore.”
+
+Methodological Limitations and Affordances of Craigslist
+Gathering data related to the abandonment of personal-
+tracking technology proved to be a challenge. Selling a tech-
+nology online is a public and visible presentation of abandon-
+ing a technology. People also abandon mHealth applications
+and personal behavior trackers by simply choosing not to use
+those devices over the course of time, however long that may
+be. The return on investment of the time and attention re-
+quired to create and manage an advertisement on Craigslist
+might not be motivation enough to cause an individual to
+abandon the technology in the marketplace: it’s quite possi-
+ble forgetting the technology is the more attractive decision.
+Passive abandonment is certainly simpler than making the ef-
+fort to actively actively sell a piece of technology online. On
+the other hand, one of the attractions to studying advertise-
+ments on Craigslist is that we know these individuals were
+intentionally abandoning their health trackers.
+
+With that said,
+there are deﬁnitely limitations to using
+Craigslist as a data source for abandonment. We assume that
+there is a bias towards describing positive aspects of the tech-
+nology and minimizing negative details since the user posting
+an advertisement is obviously motivated to maximize prof-
+its. For example, people most likely downplay the amount
+of wear and tear the device has received. We deﬁnitely see
+that bias in our data with the only 2.1% of the posts report-
+ing that they had owned the technology for a year or more
+and only 1.3% of the posts describing moderate usage. An-
+other major disadvantage of using Craigslist is the inability
+to follow up with sellers to learn more about what they were
+selling and why. Without this context to ground the Craigslist
+advertisements, the analysis of the data was open to interpre-
+tation of the research team. We found ambiguity in a consid-
+erable number of posts which made reconstructing individu-
+als’ intentions and motivations challenging to say the least.
+We were often left without the ability to ﬁgure out what state-
+ments like “it’s not for me” means due to limitations in our
+methods. Hence the large number of posts labeled as “Vague”
+or “Not Reported” in the abandonment point, abandonment
+rationale, and health motivation sections.
+
+However, using Craigslist is not without its methodological
+advantages. Using Craigslist afforded us wide geographic
+coverage and enabled us to avoid self-selection bias and other
+limitations of using more traditional qualitative methods to
+investigate abandonment. Additionally, the nature of exam-
+ining advertisements illuminated certain aspects of the tech-
+nology which we might have not observed otherwise. For
+example, Technology Condition had the lowest number of
+“not reported” values. Describing the condition of the item
+for sale on Craigslist is part of the advertising culture on the
+site and it often was the catalyst for individuals sharing their
+
+654
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+personal stories online. Learning about the condition of a de-
+vice (i.e. new vs. opened vs. used) often provided insight
+into the motivation behind the technology acquisition which
+in turn taught us things about abandonment that we might not
+otherwise have been able to observe.
+
+Finally, both an affordance and a limitation of using Craigslist
+is that the data is temporally bound and only represents a brief
+snapshot of abandonment practices. For example,Fitbit, Nike
+Fuelband, and Jawbone technologies comprise the majority
+of technologies in the dataset (89.9%). As such, most of the
+reasons we report for abandoning health tracking technolo-
+gies refer particularly to these devices. If the data had been
+collected at a different time, i.e.
+two to three years earlier,
+perhaps other technologies would be better represented (such
+as Omron pedometers, Omron scales, or Polar heart rate mon-
+itors). Though the temporal nature of using Craigslist places
+limits on the generalizability of our ﬁndings,(it is entirely
+possible that a different set of reasons would be highlighted
+had we collected data ﬁve years ago or ﬁve years from now),
+it affords a viewpoint into current abandonment practices and
+sheds light on societal perceptions towards wearable health
+tracking technology. While abandonment practices are con-
+stantly changing, our research captures a snapshot of the cur-
+rent societal perceptions towards the adoption, use, and aban-
+donment of wearable health tracking technology.
+
+DISCUSSION
+Recent publications and media reports paint a rather grim pic-
+ture regarding wearable technologies and their ability to help
+users achieve meaningful goals or enact long-term changes in
+their health behaviors [17, 19, 23]. The natural consequence
+of the recently published studies documenting the high rate of
+abandonment of wearable health technologies by their users
+is to question the core functionality of these technologies and
+to conclude that either the overall vision for these technolo-
+gies is misplaced, their design is deeply ﬂawed, or both. How-
+ever, our study shows that reality is more complex than these
+initial conclusions imply and that there exist many reasons for
+abandoning wearable health technologies that do not imme-
+diately reﬂect negatively on their design or their raison d’ˆetre.
+
+Successful Abandonment
+In our data, we uncovered multiple dimensions of technology
+abandonment. Certainly there are instances where individuals
+abandoned their wearable health-tracking technology because
+it was too complicated to use, too complex to learn, or be-
+cause it failed to help them achieve their goals. However, not
+all abandonment was a result of failure in design. Rather, we
+uncovered many instances where individuals abandoned their
+technology after experiencing success using the technology.
+
+Celebrating “Happy” Abandonment
+When examining issues of adoption and abandonment, it is
+easy to take a stance that all abandonment signals a failure
+of technology. Our study suggests, however, that, at times,
+abandonment may indicate that technology has successfully
+served its intended purpose and achieved the point of retire-
+ment. For example, the desire to upgrade devices to newer
+models accounted for about 10% of the abandonment cases
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+in our dataset. In a world of rapidly changing technologies,
+this observation should not be surprising and should signal
+a continued, rather than waning interest in self-monitoring.
+Schwanda et al. observed instances of “happy” abandonment
+when they argue that “The idea that abandonment can be a
+marker of success also implies that persuasive systems can be
+explicitly designed for this gateway’ effect, planning for the
+day when the system will no longer be needed to support new
+behaviors.
+Instead of seeing persuasive tools as persistent,
+permanent companions, persuasive systems designers should
+consider whether the systems might play a critical but tempo-
+rary role in a gradual change, much as nicotine patches are not
+designed for indeﬁnite use.” [40]. Another example of how
+technology serves its purpose prior to being abandoned arises
+in the cases where individuals achieve their goals. In these
+cases, individuals no longer have reasons for self-monitoring
+and thus abandon their technology. While this scenario may
+be problematic from the perspective of device manufactur-
+ers, it may not be so for the customers as they have already
+beneﬁted from utilizing these products to achieve their goals.
+In both of these abandonment cases, individuals are happily
+abandoning their self-monitoring technology as they accom-
+plish goals and move on to other activities or devices.
+
+Exploring Social Switching
+Another example of successful abandonment is a class of in-
+dividuals we termed social switchers. The examples of “so-
+cial switching” in the study – cases when individuals de-
+cided to switch to a different device because it was preferred
+by their friends, family, or colleagues – suggest that health-
+monitoring practices often exist within individuals’ social
+networks. Understanding an individual’s social environment
+and designing software to take advantage of a social network
+are relatively new challenges for the designers of wearable
+health-tracking technology. We have already seen several ex-
+amples where peer inﬂuence played a role in the decision to
+abandon a wearable health-tracking technology. While these
+instances were rare in our dataset, the importance of social
+network effects – particularly peer inﬂuence on adoption and
+abandonment – is only beginning to be felt in the wearable
+health-tracking domain. Designing compelling social experi-
+ences for health-tracking is certainly a health-tracking chal-
+lenge today and will continue to be a health-tracking chal-
+lenge moving forward.
+
+Designing for Messy Practices
+Yet another instance where abandonment of technology may
+not signify its failure is when the circumstances dictating its
+use and the context of individuals’ lives change. Many of
+the Craigslist posts referred to important changes in individ-
+uals’ circumstances and the resulting changes in their priori-
+ties. New situations a new baby, a new health condition, or
+resolution of a previously identiﬁed concern can signiﬁcantly
+reduce individuals’ commitment to self-monitoring despite
+their initial or ongoing interest. This ﬁnding is consistent
+with previous accounts of real-world practices and adoption
+of ubiquitous computing technologies. For example, Bell and
+Dourish pointed out that the human practices that surround
+contemporary ubiquitous technologies are inﬁnitely messier,
+
+655
+
+more dynamic, and less predictable, than the visions of ubiq-
+uitous computing generated within research labs [2]. Simi-
+larly, Grudin points out the importance of understanding how
+technology use in context evolves over time. Speciﬁcally, a
+deep understanding of the context associated with the tech-
+nology use is essential if we hope to maximize the potential
+of the technology [13].
+
+Our study supports these ideas and suggests that self-
+monitoring health technologies need to exist within the ever
+changing dynamics of individuals’ lives. Health-tracking is
+not limited to a speciﬁc subset of users and our ﬁndings high-
+light the need to design solutions that embrace a diversity of
+users and have the ability to support these users over time.
+Our ﬁndings highlights the importance of taking a longitudi-
+nal approach to the study of ubiquitous technologies.
+
+Understanding Evolving Use
+To further expand on the argument regarding the changing
+and dynamic nature of human practices, our data suggest a
+complex interplay between these changes and evolution in the
+self-monitoring technologies themselves. Previous analysis
+of the complex historical trajectories of contemporary tech-
+nologies hinted that their development is shaped through the
+adoption and use by consumers [3]. Often these trajectories
+of use and appropriation unfold in ways unexpected by both
+the designers and consumers of technology.
+
+Our study identiﬁed a number of scenarios in which individ-
+uals’ understanding of their own needs evolved through their
+use of technologies. For example, some of those who started
+with FitBit as their ﬁrst choice of self-monitoring technology,
+realized they needed a device that was more resistant to wa-
+ter (since many of their ﬁtness practices were related to wa-
+ter sports and activities). Similarly, a person who decided to
+train for a triathlon after purchasing their ﬁrst tracking device
+may choose to switch to a new device that supports logging
+cycling activity. One post shared that the individual was up-
+grading from the Jawbone Up to the Nike Fuelband because
+the seller did not want to wear multiple technologies (watch
+and ﬁtness tracker). These examples do not necessarily sug-
+gest failures of technology, but rather the continuous evolu-
+tion of how the self-monitoring technology is perceived by
+the consumers and how their evolving needs suggest oppor-
+tunities for new design solutions.
+
+Enriching the Theoretical Landscape
+Overall, the results of the study identiﬁed a host of rea-
+sons why individuals abandon their self-monitoring technolo-
+gies, which suggests that human practices related to self-
+monitoring are rich, complex, and highly dynamic. As we
+argued above, as circumstances of individuals’ lives change,
+so do their needs and expectations for self-monitoring. In our
+study, mismatch in expectations was identiﬁed as the most
+common reason for abandonment. This points to a possible
+disconnect between the human practices that emerge around
+wearable self-tracking technologies and theories of behavior
+change that often provide theoretical foundations for the de-
+sign of technologies for health and wellness. Many of these
+theories focus on such issues as motivation to engage in self-
+management [12], readiness to change one’s health behaviors
+
+[36], and individuals’ perceptions regarding their ability to
+succeed in this challenging undertaking [1]. Yet few of these
+theories account for the continuous and increasing inﬂux of
+data available to individuals with new self-monitoring tech-
+nologies. Moreover, these theories take a static view of the
+individual, and usually do not account for changes in either an
+individual’s own internal state, or in their life circumstances
+[37]. Our study suggests a need for more ﬂexible technolo-
+gies that could adapt to the changing goals and priorities of
+their users. This calls for new ways to conceptualize and theo-
+rize about individuals’ health behaviors that take into account
+new streams of information, dynamically changing contexts
+of use, and rich messy practices that emerge around technolo-
+gies for health. For example, Riley et al. suggested incor-
+porating a dynamic systems modeling approach to ﬂexibly
+adjust the content and dose of health interventions based on
+the changing context (individual and environmental). Sim-
+ilarly, Mamykina et al. proposed sensemaking as a way of
+conceptualizing individuals’ engagement with information in
+the context of health and health management [29].
+
+Designing for Evolving Adoption and Continuous Use
+In this study our goal was to explore the issues of technol-
+ogy adoption and abandonment in all their richness and com-
+plexity, without reducing them to a small list of design rec-
+ommendations. There are, however, a number of lessons we
+learned that suggest more tangible opportunities for new de-
+sign solutions that can help to support the evolving adoption
+and continuous use of wearable health-tracking technologies.
+Below we discuss several concrete design opportunities we
+identiﬁed during the study; we hope our ﬁndings will inspire a
+continuing discussion within the HCI and UbiComp commu-
+nities as to the future trajectory of wearable self-monitoring
+technologies.
+
+1. Self-monitoring as a means to an end - Many of the orig-
+inal self-monitoring technologies focused on data collec-
+tion, leaving it up to their users to utilize the data in any
+way they saw ﬁt. New applications, however, are beginning
+to view self-monitoring not as a goal in itself, but rather as
+a means to some end, a way to achieve a certain goal. Our
+study suggested, however, that these goals vary greatly be-
+tween individuals. Some of these are concerned with eating
+habits, some with weight loss, some with increased physi-
+cal ﬁtness. Moreover, these goals are likely to change and
+evolve as individuals make (or fail to make) progress to-
+wards them. We propose that new self-monitoring tech-
+nologies further embrace goals as a motivator to engage in
+data collection; however, we suggest that the applications
+should support a wide variety of these goals, and help their
+users to re-assess and re-evaluate them when necessary.
+2. From self-monitoring to personal analytics - Further, we
+propose that self-monitoring technologies increase their fo-
+cus on the analysis of data they collect and provide more
+extensive personal analytics features. Most of the technolo-
+gies available today focus on data collection, and usually
+present their users with a historical log of captured data.
+However, many previous studies of individuals’ learning in
+health and wellness suggest that dependencies and correla-
+tions in the data are more important and more difﬁcult to
+
+656
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+identify than simple historical records [28, 31]. Moreover,
+the focus of such analytics could be not only on the pat-
+terns of dependencies in the captured data, but also on the
+evolving patterns of the technology use. We propose that
+personal self-monitoring technologies incorporate more ro-
+bust analytical engines that can help individuals notice and
+test these dependencies.
+
+3. Beyond individual - Our study suggested that self-
+monitoring technologies often exist within individuals’ so-
+cial networks and as part of individuals’ social practices.
+Yet many of these devices provide only a limited set of
+features for individuals to share their data with others and
+to subscribe to other individuals’ records. These new abil-
+ities, however, could help to promote such important phe-
+nomena as social and observational learning and allow in-
+dividuals to provide encouragement and motivation, thus
+contributing to continuous and sustained engagement.
+
+CONCLUSION
+Personal health-tracking technologies have been rapidly
+adopted into mainstream culture and have sparked an explo-
+sion of interest in self-monitoring. While there has been
+a lot of recent research investigating the use of these self-
+monitoring technologies for health and behavior change in-
+terventions, the adoption, use, and particularly abandonment
+of these technologies in everyday life is relatively unexplored.
+We conducted an investigation into the abandonment of per-
+sonal health-tracking technologies collecting almost 1600 on-
+line classiﬁed advertisements. We conducted iterative induc-
+tive and deductive analyses of these advertisements, and un-
+covered a set of themes around the acquisition, usage, and
+abandonment of personal health-tracking technologies.
+
+Our study uncovered that in many cases, abandonment does
+not necessarily reﬂect individuals’ dissatisfaction with tech-
+nology. Many individuals were selling their old devices be-
+cause they achieved their goals or were upgrading to newer
+models, scenarios that indicate success, rather than failure of
+technologies. Others were selling devices because of unantic-
+ipated changes in their life circumstances that led to changes
+in their priorities and abilities, for example a surgery, or the
+birth of a child. These cases, while difﬁcult to predict, suggest
+that self-monitoring technologies are often integrated within
+complex, messy, and dynamically changing human practices.
+Understanding the context of their use can help designers
+identify potential use trajectories and design for evolving
+adoption. However, over a quarter of all devices in the study
+were abandoned due to a mismatch between users’ hopes and
+expectations and device capabilities. This suggests a need for
+new theoretically-grounded approaches for engaging individ-
+uals in the analysis of data collected through self-monitoring
+that can lead to discovery, insight, and, as a result, improved
+health.
+
+ACKNOWLEDGMENTS
+This work was supported in part by the National Institute
+of Diabetes and Digestive and Kidney Disease (NIDDK)
+grant, 5R01DK090372 and the National Library of Medicine
+(NLM) grant T15LM007442.
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+REFERENCES
+1. Bandura, A. Health promotion by social cognitive
+
+means. Health Education & Behavior 31, 2 (2004),
+143–164.
+
+2. Bell, G., and Dourish, P. Yesterday&#x2019;s
+
+tomorrows: Notes on ubiquitous computing&#x2019;s
+dominant vision. Personal Ubiquitous Comput. 11, 2
+(Jan. 2007), 133–143.
+
+3. Bijker, W. E. Of Bicycles,Bakelites and Bulbs: Toward a
+Theory of Sociotechnical Change. MIT Press, 1995,
+ch. 1-2.
+
+4. Chen, Z., Lin, M., Chen, F., Lane, N. D., Cardone, G.,
+
+Wang, R., Li, T., Chen, Y., Choudhury, T., and
+Campbell, A. T. Unobtrusive sleep monitoring using
+smartphones. In Proceedings of the 7th International
+Conference on Pervasive Computing Technologies for
+Healthcare, PervasiveHealth ’13, ICST (Institute for
+Computer Sciences, Social-Informatics and
+Telecommunications Engineering) (ICST, Brussels,
+Belgium, Belgium, 2013), 145–152.
+
+5. Choe, E. K., Consolvo, S., Watson, N. F., and Kientz,
+J. A. Opportunities for computing technologies to
+support healthy sleep behaviors. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing
+Systems, CHI ’11, ACM (New York, NY, USA, 2011),
+3053–3062.
+
+6. Choe, E. K., Lee, N. B., Lee, B., Pratt, W., and Kientz,
+J. A. Understanding quantiﬁed-selfers’ practices in
+collecting and exploring personal data. In Proceedings
+of the SIGCHI Conference on Human Factors in
+Computing Systems, CHI ’14, ACM (New York, NY,
+USA, 2014), 1143–1152.
+
+7. Consolvo, S., Everitt, K., Smith, I., and Landay, J. A.
+Design requirements for technologies that encourage
+physical activity. CHI ’06, ACM (New York, NY, USA,
+2006), 457–466.
+
+8. Cordeiro, F., Epstein, D. A., Thomaz, E., Bales, E.,
+Jagannathan, A. K., Abowd, G. D., and Fogarty, J.
+Barriers and negative nudges: Exploring challenges in
+food journaling. In Proceedings of the 33rd Annual
+ACM Conference on Human Factors in Computing
+Systems, CHI ’15, ACM (New York, NY, USA, 2015),
+1159–1162.
+
+9. Fritz, T., Huang, E. M., Murphy, G. C., and
+
+Zimmermann, T. Persuasive technology in the real
+world: A study of long-term use of activity sensing
+devices for ﬁtness. In Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems,
+CHI ’14, ACM (New York, NY, USA, 2014), 487–496.
+
+10. Froehlich, J., Findlater, L., and Landay, J. The design of
+eco-feedback technology. In Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems,
+CHI ’10, ACM (New York, NY, USA, 2010),
+1999–2008.
+
+11. Glanz, K., Rimer, B., and Viswanath, K. Health
+
+Behavior and Health Education: Theory, Research, and
+Practice. Wiley, 2008.
+
+12. Godin, G., and Kok, G. The theory of planned behavior:
+A review of its applications to health-related behaviors.
+American Journal of Health Promotion 11, 2 (1996),
+87–98.
+
+13. Grudin, J. Why cscw applications fail: Problems in the
+design and evaluationof organizational interfaces. In
+Proceedings of the 1988 ACM Conference on
+Computer-supported Cooperative Work, CSCW ’88,
+ACM (New York, NY, USA, 1988), 85–93.
+
+14. Guo, F., Li, Y., Kankanhalli, M. S., and Brown, M. S.
+
+An evaluation of wearable activity monitoring devices.
+In Proceedings of the 1st ACM International Workshop
+on Personal Data Meets Distributed Multimedia, PDM
+’13, ACM (New York, NY, USA, 2013), 31–34.
+
+15. Hammond, T. Wearables have a dirty little secret: 50%
+of users lose interest. Tech Republic Inc. (2014).
+
+16. Hekler, E. B., Klasnja, P., Froehlich, J. E., and Buman,
+M. P. Mind the theoretical gap: Interpreting, using, and
+developing behavioral theory in hci research. In
+Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems, CHI ’13, ACM (New
+York, NY, USA, 2013), 3307–3316.
+
+17. Herz, J. Wearables are totally failing the people who
+
+need them most. Wired (November 2014).
+
+18. Hodges, S., Williams, L., Berry, E., Izadi, S., Srinivasan,
+J., Butler, A., Smyth, G., Kapur, N., and Wood, K.
+Sensecam: A retrospective memory aid. In UbiComp
+2006: Ubiquitous Computing. Springer, 2006, 177–193.
+
+19. Hunter, L. Are wearables over? Fast Company Inc.
+
+(2014).
+
+20. IDTechEx. Wearable technology 2014-2024:
+
+Technologies, markets, forecasts e-textiles, wearable
+electronics, medical diagnostics, smart glasses, smart
+wristbands and more, July 2014.
+http://www.idtechex.com/research/reports/
+wearable-technology-2014-2024-technologies\
+-markets-forecasts-000379.asp.
+
+21. Kay, M., Choe, E. K., Shepherd, J., Greenstein, B.,
+
+Watson, N., Consolvo, S., and Kientz, J. A. Lullaby: A
+capture &#38; access system for understanding the sleep
+environment. In Proceedings of the 2012 ACM
+Conference on Ubiquitous Computing, UbiComp ’12,
+ACM (New York, NY, USA, 2012), 226–234.
+
+22. Klasnja, P., and Pratt, W. Healthcare in the pocket:
+
+Mapping the space of mobile-phone health
+interventions. J. of Biomedical Informatics 45, 1 (Feb.
+2012), 184–198.
+
+23. Ledger, D., and McCaffrey, D. Inside wearables: How
+the science of human behavior change offers the secret
+to long-term engagement. Endeavour Partners, LLC 93,
+1 (2014), 36–45.
+
+657
+
+24. Lee, V. R., and Drake, J. Quantiﬁed recess: Design of an
+activity for elementary students involving analyses of
+their own movement data. In Proceedings of the 12th
+International Conference on Interaction Design and
+Children, IDC ’13, ACM (New York, NY, USA, 2013),
+273–276.
+
+25. Li, I., Dey, A., and Forlizzi, J. A stage-based model of
+personal informatics systems. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing
+Systems, CHI ’10, ACM (New York, NY, USA, 2010),
+557–566.
+
+26. Li, I., Dey, A. K., and Forlizzi, J. Understanding my
+
+data, myself: Supporting self-reﬂection with ubicomp
+technologies. In Proceedings of the 13th International
+Conference on Ubiquitous Computing, UbiComp ’11,
+ACM (New York, NY, USA, 2011), 405–414.
+
+27. Lin, J. J., Mamykina, L., Lindtner, S., Delajoux, G., and
+Strub, H. B. Fish’n’steps: Encouraging physical activity
+with an interactive computer game. In Proceedings of
+the 8th International Conference on Ubiquitous
+Computing, UbiComp’06, Springer-Verlag (Berlin,
+Heidelberg, 2006), 261–278.
+
+28. Mamykina, L., Mynatt, E., Davidson, P., and Greenblatt,
+D. Mahi: investigation of social scaffolding for reﬂective
+thinking in diabetes management. CHI ’08, ACM (New
+York, NY, USA, 2008), 477–486.
+
+29. Mamykina, L., Smaldone, A. M., and Bakken, S. R.
+
+Adopting the sensemaking perspective for chronic
+disease self-management. Journal of Biomedical
+Informatics In Print (2015), –.
+
+30. Mauriello, M., Gubbels, M., and Froehlich, J. E. Social
+fabric ﬁtness: The design and evaluation of wearable
+e-textile displays to support group running. In
+Proceedings of the 32Nd Annual ACM Conference on
+Human Factors in Computing Systems, CHI ’14, ACM
+(New York, NY, USA, 2014), 2833–2842.
+
+31. Medynskiy, Y., and Mynatt, E. D. Salud!: An open
+infrastructure for developing and deploying health
+self-management applications. In PervasiveHealth,
+IEEE (2010), 1–8.
+
+32. Miller, A. D., and Mynatt, E. D. Stepstream: A
+school-based pervasive social ﬁtness system for
+everyday adolescent health. In Proceedings of the 32Nd
+Annual ACM Conference on Human Factors in
+Computing Systems, CHI ’14, ACM (New York, NY,
+USA, 2014), 2823–2832.
+
+33. Munson, S., and Consolvo, S. Exploring goal-setting,
+rewards, self-monitoring, and sharing to motivate
+physical activity. In Pervasive Computing Technologies
+for Healthcare (PervasiveHealth), 2012 6th
+International Conference on (May 2012), 25–32.
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+34. Patel, R. A., Klasnja, P. V., Hartzler, A., Unruh, K. T.,
+and Pratt, W. Probing the beneﬁts of real-time tracking
+during cancer care. In AMIA (2012).
+
+35. Phillips, B., and Zhao, H. Faculty adoption of
+
+educational technology. Assistive Technology 5, 1
+(1993), 36–45.
+
+36. Prochaska, J., and Velicer, W. F. The Transtheoretical
+
+Model of Health Behavior Change. American Journal of
+Health Promotion 12, 1 (1997), 38–48.
+
+37. Riley, W. T., Rivera, D. E., Atienza, A. A., Nilsen, W.,
+Allison, S. M., and Mermelstein, R. Health behavior
+models in the age of mobile interventions: are our
+theories up to the task? Translational behavioral
+medicine 1, 1 (2011), 53–71.
+
+38. Rooksby, J., Rost, M., Morrison, A., and Chalmers,
+M. C. Personal tracking as lived informatics. In
+Proceedings of the 32Nd Annual ACM Conference on
+Human Factors in Computing Systems, CHI ’14, ACM
+(New York, NY, USA, 2014), 1163–1172.
+
+39. Sahami Shirazi, A., Clawson, J., Hassanpour, Y.,
+
+Tourian, M. J., Schmidt, A., Chi, E. H., Borazio, M., and
+Van Laerhoven, K. Already up? using mobile phones to
+track & share sleep behavior. Int. J. Hum.-Comput. Stud.
+71, 9 (Sept. 2013), 878–888.
+
+40. Schwanda, V., Ibara, S., Reynolds, L., and Cosley, D.
+
+Side effects and ”gateway” tools: Advocating a broader
+look at evaluating persuasive systems. In Proceedings of
+the SIGCHI Conference on Human Factors in
+Computing Systems, CHI ’11, ACM (New York, NY,
+USA, 2011), 345–348.
+
+41. Strecher, V. J., Seijts, G. H., Kok, G. J., Latham, G. P.,
+
+Glasgow, R., DeVellis, B., Meertens, R. M., and Bulger,
+D. W. Goal setting as a strategy for health behavior
+change. Health Education & Behavior 22, 2 (1995),
+190–200.
+
+42. Swan, M. Emerging patient-driven health care models:
+An examination of health social networks, consumer
+personalized medicine and quantiﬁed self-tracking.
+International Journal of Environmental Research and
+Public Health 6, 2 (2009), 492–525.
+
+43. Van Laerhoven, K., and Aronsen, A. Memorizing what
+you did last week: Towards detailed actigraphy with a
+wearable sensor. In Distributed Computing Systems
+Workshops, 2007. ICDCSW ’07. 27th International
+Conference on (June 2007), 47–47.
+
+44. Walsh, G., and Golbeck, J. Stepcity: A preliminary
+investigation of a personal informatics-based social
+game on behavior change. In CHI ’14 Extended
+Abstracts on Human Factors in Computing Systems, CHI
+EA ’14, ACM (New York, NY, USA, 2014), 2371–2376.
+
+658
+
+

@@ -1,0 +1,1758 @@
+Participant Driven Photo Elicitation for Understanding 
+Activity Tracking: Benefits and Limitations 
+
+Nanna Gorm & Irina Shklovski 
+IT University of Copenhagen 
+Denmark 
+{nanj, irsh}@itu.dk 
+
+ABSTRACT 
+Studying  in-situ  technology  use  over  time  can  be  difficult 
+and  this  is  especially  so  when  considering  technologies 
+such  as  activity  tracking  devices  explicitly  designed  to  be 
+unobtrusive. Yet understanding activity tracking in practice 
+is crucial, as tracking technologies become important tools 
+for health promotion and health insurance programs. In this 
+paper, we describe a method for a longitudinal participant-
+driven photo  elicitation  study  of  activity  tracking.  During 
+the five-month long study, our drop-out rates were low and 
+we  observed 
+lapses  and 
+idiosyncratic  practices  with 
+particular  use  patterns  among  participants  along  with 
+significant self-reflection on activity tracking as a practice. 
+We describe our method in detail, discussing the necessary 
+adaptations  for the study of  activity tracking practices. We 
+offer  our  experiences  of  benefits  and  challenges  of  this 
+process,  and  suggest  points  for  consideration  for  future 
+studies in the area. 
+
+Author Keywords 
+Activity tracking; photo elicitation; research methods. 
+
+ACM Classification Keywords 
+H5.m. Information interfaces and presentation: 
+Miscellaneous  
+
+INTRODUCTION 
+Activity trackers (such as FitBit, Jawbone and the like) are 
+increasingly popular with industry reports asserting that just 
+over  one  quarter  of  Americans  use  some  sort  of  digital 
+device  to  track  health  and  fitness  [27].  The  uptake  of 
+wearable  activity  tracking  devices  is  accompanied  by  an 
+excited rhetoric about the health benefits to be gained from 
+their  use.  Yet  most  of  these  devices  are  abandoned  within 
+six months of first use [15]. Anecdotal stories also suggest 
+that  people  often  cheat  in  creative  ways  to  log  more  steps 
+than  they  actually  walked  by  shaking  their  tracker  or 
+mounting it on a dog’s collar for example [19]. Yet despite 
+the proliferation of research in this area, we still know very 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  the  author(s)  must  be 
+honored.  Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or 
+republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+from 
+specific  permission 
+Permissions@acm.org. CSCW '17, February 25-March 01, 2017, Portland, 
+OR,  USA Copyright  is  held  by  the  owner/author(s).  Publication  rights 
+licensed 
+ DOI: 
+to  ACM. ACM  978-1-4503-4335-0/17/03…$15.00 
+http://dx.doi.org/10.1145/2998181.2998214 
+
+fee.  Request  permissions 
+
+and/or 
+
+a 
+
+little  about  the  lived  experience  of  everyday  usage  of 
+activity  trackers  and  how  this  usage  develops  over  time  in 
+order  to  understand  why  the  failure  rate  of  intended  use  is 
+so  high.  This  is  in  part  due  to  the  fact  that  studies  of 
+technologies  ‘in  use’  are  notoriously  difficult,  having  to 
+rely  on  either  extensive  ethnographic  and  participant 
+observation approaches or, most often, on self-report that is 
+sometimes  complimented  by  sensor-based  behavioral  data. 
+The problem is exacerbated because activity trackers are an 
+example  of  technologies  designed  to  be  unobtrusive  and 
+largely forgotten when in use.  
+
+have 
+
+produced 
+
+several  models 
+
+Researchers 
+for 
+understanding  self-tracking  practices  addressing  both 
+differences  in  use  practices  and  lapses  in  use  [1,8,20]  and 
+investigated  real-world  use  of  persuasive  technologies  for 
+activity  tracking  [11].  Most  often,  these  studies  are  survey 
+or interview-based [8,11,18], with some studies conducting 
+follow-up  interviews  with  very  active  users  after  shorter 
+periods of time [23]. With a different approach, Clawson et 
+al.  analyzed  Craigslist  advertisements  for  used  devices 
+being  sold  [6].  Although  these  studies  provide  valuable 
+insights,  understanding  how  activity  tracking  use  develops 
+over  time  has  proved  elusive  as  all  of  the  above-listed 
+approaches primarily rely on verbal self-report with all the 
+attendant  problems  with  memory  and  recall  accuracy  [31]. 
+As  such,  researchers  continue  to  call  for  more  empirical 
+research on everyday uses of self-tracking [24]. 
+
+Part  of  the  problem  is  that  activity  tracking  happens 
+alongside  other  daily  activities,  with  only  occasional 
+moments  of  direct  engagement.  Users  might  check  step-
+counts  while  making  breakfast  or  look  at  sleep-data  while 
+waiting  for  the  bus.  Following  these  developments  over 
+several  months  is  difficult.  There  is  no  one  fixed  place 
+where  the  activity  can  be  observed  and  focused  on  one 
+aspect of use. Despite the expectation of continuous use of 
+trackers  for  health  management  purposes,  research  cited 
+above  suggests  that  much  of  the  use  is  episodic,  with 
+frequent  lapses  and  “creative  uses”.  Such  episodic  use  is 
+difficult  to  study  through  traditional  approaches.  Yet  as 
+these  devices  become  ever  more  central  to  discourses  on 
+behavior  change  efforts,  health  promotion  campaigns  and 
+even health insurance discount programs, understanding the 
+lived dynamics of activity tracker use over time is crucial.  
+
+In this paper we detail a methodology and study design that 
+relies  on  participant-driven  photo  elicitation.  The  use  of 
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1350 
+photo  elicitation  may  seem  counter-intuitive  for  studying 
+devices that are designed to be largely invisible when in use 
+but  we  found  our  approach  to  be  successful.  Our  study 
+allowed  us  to  gain  significant  insight  into  dynamics  of 
+activity tracker use over the course of five months, working 
+with  novice,  occasional,  and  experienced  users.  Here  we 
+describe  our  adaptation  of  photo  elicitation,  experience 
+sampling, and photo diary methods for studying intermittent 
+and often idiosyncratic use of activity tracking devices. We 
+discuss  the  methodological  considerations,  successes  and 
+failures  that  arose  in  the  course  of  our  research  and 
+conclude  with  suggestions  for  how  this  approach  may  be 
+successfully  employed  to  further  our  understanding  of 
+activity tracking in practice.  
+
+STUDYING TECHNOLOGY IN USE 
+Studying  technologies  “in  use”  means  investigating  the 
+very experience of use. No automatic measurement of data 
+produced  in  the  course  of  usage  activities  or  external 
+observations  of  practices  can  get  at  understanding  how 
+technologies  are  experienced  by  individuals.  Thus  self-
+reports  of  why  and  how  technology  use  had  occurred  are 
+usually  collected  alongside 
+the  automatic  methods. 
+Research  has  suggested  various  methods  to  support  self-
+report and to mitigate associated memory and recall issues.  
+
+is 
+
+insight 
+
+in  self-report  research 
+
+A  significant  concern 
+that 
+participants  may  answer  in  socially  desirable  ways  that  do 
+not necessarily align with actual experience [25]. Projective 
+interviewing is one approach attempting to circumvent this 
+issue  [12].  Projective  interviewing  techniques  make  use  of 
+materials such as objects, photos, or diagrams as part of the 
+interview  process.  These 
+techniques  were  originally 
+developed in clinical and psychoanalytical research to gain 
+better 
+to  get 
+into  patients’  problems, 
+participants  (or  patients)  to  more  easily  communicate 
+experiences, that might otherwise be hard to study [25]. For 
+example,  the  Rorschach  Inkblot  Test  can  help  patients 
+project  their  own  thoughts  and  feelings  onto  others  (or  in 
+this  case  onto  an  object)  [25].  Projective 
+interview 
+techniques  have  also  been  employed  in  consumer  research 
+because  consumers  may  fear  being  judged  negatively  if 
+they revealed their opinions or attitudes towards the subject, 
+or in most cases brands and products, under study.  
+
+trying 
+
+Diary  studies  is  an  alternative  approach  to  understanding 
+mundane  practices  that  are  difficult  to  externally  observe 
+[4]. Paper- and pencil-based diaries have been followed by 
+experience  sampling  methods,  made  possible  as  personal 
+technologies became ubiquitous. Early experience sampling 
+methods (ESM) studies added ways of pinging participants 
+to  remind  them  to  fill  out  their  diary  entries  [3].  In  more 
+recent  studies,  participants  are  typically  asked  at  random 
+times throughout the day about what they are doing via an 
+app  [32:1545].  Yue  et  al.  also  suggested  allowing 
+participants  to  also  add  media  for  later  use  in  interviews 
+[32].  One  of  the  biggest  issues  with  conducting  diary  or 
+ESM  studies  is  that  the  demand  of  commitment  and 
+
+workload  from  participants  can  be  quite  high,  reducing 
+participation and increasing dropout rates.  
+
+Methodological  developments  of  the  approaches  described 
+above  have  resulted  in  a  variety  of  media  elicitation 
+methods. ‘Media elicitation’ involves participants capturing 
+audio, photo or video and even collecting objects, in order 
+to  reflect  on  their  experiences.  In  media  elicitation  studies 
+participants are later interviewed about the items they have 
+chosen to capture or collect.  
+
+Besides including photos in research studies, some research 
+has  investigated  using  video-methods  for  understanding 
+everyday  use  of  technologies.  This  entails  that  the  user 
+captures video of the system they are working with. While 
+this  “trouble-spotting”  is  useful  for  understanding  specific 
+systems and their use [30], there are other shortcomings of 
+the  method.  For  example,  setting  this  up  in  the  context  of 
+activity tracking would only give access to the experiences 
+people  have  when  they  are  already  in  the  app  or  working 
+directly  with  the  tracking  system.  There  are  many  aspects, 
+however,  that  connect  to  use  beyond  the  minutes  the 
+participant  is  looking  at  the  app.  Many  experiences  and 
+contingencies outside the actual use of the device influence 
+individual  self-tracking  practices  [8,23].  Looking  purely  at 
+the data, or at the interaction with the device alone can tell 
+very little of the overall lived experience.  
+
+tasks 
+
+to  provoke 
+
+In  the  area  of  design,  researchers  have  used  ‘cultural’  or 
+‘design’  probes  to  engage  participants,  using  designed 
+objects,  photographs  or 
+reflective 
+responses  from  participants  [2].  Some  such  studies  have 
+used  probes  to  collect  reactions  and  reflections  over  time, 
+typically to support and inspire an on-going design process 
+[13].  The  materials  used  in  the  probes  are  designed  and 
+produced  by  the  researchers  specifically  for  the  study  and 
+can  function  similarly  to  other  projective  methods.  Some 
+studies have also used open-ended prompts and instructions 
+to  the  participants  to  generate  their  own  media  by  taking 
+pictures  with  their  own  cameras  or  those  provided  by 
+researchers [17]. These latter iterations of probes have been 
+critiqued  as  alterations  of  the  original  design  of  cultural 
+to  epistemological 
+probes  without  sufficient  attention 
+concerns  [2].  While  such  engagements  are  similar  in  form 
+to the media elicitation methods we describe here, the goals 
+and  purposes  of  the  method  we  describe  is  different  in  its 
+emphasis  on  understanding  lived  experience  with  pre-
+existing technology over time. 
+
+Photo elicitation 
+Photo  elicitation  refers  to  the  idea  of  using  photographs 
+during  an  interview  interaction  with  a  participant,  and  was 
+first suggested by Collier in 1957 as an augmentation to the 
+qualitative  interview  [16].  The  images  used  in  most  photo 
+elicitation  interviews  vary  from  generic  images  to  images 
+capturing  known  prior  events  to  images  capturing  the 
+interviewee  and  everything  in  between  [16].  These  images 
+can be produced either by the researcher or the interviewees 
+themselves.  In  the  latter  case  this  is  often  referred  to  as 
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1351[5]  or 
+
+“auto-driven” 
+“participant-driven”.  We  use 
+“participant-driven”  to  avoid  confusion  with  automatic 
+capture systems, such as those that have been used in other 
+HCI studies.  
+
+Inclusion  of  images  as  part  of  a  self-report  interview 
+interaction  with  participants  has  several  benefits.  First, 
+images  can  often  lead  to  more  specific  recall  [4,16].  By 
+creating  conditions  for  more  precise  recall  of  activities  of 
+interest,  the  researcher  may  become  aware  of  aspects  that 
+might  have  been  overlooked  in  traditional  interviews  [5]. 
+Second,  photo  elicitation  eases  rapport  between 
+the 
+interviewer and interviewee, facilitating which questions to 
+ask,  while  lessening  potential  akwardness  in  the  interview 
+situation by providing an object of focus. Third, the process 
+of  discussing  photos  can  allow  the  particpant  to  “take  the 
+leading role” during the encounter with the researcher [21]. 
+Especially 
+(as 
+opposed  to  using  photos  chosen  by  the  researcher)  photos 
+can  become  an  important  element  in  the  research  process 
+making  the  interview  into  a  sense-making  collaboration 
+[21].  The  meaning  arises  from  the  conversation  betweeen 
+participant and researcher, rooted in the visual record of the 
+lived experience of the participant [16].  
+
+in  participant-driven  photo  elicitation 
+
+As  with  all  methods,  however,  photo  elicitation  studies 
+come with a set of challenges. Some challenges are similar 
+to those encountered in any sort of qualitative engagement 
+with research participants, while others are particular to this 
+method. Considerations of confidentiality and ethics, while 
+a  concern  in  any  study,  become  especially  important  with 
+photographic  material.  Photographs  can  create  more 
+intimate  situations  or  produce  unintended  disclosures.  By 
+asking participants to take and share photos, the possibility 
+to  gain  more  insight  comes  with  the  risk  of  intruding  on 
+participants’  private  sphere.  This  is  a  delicate  balance  that 
+demands  that  the  researcher  be  attentive  to  and  aware  of 
+this  boundary,  causing  a  potentially  negative  or  stressful 
+experience  for  the  participant.  Social  desirability  bias  is 
+another  common  aspect  of  any  research  engagement.  By 
+virtue of agreeing to participate in a study participants tend 
+to  try  to  produce  helpful  and  socially  desirable  content  for 
+the  researcher.  The  challenge  with  photos  is  ensuring  that 
+participants  do  not  focus  on  producing  photos  that  are 
+somehow  judged  to  be  inherently  interesting.  Instead,  the 
+goal  is  to  generate  photos  that  would  allow  researchers  to 
+expand  on  their  questions,  while  providing  a  way  for 
+participants  to  communicate  various  dimensions  of  their 
+lives [3].  
+
+Other  challenges  in  photo  elicitation  studies  have  changed 
+as  devices  have  changed  and  experience  with  them  vary 
+between  communities.  Clark-Ibáñez 
+found  challenges 
+pertaining  to  inexperience  with  photographic  devices,  and 
+costs  of  distributing  disposable  cameras 
+to  research 
+participants [5]. While this could still be challenging if one 
+wishes  to  do  research  in  underserved  communities,  these 
+were  not  relevant  in  our  study.  At  the  same  time,  cameras 
+
+have  developed  rapidly,  and  as  such  the  opportunities  and 
+challenges now relevant to these types of studies are in need 
+of 
+revision.  For  example,  phone  cameras  are  so 
+commonplace  that  people  have  developed  complex  habits 
+around  their  use.  Participant-driven  photo  elicitation  may 
+require altering these habits, which could prove difficult to 
+accomplish.   
+
+The  use  of  visual  research  methods  is  common  in  CSCW 
+research  [22],  where  photography  and  videography  have 
+been  used  to  analyze  interactions  and  uses  of  computing 
+artifacts  in  a  variety  of  settings  [26].  It  might  be  the  case 
+that  even  though  studies  use  photos,  not  just  of  research 
+settings but also as a part of the interview, few of these are 
+written  up  as  photo  elicitation  studies  [14],  as  is  often  the 
+case in anthropology [16]. The collaborative element makes 
+participant driven photo elicitation study a particularly good 
+fit  for  research  in  the  area  of  CSCW.  Yet  clarifying  the 
+benefits  and  challenges  of  participant  driven  photo 
+elicitation studies can help move research forward. 
+
+Activity  tracking  technologies  are  in  rapid  development, 
+and  pose  many  challenges.  This  includes  understanding 
+how people manage lapses in use [1,7], and what might lead 
+to  “happy  abandonment”,  where  the  user  for  example 
+learned  new  fitness  habits  and  thus  no  longer  needs  the 
+device  [6].  Understanding  these  practices  better  could  lead 
+to  better  designed  devices,  and  potentially  better 
+experiences  of  use.  However,  the  use  of  activity  tracking 
+technologies is difficult to observe or survey over extended 
+periods  of  time,  for  reasons  stated  above.  As  such,  many 
+studies  so  far  have  focused  on  members  of  the  Quantified 
+Self  community,  where  self-tracking  practices  are  more 
+easily  observed.  Other  studies  have  used  secondary  data 
+such  as  Craigslist  listings  [6].  We  believe  that  studies  of 
+activity  tracking  need  a  greater  variety  of  tools  in  our 
+methodological  arsenal.  Photo  elicitation  is  perhaps  a 
+counter-intuitive  method  as  the  “doing”  of  self-tracking 
+does  not  obviously  and  easily  lend  itself  to  photo  capture. 
+Yet the challenge of it can lead to important self-reflection 
+on  self-tracking  practices,  facilitating  and  enriching  self-
+reporting  in  interviews.  Thus  photo  elicitation  is  way  to 
+encourage continuous reflection rather than a way to closely 
+observe tracking practices in-situ. Contact with participants 
+over time through photos can help the researcher to follow 
+changes in experiences and attitudes as images help trigger 
+recall.  Below  we  detail  the  benefits  and  challenges  of 
+participant  driven  photo  elicitation  as  we  adapted  this 
+method to study activity tracking in practice.   
+
+RESEARCH DESIGN 
+The  photo  elicitation  study  of  activity  tracking  users  we 
+describe  here  was  conducted  in  Denmark  between  August 
+2015 and February 2016. 
+
+Recruiting participants 
+We  recruited  participants  using  Facebook  and  snowball 
+sampling.  67%  of  all  Danes  have  a  profile  on  Facebook, 
+making  this  the  social  network  site  with  the  highest 
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1352penetration in the country [29]. We recruited participants by 
+posting in relevant Facebook groups and in the networks of 
+the  authors.  An  invitation  to  participate  in  the  study  was 
+posted in a Facebook group for women in start-ups (‘Ladies 
+First’), in FitBit Denmark, and in Fitness.dk (Danish fitness 
+chain). Anyone with familiarity of the study, or the authors 
+personally,  was  thanked  for  their  interest,  and  asked  to 
+share  the  post  in  their  network.  Posting  on  Facebook  was 
+initially  meant  to  be  just  one  step  towards  finding 
+participants, followed by posters in cafés, libraries or other 
+interested 
+public  places. 
+respondents replied either directly on the post, via e-mail or 
+via  private  messages  on  Facebook.  In  order  to  have  as 
+broad a picture of activity tracking practices as possible we 
+sought  to  include  users  with  various  levels  of  experience, 
+educational  background,  geographical  location  (rural  and 
+urban),  gender  and  age.  All  participants  were  asked  about 
+other  potential  participants, 
+the 
+snowball sampling method. 
+
+the  end,  however,  64 
+
+thus  making  use  of 
+
+In 
+
+to 
+
+throughout 
+
+Of the 25 final participants, nine participants had little or no 
+experience  with  activity  tracking  devices,  and  were  given 
+the  choice  of  a  Fitbit  One  or  Fitbit  Flex  to  use  as  they 
+the  study.  Eight 
+the  course  of 
+wanted 
+participants  we  categorized  as  occasional  users,  as  they 
+would sometimes lapse in the use of their devices, but also 
+come  back 
+them.  Finally,  eight  participants  we 
+categorized  as  continuous  users,  as  they  had  used  their 
+device  consistently  for  at  least  four  months  prior  to  the 
+study. It is important to highlight that participants switched 
+use  patterns  throughout  the  study,  however,  this  initial 
+diversity  was  useful  to  give  us  a  broad  insight  into  user 
+experiences. All participants received a written explanation 
+of  the  purpose  of  the  study,  the  process  of  the  study,  and 
+information  on  anonymization  procedures.  Both  the  initial 
+and  follow-up  interviews  were,  when  possible,  conducted 
+face  to  face  in  the  homes  of  the  participants  or  in  their 
+workplace. All interviews were conducted in Danish except 
+one conducted in English. Initial interviews were conducted 
+with  all  participants  throughout  August  and  September 
+2015.  At  the  end  of  the  interview,  participants  that  were 
+new  to  tracking  were  given  a  Fitbit  device.  Two  of  these 
+new  users  lost  their  devices  shortly  after  the  study  had 
+started  (within  1  and  3  weeks).  One  of  these  participants 
+gave  a follow-up  account  of  his  experience  via  e-mail,  but 
+has been omitted from this study as he had only had a few 
+days  with 
+tracker.  The  second  participant  was 
+interviewed  over  the  phone  and  is  included  in  the  study. 
+After the 5 months of the study, two new users did not reply 
+to our invitation to a follow-up interview. In total, this study 
+builds on the findings from interviews, photos, and e-mails 
+from 22 participants.  
+
+the 
+
+Study set-up 
+The study was carried out in three phases. In the first phase, 
+initial  interviews  were  conducted  in  a  semi-structured 
+format. This first interview served as an introduction to the 
+study where participants were asked about their occupation, 
+
+preferred  leisure  time  activities,  and  previous  experiences 
+with  tracking  physical  activity  as  well  as  other  types  of 
+tracking  (finance,  location,  weight).  Participants  were  also 
+asked about their habits with regards to taking photos. New 
+users  were  asked  about  their  expectations  of  the  devices, 
+while  the  rest  of  the  participants  were  interviewed  about 
+previous  experiences  and  uses  of  various  devices.  At  the 
+end  of  the  interview  we  instructed  participants  to  take 
+photos  for  the  next  five  months  of  events  or  experiences 
+they  felt  were  related  to  their  activity  tracking.  We 
+explicitly told participants to capture anything, big or small, 
+that  they  thought  might  be  relevant  to  help  us  understand 
+their  particular  experiences  of  using  an  activity  tracker. 
+Participants were asked to send photos via e-mail to the first 
+author  once  a  week  and  were  encouraged  to  also  include 
+one  or  two  sentences  describing  the  photo  or  any  thoughts 
+they might like to share, but this was not compulsory.  
+
+The  second  phase  of  the  study  lasted  for  five  months  with 
+occasional  checking  in  with  participants.  We  responded  to 
+each photo we received, sometimes with a simple thank you 
+and  sometimes  with  a  few  follow-up  questions,  depending 
+on the content. If we had not heard from participants in two 
+weeks they would get an individually tailored follow-up e-
+mail. At the end of the study, participants had sent a total of 
+313 photos, ranging from 4-125 photos per participant, with 
+a median of 8 photos (see Table 1). Our initial reaction was 
+that  the  median  number  of  photos  was  too  low.  This 
+perhaps  had  to  do  with  how  often  we  sent  reminders  and 
+how these were designed. Yet even with just a few photos 
+the  follow-up  interviews  proved  very  fruitful.  We  will 
+address  this  issue  in  more  detail  later  in  the  paper.  In  the 
+third and final phase of the study, we conducted follow-up 
+interviews.  In  preparation  for  these  interviews,  we  printed 
+out  all  of  the  photos  participants  had  sent  throughout  the 
+second  phase.  For  each  participant  we  also  developed  a 
+follow-up  interview  guide,  noting  items  that  were  left 
+unclear  from  the  first  interview  or  from  the  photos  and  e-
+mails.  
+
+The  follow-up  interview  had  a  three-part  design.  First, 
+participants  were  asked  to  go  through  the  photos  they  had 
+sent one by one, and explain what was in the photo and why 
+they took the photo. This often sparked long reflections and 
+explanations,  where  only  a  few  clarifying  questions  were 
+needed.  Most  of  the  time  participants  addressed  questions 
+in  the  follow-up  interview  guide  before  they  were  done 
+explaining  the  photos  without  prompting.  Once  all  photos 
+had  been  discussed,  participants  were  asked  to  complete  a 
+sorting  task  by  looking  at  all  of  their  photos  together  and 
+identifying  any  patterns.  For  example,  participants  were 
+asked  whether 
+represented  different 
+experiences, or whether some of them might fit together in 
+certain  categories.  For  example,  one  participant  explained 
+that her photos could be categorized as before, during, and 
+after,  exercise  sessions.  This  led  to  a  broader  range  of 
+considerations,  as  she  saw  her  own  activity  tracking 
+practice from a new perspective.  
+
+their  photos 
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1353Device*	
+
+125	
+0	
+4	
+8	
+
+Photo
+s	sent	
+6	
+
+Table	1.	Participant	information	
+Age	 Occupation	
+Parti-
+cipant	
+P1F	(N)	
+P2F	(N)	
+P3M	(N)	
+P4M	(N)	
+P5F	(N)	
+P6F	(N)	
+P7M	(N)	
+P8M	(N)	
+P9F	(N)	
+P10F	(O)	
+P11F	(O)	
+P12F	(O)	
+P13F	(O)	
+P14M	(O)	
+P15M	(O)	
+P16F	(O)	
+P17M	(O)	
+P18F	(C)	
+P19F	(C)	
+P20F	(C)	
+P21M	(C)	
+P22F	(C)	
+P23M	(C)	
+P24M	(C)	
+P25F	(C)	
+F=  female,  M=  Male.  (N)=  New  tracker  received,  (O)=  Occasional 
+use  at  start  of  study.  (C)=  Continuous  use  at  start  of  study.                   
+** Switched device during study. Strikethroughs indicate participants 
+that left the study before follow-up. 
+
+Student	
+Student	
+Software	develop	
+Store	manager	
+Import	manager	
+Engineer	
+Music	teacher	
+Carpenter	
+Nurse	
+Student	
+App	developer	
+Consultant	
+Office	assistant	
+PhD	student	
+Store	manager	
+Civil	engineer	
+Dept.	manager	
+Student	
+Teacher	
+Health	Care	Wrk	
+IT	consultant	
+Text	writer	
+Office	adm.	
+Machine	engineer	
+Finance	
+
+Fitbit	Flex	
+Fitbit	Flex	
+Fitbit	Flex	
+Fitbit	One	
+Fitbit	Flex	
+Fitbit	One	
+Fitbit	One	
+Fitbit	Flex	
+Fitbit	One	
+Garmin	
+Fitbit	Flex**	
+Jawbone	UP	
+Fitbit	Surge	
+Jawbone	UP	
+Suunto	
+Polar	
+Fitbit	Surge	
+Fitbit	Surge	
+Garmin	Vivofit	
+Fitbit	Flex	
+Fitbit	Charge	
+Fitbit	Flex**	
+Garmin	Vivofit	
+Fitbit	Surge	
+Fitbit	Charge	
+
+21	
+22	
+27	
+31	
+34	
+38	
+42	
+45	
+50	
+25	
+28	
+28	
+31	
+33	
+39	
+40	
+47	
+25	
+26	
+39	
+40	
+41	
+41	
+54	
+57	
+
+12	
+9	
+16	
+5	
+7	
+5	
+10	
+10	
+8	
+6	
+16	
+21	
+8	
+8	
+4	
+8	
+12	
+
+This  interaction  sparked  reflections  at  a  broader  level, 
+looking  across  one-off  uses  and  often  led  to  a  wider  range 
+of considerations. Finally, participants were asked to reflect 
+upon  their  experience  of  participating  in  the  study  as  a 
+whole.  All  interviews  were  transcribed  and  then  coded 
+using  the  TAMSanalyzer  tool.  Research  notes  and  email 
+correspondence  with  participants  from  the  whole  research 
+period were also included in the analysis.  
+
+EXPERIENCES FROM RUNNING THE STUDY 
+In 
+the  following  sections  we  discuss  our  research 
+experience by detailing first the particular benefits and then 
+the  challenges  we  encountered  as  we  conducted  this 
+participant-driven photo elicitation study.  
+
+Benefits from photo elicitation methods 
+
+1. Familiar medium made sign-up barrier low 
+Even  though  all  participants  had  experience  taking  photos 
+with  their  own  cameras,  they  had  different  ideas  about 
+taking  photos  and  different  habits.  To  some  taking  photos 
+was already related to physical activity. For example, P10F 
+often took photos as part of her running, sometimes posting 
+these  on  her  Endomondo  account,  which  she  associated 
+with her tracking practices. On the other hand, we also had 
+participants  who  did  not  use  their  cameras  often:  “I’m  not 
+good  at  photos,  that’s  not  something  I  usually  do”  (P22F, 
+follow-up  interview).  Throughout  the  study  we  reminded 
+participants that photos did not have to be “good” but rather 
+needed  to  convey  some  experience  or  thought  they  had. 
+
+Participants were also welcome to send screen shots, if they 
+felt that described something they had experienced. Even if 
+some participants did not see themselves as “good at taking 
+photos,” the design of our study allowed for a broad range 
+of  participants  to  contribute  to  the  study.  For  example,  we 
+noticed  that  those  that  sent  few  photos  sometimes  added 
+more  detailed  text  explanations  in  the  email.  This  design 
+also  appealed  to  those  who  might  decline  to  participate  in 
+other types of studies: “(…) if you had asked me to send a 
+report every week, and then it has to answer these 7 bullet 
+points and attach a photo, in that case I think it would have 
+been  too  much  work  (…),  where  this  has  more  been  just 
+using  it  and  then  sensing  how  you  use  it”  (P5F,  follow-up 
+interview).  Even  though  participants  had  prior  habits  of 
+taking photos, using the camera in their phone required no 
+set-up or introduction, which meant that there was no initial 
+hurdle to overcome for participating in the study.  
+
+2. Uncertainty about an open task lead to reflection 
+Even  though  the  medium  was  familiar,  the  act  of  taking 
+photos for a research study was new to the participants. As 
+the study was exploratory in nature we had intentionally left 
+the task open. Perhaps because of this new context and the 
+very  open  task,  we  noticed  that  some  participants  were 
+often  tentative.  Our  participant-driven  photo  elicitation 
+method created a situation where research participants were 
+not able to easily tell what would be the correct and socially 
+desirable  fulfillment  of  the  task  at  hand.  This  became 
+obvious  when  towards  the  end  of  the  follow-up  interview 
+many participants asked how others had solved the task.  
+
+Some  participants  sent  very  similar  photos  throughout  the 
+study. Initially, we worried that this might give us too little 
+insight,  rather  than  the  broad  perspective  we  were  hoping 
+for.  However,  Clark-Ibáñez  highlights  how  one  of  the 
+children in her study had taken 38 photos of her new kitten, 
+and  she  dreaded  the  interview.  How  could  anything 
+important arise from so many similar photos? It turned out 
+that  the  kitten  was  particularly  important  to  this  child, 
+because  she  had  recently  moved  to  a  new  area,  and 
+conversations  about  the  kitten  revealed  many  important 
+insights  about  her  living  situation,  the  family’s  economic 
+conditions,  etc.  As  such,  “the  kitten  was  not  just  a  kitten” 
+[5].  We  therefore  did  not  put  restrictions  on  how  many 
+photos of the same type participants could send and we did 
+not  comment  on  that  similarity  in  email  exchanges.  By 
+design we did not give participants a specific task to solve, 
+but  left  the  choice  of  what  to  capture  open.  Even  though 
+such an open task created uncertainty it also allowed space 
+for  individuality  and  for  reflection  on  personal  use  of 
+activity  tracking  devices.  Some  participants  explained  that 
+one  particular  challenge  had  been  to  capture  episodes  of 
+“non-use”. This was especially so for novice users who lost 
+interest in the device, or for episodic users. Yet their photos 
+reflected  creative  ways  of  still  capturing  this,  which  led  to 
+detailed  explanations  and  discussions  of  these  non-use 
+episodes during follow up interviews.  
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1354	
+		
+		
+		
+you need to answer and it takes 8 minutes of you work day 
+and  then  you  have  to  answer  all  sorts  of  things  where  you 
+don’t  feel  it  fits  to  your  situation  (…)”  (P16F,  Follow-up 
+interview).  P16F  and  her  partner  both  participated  in  the 
+study,  but  had  not  been  particularly  active  with  sending 
+photos  (10  for  both  of  them  combined).  Both  had  found  it 
+challenging  to  decide  what  to  capture.  Even  so,  she 
+explained: “Generally, I would say this has started a lot of 
+thoughts,  to  be  a  part  of  this,  we’ve  often  discussed  what 
+you can use them (trackers) for and where the development 
+is going” (P16F, follow-up interview).  
+
+The  initial  idea  for  instructing  participants  to  write  a 
+sentence or two about their photos was meant to be purely a 
+clarification  of  the  content  of  the  photo  for  the  researcher. 
+to  photos  gave  some 
+text 
+However,  adding  some 
+participants an opportunity to describe something that they 
+simply  could  not  find  a  way  to  capture  in  a  photo.  It  also 
+opened up for some participants to describe the challenges 
+they were facing when they were not sending photos. P17M 
+explained in an email without a photo enclosed: “I’ve been 
+racking my brain as to what I should write about (and take 
+a  photo  of).  But  this  time  I  am  blank.  Maybe  the  message 
+this  time  around  is  that  life  and  existence  is  extremely 
+everyday like at the moment, and that therefore there’s not 
+so  much  focus  on  pulse,  steps,  calories,  etc.  But  there  will 
+be  soon,  when  Christmas  is  over  and  the  weight  scale 
+comes out” (P17M, e-mail). This quote itself gave us much 
+to  think  about  because  Christmas  time  is  not  at  all 
+“extremely everyday like” in Denmark, filled as it is with a 
+myriad  of  social  and  celebration  events  throughout  the 
+month of December for most residents. This is highlighted 
+by  the  statement  that  “the  weight  scale  comes  out”  when 
+Christmas is over. Instead, this is an indication of episodic 
+use – the context when “there’s not so much focus on pulse, 
+steps,  calories,  etc.”  (P17M,  e-mail).  Such  reflections  and 
+explanations became critical for our understanding of lapses 
+of  use  and  episodes  of  life  when  less  attention  is  paid  to 
+health data, even without a photo. As researchers, we found 
+that we learned a great deal, not only from the photos, but 
+also  from  instances  where  participants  struggled  to  take 
+photos.  In  this  example,  P17M  had  been  tracking  various 
+aspects  of  his  health  for  a  very  long  time,  and  could  have 
+been  categorized  as  someone  who  really  had  activity 
+tracking  deeply  integrated  into  his  everyday  practices.  Yet 
+in the “extremely everyday” moment in his life, as he put it, 
+activity tracking is not included.  
+
+it  difficult 
+
+P21M  explained  how  he  had  found 
+to 
+photograph  how  he  used  the  device.  As  he  explained:“I 
+don’t really use it to say I’ve been out walking in the forest 
+this day, or now I’ve walked 10km, so in that way it’s been 
+a  bit  difficult”.  He  then  reflected  on  the  study  and 
+elaborated “I think it’s been great that the task has been so 
+open, because that makes you more aware of what you are 
+doing, and what it’s like” (P21M, Follow-up interview). 
+
+Figure 1: Examples of photos of non-
+use. Clockwise from top-left P6F, 
+P14M, P20F, P12F 
+
+The  photos  in  Fig.  1  show  examples  of  non-use.  The  top-
+left  photo  allowed  P6F  to  describe  the  paradoxical  feeling 
+of wearing the Fitbit, but due to medical reasons not being 
+able  to  do  much  physical  activity,  thus  not  “using”  the 
+Fitbit  even  though  she  wore  it.  P14M  took  a  photo  of  the 
+bowl in his entrance hall where the tracker inevitably ended 
+up. He explained that seeing the device in the bowl he was 
+forced to consider what he actually gained from wearing it, 
+eventually  deciding  to  leave  it  behind.  P20F  (bottom-left) 
+was annoyed she had forgotten to wear the tracker to work 
+on  a  busy  day  and  felt  the  walking  she  had  done  was 
+somehow  “lost”.  P12F  in  contrast  wanted  to  wear  a  watch 
+she had gotten as a graduation present. She explained how 
+she saw her Jawbone more as a ‘usable object,’ whereas her 
+watch  was  more  aesthetically  pleasing.  These  photos 
+the  very  different  ways  participants 
+demonstrated 
+experience  non-use,  and  allowed  us  to  discuss  non-use 
+more directly in interviews.  
+
+Wearing  an  activity  tracker  can  at  times  be  demanding. 
+Fulfilling  the  pre-set  goals  of  activity  levels  can  require 
+changes  in  ones  life,  reminding  users  of  failing  to  reach 
+their goals even in situations where there is little room to do 
+anything  about  it.  Not  wearing  the  devices  surfaced  as  a 
+way to retain a feeling of control, to not be reminded of low 
+activity  levels  in  times  when  this  was  difficult  to  change 
+(for  example  due  to  work  or  family).  Supported  by  the 
+photos  participants  explained  what  we  understood  as 
+strategies  for  making  the  trackers  effectively  empowering. 
+For  many  participants  increasing  activity  levels  required 
+more  than  merely  taking  more  steps  every  day.  We  found 
+that photo-driven narratives of non-use were crucial to our 
+understanding  of 
+these  offered 
+opportunities  to  discuss  the  rich  diversity  of  practices 
+around tracking devices.  
+
+these  strategies  as 
+
+3. Struggles of what to capture led to individual insights 
+In  the  follow  up  interviews,  several  participants  noted  that 
+even though they found photos more challenging than other 
+types  of  research  participation,  they  appreciated  that  the 
+photos helped them reflect on their own use of the device. 
+For  example,  P16F  compared  the  experience  of  being  in 
+this study to other types of studies: “Don’t we all know this 
+thing where (consultant company) has developed something 
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1355 
+ 
+ 
+ 
+ 
+ 
+that 
+
+nice 
+
+Figure  2:  Example  of 
+photos  sent  by  P21M.  “It 
+even 
+was 
+someone 
+like  me,  who 
+doesn’t use the tracker for 
+training  purposes  could 
+tell about it, and what you 
+for  besides 
+can  use 
+exercise, 
+focusing 
+exercise, 
+exercise” 
+(P21M).  
+
+it 
+on 
+
+Thus  participants  were  challenged,  and  offered  an 
+opportunity, to consider their activity tracking practices in a 
+new way and explain it in their own terms. In this way, the 
+research process became an exploration of the patterns and 
+meanings  of  participant’s  own  activity  tracking  practices, 
+done in collaboration with the researchers.   
+
+4. Following experiences and attitudes over time  
+Activity  tracking  is  often  emotionally  charged  [23].  The 
+five month length of the study and its open format seemed 
+to make participants feel confident and comfortable enough 
+to express deeply felt worries and concerns both via e-mail 
+and  during  the  follow-up  interview.  We  believe  several 
+factors  such  as:  the  extended  period  of  time  of  the  study, 
+direct feedback from the researchers whenever a photo was 
+sent,  and  the  fact  that  the  follow  up  interview  was  clearly 
+grounded  in their own experiences rather than researcher’s 
+prepared questions, may have influenced this.  
+
+For  example,  P17M  had  noticed  some  irregularities  in  his 
+body,  and  had  been  worried  for  two  weeks  that  this  might 
+be  a  sign  of  something  being  very  wrong.  He  finally 
+convinced himself to see a doctor, and found out that there 
+was  nothing  to  worry  about  two  weeks  later.  This  is  when 
+we  received  a  photo  of  his  pulse  measurements.  In  the 
+email accompanying the photo P17M explained:  
+
+“When you receive this photo of the 
+it’s 
+pulse  measurement 
+days 
+because 
+evening 
+I  Monday 
+discovered  that  my  almost-resting-
+pulse  (the  one  I  see  when  I  have 
+been  laying  on  the  couch  watching 
+TV)  had  fallen  with  about  10  beats 
+per  minute.  That’s  when  I  realized 
+how much I have stressed myself out 
+the last couple of weeks” (P17M, e-
+mail).  
+
+Figure 3: showing the lowered pulse (P17M) 
+
+In  the  same  e-mail  he  expressed  doubts  of  whether  he 
+should describe this episode at all, as he wasn’t sure he felt 
+it  was  relevant  to  us  as  researchers:  “I  don’t  know  if  you 
+can use it for anything, but at least it’s been 4 weeks where 
+the tracker played a role above the usual” (P17M, e-mail). 
+He  then  explained  in  detail  how  the  episode  made  him 
+reflect on the use of his tracker in a particular way: “It may 
+be  that  a  tracker,  in  all  reality,  might  just  not  be  a  good 
+invention  for  someone  like  me,  that  is,  at  least  not  when  I 
+had  an  experience  like  these  4  weeks.  But  then  again  it 
+might be a good invention, when I then afterwards see the 
+very  concrete  results  of  how  the  body’s  basic  pump  reacts 
+when it is then allowed to relax again” (P17M, e-mail).  
+
+from 
+
+reaction 
+
+immediate 
+
+During  the  follow-up  interview,  we  once  again  discussed 
+this experience, which meant that we were able to get both 
+a  more 
+the  e-mail,  and 
+considerations after the episode had time to be processed. In 
+the  follow-up  interview  P17M  practically  dismissed  the 
+experience:  “I  self-diagnosed  completely,  and  that  was 
+silly.”  In  this  later  reflection  he  explained  how  he  over-
+reacted, while his initial e-mail revolved around the benefits 
+of  tracking.  Having  him  explain  this  experience  as  it 
+happened, but also following up some time later, allowed us 
+to  note  this  change  in  attitudes  over  time.  By  using  photo 
+elicitation  as  a  method  for  understanding  experiences  both 
+as  they  occur  and  as  they  ‘sink  in’,  we  could  begin  to 
+explore this. The fact that the activity tracker played a role 
+for  P17M  in  this  situation  was  not  a  scenario  we  as 
+researchers  might  have  imagined.  These  findings  allowed 
+us  to  consider  the  ‘worried  well’,  a  concept  of  much 
+concern in the health promotion literature [10,28]. This was 
+possible  because  participant  driven  photo  elicitation 
+allowed  us  to  follow  participants  long  enough  for  these 
+worries  to  surface,  and  gives  us  an  opportunity  to  observe 
+how these attitudes might change over time.  
+
+5. Photo sorting task as a way to discuss absent images 
+Similar  to  Frith  and  Harcourt  we  found  that  information 
+was  not  necessarily  lost  even  if  not  all  experiences  were 
+photographed, but only if participants were “encouraged to 
+reflect on the research process and on images that may be 
+absent from their collection” [9]. After all photos had been 
+discussed,  the  participants  were  asked  to  look  across  their 
+photos  and  consider  whether  they  themselves  could  see 
+emerging patterns or categories and whether something was 
+missing  from  this  overall  picture.  Often,  this  resulted  in 
+broader  reflections  on  their  activity  tracking  behaviors.  In 
+one case, P10F took out her phone and took a photo of the 
+photographs sorted into piles on the table that had just been 
+discussed in the interview. From the photos she discovered 
+a  pattern  in  her  use  of  activity  tracking  device  and  her 
+exercise pattern that she had not been aware of herself. As 
+we concluded the interview she explained:  
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1356 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“The most fun thing has kind of 
+been seeing that you printed the 
+photos  and  that  there’s  this 
+before, 
+after 
+procedure.  That  was  more  than 
+I  had  myself  thought  about.” 
+(P10F, follow-up interview). 
+
+during 
+
+and 
+
+Figure 4: 
+Three categories of photos: Before, 
+during and after exercise. P10F. 
+
+As we were discussing whether photos fit into categories or 
+represented  separate  experiences  P11F  explained:  “I  don’t 
+know,  it’s  also  kind  of  funny,  I’ve  been  thinking  that  these 
+photos I sent you were mostly sport so I actually don’t have 
+these  small  ones  during  the  day,  I  haven’t  thought  about 
+that. I have been thinking that I bought this watch for sports 
+and  that’s  why  I  take  sports  photos  for  you”   (P11F, 
+Follow-up  interview).  In  this  case,  as  P11F  looked  across 
+her photos, she realized that her use of the activity tracking 
+device  had  come  to  mean  more  to  her  in  the  everyday 
+activities than she had initially anticipated. She realized this 
+because  to  her  surprise  photos,  stories  and  memories  that 
+were  unrelated  to  sports  events  kept  surfacing.  She  had 
+bought  the  Apple  Watch  mainly  to  track  her  running  and 
+exercise sessions, and thus thought of it mostly as a sports 
+or  fitness  tracker.  In  P11F’s  case,  had  we  prompted  her  to 
+reflect  on  her  use  via  survey  or  questionnaire,  she  would 
+have perhaps answered with a starting point in her intended 
+use. Had we done interviews without photo elicitation, she 
+might  not  have  realized  that  using  the  tracker  in  her 
+everyday  activities  actually  was  a  bigger  and  more 
+pervasive  practice  than  she  had  previously  thought.  Thus 
+allowing  participants  to  step  back  and  look  across  their 
+experiences  opened  up  to  a  new  level  of  reflection  and 
+findings.  Overall,  what  we  saw  was  that  participants  were 
+processing  their  experiences  as  they  were  looking  at  the 
+photos, both as they were sending them and as photos were 
+discussed during the follow-up interview. The fact that the 
+photos  so  clearly  sparked  new  insights  and  reflections  for 
+the participants is a strong point of participant driven photo 
+elicitation studies.  
+
+they 
+
+6. Participant-driven aspect led to substantial commitment 
+received  a 
+Whenever  participants  sent  photos 
+personalized follow-up thank you e-mail, which sometimes 
+included  short  follow-up  questions.  We  made  sure  to 
+alternate  between  asking  follow-up  questions  and  simply 
+their  e-mail. 
+acknowledging 
+Otherwise,  those  who  sent  photos  often  would  just  keep 
+getting  more  questions,  which  could  deter  them  from 
+sending more photos. This feedback loop gave us an idea of 
+how  tracking  experiences  developed  over  time,  which  we 
+were  able  to  explore  in  the  follow-up  interviews.  We 
+believe that this feedback loop also ensured that the number 
+of dropouts was very low. We had 25 participants, and out 
+
+that  we  had 
+
+received 
+
+of  these  we  were  able  to  follow  up  with  23.  Two  were 
+contacted  after  they  had  lost  their  devices  within  a  few 
+weeks  of  the  beginning  of  the  study,  while  21  were 
+interviewed  in  full  at  the  end  of  the  study.  Only  two 
+participants never answered the invitation for the follow-up 
+interview. Out of the participants who completed follow-up 
+interviews,  several  expressed  that  they  had  enjoyed  trying 
+to capture their experiences 
+in photos. P9F explained:  
+
+it 
+
+could 
+
+fun  doing 
+
+be 
+“Well 
+motivating,  and  we  have 
+had  some 
+it, 
+when we had to find a good 
+motif, so this photo with the 
+red  jacket,  I  am  actually 
+not  walking  at  all,  I  am 
+standing  still  actually  and 
+we  had  some  great  laughs 
+(P9F, 
+that” 
+because  of 
+follow-up interview). 
+
+Figure 5: P9F depicting an evening walk. 
+
+Despite  the  fact  that  the  photo  in  Fig.  5  was  posed,  the 
+image  enabled  us  to  discuss  the  social  experience  of 
+walking  and  the  role  activity  tracking  played  in  this 
+practice.  We  had  hoped  that  participants  would  find  it 
+interesting to capture their experiences by using photos. Yet 
+our design had an unexpected side effect. Frequent contact 
+in  the  form  of  thank  you  and  follow  up  emails  strongly 
+signaled to the participants that this study was important to 
+us. P24M explained: “I think that this way you are doing it, 
+I  mean,  there  are  many  who  just  send  out  an  electronic 
+questionnaire  and  then  it’s  like,  this  is  more  a  testament 
+that  you  want  to  get  more  in-depth  with  this”  (P24M, 
+follow-up interview). The very open structure of the photo 
+elicitation  task  demonstrated  to  the  participants  that  we 
+were  deeply  committed  and  very  much  interested  in  their 
+particular  experiences,  with  participants  trying  hard  to 
+convey those experiences to us. This resulted in a relatively 
+high level of commitment in study participation.   
+
+Challenges of using photo elicitation methods  
+As  we  conducted  the  study  we  also  faced  specific 
+challenges worth considering for future studies. 
+
+1. A range of interpretations of appropriateness 
+The  relative  lack  of  structure  to  the  longitudinal  task  of 
+taking photos that might have something to do with activity 
+tracking  had  many  benefits  as  described  above.  Yet  it also 
+had  one  significant  drawback.  Because  the  task  was  open, 
+participants  chose  different  strategies,  varying  from  a  very 
+narrowly  focused  to  what  we  call  a  “catch  all”  strategy. 
+Many  participants  tended  to  focus  on  the  tracking  device 
+itself,  but  sometimes  other  apps  or  devices  became 
+important in relation to activity tracking practices. This was 
+not  always  evident  from  the  photos,  but  came  up  in  the 
+follow-up interviews. For example P18F used LifeSum, an 
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1357 
+ 
+ 
+app  in  which  she  tracked  her  food  intake.  This  would 
+automatically feed into her use of the Fitbit, and be a part of 
+how she used her tracking device. However, throughout the 
+study she did not send any photos of LifeSum. We realized 
+that  participants  may  have  been  so  focused  on  the  tracker 
+itself that other related apps or devices were not so much in 
+focus, and thus they would not send photos of these. Yet as 
+we discussed the photos these practices surfaced ensuring a 
+fuller  picture  of  the  ecology  of  tracking  devices  and 
+systems  that  participants  used.  For  other  studies  that  are 
+exploratory of nature it might be beneficial to emphasize to 
+participants that not only the device (or whatever might be 
+the  focus  of  the  study),  but  any  related  or  supporting 
+technologies  might  be  of  interest,  and  that  they  would  be 
+welcome  to  reflect  on  the  use  of  those  too.  In  contrast,  at 
+least one participant had chosen a more “catch all” strategy, 
+which  meant  that  by  the  end  of  the  study  he  had  sent  125 
+photos. During his interview he explained how he had both 
+sent photos that he had taken because he was in the study, 
+but he also sent photos he had taken anyway, and these did 
+not  necessarily  say  anything  about  his  activity  tracking 
+experiences.  This  made  the  follow-up  interview  quite 
+challenging:  
+
+“Yes, photo nr. 37 is a photo of an 
+egg. 
+that’s 
+I  wonder  what 
+supposed  to  mean…  It’s  at  my 
+parents’  place  because  I  can  see 
+it’s my sister sitting there with the 
+egg.  And  then  this  is  also  a  photo 
+from  my  parents’  place  where  we 
+card  game”  
+are  playing  a 
+interview).  
+(P3M, 
+Figure 6: Photo, P3M. 
+
+follow-up 
+
+Here  the  interview  drifted  very  far  from  what  we  had 
+expected.  This  does,  however,  serve  as  an  example  of  the 
+potential of participant-driven photo elicitation methods. In 
+the  first  interview,  P3M  was  challenging  to  interview 
+because  he  was  not  as  outspoken  as  others.  Our  first 
+interview  with  P3M  lasted  only  32  minutes,  whereas  most 
+of  the  other  interviews  took  an  hour  or  more.  P3M  would 
+give  short  answers  and  not  elaborate  much,  even  with 
+prompting. It was therefore surprising to us that the second 
+interview  with  him  was  one  of  the  longest  follow-up 
+interviews  in  our  entire  study,  lasting  approximately  1.5 
+hours,  with  P3M  talking  uninterrupted  for  long  periods  of 
+time,  explaining  his  photos  and  his  experiences  with  the 
+tracker.  Here 
+the  photos  acted  as  “a  medium  of 
+communication  between  researcher  and  participant”  [5]. 
+P3M  enjoyed  explaining  his  photos,  and  the  follow-up 
+interview using the photos was a very different experience 
+from  the  short,  and  at  times  awkwardly  silent,  initial 
+engagement.  In  the  second  interview  P3M  felt  more  on 
+“home turf” because of the photos. His own life included a 
+great  many  experiences:  visiting  his  parents,  concerts,  a 
+book  club,  etc.  While  not  all  of  this  will  be  interesting  or 
+directly  used  in  our  analysis,  it  made  P3M  comfortable 
+
+enough with the situation to also significantly elaborate on 
+activity tracking experiences.  
+
+As  such,  while  we  as  researchers  were  eager  to  focus  on 
+activity  tracking,  it  took  patience  to  let  participants  decide 
+which  of  their  experiences  to  share  and  let  the  stories 
+unfold. This might entail sidetracks and background stories. 
+Yet these are experiences that provide essential background 
+knowledge often missing in other approaches. As such, the 
+photo elicitation method makes it possible to gain valuable 
+that  might  otherwise  be 
+insights 
+disregarded.  The  challenge  of  participant  driven  photo 
+elicitation,  however,  is  to  let  the  stories  unfold  in  a  tempo 
+set by the participant without getting drowned by irrelevant 
+content. 
+
+from  participants 
+
+2. Recall and memory issues remain in longitudinal studies 
+The longitudinal participant-driven photo elicitation design 
+of  the  study  presented  many  important  benefits.  Yet  we 
+caution  other  researchers  conducting  a  study  like  this 
+against letting it go on much longer than five or six months. 
+During  the  follow-up  interviews  five  months  later  we 
+observed that participants had trouble remembering some of 
+the  very  early  photos  and  explaining  why  they  had  sent 
+them. In a few cases, the researcher had to read out loud the 
+accompanying e-mail that had been sent with the photo, and 
+the  participant  would  then  pick  up  on  that  and  describe 
+some  their  original  intent  with  the  photo.  Although 
+important  for  triggering  recall,  photos  alone  may  not  be 
+enough to facilitate recall in longer studies. 
+
+Only three of the nine participants who received a tracker at 
+the  beginning  of  the  study  used  that  same  tracker  on  a 
+regular  basis  at  the  end  of  the  study.  Thus  six  participants 
+abandoned  use  of  their  trackers,  including  two  who  lost 
+their trackers. P6F, for example, had quickly abandoned her 
+new Fitbit tracker. Although we stayed in contact with P6F 
+throughout  the  five  months  to  see  if  she  picked  up  the 
+device again, the experience of tracking was not as present 
+for her as it was for some participants who tracked a larger 
+proportion  of  the  time  of  the  study.  Thus  the  follow-up 
+interview was perhaps less useful. Instead of waiting to do 
+the follow-up interview, we should have asked for an earlier 
+follow-up,  and  then  kept  in  e-mail  contact  to  monitor  any 
+changes  in  her  patterns  and  perhaps  conduct  yet  another 
+interview at the end of the study.  
+
+We  chose  to  end  the  study  after  5  months,  as  we  did  not 
+want participants to grow tired or frustrated with the study. 
+Identifying the right length of time for the photo elicitation 
+stage and the frequency of interviews remains a challenge. 
+In  the  future  we  plan  to  deploy  such  studies  for  shorter 
+periods  of  photo-elicitation  and  to  iterate  several  times  to 
+mitigate  recall  issues.  For  example,  we  might  conduct 
+shorter  follow-up  interviews  monthly  during  a  five-month 
+study  or  do  two  or  three  month  long  studies  several  times 
+over the course of a year.  
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1358 
+3. Unobtrusive and easy to forget to take photos 
+Taking photos with a mobile phone can be habitual. Some 
+people  do  so  frequently  and  others  hardly  ever.  If 
+photographing a situation was not something the participant 
+would have otherwise done, bringing out the phone to take 
+that  photo  was  hard  to  remember.  P19F  explained:  “So  I 
+would think about it, but then when you are in the middle of 
+it, you just forget it” (Follow-up interview). 
+
+this  also  at 
+
+times  resulted 
+
+Our  hope  in  doing  photo  elicitation  study  was  to  gain 
+insight  into  everyday  practices  with  minimal  intrusion. 
+However, 
+in  participants 
+forgetting  to  either  take  photos  or  send  photos.  We  sent 
+reminders every second week, if they had not sent a photo 
+the previous week. While most participants felt this was an 
+appropriate level of reminders, a few told us we could have 
+reminded  them  more  often.  Future  studies  might  consider 
+sending out more frequent reminders, or asking participants 
+at the beginning of the study how often they would like to 
+be reminded to send photos.  
+
+these  devices” 
+
+Towards  the  end  of  the  interview  we  discussed  with 
+participants  whether  they  would  have  preferred  specific 
+tasks  to  solve,  such  as  “take  a  photo  of  your  tracker  while 
+you  are  at  work”.  P15M,  like  most  participants,  preferred 
+not having set tasks: “So one could say that by asking us to 
+do  specific  tasks  it  might  have  broken  the  rhythm  of  how 
+you  would  usually  use 
+(Follow-up 
+interview).  Participants agreed that while giving them tasks 
+would have made the job easier to get done, it would have 
+not  as  clearly  represented  the  way  they  used  their  devices. 
+“Well  this  is  100%  my  reality,  I  promise  you  that”  (P12F, 
+Follow-up  interview).  In  any  study,  the  researcher  must 
+decide  how  much  to  ask  of  the  participants,  and  often  this 
+will come at a cost of how intrusive the study might be. In 
+keeping the task open we made participants responsible for 
+identifying  relevant  situations  and  generating  relevant 
+content. The upside was that participants agreed this did not 
+make  them  do  anything  out  of  their  routine,  but  we  could 
+have gathered more photos if we had reminded participants 
+more  often  or  given  them  more  structure.  Decisions  like 
+these  depend  very  much  on  the  specific  goals  of  the  study 
+and must be considered in any design. 
+
+4. Expect discontinuity & technical difficulties 
+Even  though  all  participants  owned  a  smartphone,  we 
+encountered  minor  technical  problems  that  are  worth 
+mentioning.  For  example,  writing  a  few  sentences  turned 
+out to be important to some participants. However, writing 
+longer  messages  on  smartphones  could  be  a  hassle.  One 
+participant  had  some  problems  sending  photos  from  her 
+phone  or  figuring  out  how  to  connect  to  her  computer  and 
+send  photos  from  there  (she  eventually  did).  Additionally, 
+some participants took photos but never sent those. Several 
+participants sent forgotten photos during or after the follow-
+up  interview,  but  it  is  likely  that  some  photos  never  came 
+through,  and  some  thoughts  were  never  written  down.  We 
+to  send 
+recommend  clearly  encouraging  participants 
+
+messages even when they were unfinished, and then remind 
+them to fill out more detail later. Further, providing several 
+different avenues for communication (perhaps a web-form, 
+or even a phone app) can help mitigate such issues. Taken 
+together,  these  technical  hitches  clearly  influenced  the 
+number of photos we received.  
+
+itself 
+
+lends 
+
+tracking 
+
+inherently 
+
+5. Self-presentation and self-censorship 
+Asking participants to send photos of their experiences with 
+activity 
+to  subjective 
+positioning  and  self-censorship.  For  example,  some 
+participants  worried  their  photos  might  not  make  sense  to 
+anyone  else,  and  thus  didn’t  send  them.  Some  participants 
+explained  to  us  that  they  would  wait  until  they  had 
+something  “really  interesting”  to  send  before  sending  it. 
+The fact that participants were not really aware of what role 
+exactly  photos  would  play  in  the  study  or  the  follow  up 
+interviews  made  choosing  what  to  capture  challenging. 
+Discussions  in  the  follow-up  interviews  demonstrated  how 
+some  photos  were  clearly  driven  by  social  desirability. 
+P20F, for example, who struggled to lose weight, explained 
+about a photo of a breakfast she had cooked: 
+
+ “I  think  this  (photo)  was  a 
+day  where  I  was  thinking  I 
+wanted to show you that I can 
+actually 
+healthily” 
+live 
+ (P20F, Follow-up interview).  
+
+Figure 7: Photo, P20F. 
+
+We  readily  admit  that  the  wish  to  engage  in  impression 
+management has played a role in what participants chose to 
+send us, and this self-censorship probably led some to send 
+fewer  photos.  Yet  the  open  nature  of  the  original  photo-
+elicitation task and the focus on the photos in the follow-up 
+study resulted in many participants explaining that they had 
+not  felt  judged  when  participating  in  this  study:  “In  this 
+way  it’s  fine  and  comfortable  to  participate  because  there 
+has been no finger pointing when I’ve shown my numbers” 
+(P21M,  Follow-up  interview).  While  we  see  participants 
+wanted  to  uphold  a  positive  self-image  and  present  that  to 
+us, a careful design can allow for less “finger pointing.”  
+
+DISCUSSION 
+Research in the area of activity tracking, despite producing 
+valuable  insights,  has  struggled  to  find  ways  to  study  the 
+role tracking devices play in the everyday lives of people as 
+use develops over weeks and months. This is a difficult nut 
+to  crack  because  activity  tracking  devices  are  built  to  be 
+unobtrusive,  with  only  occasional  moments  of  direct 
+engagement.  For  this  reason,  photo  elicitation  methods 
+might seem counterintuitive, explicitly drawing attention to 
+a  technology  that  is  designed  to  be  overlooked.  However, 
+we found that with this method we experienced a number of 
+benefits. We were able to gain insights without making too 
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1359 
+ 
+ 
+ 
+interest 
+
+researcher 
+
+many  initial  assumptions  about  the  use  patterns  of  the 
+participants,  which  is  difficult  to  avoid  in  survey  studies. 
+Most  importantly,  the  method  turned  out  to  be  useful  as  a 
+way to begin to understand “non-use” or episodic events or 
+experiences  in  more  detail,  as  participants  found  creative 
+ways  to  capture  this.  The  frequent  low-level  engagement 
+with  the  researchers  through  email  became  a  genuine 
+indication  of 
+their  particular 
+experiences,  which  resulted  in  a  very  low  dropout  rate, 
+often  a  problem  in  other  types  of  longitudinal  studies.  We 
+admit  that  participants’  self-censorship  might  have  led  to 
+some  photos  not  being  sent.  However,  several  participants 
+explained  that  they  felt  at  ease  and  willing  to  discuss  their 
+practices  in  detail  in  interviews  that  took  a  direct  starting 
+point in their own experiences and values. Thus participants 
+revealed  a  great  deal  about  their  experiences,  even  such 
+things as deeply felt worries of disease, struggling to loose 
+weight  or  balance  stressful  workdays  with  being  an 
+attentive parent. 
+
+in 
+
+Alongside the benefits clearly gained by the researchers, we 
+observed  that  this  method  allowed  participants  themselves 
+to reflect on their own use of their device at several points 
+in  time.  We  believe  this  is  important,  and  has  not  been 
+covered  by  research  methods.  Here  both  photo  elicitation 
+and  the  follow-up  interview  essentially  became  part  of  the 
+activity  tracking  process  for  our  participants.  For  five 
+months  we  redirected  participant  attention  to  the  device  at 
+the  follow-up 
+least  every 
+interview  we  staged  an  intense  experience  of  reflection  on 
+participant  device  use  and  the  images  they  had  sent.  Our 
+data  suggest  that  despite  the  device  being  designed  to 
+essentially  disappear  and  become  unobtrusive  in  use, 
+moments  of  reflection  on  its  use  and  its  function  may  be 
+integral to productive activity tracking 
+
+two  weeks.  Then,  during 
+
+The  participant  driven  photo  elicitation  method  that  we 
+have  demonstrated  here  draws  on  a  rich  tradition  across 
+various fields, and can allow participants to “retain control 
+over how and when they engage in the research” [9]. While 
+this  makes  this  method  especially  suitable  for  researchers 
+interested  in  collaborative  efforts,  our  application  of  this 
+method  to  a  longitudinal  study  of  activity  tracking  devices 
+proved fruitful. 
+
+CONCLUSION & RECOMMENDATIONS 
+This paper investigates the benefits and challenges of using 
+participant  driven  photo  elicitation  method 
+to  better 
+understand activity tracking practices as these develop over 
+days and months. Based on our experience in this study we 
+make the following suggestions for researchers interested in 
+replicating or adapting our methods. 
+
+1.  Study  duration:  Despite 
+
+the 
+
+importance  of 
+
+the 
+longitudinal  design,  we  hesitate  to  recommend  any 
+study  to  continue  longer  than  5-6  months  without 
+following up on the photos. While photos support more 
+specific  recall  this  effect  does  not  last  forever.  We 
+suggest for future studies to have more, but shorter 
+
+rounds  of  photo  elicitation.  For  example,  ask 
+participants  to  take  photos  the  first  week  of  every 
+month  and  then  follow  up  every  3-5  months.  This 
+means that reminders to take photos should be adjusted 
+accordingly;  shorter  iterations  of  photo  elicitation 
+might  allow  for  more  reminders,  whereas  longer 
+continuous  studies  should  be  careful  not  to  overload 
+participants with reminders. 
+
+2.  Photo  content:  It  is  important  to  remind  participants 
+that photos do not have to be “good” and do not have 
+to always feature the device itself. As long as the photo 
+captures  some  element  of  the  experience,  ensure  that 
+participants  understand  that  this  is  useful  in  the  study. 
+Activity  tracker  use  practices  are  very  diverse  and 
+these unobtrusive devices can come to play a role in a 
+range of unexpected daily practices. Thus emphasis on 
+particular 
+counter-productive.  
+Participants will at times struggle to figure out what to 
+capture.  We  found  that  this  struggle  can  lead  to 
+significant  insight  into  how  participants  figured  out 
+what  they  themselves  found  to  pertain  to  activity 
+tracking use.  
+
+content 
+
+can 
+
+be 
+
+4.  Follow  up 
+
+3.  Allow  content  other  than  photos:  To  support 
+reflection  and  to  gain  inside  into  the  breadth  of  daily 
+practice  we  suggest  allowing  participants  to  include 
+written  text  alongside  photos  but  not  requiring  it. 
+To mitigate technical issues we recommend reminding 
+participants  that  it  is  okay  to  write  keywords and  then 
+come back to this at a later point and fill in more detail.  
+their 
+interviews  benefit  from 
+departure  in  photos.  Interviewers  need  to  be  prepared 
+that  follow-up 
+the 
+interests of the participant. Trying to steer the interview 
+in  certain  predetermined  directions  leads  the  study 
+away from the main point of photo elicitation, namely 
+creating  a  space  for  participants  to  explain  about  their 
+individual experiences. 
+
+interviews  necessarily  follow 
+
+taking 
+
+5.  Sorting  task  is  key  to  reflection:  We  found  it  highly 
+beneficial  to  include  a  sorting  task  in  the  follow-up 
+interview.  In  this  exercise  participants  were  asked  to 
+categorize  their  photos  as  they  saw  fit,  and  then  to 
+explores  further  what  this  might  mean  to  them.  This 
+task  generated  important  insights  for  the  researchers 
+and also lead to thoughtful reflection on the part of the 
+participants.  
+
+Participant  driven  photo  elicitation  method  is  no  panacea 
+for  all  studies  exploring  activity-tracking  in  practice. 
+However, the method we describe here can be a useful tool 
+by  itself  or  in  addition  to  other  methods  as  we  seek  to 
+understand how consumers adopt, implement and push back 
+on wearable activity tracking devices.   
+
+ACKNOWLEDGMENTS 
+We  thank  our  participants  and  gratefully  acknowledge  the 
+time  and  effort  they  invested  in  this  study.  We  thank 
+Daniela Rosner, Sean Munson, Christina Chung and Daniel 
+Epstein for feedback on earlier versions of this paper. 
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1360REFERENCES 
+1.  Elena Agapie, Daniel Avrahami, and Jennifer Marlow.  
+
+16.  Douglas Harper. 2002. Talking about pictures: A case 
+
+for photo elicitation. Visual Studies 17, 1. 
+
+2016. Staying the Course: System-Driven Lapse 
+Management for Supporting Behavior Change. 
+CHI’16. 
+
+2.  Kirsten Boehner, Janet Vertesi, Phoebe Sengers, and 
+Paul Dourish. 2007. How HCI Interprets the Probes. 
+CHI’07, 1077–1086. 
+
+3.  Niall Bolger, Angelina Davis, and Eshkol Rafaeli. 
+2003. Diary methods: Capturing life as it is lived. 
+Annual Review of Psychology 54, 579–616. 
+
+4.  Scott Carter and Jennifer Mankoff. 2005. When 
+
+Participants Do the Capturing: The Role of Media in 
+Diary Studies. CHI’05 5, 899. 
+
+5.  Marisol Clark-Ibáñez. 2004. Framing the Social World 
+
+With Photo-Elicitation Interviews. American 
+Behavioral Scientist 47, 12, 1507–1527. 
+
+6. 
+
+James Clawson, Jessica A. Pater, Andrew D. Miller, 
+Elizabeth D. Mynatt, and Lena Mamykina. 2015. No 
+Longer Wearing: Investigating the Abandonment of 
+Personal Health-Tracking Technologies on Craigslist. 
+UbiComp’15. 
+
+7.  Daniel A. Epstein, Jennifer Kang, Laura R. Pina, James 
+Fogarty, and Sean A. Munson. 2016. Reconsidering the 
+Device in the Drawer: Lapses as a Design Opportunity 
+in Personal Informatics. UbiComp ’16. 
+
+8.  Daniel A. Epstein, An Ping, James Fogarty, and Sean 
+
+Munson. 2015. A Lived Informatics Model of Personal 
+Informatics. UbiComp ’15. 
+
+9.  Hannah Frith and Diana Harcourt. 2007. Using 
+
+Photographs to Capture Women’s Experiences of 
+Chemotherapy: Reflecting on the Method. Qualitative 
+Health Research 17, 10, 1340–1350. 
+
+10.  Maxine Frith. 2014. Are you one of the rising numbers 
+
+of the “worried well”? The Telegraph. 
+
+11.  Thomas Fritz, Elaine Huang, Gail Murphy, and 
+
+Thomas Zimmermann. 2014. Persuasive Technology in 
+the Real World: A Study of Long-Term Use of Activity 
+Sensing Devices for Fitness. CHI ’14, 487–496. 
+
+12.  George Gaskell. 2000. Individual and group 
+
+interviewing. In Qualitative researching with text, 
+image and sound. SAGE, 38–56. 
+
+13.  Bill Gaver, Tony Dunne, and Elena Pacenti. 1999. 
+
+Cultural Probes. Interactions 6, 1, 21–29. 
+
+14.  Andrea Grimes and Desney Tan. 2009. Toward 
+
+technologies that support family reflections on health. 
+GROUP’09, 311–320. 
+
+15.  Teena Hammond. 2014. Wearables have a dirty little 
+secret: 50% of users lose interest. TechRepublic.Com. 
+http://tek.io/1doKGVt 
+
+17.  Willem Horst, Ties Bunt, Stephan Wensveen, and Lisa 
+Cherian. 2004. Designing probes for empathy with 
+families. Proc. Dutch directions in HCI, 15. 
+
+18.  Amanda Lazar, Joshua Tanenbaum, Christian Koehler, 
+
+and David H. Nguyen. 2015. Why We Use and 
+Abandon Smart Devices. UbiComp’15. 
+
+19.  Emily Levy. 2014. The Dirty Business of Gaming 
+
+Wearable Fitness Gadgets. Vocative. 
+http://www.vocativ.com/money/business/dirty-
+business-gaming-wearable-fitness-gadgets/ 
+
+20.  Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A stage-
+
+based model of personal informatics systems. CHI’10, 
+557. 
+
+21.  T. A. Loeffler. 2004. A Photo Elicitation Study of the 
+Meanings of Outdoor Adventure Experiences. Journal 
+of Leisure Research 36, 536–557. 
+
+22.  Brian J. McNely. 2013. Visual research methods and 
+communication design. SIGDOC ’13, 123–132. 
+
+23.  John Rooksby, Mattias Rost, and Matthew Chalmers. 
+
+2014. Personal Tracking as Lived Informatics. CHI’14, 
+1163–1172. 
+
+24.  Minna Ruckenstein. 2014. Visualized and Interacted 
+Life: Personal Analytics and Engagements with Data 
+Doubles. Societies 4, 1. 
+
+25.  Ross B. Steinman. 2008. Projective Techniques in 
+Consumer Research. Northeastern Association of 
+Business, Economics, and Technology, 253–261. 
+
+26.  Lucy Suchman. 2007. Human-Machine 
+
+Reconfigurations. Plans and Situated Actions. 
+Cambridge University Press. 
+
+27.  Technology Advice. 2014. Wearable Technology and 
+Preventative Health: Trends in Fitness Tracking 
+Among U.S. Adults.  
+
+28.  Kirsty Walker. 2010. NHS “wasting millions on 
+
+treating the worried well.” MailOnline. 
+
+29.  Justyna Wijas-Jensen. 2014. It-anvendelse i 
+befolkningen 2014. Danmarks Statistik. 
+
+30.  Jill Palzkill Woelfer. 2010. Trouble-spotting 
+
+Photoshows: Capturing Everyday HCI Experiences. 
+CHI’10, 3367. 
+
+31.  Daniel B. Wright and George D. Gaskell. 1998. 
+Surveying Memory Processes: Introduction. In 
+Memory. Taylor & Francis Group. 
+
+32.  Zhen Yue, Eden Litt, Carrie J. Cai, et al. 2014. 
+
+Photographing Information Needs: The Role of Photos 
+in Experience Sampling Method-Style Research. 
+CHI’14, 1545–1554.  
+
+Session: Tracking Activity & HealthCSCW 2017, February 25–March 1, 2017, Portland, OR, USA1361 
+ 
+ 
+ 
+

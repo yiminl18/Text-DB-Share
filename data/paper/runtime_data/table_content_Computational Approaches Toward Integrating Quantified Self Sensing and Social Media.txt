@@ -1,0 +1,26 @@
+Table of Contents:
+
+1. Introduction
+2. Related Work
+    2.1 Role of Technology in Health and Wellness
+    2.2 Health Information Sharing on Social Media
+    2.3 Assessing Health Status from Social Media
+3. Data
+    3.1 Collecting MyFitnessPal and Twitter Data
+    3.2 Data Cleaning
+    3.3 Data Descriptive Statistics
+4. Methods
+    4.1 Defining Measures of Diet Compliance
+    4.2 Social Media Behavioral Measures
+    4.3 Analytic Techniques
+5. Results
+    5.1 RQ 1: What Predicts Diet Compliance?
+    5.2 RQ 2: Assessing Role of Social Media in Diet Compliance
+6. Discussion
+    6.1 Theoretical and Practical Implications
+    6.2 Implications for Design
+    6.3 Privacy and Ethical Considerations
+7. Limitations and Future Directions
+8. Conclusion
+9. Acknowledgments
+10. References

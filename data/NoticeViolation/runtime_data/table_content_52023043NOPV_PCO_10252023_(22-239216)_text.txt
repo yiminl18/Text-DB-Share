@@ -1,0 +1,19 @@
+Table of Contents:
+
+1. Notice of Probable Violation and Proposed Compliance Order
+2. Inspection and Alleged Violations
+   2.1. Violation of §195.446 Control Room Management (a) General
+   2.2. Violation of §195.446 Control Room Management (c) Provide Adequate Information
+   2.3. Violation of §195.446 Control Room Management (c) Test and Verify an Internal Communication Plan
+   2.4. Violation of §195.446 Control Room Management (c) Test Any Backup SCADA Systems
+   2.5. Violation of §195.446 Control Room Management (h) Training
+   2.6. Violation of §195.446 Control Room Management (j) Compliance and Deviations
+3. Proposed Civil Penalty
+4. Proposed Compliance Order
+5. Warning Items
+6. Response to this Notice
+7. Proposed Compliance Order
+   7.1. Remedial Requirement A
+   7.2. Remedial Requirement B
+   7.3. Remedial Requirement C
+   7.4. Remedial Requirement D

@@ -1,0 +1,1695 @@
+Sundroid: Solar Radiation Awareness with Smartphones∗
+
+Thomas Fahrni, Michael Kuhn, Philipp Sommer, Roger Wattenhofer, and Samuel Welten
+Computer Engineering and Networks Laboratory
+ETH Zurich, Switzerland
+ﬁrstname.lastname@tik.ee.ethz.ch
+
+ABSTRACT
+While the sun is important for our health, overexposure to
+sunlight carries signiﬁcant health risks ranging from sunburn
+to skin cancer. Although people know about these risks,
+sunlight related skin damages have increased over the past
+decades. We have conducted a survey that sheds light on
+this phenomenon and suggests that the missing natural sense
+for UV radiation negatively inﬂuences people’s sun related
+behavior. To address this issue, we have implemented Sun-
+droid. Sundroid measures the incident UV radiation using a
+body-worn sensing unit that communicates wirelessly with
+the user’s smartphone. The phone thereby acts as a user in-
+terface to present the measured data in an intuitive manner,
+and to notify the user once a critical amount of sunlight has
+been reached. Sundroid can also be applied in other con-
+texts, such as behavioral research or medicine. We show
+that after calibration, errors are within 5% compared to a
+high-precision reference signal.
+
+Author Keywords
+Personal Health Monitoring, Wearable Sensor, Solar Radia-
+tion, UV Exposure, Dosimetry, Survey
+
+ACM Classiﬁcation Keywords
+J.3 Life and Medical Sciences: Health.
+
+General Terms
+Design, Experimentation, Measurement, Reliability
+
+INTRODUCTION
+Sunlight is a driving force for life and, amongst others due to
+its role in the production of vitamin D, indispensable for our
+health. However, over the past decades an increasing num-
+ber of studies warned against the risks of excessive sunlight
+exposure. A vast majority of people has already experienced
+the unpleasant feeling of sunburn after having stayed in the
+sun too long. Unfortunately, the harmful effects can go be-
+yond unpleasant feelings. Long-term damage, such as pre-
+∗
+
+The authors of this paper are alphabetically ordered.
+
+Permission to make digital or hard copies of all or part of this work for
+personal or classroom use is granted without fee provided that copies are
+not made or distributed for proﬁt or commercial advantage and that copies
+bear this notice and the full citation on the ﬁrst page. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior speciﬁc
+permission and/or a fee.
+UbiComp’11, September 17–21, 2011, Beijing, China.
+Copyright 2011 ACM 978-1-4503-0630-0/11/09...$10.00.
+
+mature skin aging and skin cancer are severe implications
+that can result from an overexposure to sunlight, even if no
+immediate signs of sunburn are visible [3].
+
+Both, sunburn as well as the mentioned long-term damages
+are caused by the ultraviolet (UV) radiation contained in the
+sunlight. In fact, most of the non-melanoma skin cancers are
+associated with exposure to ultraviolet radiation [29]. A con-
+siderable fraction of people is aware of the risks originating
+from the sun. Nevertheless, the number of such skin cancer
+cases in the United States has constantly increased over the
+past years [30]. Even though most people know about appro-
+priate protective measures, a large fraction of the population
+gets sunburned from time to time. A ﬁrst contribution of this
+paper is a survey that sheds light on the reasons for this phe-
+nomenon. A relevant ﬁnding of our survey is that inattention
+and the inability to correctly assess the UV intensity are two
+major reasons for excessive UV exposure and therefore for
+people to get sunburned.
+
+Contributions. Following these ﬁndings, the main contribu-
+tion of this paper is a wearable prototype system that tracks
+the wearer’s sunlight exposure in real-time. This is in con-
+trast to existing wearable UV dosimeters, that are designed
+for ofﬂine analysis only. The proposed system is designed
+in a modular fashion and consists of two parts: (1) A small
+sensor unit that measures the UV radiation and is equipped
+with a Bluetooth module. (2) A smartphone application that
+collects and processes the sensor unit’s measurements. The
+phone thereby acts as a generic processing platform, which
+makes the system adjustable to a wide range of applications.
+The application presents the measured solar radiation data
+in a user-friendly manner. Moreover, it is able to notify the
+user of the imminent danger due to UV radiation when ap-
+propriate, thereby taking into account critical factors such as
+the speciﬁc skin type of the user or sunscreen applied.
+
+The modular design of our sensor system reduces the effort
+to address other usage scenarios, as basically only the smart-
+phone application needs to be modiﬁed.
+In fact, we also
+envision applications that go beyond personal UV radiation
+monitoring. Discussions with a dermatologist have shown
+that our system could prove advantageous in several med-
+ical settings. Moreover, we see various usage scenarios in
+research and large-scale sensing.
+
+For the discussed usage scenarios, it is essential that the
+sensor unit works reliably and provides accurate data. We
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China365have thus paid particular attention to the technical sound-
+ness of our system. By independently tracking UVA (400 nm
+- 315 nm) and UVB (315 nm - 280 nm) radiation, we can
+well approximate the action spectrum relevant to a given
+application. An example is the erythema action spectrum,
+which describes the radiation relevant to sunburn that is ab-
+sorbed by the skin. The system has been calibrated using
+two six hours traces recorded at the World Radiation Center
+in Davos, Switzerland. The comparison with the reference
+measurements shows that our sensor module is able to ac-
+curately measure the radiation absorbed by the skin at the
+position of the sensor. In separate experiments we have in-
+vestigated the effect of a diffuser to reduce angle dependen-
+cies. Furthermore, we have conducted two pilot studies in
+each of which we have recorded real-world data of a person
+wearing the system during a speciﬁc outdoor activity.
+
+RELATED WORK
+Existing research efforts have investigated various aspects
+relevant to our work both in medicine and in the ﬁeld of
+ubiquitous computing. In the following, we will brieﬂy re-
+view major achievements and results from these different ar-
+eas and sketch how our work relates to or was inﬂuenced by
+these ﬁndings.
+
+UV Dosimeters. A variety of wearable UV dosimeters based
+on different technologies have been proposed in the past. A
+rough categorization distinguishes between chemical, bio-
+logical, and electronic methods to measure UV radiation [15].
+While electronic measurements facilitate the post-processing
+of various sensor inputs to approximate a desired action spec-
+trum, biological and chemical dosimeters are more restricted
+with respect to the spectral response. Biological dosimeters
+typically agree well with the DNA damage spectrum [15].
+An example of the use of a biological dosimeter is a study
+on long-term UV exposure of mountain guides [24].
+
+As opposed to biological and chemical dosimeters that ex-
+hibit an integral characteristic, electronic systems based on
+photodiodes can measure the UV intensity at a given point
+in time. They thus do not only provide higher ﬂexibility
+with respect to post-processing, but are also well suited to
+creating plots of the UV intensity over time. Examples for
+such systems are [1], [6], and [12]. Like our sensor system,
+these devices are designed to be worn by humans. However,
+all of them measure UV intensity using a single sensor and
+thus fail to take advantage of the ﬂexibility given by post-
+processing of individual UVA and UVB values. Moreover,
+they are primarily designed for the use in medical studies,
+and thus do neither provide a direct feedback to the user, nor
+do they support real-time monitoring. As a consequence the
+intensity data can only be retrieved after a measurement se-
+ries has been completed, which is in contrast to our system
+that constantly transmits the sensor values to a mobile phone,
+and thus can directly take inﬂuence on the user’s behavior.
+Beside these limitations, the system described in [12] was
+used in a medical study to record the exposure to UV radi-
+ation [36] of over 300 subjects. They found that sunburn is
+correlated with risk behavior.
+
+Mobile phones. We have chosen the mobile phone as a pro-
+cessing platform as it provides high ﬂexibility with respect to
+applications. Besides the powerful post-processing possibil-
+ities, the advantages of a phone are its communication capa-
+bilities that make it a perfect gateway to transmit sensor data
+to servers [37], the permanent reachability by the user [27]
+and the wide variety of sensors readily available [23]. For
+these reasons mobile phones have been said to be an ideal
+platform for context-driven reminders and alerts [34, 17],
+and for the use in large-scale sensing studies [23, 37].
+
+Reminders. In a recent study, it was shown that the overall
+adherence to sunscreen use can be improved by daily text-
+message reminders [2]. As overly frequent reminders are
+likely to be disturbing over time, in this paper we propose to
+take the context into account to only issue reminders when
+required. Such context aware reminders have been proposed
+before, both, for medical scenarios [22, 20, 35, 28] and in
+everyday settings [34, 17, 18, 21, 8, 32, 13]. For everyday
+settings, location-based reminders have been examined par-
+ticularly well, and have been found useful in several user
+studies [21, 17, 34]. These studies underline that people are
+interested in and amenable to context-aware reminders. We
+thus expect that the context dependent reminders issued by
+Sundroid can achieve a similar improvement of sunscreen
+adherence as reported by [2] in a much less obtrusive way.
+
+Medical applications. Many of the usage scenarios we en-
+vision are related to health related contexts, such as sunburn
+warning or long-term behavioral training with respect to sun-
+light exposure. A variety of studies proposes remote and
+self-monitoring systems in medical contexts and/or investi-
+gates their success. Examples include diabetes self-care [10,
+20, 35, 26], asthma management [28], context-aware pill re-
+minders [22] and generic remote monitoring frameworks [5,
+25]. User studies thereby on the one hand show that peo-
+ple are open to such systems [28, 35] and on the other hand
+indicate a positive effect on the patients’ health and/or com-
+fort [26, 22, 28, 10, 20]. Several authors highlight the ad-
+vantages of mobile phones and PDAs as a platform and in-
+formation hub [20, 10, 35, 28, 26, 25, 5] and the usefulness
+of context-driven reminders [20, 22, 26, 28, 35], for example
+triggered when the monitoring system detects low activity or
+the need to take medication. Moreover, visual feedback of
+the monitored data has said to be helpful by different stud-
+ies [10, 26], in particular when it comes to train the user’s
+awareness of, or behavior in a given context. A design eval-
+uation of Logan et al. [20] further investigates relevant re-
+quirements as seen by the end users. In particular, they state
+that user intervention should be avoided for data-gathering,
+messages must be user understandable (i.e. in laymen terms),
+and that the system’s user interface needs be intuitive. More-
+over, Nachman et al. [26] conclude that a wearable sensor
+system should be unobtrusive, contain as few components as
+possible, and should not attract attention to the wearer in the
+public. When designing the prototype implementation of the
+Sundroid system, we have taken these different factors into
+account as far as possible given the hardware constraints.
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China366SURVEY
+As mentioned in the introduction, the number of skin cancer
+cases has constantly increased over the past years and most
+of the non-melanoma skin cancers are associated with expo-
+sure to ultraviolet radiation [29]. Moreover, a study in New
+Zealand showed that 17.8% of the skin cancer cases can di-
+rectly be attributed to sunburn [33]. Despite the warnings
+of health departments from all around the world, most peo-
+ple have already experienced sunburn. In the following we
+present an online survey that investigates possible reasons
+for the mismatch between information and action, i.e. why
+people get burned even though they know about the severe
+health risks.
+
+The online survey was conducted amongst 785 students (52%
+male, 48% female) from different departments at our univer-
+sity. We wanted to know how often people get burned, and
+why this happens. For this purpose we have also investigated
+how well people are informed about the risks of sunburn
+and protective measures. In addition, we wanted to know
+whether they believe that a warning system could prevent
+some of the sunburns they suffer, and whether they would
+be willing to use such a system. We ﬁrst asked four con-
+trol questions related to sunburn and its risks. As expected
+the participants are generally well informed. Roughly three
+quarter answered all questions correctly, and even 95% know
+that sunburn increases the risk of skin cancer.1
+
+Despite this knowledge, roughly two thirds of the respon-
+dents experience sunburn at least once a year, and almost
+everybody (96%) has already been sunburned. For the rest
+of this section, the 4% of participants who never suffered
+sunburn are excluded. From the remaining participants al-
+most all (96%) consider sunburn somewhat (38%) or very
+(58%) annoying. To understand why people are suffering
+sunburn despite the risks and the potential annoyance, we
+further asked for the reasons for getting sunburned. To get
+an unbiased picture, the question was formulated openly, i.e.
+replies were given in free form text. For evaluation, we man-
+ually grouped the answers into semantic categories. A single
+answer could have been assigned to more than one category.
+The most frequent answers are summarized in Table 1.
+
+It seems that several of the issues mentioned in Table 1, such
+as the misjudgment of radiation intensity and staying in the
+sun too long, could be overcome if people were warned be-
+fore the critical dose of UV radiation has been reached. To
+ﬁnd out if people agree with this presumption we asked them
+whether they believe that a warning system would reduce the
+number of sunburns. More than two thirds of the respon-
+dents conﬁrmed this. Those denying could state why such
+a warning would not help. People mainly said they knew
+when to react themselves, and/or could not take appropriate
+measures in the relevant situations anyways.
+
+We further wanted to know what type of sunburn warning
+system people might use. The corresponding question was
+only given to those participants who previously conﬁrmed
+
+1These numbers might be slightly biased as they reﬂect the answers
+of our participants that tend to be well educated people.
+
+Category of answer
+
+1. Misjudgment the solar radiation
+2. No sunscreen at hand
+3. Staying in the sun for too long
+4. Incorrect/insufﬁcient application of
+
+Percentage
+23%
+19%
+18%
+13%
+
+sunscreen
+
+5. Forgot to apply sunscreen
+6. Did not pay attention
+7. Sport activities
+8. The skin was not yet accustomed to
+
+the sun (mostly in spring)
+
+9. Did not apply sunscreen (reason un-
+
+known)
+
+10. Sleeping in the sun
+
+13%
+10%
+10%
+8%
+
+8%
+
+6%
+
+Table 1. Most popular reasons for sunburn according to our survey.
+A single answer could have been assigned to more than one category.
+Therefore percentage numbers do not sum up to 100%.
+
+that a warning system might help. More than half of the
+respondents could imagine to use a corresponding smart-
+phone application. Roughly a third would feel comfortable
+to wear a dedicated sensor device and even more than half
+could imagine to use such a device if it was unobtrusively
+integrated into accessories or clothing.
+
+The main ﬁndings of our survey can be summarized as fol-
+lows:
+
+• A signiﬁcant fraction of the people (67%) suffer a sunburn
+regularly (at least once a year), despite their knowledge of
+the risks and countermeasures.
+
+• A lot of the reasons for getting sunburned are related to
+inattention and misjudgment of the sun’s intensity, and
+could be overcome by an adequate warning mechanism.
+• Many people are willing to use such a warning system in
+form of a smartphone application and/or dedicated sensor
+device.
+
+Following these ﬁndings, we propose Sundroid, a prototype
+system that is able to warn its user once a critical dose of
+sunlight has been absorbed, and can help to improve people’s
+awareness of the incident radiation in different situations. It
+thereby acts as a replacement for a missing human sense for
+UV radiation that could naturally warn us, similarly as our
+sense of smell warns us of inappropriate food.
+
+SYSTEM DESIGN
+In this section, we describe the design and implementation of
+Sundroid, a wearable system to measure solar radiation. The
+current prototype system targets a broad range of application
+scenarios for solar radiation awareness. Sundroid consists of
+two separate components, as shown in Figure 1: A dedicated
+sensor unit to measure UV radiation, and a smartphone as a
+universal computing platform. To provide data relevant to its
+user, the sensor unit needs to be body wearable. Moreover,
+to ﬁnd widespread acceptance, it is inevitable to make the
+corresponding device as unobtrusive as possible and avail-
+able at low cost.
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China367User Interface
+on Smartphone
+
+Bluetooth
+
+WiFi/3G
+
+Central Server
+
+Wearable Sensing Unit
+with Bluetooth transceiver
+
+Storage
+
+SD
+Card
+
+Ofﬂine Analysis
+
+Figure 1. Schematic overview of the Sundroid system: A wearable sensing unit containing UV sensors is attached to a user’s clothes or accessories.
+Sensor data is transferred using Bluetooth to a smartphone, which serves as a graphical user interface. Optionally, measurement data can be
+transferred to a central server or stored on a SD card for ofﬂine analysis by researchers or medical personnel.
+
+Due to application speciﬁc action spectra, we decided to in-
+dependently measure UVA and UVB intensities. This design
+provides maximal ﬂexibility for the approximation of differ-
+ent spectra. An example is the erythema action spectrum in
+case of sunburn, which describes the wavelength dependent
+sensitivity of skin relevant to sunburn. Other examples in-
+clude the action spectra for DNA damage [31] or skin cancer
+[7].
+
+To further improve the ﬂexibility with respect to possible
+applications, we rely on the user’s smartphone as a generic
+information hub. The phone can on the one hand provide
+further context, such as location and activity patterns, and
+is on the other hand used for data processing, presentation
+and communication. Data exchange between the sensor unit
+and the smartphone is realized over a Bluetooth wireless link
+in real-time. An important requirement is that the system
+continually monitors the solar radiation to which the user is
+exposed, even when the user is temporarily not in the prox-
+imity of the phone. Depending on the application, the phone
+can either log the data and present it to the user, or forward it
+to a central infrastructure, e.g., for analysis by experts such
+as researchers or medical personnel.
+
+Wearable Sensing Unit
+The wearable sensing unit consists of a custom made printed
+circuit board (see Figure 2) and a plastic enclosure. It fea-
+tures a TI MSP430 low-power microcontroller with 4 KBytes
+program ﬂash and 512 Bytes of RAM, which is connected
+to a Roving Networks RN-42 low-power Bluetooth module.
+All components are standard parts available at low prices
+(tens of dollars). The sensing unit is supplied with power by
+a 3.7 V lithium-polymer rechargeable battery.
+
+UV Sensors. We equipped the wearable sensing unit with
+a UVA photodiode (Genicom GUVA-S10GD) and a UVB
+photodiode (Genicom GUVB-S10GD). Each of the two pho-
+todiodes gives an estimation of the current sunlight intensity
+in their intrinsic spectrum. Depending on the use case we are
+interested in different spectra. Some medical applications,
+for example, require the measurement of UVA only. In the
+
+Figure 2. The wearable sensing unit consists of a double-sided printed
+circuit board. The Bluetooth module and the UV photodiodes are
+mounted on the top layer (left), while the microcontroller and the ana-
+log circuits are on the bottom layer (right).
+
+context of sunburn, we are interested in the erythema action
+spectrum, which can be approximated using a weighted lin-
+ear combination of the values of the UVA and UVB sensors.
+We found that a combination of 9% UVA estimation and
+91% UVB estimation can accurately approximate the ery-
+thema action spectrum in our setting, as shown in Figure 3.
+
+0
+
+10
+
+- 2
+
+10
+
+- 4
+
+10
+
+0
+
+10
+
+- 2
+
+10
+
+- 4
+
+10
+
+Erythema Spectrum
+UVA Sensor
+UVB Sensor
+
+Erythema Spectrum
+Approximation
+
+300
+
+320
+
+340
+
+360
+
+380
+
+400
+
+300
+
+320
+
+340
+
+360
+
+380
+
+400
+
+Wavelength [nm]
+
+Wavelength [nm]
+
+Figure 3. Normalized sensor responses for sunlight (left). The ery-
+thema action spectrum can be approximated by combining the values
+of the UVA and UVB sensors (right).
+
+Data Acquisition and Buffering. Measurement of UV ra-
+diation using photodiodes can be accomplished with a sim-
+ple analog circuit. The energy of the incoming light within
+the active area of the photodiode is converted into a small
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China368 
+ 
+current. The magnitude of this current depends on the in-
+tensity of the light and the wavelength dependent sensitivity
+of the photodiode with respect to the incoming light’s spec-
+trum. Since the resulting currents are very small, we use
+a transimpedance ampliﬁer circuit to convert the photocur-
+rent into a corresponding voltage, which is continually sam-
+pled using the 10-bit analog-digital converter of the micro-
+controller. Both sensors can be sampled multiple times per
+second. Depending on the availability of a Bluetooth con-
+nection to the user’s smartphone, measurement data is either
+transferred immediately to the phone or buffered locally in
+the memory of the microcontroller. This helps to avoid data
+loss when the user temporarily leaves the connection range
+of the phone. The storage capacity of the microcontroller
+allows to store several minutes of samples at the highest res-
+olution using a circular buffer. Furthermore, we also accu-
+mulate the sum of the sensor readings which have not yet
+been transferred to the phone. This assures that we can track
+the total absorbed radiation even if no Bluetooth connection
+is available for longer periods. However, we might loose
+some of the individual sensor readings since they have been
+overwritten in the local buffer with new data.
+
+Power Consumption
+Prolonging battery lifetime is a crucial aspect for wearable
+applications. Therefore, we carefully designed the sensor
+unit for low-power operation. The analog sensor circuit and
+the microcontroller can be put into low-power mode most of
+the time to reduce the overall power consumption. As a re-
+sult, the biggest part of the power budget is assigned to the
+Bluetooth module. By duty-cycling the Bluetooth module
+when connected (sniff-mode), the total current drawn of the
+sensor unit can be reduced signiﬁcantly from 27 to 6 mA,
+as shown in Figure 4. However, the Bluetooth low-power
+mode has to be supported by both master (phone) and client
+(sensor). Given the nominal battery capacity of 110 mAh,
+the sensor unit can be operated up to 18 hours before it has
+to be recharged. To prevent a sudden power failure, the
+battery voltage is measured continuously and displayed on
+the smartphone. While the current hardware design sup-
+ports operation of the wearable sensing unit during an in-
+terval which is in the order of a typical recharge cycle of
+a modern smartphone, next generation hardware supporting
+the upcoming Bluetooth 4.0 low energy standard will allow
+to tremendously prolong the operation time of the sensor unit
+using even smaller batteries.
+
+SMARTPHONE APPLICATION
+Measurement data from the wearable sensor unit is trans-
+ferred over Bluetooth to a smartphone running the Google
+Android operating system. The phone runs a background
+service, which handles the Bluetooth communication with
+the sensor device. The wearable sensing unit is polled pe-
+riodically for new sensor measurements. All sensor read-
+ings from the UVA and UVB photodiodes are stored together
+with the corresponding timestamp and location information
+provided by the phone. These measurements are made avail-
+able to the user via the phone in real-time. This is in contrast
+to existing UV dosimeters which only allow for ofﬂine anal-
+ysis (see section on related work). Furthermore, data is writ-
+
+]
+
+A
+m
+
+[
+
+t
+n
+e
+r
+r
+u
+C
+
+]
+
+A
+m
+
+[
+
+t
+n
+e
+r
+r
+u
+C
+
+80
+
+70
+
+60
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0
+
+0
+
+80
+
+70
+
+60
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+
+Time [s]
+
+(a) Bluetooth module in standard mode
+
+2
+
+4
+
+6
+
+8
+
+10
+
+Time [s]
+
+(b) Bluetooth module in low-power mode
+
+Figure 4. Current consumption of the sensing unit with an active Blue-
+tooth connection for the standard (a) and low-power operation mode
+(b). The horizontal line indicates the average power consumption mea-
+sured for the normal operation mode (27 mA) or the low-power mode
+(6 mA).
+
+ten to the phone’s SD card for further analysis. If needed,
+sensor readings can also be sent to a web server, if the phone
+provides Wiﬁ or 3G connectivity.
+
+Data Processing and Visualization
+A considerable difference between stand-alone sensors and
+smartphone based sensors systems is that the data processing
+and displaying can be easily adapted to the needs of the use
+case on smartphone based systems. In the case of Sundroid,
+this allows us to adapt the system to various applications.
+In the following we shortly describe two user interfaces we
+have implemented for Sundroid.
+
+Simple View. The ﬁrst use case is the one of a person that
+has an outdoor job or likes to do outdoor sports and wants
+to avoid skin damage by UV radiation. This user is mainly
+interested in not being sunburned and avoiding long term
+skin damage. In order to asses the danger of the accumu-
+lated UV radiation to a person, we refer to the commonly
+used method of Fitzpatrick’s skin typing [16]. It classiﬁes
+a persons skin, based on external features, such as pigmen-
+tation, tanning history, and eye color to estimate a minimal
+erythema dose (MED) for that skin type. The minimal ery-
+thema dose is deﬁned as the minimal solar radiation energy
+that results in a reddening of the skin, that is not induced by
+heat (i.e. sunburn) [16].
+
+On top of the screen, a simple diagram informs the user
+about the incident UV radiation he was exposed to that day
+(see Figure 5). The plain energy value of the accumulated
+incident UV radiation in J/cm2 would not be a valuable in-
+formation for most users. Therefore we display aggregated
+radiation energy in terms of the percentage of the user’s min-
+imal erythema dose. As the minimal UV dose a person can
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China369 
+ 
+Skin type Description
+
+1
+2
+3
+4
+5
+6
+
+White, very fair skin
+White, fair skin
+Beige skin
+Beige to brown skin
+Dark brown skin
+Black skin
+
+MED in mJ
+cm2
+20 - 35
+30 - 45
+40 - 55
+50 - 80
+70 - 100
+100
+
+Table 2. The skin type and the corresponding minimal erythema doses
+based on Fitzpatrick’s skin typing.
+
+be exposed to without getting a sunburn depends mainly on
+the skin type and the sun protection factor of the applied
+sunscreen, these parameters can be set in the application and
+are taken into account to asses the correct moment to issue a
+warning. When the accumulated radiation intensity exceeds
+80% of the MED (multiplied with the sun protection factor
+of the applied sunscreen) the users is warned about the acute
+danger of a sunburn through a notiﬁcation on the phone (see
+Figure 6).
+
+To inform the user about the current radiation intensity in an
+easily understandable manner, the values of the UVA and the
+UVB radiation are not displayed directly, but are combined
+to match the erythema action spectrum. The resulting radi-
+ation intensity is transformed into the according UV-index2
+and displayed on the center of the screen (see Figure 5, left).
+On the bottom of the screen the user can see the radiation
+history of the day, which can serve as an educational com-
+ponent, to learn in which situations the skin was exposed
+to the highest radiation intensities. Beside processing the
+data of the external sensors, the use of a smartphone allows
+to gather more context information. For example, Sundroid
+fetches the UV-index forecast of the day from the Internet.
+The predicted UV-index can be used to inform the user on
+time about necessary precautions, such as to take along ap-
+propriate sunscreen or clothing.
+
+Advanced View. The second user interface shows a more
+technical view, which can be seen in Figure 5 on the right.
+This view is mainly intended to be used by technical experts
+(e.g. physicians, researchers or medical staff). It displays
+the exact values of the incident UVA, UVB and accumulated
+radiation. The graph on the bottom of the screen displays
+the UVA and UVB radiation intensities separately. The live
+feedback on the screen and the possibility to send the sensor
+data to a central server in real time make it a useful tool for
+UV-radiation related research (see Application Scenarios).
+
+Data Fusion
+The advantages of smartphones as a generic processing plat-
+form are manifold. On the one hand, they are personal de-
+vices that are almost always with their user. On the other
+hand, they exhibit a variety of readily available sensors, such
+as 3D compass, accelerometers, GPS, light sensor, camera,
+
+2The UV-index is a common measure to communicate UV radia-
+tion intensity to the general public. It is deﬁned to be the incident
+UV radiation irradiance in the erythema action spectrum, divided
+by 25 W
+
+cm2 .
+
+Figure 5. Sundroid activity screens on the smartphone: The Simple
+View displays the accumulated UV dose, the current UV index, and the
+time line of UV exposure (left). The Advanced View shows more detailed
+information about the current and accumulated UV radiation (right).
+
+Figure 6. A notiﬁcation window is shown when the absorbed UV radi-
+ation exceeds a critical value for the speciﬁed skin type and sunscreen.
+
+and microphone, from which the user’s context can be in-
+ferred. In addition, state-of-the-art smartphones feature enor-
+mous computing and communication capabilities, which pro-
+vides a ﬂexible way to process and distribute the gathered
+sensor data. Currently, we assign the current timestamp and
+location of the user as provided by the GPS to each sensor
+reading, which provides valuable context information for the
+analysis of the measurement data.
+
+EVALUATION
+In this section, we evaluate several aspects of the Sundroid
+system. First, we compare the accuracy of UV measure-
+ments against reference values. Second, we investigate the
+sensitivity of the sensors with different incident angles of
+sunlight.
+
+Sensor Calibration
+To ensure high accuracy of UV measurements, we have cal-
+ibrated the sensor units against the erythema speciﬁc refer-
+ence signal of the World Radiation Center (WRC) in Davos,
+Switzerland. For the measurements, our sensor devices were
+horizontally mounted on the roof of the WRC building, next
+to the reference probes. Figure 7 compares the erythema
+speciﬁc responses measured by the high-precision reference
+equipment with those of our sensor devices during two days.
+The ﬁrst measurement was conducted during a partly cloudy
+day in autumn with some rain around 2.30 pm, and the sec-
+ond measurement took place during a sunny day in winter.
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China3706
+
+5
+
+4
+
+3
+
+2
+
+1
+
+x
+e
+d
+n
+I
+
+V
+U
+
+WRC Reference
+Sundroid
+Absolute Error
+
+3
+
+2.5
+
+2
+
+1.5
+
+1
+
+0.5
+
+x
+e
+d
+n
+I
+
+V
+U
+
+0
+11
+
+12
+
+13
+14
+Hour of Day
+
+15
+
+16
+
+0
+9
+
+10
+
+11
+
+WRC Reference
+Sundroid
+Absolute Error
+
+14
+
+15
+
+16
+
+12
+
+13
+
+Hour of Day
+
+Figure 7. Sensor calibration: The sensors have been calibrated against
+the reference measurement for the erythema action spectrum at the
+World Radiation Center (WRC). The calibration measurements were
+conducted on a partly cloudy day in autumn (left) and on a sunny day
+in winter (right).
+
+UVA Sensor
+UVB Sensor
+Cosine
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+e
+s
+n
+o
+p
+s
+e
+R
+e
+v
+i
+t
+a
+l
+e
+R
+
+UVA Sensor
+UVB Sensor
+Cosine
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+e
+s
+n
+o
+p
+s
+e
+R
+e
+v
+i
+t
+a
+l
+e
+R
+
+0
+0
+
+15
+
+30
+
+45
+Angle [deg]
+
+60
+
+75
+
+90
+
+0
+0
+
+15
+
+30
+
+45
+Angle [deg]
+
+60
+
+75
+
+90
+
+Figure 8. Relative response of the UVA/B photodiodes when exposed to
+sunlight at different incident angles (left). Placing a PTFE diffuser foil
+on top of the sensors results in a response which approaches the ideal
+cosine curve (right).
+
+Due to a bug in the recording software, a small number of
+sensor readings have been lost during the ﬁrst measurement
+day. Nevertheless, the good match of our sensor data with
+the reference curve after calibration shows that our sensor
+unit is able to accurately measure the UV radiation relevant
+to erythema. In fact, the resulting relative error after cali-
+bration is less than 5%. The linear correction factor used for
+calibration needs to be known by the Sundroid application to
+convert the raw UV measurements into the human readable
+UV index scale.
+
+Angle Dependencies
+Clearly, the sensor sensitivity is dependent on the direction
+of the incident radiation. Ideally, the response follows a co-
+sine curve, similarly as the response of the human skin. Un-
+fortunately, this curve is not well matched by the raw photo-
+diodes, as shown in Figure 8 (left). To overcome this prob-
+lem, we integrated a diffuser made from Polytetraﬂuoroethy-
+lene (PTFE). PTFE, also known as Teﬂon, has been used
+as a material for UV diffusers in similar contexts before [6,
+1]. After applying a diffuser, the dependency on the angle
+closely follows the ideal cosine curve as shown in Figure 8
+(right). The ﬁgure shows that the use of a diffuser mitigates
+angle dependencies, such that the (ideal) cosine response is
+closely approximated. For these plots, we assumed that at
+0 degrees (perpendicular to the incident sunlight) there is
+only diffuse radiation. The corresponding intensity value
+has been subtracted from the entire measurement series to
+account for directed light only.
+
+APPLICATION SCENARIOS
+The modular design of the Sundroid system facilitates the
+use not only as a personal assistant to track absorbed UV
+radiation in everyday life, such as in personal informatics
+systems [19], but also opens possibilities in a variety of other
+settings. This section describes how Sundoid can be used in
+a variety of contexts.
+
+Behavioral Research. We believe that the real-time report-
+ing capabilities, together with the possibility to grasp the
+context of a given user, can considerably improve our under-
+standing of the impact of UV radiation throughout different
+activities. Using time and GPS information, for example,
+we can precisely match the detected solar irradiation to a
+person’s location. Using the phone’s 3D compass, the sun’s
+incident angle becomes known, under the assumption that
+the user keeps the phone in the same place on the body most
+of the time. Furthermore, acceleration data, microphone, etc.
+help to infer the user’s current activity. This additional infor-
+mation might help to answer previously unanswered ques-
+tions. Holman et al. [14], for example, speculate that some
+of the differences they found compared to a manikin based
+study [9] originate from the fact that people tend to turn away
+from the sun. The additional sensor data (GPS, compass)
+provided by the Sundroid system could help to prove or dis-
+prove this conjecture.
+
+Participatory Sensing. Our survey suggests a general in-
+terest in using Sundroid as a personal assistant and warning
+device, in particular when the sensor part is unobtrusively
+integrated into clothing and/or accessories. If such a system
+indeed happens to ﬁnd widespread use, information about
+UV radiation can enter the domain of participatory sens-
+ing [4]. Participatory sensing aims at collecting and sharing
+sensor data gathered by the everyday use of mobile devices.
+In the context of UV radiation, large scale UV maps could
+be drawn at a much ﬁner resolution than currently possible,
+thereby for example taking time, shadow, and reﬂection ef-
+fects into account.
+
+Applications in Therapy. In discussions with a dermatol-
+ogist, we were pointed to a variety of medical application
+scenarios. Examples include the different use cases in the
+context of photodynamic therapy, UV induced immunosup-
+pression, and the treatment of light allergies. Moreover, it
+could be used to research the positive effects of sunlight, for
+example in the production of vitamin D, circadian rhythm
+regulation, or seasonal affective disorder.
+In particular, a
+wearable UV sensing device could help both, physicians as
+well as patients to monitor the irradiation and user activity
+over a longer period of time, thereby facilitating a more pre-
+cise treatment at lower cost, as part of the monitoring task
+is shifted from the physician to the patient. Via the mobile
+network infrastructure the sensor data can be transmitted to
+a physician in real-time, who can directly take adequate ac-
+tions if required. Long-term irradiation traces can further be
+used to improve people’s awareness of sunlight intensity in
+different situations and are thus well suited for health related
+behavior training.
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China371 
+ 
+ 
+ 
+2
+
+1
+
+x
+e
+d
+n
+I
+
+V
+U
+
+0
+3000
+
+2500
+
+2000
+
+1500
+
+1000
+
+10
+
+]
+
+m
+
+[
+
+e
+d
+u
+t
+i
+t
+l
+
+A
+
+Chest
+
+Head
+
+Shoulder
+
+k
+a
+e
+r
+b
+h
+c
+n
+u
+L
+
+)
+r
+o
+o
+d
+n
+i
+(
+
+t
+f
+i
+l
+
+a
+l
+o
+d
+n
+o
+G
+
+11
+
+12
+Hour of Day
+
+13
+
+14
+
+Figure 9. Positioning of the three wearable sensor units during the ﬁeld
+experiments: Unit 1 is attached on the helmet, Unit 2 is attached on the
+shoulder, and Unit 3 is attached near the chest. The sensor units are
+enclosed within a plastic housing to protect them from snow.
+
+Figure 10. The elevation proﬁle of the test subject during one day of
+snowboarding in a ski resort (bottom) and the measured UV intensity
+of the different Sundroid sensors (top).
+
+PILOT STUDY
+In order to demonstrate the practical usability of the system
+and to investigate the effects of sensor placement in a real-
+world setting, we have conducted a small scale pilot study.
+The study encompassed two different outdoor sport activies:
+snowboarding and climbing. In both experiments the inci-
+dent UV radiation on a single test subject was measured over
+several hours.
+
+Scenario 1: Snowboarding
+The snowboarding experiment was conducted in a large ski
+resort. We have attached three Sundroid sensor units to the
+test subject: One on the helmet, facing upwards, one on the
+shoulder, facing upwards, and one on the chest, facing front-
+wards, as shown in Figure 9. The test subject’s task was to
+use all the ski lifts and slopes freely. Beside the UV intensity
+values we tracked the location of the person using GPS. The
+location and the UV data was logged on the Android mobile
+phone carried by the person. From the location, an elevation
+proﬁle was derived that can be seen in Figure 10 along with
+the plot of the measured UV radiation of the three sensor
+units. In the plot, one can clearly see two periods of zero
+UV radiation; the ﬁrst of them, around 12 pm, was caused
+by a lunch break in a restaurant. The second one, around
+1.30 pm, was caused by a trip in a closed cabin gondola lift.
+
+This day trace provides a good example of how the Sundroid
+system can be used in scientiﬁc experiments. One can gain
+different insights by analyzing the UV radiation traces.
+
+1.5
+
+1
+
+0.5
+
+x
+e
+d
+n
+I
+
+V
+U
+
+0
+1500
+
+2000
+
+Altitude [m]
+
+2500
+
+3000
+
+Figure 11. UV intensity versus altitude of the test subject during the
+ride on the longest ski slope. The correlation of altitude over mean sea
+level and UV radiation is clearly visible.
+
+diation, as measured by a horizontally placed dosimeter, is
+received at the shoulder, which is slightly less than the doses
+measured at the vertex of the head. Moreover, under lightly
+cloudy weather conditions, the incident radiation at the chest
+is stated to be about two thirds of the radiation measured at
+the shoulder.
+
+However in the case of the snowboard trip, the measured in-
+tensity ratios of the three sensors (on the head, shoulder and
+chest), differ signiﬁcantly from the values reported in [14]:
+In particular, the sensor mounted on the chest absorbed about
+10% more energy than the sensor mounted on the head. These
+differences can, presumably, be explained by the low posi-
+tion of the sun during winter days and the substantial amount
+of UV reﬂection by the snow. Such factors have shown to
+have a relevant impact by Gr¨obner et al. [11].
+
+For instance the role of the sensor placement (i.e. where a
+user is wearing the sensing unit) can be studied. Prior re-
+search using a rotating manikin has shown that the weather
+conditions (i.e. amount of clouds) affect the overall UV in-
+tensity, but play a minor role for the proportions of sunlight
+absorbed by different sites of the body [9]. Further studies on
+living subjects have shown high and relatively stable values
+for measurements on the shoulder for different outdoor oc-
+cupations, namely gardener, roof carpenter, bricklayer [14].
+The reported values show that roughly 70% of the total ra-
+
+Another interesting observation discussed in [11] is the de-
+pendency between UV radiation and the altitude above sea
+level. The data of the longest downhill drive (around 1 pm)
+conﬁrms such a dependency. Figure 11 shows the measured
+intensities versus the current altitude of the test subject. It is
+important to note that the measured decrease of UV intensity
+at lower altitudes cannot be explained by the elevation level
+alone. Other effects, such as an increased amount of shadow
+in lower areas, or the direction of the slope are also likely to
+have an inﬂuence.
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China372 
+ 
+ 
+2
+
+/
+
+m
+W
+m
+n
+i
+
+n
+o
+i
+t
+a
+i
+d
+a
+R
+
+120
+
+100
+
+80
+
+60
+
+40
+
+20
+
+0
+
+UVA
+UVB
+
+200
+
+150
+
+100
+
+50
+
+D
+E
+M
+
+f
+o
+
+e
+g
+a
+t
+n
+e
+c
+r
+e
+P
+
+10
+
+11
+
+12
+
+13
+
+14
+Hour of Day
+
+15
+
+16
+
+17
+
+0
+13.5
+
+14
+
+14.5
+Hour of Day
+
+15
+
+15.5
+
+Figure 12. The left plot shows the incident radiation during one day
+of climbing on a sunny spring day. On the right, one can see the accu-
+mulated radiation energy, expressed as percentage of the MED for the
+different skin types. The blue line on top is skin type 1, whereas the
+blue line on the bottom is skin type 6.
+
+This experiment demonstrates that the Sundroid system can
+be used to gain insights into the effects of sensor placement
+in different environments and to improve the understanding
+of the surface albedo in various settings. Moreover, the rel-
+atively cheap hardware allows to realize studies with a large
+number of participants.
+
+Scenario 2: Climbing
+Another measurement series were conducted during one day
+of climbing on a sunny spring day. We attached one Sun-
+droid sensor at the climber’s harness, which measured the
+incident sun radiation on the back of the test person. Plots
+of the recorded UVA and UVB radiation can be seen in Fig-
+ure 12 (left). Figure 12 (right) plots the accumulated energy
+in the erythema action spectrum as percentage of the mini-
+mal erythema dose for the skin types 1 to 6. The lowest blue
+line corresponds to the percentage of the MED, a person with
+skin type 6 would have been exposed to, whereas the high-
+est blue line corresponds to the percentage of the MED of a
+person with skin type 1.
+
+The UV forecast of the national meteorological institute for
+that day was UV index 5. As one can see, the radiation was
+high enough to exceed the minimal erythema dose for skin
+type 1 and skin type 2. However, a person with skin type 1
+would have been warned around 2 pm about the high radia-
+tion energy (80% of the MED), which would have allowed
+the person to apply sunscreen, or seek shadow in time. Sim-
+ilarly, a person with skin type 2 would have been warned
+around 40 minutes later, which again would have been early
+enough to take precautions.
+
+CONCLUSIONS AND OUTLOOK
+We have presented Sundroid, a wearable prototype system
+designed to increase the awareness of solar radiation by means
+of body worn sensors. Our experiments show that despite
+the use of low cost components, the accuracy reached by
+our sensor unit is comparable with the one of high-precision
+infrastructure. In a survey we could further show that a rele-
+vant fraction of people could imagine using such a system to
+reduce sun-related health problems. Our prototype demon-
+strates the potential of combining wearable sensors with a
+smartphone. If the Sundroid sensor is worn during everyday
+activities, it can notify people in time about the imminent
+
+risk of a sunburn. The modular design featuring a smart-
+phone as a versatile platform facilitates the use in several
+other settings, such as medical therapies and research. We
+are convinced that technological advances will empower the
+seamless integration of a variety of sensors in clothing and
+accessories, making systems such as Sundroid a ubiquitous
+part of our daily life.
+
+ACKNOWLEDGMENTS
+We would like to thank Dr. G¨unter Hofbauer from the De-
+partment of Dermatology at the University Hospital Zurich
+for his useful advice and feedback on the prototype platform.
+Furthermore, we thank Dr. Julian Gr¨obner of the World Ra-
+diation Center in Davos, Switzerland for his support during
+the calibration measurements.
+
+REFERENCES
+1. M. Allen and R. McKenzie. Dosimeter badges to
+
+monitor personal UV doses. In NIWA UV Workshop,
+2010.
+
+2. A. Armstrong, A. Watson, M. Makredes, J. Frangos,
+
+A. Kimball, and J. Kvedar. Text-message reminders to
+improve sunscreen use: a randomized, controlled trial
+using electronic monitoring. Archives of dermatology,
+145(11):1230, 2009.
+
+3. D. E. Brash, J. A. Rudolph, J. A. Simon, A. Lin, G. J.
+
+Mckenna, H. P. Baden, A. J. Halperin, and J. Ponten. A
+role for sunlight in skin cancer: UV-induced p53
+mutations in squamous cell carcinoma. Proceedings of
+the National Academy of Sciences of the United States
+of America, 88(22):10124–10128, 1991.
+
+4. J. Burke, D. Estrin, M. Hansen, A. Parker,
+
+N. Ramanathan, S. Reddy, and M. Srivastava.
+Participatory sensing. In WSW, 2006.
+
+5. G. Chen, B. Yan, M. Shin, D. Kotz, and E. Berke.
+
+MPCS: Mobile-phone based patient compliance system
+for chronic illness care. In MobiQuitous, 2009.
+
+6. S. David. Personal UV Dosimeter Badges: Mark II. In
+
+NIWA UV Workshop, 2010.
+
+7. F. de Gruijl, H. Sterenborg, P. Forbes, R. Davies,
+
+C. Cole, G. Kelfkens, H. van Weelden, H. Slaper, and
+J. van der Leun. Wavelength dependence of skin cancer
+induction by ultraviolet irradiation of albino hairless
+mice. Cancer research, 53(1):53, 1993.
+
+8. A. Dey and G. Abowd. Cybreminder: A context-aware
+
+system for supporting reminders. In HUC, 2000.
+
+9. B. Diffey, M. Kerwin, and A. Davis. The anatomical
+
+distribution of sunlight. British Journal of
+Dermatology, 97(4):407–410, 1977.
+
+10. S. Forjuoh, M. Reis, G. Couchman, and M. Ory.
+Improving Diabetes Self-Care with a PDA in
+Ambulatory Care. Telemedicine and e-Health,
+14(3):273–279, 2008.
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China373 
+ 
+ 
+ 
+ 
+ 
+11. J. Gr¨obner, D. Pavel, H. G., and B. M. Effect of snow
+albedo and topography on UV radiation. In NIWA UV
+Workshop, 2010.
+
+12. J. Heydenreich and H. Wulf. Miniature Personal
+
+Electronic UVR Dosimeter with Erythema Response
+and Time-stamped Readings in a Wristwatch.
+Photochemistry and photobiology, 2005.
+
+13. J. Ho and S. Intille. Using context-aware computing to
+reduce the perceived burden of interruptions from
+mobile devices. In CHI, 2005.
+
+14. C. Holman, I. Gibson, S. M., and B. Armstrong.
+
+Ultraviolet irradiation of human body sites in relation
+to occupation and outdoor activity: ﬁeld studies using
+personal UVR dosimeters. Clinical and Experimental
+Dermatology, 8(3):269–277, 1983.
+
+15. G. Horneck. Quantiﬁcation of the biological
+
+effectiveness of environmental UV radiation. Journal of
+Photochemistry and Photobiology B: Biology,
+31(1-2):43–49, 1995.
+
+16. F. Im, A. Eisen, K. Wolff, A. Kf, G. La, and S. Katz.
+Fitzpatrick’s dermatology in general medicine, 2000.
+
+17. A. Kessell and C. Chan. Castaway: a context-aware
+
+task management system. In CHI, 2006.
+
+18. O. Kwon and S. Choi. Applying associative theory to
+need awareness for personalized reminder system.
+Expert Systems with Applications, 2008.
+
+19. I. Li, A. Dey, and J. Forlizzi. A stage-based model of
+
+personal informatics systems. In CHI ’10: Proceedings
+of the 28th international conference on Human factors
+in computing systems, pages 557–566. ACM, 2010.
+
+20. A. Logan, W. McIsaac, A. Tisler, M. Irvine,
+
+A. Saunders, A. Dunai, C. Rizo, D. Feig, M. Hamill,
+M. Trudel, et al. Mobile Phone-Based Remote Patient
+Monitoring System for Management of Hypertension
+in Diabetic Patients. American journal of hypertension,
+20(9):942–948, 2007.
+
+21. P. Ludford, D. Frankowski, K. Reily, K. Wilms, and
+L. Terveen. Because I carry my cell phone anyway:
+functional location-based reminder applications. In
+CHI, 2006.
+
+22. J. Lundell, T. Hayes, S. Vurgun, U. Ozertem, J. Kimel,
+
+J. Kaye, F. Guilak, and M. Pavel. Continuous activity
+monitoring and intelligent contextual prompting to
+improve medication adherence. In EMBS, 2007.
+
+23. E. Miluzzo, N. Lane, K. Fodor, R. Peterson, H. Lu,
+
+M. Musolesi, S. Eisenman, X. Zheng, and
+A. Campbell. Sensing meets mobile social networks:
+the design, implementation and evaluation of the
+cenceme application. In SenSys, 2008.
+
+24. M. Moehrle, B. Dennenmoser, and C. Garbe.
+
+Continuous long-term monitoring of UV radiation in
+professional mountain guides reveals extremely high
+exposure. International Journal of Cancer,
+103(6):775–778, 2003.
+
+25. M. Mor´on, J. Luque, A. Botella, E. Cuberos,
+
+E. Casilari, and A. D´ıaz-Estrella. J2ME and smart
+phones as platform for a Bluetooth Body Area Network
+for Patient-telemonitoring. In EMBS, 2007.
+
+26. L. Nachman, A. Baxi, S. Bhattacharya, V. Darera,
+
+P. Deshpande, N. Kodalapura, V. Mageshkumar,
+S. Rath, J. Shahabdeen, and R. Acharya. Jog Falls: A
+Pervasive Healthcare Platform for Diabetes
+Management. Pervasive Computing, 2010.
+
+27. S. Nylander, T. Lundquist, A. Br¨annstr¨om, and
+
+B. Karlson. “It’s Just Easier with the Phone”–A Diary
+Study of Internet Access from Cell Phones. Pervasive
+Computing, 2009.
+
+28. H. Pinnock, R. Slack, C. Pagliari, D. Price, and
+
+A. Sheikh. Understanding the potential role of mobile
+phone-based monitoring on asthma self-management:
+qualitative study. Clinical & Experimental Allergy,
+37(5):794–802, 2007.
+
+29. E. D. Pleasance et al. A comprehensive catalogue of
+somatic mutations from a human cancer genome.
+Nature, 463(7278):191–196, Dec. 2009.
+
+30. H. W. Rogers, M. A. Weinstock, A. R. Harris, M. R.
+Hinckley, S. R. Feldman, A. B. Fleischer, and B. M.
+Coldiron. Incidence Estimate of Nonmelanoma Skin
+Cancer in the United States, 2006. Arch Dermatol,
+146(3):283–287, Mar. 2010.
+
+31. R. Setlow. The wavelengths in sunlight effective in
+
+producing skin cancer: a theoretical analysis. Proc. of
+the National Academy of Sciences of the United States
+of America, 71(9):3363, 1974.
+
+32. D. Siewiorek, A. Smailagic, J. Furukawa, A. Krause,
+N. Moraveji, K. Reiger, J. Shaffer, and F. Wong.
+Sensay: A context-aware mobile phone. In Wearable
+Computers, 2003.
+
+33. M. Sneyd and B. Cox. The control of melanoma in
+New Zealand. Journal of the New Zealand Medical
+Association, 119:1242, 2006.
+
+34. T. Sohn, K. Li, G. Lee, I. Smith, J. Scott, and
+
+W. Griswold. Place-its: A study of location-based
+reminders on mobile phones. UbiComp, 2005.
+
+35. S. Sultan and P. Mohan. myDR: Improving the
+
+Self-Care Process for Caribbean Patients with Diabetes
+through Mobile Learning. International Journal of
+Education and Development using Information and
+Communication Technologies, 5(4), 2009.
+
+36. E. Thieden, P. A. Philipsen, J. Sandby-Moller, and
+
+H. C. Wulf. Sunburn related to uv radiation exposure,
+age, sex, occupation, and sun bed use based on
+time-stamped personal dosimetry and sun behavior
+diaries. Arch Dermatol, 141(4), 2005.
+
+37. D. Trossen and D. Pavel. Building a ubiquitous
+
+platform for remote sensing using smartphones. In
+MobiQuitous, 2005.
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China374

@@ -1,0 +1,23 @@
+Table of Contents:
+
+1. Abstract
+2. Introduction
+3. Existence of Multiple Lives
+    3.1 Dataset
+    3.2 Multiple Lives
+4. Why Multiple Lives?
+    4.1 Multiple User Intents
+    4.2 User Intent & Multiple Lives
+    4.3 Intent-oriented Performance Driving Multiple Lives
+    4.4 External Influences
+5. Predicting Multiple Lives
+    5.1 Task Description
+    5.2 Experimental Setup
+    5.3 Results
+6. Related Work
+7. Discussion & Conclusion
+    7.1 Conceptual Model of Multiple Life User Engagement in Activity Tracking Apps
+    7.2 Implications for Increasing Engagement
+    7.3 Conclusion
+8. Acknowledgments
+9. References

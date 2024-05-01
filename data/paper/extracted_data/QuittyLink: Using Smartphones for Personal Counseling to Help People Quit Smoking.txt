@@ -1,0 +1,899 @@
+QuittyLink: Using Smartphones for Personal Counseling 
+to Help People Quit Smoking  
+
+Jeni Paay, Jesper Kjeldskov, Mikael B. Skov, Nirojan Srikandarajah, Umachanger Brinthaparan 
+Department of Computer Science / Research Centre for Socio+Interactive Design 
+Aalborg University, Aalborg East, Denmark 
+{jeni, jesper, dubois}@cs.aau.dk 
+
+ABSTRACT 
+We present the design and evaluation of a smartphone app, 
+QuittyLink,  designed  to  help  smokers  reduce  or  stop 
+smoking.  Smoking  cigarettes  is  a  serious  health  risk  and 
+people  who  wish  to  quit  often  struggle  to  do  so.  It  is  well 
+known that the most effective method of assisting smoking 
+cessation is personal face-to-face counseling. However, this 
+approach  is  only  used  by  very  few  people  wishing  to  quit 
+for reasons such as inconvenience and personal shyness. In 
+response  to  this  we  have  created  an  app  that  provides 
+personal  counseling  to  users  on  their  smartphone.  The 
+counseling  content  is  authored  by  smoking  cessation 
+experts and is based on the user’s personal data and recent 
+actual smoking behaviors collected through the smartphone. 
+We  deployed  the  QuittyLink  app  with  people  in  their 
+everyday lives to study how personal counseling on mobile 
+phones would influence their smoking behaviors. We found 
+that both the personal counseling and the ability to visualize 
+and  reflect  on  their  own  self-tracked  smoking  behaviors 
+helped them form strategies to improve their ability to quit. 
+
+Author Keywords 
+Smoking cessation; health behavior change; mobile apps; 
+personal counseling; self-tracking; interaction design. 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI):
+Miscellaneous.
+
+INTRODUCTION 
+With  the  growing  proliferation  of  mobile  technologies,  we 
+are witnessing several mobile applications that support and 
+encourage  behavior  change  within  different  domains,  such 
+as  physical  activity,  healthy  eating  and  drinking,  stress 
+management, alcohol abuse, smoking cessation, etc. In this 
+paper,  we  are  particularly  interested  in  the  use  of  mobile 
+technologies  for  supporting  people  in  changing  smoking 
+behaviors and, more ideally, quitting entirely. 
+
+Permission to make digital or hard  copies of all or part of this work for 
+personal or classroom use is grante d without fee provided that copies are  
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. Copyrights for 
+components of this work owned by others than ACM must b e honored. 
+Abstracting with credit is permitted. To copy otherwise, or republish, to 
+post on servers or to redistribute t o lists, requires prior specific permiss ion 
+and/or a fee. Request permissions from Permissions@acm.org. 
+
+MobileHCI '15, August 24 - 27, 2015, Copenhagen, Denmark  © 2015 
+ACM. ISBN 978-1-4503-3652-9/15/08…$15.00  DOI: 
+http://dx.doi.org/10.1145/2785830.2785877 
+
+Figure 1. Participant using QuittyLink while smoking 
+
+Smoking  can  impact  personal  health  with  varying  degrees 
+of  severity,  with  illnesses  including  cancer,  lung  disease, 
+heart disease, and poor blood circulation [15]. Despite this, 
+and widespread campaigning against smoking, consumption 
+of  tobacco  continues  to  grow,  and  according  to  the  World 
+Health  Organization  almost  six  million  people  die  every 
+year from smoking-related diseases [22]. Illness and deaths 
+from smoking are not only tragic, but also have significant 
+economical  costs  for  societies.  As  a  means  of  facilitating 
+smoking  cessation,  it  is  well  known  that  personal  face-to-
+face  counseling  is  very  effective.  However,  it  is  also  well 
+known  that  this  approach  is  not  very  popular  amongst 
+potential  quitters  for  reasons  such  as  inconvenience  of 
+having  to  be  in  a  specific  place  at  a  specific  time  for  the 
+counseling, and shyness of going to a counselor in person.  
+
+In  response  to  this,  we  have  been  exploring  the  use  of 
+personal  mobile  technologies,  such  as  smartphones,  for 
+facilitating  and  mediating  personal  counseling  in  smoking 
+cessation. Personal smartphones are particularly interesting 
+as platform for this purpose because of their pervasiveness 
+and  hence  the  ability  to  use  them  for  reaching  people  at 
+times  and  places  where  they  are  tempted  to  smoke.  They 
+they  facilitate  real-time 
+are  also 
+collection  of  information  about  the  smokers’  context  and 
+smoking  habits.  Our  prototype  application,  QuittyLink, 
+combines these two into a mobile personal counselor, using 
+health behavior change strategies, tailoring its content to the 
+individual smokers’ profile, smoking behavior and context, 
+and  delivering  it  into  the  users’  own  contexts  rather  than 
+requiring them to go to a counseling appointment. 
+
+interesting  because 
+
+In  the  following  we  outline  related  work  and  describe  the 
+QuittyLink  app.  We  then  describe  our  field  deployment  of 
+the  prototype  with  people  trying  to  quit  smoking,  and 
+present and discuss our findings.  
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark98RELATED WORK 
+In recent years there has been an increase in interest in the 
+use of technology to support health behavior change - both 
+in  terms  of  commercial  products  and  research  projects. 
+Popular  for  every  day  use  are  the  commercially  available 
+wrist  worn  fitness  bands  including  Apple  Watch1,  Fitbit2 
+and  Jawbone3.  Each  comes  with  different  options,  but 
+common  to  all  is  collecting  and  presenting  data  about  the 
+user’s  physical  activity.  Fitbit  Flex  tracks  steps,  distance, 
+calories  burned  and  how  much  a  person  has  slept.  Apple 
+Watch  Sport  tracks  heart  rate,  physical  movement  and 
+calories  burned.  Jawbone  Up  tracks  daily  activity,  calories 
+burned,  sleeping  hours,  meals  and  even  has  a  barcode 
+scanner  to  record  food  items  consumed.  HCI  research  has 
+successfully  explored  the  use  of  tracking  technologies  for 
+automated and more accurate data input. Consolvo et al. [4] 
+developed  a  prototype  mobile  app  called  Houston  for 
+encouraging physical activity by using a pedometer to count 
+the steps a person takes each day and presenting this to the 
+user on their phone to be shared with others. Chui et al. [3] 
+created  a  system  called  Playful  Bottle  to  motivate  office 
+workers  to  drink  healthy  quantities  of  water.  This  system 
+uses  a  mobile  phone  attached  to  a  drinking  mug.  The 
+camera and accelerometer of the phone are used to track the 
+amount  and  regularity  of  water  consumed.  Fish’n’Steps, 
+created  by  Lin  et  al.  [10]  encourages  physical  activity  by 
+growing  virtual  fishes  in  a  fish  tank  the  more  steps  a  user 
+takes.  Similarly,  UbiFit  Garden  [5]  uses  a  virtual  flower 
+garden  as  a  metaphor  which  grows  as  the  user  is  more 
+physically  active,  using  a  fitness  sensing  device  to  track 
+activity  and  the  garden  is  then  visualized  on  a  personal 
+mobile display. In all of these systems, the activity tracking 
+with  subsequent  visualizations  helped  people  understand 
+their  health  behavior  changes  and  gave  them  indicators  of 
+when they had reached activity goals. 
+
+them 
+
+There  are 
+technology 
+limited  research  examples  of 
+supporting  smoking  cessation.  Early  studies  by  Strecher  et 
+al.  [20]  using  computer-tailored  health  letters  to  support 
+participants’  smoking  cessation  found 
+to  have 
+statistically  significant  positive  results  toward  quitting,  in 
+an  attempt  to  overcome  the  low  numbers  (less  than  0.5%) 
+of  people  who  access  and  are  helped  by  face-to-face 
+counseling when quitting [2]. Strecher [19] later confirmed 
+that  computer-tailored  content  delivered  through  the  web 
+was  more  effective  than  non-tailored  content.  Shiffman  et 
+al.  [17]  and  Schuman  [16]  both  confirmed  the  efficacy  of 
+computer-generated 
+smoking  materials. 
+tailored  quit 
+Graham  et  al.  [9]  developed  a  web-based  system  called 
+QuitCoach  to  provide  quitting  advice  to  users,  tailored  to 
+their  quitting  stage,  using  the  Trans  Theoretical  Model  of 
+
+1 https://www.apple.com/watch/ 
+2 https://www.fitbit.com 
+3 https://jawbone.com 
+
+health  behavior  change  [14].  Among  the  studies  exploring 
+the use of mobile technology to support smoking cessation, 
+“Txt2stop” by Free et al. [8] found that sending helpful text 
+messages to participants doubled their quit rate in the short 
+term.  Similarly,  “Distract  Me”  by  Ploderer  et  al.  [13] 
+showed  that  distractions  and  tips  on  mobile  phones  could 
+keep  users  from  smoking.  Extending  on  these  findings, 
+Paay et al. [11] explored how different types of content sent 
+to mobile phones could help smokers quit. They found that 
+content that relates directly to peoples’ smoking habits were 
+most  helpful.  Participants  also  requested  interaction  in  the 
+form of contact with a quitline and the tracking of their own 
+habits  in  order  to  better  engage  with  the  app.  They  also 
+liked  the  smart  phone  as  a  delivery  platform.  In  related 
+work,  Paay  et  al.  [12]  found  that  smokers  are  highly 
+individual  in  their  approach  to  quitting  and  that  the  help 
+required  at  different  stages  of  a  person’s  quitting  attempt 
+needs to be tailored to their particular situation and seen as 
+specific and relevant to them. 
+
+that  nearly  half  of 
+
+Abroms et al. [1] reviewed 98 apps for Android and iPhone, 
+finding 
+them  simply  provided 
+calculations  based  on  estimates  by  the  user,  and  that  the 
+apps  generally  had  low  adherence  to  evidence-based 
+practices.  The  problem  with  basing  feedback  on  estimates 
+provided by the user, long after the act, is that data is often 
+incomplete,  imprecise  and  prone  to  error.  Immediate  and 
+automated tracking of cigarettes smoked can solve this.  
+
+THE “QUITTYLINK” APP 
+Based on findings from previous studies on health behavior 
+change  and  smoking  cessation,  and  the  review  of  existing 
+apps, we designed and built the QuittyLink, which uses self-
+tracking and system-tracked data about a person’s smoking 
+behaviors  to  provide  weekly  personal  counseling  to  their 
+mobile device similar to the normal weekly rhythm of many 
+in-person smoking cessation counseling programs. We also 
+smoking 
+provided  visualizations  of 
+behaviors, as well as daily motivations and tips, which have 
+proven helpful in previous studies [11, 13]. The aim was to 
+both  help  people  to  quit  smoking  and  support  them  in 
+staying quit.  
+
+their  measured 
+
+QuittyLink  was  developed  as  a  native  application  for  both 
+iOS and Android, rather than as a web application, in order 
+to  better  exploit  the  technological  advantages  of  the 
+smartphone  platform.  Developing  native  applications 
+ensured  that  graphics  looked  as  intended,  location-based 
+information could be easily recorded, and the app ran faster 
+than  a  web-app  delivered  through  a  browser.  We  kept  the 
+app  simple  and  fast  to  use,  since  it  was  designed  for  data 
+entry  or  browsing  content  while  the  user  was  smoking. 
+Making  native  apps  for  the  two  most  popular  platforms 
+meant that they could each be designed with respect to the 
+design principles of that operating system, taking advantage 
+of user’s interactive familiarity with their own phone. 
+
+Contextual  attributes  such  as  time,  place  and  social 
+situation can become conditioned cues to smoke. Situations 
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark99 
+ 
+                                                             
+in 
+
+trigger  strong  cravings 
+
+are  crucial  in  a  person’s  urge  to  smoke  [21].  Certain 
+individuals,  for 
+situations 
+example,  after  meals,  when  drinking  alcohol  or  coffee, 
+when  taking  a  break.  Keeping  track  of  these  triggers  and 
+other contextual attributes can increase smoker’s awareness 
+of  their  behavioral  patterns  and  assist  them  in  making  and 
+maintaining  strategies  to  change.  To  facilitate  this  kind  of 
+assistance, our system asks users to register each time they 
+smoke  or  resist  a  cigarette  coupled  with  the  triggering 
+situation.  The  QuittyLink  system  then  logs  the  time  and 
+physical location of the phone when these entries are made. 
+By  tracking  smoked  and  resisted  cigarettes  precisely,  and 
+presenting  this  data  as  a  set  of  visualizations  on  the  user’s 
+phone, they can become more aware of their actual smoking 
+patterns. This makes QuittyLink useful to smokers who are 
+thinking  of  quitting  or  trying  to  quit,  as  well  as  smokers 
+who  are  working  to  stay  quit.  In  doing  this,  we  counteract 
+one of the biggest limitations of current apps, that is, most 
+are only useful for smokers who have already quit [1]. 
+
+the  privacy  and 
+
+Counseling  has  proven  to  be  highly  effective  in  increasing 
+people’s  success  in  quitting  smoking  [19].  Even  so,  many 
+people are reluctant to seek it in person, or attend smoking 
+cessation  groups  because  they  see  quitting  as  a  private 
+matter, or find it inconvenient to attend counseling at a set 
+time  and  location  [19].  As  counseling  is  such  an  effective 
+smoking cessation technique, we wanted to take advantage 
+of 
+flexibility  provided  by  mobile 
+technologies  to  deliver  regular  personal  counseling  to  the 
+smoker.  To  support  these  factors  further,  QuittyLink  logs 
+data about the user’s smoking habits, which is then sent to a 
+quitline expert. The expert then delivers weekly counseling 
+tailored to each individual. This can then be read at a place 
+and  time  of  the  user’s  choosing,  even  reviewed  later, 
+potentially reaching smokers who would otherwise not seek 
+personal counseling.  
+
+QuittyLink Interaction Design 
+The interaction design of QuittyLink was kept as simple as 
+possible  to  encourage  people  to  use  it  frequently  during 
+their day. The system was designed in Denmark to be used 
+
+with the general population. To make it accessible to a wide 
+variety  of  people  with  different  backgrounds,  educations 
+and  ages,  the  system  was  created  using  the  Danish 
+language.  For  the  purpose  of  this  paper, we  have  provided 
+English  versions  of  the  screens,  pertinent  to  understanding 
+the design concept. QuittyLink has three tabs corresponding 
+to the main interactive parts of the app: Track, My Data and 
+Tips  (Figure  2).  Since  smoking  cessation  counseling  in 
+Denmark  is  free  as  part  of  the  free  health  care  system,  we 
+also made the QuittyLink app available for free. 
+
+The  Track  screen  (Figure  2a)  has  very  few  elements  and 
+very simple interaction. It is used to register the number of 
+cigarettes  “SMOKED”  or  “RESISTED”  each  time.  If  they 
+have  smoked,  they  need  to  press  the  red  button  the  exact 
+number of times corresponding to the number of cigarettes 
+smoked  in  that  session.  Whether  they  have  smoked  or 
+resisted users can then choose from a predefined list of 10 
+different  situations  that  triggered  them  to  want  to  smoke 
+(e.g.,  relaxation,  work,  party,  coffee/tea,  driving,  morning 
+routine).  They  can  tick  as  many  as  are  relevant  or  an 
+“other”  option  if  their  particular  trigger  is  not  listed.  To 
+complete the input the user presses “Save” at the top of the 
+screen,  and  the  time,  date  and  location  of  the  smoking 
+episode  are  recorded  automatically  by  the  system  coupled 
+with the input information. All data is saved to a server. 
+
+The  My  Data  facilitates  selection  between  three  different 
+visualizations  of  the  user’s  smoking  history  in  an  easy  to 
+read and understand format. Common to all is the intention 
+of  provoking 
+self-awareness  by  providing  accurate 
+information  about  a  persons  smoking  habits  over  time. 
+They are able to see whether they are reducing the number 
+of  cigarettes  over  time,  how  often  they  resist  having  a 
+cigarette,  and  the  kinds  of  locations  and  situations  that 
+trigger their smoking.  
+
+The  Process  line  graph  (Figure  2b)  shows  the  number  of 
+cigarettes  smoked  over  time  against  the  number  resisted, 
+allowing  people  to  compare  the  two  and  draw  their  own 
+conclusions  about  what  that  might  mean.  Above  the  graph 
+
+Figure 2. QuittyLink screens: a) Track, b) My Data-Process, c) My Data-Triggers, d) My Data-Places, e) Tips 
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark100 
+ 
+   
+    
+    
+    
+    
+ 
+the  total  numbers  of  smoked  and  resisted  cigarettes  since 
+they  started  using  the  app  are  shown.  A  user  can  get 
+information about the exact number of cigarettes smoked on 
+a particular day by tapping on the point on the graph. 
+
+The  Triggers  pie  chart  (Figure  2c),  “Triggers  you  can’t 
+resist”  shows  the  proportions  of  different  situations  that 
+have 
+triggered  smoking  episodes,  (e.g.,  work,  party, 
+coffee/tea,  social).  This  gives  smokers  insight  into  what 
+situations  trigger  them  to  smoke  most  often.  Tapping  the 
+bottom  label  “Triggers  you  resist  well”  activates  an 
+alternate chart showing the same information about resisted 
+cigarettes.  The  user  can  toggle  between  these  two  charts. 
+They  can  also  tap  on  the  pie  slice  to  find  out  the  exact 
+number of cigarettes it represents. 
+
+The  Places  bar  chart  (Figure  2d)  shows  how  many 
+cigarettes have been smoked at different locations, given as 
+street  addresses  (e.g.,  Helenelyst  8220  Aarhus).  This  gives 
+users  an  understanding  of  where  they  tend  to  smoke  the 
+most, helping them to reflect on the kinds of locations (and 
+hence  perhaps  situations)  they  need  to  avoid,  or  be  more 
+aware of in resisting their cigarette cravings. Common to all 
+of the My Data visualizations is the intention of provoking 
+self-awareness  of  smoking  habits  from  self-tracked  data. 
+This  can  lead  to  people  adjusting  their  behaviors  in 
+response  to  this  knowledge  and  has  proven  useful  in  other 
+fields of health behavior change [7]. 
+
+The  Tips  screen  (Figure  2e)  gives  access  to  three  different 
+content  types:  Daily  motivations  to  smoking  cessation 
+(factual  statements  about  the  pros  and  cons  of  smoking), 
+Daily  tips  for  smoking  cessation  (easily  implementable 
+piece of advice) and Personal advice for you based on your 
+habits  (tailored  personal  counseling).  Motivational  stories 
+and  daily  tips  are  sourced  from  various  online  quit  help 
+sources,  and  updated  daily  by  the  system.  A  daily 
+motivation  might  be,  for  example.  “Cigarette  smoke 
+contains over 4000 chemicals and 69 of these are known to 
+cause cancer.” An example of a daily tip is “Some smokers 
+say  that  the  taste  of  citrus  reduces  cigarette  cravings,  so 
+start your day with a glass of orange juice.” A daily SMS 
+reminder  was  sent  to  inform  users  of  new  content  and  to 
+prompt them to use QuittyLink.  
+
+Figure 3. Personal Counseling based on smoking habits 
+
+Personal  counseling  from  STOPLINEN  smoking  cessation 
+service, Denmark, was provided weekly and tailored to the 
+
+participant’s own situation, with the opportunity to contact 
+the counselor directly for follow up advice. It was delivered 
+directly  to  the  participants  smart  phone,  based  on  tracked 
+data  on  the  smoker’s  habits  from  the  past  week,  including 
+number of cigarettes coupled with trigger situations, times, 
+and locations (see Figure 3). Push notifications alerted users 
+to the arrival of their personal counseling messages.  
+
+FIELD STUDY  
+We  conducted  a  field  study  of  QuittyLink  in  everyday  use 
+over  a  period  of  three  weeks.  This  study  duration  allowed 
+people to get used to the app as part of their every day life 
+(as  opposed  to  a  snapshot  study  of  use)  and  allowed  us  to 
+give  a  each  participant  counseling  feedback  a  number  of 
+times. The aim of the study was not to investigate sustained 
+behavioral  change,  which  would  have  required  a  much 
+longer study duration, but explore how smokers responded 
+to entering data about their smoking habits and then receive 
+personal counseling advice based on this input, direct to the 
+QuittyLink  app.  We  also  wanted  to  see  if  the  My  Data 
+visualizations  prompted  self-reflection  on  their  smoking 
+habits and the effect that this and/or the counseling had on 
+their ability to reduce cigarette intake, in the short term. The 
+field  study  was  conducted  in  Denmark  in  spring  of  2014. 
+The  app  was  delivered  using  public  app  stores,  and  so  it 
+was possible for people not directly recruited to the study to 
+sign up for the app and join. Participants were asked to use 
+the app every day as part of their normal smoking routines 
+for the duration of the study.  
+
+their  smoking  habits.  Of 
+
+Participants completed a demographic survey that included 
+information  about 
+the  13 
+participants  in  the  study  4  were  male  and  9  female. 
+Participant age ranged from 22 to 52 years with a mean of 
+35  and  a  standard  deviation  of  11.8.  Seven  of  the 
+participants  had  an  iPhone  and  six  had  an  Android  device. 
+Eleven  participants  had  previously  tried  to  quit  smoking. 
+Six  were  thinking  about  quitting,  4  were  preparing  to  quit 
+and 3 were trying to stay quit. Based on Fagerströms test of 
+nicotine dependency [6], 3 participants had no dependency, 
+2  had  very  low  dependence,  6  participants  had  low  to 
+moderate dependence and 2 had high nicotine dependence.  
+See Table 1 for details. 
+
+During the study, each participant was asked to use the app 
+every  day  whenever  he/she  smoked  a  cigarette  or  had  a 
+craving. All participants received a new motivation and tip 
+each day, with an SMS to remind them to use the app. Once 
+a week, the tracked data for each participant was collected 
+and  sent  to  the  counselor.  Based  on  their  initial  survey 
+responses  and  the  tracked  data  from  the  past  week, 
+participants  then  received  personal  counseling  messages, 
+typically 15-25 lines, from the expert counselor. All content 
+sent to the participants remained accessible at all times, so 
+they had the possibility to revisit advice as needed. 
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark101 
+ 
+ 
+Participant 
+
+Age 
+
+Gender  Nicotine dependency  App entries 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+12. 
+
+13. 
+
+47 
+
+43 
+
+24 
+
+22 
+
+22 
+
+45 
+
+26 
+
+51 
+
+52 
+
+25 
+
+45 
+
+30 
+
+F 
+
+F 
+
+F 
+
+F 
+
+F 
+
+F 
+
+F 
+
+F 
+
+F 
+
+M 
+
+M 
+
+M 
+
+Low to moderate 
+
+High 
+
+High 
+
+Low to moderate 
+
+Very low 
+
+Very low 
+
+None 
+
+Low to moderate 
+
+Low to moderate 
+
+None 
+
+Low to moderate 
+
+Low to moderate 
+
+M 
+
+26 
+Table 1. Participant overview 
+
+None 
+
+146 
+
+26 
+
+8 
+
+8 
+
+31 
+
+7 
+
+76 
+
+6 
+
+198 
+
+14 
+
+112 
+
+80 
+
+30 
+
+After  the  study,  we  conducted  semi-structured  interviews 
+with  each  participant  to  discuss  their  experiences  with 
+QuittyLink and the role it played in their smoking cessation. 
+Questions covered general impressions of the app, entering 
+data,  reading  graphs,  impact  of  their  personal  counseling 
+messages  and  suggestions  for  improvements.  During  the 
+interview,  we  used  information  about their  use  pattern  and 
+their logged interactions with the app to ask individual and 
+specific  questions.  We  were  interested  in  their  reflections 
+on  their  smoking  habits  and  whether  they  felt  they  had 
+changed  during  the  study.  We  asked  how  motivated  they 
+were  to  quit  smoking  as  a  result  of  their  experience  with 
+QuittyLink, and compared this to their response to the same 
+question in the online survey at the beginning of the study. 
+All interviews were audio recorded. 
+
+Data  analysis  was  done  using  qualitative  content  analysis 
+with partial transcription on audio recordings, as this was an 
+explorative  design  study.  Researchers  listened  to  the  tapes 
+individually,  noted  the  issues  discussed  at  each  section, 
+compared notes, and then fully transcribed selected parts. 
+
+FINDINGS 
+Our participants used the app quite differently ranging from 
+6  entries  for  one  person  to  198  entries  for  our  most  active 
+participant  (where  each  entry  may  contain  more  than  one 
+smoked cigarette). The mean number of entries was 57 and 
+the  standard  deviation  was  61.8.  Although  we  discouraged 
+it,  we  found  that  some  would  enter  the  day’s  cigarettes  all 
+in one entry before going to bed at night. It seemed that for 
+some this would be more convenient and recalling time and 
+place for a smoke seemed less problematic for these people. 
+In  the  following,  we  report  our  findings  as  three  overall 
+themes on personal counseling using our mobile app. 
+
+Learning about Time and Place for Smoking 
+In  terms  of  the  feedback  provided  by  the  graphical 
+visualizations,  7  out  of  13  users  said  that  they  learned 
+something  new  about  their  smoking  habit.  One  said,  “I 
+
+found out that I smoke the most at home and when passing 
+time...I  always  thought  that  if  I  smoked,  it  was  because  I 
+was  stressed.  So  my  justification  to  smoke  is  not  really 
+honest.”  All  13  found  it  highly  motivating  to  get  a  simple 
+and informative picture of their smoking patterns, however, 
+all also mentioned a desire for the ability to choose the time 
+frame of the graphs, in particular, to be able to compare this 
+week’s  activity  with  last  week.  All  participants  reported 
+being more motivated to stop smoking. We found that they 
+expressed a general liking and interest in tracking smoking 
+habits.  All  13  found  the  app  easy  to  use  and  10  out  of  13 
+not too time consuming, “Yes, very, it was easy to use, even 
+to me who is bad at using technology”, and, “Easy and fast. 
+It  takes  a  quarter  of  a  second  to  open  and  then  you  just 
+press save and ‘bang’, you are done”. Most participants, 11 
+out  of  13,  found  the  daily  SMS  reminders  useful,  and  did 
+not  mind  receiving  them,  although  smokers  who  were  not 
+feeling motivated to quit tended to not like being reminded 
+to  use  the  app  each  day.  The  SMSs  successfully  reminded 
+participants to use the app every time they had a craving. 
+
+Convenient and Pertinent Mobile Counseling 
+Users preferred the convenience of receiving counseling on 
+their  mobile  phone  rather  than  having  to  contact  someone. 
+Thus,  it  seemed  that  mobile  counseling  holds  great 
+potential.  We  further  found  that  regardless  of  the  age, 
+participants  were  keen  on  using  their  smartphone  for 
+smoking  cessation.  Quite  interestingly,  participants  who 
+had  not  yet  committed  to  quitting  said  that  registering 
+resisted  cigarettes  made  them  crave  a  cigarette  even  more. 
+Thus,  the  app  sometimes  had  counter-productive  effects. 
+Ironically, one participant rewarded himself with a cigarette 
+for  resisting  one,  “Good  job,  you  have  done  well,  smoke  a 
+cigarette for that.” But participants who were serious about 
+quitting or trying to stay quit found the Resisted button and 
+graph  very  useful  and  liked  that  they  could  see  their  own 
+progress  over  time.  In  relation  to  registering  resisted 
+cigarettes it should be noted that when resisting an urge to 
+smoke,  the  urge  often  doesn’t  go  away.  Hence  people 
+could, theoretically, keep clicking the “RESIST” button and 
+thereby  registering  one  resisted  cigarette  as  many  resisted 
+ones. However, we did not hear of any such use of the app 
+to inflate the number of resisted cigarettes.  
+
+We observed a direct correlation between users’ motivation 
+to  quit  and  their  acceptance  of  counseling  messages. Eight 
+of the participants, who took their quitting attempt seriously 
+and  wanted  to  change  their  habits  found  them  personal, 
+motivating  and  helpful,  saying,  “It  gave  me  more 
+motivation.  That  I  am  going  to  make  it…the  counseling 
+helped  me  find  out  by  myself  that  I  was  ready  to  stop”. 
+Those  not  ready  to  quit,  the  other  5,  who  did  not  see  their 
+smoking as a problem, said the counseling made them feel 
+pressured.  All  participants  appreciated  that  the  counseling 
+messages  were  personalized,  “It  means  a  lot  that  it  was 
+written  specifically  to  me,  what  I  should  do,  and  not  what 
+others should do”. 
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark102 
+ 
+Effects of Mobile Smoking Counseling 
+Nine of the participants reported a positive  change in their 
+smoking habits after the three weeks of use. They had either 
+reduced  their  consumption  or  QuittyLink  had  supported 
+them  in  staying  quit,  “The  app  had  a  major  impact;  it  has 
+helped  me  to  think  about  my  consumption.  It  helped  to 
+postpone cigarettes.”  Many mentioned that knowing that a 
+real  person  (the  counselor)  had  put  time  and  effort  into 
+writing  the  personal  messages  was  a  great  encouragement 
+and motivation to quit. The 4 who did not change behavior 
+during the study reported that QuittyLink at least made them 
+reflect  more  on  their  habits,  potentially  inspiring  future 
+behavior change, “I have found out where my weakness lies. 
+I think more about it every time I light a cigarette”. 
+
+DISCUSSION AND CONCLUSION 
+This study contributes findings in terms of the ease of self-
+tracking  smoking  behaviors,  the  perceived  usefulness  of 
+visualizations  of  smoking  habits,  SMS  reminders,  and  the 
+convenience  and  efficacy  of  personalized  counseling 
+delivered  directly  to  a  person’s  smart  phone.  We  confirm 
+the  positive  effects  of  these  features  on  changing  people’s 
+health  behaviors,  with  respect  to  our  particular  QuittyLink 
+design, as detailed above, and the field study showing that 
+these  designed  features  were  particularly  effective  with 
+smokers who had already committed to trying to quit. 
+
+Through  a  field  deployment,  tracked  data,  and  follow-up 
+interviews, we gathered and documented insights about the 
+potentials and challenges of designing an effective smoking 
+cessation  app,  thus  contributing  to  the  body  of  knowledge 
+on  technology-assisted  smoking  cessation.  Most  important 
+in  our  results  was  the  finding  that  providing  personalized 
+counseling  on  smart  phones,  based  on  data  about  the 
+individual  user’s  actual  smoking  habits,  collected  via  the 
+phone,  was  very  positively  received  by  users.  This  offers 
+promising potential for quit organizations to provide one of 
+the most effective quit mechanisms (personal counseling) to 
+a  much  wider  audience  than  clinics  are  currently  able  to 
+reach. As covered by [2, 19] the problem has not been lack 
+of  counselor’s  time,  but  unwillingness  by  smokers  to  seek 
+institutional  help,  for  reasons  such  as  inconvenience  or 
+reluctance to put themselves “out there”, etc. 
+
+While  computer-tailored  content  for  smokers  is  not  a  new 
+idea,  using  actual  counselors  to  write  personal  advice 
+specifically  for  that  individual,  based  on  their  actual 
+smoking patterns and delivering it to them on smartphones 
+is new - and it proved to be a motivator to both participate 
+in  recording  their  activities,  and  reducing  their  cigarette 
+intake.  Involving  users  in  tracking  of  data  about  their 
+smoking  habits  helped  make  them  aware  of  when,  where 
+and why they smoked thus supporting them in taking action 
+to  change  that  behavior  if  they  wanted  to.  To  our 
+knowledge,  this  combination  of  real-time  self-tracked  and 
+system-tracked  data  providing  a  very  detailed  picture  of 
+peoples’  smoking  habits  is  a  new  approach  to  smoking 
+cessation  technology  design.  Especially  when  this  data  is 
+
+then  used  to  both  provide  visualizations  for  personal 
+reflection and expert counseling advice. 
+
+the 
+
+that 
+
+We  discovered  that  QuittyLink  promoted  self-awareness 
+and  self-motivation  and  provided  effective  guidance  and 
+support  for  people  wanting  to  quit  smoking.  We  further 
+tracking  offered  by  QuittyLink  was 
+found 
+considerably more accurate than smoker’s own perceptions 
+of  their  smoking  habits,  and  that  this  allows  people  to 
+develop more effective personal quitting strategies. Finally, 
+we  found  it  interesting  that  self-tracking  of  “resisted” 
+cigarettes  can  be  counterproductive,  leading  smokers  in  an 
+early  quitting  stage  to  actually  smoke  as  a  reward  for 
+resisting. We will use this and other findings from our study 
+to redesign future iterations of QuittyLink that take account 
+of smokers’ individual differences. 
+
+Although  we  achieved  positive  results  in  our  study,  much 
+more  work  is  needed  to  explore  long-term  strategies  for 
+to 
+interactive  mobile 
+effectively  using 
+facilitate  smoking  cessation,  but  we  can  see  that  this 
+research represents a very promising start. 
+
+technologies 
+
+REFERENCES 
+1.  Abroms, L. C., Lee Westmaas, J., Bontemps-Jones, J., 
+Ramani, R. and Mellerson, J. A content analysis of 
+popular smartphone apps for smoking cessation. Am. J. 
+Prev. Med., 45, 6 (2013), 732-736. 
+
+2.  Chapman, S. Stop Smoking Clinics: A case for their 
+
+abandonment. The Lancet, 325, 8434 (1985), 918-920. 
+
+3.  Chiu, M., Chang, S., Chang, Y., Chu, H., Chen, C. C., 
+Hsiao, F. and Ko, J. Playful bottle. Proc. Ubicomp ‘09, 
+ACM Press (2009), 185-194. 
+
+4.  Consolvo, S., Everitt, K., Smith, I. and Landay, J. 
+
+Design Requirements for Technologies that Encourage 
+Physical Activity. Proc. CHI ‘06, ACM Press (2006), 
+457-466. 
+
+5.  Consolvo, S., Libby, R., Smith, I., Landay, J., 
+
+McDonald, D., Toscos, T., Chen, M., Froehlich, J., 
+Harrison, B., Klasnja, P., Lamarca, A. and Legrand, L. 
+Activity sensing in the wild: A Field Trial of UbiFit 
+Garden. Proc. CHI ‘08, ACM Press (2008), 1797-1806. 
+
+6.  Fagerström Test for nicotine dependence. 
+
+http://www.health.wa.gov.au/smokefree/docs/Fgerstrom
+_Test.pdf 
+
+7.  Fogg, B.J. Persuasive Technology: Using Computers to 
+Change What We Think and Do. Elsevier Science, 2002. 
+
+8.  Free, C., Free, R., Whittaker, R., Knight, T., Abramsky, 
+A. and Rodgers, I. G. Txt2stop: a pilot randomised 
+controlled trial of mobile phone-based smoking 
+cessation support. Tobacco control, 18, 2 (2009), 88-91. 
+
+9.  Graham, C., Benda, P., Howard, S., Balmford, J., 
+
+Bishop, N. and Borland, R. “heh – keeps me off the 
+smokes...”: Probing Technology Support for Personal 
+Change. Proc. OzCHI ’06, ACM Press(2006), 221- 228. 
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark103 
+ 
+10. Lin, J., Mamykina, L., Lindtner, S., Delajoux, G. and 
+Strub, H. Fish'n'steps: Encouraging physical activity 
+with an interactive computer game. Proc. UbiComp 
+2006, Springer (2006), 261-278. 
+
+11. Paay, J., Kjeldskov, J., Brinthaparan, U., Lichon, L., 
+
+Rasmussen, S., Srikandaraja, N., Smith, W., Wadley, G., 
+Ploderer, B. Quitty: Using Technology to Persuade 
+Smokers to Quit. Proc. NordiCHI ‘14, ACM Press 
+(2014), 551-560. 
+
+12. Paay, J., Kjeldskov, J., Skov, M., Lichon, L. and 
+
+Rasmussen, S. Understanding Individual Differences for 
+Tailored Smoking Cessation Apps. Proc. CHI ‘15, 
+ACM Press (2015). 
+
+13. Ploderer, B., Smith, W., Pearce, J. and Borland, R. A 
+Mobile App Offering Distractions and Tips to Cope 
+With Cigarette Craving: A Qualitative Study. JMIR 
+mHealth uHealth 2, 2 (2014), e23. 
+
+14. Prochaska, J. and Velicer, W. The Transtheoretical 
+Model of Health Behavior Change. Am. J. of Health 
+Promotion, 12, 1 (1997), 38-48. 
+
+letters for smoking cessation: theoretical and empirical 
+variability of tailoring. Int. J. Med. Inform., 77, 11 
+(2008), 715-722. 
+
+17. Shiffman, S., Paty, J., Rohay, J., Di Marino, M. and 
+
+Gitchell, J. The efficacy of computer-tailored smoking 
+cessation material as a supplement to nicotine patch 
+therapy. Drug and Alcohol Dependence, 64 (2001), 35-
+46. 
+
+18. Stead, L. F., Hartmann-Boyce, J., Perera, R. and 
+Lancaster, T. Telephone counselling for smoking 
+cessation. Cochrane Database Syst. Rev. 8 (2013), 
+CD002850. 
+
+19. Strecher, V. Computer-tailored smoking cessation 
+
+materials: A review and discussion. Patient Education 
+and Counseling, 36 (1999), 107-117. 
+
+20. Strecher, V., Kreuter, M., Den Boer, D., Kobrin, S., 
+Hospers, H. and Skinner, C. The effects of computer-
+tailored smoking cessation messages in family practice 
+settings. J. Fam. Pract. 39, 3 (1994), 262-270. 
+
+21. West, R. with Smyth, C., West, J. The SmokeFree 
+
+15. Quit Victoria. Health risks of smoking, 
+
+Formula. Orion, 2013. 
+
+http://www.quit.org.au/reasons-to-quit/health-risks-of-
+smoking. Updated 2014. 
+
+16. Schumann, A., John, U., Ulbricht, S., Ruge, J., Bischof, 
+G. and Meyer, C. Computer-generated tailored feedback 
+
+22. World Health Organization. Tobacco. Fact Sheet 339, 
+http://www.who.int/mediacentre/factsheets/fs339/en. 
+Updated May 2014 
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark104 
+ 
+ 
+

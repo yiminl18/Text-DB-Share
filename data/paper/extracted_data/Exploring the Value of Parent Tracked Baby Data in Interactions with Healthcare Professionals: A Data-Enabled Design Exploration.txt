@@ -1,0 +1,1475 @@
+Exploring the Value of Parent-Tracked Baby Data in 
+Interactions with Healthcare Professionals:  
+A Data-Enabled Design Exploration 
+
+Janne van Kollenburg1,2, Sander Bogers2,1, Heleen Rutjes2, Eva Deckers1,  
+Joep Frens2, Caroline Hummels2  
+
+1 Philips Design, 
+Eindhoven, the Netherlands 
+janne.van.kollenburg@philips.com 
+
+2 Eindhoven University of Technology, 
+Eindhoven, the Netherlands 
+s.j.a.bogers@tue.nl 
+
+ABSTRACT 
+This paper presents a designerly exploration of the potential 
+values  of  parent-tracked  baby  data  in  interactions  between 
+parents  and  healthcare  professionals  (HCPs).  Where 
+previous  work  has  used  parent-tracked  data  as  part  of  the 
+solution to a problem, we contribute by starting our design 
+exploration  from  data,  using  it  as  creative  material  in  our 
+design process. As we intend to work towards a system that 
+could  be  viable  across  different  levels  of  care,  we  invited 
+three  different  types  of  HCPs  and  five  families  with 
+newborns,  for  a  five-week  situated  design  exploration. 
+Facilitated by an open and dynamic data collection toolkit, 
+parents  and  HCPs  could  together  decide  what  data  to 
+collect.  In  a  continuous  dialogue,  they  reflected  on  the 
+relevance of that data in their interaction. Based on this, we 
+continuously and remotely developed two concepts.  
+
+Author Keywords 
+Data-enabled  Design;  Healthcare  Professionals;  Babies; 
+Parents; Health; Data; Exploration; Personal Informatics. 
+
+ACM Classification Keywords 
+H.5.2. User Interfaces. 
+
+INTRODUCTION 
+Personal  informatics  systems  [24,  9] gather  data  about our 
+behavior,  facilitate  interpretation  of  the  data,  and  thereby 
+help us in gaining a better understanding of ourselves (e.g. 
+Fitbit [11], Nokia Health [31], Apple HealthKit [3]). When 
+applied  in  the  healthcare  domain,  personal  informatics 
+systems  can  be  valuable  enablers  of  patient-provider 
+collaboration  [14,16,19,28].  These  can  support  diagnosis; 
+personalize  treatment;  increase  patient  motivation  and 
+accountability;  highlight  unarticulated  patient  goals;  and 
+facilitate  visit  management  [5,  6].  However,  commercially 
+
+Permission to make digital or hard copies of all or part of this work for personal 
+or classroom use is granted without fee provided that copies are not made or 
+distributed for profit or commercial advantage and that copies bear this notice 
+and the full citation on the first page. Copyrights for components of this work 
+owned by others than ACM must be honored. Abstracting with credit is 
+permitted. To copy otherwise, or republish, to post on servers or to redistribute 
+to lists, requires prior specific permission and/or a fee. Request permissions 
+from permissions@acm.org. 
+CHI 2018, April 21–26, 2018, Montréal, QC, Canada. 
+© 2018 ACM ISBN 978-1-4503-5620-6/18/04...$15.00. 
+ https://doi.org/10.1145/3173574.3173871 
+
+Figure 1: the uGrow baby app 
+
+available  personal  informatics  systems  are  generally  not 
+developed  with  a  healthcare  professional  perspective  in 
+mind  and  thereby  often  lack  mechanisms  for  effective 
+communication, 
+in  overwhelmed  healthcare 
+professionals (HCPs) and frustrated patients [7, 41].  
+
+resulting 
+
+(figure  1). 
+
+The  uGrow  baby  development  tracker  app,  launched  by 
+Philips in 2016, is a personal informatics system  that aims 
+to  help  new  parents  in  understanding  and  supporting  their 
+baby’s  healthy  development 
+It  provides 
+personalized  feedback,  advises  on  what  to  expect  at  each 
+stage  of  development,  and  gives  assurance 
+that  the 
+development of the baby is on track. This is driven by the 
+data collected through manual trackers in the app (e.g., how 
+long  the  baby  sleeps,  how  much  the  baby  is  eating)  or 
+through  a  range  of  automated  loggers  in  the  form  of 
+connected  products  (e.g.  Philips  Avent  [34]  smart  ear 
+thermometer, smart baby monitor).  
+
+As part of the uGrow innovation team at Philips Design, we 
+see  potential 
+in  bringing  parent-tracked  baby  data 
+[12,26,30,33] into interactions with healthcare professionals 
+(HCPs),  yet  a  direct  transfer  of  uGrow  (developed  for 
+family  use)  to  the  healthcare  domain  would  likely  be 
+unsuccessful.  We  therefore  set  out  to  explore,  in  a 
+designerly manner, what and how parent-tracked baby data 
+can  be  of  value  in  the  interaction  between  parents  and 
+HCPs. 
+
+In  our  data-enabled  design  approach  [4],  we  use  situated 
+explorations  with  remote  design  interventions  to  translate 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 1 
+ 
+ 
+ 
+ 
+ 
+insights  into  new  designs  continuously.  To  do  this,  we 
+shape  a  playground  of  physical  data  loggers  and  screen-
+based  dashboards,  enabling  parents  and  HCPs  to  explore 
+together what data is of interest and how it can be relevant 
+in  their  specific  use  cases.  By  making  changes  to  the 
+playground  –  or  data-enabled  canvas  –  inspired  by 
+contextualized insights, the design researchers continuously 
+make new ideas experiential.  
+
+In this paper, we first outline and reflect on previous work, 
+both  in  the  domain  of  parent-tracked  data  for  HCPs  and 
+self-tracked data for HCPs in general. These insights helped 
+in  shaping  the  initial  setup  of  our  ‘data-enabled  design 
+canvas’. Based on our design exploration with  three HCPs 
+and  five  families  over  five  weeks,  we  describe  how 
+different  insights  have  led  iteratively  to  new  design 
+implementations.  Finally,  the  paper  discusses  our  findings 
+and  how  our  approach  has 
+these.  The 
+contribution of this paper is found in how data is used as a 
+creative  material  in  the  process  of  design  for  interaction 
+between parents and HCPs. 
+
+influenced 
+
+RELATED WORK   
+The related work we outline here falls into two categories: 
+(1) case studies that operate in the same application domain 
+as  our  work,  and  (2)  other  approaches  to  self-tracked  data 
+and  HCPs  in  other  healthcare  domains.  We  used  the 
+insights from these case studies as inspiration for our design 
+exploration,  and  reflect  on  their  approaches  to  inform 
+construction of our own. These particular case studies were 
+selected  as  we  see  them  as  representative  of  a  larger  body 
+of work in this research area.  
+
+(1) Health technologies in parent-HCP interactions 
+The projects Baby Steps [18] and @Baby Steps [38] show a 
+new approach to existing development assessment surveys, 
+used for preventative care, which are not reliably completed 
+by  parents.  This  software  tool  helps  parents  to  remember 
+and  record  developmental  milestones  on  a  daily  basis. 
+Design  recommendations  highlight 
+to 
+design for limited anxiety by mixing more serious medical-
+related features with lightweight features, such as capturing 
+the milestone of a first haircut.  
+
+importance 
+
+the 
+
+For aiding diagnosis in higher levels of care, the MediCubes 
+[39]  project  shows 
+the  value  of  bringing  playful 
+technology-aided diagnostic tools to the home context. The 
+child’s health is monitored via a set of noninvasive sensors 
+placed  on  the  toy  (e.g.  measuring  pulse,  temperature  and 
+lung  capacity)  while  interacting  with  a  storytelling  game. 
+Monitoring  the  child’s  health  in  their  natural  environment 
+can lead to better health assessments, since the examination 
+is decoupled from the data-gathering process, and thus any 
+anxiety relating to the examination no longer influences the 
+data collected. 
+
+in 
+The  ENSURE 
+automatically  recording,  retrieving  and  transferring  health 
+information (related to medication adherence) to their HCP. 
+
+supports  parents 
+
+concept 
+
+[32] 
+
+The concept was an answer to the needs of parents finding 
+it  difficult  to  adhere  to  medical  advice  and  prescription 
+regimens due to having hectic lives, and the need of HCPs 
+to  make  effective  use  of  consultation  time.  The  work 
+highlights  that  data  collecting  technologies  in  the  home 
+caregivers 
+consider  multiple 
+context 
+(e.g. 
+timings  of  care. 
+locations  and 
+babysitters),  multiple 
+Additionally, 
+it  argues  for  easy  data  collection  via 
+automated trackers (e.g. smart thermometer with automated 
+temperature  history),  and  a  comprehensive  yet  clear  data 
+overview for HCPs to make consultation more efficient. 
+
+should 
+
+Conclusion: 
+Previous  work  shows  how  parent-tracked  baby  data, 
+collected at home, has potential value across multiple levels 
+of  care,  from  prevention  to  diagnosis  and  treatment. 
+However,  all  case  studies  in  this  domain  start  from  pre-
+defined challenges and needs. They define a specific set of 
+data  as  part  of  the  solution  to  the  problem,  and  parents’ 
+and/or HCPs’ experience  of the  solution  is  then  evaluated. 
+Building  on  our  previous  experience  designing 
+the 
+connected  baby  bottle,  we  were  curious  to  find  out  what 
+would happen if we again took the (parent-tracked) data as 
+a starting point instead of concrete needs. We expected this 
+to result in a variety of use cases and pitfalls of data usage 
+not yet identified in previous work. 
+
+(2)  Explorations  starting  from  data  in  other  healthcare 
+domains 
+When  broadening  our  perspective  to  work  that  explores 
+how  home-collected  data  can  be  valuable  in  interactions 
+with HCPs which are not specific to babies, we see a larger 
+body of work that does start with the data itself. 
+
+Mentis  et  al  [28]  present  a  case  study  that  explores  the 
+value of Fitbit step count data in a clinical visit. They stress 
+that when self-tracking is brought into a clinical consult, the 
+data is reshaped by the goals and expertise that exist within 
+that  healthcare  framework  [29].  Building  a  common 
+understanding of the data requires work by both the patient 
+and the clinician, as it is shaped and co-interpreted by both 
+[1,13,15,17,35].  The  approach  whereby  patient  and 
+clinician  build  a  shared  understanding  of  the  data  (e.g.  by 
+discussing  outliers)  provides  a  valuable  additional  layer  of 
+meaning to the data.  
+
+The  Fitbit  data  used  by  Mentis  et  al  is  a  clear  example  of 
+how the domain of self-tracking and quantified-self shows a 
+clear  trend  from  manual  tracking  towards  automated  or 
+passive  tracking.  Challenges  that  are  often  associated  with 
+manual tracking in the healthcare domain include: (1) that it 
+is more difficult to maintain manual logging because of the 
+higher burden [40,21], and (2) that the data is less reliable 
+than data collected automatically [20].  
+
+However,  Yamashita  et  al  [40]  highlight  that  manually 
+logging  data  can  be  advantageous  as  it  can  lead  to  more 
+careful  self-observation,  which  increases  self-awareness 
+and  engagement  [23,25].  Their  study,  which  was  designed 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 2to explore the value of manually tracked data for caregivers, 
+focused  on  a  manual  mood-tracking  system  for  family 
+caregivers caring for a depressed family member. The study 
+found  that  it  helped  the  caregivers  gain  better  insight  into 
+the  behavior  of  the  care  recipient,  for  example,  and  to 
+develop concrete action plans.  
+
+Conclusion: 
+Although  not  in  the  domain  of  baby  care,  there  are  clear 
+examples of studies that depart from data  rather than from 
+problems  and  needs.  The  direct  insights  are  arguably  less 
+valuable  to  us,  as  they  are  heavily  influenced  by  their 
+context. The approach, however, is of interest. In the Fitbit 
+case  study,  the  building  of  a  shared  understanding  of  the 
+data  by  patients  together  with  clinicians  is  of  value.  Even 
+though the study started from exploring the potential value 
+of data, it were the researchers who defined what data was 
+used.  A  similar  argument  could  be  made  for  Yamashita’s 
+case study, as the application provided a fixed template for 
+what  data  to  manually  keep  track  of.  Although  we  have 
+only  highlighted  a  limited  number  of  cases,  we  have  not 
+found case studies that do not pre-define the data involved. 
+As we set out to use data as creative material to inspire our 
+design  iterations,  we  argue  for  a  more  open  and  dynamic 
+approach, as described in the following section.  
+
+DATA-ENABLED DESIGN (METHOD) 
+We  build  on  our  data-enabled  design  approach  [4]  to 
+explore  what  data  is  valuable  in  what  way.  This  approach 
+was developed and described at an earlier stage, based on a 
+design  exploration  of  a  connected  baby  bottle.  The 
+approach is outlined below, after which we elucidate how it 
+was used in the case.  
+
+Data-enabled design sets out to use data as creative material 
+from the early stages of the design process to ascertain new 
+design directions. This is very different from a data-driven 
+design approach [8], in which data is used as evidence for 
+design decisions (i.e. in AB testing). Discussions about the 
+data  become  far  more  personal  and  detailed  if  the  data  is 
+real  and  belongs  to  an  individual  [22].  We  use  a 
+combination  of  sensor  data  to  gain  detailed  insights  in 
+behavioral patterns and qualitative methods for providing a 
+detailed 
+experiences. 
+Consequently, the data-enabled explorations are situated in 
+a  real-life  context,  for  a  longer  period  of  time.  We 
+deliberately refer to these as ‘situated explorations’ because 
+they  are  not  static  validations,  field  trials  or  home 
+placement tests.  
+
+understanding 
+
+related 
+
+of 
+
+Data  is  used  as  a  means  to  collect  insights  remotely  and 
+continuously, but also to remotely design interventions. For 
+example,  in  the  connected  baby  bottle  case,  bottle  feeding 
+data was remotely collected and displayed in real time on a 
+researcher  data-dashboard.  This  screen-based  interface 
+displayed  data  visualizations  that  gave  insight  into  the 
+behavior, experiences and context of the participants. Based 
+on  insights  from  this  data,  content  was  then  sent  to  a 
+connected mobile app.  
+
+The playground that is shaped through all the tools involved 
+(e.g.  physical  and  digital  prototypes,  software  platforms, 
+apps,  researchers’  dashboards)  is  what  we  refer  to  as  the 
+data-enabled  canvas.  The  data-enabled  canvas  facilitates 
+the  explorative  and  open  nature  of  this  approach.  It  is 
+designed  to  be  sufficiently  open  to  facilitate  a  variety  of 
+explorations,  based  on  the  insights  gained  during  the 
+situated explorations. These cannot be planned upfront, and 
+thus  will  continuously  change.  Our  data  canvas  needs  to 
+grow together with our solution to enable continuity of the 
+design  explorations  [37].  More  simply  put,  by  collecting 
+and  showing  data  to  participants,  they  come  up  with  new 
+questions or ideas. From a distance, we can quickly update 
+elements  of  the  data  canvas  to  embody  these  ideas,  and 
+participants  can  then  experience  them.  These  again  trigger 
+new ideas for participants and researchers. In this way, we 
+can explore continuously and remotely. 
+
+DESIGN CASE 
+Our  design  case  in  this  paper  is  a  data-enabled  design 
+exploration of how baby data collected in the home can be 
+valuable  in  the  interaction between parents and  HCPs.  For 
+our  situated  explorations  we  invited  three  HCPs  from  the 
+Netherlands.  As  we  set  out  to  design  for  a  system  that  is 
+valuable  across  different  levels  of  care,  we  invited  (1)  a 
+consultation  office  nurse,  who  takes  a  preventative  and 
+informative  role  in  screening  the  overall  health  and 
+development  of  children,  executing  vaccinations  and 
+providing  parenting  strategies;  (2)  a  general  practitioner, 
+who helps parents in solving common medical conditions or 
+refers them to a specialist in a higher level of care; and (3) a 
+pediatrician, who is there for newborns that need specialist 
+treatment in hospitals or other medical services.  
+
+The three HCPs were each asked to recruit two families to 
+participate  in  the  study  for  five  weeks  (see  table  1). 
+Families  involved  in  current,  ongoing  treatment  with  the 
+pediatrician were excluded, as from a medical ethical point 
+of  view  we  did  not  want  to  interfere  with  diagnosis  or 
+treatment of severe issues. The pediatrician had difficulty in 
+recruiting  families,  and  so  started  the  study  supervising 
+only  one  family.  However,  Family  4  was,  coincidentally, 
+referred  to  the  pediatrician  by  the  GP  during  the  situated 
+explorations; hence, all HCPs interacted with two families. 
+When  referring  to  participants  hereafter,  we  refer  to  all 
+participating families and HCPs. This setup was positively 
+evaluated in a Philips internal ethical committee board and 
+the  Dutch  Medical  Ethical  Committee  at  Maxima  Medical 
+Center [27].  
+
+Part  of  our  data-enabled  design  approach  was  to  shape  a 
+data-enabled canvas that allowed us to gain insights, and to 
+respond  to  these  insights  in  a  continuous  manner  through 
+design  interventions.  This  meant  that  after  two  weeks  the 
+canvas could be completely different for Family 1 than for 
+Family  5.  As  a  whole,  our  data-enabled  canvas  comprised 
+of  (1)  a  family  toolkit;  (2)  a  healthcare  professional 
+dashboard; and (3) a researcher dashboard.  
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 3 
+(CON) Consultation 
+Office Nurse 
+
+(P) Pediatrician  
+
+(GP) General 
+Practitioner  
+
+Family 1 
+
+Family 2 
+
+Family 3 
+
+Family 4 
+
+Family 5 
+
+Baby: 5w 
+Father: 37 
+Mother: 34 
+
+Baby: 3w 
+Father: 33 
+Mother: 32 
+
+Baby: 5m 
+Father: 35 
+Mother: 34  
+Sister: 3y 
+
+Baby: 3m 
+Father: 27 
+Mother: 26 
+
+Baby: 6w 
+Father: 37 
+Mother: 30 
+
+High level of 
+education 
+No health 
+issues 
+Preventative 
+focus 
+
+High level of 
+education 
+Born 
+lightweight 
+Focus on 
+growth 
+
+Middle level 
+of education 
+Was 
+hospitalized 
+Issue solved, 
+prevention 
+
+Middle level 
+of education 
+Excessive 
+crying 
+Unraveling 
+cause 
+
+Middle level 
+of education 
+Reflux 
+
+Lowering 
+medication 
+
+Two home 
+visits of CON 
+Handwritten 
+diary 
+
+Two home 
+visits of CON 
+Babytracker 
+app 
+
+6 consults & 
+hospitalized 
+No tracking 
+of data 
+
+Family is 2 
+years with GP 
+No tracking 
+of data 
+
+Family is 1,5 
+years with GP 
+Handwritten 
+diary 
+
+Table 1. Overview of participating healthcare professionals 
+and families with ages, education levels, health problem, care 
+focus, patient-provider relationship, and data experience. 
+
+A data-enabled canvas 
+The  domain  of  home-collected  (baby)  data  is  heavily 
+connoted  with  apps,  screen  interfaces  and  quantified  self 
+products.  We  aimed  to  enable  participants  to  think  freely 
+about  the  possible  benefits  of  sharing  data  with  HCPs, 
+instead of what the next great app (feature) could be.  
+
+(1) Family Toolkit 
+By  introducing  a  physical  ‘family  toolkit’  for  parents,  as 
+part  of  our  data-enabled  canvas,  we  aimed  to  position 
+ourselves outside of  the digital only frame of reference.  In 
+addition, we hoped that the physicality of the loggers made 
+them stand out in the home context, so that everyone (e.g. 
+mother, father, grandmother, sister, nanny) could decide to 
+keep track of things, instead of only those who had the app 
+installed on their phone. Especially in the context of family 
+care where, for example, grandparents and daycare are also 
+responsible  for  the  care  of  the  baby,  it  would  be  a  missed 
+opportunity not to include them in data collection. 
+
+The family toolkit (figures 2 & 5) can facilitated a dialogue 
+between the parents and the HCPs through data collected at 
+home.  As  related  work  has  given  little  insight  into  what 
+data may be relevant for parents to keep track of (let alone 
+how this could be tracked), the toolkit does not define this. 
+Instead,  it  is  set  up  as  a  multi-purpose  and  dynamic  set  of 
+tools for parents and HCPs to use in a way they see fit. The 
+toolkit consisted of (a) a collection of physical data loggers 
+and (b) a parent dashboard displayed on a touchscreen (see 
+figure 2).  
+
+The  physical  data  loggers  are  generic,  internet-connected, 
+manual  trackers  (see  figure  3)  that  could  be  placed 
+anywhere  the  parents  wanted.  Every  data  logger  has  a 
+different  interaction  style,  resulting  in  different  types  of 
+data  (see  table  2).  Using  the  parent  dashboard,  parents 
+could,  together  with  their  HCP,  define  what  the  physical 
+loggers would be used for. For example, if they decided it  
+
+Figure 2. The family toolkit. Clockwise from bottom-left: text 
+module, video module, rotating knob, push button (in hand), 
+parent dashboard. 
+
+Was valuable to keep track of how often a baby was being 
+fed, they could use the parent dashboard to assign the label 
+‘feeding’  to  the  push  button.  From  that  point  onwards, 
+when  the  push  button  was  pressed,  a  new  ‘feeding’  event 
+would  be  recorded.  The  assigned  labels  could  be  freely 
+changed at any point in time. All recorded events would be 
+displayed on the parent and HCP dashboard as a simple log 
+of all events (figure 4). In addition, a message center in all 
+dashboards  allowed  communication  between  the  parents, 
+HCPs and design researchers.   
+
+It  is  important  to  note  that  the  physical  loggers  were 
+deliberately  designed  to  be  used  for  a  single  purpose. 
+Hence,  it  would  be  impossible  for  parents  to  start  logging 
+everything;  they  had  to  make  conscious  decisions  on  what 
+data was most relevant.  
+
+Data logger 
+
+Functionality 
+
+(a) push-button module 
+
+saves when it is pressed 
+
+(b) rotation-knob module 
+
+saves  when  it  is  pressed  and  at 
+what position (from 0 to 100) 
+
+(c) video module 
+
+saves short videos (max. 5 mins) 
+
+(d) text module 
+
+saves text messages  
+
+Table 2. Overview of physical data loggers, with functionality  
+
+Not only did we envision the physical trackers to be open-
+ended, we also designed the underlying technology in a way 
+that  would  allow  us  to  quickly  design  and  introduce  new 
+physical  data  loggers.  The  smaller  cylindrical  loggers  (A, 
+B)  were  built  using  the  same  hardware  platform  (i.e. 
+ESP8266 [10] with custom-designed printed circuit board). 
+They  were  battery  operated  and  could  run  for  more  than 
+five  weeks  without  a  recharge;  they  were  also  wireless, 
+enabling  parents  to  place  them  at  a  convenient  place 
+associated with the event (e.g. putting a ‘wet diaper’ logger 
+next  to  the  diaper  changing  table).  Loggers  C  and  D  were 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 4 
+ 
+built  using  Android  phones,  and  could  be  used  wirelessly 
+and charged, but only had a battery lifespan of about a day.  
+
+Figure 3. The physical data loggers 
+
+Figure 4. Different elements of the HCP dashboard: (A) data 
+filters for the HCP; (B) visualization of the audio tracker 
+(introduced later); (C) data logs of the physical trackers; (D) 
+annotations on data points.  
+
+(2) HCP Dashboard 
+In  the  system,  each  family  was  connected  to  their  HCP, 
+giving  the  HCP  access  to  that  family’s  data.  As  with  the 
+parent dashboard, the HCP dashboard initially displays the 
+logbook  (figure  4),  but  also  offers  some  additional  filters 
+and  controls  to  zoom  in/out  to  discover  relations  and 
+patterns  (figure  4-A).  The  HCP  also  has  access  to  the 
+messaging interface. 
+
+(3) Researcher Dashboard 
+The design researchers had access to the data of all families 
+and HCPs. As well as having a copy of the HCP dashboard, 
+the  researcher  dashboard  contains  more  experimental  data 
+visualizations  and  some  metadata  (when  participants  visit 
+the  dashboard)  to  gain  insight  into  the  current  exploration. 
+It  can  also  be  used  to  communicate  with  the  participants 
+and as a place to try out new features before going ‘live’. 
+
+Figure 5. The 5 toolkits handed out to families 
+
+Procedure 
+The  situated  explorations  were  planned  to  run  for  five 
+weeks  for  all  participants.  Participants  were  phased  in  at 
+different times to allow for any technical immaturities at the 
+start,  and  to  provide  more  time  for  new  explorations.  The 
+study  therefore  ran  for  nine  weeks  in  total.  We  hereafter 
+refer  to  week  numbers  in  relation  to  the  starting  date  of 
+each  participant  (i.e.  week  1  of  Family  1  will  have  a 
+different date range to week 1 of Family 3).  
+
+– For families  
+In  the  introductory  meeting  at  the  family’s  home,  we 
+introduced the purpose of the study and the functionality of 
+the toolkit (figure 6). To help them become acquainted with 
+how to log data and change the labels assigned to the data 
+loggers, the parents were asked to label each module, based 
+on  what  they  thought  could  be  useful  to  keep  track  of.  In 
+this  way,  we  quickly  learned  about  aspects  that  are  of 
+(temporal)  relevance  for  them  to  discuss  with  their  HCPs. 
+We explained that the toolkit allows for quick updates, and 
+so encouraged them to actively think and make suggestions 
+that we could respond to.  
+
+In the second week, a session was held with the parents in 
+which  we  discussed  their  first  experiences.  In  the  weeks 
+thereafter,  there  were  only  contact  moments  when  specific 
+issues arose (e.g. technical malfunctioning, questions about 
+the  study,  changing  health  condition  of  the  baby  requiring 
+exclusion from the study).  
+
+In the fifth (i.e. final) week, we met with the families twice. 
+The first meeting was a session at home to reflect on their 
+experiences,  and  to  discuss  their  perspective  on  the 
+relevance  of  home-collected  baby  data  for  themselves  and 
+their HCPs. The second was in a consult with the HCP and 
+design  researchers,  where  they  shared  and  discussed 
+experiences and asked any remaining questions.  
+
+– For healthcare professionals 
+In an introductory meeting at the HCP’s office, the purpose 
+and  setup  of  the  study  was  explained.  Both  the  family 
+toolkit  and  the  HCP  dashboard  were  introduced.  To  give 
+HCPs  a  better  understanding  of  the  potential  opportunities 
+of  the  family  toolkit,  the  researchers  gave  some  hands-on 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 5 
+ 
+ 
+demos. Once every week the researchers visited the HCP to 
+review the data collected by their families through the HCP 
+dashboard, and to discuss new ideas. We explained that we 
+intended  to  design  and  explore  ‘on-the-fly’,  meaning  that 
+things  would  continuously  change  as  their  ideas  and 
+feedback were directly implemented.   
+
+In  general,  the  system  was  very  well  received.  Initially, 
+parents struggled with defining which labels to assign to the 
+physical  loggers,  as  the  system  was  so  open  that  it  was 
+challenging to find a starting point.  
+
+“I  am  doubting  what  kind  of  information  I  should  collect: 
+information  around  my  questions  of  care  or  information  about 
+everything I do? I would like to have answers to my questions but 
+think  it  might  also  be  interesting  to  have  the  HCP  access  my 
+routines.  There  might  be  aspects  which  I  find  normal  but  which 
+the consultation officers find striking.” – Family 1 
+
+After  using  the  system  for  several  days,  and  as  a  result  of 
+interactions with their HCP, this became clearer. From this 
+point onwards, the parents started to enthusiastically collect 
+extensive datasets. 
+
+Figure 6. The family toolkit installed during the situated 
+explorations 
+
+– For design researchers 
+In  a  weekly  design  meeting,  all  results  and  insights  from 
+interviews  and  dashboard  reviews  were  discussed.  These 
+ranged  from  participant  quotes  and  study  questions  to 
+technical  difficulties  or  bug  fixes.  When  participants  sent 
+messages  using  their  dashboard  message  center,  we  aimed 
+to  respond  within  a  couple  of  hours.  Based  on  these 
+insights, the team would collectively brainstorm and decide 
+which  actions  and  new  designs  would  have  the  largest 
+priority. The designs would balance the questions and ideas 
+from  the  participants  with  the  ideas  of  the  design  team, 
+based on their insights.  
+
+resulting 
+
+SITUATED EXPLORATIONS 
+In  this  section,  we  share  two  design  narratives  which 
+describe the evolution of our situated explorations, and the 
+rich  and  detailed  stories  that  have  driven  them.  These 
+narratives  are  formed  from  a  study  timeline  where, 
+throughout  the  exploration,  we  tracked  user  behavior  and 
+experiences, 
+design 
+interventions.  As  most  design  interventions  were  directly 
+connected  to  one  or  more  insights  resulting  from  other 
+design 
+the  design 
+narratives  throughout  the  situated  explorations.  Where 
+relevant, we use reflection on action, as described by Schön 
+[36], to describe the design narratives. From a collection of 
+multiple narratives, we selected those that lead to the more 
+concrete design concepts. 
+
+they  clearly  show 
+
+interventions, 
+
+insights 
+
+new 
+
+and 
+
+Cumulatively,  families  participated  for  127  days  over  a 
+period  of  nine  weeks.  In  total,  we  collected  1372  data 
+entries from the physical data loggers, which were divided 
+over  25  different  assigned  labels.  The  HCPs  typed  20 
+messages to families. We sat together with participants for a 
+total  of  36  hours,  and  made  changes  to  the  data-enabled 
+canvas continuously.  
+
+Although  very  curious,  the  HCPs  were  more  reluctant  at 
+first. It was not immediately clear how the data could help 
+them, as it was hard to imagine what the parents would use 
+the  data  loggers  for.  This  quickly  changed  once  they 
+received  real  data,  as  this  gave  them  a  better  idea  of  what 
+access  to  the  data  could mean for them, and what changes 
+were  required  to  move  towards  that.  We  present  two 
+distinct  directions,  as 
+the  general 
+practitioner  and  pediatrician  showed  large  similarities  but 
+were unlike the insights from the consultation office nurse.  
+
+insights  from 
+
+the 
+
+A  design  narrative  towards  My  Care  Question  (for  the 
+consultation office nurse) 
+The  families  started  to  collect  data  before  having  data-
+related  interaction  with  their  consultation  office  nurse.  At 
+this level of preventative care, the issues are less prominent 
+and  the  parents  found  it  difficult  to  pinpoint  what  data  to 
+collect. Consequently, they began with the most commonly 
+tracked  data:  feeding  and  sleeping.  Parents  were  very 
+dedicated to tracking this repetitive information accurately, 
+as they valued a complete overview.   
+
+“Sometimes I click the button twice as I forgot to log the previous 
+one. But that doesn’t show the real situation.” – Family 2 
+
+As  this  seemed  an  important  value,  we  introduced  the 
+ability to manually add data points at a certain time (in the 
+past) and the ability to delete (wrong) data points (figure 4). 
+To  achieve  this,  we  integrated  a  comment  option  for  each 
+data point. Parents could use the comment facility to record 
+what was wrong with a given data point and what needed to 
+be  changed.  This  was  visible  to  the  design  research  team, 
+who initially updated the data manually.   
+
+“I am so pleased with the adaption possibilities. When I forget it 
+in  the  middle  of  the  night  and  enter  the  data  in  the  morning,  it 
+automatically  ‘jumps’  to  the  right  position  on  the  timeline  –  so 
+nice.”  – Family 3 
+
+After the first weeks, the consultation office nurse received 
+extensive overviews of accurately tracked data in the form 
+of a timeline. There was so much data that it took the HCP 
+about 30 minutes to go through it. At many points she saw 
+something  she  thought  could  be  worth  giving  feedback 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 6 
+about,  however,  she  also  did  not  want  to  worry  parents 
+about something that was not causing any problems.  
+
+and  the  HCP  receives  the  list  of  questions  with  associated 
+data.   
+
+“I am doubting. I see a lot of data that I could respond to, 
+but I’m hesitant to do so as I do not want to create issues or 
+concerns that are not there.” – Consultation Office Nurse 
+
+The My Care Question module was introduced to Family 2 
+two  weeks  before  the  end  of  the  situated  explorations,  It 
+immediately proved its relevance, as shown below.  
+
+The nurse made a case for easier browsing through the data, 
+as this could significantly speed up the task of reviewing it. 
+We therefore implemented data filters so that irrelevant data 
+could be hidden.  
+
+In  the  meantime,  the  parents  continued  to  track  the  same 
+data but also started to use the comments facility. Although 
+intended as a workaround for manual data adjustment, they 
+also  used  comments  to  give  more  qualitative  information 
+about  the  data  they  collected.  As  the  comments  were 
+previously  only  visible  to  the  design  research  team,  we 
+quickly enabled the HCP to  not only see them, but also to 
+write new comments.  
+
+As a comment on “sleep” by the parent  –“Baby went to sleep at 
+21:00, after a feed at 18:30 we took a shower, baby was awake in 
+my arms. In his crib he cried a lot, fell asleep in my arms in the 
+nursing room, then I put him to bed in the nursing room.–Family 1  
+
+The comment above shows the ‘obvious’ first data tracked 
+by the family becoming more detailed and nuanced through 
+the  addition  of  context  and  personal  experiences.  As  the 
+HCP started to gain a better understanding of what the data 
+might  bring,  she  started  to  ask  for  other  details  that  could 
+provide more contextual insight. Together, the HCP and the 
+family  decided  to  start  tracking  the  ‘easiness  of  falling 
+asleep’, using the rotation knob. After doing this for several 
+days,  based  on  whether  her  experience  of  ‘falling  asleep 
+peacefully’  matched  what can be  expected of  a  five-week-
+old baby, the HCP discussed this with the parents further.  
+
+Although  the  consultation  office  nurse  was  now  equipped 
+with  a  dashboard  that  allowed  for  easier  filtering  of  data 
+and  had  a  better  contextual  understanding  of  the  data 
+through  the  comments  from  the  parents,  she  still  clearly 
+struggled  with  the  large  amount  of  data  and  how  to  deal 
+with  it.  In  contrast  to  her  normal  approach,  where  parents 
+ask  questions  and  she  tries  to  answer  them,  there  now 
+seemed to be an expectation for her to give advice without a 
+clear  question.  She  clearly  appreciated  it  when  a  concrete 
+question  appeared  in  one  of  the  comments,  and  explained 
+that  she  always  used  a  question-based  approach  whereby 
+parents explained what was on their mind and she would try 
+to find a solution.  
+
+Inspired by this, we built the ‘My Care Question’ concept. 
+This  is  a  different  tab/window  in  the  parent  dashboard 
+where  new  questions  can  be  initialized  and  data  points 
+(historic or to be collected) can be selected, where the data 
+points  are  relevant  for  the  HCP  to  better  help  with  the 
+question  (i.e.  the  question  module  provided  a  filter  on  the 
+data  set  by  the  parents  for  the  HCP).  Based  on  the  data 
+points, the system creates a simple data summary overview, 
+
+Figure 7. An example question asked in the My Care Question 
+module. At the top, the question is formulated (A). Next, the 
+relevant data types can be selected, using a number of filters 
+(B). A simple summary data visual is then shown (C), followed 
+by all data points (D).  
+
+The  mother  of  Family  2  used  the  new  My  Care  Question 
+module  to  ask  how  she  could  increase  her  breastfeeding 
+supply  through  expressing  (i.e.  pumping)  (figure  7).  She 
+connected data about the duration and volume of expressing 
+to the question. As this clearly illustrated a highly irregular 
+routine  during  that  time,  the  consultation  office  nurse 
+advised  her  to  pump  delicately  every  two  hours  for  two 
+days.  Unfortunately,  that  advice  did  not  have  the  desired 
+effect (also visible in the data). 
+
+“After  29  years  of  experience,  I  have  not  often  experienced  that 
+breastmilk amounts do not increase [after giving this advice].” – 
+Consultation Office Nurse 
+
+To  find  suitable  advice,  the  consultation  office  nurse 
+reached out to a lactation consultant. She communicated the 
+new  advice  through  the  My  Care  Question  module,  and  it 
+had  a  positive  effect.  In  the  reflective  session,  both  the 
+mother  and  the  consultation  office  nurse  reported  being 
+very satisfied with the functionality of the module. 
+
+“Now I get much more information (...). Maybe, when you [mum] 
+had  seen  me  two  weeks  after,  you  might  have  already  stopped 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 7 
+expressing.  You  might  have  thought  ‘this  isn’t  working  out’  and 
+maybe  you  would  have  switched  to  bottle  feeding  already.  [mum 
+confirms]” – Consultation Office Nurse 
+
+A  design  narrative  towards  Care  Paths  (for  the  GP  and 
+pediatrician) 
+When  the  parents  received  the  toolkits,  we  encouraged 
+them to start logging  the data they expected to be relevant 
+for  them  in  interactions  with  their  HCP.  Compared  to  the 
+families  participating  with  the  consultation  office  nurse, 
+these  families  found  it  a  little  easier  to  define  what  their 
+data  loggers  would  collect  as  there  was  a  clearer  issue  at 
+hand. They appreciated the fact that they were now able to 
+keep track of a problem so that their HCP would “see what 
+our baby is going through” (Family 5).  
+
+After the first week, the data collected by the families was 
+presented  to  the  GP  and  pediatrician  in  the  form  of  a 
+logbook  of  events  (figure  4).  Both  professionals  struggled 
+to  make  sense  of  the  data.  It  was  difficult  to  get  an 
+overview  as  an  extensive  set  of  data  had  already  been 
+collected.  We  agreed  that  this  was  probably  the  case 
+because having an overview alongside the ability to look at 
+the  data  from  different  angles  was  necessary,  but  widely 
+missing.  In  response,  we  developed  the  first  version  of  a 
+timeline  data  visualization,  for  the  HCP  dashboard  (see 
+figure 8).  
+
+Figure 8. Data visualization, first version. The color of the dots 
+is mapped to the type of physical data logger used.  
+
+The  new  visualization  did  not  provide  a  solution  to  the 
+issues  highlighted  during  the  first  meeting.  It  was  still 
+difficult  for  the  HCPs  to  get  a  good  overview,  and  they 
+argued  strongly  that  the  data  collected  by  the  parents  was 
+way too much: they only needed to see specific things that 
+could  help  to  answer  some  of  their  unanswered  questions. 
+Also,  the  GP  felt  that  by  tracking  data  some  parents  may 
+become  so  obsessed  with  it  that  it  had  the  potential  to 
+magnify the problem. As a result, both HCPs asked parents 
+to keep track of specific things.  
+
+“I  am  a  GP,  I  only  want  to  see  information  related  to  the  care 
+question.  Parents  visit  me  because  they  have  a  problem,  not  to 
+show videos of how cute their baby is.” – GP 
+
+“I  want  to  stimulate  the  family  to  make  videos  of  skin  rash  or 
+uncommon behavior, that is very valuable to me. We can stop with 
+tracking full (poo) diapers, and replace it by wet diapers. Also, I 
+want the family to track sleep.” – Pediatrician 
+
+Where the HCP partly found a solution to data overload by 
+helping  parents  focus  on  what  data  to  collect,  we  together 
+
+still  struggled  in  coming  up  with  more  usable  data 
+visualizations.  As  the  physical  loggers  could  be  used  to 
+keep track of any kind of data, our visualizations needed to 
+be  abstract  representations  that  had  no  understanding  of 
+context. As they had to be generic, we kept coming back to 
+timeline  visualizations  that  stayed  the  same  conceptually 
+but had improved readability. 
+
+Figure 9. A new data visualization. Different days are shown 
+next to each other; icons represent labels. At the top, 
+cumulative charts show how often events occur. 
+
+From  the  HCP  perspective  it  was  clear  what  kind  of  data 
+was  needed  in  a  specific  case.  In  an  ideal  world  that  data 
+would  be  collected  as  accurately  as  possible.  Manually 
+tracked  data  had  clear  advantages,  as  it  was  open  and 
+almost  anything  could  be  collected,  but 
+the  HCPs 
+sometimes  questioned  its  quality.  For  example,  was  there 
+no feeding at a given point because there was no feeding, or 
+because it was not logged?  
+
+To  support  a  request  for  sleep  tracking  and  explore  the 
+value of an automated data logger, we introduced two new 
+data  loggers:  (1)  the  two-state  toggle  button,  and  (2)  the 
+audio module.  
+
+(1) The  two-state  toggle  button (figure  10) was  introduced 
+to  support  the  sleep  request.  Where  the  other  buttons  only 
+register an event at a particular moment in time, this button 
+registers  when  it  is  in  its  pressed  state  and  thus  logs  the 
+duration  of  events.  (2)  The  audio  module  (figure  10)  was 
+introduced to elicit responses about automated data loggers. 
+The module can be freely placed throughout the house and 
+continuously keeps track of environmental sound levels and 
+tone  heights.  Approximately  every 
+five  hours  a 
+visualization  appears  in  the  parent  and  HCP  dashboard, 
+summarizing that time slot (figure 4).  
+
+Although  the  data  in  current  form  was  hard  to  interpret 
+initially,  the  parents  started  exploring  how  these  modules 
+could be valuable. They came up with unexpected use cases 
+and questions as to how this information could be relevant.  
+
+Although  both  HCPs  expected  to  see  a  ‘universal  truth’ 
+from the automated data collectors, it became clear that, for 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 8 
+ 
+ 
+both  the  manual  and  the  automated  loggers,  it  was 
+important to build a shared understanding of what the data 
+means.  Only  then  can  it  become  meaningful  for  both 
+parties.  
+
+Figure 10. The toggle button (left) and audio module (right) 
+
+ “I wonder, if he [my baby] makes a lot of noise during the night, 
+is  he  doing  that  constantly  or  only  15  minutes  before  he  wants 
+food?” – Family 2  
+
+We  see  a  good  example  of  this  in  how  Family  4  used  the 
+video  module  to  annotate  the  rotation  knob.  Initially  the 
+rotation knob was set to track ‘crying’. The minimum of the 
+knob was manually defined as ‘whining’, and the maximum 
+as  ‘screaming’.  Upon  questions  from  the  GP,  the  mother 
+made  two  videos,  one  showing  whining,  and  the  other 
+screaming.  Immediately,  the  GP  had  a  frame  of  reference 
+for that data.  
+
+In  short,  we  discovered  that  the  HCP  would  like  to  be  in 
+control  and somehow  regulate  what  is  being kept  track of, 
+to prevent parents from worrying too much. 
+
+Building  on  this,  we  introduced  ‘Care  Paths’:  problem-
+specific  care  modules.  HCPs  could  start  these  modules 
+when  there  was  a  clear  indication  for  a  problem  or  a 
+diagnosis  had  already  been  made.  Each  problem-specific 
+module  pre-lists  a  set  of  data  points  that  are  important  for 
+the  parent  to  keep  track  of.  After  the  HCP  initializes  a 
+module,  the  request  shows  up  on  the  parent  dashboard. 
+Upon  acceptance,  all  the  labels  for  the  physical  loggers 
+automatically  update  to  those  defined  by  the  module.  For 
+example, the allergies care module may ask parents to take 
+a video of a skin condition, using the video module, every 
+day.  As  the  Care  Path  modules  focus  on  more  specific 
+issues,  they  can  also  involve  function-specific  automated 
+loggers (e.g. a smart baby bottle for feeding issues). 
+
+We implemented a Care Path reflux module during the last 
+week of the situated explorations and discussed this in final 
+interviews.  Although  the  HCPs  were  enthusiast  about  the 
+concept, the parents were less convinced of it in its current 
+form. In the current setup, they felt that what they found to 
+be  valuable  was  not  integrated  enough.  This  is  clearly 
+evident in the following quotes:  
+
+“In this  case,  I just  want to  know  when the baby is fed,  when  he 
+spits up and when he cries. It is as simple as that.”  – GP 
+
+Figure 11. A care path-specific data visualization for reflux, 
+showing the time between feeding and spitting up 
+
+the  care  paths  pre-define 
+
+Because 
+the  problem  and 
+concurrent  data  request,  where  the  data  gains  contextual 
+value,  we  were  able  to  move  away  from  generic  timeline 
+visualizations.  This  allowed  us  to  create  care  path-specific 
+data visualizations that would emphasize other elements. 
+
+Figure  11  shows  the  first  version  of  a  care  path-specific 
+visualization  for  reflux.  It  shows  the  temporary  relation 
+between  feeding  (in  the  center)  and  spitting  up  (the  green 
+lines), compiled from data from the reflux module gathered 
+by  Family  5.  From  this  visualization,  it  can  be  seen  that, 
+over the previous 14 days, the baby never spat up within an 
+hour  after  feeding.  We  presented  this  visualization  to  the 
+GP, who quickly responded: 
+
+“There is no spitting after a feed, only before. That doesn’t seem 
+to be a reflux problem...” – GP 
+
+Mother elaborated: “When my baby spits up, I give him a little sip 
+to rinse away that disgusting taste.” – Family 5 
+
+The  care  path-specific  data  visualization  helped  the  GP  to 
+gain insight into what might be causing the baby to spit up, 
+and how she could best help the family to make it better. In 
+addition,  it  provided  her  with  the  tools  to  monitor 
+improvement.  
+
+Together  with  the  HCP,  we  developed  six  Care  Path 
+modules, and defined what data was relevant for each one. 
+However, we also learned that the set of data defined by the 
+HCPs; the Care Path modules should have the flexibility to 
+enable parents to track extra data points if they want to. 
+
+DISCUSSION  
+In 
+this  paper,  we  presented  a  data-enabled  design 
+exploration  where  we  explored,  in  context,  how  parent-
+tracked  baby  data  can  be  valuable  in  the  interaction 
+between  parents  and  HCPs.  We  chose  this  approach 
+because  (1)  we  wanted  to  explore  what  data  could  be 
+valuable, in contrast to prior work that defined this upfront; 
+and  (2)  because  we  wanted  to  be  able  to  translate  our 
+that  could  be 
+insights 
+experienced,  thus  enabling  us  to  explore  how  data  can  be 
+relevant in their interactions. 
+
+into  designs 
+
+immediately 
+
+“If  I  only  tracked  feeds,  spitting  up  and  crying,  I  don’t  think  the 
+GP would have enough understanding of the situation. Sometimes 
+my baby is not crying but clearly uncomfortable, you could notice 
+that by not going to sleep.” – Family 5 
+
+The exploration of what data is relevant 
+By  enabling  parents  and  HCPs  to  have  a  continuous 
+dialogue  about  what  data  was  relevant  for  them,  working 
+together,  they  quickly  went  beyond  the  most  commonly 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 9 
+ 
+tracked  data  (e.g.  feeding,  sleeping,  diapers,  milestones). 
+The  data  loggers  were  set  to  track  more  detailed  and 
+nuanced activities that often provided an experiential layer 
+on  top  of  the  data  [2].  The  assigned  labels  ‘easiness  of 
+falling asleep’, ‘response to reflux’, and ‘position of waking 
+up’  as  well  as  parents’  comments  to  data  points  are  good 
+examples  of  this.  It  is  interesting  to  see  how  these  labels 
+became  more  detailed  over  time,  as  the  questions  of  the 
+parent  and  HCP  did.  We  would  argue  that,  had  we  started 
+this exploration from existing baby apps as uGrow, without 
+a  dynamic  data-enabled  canvas,  it  would  have  been  more 
+difficult to go beyond this (in our eyes, superficial) layer.  
+
+for  example,  wanted 
+
+By  selecting  HCPs  from  different  levels  of  care,  we  were 
+able  to  corroborate  our  belief  that  different  types  of 
+[6].  The 
+professionals  have  different  data  needs 
+consultation  office  nurse, 
+to 
+understand  development,  while  the  pediatrician  wanted  to 
+know  how  long  after  a  feeding  the  baby  would  spit  up. 
+Alongside  the  differences  between  types  of  professionals, 
+the  personality  of  individual  professionals  also  played  a 
+role.  All  had  developed  their  own  way  of  working 
+throughout  their  careers  and  preferred  that  the  data 
+respected that. The open nature of the data trackers proved 
+to be very valuable in allowing professionals to use them in 
+a way that they saw fit.   
+
+A critical note here is that although we clearly created more 
+openness  in  what  data  was  used  than  other  case  studies  in 
+this  domain  have  shown,  the  boundaries  of  what  could  be 
+collected were not infinite. Through our toolkit, we created 
+a  frame  of  reference  for  the  participants  that  clearly 
+influenced their perspective (i.e. nobody asked for medical 
+measures such as pulse or lung capacity). 
+
+The exploration of how data can be relevant  
+In  the  section  on  the  situated  explorations,  we  presented  a 
+variety of real-life use cases. For example, we saw the GP 
+using  manual  feeding,  spitting  up  and  crying  data  to  gain 
+insight  into  potential  reflux-related  issues;  the  pediatrician 
+using  video  to  monitor  allergic  skin  responses;  and  the 
+consultation office nurse using breast pumping data to give 
+advice  on  how  to  increase  milk  production.  Exploring 
+through 
+these  real-life  use  cases  gave  us  a  better 
+understanding of the full complexity of the design space [5, 
+7,  19,  28].  As  a  result,  we  were  not  only  able  to  identify 
+certain pitfalls but could also explore how to design around 
+them. For example, the GP strongly argued for limiting the 
+amount  of  data  that  was  collected  by  the  families,  as  it 
+would  only  make  them  more  worried  and  focused  on  the 
+problem.  Our  response  to  this  was  that  the  design  of  the 
+Care  Path  modules  would  only  allow  certain  types  of  data 
+collection  for  a  fixed  moment  of  time.  For  example,  it 
+would  only  allow  tracking  of  crying  for  two  weeks.  The 
+situatedness  of  the  explorations  also  allowed  for  the 
+continuous  emergence  of  inspiring  and  unexpected  use 
+cases. Whereas the GP argued strongly against the logging 
+of  ‘see  how  cute  my  baby  is’  videos  (and  manually 
+
+removed  almost  all  of  them),  the  pediatrician  really 
+appreciated  these.  He  argued  that  because  he  has  no 
+background knowledge of the family coming to the consult, 
+the videos could help him to get a rich contextual snapshot 
+of the family (e.g. a chaotic household) and thereby allows 
+for  advice  personalization  [32].  This  example,  again, 
+reinforces the fact that different HCPs have different needs 
+and different ways of working.  
+
+At  the  start  of  the  situated  explorations, parents  and HCPs 
+initially  struggled  to  find  a  direction  for  data  gathering. 
+However, regardless of their initial choices, the experience 
+of  gathering  and  reviewing  data  inspired  a  collaborative 
+data-relabeling  process  between  the  parent  and  HCP.  It 
+made  them,  and  thus  also  the  design  research  team,  see 
+possibilities  and  pitfalls  of  data  that  they  would  not 
+necessarily have thought of before. For the same reason, we 
+directly  implemented  new  design  ideas  arising  from  the 
+insights  that emerged.  And  again,  it was  the  experience of 
+participants  using  the  updated  data-enabled  design  canvas 
+that  gave  the  most  valuable  insights  to  move  forward.  As 
+the tools were designed to be open for remote updates, we 
+have  been  able  to  run  multiple  insight-to-design  iterations 
+in  a  single  set  of  continuous  situated  explorations.  The 
+participants  (i.e.  families,  healthcare  professionals  and 
+researchers),  study  location  and  setup  have  had  a  clear 
+impact  on  how  these  situated  explorations  developed. 
+Hence,  we  treat  the  presented  narratives  and  concepts  as 
+well-grounded starting points for future research rather than 
+fully evaluated outcomes. 
+
+CONCLUSION 
+From  related  previous  work,  we  saw  two  clear  ways  in 
+which  others  have  approached  data-intensive  projects.  The 
+first  uses  data  only  as  part  of  the  solution;  the  second 
+departs from data and questions how it might be relevant in 
+a  given  context.  The  latter,  however,  always  defined  what 
+data  was  used  upfront.  In  this  paper,  we  present  a  third 
+approach,  based  on  situated  and  explorative  data-enabled 
+design approach. Many of our initial insights show a large 
+overlap with those presented in previous work. However, as 
+we  moved  forward  and  used  different  designs  to  embody 
+these  insights,  they  became  more  detailed,  nuanced  and, 
+simply, different; they build on more complex insights from 
+combinations of data in different settings that continuously 
+evolve. In the case study, we have shown how we brought 
+together  parents,  HCPs  and  design  researchers  who  were 
+enabled to actively contribute by means of the data-enabled 
+canvas.  Through  this,  we  demonstrated  how  different 
+stakeholders,  as  experts  in  their  own  areas,  together  with 
+design researchers have used data as a creative  material to 
+allow new design interventions to emerge iteratively, while 
+situated in real life.  
+
+ACKNOWLEDGEMENTS 
+This research was supported by the IMPULSE perinatology 
+framework. 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 10REFERENCES 
+1.  Margunn Aanestad. 2003. The Camera as an Actor Design-
+
+13. Stefan Hirschauer. 1991. The Manufacture of Bodies in 
+Surgery. Social Studies of Science 21, 2: 297-319. 
+
+in-Use of Telemedicine Infrastructure in Surgery. 
+Computer Supported Cooperative Work (CSCW) 12, 1: 1-
+20. 
+
+2.  Amid Ayobi, Paul Marshall, Anna L Cox and Yunan Chen. 
+2017. Quantifying the Body and Caring for the Mind: Self-
+Tracking in Multiple Sclerosis. In proceedings of the 2017 
+CHI Conference on Human Factors in Computing Systems 
+- CHI’17, 6889-6901.   
+
+3.  Apple. 2017. A bold way to look at your health. Retrieved 
+
+December 11, 2017 from 
+https://www.apple.com/ios/health/ 
+
+4.  Sander Bogers, Joep Frens, Janne van Kollenburg, Eva 
+
+Deckers, and Caroline Hummels, 2016. Connected Baby 
+Bottle: A design case study towards a framework for data-
+enabled design. In Proceedings of the 2016 ACM 
+Conference on Designing Interactive Systems (DIS’16), 
+301-311. 
+
+5.  Chia-Fang Chung, Jonathan Cook, Elizabeth Bales, 
+Jasmine Zia, and Sean A. Munson. 2015. More than 
+telemonitoring: Health provider use and nonuse of life-log 
+data in irritable bowel syndrome and weight management. 
+Journal of Medical Internet Research, 17(8). doi: 
+10.2196/jmir.4364. 
+
+6.  Chia-Fang Chung, Kristin Dew, Allison Cole, Jasmine Zia, 
+James Fogarty, Julie A. Kientz and Sean A. Munson. 2016. 
+Boundary negotiating artifacts in personal informatics: 
+Patient-provider collaboration with patient-generated data. 
+In Proceedings of the 19th ACM Conference on Computer-
+Supported Cooperative Work & Social Computing. 
+
+7.  Mary Jo Deering, Erin Siminerio, and Scott Weinstein. 
+2013. Issue Brief: Patient-Generated Health Data and 
+Health IT. Office of the National Coordinator for 
+HealthInformation Technology 
+
+8.  Biplap Deka. 2016. Data-driven Mobile App Design. In 
+
+Proceedings of the User Interface Software and 
+Technology Symposium –UIST '16 Adjunct, 21-24. 
+
+9.  Daniel A. Epstein, An Ping, James Fogarty, and Sean A. 
+Munson. 2015. A Lived Informatics Model of Personal 
+Informatics. In Proceedings of the 2015 ACM International 
+Joint Conference on Pervasive and Ubiquitous Computing 
+(UbiComp '15).  
+
+10. Espressif Systems IOT Team. 2017. ESP8266EX 
+
+Datasheet. Retrieved September 18, 2017 from https://cdn-
+shop.adafruit.com/product-files/2471/0A-
+ESP8266__Datasheet__EN_v4.3.pdf.  
+
+11. Fitbit. Find your fit. 2017. Retrieved December 11, 2017 
+
+from www.fitbit.com/.  
+
+12. Glow Inc. 2017.Glow Baby - Baby Tracker App. Retrieved 
+
+September 18, 2017 from 
+https://itunes.apple.com/us/app/id1077177456.  
+
+14. Nicholas Huba, and Yan Zhang. 2012. Designing patient-
+centered personal health records (PHRs): health care 
+professionals’ perspective on patient generated data. 
+Journal of Medical Systems 36, 6: 3893-3905. 
+
+15. Kelly Joyce. 2005. Appealing Images: Magnetic 
+
+Resonance Imagining and the Production of Authoritative 
+Knowledge. Social Studies of Science 35, 3: 437-462. 
+
+16. Marije Kanis, Saskia Robben, Judith Hagen, Anne 
+
+Bimmerman, Natasja Wagelaar and Ben Kröse. 2013. 
+Sensor Monitoring in the Home: Giving Voice to Elderly 
+People. In proceedings of conference on Pervasive 
+Computing Technologies for Healthcare. 97-100. 
+
+17. Bonnie Kaplan. 1995. Objectification and negotiation in 
+interpreting clinical images: implications for computer-
+based patient records. Artificial Intelligence in Medicine 7, 
+5: 439-454. 
+
+18. Julie Kientz, Rosa Arriaga, Gregory Abowd. 2009. Baby 
+
+Steps: Evaluation of a System to Support Record-Keeping 
+for Parents of Young Children. In Proceedings of the 2009 
+CHI Conference on Human Factors in Computing Systems 
+- CHI’09, 1713-1722. 
+
+19. Soo-Cheol Kim, Young-Sik Jeong, Sang-Oh Park. 2013. 
+
+RFID-based indoor location tracking to ensure the safety of 
+the elderly in smart home environments. Pers Ubiquit 
+Comput 17:1699–1707. 
+
+20. Yoojung Kim, Eunyoung Heo, Hyunjeong Lee, Sookyoung 
+
+Ji, Jueun Choi, Jeong-Whun Kim, Joongseek Lee, 
+Sooyoung Yoo. Prescribing 10,000 Steps like Aspirin: 
+Designing a Novel Interface for Data-Driven Medical 
+Consultation. In Proceedings of the 2017 CHI Conference 
+on Human Factors in Computing Systems - CHI’17, 5797-
+5796. 
+
+21. Predrag Klasnja and Wanda Pratt. 2012. Healthcare in the 
+pocket: Mapping the Space of Mobile-phone Health 
+Interventions. J Biomet Inform 45, 1: 184-198. 
+
+22. Janne van Kollenburg, Sander Bogers, Eva Deckers, Joep 
+Frens, Caroline Hummels. 2017. How Design-inclusive 
+UXR Influenced the Integration of Project Activities: 
+Three Design Cases from Industry. In Proceedings of the 
+2017 CHI Conference on Human Factors in Computing 
+Systems - CHI’17, 1408-1418.  
+
+23. Eun Kyoung Choe, Nicole Lee, Bongshin Lee, Wanda 
+Pratt and Julie Kientz. 2014. Understanding Quantified-
+selfers’ Practices in Collecting and Exploring Personal 
+Data. In Proceedings of the 2014 CHI Conference on 
+Human Factors in Computing Systems - CHI’14, 1143-
+1152. 
+
+24. Ian Li, Anind K. Dey and Jodi Forlizzi. 2010. A stagebased 
+model of personal informatics systems. In Proceedings of 
+the SIGCHI Conference on Human Factors in Computing 
+Systems (CHI '10). ACM 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 1125. Ian Li, Anind K. Dey and Jodi Forlizzi. 2011. 
+
+Understanding my data, myself: supporting self-reflection 
+with ubicomp technologies. In Proceedings of the 
+Conference on Ubiquitous Computing - UbiComp’11, 405-
+414. 
+
+34. Philips AVENT. 2017. uGrow- the world’s first medical 
+baby app with connected devices giving you personal 
+advice that matters. Retrieved September 18, 2017 from 
+http://www.philips.co.uk/c-m-mo/ugrow-healthy-baby-
+development-app.  
+
+26. Life'n Stats LLC. 2017. MammaBaby - Breast feeding App 
+& Baby Log Tracker. Retrieved September 18, 2017 from 
+https://itunes.apple.com/us/app/mammababy-breast-
+feeding-app-baby-log-tracker/id618601202?mt=8.  
+
+35. Amit Prasad. 2005. Making Images/Making Bodies: 
+
+Visibilizing and Disciplining through Magnetic Resonance 
+Imaging (MRI). Science, Technology & Human Values 30, 
+2: 291-316. 
+
+27. Máxima Medisch Centrum. 2017. De METC van het 
+
+Máxima Medisch Centrum. Retrieved September 18, 2017 
+from 
+https://www.mmc.nl/professionals/wetenschappelijk_onder
+zoek_in_mmc/metc/introductie.  
+
+28. Helena Mentis, Anita Komlodi, Katrina Schrader, Michael 
+Phipps, Ann Gruber-Baldini, Karen Yarbrough and Lisa 
+Shulman. 2017. Crafting a View of Self-Tracking Data in 
+the Clinical Visit. In Proceedings of the 2017 CHI 
+Conference on Human Factors in Computing Systems - 
+CHI’17, 5800-5812. 
+
+29. Gina Neff and Dawn Nafus. 2016. Self-Tracking. MIT 
+
+Press, Cambridge, MA. 
+
+30. Nighp Software LLC. 2017. Baby Tracker (Feed timer, 
+sleep, diaper log). Retrieved September 18, 2017 from 
+https://itunes.apple.com/us/app/baby-tracker-feed-timer-
+sleep-diaper-log/id779656557?mt=8. 
+
+31. Nokia. 2017. An ideal weight loss companion. Retrieved 
+
+December 11, 2017 from 
+https://health.nokia.com/us/en/body-plus. 
+
+32. Sun Young Park, Hee Young Jeong, John Zimmerman. 
+2008. ENSURE: Support for Parents in Managing their 
+Children’s Health. In \Proceedings of the Conference on 
+Design and Emotion. The Design and Emotion Society. 
+
+33. Philips AVENT. 2017. Philips AVENT. Retrieved January 
+22, 2017 from http://www.philips.co.uk/c-m-mo/philips-
+avent-and-your-baby.  
+
+36. D.A. Schön. 1983. The Reflective Practitioner: How 
+
+Professionals Think in Action. New York: Basic Books. 
+
+37. Jelle Stienstra, Sander Bogers, Joep Frens. 2015. 
+
+Designerly Handles: Dynamic and Contextualized Enablers 
+for Interaction Designers. In Proceedings of Conference on 
+Design and Semantics of Form and Movement 2015. 86-94. 
+
+38. Hyewon Suh, John Porter, Alexis Hiniker, Julie Kientz. 
+
+2014. @BabySteps: Design and Evaluation of a System for 
+using Twitter for Tracking Children’s Developmental 
+Milestones. In Proceedings of the 2014 CHI Conference on 
+Human Factors in Computing Systems - CHI’14, 2279-
+2288. 
+
+39. Emanuel Vonach, Marianne Ternek, Georg Gerstweiler, 
+Hannes Kaufmann. 2016. Design of a Health Monitoring 
+Toy for Children. In Proceedings of the 2016 Interaction 
+Design and Children Conference - IDC’16, 58-67. 
+
+40. Naomi Yamashita, Hideaki Kuzuoka, Keiji Hirata, Takashi 
+Kudo, Eiji Aramaki and Kazuki Hattori. 2017. Changing 
+Moods: How Manual Tracking by Family Caregivers 
+Improves Caring and Family Communication. In 
+Proceedings of the 2017 CHI Conference on Human 
+Factors in Computing Systems - CHI’17, 158-169. 
+
+41. Haining Zhu, Joanna Colgan, Madhu Reddy, and Eun 
+Kyoung Choe. 2016. Sharing Patient-Generated Data in 
+Clinical Practices: An Interview Study. In AMIA Annual 
+Symposium Proceedings American Medical Informatics 
+Association, 1303–1312. 
+
+CHI 2018 Honourable MentionCHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 297Page 12 
+

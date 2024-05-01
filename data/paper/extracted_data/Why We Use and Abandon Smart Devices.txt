@@ -1,0 +1,1560 @@
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Why We Use and Abandon Smart Devices 
+
+Amanda Lazar 
+University of Washington 
+alaz@uw.edu 
+
+Christian Koehler 
+Carnegie Mellon University 
+ckoehler@andrew.cmu.edu 
+
+Theresa Jean Tanenbaum 
+University of California, Irvine 
+ttanen@uci.edu 
+
+David H. Nguyen 
+Nokia 
+david.h.nguyen@nokia.com 
+
+ABSTRACT 
+Smart  devices  are  becoming  increasingly  commercially 
+available. However, uptake of these devices has been slow 
+and abandonment swift, which indicates that smart devices 
+may  not  currently  meet  the  needs  of  users.  To  advance  an 
+understanding  of 
+the  ways  users  benefit  from,  are 
+challenged  by,  and  abandon  smart  devices,  we  asked  a 
+group of users to purchase smart sensing devices to advance 
+themselves towards a personal, self-defined goal. We found 
+that participants abandoned devices because they did not fit 
+with the their conceptions of themselves, the data collected 
+by  devices  were  perceived  to  not  be  useful,  and  device 
+maintenance  became  unmanageable.  Participants  used 
+devices  because  they  had  developed  routines  and  because 
+devices  were  useful,  satisfied  curiosity,  and  held  hope  for 
+potential  benefit  to  them.  We  propose  ways  to  reduce 
+barriers,  motivate  use,  and  argue  for  envisioning  an 
+additional 
+for  short-term 
+interventions, in addition to standard long-term use.  
+
+these  devices 
+
+function  of 
+
+Author Keywords 
+Smart  devices;  wearable  devices;  personal  informatics 
+systems; self tracking. 
+
+ACM Classification Keywords 
+H.5.2  Information  interfaces  and  presentation  (e.g.,  HCI):
+Miscellaneous.
+
+INTRODUCTION 
+Smart  devices  promise  users  a  wealth  of  information  that 
+will enable them to become the best versions of themselves. 
+This  reasoning  follows  the  line  of  thought  that  more 
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. Copyrights for 
+components of this work owned by others than ACM must be honored. 
+Abstracting with credit is permitted. To copy otherwise, or republish, to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from permissions@acm.org.     
+UbiComp '15, September 7–11, 2015, Osaka, Japan.        
+Copyright 2015 © ACM 978-1-4503-3574-4/15/09…$15.00.        
+http://dx.doi.org/10.1145/2750858.2804288 
+
+information  about  one’s  activities  will  result  in  behavior 
+change.  For  example,  many  activity  trackers  provide  users 
+with  the  numbers  of  steps  taken  that  day  on  the  pretense 
+that  knowing  this  information  will  cause  lifestyle  changes 
+such  as  increased  physical  activity.  For  example,  the 
+Hexoskin, a tanktop with embedded sensors, has the tagline 
+“Know  More,  Live  Better”  (http://www.hexoskin.com/). 
+The implication of this tagline is that having knowledge of 
+the  metrics  measured  by  this  shirt  –  heart  rate,  heart  rate 
+variability,  breathing 
+rate,  breathing  volume,  steps, 
+cadence, and calories – will lead the wearer to a better life. 
+
+Given the promises made by the producers of these devices, 
+one  might  expect  the  widespread  adoption  of  activity 
+trackers  in  a  society  so  concerned  with  fitness  and  body 
+image. According to one report [15], one in ten Americans 
+over the age of 18 owns an activity tracker. However, of the 
+people  who  do  purchase  activity  trackers,  many  fail  to  use 
+the  devices  long  term.  More  than  half  of  people  who  own 
+activity  trackers  no  longer  use  them,  and  a  third  of  people 
+who own trackers stop using them within six months [15]. 
+This  raises  several  questions.  Who  benefit  from  these 
+devices? Why are people not using them? Particularly, what 
+are the reasons people abandon them? 
+
+To explore these questions, a group of users were asked to 
+purchase smart  devices, sensors, and wearables  to advance 
+themselves 
+self-defined  goal. 
+a  personal, 
+Participants  were  interviewed  about  their  use  after  two 
+months.  
+
+towards 
+
+In  this  paper,  we  explore  the  above  questions  and  expand 
+on previous literature that discuss the motivations of smart 
+device  users  and  the  barriers  that  they  experience.  We 
+suggest ways to design smart devices to reduce barriers and 
+to  increase  motivation  to  use  smart  devices.  Finally,  we 
+raise  a  question  as  to  whether  the  ideal  of  sustained  long-
+term use is appropriate for all users and all goals. 
+
+RELATED WORK 
+Smart devices have been an area of focus for UbiComp and 
+HCI for many years. We are using the term smart devices to 
+refer to devices that automatically gather information about 
+
+635
+
+Most up-to-date version: 11-12-2020
+
+users  or  their  environment  to  assist  them  in  gaining 
+knowledge  about  themselves  and/or  taking  action.  Other 
+terms  that  have  been  used  to  refer  to  smart  devices  are 
+personal informatics systems [16] and quantified self [5]. 
+
+Routine and Motivation 
+HCI  and  Ubicomp  researchers  have  studied  ways  to 
+increase  motivation  to  participate  in  healthy  or  socially 
+desirable  behaviors.  Across  various  theories,  a  variety  of 
+factors  are  believed  to  contribute  to  motivation,  such  as 
+personal  affect  (e.g.  feelings),  social  interaction  (e.g. 
+cooperation),  and  task  related  (e.g.  curiosity)  factors  [3]. 
+Different  individuals  are  motivated  by  different  goals;  in 
+the  case  of  health,  goals  may  include  maintaining  one’s 
+own or another’s health state or increasing wellness [12]. 
+
+Researchers have explored the relationship between routine 
+and motivation. Barretto et al. describe the significant effect 
+of  routine  on  the  motivation  of  families  to  take  part  in 
+environmentally  friendly  behavior  [4].  Though  routines 
+sometimes serves as factors contributing to motivation, they 
+can  also  be  independent  of  or  even  in  opposition  to 
+motivation. According to rational choice theory, consumers 
+make  decisions  based  on  maximizing  the  benefit  to  them, 
+based  on  their  individual  preferences,  goals,  and  options 
+[13]. However, routine and habit drive many decisions and 
+behaviors, sometimes regardless of a desire to do something 
+different  [13].  Though  routines  regularly  shape  decisions, 
+they  are  not  completely 
+the  case  of 
+environmentally  friendly  behaviors,  Gram-Hanssen  argues 
+that,  rather  than  due  to  environmental  concerns,  routines 
+have  changed  historically  as  a  result  of  the  introduction  of 
+technologies  as  well  as  how  the  social  organization  of 
+everyday life has shifted [13]. In particular, routines around 
+ICT use change very quickly [13].  
+
+fixed. 
+
+In 
+
+Studies of Smart Devices 
+Researchers  have  explored  the  ways  smart  devices  can  be 
+adopted into routines or build motivation. Researchers have 
+explored  smart  devices  for  purposes  as  diverse  as 
+encouraging  more  environmentally  friendly  behavior  (e.g. 
+[10])  and  for  home  surveillance  (e.g.  [24]).  Smart  devices 
+have  also  been  explored  extensively  in  the  domain  of 
+health. Activity trackers have been used extensively in this 
+domain, as have various sensors documenting other aspects 
+important  to  health  (such  as  sensors  that  monitor  UV 
+exposure [8]). Activity trackers and mHealth devices utilize 
+a  variety  of  strategies  to  encourage  users:  Klasnja  et  al. 
+outlined  the  ways  these  devices  encourage  wellness, 
+including 
+tracking  and  feedback,  goal  setting,  social 
+influence, and gamification [14]. 
+
+In  addition  to  exploring  a  range  of  uses,  researchers  have 
+explored  a  range  of  sensors,  from  commercially  available 
+sensors  to  prototypes  such  as  Lim  et  al.’s  shoe-worn 
+pedometer  that  measures  users’  physical  activity  and 
+provides feedback through varying intensities of light [18]. 
+Some researchers have even allowed participants in studies 
+to  design their  own input  devices [2]. Another approach is 
+
+636
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+to  utilize  a  combination  of  commercially  available  and 
+prototype  interfaces.  Examples  of  this  approach  are  Walsh 
+et al.’s StepCity, which used commercially available Fitbits 
+as  an  interface  for  a  social  game  that  they  designed  [25], 
+and Lin et al.’s Fish’n’Steps, a virtual pet that responded to 
+the  number  of  steps 
+taken  by  participants  wearing 
+commercially available pedometers [19]. 
+
+Studies  Focused  on  Those  with  Acute  Health  Needs  and 
+Users who Have Integrated Devices into their Lives 
+Many studies have examined the use of smart devices with 
+highly  motivated  individuals,  such  as  those  with  acute 
+health  needs.  One  example  is  participants  who  have 
+attended  physical  therapy,  which  were  the  population 
+studied  by  Ananthanarayan  et  al.  in  the  evaluation  of  a 
+wearable  prototype  to  assist  in  knee  rehabilitation  [1]. 
+Another  group  of  highly  motivated  people  are  those  who 
+may not have had specific physical disabilities or conditions 
+but  were  recruited  for  their  interest  in  increasing  physical 
+activity,  such  as  participants  in  trials  of  UbiFit  Garden,  an 
+activity  tracker  integrated  with  a  mobile  phone  that 
+provides users with a glanceable symbolic representation of 
+goal adherence [6][7]. 
+
+Another  user  base  that  has  been  studied  extensively  are 
+users  who  had  integrated  smart  devices  into  their  lives  at 
+the  point  of  study.  Rooksby  et  al.  interviewed  a  group  of 
+participants,  the  majority  of  whom  were  using  activity 
+trackers  at  the  start  of  the  study  [13].  They  found  that 
+personal tracking was enmeshed in these participants’ lives 
+(which  they  called  ‘lived  informatics)  and  that  people 
+changed  the  tracker  they  used  depending  on  their  current 
+short-term  or  long-term  goal.  Fritz  et  al.  interviewed 
+participants, all of whom were using activity trackers at the 
+time  of  the  interview  [9].  Even  under  changing  goals  and 
+practices  over 
+time,  participants  derived  value  and 
+motivation  from  use  of  devices,  even  over  long  periods  of 
+use.  Li  et  al.  administered  surveys  and  interviews  to 
+individuals engaged in personal data tracking and identified 
+barriers  that  occurred  through  the  different  stages  of  using 
+smart devices that they identified [16]. In another study by 
+Li et al., participants who had been self-tracking for at least 
+one  month  were  interviewed  about  the  questions  they  had 
+about the data they collected [12].   Choe et al. investigated 
+how a group of Quantified-Selfers (whom they define as an 
+“extreme  users”)  collected  and  explored  personal  data  [5]. 
+These users created workarounds to manage barriers of the 
+technologies  they  used,  and  many  built  their  own  smart 
+devices and systems. Implications from this study included 
+ways to support users in self-experimentation and reflecting 
+on  data.  A common finding in the studies described above 
+is  that  participants  successfully  integrate  the  devices  into 
+their lives by either modifying the devices or their routines, 
+and that they were willing to and interested in finding ways 
+to work around device barriers.  
+
+Although many of the participants in the studies mentioned 
+above had used trackers and integrated them into their lives 
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+before studies began, we suggest that there is also a need to 
+examine  users  who  are  not  willing  or  able  to  integrate 
+devices in their lives. 
+
+use 
+
+and 
+
+affected 
+
+characteristics 
+
+Studies Exploring Use and Abandonment 
+Some  researchers  have  explored  the  use  of  devices  among 
+people  who  do  not  appear  to  be  as  willing  to  overcome 
+device  barriers.  Shih  et  al.  examined  the  ways  personal 
+preferences 
+and 
+abandonment  of  Fitbit  activity  trackers  given  to  college 
+students over six weeks [22]. Participants abandoned Fitbits 
+quickly  (65%  stopped  using  them  at  two  weeks)  and  had 
+issues  remembering  to  wear  the  device.  Additionally, 
+participants were unsatisfied with the passive nature of the 
+system  and  wanted  active  triggers  about  reaching  their 
+goals.  Some  participants  were  also  unsatisfied  with  the 
+appearance and obtrusiveness of devices. Though this study 
+explored  users  who  are  not  highly  motivated,  users  used 
+devices manufactured by a single company, which does not 
+expose barriers across devices. 
+
+Below, we describe a study in which participants who were 
+not  recruited  based  on  acute  health  needs  or  having 
+integrated  devices  into  their  lives  were  given  funds  to 
+purchase whichever devices they wished to use. We explore 
+questions around use and abandonment of devices.  
+
+METHOD 
+
+Procedure 
+Participants  were  recruited  through  convenience  sampling 
+at  a  technology  company.  At  the  start  of  the  study, 
+participants  were  surveyed  to  find  what  goals,  objectives, 
+and passions they were interested in addressing with smart 
+devices.  Participants  were  then  given  the  opportunity  to 
+purchase  up  to  $1,000  of  smart  devices  to  advance  them 
+towards a goal they were passionate about (see Table 1 for 
+goals and devices). Participants were asked to choose their 
+own  goals  based  on  the  assumption  that  self-defined  goals 
+would  motivate  them  much  more  than  pre-defined  goals. 
+Participants  were  free  to  choose  whichever  devices  they 
+wished to purchase and were reimbursed. Some participants 
+they  had 
+told  other  participants  about 
+purchased, and because of this, certain devices were bought 
+by  many  participants.  Approximately  two  months  later, 
+the  devices 
+participants  were 
+the  purchases. 
+the  reasoning  behind 
+purchased  and 
+Typically  lasting  about  one  hour,  the  semi-structured 
+interview also ascertained if and why the devices were still 
+in  regular  use,  whether  participants  experienced  any 
+benefits or disadvantages from using the devices, as well as 
+previous experiences with smart devices.  
+
+the  devices 
+
+interviewed 
+
+to  discuss 
+
+No  monetary  compensation  was  given  to  the  participants, 
+but they were permitted to keep any devices purchased. 
+
+Participants 
+
+17  participants  (13  male)  were  recruited.  The  participants 
+included  engineers,  interns,  an  executive  assistant,  and  the 
+
+637
+
+partner  of  an  employee.  Five  were  in  the  age  category  18-
+29,  three  30-39,  six  40-49,  and  three  50-59.  Three  had 
+completed  some  college,  ten  had  bachelor’s  degrees,  three 
+had master’s degrees, and one had a PhD. Nine identified as 
+Asian or Asian American, five as white, and three as other. 
+One person identified as Hispanic/Latino. 
+
+Participants were recruited at a technology company. Their 
+familiarity  with  technology  was  beneficial  for  multiple 
+reasons.  First,  through  their  work  and  network,  they  were 
+more  likely  to  be  aware  of  different  devices  and  therefore 
+likely selected a wider variety of devices than from a group 
+unfamiliar  with  the  landscape  of  smart  devices.  Second, 
+these  participants  were  more  likely  to  know  how  to 
+troubleshoot  devices  on  their  own,  thus  less  likely  to 
+abandon  devices  due  to  technical  issues.  However,  it  is 
+important  to  note  that  although  the  participants  were 
+comfortable  with  computing  devices  in  general,  they  were 
+not  necessarily  experts  –  or  even  knowledgeable  – 
+that  would  advance 
+regarding 
+themselves towards the goals (e.g. health, productivity) that 
+they wished to pursue. In other words, participants may be 
+able 
+they  will  not 
+necessarily  know  the  best  ways  to  apply  the  devices 
+towards their goals. 
+
+the  specific  sensors 
+
+the  devices,  but 
+
+troubleshoot 
+
+to 
+
+interviews  and 
+
+interviews  were  audio  recorded  and 
+
+Analysis 
+transcribed. 
+All 
+transcripts  were 
+Detailed  notes  from 
+analyzed  using  open  and  axial  coding  by  two  of  the 
+researchers  to  identify  emergent  themes.  The  coding 
+scheme  was  discussed  and  finalized.  Once  the  coding 
+scheme was finalized, all interview data was then coded and 
+shared  with  the  research  team.  As  themes  emerged,  they 
+were merged into the codebook.  
+
+RESULTS 
+Below  we  describe  the  sensors  purchased,  and  why 
+participants used and stopped using devices. 
+
+Participant goals and devices 
+
+What were participant goals? 
+During  the  initial  interviews  at  the  start  of  the  study, 
+participants  expressed  a  range  of  goals,  from  increasing 
+fitness  to  reducing  pain  to  playing  Ping-Pong  better  (see 
+Table  1).  Most  of  these  goals  (13)  pertained  to  mental  or 
+physical  health  and  fitness,  two  to  improving  performance 
+at  a  sport,  and  three  to  improving  productivity  or  focus. 
+Given  that  participants  could  choose  any  goal,  it  is 
+interesting that the majority chose health and fitness, which 
+may be the result of the current marketing of commercially 
+available smart devices.  
+
+Surprisingly, devices purchased often did not appear to map 
+to  goals.  For  example,  P7  purchased  the  Misfit  Shine,  a 
+wearable  pedometer,  although  his  goal  was  to  reduce  his 
+neck and shoulder pain. This suggests that either users may 
+not have the expertise of how devices would suit their goals 
+or users may not have the expertise of how their goals can 
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+goal  of  increasing  physical  activity,  P12  said,  “…  I  don't 
+really  need  to  know  this  information  every  single  day.  If  I 
+were an avid health freak, maybe, but I'm not.” Participants 
+also  mentioned  older  adults  as  benefiting  more  from 
+devices,  as  they  were  likely  to  have  more  health  needs. 
+Participants  saw  sensors  as  appropriate  for  others,  not 
+themselves, and therefore had less interest in using them. 
+
+Data collected was not useful 
+Participants  perceived  the  data  collected  as  not  useful 
+because they were not interested in the level of information 
+the  data  gave  them.  Many  participants  mentioned  that  the 
+number  of  steps  they  took  was  not  interesting  –  including 
+participants who had decided to purchase smart pedometers. 
+Some  reasons  participants  mentioned  that  steps  were  not 
+interesting  were  that  walking  was  not  considered  exercise 
+(P10)  or  that  walking  did  not  impact  mood,  which  the 
+participant had actually learned by wearing the sensor (P9). 
+Even  sensors  that  were  more  specialized  than  pedometers 
+were  not  seen  as  beneficial:  the  specialized  sports  sensors 
+(94Fifty  basketball  and  Babolat  tennis  racket)  did  not 
+provide the information that participants found most useful 
+(such  as  whether  or  not  the  basketball  went  through  the 
+hoop). Additionally, one participant who exercised 18 hours 
+a  week  said,  “How  can  a  Fitbit  measure  [how  fit  I’m 
+getting]? They don't know that. It doesn't really matter if I 
+do a hundred sit-ups... a trainer, they tell you what is it that 
+you  [should]  eat,  how  much  sleep  [you  should]  get,  and 
+what  kind  of  quantities  of  protein  you  [should]  eat  versus 
+vegetables,  or  things  like  that.”  Interestingly,  the  more 
+
+be reached. Another possibility is that devices do not exist 
+that  matches  some  of  these  goals.  This  issue  is  explored 
+further in the discussion. 
+
+What kinds of devices were used? 
+The majority of devices used were health or fitness sensors, 
+corresponding  to  the  majority  of  goals  (see  Table  1). 
+Interestingly, though participants were free to purchase any 
+type of device, the majority purchased wearable devices. Of 
+the  49  devices  used,  35  were  purchased  with  study  funds 
+and  14  were  obtained  some  other  way  during  the  study 
+period  or  before  the  study  had  started  (purchased  with 
+personal  funds,  purchased  with  work  funds  for  a  different 
+project,  found,  or  borrowed  from  a  participant  who  had 
+purchased the device).   
+
+Why Did Participants Stop Using Devices? 
+Participants  abandoned  almost  80%  of  devices  purchased 
+for  this  study  within  the  first  two  months  (see  Table  2). 
+Sensors were abandoned for a variety of reasons, primarily 
+in  three  categories:  devices  not  fitting  with  participants’ 
+conceptions of themselves, collected data not being useful, 
+and devices requiring too much work and maintenance. 
+
+Did not fit with their conceptions of themselves 
+Participants frequently referred to other types of people (as 
+opposed  to  themselves)  for  whom  devices  might  be  more 
+useful.  Most  frequently  mentioned  were  people  with  what 
+were considered extreme fitness needs, such as those trying 
+to lose large amounts of weight and athletes. For example, 
+regarding  whether  her  devices  advanced  her  toward  her 
+
+Id 
+P1 
+
+Goal 
+Reduce neck pain 
+
+P2 
+
+Take body to the next level of fitness 
+
+Device 
+Lumoback 
+Lumoback,  Basis  watch,  Withings  wireless  blood  pressure  monitor, 
+Mindfield  eSense 
+temperature,  Mindfield  eSense  skin  response, 
+Heartmath Inner Balance-Lightning sensor 
+Fitbit 
+Jawbone, 94Fifty basketball 
+
+P3 
+P4 
+P5 
+P6 
+P7 
+P8 
+P9 
+
+Stay hydrated, feel at peak, reduce headaches 
+Get better at basketball 
+Detect heart issues, maintain healthy body & weight  MioAlpha heart rate sports watch, Metawatch* 
+Be more fit, have more energy, lose belly 
+Reduce neck and shoulder pain 
+Improve health and wellbeing 
+Feel good, determine the reason behind losing focus 
+
+Muse, Mio Alpha, Fitbit, Withings scale, Metawatch* 
+Misfit Shine 
+Samsung Gear 2 Neo, Withings wireless blood pressure monitor  
+
+P10 
+
+Increase productivity and mindfulness 
+
+P11 
+
+Increase energy level 
+
+Increase activity for endurance and weight loss 
+
+P12 
+P13  Get better at ping pong 
+P14  Dream lucidly, improve posture and health/fitness 
+P15 
+P16 
+P17 
+
+Increase activity, lose weight 
+Be able to run for 30 minutes, increase endurance 
+Increase focus 
+
+Samsung Gear fit, Lumoback 
+Blood  pressure  monitor,  Pulse  rate  and  hypertension  monitor,  MIO 
+Alpha heart rate sports watch* 
+Hexoskin,  Pebble  watch,  Shine,  Lumoback,  Babolat  smart  tennis 
+racket*, Zapp tennis racket, Metawatch* 
+Misfit Shine, Jawbone, Hexoskin 
+Garmin Fenix*, Pebble*, Moves app on phone, Lumoback 
+Fitbit, Lumoback, REM 
+Garmin Vivofit, Withings Scale 
+Mio Alpha heart rate sports watch, Misfit Shine 
+Misfit Shine, Basis health tracker for fitness, sleep, and stress 
+
+* Device was personally owned or purchased for a different project 
+
+Table 1. Participant goals and devices 
+
+638
+
+ 
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+athletic  participants  did  not  find  their  devices  useful, 
+despite  the  perceptions  of  other  participants  that  the  more 
+athletic types would be the ones who benefited most. 
+
+Other participants were not interested in the collected data 
+because  they  would  know  that  information  even  without 
+using the device. P2 said, “If I go to bed at eight and count 
+eight hours… I'm going to know. It's common sense. I went 
+to bed at this time, and I woke up at this time.” The devices 
+did  not  provide  any  new  or  useful 
+to 
+participants, so they did not see a reason to use the devices. 
+
+information 
+
+Another  reason  data  was  not  useful  to  participants  was 
+because it was unprocessed. Participants did not know what 
+to  do  with  the  data:  as  P12  said,  “It  gave  me  a  lot  of 
+information,  but  I  don't  know  what  to  do  with  any  of  this 
+information.... My heart rate is this much. But I don't know 
+what that means. Am I supposed to be within this range and 
+this range? If I am, what does that mean?” P16 said “I don't 
+know  what  to  do  with  that  sort  medical  data  once  I've 
+collected it... I'm not in that kind of professional capacity to 
+analyze  the  data.”  Through  statements  such  as  these, 
+participants such as P12 and P16 expressed they lacked the 
+skill and expertise to interpret data collected by the devices. 
+Interestingly,  they  did  not  mention  attempts  to  decipher 
+data  by  utilizing  online 
+resources  or  healthcare 
+professionals,  even  though  some  of  this  information  (such 
+as  suggested  ranges  for  heart  range  by  age)  is  freely 
+available  online.  Participants  may  not  have  realized  that 
+these resources were available and might need more explicit 
+instruction on how to interpret data. 
+
+As  described  above,  there  was  often  no  instruction  or 
+prompting given to users on how to analyze collected data. 
+Participants were not interested in quantifying behavior just 
+for the sake of getting a number; they wanted to know what 
+to  do  with  that  number.  As  P16  said,  “Wearing  the  watch 
+doesn't help me to sleep better… I wanted to be healthy, but 
+wearing  the  watch  is  not  going  to  give  me  better  sleep  or 
+make  me  healthier.  It  just  tells  me  whether  I  have  a  good 
+sleep or a bad sleep… it's not productive or useful.” In this 
+case, the data collected were not only unprocessed, but also 
+did not give the participant any actionable information. 
+
+Status of device after two months 
+
+Still using (at least four days a week) 
+Using  for  a  ‘non-smart’  purpose  (e.g. 
+alarm function of activity tracker) 
+Not  using  but  plan  to  use  again  in  the 
+future 
+Not using and no plan to use again 
+Ordered but did not receive yet 
+
+Percentage 
+
+20% (10/49) 
+
+10% (5/49) 
+
+22% (11/49) 
+
+45% (22/49) 
+2% (1/49) 
+
+Table 2: Use of devices at exit interview 
+
+Even when devices gave users actionable information, some 
+users  were  unwilling  or  unable  to  take  action.  This 
+happened  when  participants  could  not  meet  device  goals 
+because  of  environmental  factors,  such  as  P1  (trying  to 
+reduce neck pain) who said, “I would take [the] LumoBack 
+[posture  sensor]  off  when  I  go  home  because  at  that  point 
+I'm  with  my  daughter…  I'm  in  all  kinds  of  different 
+positions.  My  posture  sucks  all  night  and  I  know  that.  I 
+don't  need  to  be  bothered  by  it.”  Even  when  participants 
+could  alter  behavior,  some  noted  feeling  that  they  did  not 
+have to meet goals set by the  manufacturers of the device. 
+Regarding meeting the default goal of 10,000 steps, P7 said, 
+"I'm doing this for myself... If I get it, I get it. If I don't, I 
+don't. In general, you just know you need to exercise more.” 
+The  goals  advocated  by  the  device  manufacturers  did  not 
+possess  greater  authority 
+than  messages  participants 
+encountered promoting health behaviors on a regular basis.  
+Participants  did  not  perceive  real  repercussions  to  not 
+satisfying the device and viewed advice from the device as 
+suggestions rather than prescriptions.  
+
+Too much extra work/maintenance 
+Extra  work  and  maintenance  was  a  significant  issue  for 
+many  participants,  especially  because  they  were  getting  so 
+little benefit. For example, P9 had been using the Samsung 
+Gear Fit smart watch, to control his phone without taking it 
+out  of  his  pocket.  He  lamented  that  “just  to  have  that  one 
+benefit  [of  controlling  a  phone]  I  have  to:  one,  charge  it. 
+Two,  wear  it  on  my  other  wrist.  And  three,  always  make 
+sure  it's  paired  with  Bluetooth.  [Also],  it's  wasting  my 
+phone's  battery  to  keep  that  Bluetooth  connection  paired 
+and  I'd  have  to  charge  [the  phone]  as  well.”  Participants 
+acknowledged that if the device had been more useful, they 
+would  have  been  willing  to  make  more  of  an  effort;  when 
+asked  why  he  was  not  using  his  device,  P10  said,  “Other 
+things. Other commitments I have to do. Not enough time. I 
+guess  I  [would]  make  time  if  it's  interesting  enough.  It 
+didn't  seem  interesting  enough.”  The  devices  did  not  yield 
+enough value for participants to be willing to engage in the 
+time consuming process of maintaining devices.  
+
+A  high  frequency  of  maintenance  was  a  factor  that  greatly 
+discouraged  participants  from  use.  The  need  to  charge 
+devices  often  was  mentioned  by  many  as  highly 
+inconvenient.  Having  to  provide  input  to  the  device 
+frequently  (such  as  calibrating  the  LumoBack  posture 
+sensor  or  entering  food  into  a  food  diary  connected  to  the 
+Jawbone)  was  also  mentioned  as  an  obstacle.  Participants 
+considered benefits when determining how much work they 
+were  willing  to  do;  P5  questioned  the  value  of  smart 
+devices,  “...  years  ago,  you  [wore]  a  watch  that  you 
+[wouldn’t]  have  to  charge  for  a  whole  year.  We  are  going 
+back.  It's  okay  [with  the  phone]  because  it  replaces  [your] 
+laptop  partially…  What  is  that  on  the  wearable  that  would 
+offset that inconvenience of recharging every few days…?” 
+Some  participants  turned  off  the  “smart”  functions  to 
+reduce  the  need  to  charge  devices.  P10  said  that  his  Mio 
+Alpha heart rate watch “charges fairly often if I was using 
+
+639
+
+ 
+ 
+the heart rate monitor. After a point… I would use it more 
+like a timepiece rather than a heart rate monitor.”  
+
+devices  were  perceived  as  even  more  uncomfortable  when 
+bands were made of rubber and participants sweat in them. 
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Another  way  the  use  of  smart  devices  was  too  much  extra 
+work  was  when  use  did  not  fit  with  routines.  Participants 
+did  not  remember  to  or  want  to  do  seemingly  low-effort 
+activities such as tapping devices to put them in a mode to 
+track sleep. Some participants grew tired of bringing tablets 
+around with them as their phones were not compatible with 
+devices. They also mentioned that it took time to get into a 
+routine of use, even to remember to put on a device; “Even 
+a  watch,  it's  taught.  It's  trained.  I've  been  wearing  a  watch 
+since  I  was  six.  It's  a  learned  behavior.  I'm  comfortable 
+wearing a watch. If I don't wear a watch, I feel naked. I feel 
+something's missing. But, with a wearable, I just don't have 
+that patience to train myself to learn to wear it. I think the 
+biggest  thing  is  the  benefit.  I  just  don't  see  that  much 
+benefit.”  P7  acknowledged  that  it  was  possible  to  train 
+himself  to  remember  to  wear  the  device,  but  given  that 
+there was so little benefit, it was not worth doing.  
+
+Some  participants  managed  to  develop  a  routine,  but  once 
+they  fell  out  of  the  routine,  even  for  a  day,  they  often  did 
+not recover. Three participants mentioned vacation affected 
+their use: P17, who periodically lacked Internet on vacation, 
+said,  “You  kind  of  lose  interest  after  you  lose  that  first 
+instance of focus on it. After I went on vacation… I didn't 
+care anymore because I had stopped looking at it for four or 
+five days… it lost all appeal to me.” The device running out 
+of charge was also a reason many fell out of routine: as P9 
+said, “… I forgot to charge it one day, and I haven't charged 
+it  since.  If  it  was  always  charged,  I  think  I'd  still  wear  it.” 
+Some  participants  explained  that  they  felt  a  sense  of  relief 
+when they fell out of a routine: P14 said “Once I went a few 
+days without it: it was like ‘I guess I really don't need it to 
+survive’…  you're  like,  ‘It  feels  good  not  to  have  to  work 
+out.  It  feels  good  without  something  buzzing  at  me  to  tell 
+me my posture is crappy.’" Sometimes, the realization that 
+they felt relief or did not miss the device after falling out of 
+a  routine  led  participants  to  consciously  abandon  the 
+device:  P12  said  “I  just  forget  about  it,  and  I  guess  that 
+started the decline of me wearing it to bed, because I realize 
+it's  not  changing  my  life.  At  that  point  it  was  like,  I'm  not 
+wearing it, and it's not making a difference at all... so why 
+am I bothering wearing it?” Again, the lack of benefit from 
+using the device led participant to abandon the device rather 
+then attempting to reintegrate it into their routine. 
+
+Participants  hesitated  to  expend  effort  adjusting  devices  or 
+the mental energy to become accustomed to uncomfortable 
+devices.  When  a  device  was  extremely  uncomfortable,  it 
+was  often  abandoned  hastily,  even  when  participants  were 
+interested  in  the  information  tracked.  Several  participants 
+said they were not used to wearing jewelry or bracelets and 
+the  device  felt  uncomfortable.  Another  element  considered 
+uncomfortable  was  when  devices  had  to  be  worn  tight 
+around 
+the 
+LumoBack,  Hexoskin,  and  heart  rate  monitors).  Tight 
+
+to  function  properly  (such  as 
+
+the  body 
+
+Similar 
+to  uncomfortable  devices,  obtrusive  devices 
+required  extra  work  from  participants.  For  example,  P10 
+said that he stopped using a wireless blood pressure monitor 
+after  a  single  use  because,  “It  was  too  big.  It  was 
+cumbersome.  It  was  difficult.  It  was  not  as  mobile  as  I 
+expected  it  to  be.”  Conversely,  some  participants  wore 
+devices that were perceived as unobtrusive even when they 
+did  not  see  much  value  in  the  data.  For  example,  P12  said 
+that “I think what makes me like the Shine [activity tracker] 
+most is just because it's so effortless. I don't think about it at 
+all.  See,  because  I  don't  even  remember  it's  on  me,  and  I 
+rarely ever check it anymore. That's the only reason why I 
+still  keep  wearing  it.”  Even  though  P12  didn’t  check  her 
+device  and  did  not  benefit  from  the  data  collected,  it  was 
+very unobtrusive, and she therefore continued to wear it. 
+
+to  a  general  sense  of  having 
+
+The challenges of individual devices described above were 
+compounded  when  participants  had  multiple  devices,  and 
+participants  had  a  negative  perception  of  maintaining 
+multiple devices. Interestingly, almost all participants spent 
+well  under  $1,000  on  devices,  and  most  purchased  two  or 
+fewer devices. When asked why they did not purchase more 
+devices, many said that they did not want to experience the 
+burden  associated  with  multiple  devices;  P14  said,  “I  just 
+didn't want to wear that many things... I didn't want to give 
+my  entire  life  over  to  these  devices.”  Participants  also 
+referred 
+too  many 
+responsibilities  in  their  lives  that  manifested  in  a  desire  to 
+have  fewer  devices.  When  asked  why  he  did  not  like 
+wearing  devices,  P11  said,  “It's  just  one  more  thing.  We 
+have so many things in our lives right now.” Similarly, P10 
+said, “I have other commitments. I have other things that I 
+do. There are things that I have to do for those things. This 
+piece  of  technology  should  enhance  what  things  that  I  do 
+outside  rather  than  take  up  my  brain  space...”  Like  other 
+types  of  work,  not  getting  any  benefit  was  the  reason  that 
+multiple  devices  caused  so  much  frustration:  “Carrying 
+these  two,  three  devices,  I  used  to  keep  track  of  the 
+charging... Eventually I thought, ‘What is the point of doing 
+all these things?’" (P13). Each additional device resulted in 
+another set of maintenance activities for participants. 
+
+Why Did Participants Use Devices? 
+Few devices were still being used at the exit interview, and 
+even  fewer  at  the  time  of  this  writing.  Participants 
+explained what kept them using devices through the course 
+of the study, even when eventually abandoned. 
+
+Useful 
+A  subset  of  the  participants  had  experiences  where  the 
+device was useful. We categorize the ways the devices were 
+useful as major benefits and minor benefits, and momentary 
+small benefits and benefits from “non-smart” features. 
+
+Three  participants  experienced  major  benefits.  P1  (who  at 
+the  time  of  this  writing  had  stopped  using  the  device  but 
+
+640
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+intended  to  wear  it  in  the  future)  wore  the  LumoBack 
+posture  sensor  for  chronic  neck  pain.  She  thought  her 
+posture  had  improved  significantly  from  her  use  of  the 
+device.  She  attributed  her  better  posture  to  instantaneous 
+feedback  but  also  because  she  was  strengthening  the 
+muscles involved in correct posture. P10 (who had stopped 
+wearing his device, but planned to use it again in the future) 
+learned  to  control  his  anxiety  and  breathe  deeply  in  social 
+situations from using the device. P15 said her device helped 
+her get more healthy and active and lose weight.  
+
+Some  participants  experienced  minor  benefits  after  they 
+stopped wearing the devices, such as being more conscious 
+of  posture,  getting  up  to  walk  around  during  the  day,  or 
+taking the stairs instead of the elevator. 
+
+Many  participants  mentioned  an  increased  awareness  of 
+physical  activity  while  wearing  the  devices,  which  we  see 
+as  a  momentary  small  benefit.  While  wearing  the  devices, 
+some  participants  initially  tried  to  increase  step  counts. 
+Another  participant  used  the  Phyode  W/me,  a  heart  rate 
+sensor with a breathing app, to increase mindfulness during 
+the day. While participants appreciated these benefits when 
+they occurred, they did not necessarily persist. 
+
+Participants  also  experienced  benefit  from  “non-smart” 
+features, such as seeing the time or setting alarms. Several 
+participants  continued  wearing  smart  devices  as  watches 
+and  either  turned  off  or  did  not  view  the  smart  functions. 
+Conversely,  smart  devices  worn  on  the  wrists  that  did  not 
+show the time (such as the Fitbit Flex) were abandoned by 
+some  participants  who  did  not  want  to  wear  multiple 
+devices and therefore chose a watch over the device. 
+
+Curiosity and novelty 
+As  has  been  found  in  other  studies  (e.g.  [20][23]),  the 
+novelty of a device affects use. In this study, the novelty of 
+the  device  and  curiosity  about  the  device  and  data  was  a 
+compelling  motivator  for  participants  to  begin  using 
+devices, and many participants experienced enjoyment from 
+playing  with  a  new  “toy.”  However,  as  P10  said,  “[during 
+the]  first  few  days,  it  was  a  new  thing  so  it  was  novel 
+enough  that  I  didn't  mind  that  extra  hassle.  After  a  while, 
+that negative impact was too much.” For many participants, 
+a  drop  off  effect  occurred  as  novelty  diminished  and  the 
+cost of maintaining the device became irritating. 
+
+Curiosity was often sated after participants discovered some 
+quantified number about their activities. P13 said, “After a 
+point I get a rough estimate as to how much I am walking 
+every  day,  so  I  don't  need  a  step  counter  to  tell  me…  I've 
+got  a  mental  map.”  Like  P13,  others  lost  interest  in  using 
+devices once they developed a sense of what data would be 
+generated when they engaged in various activities. 
+
+The drop off effect was less apparent for a participant using 
+a device sporadically: “Fitbit is for day-to-day use, and the 
+Garmin Fenix [a GPS navigator and activity tracker] is only 
+for a particular use, and at a particular time… the number of 
+times  I  go  for  hiking  is  maybe  once  a  week…  so  I  don't 
+
+641
+
+mind  carrying  that  extra  device,  only  for  that  hiking 
+purpose... But for the FitBit, it's a day-to-day activity. After 
+a  point,  it  loses  its  relevance.”  It  appears  that  since  the 
+device was for a dedicated activity, the participant was able 
+to  overlook  issues  with  the  device  that  would  have 
+prevented  him  from  using  it  for  an  everyday  activity.  Had 
+he gone hiking more regularly, he thought it was likely that 
+he would be bothered by the obtrusiveness of the device. 
+
+Hope for potential use 
+Another  factor  that  kept  participants  using  devices  was 
+hope  that  the  current  capabilities  of  devices  would  be 
+extended someday with new ways to process recorded data.  
+
+Participants hoped that data would benefit themselves, and 
+some  also  mentioned  that  they  hoped  their  using  the 
+technology  would  lead  to  benefits  for  others.  A  few  stated 
+plans  to  devise  their  own  algorithms  to  correlate  different 
+aspects of their behavior. However, none of the participants 
+had designed these systems at the time of the interview. 
+
+This hope for potential use kept some participants using and 
+increased the frequency with which they used devices after 
+they had lost interest in the novelty of the data, even when 
+data  was  not  useful  to  them.  This  expectation  for  future 
+benefit  led  participants  to  stop  using  devices  that  did  not 
+store  data.  Because  the  potential  benefit  came  from  data, 
+devices that did not store data were less desired. 
+
+The  hope  for  use  of  collected  data  may  be  why  most 
+participants placed a great deal of importance on accuracy, 
+despite many not viewing the data. The desire for accuracy 
+impacted  which  devices  participants  chose  and  kept  using. 
+Although P10 had been benefiting from using his heart rate 
+monitor to learn about how to manage his anxiety in social 
+situations,  hearing  that  the  device  was  inaccurate  was  one 
+factor  that  led  to  his  abandonment  of  the  device.  He 
+explained  that  he  “felt  cheated”  when  he  heard  that  the 
+device  was  not  accurate,  and  that  it  bothered  him  because 
+“If  [the  heart  rate  measurements  were]  not  objectively 
+accurate, I was going by some number they produced and I 
+didn't know whether to believe it or not.” He went on to say 
+that  he  still  used  the  strategies  he  had  learned  from  using 
+the  heart  rate  monitor,  but  had  “stopped  relying  on  the 
+sensor”. Even though the number “did not seem that off” to 
+him and he had not verified that the device was inaccurate, 
+the  chance  of  the  device  being  inaccurate  was  enough  for 
+him to stop trusting the data generated by the sensor.  
+
+Developed routine of use  
+Despite  neither  receiving benefit nor having their curiosity 
+satisfied,  participants  would  sometimes  persist  in  using  a 
+device  because  they  had  developed  a  routine  of  doing  so. 
+For example, when asked why he still wore his Misfit Shine 
+even  though  he  no  longer  viewed  the  data,  P17  said,  “I 
+think  I  just  developed  a  habit  over  the  last  couple  of 
+months...  I  guess  I  just  put  it  on  to  put  it  on.”  Even  when 
+participants  saw  little  use,  they  still  wore  it  “because  it's 
+kind of a habit now” (P17). Participants justified continuing 
+
+the “habit” with a variety of reasons, including getting use 
+out of something that they had purchased. Additionally, as 
+long as these devices were not obtrusive and did not require 
+extra  work,  participants  would  continue  using  the  device 
+until  an  issue  arose  that  interrupted  the  routine,  such  as 
+maintenance  activities  or  travel.  This  suggests  that  once 
+people begin to use a device, they may be likely to continue 
+using it simply because they grow accustomed to doing so. 
+
+Seven participants were still using devices at the end of the 
+study.  P1  and  P15  still  used  their  devices  because  they 
+found  them  useful.  P17  did  not  look  at  the  data  from  his 
+Shine  but  had  developed  a  routine  of  wearing  it.  P6,  P7, 
+P12,  and  P13  wore  their  devices  to  satisfy  curiosity  or 
+because  they  saw  potential  use.  This  suggests  that  though 
+curiosity faded for many participants, some continued to be 
+curious  about  their  data,  which  sustained  their  use.  It  is 
+interesting  to  note  which  types  of  devices  were  still  being 
+used compared to how many were purchased. Of two smart 
+scales used in the course of the study, both were still being 
+used. Of thirteen activity trackers used during the study, six 
+were  still  being  used  two  month  later,  half  of  which  were 
+the  Misfit  Shine  (the  activity  tracker  that  was  noted  by 
+participants  as  requiring  very  low  maintenance).  Out  of 
+thirteen smart watches used over the course of the study and 
+the six posture detectors, only one of smart watch and one 
+posture  detector  was  being  used  at  the  end  of  the  study. 
+These numbers suggest that participants were more likely to 
+continue  to  use  activity  trackers,  particularly  unobtrusive 
+ones,  than  smart  watches  (many  of  which  had  similar 
+functions as activity trackers, such as counting steps). One 
+possible  explanation  for  this  discrepancy  is  that  activity 
+trackers required less charging and also were less bulky. 
+
+Limitations 
+We  acknowledge  several  limitations  to  this  study.  First, 
+giving  participants  funds  to  purchase  devices  may  have 
+affected  their  choices  and  use  of  devices.  One  participant 
+mentioned that he would have valued the device more if he 
+had spent his own money and felt that he had to “get [his] 
+money’s  worth.”  Providing  participants  with  funds  may 
+have had the opposite effect for others; some said that they 
+used the device or felt an obligation to exercise because of 
+the  study.  However,  many  who  were  using  devices  for 
+those reasons had stopped by the time of the interview. 
+
+Moreover, two months is not necessarily long enough to see 
+if users have adopted a device (or would abandon a device 
+shortly  after  the  study  ended).  However,  most  of  the 
+participants  who  were  still  using  devices  were  not  overtly 
+committed  to  continuing  use.  Waiting  longer  to  interview 
+participants  would  have  meant  that  the  exact  reasons  for 
+continued  use  and  benefits  would  have  faded.  The  reader 
+should therefore not assume that the users fully adopted the 
+ten devices that were being used at the exit interview. 
+
+Furthermore,  participants  used  a  slew  of  devices.  The 
+devices  had  varying  functionalities  and  affordances  and 
+the  experiences  of  participants 
+therefore 
+
+impacted 
+
+642
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+differently. However, allowing users to select their devices 
+allowed  them  to  buy  the  device  that  was  potentially  most 
+useful  to  them,  thereby  increasing  the  chance  that  they 
+might  benefit  from  them.  This  approach  also  resulted  in 
+similar  findings  across  different  types  of  devices  (such  as 
+issues  with  charging),  which  strengthens  their  significance 
+and likelihood to apply to other similar devices.  
+
+Additionally,  seven  participants  had  used  smart  devices 
+previously,  though  not  for  an  extended  amount  of  time. 
+Future studies should examine people with less exposure to 
+smart  devices,  as  they  might  display  different  patterns  of 
+use and motivations and barriers to use. 
+
+Finally,  not  surprisingly,  some  participants,  especially  the 
+technology-positive  views. 
+engineers,  expressed  very 
+Future studies would be well served to examine people with 
+mixed attitudes to technology. Additionally, it is likely that 
+being  in  a  technology  company  affected  the  opinions  and 
+experience  of  participants  in  this  study.  For  example,  it  is 
+possible  that  a  greater  familiarity  with  the  way  a  device 
+works (and should work) could lead to increased frustration 
+over  a  device  not  working  properly  or  being  designed 
+poorly.  It  is  important  for  researchers  to  explore  the 
+experience of participants with other backgrounds and work 
+experience.  This  study  also  focuses  on  a  group  limited  in 
+terms  of  diversity.  In  particular,  the  sample  was  primarily 
+male,  and  this  gender  ratio  may  have  affected  the  devices 
+purchased as well as their use and abandonment [22].  
+
+Given  the  limitations  described  above,  we  make  no  claims 
+to  experimental  validity,  or  to  any  objective  “truth”  in  this 
+work.  While  the  responses  that  we  observed  do  not 
+constitute a ground truth, however, they are both “real” and 
+“useful”  in  that  they  represent  a  diverse  sampling  of 
+wearable  device  usage  that  has  been  driven  by  the 
+preferences  of  the  subjects,  rather  than  a  top-down, 
+experimental  structure.  We  contend  that  the  collected  data 
+represents an important first look at some of these identified 
+behaviors  and  attitudes.  We  believe  that  the  themes  and 
+observations that arose from this data are useful markers of 
+technology adoption strategies and motivations. 
+
+DISCUSSION AND DESIGN IMPLICATIONS 
+In 
+this  paper,  we  present  a  study  describing  how 
+participants used and abandoned a variety of smart devices. 
+Below  we  provide  design  recommendations  to  lower 
+barriers  and  increase  motivation.  Though  many  of  these 
+suggestions  can  lead  to  long-term  use,  we  stress  the 
+importance of considering designing for short-term use. 
+
+Lowering Barriers for Users 
+When users were able to develop a routine of use that was 
+not  obstructed  by  extra  work  or  maintenance,  they  kept 
+using devices, even when perceived benefits were minimal. 
+While  this  is  not  a  novel  finding,  our  contribution  is  to 
+emphasize the enormous importance of lowering barriers of 
+use  of  use  for  users  who  are  not  highly  motivated.  We 
+outline some ways to lower barriers of use below. 
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+Encouraging routines 
+It is key to help users develop a routine from the first use, 
+as participants who were unable to develop a routine of use 
+abandoned devices more quickly than those who were able 
+to do so. One way of encouraging routines is latching on to 
+an  existing  user’s  routine,  for  example  outfitting  a  watch 
+that  the  user  wears  every  day  with  a  smart  device. 
+Designers should also examine ways to incentivize users to 
+develop routines. One approach may be to harness curiosity 
+by  revealing  different  metrics  (e.g.  steps  walked,  hours 
+slept) as rewards for regular use. This would assist users in 
+developing routines of use while simultaneously prolonging 
+curiosity, a strong but short-lasting motivator for use. 
+
+Minimizing maintenance 
+Charging  and  other  types  of  extra  work/maintenance  often 
+led  to  participants  falling  out  of  routines,  after  which  they 
+would never use the device again. It seems clear that these 
+devices  need  to  be  designed  to  avoid  this  pitfall.  The 
+amount of time and effort needed to charge a device was an 
+enormous  issue  for  participants.  One  especially  popular 
+device in the study, the Misfit Shine, was appreciated due to 
+not  needing  to  be  charged  (it  operates  on  a  coin  cell).  We 
+recommend that designers consider power approaches such 
+as  coin  cells,  which  do  not  require  charging,  or  other 
+approaches that require minimal charging.  
+
+Participants  felt  especially  burdened  by  multiple  devices, 
+even  when  each  did  not  require  much  effort  individually. 
+Additionally, a segment of the current market appears to be 
+splintering  into  single-use  devices  (e.g.,  a  bracelet  that 
+measures  UV  exposure-  http://www.junebynetatmo.com). 
+Based on the data from this study, we contend that a single 
+device  should  do  as  much  as  possible  and  allow  users  to 
+ignore  or  turn  off  the  unused  features.  Of  course,  packing 
+more  functionality  into  one  device  while  seeking  ways  to 
+charge the device less is a major engineering challenge. 
+
+Appealing to identity 
+Marketing and branding also played a role in whether or not 
+participants  embraced  their  devices.    Participants  felt  that 
+smart  devices  such  as  activity  trackers  were  for  the  “avid 
+health  freak”  (P12)  and  not  for  them.  Marketers  show 
+impossibly  slender  models  practicing  yoga  poses  on  the 
+beach after jogging a dozen miles, but the lifestyle depicted 
+in these images can alienate the user who does not affiliate 
+with this image. Previous studies have advised that devices 
+be  designed  so  they  do  not  cause  users  to  feel  “out-of-
+character” [18] or that casings for trackers be accessorized 
+to fit user’s “mood, outfit, or occasion” [22]. We take these 
+suggestions a step further to suggest devices be presented to 
+users  with  language  and  images  that  fit  their  lifestyles  and 
+conceptions  of  themselves.  For  example,  the  rubber  Fitbit 
+band  resembles  a  LiveStrong  band,  which  may  be  more 
+appropriate for those who identify with an athletic persona. 
+Alternate  casings  allow  users  to  wear  Fitbits  that  better 
+match their identities, such as a designer who allows users 
+to  “Transform  [the]  Fitbit  Flex  tracker  into  a  super  chic 
+(http://www.fitbit.com/toryburch).  Designers 
+accessory” 
+
+643
+
+should consider the types of images the individuals using it 
+wish to project in designing the appearance of the device. 
+
+Increasing Motivation for Users 
+However,  even  if  all  barriers  were  lowered,  people  like 
+some of the participants in this study might still not engage 
+in long-term use of devices for a variety of reasons. These 
+devices  and  the  data  they  generate  simply  do  not  fit  their 
+needs or motivations. In fact, it appears that barriers to use, 
+such  as  extra  work  or  maintenance,  are  especially 
+problematic because users perceive so little benefit from the 
+devices.  Participants  were  unwilling  to  sacrifice  personal 
+comfort  or  convenience  for  the  marginal  benefit  they  got 
+from these devices. They were not satisfied seeing data for 
+the  sake  of  seeing  data  after  initial  novelty  wore  off,  nor 
+were they willing to correlate data or create the rich systems 
+seen in studies of highly motivated users (e.g. [5], [16]).  
+
+Additionally, participants did not have the expertise needed 
+to find, interpret data, and create plans for action from their 
+devices. For example, though many participants had health-
+related goals, few expressed an understanding of what types 
+of  devices  would  be  appropriate  for  their  health  goal,  how 
+to interpret data generated from devices, and what kinds of 
+actions  they  should  take  based  on  the  data.  The  following 
+four  recommendations  arise  from  the  most  commonly 
+expressed desires of our participants. We contend, in all of 
+these  cases,  a  unifying  theme  for  a  desire  that  rather  than 
+the user, the device should handle the work and complexity. 
+
+Employ user language 
+Currently,  many  devices  present  users  with  raw  data  (e.g. 
+number of steps). Users wanted a summary using terms and 
+language they understood, rather than raw data. They do not 
+want  to  interpret  the  data  themselves.  Rather,  participants 
+voiced interest for something like a report card, which told 
+them  whether  they  had  done  well  or  poorly  that  week. 
+Designers  should  investigate  ways  to  provide  this  type  of 
+‘report card’ feedback to users, such as by comparing steps 
+one week to the previous week or to peers. 
+
+Consider proactive feedback  
+Users did not want to have to remember to look at devices, 
+as it was not a part of their regular routine and thus served 
+as ‘just another thing to remember.’ Notifications could be 
+useful  to  these  participants,  particularly  if  location  or 
+activity  sensing  is  incorporated  to  minimize  the  chance  of 
+disrupting an important activity.  
+
+Coach the user 
+Some  participants  did  not  have  the  knowledge  or  skills 
+required  to  take  action  and  wanted  to  be  coached  with 
+actionable  feedback.  For  example,  the  participants  who 
+purchased  sports  sensors  (the  smart  basketball  and  the 
+tennis  racket)  were  not  satisfied  with  sensors  that  showed 
+them  the  angle  they  had  shot  or  hit  the  ball-  they  wanted 
+devices  that  would  actually  instruct  them  to  swing  and 
+throw with a better outcome. Designers should consider the 
+possibility  that  users  may  not  know  how  to  achieve  their 
+
+goals  or  even  how  to  start  –  incorporating  some  kind  of 
+coaching would benefit this class of users.  
+
+Involve the user’s personal history 
+Participants  did  not  want  to  do  calculations  to  determine 
+their progress or keep track of their historical data, but did 
+want devices that were tailored to their personal history. P1 
+wanted a system that could factor in that when she had poor 
+posture a certain percentage of the day, it often resulted in 
+pain,  and 
+that 
+percentage.  Participants  felt  that  personalized  suggestions 
+would be much more useful than generic suggestions.  
+
+tell  her  when  she  was  approaching 
+
+their 
+
+Provide Concrete Motivation 
+Some  participants  requested  functions  or  capabilities  that 
+lie  beyond  the  current  limits  of  science.  Some  commented 
+(semi-jokingly)  that  sensors  would  be  useful  if  they  could 
+determine the exact time they would die and what behaviors 
+could  prolong 
+lives.  Another  participant,  more 
+seriously,  said  that  he  wanted  a  sensor  that  would  tell  him 
+concretely  that  he  would  have  a  certain  outcome,  rather 
+than  offering  vague  assurances  that  he  might  feel  happier. 
+While  this  may  not  be  feasible  due  to  uncertainty  in  the 
+outcomes  of  different  actions,  it  may  be  helpful  to  utilize 
+probabilities  to  motivate  different  behaviors  (for  example, 
+‘If you exercise one more day a week, you are 90% likely 
+to live 1 year longer’). Though these probabilities may still 
+be  considered  too  vague  for  some  users,  they  can  be  more 
+concrete than they are currently. 
+
+Reconceptualizing Abandonment as Short Term Use 
+The  recommendations  above  are  particularly  pertinent  to 
+encourage long-term use of devices (though we believe they 
+are  good  practice  in  general).  Designing  for  long-term  use 
+is vital for devices that must be used regularly (e.g. such as 
+glucose  monitors)  or  for  users  who  are  willing  and 
+interested in using devices long term.  
+
+Despite  the  benefits  of  long-term  use  of  devices,  our 
+analysis leads us to believe that there is an under-explored 
+class of smart devices, particularly for wearables: those that 
+might  be  beneficial  for  short-term  interventions.  This 
+approach  challenges  the  dominant  paradigm  of  designing 
+for  long-term,  continuous  use  and  echoes  Rooksby  et  al. 
+that posit, “to track over the short term is not necessarily to 
+give  up  or  fail”  [21].  Participants  experienced  many 
+benefits from short-term use that may, indeed, lead to long-
+term changes. Yet these devices are marketed for continual 
+and  everyday  use.  Even  when  the  participants  had  learned 
+something  useful  or  made  a  behavior  change,  participants 
+internalized abandonment of devices as failure.  
+
+Additionally, elements of devices that are obtrusive or even 
+irritating  may  be  extremely  helpful  in  the  short  term  but 
+unsustainable in the long term. Some users benefited when 
+devices were obtrusive- such as posture sensors that buzzed 
+when they detected bad posture- but sustained use of these 
+devices  annoyed 
+to 
+abandonment.  While  not  appropriate  for  all  users  and  all 
+
+long  run  and 
+
+them 
+
+the 
+
+led 
+
+in 
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+devices, short-term use is appropriate for those interested in 
+devices  to  satisfy  curiosity  as  well  as  those  who  wish  to 
+alter  routines  or  behaviors.  Obtrusiveness  and  deviation 
+from  routine  are  not  as  off-putting  when  occasional. 
+Curiosity  and  the  desire  for  novelty  can  continue  to  be 
+satisfied when participants are not jaded by continual use.  
+
+We  stress  that  short-term  use  and  abandonment  can  be  an 
+effective use of smart devices when users are able to more 
+deeply  understand  or  alter  habits  and  routines.  Unlinking 
+abandonment of devices with failure raises bigger questions 
+about  the  intended  future  of  these  devices:  is  the  goal  to 
+create smart sensing systems that are continuously relevant 
+and  useful  to  a  user  or  is  the  goal  to  create  a  device  that 
+supports a user’s need even if that need is temporary? Can 
+we allow learning about ourselves to occur in spurts and not 
+only  as  a  continual  everyday  process?   Do  we  envision  a 
+future where we are dependent on our devices to keep us on 
+track or do we see these devices as a tool for learning how 
+to  manage  our  lives  and  health  ourselves?  We  propose 
+embracing  a  short-term  intervention  mentality  to  broaden 
+the  market  for  these  devices,  while  supporting  designs 
+better suited to the lived practices of the everyday user. 
+
+Already,  the  amount  of  electronic  waste  has  a  staggering 
+effect  on  the  environment  as  well  as  the  individuals  who 
+live where technology is processed and recycled (e.g. [27]), 
+and  the  amount  of  time  electronic  devices  are  used  before 
+they  are  discarded  continues  to  shorten  [26].  In  pursuing 
+this  area  of  research,  it  is  important  to  reflect  on  and 
+explore ways to create devices that will be used short term 
+and  discarded 
+in  an  environmentally  and  ethically 
+responsible  manner,  such  as  through  the  use  of  water-
+soluble electronics [28].  
+
+reasons 
+
+CONCLUSION 
+In  this  paper,  we  present  a  study  detailing  a  group  of 
+for 
+participants’  motivations,  practices,  and 
+abandonments of smart devices for a group of participants. 
+The  paper  contributes  novel  reasons  that  users  use  and 
+abandon smart devices. By allowing participants  to choose 
+devices  and  then  interviewing  them  several  months  later, 
+we were able to see the ways people integrated devices into 
+their lives or abandoned them and the factors for doing so. 
+Based  on  what  we  learned  from  these  participants,  we 
+present  design  recommendations  to  lower  barriers  and 
+encourage  use.  We  also  acknowledge  that  long-term  use 
+may  not  be  feasible  for  some  users  and  purposes  and 
+propose  short-term  interventions  as  one  way  of  increasing 
+the  usefulness  of  devices  for  users.  These  findings  have 
+implications  for  the  design  of  the  next  generation  of  smart 
+devices that more closely meet the needs of users. 
+
+ACKNOWLEDGMENTS 
+We  thank  those  who  participated  in  this  study.  This  work 
+was  supported  by 
+the  National  Science  Foundation 
+Graduate Research Fellowship (DGE-1256082). 
+
+644
+
+SESSION: ENGAGEMENT AND DISENGAGEMENT
+
+REFERENCES 
+1.  Ananthanarayan, S., Sheh, M., Chien, A., Profita, H., and 
+Siek, K. Pt Viz: towards a wearable device for visualizing 
+knee  rehabilitation  exercises.  In Proceedings  of 
+the 
+SIGCHI  Conference  on  Human  Factors  in  Computing 
+Systems. ACM Press (2013) 1247-1250. 
+
+2.  Ananthanarayan,  S.,  Lapinski,  N.,  Siek,  K.,  and  
+Eisenberg,  M.  Towards  the  crafting  of  personal  health 
+technologies.  In Proceedings  of  the  2014  conference  on 
+Designing  interactive  systems.  ACM  Press  (2014)  587-
+596.  
+
+3.  Axelrod,  L.,  Fitzpatrick,  G.,  Balaam,  M,  Mawson,  S., 
+Burridge,  J.,  Ricketts,  I.,  Smith,  P.  P.,  &  Rodden,  T.  A 
+Toolkit  to  Explore  Lived  Experience  of  Motivation: 
+the 
+When  Words  are  Not  Enough.  In  Proc.  Of 
+International  Conference  on  Pervasive  Computing 
+Technologies  for  Healthcare  (PervasiveHealth).  (2011) 
+32-39. 
+
+4.  Barreto, M. L., Szóstek, A., Karapanos, E., Nunes, N. J., 
+Pereira,  L.,  &  Quintal,  F.  Understanding  families’ 
+motivations  for  sustainable  behaviors.  Computers  in 
+Human Behavior 40 (2014), 6-15. 
+
+5.  Choe,  E.K.,  Lee,  N.B.,  Lee,  B.,  Pratt,  W.,  and  Kientz, 
+J.A.  Understanding  Quantified-selfers’  Practices 
+in 
+Collecting  and  Exploring  Personal  Data.  In  Proc.  of  the 
+SIGCHI  Conference  on  Human  Factors  in  Computing 
+Systems, ACM Press (2014), 1143-1152. 
+
+6.  Consolvo, S., Klasnja, P., McDonald, D.W., and Landay, 
+J.A.  Goal-setting 
+persuasive 
+technologies  that  encourage  physical  activity.  In  Proc. 
+Persuasive, ACM Press (2009). 
+
+considerations 
+
+for 
+
+7.  Consolvo, S., McDonald, D.W., Toscos, T., Chen, M.Y., 
+Froehlich,  J.,  Harrison,  B.,  Klasnja,  P.,  LaMarca,  A., 
+LeGrand,  L.,  Libby,  R.,  Smith,  I.,  and  Landay,  J.A. 
+Activity sensing in the wild: a field trial of ubifit garden. 
+In Proc. of the SIGCHI Conference on Human Factors in 
+Computing Systems. ACM Press (2008), 1797-1806. 
+
+8.  Fahrni,  T.,  Kuhn,  M.,  Sommer,  P.,  Wattenhofer,  R.,  and 
+Welten,  S.  Sundroid:  solar  radiation  awareness  with 
+smartphones.  In Proceedings  of  the  13th  international 
+conference on Ubiquitous computing. ACM Press (2011), 
+365-374.  
+
+9.  Fritz, T., Huang, E.M., Murphy, G.C., and Zimmermann, 
+T. Persuasive Technology in the Real World: A Study of 
+Long-term  Use  of  Activity  Sensing  Devices  for  Fitness. 
+In Proc. of the SIGCHI Conference on Human Factors in 
+Computing Systems, ACM Press (2014), 487–496. 
+
+10. Froehlich,  J.,  Dillahunt,  T.,  Klasnja,  P.,  Mankoff,  J., 
+Consolvo,  S.,  Harrison,  B.,  and  Landay,  J.A.  UbiGreen: 
+Investigating a Mobile Tool for Tracking and Supporting 
+Green  Transportation  Habits.  In  Proc.  of  the  SIGCHI 
+Conference  on  Human  Factors  in  Computing  Systems, 
+ACM Press (2009), 1043–1052. 
+
+11. Gram-Hanssen, K. Consuming technologies – developing 
+routines. Journal of Cleaner Production 16 (2008), 1181-
+1189. 
+
+12. Grönvall,  E.,  Verdezoto,  N.  Beyond  Self-Monitoring: 
+Understanding  Non-functional  Aspects  of  Home-based 
+Healthcare Technology. In Proc. of the 15th international 
+conference on Ubiquitous computing, ACM Press (2013), 
+587-596. 
+
+13.  Jackson,  T.  Motivating  Sustainable  Consumption:  a 
+review  of  evidence  on  consumer  behavior  and 
+behavioural  change:  a 
+the  Sustainable 
+Development  Research  Network  (White  paper).  Center 
+for Environmental Strategy, 2005. 
+
+report 
+
+to 
+
+14. Klasnja,  P.,  Pratt,  W.  Managing  Health  With  Mobile 
+
+Technology. Interactions 21, 1 (2014), 66-69. 
+
+15. Ledger,  D.,  and  McCaffrey,  D.  Inside  Wearables:  How 
+the Science of Human Behavior Change Offers the Secret 
+to  Long-Term  Engagement  (White  paper).  Endeavor 
+Partners LLC (2014). 
+
+16. Li,  I.,  Dey,  A.,  and  Forlizzi,  J.  A  Stage-based  Model  of 
+Personal  Informatics  Systems.  In  Proc.  of  the  SIGCHI 
+Conference  on  Human  Factors  in  Computing  Systems, 
+ACM Press (2010), 557–566. 
+
+supporting 
+
+17. Li,  I.,  Dey,  A.,  and  Forlizzi,  J.  Understanding  my  data, 
+myself: 
+ubicomp 
+technologies.   In Proceedings  of  the  13th  international 
+conference on Ubiquitous computing, ACM Press (2011), 
+405-414. 
+
+self-reflection  with 
+
+18. Lim,  B.Y.,  Shick,  A.,  Harrison,  C.,  and  Hudson.  S.E.. 
+2010.  Pediluma:  motivating  physical  activity  through 
+contextual 
+influence. 
+In Proceedings  of  the  fifth  international  conference  on 
+Tangible,  embedded,  and  embodied  interaction (TEI). 
+ACM Press (2011), 173-180. 
+
+information 
+
+social 
+
+and 
+
+19. Lin,  J.J.,  Mamykina,  L.,  Lindtner,  S.,  Delajoux,  G.,  and 
+Strub,  H.B.  Fish'n'Steps:  encouraging  physical  activity 
+with an interactive computer game. In Proceedings of the 
+8th  international  conference  on  Ubiquitous  Computing. 
+ACM Press (2006), 261-278. 
+
+20. Macvean,  A.  and  Robertson,  J.  Understanding  exergame 
+users'  physical  activity,  motivation  and  behavior  over 
+time.  In Proc.  of  the  SIGCHI  Conference  on  Human 
+Factors in Computing Systems. ACM Press (2013), 1251-
+1260.  
+
+21. Rooksby, J., Rost, M., Morrison, A., and Chalmers, M.C. 
+Personal  tracking  as  lived  informatics.  In  Proc.  of  the 
+SIGCHI  Conference  on  Human  Factors  in  Computing 
+Systems, ACM Press (2014), 1163–1172. 
+
+22. Shih, P.C., Han, K., Poole, E.S., Rosson, M. B., Carroll, 
+J.M.  Use  and  adoption  challenges  of  wearable  activity 
+trackers. In iConference Proceedings (2015). 
+
+23. Sung,  J.,  Christensen,  H.I.,  and  Grinter,  R.E.  Robots  in 
+the wild: understanding long-term use. In Proceedings of 
+
+645
+
+the  4th  ACM/IEEE  international  conference  on  Human 
+robot interaction, ACM Press (2009), 45-52.  
+
+waste.  Environmental  Impact  Assessment  Review  25 
+(2005), 436-458. 
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+27. Wong,  M.H.,  Wu,  S.C.,  Deng,  W.J.,  Yu,  X.Z.,  Luo,  Q., 
+Leung,  A.O.W.,  Wong,  C.S.C,  Luksemburg,  W.  J., 
+Wong, A.S. Export of toxic chemicals – A review of the 
+recycling. 
+case 
+Environmental Pollution 149 (2007), 131-140. 
+
+electronic-waste 
+
+uncontrolled 
+
+of 
+
+28.  Yin,  L.,  Bozler,  C.,  Harburg,  D.  V.,  Omenetto,  F.,  & 
+Rogers,  J.  A.  Materials  and  fabrication  sequences  for 
+water  soluble  silicon  integrated  circuits  at  the  90nm 
+mode. Applied Physics Letters 106 (2015). 
+
+24. Ur,  B.,  Jung,  J.,  Schechter,  S. 
+
+Intruders  versus 
+intrusiveness:  teens’  and  parents’  perspectives  on  home-
+entryway  surveillance.  In Proceedings  of 
+the  ACM 
+International  Joint  Conference  on  Pervasive  and 
+Ubiquitous Computing. ACM Press (2014), 129-139. 
+
+25. Walsh,  G.  and  Golbeck,  J.  StepCity:  a  preliminary 
+investigation of a personal informatics-based social game 
+on  behavior  change.  In Extended  Abstracts  on  Human 
+Factors in Computing Systems. ACM Press (2014), 2371-
+2376. 
+
+26.  Widmer,  R.,  Oswald-Krapf,  H.,  Sinha-Khetriwal,  D., 
+Schnellmann,  M.,  Böni,  H.  Global  perspectives  on  e-
+
+646
+
+ 
+ 
+

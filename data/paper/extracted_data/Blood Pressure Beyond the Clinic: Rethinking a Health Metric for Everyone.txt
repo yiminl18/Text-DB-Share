@@ -1,0 +1,1283 @@
+Blood Pressure Beyond the Clinic:  
+Rethinking a Health Metric for Everyone  
+Logan Kendall1,2, Dan Morris1, Desney Tan1 
+
+1Microsoft Research 
+{dan; desney}@microsoft.com 
+
+ABSTRACT 
+Blood pressure (BP) is typically captured at irregular inter-
+vals, mostly in clinic environments. This approach treats BP 
+as a static snapshot for health classification and largely ig-
+nores its value as a continuously fluctuating measure. Rec-
+ognizing  that  consumers  are  increasingly  capturing  health 
+metrics  through  wearable  devices,  we  explored  BP  meas-
+urement in relation to everyday living through a two-week 
+field  study with  34  adults.  Based  on  questionnaires,  meas-
+urement  logs,  and  interviews,  we  examined  participants’ 
+perceptions  and  attitudes  towards  BP  variability  and  their 
+associations of BP with aspects of their lives. We found that 
+participants modified their use of BP devices in response to 
+BP  variability,  made  associations  with  stress,  food,  and 
+daily  routines,  and  revealed  challenges  with  the  design  of 
+current  BP  devices  for  personal  use.  We  present  design 
+recommendations for BP use in everyday contexts and de-
+scribe strategies for re-framing BP capture and reporting. 
+
+Author Keywords 
+Personal informatics; blood pressure; self-monitoring. 
+
+ACM Classification Keywords 
+J.3. Life and medical sciences: Health. 
+
+INTRODUCTION 
+Blood pressure (BP) is an important and widely used indi-
+cator for assessing cardiovascular health. One in five hyper-
+tensive  individuals  are  not  even  aware  they  have  high  BP 
+and  overall  public  understanding  of  BP  is  poor  [3,11]. 
+Young  adults  in  particular  are  less  likely  to  be  aware  of 
+their  blood  pressure.  However,  recent  longitudinal  studies 
+have shown that capturing blood pressure at an earlier age 
+and evaluating it over a lifetime provides valuable data for 
+understanding and predicting cardiovascular risk [1]. 
+
+Limited  awareness  and  understanding  of  blood  pressure  is 
+due in part to the fact that BP measurement is typically sit-
+
+Permission to make digital or hard copies of all or part of this work for personal
+or  classroom  use  is  granted  without  fee  provided  that  copies  are  not  made  or
+distributed for profit or commercial advantage and that copies bear this notice
+and the full citation on the first page. Copyrights for components of this work
+owned  by  others  than  the  ACM  must  be  honored.  Abstracting  with  credit  is
+permitted. To copy otherwise, or republish, to post on servers or to redistribute
+to  lists,  requires  prior  specific  permission  and/or  a  fee.  Request  permissions
+from permissions@acm.org. 
+CHI 2015, April 18–23, 2015, Seoul, Republic of Korea. 
+Copyright is held by the owner/author(s). Publication rights licensed to ACM. 
+ACM 978-1-4503-3145-6/15/04…$15.00. 
+http://dx.doi.org/10.1145/2702123.2702576 
+
+2Biomedical and Health Informatics 
+University of Washington 
+kendall5@uw.edu 
+
+uated  in  the  clinic.  However,  metrics  typically  captured  in 
+this  context  or  through  cumbersome  devices  are  becoming 
+more accessible to consumers through noninvasive, weara-
+ble  sensors  designed  to  support  personal  monitoring.  The 
+success  of  consumer  devices  like  the  Fitbit  demonstrates 
+deep interest in leveraging sensor data to learn about, reflect 
+upon, and inform lifestyle choices. In particular, the ubiqui-
+tous  nature  of  these  sensors  creates  a  shift  from  ad  hoc 
+measurement towards continuous capture within the context 
+of normal daily activities. For a health indicator like blood 
+pressure,  continued  advancement  of  tools  such  as  wrist-
+worn,  cuffless,  continuous  BP  monitors  [22]  suggest  a  fu-
+ture in which cardiovascular metrics are captured as easily 
+as  the  activity  data  dominating  the  current  wearable  tech-
+nology market.  
+
+For this study, we explore the concept of ubiquitous health 
+sensing  in  relation  to  BP  monitoring  by  evaluating  how 
+people use and relate to their BP measurements outside of a 
+typical  medical  context.  To  explore  this  potential  future 
+state  for  personal  health  sensing,  we  first  describe  related 
+work on home BP measurement, its relationship to personal 
+health  informatics,  and  challenges  with  communicating 
+measurement  uncertainty.  Second,  we  describe  our  study 
+design  and  descriptive  findings.  Third,  we  outline  the 
+themes  elicited  from  questionnaires,  participants’  BP  logs, 
+and  semi-structured  interviews  conducted  with  each  study 
+participant. We conclude with a discussion of design oppor-
+tunities  to  enhance  the  experience  of  BP  measurement  for 
+personal health and well-being. 
+
+Based  on  participants’  experiences, we  provide  three  main 
+contributions  in  this  paper:  (1)  we  improve  understanding 
+of  a  healthy  population’s  attitudes  and  motivations  toward 
+BP  variability  and  monitoring,  (2)  we  identify  aspects  of 
+everyday  living  that  people  associate  with  their  BP  meas-
+urement, and (3) we recommend design strategies to make 
+this metric intelligible and relevant for personal monitoring. 
+
+BACKGROUND AND RELATED WORK 
+
+Fundamentals of BP and BP variability 
+A  BP  measurement  is  a  snapshot  of  the  force  of  blood 
+pressing on the arteries as the pressure rises and falls with 
+each  heartbeat.  BP  is  measured  in  units  of  millimeters  of 
+mercury  (mmHg),  typically  using  an  inflatable  cuff  that 
+exerts pressure on the outside of a part of the body to obtain 
+the arterial pressure. Optimal BP is clinically defined as less 
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1679 
+ 
+than 120/80 mmHg, where the upper value is systolic pres-
+sure (SBP) and the lower value is diastolic pressure (DBP).  
+
+BP is frequently discussed as a static snapshot of SBP and 
+DBP, however it is a dynamic process with natural fluctua-
+tions  over  the  course  of  days,  weeks,  and  months.  People 
+usually  experience  changes  throughout  the  day  such  as  a 
+nighttime dip in pressure in accordance with one’s circadian 
+rhythm [14]. Systolic BP typically varies by approximately 
+10-15 mmHg during the daytime and 5-10 mmHg at night 
+[27].  BP  can  also  fluctuate  dramatically  due  to  short-term 
+influences that affect cardiac output and vascular resistance. 
+Caffeine  significantly  increases  SBP  by  5-10  mmHg  and 
+psychological  stress  and  physical  exertion  can  cause  an 
+increase of 20-60 mmHg [16,21,27]. Sleeping, eating, and a 
+variety of other activities are also correlated with dynamic 
+changes  in  BP  yet  occur  sporadically,  making  the  changes 
+difficult to identify without continuous monitoring [27].  
+
+Value of BP measurement outside the clinic 
+These  short-term  fluctuations  in  BP  are  important  because 
+significant  variation  may  cause  subtle  arterial  damage  that 
+raises average BP over long periods [20]. However, clinic-
+based measurement, considered the standard for BP classi-
+fication,  is  how  most  people  assess  their  BP.  The  clinic 
+setting may not be optimal due to limitations in its capacity 
+to  accurately  measure  BP  in  certain  contexts  [26]  and  the 
+fact that 15% of adults do not visit their providers annually 
+[23].  Instead,  studies  show  that  BP  monitoring  at  home  is 
+better  at  predicting  cardiovascular  risk  than  measurements 
+in  the  clinic  [19,24].  Though  automated  ambulatory  moni-
+toring  is  becoming  more widespread,  it  is cost-prohibitive, 
+requires  clinical  guidance,  and  necessitates  wearing  a  cuff 
+that auto-inflates every 30-60 minutes for at least 24 hours.  
+
+As a result, home BP devices have become a preferred al-
+ternative for BP assessment. Yet home devices are still de-
+signed based on clinical needs and not with personal use in 
+mind. In a study focused on elderly adults, researchers de-
+scribed  usability  challenges  with  patients  reliably  measur-
+ing their BP, interpreting the results, and integrating meas-
+urement  into  daily  routines  [12].  Despite  these  challenges, 
+home  monitoring  has  the  potential  to  positively  influence 
+quality of life and empower individuals when it is integrat-
+ed successfully into everyday living [5]. 
+
+Growth of personal health monitoring 
+Challenges with user-device interaction for health monitor-
+ing are not limited to elderly or at-risk populations despite 
+the  research  emphasis  on  these  groups.  Increasingly  cheap 
+sensors  have  encouraged  rapid  growth  in  the  personal 
+health  sensing  market  in  the  US  [9].  Tracking  health  met-
+rics  enables  people  to  learn  more  about  their  specific  con-
+text and motivate lifestyle changes. Li et al. described how 
+collecting  behavioral  information  along  with  physiological 
+metrics  helps  foster  insight  and  promote  positive  behavior 
+[17].  Choe  and  colleagues  build  on  this  work,  noting  a 
+strong  interest  in  health  metrics  among  self-trackers,  but 
+
+highlighting breakdowns that may inhibit tracking behavior 
+[4].  Other  research  highlights  how  perceptions  of  personal 
+monitoring  devices  for  general  living,  wellness,  or  illness 
+affect how people use them in the home [13]. Epstein et al. 
+identified how various data representations supported users 
+to  make  discoveries  about  their  behavior  and  identify  op-
+portunities for change [8]. These conclusions align with the 
+observations  of  Bentley  et  al.  regarding  the  importance  of 
+promoting  self-reflection  and  linking  multiple  streams  of 
+data to promote meaningful personal monitoring [2]. As BP 
+becomes easier to capture, it can serve as a key metric sup-
+porting lifestyle monitoring and personal health. 
+
+Measurement uncertainty with BP devices 
+BP  measurement  also  introduces  variability  due  to  signal 
+noise  and  lenient  validation  protocols.  Devices  that  meet 
+current  validation  criteria  may  still  be  inaccurate  by  more 
+than 5 mmHg in a given measurement for more than half of 
+users  [10].  This  level  of  error  introduces  challenges  to  in-
+terpreting  singular  snapshots  of  BP  and  can  lead  someone 
+to classify their blood pressure and health risk incorrectly.  
+
+How  users  understand  and  accept  this  type  of  variability 
+reflects  a  common  challenge  with  sensing  tools  that  must 
+provide reliable feedback despite measurement uncertainty. 
+Lim and Dey introduce the concept of intelligibility to de-
+scribe  how  well  context-aware  systems  communicate  rea-
+soning or uncertainty [18]. In the health domain, Kay et al. 
+explored  the  intelligibility  of  scales  in  communicating 
+weight  fluctuations.  Importantly,  Kay  et  al.  found  that  a 
+person’s understanding of weight fluctuation was associated 
+with  their  trust  in  the  scales’  capabilities  [15].  Similar  to 
+scales,  displaying  BP  as  a  static  snapshot  without  com-
+municating measurement uncertainty may impact user per-
+ception of BP devices over time.  
+
+Based on this related work, we assert there is an opportuni-
+ty to reframe BP for a broader audience, motivated by per-
+sonal  monitoring  outside  of  the  clinic.  Brief,  infrequent 
+clinic  visits  limit  the  ability  of  providers  to  assess  short-
+term changes in BP or to account for in-clinic measurement 
+variation.  Individual  use  of  BP  devices  outside  the  clinic 
+more accurately encapsulates BP as dynamic variable, how-
+ever, the way users respond to this variability is poorly un-
+derstood. Moreover, BP’s sensitivity to environmental vari-
+ables shows promise as a metric for self-tracking and link-
+ing  with  aspects  of  daily  living.  Our  study  illuminates  the 
+value and challenges of BP capture for personal informatics 
+use among a population not familiar with BP monitoring. 
+
+STUDY OVERVIEW 
+
+Participants 
+Since  monitoring  has  been  studied  extensively  in  popula-
+tions with high BP, we excluded persons who were actively 
+taking BP medication or had been diagnosed with hyperten-
+sion  or  other  cardiovascular  diseases.  This  increased  the 
+likelihood that our participants had limited experience with 
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1680Figure 1. Screenshot of a mobile web app used by participants to collect each blood pressure measurement. For the second week of 
+the study period, participants could see a 72 hour visual summary of their BP data. 
+
+monitoring their BP. We also required that participants own 
+a smartphone or tablet so that they could use our web-based 
+logging tool (Figure 1) regardless of their location. 
+
+Using purposeful sampling based on age and gender to en-
+sure  representation  from  an  adult  population,  we  recruited 
+participants from a large volunteer database. Thirty-four (17 
+female) persons, aged 23 to 53 (mean=36.6, SD=7.8), par-
+ticipated  in  the  study.  All  participants  had  some  college-
+level education, with 27 holding a college degree or higher. 
+Participants indicated a high level of physical activity, with 
+79% reporting exercising outside of work on a daily basis. 
+Also,  68%  of  participants  stated  that  they  had  previously 
+measured their BP outside of a clinic, such as at a pharmacy 
+kiosk or at home with a personal BP device. 
+
+Study protocol and analysis 
+At  the  beginning  and  end  of  the  study,  participants  com-
+pleted  a  questionnaire  covering  demographic  details  and 
+knowledge, beliefs, and attitudes about BP. For evaluations 
+of changes in responses pre- and post-study, we used paired 
+Wilcoxon  Signed-Rank  tests.  We  also  collected  and  sum-
+marized  a  brief  follow-up  survey  distributed  60  days  after 
+the  end  of  the  study.  Each  participant  received  a  gratuity 
+and kept their BP cuff after finishing the study. To encour-
+age adherence to our protocol, participants who averaged at 
+least four recordings daily received an extra gratuity. 
+
+At baseline, participants received a MicroLife BP3MC1-PC 
+portable  upper-arm  BP  monitoring  cuff  that  has  been vali-
+dated  for  clinic  and  home  use  [7].  The  investigators  also 
+reviewed standard protocol for BP measurement with each 
+person and had them take their baseline BP reading. Partic-
+
+ n=2,181  Mean  Median  Min  Max 
+SBP 
+DBP 
+Pulse 
+
+SD 
+170  13.1 
+145  10.2 
+145  15.5 
+
+127 
+81 
+74 
+
+126 
+80 
+72 
+
+90 
+42 
+28 
+
+ipants  then  measured  their  BP  daily  at  five  points  spread 
+throughout  the  day  for  14  days.  This  served  as  an  experi-
+mental  surrogate  for  a  future  of  more  continuous,  cuffless 
+measurement  for  which  technology  is  already  emerging. 
+Our  study  design  differs  from  clinic-defined  home  proto-
+cols to give participants the opportunity to see their BP as a 
+continuously  fluctuating  variable  and  not  just  a  means  for 
+diagnosis  and  monitoring.  All  participants  opted  in  to  re-
+ceive  text  and/or  email  reminders  sent  periodically  during 
+the day to support adherence. After each measurement, par-
+ticipants completed a mini-questionnaire delivered through 
+a  web-based  app  that  assessed  contextual  data  known  to 
+influence  BP—caffeine  intake,  stress,  or  exercise—based 
+on activities in the hour preceding the BP recording (Figure 
+1). The questionnaire also provided space for participants to 
+comment on each measurement. For the final week, partici-
+pants  were  given  access  to  a  72-hour  visual  summary  of 
+their BP trends and a table summary of their average, high-
+est, and lowest values for SBP, DBP, and pulse. 
+
+Summarized in Table 1, over the course of the study period, 
+participants  recorded  2,181  BP  measurements  (mean  4.6 
+per  day  per  participant)  and  entered  brief  structured  infor-
+mation about each measurement. Figure 2 shows the distri-
+bution of measurements by time of day with peaks at 8am, 
+12pm,  and  9pm.  Across  the  BP  recordings,  84%  were 
+measured while sitting, 11% standing, and 5% while lying 
+
+150
+
+125
+
+100
+
+75
+
+50
+
+25
+
+0
+
+M
+A
+2
+1
+
+M
+A
+2
+
+M
+A
+4
+
+M
+A
+6
+
+M
+A
+8
+
+M
+A
+0
+1
+
+M
+P
+2
+1
+
+M
+P
+2
+
+M
+P
+4
+
+M
+P
+6
+
+M
+P
+8
+
+M
+P
+0
+1
+
+Table 1. Descriptive summary of BP measurements rec-
+orded by participants during the 14 day study period. 
+
+Figure 2. Overview of the number participant recordings by 
+time of day. Evening hours are shaded in gray.
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1681   
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+down. For more than half of the entries (56%), participants 
+made  brief,  open-ended  notes  about  the  measurement  they 
+had  just  taken.  The  three  authors  independently  coded  a 
+subset  of  the participants’  logs  entries  to  identify  common 
+themes that were then used to code all of the entries.  
+
+At days 7 and 14, we conducted a semi-structured interview 
+with each participant during which we provided them with 
+a summary of their BP log and reviewed the data with them. 
+We conducted 68 interview sessions totaling 45 hours. Each 
+session  averaged  40  minutes  (range:  26–61  min)  and  fo-
+cused on the participant’s recent experiences with using the 
+BP  device.  All  interviews  were  transcribed  and  reviewed 
+for preliminary themes. The authors organized the emerging 
+concepts  into  an  affinity  diagram  to  help  identify  higher-
+level concepts and relationships among terms. They iterated 
+on codes through several rounds in order to focus in on the 
+core  themes  used  for  this  article.  One  author  used  these 
+themes  to  analyze  each  interview  using  Atlas.ti  7.  Finally, 
+the remaining authors each coded a subset of the interviews 
+to validate the themes and ensure reliability. 
+
+RESULTS 
+Based  on  interviews,  BP  logs,  and  questionnaires,  we  re-
+view participants’ attitudes toward their use of BP devices 
+in terms of accuracy, relevance to daily living, and impact 
+on  their  sense  of  well-being.  We  also  highlight  challenges 
+this cohort associated with using a BP device every day. 
+
+Participant response to BP variability 
+Prior research has established measure-to-measure variation 
+at  clinics  between  10  and  20  mmHg  [27].  Our  analysis  of 
+participant  recordings  that  were  measured  while  sitting 
+showed  within-person  variation  of  ±5  to  ±15  SBP  during 
+the study (Figure 3). We found that participants were very 
+sensitive  to  the  variation  that  they  experienced  over  the 
+study  period  and  demonstrated  a  variety  of  behaviors  and 
+strategies when they noticed deviations from their usual BP. 
+
+Evaluating measurement accuracy and consistency 
+Measurement variability, whether from the device or a nat-
+ural change, challenged participants’ level of trust in a giv-
+en measure. When the device reported a value outside of an 
+expected range, participants would take extra steps such as 
+taking  repeat  measures  to  evaluate  its  accuracy.  If  the  re-
+sults appeared consistent over time, they seemed reassured: 
+
+“I  wouldn’t  bet  on  those  numbers  with  my  life,  but  I 
+would  say  that  they  are  within  a  range  that  works,  be-
+cause I can literally sit down and sometimes I do just take 
+my  blood  pressure  three  times  in  a  row  just  to  see  how 
+accurate it is. And the numbers will fluctuate plus or mi-
+nus 5 to 10 on the blood pressure [device].” (P18)  
+
+Recognizing  consistency  in  the  measurements  was  an  im-
+portant  consideration  for  many  of  the  participants.  They 
+mentioned challenging settings such as being on a boat or in 
+a car where they questioned the numbers because, “taking it 
+in  places  with  me  in  different  variables  and  environments 
+and stuff, I feel like you have to kind of baby it or it’s going 
+to give you some crazy reading” (P27). However, finding a 
+comfortable location and the appropriate amount of time to 
+sit down and take the measurement was often a challenge. 
+
+Comparing to other sources 
+In  the  interviews,  participants  often  compared  the  study-
+provided BP device with other sources of BP measurement. 
+They visited their primary care clinic to compare with their 
+doctor,  went  to  pharmacy  kiosk  machines,  and  also  tested 
+their  device  relative  to  other BP  devices  that  family  mem-
+bers  or  friends  owned.  One  person  (P14)  seemed  satisfied 
+with the device used in the study, “because one of the days 
+I actually went to the doctor and it was only like—the num-
+ber is only like one or two different.”  
+
+the  questionnaire,  participants 
+
+Within 
+indicated  what 
+sources of BP measurement they trusted the most. Methods 
+that  involved  multiple  measurements  were  ranked  highest. 
+Although  the  overall  order  of  rankings  across  participants 
+did  not  change  over  the  study  period,  more  participants 
+
+Figure 3. Overview of within-person variation between participants. The top (orange) indicates the average and range for each 
+participant’s SBP, the bottom (blue) for each person’s DBP. Overall within-person variation ranged from ±5 to ±15 SBP. 
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1682 
+gave  a  lower  ranking  to  single-point  measurements  at  the 
+end of the study (one-tail, p<0.025 after Bonferroni correc-
+tion).  This  suggests  that  our  study  cohort  placed  greater 
+value on having multiple measurement points to assess BP 
+versus casual, ad hoc approaches (Table 2).  
+
+Using heart rate to gauge validity 
+In  the  interviews,  participants  commented  that  they  paid 
+attention to specific values within a given BP reading, espe-
+cially  heart  rate,  as  a  way  of  deciding  if  the  measurement 
+seemed  reasonable  or  not.  When  this  relationship  broke 
+down, participants expressed greater doubt in the measure-
+ment.  P34  had  a  normal  BP  reading  but  was  skeptical  be-
+cause of what seemed like an inaccurate hear rate. “I don’t 
+know  why  my  heart  rate  was  so  elevated.  I  wasn’t  doing 
+anything, I felt fine but that’s what I read on the machine. I 
+don’t know. Maybe it’s accurate, maybe it wasn’t” (P34).  
+
+Understanding counter-intuitive fluctuations in BP 
+The  variability  that  participants  experienced  occasionally 
+ran counter to their expectations in relation to level of activ-
+ity during the day. Participants expected their BP to be low-
+er in the mornings as, “that’s going to probably be my most 
+relaxed  part  of  the  day”  (P16).  In  contrast,  the  afternoons 
+are when, “you would expect it to be a little higher because 
+that’s the more 'active” portion of the day” (P30). Partici-
+pants intuitively expected their BP to be low at times when 
+they felt relaxed or when they had not recently been active, 
+such  as  after  sleeping.  Similarly,  they  believed  that  the 
+greater  amount  of  activity  during  the  day  or  immediately 
+after exercising would lead to higher measurement values.  
+
+In the questionnaire, 47% of participants both pre- and post-
+study selected the afternoon (defined as 2-5pm) as the high-
+est  BP  point  of  the  day.  Moreover,  there  was  an  increase 
+from 18% to 38% of participants that selected the morning 
+as the lowest BP point of the day. Their intuition seemed to 
+influence  their  expectations  for  BP  despite  a  lack  of  evi-
+dence in the recordings or in the literature supporting this. 
+Within a typical sleep-wake cycle there are natural oscilla-
+tions in BP levels—a rise in BP that begins before waking, 
+peak BP in the late morning, and a drop in the early after-
+noon [14]. P08 was also surprised by this trend at first, but 
+then  she  recalled  an  article  about  women  who  have  heart 
+attacks in the morning because “it has something to do with 
+something rising in their bodies.” She was able to adjust her 
+expectations with greater understanding of BP variability. 
+
+Adjusting behavior to achieve desired BP 
+Participants  also  described  how  they  learned  over  the 
+course  of  the  study  factors  that  might  influence  their  BP 
+level and then altered their behavior to achieve a desired BP 
+target. P09 explained, “I would know that from what I had 
+been  looking  at,  that  my  pressure  would  be  jacked  up  at 
+certain  times,”  so  he  avoided  caffeine  and  took  his  BP  at 
+times when he thought it would be lowest, “because I want 
+to  see  my  overall  average  go  down”.  P09  framed  his  BP 
+
+Measure 
+
+Rank
+
+Measured continuously by a cannula (small tube) 
+that is inserted into an artery in the body. 
+
+Average of measurements automatically recorded 
+every hour for 24 hours by an auto-inflating device.
+
+Average of self-measurements taken at home 3 
+times a day for 3 days using an automated BP cuff.
+
+Measured once by a doctor using a manually in-
+flated cuff with a stethoscope. 
+
+Measured once by a nurse using an automated 
+blood pressure cuff. 
+
+Self-measured once at home using an automated 
+blood pressure cuff. 
+
+Measured once at a kiosk machine with auto-
+inflating cuff commonly found in drug stores. 
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+Table 2. Participant ranking of the most trustworthy sources 
+for measuring blood pressure at baseline. Order did not 
+change when re-evaluated at the end of the study. 
+
+monitoring  as  a  competition  that  he  wanted  to  win.  Other 
+participants  used  their  observations  of  BP  variability  and 
+avoided stressful settings that they linked to elevated pres-
+sure, reduced their caffeine intake, and made other changes 
+to their behavior to affect measurements. 
+
+Correlating BP with daily living 
+Using  structured  fields  in  the  web  application,  we  asked 
+participants to mark if they exercised, felt stressed, or drank 
+caffeine  in  the  hour  prior  to  each  measurement.  At  least  1 
+out of 8 recordings was linked to one of these three varia-
+bles (Table 3). In the free-text log notes, participants made 
+connections with other aspects of their lives including emo-
+tion,  food  intake,  and  physical  state.  These  same  themes 
+appeared  throughout  the  interviews  as  well,  suggesting  a 
+desire to relate daily activities with their BP levels.  
+
+Descriptor 
+
+Count  % 
+
+Structured from 
+web app 
+
+Total log      
+entries=2,181 
+
+Author coded 
+from participant 
+comments in 
+web app 
+
+Total          
+comments=1,225 
+
+Caffeine 
+Stress 
+
+Exercise 
+
+Context: activities 
+Context: part of day 
+Context: location 
+Intake (food, drink) 
+Commentary on BP 
+Emotional State 
+Physical State 
+
+353  16 
+291  13 
+
+279  13 
+
+549  45 
+340  28 
+99 
+8 
+209  17 
+180  15 
+9 
+106 
+6 
+72 
+
+Table 3. Participant descriptors for BP measurements. Caf-
+feine, Stress, and Exercise were structured options; other 
+themes were coded from comments in log entries, where there 
+were multiple descriptors possible for a given entry. 
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1683 
+BP’s relationship to patterns of everyday living 
+The most common annotation (45% of all comments) from 
+participants  was  to  provide  context  about  a  recent  or  up-
+coming activity, the part of the day (e.g. bedtime), and their 
+location when they captured their BP. Participants reported 
+taking  measurements  in  a  wide  variety  of  settings  outside 
+the home including in vehicles and in public spaces. How-
+ever, having a routine setting, “was probably the most rele-
+vant to me because it was the most controlled environment. 
+Same time of the day, I’m doing the same type of work. I’m 
+interacting with the same type of people... It’s so more rele-
+vant to me to see during that time because I think more fac-
+tors are controlled” (P07). Participants described work and 
+home as stable places through which to capture a meaning-
+ful set of measurements. Participants also explained how a 
+change  in  pattern,  “shows  that  our  weekends  are  totally 
+different  than  the  weekdays.  I  guess  keeping  that  in  mind, 
+I’m  not  too  surprised  but  it  is  surprising  that  the  blood 
+pressure  is  so  sensitive  to  I  guess  routine  versus  whatever 
+ad hoc thing we’re doing” (P01). Throughout the logs and 
+interviews,  participants  stated  that  their  BP  data  heavily 
+reflected their recent activities and routines. 
+
+BP’s relationship to food and drink 
+Food  and  meals  were  an  important  contextual  factor  that 
+participants associated with BP, despite the fact that there is 
+no  clear  evidence  supporting  this  type  of  acute  effect.  Be-
+yond having caffeine, 17% of the notes included comments 
+about other forms  of  consumption,  including recent  meals, 
+alcohol, and cigarettes. Further reflecting this belief, partic-
+ipants responded in the questionnaire about whether differ-
+ent scenarios would lead to an acute increase, decrease, or 
+no  change  in  an  average  person’s  BP.  More  than  75%  of 
+participants at baseline and 85% post-study believed a high-
+sodium  meal  would  increase  BP.  Though  popular  discus-
+sion  about  the  link  between  sodium  and  heart  disease  is  a 
+possible reason for participants’ focus on meals, they felt it 
+added  relevance  and  meaning  to  highlight  instances  where 
+they either consumed food or drink or had missed a meal. 
+
+BP’s relationship to emotional and physical states 
+In the interviews, participants rationalized a given BP read-
+ing based on whether they were feeling stressed, anxious, or 
+unwell  at  the  time.  P13  mentioned  how,  “Stress  is  a  big 
+thing  and  I  know  that  that  definitely  raises  blood  pressure 
+because when I feel stressed and I take it, it’s up.” Partici-
+pants  marked  13%  of  their  entries  as  feeling  stressed.  In 
+addition, noting physical states, such as feeling tired or un-
+well, was another way for participants to give more context 
+to BP readings. Ultimately, our study cohort expressed how 
+a  given  BP value  helped  them  realize  how  their  emotional 
+or physical state was affecting them. Seeing their BP meas-
+urement brought attention to, “my surroundings, my intake, 
+my stress intake and wanting to know more about that and 
+what the triggers are, and how to stop those” (P27). Moni-
+toring  provided  a  reflection  of  their  current  state  and  vali-
+dated periods where they felt stress or excitement. 
+
+Hypotheses and experiments to understand BP 
+The  process  of  incorporating  more  contextual  data  along-
+side the BP measurements helped participants to triangulate 
+possible  causes  for  the  fluctuations.  Fifteen  percent  of  the 
+log entries included comments about participants’ reactions 
+to  a  particular reading  where  they  often  provided  explana-
+tions  for  why  they  recorded  a  particular  BP  value.  After 
+getting  an  unusual  reading,  P33  explained, “I  am  wonder-
+ing if it was the shirt fabric I had on. I will experiment with 
+that  tomorrow.”  In  response  to  confusion  or  questions 
+about  a  given  reading,  participants  began  to  hypothesize 
+and  test  out  how  their  BP  behaved  in  relation  to  a  certain 
+activity or aspect of their lives. P27, for example, expressed 
+a desire to set up an experiment where, “One day for lunch, 
+I would eat a whole bunch of pizza and take it and the next I 
+would eat salad, and see if that was different, and it would 
+make  you  feel  good  if  you  could  see  a  big  change  in  it.” 
+Participants would take their BP before and after climbing 
+stairs, after coming out of a meeting, or in other contexts to 
+see how the activities affected their BP. 
+
+Impact on Perceptions of Well-being 
+BP is a widely used health indicator for clinic diagnosis and 
+treatment.  Accordingly,  participants  framed  their  experi-
+ence of measuring BP in relation to health and well-being.  
+
+Classifying blood pressure risk 
+Although  participants  had  heard  of  hypertension,  pre-
+hypertension, and normal BP prior to this study, most were 
+not  able  to  correctly  identify  the  corresponding  numerical 
+thresholds  of  these  categories  when  asked  in  the  question-
+naire. At baseline, 35% and 26% of participants selected the 
+correct  thresholds  of  hypertension  and  normal  BP  respec-
+tively. We observed an increase to 44% correctly answered 
+for hypertension (p=0.366) and 53% correctly answered for 
+normal BP (p=0.020) by the end of the study. 
+
+We also asked participants to self-describe their BP as nor-
+mal,  pre-hypertensive,  or  hypertensive  (Figure  4).  Prior  to 
+the  study  almost  all  participants  (91%)  self-identified  as 
+having normal BP and only one participant stated they were 
+pre-hypertensive.  However,  after  the  study,  24%  and  6% 
+classified themselves as pre-hypertensive and hypertensive, 
+respectively (p=0.003). This change is corroborated by the 
+calculated  average  of  all  sitting  measurements  that  partici-
+pants recorded in their BP logs. Using clinic-based thresh-
+olds  for  classification,  62%  had  normal  BP  and 38% were 
+
+Figure 4. Participants’ self-reported classification as either 
+normal, pre-hypertensive, or hypertensive (pre/post), and 
+calculated classification of measurements taken while sitting.
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1684pre-hypertensive  or  hypertensive.  The  reason  for  this 
+change  pre-  to  post-study  is  unclear,  but  factors  such  as 
+enhanced  knowledge  of  BP  definitions,  greater  awareness 
+of  their  typical  BP,  or  possibly  increased  anxiety  from  the 
+readings could have affected participants’ classification.  
+
+“You get like an emotional attachment to the thing… it’s a 
+little  buddy  because  it’s  with  you  and  so  it  feels  like  it’s 
+protecting  you,  that  might  sound  so  funny”  (P09).  Partici-
+pants’ framing and association with the BP data and devices 
+influenced their emotional experience.  
+
+Defining BP beyond “clinical” normal 
+The  change  in  how  participants  perceived  their  BP-related 
+risk  reflects  a  larger  interest  among  participants  in  under-
+standing  how  their  BP  compared  to  others.  During  the  in-
+terviews, participants made comparisons to friends, family, 
+or other groups. They expressed a desire to know, “is what 
+I’m  seeing  typical  from  other  people?  That  was  what  I’m 
+just  trying  to  figure  out”  (P30).  How  participants  defined 
+normal varied. Some simply wanted to know whether they 
+were  “healthy”.  However,  many  wanted  to  compare  their 
+measurements  to  individuals  that  were  in  a  similar  age 
+group,  the  same  gender,  and  a  similar  lifestyle  in  terms  of 
+physical  activity,  smoking,  and  diet.  This  discussion  also 
+led several of the participants to hypothesize that compari-
+sons to others that are younger or healthier might be an ef-
+fective way to stay motivated around health goals: 
+
+“So I would like to see not only for my age group because 
+I think the medical community tends to have lower expec-
+tations as we age…I want to compare to younger people 
+not—it’s  the  whole  thing  why  people  think,  ‘Oh,  we’re 
+older so it’s okay to have 25 lbs. on.’ No it’s not.” (P08) 
+
+Challenges to BP use in everyday contexts 
+Prior  work  has  revealed  measurement  and  interpretation 
+challenges with using BP devices [12,13], however, partici-
+pants  in  this  study  also  discussed  the  emotional  impact  of 
+measurement, concerns about the stigma of using a BP de-
+vice, and their interest in continuing to measure their BP. 
+
+Emotional impact and reactions to BP readings 
+When the participants measured their BP, the health impli-
+cations associated with blood pressure would create strong 
+positive and negative emotional reactions. As P27 explains, 
+“I  think  subconsciously  even  looking  at  it,  I  would  get  a 
+little  stressed  or  kind  of  little  anxious  because  I  would  be 
+scared it would be really high again.” P10 commented how 
+the process of the cuff inflating was “anxiety-inducing” as 
+it  cut  off  circulation  in  his  arm.  Feelings  of  apprehension 
+about  future  measurements  or  the  discomfort  of  using  the 
+device put off some participants. Others that had an atypical 
+measurement described feeling panicked and obsessed, tak-
+ing repeated measurements well beyond the 5 requested per 
+day in order to make sure the readings were correct.  
+
+Conversely, participants had positive reactions to their data 
+when  they  focused  less  on  individual  readings.  For  exam-
+ple, after seeing a graphic visual of his data, P10 explained 
+that, “Once I thought I was in the norm I was like, ‘Yeah, 
+I’m  good,  nothing  to  worry  about,’  and  then  I  just  go  on 
+with my life.” Another participant actually felt more secure 
+over  time  while  taking  measurements  at  home  because, 
+
+Associations of BP with illness 
+Framing  is  important,  as  participants  described  challenges 
+with using the device in an open setting. They felt uncom-
+fortable  with  how  others  would  perceive  them  and  were 
+concerned about how the device attracted attention and was 
+disruptive to others. Participants described instances where 
+co-workers, friends, or family expressed concern or asked if 
+they were unwell because they were capturing their BP.  
+
+“This  isn’t  exactly  a  device that  you  go  for  and buy  it—
+you  relate  this  to  sickness.  So  you  try  to  avoid  those  de-
+vices…The design, it does not attract me and it’s an aisle 
+that  I  just  try  to  avoid.  It’s  something  with  health  is-
+sues…You  never  relate  this  design  to  I  just  want  to  be 
+healthy  and  I  want  to  keep  it  there.  Versus  the  [fitness] 
+watch,  when  I  keep  it  there,  I  want  to  be  healthy  and  I 
+want to track it. The design helps to inspire you.” (P26) 
+
+P26’s  experience  reflects  a  current  challenge  with  existing 
+perceptions of BP. The stigma of its association with having 
+a disease or being unwell was a concern across participants. 
+
+Continued use of BP device 
+During  the  interviews,  participants  commented  on  their 
+motivation to continue using the device after the study end-
+ed.  Regularly  monitoring  BP  helped  some  to  “understand 
+the readings better. That it does fluctuate. And one reading 
+at the doctor once a year is not going to tell the whole sto-
+ry.  Which  I  thought  it  did.  I  really  thought  that’s  all  you 
+needed”  (P31).  Not  everyone  identified  immediate  value 
+from using the BP device, however. P10 expressed a desire 
+for additional context to add value or significance to the BP 
+results.  He  preferred  that,  “if  the  program  could  be  de-
+signed  that  was  like—you  just  had  this  amount  of  calories 
+or this kind of food and you’ll see this bump in your blood 
+pressure. Yeah, maybe I would be more intrigued to keep up 
+with that kind of data and learn.”  
+
+At  the  study  end,  seventeen  participants  stated  that  they 
+would  continue  to  measure  their  BP  at  least  once  per  day. 
+Another thirteen mentioned an interest in capturing their BP 
+periodically, such as, “one to two times a month just to see. 
+That’s about it. And I think that would be sufficient just to 
+kind of—and I would do my three [measurements]—get my 
+average because I think that that’s important” (P34). Four 
+mentioned they were unlikely to continue measuring it reg-
+ularly,  “because  I  know  I’m  more  or  less  in  the  healthy 
+range—I mean yes I do go into the 120's, but whatever—so 
+I wasn't as concerned about it” (P30).  
+
+We  also  followed  up  with  participants  60  days  after  the 
+study to assess their continued use. Twenty-six (76%) of the 
+participants responded. Even though several people contin-
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1685ued  to  measure  their  BP  at  least  once  a  week,  most  re-
+spondents  reported  less  frequent  measurement  than  during 
+their final interview (Table 4). 
+
+DISCUSSION 
+Based  on  the  experiences  of  our  participants,  there  is  an 
+opportunity for redesigning future BP devices for a general 
+audience that addresses issues of stigma, measurement vari-
+ability,  and  the  lack  of  meaningful,  actionable,  feedback 
+with current devices. The themes discussed in the previous 
+section  are  especially  relevant  as  we  shift  from  ad  hoc  BP 
+measurements  in  the  clinic  to  more  frequent  measurement 
+at home by consumers seeking to track and understand gen-
+eral well-being based on their data. Our participant experi-
+ences demonstrated that a BP value means little in isolation.  
+
+For our participants with limited knowledge of BP, the var-
+iation  that  they  experienced  influenced  their  attitudes  and 
+understanding of blood pressure. In some cases their intui-
+tion  of  BP  during  the  mornings  or  after  exercise  broke 
+down.  In  other  cases,  participants  associated  BP  with  mo-
+ments  of  stress  or  factors  related  to  their  environment.  In-
+creased  interaction  with  their  BP  led  many  participants  to 
+alter their behavior, experiment with how their BP respond-
+ed  to  stimuli,  and  reflected  a  desire  for  greater  knowledge 
+of how BP links with different aspects of their lives. 
+
+Importantly,  measuring  BP  and  experiencing  variation  had 
+an emotional impact on many participants. Observing unu-
+sual  values  caused  confusion,  frustration,  and  anxiety  that 
+influenced  their  interest  in  using  the  BP  device.  They  dis-
+cussed their use in terms of normative social influences that 
+aligns with the findings in the autoethnography reported by 
+O’Kane et al. [25]. Participants expressed a desire to situate 
+their BP relative to others—to motivate change or establish 
+a sense of what is normal BP and normal variation. Howev-
+er,  some  participants  started  to  measure  their  BP  well  be-
+yond the study requirements after becoming concerned with 
+a particular elevated reading. This contributed to feelings of 
+stress  and  may  have  led  to  even  more  elevated  readings. 
+Because  measuring  BP  has  such  strong  connotations  with 
+illness,  devices  designed  for  personal  use  should  consider 
+how this metric will be accepted and interpreted—both pos-
+itively and negatively—as it becomes more pervasive.  
+
+Envisioning future BP devices for personal use 
+Many  participants  expressed  an  interest  in  regular  meas-
+urements to ascertain their BP and gain an intuitive under-
+standing  of  BP  variability  through  introspection.  Others 
+wanted to explicitly test the acute impact of certain activi-
+ties on their BP. To support this need, we envision an unob-
+trusive,  wearable  BP  device  that  can  capture  BP  as  a  dy-
+namic  variable  throughout  the  day.  This  type  of  device 
+should link with other data such as stress measures and food 
+logs that many of the participants highlighted as relevant to 
+their  BP  variation.  We  also  know  that  the  relationship  be-
+tween  BP  and  risk  of  cardiovascular  disease  is  continuous 
+and  short-term  changes  can  be  meaningful  indicators  of 
+
+Post-Study Use 
+More than once/week 
+Once/week 
+Once/month 
+Haven’t used device 
+No response 
+
+Count 
+4 
+4 
+9 
+9 
+8 
+
+% 
+12 
+12 
+26 
+26 
+24 
+
+Table 4. Follow-up survey of average self-reported measure-
+ment frequency 60 days after the end of the study. 
+
+health  risk.  Capturing  these  changes  in  real-time  can  pro-
+vide immediate feedback to users regarding trends and help 
+them to reflect, review, and engage with their BP data. 
+
+Other  participants  described  the  value  of  BP  measurement 
+in terms of a periodic check-up, such as monitoring for pre-
+eclampsia for a short duration of time. As an alternative to a 
+device built  for  continuous monitoring, we  envision  a  sys-
+tem that reimagines the pharmacy BP kiosk. However, un-
+like  a  kiosk,  our  participants  did  not  want  a  snapshot  of 
+their  BP  at  a  single  point  in  time,  but  preferred  a  way  to 
+temporarily capture their BP for a period of time—such as 
+monitoring several days to capture an average and evaluate 
+longitudinal  trends.  They  also  did  not  want  to  manage  or 
+find a place for a cumbersome, infrequently used device in 
+the home, nor have to go to a fixed location like a pharma-
+cy.  The  users  of  this  new  system  do  not  need  to  monitor 
+their  BP  every  day,  but  are  interested  in  a  momentary,  re-
+peated  measure  assessment  that  reports  their  health  status 
+and  how  they  compare  to  others.  They  prefer  measuring 
+their BP in an environment that is convenient and comfort-
+able using a system that is either disposable or can be inte-
+grated unobtrusively into their home environment. 
+
+Design recommendations 
+Even though our participants strongly desired to track their 
+BP at home,  they were dissatisfied with the capabilities  of 
+typical home devices. Here, we consider the implications of 
+short-term fluctuations and an audience new to BP monitor-
+ing. We suggest several design considerations that can im-
+prove  the  relevance,  actionable  value,  emotional  impact, 
+and intelligibility of BP data captured for generalized use. 
+
+Making BP data relevant and context-sensitive 
+The  importance  of  situating  BP  in  context  is  evident  with 
+the  variety  of  environmental  and  situational  variables  that 
+participants  highlighted  in  the  study.  Participants  did  not 
+discuss their BP values independently, but often connected 
+readings with their workplace, stress, food and drink, exer-
+cise, or other activities. Bentley and other researchers have 
+argued  that  for  longer-term  personal  monitoring,  a  multi-
+faceted, holistic  outlook  on what  to  track can  enable  more 
+nuanced  and  personalized  feedback  from  sensor  data  [2]. 
+BP devices should have greater integration with sensors that 
+detect  location,  movement,  stress,  and  other  physical  met-
+rics  to  help  individuals  understand  changes  in  blood  pres-
+sure in relation to relevant aspects of their lives.  
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1686Participants  also  described  adding  context  to  BP  data  by 
+comparing  their  numbers  to  other  groups  to  get  a  sense  of 
+what is “normal”. This desire for having a certain BP status 
+is a clear opportunity to leverage crowd-sourcing to provide 
+an individual with an understanding of their data relative to 
+others  with  similar  age,  gender,  or  lifestyle.  Participants 
+also wanted to compare to others’ BP in order to set goals 
+for  self-improvement.  Based  on  data  from  younger  or 
+healthier  users,  devices  could  even  infer  and  recommend 
+activities and lifestyle changes that would help users attain 
+health goals. Having  a personalized  history  of  BP  changes 
+in  combination  with  other  persons’  data  can  provide  users 
+with valuable trajectories for predicting health risks [1] and 
+help motivate behavior changes in a person’s life. 
+
+Making BP data meaningful and actionable 
+The manner in which BP data is presented seemed to have a 
+large  impact  on  participants’  interpretations  and  perceived 
+value.  The  typical  device’s  display  of  a  snapshot  of  SBP, 
+DBP,  and pulse  values provides  little  sense  of  the  form  or 
+shape of their blood pressure over time. In cases of strong 
+variation  this  may  have  hindered  pattern  recognition,  and 
+participants’  prior  experience  influenced  their  assumptions 
+and expectations. For example, many participants expected 
+their lowest BP reading in the morning and were often con-
+fused  by  the  rise  and  fall  of  BP  throughout  the  day.  The 
+participants  also  cited  the  order  that  the  numbers  are  pre-
+sented and their relative magnitude as why they focused on 
+SBP  or  DBP.  Recognizing  these  situations  where  expecta-
+tions  break  down  or  when  the  data  display  directs  user  at-
+tention  provides  an  opportunity  to  focus  design  to  educate 
+users about meaningful BP variability and trends. 
+
+Blood  pressure  devices  can  also  move  beyond  supporting 
+reflection  toward  providing  actionable  information.  Sys-
+tems  should  flexibly  handle  diverse  representations  of  BP 
+data  such  as  binary  (healthy  or  not),  categorical  (health 
+risk),  ordinal  (population  comparisons),  or  continuous 
+(trends,  correlations  with  everyday  living)  to  not  only  an-
+swer  user  queries  but  support  active  decision-making 
+aligned  with  personal  goals.  A  continuous  monitoring  tool 
+that  can  recognize  patterns,  learn  baselines,  and  identify 
+meaningful  trends  can  support  real-time  decisions  through 
+contextually aware feedback. Instead of placing a burden on 
+the user or a third party to analyze a large, complex dataset, 
+the  device  can  produce  an  appropriate  data  representation 
+that helps evaluate actions relative to changes in BP. 
+
+Making BP data desirable 
+Even  though  participants  expressed  interest  in  evaluating 
+correlations between their current mental state and their BP, 
+atypical  BP  readings  among  some  participants  increased 
+their  anxiety  in  a  manner  similar  to  the  white  coat  effect 
+observed  in  clinics.  The  way  that  individuals  perceive  BP 
+devices and how BP results are communicated to them can 
+affect this type of emotional response. We suggest that fu-
+ture designs frame BP data in terms of averages and ranges 
+
+to reflect measurement uncertainty and mitigate the psycho-
+logical  impact  of  a  single  high  reading.  Framing  measure-
+ments  this  way  also  offers  an  opportunity  to  incorporate 
+better  visual  displays  that  emphasize  patterns,  trends,  and 
+deviations from the mean rather than single-point measures. 
+
+Making BP data trustworthy and intelligible 
+Most  home  BP  devices,  including  the  one  used  in  this 
+study, will provide a clinical stratification of BP based on a 
+single  measurement.  Yet  within  person  variation,  environ-
+mental  stimuli,  and  device  inaccuracy  create  significant 
+measurement  variability [10]. Even clinical guidelines rec-
+ommend  incorporating  additional  factors  such  as  co-
+morbidities and lifestyle behaviors in order to classify car-
+diovascular risk [19]. A single reading provides a mislead-
+ing understanding of an individual’s BP. In a home setting, 
+participants  have  the  ability  to  capture  regular  measure-
+ments  of  their  BP.  Therefore,  classification  of  a  person’s 
+health status may be more relevant and representative as an 
+average or visualization of BP trends. Devices could begin 
+with  typical  variance  as  ascertained  from  other  users  or 
+based  on  existing  literature  and  slowly  personalize  this  to 
+the individual, emphasizing their BP as a range. The devic-
+es can also improve their intelligibility by providing an in-
+dication of confidence in a given reading depending on fac-
+tors such as deviation from an average BP or awareness of 
+the possible influence of environmental variables. 
+
+Limitations 
+Because  our  study  was  primarily  qualitative,  and  because 
+our participant sample skewed slightly towards a physically 
+active and educated demographic, we caution against over-
+generalizing  our  findings.  Moreover,  although  participants 
+were exposed to their BP repeatedly during the study peri-
+od, a two-week interval might be inadequate to fully reflect 
+and  understand  their  blood  pressure.  However,  we  believe 
+the  open  log  entries  and  the  multiple  interviews  provide 
+insight into how non-hypertensive individuals begin to un-
+derstand and relate to BP as a personal health metric. This 
+type  of  real-time  in  situ  data  capture  is  a  well-recognized 
+approach to understanding ubiquitous technologies [6].  
+
+CONCLUSION 
+BP  is  a  valuable  metric  to  incorporate  as  part  of  personal 
+informatics  systems  for  health.  We  identified  self-tracking 
+needs  including  responding  to  BP  variability  through  re-
+peated  or  continuous  measures  and  supporting  personal 
+discovery of BP fluctuations linked to everyday living. Re-
+framing BP devices away from disease management toward 
+well-being can help reduce the stigma and emotional anxie-
+ty  associated  with  BP  and  stimulate  greater  adoption  and 
+use  of  these  devices.  Future  designs  should  consider  more 
+casual use contexts in addition to health maintenance. 
+
+Through our analysis of participant experiences with track-
+ing their BP, we illuminate how individuals collecting more 
+frequent at-home BP measurements perceive BP variability 
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1687and  make  associations  with  activities  and  aspects  of  daily 
+living.  We  also  demonstrate  the  impact  and  relevance  that 
+measurement  of  BP  had  on  a  young,  healthy  population. 
+Finally,  we  discuss  opportunities  to  improve  the  design  of 
+BP  devices  through  better  support  of  individual  reflection, 
+diverse data representations, transparency around BP varia-
+bility, and integration with other sensor data. Many BP de-
+vices currently on the market are still designed for clinical 
+needs  and  uses.  The  shift  towards  sensor-based  personal 
+health  monitoring  provides  an  opportunity  to  innovate  on 
+this  metric  and  make  blood  pressure  measurement  more 
+accessible and relevant to a broader audience. 
+
+REFERENCES 
+1.  Allen, N.B., Siddique, J., Wilkins, J.T., et al. Blood pres-
+sure trajectories in early adulthood and subclinical athero-
+sclerosis in middle age. JAMA 311, 5 (2014), 490–7. 
+
+2.  Bentley, F., Tollmar, K., Stephenson, P., et al. Health 
+
+Mashups: Presenting Statistical Patterns between Wellbe-
+ing Data and Context in Natural Language to Promote Be-
+havior Change. ACM TOCHI 20, 5 (2013), 1–27. 
+
+3.  Cheng, S., Lichtman, J.H., Amatruda, J.M., et al. 
+
+Knowledge of blood pressure levels and targets in patients 
+with coronary artery disease in the USA. Journal of human 
+hypertension 19, 10 (2005), 769–74. 
+
+4.  Choe, E.K., Lee, N.B., Lee, B., Pratt, W., Kientz, J.A. Un-
+derstanding quantified-selfers’ practices in collecting and 
+exploring personal data. Proc CHI 2014, ACM Press 
+(2014), 1143–1152. 
+
+5.  Clemensen, J., Craggs, M., Marcussen, C., et al. Chroni-
+cally Ill Citizens and Home Monitoring: “Nothing to talk 
+about ”!. eTELEMED 2013, (2013), 47–52. 
+
+6.  Consolvo, S., Harrison, B., Smith, I., et al. Conducting In 
+Situ Evaluations for and With Ubiquitous Computing 
+Technologies. International Journal of Human-Computer 
+Interaction 22, 1-2 (2007), 103–118. 
+
+7.  Cuckson, A.C., Reinders, A., Shabeeh, H., Shennan, A.H. 
+Validation of the Microlife BP 3BTO-A oscillometric 
+blood pressure monitoring device according to a modified 
+British Hypertension Society protocol. Blood pressure 
+monitoring 7, 6 (2002), 319–24. 
+
+8.  Epstein, D., Cordeiro, F., Bales, E., Fogarty, J., Munson, S. 
+Taming data complexity in lifelogs. Proc DIS 2014, ACM 
+Press (2014), 667–676. 
+
+9.  Fox, S., Duggan, M. Tracking for Health. Pew Internet & 
+
+American Life Project, Washington, DC, 2013. 
+
+10. Gerin, W., Schwartz, A.R., Schwartz, J.E., et al. Limita-
+tions of current validation protocols for home blood pres-
+sure monitors for individual patients. Blood pressure 
+monitoring 7, 6 (2002), 313–8. 
+
+11. Go, A.S., Mozaffarian, D., Roger, V.L., et al. Heart disease 
+and stroke statistics-2013 update: a report from the Ameri-
+can Heart Association. Circulation 127, 1 (2013), e6–e245. 
+
+12. Grönvall, E., Verdezoto, N. Understanding challenges and 
+opportunities of preventive blood pressure self-monitoring 
+at home. Proc ECCE 2013, ACM Press (2013), 1. 
+
+13. Grönvall, E., Verdezoto, N. Beyond self-monitoring. Proc 
+
+UbiComp 2013, ACM Press (2013), 587. 
+
+14. Hermida, R.C., Ayala, D.E., Portaluppi, F. Circadian var-
+iation of blood pressure: the basis for the chronotherapy of 
+hypertension. Advanced drug delivery reviews 59, 9-10 
+(2007), 904–22. 
+
+15. Kay, M., Morris, D., Schraefel, M., Kientz, J.A. There’s no 
+such thing as gaining a pound. Proc Ubicomp 2013, ACM 
+Press (2013), 401. 
+
+16. Le, V.-V., Mitiku, T., Sungar, G., Myers, J., Froelicher, V. 
+The blood pressure response to dynamic exercise testing: a 
+systematic review. Progress in cardiovascular diseases 51, 
+2 (2008), 135–60. 
+
+17. Li, I., Dey, A.K., Forlizzi, J. Understanding my data, my-
+self. Proc Ubicomp 2011, ACM Press (2011), 405. 
+
+18. Lim, B.Y., Dey, A.K. Investigating intelligibility for un-
+certain context-aware applications. Proc Ubicomp 2011, 
+ACM Press (2011), 415. 
+
+19. Mancia, G., Fagard, R., Narkiewicz, K., et al. 2013 
+
+ESH/ESC Guidelines for the management of arterial hy-
+pertension. European heart jrnl 34, 28 (2013), 2159–219. 
+
+20. Mancia, G. Short- and long-term blood pressure variabil-
+ity: present and future. Hypertension 60, 2 (2012), 512–7. 
+
+21. Mort, J.R., Kruse, H.R. Timing of blood pressure meas-
+
+urement related to caffeine consumption. Annals Pharma-
+cotherapy 42, 1 (2008), 105–10. 
+
+22. Nair, D., Tan, S.-Y., Gan, H.-W., et al. The use of ambula-
+tory tonometric radial arterial wave capture to measure 
+ambulatory blood pressure: the validation of a novel wrist-
+bound device in adults. Journal of human hypertension 22, 
+3 (2008), 220–2. 
+
+23. National Center for Health Statistics. Percent Distribution 
+of Number of Visits to Health Care Professionals by Se-
+lected Characteristics: 2000 and 2009. Statistical Abstract 
+of the U.S.: 2010, 2010. 
+
+24. Niiranen, T.J., Hänninen, M.-R., Johansson, J., et al. 
+
+Home-measured blood pressure is a stronger predictor of 
+cardiovascular risk than office blood pressure: the Finn-
+Home study. Hypertension 55, 6 (2010), 1346–51. 
+
+25. O’Kane, A.A., Rogers, Y., Blandford, A.E. Gaining empa-
+thy for non-routine mobile device use through autoethnog-
+raphy. Proc ACM CHI ’14, ACM Press (2014), 987–990. 
+
+26. Pickering, T.G., White, W.B., Giles, T.D., et al. When and 
+how to use self (home) and ambulatory blood pressure 
+monitoring. J Am Soc Hypertens 4, 2 (2010), 56–61. 
+
+27. Rothwell, P.M. Limitations of the usual blood-pressure 
+hypothesis and importance of variability, instability, and 
+episodic hypertension. Lancet 375, 9718 (2010), 938–48.  
+
+DIY Healthcare: Apps & WearablesCHI 2015, Crossings, Seoul, Korea1688 
+

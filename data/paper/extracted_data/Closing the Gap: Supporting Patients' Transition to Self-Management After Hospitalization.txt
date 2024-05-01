@@ -1,0 +1,1780 @@
+Closing the Gap: Supporting Patients’ Transition  
+to Self-Management after Hospitalization 
+ Ari H Pollack1,2, Uba Backonja4, Andrew D. Miller4, Sonali R. Mishra3, Maher Khelifi4,  
+Logan Kendall4, and Wanda Pratt3 
+2Division of Nephrology 
+Seattle Children’s Hospital 
+Seattle, WA, USA 
+
+3The Information School,  
+4Biomedical and Health Informatics  
+University of Washington 
+Seattle, WA, USA
+
+1Department of Pediatrics 
+School of Medicine  
+University of Washington 
+Seattle, WA, USA 
+
+{apollack; backonja; millerad, srmishra; khelifi; kendall5; wpratt}@uw.edu 
+
+ABSTRACT 
+Patients  going  home  after  a  hospitalization  face  many 
+challenges.  This  transition  period  exposes  patients  to 
+unnecessary risks related to inadequate preparation prior to 
+leaving the hospital, potentially leading to errors and patient 
+harm. Although patients engaging in self-management have 
+better  health  outcomes  and  increased  self-efficacy,  little  is 
+known about the processes in place to support and develop 
+these  skills  for  patients  leaving  the  hospital.  Through 
+qualitative  interviews  and  observations  of  28  patients 
+during  and  after  their  hospitalizations,  we  explore  the 
+challenges they face transitioning from hospital care to self-
+management.  We  identify  three  key  elements  in  this 
+process:  knowledge,  resources,  and  self-efficacy.  We 
+describe how both system and individual factors contribute 
+to  breakdowns  leading  to  ineffective  patient  management. 
+This  work  expands  our  understanding  of  the  unique 
+challenges  faced  by  patients  during  this  difficult  transition 
+and uncovers important design opportunities for supporting 
+crucial yet unmet patient needs. 
+
+Author Keywords 
+Health informatics; pediatric; hospital; medical informatics; 
+self-efficacy; self-management; discharge.  
+
+ACM Classification Keywords 
+
+J.3 Life and Medical Sciences, Health, Medical Information 
+Systems; H.5.m. Information interfaces and presentation. 
+
+INTRODUCTION 
+Hospitals  provide  acute  management  for  both  new  and 
+chronic  medical  conditions  with  the  goal  of  treating  and 
+stabilizing  patients  so  they  can  return  to  their  life  outside 
+the  hospital.  However,  patients  face  many  risks  and 
+challenges  after  leaving  the  hospital.  Re-hospitalization, 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for
+personal or classroom use is granted without fee provided that copies are
+not made or distributed for profit or commercial advantage and that copies
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for
+components  of  this  work  owned  by  others  than  ACM  must  be  honored.
+Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or  republish,  to
+post on servers or to redistribute to lists, requires prior specific permission
+and/or a fee. Request permissions from Permissions@acm.org.  
+CHI'16, May 07-12, 2016, San Jose, CA, USA   
+© 2016 ACM. ISBN 978-1-4503-3362-7/16/05…$15.00 
+DOI: http://dx.doi.org/10.1145/2858036.2858240 
+
+one  such  risk,  has  been  identified  as  a  major  issue  within 
+the  United  States  health  care  system,  impacting  1 out  of  5 
+Medicare beneficiaries, leading to $17.4 billion each year in 
+unnecessary  spending 
+[35].  Although  some  hospital 
+readmissions  are  unavoidable,  many  are  preventable  and 
+result  from  inadequate  patient  preparation  prior  to  leaving 
+the  hospital  (i.e.  discharge)  [11].  Discharge  planning,  a 
+common  component  of  many  health  care  systems,  allows 
+for  the  development  of  individualized  plans  provided  to  a 
+patient  prior  to  leaving  the  hospital,  with  the  goal  of 
+improving  patient  outcomes  and  reducing  unnecessary  re-
+hospitalizations.  Yet,  it  has  had  mixed  results  [53].  Key 
+remaining  challenges  include  patients  having  a  poor 
+understanding  of  their  medical  condition  or  low  health 
+literacy in general [2,34] as well as patients not being able 
+to  access  the  health  resources  they  need  after  discharge 
+[37,39]. 
+
+June,  a  16-year-old  competitive  soccer  player,  recently 
+returned home from a three-day hospitalization after being 
+newly  diagnosed  with  Type  1  diabetes.  In  addition  to 
+receiving  the  medical  care  necessary  to  treat  and  manage 
+her  new  condition,  hospital  staff  also  provided  intensive 
+education  designed  to  teach  June  and  her  family  about 
+what diabetes is and how to manage this chronic condition. 
+Eager to leave the hospital and return to a normal life, June 
+and  her  family  felt  empowered  with  their  newly  acquired 
+knowledge,  confident  that  they  had  the  tools  to  face 
+whatever  challenges  lay  ahead.  However,  their  feelings  of 
+confidence quickly transitioned to feeling overwhelmed and 
+unprepared. Previously simple tasks for June, like grabbing 
+a snack to bring to soccer practice, now required that she 
+read  food  labels,  count  carbs,  and  plan  insulin  injections. 
+Should  she  tell  her  coach  or  her  teammates  about  her 
+diabetes in case the disease caused her to get ill during an 
+away  game,  even  though  she  did  not  want  any  special 
+treatment? What would she do if she did not have a place at 
+school to take injections in private or to dispose of needles?  
+
+Once  discharged,  patients  and  their  caregivers  need  to 
+possess,  or  know  how  to  obtain,  the  knowledge  (e.g. 
+including  both  technical/clinical  facts  as  well  as  patient 
+expertise [58]) and resources (enablers that help individuals 
+manage  their  illness  including  social  support,  access  to 
+pharmacies,  etc.)  required  to  provide  care  at  home,  and 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5324respond  appropriately  to  the  routine  as  well  as  unfamiliar 
+challenges, referred to as self-management [46]. As a result, 
+patients  like  June  (whose  scenario  is  based  on  a  teenaged 
+patient  from  our  study)  face  a  number  of  challenges 
+immediately after leaving the hospital.  
+
+interaction  (HCI)  methods 
+
+to 
+Using  human-computer 
+redesign technology for use after hospital discharge has the 
+potential  to  bridge  the  resource  and  knowledge gaps faced 
+by  patients  and  caregivers.  By  designing  better  tools  that 
+consider  the  holistic  needs  of  patients,  clinicians  can 
+support  patients 
+self-
+management.  Although  abundant  research  in  HCI  and 
+Health  Informatics  has  explored  how  to  best  support 
+patients  with  chronic  diseases  [12,21,28],  we  have  less 
+understanding of how technology could support patients as 
+they transition to life after an acute hospitalization. 
+
+transition 
+
+through 
+
+their 
+
+to 
+
+to  home,  we  conducted  an 
+
+To  better  understand  how  information  technology  could 
+support  patients  and  prepare  them  as  they  move  from 
+interview  and 
+hospital 
+observation  study  with  28  hospitalized  patients  and  their 
+family caregivers, prior to and just after discharge. Through 
+our  analysis,  we  show  that  many  challenges  the  patients 
+face  arise  from  deficiencies  in  three  key  areas:  (1) 
+medical Knowledge,  (2)  Resources  to manage  their  health 
+(including social support), or (3) Self-efficacy. We describe 
+how  these  three  key  areas,  referred  to  as  the  KRS 
+framework,  have  the  potential  to  help  guide  design 
+opportunities  for  HCI  and  patient-centered  information 
+technology  to  support  patients  as  they  transition  from 
+hospital-based  management  to  self-management.  Based  on 
+multiple  in-depth  interviews,  we  describe  the  challenges 
+faced by patients and their families during such a hospital to 
+home 
+in  medical 
+knowledge,  in  resources  needed  to  care  for  one’s  health, 
+and  in  self-efficacy  prevent  effective  self-management 
+when patients leave the hospital setting. Finally, we outline 
+design  recommendations  for  technologies  that  could  help 
+address  these  unmet  needs  and  ease  the  burden  of  this 
+difficult and fragile transition for patients.  
+
+transition.  We  explore  how  gaps 
+
+BACKGROUND AND RELATED WORK 
+With  the  increasing  life  expectancy  of  individuals  around 
+the  world,  the  number  living  with  a  chronic  condition  has 
+correspondingly  increased  [10].  This  situation  has  led 
+individuals  to  self  manage  and  integrate  their  health 
+conditions  into  their  daily  routine,  through  self-care  [8]. 
+Recently, researchers in the fields of HCI and CSCW have 
+explored broadly how technology supports those living with 
+a chronic illness and have provided suggestions on how to 
+advance  both  research  and  design  to  support  individuals 
+living with a chronic illness [24,48].  
+
+low-tech  solutions  have  shown  benefit 
+
+in 
+Although 
+(e.g. 
+events 
+reducing  undesirable 
+readmission  or  no  follow-up  with  their  primary  physician) 
+[4],  they  often  did  not  assess  the  innate  skills  required  for 
+self-management at home.  
+
+after  discharge 
+
+Given  that  behavior  change  is  a  key  component  of  self-
+management as individuals need to learn how to adapt their 
+lifestyle  as  a  result  living  with  a  chronic  illness,  Social 
+Cognitive  Theory  [6]  provides  a  useful  lens  to  help 
+understand  and  guide  the  patients’  actions  post-discharge. 
+SCT has been applied to health promotion interventions [5], 
+and  includes  the  key  determinants  of  the  KRS  framework. 
+However, SCT alone cannot account for all challenges and 
+constraints faced by individuals self-managing their illness. 
+Therefore,  new  frameworks  are  needed 
+to 
+understand  and  design  for  the  needs  of  this  unique 
+population. In the sections that follow, we describe patients’ 
+knowledge,  resources,  and  self-efficacy  in  the  context  of 
+clinical care and related work. 
+
+in  order 
+
+Knowledge 
+Traditionally,  hospital  staff  take  the  primary  role  in 
+managing  patients  during  the  course  of  a  hospitalization. 
+After discharge, patients and their caregivers must take over 
+this  management task. Staff try to prepare patients for this 
+transition  by  providing  the  appropriate  knowledge  and 
+resources  to  ensure  a  smooth  and  seamless  transition. 
+Interventions  that  provide  patients  with  medical  education 
+at  and  beyond  the  time  of  discharge,  facilitate  access  to 
+needed  resources,  or  support  self-efficacy  have  been 
+successful  in  improving  patient  health  and  quality  of  life 
+and decreasing readmission rates [13,57,62]. However, not 
+all  interventions  have  been  reliably  successful,  suggesting 
+additional studies are needed to identify useful strategies to 
+reduce readmissions [29].  
+
+Despite the education currently provided, patients continue 
+to face many challenges after discharge from the hospital. It 
+has  been  estimated  that  up  to  20%  of  patients  discharged 
+from  US  hospitals  suffer  some  type  of  adverse  event 
+leading  to  re-hospitalization  within  90  days,  one  third  of 
+which  are  preventable  [25].  Lack  of  knowledge  is  a  key 
+factor in these events related to: low health literacy [3,34], 
+and  a  poor  understanding  of  medication  regimens  [45]. 
+These  knowledge  deficits  lead  to  a  gap  in  effective  care 
+after discharge. 
+
+Some  have  explored  technological  solutions  to  address 
+these  gaps  in  knowledge.  For  example,  researchers  have 
+developed  relational  agents  to  act  as  a  virtual  nurse  who 
+helps disseminate information prior to discharge [64] or as 
+a  virtual  pharmacist  who  helps  detect  and  resolve  issues 
+that  arise  post-hospitalization  [50].  The  patients  preferred 
+receiving  their  virtual  discharge  nurse  over  their  human 
+nurse  or  doctor  and  expressed  high  levels  of  satisfaction 
+with the virtual agent.  
+
+Resources  
+To  successfully  manage  health  and  disease  outside  the 
+hospital setting, patients must also have access to resources 
+that  support  their  transition  to  home  care.  Patients  face 
+many  impediments  needed  to  mange  health  outside  the 
+hospital  setting.  These  impediments  include  inadequate 
+[54],  challenges  with 
+social  and 
+
+support 
+
+family 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5325transportation and obtaining medication [40]. These barriers 
+to  resources  can  be  particularly  exacerbated  among 
+vulnerable  populations.  For  example,  children  and 
+adolescents  are  often  dependent  on  their  families  and 
+[15],  and 
+communities 
+individuals  of 
+lack 
+resources  to  access  health  care  or  engage  in  healthy 
+behaviors [9,36]. 
+
+low  socioeconomic  status  often 
+
+for  health-related 
+
+resources 
+
+Self-efficacy 
+Self-efficacy refers to a person’s confidence in their ability 
+to  accomplish  a  specific  goal  [5,6,12].  Lorig  and  Holman 
+describe that in addition to understanding and managing the 
+medical components of illness, people need to manage their 
+behaviors  as  well  as  the  emotional  sequelea  and  self-
+illness  [43].  Although 
+their 
+efficacy  associated  with 
+education programs focusing just on medical aspects of the 
+disease  are  not  sufficient  to  improve  health  outcomes  in 
+adults  [27],  those  focusing  on  medical  management,  self-
+efficacy, and emotional support, the three tasks required for 
+self-management,  have  demonstrated  benefits  in  a  variety 
+of chronic conditions [44].  
+
+Goal  setting,  a  key  component  of  self-efficacy,  also  plays 
+an important role in helping patients manage their illnesses. 
+Bodenheimer and colleagues describe how these goals help 
+with  the  creation  of  action  plans,  developed  by  patients 
+through the use of problem solving skills [12]. The creation 
+and  successful  completion  of  patient-derived  action  plans, 
+(which take into account knowledge and resources), support 
+self-efficacy,  and  provides  patients  with  the  confidence  to 
+manage 
+increased 
+motivation leading to self-management success. In addition, 
+coaching  has  shown  to  be  effective  in  enhancing  self-
+management especially during times of transition [49].  
+
+illness.  This  results 
+
+their  own 
+
+in 
+
+the  goal-forming  process.  Peers  help 
+
+Although  self-directed  goal  formation  is  important  for 
+patients,  patients  often  also  turn  to  others  with  similar 
+conditions for information as well as guidance and support 
+in 
+through 
+informational [18], emotional [51], and instrumental forms 
+of  support  [32].  With  the  explosion  of  online  health 
+communities there are many opportunities for individuals to 
+obtain  support  beyond  their  immediate  social  network. 
+Hartzler  and  colleagues  describe  how  experienced  patients 
+do  not  serve  as  just  “amateur  doctors,”  but  rather  offer 
+valuable  personal  information  that  clinicians  often  cannot 
+provide  [30].  Patient  expertise  explores  “strategies  [used] 
+for  coping  with  day-to-day  personal  health  issues  gained 
+through  trial  and  error  of  the  lived  experience  [30].” 
+Integrating  patient  expertise  and  promoting  social  support 
+resources  in  times  of  transition  should  therefore  help 
+inexperienced  patients  with  finding  and  setting  realistic 
+goals. 
+
+With  realistic  goals,  patients  then  require  decision-making 
+and  problem  solving  skills  to  support  goal  attainment. 
+These key skills of self-management require individuals to 
+have access to, gather and interpret data (i.e. sensemaking). 
+
+Mamykina  and  colleagues  have  proposed  a  sensemaking 
+framework for chronic-disease self-management [46]. With 
+patients in one of two modes based on the familiarity of an 
+experience,  they  utilize  different  skills  to  navigate  these 
+experiences.  
+
+Recognizing  the  benefits  of  self-management,  hospitals 
+have  an  opportunity  to  integrate  knowledge,  facilitate 
+access  to  resources,  and  support  self-efficacy,  to  aid 
+patients as they transition from hospital care to self care.  
+
+METHODS 
+Our work is part of a larger study, which was approved by 
+the authors’ institutional review board and the participating 
+hospitals, exploring how to increase patient engagement in 
+preventing  hospital-based  errors.  We  conducted  interviews 
+and observations with 28 adult and pediatric (i.e. child and 
+adolescent) patients and their caregivers hospitalized at two 
+different  hospitals  in  Seattle,  Washington,  United  States. 
+One  is  an  adult  hospital  that  serves  local  patients  from 
+various  socioeconomic  and  ethnic  backgrounds.  The  other 
+is  a  children’s  hospital  that  serves  pediatric  patients  from 
+urban  and  rural  areas  from  various  regional  states.  We 
+chose  these  two  sites  because  of  the  different  challenges 
+faced  by  adult  and  pediatric  patients  in  the  discharge 
+process. While adult patients may have a caregiver assisting 
+them  post-discharge,  pediatric  patients  almost  always  rely 
+on  the  support  of  adult  caregivers  because  of  their  minor 
+status  and  they  may  not  be  developmentally  capable  of 
+caring for themselves. Thus pediatric patients are dependent 
+on caregivers who have their own goals and needs to aid in 
+the  patients’  self-management.  Therefore  we  sought  to 
+understand  and  include  multiple  populations  to  understand 
+the  range  of  complexities  and  associated  with  and 
+similarities across self-care strategies. 
+
+Study Procedures 
+Patients  were  recruited  over  a  four-month  period  between 
+February  2015  and  May  2015.  For  each  patient,  we 
+conducted  three  semi-structured  interview  or  observation 
+sessions that occurred pre- and post-discharge. First, while 
+the patient was in the hospital, the initial sessions with both 
+patients and their caregivers lasted 40-60 minutes. Next we 
+observed  the  patient  while  he/she  was  still  in  the  hospital 
+for  60-90  minutes.  Typically, 
+interviews  and 
+observations  occurred  1-2  days  prior  to  the  patient’s 
+discharge.  Finally,  we  carried  out  a  follow-up  phone 
+interview within 1-2 weeks after the patient was discharged 
+from  the  hospital.  Follow-up  interviews  lasted  up  to  30 
+minutes  and  were  guided  and  informed  by  the  initial 
+interviews  and  allowed  us  to  determine  if  the  patients’ 
+needs and expectations were met after discharge. 
+
+these 
+
+In the interviews, participants (both patients and caregivers) 
+were asked about their current hospital visit, exploring their 
+experiences  in  providing  and receiving  information  related 
+to  their  care.  The  follow  up  interviews  occurred  shortly 
+after  discharge  and  followed  up  on  items  discussed  and 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5326events that occurred after the first interview. All interviews 
+were audio-recorded and transcribed prior to analysis. 
+
+patients had a range of educational levels, with most having 
+had at least some college. 
+
+We  also  conducted  bedside  observations  with  all  the 
+participants, typically after the initial interview. During the 
+observation  period,  a  member  of  the  research  team  sat  in 
+took  notes.  We  focused  on 
+the  hospital  room  and 
+discussions  regarding  the  patient’s  care,  communications 
+between patients, caregivers, and providers, and finally the 
+use of technology or other information artifacts in the room. 
+
+Study Sites  
+Our study took place at one adult and one pediatric hospital 
+in  a  large  urban  area,  Seattle,  WA,  in  the  United  States. 
+Each hospital serves as a tertiary referral center for a large 
+geographic  region.  The  adult  hospital  admits  over  16,000 
+patients  each  year,  and  the  pediatric  hospital  admits  over 
+15,000 patients each year. Patients at the adult hospital have 
+similar demographics with the local area’s population, and 
+two-thirds of the patients are covered by private insurance. 
+The  pediatric  hospital  has  a  slightly  more  diverse  patient 
+population  then  the  surrounding  area,  and  less  than  half 
+have private insurance. 
+
+Participants 
+Due to our site selection and sampling methods we had the 
+opportunity  to  recruit  patients  with  a  wide  variety  of  ages 
+and  medical  conditions.  This  allowed  us  to  see  whether 
+themes  were  common  across  age  and  medical  condition. 
+We recruited a total of 48 people to participate: 28 patients 
+and  20  caregivers  across  both  sites.  Our  methodology 
+utilized a purposeful sampling framework focusing on age, 
+gender, ethnicity,  medical service, and disease complexity. 
+Research coordinators employed by each hospital recruited 
+and consented participants on behalf of the research team.  
+
+Patient  participants  had  diverse  reasons  for  being  in  the 
+hospital,  which  represented  varying  levels  of  complexity 
+and medical needs. Fifty percent of the patients, were in the 
+hospital  on  the  surgical  service  after  undergoing  different 
+procedures such as a heart or kidney transplant, hip repair, 
+gall  stone  removal,  cleft  lip  repair,  and  infection  drainage. 
+The other 50% of patients were cared for on medical teams 
+for  problems  such  as  a  blood  infection,  diabetes,  Chron’s 
+disease,  chronic  obstructive  pulmonary  disease,  kidney 
+failure,  pneumonia,  and  heart  disease.  Otherwise,  patients 
+were  equally  divided  in  the  following  categories:  pediatric 
+vs  adult,  chronic  vs.  non-chronic  conditions,  and  male  vs. 
+female. Though, of the 28 patients, 20 had previously been 
+hospitalized for some reason that could have been related to 
+the  current  condition  for  which  they  were  receiving  care. 
+Patients’  ages  ranged  between  7  and  76.  In  the  pediatric 
+hospital  (14  patients),  half  of  the  patients  were  age  7-13 
+years  and  half  age  13-17  years.  In  the  adult  hospital  (14 
+patients),  patients  were  evenly  split  between  ages  18-39, 
+40-59,  and  60-76  years.  Patients  were  more  ethnically 
+diverse 
+the  American  population:  18  were 
+White/Caucasian, 6 Black/African American, 3 Hispanic, 2 
+Asian,  and  1  American  Indian/Alaska  Native.  Adult 
+
+than 
+
+In  addition,  we  enrolled  20  caregivers  who  were  present 
+when patients were recruited. Half were 18-39 and the other 
+half  were  40-59.  Caregivers  were  predominantly  female, 
+especially at the pediatric hospital. Of the 20 caregivers that 
+participated,  16  were  parents  of  pediatric  patients  and  4 
+were caregivers of adult patients. 
+
+Analysis 
+Throughout  the  interviews  and  observations,  the  research 
+team  met  regularly  to  discuss  preliminary  findings  and 
+identify  themes  in  the  data  to  identify  the  gaps  associated 
+with  discharge  preparation.  Transcripts  were  reviewed  and 
+coded by three members of the research team using AtlasTi. 
+Initial  coding  was  developed  through  an  iterative  process 
+and not guided by a theory or framework identified a priori.  
+
+and 
+
+support 
+
+FINDINGS 
+Throughout our analysis, it became clear that the challenges 
+patients experienced during their time of transition to self-
+management related to three areas: Knowledge, Resources, 
+and  Self-efficacy  (KRS).  Below  we  show  how  the  KRS 
+areas  frame  two  key  themes:  (1)  Gaps  in  System-based 
+(2)  Elements  of 
+Self-Management 
+Individual  Self-Management.  Gaps  in  system-based  self-
+management  support  relate  to  the  importance  of  hospital-
+based practices  in supporting  individuals  as  they  transition 
+from  hospital  management  to  self-management.  Elements 
+of individual self-management relate to the various states of 
+individuals 
+towards  effective  self-
+management.  Below  we  describe  findings  by  theme  and 
+provide  quotations  to  illustrate  each  theme.  We  identify 
+participants with a code: The first letter indicates the site as 
+adult  (A)  or  pediatric  (P),  the  second  letter  designates 
+patient  (P)  or  caregiver  (C),  and  the  number  is  a  unique 
+identification provided by the research team.  
+
+journey 
+
+their 
+
+in 
+
+Gaps in System-based Self-Management Support 
+Despite  the  large  amounts  of  knowledge  patients  gain 
+during a hospitalization, many patients are still unprepared 
+to  successfully  self-manage  their  illness  at  home.  This 
+finding was present in both adult and pediatric populations 
+and  across  different  medical  conditions.  The  gap  between 
+hospital  management  and  self-management  is  related  to 
+three  key  factors:  (1)  most  information  transferred  to 
+patients  occurs  verbally,  which  makes  it  difficult  for 
+patients  to  process  and  remember,  (2)  patients  lack  the 
+necessary  patient  expertise  to  adequately  integrate  the 
+knowledge  back  into  their  lives,  and  (3)  patients  and 
+caregivers  often  have  low  self-efficacy,  preventing  them 
+from  accomplishing  specific  tasks.  Although  the  later  two 
+items  are  individual  in  nature,  we  identify  how  all  three 
+factors relate back to fundamental system failures.  
+
+Challenges  with  verbal  information  transfer.  Although 
+most  hospitals  utilize  electronic  health  records  (EHR)  to 
+document, order, and organize the care provided to patients 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5327in the hospital, these systems support the information needs 
+of  clinicians  rather  than  patients.  Despite  the  fact  that 
+patients  are  legally  entitled  to  their  medical  information 
+contained  within  the  EHR,  most  hospitals  do  not  provide 
+easy or timely access [33,47]. Instead, patients obtain most 
+of  their  results  and  the  reasoning  behind  the  care  they 
+receive  verbally  from  nurses  and  physicians.  However, 
+without  a  concrete  record  for  patients  to  refer  to,  their 
+ability to retain it for future use is called into question. Not 
+to  mention  the  overwhelming  volume  of  information 
+presented over the course of a hospitalization: 
+
+I didn't understand and they were talking so fast and I didn't 
+know  what  was  important  and  what  wasn't.  Like  I  wasn't 
+able to tell my family what was going on because there was 
+just so much information. (PC04) 
+
+In  addition  to the  lack of  tangible  information  available  to 
+patients  after  a  verbal  exchange,  another  important  barrier 
+relates to the physical and mental state of patients while in 
+the  hospital.  Often  patients  are  not  capable  of  interacting 
+with  the  medical  team  in  a  way  conducive  to  effective 
+information transfer.  
+
+to 
+
+relates 
+parameters required for self-management.  
+
+the  ability 
+
+track 
+
+to 
+
+important  metrics  or 
+
+If  I  can’t  keep  track,  I  forgot  and  then  usually  I  need  my 
+parents  to  help  me  keep  track  of  some  things,  because  if  I 
+don’t keep track of it I lose information. (PP05) 
+
+When  patients  lack  expertise  they  feel  overwhelmed  or 
+helpless,  and  not  knowing  where  to  turn  for  help.  In  this 
+situation  patients  clearly  lack  both  knowledge  and  self-
+efficacy to manager their illness. 
+
+Sometimes  she’ll  get  sad  or  she’ll  feel  like  she’s  alone. 
+(PC14) 
+
+the 
+
+Fortunately, instead of taking the time to develop their own 
+expertise,  patients  turn  to  others  for  help.  Although  many 
+have  discussed 
+importance  of  online  patient 
+communities [18,26,52] as well as in-person patient support 
+groups [32] that support the needs of patients with a chronic 
+illness,  little  is  known  about  how  a  resource  of  peer 
+expertise might help people in the hospital prepare for self 
+management.  Nonetheless,  we  found  that  patients  are 
+clearly interested in such a resource. 
+
+I really was out of it, I was not the best advocate for myself 
+while  I  was  there,  because  I  was  at  such  diminished 
+capacity that I wasn't advocating for myself like I normally 
+would when I'm in my normal state. (AP06) 
+
+We haven’t [found any other families who need to deal with 
+the same condition]. It’s something I would definitely like to 
+do  -  being  that  we  live  in  a  smaller  area,  our  options  are 
+pretty small. (PC14) 
+
+Despite  the  strong  efforts  of  hospitals  to  educate  their 
+patients  in  preparation  for  discharge,  patients  continue  to 
+have large gaps in the information or knowledge needed to 
+support  them  in  self-management  due  to  communication 
+challenges  stemming  from  a  lack  of  understanding  of 
+complex  medical  information  and  being  unprepared  or 
+unable to process this information.  
+
+Lack  of  patient  expertise.  Although  some  discharge 
+information provides a basic framework for re-introduction 
+into  life  outside  of  the  hospital,  many  patients  are  not 
+completely  prepared  for  this  transition.  Because  patient-
+expertise  requires  some  degree  of  trial  and  error  through 
+real  experiences,  it  is  not  surprising  that  patients  are 
+unprepared  after  discharge.  In  the  controlled  setting  of  the 
+hospital,  patients  are  not  exposed  to  the  variety  or 
+spontaneity  of  interactions  they  are  likely  to  experience 
+once they leave the hospital.  
+
+I mean for her, she's like "Am I still going to be able to do 
+my  sport?"  Even  though  they  keep  saying  that,  she  won't 
+believe it until she does. (PC06) 
+
+So I felt like I was prepared to take care of him, it was just a 
+matter  of  taking  care  of  him  in  our  environment  that  we 
+were  going  to.  That  I  wasn't  sure  about  -  and  am  still  not 
+sure, we're still figuring it out. (PC04) 
+
+However,  for  many,  discovering  a  lack  of  expertise  only 
+occurs after getting back home. Often, the lack of expertise 
+
+Although  we  know  that  patient  expertise  does  exist  in  the 
+hospital,  the  ability  for  non-expert  patients  to  obtain  this 
+form  of  support  from  those more  experienced  while  in  the 
+hospital  is  constrained  because  of  privacy  concerns  or 
+physical constraints related to an illness.  
+
+Due to gaps in knowledge, specifically understanding how 
+to  integrate  their  illness  into  their  daily  routines  after 
+leaving  the  hospital,  as  well  as  poor  self-efficacy,  patients 
+clearly lack the expertise or confidence necessary to engage 
+in self-management before leaving the hospital. 
+
+self-efficacy.  Many  patients 
+
+Low 
+feel  completely 
+overwhelmed  by  their  illness,  and  this  feeling  leads  to  the 
+inability to effectively self-manage. 
+
+It's been overwhelming, one day at a time. Just trying to - I 
+mean it's just reorganization of your entire life. (PC06) 
+
+However,  providing  patients  and  their  caregivers  with 
+simple  support  tools,  allows  them  to  escape  the  cycle  of 
+despair and hopelessness. Support can come in the form of 
+informational,  emotional,  or  instrumental  (i.e.  providing 
+additional resources) [32].  
+
+When  I’m  really,  really  worried,  I  get  really  stressed  out 
+and  no  one  helps  me,  and  I  overstress  and  I  get  just  -  but 
+when someone helps me, I stop stressing (PC05) 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5328Although  hospital-based  systems  provide  significant  and 
+diverse  forms  of  support  to  patients  in  the  hospital,  this 
+support  does  not  adequately  prepare  all  patients  for 
+successful  self-management  after  leaving  the  hospital.  We 
+identified specific challenges in ensuring that patients have 
+the  necessary  knowledge,  resources,  and  self-efficacy  to 
+support  successful  self-management.  However,  ensuring 
+patients  have 
+the  emotional  and  physical  support 
+throughout  their  hospitalization,  should  help  foster  self-
+efficacy  earlier,  which  in  turn  should  help  facilitate 
+knowledge  acquisition  and  ultimately  the  development  of 
+patient expertise easing the transition to self-management. 
+
+Elements of Individual Self-Management  
+We  found  that  both  adult  and  pediatric  patients  and  their 
+caregivers  discussed  knowledge,  resources,  and  self-
+efficacy  as  important  issues  to  support  self-management. 
+Based  on  these  findings,  we  developed  the  Knowledge, 
+Resources, and Self-efficacy (KRS) Framework of Hospital 
+Discharge  to  describe  how  these  elements  intersect  to 
+support  self-management  (Figure  1).  We  propose  this 
+framework  because  while  SCT  includes  these  concepts,  it 
+may  be  limited  in  the  hospital  setting  where  sociocultural 
+influences  may  be  constrained.  Also,  individuals  have  less 
+control  over  their  health  because  they  may  not  (1)  be 
+physically  or  mentally  capable  of  engaging  in  or  have 
+control of their care or (2) have access to key knowledge or 
+resources because of clinician- and system-level issues. 
+
+In  reality,  patients  might  have  two,  one,  or  none  of  the 
+elements,  which  can  hamper  efforts  to  engage  in  self-
+management. We will describe each of the combinations of 
+knowledge, resources, and self-efficacy and illustrate them 
+using quotes from the study. 
+
+Knowledge  only.  Patients  could  have  only  knowledge 
+without  resources  or  self-efficacy.  This  situation  is  seen 
+often  in  current  hospital  discharge  practice  in  which 
+patients are provided information about medications, future 
+appointments,  and  the  plan  for  managing  their  health. 
+However,  hospital  staff  do  not  (1)  assess  which  resources 
+patients  have  or  (2)  provide  time  for  patients  to  learn  and 
+practice skills that are needed to carry out the plans.  
+
+We saw an example of this in an adult patient (AP02). He 
+had  been  admitted  for  Chronic  Obstructive  Pulmonary 
+Disease  (COPD).  Although  he  had  been  living  with  the 
+disease  before  being  admitted  and  knew  what  medications 
+he needed to take. However, due to financial reasons he had 
+to  stop  taking  the  medication,  which  exacerbated  his 
+symptoms and lead to being admitted to the hospital.  
+
+I was off for a couple of weeks for financial reasons why I 
+didn't  get  it  refilled  and  stuff…My  condition  just  became 
+deteriorated.  I  had  trouble  breathing  and  I  was  real 
+fatigued all the time, and that brought me here. 
+
+He  also  stated  that  previously  he  did  not  have  the 
+motivation  to  adequately  care  for  his  health,  including 
+proper  use  of  the  oxygen  tank  he  had  been  prescribed. 
+
+Knowledge
+
+1
+
+Resources
+
+3
+
+2
+
+4
+
+Self-efficacy
+
+Figure 1. The Knowledge, Resources, and Self-efficacy 
+(KRS) Framework of Hospital Discharge. Self-management 
+(star). When lacking the complete set, patients may posses a 
+combination of elements (1-3), a single element (knowledge, 
+resources, or self-efficacy), or no elements (4). 
+
+While he had always cared for himself, he did not have the 
+motivation to listen and learn from the clinicians on how to 
+best  manage  his  health.  Ultimately,  he  appeared  to  be 
+gaining motivation to support the full development of self-
+efficacy. 
+
+I was just really ready to listen to what they were telling me 
+because  I  knew  there  was  something  that  was  out  of  my 
+control, something that I needed to let somebody else take 
+care of and listen to what they were saying … this was my 
+health, because I didn't like the way I was feeling. So I was 
+ready to listen … I kind of felt it was time to, like they say, 
+put  the  cotton  in  your  mouth  and  open  the  ears,  because 
+I've  always  taken  care  of  myself,  and  listen  to  myself,  and 
+make  my  own  decisions  based  on  myself.  I  never  –  but  I 
+thought it was time to listen to others. 
+
+Resources  only.  Some  patients  have  resources  but  not 
+knowledge  or  self-efficacy.  These  patients  have  access  to 
+social  and  physical  resources  (e.g.,  family  caregivers, 
+access  to  health  insurance  and  a  pharmacy  to  obtain 
+medication).  However,  the  hospital  staff  did  not  provide 
+them  all  the  information  needed  to  successfully  manage 
+their care because the information was not tailored to their 
+individual  needs.  Often,  the  materials  that  hospital  staff 
+utilize are created for a general population, such as exercise 
+and  diet  pamphlets  that  do  not  take  into  account  cultural 
+dimensions. Also, the patients do not have the confidence to 
+the 
+perform  new 
+opportunity  to  be  taught  and  practice  the  skills  under  the 
+guidance of health professionals at the hospital.  
+
+they  did  not  have 
+
+tasks  because 
+
+PC04  provides  an  example  of  having  only  resources.  The 
+pediatric  patient  and  his  caregiver  had  access  to  the 
+medications 
+the  pediatric  patient  needed  post-
+discharge.  However,  the  caregiver  did  not  have  the 
+information  and  skills  needed  to  prepare  the  medication 
+properly. 
+
+that 
+
+… they kept preparing me for the fact that this [medication] 
+would have to be given a certain way until he starts eating 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5329and  then  we  can  sprinkle  it.  It's  a  tab  that  has  the  little 
+sprinkles inside of it. Well, when I went to the pharmacy to 
+get  his  medications,  they  didn't  give  me  that  version  of  it. 
+They gave me a like a horse pill that I have to crush, and so 
+they  spent  so  much  time  preparing  me  for  one  thing  and 
+then I  got a  completely  different  version of  the  medication 
+... I kind of wish I would have gotten the medication maybe 
+a  couple  of  days  before  discharge,  so  I  could  have  done 
+them  in  the  hospital,  like  with  the  nurses,  just  so  I  would 
+have  had  a  better  idea  of  that.  Because  that  first  night  it 
+took me about two hours to do his medications. 
+
+Self-efficacy  only.  Patients  with  only  self-efficacy 
+represent few patients at discharge but could still exist and 
+be  impacted  by  the  current  discharge  practices.  These 
+patients have the confidence to manage their health but lack 
+the knowledge and resources to carry out self-management. 
+AP13 provides an illustration of self-efficacy only. She had 
+been  living with  Crohn’s Disease  for  over 10  years  so  she 
+had the skills and confidence on how to manage her health. 
+However,  she  had  been  admitted  to  the  hospital  for  a  new 
+kidney condition.  
+
+It’s  kind  of  a  habit  I’ve  cultivated  over  the  last  13  years 
+with Crohn’s, I make sure I have everything – everybody’s 
+questions in a row and I get them all answered … I’m kind 
+of  used  to all my  research being about guts  and  stuff, and 
+all of a sudden I’ve got kidneys to deal with… 
+
+She did not posses the knowledge about this new condition 
+because  the  clinicians  did  not  know  what  was  causing  the 
+problem  and  the  patient  did  not  know  much  about  kidney 
+disease. Also, she was having problems accessing adequate 
+medical care where she lived. 
+
+Trying to get information from here to [Medical clinic] and 
+[Medical  clinic]  to  here,  because  my  insurance  company 
+wanted me to have my primary a little closer to home, but I 
+think  that’s  just  not  going  to  be  a  workable  thing.  We’re 
+going to have to figure something out. 
+
+Knowledge  and  Resources  (Figure  1,  area  1).  The 
+patients who would benefit the most from a restructuring of 
+hospital  discharge  are  patients  who  have  knowledge  and 
+resources,  even  though  they  lack  self-efficacy.  These 
+patients  have  an  understanding  of  their  disease  and  its 
+management and have the resources to mange their health; 
+however,  they  are  in  need  of  motivation  or  confidence  in 
+their ability to manage their health.  
+
+Pediatric  participant  PP09  is  an  example  of  someone  who 
+has  knowledge  and  resources  but  lacks  self-efficacy.  The 
+hospital  provided  the  parent  with  information  about  post-
+discharge care. The pediatric patient also had social support 
+– their parent – and access to medical care including on-call 
+help via phone when needed. 
+
+I needed to know for the care of my son and they gave me 
+everything  what  I  need,  all  the  numbers,  if  I  had  any 
+questions. They gave me my follow up appointment. I mean, 
+
+basically  it  was  good.  They  gave  me  all  the  information  I 
+needed … I did call them … because for his blood pressure 
+- I've been doing at home so I did call them on Monday just 
+to  make  sure  that  his  blood  pressure  and  his  pulse  was  in 
+the right range. 
+
+However, the patient did not have the self-efficacy to take 
+their  medications.  The  parent  was  in  the  process  of 
+providing  him  the  confidence  in  his  ability  to  take 
+medications through teaching. 
+
+Right  now,  yes,  it's  just  me  [the  parent  giving  him  the 
+medications], but I'm also training him. I'm telling him you 
+need  to  know  and  now  I've  been  training  him  so  he  could 
+look at the pills and knows what pill is what. 
+
+Resources and self-efficacy (Figure 1, area 2). There may 
+be  patients  who  have  the  resources  and  self-efficacy  but 
+lack knowledge needed to engage in self-management. It is 
+possible  to  easily  address  this  by  providing  tailored 
+information  to  patients  before  discharge,  which  can  be 
+facilitated  by  clinical  and/or  personal  technologies.  These 
+patients are likely to have resources, including tangible and 
+informational,  available  after  discharge.  In  addition,  these 
+patients typically have high levels of motivation to get their 
+health back on track.  
+
+Caregiver  PC05  of  a  pediatric  patient  is  an  example  of 
+having  resources  and  self-efficacy  but  lacking  knowledge. 
+This parent was caring for her child and had the resources 
+and self-efficacy to learn about the medications her son was 
+taking and she had resources to purchase these medications. 
+She  also  had  some  knowledge  about  what  to  expect  after 
+discharge.  
+
+…we looked up some of the medications like on Google that 
+he's on now … we talked about what appointments he was 
+going to need after he was out, what appointments we had 
+to come back for … and following up with the kidney doctor 
+or the urology [doctor]. 
+
+However, she lacked important knowledge about her son’s 
+treatment plan, specifically what medications he needed to 
+take after discharge. 
+
+… so like when we left [the hospital] I wasn't sure if I was 
+still  supposed  to  give  him  the  [medication]  when  we  got 
+home,  I  realized  they  had  been  giving  him  an  anti-acid  in 
+the  hospital  but  there  wasn't  anywhere  on  the  form  about 
+whether or not we should take them. So I think there was a 
+slight gap in how everything - information passing over.  
+
+Knowledge  and  Self-efficacy  (Figure  1,  area  3).  The 
+situation  in  which  patients  have  knowledge  and  self-
+efficacy  but  not  resources  may  occur  frequently,  in 
+particular in areas where there may be system or structural 
+barriers to resources. An illustrative patient could include a 
+patient admitted to a hospital related to their diabetes. They 
+have had the disease for many years so they know about the 
+disease and how to manage it. However, they live in an area 
+with frequent power outages so it is difficult to keep critical 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5330medication  stored  in  their  refrigerator  at  the  proper 
+temperature. 
+
+AP12  exemplifies  this  scenario.  She  was  admitted  for  a 
+planned orthopedic surgery and had been given information 
+before  being  admitted  and  while  in  the  hospital.  She  also 
+had the confidence to take her medications and understand 
+much  about  the  medical  system  and  her  care  specifically 
+because she worked in healthcare.  
+
+I had kind of picked her [the surgeon’s] brain before on my 
+pre-op  appointment,  and  I  did  a  little  research  …  she  has 
+actually  a  documentary,  like  a  short  four-minute  thing  on 
+her website, it talks about what they do and what to expect 
+and  then  six  or  eight  months  down  the  road  I  should  be 
+going back to a more regular routine  
+
+However,  she  lacked  the  needed  resources  when  the 
+hospital, her health insurance, and her military benefits did 
+not coordinate, resulting in billing concerns. 
+
+…when  I  had  called  to  schedule  I  had  been  told  from  my 
+insurance  company  that  I  had  approval  and  I  called 
+scheduling, they said they didn’t have anything and because 
+I had military stuff pending on my surgery, she said “well, I 
+can send you a bill, but it’s going to be $60,000,” but they 
+didn’t  since  then.  And  I  called  financial  aid  and  all  that, 
+they haven’t said “well, your patient portion is going to be 
+this, and this is how much,” so I have no idea what my bill 
+looks like. And that bothered me a little bit going into this, 
+not knowing if I owe $10,000 or $10. 
+
+No knowledge, resources, or self-efficacy (Figure 1, area 
+4). These patients lack the knowledge, resources, and self-
+efficacy  to  engage  in  self-management.  They  may  be  the 
+most challenging at discharge but potentially have the most 
+to gain from any support. Because all of the subjects in our 
+study had access to healthcare, by the very nature of being 
+in  the  hospital,  we  have  no  such  examples  to  describe. 
+However,  here  we  provide  a  hypothetical  example  to 
+illustrate this case. Imagine a teenager who is a very recent 
+immigrant,  admitted  to  an  emergency  department  because 
+of injuries from a sexual assault. They come from a culture 
+where  sexual assault  is not discussed  so  they do  not know 
+about  what  constitutes  sexual  assault  and  consequences  of 
+being  sexually  assaulted.  Because  of  the  psychological 
+consequences  of  being  assaulted  and  being  in  a  new 
+country,  they  lack  confidence  in  their  ability  to  manage 
+their  health  or  social  interactions.  Also,  because  they  are 
+not  a  citizen  and  in  a  country  with  a  medical  system  with 
+which  they  are  unfamiliar,  they  may  lack  the  resources  to 
+medical care after they leave the emergency department.  
+
+DESIGN OPPORTUNITIES 
+Our analysis at the time of transition after a hospitalization 
+has  highlighted  the  presence  of  a  gap  between  hospital-
+based  care  and  individual-driven  care  at  home  for  both 
+adult and pediatric populations and across different medical 
+conditions.  This  gap  leads  to  challenges  for  patients 
+
+Figure 2. Ideally patients should have the opportunity to 
+develop the necessary self-management elements over 
+time while under the support and guidance of the hospital 
+and its resources prior to discharge.  
+
+to 
+
+to 
+
+this  problem.  With  understanding 
+
+recovering  from  an  illness  to  engage  in  self-management 
+because  often  there  are  not  opportunities  to  (1)  support 
+health knowledge, (2) to access resources, and (3) promote 
+self-efficacy,  each  of  which  contribute  to  successful  self-
+management  outside  the  hospital.  In  addition,  hospital-
+based  system  challenges  and  individual  personal  traits 
+contribute 
+the 
+contributing  factors 
+this  gap,  designers  have  an 
+opportunity  to  focus  on  specific  patient  needs  that  provide 
+support to patients during this risky time of transition from 
+hospital to home. Based on findings regarding expectations 
+and  experiences  post  discharge,  we  first  focus  on  system 
+support issues ripe for potential design improvements, then 
+discuss  the  opportunities  available  to  support  individual 
+patients who are missing one or more elements required for 
+the 
+effective 
+opportunities 
+in 
+take  place  prior 
+preparation for self-management after discharge to address 
+pre-discharge expectations and prevent adverse experiences 
+post-discharge. 
+
+self-management.  We 
+
+to  discharge 
+
+focused 
+
+that 
+
+on 
+
+System Support 
+Traditionally,  hospitals  expect  patients  to  begin  self-
+management  only  at  the  time  of  discharge.  Although  they 
+provide resources to support this transition, we have shown 
+that, in reality, patients still struggle. Given the importance 
+of  the  knowledge  gained  from  patient  expertise  and  self-
+efficacy  in  supporting  self-management,  it  is  unrealistic  to 
+expect  that  these  elements  will  be  present  immediately  at 
+the time of discharge. Ideally, a system should support their 
+progressive  development  over 
+transition  period, 
+culminating with patients completely engaging in their own 
+self-management  at  the  time  of  discharge  (Figure  2).  This 
+strategy  supports  patients  as  they  develop  the  necessary 
+skills,  without  having  to worry  about  failure,  because  they 
+remain supported by the hospital.  
+
+the 
+
+Through the KRS framework, we can beging to understand 
+the  unique  and  varying  needs  of  patients  throughout  their 
+hospitalization  and  morre  importantly  how  these  needs 
+change  overtime.  The  framework  will  allow  tools  to  be 
+tailored to meet the individual needs of patients in an early 
+yet  gradual  and  supported  transition  to  self-management, 
+taking  into  consideration  the  unique  constraints  (both 
+physical and cognitive placed on patients as a result of their 
+illness.  In  the  following  sections,  we  discuss  technology 
+opportunities to allow hospitals to realize this goal. 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5331Capturing and Retaining Verbal Information 
+We  have  described  multiple  issues  with  information 
+exchange  to  patients  due  to  communication  challenges  for 
+hospitalized patients that in turn can impact patients’ health 
+knowledge  and  self-efficacy.  These  include  excessive 
+amounts  of  information,  unfamiliar  or  confusing  medical 
+terms, an inability to process information in real time, and 
+an inability to receive information in the first place, due to 
+altered states of cognition resulting from a patient’s illness. 
+Not  only  is  the  volume  and  content  of  information 
+overwhelming for patients, but so is the speed at which it is 
+delivered, resulting in misunderstandings and errors [60].  
+
+In  the  outpatient  setting,  others  have  recommended  an 
+automated  approach  to  capturing  verbal  information  [60], 
+in  a  cancer  consultation  setting,  simple  audio 
+and 
+recordings have improved patients recall of the information 
+[61] and been rated highly by patients [1]. However, simple 
+audiotapes  provide  limited  search  and  retrieval  capability. 
+rounds  and  other 
+Capturing  verbal  content  during 
+hospital based clinician interactions could build on research 
+from the field of ubiquitous computing to go beyond simple 
+audio recordings. 
+
+the 
+
+review  of 
+
+further  contextualization  of 
+
+to  encourage 
+[38], 
+
+Although  embedded  capture  and  access  technologies  have 
+recorded 
+the  potential 
+conversations 
+this 
+information has the potential  to improve its  comprehension. 
+For  example,  medication  names,  laboratory  tests,  and  even 
+medical  problems  or  diagnoses  could  be  associated  with 
+relevant 
+tailored  medical 
+information)  [7,17]  providing  patients  the  ability  to  obtain 
+this  critical  information  on  demand  at  a  time  of  their 
+choosing.  
+
+InfoButtons 
+
+links  or 
+
+(i.e., 
+
+Finding Expertise in the Hospital 
+To  gain  clinical  knowledge  and  patient  expertise,  patients, 
+including  the  patients  in  this  study,  are  spending  more  time 
+online  searching  for  health  related  information,  including 
+other  patients’  experiences,  to address  various  gaps  [26,52]. 
+In addition, we know that patient expertise is obtainable from 
+both online communities as well as in-person support groups, 
+but  these  venues  typically  support  patients  outside  of  the 
+hospital  [18,32].  Although  preliminary  work  explores  how 
+social  interactions  support  children  and  adolescents  with 
+chronic  disease  in  the  hospital  setting  [59],  more  work  is 
+needed  to  understand  how  this  technology  can  support  both 
+children and adults during the times of transition at the end of 
+a  hospitalization.  Work  is  also  needed  to  explore  how 
+hospitals  and  patients  can  address  the  knowledge  needs  of 
+patients  who  may  not  have  reliable  or  any  access  to  online 
+resources  (e.g.,  lack  of  consistent  internet  access  because 
+they live in a rural area or lack a steady income to pay each 
+internet bill). 
+
+Besides  directing  patients  to  external  resources,  hospital-
+based  support  has  the  potential  to  also  fill  the  patient-
+expertise  gap.  Preliminary  work  [31,41]  has  shown  the 
+potential  in  cataloging  and  archiving  previous  patients’ 
+
+formats 
+
+personal histories, experiences, challenges, and solutions in a 
+(e.g.  written  or  video 
+variety  of  different 
+biographies),  allowing  current  patients 
+this 
+information from a trusted source with minimal effort. At the 
+very least hospitals need to enable patient access to expertise 
+from  their  peers,  and  provide  ways  for  them  to  locate  it 
+within the hospital [19]. 
+
+to  obtain 
+
+Supporting Self-Efficacy  
+Although we have described how gaps in clinical knowledge 
+and  patient  expertise  can  lead  to  low  self-efficacy,  systems 
+supporting  self-efficacy  also  support  self-management,  at 
+least  in  the  outpatient  setting  [12,14].  Preliminary  work  in 
+hospitals  have  shown  that  technology  supports  patient 
+engagement  leading  to  self-efficacy  through  contextualized 
+information and communication portals [22,23,63]. Although 
+these  systems  focus  on  care  planning,  goal  setting,  and 
+medication  tracking—all  important  for  improving  self-
+efficacy—our  results  demonstrate  the  need  for  additional 
+support tools.  
+
+We have reported patients’ challenges in understanding their 
+capabilities and limits related to physical activity and diet. In 
+addition,  patients  commented  on  their  ability  to  understand 
+how their actions impact certain clinical parameters—such as 
+blood tests, changes in body weight, or just their overall well-
+being. Therefore, providing patients with the ability to track a 
+variety of parameters, outcomes or actions may help provide 
+them  with  a  better  understanding  of  (1)  how  their  ability  to 
+meet  specific  goals  has  changed  over  the  course  of  their 
+hospitalization  and  (2)  how  their  behaviors  and  actions 
+directly  impact  their  clinical  course.  Work  outside  the 
+hospital  has  explored  the  benefits  of  self  tracking  related  to 
+general wellness [20] and chronic disease management [55], 
+but  little  is  known  about  how  this  technology  can  influence 
+patients  in  the  hospital.  In  addition,  we  need  to  develop 
+technological  solutions  that  support  the  integration  of  self-
+tracking  tools  and  electronic  health  records  so  patients  can 
+see  this  data  in  context  with  the  rest  of  their  medical 
+information.  These  tools  must  minimize  the  burden  of 
+tracking personal information [42], especially in light of the 
+physical  and  mental  constraints  faced  by  hospitalized 
+patients. Finally, we need to expand our understanding how 
+individuals  utilize  this  type  of  information  [16],  specifically 
+focusing  on  how  to  frame  the  data  to  support  patient  goals 
+and  self-efficacy,  which  are  likely  different  from  those 
+needed  to  support  general  wellness  or  chronic  disease 
+tracking activities outside the hospital. 
+
+Identifying Patients’ Needs to Provide Tailored Individual 
+Support 
+The common thread across the design recommendations we 
+have  discussed  thus  far  is  that  to  support  patient  self-
+management, hospitals and patients need to work together to 
+identify  which  of  the  three  elements  that  patients  possess. 
+With this understanding, using the KRS framework, systems 
+can  better  tailor  resources  to  meet  the  individual  needs  of 
+patients. To identify these needs requires both individual- and 
+system-level considerations. 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5332At the  individual  level, we need to ensure patients have the 
+necessary  skills  required  for  self-management  (e.g.  decision 
+making and problem solving) [43]. By identifying individual 
+deficiencies  in  one  or  more  of  the  three  elements—
+knowledge,  resources,  and  self-efficacy—hospital  staff  can 
+tailor  specific  strategies  to  fit  the  underlying  needs.  Most 
+often this work will rely on a combination of technologies we 
+just  described.  However,  to  ensure  resources  are  allocated 
+efficiently  and  effectively,  understanding  individual  patient 
+needs  will  be  key.  In  addition,  these  tools  should  support 
+short-  and  long-term  self-management  tailored  to  a  specific 
+type or class of  medical conditions. Individuals with an acute 
+medical  condition,  such  as  a  broken  bone,  and  a  chronic 
+medical  condition,  such  as  diabetes,  will  need  knowledge, 
+resources,  and  self-efficacy  to  engage  in  self-management. 
+The difference lies in how long self-management needs to be 
+sustained. In particular, for individuals with chronic diseases, 
+their  knowledge,  resources,  and  self-efficacy  needs  may 
+change over time and disease progression, and therefore the 
+self-management  strategies  may  need  to  adjust  to  those 
+changes requiring the use of flexible tools and strategies. 
+
+At the system level, hospitals need to support patients as they 
+transition  from  hospital  management  to  self-management. 
+This will require multiple changes to existing hospital-based 
+practices. Hospitals and clinicians need to improve how they 
+educate  patients  about  their  medical  condition,  remove  the 
+emphasis on verbal lines of transmission, support additional 
+patient-expertise  searching,  and  ensure  patients  have  the 
+confidence necessary to provide their own care without direct 
+medical  supervision.  Finally,  utilization  of  one  or  more  of 
+these  systems  will  require  that  hospital  staff  understand  the 
+individual patient and his or her needs.  
+
+and 
+
+both 
+
+individual- 
+
+system-level 
+
+For 
+design 
+recommendations, consideration of the KRS framework and 
+how it supports self-management requires appropriate patient 
+training and education. Knowledge, the most straightforward, 
+requires  that  patients  gain  clinical  knowledge  and  patient 
+expertise  required  to  engage  in  self-management  of  their 
+illness.  Self-efficacy 
+the 
+confidence and motivation required to change their behaviors 
+and  for  realistic  goal  setting.  Finally,  learning  appropriate 
+problem-solving  and  decision-making  skills,  both  key  tasks 
+in self-management [43,46], help individuals find and access 
+social and structural resources needed to mange their health. 
+
+that  patients  gain 
+
+requires 
+
+tailored 
+
+information 
+
+Traditional  hospital  educational  programs  that  only  transmit 
+information,  which  is  usually  the  same  across  all  patients, 
+should  be  replaced  with 
+is 
+appropriate for their cognitive development (e.g., toddler vs. 
+older  adult)  to  support  active  learning.  Therefore,  designers 
+should  explore  how  the  key  learning  principles  of  growth, 
+diversity,  cognitive  development,  and  motivation  [56], 
+support  the  cultivation  of  self-management  skills.  Hospital 
+educational resources should therefore support  methods that 
+incorporate  these  principles  to  support  patients  as  they 
+prepare for hospital discharge. 
+
+that 
+
+Limitations and future work 
+Although  our  work  provides  insight  into  the  challenges 
+facing  patients  around  the  time  of  discharge  from  a 
+hospitalization,  we  need  to  recognize  its  limitations.  Our 
+sample  represents  the  patients  from  only  two  different 
+institutions in a single metropolitan area in the United States. 
+Although  both  institutions  provide  care  to  patients  from  a 
+wide  geographic  area  and  diverse  sociocultural  and  medical 
+backgrounds,  our  findings  may  not  be  generalizable  and 
+therefore  should  be  validated  at  additional  institutions  and 
+locations  within  and  beyond  the  United  States.  In  future 
+work,  we  would  like  to  follow  patients  throughout  their 
+hospitalization to understand how best to begin fostering self-
+management.  Finally,  our  data  focused  exclusively  on 
+patients  and  caregivers,  using  their  own  perspectives  and 
+stories. Given the significant role hospital staff play in these 
+issues,  they  should  be  included  in  future  studies,  not  just 
+obtaining  their  perspective  on  the  challenges  related  to 
+transitioning  to  self-management,  but  more  importantly  on 
+the  development  and  validation  of  future  technological 
+resources. 
+
+to 
+
+their 
+
+illness 
+
+CONCLUSION 
+In this paper, we describe how patients discharged from the 
+hospital  often  are  unprepared  as  they  transition  from 
+hospitals  managing 
+their  own  self-
+management. We make three primary contributions. First, we 
+show  that—despite  their  best  efforts—hospital  systems  do 
+not  utilize  their  resources  in  ways  that  adequately  support 
+patients during the transition period. In addition, we describe 
+how patients lack the key elements of knowledge, resources, 
+and  self-efficacy  required  for  self-management  outside  the 
+hospital.  Finally,  we  outline  design  opportunities  for  new 
+systems to support patients in their self-management journey. 
+These  technological  opportunities  have  the  potential  to 
+empower  patients,  affording  them  the  opportunity  to  focus 
+less on living with an illness, and just living. 
+
+ACKNOWLEDGMENTS 
+We thank our participants, who graciously gave us their time 
+and  attention  during  their  hospital  stay.  We  thank  the 
+Patients  as  Safeguards  team,  including  Barry  Aaronson, 
+Shefali  Haldar,  Alex  Filipkowski,  Kelsey  Aiello,  and  Cory 
+Brown. We also thank Virginia Mason and Seattle Children’s 
+hospitals.  This  project  was  primarily  supported  by  grant 
+#1R01HS022894  from  the  Agency  for  Healthcare  Research 
+and Quality (AHRQ), with additional funding from the NIH 
+National 
+Training  Grant 
+of  Medicine 
+#T15LM007442.  
+
+Library 
+
+REFERENCES 
+1.  Gregory D. Abowd and Elizabeth D. Mynatt. 2000. 
+
+Charting past, present, and future research in ubiquitous 
+computing. Transactions on Computer-Human 
+Interaction (TOCHI) 7, 1: 29–58. 
+http://doi.org/10.1145/344949.344988 
+
+2.  David W. Baker, Julie A. Gazmararian, Mark V. 
+
+Williams, et al. 2002. Functional health literacy and the 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5333risk of hospital admission among Medicare managed 
+care enrollees. American journal of public health 92, 8: 
+1278–1283. 
+
+3.  David W. Baker, Ruth M. Parker, Mark V. Williams, 
+and W. Scott Clark. 1998. Health literacy and the risk 
+of hospital admission. Journal of General Internal 
+Medicine 13, 12: 791–798. 
+http://doi.org/10.1046/j.1525-1497.1998.00242.x 
+4.  Richard B. Balaban, Joel S. Weissman, Peter A. 
+
+Samuel, and Stephanie Woolhandler. 2008. Redefining 
+and redesigning hospital discharge to enhance patient 
+care: a randomized controlled study. Journal of General 
+Internal Medicine 23, 8: 1228–1233. 
+http://doi.org/10.1007/s11606-008-0618-9 
+
+5.  Albert Bandura. 1977. Self-efficacy: toward a unifying 
+theory of behavioral change. Psychological Review 84, 
+2: 191–215. http://doi.org/10.1016/0146-
+6402(78)90002-4 
+
+6.  Albert Bandura. 2004. Health Promotion by Social 
+
+Cognitive Means. Health Education & Behavior 31, 2: 
+143–164. http://doi.org/10.1177/1090198104263660 
+
+14.  Kristin L. Carman, Pam Dardess, Maureen Maurer, et 
+al. 2013. Patient and family engagement: a framework 
+for understanding the elements and developing 
+interventions and policies. Health Affairs (Project 
+Hope) 32, 2: 223–231. 
+http://doi.org/10.1377/hlthaff.2012.1133 
+
+15.  Richard Charlton, Michael B. Gravenor, Anwen Rees, 
+et al. 2014. Factors associated with low fitness in 
+adolescents - a mixed methods study. BMC Public 
+Health 14, 1: 764. http://doi.org/10.1186/1471-2458-
+14-764 
+
+16.  Eun Kyoung Choe, Nicole B. Lee, Bonghin Lee, 
+
+Wanda Pratt, and Julie A. Kientz. 2014. Understanding 
+quantified-selfers' practices in collecting and exploring 
+personal data. http://doi.org/10.1145/2556288.2557372 
+
+17.  James J. Cimino, G Elhanan, and Q Zeng. 1997. 
+
+Supporting infobuttons with terminological knowledge. 
+AMIA Annual Symposium Proceedings: 528–532. 
+18.  Andrea Civan and Wanda Pratt. 2007. Threading 
+
+together patient expertise. AMIA Annual Symposium 
+Proceedings: 140–144. 
+
+7.  David M. Baorto and James J. Cimino. 2000. An 
+
+19.  Andrea Civan-Hartzler, David W. McDonald, Chris 
+
+8. 
+
+9. 
+
+“infobutton” for enabling patients to interpret on-line 
+Pap smear reports. Proceedings / AMIA ... Annual 
+Symposium. AMIA Symposium: 47–50. 
+Julie Barlow, Chris Wright, Janice Sheasby, Andy 
+Turner, and Jenny Hainsworth. 2002. Self-management 
+approaches for people with chronic conditions: a 
+review. Patient Education and Counseling 48, 2: 177–
+187. 
+Priscilla Barnes, Kelly Caine, Kay Connelly, and Katie 
+Siek. 2013. Understanding the needs of low SES 
+patients with type 2 diabetes. ICST (Institute for 
+Computer Sciences, Social-Informatics and 
+Telecommunications Engineering). 
+http://doi.org/10.4108/icst.pervasivehealth.2013.252153 
+10.  Yoav Ben-Shlomo and Diana Kuh. 2002. A life course 
+approach to chronic disease epidemiology: conceptual 
+models, empirical challenges and interdisciplinary 
+perspectives. International Journal of Epidemiology 31, 
+2: 285–293. 
+
+11.  Jochanan Benbassat and Mark Taragin. 2000. Hospital 
+readmissions as a measure of quality of health care: 
+advantages and limitations. Archives of Internal 
+Medicine 160, 8: 1074–1081. 
+
+12.  Thomas Bodenheimer, Kate Lorig, Halsted Holman, 
+
+and Kevin Grumbach. 2002. Patient self-management 
+of chronic disease in primary care. JAMA 288, 19: 
+2469–2475. 
+
+13.  Robert E. Burke, Ruixin Guo, Allan V. Prochazka, and 
+Gregory J. Misky. 2014. Identifying keys to success in 
+reducing readmissions using the ideal transitions in care 
+framework. BMC Health Services Research 14, 1: 423. 
+http://doi.org/10.1186/1472-6963-14-423 
+
+Powell, Meredith M. Skeels, Marlee Mukai, and Wanda 
+Pratt. 2010. Bringing the field into focus: user-centered 
+design of a patient expertise locator.  ACM  Request 
+Permissions, 1675–1684. 
+http://doi.org/10.1145/1753326.1753577 
+
+20.  Sunny Consolvo, Katherine Everitt, Ian Smith, and 
+
+James A. Landay. 2006. Design requirements for 
+technologies that encourage physical activity. 
+http://doi.org/10.1145/1124772.1124840 
+
+21.  Juliet M. Corbin and Anselm Strauss. 1988. Unending 
+work and care: managing chronic illness at home. 
+Jossey-Bass. 
+
+22.  Anuj K. Dalal, Patricia C. Dykes, Sarah Collins, et al. 
+2015. A web-based, patient-centered toolkit to engage 
+patients and caregivers in the acute care setting: a 
+preliminary evaluation. Journal of the American 
+Medical Informatics Association : JAMIA: ocv093. 
+http://doi.org/10.1093/jamia/ocv093 
+
+23.  Patricia C. Dykes, Diana Stade, Frank Chang, et al. 
+
+2014. Participatory Design and Development of a 
+Patient-centered Toolkit to Engage Hospitalized 
+Patients and Care Partners in their Plan of Care. 
+Proceedings of the AMIA Symposium 2014: 486–495. 
+24.  Geraldine Fitzpatrick and Gunnar Ellingsen. 2013. A 
+
+Review of 25 Years of CSCW Research in Healthcare: 
+Contributions, Challenges and Future Agendas. 
+Computer Supported Cooperative Work (CSCW) 22, 4-
+6: 609–665. http://doi.org/10.1007/s10606-012-9168-0 
+25.  Alan J. Forster, Harvey J. Murff, Josh F. Peterson, Tejal 
+
+K. Gandhi, and David W. Bates. 2003. The incidence 
+and severity of adverse events affecting patients after 
+discharge from the hospital. Annals of Internal 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5334Medicine 138, 3: 161–167. 
+
+26.  Susannah Fox. 2011. The social life of health 
+
+information, 2011. Pew internet & American life 
+project. Retrieved from 
+http://pewinternet.org/Reports/2011/Social‐Life‐of‐
+Health‐Info.aspx 
+
+27.  Peter G. Gibson, Heather Powell, Amanda J. Wilson, et 
+
+al. 2002. Limited (information only) patient education 
+programs for adults with asthma. The Cochrane 
+database of systematic reviews, 2: CD001005. 
+http://doi.org/10.1002/14651858.CD001005 
+28.  Paul Glasziou, Les Irwig, and David Mant. 2005. 
+
+Monitoring in chronic disease: a rational approach. 
+BMJ (Clinical research ed.) 330, 7492: 644–648. 
+http://doi.org/10.1136/bmj.330.7492.644 
+
+29.  Luke O. Hansen, Robert S. Young, Keiki Hinami, 
+Alicia Leung, and Mark V. Williams. 2011. 
+Interventions to reduce 30-day rehospitalization: a 
+systematic review. Annals of Internal Medicine 155, 8: 
+520–528. http://doi.org/10.7326/0003-4819-155-8-
+201110180-00008 
+
+30.  Andrea Hartzler and Wanda Pratt. 2011. Managing the 
+
+personal side of health: how patient expertise differs 
+from the expertise of clinicians. Journal of Medical 
+Internet Research 13, 3: e62. 
+http://doi.org/10.2196/jmir.1728 
+
+31.  Andrea L. Hartzler, Shomir Chaudhuri, Brett C. Fey, 
+David R. Flum, and Danielle Lavallee. 2015. 
+Integrating Patient-Reported Outcomes into Spine 
+Surgical Care through Visual Dashboards: Lessons 
+Learned from Human-Centered Design. eGEMs 3, 2: 
+1133. http://doi.org/10.13063/2327-9214.1133 
+32.  Vicki S. Helgeson and Sheldon Cohen. 1996. Social 
+support and adjustment to cancer: reconciling 
+descriptive, correlational, and intervention research. 
+Health psychology: Official journal of the Division of 
+Health Psychology, American Psychological 
+Association 15, 2: 135–148. 
+
+33.  James G. Hodge, Lawrence O. Gostin, and Peter D. 
+Jacobson. 1999. Legal issues concerning electronic 
+health information: privacy, quality, and liability. JAMA 
+282, 15: 1466–1471. 
+
+34.  Leora I. Horwitz, John P. Moriarty, Christine Chen, et 
+al. 2013. Quality of discharge practices and patient 
+understanding at an academic medical center. JAMA 
+internal medicine 173, 18: 1715–1722. 
+http://doi.org/10.1001/jamainternmed.2013.9318 
+35.  Stephen F. Jencks, Mark V. Williams, and Eric A. 
+
+Coleman. 2009. Rehospitalizations among patients in 
+the Medicare fee-for-service program. The New 
+England journal of medicine 360, 14: 1418–1428. 
+http://doi.org/10.1056/NEJMsa0803563 
+
+36.  Amber E. Johnson, L. Ebony Boulware, Cheryl A.M. 
+
+Anderson, et al. 2014. Perceived barriers and 
+
+facilitators of using dietary modification for CKD 
+prevention among African Americans of low 
+socioeconomic status: a qualitative study. BMC 
+nephrology 15, 1: 194. http://doi.org/10.1186/1471-
+2369-15-194 
+
+37.  Shreya Kangovi, Frances K. Barg, Tamala Carter, et al. 
+
+2014. Challenges faced by patients with low 
+socioeconomic status during the post-hospital 
+transition. Journal of General Internal Medicine 29, 2: 
+283–289. http://doi.org/10.1007/s11606-013-2571-5 
+38.  Julie A. Kientz. 2012. Embedded capture and access: 
+
+encouraging recording and reviewing of data in the 
+caregiving domain. 16, 2. 
+
+39.  Amy J.H. Kind, Steve Jencks, Jane Brock, et al. 2014. 
+
+Neighborhood socioeconomic disadvantage and 30-day 
+rehospitalization: a retrospective cohort study. Annals 
+of Internal Medicine 161, 11: 765–774. 
+http://doi.org/10.7326/M13-2946 
+
+40.  Gina Koch, Bonnie J. Wakefield, and Douglas S. 
+
+Wakefield. 2015. Barriers and facilitators to managing 
+multiple chronic conditions: a systematic literature 
+review. Western Journal of Nursing Research 37, 4: 
+498–516. http://doi.org/10.1177/0193945914549058 
+
+41.  Danielle C Lavallee, Paul Wicks, Rafael Alfonso 
+
+Cristancho, and C. Daniel Mullins. 2014. Stakeholder 
+engagement in patient-centered outcomes research: 
+high-touch or high-tech? Expert Review of 
+Pharmacoeconomics & Outcomes Research 14, 3: 335–
+344. http://doi.org/10.1586/14737167.2014.901890 
+Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A stage-
+based model of personal informatics systems. ACM, 
+New York, New York, USA. 
+http://doi.org/10.1145/1753326.1753409 
+
+42. 
+
+43.  Kate R. Lorig and Halsted R. Holman. 2003. Self-
+
+management education: History, definition, outcomes, 
+and mechanisms. Annals of Behavioral Medicine 26, 1: 
+1–7. http://doi.org/10.1207/S15324796ABM2601_01 
+
+44.  Kate R. Lorig, Philip Ritter, Anita L. Stewart, et al. 
+2001. Chronic disease self-management program: 2-
+year health status and health care utilization outcomes. 
+Medical Care 39, 11: 1217–1223. 
+
+45.  Amgad N. Makaryus and Eli A. Friedman. 2005. 
+
+Patients' understanding of their treatment plans and 
+diagnosis at discharge. Mayo Clinic Proceedings 80, 8: 
+991–994. http://doi.org/10.4065/80.8.991 
+
+46.  Lena Mamykina, Arlene M. Smaldone, and Suzanne R. 
+
+Bakken. 2015. Adopting the sensemaking perspective 
+for chronic disease self-management. Journal of 
+Biomedical Informatics 56, C: 406–417. 
+http://doi.org/10.1016/j.jbi.2015.06.006 
+
+47.  Kenneth D. Mandl, Peter Szolovits, and Isaac S. Kohane. 
+2001. Public standards and patients' control: how to keep 
+electronic medical records accessible but private. BMJ 
+(Clinical research ed.) 322, 7281: 283–287. 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA533548.  Francisco Nunes, Nervo Verdezoto, Geraldine 
+
+Fitzpatrick, Morten Kyng, Erik Grönvall, and Cristiano 
+Storni. 2015. Self-Care Technologies in HCI: Trends, 
+Tensions, and Opportunities. ACM Transactions on 
+Computer-Human Interaction (TOCHI) 22, 6: 33–45. 
+http://doi.org/10.1145/2803173 
+
+49.  Carla Parry, Heidi M. Kramer, and Eric A. Coleman. 
+2006. A qualitative exploration of a patient-centered 
+coaching intervention to improve care transitions in 
+chronically ill older adults. Home Health Care Services 
+Quarterly 25, 3-4: 39–53. 
+http://doi.org/10.1300/J027v25n03_03 
+
+50.  Laura M. Pfeifer and Timothy W. Bickmore. 2011. 
+Longitudinal Remote Follow-Up by Intelligent 
+Conversational Agents for Post-Hospitalization Care. 
+AAAI Spring Symposium - Technical Report, SS-11-01, 
+33-40. 
+
+51.  Jenny Preece. 1998. Empathic communities: reaching 
+
+out across the Web. interactions. 
+http://doi.org/10.1145/274430.274435 
+
+52.  Jane Sarasohn-Kahn. 2012. The wisdom of patients: 
+
+Health care meets online social media. California 
+HealthCare Foundation (2008). Retrieved from 
+http://www.chcf.org/publications/2008/04/the-wisdom-
+of-patients-health-care-meets-online-social-media 
+
+53.  Sasha Shepperd, Natasha A. Lannin, Lindy M. 
+
+Clemson, Annie McCluskey, Ian D. Cameron, and 
+Sarah L. Barras. 2013. Discharge planning from 
+hospital to home. The Cochrane Database of 
+Systematic Reviews 1: CD000313. 
+http://doi.org/10.1002/14651858.CD000313.pub4 
+
+54.  Meredith M. Skeels, Kenton T. Unruh, Christopher 
+Powell, and Wanda Pratt. 2010. Catalyzing Social 
+Support for Breast Cancer Patients. CHI ... conference 
+proceedings / Conference on Human Factors in 
+Computing Systems. CHI Conference: 173–182. 
+http://doi.org/10.1145/1753326.1753353 
+
+55.  Brian K. Smith, Jeanna Frost, Meltem Albayrak, and 
+
+Rajneesh Sudhakar. 2007. Integrating glucometers and 
+digital photography as experience capture tools to 
+enhance patient understanding and communication of 
+diabetes self-management. Personal and Ubiquitous 
+Computing, 11(4), 273-286.  
+
+56.  Elliot Soloway, Shari L. Jackson, Jonathan Klein, et al. 
+1996. Learning theory in practice: case studies of 
+learner-centered design. ACM, New York, New York, 
+USA. http://doi.org/10.1145/238386.238476 
+
+57.  Kelly D. Stamp, Monique A. Machado, and Nancy A. 
+Allen. 2014. Transitional care programs improve 
+outcomes for heart failure patients: an integrative 
+review. The Journal of Cardiovascular Nursing 29, 2: 
+140–154. 
+http://doi.org/10.1097/JCN.0b013e31827db560 
+58.  Cristiano Storni. 2015. Patients' lay expertise in chronic 
+self-care: a case study in type 1 diabetes. Health 
+expectations: An international journal of public 
+participation in health care and health policy 18, 5: 
+1439–1450. http://doi.org/10.1111/hex.12124 
+59.  Amanda Third and Ingrid Richardson. 2010. 
+
+Connecting, supporting and empowering young people 
+living with chronic illness and disability: the livewire 
+online community. Report prepared for the Starlight 
+Children's Foundation. Retrieved from 
+https://starlight.org.au/sites/all/tmp/files/200-
+programs/Livewire-Online-Community-Research-
+Project.pdf 
+
+60.  Kenton T. Unruh, Meredith Skeels, Andrea Civan-
+
+Hartzler, and Wanda Pratt. 2010. Transforming Clinic 
+Environments into Information Workspaces for 
+Patients. Human Factors in Computing Systems 
+Proceedings of the SIGCHI Conference, 183-192. 
+http://doi.org/10.1145/1753326.1753354 
+
+61.  Nienke van der Meulen, Jesse Jansen, Sandra van 
+
+Dulmen, Jozien Bensing, and Julia van Weert. 2008. 
+Interventions to improve recall of medical information 
+in cancer patients: a systematic review of the literature. 
+Psycho-oncology 17, 9: 857–868. 
+http://doi.org/10.1002/pon.1290 
+
+62.  Simone N. Vigod, Paul A. Kurdyak, Cindy-Lee Dennis, 
+et al. 2013. Transitional interventions to reduce early 
+psychiatric readmissions in adults: systematic review. 
+The British Journal of Psychiatry : the journal of 
+mental science 202, 3: 187–194. 
+http://doi.org/10.1192/bjp.bp.112.115030 
+
+63.  Lauren Wilcox, Janet Woollen, Jennifer Prey, et al. 
+
+2015. Interactive Tools for Inpatient Medication 
+Tracking: A Multi-Phase Study with Cardiothoracic 
+Surgery Patients. Journal of the American Medical 
+Informatics Association: JAMIA. 
+http://doi.org/http://dx.doi.org/10.1093/jamia/ocv160   
+
+64.  Shuo Zhou, Timothy Bickmore, Michael Paasche-
+
+Orlow, and Brian Jack. 2014. Agent-User Concordance 
+and Satisfaction with a Virtual Hospital Discharge 
+Nurse. Lecture Notes in Computer Science, 8637, 528-
+541. 
+
+Design for Health Care#chi4good, CHI 2016, San Jose, CA, USA5336 
+ 
+

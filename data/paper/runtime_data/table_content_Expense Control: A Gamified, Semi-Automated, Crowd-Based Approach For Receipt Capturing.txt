@@ -1,0 +1,27 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Domain-Specific Challenges and Requirements
+    5.1 Receipts Analysis
+    5.2 Online Questionnaire
+    5.3 Informal Budgeting App Review
+6. Related Work
+    6.1 Crowdsourcing Picture Classification
+    6.2 Crowdsourcing and OCR
+    6.3 Automatic receipt capturing
+7. System Design
+    7.1 Concept
+    7.2 Budgeting Features
+    7.3 Automated Receipt Capturing
+    7.4 Receipt Capturing and Image Preprocessing
+    7.5 Entity Extraction And Consideration Of Posed Challenges
+    7.6 Crowd Microtasks
+    7.7 Solving Microtasks
+    7.8 Gamification Elements
+8. Evaluation
+    8.1 Method
+    8.2 Results
+    8.3 Discussion
+9. Conclusion
+10. References

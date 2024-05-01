@@ -1,0 +1,1273 @@
+Fine-Grained Sharing of Sensed Physical Activity:  
+A Value Sensitive Approach 
+Daniel A. Epstein, Alan Borning, James Fogarty 
+Computer Science & Engineering 
+DUB Group, University of Washington 
+{depstein, borning, jfogarty}@cs.washington.edu 
+
+ABSTRACT 
+Personal informatics applications in a variety of domains are 
+increasingly enabled by low-cost personal sensing. Although 
+applications capture fine-grained activity for self-reflection, 
+sharing is generally limited to high-level summaries. There 
+are  potential  advantages  to  fine-grained  sharing,  but  also 
+potential  harms.  To  help  investigate  this  complex  design 
+space,  we  employ  Value  Sensitive  Design  to  consider 
+whether  and  how  to  share  fine-grained  step  activity.  We 
+identify  key  values  and  value  tensions,  and  we  develop 
+scenarios  to  highlight  these.  We  then  design  a  set  of  data 
+transformations  that  seek  to  maximize  the  benefits  while 
+minimizing  the  harms  of  detailed  sharing.  These  include  a 
+novel  approach  to  interactive  modification  of  fine-grained 
+step data, allowing people to remove private data and using 
+motif  discovery  to  generate  realistic  replacement  data. 
+Finally,  we  conduct  semi-structured  interviews  with  12 
+participants examining these scenarios and transformations. 
+We distill results into a set of design considerations for fine-
+grained physical activity sharing. 
+
+Author Keywords 
+Personal  Informatics,  Value  Sensitive  Design,  physical 
+activity sensing, social sharing. 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI). 
+
+INTRODUCTION 
+The rise of personal informatics has been enabled in part by 
+the  increasing  ubiquity  of  personal  sensing  [25].  Sensing 
+takes  many  forms,  from  simple  pedometers  [6,10,19]  to 
+location  and  other  information  sensed  by  mobile  phones 
+[2,13,18]  to  sophisticated  disaggregation  of  home  utility 
+usage  [14,15]. Prior  work  examines  how  such  sensing  can 
+support  a  variety  of  goals,  including  increasing  physical 
+activity [30,37], adopting more environmentally sustainable 
+behaviors [13,28], and improving sleep quality [5,20]. 
+
+Permission to  make digital or  hard copies of all or part of  this work  for personal  or 
+classroom use is granted without fee provided that copies are not made or distributed 
+for profit or commercial advantage and that copies bear this notice and the full citation 
+on the first page. Copyrights for components of this work owned by others than ACM 
+must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, 
+to post on servers or to redistribute to lists, requires prior specific permission and/or a 
+fee. Request permissions from permissions@acm.org. 
+UbiComp’13, September 8–12, 2013, Zurich, Switzerland. 
+Copyright © 2013 ACM 978-1-4503-1770-2/13/09…$15.00. 
+http://dx.doi.org/10.1145/2493432.2493433 
+
+Figure 1. A fine-grained view of daily step activity.  
+Five-minute intervals are colored by activity level. 
+
+Many  applications  highlight  social  sharing  in  personal 
+informatics and behavior change. Sharing sensed data  with 
+family and friends can be effective for gaining social support 
+[22,25,28].  Prior  work  emphasizes  goal  sharing  around 
+high-level  summaries,  such  as  walking  70,000  steps  per 
+week  or  remembering 
+lights  [6,28,30]. 
+Commercial  applications  also  share  high-level  summaries, 
+such as daily step totals in FitBit [10] and Jawbone UP [19] 
+or weight-loss progress in MyFitnessPal [31]. 
+
+turn  off 
+
+to 
+
+We  are  interested  in  the  additional  opportunities  and 
+concerns presented by sharing fine-grained personal activity 
+data.  For  example,  Figure 1  presents  a  detailed  view  of  a 
+day’s  step  activity  displayed  in  five-minute  intervals  [10]. 
+Detailed sharing can enable new forms of social interaction 
+around  sensed  activity  data.  Instead  of  only  seeing  that  a 
+person did not reach a weekly step goal, family and friends 
+could  praise  morning  walks  visible  in  the  detailed  data. 
+Family and friends might also use detailed data to discover 
+effective strategies, such as adding a morning walk to their 
+own  routine  or  noticing  a  person  is  generally  idle  during 
+lunch and suggesting they walk together. 
+
+Although detailed sharing presents new opportunities, it also 
+presents  complex  design  considerations.  One  concern  is 
+over-sharing.  For  example,  Munson  and  Consolvo  found 
+people worried about sharing a trivial accomplishment and 
+thus  opted  not  to  share  at  all  [30].  Other  concerns  arise 
+around privacy. A person who chooses to share fine-grained 
+data expects to give visibility into associated activities, but 
+may object to how that data might be used to infer apparently 
+unrelated information. Current approaches generally provide 
+only a simple binary choice of “share” or “do not share”, thus 
+limiting  how  people  can 
+these 
+opportunities while managing concerns. 
+
+take  advantage  of 
+
+To help address the complex value considerations that arise 
+in  fine-grained  sharing,  we  turn  to  Value  Sensitive  Design 
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland489 
+ 
+ 
+ 
+investigations:  conceptual 
+
+(VSD), an established method for addressing human values 
+and value tensions in a design process [11]. VSD uses three 
+investigations  of 
+types  of 
+stakeholders,  values,  benefits,  and  harms; 
+technical 
+investigations  of  features  and  infrastructure;  and  empirical 
+investigations involving stakeholders and potential contexts 
+of a design. These are applied iteratively and integratively. 
+
+The focus of our technical investigations is on methods for 
+transforming fine-grained activity data prior to sharing. We 
+consider  designs  based  on  unmodified  data,  a  high-level 
+summary,  and  deleting  data  prior  to  sharing.  Finally,  we 
+develop  a  new  approach  to  interactively  transforming  data 
+that attempts to explicitly preserve benefits of sharing while 
+giving people greater control over what they share. We also 
+focus our current exploration on fine-grained step activity as 
+captured  by  the  FitBit  pedometer  [10].  Step  activity  is 
+important to fitness applications and is appropriate for these 
+initial explorations. Our discussion considers how our work 
+might be extended to other types of activity data. 
+
+The specific contributions of this work include: 
+
+  Identification  of  a  range  of  values  and  value  tensions 
+arising in sharing of fine-grained physical activity data. 
+
+  Exploration  of  a  set  of  transformations  of  fine-grained 
+activity  data,  including  how  designs  might  preserve  the 
+benefits of sharing while minimizing potential harms. 
+
+  Development  of  a  new  approach 
+
+interactively 
+transforming fine-grained physical activity data, allowing 
+people to remove private data and using motif discovery 
+to generate replacement data, implemented for step data. 
+
+to 
+
+  Results of value-oriented semi-structured interviews with 
+people  who  use  pedometers,  based  on  scenarios  that 
+highlight potential benefits and harms of social sharing. 
+
+  Design considerations for future applications that include 
+
+social sharing of fine-grained physical activity data. 
+
+RELATED WORK 
+Prior 
+computing, including some work from a VSD perspective. 
+
+research  has  examined  sharing 
+
+in  ubiquitous 
+
+Value Sensitive Design 
+VSD is an established approach to addressing human values 
+throughout  a  design  process  [11].  An  early  application  of 
+VSD  in  Ubiquitous  Computing  investigated  a  privacy 
+addendum for open-source licenses [12]. Camp and Connelly 
+discuss many aspects of privacy in Ubiquitous Computing, 
+including  opportunities  for  Value  Sensitive  Design  as  an 
+approach  to  understanding  privacy  and  data  sharing  in 
+Ubiquitous  Computing  [4].  Our  focus  on  social  sharing 
+means  the  revelation  of  information  is  inherent  and 
+intentional. But there are still important value questions and 
+value tensions around potential designs. 
+
+Czeskis  et  al.  used  VSD  to  investigate  personal  safety 
+applications for use by teens and their parents [9]. Although 
+sharing in the parent / child relationship differs from social 
+sharing  among  peers,  that  work  explored  a  number  of  key 
+
+issues  that  also  arise  in  this  work,  such  as  unwittingly 
+revealing personal information about indirect stakeholders. 
+
+Sharing Applications 
+
+support, 
+
+including 
+
+studies  of 
+
+Sharing For Social Support 
+Online communities have been studied for how they promote 
+communities 
+social 
+emphasizing weight loss and cancer care [17,34]. Tang et al. 
+differentiate  social  sharing  from  purpose  sharing  in  the 
+context of location sharing [36]. In our work, we are mostly 
+considering  social  sharing  of  physical  activity,  but  can 
+imagine purpose-driven scenarios. For example, sharing with 
+a personal trainer or doctor would be purpose-oriented. 
+
+Some  prior  research  employs  deception  to  address  privacy 
+concerns.  Iachello  et  al.  implement  a  location-requesting 
+application  in  which  a  person  can  provide  incorrect  or 
+time-shifted  responses  [18].  They  found  a  low  amount  of 
+deception in their field study, and suggested  this may have 
+been  in  part  due  to  an  expectation  of  trust.  Page  et  al. 
+interviewed  people  who  use  location-sharing  services, 
+finding they mislead friends about their location and worry 
+the  services  could  expose  the  discrepancy  [33].  However, 
+many participants believed deception would go undetected. 
+
+Sharing In Activity Applications 
+Consolvo  et  al.  consider  the  design  of  technology  to 
+encourage physical activity [6]. Their Houston system shared 
+participant  daily  step  activity  with  friends.  Participants 
+reported  receiving  social  support  and  pressure  through  the 
+system,  and  also  reported 
+in  sharing  more 
+information  than  total  step  count.  Klasnja  et  al.  examine 
+privacy concerns in personal sensing applications [21]. They 
+report participants react differently to the potential recording 
+and  sharing  of  different  types  of  sensor  data:  they  felt 
+comfortable  disclosing  accelerometer  data,  but  were 
+concerned about revealing location or raw audio. 
+
+interest 
+
+Fish’n’Steps varied the size of fish in a bowl as a metaphor 
+for  physical  activity,  as  sensed  using  pedometers  [27]. 
+Fish’n’Steps  included  cooperative  and  competitive  sharing 
+of physical activity: participants shared a fishbowl with other 
+participants, and the fishbowl of the most active group was 
+displayed on a public screen. The system allowed people to 
+send  words  of  encouragement  to  other  people  in  the  same 
+bowl, but participants rarely used this feature as they seemed 
+unwilling to interact with people they did not know outside 
+the  context  of  the  study.  Toscos  et  al.  sought  to  increase 
+physical activity among adolescent girls using a step count 
+sharing  application  that  allowed  the  teenagers  to  send 
+motivating text messages to one another  [37]. When social 
+support dropped off, activity levels were lower. 
+
+Location Sharing 
+Location  sharing  has  been  extensively  explored  in  prior 
+work. In early  work, Barkhuus and Dey found a desire for 
+location-based services [2]. Consolvo et al. built a location 
+service  that  allows  selecting  a  granularity  of  sharing  [7]. 
+Participants generally felt comfortable disclosing their most 
+detailed  location  (address  or  place  name),  except  when  it 
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland490would not be beneficial to the recipient (as when a recipient 
+is not knowledgeable of the area where a sharer is located). 
+
+supporting  closeness  for  couples  [1]  or  peace  of  mind  in 
+formal and informal caregiver relationships [32].  
+
+Systems  have  also  explored  always-on  location  sharing. 
+These often take a policy-based approach,  allowing people 
+to define when and with whom to share their location [8,23]. 
+People generally have complex privacy settings and are not 
+their 
+very  good  at  defining  rules  or  understanding 
+consequences. Cornwell et al. found the rules people define 
+accurately classify 59% of location disclosures, which can be 
+improved by having people modify their rules or by applying 
+machine learning techniques [8]. 
+
+Krumm  proposes  obfuscation  as  a  method  of  injecting 
+privacy into location-sharing applications [24]. He suggests 
+degrading data prior to sharing, such as by adding noise to 
+obscure  a  person’s  exact  location.  Another  approach  is 
+K-anonymity,  which 
+selectively  does  not  disclose 
+information  that  could  be  used  to  narrow  the  identity  of  a 
+person to a set smaller than  K [35]. K-anonymity does not 
+support  sharing  for  social  purposes,  as  the  identity  of  the 
+sharer is already known and privacy concerns instead focus 
+on what sharing reveals about a person’s activities. 
+
+Varying Sharing Granularity 
+Munson and Consolvo developed GoalPost, which included 
+sharing a vague physical activity view that linked to a more 
+detailed view [30]. Participants in their study generally found 
+this additional privacy protection unnecessary. Consolvo et 
+al.’s  study  of  location  sharing  at  multiple  levels  of 
+granularity found identity of the recipient to be the biggest 
+factor in deciding what to share [7]. Tang et al. found people 
+sometimes share location information that requires ‘insider 
+knowledge’ to fully decode (e.g. ‘at the Giant Eagle’) [36]. 
+They also believe that people resist providing a very general 
+location  (e.g.  ‘Pennsylvania’)  because  they  feared  coming 
+off as intentionally vague. 
+
+CONCEPTUAL INVESTIGATIONS 
+Per our VSD approach, we examine sharing of fine-grained 
+personal activity data through a lens of stakeholders, benefits 
+and harms, values, and value tensions.  
+
+VSD  emphasizes  considering  perspectives  of  both  people 
+who directly interact with technology and others who might 
+be impacted by it [11]. In our domain, direct stakeholders are 
+both the  sharers (i.e., the people sharing activity data) and 
+recipients  (i.e.,  those  who  view  activity  data).  Indirect 
+stakeholders include anybody whose activity correlates with 
+a  sharer  (e.g.,  people  who  live  or  walk  together).  Because 
+their  activity  correlates,  a  sharer  gives  recipients  indirect 
+insight into activities of these additional stakeholders. 
+
+Fine-grained  sharing  offers  many  potential  benefits.  As 
+motivated in our introduction, family and friends might give 
+concrete  praise  for  activities  visible  in  shared  data,  might 
+discover  or  share  exercise  strategies,  or  might  identify 
+together.  These  and  other 
+opportunities 
+interactions  around  fine-grained  data  can  help  people 
+achieve  fitness  goals  [7].  Other  opportunities  include 
+
+to  exercise 
+
+There are also potential harms to sharing fine-grained data. 
+Sharers might be concerned about a loss of privacy, as data 
+may  reveal  activity  they  are  not  comfortable  sharing. 
+Transformations  can  help  mitigate  privacy  concerns,  but 
+introduce their own potential harms, including undermining 
+the  trust  of  recipients.  For  example,  Page  et al.  found 
+recipients  of  location-sharing  updates  reported  ignoring 
+sharers  who  regularly  lied  about  their  locations  [33]. 
+Transforming  data  prior  to  sharing  can  also  impact  the 
+quality of interaction sharers might have around that data, as 
+sharers  may  not  know  whether they can trust advice  given 
+based on incomplete or modified activity data. 
+
+Key Values and Value Tensions 
+In  our  conceptual  investigations,  we  identified  two  values 
+motivating  fine-grained  sharing:  support  from  family  and 
+friends who can use shared data to help sharers accomplish 
+their goals, and support for sharer accountability to others for 
+achieving their goals. Additionally, recipients expect honesty 
+from  the  sharer,  and  in  turn  develop  trust  in  the  sharer. 
+Finally,  sharers  want  to  preserve  certain  forms  of  privacy. 
+Friedman  et  al.  [11]  present  working  definitions  of  these 
+values, which have also appeared in value-oriented work in 
+related domains [4,9]. 
+
+In designing sharing applications, there is a tension between 
+privacy  and  the  other  values.  Sharers  must  find  a  balance 
+between how data sharing impacts their  privacy while also 
+enabling support and accountability. Some transformations 
+may preserve privacy at the expense of honesty, potentially 
+undermining  recipient  trust.  The  remainder  of  this  work 
+motivates and discusses designs in terms of these values. 
+
+SCENARIO DEVELOPMENT 
+We took the findings from the conceptual investigation and 
+developed  four  concrete  scenarios.  These  scenarios  were 
+to  highlight  different  stakeholders,  potential 
+designed 
+benefits  and  harms,  and  value  tensions  that  we  anticipate 
+when sharing fine-grained personal activity data in the real 
+world.  We  later  use  these  scenarios  in  our  empirical 
+investigation as part of our semi-structured interviews. 
+
+Scenario 1: Goal Achievement 
+Ellen works a desk job, becomes curious about her activity 
+level, and purchases a pedometer. She sets a daily step goal, 
+but  has  trouble  reaching  it  because  her  job  keeps  her 
+sedentary  most  of  the  day.  One  day,  she  decides  to  walk 
+around her office multiple times throughout the day, and she 
+achieves her goal. She is very excited by this and wants to 
+share her accomplishment with her friends, many of whom 
+also have desk jobs and want to become more active. 
+
+Discussion: The benefit of fine-grained sharing is clear for 
+Ellen.  She  is  proud  of  achieving  her  goal  by  including 
+activity  in  her  work  day,  and  she  wants  to  share  how  she 
+accomplished  her  goal.  Ellen’s  friends  are  similarly 
+motivated and would likely appreciate her accomplishment. 
+Ellen’s primary value consideration is support. 
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland491Scenario 2: Leaving Work Early 
+One  weekday,  Hunter  decides  to  go  for  an  afternoon  run 
+around a nearby lake. He goes to work early, completes his 
+responsibilities,  and  leaves  to  run  in  the  afternoon.  Hunter 
+finishes  his  run  in  record  time  and  wants  to  share  on  a 
+running website. He is conflicted, however, because some of 
+his  friends  on  the  site  are  co-workers  who  work  standard 
+hours.  He  is  concerned  that  highlighting  his  afternoon 
+absence will reflect poorly on his work performance. 
+
+Discussion: Hunter wishes to share detailed activity to gain 
+social  support  and  challenge  his  friends.  However,  he  is 
+concerned for privacy because sharing will highlight he was 
+not at work that afternoon. Flexible hours may be acceptable 
+and Hunter may not have reason to be concerned, but he still 
+may not want the event recorded. Even if not currently cause 
+for  concern,  the  run  may  be  found  and  interpreted  out  of 
+context  when  Hunter  is  being  reviewed  for  a  future 
+promotion by a different manager. 
+
+Scenario 3: Late Night Activity 
+Whitney regularly wears a pedometer to track her physical 
+activity.  She  has  configured  her  privacy  settings  so  her 
+fine-grained  data  is  visible  to  close  friends,  including  her 
+boyfriend Chris. One day, she tells Chris she will be studying 
+in the evening. She later receives a text from a friend she has 
+not  seen  recently,  suggesting  they  meet  at  a  local  bar. 
+Whitney meets the friend and returns home at 3:00am. A few 
+days later, Chris is comparing his activity levels to Whitney’s 
+to find ideas for how they can be more active. He notices late 
+night  activity  and  wonders  if  Whitney  is  intentionally  not 
+disclosing something to him. 
+
+Discussion:  This  scenario  motivates  transformations,  as 
+Whitney did not intend to share her late night activity but did 
+not  have  an  option  to  transform  it.  Whitney  must  now 
+manage a discrepancy between her activity data and what she 
+told  Chris.  This  is  a  tension  between  privacy  and  trust. 
+Depending  on  their  relationship,  it  may  not  be  an  issue. 
+Neither  was  malicious:  Whitney  did  not  intend  to deceive, 
+and  Chris  was  not  intentionally  snooping.  This  scenario  is 
+therefore  fairly  tame,  but  more  worrisome  variants  could 
+include accusations of infidelity or even stalking. 
+
+Scenario 4: Finding a Running Buddy 
+Gloria recently began running a route near her home. She is 
+now bored with the route and decides to post it to a running 
+website for suggestions. She is messaged by a member of the 
+website who lives nearby. The two run together once, have a 
+good experience, and it becomes a regular event. 
+
+Discussion: Gloria was motivated to share her detailed route 
+because she  wanted  support. Although Gloria’s experience 
+was positive, there were potential harms. Specifically, Gloria 
+undermined  her  own  privacy  (and  in  the  worst  case, 
+potentially her safety) by disclosing where she lives (i.e., the 
+start and end of her running route).  
+
+TECHNICAL INVESTIGATIONS 
+We began this research with an investigation of an interface 
+for interactively transforming fine-grained activity data, but 
+
+later realized there were important value considerations and 
+the  design  space  was  more  complex  than  we  first  thought. 
+We  then  adopted  a  VSD  approach  and  conducted  our 
+conceptual investigation, including developing scenarios to 
+highlight value tensions. Based on our identified values and 
+value tensions, we returned to our technical investigation and 
+considered five transformations. These transformations were 
+created  to  surface  an  array  of  value  tensions,  with  each 
+transformation  supporting  certain  values  while  raising 
+concerns  about  others.  We  now  present  these,  discussing 
+each in terms of both our FitBit pedometer data and how an 
+analogous transformation might be applied to different types 
+of data. Our final transformation requires significant novel 
+implementation, which we also present. 
+
+Detailed Single-Day View 
+This view makes fine-grained data captured for 
+self-reflection  directly  available  for  sharing  (i.e.,  directly 
+shares the detailed data presented in Figure 1). A person can 
+decide whether to share a day’s activity, but cannot modify 
+the data. This is analogous to existing applications that limit 
+sharers to “share” or “do not share” (e.g., running or biking 
+applications that allow a person to share a detailed map of 
+their just-completed route). 
+
+Value  Tensions:  This  design’s  transparency  emphasizes 
+support, accountability, and honesty. It also raises concerns 
+for  privacy,  as  choosing  to  share  reveals  all  of  a  day’s 
+activity.  The  design  can  also  raise  concerns  for  trust.  If  a 
+recipient becomes accustomed to daily activity shares, but a 
+sharer chooses not to share a particular day, the recipient may 
+wonder what activity prevented sharing.  
+
+Longitudinal View 
+This  view  aggregates  step  data 
+into  daily  step  counts,  shared 
+automatically  at  the  end  of 
+every day. These step counts appear in a chart with step totals 
+for the prior week. This is analogous to existing applications 
+that  automatically  share  high-level  summaries.  Here  the 
+summarization is simply a summation of step count data, but 
+will vary in other applications (e.g., using the total length of 
+a run, thus removing location details). 
+
+Value  Tensions:  Of  the  five  views  we  consider  here,  this 
+gives the least insight into sharer activities. It thus maximizes 
+privacy  at 
+the  expense  of  minimizing  support  and 
+accountability.  Concerns  around  honesty  or  trust  are  also 
+minimized by the completely automated approach. 
+
+Limited Hours View 
+This  view  presents  the  same 
+detailed  information  as  the 
+single-day view, but limits sharing to a range of “daytime” 
+hours specified by a sharer. Activity outside this range is not 
+shared,  under  an  assumption  it  may  be  more  private  (e.g., 
+sleep  patterns,  staying  out  late  with  friends,  or  other 
+nighttime activity spikes a person may not want disclosed). 
+As  with  the  detailed  view,  a  sharer  can  decide  whether  to 
+share this limited view of a day’s activity. Total activity, as 
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland492reported elsewhere in the application, also reflects only steps 
+from shared “daytime” hours. This was motivated by prior 
+work  on  location  sharing,  in  which  participants  refuse 
+sharing  before  8:00am  or  after  6:00pm  to  avoid  revealing 
+non-work locations  [8].  Analogous approaches  might also 
+be  based  on  different  types  of  contextual  filters  (e.g.,  only 
+sharing data sensed within sharer-approved locations). 
+
+modify  interval  step  count  (e.g.,  increasing  or  decreasing 
+activity  in  a  highlighted  interval).  In  response,  the  system 
+automatically  generates  an  offset  elsewhere  in  the  day 
+(i.e., decreasing  or  increasing  activity  to  maintain  the  total 
+step count for the day). As we detail in the next section, our 
+implementation  analyzes  a  person’s  activity  history  to 
+automatically generate realistic offset transformations. 
+
+Value  Tensions:  This  view  offers  greater  privacy  than  the 
+detailed  view,  as  it  automatically  hides  a  part  of  the  day 
+likely  to  be  more  sensitive  and  still  gives  control  over 
+whether  to  share.  It  might  also  improve  support  and 
+accountability  if  automatic  removal  of  evening  activity 
+encourages greater sharing of daily activity. There are minor 
+concerns  for  honesty  and  accountability,  because  total 
+activity  level  is  not  accurate  if  people  have  any  activity 
+outside their approved “daytime” hours. Concerns for trust 
+are similar to the detailed view, as a recipient may wonder 
+why a person limited sharing to certain hours or chose not to 
+share activity for a particular day. 
+
+Relatively minor modifications can significantly change the 
+value  tradeoffs.  Displaying  total  activity  for  the  complete 
+day instead of only “daytime” hours would improve honesty 
+and  accountability,  but  would  come  at  the  expense  of 
+privacy, as the discrepancy could reveal the presence of large 
+activity spikes outside “daytime” hours. 
+
+Interactive Deletion 
+This  view  allows  a  sharer 
+to  interactively  highlight 
+and delete data prior to sharing. As an example motivation 
+from our scenarios, Whitney might delete the  activity from 
+her night out with a friend and then be comfortable sharing 
+the remainder of her activity. Zero values are common in step 
+data, so deletion is not obviously recognizable. Deletion may 
+require greater care for other types of activity data, perhaps 
+drawing  upon  the  methods  we  develop  for  our  interactive 
+transformation interface discussed next. 
+
+Value Tensions: The primary tension is between privacy and 
+honesty, trust, and accountability. Deletion allows sharers to 
+preserve  privacy  by  removing  activity  they  do  not  want  to 
+share,  but  accountability  is  impacted  because  total  activity 
+level  is  incorrect.  A  more  challenging  scenario  arises  if  a 
+recipient loses  trust after observing inconsistency resulting 
+from a deletion. For example, Whitney might excitedly post 
+her high step count for the day, but later share a detailed view 
+that contains fewer steps after deleting her walk home from 
+the bar in the early morning. 
+
+novel 
+
+approach 
+
+Interactive Transformation 
+Our final interface explores 
+a 
+to 
+fine-grained  activity  sharing:  we  support 
+interactive 
+modification  of  fine-grained  data  to  mitigate  privacy 
+concerns  while  working  to  ensure  resulting  data  preserves 
+the  original  benefits  of  sharing.  For  step  activity  data,  we 
+define this as preserving the daily step count and the typical 
+activity  patterns.  A  sharer  can  interactively  highlight  and 
+
+Although we focus on step activity, the idea of interactively 
+modifying fine-grained data while preserving the benefits of 
+sharing  can  be  more  broadly  applied.  From  a  technical 
+perspective, the goal is to modify data while preserving key 
+invariants.  For  example,  when  Gloria  seeks  feedback  on  a 
+running route, she might adjust the beginning and end of a 
+sensed  route  to  be  in  a  park  through  which  she  runs  (i.e., 
+changing the order of points, but not the shape of the route).  
+
+Value  Tensions:  As  with  deletion,  transformation  supports 
+privacy by allowing a sharer to remove  sensitive data. The 
+tensions are again with honesty, trust, and accountability, but 
+the  design  attempts  to  mitigate  these  concerns.  Preserving 
+the  original  reason  for  sharing  by  maintaining  the  day’s 
+overall step count helps support accountability and preserve 
+trust. A focus on generating realistic transformations is also 
+intended  to  preserve  trust,  but  ultimate  responsibility 
+remains with the sharer. A sharer who moves a midday run 
+to  the  middle  of  the  night  may  succeed  in  conveying  their 
+overall level of activity, but will probably introduce concerns 
+for honesty and trust. 
+
+ENABLING INTERACTIVE TRANSFORMATION 
+Interactive transformation is based upon a visualization of 5-
+minute activity intervals, as in Figure 1. Transformations are 
+therefore defined in terms of a histogram, where the index in 
+the histogram corresponds to time-of-day and the value at a 
+bucket  to  a  step  count  for  that  interval.  A  region  is  a 
+contiguous  set  of  histogram  buckets.  A  sharer  can  add 
+activity  to  a  highlighted  region,  remove  activity  from  a 
+highlighted  region,  or  shift  an  activity  region  in  time.  We 
+implement these actions using three lower-level operators: 
+
+Set: Given a list of step values and a region of the same size, 
+overwrite the region with the provided step values. 
+
+Modify:  Given a target  step  count and a region, overwrite 
+the  region  with  realistic  data  containing  a  total  number  of 
+steps approximately equal to the target. 
+
+Offset:  Given  a  full  day  of  activity  data,  overwrite  one  or 
+more unmodified regions with realistic data that restores the 
+total step count to its original value. 
+
+These  operators  are  sufficient  for  our  higher-level  actions 
+and  could  support  additional  interface  functionality.  We 
+currently implement add as a relative action:  
+
+(1) compute current step count in the selected region,  
+(2) compute a target by applying a fixed difference,  
+(3) modify the region to the target value, and  
+(4) offset to restore the original total step count.  
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland493We implement remove similarly, but using a fixed target of 
+zero. We implement shift using three operations:  
+
+(1) set the source region into the destination region,  
+(2) modify the source region to zero, and  
+(3) offset to restore the original total step count. 
+
+We chose these actions and operators to give control without 
+requiring  that  sharers  manage  details of realistic  histogram 
+manipulation.  Realistic  transformations  therefore  depend 
+upon the modify and offset operations. In our examinations 
+of collected FitBit data, these operations are difficult because 
+activity  patterns  are  highly  variable  and  simple  techniques 
+like  uniform  scaling  often  appear  unrealistic.  Instead  of 
+attempting to model step activity, we take inspiration from 
+methods developed for image completion [16]. We consider 
+the region to be modified as a gap in activity data, search the 
+sharer’s activity history for data that might be a good fit, and 
+fill  the  gap  with  historical  data.  The  next  two  subsections 
+detail our implementation. 
+
+Modify Implementation 
+Figure 2  illustrates  the  workflow  of  our  modify  operation. 
+The sharer first specifies a region and a target activity level 
+(in this case, a region of size 4 with a target of 1700 steps). 
+
+The system obtains a portion of a person’s activity  history 
+within  which  to  search. We currently  use the  past  week of 
+activity.  This was selected to be large enough to provide data 
+variety  and  capture  day-related  patterns  (e.g.,  running 
+Wednesday morning), while small enough to promote recent 
+data, remain responsive to changes, and to ensure interactive 
+performance.  Step  activity  is  next  discretized,  a  standard 
+pre-processing  step  for  motif  discovery  algorithms  we 
+employ later in this workflow [26]. We designate a symbol 
+for zero activity (the  most  common value), then  uniformly 
+distribute non-zero activity over eight symbols. 
+
+We next identify regions from historical data that would be 
+realistic if inserted in the target gap. Based on the intuition 
+that inserted activity should be consistent with its context, we 
+filter  by  the  data  before  and  after  the  gap.  Figure 2C 
+illustrates  this,  filtering  samples  that  do  not  match  the  gap 
+context. For a gap of size k, we filter based on the k / 2 entries 
+before  and  after  (referred  to as  the  gap  context). We use  a 
+sliding  window  to  consider  all  regions  of  size  k,  compute 
+Levenshtein  distance  between  our  gap  context  and  the 
+context of each region, filtering regions above a threshold. 
+The threshold is initially zero (i.e., an exact match), and is 
+iteratively  relaxed  if  later  steps  are  unable  to  find  a  good 
+region for the insertion. 
+
+Among  regions  that  match  the  gap  context,  we  want  an 
+example representing typical activity (i.e., that will not be out 
+of  place  when  inserted).  We  implement  this  using  motif 
+discovery.  Motifs  are  frequently  occurring  patterns  in 
+time-series  data  [26],  previously  been  used  to  detect 
+characteristic  activities  in  fine-grained  sensor  data  [3,29]. 
+We apply the 1-motif brute force algorithm described by Lin 
+et al. [26], generalized to find the ten largest motifs among 
+our matching regions of size k. We define our radius using 
+
+Figure 2. The workflow of the Modify operation. 
+Levenshtein distance, requiring two regions assigned to the 
+same motif have a distance less than k / 4. 
+
+Each  motif  contains  regions  that  are  similar  and  found  at 
+many different locations in an activity history. Regions not 
+assigned to any motif do not occur frequently enough to be 
+good candidates for our gap (i.e., they may seem unusual or 
+out of place). We select a motif containing regions with an 
+average step count within 10% of our target. If no such motif 
+exists, we relax the filter threshold to generate new motifs. 
+We  then  select  a  random  region  from  those  within  the 
+selected motif, and set its values to our gap. 
+
+Offset Implementation 
+Figure  3  illustrates  the  workflow  of  offset.  The  prior 
+operation implies a number of steps that need to be offset (in 
+this  case,  1800  steps  were  added  in  a  region  of  size  4  and 
+now need to be offset). We use a sliding window to consider 
+all regions where we might add or remove the offset, using 
+the  same  k  from  the  prior  operation  and  excluding  regions 
+modified by the operation being offset. 
+
+As  with  modify,  we  want  a  transformation  consistent  with 
+historical activity. Specifically, we want an offset consistent 
+with  daily  activity  trends.  If  a  sharer  walks  home  daily  at 
+5:00pm, it would be unwise to remove this consistent daily 
+activity. We score each region by the difference between step 
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland494 
+Study Design 
+Our  study  employed  in-person  semi-structured  interviews. 
+We  first  asked  participants  about  their  pedometer  usage, 
+including  their  motivation  for  using  a  pedometer,  average 
+activity level, and their self-reflection and sharing practices. 
+We next asked them to consider our scenarios, first from the 
+perspective  of  the  sharer  and  then  the  recipient  (a VSD 
+technique  first  used  by  Czekis  et  al.  [9]).  Finally,  we 
+demonstrated each of our five interfaces on the activity data 
+in  our  scenarios.  For  each,  we  again  asked  participants 
+consider the perspective of the sharer and then the recipient. 
+Interviews averaged 45 minutes (range 30-60). 
+
+Participants 
+We interviewed 12 participants (7 female) who regularly use 
+pedometers.  Participants  were  recruited  from  university 
+mailing  lists,  forums  for  well-known  pedometers,  and  the 
+local Quantified Self forum. Participant averaged 34 years in 
+age (range 23-53), averaged about 9,000 steps per day, and 
+shared high-level activity summaries with an average of 4.33 
+people (range 0-13). Common recipients included friends (6 
+participants),  co-workers 
+(3 
+participants), and significant others (3 participants). Primary 
+motivation varied: 4 had a weight loss goal, 3 wanted to be 
+aware of daily activity, and 3 wanted to track activity to look 
+for patterns. For their device, 9 used a FitBit, 2 a Jawbone 
+UP, and 1 a mobile phone application. 
+
+(6 participants), 
+
+siblings 
+
+Figure 3. The workflow of the Offset operation. 
+
+count that would occur in the region after an offset versus the 
+average step count at that same time of day in the historical 
+data. We sort potential regions by this score and attempt to 
+apply the offset to the region with the best score. 
+
+To apply the offset, we use modify to search for a motif that 
+matches the region and is within 10% of the desired steps. If 
+no  motif  is  found  for  the  best-scoring  region,  we  try 
+lower-scoring regions.  If  no  motif is  found for any region, 
+we  recursively  apply  two  offsets  of  half  the  desired  size 
+(as more  regions  will  be  available  for  a  smaller  offset). 
+Because the offset must be exact, we linearly scale the results 
+of the modify. Note this adjustment is small, as the identified 
+motif is already within 10% of the offset. 
+
+Implementation Details and Extensions 
+Our prototypes are implemented in C#, using the Windows 
+Presentation Framework, accessing  step data  via the  FitBit 
+Intraday  API. Based on informal experimentation, our  add 
+action currently adjusts activity 400 steps at a time. 
+
+Although  our  current  implementation  is  effective  and 
+certainly sufficient for our empirical investigation, it could 
+also  be  extended.  Both  modify  and  offset  could  consider 
+additional information when transforming activity regions. 
+
+EMPIRICAL INVESTIGATION 
+Continuing  our  VSD  approach,  we  next  conducted  an 
+empirical  investigation  to  elicit  stakeholder  values  and 
+concerns  and  to  evaluate  the  interfaces  developed  in  our 
+technical investigation. 
+
+RESULTS AND DISCUSSION 
+We focus on findings that motivate design considerations in 
+fine-grained physical activity sharing applications. 
+
+Is Fine-Grained Data Private? 
+Participants  held  a  range  of  views  on  whether  to  share 
+fine-grained data: five wanted to keep it private at all times, 
+three  felt  comfortable  sharing  with  close  friends,  and  four 
+were  willing  to  open  it  to  anybody  interested.  Among 
+participants interested in sharing, many found it important to 
+differentiate  between  social  groups.  P3  stated,  “I  wouldn’t 
+mind sharing [my fine-grained activity] with my girlfriend, 
+but I wouldn’t want my professor to see it.” 
+
+to  using 
+
+The  transformation  presented  generally  did  not  influence 
+participant  preferences  for  sharing  fine-grained  data.  The 
+seven participants interested in fine-grained sharing did not 
+object 
+the  detailed  single-day  view.  Some 
+participants were also interested in the limited hours view, as 
+they believed it was accurate yet kept some activity private. 
+Four participants said their activity outside of typical limited 
+hours is usually minimal or otherwise  uninteresting, so not 
+sharing it would be an improvement. 
+
+Discussion 
+We  anticipated  participants  would  react  positively  to  the 
+transformations  developed  to  mitigate  privacy  concerns. 
+However, participants remained concerned about with whom 
+fine-grained data was shared. Because of the wide range of 
+views  on  sharing  fine-grained  activity  data,  it  is  important 
+any interface allow people to easily select whether to share 
+and with whom to share. 
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland495 
+Many participants discussed  context as an important factor 
+in how they feel about sharing fine-grained data. Combining 
+data  with  other  information,  such  as  a  user’s  Facebook 
+stream or Twitter feed, raised additional concerns. Situations 
+similar to Hunter not sharing his midday ride become more 
+common when physical activity data can be combined with 
+other  context-revealing  information,  such  as  check-ins  or 
+status updates. 
+
+Motivations to Share Fine-Grained Data 
+Interviews  corroborated  the  motivations  for  fine-grained 
+sharing  of  physical  activity  identified  in  our  conceptual 
+investigation.  Current  participant  practices  are  consistent 
+with  many  of  these  motivations,  which  suggests  they  are 
+important motivations for sharing. 
+
+For Accountability in Goals 
+P4 and her co-workers are trying to be more active, so they 
+compete  with  rewards  and  good-natured  punishments.  She 
+uses sharing to increase accountability: “My teammates will 
+know that I haven’t met my step goal, so that’s looming over 
+my  head, ‘oh my  gosh, gotta get these steps in!’” She  was 
+excited  about  opportunities  for  support:  “I  think  the  more 
+information out there, the better. If it helps a friend of mine 
+get more motivated and try to keep up with me...” 
+
+Although  P6  did  not  see  value  in  fine-grained  data  for 
+self-reflection  or  sharing,  he  discussed  sharing  as  a 
+motivational tool. He said, “What I get out of having friends 
+on FitBit… is just creating social pressure by reminding me 
+that other people get more exercise than I do.” 
+
+For Advice 
+P11 wanted different avenues for giving and receiving advice 
+on  activity.  Regarding  Ellen’s  scenario:  “If  she  has  other 
+people  in  her  network  who  are  active,  they  could  say 
+something  like,  ‘oh,  I  see  that  you  walk  after  dinner.  We 
+should  just  start  walking  together.’”  When  considering 
+giving advice to friends with which he shares, he suggested: 
+“It’ll be like, ‘oh, you woke up really early. We should go to 
+the gym tomorrow because we both get up really early.’” P10 
+wanted  to  share  detailed  activity  in  a  public  online 
+community to get feedback. He said, “That way I can get tips 
+from people I don’t know as to like, during this time… you 
+really didn’t have that much activity, or at this time you were 
+really hitting that peak, what were you doing?” 
+
+For Closeness 
+Of three participants who shared with their significant other, 
+none mentioned closeness as a motivation. However, P1 and 
+her sister used FitBits in a competition with the goal of losing 
+weight.  This  started  a  trend  toward  them  sharing  more  of 
+their  daily  routines  with  one  another.  P7  suspected  from 
+pedometer  activity  that  a  former  co-worker  with  recurring 
+health  problems  had  another  incident:  “It  would  say,  like, 
+‘oh, he got 2000 steps average for the week…’ oh my gosh, 
+is  everything  ok?”  Although  her  friend  was  not  using  his 
+pedometer to intentionally track his recovery progress,  she 
+deduced his status from his activity level. 
+
+Discussion 
+Participants interested in fine-grained sharing seemed most 
+motivated  by  advice  and  detailed  feedback,  which  we 
+characterize as support and accountability in our conceptual 
+investigation.  Although  participants  described  motivations 
+around goal setting and closeness, they did not describe fine-
+grained sharing as supporting these goals. Fine-grained data 
+may  still  have  value  for  these  motivations,  but  strong 
+conclusions  cannot  be  drawn  until  these  approaches  are 
+deployed and examined in situ. 
+
+What is Useful to Share? 
+Two  participants  emphasized  sharing  data  that  recipients 
+might  find  useful.  P11  was  willing  to  share  with  anybody 
+interested,  but  focused  on  sharing  noteworthy  activity.  P2 
+agreed, stating, “By default, I wouldn’t share anything unless 
+I think it could in some way be useful to someone.” 
+
+P9  was  concerned  about  oversharing,  especially  in  groups 
+not centered on physical activity: “I am slightly proud of [my 
+activity]…  there’s  always  the  issue  on  Facebook  of 
+oversharing, TMI, versus not. I wouldn’t put everything up, 
+but  like,  when  I  got  the  4000  flights  badge…”  P7  had  a 
+firsthand  experience  with  oversharing,  and 
+reacted 
+accordingly:  “I  used  to post  [my  weekly  activity  report]  to 
+Facebook… in the beginning we were all… giving each other 
+posts and things, and that kind of tapered off.”  
+
+Discussion 
+Applications  should  help  avoid  oversharing.  Because 
+frequent posts may overwhelm recipients, it should be easy 
+to  select  with  whom  to  share.  Confining  detailed  data  to  a 
+profile view may be a better alternative, while encouraging 
+sharing  of  major  achievements  with  a  larger  audience. 
+Interested  recipients  could  still  investigate  further  without 
+the sharer needing to be concerned about oversharing. 
+
+Deception 
+Two  participants  stated  they  would  use  the  interfaces  that 
+support interactive transformation of their data. However, it 
+can be awkward for participants to state this so directly. We 
+therefore  also  asked  whether  other  people  might  be 
+interested  in  having  such  an  interface,  to  which  seven 
+participants  agreed.  For  example,  P3  said,  “I  can  see  the 
+benefit of having such a function, but for me, personally, I’ll 
+just feel like a liar. I wouldn’t use it.” 
+
+P12 liked the idea of the deletion interface, especially in the 
+context of sharing with co-workers:  “If I’m working, and I 
+don’t want anyone to know I was up at 2 o’clock. If I’m like, 
+barely making it through the day... I don’t want my employer 
+to  know  that.”  P4  expressed  interest  in  having  the  data 
+transforming interface: “I would like that [transformation] is 
+there… Even if it’s a bad thing. I would like that it would be 
+there.” and offered an example use: “I sleepwalk a lot... if I 
+hide that… it’s trying to protect [my fiancé]… it’s trying to 
+keep him from worrying about me.” 
+
+In  discussing  how  other  people  might  use  interactive 
+transformation, P9 suggested a parent and child relationship 
+as  an  appropriate  use:  “I  think  that  if  you  were  like,  FitBit 
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland496friends  with  your  mom…  I  think  doing  that  might  be  an 
+interesting  way  to  keep  her  late-night  activity  [private].” 
+Three participants discussed sharing with a coach or doctor, 
+but  felt  transformation  was  not  appropriate  for  that 
+relationship: “I wouldn’t want to do that either to my doctor 
+or to myself. I want him to see the truth.” 
+
+Discussion 
+Participant  concerns  for  data  transformation  focused  on 
+honesty. Although most did not offer examples of when they 
+might use such capability in their own life, they were able to 
+develop  other  scenarios.  Together  with  the  handful  of 
+participants  who  expressed  explicit  interest,  this  suggests 
+interactive  transformation  warrants  further  examination. 
+Extended in situ availability may reveal new use scenarios.  
+
+Effort Required 
+Six  participants  were  concerned  interactive  deletion  and 
+transformation required too much effort from the sharer. P1 
+stated “People have so much going on in their lives to think, 
+‘oh, someone might look at my FitBit data…’ it just seems 
+like too much mental effort.” P8 thought it would be rarely 
+used, but important: “this kind of feature is nice to have, but 
+I think rarely used… but that one use would be so critical.” 
+Two  participants  mentioned  concerns  about  remembering 
+what  transformations  they  had  made  when  talking  to  their 
+friends later. P11 noted: “That could be useful … there’s a 
+heavier cognitive load. Because then I have to remember that 
+what other people see is not what I see.” 
+
+Discussion 
+We developed the deletion and transformation interfaces to 
+give  more  control  over  how  data  is  shared.  The  effort 
+required  to  exert  that  control  is  a  concern  that  should  be 
+explored  in  future  designs.  For  example,  a  system  might 
+detect anomalous activity (e.g., Whitney’s unusual late night 
+activity)  and  pro-actively  suggest  transformation.  This 
+would reduce required effort, but preserve sharer control. 
+
+Current  systems  generally  only  support  a  choice  between 
+sharing  or  not  sharing,  which  we  believe  is  too  limiting. 
+Some participants offered additional approaches. P2 and P4 
+both suggested a view revealing an intermediate amount of 
+information based on typical trends. P2 suggests: “just your 
+general  patterns,  ‘I’m  more  of  a  morning  person  or  an 
+evening  person’,  kind  of  like  sharing  a  profile”.  P4  says: 
+“I think that would be awesome! I like seeing how often I’m 
+active and how many steps I’ve gotten per hour.” 
+
+DESIGN CONSIDERATIONS 
+Through  our 
+empirical 
+conceptual, 
+investigations,  we  developed  a  set  of  considerations  for 
+applications that share fine-grained physical activity data. 
+
+technical, 
+
+and 
+
+Mitigate Oversharing 
+Multiple participants expressed concern about  oversharing. 
+We  suspect  that  this  can  be  improved  with  a  more  tiered 
+approach.  A  Facebook-style  news  feed  of  the  detailed 
+physical activity of friends may be overwhelming, but it may 
+be  more  appropriate  to  display  major  accomplishments  or 
+events  and  allow  recipients  to  seek  more  detail  as  desired. 
+
+This could place detailed activity where interested recipients 
+could find it, without overwhelming others. 
+
+Emphasize Effortless Sharing 
+Participants felt interactive transformation required too much 
+effort. Some reported that, if  concerned about  privacy in a 
+particular instance, they would perhaps share a higher-level 
+summary.  They  believed  this  supports  honesty  while 
+reducing both the time and effort required. But as we have 
+previously noted, unexpectedly not sharing can also present 
+challenges  for  recipient  trust.  Designs  that  enable  more 
+transformation  can  be 
+pro-active  or  even  automatic 
+envisioned  (e.g.,  detecting  unusual  activity  and  suggesting 
+hiding or transforming it). Designs might also automatically 
+consider  other  contextual  information  (e.g.,  the  location  of 
+activity). Further research should explore implications of and 
+reactions to such designs. 
+
+Support Intermediate Levels of Sharing 
+Some  participants  felt  5-minute  step  intervals  infringed 
+privacy by allowing inference of too much about a sharer’s 
+activity. But participants suggested new intermediate points 
+between  this  and  current  high-level  summaries.  Sharers 
+might configure intermediate intervals (e.g., steps per hour) 
+or share high-level summaries about their activity  patterns. 
+Such  intermediate  representations  may  help  some  sharers 
+balance support and accountability with their privacy.  
+
+CONCLUSION 
+We have used Value Sensitive Design to investigate human 
+values and tensions in interfaces for fine-grained sharing of 
+sensed  physical  activity  data.  By  developing  scenarios  to 
+highlight  value  tensions  and  stakeholders,  we  captured  the 
+results of  our conceptual  investigations in  a  more concrete 
+form.  Our  technical  investigations  examined  how  a  set  of 
+transformations relate to our value tensions and developed a 
+novel  approach  to  interactive  transformation  that  allows 
+removing  private  data  while  preserving  data  invariants 
+important  to  the  benefits  of  sharing.  We  then  conducted 
+value-oriented  semi-structured  interviews  and  learned  how 
+people  respond 
+to  fine-grained  sharing.  Finally,  we 
+enumerate design considerations for future applications. 
+
+Further  evaluation  of  this  value  sensitive  approach  would 
+strengthen  our  ability 
+to  make  prescriptive  design 
+recommendations. Future work would extend the empirical 
+investigation to a field deployment, allowing participants to 
+experience  real-world  reactions  to  transforming  their  data. 
+The  field  deployment  would  also  assess  whether  the 
+interactive transformation is effective in actual use. 
+
+We  have  explored  only  fine-grained  pedometer  data,  but 
+other  domains  may  also  benefit  from  fine-grained  sharing. 
+For  example,  the  StepGreen  and  UbiGreen  applications 
+explore  high-level  sharing  in  environmental  applications 
+[13,28].  Disaggregated  sensing  could  enable  fine-grained 
+sharing of in-home utility usage [14,15], which may increase 
+support  and  accountability.  One  direction  for  future  work 
+will  be  investigating  values  and  value  tensions  in  other 
+domains to generalize the insights developed here. 
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland497ACKNOWLEDGMENTS 
+We  thank  Felicia  Cordeiro,  Yoshi  Kohno,  Katie  Kuksenok, 
+Anthony LaMarca, and Sean Munson for feedback throughout this 
+project.  We  also  thank  the  organizers  and  participants  of  the 
+Dagstuhl Seminar 12492 on Human Activity Recognition in Smart 
+Environments. This work is sponsored in part by the Intel Science 
+and  Technology  Center  for  Pervasive  Computing  and  by  the 
+National Science Foundation under award OAI-1028195. 
+
+REFERENCES 
+1.  Bales, E., Li, K.A., and Griswold, W. CoupleVIBE: Mobile 
+
+Implicit Communication to Improve Awareness for (Long-
+Distance) Couples. CSCW 2011, 65–74. 
+
+2.  Barkhuus, L. and Dey, A. Location-Based Services for 
+
+Mobile Telephony: A Study of Users’ Privacy Concerns. 
+Interact 2003, 207–212. 
+
+3.  Berlin, E. and Van Laerhoven, K. Detecting Leisure 
+
+Activities with Dense Motif Discovery. UbiComp 2012, 250–
+259. 
+
+4.  Camp, J. and Connelly, K. Beyond Consent: Privacy in 
+Ubiquitous Computing (Ubicomp). In Digital Privacy: 
+Theory, Technologies, and Practices. Auerbach Publications, 
+New York and London, 2008, 327–343. 
+
+5.  Choe, E.K., Consolvo, S., Watson, N.F., and Kientz, J.A. 
+Opportunities for Computing Technologies to Support 
+Healthy Sleep Behaviors. CHI 2011, 3053–3062. 
+
+6.  Consolvo, S., Everitt, K., Smith, I., and Landay, J.A. Design 
+Requirements for Technologies that Encourage Physical 
+Activity. CHI 2006, 457–466. 
+
+7.  Consolvo, S., Smith, I.E., Matthews, T., LaMarca, A., and 
+
+Tabert, J. Location Disclosure to Social Relations: Why, 
+When, & What People Want to Share. CHI 2005, 81–90. 
+8.  Cornwell, J., Fette, I., Hsieh, G., Prabaker, M., Rao, J., Tang, 
+K., Vaniea, K., Bauer, L., Cranor, L., Hong, J., McLaren, B., 
+Reiter, M., and Sadeh, N. User-Controllable Security and 
+Privacy for Pervasive Computing. HotMobile 2007, 14–19. 
+
+9.  Czeskis, A., Dermendjieva, I., Yapit, H., Borning, A., 
+
+Friedman, B., Gill, B., and Kohno, T. Parenting from the 
+Pocket : Value Tensions and Technical Directions for Secure 
+and Private Parent-Teen Mobile Safety. SOUPS 2010. 
+
+10.  FitBit. http://www.fitbit.com/. 
+11.  Friedman, B., Kahn, P.H., and Borning, A. Value Sensitive 
+Design and Information Systems. Human-Computer 
+Interaction and Management Information Systems: 
+Foundations, (2006), 348–372. 
+
+12.  Friedman, B., Smith, I., Kahn, P.H., Consolvo, S., and 
+
+Selawski, J. Development of a Privacy Addendum for Open 
+Source Licenses: Value Sensitive Design in Industry. 
+UbiComp 2006, 194–211. 
+
+13.  Froehlich, J., Dillahunt, T., and Klasnja, P. UbiGreen: 
+
+Investigating a Mobile Tool for Tracking and Supporting 
+Green Transportation Habits. CHI 2009, 1043–1052. 
+14.  Froehlich, J., Larson, E., Campbell, T., Haggerty, C., 
+
+Fogarty, J., and Patel, S.N. HydroSense: Infrastructure-
+Mediated Single-Point Sensing of Whole-Home Water 
+Activity. UbiComp 2009, 235–244. 
+
+15.  Gupta, S., Reynolds, M., and Patel, S. ElectriSense: Single-
+
+Point Sensing Using EMI for Electrical Event Detection and 
+Classification in the Home. UbiComp 2010, 139–148. 
+
+16.  Hays, J. and Efros, A.A. Scene Completion Using Millions of 
+
+Photographs. SIGGRAPH 2007. 
+
+17.  Hwang, K.O., Ottenbacher, A.J., Green, A.P., Cannon-Diehl, 
+M.R., Richardson, O., Bernstam, E. V, and Thomas, E.J. 
+Social Support in an Internet Weight Loss Community. 
+
+International Journal of Medical Informatics 79, 1 (2010), 5–
+13. 
+
+18.  Iachello, G., Smith, I., Consolvo, S., Abowd, G.D., Howard, 
+J., Potter, F., Scott, J., Sohn, T., Hightower, J., and LaMarca, 
+A. Control, Deception, and Communication: Evaluating the 
+Deployment of a Location-Enhanced Messaging Service. 
+UbiComp 2005, 213–231. 
+
+19.  Jawbone UP. http://jawbone.com/up. 
+20.  Kay, M., Choe, E., Shepherd, J., Greenstein, B., Watson, N., 
+Consolvo, S., and Kientz, J.A. Lullaby: A Capture & Access 
+System for Understanding the Sleep Environment. UbiComp 
+2012, 226–234. 
+
+21.  Klasnja, P., Consolvo, S., Choudhury, T., and Beckwith, R. 
+Exploring Privacy Concerns about Personal Sensing. 
+Pervasive 2009, 176–183. 
+
+22.  Klasnja, P., Consolvo, S., McDonald, D.W., Landay, J.A., 
+
+and Pratt, W. Using Mobile & Personal Sensing 
+Technologies to Support Health Behavior Change in 
+Everyday Life: Lessons Learned. AMIA 2009, 338–342. 
+23.  Kostakos, V., Venkatanathan, J., and Reynold, B. Who’s 
+Your Best Friend? Targeted Privacy Attacks In Location-
+Sharing Social Networks. UbiComp 2011, 177–186. 
+
+24.  Krumm, J. Inference Attacks on Location Tracks. Pervasive 
+
+2007, 127–143. 
+
+25.  Li, I., Dey, A., and Forlizzi, J. A Stage-Based Model of 
+Personal Informatics Systems. CHI 2010, 557–566. 
+
+26.  Lin, J., Keogh, E., Lonardi, S., and Patel, P. Finding Motifs 
+
+in Time Series. SIGKDD 2002, 53–68. 
+
+27.  Lin, J.J., Mamykina, L., Lindtner, S., Delajoux, G., and 
+
+Strub, H.B. Fish’ n’ Steps: Encouraging Physical Activity 
+with an Interactive Computer Game. UbiComp 2006, 261–
+278. 
+
+28.  Mankoff, J., Fussell, S.R., Dillahunt, T., Glaves, R., Grevet, 
+
+C., Johnson, M., Matthews, D., Matthews, H.S., Mcguire, R., 
+Thompson, R., Shick, A., and Setlock, L. StepGreen.org: 
+Increasing Energy Saving Behaviors via Social Networks. 
+ICWSM 2010, 106–113. 
+
+29.  Minnen, D. and Starner, T. Discovering Characteristic 
+
+Actions from On-Body Sensor Data. ISWC 2006, 11–18. 
+30.  Munson, S.A. and Consolvo, S. Exploring Goal-Setting, 
+
+Rewards, Self-Monitoring, and Sharing to Motivate Physical 
+Activity. PervasiveHealth 2012, 25–32. 
+31.  MyFitnessPal. http://www.myfitnesspal.com/. 
+32.  Mynatt, E.D., Rowan, J., Jacobs, A., and Craighill, S. Digital 
+Family Portraits : Supporting Peace of Mind for Extended 
+Family Members. CHI 2001, 333–340. 
+
+33.  Page, X., Knijnenburg, B., and Kobsa, A. What a Tangled 
+
+Web We Weave: Lying Backfires in Location-Sharing Social 
+Media. CSCW 2013, 273–284. 
+
+34.  Skeels, M.M., Unruh, K.T., Powell, C., and Pratt, W. 
+
+Catalyzing Social Support for Breast Cancer Patients. CHI 
+2010, 173–182. 
+
+35.  Sweeney, L. K-Anonymity: A Model for Protecting Privacy. 
+
+International Journal of Uncertainty, Fuzziness and 
+Knowledge-Based Systems 10, 05 (2002), 557–570. 
+
+36.  Tang, K.P., Lin, J., Hong, J.I., Siewiorek, D.P., and Sadeh, N. 
+
+Rethinking Location Sharing: Exploring the Implications of 
+Social-Driven vs. Purpose-Driven Location Sharing. 
+UbiComp 2010, 85–94. 
+
+37.  Toscos, T., Faber, A., Connelly, K., and Upoma, A.M. 
+
+Encouraging Physical Activity in Teens: Can Technology 
+Help Reduce Barriers to Physical Activity in Adolescent 
+Girls? PervasiveHealth 2008, 218–221.  
+
+Session: Location-Based Services IIUbiComp’13, September 8–12, 2013, Zurich, Switzerland498 
+

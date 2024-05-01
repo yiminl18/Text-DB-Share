@@ -1,0 +1,15 @@
+1. Abstract
+2. Introduction
+3. Related Work
+4. EdiPulse
+5. Design Process
+6. EdiPulse in Action (Field Study)
+7. Findings
+    7.1 Reflection
+    7.2 Positivity
+    7.3 Determination
+    7.4 Affection
+    7.5 Co-experience
+8. Implications for Design
+9. Conclusion
+10. References

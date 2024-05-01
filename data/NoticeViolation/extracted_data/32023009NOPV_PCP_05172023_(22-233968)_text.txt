@@ -1,0 +1,680 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+VIA  ELECTRONIC  MAIL  TO:  mark.hewett@nngco.com,  thomas.correll@nngco.com; 
+john.gormley@nngco.com; 
+
+May 17, 2023 
+
+Mr. Mark Hewett 
+President/CEO 
+Northern Natural Gas Company 
+1111 S. 103rd Street 
+Omaha, NE  68124 
+
+Dear Mr. Hewett: 
+
+CPF 3-2023-009-NOPV 
+
+From February 28, 2022 to September 23, 2022 , a representative of the Pipeline and Hazardous 
+Materials Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 
+601 of 49 United States Code (U.S.C.), conducted an onsite inspection of Northern Natural Gas 
+Company’s (NNG) procedures and records for the Operations and Maintenance (O&M), 
+Integrity Management Plan (IMP), and Operator Qualification (OQ) in Nebraska, Iowa, 
+Michigan, Minnesota, and Wisconsin. 
+
+As a result of the inspection, it is alleged that NNG has committed probable violations of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR).  The items inspected 
+and the probable violations are: 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+1.  § 192.467 External corrosion control: Electrical isolation. 
+
+(a) . . . . 
+(c) Except for unprotected copper inserted in ferrous pipe, each pipeline must be 
+electrically isolated from metallic casings that are a part of the underground system. 
+However, if isolation is not achieved because it is impractical, other measures must 
+be taken to minimize corrosion of the pipeline inside the casing. 
+
+NNG failed to comply with the regulation because it did not electrically isolate the 
+pipeline from metallic casings that are a part of the underground system.  NNG failed to 
+provide documentation on why this isolation was not achieved or if it was impractical to 
+achieve.  NNG did not provide information that it had taken other measures to minimize 
+corrosion inside the casing if isolation was impractical. 
+
+From a review of corrosion control records, PHMSA identified shorted casings for the 
+following pipeline segments: 
+
+•  Line 179M471B Test Point 471B.223 - MP 142.00 
+
+Casing tests were conducted on 11/8/1989 and 9/6/2013 and both indicated a 
+metallic short. The casing was filled with wax in 2020 as stated during the 
+records review.  The casing then was retested on 1/13/2021 and still exhibited a 
+metallic short. This was still determined to be a metallic short at the time of 
+inspection and no further action was taken by NNG to perform other measures to 
+minimize corrosion of the pipeline inside the casing. 
+
+•  Line 179SDB90401 - MP 9.8 
+
+Casing test was conducted on 2/29/2000 and indicated a metallic short. The 
+casing was filled with wax and retested on 4/16/2022.  This was still determined 
+to be a metallic short at the time of inspection and no further action was taken by 
+NNG to perform other measures to minimize corrosion of the pipeline inside the 
+casing.  In 2021, the Cathodic Protection reads stated that the casing was clear. 
+However the casing was not clear according to the documentation presented to 
+PHMSA at the time of inspection.  Remedial action according to NNG’s 
+procedure is to be taken. 
+
+•  Line 179SDB91601 - MP 2.65 
+
+Casing test was conducted on 9/6/2005 and repeated on 10/19/2020. The results 
+of both indicated a metallic short.  This was still determined to be a metallic short 
+at the time of inspection and no further action was taken by NNG to perform 
+other measures to minimize corrosion of the pipeline inside the casing. 
+
+Additionally, during the inspection, PHMSA requested a complete list of shorted casings 
+for the inspection system, however, the casings listed above were not on the list provided 
+to PHMSA by NNG. 
+
+ 
+   
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.  § 192.605  Procedural manual for operations, maintenance, and emergencies. 
+
+(a)  General.  Each operator shall prepare and follow for each pipeline, a manual of 
+written procedures for conducting operations and maintenance activities and for 
+emergency response.  For transmission lines, the manual must also include 
+procedures for handling abnormal operations.  This manual must be reviewed and 
+updated by the operator at intervals not exceeding 15 months, but at least once each 
+calendar year.  This manual must be prepared before operations of a pipeline 
+system commence.  Appropriate parts of the manual must be kept at locations 
+where operations and maintenance activities are conducted. 
+
+NNG failed to follow its own O&M plan from 80.212 Cleaning Pipelines Using Pigs, 
+Section 5.1: 
+
+“Where pigging is used to remove liquids on a frequent, periodic basis for internal 
+corrosion control or mitigation, document tools used and all findings using the operating 
+procedure 80.212a, Appendix A: Routine Pigging Log. Submit logs into the company’s 
+records management system. Use the category, pigging log sheets on the Document 
+Submittal Form. Retain these records for the life of the facility.” 
+
+During the field inspection of the Redfield Storage area, PHMSA observed that an Excel 
+form was utilized for this activity which was not part of the NNG’s procedure.  NNG has 
+since modified their procedure to address the use of this form for documenting pigging in 
+storage fields.  PHMSA has reviewed the modification to NNG’s procedure after the 
+inspection and found it satisfactory. 
+
+3.  § 192.605  Procedural manual for operations, maintenance, and emergencies. 
+
+(a)  General.  Each operator shall prepare and follow for each pipeline, a manual of 
+written procedures for conducting operations and maintenance activities and for 
+emergency response.  For transmission lines, the manual must also include 
+procedures for handling abnormal operations.  This manual must be reviewed and 
+updated by the operator at intervals not exceeding 15 months, but at least once each 
+calendar year.  This manual must be prepared before operations of a pipeline 
+system commence.  Appropriate parts of the manual must be kept at locations 
+where operations and maintenance activities are conducted. 
+
+ 
+ 
+   
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+NNG failed to follow their own O&M plan 160.101 Valve Maintenance, Section 5.1.7: 
+
+“If  a  valve  is  found  to  be  in  a  bind,  experiencing  outside  forces,  or  abnormal  loading, 
+inoperable, difficult to operate, or doesn't seal, initiate prompt remedial action. Contact the 
+manager or team leader to designate an alternative valve that can be utilized to satisfy the 
+functions  of  the  inoperable  valve  until  it  is  repaired.  If  repairs  can  be  made  by  field 
+personnel during the MCS activity, note the issue and repairs in the comments section of 
+the MCS task sheet when completing. If repairs are unsuccessful, note the issue and that it 
+was not resolved in the comments section of the MCS task and create an EATS general 
+action item and use the list, PLS - Valve Integrity Tracker. Include the valve number, 
+pipeline name and a description of the repair required as well as the alternate valve number. 
+Tag  the  valve  with  issue  found  and  denote  the  alternate  valve  on  the  tag  as  per  guide 
+material in 160.101a.” 
+
+Upon review of the records provided by NNG, PHMSA identified 18 valves that did not 
+follow NNG’s Procedure 160.101 Valve Maintenance, Section 5.1.7 as stated above. 
+
+PHMSA requested the MCS task sheets for the inspection system as well as the  PLS – 
+Valve Integrity Tracker from their EATS system.  NNG provided the EATS report, PLS 
+– Valve Integrity Tracker and a spreadsheet that is maintained by the field which appears 
+to be an export from the MCS system with columns added at the end of the report. 
+
+NNG is currently not following their O&M by omitting comments in its MCS system to 
+track  deficiencies  and  issues  with  its  valves  and  devices  that  have  been  found  by  field 
+personnel  during  inspection.  The  actions  taken  in  the  field  need  to  be  documented  to 
+inform  field  personnel  that  there  is  a  potential  issue  with  a  valve  being  inspected,  as 
+prescribed by NNG’s O&M procedure 160.101.  The valve spreadsheet entries provided 
+by  NNG  do  not  include  comments  corresponding  to  the  issues  identified  in  the  Valve 
+Integrity Tracker data. 
+
+4.  § 192.605  Procedural manual for operations, maintenance, and emergencies. 
+
+(a)  General.  Each operator shall prepare and follow for each pipeline, a manual of 
+written procedures for conducting operations and maintenance activities and for 
+emergency response.  For transmission lines, the manual must also include 
+procedures for handling abnormal operations.  This manual must be reviewed and 
+updated by the operator at intervals not exceeding 15 months, but at least once each 
+calendar year.  This manual must be prepared before operations of a pipeline 
+system commence.  Appropriate parts of the manual must be kept at locations 
+where operations and maintenance activities are conducted. 
+
+NNG failed to follow their O&M procedure 080.501 and observe surface conditions over 
+its right-of-way when conducting aerial patrols of its pipeline system in this inspection 
+system. During the field inspection, PHMSA observed overgrown areas of trees and 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+brush obscuring the aerial view of the right-of-way in multiple locations for this 
+inspection system.  No ground patrols were conducted on this inspection system in the 
+following three (3) locations: 
+
+1.  Line 11001 MP 6.624 
+2.  Line 19901 MP 4.283 East from County Road D 
+3.  Line SDB94101, MP 0.93 (Heinrich property) 
+
+Additionally, NNG provided the aerial reports for the inspection system and there was no 
+mention of the ROW obstruction in any of the cited areas.  According to their procedure 
+080.501 Patrol Program and the 080.501a Appendix A Aerial Patrol Report Form, NNG 
+should be reporting these issues from the aerial patrol on the form. Regarding the 
+objective of patrolling, it states that: “Observations include looking for leak areas, bank 
+erosion or exposed pipeline, brush growing over lines, any unknown encroachment 
+activity, or any change in what might be considered the normal appearance for activity 
+and land terrain through the pipeline corridor.” 
+
+PHMSA does recognize that NNG has cleared the ROW for the above-cited locations 
+after the inspection. 
+
+5. 
+
+§ 192.917 How does an operator identify potential threats to pipeline integrity and 
+use the threat identification in its integrity program? 
+
+(a) . . . . 
+(c) Risk assessment.  An  operator  must  conduct  a  risk  assessment  that  follows 
+ASME/ANSI B31.8S, section 5, and considers the identified threats for each covered 
+segment. An operator must use the risk assessment to prioritize the covered segments 
+for  the  baseline  and  continual  reassessments  (§§192.919, 192.921, 192.937),  and  to 
+determine what additional preventive and mitigative measures are needed (§192.935) 
+for the covered segment. 
+
+NNG’s risk assessment program failed to appropriately consider the identified threats for 
+each covered segment.  PHMSA reviewed NNG’s risk model and data in regards to 
+metallic and electrolytic shorts in casings and NNG failed to incorporate any shorted 
+casings into their risk model. 
+
+NNG’s procedure 040.202 Electrical Isolation, section 5.4.3 clearly states that shorted 
+casing will be addressed in the risk model. 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a 
+related series of violations.  For violation occurring on or after March 21, 2022 and before 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+January 6, 2023, the maximum penalty may not exceed $239,142 per violation per day the 
+violation persists, up to a maximum of $2,391,412 for a related series of violations.  For violation 
+occurring on or after May 3, 2021 and before March 21, 2022, the maximum penalty may not 
+exceed $225,134 per violation per day the violation persists, up to a maximum of $2,251,334 for 
+a related series of violations.  For violation occurring on or after January 11, 2021 and before 
+May 3, 2021, the maximum penalty may not exceed $222,504 per violation per day the violation 
+persists, up to a maximum of $2,225,034 for a related series of violations.  For violation 
+occurring on or after July 31, 2019 and before January 11, 2021, the maximum penalty may not 
+exceed $218,647 per violation per day the violation persists, up to a maximum of $2,186,465 for 
+a related series of violations.  For violation occurring on or after November 27, 2018 and before 
+July 31, 2019, the maximum penalty may not exceed $213,268 per violation per day, with a 
+maximum penalty not to exceed $2,132,679.  For violation occurring on or after November 2, 
+2015 and before November 27, 2018, the maximum penalty may not exceed $209,002 per 
+violation per day, with a maximum penalty not to exceed $2,090,022. 
+
+We have reviewed the circumstances and supporting documentation involved for the above 
+probable violations and recommend that you be preliminarily assessed a civil penalty of $75,200 
+as follows: 
+
+Item number 
+
+PENALTY 
+
+4 
+
+$75,200 
+
+Warning Items 
+
+With respect to Items 1, 2, 3, and 5, we have reviewed the circumstances and supporting 
+documents involved in this case and have decided not to conduct additional enforcement action 
+or penalty assessment proceedings at this time.  We advise you to promptly correct these Items.  
+Failure to do so may result in additional enforcement action. 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators 
+in Enforcement Proceedings.  Please refer to this document and note the response options.  All 
+material you submit in response to this enforcement action may be made publicly available.  If 
+you believe that any portion of your responsive material qualifies for confidential treatment 
+under 5 U.S.C. § 552(b), along with the complete original document you must provide a second 
+copy of the document with the portions you believe qualify for confidential treatment redacted 
+and an explanation of why you believe the redacted information qualifies for confidential 
+treatment under 5 U.S.C. § 552(b). 
+
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a waiver of your right to contest the allegations in this Notice and authorizes the Associate 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region 
+Director may extend the period for responding upon a written request timely submitted 
+demonstrating good cause for an extension. 
+
+In your correspondence on this matter, please refer to CPF 3-2023-009-NOPV and, for each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Gregory A. Ochs 
+Director, Central Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Response Options for Pipeline Operators in Enforcement Proceedings 
+
+cc: 
+
+John Gormley (john.gormley@nngco.com) 
+Thomas Correll (thomas.correll@nngco.com) 
+
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

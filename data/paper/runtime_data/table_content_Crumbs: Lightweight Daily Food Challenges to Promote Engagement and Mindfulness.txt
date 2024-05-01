@@ -1,0 +1,27 @@
+1. Introduction
+2. Background and Motivation
+    2.1 Food Journaling
+    2.2 Eating Mindfulness
+    2.3 Supporting Engagement & Reducing Barriers in Tracking
+3. System Design
+4. Crumb Development and Selection
+    4.1 Verification of Crumb Categories
+    4.2 Filtering and Categorizing Crumbs
+5. Field Study of Lightweight Daily Food Challenges
+    5.1 Participants and Crumb Selection
+    5.2 Procedure
+    5.3 Measures and Evaluation Metrics
+6. Field Study Results
+    6.1 Overall Application Usage
+    6.2 Engagement and Mindfulness with Crumbs
+    6.3 Changing Food Choices
+    6.4 Additional Journaling
+    6.5 Differences between Nutrition and Non-Nutrition Crumbs
+    6.6 Role and Effects of Social Features
+7. Discussion
+    7.1 Designing for Engagement: Difficulty
+    7.2 Designing for Engagement: Social
+    7.3 Future Opportunities for Crumbs
+8. Conclusion
+9. Acknowledgments
+10. References

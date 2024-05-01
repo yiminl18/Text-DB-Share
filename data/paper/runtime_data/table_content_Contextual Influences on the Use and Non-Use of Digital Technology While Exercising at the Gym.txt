@@ -1,0 +1,18 @@
+1. Introduction
+2. Background and Related Research
+   2.1 Physical Activity and Fitness Research
+   2.2 Interactive Technology to Aid Physical Activity
+   2.3 Approaches to Studying Fitness Technology
+3. Methodology
+   3.1 Context of the Study
+   3.2 Autoethnography
+   3.3 In-Situ User Study
+   3.4 Data Analysis
+4. Findings
+   4.1 Distraction vs. Disruption
+   4.2 Information Needs vs. Avoiding Information
+   4.3 Exercise Shaping Tech Use vs. Tech Use Shaping Exercise
+5. Discussion
+6. Conclusion
+7. Acknowledgements
+8. References

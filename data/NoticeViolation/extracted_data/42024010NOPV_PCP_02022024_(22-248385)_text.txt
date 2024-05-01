@@ -1,0 +1,738 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+VIA ELECTRONIC MAIL TO: Steve.Ledbetter@hfsinclair.com 
+
+February 2, 2024 
+
+Steven Ledbetter 
+Executive Vice President 
+Osage Pipe Line Company, LLC 
+2828 N. Harwood 
+Suite 1300 
+Dallas, TX 75201 
+
+Dear Mr. Ledbetter: 
+
+CPF 4-2024-010-NOPV 
+
+On  August  4,  2022,  a  representative  of  the  Pipeline  and  Hazardous  Materials  Safety 
+Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 601 of 49 United 
+States  Code  (U.S.C.)  investigated  the  Osage  Pipeline  System  in  Payne  County,  Oklahoma, 
+operated by Osage Pipe Line Company, LLC, a subsidiary of Holly Energy Partners, L.P. 
+
+On July 8, 2022, at approximately 12:29 a.m. Central Standard Time (CT), the Osage Pipeline 
+System ruptured at MP 6.99 in Payne County, Oklahoma.  Osage discharged an estimated 7,110 
+barrels of crude oil onto land belonging to the Sac and Fox Nation.  The crude oil migrated from 
+land to Skull Creek, a tributary to the Cimarron River, and traveled 0.75 miles down the creek. 
+The crude oil release contaminated soil and surface water and impacted wildlife, including fish, 
+birds, and terrestrial animals.1 
+
+As a result of the investigation, it is alleged that you have committed a probable violation of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR).  The item investigated 
+and the probable violation is: 
+
+1 As a result of the rupture, PHMSA issued a Notice of Proposed Safety Order which was resolved in a Consent 
+Agreement and Order.  See Osage Pipe Line Company, LLC, Consent Agreement and Order, CPF No. 4-2022-055-
+NOPSO, 2022 WL 16900267 (Oct. 19, 2022). 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+1. 
+
+§ 195.446 Control room management. 
+
+(a)  General.  This  section  applies  to  each  operator  of  a  pipeline 
+facility with a controller working in a control room who monitors and 
+controls all or part of a pipeline facility through a SCADA system. Each 
+operator  must  have  and  follow  written  control  room  management 
+procedures  that  implement  the  requirements  of  this  section.  The 
+procedures required by this section must be integrated, as appropriate, 
+with  the  operator's  written  procedures  required  by  §  195.402.  An 
+operator must develop the procedures no later than August 1, 2011, and 
+must  implement  the  procedures  according  to  the  following  schedule. 
+The procedures required by paragraphs (b), (c)(5), (d)(2) and (d)(3), (f) 
+and (g) of this section must be implemented no later than October 1, 
+2011. The procedures required by paragraphs (c)(1) through (4), (d)(1), 
+(d)(4), and (e) must be implemented no later than August 1, 2012. The 
+training procedures required by paragraph (h) must be implemented 
+no  later  than  August  1,  2012,  except  that  any  training  required  by 
+another paragraph of this section must be implemented no later than 
+the deadline for that paragraph. 
+
+Osage Pipe Line Company, LLC (Osage) failed to follow its written control room management 
+procedures in accordance with § 195.446(a).  Specifically, Osage’s controller and control room 
+supervisor  attempted  to  restart  a  pipeline  after  receiving  multiple  leak  alarms  before  assuring 
+segment integrity and determining if a leak occurred, contrary to Osage’s written control room 
+management procedures.  This failure increased the severity of the July 8, 2022, accident. 
+
+At the time of the rupture, the Osage Pipeline System was under the primary control of a controller 
+in Artesia, New Mexico.  This location is the Primary Control Center (PCC) for Osage.  Osage’s 
+PCC  is  composed  of  five  continuously  monitored  consoles,  and  typically  has  a  Control  Center 
+Shift Foreman (CCSF) or Senior Controller (SC) that can monitor all consoles and assumes control 
+during controller breaks.  The Osage Pipeline is one of the pipelines that Console 4 is responsible 
+for controlling. 
+
+In its Control Room Management Procedure, Revision 11.0, effective 12/20/2021, Osage specified 
+the  required  actions  of  a  controller  when  a  leak  is  suspected.    Sections  17.7.1  and  17.9.2  both 
+require shut-ins if any condition appears that could indicate a leak, and that the pipeline cannot be 
+returned to service until segment integrity is assured and the pressure variance is explained. 
+
+As indicated in the timeline below, beginning at 12:29 a.m. CT on July 8, 2022, the Console 4 
+Controller received at least four indications a potential leak had occurred (Potential Indication), 
+including  a  detected  loss  of  suction  pressure  at  two  pump  stations  that  caused  an  automatic 
+shutdown of the pumps and two leak alarms.  Despite these indications, the Console 4 Controller, 
+with CCSF approval, attempted to restart a pump station on the Osage pipeline after the second 
+leak alarm without assuring segment integrity and determining the cause of the pressure variance, 
+such as by thoroughly investigating line balance, flow trends, rate of change, status of suppliers, 
+and other factors associated with pipeline conditions.  After the Console 4 Controller attempted to 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+restart the upstream pump station, a third leak alarm occurred, causing the Console 4 Controller to 
+shut down the Osage pipeline.  The attempted restart, prior to assuring segment integrity, increased 
+the volume of crude oil released and violated sections 17.7.1 and 17.9.2 of Osage’s control room 
+management procedures. 
+
+These failures are detailed in the following timeline: 
+
+•  At 12:19 a.m. CT, the Console 4 Controller logged a regular break.  Shortly after, the CCSF 
+became suddenly ill and left the control room without notifying any other controllers that 
+were working at other consoles.  As a result, Console 4 was left un-monitored. 
+
+•  At 12:29 a.m., the SCADA system detected a loss of suction pressure at the Cushing PS 
+(upstream  PS)  which  caused  an  alarm  (Alarm  1,  Potential  Indication  1)  and  automatic 
+shutdown of the pumps.  This alarm went undetected until 12:33 a.m. 
+
+•  At 12:30 a.m., a leak alarm occurred (Leak Alarm 1, Potential Indication 2) followed by 
+the automatic shutdown of the Ralston PS (downstream PS) on a loss of suction pressure. 
+This alarm went undetected until 12:33 a.m. 
+
+•  At 12:32 a.m., the Hardy PS automatically shut down on a loss of suction pressure.   This 
+event was noted in the RCFA but was not listed as an alarm. This event went undetected 
+until 12:33 a.m. (Potential Indication 3). 
+
+•  At 12:32 a.m., the initial leak alarm returned to a normal state.2 
+
+•  At 12:33 a.m., upon returning from a scheduled break, a SC at another console noticed 
+Console 4 alarms and called upstream supplier checking on their status.  The SC notified 
+the supplier to shut down their booster pumps and they complied. 
+
+•  At 12:35 a.m., a second leak alarm occurred (Leak Alarm 2, Potential Indication 4). 
+
+•  At 12:37 a.m., Console 4 Controller and CCSF returned from breaks and were informed of 
+
+the situation. 
+
+•  At 12:38 a.m., Console 4 Controller acknowledged second leak alarm, which returned to a 
+
+normal state. 
+
+2 Although the leak alarm returned to a normal state, that does not mean there is no leak.  The leak detection system 
+may determine that conditions are “okay” as a result of the pumps shutting down.  However, Osage’s procedures 
+require that leak alarms be presumed actual until proven otherwise.  Therefore, a controller cannot assume a leak is 
+not occurring if the leak alarm returned to a normal state as further investigation would be required. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+   
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+  
+ 
+•  At 12:39 a.m., Console 4 Controller recontacted the upstream supplier asking them about 
+a potential tank switch and received verification that there had not been a tank switch.3 
+The Console 4 Controller then asked the supplier to restart their booster pump. 
+
+•  At 12:40 a.m., Console 4 Controller and CCSF attempted to restart the Cushing PS.  A 
+
+third leak alarm activated at that time (Leak Alarm 3, Potential Indication 5). 
+
+•  At 12:43 a.m., Console 4 Controller shut down the Osage pipeline and began the line block 
+
+sequence. 
+
+Therefore, Osage failed to follow its written control room management procedures in accordance 
+with § 195.446(a). 
+
+Proposed Civil Penalty 
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 
+2023, the maximum penalty may not exceed $239,142 per violation per day the violation persists, 
+up to a maximum of $2,391,412 for a related series of violations.  For violation occurring on or 
+after May 3, 2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 
+per violation per day the violation persists, up to a maximum of $2,251,334 for a related series of 
+violations.    For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day  the  violation  persists,  up  to a  maximum  of  $2,186,465  for  a  related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable  violation(s)  and  recommend  that  you  be  preliminarily  assessed  a  civil  penalty  of  $ 
+239,142 as follows: 
+
+Item number 
+1 
+
+PENALTY 
+$ 239,142 
+
+Response to this Notice 
+
+3  Tank switches can often cause fluctuations in the operating conditions of a pipeline.  Therefore, a tank switch 
+could have caused the alarms if the tank switch was not communicated.  Here, the controller contacted the upstream 
+supplier to confirm that a tank switch did not occur. 
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+       
+ 
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.  Please  refer  to  this  document  and  note  the  response  options.  All 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. § 552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  4-2024-010-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Bryan Lethcoe 
+Director, Southwest Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Response Options for Pipeline Operators in Enforcement Proceedings 
+
+cc:  Ms.  Lori  Coupland,  Vice  President,  Compliance  and  EHS,  Holly  Energy  Partners,  LP, 
+
+lori.coupland@hollyenergy.com 
+
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

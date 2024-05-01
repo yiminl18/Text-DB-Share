@@ -1,0 +1,26 @@
+1. Abstract
+2. Introduction
+3. Related Work
+    3.1 HCI Work on Upper Limb Rehabilitation After a Stroke
+    3.2 Monitoring Upper Limb Movements in Daily Life
+4. Research Setting and Approach
+5. Study 1: Practices and Needs of Therapists
+    5.1 Research Aim and Study Design
+    5.2 Meaningful Goals, Activities and Motions
+    5.3 Exercise and Activities Outside Therapy
+    5.4 Objective Data to Assess Exercise and Activities
+6. Study 2: Design and Evaluation of the ArmSleeve Sensor
+    6.1 Research Aim and Study Design
+    6.2 Design of the ArmSleeve Sensor
+    6.3 Accuracy of the ArmSleeve Sensor
+7. Study 3: Design and Evaluation of the ArmSleeve Dashboard
+    7.1 Research Aim and Study Design
+    7.2 ArmSleeve Dashboard Design
+    7.3 Assess Exercises and Activities Outside Therapy
+    7.4 Engage Patients and Other Clinicians
+    7.5 Lack of Contextual Information
+8. Discussion
+    8.1 Design Implications for Interpreting Sensor Data
+    8.2 Design Implications for Sensors Worn in Daily Life
+9. Conclusion
+10. References

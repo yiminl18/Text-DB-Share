@@ -1,0 +1,1234 @@
+NOTICE OF PROBABLE VIOLATION 
+PROPOSED CIVIL PENALTY 
+and 
+PROPOSED COMPLIANCE ORDER 
+
+VIA ELECTRONIC MAIL 
+
+May 8, 2023 
+
+Greg McIlwain 
+Executive Vice President, Operations 
+Energy Transfer Company 
+1300 Main Street 
+Houston, Texas 77002 
+
+Dear Mr. McIlwain: 
+
+CPF 4-2023-034-NOPV 
+
+From June 6 through December 1, 2022, a representative of the Pipeline and Hazardous Materials 
+Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 601 of 49 
+United States Code (U.S.C.) inspected Energy Transfer Company’s Mid-Valley Pipeline Company 
+(ETC Mid-Valley) in Michigan, Ohio, Kentucky,  Tennessee,  Mississippi, Louisiana, Arkansas, 
+and Texas. 
+
+As a result of the inspection, it is alleged that ETC Mid-Valley  has committed probable violations 
+of  the  Pipeline  Safety  Regulations,  Title  49,  Code  of  Federal  Regulations  (CFR).  The  items 
+inspected and the probable violations are: 
+
+1. 
+
+§ 195.52 Immediate notice of certain accidents. 
+
+(a)  Notice  requirements.  At  the  earliest  practicable  moment 
+following  discovery,  of  a  release  of  the  hazardous  liquid  or  carbon 
+dioxide transported resulting in an event described in § 195.50, but no 
+later  than  one  hour  after  confirmed  discovery,  the  operator  of  the 
+system  must  give  notice,  in  accordance  with  paragraph  (b)  of  this 
+section of any failure that: 
+
+(1) . . . . 
+(3) Caused estimated property damage, including cost of cleanup 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+and recovery, value of lost product, and damage to the property of 
+
+the operator or others, or both, exceeding $50,000 
+
+ETC Mid-Valley failed to give notice, at the earliest practicable moment but no later than one hour 
+after confirmed discovery, following discovery of a release of a hazardous liquid resulting in an 
+event where an estimated property damage, including cost of cleanup and recovery, value of lost 
+product, and damage to property of the operator or others, or both, exceeded $50,000 in accordance 
+with § 195.52(a)(3).  Specifically, PHMSA found three occasions in 2021 and 2022 when ETC 
+Mid-Valley  experienced  reportable  accidents  but  failed  to  give  notice  within  the  required  time 
+frame to the National Response Center. 
+
+On February 22, 2021, ETC Mid-Valley identified a reportable accident due to estimated property 
+damage of $81,512.  However, ETC Mid-Valley did not notify NRC until March 12, 2021.  On 
+June 10, 2021, ETC Mid-Valley identified a reportable accident due to estimated property damage 
+of $79,229.  However, ETC Mid-Valley did not notify NRC until June 11, 2021.  On June 29, 
+2022,  at  1234  local  time,  ETC  Mid-Valley  identified  a  reportable  accident  due  to  estimated 
+property damage of $4,651,397.  However, ETC Mid-Valley did not notify NRC until June 29, 
+2022 at 1615 local time. 
+
+Therefore, ETC Mid-Valley failed to give notice, at the earliest practicable moment but no later 
+than one hour after confirmed discovery, following discovery of a release of a hazardous liquid 
+resulting in an event where an estimated property damage, including cost of cleanup and recovery, 
+value of lost product, and damage to property of the operator or others, or both, exceeded $50,000 
+in accordance with § 195.52(a)(3). 
+
+2. 
+
+§ 195.412 Inspection of rights-of-way and crossings under navigable waters. 
+(a) Each operator shall, at intervals not exceeding 3 weeks, but at 
+least 26 times each calendar year, inspect the surface conditions on or 
+adjacent to each pipeline right-of-way. Methods of inspection include 
+walking, driving, flying or other appropriate means of traversing the 
+right-of-way. 
+
+ETC Mid-Valley failed to inspect the surface conditions on or adjacent to each pipeline right-of-
+way (ROW) using an appropriate method of inspection in accordance with § 195.412(a). 
+
+During the inspection, PHMSA noted several locations along the pipeline where the ROW was 
+overgrown with vegetation, or the overhang of tree branches made it difficult to adequately inspect 
+the ROW by aerial patrols.  PHMSA noted seven locations in four units where surface or overhead 
+conditions did not allow for adequate aerial patrols.  ETC Mid-Valley failed to provide records of 
+ground patrols for these locations. 
+
+The following ROWs had overhanging trees and/or overgrown vegetation that prevented a clear 
+inspection of the ROW from an aerial patrol: 
+
+1) ROW at BV 55 southwest of Dixie, LA (Unit ID 9754, TX (Longview)) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+2) ROW at MP 294 southwest of Minter City, MS, and MP 388 southeast of Holly 
+
+Springs, MS (Unit ID 1922, MS, TN (Oxford)) 
+
+3) ROW at BV 626 east of Morgantown, KY and in the Fox Crossing subdivision 
+
+in Clarksville, TN (Unit ID 84893, TN, KY (Oxford)) 
+
+4) BV 549 northwest of Palmyra, TN, and the ROW at BV 772 southeast of Patriot, 
+
+IN (Unit ID 1932, KY) 
+
+Therefore, ETC Mid-Valley failed to inspect the surface conditions on or adjacent to each pipeline 
+right-of-way using an appropriate method of inspection in accordance with § 195.412(a). 
+
+3. 
+
+§ 195.420 Valve maintenance. 
+
+(a) Each operator shall maintain each valve that is necessary for the 
+safe operation of its pipeline systems in good working order at all times. 
+
+ETC Mid-Valley failed to maintain each valve that is necessary for the safe operation of its pipeline 
+systems in good working order at all times in accordance with § 195.420(a).  Specifically, PHMSA 
+found two leaking valves and a remote operated valve (ROV) that did not respond to open or close 
+signals from the control room. 
+
+During  the  inspection  PHMSA  observed  a  leaking  valve  downstream  from  MOV  4191  at  the 
+Toledo Terminal Station, identified as Valve #15 and a leaking discharge valve from pump unit 
+#4 at the Lima Pump Station.  The ROV, BV 400, experienced a communications failure during 
+operation of the valve for the field inspection.  The valve did not respond to open or close signals 
+from the control room, but could be manually operated. 
+
+Therefore, ETC Mid-Valley failed to maintain each valve that is necessary for the safe operation 
+of its pipeline systems in good working order at all times in accordance with § 195.420(a). 
+
+4. 
+
+§ 195.432 Inspection of in-service breakout tanks. 
+
+(a) . . . . 
+(b) Each operator must inspect the physical integrity of in-service 
+atmospheric  and  low-pressure  steel  above-ground  breakout  tanks 
+according  to  API  Std  653  (except  section  6.4.3,  Alternative  Internal 
+Inspection Interval) (incorporated by reference, see § 195.3). However, 
+if structural conditions prevent access to the tank bottom, its integrity 
+may  be  assessed  according  to  a  plan  included  in  the  operations  and 
+maintenance  manual  under  §  195.402(c)(3).  The  risk-based  internal 
+inspection procedures in API Std 653, section 6.4.3 cannot be used to 
+determine the internal inspection interval. 
+
+ETC  Mid-Valley  failed  to  inspect  the  physical  integrity  of  its  in-service  atmospheric  breakout 
+tanks in accordance with § 195.432(b) and failed to follow its manual of written procedures for 
+conducting  normal  operations  and  maintenance  activities  in  accordance  with  §  195.402(a). 
+Specifically, ETC Mid-Valley failed to conduct monthly in-service visual inspections on several 
+breakout tanks (BOTs) in the Hebron and Oxford areas. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Standard Operating Procedure HLT.05 Inspection of In-Service Breakout Tanks Procedure, dated 
+10/15/2021,  Section  7.1  requires  monthly  in-service  visual  inspections  on  all  above  ground 
+atmospheric and low pressure breakout tanks (BOTs). PHMSA reviewed records for the Hebron 
+and Oxford areas and found the following eleven instances of missed monthly inspections: 
+
+Hebron Area: 
+
+•  BOT 1 – missed June 2021 
+•  BOT 2 – missed August 2021 
+•  BOT 87 – missed September 2021 
+•  BOT 91 – missed July 2021 
+•  BOT 113 – missed March 2021 
+
+Oxford Area: 
+
+•  BOT 3 – missed July 2021 and October 2021 
+•  BOT 7 – missed October 2021, January 2022, March 2022, and July 2022 
+
+Therefore, ETC Mid-Valley failed to inspect the physical integrity of its in-service atmospheric 
+breakout  tanks  in  accordance  with  §  195.432(b)  and  failed  to  follow  its  manual  of  written 
+procedures  for  conducting  normal  operations  and  maintenance  activities  in  accordance  with  § 
+195.402(a). 
+
+5. 
+
+§ 195.505 Qualification program. 
+
+Each  operator  shall  have  and  follow  a  written  qualification 
+
+program. The program shall include provisions to: 
+
+(a) . . . . 
+(i) After  December  16,  2004,  notify  the  Administrator  or  a  state 
+agency  participating  under  49  U.S.C.  Chapter  601  if  the  operator 
+significantly  modifies  the  program  after  the  administrator  or  state 
+agency has verified that it complies with this section. Notifications to 
+mail 
+PHMSA 
+submitted 
+to InformationResourcesManager@dot.gov, or  by  mail 
+to  ATTN: 
+Information  Resources  Manager  DOT/PHMSA/OPS,  East  Building, 
+2nd Floor, E22-321, New Jersey Avenue SE., Washington, DC 20590. 
+
+electronic 
+
+may 
+
+by 
+
+be 
+
+ETC Mid-Valley failed to notify the Administrator after it made significant modifications to its 
+Operator Qualification (OQ) Program in accordance with § 195.505(i) and its Standard Operating 
+Procedure HLA.18 Operator Qualification Plan, dated 12/15/2021.  Specifically, ETC Mid-Valley 
+failed to timely notify PHMSA of three significant modifications to its OQ Program. 
+
+SOP  HLA.18  Section  7.11  Notification  to  PHMSA  and  State  Agencies  states  that  significant 
+changes, such as a change in the number of covered tasks identified by the operator and changes 
+in span of control, will be reported to PHMSA. 
+PHMSA  reviewed  the  HLA.18  Operator  Qualification  Plan  Revision  Log,  dated  10/21/2021 
+which stated ETC Mid-Valley changed the number of covered tasks identified on May 4, 2018, 
+but did not notify PHMSA until October 28, 2020, a delay of over two years.  ETC Mid-Valley 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+made additional changes to the number of covered tasks on March 24, 2021 and notified PHMSA 
+on April 12, 2021.  ETC Mid-Valley made changes to span of control for several covered tasks on 
+August 11, 2021 and added additional covered tasks on October 21, 2021.  ETC Mid-Valley has 
+not notified PHMSA of the changes made in August and October 2021. 
+
+Therefore,  ETC  Mid-Valley  failed  to  notify  the  Administrator  after  it  made  significant 
+modifications to its OQ Program in accordance with § 195.505(i) and its procedures. 
+
+6. 
+
+§ 195.581 Which pipelines must I protect against atmospheric corrosion and 
+what coating material may I use? 
+
+(a) You must clean and coat each pipeline or portion of pipeline that 
+is exposed to the atmosphere, except pipelines under paragraph (c) of 
+this section. 
+
+ETC Mid-Valley failed to protect aboveground pipe from atmospheric corrosion by cleaning and 
+coating each pipeline or portion of pipeline that is exposed to the atmosphere in accordance with 
+§  195.581(a).  Specifically,  PHMSA  observed  three  locations  where  coating  material  had 
+deteriorated and showed bare pipe at the soil-to-air interfaces.  PHMSA observed bare pipe at the 
+Toledo Terminal Station, the Denver Station, and at BV 220. 
+
+Therefore, ETC Mid-Valley  failed to  protect  aboveground pipe  from atmospheric corrosion  by 
+cleaning  and  coating  each  pipeline  or  portion  of  pipeline  that  is  exposed  to  the  atmosphere  in 
+accordance with § 195.581(a). 
+
+7. 
+
+§ 195.583 What must I do to monitor atmospheric corrosion control? 
+
+(a)  You  must  inspect  each  pipeline  or  portion  of  pipeline  that  is 
+exposed  to  the  atmosphere  for  evidence  of  atmospheric  corrosion,  as 
+follows: 
+
+ETC Mid-Valley failed to inspect each pipeline or portion of its pipeline that is exposed to the 
+atmosphere for evidence of atmospheric corrosion at least once every 3 calendar years, but with 
+intervals not exceeding 39 months for its onshore Mid-Valley Pipeline System in accordance with 
+§ 195.583(a). 
+
+PHMSA inspected records for the Delhi, LA location and found that ETC Mid-Valley failed to 
+conduct atmospheric corrosion inspections at least once every three calendar years with intervals 
+not  to  exceed  39  months.  ETC Mid-Valley conducted atmospheric corrosion inspections  from 
+May 1 through June 2, 2015 but not again until December 9 through December 10, 2020. 
+
+If the pipeline is located:Then the frequency of inspection is:OnshoreAt least once every 3 calendar years, but with intervals not exceeding 39 months.OffshoreAt least once each calendar year, but with intervals not exceeding 15 months. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Therefore, ETC Mid-Valley failed to inspect each pipeline or portion of pipeline that is exposed 
+to the atmosphere for evidence of atmospheric corrosion at least once every 3 calendar years, but 
+with intervals not exceeding 39 months, in accordance with § 195.583(a). 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations. For violation occurring on or after March 21, 2022 and before January 6, 2023, 
+the maximum penalty may not exceed $239,142 per violation per day the violation persists, up to 
+a maximum of $2,391,412 for a related series of violations.  For violation occurring on or after 
+May  3, 2021  and  before  March  21, 2022,  the  maximum  penalty  may  not  exceed  $225,134  per 
+violation  per  day the  violation  persists,  up to  a  maximum  of  $2,251,334  for  a related  series  of 
+violations.  For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day the  violation  persists,  up to  a  maximum  of  $2,186,465  for  a  related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable violations and recommend that you be preliminarily assessed a civil penalty of $  119,000 
+as follows: 
+
+Item number 
+1 
+4 
+5 
+
+PENALTY 
+$ 39,800 
+$ 39,400 
+$ 39,800 
+
+Warning Items 
+
+With respect to Items 2 and 7,  we have reviewed the circumstances and supporting documents 
+involved in this case and have decided not to conduct additional enforcement action or penalty 
+assessment proceedings at this time.  We advise you to promptly correct these items.  Failure to 
+do so may result in additional enforcement action. 
+
+Proposed Compliance Order 
+
+With  respect  to  Items  3,  5,  and  6  pursuant  to  49  U.S.C.  §  60118,  the  Pipeline  and  Hazardous 
+Materials  Safety  Administration  proposes  to  issue  a  Compliance  Order  to  ETC  Mid-Valley 
+Pipeline.  Please refer to the Proposed Compliance Order, which is enclosed and made a part of 
+this Notice. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.  Please  refer  to  this  document  and  note  the  response  options.  All 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. § 552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following the receipt of this Notice, you have 30 days to submit written comments, or request a 
+hearing under 49 CFR § 190.211.  If you do not respond within 30 days of receipt of this Notice, 
+this constitutes a waiver of your right to contest the allegations in this Notice and authorizes the 
+Associate Administrator for Pipeline Safety to find facts as alleged in this Notice without further 
+notice to you and to issue a Final Order.  If you are responding to this Notice, we propose that you 
+submit your correspondence to my office within 30 days from receipt of this Notice.  This period 
+may be extended by written request for good cause. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  4-2023-034-NOPV,  and  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Bryan Lethcoe 
+Director, Southwest Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Proposed Compliance Order 
+
+Response Options for Pipeline Operators in Enforcement Proceedings 
+
+Cc:  Todd Nardozzi, Director, Regulatory Compliance, Energy Transfer Company, 
+
+todd.nardozzi@energytransfer.com 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROPOSED COMPLIANCE ORDER 
+
+Pursuant  to  49  United  States  Code  §  60118,  the  Pipeline  and  Hazardous  Materials  Safety 
+Administration  (PHMSA)  proposes  to  issue  to  Energy  Transfer  Company  (ETC)  Mid-Valley 
+Pipeline  Company,  a  Compliance  Order  incorporating  the  following  remedial  requirements  to 
+ensure the compliance of ETC Mid-Valley Pipeline Company (ETC Mid-Valley) with the pipeline 
+safety regulations: 
+
+A. 
+
+B. 
+
+C. 
+
+D. 
+
+For Item 3 of the Notice pertaining to ETC Mid-Valley’s failure to maintain each 
+valve that is necessary for the safe operation of its pipeline systems in good working 
+order  at  all  times,  ETC  Mid-Valley  must  inspect  all  valves  on  the  Mid-Valley 
+Pipeline System and repair or replace any valves that are not in good working order, 
+including testing communications with the control room for ROVs, and provide the 
+associated inspection records and work orders to the Director, Southwest Region, 
+PHMSA within 180 days of issuance of the Final Order. 
+
+For  Item  5  of  the  Notice  pertaining  to  ETC  Mid-Valley’s  failure  to  notify  the 
+Administrator after it made significant modifications to its Operator Qualification 
+(OQ) Program, ETC Mid-Valley must notify the Administrator of the August and 
+October  2021  significant  modifications,  and  provide  a  copy  of  the  submitted 
+notification to the Director, Southwest Region, PHMSA within 30 days of issuance 
+of the Final Order. 
+
+For  Item  6  of  the  Notice  pertaining  ETC  Mid-Valley’s  failure  to  protect 
+aboveground  pipe  from  atmospheric  corrosion  by  cleaning  and  coating  each 
+pipeline or portion of pipeline that is exposed to the atmosphere, ETC Mid-Valley 
+must  ensure  all  pipe  on  the  Mid-Valley  pipeline  system  that  is  exposed  to  the 
+atmosphere is protected.  ETC Mid-Valley must follow its procedure and remediate 
+all  areas  with  coating  damage  and  provide  inspection  and  remediation  records, 
+including  before  and  after  pictures,  to  the  Director,  Southwest  Region,  PHMSA 
+within 180 days of issuance of the Final Order. 
+
+It  is requested (not mandated) that Energy Transfer Company, Mid-Valley Pipeline 
+Company maintain documentation of the safety improvement costs associated with 
+fulfilling  this  Compliance  Order  and  submit  the  total  to  Bryan  Lethcoe,  Director, 
+Southwest  Region,  Pipeline and  Hazardous  Materials  Safety  Administration.  It  is 
+requested that these costs be reported in two categories: 1) total cost associated with 
+preparation/revision  of  plans,  procedures,  studies,  and  analyses,  and  2)  total  cost 
+associated with replacements, additions, and other changes to pipeline infrastructure. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

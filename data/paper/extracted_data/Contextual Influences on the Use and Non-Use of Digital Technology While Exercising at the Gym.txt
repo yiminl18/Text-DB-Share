@@ -1,0 +1,1322 @@
+Contextual Influences on the Use and Non-Use of Digital 
+Technology While Exercising at the Gym 
+
+Misha Patel 
+Foolproof and University College London 
+London, United Kingdom 
+misha.patel@foolproof.co.uk 
+
+Aisling Ann O’Kane 
+University College London 
+London, United Kingdom 
+a.okane@cs.ucl.ac.uk 
+
+ABSTRACT 
+The  use  of  wearable  technology  will  become  significantly 
+more prevalent in the coming years, with major companies 
+releasing  devices  such  as  the  Samsung  Gear  Fit.  With 
+sensors,  such  as  pedometers  and  heart  rate  monitors, 
+embedded  in  these  devices  it  is  possible  to  use  them  for 
+fitness  purposes.  However,  little  is  known  about  how 
+wearable  adopters  actually  use  wearable  and  existing 
+technologies  during  exercise.  In  an  exploratory  situated 
+study  of  technology  use  and  non-use  in  the  context  of  the 
+gym,  fitness  informatics  adopters  showed  varied  practices 
+related  to  distraction,  appropriating  technology  into  their 
+routines, and information needs. We discuss this variance in 
+relation  to  individual  differences  and  the  impact  of  the 
+physical nature of the gym. Although further research might 
+show  other  influencing  factors  such  as  the  social  context, 
+we  make  a  case  for  the  use  of  situated  studies  to  uncover 
+tensions  that  lead  to  use  and  non-use  of  technology  that 
+arise in the different unfolding situations of using wearables 
+in  everyday  life,  including  at  the  gym,  which  is  a 
+surprisingly complex context. 
+
+INTRODUCTION 
+There has been an increase in the popularity and availability 
+of  personal  informatics  tools.  This  includes  the  growth  of 
+fitness mobile applications being developed for smartphone 
+use, but also standalone wearable devices. The popularity of 
+these  technologies  will  continue  to  grow  with  large 
+companies releasing smartwatches with embedded activity-
+tracking  functionality,  such  as  the  Samsung  Gear  Fit.  This 
+trend has led the domains of exercise, fitness and wellbeing 
+to  be  of  increasing  interest  to  the  HCI  community  (e.g. 
+[29]).  
+
+There  has  been  significant  emphasis  on  designing 
+technology  to  encourage  people  to  engage  in  physical 
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies 
+are not made or distributed for profit or commercial advantage and 
+that copies bear this notice and the full citation on the first page. 
+Copyrights for components of this work owned by others than ACM 
+must be honored. Abstracting with credit is permitted. To copy 
+otherwise, or republish, to post on servers or to redistribute to lists, 
+requires prior specific permission and/or a fee. Request permissions 
+from Permissions@acm.org. 
+CHI 2015, April 18 - 23, 2015, Seoul, Republic of Korea 
+Copyright is held by the owner/author(s). Publication rights licensed to 
+ACM. 
+ACM 978-1-4503-3145-6/15/04…$15.00 
+http://dx.doi.org/10.1145/2702123.2702384 
+
+activity.  This  includes  the  design  of  ubiquitous  computing 
+tools  [4],  the  development  of  fitness  device  infrastructures 
+[23],  virtual  trainers  [12]  and  interactive  social  computer 
+games  [27].  These  HCI  studies  have  been  concerned  with 
+the  user  evaluation  of  bespoke  persuasive 
+fitness 
+technologies.  However,  people  who  adopt  personal 
+informatics typically do not use just one type of technology; 
+for instance, Rooksby and colleagues discovered that some 
+people  interweave  their  use  of  different  activity  trackers 
+[36].  There  is  a  dearth  of  exploratory  research  that  has 
+investigated  how  and  why  different  people  use  and  do  not 
+use various technologies during physical activity, including 
+at the gym: a popular place for regular exercise. 
+
+Regular  physical  activity  is  essential  for  good  health  and 
+wellbeing,  bringing  about  a  range  of  physical,  social  and 
+mental  health  benefits  that  are  important  for  both  the 
+individual  and  for  society  [4].  As  people  become  more 
+aware of these rewards, the prevalence of people who go to 
+the  gym  (also  known  as  fitness  centres  or  health  clubs)  is 
+rising, with over a hundred new facilities opening in the UK 
+in 2013 alone, and with memberships rising to 12.6% of the 
+UK population [20]. Although users’ behaviours and needs 
+regarding mobile fitness technology have been investigated, 
+there  is  little  research  on  technology  use  at  the  gym  and 
+many  studies  use  self-reported  and  retrospective  data 
+independent  of  the  context  of  use  (e.g.  [19,  36].  As 
+behavioural 
+the 
+interactions  occur  and  independent  of  their  context,  it  is 
+argued  that  such  methods  do  not  elicit  comprehensive 
+information  about  behaviour  as  it  really  happens  in  the 
+world [11].  
+
+typically  obtained  after 
+
+insights  are 
+
+situated 
+
+Examining  interactions  with  technology  within  the  context 
+of  use  is  crucial,  as  user  actions  are  fundamentally 
+embedded  within  a  particular  situation  [39]  and  context  is 
+an  ever-changing  unfolding  notion  [18].  There  have  been 
+exploratory 
+general 
+studies 
+technology use within contexts including the workplace [7] 
+and the home [9]; however there has been little exploratory 
+investigation into the use of technology in gyms. An ‘in the 
+wild’ approach [35] is particularly appropriate for research 
+into  the  use  of  fitness  mobile  applications  and  wearable 
+devices,  as  they  are  designed  to  be  used  in  an  diversity  of 
+uncontrollable settings [28]. As fitness informatics adopters 
+are  inherently  interested  in  the  use  of  new  technology,  we 
+
+investigating 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2923 
+ 
+explored  how  the  gym  context  influenced  their  adoption, 
+use  and  non-use  of  digital  technologies  for  purposes 
+ranging  from  tracking  to  entertainment  during  individual 
+physical activity.  
+
+BACKGROUND AND RELATED RESEARCH 
+
+is  well  studied 
+
+Physical Activity and Fitness Research 
+Exercise 
+the  domains  of  sports 
+in 
+psychology  and  behaviour  change.  The  concepts  behind 
+some  persuasive  technologies  to  support  physical  activity 
+are  loosely  based  on  health  behaviour  change  theories, 
+featuring  elements  of  social  support,  motivation  and  self-
+efficacy.  
+
+Motivation is a key feature of exercise  and can account for 
+individual  differences  in  behaviours,  inspiring  people  to 
+engage  in  exercise.  Intrinsic  motivation  is  described  as 
+performing a behaviour for its own sake [40]; exercising for 
+the  enjoyment  of  the  experience.  It  has  been  shown  that 
+performance  feedback  and  having  a  personal  choice  of  the 
+type  of  music  to  listen  to  influences  situational  motivation 
+[40].  On  the  other  hand,  extrinsic  motivation  is  doing 
+something  as  a  means  to  an  end as  opposed  to  for  its  own 
+sake,  for  instance  exercising  for  the  purpose  of  a  reward 
+such as achieving a weight loss target [40].  
+
+It  has  been  found  that  tracking  one’s  activity  is  beneficial 
+for fitness behaviour change [38]. Setting goals for oneself 
+is  also  a  well-known  strategy  that  has  been  shown  to 
+contribute  towards  behaviour  change  for  fitness  activity 
+[13].  The  design  of  many  mobile  fitness  applications 
+revolves  around  activity  tracking  and  goal  setting  with  the 
+aim of increasing user’s physical activity [14].  
+
+that  during 
+
+As  well  as  the  influence  of  individual  personal  goals  on 
+motivation, research has also demonstrated the motivational 
+effects  of  external  stimulation  during  physical  activity. 
+Engaging in technology for entertainment such as watching 
+TV  and  listening  to  music  has  been  discovered  to  have 
+positive psychological and physiological effects on exercise 
+performance  [5].  In  a  review,  Karagoris  and  Priest  [26] 
+summarised 
+repetitive,  endurance-related 
+anaerobic  activities,  listening  to  self-selected  motivational 
+music demonstrated performance enhancing effects (e.g. an 
+increase 
+reduce 
+perceptions of exertion; it is hypothesized that this may be 
+due to a ‘dissociation’ effect through which music distracts 
+attention  away  from  the  pain  associated  with  the  exercise 
+[34].  Another  way  in  which  music  has  been  shown  to 
+increase  performance  is  through  the  characteristics  of 
+synchronous  music,  whereby 
+rhythm  moderates 
+movement patterns [6].  
+
+in  stamina).  Music  was 
+
+found 
+
+the 
+
+to 
+
+Another  theoretical  concept  that  relates  to  the  individual’s 
+experience  during  exercise  is  ‘flow’  [33].  ‘Flow’  is  a 
+positive state of mind characterised by complete immersion 
+and absorption in an activity [17]. Research has mentioned 
+the positive effects of ‘flow’ on physical activity adherence 
+[33].  
+
+Interactive Technology to Aid Physical Activity 
+The availability of health and fitness tracking capabilities is 
+growing  with  the  release  of  new  commercially  available 
+technologies  [21].  In  light  of  this,  fitness  tracking  sensors, 
+such as heart rate monitors, accelerometers, pedometers and 
+GPS (to track outdoor running and cycling) are being added 
+to  mobile  and  wearable  devices  such  as  smartphones  and 
+smartwatches.  For  instance,  the  Samsung  Gear  Fit  tracks 
+everyday  activity  such  as  the  number  of  steps,  presenting 
+values  to  the  user  such  as  calories  burnt  and  distance 
+achieved,  and  it  interfaces  with  Samsung  phones  for  GPS 
+and to provide notifications (e.g. text messages) through the 
+watch.  
+
+There  has  been  some  research  investigating  behaviour 
+relating  to  the  use  of  personal  informatics  technology  for 
+general  health  and  wellbeing.  Ahtinen  and  colleagues  [2] 
+conducted  a  cross-cultural 
+involving  a 
+technology  probe  where  participants  recorded  subjective 
+experiences  about  their  use  of  a  wellness  mobile  app  for 
+two  weeks.  Findings 
+and 
+environmental  factors  influenced  user  needs  and  usage  of 
+the application.  
+
+field  study 
+
+showed 
+
+cultural 
+
+that 
+
+Similarly,  Rooksby  et  al.  [36]  explored  the  area  of  ‘lived 
+informatics’  in  terms  of  the  ways  in  which  people  use 
+health  and  wellbeing  activity  tracking  devices  they  have 
+already  adopted.  The  self-reported  study  revealed  several 
+categories  of  tracking  behaviour,  including  documentary 
+tracking (where participants track their activity for reasons 
+such as facilitating understanding of their activity or sharing 
+their  stories  with  others)  and  directive  tracking  (where 
+participants track their activity in order to reach a goal). 
+
+interviews  and 
+
+Approaches to Studying Fitness Technology 
+The  majority  of  HCI  research  that  investigates  fitness 
+technology  use  is  for  the  purpose  of  evaluating  specific 
+fitness technologies.  The Sports Tracker,  a mobile outdoor 
+sports  tracking  application  [1],  was  evaluated  through 
+examining  usage  habits  and  user  experience  data  for 
+existing  users  of  the  application,  which  were  collected 
+text-message 
+through  one-off  phone 
+questionnaires  lasting  two  weeks.  Consolvo  et  al.  [14] 
+conducted  a  field  evaluation  of  Houston,  a  mobile 
+application  that  enables  step-count  tracking  to  enhance 
+users’  physical  activity 
+in-situ 
+evaluation  study  was  implemented  where  participants  used 
+the  application,  were  interviewed  about  their  experiences, 
+and  completed  questionnaires  and  daily  records  of  step 
+counts. Another system that was evaluated ‘in the wild’ was 
+the UbiFit Garden system [15]; a mobile application along 
+with  a  fitness  device  which  displays  a  visualisation  of  the 
+user’s  physical  activity.  The  evaluation  of  the  system  was 
+run on mobile phones that participants used and they were 
+interviewed  to  examine  user  experiences.  These  studies 
+have 
+the  use  of  specific 
+technology, rather than looking at the range of technologies 
+that can be and are used for personal fitness.  
+
+investigating 
+
+focused  on 
+
+three-week 
+
+levels.  A 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2924Other 
+than  Rooksby  and  colleagues  [36]  who  used 
+interviews and on-going self-reports on the use of personal 
+informatics  discussed  above,  there  are  only  a  limited 
+number of studies within the HCI literature that take a more 
+open,  exploratory  approach  in  examining  general  user 
+behaviour  in  the  domain  of  health.  Fritz  et  al.  [19] 
+investigated  the  behaviour  of  long-term  users  of  activity 
+monitoring  devices  to  find  out  how  they  use  their devices; 
+however  they  only  used  retrospective  interview  data  to  do 
+so. On the other hand, Goodman [22] used more extensive 
+methods  (blog  readings,  interviews,  diary  reports  for 
+activity  logging,  and  pedometer  data)  to  explore  people’s 
+health issues and behaviours in their daily lives, but only as 
+a  work  in  progress  in  order  to  discover  ways  in  which 
+health  technology  could  be  designed  to  support  behaviour 
+change.  However,  there  have  been  few  exploratory  studies 
+into technology use in the context of the gym.  
+
+Other  than  a  few  studies  of  specific  technologies,  many 
+investigations  looking  at  technology  use  in  this  review  did 
+not  carry  out  situated  research.  The  methods  that  were 
+primarily  used  consisted  of  post-hoc  interviews,  diaries, 
+experience  sampling  methods  and  logging  devices  [1,36]. 
+The  use  of  these  methods  undermines  the  pertinent  role  of 
+the environment and situation of the activity in influencing 
+interactions  with  technology  [35].  As  Brown  et  al.  [11] 
+argue,  subtle  but  meaningful  interactions  with  technology 
+may  be  lost  if  the  data  is  based  on  retrospective  and  self-
+reported  information  rather  than  the  actual  behaviour  as  it 
+happens  in  the  real  world,  during  real  time.  Additionally, 
+retrospective reports lack detail and may not capture every 
+occurrence  of  use  as  they  are  susceptible  to  report  bias, 
+the  participant 
+is  dependent  on  what 
+where  recall 
+remembers and considers relevant [3]. Logging devices can 
+obtain  data  at  the  point  of  use,  but  they  only  provide  a 
+conceptual  outline  of  device  usage  and  produces 
+descriptions  of  only  general  use  rather  than  understanding 
+particular  accounts  of  use  [11].  Based  on  Brown  and 
+colleagues’  rich  findings  on  mobile  phone  use  using 
+situated methods, the current exploratory research warrants 
+a  situated  approach  to  investigate  technology  use  in  the 
+context where fitness informatics may be used: the gym.  
+
+METHODOLOGY 
+
+Context of the Study 
+The  study  took  place  in  a  busy  London  university  gym, 
+which  is  also  open  to  the  general  public.  Permission  was 
+gained from the gym to recruit members for the study. It is 
+a  relatively  basic  gym  with  regards  to  the  facilities  and 
+to  other  more 
+technology  available, 
+expensive  gyms  nearby.  Other  than  a  separate  floor  for 
+group classes, it comprises four main areas with: machines 
+for  aerobic  exercises  (e.g.  treadmills,  cross  trainers  and 
+exercise bikes), resistance machines, free weights and a mat 
+area  for  stretching  or  floor  exercises  (see  Figure  2,  left). 
+Aerobic  exercises  are  activities  that  involve  constant 
+repetitive movements of the arms and legs, heightening  
+
+in  comparison 
+
+Figure 1: Samsung Gear Fit worn on the wrist at the gym 
+
+(e.g.  weightlifting)  where 
+
+heart rate  and respiration (e.g. running), and it can involve 
+interval  training  consisting  of  systematic  fluctuation  of 
+speed. Anaerobic exercises comprise short bursts of intense 
+recovery  breaks 
+exertion 
+(‘deadtime’)  are  usually  taken  in  between  exercises  or 
+‘reps’. On the wall in front of the aerobic machines are a set 
+of  mirrors  and  five  television  screens  displaying  various 
+subtitled programs while loud, popular music plays through 
+speakers around the whole gym area. 
+
+autoethnography  was 
+
+Autoethnography 
+The  initial  phase  in  this  research  was  a  four-week 
+autoethnography study by the first author with the Samsung 
+Gear Fit (see Figure 1), as described above. The purpose of 
+this 
+in-depth 
+understanding of the various contexts of everyday use [30] 
+of  a  fitness  related  wearable  device.  Her  experiences 
+relating to its use were documented in textual diary entries 
+at  the  end  of  every  day.  The  insights  influenced  the 
+structure and format of the user study, and the diary entries 
+were analysed as part of the findings.  
+
+to  obtain 
+
+an 
+
+In-Situ User Study 
+
+Participants  
+Recruitment posters were put up in the gym and around the 
+university  campus.  Participants  were  only  recruited  if  they 
+were  members  of  the  gym  and  currently  used  or  had  used 
+wearable  technology  or  fitness  applications.  This  ensured 
+that  participants  had  at  least  some  prior  experience  with 
+using  tracking  technology  and  the  facilities  in  the  gym  to 
+prevent the additional extrinsic motivation of making them 
+exercise  or  adding  technology  only  for  the  purpose  of  the 
+study [32]. Participants gave informed consent as stipulated 
+by  UCL  ethical  procedures  and  were 
+financially 
+compensated with £10 cash on completion of the session.  
+
+The study involved 11 participants: four females and seven 
+males between the ages of 21 and 35 years (mean age of 26 
+years).  Nine  participants  were  students  and  two  were 
+professionals,  all  living  in  London.  Eight  participants 
+currently  owned  or  had  used  a  wearable  device  including: 
+Fitbit3,  Nike  Fuelband4,  Sony  Smartband5,  heart  rate 
+monitor and pedometer. Five participants occasionally used 
+a smartphone application for tracking running or diet. Eight 
+participants  brought  in  their  smartphones  to  the  gym  to 
+listen to music, watch TV, use messaging and social media, 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2925 
+Figure 2: The layout of the gym (left), and the location of the contextual interviews and in-situ coding meetings (right) 
+
+or as a tool to record their exercise. Pseudonyms are used in 
+the findings to preserve anonymity. 
+
+User Study Procedure  
+To test and refine the chosen methodology, two participants 
+who  fulfilled  the  recruitment  criteria  took  part  in  pilot 
+studies.  Data  from  pilot  study  was  not  directly  included  in 
+the  results  of  the  main  user  study  as  the  participant 
+observation  changed  significantly  after  their  participation, 
+but the findings did contribute to the overall analysis.  
+
+The main user study involved three different data collection 
+phases for each of the 11 participants, conducted by the first 
+author:  entry  briefing  and  contextual  interview,  participant 
+observations  and  dialogue  during  exercise,  and  exit 
+contextual interview and debrief.  
+
+The  semi-structured  contextual  entry  interviews  lasted 
+between 30 and 45 minutes and were conducted in the gym 
+reception  area  next  to  a  big  window  with  a  view  of  the 
+context of use (see Figure 2, right), which can give a richer 
+account than other types of interviews [25]. Interviews were 
+semi-structured  with  the  aim  of  developing  rapport  with 
+participants  and  for  them  to  feel  comfortable  to  talk  about 
+their experiences. The purpose of the interview was to gain 
+understanding  of  how  they  currently  perceive  their  use  of 
+technology  during  exercise.  An  initial  interview  script  for 
+the  first  interview  was  generated  as  a  product  of  the 
+autoethnography  and  pilot  interviews,  and  was  used  to 
+guide  the  interview.  Questions  involved  asking  about  their 
+exercise  routines  (e.g.  What  are  your  motivations  for 
+exercise;  why  do  you  attend  the  gym?),  participants’ 
+experience  of  various  technologies  during  exercise  (e.g. 
+What type of wearable technology or fitness applications do 
+you  use  or  have  you  used  in  the  past?)  and  how  they  use 
+technology  when  exercising  (e.g.  Do  you  think  the  use  of 
+this  technology  impacts  on  your  exercise  behaviour?). 
+Using  an  exploratory  approach,  the  interview  questions 
+were  adapted  as  relevant  themes  emerged  from  the  data. 
+The interviewer would sometimes prompt the participant to 
+keep focus on relevant conversation. Interviews were audio 
+recorded to facilitate transcription.  
+
+in 
+
+the  gym 
+
+to  capture 
+
+Immediately after the interview, the first author carried out 
+participant  observation  whilst  they  performed  their  usual 
+exercise  regime 
+technology 
+interaction.  Participants  were  asked  to  engage  in  dialogue 
+where they verbalised their thoughts and feelings to capture 
+their experience and motivations underlying certain actions. 
+Observations  lasted  for  the  duration  of  the  participant’s 
+exercise  routine,  but  no  longer  than  one  hour.  The  first 
+author  was  dressed  in  workout  clothing  and  was  situated 
+near  the  participant  on  an  exercise  machine  in  order  to 
+blend in. Observation notes were written on a smartphone, 
+as the gym did not allow video capture. 
+
+Post-interviews  were  conducted  immediately  after  the 
+participant  observations  and  lasted  for  about  ten  minutes, 
+taking  place  in  context  (Figure  2,  right).  The  researcher 
+clarified  any  questions  about  the  participant’s  observed 
+behaviour,  and  then  summarised  the  information  gathered 
+from the interview and observation. 
+
+Data Analysis 
+Iterative  data  gathering  and  analysis  proceeded  with  the 
+interviews  being  immediately  transcribed  and  the  textual 
+observations  written  out  in  full,  and  then  both  coded  for 
+salient  themes  by  the  first  author.  Throughout  the  analysis 
+process,  emerging  themes  and  insights  were  discussed 
+between  the  authors  in  the  context  of  the  gym  [31]  during 
+in-situ coding meetings (see Figure 2, right), which helped 
+to  adapt  the  focus  of  questions  asked  in  subsequent 
+interviews [16]. The data analysis process took part in four 
+stages,  loosely  following  the  phases  of  thematic  analysis 
+[10]:  immediately  transcribing  the  data,  becoming  familiar 
+with  it;  open  coding  of  the  data  between  each  interview 
+looking 
+interviews, 
+themes 
+observations,  and  autoethnography;  and  axial  coding  to 
+categorise  them  systematically  using  an  affinity  diagram 
+[24]. Finally, three rounds of categorisation were performed 
+to drill down from issues with adoption, carrying and using 
+technology, focusing on fitness and non-fitness technology, 
+uncovering  tensions  leading  to  use  and  non-use  that  are 
+presented in the findings. Data were  also analysed through 
+the links to previous literature [10].  
+
+salient 
+
+from 
+
+the 
+
+for 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2926      
+ 
+ 
+FINDINGS 
+The  findings  are  arranged  in  three  separate  themes  that 
+arose  from  the  data,  but  there  is  much  overlap  between 
+topics.  The  themes  are  presented  as  the  following  use  and 
+non-use  tensions:  technology  used  for  distraction  vs. 
+technology  causing  disruption;  information  needs  met  by 
+information  provided  by 
+technology  vs. 
+technology;  and  exercise  influencing  technology  use  vs. 
+technology use influencing exercise. 
+
+avoiding 
+
+Distraction vs. Disruption 
+There were many cases where participants used technology 
+to distract themselves from the task at hand: exercising. On 
+the other hand, there were situations where technology used 
+for  non-fitness  reasons  caused  disruption  to  exercise,  so 
+participants actively avoided it. 
+
+Technology Used for Distraction 
+Six participants were observed using technology as a source 
+of  distraction:  they  got  immersed  in  watching  videos, 
+listening to music or audio books, or looking at the machine 
+display.  This  diverted  their  attention  away  from  thinking 
+about  the  exercise  towards  the  distraction  technology. 
+Participants  suggested  that  they  required  distraction  from 
+concentrating on performing certain exercises in the gym as 
+this  reduced  the  intensity  of  their  perception  of  the  pain, 
+effort and tiredness experienced during exercise (cf. [34]). 
+
+(Referring to the machine display and music) “Having 
+something else to concentrate on takes my mind away from 
+pain and tiredness” (Andy, interview) 
+
+“I try not to think about what I am doing so I watch TV on 
+my phone. Distraction is my key. When I cannot use my 
+phone I have to concentrate on it and I feel every second of 
+it” (Juliette, observation and dialogue) 
+
+The  need  to  divert  attention  meant  that  some  participants 
+used  any  technology  they  could  to  distract  them.  One 
+participant watched TV to distract her from her cross trainer 
+exercise,  regardless  of  the  value  of  entertainment  it 
+provided. 
+
+“I would watch TV just to take my mind off what I’m doing, 
+even though I don’t really like what’s on” (Helen, 
+observation and dialogue) 
+
+This  need  to  use  technology  for  distraction  was  mainly 
+observed  for  participants  performing  aerobic  exercises that 
+did  not  necessarily  require  attention  on  the  activity  or  the 
+machine  display  in  order  to  achieve  performance,  such  as 
+running  at  a  steady  pace  on  the  treadmill.  This  type  of 
+exercise  allowed  participants  to  disengage  their  attention 
+from  the  exercise  and  to  direct  it  towards  something  else. 
+However,  when  participants  performed  interval  training  or 
+weight  training,  many  did  not  use  technology  for  the 
+purpose of distraction. 
+
+“I only watch TV on my phone when I’m doing aerobic 
+exercises like on the elliptical machine, but I don’t on the 
+resistance machines” (Juliette, observation and dialogue) 
+
+Technology Use Causing Disruption 
+One  of  the  reasons  that  participants  didn’t  make  as  much 
+use of technology during anaerobic exercises as they did for 
+aerobic  exercises  was  because  many  preferred  to  mentally 
+count  the  number  of  repetitions  they  were  performing  to 
+keep  track  of  their  exercise  progress  and  therefore  needed 
+to direct their attention towards the task. 
+
+“I would stop listening to music and focus on counting the 
+reps in my head instead, so I know how many I can manage 
+to do today” (Sammy, observation and dialogue) 
+
+required 
+
+to  manually  count 
+
+Unlike  aerobic  machines,  the  resistance  machines  did  not 
+provide  automatic  activity  tracking  functionality  and  so 
+participants  were 
+their 
+repetitions.  This  need  for  concentration  on  counting 
+repetitions  inhibited  the  use  of  any  technology  that  might 
+disrupt this, even when participants would have preferred to 
+use  it  for  distraction  purposes.  Three  participants  would 
+have  still  preferred  to  use  their  phones  to  watch  TV  and 
+listen  to  music  during  weight  training,  but  they  did  not, 
+because  it  conflicted  with  their  need  to  count  their 
+repetitions. 
+
+“It would be great if the machine or my [wrist] Fitbit could 
+automatically count my reps so I could listen to my music 
+properly” (Sammy, observation and dialogue)  
+
+Even  for  aerobic  exercise,  disruption  could  be  unwelcome 
+and technology could be avoided to minimise it. When the 
+smartphone notification feature was active on the Samsung 
+Gear  Fit  during  the  first  author’s  activity  on  the  cross 
+trainer,  it  disrupted  her  concentration.  She  found  this 
+constant  disruption  frustrating  and  eventually  disabled  that 
+feature for the rest of the duration of her exercise sessions.  
+
+“The notifications made me lose concentration of what I 
+was doing and I had to slow down just to read the message 
+which was annoying, so I turned it off” (autoethnography 
+diary)  
+
+Another reason why people avoided disruption stems from 
+their  beliefs  about  the  relationship  between  exercise  and 
+technology use. Some participants believed that exercise is 
+an  opportunity  to  focus  on  the  mind  and  body:  to  be 
+immersed 
+the  experience  of  exercise.  The  deep 
+concentration  may  be  related  to  a  sense  of  ‘flow’;  a  state 
+characterised  by  complete  immersion  and  absorption  in  an 
+activity [17].  
+
+in 
+
+“I think exercise should be a time to get away from 
+unnecessary technology and distractions and just focus on 
+exercising and being in the zone, that’s why I don’t even 
+bring my phone with me” (Kevin, interview) 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2927findings  show 
+
+that  unintentional  disruption 
+
+Summary of the Distraction/Disruption Tension 
+to 
+The 
+concentration  can  consequently 
+impact  performance, 
+enjoyment,  or  even  the  ability  to  exercise,  which  can  be 
+viewed  negatively  and  lead  to  disengagement.  For  the 
+design  of  technology  that  might  be  used  in  the  gym,  this 
+must  be  balanced  with  people’s  desire  to  dissociate  from 
+the  exercise  through  distraction,  as  entertainment  can 
+motivate people to exercise more often and for longer. 
+
+Information Needs vs. Avoiding Information 
+Many  participants  wanted  to  use  technology  to  monitor 
+their  practices  and  to  motivate  themselves  by  reviewing 
+their  fitness  information.  Unfortunately,  these  information 
+needs  sometimes  conflicted  with  their  need  to  avoid 
+demotivating information, both in the gym and outside it. 
+
+Information Needs Met by Technology  
+Nine  participants  primarily  used  the  measures  of  time, 
+distance,  calories  and  heart  rate  on  the  fitness  tracking 
+displays  on  aerobic  machines.  Using  these  measurements, 
+participants  monitored 
+set 
+their 
+themselves  goals  and  moderated  their  level  of  exertion  to 
+reach  their  goal.  This  goal  directed  tracking  behaviour 
+relates  to  the  ‘directive  tracking’  style  [36].  For  example, 
+two  participants  were  concerned  with  maintaining  their 
+heart  rate  within  a  certain  range  and  therefore  during 
+aerobic exercises they constantly focused their attention on 
+the  heart  rate  display,  moderating  their  exertion  level  to 
+achieve their target heart rate. 
+
+current  progress, 
+
+“I look at the heart rate monitor, if it is lower than my 
+target then I speed up to try and reach it” (Kevin, 
+observation and dialogue) 
+
+It  was  observed  that  participants  used  different  aspects  of 
+performance feedback values to motivate their activity, and 
+this  was  dependent  on  the  exercise  as  well  as  what  part  of 
+the  exercise  they  were  at.  For  instance,  four  participants 
+found  seeing  that  there  was  little  time  remaining  of  their 
+workout motivated them to increase exertion. 
+
+ “When I see there is only 40 secs left I think to myself, 
+“come on you can do it!”” (Marie, observation and 
+dialogue) 
+
+As well as for motivational purposes, activity monitoring is 
+sometimes  required  for  particular  exercises.  The  three 
+participants who performed interval training exercises used 
+the  information  on  the  machine  display  as  a  way  to 
+structure  their  workout.  They  explained  that  they  used  the 
+time display as an indicator for when they needed to adjust 
+their speed control. 
+
+“I’m looking at the time so I know that every two minutes I 
+need to change my speed” (Marie, observation and 
+dialogue) 
+
+In contrast, some participants chose to focus on less reliable 
+information; two participants focused on the calorie counter 
+
+on  the  machine  display  as  an  aid  for  exercise  motivation. 
+Although they knew this was an inaccurate measure, it was 
+satisfying  for  them  just  to  know  that  calories  were  being 
+burned  as  their  exercise  goals  were  related  to  weight  loss 
+and  body  shape.  This  was  also  observed  for  the  Nike 
+Fuelband  where  there  was  satisfaction  gained  by  reaching 
+the  ‘next  full  number’  on  a  constantly  ascending  or 
+descending  value,  such  as  aiming 
+to  achieve  3000 
+Fuelpoints rather than stopping at 2800. 
+
+“I would never stop before I reach a full number, even 
+though I don’t really know what the Fuelpoints are based 
+on” (Harry, observation and dialogue) 
+
+Participants  reviewed  performance  data  logged  by  the 
+activity tracking technology after they had exercised at the 
+gym. Eight participants described that they enjoyed looking 
+at their performance data from wearable devices to facilitate 
+a  better  understanding  of 
+fitness  behaviour 
+(‘documentary tracking’ [36]).  
+
+their 
+
+“Data is knowledge when you look at it in the right way” 
+(Nigel, interview) 
+
+One  reason  why  participants  used  fitness  technology 
+outside  of  the  gym  was  to  motivate  exercise  behaviour  in 
+the  gym.  Martin  claimed  the  Fuelband  data  motivated  him 
+to  exercise  in  order  to  not  break  the  streak  of  goal 
+achievement  he  had  developed;  the  motivation  stemmed 
+from  the  disappointment  of  the  thought  of  not  meeting  the 
+goal.  This  shows  the  powerful  motivational  effect  that 
+tracking  fitness  and  goals  setting  can  have  on 
+the 
+participant’s behaviour. 
+
+“I was addicted to meeting my daily goals; once you 
+develop streaks, you don’t want to break it.” (Martin, 
+interview)  
+
+the 
+
+to  evade 
+
+Avoiding Information Provided by Technology 
+Conversely,  some  participants  suggested  that  they  avoided 
+information 
+feelings  of  shame  and 
+disappointment  of  not  being  able  to  meet  a  goal.  Harry 
+explained  that  he  avoided  wearing  his  Nike  Fuelband 
+device on certain days where he knew that he would not go 
+to  the  gym  in  order  to  avoid  the  negative  affect  associated 
+with  seeing  an  unmet  goal.  This  may  relate  to  the 
+participant  self-identity  as  “somebody  who  always  reaches 
+his goal” and so he avoids behaviour that would violate that 
+perception. 
+
+“When I am too busy to exercise as much, I don’t wear the 
+Fuelband. I don’t like to see that I have not reached my 
+goal so would rather not wear it at all on some days” 
+(Harry, interview) 
+
+Avoiding  looking  at  certain  measures  of  fitness  tracking 
+was  observed  and  some  participants  explained  that  they 
+found  it  demotivating  during  their  exercise.  For  constant 
+aerobic fast paced, high intensity exercises (e.g. running on 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2928the treadmill), six participants consciously avoided looking 
+at the time on the machine display. 
+
+use  of  digital  technology,  but  the  technology  could  also 
+influence people’s exercise at the gym.  
+
+Juliette placed her phone on the display pad, deliberately 
+covering the time during use of the elliptical machine 
+(Juliette, observation notes) 
+
+“I avoid looking at the time when I’m running, it makes my 
+goal seem further away” (Nigel, observation and dialogue) 
+
+A  reason  for  this  was  because  participants  believed  that 
+watching the clock increases their perception of their effort 
+and tiredness, and reduces the perceived speed of time. This 
+distortion of perception of time could have a negative effect 
+on  some  participants’  motivation  and  consequently  affect 
+their performance. 
+
+“When I am tired I avoid constantly looking at the time, it 
+makes it feel like more effort and time seems to go slower!” 
+(Marie, observation and dialogue) 
+
+As well as the time measure, participants avoided looking at 
+other  values  that  also  indicated  low  performance  progress. 
+Two  participants  did  not  look  at  the  progress  display  near 
+the  beginning  of  their  workout  when  progress  was  low 
+because  they  found  it  de-motivating.  This  highlights  that 
+the  use  of  technology  is  influenced  by  certain  temporal 
+stages within a workout. 
+
+“I don’t want to look at calories at the beginning because it 
+is low and I think I am not doing well” (Sammy, 
+observation and dialogue) 
+
+Similarly,  it  was  observed  that  some  participants  avoided 
+viewing  their  performance  data  until  after  their  workout 
+session as opposed to during. One reason for this is because 
+seeing  a  larger  achievement  at  the  end  provided  a  greater 
+sense  of  accomplishment  and  surprise  rather  than  viewing 
+smaller increments of progress. 
+
+“I prefer to see my data after exercise because I feel good 
+when I have seen that I have burnt 500 calories in one go, it 
+is a nice surprise when I see I have done well” (Juliette, 
+interview) 
+
+Summary of the Information Needs Tension 
+Our  findings  suggest  that  that  there  is  a  fine  line  to  be 
+walked  with  regards  to  fitness  information  presented  to 
+people  at  the  gym.  Information  at  the  time  of  exercise 
+helped  participants  to  monitor  and  adjust  performance,  but 
+it  could  also  be  demotivating  if  it  showed  low  progress. 
+Even  arbitrary  data  points  can  motivate  people  if  they  are 
+shown positive results, but people can also avoid the use of 
+fitness  technology  altogether  if  they  expect  there  to  be 
+negative results.  
+
+Exercise Shaping Tech Use vs. Tech Use Shaping 
+Exercise  
+Another tension that arose from the data was caused by the 
+physical nature of the context: the exercises influenced the 
+
+Exercise Influencing Technology Use 
+One  factor  that  influenced  the  use  of  technology  was  the 
+restrictions  imposed  by  physical  characteristics  of  the 
+exercise.  Exercise  involves  dynamic  body  movements, 
+which then limit the types of digital technology that can be 
+used.  An  example  of  this  was  the  impracticality  of  using 
+technology that required sustained visual attention, such as 
+reading  when  running.  Harry  stated  that  he  would  have 
+liked to use his mobile phone but the physicality of running 
+does  not  make  this  possible,  forcing  him  to  not  use  the 
+technology as desired. 
+
+“I would like to read from my phone when I’m running, but 
+it’s difficult when I’m moving around so I have to wait until 
+the breaks” (Harry, observation and dialogue) 
+
+Additionally,  the  specific  aspects  of  exercising  in  the  gym 
+limited the functionality that was useful on wearables. The 
+Samsung Gear Fit was unable to track the first author’s use 
+of the bicycle machine in the gym because the smartphone 
+was required for the GPS distance tracking function, which 
+went  against  her  expectations  of  just  using  a  wearable 
+device during exercise without the need of a phone.  
+
+“I was excited to be able to use the ‘cycle’ tracking function 
+at spin class. However I discovered that this feature only 
+works when the phone is nearby for GPS detection. I felt 
+disappointed” (autoethnography diary) 
+
+The  physical  set  up  of  the  equipment  also  restricted  the 
+participants  being  able  to  use  technology  in  their  desired 
+way.  For  example,  Juliette  usually  prefers  to  watch  TV  on 
+her  phone  and  the  elliptical  trainer  allows  her  to  do  this 
+because  the  machine  also  provided  a  shelf  to  place  her 
+phone. In contrast, the resistance machines did not afford a 
+physical  space  to  place  a  phone  and  so  she  was  unable  to 
+watch  TV  during  that  exercise.  She  described  that  this 
+limitation  consequently  affected  her  experience  of  the 
+exercise  as  she  was  forced  to  focus  on  her  performance, 
+thus  increasing  her  awareness  on  the  feelings  of  pain. 
+Having  this  repeated  experience  contributed  to  her  losing 
+motivation  for 
+this  exercise  and  she  stopped  using 
+resistance machines altogether. 
+
+Technology Use Influencing Exercise 
+The  desire  to  use  some  technology  during  exercise  proved 
+to be strong enough to actually impact the way participants 
+exercised in the gym. Juliette adapted the way she used the 
+elliptical  trainer  in  a  way  to  minimize  interaction  with  the 
+display:  she  exercised  at  a  constant  speed  and  set  the  time 
+to the maximum workout length to watch a TV program on 
+her tablet.  
+
+“I guess I want to keep at a steady pace so I can 
+concentrate on watching TV and not have to think about 
+changing my speed or playing with the display [...] I don’t 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2929really want to be distracted from my distraction!” (Juliette, 
+observation and dialogue). 
+
+technology 
+
+for  performance 
+
+There  were  some  situations  where  participants  wanted  to 
+use 
+the 
+functionality  of  technology  led  to  a  change  in  the physical 
+activity. Juliette wanted to monitor her performance on the 
+elliptical  trainer  but  her  Fitbit  did  not  capture  her  strides 
+when she held onto the handlebars, so she chose not to hold 
+on to the handlebars as a way of gaining stride information. 
+
+tracking  but 
+
+“It’s annoying that the Fitbit doesn’t count my gym activity 
+[...] I don’t hold onto the handlebars so my strides can 
+count towards my daily step count. It looks stupid and 
+makes the exercise harder” (Juliette, observation and 
+dialogue) 
+
+It was uncovered that this same participant had a strategy of 
+avoiding  the  use  of  non-fitness  related  technology  outside 
+of  the  gym  in  order  to  motivate  her  to  exercise:  Juliette 
+refrains  from  watching  TV  and  films  on  Netflix  at  home 
+and  sets  herself  a  rule  that  she  can  only  watch  TV  at  the 
+gym.  This  motivates  her  to  go  to  the  gym  to  exercise  as  it 
+allows the opportunity to watch her favourite programs. 
+
+“I feel less guilty when I’m bingeing on Netflix at the gym. I 
+promised myself I would only watch them here [in the gym] 
+and not at home” (Juliette, observation and dialogue) 
+
+Summary of the Exercise/Technology Tension 
+The  findings  indicate  that  the  physicality  of  the  gym 
+impacted  the  ways  people  were  able  to  use  technology, 
+leading to issues of frustration. The need to use technology 
+impacted  exercise  negatively  in  some  cases,  but  its  active 
+avoidance  could  also  motivate  exercise.  Technology 
+impacting  exercise  and  exercise  impacting  technology  use 
+led  to  disengagement  and  engagement  with  both  the 
+technologies and the exercises. 
+
+in 
+
+includes  variety 
+
+DISCUSSION 
+‘Going  to  the  gym’  can  be  perceived  as  a  singular  activity 
+in  a  box;  people  going  in,  exercising  and  coming  out. 
+However,  the  findings  of  this  situated  exploratory  study 
+show  that  this  is  not  the  case;  the  gym  is  a  complex  and 
+dynamic  environment.  This 
+the 
+physicality  of  exercises,  the  physical  design,  and  the 
+facilities as well as how an exercise changes over its course. 
+The  most  dominant  factor  is  the  difference  in  types  of 
+exercise performed in the gym influencing the use and non-
+use of digital technology: exercises are inherently different 
+in  the  way  that  they  are  performed  and  what  they  demand 
+from  the  individual.  For  example,  the  physicality  of  the 
+context  of  exercising  at  the  gym  meant  a  participant  was 
+looking  for  distraction  on  their  smartphones  during  the 
+‘deadtime’  between  reps  or  when  they  were  bored  on  the 
+treadmill,  but  were  very  frustrated  by  any  disruption  when 
+they  were  concentrating  on  form  or  particularly  when 
+counting  reps  on  non-digital  resistance  machines.  Across 
+the data set, exercise was found to influence the occupation 
+
+of  physical  space,  the  physical  equipment  and  how  people 
+were  feeling  in  the  moment,  and  therefore  influenced  the 
+technologies available and participants’ use and non-use of 
+technology. 
+
+Beyond  the  complexity  of  the  environment,  we  found  that 
+the  people  who  go  to  the  gym  can  have  very  different 
+technology  needs.  There  are  many  available  technology 
+choices in the gym and participants used and adopted them 
+in  different  ways.  This  variety  in  use  was  related  to 
+participants’  motivations  for  exercise,  their  health  goals, 
+how  they  valued  exercise,  their  individual  preferences 
+towards  certain  technologies,  and  simply  their  personal 
+taste.  For  example,  intrinsic  motivation  to  exercise  meant 
+that  participants  monitored 
+in-the-moment  heart  rate 
+information  or  avoided  technology  altogether  to  achieve  a 
+sense  of  ‘flow’,  but  extrinsic  motivation  meant  that  other 
+participants  actively  avoided  low  performance  values  on  a 
+Fuelband  or  prioritized  watching  TV  on  their  phone  for 
+distraction  and  therefore  did  not  use  resistance  machines. 
+With  regards  to  fitness  technologies,  we  found  there  were 
+differences  in  the  way  that  individuals  used  the  activity 
+tracking technology, in line with Rooksby et al. [36]. 
+
+Rather  than  independently  determining  behaviour,  the 
+complexity  of  the  environment  and  the  complexity  of 
+individual differences are intertwined in how they influence 
+the use and non-use of technology in the gym. Non-use has 
+been  gaining  attention  in  the  HCI  domain  in  recent  years 
+(e.g.  [8]).  Satchell  and  Dourish  [37]  talk  about  different 
+types  of  non-use  of  technology  such  as  active  resistance, 
+disenchantment, and disinterest, but these categories do not 
+cover  the  non-use  that  we  found  among  the  fitness 
+informatics adopting participants. Our participants opted in 
+and  opted  out  of  using  technology  based  on  the  type  of 
+exercise  they  were  doing,  the  physical  space  afforded  near 
+that  exercise,  and  the  point  they  were  at  in  a  particular 
+exercise.  This  opting  in  and  opting  out  of  technology  use 
+was  also  closely  linked  to  people’s  individual  differences, 
+particularly their values, motivations, and preferences.  
+
+This study took a step towards expanding our understanding 
+of  the  influence  that  context  of  use  can  have  on  the 
+rhythms/routines  of  the  gym  visit  and  rhythms/routines  of 
+technology  use.  However,  even  with  this  targeted  scope,  it 
+did not access the complete complexity of the gym context. 
+This  study  involved  a  limited  amount  of  participants, 
+focused  on  working  out  alone  at  the  gym  and  participants 
+may  have  been  influenced  by  the  presence  of  a  researcher 
+observing  them,  which  influence  its  representativeness.  If 
+the study involved the recruitment of participants who come 
+to  the  gym  to  exercise  with  a  partner  (or  ‘gym  buddy’)  or 
+observed  people  in  group  classes,  it  might  have  uncovered 
+factors relating to  how the social context influences fitness 
+technology use.  
+
+Features such as sensors and pedometers are being added to 
+smartwatches under the assumption that this is what people 
+want  and  are  able  to  use  throughout  different  settings, 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2930including  during  exercise.  In  reality,  a  large  number  of 
+people  choose  the  gym  as  their  regular  source  of  physical 
+activity, and this context influences what people want to use 
+and  what  they  can  actually  use.  We  found  that  if 
+participants want to use some of these features, they choose 
+to  alter  the  way  they  exercise,  for  example  where  a 
+participant with a wrist FitBit did not use the handlebars on 
+the  elliptical  and  felt  unbalanced  while  gaining  pedometer 
+information. Similarly, people can opt out of features of the 
+technology  entirely  if  it  does  not  fit  into  their  exercise 
+preferences,  as  was  the  case  where  text  notifications  were 
+disabled on the Samsung Gear Fit to prevent disruption.  
+
+This research has particular relevance to the growing trend 
+for  wearable  technologies,  especially  those  geared  towards 
+fitness, such as the Samsung Gear Fit or Apple Watch. The 
+use of these increasingly popular technologies has not been 
+comprehensively  explored  in  the  context  of  everyday  life, 
+and much work still needs to be completed focusing on how 
+different  aspects  of  people’s  lives  influence  use  and  non-
+use,  and  how  the  use  of  the  technology  in  turn  influences 
+people’s  lives.  By  using  a  situated  approach,  the  current 
+study reveals use and non-use tensions that arise for fitness 
+technologies that may be used in the gym, as it is a complex 
+space  and  individual  differences  are  wide-ranging.  We 
+should be wary of context-independent design and research 
+of  wearable  technologies  that  are  meant  to  be  useful  in  all 
+environments,  including  in  and  outside  of  the  gym  and  in 
+conjunction  with  the  use  of  a  variety  of  other  technology. 
+Wearable technology is inherently mobile and therefore its 
+use  is  influenced  by  the  unfolding  and  dynamic  context  in 
+which it is used, as well as the individual using it. As such, 
+a  situated  approach  to  design  and  ‘in  the  wild’  evaluation 
+would allow for the investigation of contextual factors that 
+influence  the  various  uses  and  non-uses  of  these  emerging 
+technologies. 
+
+regards 
+
+CONCLUSION 
+The aim of this study was to investigate the use and non-use 
+of technology during exercise in the gym. Through taking a 
+situated  exploratory  approach  to  this  research,  it  was 
+revealed that the gym context is complex and dynamic, and 
+the  complexities  of  the  context  influence  the  use  and  non-
+use  of  technology.  Use  and  non-use  tensions  became 
+to  distraction  vs.  disruption, 
+evident  with 
+information  avoidance,  and 
+information  needs  vs. 
+technology  influencing  exercise  vs.  exercise  influencing 
+technology.  People’s  choices  to  opt  in  or  opt  out  of  using 
+technology  were  dependent  on  context  and  situation, 
+influenced  by 
+the 
+individual  differences  as  well  as 
+the  gym.  Values,  motivations,  and 
+physicality  of 
+preferences  influenced  use  and  non-use  of  technology.  On 
+the  other  hand,  even  if  the  design  of  the  technology  caters 
+for  the  variance  in  users,  it  cannot  be  assumed  that  the 
+technology will be used in the in the same way throughout 
+the exercise, for all exercises, and in the same places. This 
+in 
+is  because  context 
+
+is  dynamic  and  people  react 
+
+accordance  to  their  environment  at  that  particular  moment 
+in time [18,39]. These findings point to the importance for 
+future  work  to  take  a  situated  approach  to  understand, 
+design  and  evaluate  technology  to  be  used  in  a  variety  of 
+contexts  by  a  variety  of  individuals,  such  as  wearable 
+devices for fitness. 
+
+ACKNOWLEDGEMENTS 
+This  research  has  been  funded  in  part  by  the  UK 
+Engineering  and  Physical  Sciences  Research  Council 
+CHI+MED  project  [EP/G059063/1]  with  support  from  the 
+Samsung Research and Development Institute UK. 
+
+REFERENCES 
+1.  Ahtinen, A., Isomursu, M., Huhtala, Y., and Kaasinen, 
+
+J. Tracking Outdoor Sports – User Experience 
+Perspective. Ambient Intelligence, (2008), 192–209. 
+
+2.  Ahtinen, A., Ramiah, S., Blom, J., and Isomursu, M. 
+Design of Mobile Wellness Applications  : Identifying 
+Cross-Cultural Factors. In Proc. OzCHI, ACM Press 
+(2008), 164–171. 
+
+3.  Ainsworth, B.E., Sternfeld, B., Slattery, M.L., Daguisé, 
+V., and Zahm, S.H. Physical activity and breast cancer: 
+evaluation of physical activity assessment methods. 
+Cancer 83, 3 Suppl (1998), 611–20. 
+
+4.  Albinali, F., Intille, S., Haskell, W., and Rosenberger, 
+M. Using wearable activity type detection to improve 
+physical activity energy expenditure estimation. In 
+Proc. UbiComp 2010, ACM Press (2010), 311. 
+
+5.  Annesi, J.J. Effects of music, television, and a 
+
+combination entertainment system on distraction, 
+exercise adherence, and physical output in adults. Can. 
+J. of Behavioural Science 33, 3 (2001) 193. 
+
+6.  Anshel, M.H. and Marisi, D.Q. Effect of Music and 
+
+Rhythm on Physical Performance. Res. Quart. Am. All. 
+for Health, Phys. Ed. and Rec. 49, 2 (1978), 109–113. 
+
+7.  Bardram, J.E. Plans as Situated Action  : An Activity 
+Theory Approach to Workflow Systems. In Proc. 
+ECSCW 1997, Springer (1997), 17-32.  
+
+8.  Baumer, E.P.S., Ames, M.G., Brubaker, J.R., Burrell, J., 
+and Dourish, P. Refusing, Limiting, Departing: Why We 
+Should Study Technology Non-use. In Proc. CHI EA 
+2014, ACM Press (2014), 65–68. 
+
+9.  Blythe, M. and Monk, A. Notes towards an ethnography 
+of domestic technology. In Proc. DIS 2002, ACM Press 
+(2002), 277. 
+
+10. Braun, V. and Clarke, V. Using thematic analysis in 
+psychology. Qualitative research in psychology 3, 2 
+(2006), 77–101. 
+
+11. Brown, B., McGregor, M., and Laurier, E. iPhone in 
+
+Vivo: Video Analysis of Mobile Device Use. In Proc. 
+CHI 2013, ACM (2013), 1031–1040. 
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea293112. Buttussi, F., Chittaro, L., and Nadalutti, D. Bringing 
+
+mobile guides and fitness activities together  : a solution 
+based on an embodied virtual trainer. In Proc. Mobile 
+HCI 2006, ACM. (2006), 29-36. 
+
+27. Lin, J.J., Mamykina, L., Lindtner, S., Delajoux, G., and 
+Strub, H.B. Fish ’ n ’ Steps  : Encouraging Physical 
+Activity with an Interactive Computer Game. UbiComp 
+(2006), 261–278. 
+
+13. Cobb, L.E., Stone, W.J., Anonsen, L.J., and Klein, D. a. 
+The Influence of Goal Setting on Exercise Adherence. J. 
+of Health Ed. 31, 5 (2000), 277–281. 
+
+28. Moran, T.P. and Dourish, P. Introduction to this special 
+issue on context-aware computing. HCI 16, 2-4 (2001), 
+87–95. 
+
+14. Consolvo, S., Harrison, B., Smith, I., et al. Conducting 
+
+In Situ Evaluations for and With Ubiquitous Computing 
+Technologies. IJHCI 22, 1-2 (2007), 103–118. 
+
+29. Nylander, S., Tholander, J., Mueller, F., and Marshall, 
+J. HCI and sports. In Proc. CHI EA 2014, ACM Press 
+(2014), 115–118. 
+
+15. Consolvo, S., Libby, R., Smith, I., et al. Activity sensing 
+in the wild. In Proc. CHI 2008, ACM Press (2008), 
+1797. 
+
+16. Corbin, J.M. and Strauss, A. Grounded theory research: 
+Procedures, canons, and evaluative criteria. Qual. Soc. 
+13, 1 (1990), 3–21. 
+
+17. Csikszentmihalyi, M. and Csikszentmihalyi, S. Optimal 
+
+Experience: Psychological Studies of Flow in 
+Consciousness. Cambridge University Press, 1992. 
+
+18. Dourish, P. What we talk about when we talk about 
+context. Per. and Ubiq. Comput. 8, 1 (2004), 19–30. 
+
+19. Fritz, T., Huang, E.M., Murphy, G.C., and 
+
+Zimmermann, T. Persuasive Technology in the Real 
+World  : A Study of Long-Term Use of Activity Sensing 
+Devices for Fitness. In Proc. CHI 2014, ACM (2014), 
+487–496. 
+
+20. Future Fit Training. The UK Fitness Industry Report - 
+
+commentary. 2013. http://www.futurefit.co.uk/personal-
+training/news-and-views/2013/10/02/uk-fitness-
+industry-report/. 
+
+21. Gittleson, K. BBC News - Can Nike’s Fuelband really 
+
+motivate you to exercise? 2013. 
+http://www.bbc.co.uk/news/technology-24543910 
+
+22. Goodman, E. Seeing fit  : Visualizing physical activity in 
+context. In Proc. CHI EA 2006, ACM (2006), 797–802. 
+
+23. Gupta, N. and Jilla, S. Digital Fitness Connector: Smart 
+Wearable System. In Proc. ICI 2011, IEEE (2011), 
+118–121. 
+
+24. Hartson, H.R. and Pyla, P.S. The UX Book: process and 
+
+guidelines for ensuring a quality user experience. 
+Elsevier, Amsterdam  ; Boston, 2012. 
+
+25. Holtzblatt, K. and Jones, S. Contextual inquiry: A 
+
+participatory technique for system design. Participatory 
+design, (1993), 180–193. 
+
+26. Karageorghis, C.I. and Priest, D.-L. Music in the 
+
+exercise domain: a review and synthesis (Part I). Int. 
+Review of sport and exercise psych. 5, 1 (2012), 44–66. 
+
+30. O’Kane, A.A., Rogers, Y., and Blandford, A.E. Gaining 
+empathy for non-routine mobile device use through 
+autoethnography. In Proc. CHI 2014, ACM Press 
+(2014), 987–990. 
+
+31. Oulasvirta, A., Kurvinen, E., and Kankainen, T. 
+
+Understanding Contexts by Being There: Case Studies 
+in Bodystorming. Per. Ubiq. Comput. 7, 2 (2003), 125–
+134. 
+
+32. Pelletier, Luc G., Michelle S. Fortier, Robert J. 
+
+Vallerand, Kim M. Tuson, Nathalie M. Briere, M.R.B. 
+Toward a new measure of intrinsic motivation, extrinsic 
+motivation, and amotivation in sports: The Sport 
+Motivation Scale (SMS). J. Sport & Exercise Psych. 17, 
+35–53. 
+
+33. Petosa, R.L. and Holtz, B. Flow for Exercise 
+
+Adherence: Testing an Intrinsic Model of Health 
+Behavior. Amer. J. Health Edu. 44, 5 (2013), 273–277. 
+
+34. Potteiger, J.A., Schroeder, J.M., and Goff, K.L. 
+
+Influence of music on ratings of perceived exertion 
+during 20 minutes of moderate intensity exercise. 
+Perceptual and motor skills 91, 3 Pt 1 (2000), 848–54. 
+
+35. Rogers, Y. Interaction design gone wild: striving for 
+
+wild theory. Interactions 18, 4 (2011), 58. 
+
+36. Rooksby, J., Rost, M., Morrison, A., and Chalmers, 
+
+M.C. Personal tracking as lived informatics. In Proc. 
+CHI 2014, (2014), 1163–1172. 
+
+37. Satchell, C. and Dourish, P. Beyond the User: Use and 
+Non-use in HCI. In Proc. OZCHI 2009, ACM (2009), 
+9–16. 
+
+38. Speck, B.J. and Looney, S.W. Effects of a minimal 
+intervention to increase physical activity in women: 
+daily activity records. Nursing Research 50, 6 (2001), 
+374–8. 
+
+39. Suchman, L. Plans and Situated Actions. Cambridge 
+
+University Press, 1987. 
+
+40. Vallerand, R.J. and Losier, G.F. An integrative analysis 
+of intrinsic and extrinsic motivation in sport. J. Applied 
+Sport Psych. 11, 1 (1999), 142–169.   
+
+Wellness & WearablesCHI 2015, Crossings, Seoul, Korea2932 
+

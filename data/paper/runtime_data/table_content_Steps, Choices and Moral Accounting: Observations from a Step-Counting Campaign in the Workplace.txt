@@ -1,0 +1,26 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Background
+    5.1 The Social Context of Health Technologies
+    5.2 Activity Sensing in the Workplace
+    5.3 Where are the Non-users?
+    5.4 Social ecological approach
+6. Research Context
+    6.1 The campaign
+    6.2 The company
+7. Methods
+8. Findings
+    8.1 Social negotiations of steps
+    8.2 Fairness and moral accounting of steps
+    8.3 Group competition and accountabilities of walking
+    8.4 Step counting as social currency
+    8.5 A social ecology approach to health in the workplace
+9. Discussion
+    9.1 Steps and walking have social meaning
+    9.2 The social costs of moral accounting
+    9.3 Designing for a social ecology of health
+10. Health Promotion or Behavior Change?
+11. Acknowledgments
+12. References

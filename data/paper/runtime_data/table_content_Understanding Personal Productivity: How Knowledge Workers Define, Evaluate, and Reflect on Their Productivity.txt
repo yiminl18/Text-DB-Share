@@ -1,0 +1,27 @@
+1. Abstract
+2. CCS Concepts
+3. Keywords
+4. ACM Reference Format
+5. Introduction
+6. Related Work
+    6.1 Measuring Knowledge Workers’ Productivity
+    6.2 Enhancing Personal Productivity with Self-Tracking
+7. Diary Study
+    7.1 Participants
+    7.2 Study Instrument for Data Capture
+    7.3 Procedure
+    7.4 Data Analysis
+8. Results
+    8.1 Descriptive Summary of Diary Entries
+    8.2 Rationales for Productivity Evaluation
+    8.3 Task Types of Productive Activities
+9. Discussion
+    9.1 Productivity as a Multifaceted Concept
+    9.2 Diverse Productive Activities in Work Contexts
+    9.3 Productive Activities in Personal Contexts
+    9.4 Factors Affecting Productivity
+    9.5 Opportunities for Tracking Tool Customization
+10. Study Limitations
+11. Conclusion
+12. Acknowledgments
+13. References

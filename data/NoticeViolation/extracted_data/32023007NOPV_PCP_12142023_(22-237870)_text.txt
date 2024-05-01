@@ -1,0 +1,462 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+VIA ELECTRONIC MAIL TO : Cynthia.hansen@enbridge.com; 
+peter.seydewitz@enbridge.com; leo.rosasjr@enbridge.com 
+
+December 14, 2023 
+
+Cynthia Hansen 
+EVP & President Gas Transmission and Midstream - Enbridge Inc. 
+Texas Eastern Transmission, LP 
+915 N Eldridge Parkway, Suite 1100 
+Houston, TX 77079 
+
+CPF 3-2023-007-NOPV 
+
+Dear Ms. Hansen: 
+
+From February 22, 2022, and throughout 2022, representatives of the Pipeline and Hazardous 
+Materials Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 
+601 of 49 United States Code (U.S.C.), investigated the February 21, 2022, in-service failure of 
+Texas Eastern Transmission, LP’s (TETLP) Line 11 in DeSoto Parish, Louisiana. 
+
+On February 21, 2022, at 11:25 pm Central Standard Time (CST), TETLP experienced an in-
+service failure of Line 11, near Mile Post 247 in DeSoto Parish, Louisiana (“the incident”). The 
+24-inch diameter pipeline was operating at 901 psi at the time of failure, and the rupture resulted 
+in 9 fragments, totaling approximately 110 linear feet of pipe, being ejected from the ground. 
+Approximately 37 million cubic feet of natural gas was unintentionally released as a result of the 
+incident. The incident occurred in a Class 1 location, and there was no ignition, no injuries, and 
+no fatalities. The estimated total cost of the incident, including the gas lost, was $8,293,379.  
+
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The incident was caused by mechanical damage that occurred on the pipeline during an integrity 
+dig. As denoted in the metallurgical report, the damage included 24 individual gouges located on 
+the top portion of the pipe. The integrity dig, Dig 1175, began in October of 2020 but work 
+ceased soon thereafter when it was determined that additional space was needed to complete the 
+required repairs. Dig 1175 recommenced in May of 2021. 
+
+At some point during the excavation or backfilling activities for Dig 1175, likely during the 
+second dig that began in May of 2021, the pipeline was struck resulting in mechanical damage to 
+the pipe. According to TETLP, the line strike(s) and resulting mechanical damage were not 
+reported by either the second-party excavator or the company representative that was supposed 
+to be monitoring and inspecting the excavation activities. The mechanical damage that occurred 
+during Dig 1175 left a flaw in the pipe that failed in-service months later on February 21, 2022, 
+resulting in a rupture and release of natural gas. 
+
+As a result of the investigation, it is alleged that you have committed a probable violation of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR). The item investigated 
+and the probable violation is: 
+
+1. 
+
+§ 192.605 Procedural manual for operations, maintenance, and emergencies. 
+
+(a) General. Each operator shall prepare and follow for each pipeline, a manual of 
+
+written procedures for conducting operations and maintenance activities and for 
+emergency response. For transmission lines, the manual must also include 
+procedures for handling abnormal operations. This manual must be reviewed 
+and updated by the operator at intervals not exceeding 15 months, but at least 
+once each calendar year. This manual must be prepared before operations of a 
+pipeline system commence. Appropriate parts of the manual must be kept at 
+locations where operations and maintenance activities are conducted. 
+
+The manual required by § 192.605(a) must be followed and must include procedures to 
+provide safety for operating, maintaining, and repairing the pipeline. See §192.605(b)(1). 
+While performing Dig 1175 to maintain and repair the pipeline, TETLP failed to follow 
+its procedure, “Ground Disturbance Specification – U.S.” Version 1.1, dated 11-26-2019. 
+Specifically, TETLP failed to maintain a 1-foot buffer around the pipe when using 
+mechanical equipment for excavation (see section 6.5) and/or backfilling (see section 
+6.12) during an integrity repair, Dig 1175, on Line 11. TETLP’s failure to maintain the 
+1-foot buffer resulted in the pipe being struck with equipment used by the second-party 
+contractor that caused mechanical damage leading to the subsequent failure in February 
+2022. 
+
+These facts were revealed during the root-cause failure analysis conducted by DNV GL 
+USA, Inc., and as part of TETLP’s internal investigation of the incident. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a 
+related series of violations. For violation occurring on or after March 21, 2022 and before 
+January 6, 2023, the maximum penalty may not exceed $239,142 per violation per day the 
+violation persists, up to a maximum of $2,391,412 for a related series of violations. For violation 
+occurring on or after May 3, 2021 and before March 21, 2022, the maximum penalty may not 
+exceed $225,134 per violation per day the violation persists, up to a maximum of $2,251,334 for 
+a related series of violations. For violation occurring on or after January 11, 2021 and before 
+May 3, 2021, the maximum penalty may not exceed $222,504 per violation per day the violation 
+persists, up to a maximum of $2,225,034 for a related series of violations. For violation 
+occurring on or after July 31, 2019 and before January 11, 2021, the maximum penalty may not 
+exceed $218,647 per violation per day the violation persists, up to a maximum of $2,186,465 for 
+a related series of violations. For violation occurring on or after November 27, 2018 and before 
+July 31, 2019, the maximum penalty may not exceed $213,268 per violation per day, with a 
+maximum penalty not to exceed $2,132,679. For violation occurring on or after November 2, 
+2015 and before November 27, 2018, the maximum penalty may not exceed $209,002 per 
+violation per day, with a maximum penalty not to exceed $2,090,022. 
+
+We have reviewed the circumstances and supporting documentation involved for the above 
+probable violation and recommend that you be preliminarily assessed a civil penalty of $223,134 
+as follows: 
+
+Item number 
+1 
+
+PENALTY 
+$225,134 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators 
+in Enforcement Proceedings. Please refer to this document and note the response options. All 
+material you submit in response to this enforcement action may be made publicly available. If 
+you believe that any portion of your responsive material qualifies for confidential treatment 
+under 5 U.S.C. § 552(b), along with the complete original document you must provide a second 
+copy of the document with the portions you believe qualify for confidential treatment redacted 
+and an explanation of why you believe the redacted information qualifies for confidential 
+treatment under 5 U.S.C. § 552(b). 
+
+Following the receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options. If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a waiver of your right to contest the allegations in this Notice and authorizes the Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order. If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from the receipt of this Notice. The Region 
+Director may extend the period for responding upon a written request timely submitted 
+demonstrating good cause for an extension. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+In your correspondence on this matter, please refer to CPF 3-2023-007-NOPV and, for each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Gregory A. Ochs 
+Director, Central Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosure: Response Options for Pipeline Operators in Enforcement Proceedings 
+
+cc: 
+
+Peter Seydewitz, Director, Operational Excellence, Texas Eastern Transmission, LP, 
+(peter.seydewitz@enbridge.com) 
+Leo Rosas, Jr., Supervisor, Operational Compliance, Texas Eastern Transmission, LP, 
+(leo.rosasjr@enbridge.com) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+

@@ -1,0 +1,964 @@
+Barriers and Negative Nudges:  
+Exploring Challenges in Food Journaling   
+Felicia Cordeiro1, Daniel A. Epstein1, Edison Thomaz3, Elizabeth Bales1,2, 
+Arvind K. Jagannathan3, Gregory D. Abowd3, James Fogarty1 
+
+1 Computer Science & Engineering 
+2 Human Centered Design & Engineering 
+DUB Group, University of Washington 
+{felicia0, depstein, lizbales, jfogarty} 
+@cs.washington.edu 
+
+ABSTRACT  
+Although food journaling is understood to be both important 
+and  difficult,  little  work  has  empirically  documented  the 
+specific  challenges  people  experience  with  food  journals. 
+We identify key challenges in a qualitative study combining 
+a  survey  of  141  current  and  lapsed  food  journalers  with 
+analysis of 5,526 posts in community forums for three mobile 
+food  journals.  Analyzing  themes  in  this  data,  we  find  and 
+discuss  barriers  to  reliable  food  entry,  negative  nudges 
+caused  by  current  techniques,  and  challenges  with  social 
+features.  Our  results  motivate  research  exploring  a  wider 
+range of approaches to food journal design and technology. 
+
+Author Keywords  
+Personal Informatics; Food Journals; Barriers; Negative Nudges. 
+
+ACM Classification  Keywords  
+H.5.m. Information interfaces and presentation (e.g., HCI). 
+
+INTRODUCTION 
+Food  journals  are  an  important  method  for  tracking  food 
+consumption  and  can  support  a  variety  of  goals,  including 
+weight  loss,  healthier  food  choices,  detecting  deficiencies, 
+identifying allergies, and determining foods that trigger other 
+symptoms.  Although  food  journaling  is  widely  considered 
+difficult  and  has  motivated  research  on  easing  or  even 
+automating  entry,  little  work  has  empirically  documented 
+why it is difficult. As a result, the field is currently missing 
+opportunities for design and technology to improve journaling. 
+
+Our work explores key challenges people encounter in food 
+journaling.  We  conduct  a  qualitative  study  combining  a 
+survey of 141 current and lapsed food journalers with analysis 
+of  5,526  posts  from  community  forums  for  three  mobile 
+food  journals.  Analyzing  themes  in  this  data,  we  find  and 
+discuss  barriers  to  reliable  food  entry,  negative  nudges 
+caused  by  current  techniques,  and  challenges  with  social 
+
+Permission to make  digital or hard copies of all or part of this work for personal 
+or  classroom  use  is  granted  without  fee  provided  that  copies  are  not  made  or 
+distributed for  profit or commercial advantage and t  hat copies bear this notice 
+and the full citation on the first page. Copyrights for components of this work 
+owned  by   others  than  ACM  must  be  honored.  Abstracting  with  credit  is 
+permitted. To copy otherwise, or republish, to post on servers or to redistribute 
+to lists, requires prior specific permission and/or a fee.  
+Request permissions from Permissions@acm.org.   
+CHI 2015, April 18  - 23 2015, Seoul, Republic of Korea   
+Copyright 2015 ACM 978-1-4503-3145-6/15/04$15.00   
+http://dx.doi.org/10.1145/2702123.2702155  
+
+3 School of Interactive Computing 
+College of Computing 
+Georgia Institute of Technology 
+{ethomaz, arvind.krishnaa, abowd} 
+@gatech.edu 
+
+features.  Our  results  support  continued  research  in  food 
+journaling,  identify  specific  challenges  in  current  journals, 
+and  highlight  opportunities  to  consider  a  wider  range  of 
+opportunities in food journal design and technology. 
+
+RELATED WORK  
+Recent years have seen significant research in mobile food 
+journals, which aim to improve entry or feedback relative to 
+traditional  paper  methods.  An  early  example  is  PmEB, 
+which demonstrated daily calorie budget feedback computed 
+from a  mobile food journal [9]. Siek et al. studied journals 
+for patients with chronic kidney disease, who found barcode 
+and audio-based journals overwhelming [7]. Mamykina et al. 
+developed MAHI, a mobile food journal to aid people with 
+newly  diagnosed  diabetes  in  developing  reflective  analysis 
+skills, essential to successful diabetes management [4]. 
+
+Given the effectiveness of such systems, additional research 
+has considered the adoption, difficulty, and everyday use of 
+food journals. Helander et al. analyze logs from The Eatery, 
+finding only 3% of 190,000 downloads resulted in a person 
+using the mobile food journal for more than one week [3]. 
+PlateMate  examines  minimizing  burden  of  entry  by  using 
+crowdsourcing  to  obtain  nutritional  summaries  from  food 
+photos  [5].  Rooksby  et  al.  discuss  challenges  of  personal 
+informatics  and  argue  for  considering  how  tracking  is 
+intertwined  with  everyday  life  [6].  Grimes  and  Harper 
+suggest  that  research  should  consider  the  variety  of 
+relationships people have with food [2]. Despite such interest 
+in  how  food  journals  integrate  in  everyday  life,  relatively 
+little is known about specific challenges people experience 
+with food journals. We explore current challenges to inform 
+future contributions in food journal design and technology. 
+
+DATA COLLECTION 
+We  surveyed  141  food  journalers  (47  active,  94  lapsed, 
+105 female,  36  male,  age  19  to  70,  mean  34,  median  30), 
+recruited from university mailing lists, MyFitnessPal Facebook 
+groups,  and  FitBit  forums,  randomly  raffling  three  $20 
+Amazon  gift  cards.  117 reported  journaling  with  mobile 
+apps, 23 desktop / website, and 47 using paper (some using 
+multiple  methods).  We  also  examined  5,526  posts  in  627 
+threads in community forums for three mobile food journals 
+(MyFitnessPal,  FatSecret,  CalorieCount). We  quote  survey 
+respondents as P## and attribute forum posts by community. 
+
+The Value of the Village in CaregivingCHI 2015, Crossings, Seoul, Korea1159 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Survey respondents answered open response questions about 
+what made journaling difficult and what aspects of journaling 
+they  disliked.  They  next  used  a  seven-point  Likert  scale  to 
+rate  the  difficulty  of  journaling  meal  types  (buffet  meals, 
+ethnic  food,  fast  food,  foods  served  by  friends,  foods 
+consumed  at  parties,  home-cooked  meals,  packaged  food, 
+restaurant  meals).  Lapsed  journalers  additionally  provided 
+open responses explaining why they stopped. Responses were 
+analyzed in an affinity diagram exercise by two members of 
+the team, yielding themes later coded by a third. 
+
+We gathered community forum data using provided search 
+interfaces,  which  allow  keyword  filtering  of  threads  and 
+posts.  We  initiated  analysis  with  a  set  of  keyword  phrases 
+targeting  causes  of  attrition  (e.g., “stop  logging”,  “no fun 
+logging”,  “not  working”,  “tired  of  logging”).  With  these 
+initial search phrases, we found posts such as “It is such a 
+slow  and  tedious  process”  (FatSecret),  which  gave  insight 
+into additional keywords to use in searches (e.g., “tedious”). 
+We  examined  posts  using  summative  content  analysis, 
+yielding  themes  we  had  not  originally  specified  that  were 
+consistent with our survey analysis, as well as an additional 
+theme on challenges in social features of food journals. 
+
+RESULTS AND THEMES 
+Goals Drive Journaling 
+Journaling can end with a perceived success or at a defined 
+endpoint. Successes included a “goal weight” (P46, P52, P53), 
+understanding eating habits “I had developed a good sense 
+of how many calories are in the different foods I eat and in 
+what  proportions  I  was  eating  them”  (P68),  or learning  to 
+make  healthier  food  choices  “I got a  grasp  on  what  to  eat 
+and  how  to  eat  to  maintain  optimal  health”  (P126). 
+Endpoints  included  identifying  a  recurring  problem  “I was 
+trying to track down migraine triggers. Once we identified 
+several  triggers,  I  stopped”  (P50)  and  the  end  of  a 
+pregnancy  “I stopped  being  pregnant.  :)”  (P82).  Of  94 
+lapsed journalers, only 22 indicated they no longer needed to 
+journal because they received enough benefit. An additional 
+12 reported periodic journaling: “to audit my consumption” 
+(P85),  “whenever  I  wanted  to  lose  weight”  (P51).  A  few 
+reported  journaling  with  no  clear  goal:  “I wasn’t  really 
+trying  to  lose  weight  or  anything  but  was  simply  curious 
+about  what  I  ate.  Once  I  got  a  decent  idea  of  my  eating 
+habits, I didn’t really feel like continuing to journal” (P14). 
+
+Although some journalers reach their goals or do not have a 
+specific goal, this is a definite minority. The majority report 
+significant challenges, sometimes leading them to abandon 
+journaling altogether. We discuss these challenges in terms 
+of barriers to reliable food entry, negative nudges in current 
+journals, and challenges with social features. 
+
+Barriers to Reliable Food Entry 
+Our forum analysis found the effort required to journal is a 
+major barrier: “if I hit a rough spot or start regaining some 
+weight  I  will  go  back  to  counting  calories.  I hate  counting 
+it's  tedious  but  yet  very  important”  (FatSecret).  Survey 
+respondents also expressed this, describing food journaling 
+
+as  “too  much  effort”,  “time-consuming”,  or  “tedious”  (31, 
+27,  16  respondents).  Looking  more  closely,  we  unpacked 
+this theme into four barriers to reliable food entry. 
+
+What and How Much: Journalers report challenges knowing 
+what  and  how  much  to  enter  in  journals  designed  around 
+detailed  entry.  P98  summarizes:  “I  cook  most  of  my  own 
+meals,  so  it  was  difficult  to  estimate  the  amounts  of  each 
+ingredient  (first,  I  loosely  follow  recipes,  then  I  only  eat 
+some  of  what  I  make  at  a  time),  then  find  the  calories 
+(which  weren’t  available  for  many  of  the  foods  I  ate)”. 
+Barriers  include  ingredients  (e.g.,  “Not  knowing  the  exact 
+ingredients  and  portions  make  the  logging  difficult”  P126, 
+75  others),  their  proportions  (e.g.,  “spaghetti:  How  much 
+meat? How much oil? Etc…” P107, 10 others), preparation 
+(e.g.,  “It  is  also  difficult  to  know  how  things  are  cooked 
+sometimes, did they use oil?  Does that affect the calories?” 
+P128,  27  others),  and  then  the  portion  consumed  (e.g., 
+“I have a hard time figuring out portions” P23, 39 others). 
+Uncertainty regarding any undermines reliability of an entry. 
+
+Database  Reliability:  Many  journals  use  a  database  to 
+convert  entries  into  calories,  other  components,  or  points. 
+These often allow community contribution, with journalers 
+able to publish nutritional entries themselves. Although  this 
+can  enable  a  diverse  food  database,  it  raises  concerns 
+regarding reliability:  “the  food  database  is  put  together by 
+users, so not all entries can be considered accurate” (P32), 
+“sometimes  hard  to  find  certain  foods,  or  to  know  enough 
+about the listing to know if it will be accurate” (P129). 
+
+Databases  are quite  large, but  journalers  find  categories of 
+food missing. From our forum analysis: “Hey all. Any tips 
+on  how  to  record  foods  not  found  in  database?  IE  made 
+from  scratch, bought at a locally owned restaurant, etc. I'm 
+finding  it  difficult  sometimes  to  find  something  close  and 
+match it up, or to make a guess” (FatSecret). P2 reported it 
+harder  to  find healthy  foods  “They  don’t  have  some  of  the 
+foods I’d like to enter - like more of the healthy and organic 
+foods.” P40 found common foods missing “there are large 
+gaps particularly with foods that are only found in Canada.” 
+
+However, continuing to grow the database presents its own 
+barriers. Journalers report that obtaining many results from 
+a query creates concerns for reliability “sometimes it was even 
+incorrect  or  multiple  postings  with  all  different  information” 
+(P101),  difficulty  choosing  “there  were  too  many  choices 
+and it was difficult to determine which option was the closest 
+to reality” (P105), and frustration with apparently irrelevant 
+entries  “I  ate  some  oatmeal  and  my  options  for  logging  it 
+were weird. Oh, was it McDonald’s oatmeal? Quaker Instant 
+apple  cinnamon  oatmeal  in  a  pouch?  No.  It  was  normal 
+oatmeal!” (P1). Food journal databases face a tension between 
+providing desired foods versus overwhelming journalers. 
+
+Eating  Context:  Journalers  report  barriers  entering  food 
+from  restaurants,  prepared  by  friends,  from  buffets,  and  at 
+parties. Part of the challenge is that knowledge barriers are 
+magnified  because  the  journaler  did  not  prepare  the  food: 
+“Meals at a restaurant are very difficult because you do not 
+
+The Value of the Village in CaregivingCHI 2015, Crossings, Seoul, Korea1160 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+know the ingredients” (P99), “Foods eaten out were tricky 
+due  to  the  ingredients  not  being  clear”  (P50),  “Calorie 
+databases  have  some  entries  for  chain  restaurants,  but 
+finding something that might be similar to a dish at a local 
+restaurant is difficult, if not impossible” (P137). 
+
+Another critical challenge in these contexts is people often 
+consume a variety of food over an extended time. P69 felt it 
+was unreasonable to journal: “You’re simply not going to sit 
+there  with  each  thing  you  grab  and  log  it”.  This  leads  to 
+delay,  which  leads  to  difficulty  remembering:  “when  I’m 
+eating at a party, or at a buffet I usually eat small amounts 
+of  lots  of  different  things.  Then  when  I  get  back  to  my 
+apartment  and  go  to  log  it,  I’ve  often  forgotten  already 
+exactly what I ate, and I’m sure I often miss things.” (P130) 
+and  “It  was  hard  to  log  when  I  wasn’t  at  home  because  I 
+had to remember to when I got home” (P112). Despite the 
+always-available nature of mobile devices, contexts in which 
+people  eat  present  significant  barriers  to  in-the-moment 
+journaling practices that mobile journals aim to promote. 
+
+Losing  the  Habit:  Simply  forgetting  to  journal  is  a  major 
+barrier  to  reliable  journals,  and  was  the  most-cited  reason 
+why survey respondents had missed at least one entry. But 
+journalers  further  report  that  missed  entries  can  lead  them 
+to abandon journaling altogether. In journals that emphasize 
+calories  or  other  summaries  of  food  components,  missing 
+an entry means feedback is inaccurate: “Half of the time, I 
+would just log foods for half the day, so the calories totals 
+were  completely  off.”  (P137).  This  can  in  turn  create  a 
+feedback cycle that undermines the journaling habit: “Every 
+time I start I forget one meal or another so it becomes less 
+accurate. Then I just forget completely.” (P128). P42 noted 
+other factors can lead to breakdowns in her journaling habit 
+“e.g.,  due  to  a  hard  deadline,  travel,  holiday  season”,  and 
+reported “once the habit is broken…it’s hard to start again.” 
+Journals cannot assume continuous and complete compliance, 
+and should instead support the journaling habit. 
+
+Negative Nudges in Current Food Journals   
+Nudges are features of systems that alter behavior [8]. They 
+are  typically  designed  to  promote  a  desired  behavior,  but 
+we  found  examples  of  unintentional  negative  nudges  in 
+current food journals. Journalers report the design of current 
+journals can encourage behaviors contrary to their goals. 
+
+Contrasting Difficulty of Meal Entry: When asked to rate 
+difficulty  by  meal  type,  respondents  rated  packaged  food 
+(average:  6.5)  and  fast  food  (6.3)  as  significantly  easier  to 
+journal  than  home-cooked  meals  (4.6),  buffet  meals  (3.7), 
+ethnic  food  (3.7),  restaurant  meals  (3.6),  foods  served  by 
+friends  (3.2),  and  foods  consumed  at  parties  (2.9)  (using a 
+mixed-model  analysis  of  variance,  with  participant  as  a 
+random effect, applying Tukey’s HSD at p < .05). 
+
+Journalers  report  databases  make  packaged  and  fast  food 
+easiest to log, with barcodes further simplifying their entry: 
+“It was easy to search specific brands” (P67), “Fast foods and 
+prepackaged  foods  have  calorie  counts  readily  available” 
+(P86).  In  contrast,  journalers  report  difficulty  entering 
+
+homemade  food:  “took  too  much  time,  hard  to  track  meals 
+that aren’t pre-packaged” (P43), “a lot of foods are difficult 
+to track without an ingredient list or barcode” (P45). 
+
+Many journals provide recipe builders intended to ease the 
+difficulty  of  entering  homemade  food.  Journalers  were 
+aware  of  this,  but  still  considered  it  burdensome  to  enter 
+homemade food: “recipe builders took a long time” (P78), 
+“If  a  particular  item  isn’t  in  my  app’s  database,  I  would 
+have  to  deconstruct  it  into  its  constituent  ingredients  and 
+then  add  those  individually.”  (P3),  “I  often  had  to  search 
+for lots of individual components, and I wasn’t sure of the 
+measurements” (P47). An additional challenge with recipes 
+is  that  journalers  report  they  do  not  support  variation  in 
+preparation: “Even with options to create a meal and save it 
+for later. Most of my cooking isn’t that consistent.” (P101). 
+
+This  difficulty  contrast  creates  a  dilemma:  “Prepackaged 
+meals  were  the  easiest  because  of  bar  codes  but  those 
+aren’t  healthy”  (P123).  This  can  undermine  the  journaling 
+habit:  “I usually  stop  [journaling]  shortly  after  I  made  a 
+wrap or some other type of sandwich that has a significant 
+number of components that it would be difficult to measure 
+and  manually  add”  (P105).  Journalers  also  reported  it  can 
+nudge  them to  eat  contrary  to  their  goals,  including  eating 
+less  variety  “I  could  make  life  easier  by  eating  the  same 
+things regularly” (P97), limiting food choice “I just avoided 
+eating  things  that  were  hard  to  log”  (P132),  and  avoiding 
+healthier foods “the time it took entering it manually made 
+eating  fresh  and  healthy  less  appealing.  Easier  to  scan  a 
+code on some processed stuff and be done with it” (P101). 
+Although the mindfulness created by journaling can lead to 
+healthier  choices,  the  difficulty  of  food  entry  in  current 
+designs is also negatively impacting journaler food choices. 
+
+Judgment and Choosing Not to Journal: Food journalers 
+report feelings of shame, judgment, or obsession associated 
+with current designs. P6 reported journaling “made me feel 
+guilty  sometimes”,  while  P27  noted  a  lack  of  positive 
+feedback:  “I  always  felt  guilty  when  I  ate  too  much,  and 
+there  wasn't  that  much  pride  when  I  was  under  my  goal.” 
+Others described not wanting to journal foods they considered 
+unhealthy  or  that  may  put  them  over  a  calorie  goal: 
+“Sometimes I feel like not logging things because I know it’s 
+really  unhealthy. =(”  (P117).  Journalers  report  abandoning 
+journaling due to these feelings: “I stopped because I didn’t 
+feel  a  need  to  keep  it  up.  I  did  not  want  to  obsess  about 
+food”  (P13),  “it  made me  too  focused  and  obsessive  about 
+what  I  was  eating”  (P70),  “I think  I'm  obsessing  about 
+every calorie and I'm either not eating enough or eating too 
+much”  (MyFitnessPal).  P113  was  especially  concerned: 
+“it was  more of  an  on  the  way  to  an  eating  disorder  thing 
+than  anything  else  (tried  to  keep  calories  extremely  low)”. 
+Although in-the-moment feedback can be powerful, designs 
+that create feelings of judgment can be self-defeating. 
+
+Stigma and Journaling: Journaling often takes place in the 
+presence  of  others,  and  P37  noted  “it’s  not  always  that 
+discreet”.  Many  did  not  want  friends  and  colleagues  to 
+
+The Value of the Village in CaregivingCHI 2015, Crossings, Seoul, Korea1161 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+know they were tracking food “I think I was hesitant to do 
+the  logging  if  not  alone”  (P30)  and  were  afraid  to  ask  the 
+ingredients  in  food  “I  had  more  of  a  problem  with  eating 
+out  at  a  friend’s  house  because  I  didn’t  want  to  ask  for 
+ingredients  or  mention  that I  was  logging  calories”  (P11). 
+This  can  lead  people  to  abandon  journaling:  “I  also  felt 
+embarrassed to do it in front of friends so I stopped” (P27). 
+Journalers also report being nudged to avoid social situations: 
+“It discourages you from eating out or at a friend’s, even if 
+it is healthy” (P42). Journalers can struggle with a perceived 
+stigma around tracking, undermining not only the reliability 
+of their journal but also their goals and motivation. 
+
+Challenges in  Social Features  
+The  previous  challenges  emerged  in  both  datasets,  but  our 
+community  forum analysis  additionally  surfaced  challenges 
+in provided social features. Journalers turn to these for social 
+support “please if you want to motivate me and help me out 
+with  comments  and  suggestions,  add  me  as  a  friend” 
+(MyFitnessPal),  and  some  find  that  support  “I  have  found 
+that  having  friends  on  MFP  has  helped  me,  just  having 
+someone say good job when I do my exercise or finish under 
+my  calorie  goals”  (MyFitnessPal).  But  others  find  support 
+never  materializes  “I  have  seen  lately  that  I  will  post  my 
+diary or my progress or even some troubles and no one will 
+comment back. How is that going to encourage me to keep 
+going  when  I  have  no  support”  (MyFitnessPal),  that  their 
+motivation is undermined as friends stop journaling “Although 
+I used to log frequently in the past, most of my connections 
+have  stopped  logging  in  or  are  no  longer  members,  so  I 
+recently  emptied  my  ‘buddy  list’”  (FatSecret),  or  they  are 
+discouraged  by  the  success  of  others  “I hate  coming  on  to 
+forums  and  seeing  how  much  people  have  lost  and  I  have 
+made barely any progress at all.” (FatSecret). Embarrassment 
+leads people to omit entries or disable sharing: “I have logged 
+food  on  here  before  but  I  get  embarrassed  so  I  made  it 
+private  so  only  I  can  see  and  told  myself  be  honest  with 
+yourself” (MyFitnessPal). Social features can both support or 
+undermine journalers, and need to be carefully considered. 
+
+DISCUSSION AND CONCLUSION 
+We  have  contributed  a  qualitative  analysis  of  two  datasets 
+to empirically document specific challenges people encounter 
+in  food  journaling.  By  unpacking  “too  much  effort”  into 
+specific  challenges,  our  findings  suggest  opportunities  to 
+improve food journaling design and technology. 
+
+One  important  opportunity  is  to  consider  journaler  goals 
+and  how  they  relate  to  these  challenges.  For  example, 
+detailed  nutritional  data  may  be  important  to  a  journaler 
+pursuing  weight  loss.  But  the  challenges  in  obtaining  that 
+data  might  be  inappropriate  for  a  journaler  looking  to 
+identify a food trigger or gain a higher-level understanding 
+of  food  habits  (e.g.,  for  whom  “oatmeal”  is  sufficient). 
+Conversely,  details  of  preparation  might  be  irrelevant  to  a 
+to 
+journaler 
+identifying  a food  trigger.  Instead  of  attempting  to  capture 
+the  elusive  “everything”,  these  findings  suggest  a diversity 
+of journal designs to support specific goals. 
+
+in  calories  but  critical 
+
+interested  only 
+
+Challenges with food databases suggest several opportunities. 
+A reputation system might address reliability of community 
+entries, and could consider goals (e.g., a journaler tracking 
+sodium intake may find an entry more reliable if created by 
+another journaler with a similar goal). Further, a community 
+could vote on the accuracy of a contributed entry (e.g. “6 of 8 
+journalers  agree  with  this  assessment  of  calories”).  The 
+tension  between  databases  providing  desired  foods  but 
+overwhelming journalers might be addressed using context 
+(e.g., surface likely food at a particular restaurant), personal 
+diets  (e.g.,  a  vegetarian’s  journal),  routines  (e.g.,  a  person 
+may  always  have  the  same  espresso  drink),  or  designs  for 
+lower-fidelity  journals  (e.g.,  using  nutritional  information 
+from a generic “oatmeal” entry instead of strictly requiring 
+greater disambiguation for a minor nutritional difference). 
+
+One  initial  promising  opportunity  we  have  pursued  is  a 
+photo-based  food  journal,  which  can  level  the  challenge  of 
+journaling  different  meal  types,  provide  value  in  spite  of 
+missing  entries,  and  avoid  creating  judgment  by  not 
+emphasizing nutritional details [1]. But our findings point out 
+a  variety  of  challenges  in  food  journaling  and  motivate 
+future research exploring how new designs and technology 
+can support journalers in their food-related goals. 
+
+ACKNOWLEDGMENTS 
+We thank Ravi Karkar, Julie Kientz, and Sean Munson for feedback 
+and analysis. This work was funded in part by the Intel Science and 
+Technology Center for Pervasive Computing, by the National Science 
+Foundation  under  awards  OAI-1028195  and  SCH-1344613,  and  by 
+the National Institutes of Health under award 1U54EB020404-01. 
+
+REFERENCES 
+1. Cordeiro F, Bales E, Cherry E, & Fogarty J. Rethinking
+the Mobile Food Journal: Exploring Opportunities for
+Lightweight Photo-Based Capture. CHI 2015, to Appear.
+
+2. Grimes A & Harper R. Celebratory Technology : New
+
+Directions for Food Research in HCI. CHI 2008, 467–476.
+3. Helander E, Kaipainen K, Korhonen I, & Wansink B. Factors
+Related to Sustained Use of a Free Mobile App for Dietary
+Self-Monitoring With Photography and Peer Feedback:
+Retrospective Cohort Study. J Med Internet Res 16, 4 (2014), e109. 
+
+4. Mamykina L, Mynatt ED, Davidson PR, & Greenblatt D.
+MAHI : Investigation of Social Scaffolding for Reflective
+Thinking in Diabetes Management. CHI 2008, 477–486.
+5. Noronha J, Hysen E, Zhang H, & Gajos KZ. PlateMate:
+
+Crowdsourcing Nutrition Analysis from Food Photographs.
+UIST 2011, 1–12.
+
+6. Rooksby J, Rost M, Morrison A, & Chalmers M. Personal
+Tracking as Lived Informatics. CHI 2014, 1163–1172.
+7. Siek KA, Connelly KH, Rogers Y, Rohwer P, Lambert D, &
+Welch JL. When Do We Eat ? An Evaluation of Food Items
+Input into an Electronic Food Monitoring Application.
+PervasiveHealth 2006, 1–10.
+
+8. Thaler RH & Sunstein CR. Nudge: Improving Decisions
+
+about Health, Wealth, and Happiness. 2008.
+
+9. Tsai CC, Lee G, Raab F, Norman GJ, Sohn T, Griswold WG,
+& Patrick K. Usability and Feasibility of PmEB: A Mobile
+Phone Application for Monitoring Real Time Caloric Balance.
+Mobile Networks and Applications 12, 2-3 (2007), 173–184.
+
+The Value of the Village in CaregivingCHI 2015, Crossings, Seoul, Korea1162 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

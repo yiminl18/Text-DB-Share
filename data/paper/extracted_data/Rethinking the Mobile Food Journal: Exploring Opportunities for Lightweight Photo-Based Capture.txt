@@ -1,0 +1,2348 @@
+Rethinking the Mobile Food Journal:  
+
+Exploring Opportunities for Lightweight Photo-Based Capture 
+
+Felicia Cordeiro1, Elizabeth Bales1,2, Erin Cherry3, James Fogarty1 
+3 Computer Science 
+University of Rochester 
+erinc@cs.rochester.edu
+
+1 Computer Science & Engineering  
+2 Human Centered Design & Engineering  
+DUB Group, University of Washington  
+ {felicia0, lizbales, jfogarty}@cs.washington.edu  
+
+ABSTRACT 
+Food  choices  are  among  the  most  frequent  and  important 
+health  decisions  in  everyday  life,  but  remain  notoriously 
+difficult  to  capture.  This  work  examines  opportunities  for 
+lightweight  photo-based  capture  in  mobile  food  journals. 
+We first report on a survey of 257 people, examining how 
+they define healthy eating, their experiences and challenges 
+with  existing  food  journaling  methods,  and  their  ability  to 
+interpret  nutritional  information  that  can  be  captured  in  a 
+food journal. We then report on interviews and a field study 
+with  27  participants  using  a  lightweight,  photo-based  food 
+journal  for  between  4  to  8  weeks.  We  discuss  mismatches 
+between  motivations  and  current  designs,  challenges  of 
+current approaches to food journaling, and opportunities for 
+photos as an alternative to the pervasive but often inappropriate 
+emphasis on quantitative tracking in mobile food journals. 
+
+Author Keywords 
+Personal Informatics; Self-Tracking; Food Journals; Photos. 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI). 
+
+INTRODUCTION 
+Food  choices  are  among  the  most  frequent  and  important 
+health decisions in everyday life, yet it remains notoriously 
+difficult to understand our food choices. People eat in many 
+different contexts and have widely varying motivations and 
+constraints on food. Being mindful of the quality and quantity 
+of  food  choices  is  a  crucial  component  of  a  healthy  life 
+[35,36],  and  food  journals  can  be  effective  for  monitoring 
+food intake [8,15]. The implications of food also go beyond 
+health,  as  food  is  central  to  our  daily  experiences  and  our 
+relationship with food varies according to personal contexts 
+and goals [14]. But food journals impose high burdens that 
+detract  from  their  potential  benefit  [11,12].  Effective  food 
+journaling is thus a grand challenge for personal informatics. 
+
+Permission to make digital or hard copies of all or part of this work for personal 
+or  classroom  use  is  granted  without  fee  provided  that  copies  are  not  made  or 
+distributed for profit or commercial advantage and that copies bear this notice 
+and the full citation on the first page. Copyrights for components of this work 
+owned  by  others  than  ACM  must  be  honored.  Abstracting  with  credit  is 
+permitted. To copy otherwise, or republish, to post on servers or to redistribute 
+to lists, requires prior specific permission and/or a fee. 
+Request permissions from Permissions@acm.org. 
+CHI 2015, April 18 - 23 2015, Seoul, Republic of Korea 
+Copyright 2015 ACM 978-1-4503-3145-6/15/04$15.00 
+http://dx.doi.org/10.1145/2702123.2702154 
+
+Figure  1.  An  entry  in  our  lightweight  photo-based 
+food  journal.  No  calorie  or  nutrition  information  is 
+shown,  as  the  journal  instead  logs  meal  enjoyment, 
+location context, and social context. 
+
+Automated  sensing  has  proven  powerful  in  some  domains 
+of human activity, but remains out of reach for food despite 
+recent  advances  [1,3,18,27,29,32,38].  It  is  also  unclear 
+whether  automation  is  desirable,  as  it  may  undermine 
+in-the-moment  awareness  created  by  food  journaling  [36]. 
+Some existing methods involve taking photos of food as an 
+intermediate  step  toward  collecting  underlying  nutritional 
+information  [18,27,38].  We  step  further  back,  asking  what 
+people  want  to  capture  about  food  and  what  value  photos 
+themselves might provide in a lightweight food journal. 
+
+Our  work  examines  lightweight  photo-based  capture  and 
+reflection,  reconsidering  the  common  assumption  that  a 
+quantitative  approach  is  required.  We  first  present  a  survey 
+examining  how  people  define  healthy  eating,  experiences 
+and challenges with existing food journals, and how people 
+interpret the healthiness of food presented as either photos 
+or  nutrition  labels.  We  then  present  interviews  and  field 
+deployments  of  a  lightweight,  photo-based  mobile  food 
+journal. A total of 27 people with varying food goals from 
+two distinct trials use our application to journal for between 
+4 to 8 weeks. We explore reactions to a design focused on 
+food photos in lieu of nutritional information and examine 
+the value of food photos with regard to their goals. Finally, 
+we discuss our results in the context of rethinking challenges 
+and opportunities in the design of mobile food journals. 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3207 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+  
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+The specific contributions of our work include: 
+• Examination  of  how  people  define  healthy  eating,  their 
+experiences  and  challenges  with  food  journaling,  and 
+their interpretation of nutritional information that can be 
+captured in a journal. This includes surveying 257 people 
+to  define  healthy  eating  and  to  rate  the  healthiness  of 
+foods presented as either photos or nutrition labels. 
+
+• A field study examining a lightweight photo-based food 
+journal.  Specifically,  we  build  and  deploy DECAF  with 
+27  people  with  varying  food  goals  from  two  distinct 
+trials,  each  for  between  4  to  8  weeks.  We  examine  the 
+challenges participants encounter in journaling relative to 
+their  prior  methods,  the  value  they  find  in  photos,  and 
+differences according to their food goals. 
+
+• Discussion  of  opportunities  for  lightweight  photo-based 
+capture and reflection in mobile food journals. In contrast 
+to  quantitative  designs,  our  results  suggest an opportunity 
+for  qualitative  capture  and  reflection  to  help  support  the 
+diversity of goals that people bring to food journaling. 
+
+RELATED WORK 
+We  review  six  areas  of  related  work:  benefits,  traditional 
+methods,  challenges,  automation,  photos  and  alternative 
+representations, and alternative views on food journals. 
+
+Benefits of Food Journaling 
+Food  journaling  can  provide  benefit  across  many  areas  of 
+health.  Hollis  et  al.  found  weight-loss  patients  who  kept 
+regular food journals lost twice as much weight as patients 
+who kept no records [16]. Reflective analysis of daily food 
+intake  and  symptom  progression  is  critical  in  diabetes 
+management,  thus  motivating  food  journals  and  more 
+comprehensive health monitoring systems that help scaffold 
+understanding  and  interpreting  collected  data  [21,22]. 
+Similarly,  food  journals  and  elimination  diets  are  critical 
+tools  in  identifying  and  managing  food  allergies  [15,30]. 
+In addition  to  creating  a  record,  journaling  can  encourage 
+healthier  choices  by  increasing  in-the-moment  awareness. 
+Prior studies have found increased mindfulness encouraged 
+journalers to avoid consuming unhealthy foods [17,36]. 
+
+Traditional Food Journaling Methods 
+Early  methods  used  lengthy  interviews  and  questionnaires 
+to  understand  patient  eating  habits  [24].  Recall  and  paper 
+diaries  remain  popular  in  the  medical  community  [7],  but 
+mobile  devices  have  become  powerful  journaling  tools. 
+Early  research  proposed  using  mobile  devices  to  provide 
+real-time  feedback  on  daily  calorie  budgets  [33].  Outside 
+the medical community, many common commercial phone 
+applications  now  support  using  food  databases  to  journal 
+calories and other nutritional information relative to a daily 
+budget  (e.g.,  MyFitnessPal,  Lose  It!).  A  person  journals 
+food  by  searching  for  each  component  of  a  meal  in  the 
+database  and  then  entering  portion  information.  Many 
+applications also allow storing custom recipes, shortcuts for 
+commonly  eaten  foods,  or  using  barcode  scanners  to 
+quickly  enter  packaged  foods.  Others  strive  to  simplify 
+journaling using a point system (e.g., Weight Watchers).  
+
+Challenges of Food Journaling 
+The high level of engagement required for food journaling 
+can quickly lead to fatigue and reduced compliance [4,12]. 
+Choe et al.  found  self-trackers  across  a  variety  of  domains 
+encounter key difficulties in tracking too much information 
+or information that is irrelevant to their goals, contributing 
+to fatigue and abandonment [10]. In research reviewed later 
+in this paper, Cordeiro et al. examine barriers and negative 
+nudges  in  current  food  journals  [11].  Another  important 
+problem is data hoarding, the practice of completing many 
+delayed  entries  at  once  [31].  Our  interest  in  photo-based 
+journals  is partially  motivated  by  a desire  to  examine  how 
+photo-based  capture  might  reduce  fatigue,  but  also  that 
+temptation to hoard might be reduced because a person can 
+only take a photo of food before or during its consumption. 
+
+An  additional  food  journaling  challenge  is  the  accuracy  of 
+journaled  nutrition  information.  Journaled  calories  can  be 
+inaccurate by 20% to 50% [19,20], due to difficulty finding 
+appropriate  entries  in  food  databases,  unreliable  entries  in 
+those  databases,  and  difficulty  estimating  portions  [11,35]. 
+Inaccurate  estimates  are  problematic  for  people  relying  on 
+them to make decisions relative to a daily budget, especially 
+when combined with errors in estimating calorie expenditure. 
+This plays a role in a popular backlash against gaining weight 
+while following the guidance of popular fitness devices [34].  
+
+Automating Food Journals 
+Researchers  have  investigated  automating  food  journaling 
+by  detecting  chewing  sounds  [1,29]  or  scanning  grocery 
+receipts [23]. Others have proposed automatically capturing 
+meal  photos  using  wearable  devices,  such  as  SenseCams 
+[3,32].  In  addition  to  automatic  image  capture,  there  have 
+been several attempts to automate nutrition entry, including 
+crowdsourcing  nutrient  estimates  [27]  and  using  computer 
+vision to recognize foods [18,38]. But visually similar foods 
+can have vastly different nutritional profiles (e.g., due to the 
+presence of condiments not visible in a photo, according to 
+whether the food is homemade or processed). As previously 
+noted, full automation may also undermine the mindfulness 
+benefits  of  food 
+journaling  [36].  We  designed  our 
+photo-based journal to lower the burden of journaling while 
+still requiring active involvement in data capture. 
+
+Photos and Alternative Representations in Food Journals 
+Prior work has proposed food photos to simplify journaling. 
+Photos  can  be  used  for  estimating  nutrient  content  and 
+portion sizes [6,26] or directly for reflection [5,13]. Zepeda 
+and  Deal  compare  food  journaling  with  paper  versus  a 
+camera,  finding  in-the-moment  photos  increase  awareness 
+of unhealthy eating [37]. Frost and Smith develop a system 
+to support diabetes patients in taking and viewing photos in 
+conjunction  with  visualizations  of  blood  glucose  levels, 
+including  but  not  limited  to  food  photos  [13].  They  report 
+some participants observed trends between foods consumed 
+and  blood  glucose.  Research  has  also  explored  other 
+representations for food journals, often intended to simplify 
+capture. Andrew et al.’s POND journaled according to food 
+components  (e.g.,  grains,  vegetables,  sodium,  solid  fats, 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3208 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+for 
+
+added sugar) and allowed circumventing database search by 
+directly journaling components [2]. Mattila  et al. present a 
+multi-dimensional wellness diary that emphasized minimal 
+entry  designed 
+finding 
+long-term 
+sustained  usage  they  argue  contrasts  with  what  could  be 
+expected of more burdensome journals [25]. We build upon 
+these  prior  results  to  examine  direct  use  of  photos  for 
+lightweight capture and reflection in support of a variety of 
+food-related  goals,  focusing  on  contrasts  to  challenges 
+reported by participants with prior journaling methods. 
+
+self-tracking, 
+
+Alternative Views on Journaling 
+Many food journals are designed with a focus on persuasion 
+and  behavior  change,  but  research  has  critiqued  this  as  a 
+limiting  view.  Purpura  et  al.  present  Fit4Life,  a  fictional 
+persuasive  system  promoting  healthy  behavior  and  ideal 
+weight, then use it to discuss issues of control and coercion 
+in self-tracking [28]. Baumer et al. similarly argue a focus 
+on prescriptive persuasion is limiting, then create VERA to 
+explore  open-ended  social  awareness  as  an  alternative 
+approach  [5].  More  focused  on  food,  Grimes  and  Harper 
+critique what they term “corrective technology” and suggest 
+“celebratory technology” as an alternative, noting that food 
+journaling  can  be  used  as  a  reflective  task  to  capture 
+positive  aspects  related  to  food,  such  as  time  spent  with 
+family  and  friends,  moments  of  creativity,  and  meaningful 
+exchanges [14]. We build on these perspectives of personal 
+empowerment, in that our focus on qualitative capture and 
+reflection  in  a  photo-based  journal  allows  people  to 
+interpret their journal according to their personal goals. 
+
+FOOD JOURNALING SURVEY 
+We  conducted  a  survey  of  257  people  (162  female)  of 
+which  141  had  current  or  past  food  journaling  experience. 
+Respondents  were  recruited  from  university  and  local 
+mailing lists, Facebook groups, and Fitbit and MyFitnessPal 
+forums.  The  median  age  was  30  years  (range:  19  to  70). 
+The  majority  of  respondents  (64%)  had  Body  Mass  Index 
+(BMI)  scores  within  the  normal  range,  with  10  people 
+opting  out  of  providing  height  and  weight  information. 
+Table 1 shows additional survey participant demographics. 
+
+All survey respondents were first asked “What does healthy 
+eating look like to you?” They were then asked to rate the 
+healthiness of 9 foods on a scale of 1 (Very Unhealthy) to 7 
+(Very  Healthy),  using  food  images  or  the  corresponding 
+nutrition labels. The images and nutrition labels represented 
+the same foods but were presented in a random order. The 
+foods correspond to a range of nutritional profiles, selected 
+to  fall  into  four  groups:  (1)  foods  that  look  healthy  in  a 
+photo,  but  unhealthy  on  a  nutritional  label  (avocado, 
+salmon,  mixed  nuts),  (2)  foods  that  look  unhealthy  in  a 
+photo, but look healthy on a nutritional label (waffles, mac 
+and  cheese),  (3)  foods  that  look  healthy  on  both  (apple, 
+cucumber),  and  (4)  foods  that  look  unhealthy  on  both 
+(burger, cake). The nutrition labels presented the nutritional 
+information  for  a  single  serving.  Figure  3  shows  a  sample 
+food  photo  and  corresponding  nutritional  label.  We  note 
+that  food  is  complex,  and  the  medical  community  has  no 
+
+Gender 
+Age 
+BMI 
+Length 
+Journaling 
+Benefits of 
+Journaling 
+
+Methods of 
+Journaling 
+
+Accuracy of 
+Journal 
+(Remember 
+to log…) 
+
+When Meals 
+are Logged 
+
+Method of 
+Calorie 
+Journaling 
+
+Past Journalers 
+
+Current Journalers 
+
+36 Female, 11 Male 
+
+69 Female, 25 Male 
+M: 34, SD: 9.5, Min/Max: 21/70  M: 34, SD: 11.7, Min/Max: 19/64 
+M: 25, SD: 4.6, Min/Max: 17/43  M: 28, SD: 7, Min/Max: 19/53 
+Median: 2-3 months, 
+Min/Max: 1 week / 2+ years 
+I feel better about myself (17), it 
+helps me lose weight (35), it 
+makes me think about my eating 
+decisions (75), it helps me find 
+patterns (42), it helps me have a 
+record (44) 
+Paper (45), MyFitnessPal (18), 
+Weight Watchers (13), Other 
+Mobile (22), Desktop / Website 
+(19), Fitbit (2), Other(18) 
+all of their food (30), most of their 
+food (45), 75% of their food (14), 
+50% of their food (3), mostly 
+forgot (1) 
+
+Median: 7-12 months, 
+Min/Max: 1 week / 2+ years 
+I feel better about myself (14), it 
+helps me lose weight (34), it 
+makes me think about my eating 
+decisions (40), it helps me find 
+patterns (23), it helps me have a 
+record (22) 
+Paper (2), MyFitnessPal (25), 
+Weight Watchers (3), Other 
+Mobile (7), Desktop / Website (4), 
+Fitbit (7), Other (2) 
+all of their food (20), most of their 
+food (16), 75% of their food (8), 
+50% of their food (1), 25% of their 
+food (1), mostly forgot (1) 
+
+after eating (48), end of the day 
+(19), when remember (8), before 
+eating (4), other (6) 
+64 used calorie journaling: 37 used 
+databases, 31 used the internet, 25 
+used nutrition labels, 18 estimated 
+on their own, 8 used a book or 
+other resource 
+
+after eating (21), when remember 
+(6), before eating (12), other (4) 
+
+40 used calorie journaling: 28 use 
+databases, 19 use the internet, 23 
+use nutrition labels, 2 estimate on 
+their own, 3 use a book or other 
+resource 
+
+Table  1.  We  surveyed  current  and  past  journalers  to 
+examine their perspectives on healthy eating and their 
+experiences with current food journaling methods. 
+
+single  objective  measure  for  rating  food  healthiness  [9]. 
+This survey targets respondent perceptions of healthiness. 
+
+Past and current journalers were further asked to respond to 
+questions  about  their  goals  for  food  journaling,  their 
+journaling  methods,  the  benefits  received  from  journaling, 
+as  well  as  experiences  and  difficulties  in  journaling. 
+Respondents  who  no  longer  journaled  were  additionally 
+asked  questions  targeting  their  reasons  for  stopping.  We 
+used  open  coding  techniques  on  open-ended  questions  to 
+extract themes and gain an understanding of trends. 
+
+SURVEY RESULTS 
+We present survey results in four sections: healthy eating as 
+defined by respondents, food journaling barriers, when and 
+why  past 
+journaling,  and  comparing 
+healthiness  ratings  between  photos  and  nutrition  labels. 
+Additional analysis of responses regarding current and past 
+food journaling practices is available in [11], with this paper 
+focusing on their relevance to photo-based food journaling. 
+
+journalers  stop 
+
+What Does Healthy Eating Look Like 
+Responses to “What does healthy eating look like to you?” 
+identified a variety of perspectives, summarized in Figure 2. 
+Responses 
+themes: 
+eating more  vegetables  (77%),  more  fruit  (53%),  or  more 
+protein  (33%),  maintaining  a  balanced  diet  (29%),  and 
+avoiding processed foods (29%).  
+
+include  consensus  around  several 
+
+In  contrast,  we  note  only  24  (9%)  respondents  mentioned 
+calories.  Calories  are  probably  the  most  pervasive  metric 
+for  weight-loss  and nutrition journaling, but  reducing  food 
+to  such  a  single  numeric  value  often  loses  the  dimensions 
+respondents  said  were 
+important  (e.g.,  eating  more 
+vegetables,  eating  more  fruit,  having  a  balanced  diet, 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3209 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+for  stopping  was  reduced  value  over  time  (37%),  either 
+because a new habit was established or a goal was reached. 
+Other reasons included journaling requiring too much effort 
+(25%),  being  too  time  consuming  (16%),  and  a  loss  of 
+motivation  (10%).  Reasons  for  stopping  were  often 
+complex with many factors contributing to the decision. 
+
+SP27  was  representative  of  encountering  multiple  barriers 
+and ultimately deciding to abandon journaling: “It was too 
+time  consuming  and  tedious.  I  also  did  not  know  what  to 
+enter  if  I  ate  out,  so  I  often  did  not  enter  data  and  that 
+compounded.  I  also  felt  embarrassed  to  do  it  in  front  of 
+friends so I stopped. It seemed like more work than it was 
+worth.” We further discuss these general challenges to food 
+journaling in Cordeiro et al. [11], with the remainder of this 
+paper focusing on our lightweight photo-based food journal. 
+
+Comparing Food Representations 
+We hypothesized food representation impacts perception of 
+healthiness. We tested this by asking respondents to rate 9 
+food  photos  and  their  corresponding  nutrition  labels  on  a 
+scale  of  1  (Very  Unhealthy)  to  7  (Very Healthy).  We  also 
+asked which representation made it easier to determine.  
+
+When  asked  which  representation  made  it  easier  to 
+determine healthiness, 46% of respondents selected photos, 
+22%  selected  nutrition  labels,  and  the  remainder  had  no 
+preference.  For  participants  that  preferred  photos,  many 
+expressed  having  an  image  in  their  mind  of  what  healthy 
+and unhealthy looked like, but knowing less about nutritional 
+contents:  “I  think  I  have  roughly  accurate  pictures  in  my 
+mind of what a healthy vs. not healthy food looks like, but 
+I'm realizing I don't really know the nutritional makeup of 
+any  of  these  things  with  any  sort  of  decent  accuracy” 
+(SP190).  Many  respondents  that  preferred  photos  also 
+reported advantages of photos over nutrition labels, such as 
+being  able  to  determine  portion  sizes,  the  method  of 
+cooking,  or  whether  food  was  processed:  “I  have  a  hard 
+time  understanding  size,  and  whether  or  not  the  food  is 
+heavily  processed,  which  pictures  convey”  (SP170)  and 
+“photographs reveal quality” (SP179). The respondents that 
+preferred nutritional labels generally worried about pictures 
+hiding  condiments  and  wanted  precision  in  calorie  counts, 
+two points we revisit in examining field study responses. 
+
+To  further  examine  respondent  interpretation  of  food 
+representations,  we  calculated  the  skewness  of  healthiness 
+rankings  for  each  food  in  each  representation,  using  the 
+adjusted  Fisher-Pearson  standardized  moment  coefficient 
+with  a  0.9  cutoff.  The  skew  allowed  us  to  determine  the 
+general trend in how respondents perceived the healthiness 
+of each food and compare that trend across representation. 
+The  results  of  these  comparisons  fell  into  three  groups, 
+shown  in  Figure 3.  We  found  foods  that  (1)  had  the  same 
+skew  in  both  representations  (e.g.,  hamburgers  rated 
+unhealthy  in  both,  cucumbers  rated  healthy  in  both), 
+(2) foods  with  skew  in  the  photo  but  no  skew  in  the  label 
+(e.g., salmon rated healthy in the photo, but had no skew in 
+labels), and (3) opposing skew (e.g., mixed nuts rated healthy 
+
+Figure  2.  The  20  most  frequent  survey  responses  to 
+“What does healthy eating look like to you?” Respondents 
+identify  a  variety  of  themes,  in  contrast  to  a  focus  on 
+calories in many current food journaling applications. 
+having  a  low  processed  diet).  This  suggests  a  mismatch 
+between  how  people  define  healthy  eating  versus  the 
+information highlighted in many current food journals. 
+
+Food Journaling Challenges 
+The  most  cited  reason  for  not  journaling  was  forgetting, 
+with  54%  of  respondents  having  missed  an  entry  for  this 
+reason.  However,  forgetting  was  far  from  the  only  reason 
+respondents  did  not  journal.  Even  when  they  remembered 
+they should journal, 40% reported choosing not to journal a 
+food  that  was  too  difficult  to  enter.  Additional  reasons  for 
+not  journaling  included  not  knowing  what  was  in  a  meal 
+(40%)  or  social  contexts  (20%),  such  as  not  wanting  to 
+journal in front of friends. This shows that forgetting is not 
+the  only  challenge  in  current  approaches  to  capture,  thus 
+suggesting  opportunities  for  new  designs.  But  13%  of 
+respondents  further  reported  they  intentionally  avoided 
+journaling  when  they  ate  something  unhealthy  or  did  not 
+want  to  record  exceeding  a  calorie  budget:  “Sometimes  I 
+feel  like  not  logging  things  because  I  know  it’s  really 
+unhealthy. =(” (P117). This is problematic in that deciding 
+against capture undermines later reflection or analysis. 
+
+Although respondents reported packaged food and fast food 
+were  the  easiest  to  journal  with  their  prior  tools,  that 
+conflicted with how they defined healthy eating (e.g., to eat 
+less  processed  foods).  Most  journaling  applications  allow 
+adding entries for foods not found in a database, but many 
+respondents found this tedious. Some even reported avoiding 
+food  that  was  hard  to  track,  instead  turning  to  packaged 
+food: "They weren’t on the list. I just avoided eating things 
+that  were  hard  to  log.”  (SP132).  This  exposes  a  concern 
+that  journaling  can  artificially  limit  food  choices  by 
+incentivizing  foods  that  are  easier  to  track,  even  though 
+those foods may not support journaler goals. Cordeiro et al. 
+discuss this as a negative nudge in current journals [11]. 
+
+When and Why Did Past Journalers Stop 
+Of  141  respondents  with  prior  food  journaling  experience, 
+94  no  longer  kept  a  food  journal.  Their  most  common 
+method  was  paper  (48%),  and  they  reported  keeping  a 
+journal for a median of between 2 to 3 months. In contrast, 
+current  journalers  primarily  used  technology  (98%)  and 
+reported  journaling  for  a  median  of  7  to  12  months.  This 
+suggests  technology-simplified  journaling  is  supporting 
+longer-term  journaling.  The  most  commonly  stated  reason 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3210 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure  3.  Respondents  rated  the  healthiness  of  the  same  foods  represented  using  Food  Photos  or  Nutrition  Labels. 
+We found  a)  foods  with  agreement  in  skew  in  both  representations,  b)  foods  with  skew  in  only  the  photo 
+representation, c) foods with opposing skews in the representations, and d) more extreme ratings for Food Photos. 
+in  the  photo,  but  unhealthy  in  labels).  Consistent  with  our 
+finding  that  calories  are  not  primary  in  how  many  define 
+healthy  eating,  these  differences  in  skew  show  that 
+low-level nutritional information often does not correspond 
+with how people consider food healthiness. 
+
+In  the  photo  representation,  all  foods  had  either  a  positive 
+or negative skew. In contrast, only three foods had skew in 
+the  nutrition  labels  representation.  Figure  3d  illustrates  the 
+combined respondent ratings across all foods. Respondents 
+overall ranked photos toward extremes (i.e., “very healthy” 
+or  “very  unhealthy”).  Nutrition  labels  for  the  same  foods 
+received  a  broader  range  of  scores.  We  tested  whether 
+photos yield more extreme ratings using a chi-squared test, 
+bucketing  ratings  in  (1,  2,  6,  7)  as  extreme  and  ratings  in 
+(3, 4, 5)  as  neutral.  Respondents  were  significantly  more 
+likely  to  give  food  an  extreme  rating  with  a  photo 
+representation  than  with  a  nutritional  label  representation 
+X2(1,  4626)  ≈  624,  p  <.001.  Food  photos  thus  allowed 
+respondents to develop a stronger opinion of the healthiness 
+of  foods,  while  nutrition  labels  left  them  unsure.  This 
+supports our prior discussion of respondent statements they 
+prefer  photos  because  they  understand  healthiness  but  are 
+often unsure how to interpret nutritional information. 
+
+FIELD STUDY OF A LIGHTWEIGHT FOOD JOURNAL 
+Our  survey  reveals  challenges  in  food  journal  design, 
+mismatches  between  journals  versus  how  people  define 
+healthy  eating,  and  opportunities  for  photo-based  capture. 
+Because  of  the  survey  method,  responses  were  based  in 
+recollections  and  hypothetical  foods.  We  complement  this 
+with  a  field  study  examining  photo-based  journaling  with 
+the food that journalers encounter in their everyday lives. 
+
+We conducted our field study by developing a food journal 
+organized  around  photos  and  does  not  include  calories  or 
+nutrition  information.  We  deployed  it  with  27  people  to 
+examine:  (1)  the  impact  of  photo-based  capture  on  food 
+journaling challenges, (2) what value photos provide absent 
+nutritional  details,  and  (3)  how  journaling  challenges  and 
+the value of photos vary according to journaler goals. 
+
+Figure 4. The DECAF mobile interface, showing a blank 
+journal entry (left) and a scrolling journal view (right). 
+
+The DECAF Food Journal 
+We conduct our field study using a lightweight, photo-based 
+journal,  DECAF  (Diary  of  Emotion,  Context,  And  Food). 
+It consists of two components: (1) a mobile application for 
+easy  food  capture,  and  (2)  a  website  for  providing  details 
+and  reflection.  At  the  time  of  eating,  a  journaler  simply 
+opens  the  application  and  adds  an  entry  with  an  “I  Am 
+Eating” button. Mobile journal entries can include a picture 
+of the food, a description, and a rating of current mood (as 
+seen  in  Figure  4).  The  myDECAF.org  website  allows 
+providing  additional  detailed  information  about  an  entry, 
+such as which meal of the day, the meal enjoyment rating, 
+meal  location,  how  many  and  with  whom  it  was  eaten, 
+feelings  after  eating,  and  a  description  of  the  meal 
+components  (as  seen  in  Figure  1).  DECAF  explicitly  and 
+intentionally does not log calories or other nutritional details, 
+as our focus is on participant response to photo-based capture 
+and reflection in comparison to prior journaling techniques. 
+
+Procedure 
+Participants  installed  DECAF  on  their  own  phone.  We 
+encouraged  them  to  use  the  application  for  in-the-moment 
+journaling  and  to  then  visit  the  website  nightly  to  provide 
+additional  details.  Participants  were  compensated  $20  for 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3211 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+every  week  they  journaled  their  food  and  provided  details 
+on the website. The study consisted of a one-hour pre-study 
+session,  use  of  the  journal  for  four  weeks,  and  a  one-hour 
+post-study  session.  Some  participants  who  kept  thorough 
+journals were given the option to continue for up to 4 more 
+weeks, with an additional one-hour interview. 
+
+In the initial session, we interviewed participants about their 
+health goals, past journaling experiences, and eating routines. 
+In  the  post-study  session,  we  asked  multiple  choice  and 
+Likert scale questions and then a semi-structured interview. 
+The  interview  began  by  asking  participants  to  reflect  on 
+their four weeks of DECAF usage. We finished with a series 
+of  questions  about  advantages,  disadvantages,  difficulties, 
+and  valuable  aspects  of  any  prior  journaling  methods  as 
+well  as  those  for  photo-based  journaling  with  DECAF. 
+We transcribed  the  semi-structured  interviews  and  used 
+open coding techniques to extract themes. 
+
+Participants 
+We  recruited  27  participants  to  use  DECAF  for  between 
+4 and  8  weeks  (not  including  3  drop  outs).  Participants 
+ranged in age from 21 to 64 years (M: 39, SD: 13) and had 
+a range of health goals and journaling experience. Although 
+all field participants indicated a general goal of wanting to 
+make  healthier  food  choices,  their  specific  goals  ranged 
+from substantial weight loss to transitioning their diet to be 
+vegan or vegetarian. Participants were in two trials: 
+
+Trial 1 consisted of 14 participants (after 2 drop outs) from 
+the Seattle area. Participants were recruited from university 
+and local mailing lists based on interest in food journaling. 
+This trial included several people on vegetarian, vegan, and 
+low-processed  food  diets.  10  people  had  previous  food 
+journaling experience. This trial ran November to January. 
+
+Trial  2  consisted  of  13  participants  (after  1  drop  out) 
+recruited from the University of Rochester Medical Center 
+using ResearchMatch. All had a BMI >= 25, indicating they 
+were overweight or obese. As in Trial 1, we recruited based 
+on  interest  in  food  journaling,  and  10  had  previous 
+experience. This trial ran January to February.  
+
+FIELD STUDY RESULTS 
+We present our field deployment results in terms of usage, 
+the  impact  of  lightweight  journaling  on  challenges,  the 
+value of photos, and differences by journaler food goal. 
+
+Usage  
+Common challenges with long-term food journaling include 
+compliance  and  data  hoarding.  Estimating  compliance  is 
+difficult  as  there  is  no  ground  truth  as  to  what  food  was 
+consumed.  To  approximate  compliance,  we  examine  the 
+journaling rate. Participants journaled for an average of 5.2 
+weeks, a total of 3569 entries, an average of 3.5 entries per 
+participant per day. This suggests overall high usage. 
+
+We  expected  in-the-moment  photo-based  journaling  to 
+minimize hoarding, as a photo can only be taken before or 
+during  food  consumption.  To  detect  hoarding,  we  logged 
+the eating time and the journaling time, then compared the 
+
+timestamps.  We  defaulted  the  eating  time  to  “Now”  and 
+asked  participants  to  change  it  to  match  when  they  ate. 
+Participants generally journaled within 10 minutes of eating 
+(86% of all entries). Because 94% of entries created within 
+10  minutes  of  eating  contained  photos  of  the  food,  they 
+were not susceptible to hoarding. In contrast, a journal entry 
+created more than 30 minutes after eating normally did not 
+contain a photo (12% of all entries were created more than 
+30 minutes after eating, only 20% of which include a photo). 
+When  delayed  entries  did  contain  a  photo,  it  was  often  of 
+dirty  plates  or  empty  wrappers.  Although  such  photos 
+would  be  difficult  or  impossible  for  transcription  by  an 
+automated system or by other people, participants reported 
+they supported their ability to remember what they ate. 
+
+Impact of Lightweight Journaling on Challenges 
+Similar to our survey findings, all field participants with prior 
+food  journaling  experience  reported  their  prior  techniques 
+made  packaged  food  and  fast  food  easiest  to  log,  with 
+home-cooked  meals  being  more  challenging.  In  contrast, 
+photo journals lowered this barrier and leveled the playing 
+field among meal types. Taking a picture is equally difficult 
+regardless  of  preparation,  and  participants  rated  all  food 
+types at the same difficulty. 60% of field participants with 
+prior journaling experience reported they sometimes did not 
+journal a meal with their prior technique because it was too 
+difficult.  With  photo-based  journaling  in  DECAF,  only 
+22%  reported  not  journaling  because  it  was  too  difficult. 
+Participants still reported difficulty when food is eaten over 
+time  (e.g.,  appetizer,  main  dish,  dessert)  or  in  a  sampling 
+manner (e.g., a buffet, at a party). These types of meals require 
+several entries throughout dining, increasing burden and the 
+likelihood of forgetting or choosing to not journal [11]. 
+
+With many journaling methods, it is difficult to log a meal 
+if a journaler does not know the exact ingredients. 65% of 
+field  participants  with  prior  experience  reported  not 
+journaling  with  their  prior  technique  because  they  did  not 
+know the ingredients. Knowing meal composition does not 
+impact  the  ability  to  journal a  meal  with  photos,  and  none 
+of our participants reported not journaling for this reason. 
+
+There  are  also  often  social  challenges  surrounding  food 
+journaling.  55%  of  field  study  participants  with  prior 
+journaling  experience  reported  this  was  a  challenge  with 
+their  prior  technique.  Although  publicly  taking  photos  of 
+food  with  phones  has  become  more  accepted,  participants 
+reported  similar  challenges  with  photo  journals.  52% 
+reported  feeling  awkward  photographing  food  in  front  of 
+others.  The  types  of  meals  reported  as  most  socially 
+awkward  to  photograph  were  restaurant  meals,  dinner  at  a 
+friend’s house, and food at a party. We note these are also 
+contexts  in which  food often  comes  over  time,  and  so  this 
+challenge may interact with the above challenge. 
+
+Finally, although participants reported photo-based capture 
+reduced  barriers  to  journaling,  simply  forgetting  to  journal 
+remains  a  challenge.  95%  of  participants  with  prior 
+experience  reported  forgetting  to  journal  with  their  prior 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3212 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+technique,  and  93%  of  participants  reported  sometimes 
+forgetting with DECAF. Because there is no ground truth in 
+either  case,  we  cannot  determine  if  reducing  barriers  with 
+photo-based  capture  impacts  the  frequency  of  forgetting. 
+But this clearly remains a challenge for food journal design. 
+
+Value of Photos 
+Photos provide rapid capture, but people also need to obtain 
+value  from  the  data  they  capture.  DECAF  explicitly  and 
+intentionally  does  not  log  calories  or  other  nutritional 
+details, as we explore the value people obtain directly from 
+the photos themselves. Of the 3569 entries journaled in the 
+deployment, 3136 (88%) included photos. Many said photos 
+were  the  most  salient  feature:  “the  strength  was  obviously 
+the  photos”  (FP34),  “I think  the  pictures  were  great.  With 
+pictures  you,  even  if  there  are  no  words  there,  you 
+understand  a  lot”  (FP11).  During  the  final  interview,  we 
+asked  participants  to  talk  aloud  as  they  reflected  on  the 
+most recent weeks of their journal. Many described looking 
+only  at  photos,  ignoring  other  information  they  collected: 
+“I'm  totally  just  looking  at  the  picture”  (FP4),  “I’m  just 
+looking at the picture, that’s the interesting thing” (FP11). 
+
+Who, What, Where, How 
+Photos were not merely “the interesting thing”, as interview 
+participants  reported  that  photo  context  supported  much 
+richer recall (e.g., where a meal was eaten, what other tasks 
+had  been  accomplished  that day,  who  was  eaten  with,  and 
+the preparation and makeup of the food). FP9 stated “I can 
+know  what  I  ate,  what  I  typically  eat,  I can  remember  the 
+events, I  can understand  myself  better”.  Photo background 
+often contained enough detail that participants knew where 
+they had eaten (as in Figure 5c): “[mom] actually has nice 
+tablecloths and really nice plates, so I know it's her house” 
+(FP11), “you can see my counter” (FP3). Participants also 
+reported  purposely  including  context  so  they  could  later 
+know  where  they  had  eaten  (e.g., FP4  included  her  laptop 
+when eating at work). 
+
+Some  participants  expressed  an  emotional  connection  to 
+photos that captured happy times they had with friends and 
+family:  “Having  the  picture  reminded  me  of  how  I  was 
+feeling  that  day,  and  the  context  around  it”  (FP10).  Some 
+also  reported  purposely  including  people  in  photos  so  that 
+they  could  better  remember  those  times  (as in  Figure 5a). 
+FP11  said  “I  purposely  got  my  boyfriend's  hand  [in  the 
+photo], because I wanted to remember that he was there”. 
+
+Survey  respondents  had  expressed  concern  that  nutritional 
+labels often do not provide the preparation of food, such as 
+what oils were used or the level of processing. Conversely, 
+some  had  expressed  concerns  that  photos  might  hide 
+condiments or other high-calorie portions of a meal. In our 
+field study,  we found participants could use their photos in 
+seeing or remembering these details of food they had eaten. 
+FP13 was on a low-processed diet, and described being able 
+to tell if her food met her goal by quickly scanning photos 
+for wrappers: “From my pictures it's pretty obvious to me if 
+it  was  prepackaged  or  not.”  Similarly,  some  participants 
+
+Figure  5.  Participant  photos  supported  rich  recall, 
+including  a) with  whom  food  was  eaten,  b) details  of 
+food that was eaten, c) context of where food was eaten. 
+
+reported  scanning  photos  for  color  as  an  indication  of  the 
+presence  of  more  vegetables.  Several  said  photos  helped 
+with determining portion sizes: “It gave you an idea of what 
+your portions are […]  ‘Wow, I ate way too much pasta in 
+that  bowl.’”  (FP24).  Finally,  participants  reported  using 
+cues  in  the photos  to remember  food  that was not  actually 
+in the photo: “an empty muesli bowl looks different than an 
+empty  salad  bowl,  because  my  salad  dressing  always  has 
+balsamic vinegar in it, so it’s kinda brown, whereas muesli 
+is  kinda  white”  (FP5).  Overall,  participants  reported  they 
+could  flexibly  interpret  photos  during  reflection,  including 
+remembering  context  that  would  be  difficult  or  impossible 
+to recover with an automated system or by another person. 
+
+Triggers and Trends 
+Participants  were  able  to  use  photos  in  making  deeper 
+connections  that  attributed  cause  to  context.  They  often 
+identified the places they were at and the people they were 
+with  as  influences  in  why  they  made  certain  food  choices: 
+“[the photos] reminded me of what I ate and what was the 
+situation” (FP6), “I know I ate all of these cookies because 
+my friend came to visit” (FP11). Participants were also able 
+to use photos in picking out higher-level trends confirming 
+beliefs  they  had  about  themselves:  “I  eat  too  much  pizza” 
+(FP10),  “I  have  salad  for  lunch  every  single  day”  (FP5), 
+“For breakfast,  I  eat  lots of  the  same  things”  (FP4). They 
+also  identified  previously  unrecognized  patterns:  “I  don’t 
+branch  out  as  much  as  I  thought  I  did,  even  when  I  go 
+somewhere new, I kind of get what I always get somewhere 
+else” (FP10), “I eat a lot of the same thing, and I eat kind 
+of  boring”  (FP19),  “I’m  surprised  at  how  many  times  I’m 
+seeing  things  that  I  consider  an  exception  to  my  diet!” 
+(FP4),  “I  didn't  eat  as  many  fruits  and  vegetables  as  I 
+thought”  (FP16).  Identifying  triggers  and  trends  can be  an 
+important use of  a food journal in  improving  eating habits 
+and identifying new goals. Participants used photos for this, 
+but more explicit support could add lightweight tagging in 
+support  of  more  active  sorting  and  filtering  mechanisms, 
+without imposing calories or nutritional details. 
+
+Awareness and Mindfulness 
+Wilde and Garvin define increased awareness of behavior as 
+one of two complementary components in self-tracking [36]. 
+Photo-based  captured  encouraged  participants  to  journal  at 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3213 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+reported 
+
+the moment of eating, which they found helped them think 
+about  their  food  choices:  “The  simple  action  of  logging 
+makes  me  think  about  what  I  eat  and  how  much  of  it” 
+(FP6).  Participants 
+taking  photos  created 
+additional mindfulness because they did not want unhealthy 
+food  to  appear  in  their  journal:  “The  fact  that  there  would 
+be a picture made me have healthier snacks” (FP19), “Do I 
+really  want  to  eat  this?  I’m  capturing  this  image”  (FP17), 
+“I didn’t  want  to  take  a  picture  of  chips,  or  a  bunch  of 
+really bad food, so I guess that kinda helped me make more 
+healthy food choices, just the act of taking a picture” (FP2), 
+“when  I  had  to  take  a  picture  of  it,  I  was  more  worried 
+about  what  was  in  the  picture,  that  there  should  be  some 
+fruits  and  vegetables”  (FP16).  Such  reactions  suggest 
+calorie  budgets  or  detailed  nutritional  information  are  not 
+necessarily  required  for healthier  in-the-moment  decisions. 
+If people already know what is healthy, the mindfulness of 
+journaling can itself encourage healthier choices. 
+
+Differences by Goal 
+Our field study included two separate trials with participants 
+with  varying  goals.  Trial  1  contained  participants  with  a 
+general interest in food journaling, while Trial 2 contained 
+only participants that were overweight or obese and trying 
+to lose weight. Because our system did not contain calories 
+or  other  nutrition  details,  we  expected  different  reactions 
+from participants according to their health goals. Although 
+most  participants  across  both  trials  saw  value  in  photos as 
+part  of  a  food  journal,  we  found  differences  in  how  the 
+photos  were  used  and  the  benefits  they  provided.  Trial  1 
+participants  generally  found  the  lack  of  calories  to  be  a 
+strength,  while  most  Trial  2  participants  felt  they  needed 
+calorie  information  to  reach  their  weight  goal:  “I need  to 
+know  calories”  (FP24),  “calories  and  nutrients,  the  things 
+in  the  food  really  matter  to  me  the  most”  (FP19),  “I think 
+someone starting out really needs [calories]” (FP20).  
+
+After using photo-based journaling, some Trial 2 participants 
+changed  their  view,  seeing  additional  value:  “I  think  you 
+can  tell  a  lot  from  the  pictures.  You  might  not  have  your 
+calorie  count.  But,  am  I  eating  something  too  fattening? 
+Is my portion too large?” (FP28). When reflecting on their 
+diary at the end of the study, several had strong reactions to 
+actually seeing the photos of what they were eating: “When 
+I would get on the computer, I would look at the diary and 
+realize  that  I  was  on  a  really  bad  road.  I  realized  what  I 
+was  eating  for  the  last  month.  It  was  awful!”  (FP24)  and 
+“The history was kind of a wake up call for me” (FP25). 
+
+Several Trial 2 participants liked photos in conjunction with 
+calorie  information:  “I  would  LOVE  if  I  could  see  the 
+picture  on  MyFitnessPal”  (FP26).  Many  also  decided  to 
+additionally  track  calories  using  other  methods,  using 
+photos  as  a  quick  way  to  capture  the  foods  consumed  for 
+later  lookup:  “easier  to  figure  out  what  the  calories  are 
+from  the  pictures”  (FP22)  and  “For  some  meals,  it’s  just 
+really  easy  to  take  a  picture….  Rather  than  sit  there  and 
+type in every ingredient” (FP20). We have noted prior work 
+
+uses  photos  as  an  intermediate  capture  to  support  later 
+calorie entry, and our results support such a usage. But our 
+broader  results  also  show  this  should  not  be  required  nor 
+assumed as the primary usage, and journals should instead 
+support a variety of goals enabled by photo-based capture. 
+
+DISCUSSION 
+We found that photo-based capture and reflection can directly 
+support a variety of food journaling practices in support of 
+diverse  goals.  We  now  discuss  our  results  relative  to 
+challenges participants reported with their prior techniques. 
+
+Journaling Without Judgment 
+13%  of  survey  participants  and  45%  of  field  participants 
+reported that in their prior journaling they sometimes chose 
+not to journal because food exceeded their calorie budget or 
+because  the  food  was  unhealthy.  In  contrast,  none  of  our 
+field  participants  reported  avoiding  journaling  an  entry for 
+this reason. Photo-based journaling supported capture while 
+avoiding  creating  feelings  of  failure  and 
+judgment: 
+“[DECAF  was]  easier  because  there  were  no  calorie 
+counts,  no  judgments,  but  still  makes  you  aware”  (FP14). 
+Such  reactions  suggest  a  potential  for  some  separation 
+between  in-the-moment  capture  and  more  goal-oriented 
+reflection. We have noted the act of journaling itself creates 
+mindfulness, but that “bad” moments can create a sense of 
+judgment  that  undermines  capture  and  therefore  later 
+reflection. This is especially damaging if failing to capture 
+those  “bad”  moments  prevents  a  journaler  from  correctly 
+diagnosing  a  trigger,  identifying  a  trend,  or  achieving  a 
+goal.  A  design  opportunity  exists  for  considering  how  to 
+support  capture  of  “bad”  moments  while  promoting 
+outside-of-the-moment reflection in the context of goals. 
+
+Role of Personalization 
+Field  participants  wanted  to  track  aspects  of  their diet  that 
+were  not  supported  by  DECAF  or  other  existing  journals. 
+These include whether a food was organic or grass-fed, the 
+level  of  processing  of  a  food,  and  the  oils  used  when 
+cooking.  37%  of  our  survey  participants  with  prior 
+journaling experience reported they stopped journaling due 
+to reduced value over time, so providing mechanisms to set 
+and  track  varied  personal  goals  could  help  journalers  stay 
+motivated. People change their goals over time, and there is 
+an opportunity for systems that allow people to change the 
+goals  of  their  journaling.  For  example,  many  participants 
+mentioned trying to lose weight and then keep it off while 
+eating  more  nutritiously.  These  are  two  distinct  goals,  and 
+the support a system should provide when a person is trying 
+to  lose  weight  may  be  different  than  when  trying  to 
+maintain  weight  and  eat  nutritiously.  Journals  should  be 
+configurable to support evolving personal goals. 
+
+Active Reminders 
+The  top  reported  reason  for  not  journaling  food  in  our 
+survey  was  simply  forgetting.  Although  using  photos  as  a 
+capture mechanism lowered the journaling barrier, our field 
+participants also struggled with remembering to log. Future 
+systems  could  combine  lightweight  capture  methods  with 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3214 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+automatic  reminders  to  log.  For  example,  research  is 
+examining  detection  of  visual  or  audio  characteristics  that 
+correspond to eating [1,3,29,32]. Another possibility would 
+be using journal history to identify routines that can prompt 
+reminders at likely eating times. In contrast to proposals for 
+automated journaling, a combination of lightweight capture 
+and  active  reminders  could  keep  journalers  involved  in 
+capture,  thus  providing  the  benefits  of  mindfulness  while 
+reducing the burden of remembering to journal. 
+
+Journaling During Transitions 
+Long-term  compliance  is  often  a  goal  in  self-tracking,  but 
+our results suggest targeted journaling at critical times may 
+provide benefits without requiring long-term adoption. We 
+administered  the  study over a  time  containing food-related 
+holidays  (American  Thanksgiving,  Hanukkah,  Christmas) 
+as  well  as  New  Years  Day  (when  many  set  health  goals). 
+For  our  student  participants,  the  study  also  spanned  the 
+university  transitions  of  finals  week,  winter  break,  and  a 
+new  quarter.  A  trend  in  our  interviews  was  a  persistent 
+optimism that, although their eating was not currently ideal, 
+in  the  future  it  would  be  easier:  “I  want  to  go  back  to  the 
+normal. The past month is a lot different and a lot of times I 
+couldn't  really  have  the  food  I  wanted  to  eat.”  (FP9). 
+Although  optimism  can  be  good,  it  can  also  encourage 
+people to postpone changing behaviors because they hope it 
+will  be  easier  if  they  just  wait  a  bit  longer.  Targeting 
+journaling  during  times  of  transition  may  help  people 
+navigate  these  times  with  a  higher  level  of  awareness  and 
+help  them  implement  habits  in  their  new  environment  that 
+can persist after journaling has ended.  
+
+Robustness to Missing Data 
+Survey  respondents  and  field  study  participants  reported 
+many reasons for not logging a meal with prior techniques 
+(e.g.,  forgetting,  it  being  too  difficult,  not  knowing  the 
+ingredients). Missed entries are particularly problematic for 
+calorie-based  food  journals,  as  the  primary  feedback  is 
+quantitative  (e.g.,  a  sum  relative  to  a  budget,  an  average 
+over the past week). Missed entries make this inaccurate, so 
+one  missed  entry  can  derail  an  entire  day  or  more  of 
+journaling:  “it  showed  the  amount  of  calories  you  took  in 
+that week but if you didn’t fill out most of the week it was 
+sort of useless. So then I started with a lot of effort but as it 
+started to go down, it sort of snow balled from there” (FP2). 
+As  reported  by  Cordeiro  et  al.  [11],  participants  reported 
+that  with  prior  techniques  they  often  would  not  bother 
+journaling after missing a single meal in a day, sometimes 
+leading them to abandon journaling: “Too hard to remember 
+to do it after every meal. Then I got discouraged once I got 
+behind and was never able to catch up again.” (SP81). 
+
+that 
+
+reported 
+
+In  contrast,  participants 
+to 
+photograph a meal did not devalue journaling other meals, 
+as each represented a self-contained data point. By focusing 
+on a data presentation that does not require long periods of 
+perfect  compliance,  missing  a  meal  did  not  initiate  longer 
+periods of non-journaling. This suggests robustness toward 
+
+forgetting 
+
+missing  data  should  be  considered  in  the  design  of  food 
+journals.  Even  if  photos  are  not  a  primary  format, 
+alternative  presentations  could  better  preserve  value  and 
+motivation for journaling in the face of missing data.  
+
+Interpretability of Data Representation 
+Prior work finds calorie journals are inaccurate by as much 
+as 20% to 50% [19,20], and 46% of our survey respondents 
+preferred  food  represented  as  photos  over  nutrition  labels. 
+Even  respondents  with  prior  food  journaling  experience 
+expressed difficulty interpreting nutrition labels without the 
+context  of  the  foods.  Although  that  context  is  available 
+during  capture  of  the  food  a  person  eats,  many  journals 
+remove the context in daily or weekly summaries that focus 
+on  a  summary  of  calories  or  other  nutritional  details.  The 
+result is often a journal that is both inaccurate and difficult 
+to interpret in the context of a person’s goals. 
+
+In  contrast  to  measurement,  photos  emphasizes  capture. 
+Field study participants reported diverse value in photos as 
+their  primary  data  representation.  Although  some  with 
+specific weight-related goals also wanted calories, most felt 
+photos provided information about what was eaten, how the 
+food  was  cooked,  with  whom  food  was  eaten,  and  the 
+context  surrounding  the  meal.  Participants  were  able  to 
+interpret  their  journals  to  quickly  determine  whether  they 
+thought  it  was  a  healthy  or  unhealthy  week,  a  personal 
+judgment  that  can  be  difficult  with  nutritional  summaries. 
+Participants  were  also  able  to  identify  trends  and  triggers 
+that  would  have  been  masked  in  a  nutritional  summary. 
+Photo-based representation is thus familiar and interpretable, 
+allowing  journalers  to  leverage  existing  food  knowledge. 
+Although  there  are  important  questions  about  how  to  help 
+people  improve  food  knowledge,  our  results  show  an 
+opportunity  for  designs  to  exploit  existing  knowledge  in 
+support of diverse food-related goals. 
+
+CONCLUSION 
+People bring a variety of goals  to food journaling, and they 
+report  prior  techniques  fail  to  support  or  even  undermine 
+their  self-tracking.  Our  work  has  examined  direct  use  of 
+photos  in  a  food  journal  to  support  capture  and  reflection. 
+We  deployed  a  lightweight  photo-based  food  journal  with 
+27 participants for between 4 to 8 weeks. Participants report 
+photos ease capture, present information that is important to 
+them  (e.g.  food  variety,  level  of  processing,  vegetables), 
+and  support  reflection  to  identify  triggers  and  trends.  Our 
+work  thus  provides  support  for  photo-based  journaling  to 
+augment or sometimes replace  methods focused  on  calories 
+or  other  nutritional  details.  Photos  can  support  journaling 
+relevant to a variety of food-related goals, while also removing 
+or reducing barriers associated with common methods. 
+
+ACKNOWLEDGEMENTS 
+We thank Daniel Epstein, Julie Kientz, and Sean Munson for 
+their  feedback.  This  work  was  funded  in  part  by  the  Intel 
+Science  and  Technology  Center  for  Pervasive  Computing 
+and  by  the  National  Science  Foundation  under  awards 
+OAI-1028195 and SCH-1344613. 
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3215 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+REFERENCES 
+1. Amft, O., Stäger, M., Lukowicz, P., and Tröster, G. Analysis of 
+
+Chewing Sounds for Dietary Monitoring. UbiComp 2005, 56-72. 
+
+2. Andrew, A.H., Borriello, G., and Fogarty, J. Simplifying
+
+Mobile Phone Food Diaries: Design and Evaluation of a Food
+Index-Based Nutrition Diary. PervasiveHealth 2013, 260-263. 
+3. Arab, L., Estrin, D., Kim, D.H., Burke, J., and Goldman, J. (2011). 
+Feasibility Testing of an Automated Image-Capture Method
+to Aid Dietary Recall. Eur J Clin Nutr, 65(10), 1156-1162.
+4. Barrett-Connor, E. (1991). Nutrition Epidemiology: How Do We 
+Know What They Ate? Am J Clin Nutr, 54(1 Suppl), 182S-187S. 
+
+5. Baumer, E.P.S., Katz, S.J., Freeman, J.E., Adams, P.,
+
+Gonzales, A.L., Pollak, J., Retelny, D., Niederdeppe, J.,
+Olson, C.M., and Gay, G.K. Prescriptive Persuasion and
+Open-Ended Social Awareness. CSCW 2012, 475-484.
+6. Bird, G. and Elwood, P.C. (1983). The Dietary Intakes of
+Subjects Estimated from Photographs Compared with a
+Weighed Record. Hum Nutr Appl Nutr, 37(6), 470-473.
+
+7. Burke, B.S. (1947). The Dietary History as a Tool in
+Research. J Am Diet Assoc, 23(12), 1041-1046.
+8. Burke, L.E., Wang, J., and Sevick, M.A. (2011).
+
+Self-Monitoring in Weight Loss: A Systematic Review
+of the Literature. J Am Diet Assoc, 111(1), 92-102.
+9. Chahoud, G., Aude, Y.W., and Mehta, J.L. (2004).
+Dietary Recommendations in the Prevention and
+Treatment of Coronary Heart Disease: Do We Have
+the Ideal Diet Yet? Am J Cardiol, 94(10), 1260-1267.
+10. Choe, E.K., Lee, N.B., Lee, B., Pratt, W., and Kientz, J.A.
+Understanding Quantified-Selfers’ Practices in Collecting
+and Exploring Personal Data. CHI 2014, 1143-1152.
+11. Cordeiro, F., Epstein, D.,Thomaz, E., Bales, E., Jagannathan, 
+A.K., Abowd, G., and Fogarty, J. Barriers and Negative Nudges: 
+Exploring Challenges in Food Journaling. CHI 2015, To Appear. 
+
+12. Craig, M.R., Kristal, A.R., Cheney, C.L., and Shattuck,
+
+A.L. (2000). The Prevalence and Impact of ‘Atypical’ Days
+in 4-Day Food Records. J Am Diet Assoc, 100(4), 421-427.
+
+13. Frost, J. and Smith, B.K. Visualizing Health: Imagery in
+
+Diabetes Education. DUX 2003, 1-14.
+
+14. Grimes, A. and Harper, R. Celebratory Technology: New
+Directions for Food Research in HCI. CHI 2008, 467-476.
+15. Heizer, W.D., Southern, S., and McGovern, S. (2009). The Role 
+of Diet in Symptoms of Irritable Bowel Syndrome in Adults: 
+A Narrative Review. J Am Diet Assoc, 109(7), 1204-1214. 
+16. Hollis, J.F., Gullion, C.M., Stevens, V.J., Brantley, P.J., Appel, 
+L.J., Ard, J.D., Champagne, C.M., Dalcin, A., Erlinger, T.P., 
+Funk, K., Laferriere, D., Lin, P.-H., Loria, C.M., Samuel-Hodge, 
+C., Vollmer, W.M., and Svetkey, L.P. (2008). Weight Loss 
+During the Intensive Intervention Phase of the Weight-Loss 
+Maintenance Trial. Am J Prev Med, 35(2), 118-126. 
+17. Kanfer, F.H. (1970). Self-Monitoring: Methodological
+Limitations and Clinical Applications. J Consult Clin
+Psych, 35(2), 148-152.
+
+18. Kong, F. and Tan, J. DietCam: Regular Shape Food
+
+Recognition with a Camera Phone. BSN 2011, 127-132.
+19. Lansky, D. and Brownell, K.D. (1982). Estimates of Food
+Quantity and Calories: Errors in Self-Report among Obese
+Patients. Am J Clin Nutr, 35(4), 727-732.
+
+20. Livingstone, M.B., Prentice, A.M., Strain, J.J., Coward, W.A., 
+Black, A.E., Barker, M.E., McKenna, P.G., and Whitehead, 
+R.G. (1990). Accuracy of Weighed Dietary Records in Studies
+of Diet and Health. BMJ, 300(6726), 708-712.
+
+21. Mamykina, L., Mynatt, E., Davidson, P., and Greenblatt, D.
+MAHI: Investigation of Social Scaffolding for Reflective
+Thinking in Diabetes Management. CHI 2008, 477-486.
+
+22. Mamykina, L., Mynatt, E.D., and Kaufman, D.R.
+
+Investigating Health Management Practices of Individuals
+with Diabetes. CHI 2006, 927-936.
+
+23. Mankoff, J., Hsieh, G., Hung, H.C., Lee, S., and Nitao, E.
+
+Using Low-Cost Sensing to Support Nutritional
+Awareness. UbiComp 2002, 371-376.
+
+24. Marr, J.W. (1971). Individual Dietary Surveys: Purposes
+
+and Methods. World Rev Nutr Diet, 13, 105-164.
+
+25. Mattila, E., Pärkkä, J., Hermersdorf, M., Kaasinen, J., Vainio, J., 
+Samposalo, K., Merilahti, J., Kolari, J., Kulju, M., Lappalainen, 
+R., and Korhonen, I. (2008). Mobile Diary for Wellness 
+Management - Results on Usage and Usability in Two User 
+Studies. IEEE Trans Inf Technol Biomed, 12(4), 501-512. 
+26. Nelson, M., Atkinson, M., and Darbyshire, S. (1996). Food 
+
+Photography II: Use of Food Photographs for Estimating Portion 
+Size and the Nutrient Content of Meals. Br J Nutr, 76(1), 31-49. 
+
+27. Noronha, J., Hysen, E., Zhang, H., and Gajos, K.Z.
+
+Platemate: Crowdsourcing Nutritional Analysis from Food
+Photographs. UIST 2011, 1-12.
+
+28. Purpura, S., Schwanda, V., Williams, K., Stubler, W., and
+
+Sengers, P. Fit4Life: The Design of a Persuasive Technology
+Promoting Healthy Behavior and Ideal. CHI 2011, 423-432.
+29. Rahman, T., Adams, A.T., Zhang, M., Cherry, E., Zhou, B.,
+Peng, H., and Choudhury, T. BodyBeat: A Mobile System
+for Sensing Non-Speech Body Sounds. MobiSys 2014, 2-13.
+30. Sicherer, S.H. and Sampson, H.A. (2010). Food Allergy. J
+
+Allergy Clin Immunol, 125(2 Suppl 2), S116-S125.
+
+31. Stone, A.A., Shiffman, S., Schwartz, J.E., Broderick, J.E.,
+and Hufford, M.R. (2003). Patient Compliance with Paper
+and Electronic Diaries. Control Clin Trials, 24(2), 182-199.
+32. Thomaz, E., Parnami, A., Essa, I., and Abowd, G.D. Feasibility 
+of Identifying Eating Moments from First-Person Images 
+Leveraging Human Computation. SenseCam 2013, 26-33. 
+33. Tsai, C.C., Lee, G., Raab, F., Norman, G.J., Sohn, T., Griswold, 
+
+W.G., and Patrick, K. (2007). Usability and Feasibility of 
+PmEB: A Mobile Phone Application for Monitoring Real Time 
+Caloric Balance. Mobile Netw Appl, 12(2-3), 173-184. 
+
+34. Urist, J. My Fitness Band Is Making Me Fat: Users Complain 
+of Weight Gain with Trackers. Today.com, July 16, 2014.
+35. Wansink, B. and van Ittersum, K. (2007). Portion Size Me:
+Downsizing Our Consumption Norms. J Am Diet Assoc,
+107(7), 1103-1106.
+
+36. Wilde, M.H. and Garvin, S. (2007). A Concept Analysis of
+
+Self-Monitoring. J Adv Nurs, 57(3), 339-350.
+37. Zepeda, L. and Deal, D. (2008). Think Before You Eat: 
+
+Photographic Food Diaries as Intervention Tools to Change Dietary 
+Decision Making and Attitudes. Int J Consum Stud, 32(6), 692-698. 
+
+38. Zhu, F., Bosch, M., Boushey, C.J., and Delp, E.J. (2010).
+An Image Analysis System for Dietary Assessment and
+Evaluation. ICIP 2010, 1853-1856.
+
+Understanding Health through Online BehaviorCHI 2015, Crossings, Seoul, Korea3216 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

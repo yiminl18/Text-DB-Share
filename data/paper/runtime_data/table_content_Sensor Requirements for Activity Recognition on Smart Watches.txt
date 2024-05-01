@@ -1,0 +1,18 @@
+Table of Contents
+
+1. Introduction
+2. Related Work
+   2.1 Smart Watch
+   2.2 Activity Recognition
+   2.3 Inactivity Recognition
+   2.4 Acceleration Sensor
+3. Challenges
+4. Activity Unit
+5. Applications
+   5.1 Wearing Detection
+   5.2 Sleep Detection
+   5.3 Heart Rate Detection
+   5.4 Industrial Applications
+6. Conclusions and Outlook
+7. Acknowledgements
+8. References

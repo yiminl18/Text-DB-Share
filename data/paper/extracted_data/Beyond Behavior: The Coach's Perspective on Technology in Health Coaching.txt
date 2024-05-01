@@ -1,0 +1,1952 @@
+Beyond Behavior: The Coach’s Perspective 
+ on Technology in Health Coaching 
+
+Heleen Rutjes 
+ Human-Technology Interaction 
+ Eindhoven University of Technology 
+ Eindhoven, the Netherlands 
+ H.Rutjes@tue.nl 
+
+Martijn C. Willemsen 
+ Human-Technology Interaction 
+ Eindhoven University of Technology 
+ Eindhoven, the Netherlands 
+ M.C.Willemsen@tue.com 
+
+Wijnand A. IJsselsteijn  
+Human-Technology Interaction 
+ Eindhoven University of Technology 
+ Eindhoven, the Netherlands 
+ W.A.IJsselsteijn@tue.com 
+
+ABSTRACT 
+
+1     INTRODUCTION  
+
+Rapid  innovations  in  electronic  healthcare  and  behavior 
+tracking systems are challenging health coaches (dietitians, 
+personal trainers, etc.) to rethink their traditional roles and 
+healthcare  practices.  At  the  same  time,  many  current  e-
+coaching  systems  have  been  developed  without  explicitly 
+incorporating the healthcare professionals’ perspective into 
+the  design  process.  In  the  current  paper,  we  present  three 
+consecutive  qualitative  studies,  starting  from  the  health 
+coach’s  perspective  on  successful  coaching,  progressively 
+zooming in on the potential role and impact of technology 
+as  part  of  the  coaching  process.  Our  main  finding  is  that 
+coaches  are  concerned  that  introducing  technology  in  the 
+coaching  process  puts  too  much  emphasis  on  behavioral 
+information,  lowering  the  attention  for  the  client’s  lived 
+experience,  while  understanding  those  experiences  is  key 
+for  successful  coaching.  We  summarize  our  insights  in  a 
+multi-channel communication model and draw implications 
+for the design of supporting technology in health coaching.  
+
+CCS CONCEPTS 
+• Human-centered  computing  →  HCI  theory,  concepts  and 
+models  
+
+KEYWORDS:  Health  coaching;  self-tracking;  behavior  change 
+support; 
+relationship; 
+e-coaching;  mHealth; 
+technology acceptance; patient-generated data.  
+
+coach-client 
+
+ACM Reference format: 
+Heleen  Rutjes,  Martijn  C.  Willemsen,  and  Wijnand  A.  IJsselsteijn.  2019. 
+Beyond  Behavior:  The  Coach’s  Perspective  on  Technology  in  Health 
+Coaching.  In  2019 CHI Conference on Human Factors in Computing Systems 
+Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK. ACM,  NY,  NY, 
+USA. Paper 670, 14 pages. https://doi.org/10.1145/3290605.3300900 
+
+Permission to make  digital  or hard copies  of  all or  part  of  this  work  for personal  or 
+classroom use is granted without fee provided that copies are not made or distributed 
+for profit or commercial advantage and that copies bear this notice and the full citation 
+on the first page. Copyrights for components of this work owned by others than ACM 
+must  be  honored.  Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or 
+republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior  specific 
+permission and/or a fee. Request permissions from Permissions@acm.org. 
+ CHI 2019, May 4–9, 2019, Glasgow, Scotland UK  
+© 2019 Association for Computing Machinery. 
+ACM ISBN 978-1-4503-5970-2/19/05…$15.00  
+https://doi.org/10.1145/3290605.3300900  
+
+A  healthy  lifestyle  has  many  benefits.  Mortality  is  on 
+average lower among physically active people than among 
+their  inactive  peers,  and  an  unhealthy  diet  is  associated 
+with  leading  causes  of  death,  including  coronary  heart 
+disease  and  stroke  [29].  However,  to  attain  a  healthy 
+lifestyle,  established  routines  or  habits  have  to  be  broken 
+and  deeply  ingrained  attitudes  need  to  be  changed  [58]. 
+Health  coaches  may  provide  help  in  this  difficult  but 
+beneficial process of behavior change. 
+
+We  define  health  coaching  as  a  client-centered  process 
+where  a  coach  supports  an  individual  client  on  achieving 
+her  goals  related  to  health  and  wellbeing.  The  process  of 
+health  coaching  itself  is  an  interpersonal  process,  where 
+situational awareness, mutual coordination, and substantial 
+knowledge about the personal characteristics and habits of 
+the  client  are  required.  In  this  client-centered  process,  a 
+good relationship between the client and the coach [47] and 
+good  communication  skills  [61]  are  of  key  importance.  In 
+related  fields,  the  importance  of  a  good  relationship 
+between  caregiver  and  client  is  also  emphasized,  for 
+example  in  psychotherapy  [46]  and  in  medical  settings 
+[5,56], in order to elicit patient’s values [6], and to facilitate 
+shared medical decision making [48].  
+
+Over recent years, various e-coaching systems have been 
+introduced  that  offer  some  unique  opportunities  for 
+behavior  tracking  and  interventions  which  were  hitherto 
+unavailable,  either  to  coaches  or  their  clients.  Specifically, 
+technologies  such  as  smartphones,  activity-trackers  and 
+health  watches  are  equipped  with  a  broad  set  of  sensors, 
+which  allow  for  higher  resolution  and  potentially  more 
+objective  tracking,  over  longer  periods  of  time,  than 
+typically afforded through users’ subjective self-assessment. 
+Moreover,  advances 
+(big)  data  processing  enable 
+increasingly  personalized  and  contextualized  behavioral 
+recommendations and motivational feedback.  
+
+in 
+
+However, by and large, technology in health coaching to 
+date  has  focused  rather  exclusively  on  the  client’s  needs 
+and  technology  affordances,  typically  arriving  at  fully 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 1 
+automated, stand-alone e-coaching systems or apps. Neither 
+the  coach’s  information  needs,  nor  the  nature  of  the 
+coaching process, have received sufficient  consideration  in 
+the  design  and  research  of  this  technology.  In  the  present 
+paper,  we  aim  to  address  this  research  gap  by  taking  the 
+coaches’ perspective as point of departure in understanding 
+the  coaching  process,  the  role  of  supporting  technology, 
+and  the  design  requirements  of  technology  aimed  at 
+supporting the coaching process.  
+
+2     RELATED WORK 
+
+Such  e-coaching  technology,  including  Behavior  Change 
+Technology  [12,44]  and  Persuasive  Technology  [20,28], 
+implicitly or explicitly takes on a role of a health coach, cf. 
+[1,45,51].  Health  coaching  is  generally  conceptualized  as  a 
+client – or patient – centered process, supporting the health 
+needs and goals of the client. In line with this, the systems 
+in use to date, be they apps (e.g., Runkeeper, MyFitnessPal) 
+or  wearable  sensing  devices  (e.g.,  Apple  Watch,  Fitbit), 
+focus primarily on the end-user wearing the device, not on 
+the social or professional context of use.  
+
+2.1   Personal Informatics and Patient-Generated Data 
+
+2.3   The Coach’s Perspective in e-Coaching Systems 
+
+Over  recent  years,  interest  in  Personal  Informatics  and 
+Quantified  Self  has  been  growing,  where  technology  and 
+user-generated  data  (e.g.,  from  wearable  trackers)  are 
+employed  to  increase  a  user’s  self-awareness  and  provide 
+her with actionable insights to support the attainment of a 
+user’s  self-improvement  and  health  goals  [18,35–37].  This 
+literature  is  predominantly  client-oriented  –  that  is,  the 
+end-user’s  needs  and  goals  are  the  driving  force  in 
+developing apps and trackers that allow for self-tracking. At 
+the  same  time,  self-tracking  is  increasingly  construed  as  a 
+social  and  collaborative  activity,  inevitably  embedded  in  a 
+social context [17,33,39,55]. This signals that health tracking 
+frequently  involves  more  stakeholders  than  the  primary 
+end-user alone, and that data may be shared. However, self-
+tracking 
+limited 
+to  date  have 
+functionality in supporting such sharing [33].  
+
+relatively 
+
+systems 
+
+In clinical settings, there is a growing interest in the value 
+of  personally  tracked  data  to  supplement  existing  clinical 
+data,  by  providing  more  contextualized  and  continuous 
+health  information.  Research  on  such  patient-generated 
+data (PGD) has a broader focus than the empowerment and 
+needs  of  the  patient;  it  also  studies  the  clinicians’  needs 
+regarding  PGD,  and  the  extent  to  which  PGD  fits  and 
+impacts  current  healthcare  practices  and  workflows 
+[10,22,27,32,42,54,57,59,60,62]. Even though the use of PGD 
+is  increasingly  prevalent  in  chronic  disease  management, 
+current  PGD  tools  do  not  adequately  support  the  effective 
+collaboration  and  communication  between  caregivers  and 
+patients.   
+
+2.2   E-Coaching-, Behavior Change- and Persuasive 
+
+Technologies 
+
+using 
+
+clients) 
+
+In  addition  to  health  data  being  captured  by  people 
+(patients, 
+technology, 
+technology can also take a more active role in interpreting 
+the  data,  and  providing  the  end-user  with  relevant 
+feedback,  timely  and  personalized  cues,  and  motivational 
+rewards, all of which may support health behavior change. 
+
+self-tracking 
+
+Designing  systems  that  support  the  process  of  healthy 
+behavior change, however, does not imply that technology 
+assisting  in  this  process  should  focus  exclusively  on  the 
+client.  First,  as  e-coaching  technology  is,  to  an  extent, 
+emulating the role of a coach, a deep understanding of what 
+constitutes  a  successful  coaching  process  should  be 
+incorporated into the design of e-coaching systems. Second, 
+as  both  personal  informatics  and  e-coaching  systems  are 
+frequently  part  of  a  larger  ecosystem  of  behavior  change 
+agents which explicitly  includes human professionals (e.g., 
+health coaches, medical doctors), the design of such systems 
+should  also 
+these 
+stakeholders,  the  dynamics  of  the  interpersonal  coaching 
+relationship, and the requirements of a successful coaching 
+process.  Although  the  primary  goal  of  the  coach  is  to 
+support  the  client,  she  has  her  own  unique  perceptions, 
+information  needs  and  attitudes  towards  technology  that 
+are fundamental to inform the design of e-coaching systems 
+that will be of value to professionals as well as their clients, 
+and  not  disruptive  of  the  client-coach  relationship  nor  the 
+the  coach’s 
+In  current 
+coaching  process. 
+perspective is underrepresented.  
+
+the  perspective  of 
+
+incorporate 
+
+literature, 
+
+3     FOCUS OF THE PRESENT PAPER 
+
+This  paper  aims  at  understanding  the  health  coach’s 
+perspective on  the role and requirements of technology  in 
+health  coaching.  Medical  treatment  as  part  of  the  health 
+coaching process are beyond the scope of this paper, since 
+the  process  of  diagnosing  and  treating  diseases  are  often 
+associated  with  more  strict  guidelines  and  standard 
+procedures,  and  thus  bring  different  dynamics  into  the 
+process. We will take the health coach’s perspective on the 
+coaching  process  as  a  point  of  departure  and  will 
+progressively  zoom  in  on  the  potential  role  and  impact  of 
+technology  as  part  of  that  process.  We  will  address  the 
+following  research  questions: 
+(1)  What  defines  and 
+influences successful health  coaching? (2)  What are health 
+towards 
+coaches’  perceptions,  attitudes,  and  needs 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 2 
+ 
+technology  in  their  coaching  practice?  And  (3)  what  do 
+these  results  imply  for  design  of  technology  in  health 
+coaching,  in  order  to  fully  utilize  the  potential  of  both 
+human coaches and technology?  
+
+To answer  these research questions, we  conducted three 
+consecutive  qualitative  studies.  In  Study  1,  through  semi-
+structured  interviews,  we  explored  coaches’  reflections  on 
+the  process  of  health  coaching,  addressing  what  defines 
+successful  coaching,  as  well  as  common  barriers  and 
+success  factors  that  coaches  encounter  in  their  day-to-day 
+practice.  In  Study  2,  using  a  focus  group,  we  explicitly 
+considered  the  potential  role  of  technology  in  health 
+coaching.  We  explored  the  extent  to  which  potential 
+technology  interventions  resonate  with  current  coaching 
+practices  and  focused  on  the  coaches’  perceptions  and 
+attitudes  towards  the  use  of  technology.  In  Study  3,  we 
+observed coaches interacting with clients as well as health-
+data  in  a  hands-on  workshop,  allowing  for  a  deeper 
+reflection on the potential role of technology, based on this 
+experience.  
+
+In  the  remainder  of  this  paper,  we  will  discuss  each  of 
+these studies in detail, and will reflect on the potential role 
+and  impact  of  technology  in  the  coaching  process.  These 
+insights will be used to formulate design considerations for 
+future  technology  solutions  supporting  the  coaching 
+process. 
+
+4      STUDY 1: EXPLORATION OF THE COACHING 
+
+PROCESS 
+
+4.1    Method 
+
+Nine  Dutch  health  coaches  (seven  women  and  two  men, 
+average  age  of  37  years,  ranging  from  25  to  56  years) 
+volunteered  to  participate  in  the  interviews.  On  average, 
+they had 10 years working experience, ranging from 2 to 28 
+years.  The  coaches  were  all  working  on  individual  basis 
+with  healthy  clients  having  health-  and  wellbeing-related 
+goals,  by  focusing  on  diet,  physical  activity,  or  both.  We 
+interviewed  three  dietitians,  four  personal  trainers,  one 
+one 
+coach 
+teacher/researcher in coaching, who is also a sports coach.  
+
+providing 
+
+coaching 
+
+online 
+
+and 
+
+The interviews, held in spring 2016, were semi-structured, 
+and  conducted  by  one  researcher  in  a  face-to-face  setting. 
+The  duration  varied  between  30  and  60  minutes.  The 
+interview questions were:  
+
+1.  Can  you  give  examples  of  things  you  do  and 
+recommend  as  a  coach,  and  how  you  motivate  your 
+clients? Does this change from person to person?  
+
+2.  When  is  coaching  successful  in  your  opinion?  What 
+
+contributes to that?  
+
+3.  Who sets the goal? Can you explain this process? 
+4.  How do you translate a long-term goal into short term 
+
+activities? 
+
+5.  Which barriers do you see often with your clients? 
+6. 
+
+If you could be a fly on the wall with your clients, what 
+information would you focus on, and what would you 
+do with this information? 
+
+As we aimed for a broad understanding of health coaching, 
+we  asked  about  many  aspects  of  coaching  (questions  1-5). 
+With  the  sixth  question,  we  hinted  at  opportunities  for 
+technology, without being overly explicit. 
+
+Saturation  was  used  as  a  stopping  criterion:  data 
+collection ended when for three consecutive interviews no 
+major  new  insights  emerged.  Two  researchers  agreed  that 
+the data was saturated after nine interviews. All recordings 
+were  transcribed  verbatim,  and  a  thematic  analysis  was 
+performed  following  established  guidelines  [8].  The  final 
+coding  of  the  data  was  executed  by  two  researchers.  The 
+inter-rater  reliability  (IRR),  expressed  in  percentage  of 
+agreement per interview per theme, was on average 98.8%, 
+with a minimum of 88.0%. All disagreements were resolved 
+by discussion. 
+
+4.2   Results 
+
+Four  major  themes  emerged  from  the  thematic  analysis, 
+which  are  summarized  in  Table  1  along  with  their 
+subthemes.  Below, all themes and subthemes are discussed.  
+
+Table 1: List of themes and subthemes 
+
+Theme 
+
+Subtheme 
+
+I: SUCCESS GOES 
+BEYOND ACHIEVING 
+GOALS 
+
+II: THE VALUE OF A 
+PERSONAL (HUMAN) 
+APPROACH 
+
+III: ADAPT THE 
+ADVICE TO 
+SITUATIONAL 
+CHARACTERISTICS 
+
+IV: MOTIVATION IS 
+IMPORTANT 
+
+a) It is about the experience instead of the 
+
+numbers 
+
+b) There is often a more profound issue 
+
+underlying a stated goal 
+
+c)  Success is also about learning 
+a) The relationship between coach and 
+
+client is of key importance 
+
+b) Social support is a major success factor 
+c)  Tailoring advice and coaching style is 
+
+important and implicit 
+
+a) Fit the advice to daily life of client 
+b) Contextual information of the client is 
+
+informative to the coach 
+
+c)  Consider stress & personal barriers 
+d) Not all information is shared 
+a) Behavior change is hard - reasonable 
+
+expectations are important  
+b) Intrinsic motivation is essential 
+c)  Suitable and specific short-term goals 
+
+help to motivate 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 3 
+ 
+  
+4.2.1 Theme I:  Success  goes beyond Achieving  Goals.  In  the 
+interviews,  coaches  indicate  that  coaching  is  about  much 
+more  than  helping  clients  achieve  their  goals.  First,  many 
+coaches  report  that  success  is  not  always  measurable,  and 
+often  related  to  experience  instead  of  numbers.  For 
+example, Coach #8 often observes that clients who are only 
+halfway  their  initial  weight  loss  goal  may  be  already 
+satisfied,  because  they  have  more  energy,  sleep  better  and 
+feel better. In line with this, Coach #1 states:  “Don’t look at 
+the scale, look in the mirror. […] It’s about how you feel.”  
+
+Coaches  also  note  that  often  a  more  profound  issue  is 
+underlying  the  explicit  goals  the  client  initially  presents. 
+For example, bad self-esteem might be underlying a weight 
+loss  goal.  As  Coach  #7  explains:  “The first impression is that 
+someone wants to lose weight, but in my experience, it’s never 
+about  that.  It's  really  about  somebody  fighting  something 
+within  themselves  […]  So  it  is  my  role  as  a  coach  to 
+understand which emotions are there, and to be sensitive.”  
+
+Furthermore, the coaches indicate that client’s awareness 
+of  their  personal  health  and  behavior  is  considered  as  a 
+valuable  benefit  of  coaching.  Coach  #5:  “In my opinion, if a 
+client didn’t achieve the weight loss, it can still be successful, 
+because  something  changed  in  their  awareness.”  Awareness 
+about the impact of a certain diet or behavior on health is 
+important to help clients make deliberate choices. Coach #3 
+strongly  argues  that  coaching  can  still  be  successful  when 
+clients  are  choosing  the  unhealthy  option  sometimes,  if 
+they  are  aware  of  the  impact  and  if  their  choice  is 
+deliberate.  
+
+When  talking  about  monitoring  progress,  some  coaches 
+are  concerned  about  clients  being  obsessed  with  the 
+numbers.  For  example,  Coach  #1  states  that  long  term 
+perseverance  is  more  likely  when  clients  enjoy  what  they 
+do,  instead  of  focusing  on,  for  example,  speed  or  burned 
+calories. On the other hand, quantitative measures can also 
+positively  influence  the  experience.  Coach  #7  explains:  “I 
+have  people  who  have  such  a  bad  self-esteem,  or  lost  touch 
+with  reality  of  their  bodies,  that  unless  I  can  show  them  on 
+paper, ‘look, you’re making progress!’ they won’t believe me.” 
+Coaches  indicate  that  the  effect  of  monitoring,  either 
+automatically  or  by  keeping  manual  diaries,  on  their 
+behavior  and  motivation,  varies  from  client  to  client.  For 
+example,  Coach  #2  explains:  “Some  people,  when  they  see 
+8,000  steps  on  their  activity  tracker  and  know  they  have  to 
+reach  10,000,  they  will  go  for  an  extra  walk  to  achieve  their 
+goal.”  
+
+4.2.2. Theme III: The Value of a Personal (Human) Approach. 
+All  coaches  emphasize  the  value  of  the  relationship 
+
+between  client  and  coach  in  order  to  be  successful.  For 
+example,  Coach  #3  says:  “It  is  about the  trust relationship 
+between client and coach, which implies certain skills a coach 
+should  have:  standing  by  someone,  being  open,  not 
+judgmental,  providing  safety,  guiding  someone,  listening, 
+being  empathic.”  Many  coaches  report  that  the  first 
+consultation is aimed purely at building a relationship with 
+the  client  and  that  this  is  a  prerequisite  to  start  working 
+towards goals.  
+
+The  role  of  social  support  of  friends  and  family  is  also 
+mentioned  as  a  success  factor.  Coach  #1  and  #8  stress  the 
+value  of  a  supporting  spouse,  and  Coach  #5  explains  how 
+effective  it  is  when  clients  share  their  health  goals  with 
+their colleagues and friends, to help them stay motivated.  
+
+Throughout all interviews, a personally tailored approach 
+emerges  as  being  important.  All  coaches  state  that  what 
+they  do  depends  on  the  client.    For  example,  Coach  #2 
+explains:  “I’m  always  looking  for  the  things  that  a  client 
+needs.  What  motivates,  helps,  triggers  him,  or  maybe  just 
+reassures him at this moment?”  Notably,  almost  all  coaches 
+report  they  tailor  intuitively  and  that  the  process  of 
+tailoring  is  hard  to  explain  explicitly.  However,  further 
+probing  does  reveal  certain  personal  and  situational 
+characteristics 
+tailoring.  Personal 
+in 
+characteristics  include  personal  goals  or  problems,  the 
+client’s  need  for  empathy  (e.g.,  a  strict  approach  versus 
+‘hand holding’), how motivated clients are, their base level 
+(“With some of my clients, I’m already happy if they’d eat one 
+piece of fruit a day” (Coach  #9)),  potential  physical  injuries 
+or  limitations,  gender,  age,  profession  and  their  place  of 
+residence  (rural  or  urban).  Situational  characteristics  are 
+even  more  commonly  mentioned  by  the  coaches  as 
+tailoring  aspects  and  are  discussed  separately  in  the  next 
+section (Theme III). 
+
+they  use 
+
+their 
+
+to  Situational 
+the  Advice 
+III:  Adapt 
+4.2.3.  Theme 
+Characteristics.  All  coaches  stress  the 
+importance  of 
+adapting  the  advice  to  situational  characteristics  of  the 
+client. They try to make  the  advice very specific  and fit  it 
+into  the  daily  life  of  the  client.  Practical  constraints  like 
+working night shifts, truck drivers who are on the road, or 
+different cultural backgrounds are extensively discussed in 
+consultation meetings to find feasible solutions. Even back-
+up plans are made, as Coach  #5 illustrates:  “If a client plans 
+to go for a run, but does not want to run in the rain, I suggest 
+installing a weather-app and we discuss a back-up plan.”  
+
+It  may  not  always  be  easy  to  gain  access  to  reliable 
+information  about  a  client’s  daily  life  and  behavior.  The 
+clients 
+coaches  mention 
+
+common  problem  with 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 4 
+ 
+ 
+withholding information – simply because they don’t know 
+it is relevant, or to avoid shame.  
+
+important,  as  they  increase  self-efficacy.  It  is  common 
+practice for coaches to make gradual, step-by-step changes.  
+
+Some coaches indicate that the client’s context may often 
+reveal  highly  relevant  information  about  the  client.  For 
+example,  Coach  #3  reports: “consultations where a partner or 
+parent joins gives me much more information. […] Also, home 
+visits  are  a  very  important  source  of  information,  seeing  the 
+kitchen  and  the  fridge  tells  me  a  lot.”  Coach  #9  asks  the 
+clients  to  make  a  food  journal:  “It says it all. Some people 
+forget  it,  then  you  know  they’re  not  motivated,  […].  Some 
+write very sloppy, others very tidy, including the times, others 
+bring food to the consultation  or make  pictures. It’s not only 
+the information itself, but also the way it is presented, which 
+is  very  informative.”  Thus,  examining  the  context  of  the 
+client offers a rich source of information and helps to tailor 
+the coaching process to the client’s needs. 
+
+Not  only  external,  practical  barriers  but  also  internal, 
+personal barriers play a role in coaching. For example, the 
+coaches report they must be sensitive to their client’s stress 
+levels in order to gauge their readiness to change behavior. 
+Coach  #2  explains:  “When there are big stressors like divorce 
+or change of jobs, it is very hard to change behavior”.  Some 
+coaches talk about ‘the right moment’ to make the change. 
+Knowing  barriers  that  impede  adherence  to  the  coaching 
+plan helps to better understand and assist the client.  
+
+4.2.4. Theme IV: Motivation Is Important. All  coaches  report 
+that  for  long-term  behavior  change,  motivation  is  very 
+important. First, reasonable expectations should be elicited; 
+it  makes  a  difference  if  clients  realize  that  change  is  hard. 
+Coach #8 and #9 report that they have had clients expecting 
+them  to  be  a  magician  and  that  just  visiting  them  will 
+initiate  a  change,  not  realizing  that  they  need  to  change 
+themselves.  Second,  being 
+is 
+indicated  as  key  for  success  by  all  coaches.  Some  coaches 
+indicate  that  clients  who  visit  them  because  their  doctor 
+referred  them  (e.g.,  because  of  diabetes)  are  the  most 
+difficult  to  coach, because  they do not  come on their own 
+initiative.  
+
+intrinsically  motivated 
+
+is  essential 
+
+Although  overall  success  is  more  than  reaching  explicit 
+goals  (see  Theme  I),  all  coaches  emphasize  that  setting 
+specific,  measurable  short-term  goals 
+in 
+providing success experiences, and thus motivation. Coach 
+#7  compares  the  short-term  goal  “losing  some  body  fat” 
+with  “losing  0.5%  body  fat”.  She  described  the  power  of 
+making  the  goal  very  specific:  “[…] Next week, 0.5% done, 
+high five, everybody happy, check off that goal. You see what 
+I  mean?  […]  To  the  mental  side,  it  makes  a  world  of 
+difference.”  Not  only  measurable,  also  achievable  goals  are 
+
+In order to keep clients motivated, it is very important to 
+focus  on  (small)  successes,  and  divert  the  attention  away 
+from  inevitable  stagnations  or  lapses  in  adherence.  Coach 
+#2  explains  that  this  is  especially  important  when  dealing 
+with  clients  who  have  low  self-esteem,  for  example  those 
+who are binge-eating. Coach #6 often creates a personalized 
+progress  report  for  clients  to  make  the  success  over  the 
+longer term visible.  
+
+4.3   Conclusion: Coaches’ Reflections on Successful 
+
+Coaching 
+
+The 
+interviews  demonstrate  coaches’  reflections  on 
+successful health coaching and the factors that may impact 
+that  process.  Summarizing,  health  coaching 
+is  an 
+interpersonal  process  that  goes  beyond  measurable  goals 
+and activities. Goals and corresponding successes are often 
+related  to  the  client’s  experience  rather  than  measurable 
+behavior, and a good relation between client and coach is a 
+prerequisite  for  successful  coaching.  The  interviews  also 
+illustrate the importance of fitting the advice to situational 
+characteristics:  The  more  specific  and  tailored  the  advice, 
+the more likely clients are to adhere to it. Tailoring shows 
+to  be  an  important  aspect  of  successful  coaching,  yet 
+coaches  find  it  hard  to  formalize  this  process.  Intrinsic 
+motivation  of  the  client  is  considered  as  a  key  success 
+factor,  and  specific  and  achievable  short-term  goals  help 
+clients to stay motivated and increase self-efficacy.  
+
+5     STUDY 2: POTENTIAL ROLE OF TECHNOLOGY 
+
+IN HEALTH COACHING 
+
+Purposely,  we  did  not  mention  the  role  of  technology 
+explicitly  in  the  interviews  in  Study  1.    In  elucidating  the 
+coaching  process  and  its  success  factors,  we  did  not  want 
+the  results  to  be  biased  by  coaches’  perceptions  on  the 
+capabilities  of  technology,  or  possible  resistance  against 
+technology.  In  Study  2,  as  a  follow  up,  we  explored  the 
+potential  role  of  technology  in  health  coaching  more 
+explicitly.  We  used  a  focus  group  to  explore  coaches’ 
+perceptions and attitudes towards the use of technology as 
+part  of  the  coaching  process.  This  method  provides  an 
+additional advantage over interviews, in that the interaction 
+between coaches may spark richer discussions and provide 
+new insights.  
+
+5.1   Method  
+
+Four  out  of  nine 
+interviewed  health  coaches 
+participated  in  the  focus  group.  The  group  consisted  of  a 
+dietitian,  two  personal  trainers  and  an  online  coach.  The 
+
+the 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 5 
+session,  held  in  autumn  2016,  lasted  2  hours  and  was 
+facilitated  by  the  same  researcher  who  conducted  the 
+interviews.  The  coaches  received  a  small 
+financial 
+compensation for their participation.  
+
+The focus group started with a short ‘warming up’: a car 
+navigation  system  was  discussed  as  a  metaphor  for  the 
+potential role of technology. This was framed by the levels 
+of  automation  per  sub  task  as  proposed  by  Parasuraman, 
+Sheridan  and  Wickens  [50]:  information  acquisition  and 
+analysis (e.g., road network, traffic congestion information), 
+decision  making  (e.g.,  the  driver  is  provided  with  route 
+information while driving) and action (e.g., self-driving car, 
+cruise control). The coaches were asked to apply the idea of 
+such  levels  of  automation  on  subtasks  in  health  coaching. 
+First,  the  coaches  individually  wrote  down  their  thoughts 
+for 10 minutes, after which a group discussion started. The 
+group  discussion  was  driven  by  the  following  questions, 
+which  were  visible  on  a  screen  during  the  session.  The 
+facilitator  refocused  the  attention  to  one  these  questions 
+whenever the discussion was going off topic.  
+
+1.  What can technology do for you? What do you need? 
+2.  How would technology fit in your workflow? 
+3.  What drawbacks of technology do you see?  
+4.  On the allocation of tasks between you and technology: 
+What do you prefer to do yourself, and which tasks do 
+you prefer to outsource to technology? 
+
+5.  Can  you  describe  your  new  role,  when  assisted  by 
+
+technology? 
+
+6.  Do  you  feel  you  have  enough  skills  to  work  with 
+
+technology? 
+
+The  session  was  video-recorded  and  transcribed  verbatim. 
+Segments were selected when relevant to one of the themes 
+‘potential role of technology’ and ‘perception of, or attitude 
+towards  technology’.  These  segments  were  clustered  in 
+topics using thematic analysis [8] by two researchers. 
+
+5.2   Results 
+
+After  the  introduction  a  vivid  discussion  sparked  easily 
+among the coaches. The facilitator did not need to intervene 
+often; all four coaches were open and willing to share their 
+opinions  and  experiences.  The  facilitator  only  interrupted 
+to give turn to other coaches, or to refocus the attention to 
+one  of  the  main  questions.  In  the  sections  below  the 
+emerging themes are explained.  
+
+5.2.1.  More  and  Better  Quality  Information.  The  coaches 
+report  a  clear  value  of  technology  in  providing  them  with 
+more and better quality information. For example, Coach #B 
+explains  “At the start I want to know many things, related to 
+
+physical activity, nutrition, (…) and I only get half of that. (…) 
+that  would  be  something  that  technology  can  support  me 
+with.” Having access to objective information is helpful, as 
+often there is a mismatch between reality and what people 
+report. They do notice a need for tracking the right type of 
+information;  they  doubt  if  this  is  always  feasible.  For 
+example,  often  information  on  a  client’s  mental  state  and 
+experiences is of interest, but not trivial to track.  
+
+5.2.2. Being Present 24/7 and Motivating Clients. The  coaches 
+indicate  that  technology  can  be  helpful  in  being  present 
+24/7 in order to motivate the client. Coach #C describes that 
+with one of her  clients: “I don’t have the time to always be by 
+his  side.  But  then  he  would  always  be  aware  that  he  is 
+actually  doing  well.”  Being  present 
+sending 
+motivational messages throughout the day can help clients 
+stay motivated, according to the coaches, especially in cases 
+when intrinsic motivation is lacking.  
+
+and 
+
+5.2.3. Support with Administrative Tasks. Another  benefit  of 
+technology emerging from the focus group is support with 
+administrative  tasks,  e.g.,  by  automatically  making  notes 
+during  consultation  meetings,  or  keep  detailed  track  of 
+exercises during workouts. Coach #D reports “I try to avoid 
+making  notes  as  much  as  possible,  because  I  always  find  it 
+annoying  (…)  I  think  it  would  be  valuable  if  notes  could  be 
+made automatically, based on speech recognition.”  When  the 
+coaches are supported with their administrative tasks, they 
+can  focus  more  on  the  main  role  that  they  see  for 
+themselves: being there for the client, interacting with her, 
+and through that, understanding her goals and experiences. 
+
+5.2.4.  Interaction  with  the  Client.  Besides  supporting  with 
+administrative  tasks,  technology  could  play  a  more 
+proactive role in the interaction with the client, for example 
+by  detecting  emotions,  non-verbal  cues  and  change  talk. 
+Coach  #C  explains:  “As a coach it is very important to notice 
+change talk, for example ‘maybe I can’ or ‘I would like to’ and 
+intervene immediately. Maybe an algorithm can help to detect 
+change talk, for example my watch would vibrate, so I don’t 
+miss these opportunities.”  
+
+According  to  the  coaches,  interpreting  and  reflecting  on 
+the  story  of  a  client  is  a  very  important  element  of 
+successful  coaching,  and  not  something  that  technology 
+can, or should, do. For example, they report that it is very 
+effective to connect a client’s goals to her values (e.g., being 
+fit  so  you  can  play  with  your  children),  and  as  Coach  #C 
+explains:  “A computer couldn’t interpret this, and reflect, like: 
+‘I understand you’”.  Even  in  the  case  technology  would  be 
+able  to  do  this,  the  coaches  think  it  will  be  more  effective 
+for a human coach to take this role. All coaches agreed that 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 6 
+ 
+ 
+a fully automated coaching solution would not sufficiently 
+motivate  clients.  Coach  #B  reports:  “That personal touch is 
+crucial,  because  only  controlled  by  a  computer…  I  myself 
+would  also  be  like:  whatever.  But  if  someone  is  looking,  it’s 
+different.” Furthermore,  the  coaches  express  concern  about 
+losing skills by too much interference of technology in the 
+process, e.g., being sensitive to cues of the client, and being 
+alert  and  ready.  Coach  #C  questions:  “What  makes  us 
+humans unique? And what makes us sensitive to each other? 
+And  if  we  outsource  that  to  technology…  we  lose  a  lot  of 
+human strength. That idea scares me.”  
+
+5.2.5. Analysis of the Client’s Data. The  coaches  indicate  that 
+a structured use of a client’s data can help in the coaching 
+process.  Coach  #C  illustrates  this  with  an  example  of  a 
+client  who  was  often  feeling  faint  during  exercises.  By 
+structurally  keeping  a  record  she  could  pinpoint  this  to  a 
+certain type of exercise and  was able to tailor the training 
+sessions  such  that  the  problem  was  resolved.  Also,  the 
+coaches see a benefit of using data for  calculating realistic 
+short-term goals based on the client’s history.  
+
+The coaches do not see much added value of relating the 
+data of single clients to those of others, such as using data 
+of a large  group of clients to  explore preferences and new 
+opportunities  for  clients.  When  this  topic  emerged,  Coach 
+#C  reported:  “Ok,  maybe  a  database  would  be  a  good 
+addition,  but  in  the  end  of  the  day…  You  know,  everyone  is 
+unique.”  She  explains  that,  although  a  coach  is  expert  on 
+health, the client is expert on herself. With that perspective, 
+coaches consider it their task to tune the coaching program 
+to  the  client’s  needs  and  possibilities  and  facilitate  her  in 
+her  own  process.  They  do  not  feel  technology  could  be 
+sensitive enough to fulfill this serving and humble role, nor 
+that additional information of other clients would improve 
+this  process.  Another  objection  of  the  coaches  against  the 
+idea of using data of other clients, is that this might lead to 
+recommendations reinforcing current (potential unhealthy) 
+behavior,  instead  of  pushing  a  client  slightly  out  of  her 
+comfort zone. They explain the fine line between engaging 
+the  client with activities that  she enjoys, at  the same  time 
+challenging  her  a  little  bit.  Finding  and  keeping  the  right 
+balance is a subtle and socially interactive process, and they 
+do not trust the capabilities of technology in this regard.  
+
+5.2.6. Limitations of Data and Negative Psychological Effects. 
+The  coaches  report  that  the  use  of  (too  much)  technology 
+may  increase  the  risk  that  clients  become  obsessed  by  the 
+data  instead  of  listening  to  their  bodies  and  enjoying  the 
+activity.  The  coaches  state  that  tracking  data  encourages 
+competition,  whereas  they  feel  that  persistence  of  healthy 
+behavior  is  related  to  joy  of  the  activity.  They  consider 
+
+themselves to have an important role in both reminding the 
+client to listen to her body, and in interpreting and making 
+sense  of  the  data.  Coach  #D  explains:  “So I don’t believe in 
+merely data. The question is, what do you  do with the data, 
+how do you give feedback, how do you interpret the data, how 
+do you create insights from the data that the clients don’t see, 
+(…), then it becomes interesting.”  The coaches stated that the 
+effect of the data can be very different for different people, 
+so it is the coaches’ task to carefully use the data and show 
+it  at  the right moment and  in the right  way. Furthermore, 
+they are skeptical about the existence of a ground truth on 
+what constitutes healthy behavior, so having the data does 
+not necessarily imply a straightforward interpretation.  
+
+Importantly, the coaches note an additional responsibility 
+when confronted with (more) data. They are worried about 
+their  liability  when  serious  issues  remain  unnoticed.  With 
+this perspective, more data is not always better; instead, it 
+provides them with additional responsibilities, higher work 
+load and potential stress.  
+
+5.3   Conclusion: Coaches’ Perspectives on 
+
+Technology 
+
+The focus group results illustrate that coaches see the added 
+value  of  technology  mainly  in  having  access  to  more 
+reliable information about their clients’ health behavior, as 
+well  as  in  the  opportunity  to  be  a  supporting  presence  in 
+their clients’ lives. Furthermore, the coaches see benefits of 
+technology  to  support  them  with  several  tasks  in  their 
+practice,  ranging  from  exercise  logging  to  recognizing  a 
+client’s ‘change talk’ and calculating appropriate short-term 
+goals.  
+
+The  coaches  also  have  a  number  of  substantial 
+reservations  about  the  added  value  of  technology  on  the 
+coaching process. For one, coaches expect that an emphasis 
+on  data  may  foster  obsessive  behavior.  Also,  they  think 
+to 
+technology  may  not  be 
+appropriately tailor its interventions to the individual client. 
+Thus,  they  are  skeptical  about  automatically  generated 
+recommendations  or  feedback,  and  feel  that  automated 
+interventions  that  lack  the  involvement  of  a  human  coach 
+will  not  be  very  effective.  Furthermore,  they  worry  about 
+additional responsibilities on their part that may arise from 
+being provided with (more) data. 
+
+sufficiently  advanced 
+
+6      STUDY 3: COACHES INTERACTING WITH 
+
+DATA AND CLIENTS 
+
+Study  1  and  Study  2  illustrate  the  complexity  and  social 
+nature of the coaching process, and the challenges that may 
+arise when introducing technology in the mix. As the first 
+two  studies  did  not  allow  coaches  to  actually  gain  some 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 7 
+firsthand experience with technology or data, we organized 
+a workshop where a group of coaches interacted with two 
+clients  who  brought 
+their  self-tracked  health  data. 
+Interacting  with  possible  artefacts  could  potentially  reveal 
+value  that  remains  hidden  when  just  talking  about 
+technology  in  hypothetical  terms.  For  the  purpose  of 
+comparison,  half  of  the  coaches  were  invited  to  interact 
+directly with the clients, while the other half were asked to 
+self-tracked  data  only.  Both  groups 
+consult 
+independently formulated an advice. Afterwards, in a group 
+discussion, the results were compared and the value of both 
+sources of information was discussed.  
+
+the 
+
+6.1   Method 
+
+Twenty-one coaches (mostly personal trainers) volunteered 
+to  participate  in  a  1.5  hour  workshop,  embedded  in  a 
+seminar  targeted  at  employees  of  all  Dutch  student  sports 
+centers,  in  autumn  2016.  Two  clients,  recruited  by  the 
+authors,  introduced  themselves  briefly  (3  minutes  each), 
+explaining their goal and question to the coaches. Client #1 
+aimed  to  be  stronger,  and  wondered  why  she  remained 
+stable, despite her fitness trainings and healthy diet. Client 
+#2 had a hard time to  keep up with her running trainings, 
+while she aspired to run the half marathon. 
+
+After  this  introduction,  4  groups  were  formed.  Five 
+coaches  were  interacting  with  client  #1,  5  coaches  jointly 
+consulted  the  data  of  client  #1,  5  coaches  were  in 
+interacting  with  client  #2  and  6  coaches  jointly  consulted 
+the data of client #2. In these parallel sessions (30 minutes 
+each)  the  coaches  were  asked  to  formulate  an  advice  for 
+their client. Afterwards, a group discussion was initiated (40 
+minutes),  where  every  group  shared  their  insights  and 
+advice,  and  the  differences  between  the  groups  and  the 
+added  value  of  the  tracking  data  and  the  interpersonal 
+coach-client interactions were discussed.  
+
+Prior to the workshop, both clients wore a Jawbone UP3 
+for  2.5  weeks,  which  tracked  their  sleep,  steps  and  resting 
+heart rate. Additionally, client #1 wrote down her daily food 
+intake.  Client  #2  brought  the  data  of  her  TomTom  Sports 
+GPS watch, which contained all of her running and cycling 
+trainings  of  over  a  year.  This  included  training  duration, 
+distance,  GPS  information  and  heart  rate.  The  coaches 
+could assess the data via the standard interfaces of Jawbone 
+and TomTom Sports, using provided laptops and tablets. 
+
+The parallel sessions and the group discussion were audio 
+or video recorded and transcribed verbatim. In the analysis, 
+segments were selected from the transcripts that related to 
+either  the  value  of  human  coaches,  or  the  value  of 
+
+technology and data. The segments were  clustered by two 
+researchers using thematic analysis [8]. 
+
+6.2   Results 
+
+All  parallel  sessions  showed  vivid  conversations,  either 
+with the client or about the data. Also the group discussion 
+was lively, with active contributions from participants of all 
+groups.  In  the  next  sections,  the  emerging  topics  will  be 
+described.  
+
+6.2.1. Emotional Background of Health Goals. Client  #2  has 
+had  negative  sport  experiences  when  she  was  a  child  in 
+school.  She  explains  to  the  coaches:  “the education was like 
+a push, you have to… and you’re graded for it.”  Her  goal  of 
+running the half marathon originates from this background. 
+However,  she  doesn’t  like  running,  she  enjoys  cycling 
+much more. For the coaches in dialog with the client, this is 
+clear right away.  
+
+In  the  other  parallel  session,  where  coaches  consult  her 
+data, the coaches only know from the introduction that she 
+had  a  hard  time  keeping  up  her  running  trainings  and 
+aimed  for  the  half  marathon.  Still,  they  interpret  her 
+underlying  motives  based  on  the  data:  “I  think  she  is 
+looking for a thrill, because she goes into a very high heart 
+rate  zone  and  stays  there  for  20  or  25  minutes,  and  then 
+suddenly  it  is  over.”  Not  only  during  the  training  session, 
+but  also  from  her  daily  routine,  the  coaches  deduce 
+something  about  her  character:  “She’s  just  not  in  balance. 
+She’s not moving there, that day only 5000 steps, and then 
+the next day suddenly 18000 steps.” And later: “It fits with 
+what she wants, she wants the endorphins, it seems like she 
+is punishing herself for a lazy day, to compensate directly.”  
+Thus,  the  behavioral  data  and  a  sparse  self-report  in  the 
+introduction  provide  hints  about  the  client’s  background, 
+motives and character.  
+
+When  the  individual  groups  share  their  findings  in  the 
+shared  group  discussion,  both  groups  report  that  the 
+information  of  the  other  group  is  complementary  to  their 
+own information. The coaches with data state that the story 
+explains  why  the  data  is  like  this,  and  the  coaches 
+interacting  with  clients  directly  report  it  is  interesting  to 
+see these emotional issues expressed in terms of behavior. 
+
+6.2.2. Understanding Beliefs. Client  #1  has  strong  beliefs  on 
+what  is  healthy,  and  reports  she  bases  her  ideas  about 
+health  on  scientific  literature  she  studies  extensively.  The 
+coaches  in  dialog  with  the  client  are  quickly  aware  of  her 
+beliefs  and  determination.  They  also  talk  about  persuasive 
+strategies  that  are  likely  to  be  effective:  “If we provide her 
+scientific articles supporting our advice, then we will probably 
+be much more likely to convince her.”  Similarly,  in  the  other 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 8 
+ 
+parallel session, the coaches consulting the data of client #1 
+deduce from the data that she must have a determined and 
+headstrong  character.  They  report:  “She  is  just  very 
+structured.  (…)  She  doesn’t  change  things  in  her  diet  nor  in 
+her  training  sessions.”  They  advise  the  client  to  bring 
+variation in her nutrition as well as in her trainings, and to 
+be  a  bit  less  persistent  in  her  attitude  towards  a  healthy 
+lifestyle.  
+
+6.2.3. Different Views on Actual Behavior. Access  to  practical 
+facts  of  the  client’s  daily  life  is  important  to  the  coaches. 
+Some  are  more  easily  accessible  using  data,  others  appear 
+clearer  for  the  coaches  in  dialog  with  the  client.  For 
+example,  client  #1  went  on  holiday  for  one  week  in  the 
+period  when  she  was  tracking  her  behavior.  This  is 
+obviously  noted  by  the  coaches  consulting  her  data,  but 
+they  draw  the  wrong  conclusion:  she  might  not  work  as 
+hard  as  she  reports.  On  the  other  hand,  the  coaches  with 
+data  have  access  to  much  more  detail  on  client  #1’s  diet. 
+Therefore,  they  advise  her  to  take  the  carbohydrate-rich 
+meal before her training session instead of after, to increase 
+the  effectiveness  of  the  training.  The  timing  of  this  meal 
+remains hidden for the coaches in dialog.  
+
+Additionally, client #2 has limited knowledge on training 
+schemes;  she  declared  to  the  coaches:  “I  started  running 
+immediately 4 or 5 kilometers. At once.”  The  coaches  try  to 
+explain  her  about  training  zones  based  on  heart  rate,  but 
+that  conversation stagnates because they lack detailed and 
+accurate information of the training sessions. In the parallel 
+session, the coaches consult the training-data of client #2 to 
+understand her training style. Based on that, they advise a 
+specific  training  scheme,  even  embedding  it  in  the  daily 
+context  of  the  client  by  inspecting  a  typical  running  track 
+and  adapting  it  on  a  very  practical  level:  “Here is a bridge, 
+right? Then she can take a break there, and then go back.”  
+
+6.3  Conclusion: Coaches Interacting with Technology 
+
+In the workshop, we set up two extreme situations: having 
+access to a client’s data only, or interaction with the client 
+only.  This  setup  allows  us  to  compare  and  contrast  the 
+added  value  of  each  source  of  information,  separately  and 
+together.  In  line  with  insights  from  Study  1,  the  results  of 
+the  workshop  support  the  notion  that  goals  can  be 
+ambiguous,  and  that  there  can  be  more  profound  issues 
+underlying  a  client’s  goal,  which  are  required  for  the 
+coaches  to  know  in  order  to  give  suitable  advice.  The 
+results  show  that  direct  interaction  with  a  client  is  an 
+effective  way  to  unravel  these  issues  in  qualitative  and 
+experiential  terms,  through  self-report  on  how  clients  feel 
+and  what  they  believe.  On  the  other  hand,  the  coaches 
+
+consulting the data discern most of these issues too, only in 
+quantitative  and  behavioral 
+terms.  Having  detailed 
+information  provides  a  good  understanding  of  the  actual 
+behavior, and results in more specific advice, situated in the 
+day-to-day context of the client.   
+
+Concluding,  information  is  both  hidden  and  revealed 
+trough behavioral data.  Stand-alone data  are not sufficient 
+for  effective  coaching,  yet  at  the  same  time,  data  provide 
+additional  insights that  improves the understanding of  the 
+client.  In  the  words  of  one  of  the  coaches  in  the  group 
+discussion: “Data help the coach to ask the right questions.” 
+
+7      DISCUSSION 
+
+In  health  coaching,  many  technological  tools  (apps, 
+trackers) are being developed and used to support end-users 
+in meeting their health goals. In developing such tools, the 
+coach’s role and perspective are rarely fully understood or 
+well-represented.  We  believe  that  in  order  to  develop 
+successful  e-coaching  applications,  we  need  to  have  a 
+deeper  appreciation  of  what  constitutes  a  successful 
+coaching process, which includes both the client and coach 
+perspectives.  In  the  current  paper  we  aim  to  extend  our 
+understanding  of  the  coach’s  perspective  on  e-coaching 
+technology,  and  the  potential  value  that  technology  and 
+(tracked)  data  may  have  in  a  successful  coaching  process 
+and a productive coaching relationship.  
+
+that  health  coaching 
+
+Based  on  the  interviews  with  health  coaches  in  our  first 
+is  about 
+study,  we  conclude 
+understanding  the  client  –  both  in  terms  of  behavior  and 
+experience – and effectively anticipating on that.  Inspired 
+by  the  multi-channel  telecommunication  model  [63],  we 
+depict  this  process  as  two  communication  channels 
+between  client  and  coach,  one  focused  on  behavioral  data 
+and one on the client’s lived experience, i.e., sharing stories, 
+background  and  daily  experiences  (see  Figure  1a).  Our 
+second  and  third  study  reveal  that  coaches  see  that 
+technology has the potential to improve the understanding 
+of the behavioral aspects of the client, i.e., by tracking and 
+sharing  data.  At  the  same  time,  coaches  emphasize  the 
+information  about  the  client’s 
+importance  of  having 
+experience,  and  they  believe  that  this  is  too  subtle  and 
+ambiguous  for  technology  to  ‘understand’.  As  a  result, 
+coaches  fear  that  incorporating  technology  into  their 
+coaching  practice  results  in  overemphasizing  ‘objective’ 
+and  numerical 
+information  on  measurable  behavior, 
+thereby  discounting  subjective  experience  and  personal 
+context,  which  would  be  detrimental  to  the  coaching 
+process  (see  Figure  1b).  We  will  discuss  these  results  in 
+intermediate 
+more  detail  below,  and  propose  an 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 9 
+communication channel to bridge behavior and experience 
+(see Figure 1c). 
+
+7.1  Technology Provides More Information on 
+
+Behavior 
+
+In health coaching, information on health-related behaviors 
+(e.g.,  nutrition,  physical  activity)  is  key  for  successful 
+coaching.  The  coaches  clearly  recognize  the  value  of 
+technology  giving  them  access  to  better  and  more  reliable 
+information  about  the  training  sessions  and  the  client’s 
+daily behavior. This resonates with insights from the sports 
+psychology  domain  where  monitoring  technology  for 
+athletes  provides  metrics  that  are  helpful  to  plan  and 
+optimize  training  programs  [9,25].  Also  the  workshop 
+(Study  3)  shows  that  interacting  with  detailed  behavioral 
+data is useful to get a richer and more precise view on the 
+client’s  actual  behaviors  and  routines,  which  may  be  less 
+prone  to  errors  than  using  a  client’s  self-reported 
+information. 
+
+Thus,  technology  can  provide  coaches  with  behavioral 
+data, which is a valuable source of information to optimize 
+the  coaching  process.  Yet,  the  coaches  are  skeptical  about 
+automated  normative 
+the  client’s 
+behavioral  data,  because  ground  truth  metrics  on  what  is 
+healthy  behavior  are  lacking.  Health  data  are  inherently 
+ambiguous; what might be good care for one patient under 
+certain  circumstances,  can  be  sub-optimal  for  another 
+[34,53]. 
+
+interpretation  of 
+
+The  availability  of,  and  focus  on,  behavioral  data  might 
+impact  the  client  and  coaching  process,  in  particular 
+regarding  motivation.  The  coaches  state  that  progress 
+feedback  or  automated  motivational  messages  in  between 
+consultation  meetings  can  potentially  be  helpful,  for 
+example in making small progress become visible. There is 
+general support in literature that feedback from technology 
+on  behavior  can  be  an  effective  way  to  change  behavior 
+[26,49]. At the same time, coaches in our study are aware of 
+the  potential  drawbacks  of  (real  time)  feedback  on  clients’ 
+behavior and motivation. For example, they state that when 
+clients are more focused on the feedback than on the joy of 
+the activity itself, it easily undermines intrinsic motivation. 
+in  Figure  1b,  behavioral  data  get 
+As 
+overemphasized, 
+experience 
+underexposed.  These  insights  resonate  with  controlled 
+experiments  demonstrating  detrimental  effects  of  external 
+rewards  [14]  or  even  just  the  presence  of  self-tracked 
+information [19] on intrinsic motivation.  
+
+illustrated 
+
+subjective 
+
+leaving 
+
+the 
+
+Coaches  in  our  study  also  express  concern  that  their 
+clients  would  become  obsessed  by  the  data.  One’s  own 
+
+a) Current situation: exchange of behavioral and 
+experiential information 
+
+b) Expected situation when technology is incorporated: 
+predominance of behavioral information 
+
+c) Desired situation: behavioral information is 
+represented in meaningful terms, facilitating the 
+exchange of experiences 
+
+Figure 1: Conceptual model of impact of technology on 
+coach-client communication 
+
+is  shown  to 
+
+health  data 
+inherently  have  emotional 
+connotations  and  provoke  value  judgements,  including 
+shame and obsession [3,13,49]. This means  that behavioral 
+data,  in  addition  to  inadequately  representing  experiential 
+qualities,  may  even  negatively  influence  that  experience. 
+Thus, as the effects of feedback on motivation are mixed, it 
+requires  a  deeper  understanding  of  the  client  to  use  it 
+effectively, arguing for systems with a ‘coach-in-the-loop’. 
+
+7.2  Coaching Beyond Behavior 
+
+For  successful  coaching,  coaches  highlight  the  importance 
+of  understanding  the  client’s  experiences,  guiding  the 
+interpretation  and  use  of  behavioral  data.  The  importance 
+of  experiential  and  relational  aspects  of  the  coaching 
+process  was  emphasized  time  and  again,  serving  a  variety 
+of  goals, 
+implicit 
+including  understanding  a  client’s 
+motivations, providing adequate social support, and helping 
+someone overcome personal barriers. 
+
+Several  studies  in  the  field  of  Quantified  Self  share  the 
+idea  that  behavioral  data  are  just  a  proxy  of  underlying 
+experiences. The real value of self-tracking is often pointed 
+out  as  a  contextualized,  subjective  and  social  process 
+[16,31,33,55], nicely illustrated by Rooksby, Rost, Morrison, 
+and  Chalmers  who  conceptualized  the  use  of  activity 
+trackers  as  ‘lived  informatics’:  “Tracking  was  explained  in 
+terms  of  people’s  lives,  worries,  hopes,  interests,  careers 
+and  so  on”  ([55],  p.  1171).  At  the  same  time,  Lupton  [38] 
+highlights  a  tension,  also  present  in  our  results,  between 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 10 
+ 
+ 
+quantifiable  data  being  perceived  as  more  reliable  on  the 
+one  hand,  whereas  on  the  other  hand  “numbers  alone  tell 
+us nothing, it is the context in which the numbers […] are 
+created  that  [is]  important”  (p.  6).  Also  for  meaningful 
+interpretation  of  health  data  among  peers,  context  is 
+essential for understanding [2,52].  
+
+Our  results  resonate  with  the  related  field  of  sports 
+psychology, where coaching is frequently characterized as a 
+complex  and  ambiguous  process  that  is  hard  to  capture 
+through  behavioral  information  alone  [7,30].  To  infer 
+experiential 
+information, 
+information  from  behavioral 
+information  as  well  as  social 
+substantial  contextual 
+intelligence is required. Despite rapid advances in artificial 
+intelligence and context-aware computing, creating socially 
+intelligent systems is still one of the major challenges in the 
+field [21,24]. Because the client’s behavior is relatively easy 
+to measure, compared to the client’s experience, it is likely 
+that  behavioral  information  will  predominate  a  coaching 
+process supported by technology. This effect has also been 
+observed  in  healthcare,  where  incorporating  information 
+technology  involves  the  risk  of  focusing  too  much  on 
+measurable and predictable workflows, not acknowledging 
+the  flexible  and  fluid  nature  of  the  work  [4,40],  failing  to 
+capture  emotional  aspects  [43],  and  sometimes  even 
+resulting 
+to  overcome  constraints 
+introduced by technology use [11].  
+
+in  work-arounds 
+
+7.3  Synergy between Behavioral and Experiential 
+
+Information  
+
+Our workshop (Study 3) demonstrated that having access to 
+behavioral  data  potentially  facilitates  the  exchange  of 
+experiential information and enhances the relation between 
+client  and  coach.  The  coaches  reflect  on  the  strength  of 
+combining  data  and  personal  interaction:  “Data help to ask 
+the right questions.” It provides access to the client’s context 
+and  experiences  which  otherwise  might  have  been 
+overlooked  by  the  coaches.  In  this  way,  data  can  be  a  cue 
+for 
+interaction,  potentially  triggering  new  topics  of 
+conversation,  or  directing  attention  to  underexplored 
+aspects of behavior. This adds to studies in medical settings, 
+where similarly the main value of patient-generated data is 
+found  to  be  a  facilitator  of  collaborative  reflection, 
+supporting  communication,  mutual  understanding  and 
+shared decision making [10,27,40,42,60]. 
+
+To 
+
+facilitate 
+
+this  synergy  between  behavior  and 
+experience  in  the  coach-client  interaction,  it  is  important 
+that 
+information  from  the  two  channels  are  easily 
+connected.  Ideally,  experiences  should  emerge  intuitively 
+from  representations  of  behaviors.  Therefore,  we  propose 
+an  intermediate  communication  channel  (see  Figure  1c), 
+
+where behavioral data is represented on a meaningful level. 
+In  the  bottom  channel,  behavior  on  a  lower,  data-driven 
+level is shared, for example, 1000 steps, 7 hours of sleep, 500 
+kcal.  In  the  intermediate  channel,  data  is  aggregated  and 
+represented in a meaningful way, shifting it to information 
+rather  than  data.  For  example,  depending  on  temporal, 
+locational,  and  other  contextual  information,  1000  steps 
+could be construed as a ‘lunch walk’ or a ‘hospital visit’, or, 
+500 kcal as a ‘dinner with friends’ or a ‘dinner at home later 
+than  usual’.  This  behavioral,  yet  contextualized  and 
+meaningful  chunks of information  will more  easily trigger 
+interpretations  at  an  experiential  level  in  interaction  with 
+the  client,  e.g.,  ‘relaxing  lunch  walk  with  a  colleague’  or 
+‘stressful hospital visit with my child’, providing the coach 
+with  a  rich  set  of  pointers  accessing  the  client’s  daily  life, 
+context, values and needs. 
+
+7.4   The Value of Ambiguity 
+
+An  important  question  is,  to  what  extent  can  and  should 
+technology  interpret  behavioral  information,  in  order  to 
+facilitate  the  coaching  process  optimally?  Context-aware 
+computing makes a helpful distinction between  contextual 
+information  of  a  particular  behavior  (the  who’s,  where’s, 
+when’s and what’s) and the intention of that behavior (why 
+the behavior has occurred) [15]. The contextual information 
+is often not ambiguous. However, the why of the behavior, 
+that  it,  the  intention  and  meaning  of  the  behavior  to  the 
+client, remains ambiguous. A lunch walk might imply that 
+the  client  was  relaxed,  but  it  can  very  well  mean  the 
+opposite  –  in  the  case  where  she  desperately  needed  a 
+break  on  a  stressful  day.  Thus,  behavioral  information 
+remains ambiguous in terms of experience, and is therefore 
+problematic to interpret automatically.  
+
+Ambiguity  is  not  necessarily  problematic.  Gaver,  Beaver 
+and Benford [23] show that it may have value when things 
+are  left  open  for  interpretation,  as  it  reveals  something 
+about  the  identity,  motivations  and  expectations  of  the 
+interpreter.  In  the  specific  case  of  health  data,  it  has  been 
+shown  that  the  interpretation  is  colored  by  one’s  own 
+beliefs  [34,38].  This  does  not  have  to  be  amiss;  the 
+ambiguity might actually comprise the value of using those 
+data,  as  long  as  it  can  be  used  as  a  conversation  topic  in 
+coaching  [57].  Ambiguity,  or  stronger,  inconsistency,  has 
+also  been  valued  in  triangulation  [41],  a  methodological 
+concept  in  social  sciences.  Triangulation  describes  the 
+process  where  multiple  sources  of  evidence  are  used  to 
+validate a claim, for example, using multiple methods, data 
+that, 
+sources  or 
+traditionally,  we  tend  to  strive  for  converging  evidence, 
+where all sources of evidence are leading to a single claim. 
+
+researchers.  Mathison 
+
+[41]  states 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 11 
+However,  often  evidence  is  inconsistent  or  contradictory, 
+and this can actually be a valuable opportunity to learn. It 
+invites  the  researcher  to  make  sense  of  the  differences, 
+ending  up  with  a  more  holistic  view  of  the  subject  of 
+interest and more valid claims [41].  
+
+7.5   Conclusion: Technology Supporting the 
+
+Collaborative Coaching Process  
+
+interpersonal  process  of  health 
+In  the  complex  and 
+coaching,  interpreting  the  client’s  behavior,  i.e.,  talking 
+about intentions and meanings of the behavior to the client, 
+is  a  highly  valuable  activity  in  itself.  Therefore,  ambiguity 
+make behavioral data useful. It is not possible, not required, 
+and  even  stronger,  it  would  be  an  unfortunate  loss,  to 
+automate  this  task  of  interpretation.  It  would  impede 
+collaborative reflection and the enhancement of the coach-
+client  relationship  that  is  critical  to  success.  Gaps  and 
+irregularities  in  the  data,  as  well  as  situations  where 
+behavioral  and  experiential  information  are  contradicting, 
+are valuable starting points for effective coaching.  
+
+At  the  same  time,  presenting  behavior  in  a  meaningful 
+way,  easily  triggering  the  recall  of  experiences,  is  an 
+important  facilitator  of  the  collaborative  coaching  process. 
+Along  the  lines  of  context-aware  computing,  the  who’s, 
+where’s,  when’s  and  what’s  provided  by  technology  are 
+used to determine why the behavior occurs [15]. Low-level 
+data  is  often  too  distant  from  experiences  to  facilitate 
+effective communication. The intermediate communication 
+channel  (see  Figure  1c)  aims  at  balancing  between 
+interpreting behavioral data on such a level that it optimally 
+supports collaborative reflection and sharing experiences, at 
+the same time, not restraining from the value of ambiguity 
+of the behavioral data in this process. 
+
+Coaching  is  a  social  process,  vigorously  engaging  both 
+client  and  coach.  As  such,  our  focus  on  the  coach’s 
+perspective  provides  only  a  partial  view  on  the  role  and 
+value of technology in health coaching. On the other hand, 
+as argued in the beginning of this paper, previous literature 
+mainly focusses on the client’s perspective on technology in 
+coach’s  perspective 
+health 
+underrepresented. Our results show that health coaching is 
+all about the interaction between the client and the coach, 
+and therefore, future work should focus on how technology 
+influences  and  may  effectively  support  these  coach-client 
+interactions. 
+
+coaching, 
+
+leaving 
+
+the 
+
+when it comes to understanding the client and shaping the 
+coaching  process  accordingly.  Technologies 
+in  health 
+coaching  are  often  called  e-coaching  systems,  giving  the 
+impression that these systems are aiming for replacing the 
+coach, rather than supporting her. We conclude that in the 
+coaching  process,  being  a  dynamic,  contextualized  and 
+social activity, there is a unique and important role for the 
+human  coach.  Technology  potentially  provides  a  valuable 
+contribution, by informing and facilitating this process. By 
+bringing  meaningful  information,  yet  accounting  for  the 
+complexity  and  dynamics  of  the  health  coaching  process, 
+technology  potentially  promotes  a  better  informed  and 
+more effective dialog, closer to the client’s experience, and 
+enhancing  the  relationship  between  the  client  and  the 
+coach. 
+
+ACKNOWLEDGMENTS 
+We  thank  our  participants  for  sharing  their  time  and 
+coaching  experiences  with  us.  We  thank  Elisabeth  T. 
+Kersten  –  Van  Dijk  for  her  support  on  the  data  analysis, 
+and Boris de Ruyter for his feedback on earlier versions of 
+the  paper.  This  research  was  performed  within  the 
+framework of the strategic joint research program on Data 
+Science  between  TU/e  and  Philips  Electronics  Nederland 
+B.V. 
+
+in 
+
+Computing 
+
+Influence  Behavior. 
+
+REFERENCES 
+[1]  Alexander  T.  Adams,  Jean  Costa,  Malte  F.  Jung,  and  Tanzeem 
+Choudhury.  2015.  Mindless  Computing:  Designing  Technologies  to 
+In  Proceedings  of  the  2015  ACM 
+Subtly 
+International Joint Conference on Pervasive and Ubiquitous Computing 
+(UbiComp ’15), 719–730. https://doi.org/10.1145/2750858.2805843 
+[2]  Elena Agapie, Bonnie Chinh, Laura R. Pina, Diana Oviedo, Molly C. 
+Welsh,  Gary  Hsieh,  and  Sean  A.  Munson.  2018.  Crowdsourcing 
+Exercise  Plans  Aligned  with  Expert  Guidelines  and  Everyday 
+Constraints.  In  Proceedings  of  the  SIGCHI  Conference  on  Human 
+Factors 
+1–13. 
+https://doi.org/10.1145/3173574.3173898 
+Jessica  S.  Ancker,  Holly  O.  Witteman,  Baria  Hafeez,  Thierry 
+Provencher,  Mary  Van  De  Graaf,  and  Esther  Wei.  2015.  “You  get 
+reminded you’re a sick person”: Personal data tracking and patients 
+with  multiple  chronic  conditions.  Journal of Medical Internet Research 
+17, 8. https://doi.org/10.2196/jmir.4209 
+Joan  S.  Ash,  Marc  Berg,  and  Enrico  Coiera.  2004.  Some  Unintended 
+Consequences  of  Information  Technology  in  Health  Care :  The 
+Nature of Patient Care Information System-related Errors. Journal of 
+the  American  Medical  Informatics  Association  11,  2:  104–112. 
+https://doi.org/10.1197/jamia.M1471.Medical 
+Jozien Bensing. 1991. Doctor-Patient Communication and the Quality 
+of  Care. 
+1301–1310. 
+Social  Science  &  Medicine 
+https://doi.org/10.1016/0277-9536(91)90047-G 
+
+(CHI’18), 
+
+Systems 
+
+11: 
+
+32, 
+
+[4] 
+
+[3] 
+
+[5] 
+
+Our  results  show  that  the  coaches  value  support  of 
+technology  in  terms  of  having  access  to  meaningful  facts 
+and figures on the client’s behavior. At the same time, the 
+coaches clearly emphasize that they want to be in the lead 
+
+[6]  Andrew  B.L.  Berry,  Catherine  Lim,  Andrea  L.  Hartzler,  Tad  Hirsch, 
+Evette  Ludman,  Edward  H.  Wagner,  and  James  D.  Ralston.  2017. 
+Creating  Conditions  for  Patients’  Values  to  Emerge  in  Clinical 
+Conversations.  Proceedings  of  the  2017  Conference  on  Designing 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 12 
+ 
+[7] 
+
+(DIS 
+
+’17): 
+
+Systems 
+
+1165–1174. 
+
+Interactive 
+https://doi.org/10.1145/3064663.3064669 
+Imornefe  Bowes  and  Robyn  L.  Jones.  2006.  Working  at  the  Edge  of 
+Chaos: Understanding Coaching as a Complex, Interpersonal System. 
+The Sport Psychologist 20: 235–245. https://doi.org/10.1123/tsp.20.2.235 
+[8]  Virginia Braun and Victoria Clarke. 2006. Using thematic analysis in 
+psychology.  Qualitative  Research  in  Psychology  3,  2:  77–101. 
+https://doi.org/10.1191/1478088706qp063oa 
+
+[9]  Marco  Cardinale  and  Matthew  C.  Varley.  2017.  Wearable  Training-
+,  and 
+International  Journal  of  Sports  Physiology  and 
+
+Monitoring  Technology :  Applications 
+Opportunities. 
+Performance 12: 55–62. 
+
+,  Challenges 
+
+[10]  Chia-fang  Chung,  Jonathan  Cook,  Elizabeth  Bales,  Jasmine  Zia,  and 
+Sean  A.  Munson.  2015.  More  than  telemonitoring:  Health  provider 
+use  and  nonuse  of  life-log  data  in  irritable  bowel  syndrome  and 
+weight management. Journal of Medical Internet Research 17, 8. 
+[11]  Sarah  A.  Collins,  Matthew  Fred,  Lauren  Wilcox,  and  David  K. 
+Vawdrey.  2012.  Workarounds  Used  by  Nurses  to  Overcome  Design 
+Constraints  of  Electronic  Health  Records.  In  Proceedings of the 11th 
+International Congress on Nursing Informatics. 
+
+[12]  Sunny  Consolvo,  David  W.  McDonald,  and  James  A.  Landay.  2009. 
+Theory-Driven  Design  Strategies  for  Technologies  that  Support 
+Behavior  Change  in  Everyday  Life.  In  Proceedings of the 2009 CHI 
+Conference  on  Human  Factors  in  Computing  Systems  (CHI  ’09),  405–
+414. https://doi.org/10.1145/1518701.1518766 
+
+[13]  Felicia Cordeiro, Daniel A. Epstein, Edison Thomaz, Elizabeth Bales, 
+Arvind K. Jagannathan, Gregory D. Abowd, and James Fogarty. 2015. 
+Barriers  and  Negative  Nudges:  Exploring  Challenges  in  Food 
+Journaling.  In  Proceedings of the SIGCHI Conference on Human Factors 
+in 
+1159–1162. 
+https://doi.org/10.1145/2702123.2702155 
+
+Computing 
+
+Systems 
+
+(CHI 
+
+’15), 
+
+[14]  Edward  L.  Deci,  Richard  M.  Ryan,  and  Richard  Koestner.  1999.  A 
+Meta-Analytic  Review  of  Eperiments  Examining  the  Effects  of 
+Extrinsic Rewards on Intrinsic Motivation. Psychological Bulletin 125, 
+6: 627–668. https://doi.org/10.1037/0033-2909.125.6.627 
+
+[15]  Anind  K.  Dey  and  Gregory  D.  Abowd.  1999.  Towards  a  Better 
+Understanding  of  Context  and  Context-Awareness.  Computing 
+Systems 40, 3: 304–307. https://doi.org/10.1007/3-540-48157-5_29 
+[16]  Chris  Elsden,  David  S.  Kirk,  and  Abigail  C.  Durrant.  2016.  A 
+Quantified  Past:  Toward  Design  for  Remembering  With  Personal 
+518–557. 
+Interaction 
+Informatics.  Human-Computer 
+https://doi.org/10.1080/07370024.2015.1093422 
+
+31, 
+
+6: 
+
+[17]  Daniel  A.  Epstein,  Bradley  H.  Jacobson,  Elizabeth  Bales,  David  W. 
+McDonald, and Sean A. Munson. 2015. From “nobody cares” to “way 
+to  go!”:  A  Design  Framework  for  Social  Sharing  in  Personal 
+Informatics.  In  Proceedings of the 18th ACM Conference on Computer 
+Supported  Cooperative  Work  &  Social  Computing  (CSCW  ’15),  1622–
+1636. https://doi.org/10.1145/2675133.2675135 
+
+[18]  Daniel Epstein, Felicia Cordeiro, Elizabeth Bales, James Fogarty, and 
+Sean Munson. 2014. Taming Data Complexity in Lifelogs: Exploring 
+Visual Cuts of Personal Informatics Data Daniel. In Proceedings of the 
+2014  conference  on  Designing  interactive  systems  (DIS  ’14),  667–676. 
+https://doi.org/10.1080/10903120190939869 
+
+[19]  Jordan  Etkin.  2016.  The  Hidden  Cost  of  Personal  Quantification. 
+967–984. 
+
+Consumer 
+
+Research 
+
+42, 
+
+of 
+
+6: 
+
+Journal 
+https://doi.org/10.1093/jcr/ucv095 
+
+[20]  B.J.  Fogg.  2003.  Persuasive  Technology:  Using  Computers  to  Change 
+What We Think and Do. Morgan Kaufmann Publishers, San Francisco, 
+USA. https://doi.org/10.1016/j.amepre.2008.09.040 
+
+[21]  Carl  Benedikt  Frey  and  Michael  A.  Osborne.  2017.  The  future  of 
+to  computerisation? 
+254–280. 
+
+employment:  How  susceptible  are 
+Technological  Forecasting  and  Social  Change 
+https://doi.org/10.1016/j.techfore.2016.08.019 
+
+jobs 
+
+114: 
+
+[22]  Katleen  Gabriels  and  Tania  Moerenhout.  2018.  Exploring 
+entertainment  medicine  and  professionalization  of  self-care: 
+Interview study among doctors on the potential effects of digital self-
+tracking.  Journal  of  Medical 
+Internet  Research  20,  1:  1–12. 
+https://doi.org/10.2196/jmir.8040 
+
+[23]  William W. Gaver, Jacob Beaver, and Steve Benford. 2003. Ambiguity 
+as  a  Resource  for  Design.  In  Proceedings of the SIGCHI Conference on 
+Human  Factors 
+’03),  233–240. 
+https://doi.org/10.1145/642651.642653 
+
+in  Computing  Systems 
+
+(CHI 
+
+[24]  William Green and Boris De Ruyter. 2010. The design and evaluation 
+of  interactive  systems  with  perceived  social  intelligence:  five 
+challenges. AI & Society 25, 2: 203–210. https://doi.org/10.1007/s00146-
+009-0252-z 
+
+[25]  Shona  L.  Halson.  2014.  Monitoring  Training  Load  to  Understand 
+139–147. 
+
+Sports  Medicine 
+
+in  Athletes. 
+
+44, 
+
+2: 
+
+Fatigue 
+https://doi.org/10.1007/s40279-014-0253-z 
+
+[26]  Sander  Hermsen,  Jeana  Frost,  Reint  Jan  Renes,  and  Peter  Kerkhof. 
+2016.  Using  feedback  through  digital  technology  to  disrupt  and 
+change  habitual  behavior:  A  critical  review  of  current  literature. 
+Computers 
+61–74. 
+https://doi.org/10.1016/j.chb.2015.12.023 
+
+Behavior 
+
+Human 
+
+57: 
+
+in 
+
+[27]  Matthew  K.  Hong,  Udaya  Lakshmi,  Thomas  A.  Olson,  and  Lauren 
+Wilcox.  2018.  Visual  ODLs :  Co-Designing  Patient-Generated 
+Observations of Daily Living  to Support Data-Driven Conversations 
+in  Pediatric  Care  Aflac  Cancer  and  Blood  Disorders  Center.  In 
+Proceedings of the SIGCHI Conference on Human Factors in Computing 
+Systems (CHI ’18), 1–13. https://doi.org/10.1145/3173574.3174050 
+[28]  Wijnand IJsselsteijn, Yvonne de Kort, Cees Midden, Berry Eggen, and 
+Elise  Van  Den  Hoven.  2006.  Persuasive  technology  for  human  well-
+being:  setting  the  scene.  In  International  conference  on  persuasive 
+technology. Springer, Berlin, Heidelberg, 1–5. 
+Institute  of  Medicine.  2001.  Health  and  Behavior:  The  Interplay  of 
+Biological,  Behavioral  and  Societal  Influences.  National  Academies 
+Press, Washington, D.C. https://doi.org/10.17226/9838 
+
+[29] 
+
+[30]  Robyn  L.  Jones  and  Mike  Wallace.  2005.  Another  bad  day  at  the 
+training  ground:  Coping  with  ambiguity  in  the  coaching  context. 
+Sport, 
+119–134. 
+https://doi.org/10.1080/1357332052000308792 
+
+Education 
+
+Society 
+
+and 
+
+10, 
+
+1: 
+
+[31]  Evangelos  Karapanos,  Rúben  Gouveia,  Marc  Hassenzahl,  and  Jodi 
+Forlizzi.  2016.  Wellbeing  in  the  Making:  Peoples’  Experiences  with 
+Wearable  Activity  Trackers.  Psychology  of  well-being  6,  4:  1–17. 
+https://doi.org/10.1186/s13612-016-0042-6 
+
+[32]  Christina  Kelley,  Bongshin  Lee,  and  Lauren  Wilcox.  2017.  Self-
+tracking for Mental Wellness: Understanding Expert Perspectives and 
+Student  Experiences.  In  Proceedings  of  the  SIGCHI  Conference  on 
+’17),  629–641. 
+Human  Factors 
+https://doi.org/10.1145/3025453.3025750 
+
+in  Computing  Systems 
+
+(CHI 
+
+[33]  Elisabeth  T.  Kersten  -  Van  Dijk  and  Wijnand  A.  IJsselsteijn.  2016. 
+Design beyond the numbers: sharing, comparing, storytelling and the 
+need  for  a  Quantified  Us.  Interaction  Design  and  Architecture(s) 
+Journal (IxD&A) 29: 121–135. 
+
+[34]  Elisabeth  T.  Kersten  -  Van  Dijk,  Wijnand  A.  IJsselsteijn,  and  Joyce 
+H.D.M.  Westerink.  2016.  Deceptive  visualizations  and  user  bias:  a 
+case  for  personalization  and  ambiguity  in  PI  visualizations.  In 
+Proceedings  of  the  2016  ACM  International  Joint  Conference  on 
+Pervasive and Ubiquitous Computing: Adjunct (Ubicomp ’16),  588–593. 
+https://doi.org/10.1145/2968219.2968326 
+
+[35]  Elisabeth  T.  Kersten  -  van  Dijk,  Joyce  H.D.M.  Westerink,  Femke 
+Beute,  and  Wijnand  A.  IJsselsteijn.  2017.  Personal  Informatics,  Self-
+Insight and Behavior Change: a Critical Review of Current Literature. 
+268-296. 
+Human–Computer 
+https://doi.org/10.1080/07370024.2016.1276456 
+
+Interaction 
+
+5-6: 
+
+32, 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 13 
+[36]  Kwangyoung  Lee  and  Hwajung  Hong.  2018.  MindNavigator. 
+Proceedings  of  the  2018  CHI  Conf.  on  Human  Factors  in  Computing 
+Systems (CHI ’18): 1–14. https://doi.org/10.1145/3173574.3174146 
+Ian Li, Anind K. Dey, and Jodi Forlizzi. 2011. Understanding my data, 
+myself:  Supporting  self-reflection  with  ubicomp.  Proceedings of the 
+13th international conference on ubiquitous computing (UbiComp ’11). 
+https://doi.org/10.1145/2030112.2030166 
+
+[37] 
+
+[38]  Deborah Lupton. 2016. You are Your Data: Self-tracking Practices and 
+Concepts of Data Deborah. In Lifelogging: Theoretical Approaches and 
+Case Studies about Self- tracking,  Stefan  Selke  (ed.).  Springer,  61–79. 
+https://doi.org/10.1007/s10551-015-2769-z.For 
+
+[39]  Julie  Maitland  and  Matthew  Chalmers.  2011.  Designing  for  peer 
+involvement  in  weight  management.  In  Proceedings of the 2011 CHI 
+Conference  on  Human  Factors  in  Computing  Systems  (CHI  ’11),  315–
+324. https://doi.org/10.1145/1978942.1978988 
+
+[40]  Gabriela  Marcu,  Anind  Dey,  and  Sara  Kiesler.  2014.  Designing  for 
+Collaborative  Reflection.  In  Proceedings of the 8th International Conf. 
+on  Pervasive  Computing  Technologies  for  Healthcare  (PervasiveHealth 
+’14), 9–16. https://doi.org/10.4108/icst.pervasivehealth.2014.254987 
+[41]  Sandra Mathison. 1988. Why Triangulate? Educational Researcher 17, 
+
+2: 13–17. https://doi.org/10.3102/0013189X017002013 
+
+[42]  Helena M. Mentis, Anita Komlodi, Katrina Schrader, Michael Phipps, 
+Ann  Gruber-Baldini,  Karen  Yarbrough,  and  Lisa  Shulman.  2017. 
+Crafting  a  View  of  Self-Tracking  Data  in  the  Clinical  Visit. 
+Proceedings of the SIGCHI Conference on Human Factors in Computing 
+Systems (CHI ’17): 5800–5812. https://doi.org/10.1145/3025453.3025589 
+[43]  Helena Marie Mentis. 2010. Emotion Awareness and Invisibility in an 
+
+Emergency Room: a Socio-Technical Dilemma.  
+
+[44]  Susan  Michie,  Stefanie  Ashford,  Falko  F.  Sniehotta,  Stephan  U. 
+Dombrowski,  Alex  Bishop,  and  David  P.  French.  2011.  A  refined 
+taxonomy  of  behaviour  change  techniques  to  help  people  change 
+their  physical  activity  and  healthy  eating  behaviours:  the  CALO-RE 
+taxonomy. 
+1479–1498. 
+Psychology  & 
+https://doi.org/10.1080/08870446.2010.540664 
+Inbal  Nahum-Shani,  Eric  B.  Hekler,  and  Donna  Spruijt-Metz.  2015. 
+Building  health  behavior  models  to  guide  the  development  of  just-in-
+time adaptive interventions: A pragmatic framework. Health Psychology 
+34: 1209–1219. https://doi.org/10.1037/hea0000306.Building 
+
+health 
+
+[45] 
+
+11: 
+
+26, 
+
+[46]  John  C.  Norcross.  2002.  Psychotherapy  relationships  that  work: 
+to  patients.  Oxford 
+
+Therapist  contributions  and  responsiveness 
+University Press, New York. 
+
+[47]  Alanna  O’Broin  and  Stephen  Palmer.  2006.  The  coach-client 
+relationship  and  contributions  made  by  the  coach  in  improving 
+coaching outcomes. The Coaching Psychologist 2, 2: 16–20. 
+
+[48]  Lucille M.L. Ong, Johanna C.J.M. de Haes, Alaysia M. Hoos, and Frits 
+B.  Lammes.  1995.  Doctor-patient  communication:  a  review  of  the 
+literature. 
+903–918. 
+Science  &  Medicine 
+https://doi.org/10.1016/0277-9536(94)00155-M 
+
+Social 
+
+40, 
+
+7: 
+
+[49]  Rita  Orji,  Richard  Lomotey,  Kiemute  Oyibo,  Fidelia  Orji,  Jamie 
+Blustein,  and  Suleman  Shahid.  2018.  Tracking  feels  oppressive  and 
+‘punishy’:  Exploring  the  costs  and  benefits  of  self-monitoring  for 
+health 
+1–10. 
+Digital 
+https://doi.org/10.1177/2055207618797554 
+
+wellness. 
+
+Health 
+
+and 
+
+4: 
+
+[50]  Raja Parasuraman, Thomas B. Sheridan, and Christopher D. Wickens. 
+2000.  A  Model  for  Types  and  Levels  of  Human  Interaction  with 
+Automation.  IEEE Transactions on Systems, Man, and Cybernetics 30, 3: 
+286–297. 
+
+[51]  Stephen  Purpura,  Victoria  Schwanda,  Kaiton  Williams,  William 
+Stubler,  and  Phoebe  Sengers.  2011.  Fit4Life:  The  Design  of  a 
+
+Persuasive  Technology  Promoting  Healthy  Behavior  and  Ideal 
+Weight.  In  Proceedings of the 2011 CHI Conference on Human Factors 
+in Computing Systems (CHI ’11), 423–432. 
+
+[52]  Aare  Puussaar,  Adrian  K.  Clear,  and Peter  Wright.  2017.  Enhancing 
+Personal  Informatics  Through  Social Sensemaking.  Proceedings of the 
+2017  CHI  Conference  on  Human  Factors  in  Computing  Systems  (CHI 
+’17): 6936–6942. https://doi.org/10.1145/3025453.3025804 
+
+[53]  Raad  voor  Volksgezondheid  en  Samenleving.  2017.  Zonder  context 
+from 
+
+geen 
+1–90. 
+https://www.raadrvs.nl/uploads/docs/Zonder_context_geen_bewijs.p
+df 
+
+Retrieved 
+
+bewijs. 
+
+[54]  Shriti Raj, Mark W. Newman, Joyce M. Lee, and Mark S. Ackerman. 
+2017.  Understanding  Individual  and  Collaborative  Problem-Solving 
+with  Patient-Generated  Data:  Challenges  and  Opportunities. 
+Proceedings  ACM  on  Human-Computer  Interaction  1,  2:  88:1--88:18. 
+https://doi.org/10.1145/3134723 
+
+[55]  John  Rooksby,  Mattias  Rost,  Alistair  Morrison,  and  Matthew 
+Chalmers. 2014. Personal tracking as lived informatics. Proceedings of 
+the SIGCHI Conference on Human Factors in Computing Systems (CHI 
+’14): 1163–1172. https://doi.org/10.1145/2556288.2557039 
+
+[56]  Debra L. Roter and Judith A. Hall. 2006. Doctors talking with patients / 
+patients  talking  with  doctors:  improving  communication  in  medical 
+visits. Praeger Publishers, Westport. 
+
+[57]  Heleen Rutjes, Martijn C. Willemsen, Janne Van Kollenburg, Sander 
+Bogers,  and  Wijnand  A.  IJsselsteijn.  2017.  Benefits  and  Costs  of 
+Patient  Generated  Data,  From  the  Clinician’ss  and  Patient’s 
+Perspective.  In  Proceedings of the 11th EAI International Conference on 
+Pervasive Computing Technologies for Healthcare (PervasiveHealth ’17), 
+436–439. 
+
+[58]  Thomas  L.  Webb  and  Paschal  Sheeran.  2006.  Does  changing 
+behavioral intentions engender behavior change? A meta-analysis of 
+the  experimental  evidence.  Psychological  Bulletin  132,  2:  249–268. 
+https://doi.org/10.1037/0033-2909.132.2.249 
+
+[59]  Peter  West,  Richard  Giordano,  Max  Van  Kleek,  and  Nigel  Shadbolt. 
+2016. The Quantified Patient in the Doctor’s Office. Proceedings of the 
+SIGCHI Conference on Human Factors in Computing Systems (CHI ’16): 
+3066–3078. https://doi.org/10.1145/2858036.2858445 
+
+[60]  Peter  West,  Max  Van  Kleek,  Richard  Giordano,  Mark  J.  Weal,  and 
+Nigel  Shadbolt.  2018.  Common  Barriers  to  the  Use  of  Patient-
+Generated Data Across Clinical Settings. In Proceedings of the SIGCHI 
+Conference  on  Human  Factors  in  Computing  Systems  (CHI  ’18). 
+https://doi.org/10.1145/3173574.3174058 
+
+[61]  Ruth  Q.  Wolever,  Leigh  Ann  Simmons,  Gary  A.  Sforzo,  Diana  Dill, 
+Miranda  Kaye,  Elizabeth  M.  Bechard,  Mary  Elaine  Southard,  Mary 
+Kennedy,  Justine  Vosloo,  and  Nancy  Yang.  2013.  A  Systematic 
+Review of the Literature on Health and Wellness Coaching : Defining 
+a  Key  Behavioral  Intervention  in  Healthcare.  Global Adv Health Med. 
+2, 4: 38–57. https://doi.org/10.7453/gahmj.2013.042 
+
+[62]  Haining  Zhu,  Joanna  Colgan,  Madhu  Reddy,  and  Eun  Kyoung  Choe. 
+2016.  Sharing  Patient-Generated  Data  in  Clinical  Practices:  An 
+Interview  Study.  AMIA  Annual  Symp.  Proceedings  Americal  Medical 
+Informatics Assoc.: 1303–1312. https://doi.org/10.1177/1932296813511727 
+[63]  Hubert Zimmermann. 1980. OSI Reference Model-The ISO Model of 
+Architecture for Open Systems Interconnection. IEEE Transactions on 
+Communications 
+425–432. 
+https://doi.org/10.1109/TCOM.1980.1094702 
+
+28, 
+
+4: 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 670Page 14 
+ 
+ 
+

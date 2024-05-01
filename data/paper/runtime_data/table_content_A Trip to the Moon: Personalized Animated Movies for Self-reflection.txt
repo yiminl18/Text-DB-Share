@@ -1,0 +1,21 @@
+
+2. Abstract
+3. ACM Classification Keywords
+4. Author Keywords
+5. Introduction
+6. Permission to make digital or hard copies of all or part of this work for personal or classroom use
+7. Storytelling or narratives are a fundamental way in which human beings make sense of the world
+8. We’ve seen traditional quantitative reflective designs made powerful with an intelligent narrative
+9. We attempt to create emotional, personal narratives of data related to behavior and mental wellbeing by making animated movies customized to each individual’s emotional trajectory
+10. Related Work
+    10.1 Reflective Design
+    10.2 Motivational Narrative Systems
+11. System Overview
+    11.1 From Data to Animation
+12. Graphical Affects Validation Study
+13. A Trip to the Moon: Video Study
+14. Findings
+15. Discussion
+16. Conclusion
+17. Acknowledgement
+18. References

@@ -1,0 +1,21 @@
+1. Introduction
+2. Background
+    2.1 Self-tracking and Personal Informatics Models
+    2.2 Technologies to Support Healthy Eating Goals
+    2.3 Health Tracking with Social Sharing
+    2.4 Sharing Health Information in Online Health Communities
+3. Methods
+4. Why and How Do People Track What They Eat on Instagram to Support Healthy Eating?
+    4.1 Deciding to Track and Selecting Tools
+    4.2 Collection and Integration
+    4.3 Reflection
+    4.4 Lapsing and Resuming Tracking
+5. Discussion
+    5.1 Including Social Roles in Personal Informatics Models
+    5.2 Using Hashtags to Reveal Myriad Communities
+    5.3 Managing Tensions between Goals and Social Needs
+    5.4 Appropriating Multiple Tools for Social Personal Tracking
+6. Limitations and Future Work
+7. Conclusion
+8. Acknowledgments
+9. References

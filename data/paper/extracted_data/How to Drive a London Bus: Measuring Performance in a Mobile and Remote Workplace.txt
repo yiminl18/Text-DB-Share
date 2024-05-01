@@ -1,0 +1,1276 @@
+How to Drive a London Bus: Measuring Performance  
+in a Mobile and Remote Workplace 
+Gary W. Pritchard1, Pam Briggs2, John Vines1, and Patrick Olivier1 
+
+1Culture Lab, 
+School of Computing Science, 
+Newcastle University, UK 
+{firstname.lastname}@ncl.ac.uk 
+
+2PaCT Lab, 
+Department of Psychology, 
+Northumbria University, UK 
+p.briggs@northumbria.ac.uk 
+
+ABSTRACT 
+This  paper  examines  how  London  bus  drivers  have 
+responded  to  performance  monitoring  via  a  telematics 
+device  called  Drivewell.  This  device  calculates  a  score 
+based  on  various  recordable  driving-related  events  like 
+abrupt  braking  or  irregular  turning  actions.  Our  qualitative 
+methodology  incorporated  semi-structured  interviews  and 
+ethnographic fieldwork in order to explore drivers‘ attitudes 
+towards the system and its effect on driving behaviour and 
+working  conditions.  Our  findings 
+illustrate  how  bus 
+operators  simultaneously  accommodate  and  resist  the 
+demands  Drivewell  places  upon  them.  Our  work  also 
+demonstrates  how 
+in 
+conjunction with other driver-related technologies, creating 
+a unique digital ecosystem on the modern London bus. Our 
+research  contributes  to  HCI  understandings  of  digital 
+surveillance  and  performance  monitoring  in  the  modern 
+workplace. 
+
+intervention  acts 
+
+this  digital 
+
+Author Keywords 
+Public Transport; Ethnography; Telematics; Event 
+Monitoring; Workplace Surveillance 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous. 
+
+INTRODUCTION 
+Sensor  technology  is  increasingly  deployed  as  a  part  of 
+intelligent  vehicle  infrastructures  that  give  drivers  the 
+capacity  to  monitor  traffic  and  navigation  information, 
+check  vehicle  status,  improve  driving  quality  and  navigate 
+adverse  driving  conditions  [27].  Recent  developments  in 
+Intelligent Transportation Systems (ITS) have also allowed 
+interconnected vehicles to exchange information in order to 
+operate  a  more  efficient  and  passenger-friendly  service 
+
+Permission to make digital or hard copies of all or part of this work for personal 
+or  classroom  use  is  granted  without  fee  provided  that  copies  are  not  made  or 
+distributed  for  profit  or  commercial  advantage  and  that  copies  bear  this  notice 
+and  the  full  citation  on the  first page. Copyrights  for  components  of  this  work 
+owned  by  others  than  ACM  must  be  honored.  Abstracting  with  credit  is 
+permitted. To copy otherwise, or republish, to post on servers or to redistribute to 
+lists,  requires  prior specific permission and/or a  fee.  Request  permissions  from 
+Permissions@acm.org. 
+CHI 2015, April 18 - 23 2015, Seoul, Republic of Korea. 
+Copyright is held by the owner/author(s). Publication rights licensed to ACM. 
+ACM 978-1-4503-3145-6/15/04…$15.00 
+http://dx.doi.org/10.1145/2702123.2702137 
+
+[27],  while  minimizing  cost  and  making  the  entire  system 
+more environmentally sound.  
+
+These  developments  have  led  to  some  drivers  acquiring 
+new  responsibilities  and  being  subject  to  new  forms  of 
+performance  monitoring.  For  instance,  it  is  now  relatively 
+straightforward  to  install  in-vehicle  data  recorders  (IVDR) 
+that  monitor  driving  quality  indicators  like  speed,  braking 
+and  cornering.  Individual  drivers  can  benefit  directly  from 
+this  by  registering  to  either  a  Pay  As  You  Drive  (PAYD) 
+insurance system that charges for distance travelled, or one 
+that  rewards  good  driving  by  offering  lower  premiums  to 
+those  who  achieve  target  driving  scores  [23].  On  an 
+organizational  scale,  professional  drivers  may  also  be 
+signed up to ‗fleet telematics‘ systems [18] that are used to 
+monitor driving across an entire fleet. When integrated into 
+these  can  become  highly  effective 
+driver  appraisals 
+performance  management  infrastructures  that  reward  good 
+driving and penalize bad.  
+
+In 2010, Transport for London (TfL)  integrated just such a 
+system  onto  all  of  the  city‘s  buses.  Before  going  into 
+service and starting the engine, drivers are  now required to 
+place  a  key  fob  that  identifies  them  as  the  operator  onto  a 
+reader  (Figure  1a).  If  they  do  not  do  this,  an  alarm  will 
+sound.  This  device—known  as  Drivewell—captures  driver 
+behaviour  and  provides  feedback  in  two  forms.  The  first 
+offers  immediate  notification  of  undesirable  driving  or 
+‗events‘,  communicated  through  a  traffic-light  module 
+directly  above  the  vehicle‘s  windscreen  (Figure  1b).  The 
+second provides a more detailed breakdown of performance 
+that  drivers  can  access  via  a  computer  terminal  located  in 
+the capital‘s bus depots. Information provided includes date 
+of  journey,  vehicle,  duration,  ‗achievement‘  (given  as  a 
+percentage)  and  overall  number  of  ‗events‘  (or  incidences 
+of  poor  driving).  The  driver  can  also  assess 
+their 
+performance  over  time  through  a  series  of  graphs  or  view 
+on  a  map  where  ‗events‘  occurred  (see  Figure  1c).  All  of 
+this  data  is  also  relayed  to  supervisors,  who  use  it  to 
+monitor  and  assess  performance.  Some  of  the  companies 
+who manage bus routes offer prizes (e.g. a TV) for the best 
+scores  over  a  set  period.  If  poor  scores  are  consistently 
+attained, the driver can be sanctioned formally or forced to 
+undertake additional training.  
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1885                             
+ 
+Figure 1. From left to right: a) Placing the Drivewell key fob onto the reader; b) The Drivewell indicator in the driver’s cabin 
+(circled red); c) The Drivewell computer terminal; and d) close-up of computer terminal screen showing Drivewell scores. 
+
+The  aim  of  this  study  was  to  explore  the  extent  that 
+Drivewell  has  been  accepted  by  bus  drivers  and  to 
+understand its impact on their behaviour. In achieving this, 
+we  conducted  ethnographic  fieldwork,  conducted  over  a 
+period of 14 months, which consisted of continuous contact 
+with  research  participants  and  formal  interviews  with  15 
+drivers. Through this, we sought to achieve a sophisticated 
+understanding  of  the  perceived  costs  and  benefits  of  this 
+kind  of  remote  surveillance  and  the  varying  ways  drivers 
+incorporated Drivewell into their work practice. In this, we 
+discuss  both  how  some  have  accommodated  to,  whilst 
+others  have  actively  resisted,  the  technology;  how  it  has 
+transformed  driving  appraisals;  and  how 
+it  works 
+interdependently with other surveillance technologies.  
+
+Our contribution to the field is three-fold. First, we advance 
+HCI‘s  knowledge  on  the  ways  that  telematics  influences 
+driver  behaviour,  safety  and  wellbeing  as  well  as  large-
+scale  transport  informatics  (a  key  issue  for  the  Internet  of 
+Things).  Second,  the  work  also  speaks  to  a  highly 
+controversial  theoretical  debate  about  the  privileging  of 
+data-performance  in  the  management  of  a  workforce  [5]. 
+Finally, we assess the utility of Drivewell and consider new 
+forms  of  resistance  against  modern  forms  of  digital 
+surveillance.  
+
+BACKGROUND 
+
+Telematics and Pay As You Drive (PAYD) 
+There have been numerous studies about the deployment of 
+telematics technology in private vehicles, with considerable 
+attention  being  paid  to  the  relative  costs  and  benefits  of 
+PAYD.  Introduced  in  the  late  1990s  as  an  innovative 
+method  of  determining  insurance  premiums,  PAYD  uses  a 
+GPS receiver and a small on-board computer to record data 
+on location, speed, mileage and time of driving. A reduction 
+in  cost  of  this  technology  has  facilitated  the  emergence  of 
+new  business  models  that  specifically  target  vulnerable 
+drivers,  like  the  young  and  inexperienced  (who  typically 
+have to pay large insurance premiums) [12]. 
+
+Studies  in  this  field  have  illustrated  how  these  initiatives 
+can have a positive affect on driving behaviour. Bolderdijk 
+et  al  [4]  studied  a  group  of  young  drivers  who  had  signed 
+up to a PAYD system that allowed them to save money on 
+their insurance premium if they adhered to predefined speed 
+
+limits. Speed was monitored over the period of a year with 
+PAYD  drivers  showing  significantly  reduced  speed  when 
+compared with non-PAYD drivers. Benefits extend beyond 
+personal  gain:  economic  and  environmental  impact  studies 
+have  illustrated that PAYD  schemes can  be  more  effective 
+for lowering fuel consumption than tax on gasoline [28].  
+
+Despite  these  benefits,  a  number  of  costs  have  been 
+identified  in  the  literature.  Duri  et  al  [14]  for  instance, 
+identified the potential for data misuse, including the risk of 
+it being sold to third parties without explicit consent. They 
+also  highlighted  the  danger  of  those  with  malicious  intent 
+accessing driver location. Subsequent studies by Iqbal et al 
+[19; 20] have also outlined the privacy and security risks of 
+leaked or hacked GPS data, in terms of the identification of 
+home  addresses  and  the  unsolicited  monitoring  of  driver 
+behaviour and style.  
+
+There  is  also  an  argument  that  the  telematic  devices  can 
+over-complicate  the  task  of  driving.  Lansdown  et  al  [21], 
+for instance, describe the problems associated with a range 
+of  new  ‗additional-to-driving‘  activities,  including  both 
+operations  that  are  unrelated  to  driving  (e.g.  the  use  of 
+mobile phones) and tasks that are driving-related, but make 
+the  activity  more  convoluted  (e.g.  navigation  and  route 
+guidance systems).  As  such, there  is reason to  hypothesise 
+that  telematics  systems—either  because  of  in-car  feedback 
+or  through  a  driver  consciously  changing  their  behaviour 
+because  of  the  awareness  of  being  monitored—might 
+adversely  complicate  driving  and,  thus,  adversely  affect  it 
+and increase the risk of accident. 
+
+Driver surveillance and appraisal 
+We  see  telematics  in  general  and  remote  monitoring  of 
+driver performance in particular as sitting  within the wider 
+remit of surveillance. Sociological contributions in this field 
+are often dystopian in theme (e.g. [16]), and concerned with 
+the concepts of ‗power‘, ‗politics‘ and ‗employee meaning-
+to  psychological 
+making‘.  This  stands 
+contributions  where  there  is  a  greater  concern  for  the 
+efficacy  of  surveillance  and  those  factors  (including 
+economic ones) that make it beneficial in the workplace [1]. 
+The earliest published theories of management, dating back 
+to 1916, understood control and monitoring as central to the 
+supervisor‘s  task  [15].  Employee  monitoring  therefore  is 
+
+in  contrast 
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1886 
+well established and related to long-standard practices such 
+as  clocking  in  and  out,  measuring  output  and  payment  by 
+task  completion.  The  development  of  information  systems 
+gave  early  large-scale  organizations  the  ability  to  police 
+their  subordinates  and  gain  an  advantage  over  their 
+commercial  rivals  [2].  It  has  also  been  shown  surveillance 
+can  diminish  employee  wellbeing  and  the  nature  and 
+intensity  of  it  says  much  about  how  a  company  views  its 
+workers [1]. 
+
+Surveillance  and  remote  appraisal  practices  have  steadily 
+grown within vehicle fleet management,  where issues such 
+as  speed,  safety  and  timeliness  are  key  to  the  successful 
+running  of  a  business.  Historically,  driver-appraisals  were 
+more subjective and made by a person. However, a number 
+of key  indicators can  now be objectively  measured via the 
+various telematics platforms, which can identify and reward 
+those who drive within established parameters. Simsek et al 
+[33]  identify  a  number  of  such  objective  indicators, 
+including  speed,  the  idle  duration  of  vehicles,  fuel  costs—
+all  indirect  measurements  of  good  driver  performance. 
+Additionally,  where  it  is  important  to  map  the  position  of 
+vehicles  in  the  fleet  in  relation  to  each  other,  GPS  based 
+metrics  such  as  headway  (distance  between  vehicles)  can 
+also be used as a key performance indicator (e.g. [27]). 
+
+Bus drivers 
+Professional  bus  drivers  face  difficult  and  taxing  daily 
+tasks.  They  must  negotiate  a  range  of  challenges  in  their 
+physical environment, both outside and inside their vehicle, 
+including  traffic  congestion,  passenger  demands  and  the 
+maintenance  of  good  operational  control  of  the  bus. 
+Research  spanning  over  fifty  years  has  demonstrated  that 
+this is one of the most stressful jobs, leading to a range of 
+negative physical, behavioural and psychological outcomes 
+[35].  In  the  1950s,  a  series  of  studies  by  Morris  and 
+colleagues (e.g. [24]) showed that bus drivers were twice as 
+likely  to  die  from  coronary  heart  disease  (CHD)  than 
+conductors  working  alongside  them.  In  1991  Rosengren  et 
+al [32] found CHD rates in bus drivers were three times the 
+rate of 30 other sampled populations, once socio-economic 
+factors  had  been  taken  into  consideration.  In  a  range  of 
+studies  that  assessed  perceived  stressors  associated  with 
+such  poor  health  outcomes,  69%  of  drivers  cited  traffic  as 
+the  main  problem  [13]  although  fatigue  associated  with 
+unusual  or  demanding  shift  patterns  is  also  a  known 
+problem leading to poor driver health [8]. If we add to this 
+the  known  psychological  impact  associated  with  difficult 
+interactions  with  passengers  [35];  the  musculoskeletal 
+disorders  linked  with  poor  cabin  posture  [35]  and  the 
+gastrointestinal  problems  associated  with  meal  hour 
+irregularity and  generally poor eating  habits [35] then it is 
+not surprising to find  that bus drivers show unusually high 
+levels of absenteeism [37] and high job turnover [25]. 
+
+Recent  years  have  seen  further  demands  placed  upon 
+London‘s  bus  drivers,  including  the  elimination  of  cash 
+payments  [29]  and  the  introduction  of  ‗headway‘  system 
+
+where  drivers  monitor  the  distance  of  the  bus  in  front  and 
+behind via an LCD display [30]. In part, our work analyses 
+a 
+this 
+occupational group that further reduces their autonomy. 
+
+technological  demand  placed  upon 
+
+further 
+
+METHOD 
+The  data  presented  here  was  collected  over  a  period  of  14 
+months  as  part  of  on-going  research  studying  digital 
+technologies and the work practices of London bus drivers. 
+Our  results  are  derived  from  qualitative  data,  collected 
+primarily  through  ethnography  and  semi-structured,  in-
+depth  interviews  with  15  bus  drivers,  10  of  whom  were 
+interviewed  twice.  On  average,  our  interviews  lasted  50 
+minutes  and  all  were  audio-recorded  and  transcribed 
+verbatim.  
+
+this  activity.  Our 
+
+Ethnography  attempts  to  understand  the  ‗social  meanings 
+and  ordinary  activities‘  of  a  group,  as  they  occur  in 
+‗naturally  occurring  setting‘  [6,  p.10].  This  is  achieved  by 
+researchers  observing  and  participating  in  as  many  of  the 
+activities  of  a  cultural  group  as  possible.  Although  for 
+practical  reasons  we  were  unable  to  participate  in  the 
+activity  of  driving,  we  spent  as  much  time  as  possible 
+observing 
+fieldwork  consisted  of 
+‗focused‘  bus  riding  around  London  for  a  total  of  five 
+weeks  (two  at  the  beginning  of  fieldwork  and  three  at  the 
+end).  Here  the  researcher  either  shadowed  a  participant 
+while  they  were  driving  or  rode  with  one  as  a  fellow 
+passenger. During these rides, the driver would be asked to 
+provide  a  commentary  of  the  journey  as  it  relates  to 
+Drivewell  scores. One driver  also  wore a  wearable camera 
+that  automatically  takes  pictures  at  10-second  intervals 
+during two workdays. The images were later played back to 
+to  reflect  on  Drivewell 
+the  driver  who  was  asked 
+considerations  for  each  part  of  his  route.  A  detailed 
+fieldwork diary was kept to record all of these interactions. 
+
+As the researchers already knew five participants, we were 
+able to elicit perspectives in more sociable settings, either at 
+bus  garages  during  their  breaks  or  in  cafes  and  pubs  after 
+work.  Employing  the  recruitment  strategy  of  ‗snowball-
+sampling‘  [3],  we  asked  these  informants  to  identify  other 
+potential  participants.  A  plethora  of  classic  ethnographies 
+have demonstrated how ‗key informants‘ like these work to 
+smooth  access  (e.g.  [36]).  However  this  familiarity  also 
+meant  that  we  had  to  pay  acute  attention  to  reflexivity, 
+affording a genuine consideration of the partialities and bias 
+we might bring into our work.  
+
+After  fieldwork,  we  assembled  all  the  raw  data  (interview 
+transcripts  and  fieldwork  diary)  on  a  Microsoft  word 
+document to get an overview. We brought order to this by 
+organizing  sections under categories and then  we drew out 
+overarching  themes.  We  then  sorted  the  data  further  by 
+breaking these themes into codes. This allowed us to group 
+information together and assess related material. 
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1887FINDINGS 
+Four substantial  themes  were identified  from  this analysis: 
+accommodating  and  accepting  Drivewell;  questioning  the 
+value of  Drivewell; resisting  and subverting  Drivewell and 
+managing multiple forms of performance monitoring. Each 
+of these is discussed in the following sections. 
+
+Accommodating and accepting Drivewell 
+Interviews  provided  an  initial  opportunity  to  explore  how 
+our participants have incorporated Drivewell into their work 
+routines.  As  will  be  noted  throughout  our  findings, 
+Drivewell is hugely divisive—while some drivers see it as a 
+positive way of improving passenger service and gathering 
+constructive feedback, others regard it as inherently flawed 
+and  counterproductive.  However, 
+that 
+Drivewell had impacted on behaviour for some. Throughout 
+bus  journeys  the  lead  author  took  with  our  participant 
+drivers, it was observed how they would frequently glance 
+at  the  Drivewell  module  located  above  their  windscreen. 
+Jimmy,  who  was  one  of  the  most  enthusiastic  drivers  in 
+regards to the  system,  was observed to check  the indicator 
+more than most: 
+
+it  was  clear 
+
+Interviewer: Do you keep an eye on that a lot? 
+Jimmy: Yes, yes, yes. Not to go red. 
+Interviewer:  And  do  you  find  it  quite  responsive,  like  if  you 
+brake? 
+Jimmy: Yes, you have to go smoothly and nicely, so, otherwise 
+they go red, it's not good.  
+
+Jimmy‘s  use  of  Drivewell  is  illustrative  of  its  capacity  to 
+encourage  a  form  of  self-surveillance.  Unlike  most  of  the 
+drivers  we  spoke  to,  Jimmy  appears  to  have  accepted 
+Drivewell  fully.  When  asked  if  he  felt  it  had  made  him  a 
+safer  driver,  he  noted:  Hundred  percent.  Hundred  percent.  If 
+there's  no  monitors  on  the  buses,  some  drivers,  they  don't  care. 
+They  just  drive  whatever  they  like.  Because  of  that  [Drivewell], 
+they are controlled. Alan shared a similar sentiment: “Well, it 
+helps.  It  probably  makes  you  try  that  little  bit  harder  to  get  a 
+better score, you know?” As Alan alludes to here, one of the 
+perceived  values  of  Drivewell  was  the  encouragement  it 
+would  give  drivers  to  achieve  ―better‖  or  ―good‖  scores. 
+However,  what  was  considered  to  be  a  good  score  or  not 
+differed widely across our participants. This was not helped 
+by  seemingly  frequent  changes  from  TfL  and  local  bus 
+garages in defining ―target‖ scores and how these related to 
+the  traffic  light  feedback  system  situated  on  the  buses. 
+Jimmy, for example, tried to achieve green all the time and 
+a  100%  target.  Nobby  was  another  driver  that  appreciated 
+the system and the feedback it gave—however, he typically 
+aimed  for  a  much  lower  score:  “The  thing  is  80%  is  the 
+guideline.  As  long  as  you  stick  to  around  that  then  you  can  go 
+under  the  radar,  as  they  say.”  Alan  explained  how  while  he 
+did  check  on  his  scores  frequently,  he  was  careful  not  to 
+attain too high a score all the time: 
+
+Alan: I think I drive about the right speed and the right comfort, 
+and I try and get the balance. If you try and get too much of a 
+high score I think you’re going to slow down a bit too much. I 
+like  to  get  a happy  medium  –  get  around  reasonably quick  but 
+
+not too  quick  so  it’s  too  uncomfortable.  Have  the  score  sort of 
+above average. 
+
+It  was  notable  how,  while  all  of  the  drivers  did  check  on 
+their  scores,  it  was  only  a  small  number  who  took  it  very 
+seriously.  For  instance,  Erik  targeted  “between  86  and  94 
+percent”  but  stated:  ―I  don’t  worry  about  it.  […]  As  long  as  I 
+keep  my  score  exactly  the  same  every  week,  I  like  to  be  in  the 
+amber.” In a similar vein, Ray explained how he did check-
+in  on  his  scores  but  he  didn‘t  feel  this  impacted  on  his 
+driving behaviour: ―I drive the same way as I do day in day out. 
+Like I say, I check my scores every now and again, and they seem 
+fine to me.” 
+
+Bob  was  an  example  of  a  very  cautious  and  careful  bus 
+driver, who prided himself in providing what he considered 
+“good service” to passengers. He explained how: ―Service to 
+me  is  comfortable  drive  and  safe  drive,  and  if  passengers  are 
+happy,  then  you’re  happy  and  everybody  is  happy.”  Bob  had 
+become  weary  in  recent  years  of  the  ways  various  bus 
+companies  had  developed  systems  to  ―catch  drivers  out‖. 
+He regularly checked his Drivewell score but admitted this 
+was  more  out of curiosity rather than a genuine  interest in 
+receiving feedback on his driving. 
+
+Bob:  I  sometimes  look  to  see;  “They  have  invested  so  much 
+money on it, let me see what they’re up to,” for that purpose, 
+but it’s not to see how well I was driving, because I know that 
+I was driving well. I mean, I don’t have customer complaints, 
+so as long as they’re thinking that I’m giving a good service.  
+
+While  the  primary  way  in  which  drivers  spoke  about  the 
+feedback  they  got  from  Drivewell  was  their  overall  scores 
+for certain periods of time or routes, it was also noted how 
+the  system  provided  a  useful  means  for  modifying  driving 
+in specific areas. As will be discussed in more detail in the 
+next section, one of the attributes of the Drivewell system is 
+that it registers changes in the quality of road surfaces and 
+bus  suspension.  While  this  can  lead  to  problems  with  the 
+quality  of  data  collected,  this  was  also  useful  for  some 
+drivers  in  modifying  how  they  drive  certain  routes.  For 
+example,  Jack  was  initially  very  frustrated  with  Drivewell 
+but has come to terms with it over time: I hated it when it first 
+came  in,  but  as  I  now  am  regularly  around  100%  on  it  I  don’t 
+mind.” Jack explained how he started to see the value of the 
+system  through  the  level  of  feedback  it  provides  a  driver 
+about  the  locations  of  events.  As  highlighted  in  the 
+introduction, drivers can also use a computer terminal at the 
+garage  to  get  more  of  a  detailed  breakdown  of  how 
+Drivewell has measured their driving. He explained: 
+
+Jack: It will also tell you any number of incidents, which may 
+be where you did break hard.  You can then get out a map, it 
+will produce a map on that, show you exactly where, and in a 
+lot of cases you will go, “Oh, yes, I remember that. That car 
+pulled out in front of me” and you had to hit the brakes. 
+
+Through use of the Drivewell terminal, Jack explained how 
+he  eventually  identified  a  specific  location  that  always 
+caused a negative event on his report. “There was one pothole 
+on my route. When I first started driving that route I hit it. From 
+then on I noticed all the drivers on that route were just pulling out 
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1888around there, because actually this pothole was so bad it broke a 
+bus.”  As  a  result,  Jack  explained  how  he  had  modified  his 
+driving down this stretch of road to avoid the pothole, and 
+consequently saw an improvement in his Drivewell scores. 
+
+Some  of  our  participants  described  how  a  competitive 
+this  was 
+culture  has  emerged  among  some  drivers; 
+especially  evident  when  a  driver  would  log-on  to  the 
+Drivewell terminal in the communal areas of the bus depot.  
+
+Nobby: When you put your Drivewell key in, which should be 
+a personal thing, and it comes up, people start gathering, and 
+they start looking at your score and what percentage you get. 
+So yes, it can become a sort of competition 
+
+As well as being seen as valuable as a source for reflecting 
+upon and changing driving behavior, some drivers also felt 
+that Drivewell contributed greater security and protection to 
+drivers. Nobby explained how ―in many ways it’s good, that if 
+you have an accident it will hopefully in many ways help you, not 
+hinder you. Because it can say that you weren’t braking hard. You 
+weren’t driving stupid”. This view was echoed by Jimmy: ―It's 
+good  because  if  you  have  accident,  all  covered.  Because 
+everything's  recorded.  Speed,  how  was  the  turns,  everything 
+recorded.  So  in  that  case  we  are  covered,  all  the  records  are 
+there.” 
+
+Questioning the value of Drivewell 
+While  many  of  our  drivers  did  see  the  value—or  some  of 
+the value—in  monitoring the  quality of their driving,  most 
+also  felt  that  Drivewell  went  beyond  what  was  reasonable 
+and  necessary.  A  selection  of  our  sample  made  explicit 
+reference  to  ‗big  brother‘  when  asked  about  their  general 
+perceptions  of  the  system:  “See,  a  lot  of  people  when  it  first 
+came  out didn’t  like  it, because it  is  like  big brother  is  watching 
+you” (Nobby). Instead of judging it as a positive system that 
+helps  to improve their driving by  giving them constructive 
+feedback,  Drivewell  was  regarded  with  some  suspicion. 
+Drivers  believed  the  real  motivation  behind  it  was  to 
+increase  the  capacity  to  punish  drivers:  “I  don’t  think  the 
+people, who invented that, really thought about that [constructive 
+feedback].  They  thought  about,  “This  is  a  way  to  catch  drivers” 
+(Bob).  Bob‘s  comments 
+illustrate  how  Drivewell  has 
+increased  feelings  of  control  and  diminished  feelings  of 
+trust between bus drivers and their employers.  
+
+Regardless  of  whether  drivers  had  positive  or  negative 
+feelings towards Drivewell, they were always framed by an 
+overarching  suspicion  of 
+the  system‘s  accuracy  and 
+efficacy.  Employees  felt  that  the  system  was  somewhat 
+simplistic as a measurement tool and too easily affected by 
+a multitude of other factors that the driver had no control of. 
+For  instance  many  perceived  that  there  were  “bad  buses”, 
+typically older models with poor suspension (like the ‗DPS‘ 
+Dennis  Plaxton  model)  that,  if  driven,  achieve  a  negative 
+score: 
+
+Jack: They also give you the scores for the buses, so you can 
+see  that  certain  buses  are  not  good.  The  other  day  I  had  a 
+DPS, which are not exactly the easiest. These are older buses. 
+Ordinarily on a DPS forget it. There’s absolutely no point in 
+worrying about it. 
+
+Alan  articulates  a  similar  sentiment:  ―Yes,  the  suspensions 
+vary  from  bus  to  bus.”  He  goes  on  to  explain  that  the 
+management  team  were  generally  aware  of  this  and 
+sympathetic  to  how  the  varying  nature  of  bus  suspension 
+affects  drivers‘  scores.  For  this  reason,  scores  had  a  duel 
+purpose—to  first  monitor  the  driver  and  second,  monitor 
+the  mechanics  of  the  bus:  “If  a  bus  is  constantly  getting  low 
+scores  with  every  driver  they  [the  management]  try  and  do 
+something about it” (Alan). 
+
+As  well  as  so-called  ―bad‖  buses,  drivers  also  argued  that 
+some routes were inherently ―bad‖ and if assigned to them, 
+they would be disadvantaged in their assessment: 
+
+Jack: But then some routes are bad, and you will see that the 
+drivers  on  those  routes  are  constantly  in  the  lower  range.  I 
+don’t  think  they  take  too  much  notice  of  those,  because  they 
+know that there’s nothing really they can do about it. 
+
+Bob  summarizes  the  reasons  many  of  our  participants  feel 
+that  Drivewell  is  a  poor  measurement  of  driving  quality: 
+“most  of  the  time,  the  result  is  based  on  the  road  surface,  and 
+crappy  buses.”  The  drivers  also  felt  that  there  was  a  clear 
+flaw and irrationality in this measurement as a poor score or 
+a  negative  event  might  actually  signal  good  driving.  This 
+would  be  the  case  if  the  driver  had  to  brake  suddenly  to 
+avoid  a  pedestrian  who  stumbles  onto  the  road:  “You  have 
+reacted fast. To me, more than you have done worse, I think you 
+have  done  well;  that’s  the  whole  concept”  (Bob).  Under  these 
+the 
+conditions, 
+incentive  to  drive  well  for  some  drivers  as  through  being 
+given  a  ―bad  bus‖  or  a  ―bad  route‖  or  even  through  safe 
+driving they cannot fairly compete against their co-workers: 
+
+the  reward  structure  doesn‘t  provide 
+
+Interviewer:  So  those  people  would  never  have  a  chance  of 
+winning the TV? 
+Jack: Not a hope. 
+
+These  findings  are  consistent  with  other  research  that  has 
+shown  how  sensor  data  can  be  fragile  [11].  It  is  therefore 
+important  to  attach  narratives  to  such  material  and  put  it 
+into context [31]. 
+
+A  further  issue  of  contention  was  the  ways  that  Drivewell 
+generates  reports  that  ‗flag‘  those  employees  who  are 
+potentially  driving  poorly  so  that  managers  can  intervene. 
+At  this  stage,  drivers  are  interviewed  by  managers, 
+following  which  a  human  form  of  surveillance—―the 
+mystery  passenger‖—would  be  used  to  either  confirm  or 
+contradict 
+of  Drivewell.  However, 
+disagreement  and  anecdotal  evidence  about  the  inaccuracy 
+of  Drivewell  as  a  tool  to  measure  performance  meant  that 
+many of our participants had crafted ready-made excuses in 
+case  they  are  called  into  the  office  for  sanction.  For 
+example,  Bob  explained  how  he  used  to  pay  attention  to 
+Drivewell when driving but no longer did because he knew 
+the system was flawed: 
+
+findings 
+
+the 
+
+Bob:  I  know  that  if  I  get  called  in,  for  having  a  bad 
+performance  on  that,  I  know  how  to  back  me  up…I’d  say, 
+“Sort the bus out first, and sort the roads out, then I’ll make 
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1889sure  that  the  performance  will  be  100%,”.  They  can’t  catch 
+me on that, definitely not. It doesn’t tell me anything; it’s just 
+a waste of time and money.  
+
+It was for these reasons that Bob felt that TfL should revert 
+to the traditional method of human surveillance: 
+
+Bob:  I  would  have  more  mystery  shoppers  [passengers], 
+because that would give me a better result […] remember, you 
+could give a perfect service, but you could be having a bit of 
+attitude to passengers; that, to me, is a bad service. That key 
+thing [Drivewell] won’t tell them that, but a human, at least if 
+you’re a mystery traveller, he could be able to tell you that.  
+
+Bob here alludes to what was previously the primary means 
+of  assessing  the  driving  quality.  ―Mystery  passengers‖ 
+would rate  aspects of the driving quality across a range of 
+subjective  measures, but also be  assessing other aspects of 
+their duties that are critical to providing passengers  with a 
+good  service,  such  as  politeness.  Our  work  therefore 
+contributes to recent literature that questions the privileging 
+of data-performance in the management of a workforce [5]. 
+However, the use of Drivewell to identify those drivers who 
+should be assessed with a mystery passenger was seen as an 
+inherent  failing  in  this  approach—an  issue  that  was 
+compounded further as most drivers were able to recognize 
+these ―mystery‖ shoppers. 
+
+Resisting and subverting Drivewell 
+Despite all of the drivers accommodating Drivewell in some 
+way  into  their  work  life,  they  simultaneously  resisted  and 
+rejected its coercive potential. This type of resistance took a 
+range of forms. Jack characterised his initial reaction to the 
+system  as  illustrative  of  his  “natural  anarchy”  and  what 
+appeared 
+to  his 
+to  a  generally  disobedient  attitude 
+relationship with management and performance monitoring: 
+―I  went  through  a  period  of  seeing  how  much  red  I  could  get” 
+(Jack). While Jack  was initially dismissive of the  system—
+and  indeed  other  forms  of  management  control—he  did 
+eventually  see  the  value  in  the  system.  Other  drivers 
+displayed  less  overt  resistances,  instead  preferring  to 
+modify  their  behaviour  just  enough  so  they  wouldn‘t  be 
+liable  for  employer  sanction.  For  instance,  in  a  discussion 
+with Erik and Justin, Erik started to explain how he would 
+deliberately drive badly in order to reduce his overall score: 
+
+Erik: As long as you keep it between 70 and 90, they won’t say 
+nothing  to  you.  Nothing  at  all.  I  keep  mine  –  mine’s  literally 
+the same every week. If I get into 100, when I’m running late, 
+say I’m running from the garage to Peckham, all I keep doing 
+is slamming the brakes on. 
+Justin: Keep your score down. 
+Erik: Yes. 
+Justin: In case they expect you to get 100 every time? 
+Erik: Yes, because if you stay in the 100s, then all of a sudden 
+you  drop  down  to  the  80s,  they’ll  want  to  know  why.  They’ll 
+start thinking, “Well, why’s he doing that? Why has that gone 
+like that?” So if you keep it the same all the way through, like 
+mine  is  always  between  86  and  94  per  cent,  and  so  I’ve  got 
+amber. Every time I look on it, it’s amber all the way down. I 
+won’t be in your green. 
+
+Erik  regards  Drivewell  performance  measurement  as  more 
+complex than just managing to keep his scores in the green 
+or  amber  zones  on  a  given  route.  Instead,  he  looks  at  his 
+scores over time and imagines the potential implications of 
+him  suddenly  moving  from  very  good  to  poorer  (but  not 
+necessarily bad) scores. Through reflecting on this, he takes 
+the decision to act by ensuring his scores are always  “good 
+enough”  so  as  to  avoid  sanctions  for  consistently  poor 
+driving but also so as not to “raise expectations” that may not 
+always  be  met.  Furthermore,  this  tactic  of  purposefully 
+driving bad on limited occasions affords Erik the luxury of 
+not modifying his driving at other times. 
+
+to 
+
+by 
+
+attempting 
+
+discover  ways 
+
+We  also  observed  ways  that  employees  would  resist 
+Drivewell 
+to 
+circumnavigate its use. As noted in the introduction, drivers 
+are supplied with an individual key that they must plug into 
+the  Drivewell  device  every  time  they  drive  a  bus.  Two 
+drivers admitted to neglecting to activate the machine if no 
+passengers  were  on-board.  This  would  typically  happen 
+when they were leaving the garage at the start of their shift. 
+There was a general feeling that this was not a significantly 
+disobedient  practice  as  Drivewell  is  primarily  explained  to 
+for  ensuring  passenger  comfort  and 
+be  a  system 
+satisfaction:  ―It  doesn't  matter  if  you  do  give  a  rough  ride,  it's 
+only yourself. […] If you're the only one on the bus, what does it 
+matter if you hit a few bumps or something? Like I say, if you take 
+it  off,  it  should  make  a  noise  after  a  while.”  (Gordon).  By  not 
+using the fob at the start of their shifts, the drivers are able 
+to  creatively  carve  themselves  a  ‗gap‘  in  the  apparatus  of 
+surveillance  and  resist 
+the  continuous  extraction  of 
+performance information. 
+
+As well as removing their Drivewell keys at times when no 
+passengers  were  on-board,  a  smaller  number  of  drivers 
+discussed  how  it  was  possible  to  circumnavigate  it  while 
+the  bus  was  in  service.  On  one  journey  that  the  researcher 
+accompanied a participant on, it was demonstrated how the 
+key could be removed for a short period of time before the 
+alarm  started  to  become  audible.  This  period  of  time—
+somewhere in the region of 10 to 15 seconds depending on 
+the  bus—was  long  enough  to  disable  the  system,  restart  it 
+and  stop  the  system  from  picking  up  on  a  potential  event. 
+Gordon  explained  how  this  was  particularly  useful:  ―If  you 
+see  a  big  pothole and  you  know you're  going  to hit  it,  you  could 
+take  it  off  quickly.”  However,  Gordon  was  also  at  pains  to 
+explain  how  he  would  not  do  this  regularly  in  practice 
+himself:  “I  don't  think  that's  a  good  idea  because  you're  not 
+concentrating so much on your driving when you’re doing things 
+like that” (Gordon). 
+
+Finally,  a  further  instance  of  subversion  was  witnessed 
+during fieldwork at a bus depot. As noted above, there were 
+occasions where multiple drivers would gather around their 
+colleagues  as  they  were  using  the  Drivewell  kiosk  to 
+receive a detailed breakdown of their driving report. During 
+one  depot  visit,  drivers  gathered  around  the  terminal  and 
+listened  intently  to  their  colleague  explain  what  was  being 
+displayed on the screen. The  immediate response  from the 
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1890researcher  was  that  this  driver  must  have  received  some 
+extraordinary  Drivewell  scores.  However,  upon  further 
+investigation  it  was  revealed  that  this  driver  was  showing 
+his colleagues where his holiday home in Spain was: “That 
+machine is quite useful. One of the drivers, who bought a house in 
+a  village  in  Southern  Spain,  was  able  to  get  that  up  on  the 
+machine  and  show  exactly  where  the  house  he  bought  was” 
+(Jack).  This  illustrates  how  drivers  have,  even  in  a  small 
+way,  the  ability  to  creatively  reshape  Drivewell  and  use  it 
+on their own terms. 
+
+Managing multiple forms of performance monitoring 
+Our  final  theme  relates  to  the  ways  that  Drivewell  was 
+considered  an  additional  complication  to  our  participants‘ 
+already  challenging  job  of  bus  driving.  In  some  ways  the 
+Drivewell  unit  was  considered  a  literal  distraction  in  a 
+driver‘s cabin.  Pat  spoke at length about the  ways in  which 
+he found the system distracting, both within the cabin and as 
+a  way  of  focusing  the  driver  too  much  on  getting  good 
+scores:  
+
+Pat:  In  my  eyes,  the  problem  is  it  comes  up  on  a  traffic-light 
+system above you. You can be distracted from driving because 
+you’re so concerned at getting a good score. […] When it was 
+first  introduced,  a  lot  of  people  were  so  concerned  because, 
+obviously,  you’re  distracted.  You’re  not  looking  at  the  road  if 
+you’re looking up there. 
+
+In many respects, Drivewell could be considered as a further 
+addition to what is a complex job requiring great amounts of 
+concentration. The complexity of the role was in many ways 
+illustrated—yet also compounded—by the increasing  modes 
+of  measuring  driver  performance.  While  our  fieldwork  was 
+focused  on  the  impact  of  the  Drivewell  system,  very  often 
+participants  talked  about  it  in  contrast,  or  alongside,  these 
+other  ways  their  work  is  being  monitored  and  judged.  For 
+instance,  CCTV  is  used  to  add  additional  security  to 
+passengers  but  was  also  known  to  be  a  way  of  checking 
+driver behaviour and action in the case of a complaint or road 
+traffic  incident.  The  iBus  terminal—a  GPS  enabled  system 
+that  visually  displays  distances  between  buses  in  front  and 
+behind  on  the  same  route  (discussed  in  [30])—is  a  way  of 
+ensuring regular intervals between buses but is also a tool for 
+real-time  assessment  of  driver  punctuality.  In  one  joint 
+interview  with  Nobby  and  Jack,  there  was  a  strong  feeling 
+that all aspects of their work life will soon be monitored: “it 
+knows  your  speed  […]  they  know  everything”  (Jack);  “they  know 
+exactly”;  “you’ve  got  cameras,  what  speed  you’re  doing,  if  you 
+accelerate  too  fast  […]  You’ve  got  undercover,  it’s  just  endless” 
+(Nobby).  The  endlessness  that  Nobby  here  describes  was 
+demonstrated frequently to us as we accompanied drivers on 
+journeys around London. After a limited amount of fieldwork 
+we quickly noticed how many drivers are prone to glance at 
+the iBus LCD and the Drivewell indicator almost as much as 
+they check their wing mirrors.  
+
+We  also  observed 
+the  qualitative  difference  between 
+Drivewell  and  other  apparatus  of  surveillance  present  on 
+London buses and the different ways drivers respond to them. 
+Like  iBus  headway,  Drivewell  supplies  immediate  visual 
+
+feedback. However, if headway performance is poor there are 
+extra  prods  via  text  message  and  then  a  radio  call,  and  so 
+more importance is placed upon adhering to the demands of 
+this apparatus of surveillance. The ―mystery passenger‖ as a 
+type  of  surveillance  is  also  experienced  differently,  as 
+described in the following quote by Jack. It is less immediate 
+and doesn‘t require a reflexive response, rather it adheres to 
+Foucault‘s  metaphorical  use  of  panopticon  when  explaining 
+modern  forms  of  surveillance  –  a  design  that  facilitates  the 
+discipline of subordinates because it is impossible for them to 
+know when they are being watched [16]..  
+
+Jack: Oh, you get them regularly anyway. You will suddenly get a 
+letter saying, “You were assessed the other day.” They don’t use 
+our own staff very often, because- 
+
+Nobby: We know them. 
+
+Jack: You see somebody get on, and you see where they're going 
+to sit, and from then on it’s absolutely mirrors, mirrors.  
+
+Nobby: Put away your sandwich. (Laughter)  
+
+Jack: Yes. Wait until they all sit down. 
+
+It  was  also  apparent  that  it  wasn‘t  just  the  functional 
+operation  of  duties  in  relation  to  these  different  forms  of 
+monitoring  that  was  challenging,  but  also  that  sometimes 
+trade-offs  had  to  be  made  in  prioritising  certain  measures 
+over  others.  For  example,  Nobby  explained  how  he  was 
+“caught out” one time when his score was adversely affected 
+after he had to leave the bus garage late: 
+
+Nobby:  Work  informed  me  that  I  left  late,  and  so  obviously  my 
+driving was rather erratic. Basically I was driving it like a rally 
+driver from Tottenham to – basically I left about 12 minutes late 
+and given about 50 minutes to do it. So basically when I finished I 
+realised,  or  when  I  put  my  score  in,  it  was  down  to  60,  and 
+therefore  I  realised  it  was  the  way  I  was  driving,  because  of 
+obviously  the  braking  and  the  acceleration.  So  I  went  from 
+average 80 down to 60.  
+
+On this occasion, Nobby acknowledged he had driven his bus 
+“like  a  rally  driver”  in  order  to  make  up  time  and  not  be 
+reprimanded  for  causing  delays 
+to  services  and  not 
+maintaining  equal  distances  between  services.  However,  he 
+realised  on  reflection  that  in  doing  so  he  had  significantly 
+impacted  on  his  Drivewell  score.  He  acknowledged  on 
+reflection that he may think twice about trying to catch up to 
+schedule like this in the future. In a similar example, Gordon 
+explained  how  when  it  came  to  managing  both  Drivewell 
+(monitoring of acceleration, speed and horizontal movement 
+of the bus) and Headway (keeping a designated gap between 
+the buses in front and behind on the same route) he aimed to 
+keep both in balance with one-another: “It's getting the happy 
+medium, isn't it? Keep the bus on time, but give a reasonable ride. I 
+try  and  get  that  balance  about  right.  If  it's  too  comfortable  you 
+might  be  going  too  slowly.”  (Gordon).  After  being  pressed 
+further  on  this  point,  however,  Gordon  explained  how 
+maintaining headway would be prioritised over the quality of 
+his driving:  
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1891Gordon: I don't like the bus in front to get too far away. If it gets a 
+little  bit  ahead,  especially  if  it's  a  fast  bus  driver,  we  can  get 
+further ahead. So you've got a wider headway, plus you can start 
+and  get  later  and  later  and  later  because  you're  picking  up 
+passengers who would have missed your bus had you been further 
+down the road. I like to keep closer to the one in front. It makes it 
+easy. You can't get too close because otherwise they will call you 
+up.  The  controllers  will  call  you  up  and  say,  "Hold  back  two 
+minutes.  Hold  back  three  minutes"  or  whatever.  I'd  rather  just 
+have  it  so  that  I  can  just  get  away  with  it  without  any  of  them 
+having to say anything to me. 
+
+Gordon reflects on the ways in which he has to negotiate the 
+different forms of surveillance and the ways in which it may 
+impact on his immediate work. He is aware that if he drives 
+too close to the bus ahead of his then he will likely get some 
+“grief” from the controller on his Headway system. This may 
+mean being asked to wait for a short period to build the gap 
+up further or receive further “hassle” from his controller and 
+potential disciplinary action. The implication here, however, 
+is  that  by  slowing  down  the  likelihood  of  picking  up  more 
+passengers  increases  and  thus  the  bus  becomes  delayed  and 
+becomes too close to one that may be following behind. This 
+would mean having to increase the speed of the bus in order 
+to maintain a distance to the one behind—which, of course, 
+would likely mean more aggressive driving and acceleration, 
+impacting  on  Drivewell  scores.  Therefore,  by  carefully 
+managing  his  Headway  all  the  time,  Gordon  considers 
+himself  better  placed  to  keep  his  ideal  “middle  ground” 
+between good Headway and Drivewell scores. 
+
+DISCUSSION AND IMPLICATIONS 
+Our  fieldwork  has  highlighted  the  ways  telematics  systems 
+like  Drivewell  can  impact  a  remote  and  mobile  workforce. 
+The  device  undoubtedly  has  some  positive  impacts,  seen 
+most  clearly  in  the  way  it  affords  real-time  feedback  and 
+opportunities  for  reflection  on  driving  practice.  However, 
+there are wider questions about the validity and accuracy of 
+the  data  collected  by  Drivewell,  which  was  indicative  of 
+broader concerns about digital surveillance. We discuss these 
+issues below in three interrelated themes: first we explore the 
+ways Drivewell carries assumptions about the nature of good 
+driving  and  ask  whether  these  assumptions  reflect  the 
+drivers‘  own  understanding  of  best  practice;  second,  we 
+consider  Drivewell  as  one  element 
+in  a  complex 
+technological  ecosystem,  asking  how  well  the  complexities 
+of driving can best be captured by this integrated telematics 
+platform and exploring the extent to which the systems set up 
+competing  demands  for  the  driver;  third,  we  ask  whether 
+driver  surveillance  techniques  can  be  integrated  into  an 
+effective  driver  appraisal  and  reward  system  that  could 
+ultimately improve performance.  
+
+What does it mean to drive well? 
+Drivewell  is  associated  with  a  number  of  claims,  with 
+published  benefits  including  improved  passenger  comfort 
+and  better  fuel  efficiency.  However  Drivewell  does  not 
+directly measure these outcomes, but instead offers a simple 
+proxy measure that can then become a target in its own right. 
+We  have  seen  that  drivers  can  develop  quite  elaborate 
+
+strategies  to  maintain  their  Drivewell  score,  but  we  should 
+ask  to  what  extent  these  strategies  ultimately  serve  the 
+company, the passengers and the drivers. 
+
+We have evidence that some drivers have used the system as 
+a learning tool, using the scores to reflect on their driving and 
+consider  areas  for  improvement.  These  drivers  maintain  a 
+more  nuanced  view  of  their  role  and  responsibilities.  They 
+are  likely  to  balance  the  demands  of  Drivewell  with  other 
+work  demands  and  in  the  process  are  likely  to  acquire  new 
+skills  and  knowledge  that  could  genuinely  lead  to  better 
+driving.  However,  the  score  can  become  an  end  in  itself—
+leading either to a race  to the top,  when drivers compete  to 
+get the best score, or a race to mediocrity, when drivers try to 
+establish  a  readily  achievable  baseline  score  and  stick  to  it. 
+Under either circumstance, the score becomes the target and 
+there  is  a  real  danger  that  genuinely  good  driving—like 
+keeping  a  safe  distance  from  the  vehicle  in  front,  gets  lost 
+along  the  way.  This  implication  is  consistent  with  other 
+research that has highlighted the potential of sensor data to be 
+insubstantial in the accurate measurement of an activity [11] 
+and  other  work  that  has  demonstrated  the  importance  of 
+attaching narratives to such data [31]. 
+
+How to drive a London bus  
+The act of driving a London bus is quite unlike other forms 
+of non-commercial driving, in large part because of a range 
+of technological innovations that have been introduced in the 
+last few years. Drivewell operates as part of a technological 
+ecosystem  where  different  devices  monitor 
+specific 
+information in relation to driving style (Drivewell), location, 
+speed  and  relationship  to  other  buses  (iBus),  passenger 
+behaviour (CCTV) and general conduct (mystery passenger). 
+In short, the London Bus is now imbued with an intelligence 
+and ability to communicate with other buses, with passengers 
+and  controllers  in  a  way  that  anticipates  the  seamless 
+communication of smart objects in the Internet of Things and 
+the eventual roll out of driverless vehicles. There is one very 
+important  difference,  however.  In  this  system,  the  human 
+driver  is  still  in  complete  control  of  the  bus.  If  the  array  of 
+on-board  devices  will  ultimately  serve  to  reduce 
+the 
+autonomy of the driver, then two questions should be raised. 
+First, do the different devices work collaborate to support the 
+driver  or  do  they  compete  for  valuable  attention  and  set  up 
+competing  priorities?  Second,  do  these  systems  lead  to 
+accurate and effective performance management? 
+
+In  answer  to  the  first  question,  we  found  that  the  different 
+systems can compete in unhelpful ways. Driving well, being 
+sensitive to local conditions and to the needs of passengers is 
+not  necessarily  compatible  with  driving  in  a  way  that 
+maintains headway between buses [30] or that keeps the bus 
+on schedule. As we have already noted, on-board devices can 
+place additional demands on the driver‘s attention, adding to 
+the  range  of  ‗multiple  additional  to  driving‘  distractors  that 
+are  becoming  commonplace  [21].  As  such,  if  monitoring 
+systems are to exist, they should be implemented in ways that 
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1892do not immediately impact on bus drivers‘ attention and the 
+way work is assessed. 
+
+In  answer  to  the  second  question,  we  need  to  return  to  the 
+organisational  literature  on  performance  monitoring  and 
+appraisal  in  order  to  ask  whether  telematics  are  likely  to 
+improve  worker  behaviour,  organisational  culture  and 
+management  practice.  We  know  that  any  surveillance  or 
+monitoring  system  should  be  designed  to  appropriately  and 
+accurately  assess  performance  on  a  particular  task.  We  also 
+know  that  the  best  performance  monitoring  systems  respect 
+the psychological and emotional elements of a job—such that 
+performance scores are not considered alone [34; 26; 10; 22; 
+7]. Given the various aforementioned stressors on those who 
+choose  bus  driving  as  an  occupation,  there  is  a  danger  that 
+Drivewell fails on both counts. As we have seen, drivers have 
+challenged  its  accuracy,  feel  that  they  don‘t  capture  good 
+driving in its fullest sense and fail to account for the quality 
+of  the  vehicle  being  driven  and  the  nature  of  the  roads 
+travelled.  In  terms  of  the  integration  of  this  system  into  the 
+wider  organisation  we  also  encounter  a  perception  that  the 
+technology  is  deployed  to  benefit  the  employer  at  the 
+expense  of  employees.  In  short,  we  don‘t  see  much 
+recognition of the known stressors already acting on the bus 
+driver,  nor  much  consideration  of  how  new  surveillance 
+might add to those stressors.   
+
+Resistance in a mobile and remote workplace 
+Marx famously described the ways workplace surveillance is 
+used  as  a  tool  to  maintain  managerial  control  on  behalf  of 
+capital. The architecture of a factory renders workers highly 
+visible  and  therefore  controllable  by  their  supervisors. 
+Workers‘ resistances to coercion in these spaces consisted of 
+literally  throwing  a  spanner  in  the  works  to  halt  production 
+lines  and 
+like 
+unionization.  We  see  this  in  the  modern  workplace,  where 
+research  on  call  centre  workers  has  shown  that  intense 
+surveillance generates acts of worker resistance, sabotage and 
+non-compliance with managers [17; 9].  
+
+forms  of  work  solidarity 
+
+traditional 
+
+the 
+
+to  discount 
+
+For  decades,  the  driver  workplace  offered  few  points  of 
+comparison  with  the  factory  or  call-centre  context—they 
+worked  alone  (or  in  pairs)  in  a  remote  and  mobile  context 
+where performance monitoring was ad hoc and subjective. So 
+what does the implementation of digital surveillance mean in 
+terms of  worker resistance? We have seen the various ways 
+legitimacy  of 
+that  drivers  are  able 
+Drivewell—questioning  its  accuracy  or  appropriateness.  We 
+have also seen a number of resistances that include removing 
+the fob for short periods in order to reduce recorded ‗events‘, 
+purposefully  performing  poorly 
+reduce 
+expectation  and  challenging  managers‘  interpretation  of 
+scores by blaming vehicles and the road. In part, this would 
+seem to be a reflection of the simplicity of the performance 
+measure and it would be interesting to consider the ways the 
+drivers  themselves  might  be  able  to  present  their  own 
+‗scores‘ as part of a more sophisticated package of evidence 
+in  support  of  skills.  It  is  interesting,  in  this  regard,  that  the 
+
+in  order 
+
+to 
+
+drivers  themselves  have  adopted  the  practice  of  using 
+Drivewell in their own evidence-gathering efforts to illustrate 
+problems  with  a  particular  bus  or  route  and  fostering  this 
+kind of agency might be a more acceptable way to go. 
+
+CONCLUSION 
+In this paper we have studied Drivewell, a telematics device 
+installed  by  London‘s  transport  authority  on  their  buses  to 
+measure  and  regulate  driving.  This  is  an  example  of  an 
+increasing  range  of  driver-surveillance  technologies  on 
+London‘s  buses.  Although  drivers  did  see  some  value  in 
+these  systems,  they  have  also  caused  anxiety  and  there  is 
+deep suspicion about this technology‘s efficacy and accuracy. 
+Our  findings  highlighted a range of resistances drivers  have 
+developed to compensate for and work-around the Drivewell 
+system. We also saw how drivers have to negotiate between 
+the  demands  of  Drivewell  and  other  monitoring  systems, 
+some  of  which  are  based  on  competing  and  contradictory 
+forms of assessment. While these issues emphasise the deep 
+challenges  to  accepting  such  monitoring  technologies  in 
+remote and mobile workplaces, we suggest there are positive 
+opportunities  here  to  harness  the  learning  potential  around 
+sensor data and to support the development of skills and self-
+advocacy in the workplace. 
+
+ACKNOWLEDGEMENTS 
+This  work  was  supported  by  RCUK  Digital  Economy 
+Program grant no. EP/G066019/1 SiDE. 
+
+REFERENCES 
+1.  Ball, K. Workplace surveillance: an overview. Labor 
+
+History, 51, 1 (2010): 87-106. 
+
+2.  Beniger, J. The Control Revolution: Technological and 
+
+Economic Origins of the Information Society. 
+Cambridge, MA: Harvard University Press, 1986 
+3.  Biernacki, P. and Waldorf, D. Snowball sampling: 
+
+problems and techniques of chain referral sampling. 
+Sociological Methods & Research, 10, 2 (1981), 141-
+163. 
+
+4.  Bolderdijk, J., Knockaert, J., Steg, E. and Verhoef, E. 
+Effects of Pay-As-You-Drive vehicle insurance on 
+young drivers‘ speed choice: Results of a Dutch field 
+experiment. Accident Analysis & Prevention, 43, 3 
+(2011), 1181-1186. 
+
+5.  Bouskila-Yam, O. and Kluger, A. Strength-based 
+performance appraisal and goal setting. Human 
+Resource Management Review, 21, 2 (2011), 137-147. 
+
+6.  Brewer, J. D. Ethnography. Philadelphia: Open 
+
+University Press, 2000.  
+
+7.  Brewer, N. and Ridgeway, T. Effects of supervisory 
+
+monitoring on productivity and quality of performance. 
+Journal of Experimental Psychology: Applied, 4 (1998): 
+211–27. 
+
+8.  Brown, I. D. Driver fatigue. Human Factors, 36 (1994), 
+
+298–314. 
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1893 
+9.  Callaghan, G. and Thompson, P. We recruit attitude: the 
+selection and shaping of routine call centre labour. 
+Journal of Management Studies, 39, 2 (2002), 233–54. 
+
+25. Mulders, H., Meijman, T., O'Hanlon, J. and Mulder, B. 
+Differential psychophysiological reactivity of city bus 
+drivers. Ergonomics, 25 (1982), 1003-1011. 
+
+10. Chalykoff, J. and Kochan, T. Computer-aided 
+
+monitoring: its influence on employee job satisfaction 
+and turnover. Personnel Psychology, 42 (1989), 807–29. 
+11. Choe, E., Lee, N., Lee, B., Pratt, W. and Kientz, J. 2014. 
+Understanding quantified-selfers' practices in collecting 
+and exploring personal data. In Proc. CHI ’14, ACM, 
+1143-1152.  
+
+12. Desyllas, P., and Sako, M. (2013). Profiting from 
+
+business model innovation: Evidence from Pay-As-You-
+Drive auto insurance. Research Policy, 42(1), 101-116. 
+13. Duffy, C. and McGoldrick, A. Stress and the bus driver 
+
+in the UK transport industry. Work and Stress, 4, 
+(1990), 17-27.  
+
+14. Duri, S., Gruteser, M., Liu, X., Moskowitz, P. Perez, R., 
+Singh, M. and Tang, J. Framework for security and 
+privacy in automotive telematics. In Proc. 2nd 
+International Workshop on Mobile Commerce, ACM 
+Press (2002), 25-32.   
+
+15. Fayol, H. General and Industrial Management. London: 
+
+Sir Issac Pitman, 1916.  
+
+16. Foucault, M. Discipline and Punish: The Birth of the 
+
+Prison. New York: Vintage Books, 1995. 
+
+17. Frenkel, S., Tam, M., Korczynski, M. and Shire, K. 
+
+Beyond bureaucracy? Work organization in call centres. 
+International Journal of Human Resource Management, 
+9, 6 (1998), 957–79. 
+
+18. Goyal, M. Insurance telematics. International Journal of 
+Innovative Research and Development, 3, 6 (2014), 72-
+76.  
+
+19. Iqbal, M. and Lim, S. A privacy preserving GPS-based 
+
+Pay-as-You-Drive insurance scheme. In Proc. 
+Symposium on GPS/GNSS (2006), 17-21. 
+
+20. Iqbal, M. and Lim, S. (2010). Privacy implications of 
+
+automated GPS tracking and profiling. Technology and 
+Society Magazine, IEEE, 29, 2 (2010), 39-46. 
+21. Lansdown, T., Stephens, A. and Walker, G. (2014). 
+Multiple driver distractions: a systemic transport 
+problem. Accident Analysis & Prevention, in press, 
+available online, July 2014. 
+
+22. Larson, J. and Callahan, C. Performance monitoring: 
+how it affects work productivity. Journal of Applied 
+Psychology, 75 (1990), 530–38. 
+
+23. Litman, T., 2005. Pay-As-You-Drive vehicle insurance: 
+converting vehicle insurance premiums into use-based 
+charges. http://www.vtpi.org/tdm/tdm79.htm on the 
+23rd of June 2014. 
+
+24. Morris, J., Heady, J., Raffle, P., Roberts, A., and Parks, 
+J. Coronary heart-disease and physical activity of work. 
+The Lancet, 2 (1953), 1053–1057. 
+
+26. Niehoff, B., and Moorman, R. Justice as a mediator of 
+the relationship between methods of monitoring and 
+organizational citizenship behaviour. Academy of 
+Management Journal, 36 (1993), 527–56. 
+
+27. Papadimitratos, P., de La Fortelle, A., Evenssen, K., 
+Brignolo, R. and Cosenza, S. (2009) Vehicular 
+communication systems: enabling technologies, 
+applications, and future outlook on intelligent 
+transportation. IEEE Communications Magazine, 
+November (2009), 84-95. 
+
+28. Parry, I. (2005) Is Pay-as-You-Drive insurance a better 
+way to reduce gasoline than gasoline taxes?. American 
+Economic Review, 288-293. 
+
+29. Pritchard, G., Vines, J. and Olivier, P. Your money‘s no 
+good here: The elimination of cash payment on London 
+buses. In Proc. CHI ’15, ACM, to appear. 
+
+30. Pritchard, G., Vines, J., Briggs, P., Thomas, L. and 
+
+Olivier, P. Digitally driven: how location based services 
+impact on the work practices of London bus drivers. In 
+Proc. CHI ’14, ACM, 3617-3626. 
+
+31. Rooksby, J., Rost, M., Morrison, A. and Chalmers, M. 
+
+Personal tracking as lived informatics. In Proc. CHI ’14, 
+ACM, 1162-1172. 
+
+32. Rosengren, A., Anderson, K., and Wilhelmsen, L. Risk 
+of coronary heart disease in middle-aged male bus and 
+tram drivers compared to men in other occupations: a 
+prospective study. International Journal of 
+Epidemiology, 20 (1991), 82–87. 
+
+33. Şimşek, B., Pakdil, F., Dengiz, B., and Testik, M. 
+Driver performance appraisal using GPS terminal 
+measurements: a conceptual framework. Transportation 
+Research Part C: Emerging Technologies, 26 (2013), 
+49-60. 
+
+34. Stanton, J., and Barnes-Farrell, J. Effects of electronic 
+
+performance monitoring on personal control, 
+satisfaction and performance. Journal of Applied 
+Psychology, 81 (1996), 738–45. 
+
+35. Tse, J., Flin, M. and Mearns, K. (2006) Bus driver well-
+being review: 50 years of research. Transportation 
+Research Part F, 9 (2006), 89-114 
+
+36. Whyte,  W.  Street  Corner  Society.  Chicago:  University 
+
+of Chicago Press, 1943. 
+
+37. Winkleby,  M.,  Ragland,  D.,  Fisher,  J.  and  Syme,  S. 
+(1988)  Excess  risk  of  sickness  and  disease  in  bus 
+drivers. International Journal of Epidemiology, 17, 255-
+262. 
+
+Sharing & Collaboration @ WorkCHI 2015, Crossings, Seoul, Korea1894 
+ 
+ 
+

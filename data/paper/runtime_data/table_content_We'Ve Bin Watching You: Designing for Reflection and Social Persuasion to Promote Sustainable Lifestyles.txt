@@ -1,0 +1,29 @@
+Table of Contents:
+
+1. Introduction
+2. Persuading Change in Behaviors
+    2.1 Determinants of Human Behavior
+    2.2 Strategies for Behavioral Change
+    2.3 Social Persuasion and Behavioral Motivation
+    2.4 Related Work
+3. The Design of BinCam
+    3.1 The BinCam Bin
+    3.2 The BinCam Application on Facebook
+4. Evaluation of BinCam
+    4.1 Method
+    4.2 Results of the Focus Groups
+5. Discussion & Lessons Learned
+    5.1 Informational Influence on Self and Others
+    5.2 Reflection on Behavior & Learning vs. Immediate Feedback
+    5.3 Other Invite Reflections: Abstract Visualizations and BinCam
+    5.4 Normative Social Influence
+    5.5 Social Presence of Others in the House – Group Coherence
+    5.6 Social Presence of Others on Facebook
+    5.7 Feelings of Guilt & Social Presence of the BinCam Bin
+    5.8 Facilitators for Performing the Target Behavior
+    5.9 Flexibility towards Individual Preferences and Needs
+    5.10 Ethical Issues
+    5.11 Limitations of the Evaluation
+6. Conclusion
+7. Acknowledgements
+8. References

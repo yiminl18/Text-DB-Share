@@ -1,0 +1,1628 @@
+Time for Break: Understanding Information Workers’
+Sedentary Behavior Through a Break Prompting System
+Bongshin Lee
+Microsoft Research
+Redmond, WA, USA
+bongshin@microsoft.com
+
+Yuhan Luo
+University of Maryland
+College Park, MD, USA
+yuhanluo@umd.edu
+
+Donghee Yvette Wohn
+New Jersey Institute of
+Technology
+Newark, NJ, USA
+wohn@njit.edu
+
+Amanda L. Rebar
+Central Queensland University
+Queensland, Australia
+a.rebar@cqu.edu.au
+
+David E. Conroy
+The Pennsylvania State
+University
+University Park, PA, USA
+conroy@psu.edu
+
+Eun Kyoung Choe
+University of Maryland
+College Park, MD, USA
+choe@umd.edu
+
+ABSTRACT
+Extended periods of uninterrupted sedentary behavior are detri-
+mental to long-term health. While prolonged sitting is preva-
+lent among information workers, it is difﬁcult for them to break
+prolonged sedentary behavior due to the nature of their work.
+This work aims to understand information workers’ intentions
+& practices around standing or moving breaks. We developed
+Time for Break, a break prompting system that enables people
+to set their desired work duration and prompts them to stand
+up or move. We conducted an exploratory ﬁeld study (N =
+25) with Time for Break to collect participants’ work & break
+intentions and behaviors for three weeks, followed by semi-
+structured interviews. We examined rich contexts affecting
+participants’ receptiveness to standing or moving breaks, and
+identiﬁed how their habit strength and self-regulation are re-
+lated to their break-taking intentions & practices. We discuss
+design implications for interventions to break up periods of
+prolonged sedentary behavior in workplaces.
+
+ACM Classiﬁcation Keywords
+H.5.m Information Interfaces and Presentation (e.g. HCI): Mis-
+cellaneous; K.4.1 Computers and Society: Computer-related
+health issues.
+
+Author Keywords
+Sedentary behavior; workplace setting; information workers;
+break; personal informatics.
+
+INTRODUCTION
+Information workers are generally sedentary, spending most
+of their days working in front of a desk-bound computer [47,
+
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for proﬁt or commercial advantage and that copies bear this notice and the full citation
+on the ﬁrst page. Copyrights for components of this work owned by others than ACM
+must be honored. Abstracting with credit is permitted. To copy otherwise, or republish,
+to post on servers or to redistribute to lists, requires prior speciﬁc permission and/or a
+fee. Request permissions from permissions@acm.org.
+CHI 2018, April 21–26, 2018, Montréal, QC, Canada.
+Copyright is held by the owner/author(s). Publication rights licensed to ACM.
+ACM ISBN 978-1-4503-5620-6/18/04 ...$15.00.
+DOI: http://dx.doi.org/10.1145/3173574.3173701
+
+53, 60]. Unfortunately, this prolonged sedentary behavior is
+closely linked with an increased risk of developing chronic
+diseases and mortality [29, 30, 41, 52, 68]. Furthermore,
+regular physical activities cannot fully compensate for the
+harm caused by prolonged sedentary behavior [3, 7]. Thus, a
+healthy work routine requires breaking up extended periods of
+sedentary behavior beyond solely increasing physical activity
+or limiting total sedentary time [23, 52].
+
+In the HCI community, researchers have studied technolog-
+ical interventions to encourage information workers to take
+breaks (e.g., prompting system [8, 65], tangible interface [56],
+game-like system [12, 49]). However, for most of these in-
+terventions, their primary goal was to promote a break from
+prolonged work, not from prolonged sitting. It is important to
+note that breaks do not necessarily make people get up from
+their seats because it is easy to stay sedentary during breaks
+(e.g., watching a video or playing a game while sitting [6, 49]).
+
+In addition, taking breaks too frequently during work hours can
+disrupt information workers’ productivity despite its health
+beneﬁts [37, 38, 45]. Thus, to promote a healthy and sus-
+tainable break habit, it is important to ﬁnd the right balance
+between the two seemingly conﬂicting goals: to take breaks
+that counter sedentary behavior and to be productive.
+
+In this work, we set out to investigate ways to help infor-
+mation workers break prolonged sedentary behavior while
+maintaining work productivity. Given that sedentary behavior
+is a strong habitual behavior [16, 44], breaking prolonged
+sedentary behavior is a long-term process. As a ﬁrst step, we
+examined the contexts around information workers’ work &
+break behavior excluding those who use sit-stand desk. We
+developed Time for Break (Figure 1), a desktop-based prompt-
+ing system that enables people to set up their preferred work
+and break duration, and sends a prompt for moving breaks
+(i.e., breaks that involve standing or moving) according to
+personalized settings. From a three-week ﬁeld study with 25
+information workers, we collected qualitative and quantitative
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 1desk-bound computer for a long period of time [47, 53, 60].
+More than 70% of U.S. employees spend over eight hours
+working during weekdays [50]. Their sitting time amounts to
+more than 80% of the work hours [53], which is about two
+hours longer than their sitting time during leisure days [47].
+
+A common misunderstanding is that regular physical activities
+can fully compensate for the harm of prolonged sedentary
+behavior. Contrary to this belief, scientiﬁc evidence shows
+that the nature of prolonged sedentary behavior is different
+from lack of exercise [3]. For example, those who spend the
+majority of their days sitting can still suffer from the health
+risks caused by prolonged sedentary behavior, even if they
+meet the recommended levels of physical activity (e.g., 60-
+minute moderate physical activities per day) [3, 7].
+
+Recognizing the harmfulness of prolonged sedentary behavior,
+researchers designed mobile applications (e.g., B-Mobile [8],
+SitCoach [65]) to reduce prolonged sitting by sending regular
+prompts. Notably, modifying the workplace environment such
+as installing sit-stand desks [1, 13] and treadmill workstations
+[39] continues to gain ground. Although some researchers ob-
+served a signiﬁcant reduction in total sitting time with sit-stand
+desks [1, 13], other studies showed that the use of sit-stand
+desks depends on personal willingness, which varied among
+people [28]. In addition, while researcher focus on measuring
+total sitting and active time using these interventions, it re-
+mains unclear whether the sitting time was effectively broken
+up, thereby preventing prolonged sedentary behaviors. To
+examine alternative strategies to reduce sedentary behavior,
+Maher and colleagues leveraged action planning by having
+people submit a detailed daily plan of when, where, and how
+they will engage in physical activity or limiting prolonged
+sitting time via email [44]. However, this approach was not
+effective in reducing sedentary behavior.
+
+Breaking prolonged sedentary behavior is still a challenge for
+most people due to its strong habitual nature [44, 57]. To inves-
+tigate the key factors that regulate sedentary behavior, Conroy
+and colleagues conducted a 14-day ecological momentary as-
+sessment study combined with wearable accelerometers [16].
+They found that sedentary behavior was regulated by both
+habit (automatic process) and intentions (reﬂective process).
+Inspired by their work, we measured the habit strength and
+self-regulation in relation to taking moving breaks to further
+explore how information workers’ habit strength and self-
+regulation relate to their break-taking intentions & practices.
+
+Promoting Breaks in Workplaces
+To promote healthy work routines for information work-
+ers, HCI researchers have designed interventions to promote
+breaks in workplaces. A common approach is using prompt-
+based systems, which remind people to take breaks by leverag-
+ing desktop computers (e.g., Time Out [62], SuperBreak [49])
+or mobile phones (e.g., BreakSense [12]). Speciﬁcally, Super-
+Break and BreakSense are game-like systems that encourage
+breaks in workplaces. SuperBreak sends out prompts to en-
+courage people to take regular and frequent microbreaks (i.e.,
+a 25-second break every eight minutes of working) by having
+them brieﬂy read a document, play an interactive game, or
+
+Figure 1. Time for Break’s break prompt dialogue (a), and a follow up
+question depending on people’s response. When they answer “yes,” they
+enter the intended break duration (b). When they answer “no,” they
+enter reasons for not taking a break (c).
+
+data on participants’ work and break intentions & practices us-
+ing Time for Break. We found signiﬁcant trends on their habit
+strength and self-regulation in taking moving breaks, as well
+as their work and break intentions & practices. Through semi-
+structured interviews, we learned how participants’ break-
+taking intentions & practices vary in different contexts.
+
+The ﬁrst contribution of this work is an empirical understand-
+ing of information workers’ intentions & practices to take
+moving breaks, including the gaps between intentions and
+behaviors, work and break preferences, and the contexts and
+reasons regarding their choices. The second contribution is a
+set of design implications for interventions that aim to break
+prolonged sedentary behavior while maintaining work pro-
+ductivity, and more broadly, suggesting information workers’
+long-term health as an important design value to consider.
+
+In what follows, we ﬁrst provide related work and present three
+research questions. After detailing the design of the Time for
+Break, we describe the ﬁeld study and report results to answer
+the research questions. We discuss design implications for
+building effective interventions to help information workers
+break sedentary behavior and create a healthy work routine.
+
+RELATED WORK
+In this section, we cover related work in deﬁning and un-
+derstanding sedentary behavior, and interventions aiming to
+reduce sedentary behavior. We also described interventions
+designed to promote breaks in workplaces and to reduce work
+interruptions in the HCI community.
+
+Sedentary Behavior
+Sedentary behavior is generally deﬁned as waking behavior
+with low energy expenditure in a seated, reclined, or lying pos-
+ture [4, 64]. Sedentary behavior often involves activities such
+as reading, watching TV, and using a computer while seated
+[6, 54]. Researchers found that prolonged sedentary behavior
+increases risks for diabetes [29], cardiovascular disease [68],
+obesity [32], and other chronic diseases [40, 51]. Recently,
+information workers have increasingly become prone to pro-
+longed sedentary behavior because they usually work on the
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 2watch a video [49]. SuperBreak was effective in engaging peo-
+ple in taking microbreaks, but it could interrupt their ﬂow of
+work. BreakSense leverages location sensing to detect people’
+physical break (e.g., going to the restroom) and invite them
+to play exergames to extend the break duration [12]. While
+BreakSense encouraged people to take longer moving breaks,
+it did not initiate the breaks. Furthermore, it could discourage
+people from going back to work.
+
+To understand the effects of different types of work breaks
+on information workers’ productivity, Epstein and colleagues
+conducted a web-based diary study combined with a survey
+and interview [24]. They identiﬁed that participants took
+longer digital and social breaks than they intended, but shorter
+necessary break, physical break, and outdoors break than they
+intended. We note that in workplaces, “taking breaks” does
+not necessarily help people reduce sedentary behaviors: many
+existing interventions encourage any work breaks, and people
+can easily engage in sedentary activities during breaks (e.g.,
+checking on social media or watching videos) [24, 49].
+
+It has been challenging to identify the “appropriate prompting
+moments” (i.e., when people are receptive and responsive)
+when designing prompting systems in workplaces. Prompting
+people at inappropriate moments can introduce unnecessary
+interruptions and inﬂuence their productivity [2, 19, 36]. In the
+HCI community, many researchers have examined interrupt-
+ibility in workplaces [33, 35, 70]. For example, Hudson and
+colleagues constructed a machine learning model to predict hu-
+man interruptibility based on their observation on the contexts
+around information workers [33]. Iqbal and Bailey examined
+opportune moments for interruption with a workload-aligned
+model, and found that the “best” moment to interrupt people
+was when they were working on tasks with low workload [35].
+However, interruptible moments that are optimized for work
+productivity are not identical with prompting moments for
+breaking extended periods of uninterrupted sitting.
+
+In contrast to the works mentioned above, we aim to explore
+ways to break information workers’ prolonged sedentary be-
+haviors by ﬁrst understanding their work and break intentions
+& practices. In addition, our work extends the prior research
+by addressing information workers’ habit strength and self-
+regulation in relation to break-taking behaviors for long-term
+habit development. In this light, we consider only “standing
+or moving” breaks as breaks in our study: the term, “moving
+breaks” in the remaining sections of the paper refers to breaks
+that involve standing or moving. We also assume that infor-
+mation workers sit while working and we use sitting duration
+and work duration interchangeably.
+
+TIME FOR BREAK
+We designed Time for Break as a data collection and prompting
+tool to answer the following three research questions:
+
+• RQ1: What are information workers’ intended work and
+
+break duration and their actual practices?
+
+• RQ2: What are reasons and contexts around information
+
+workers’ break-taking intentions and practices?
+
+• RQ3: How do information workers’ habit strength and
+self-regulation relate to their break-taking intentions and
+practices?
+
+Design Goals
+To answer the three research questions listed above, we aim to
+design Time for Break as a data collection tool, for autonomy,
+exploratory purpose, and minimal distraction.
+
+Design for Autonomy
+Many prompting systems imposed the ﬁxed duration for work
+and break (e.g., 5-minute break after every 60-minute sitting)
+on all participants throughout the study (e.g., [65, 55]). In
+contrast, to provide people with control over their schedule, we
+allow them to change their preferred work duration every day.
+In addition, people are free to accept, decline, or ignore each
+break prompt depending on their contexts. Once they accept to
+take a break, people can set an intended break duration. This
+ensures that people have the autonomy to decide on their work
+& break schedules, to dismiss the prompt when necessary, and
+to set different break duration in different contexts.
+
+Design for Exploratory Purposes
+For the exploratory purposes of understanding information
+workers’ break intentions & practices, we design Time for
+Break to collect people’s work & break contexts instead of
+changing their current break & work habits. In Fogg’s term,
+the break prompt in our study serves as a signal (i.e., a re-
+minder that does not change one’s motivation or ability to
+perform the target behavior) [25], simply indicating that it is
+the time to take a moving break rather than persuading people
+to take a break. Thus, we did not provide any feedback on
+people’s responses or break-taking behaviors, and carefully
+designed the break prompt using neutral wording (e.g., no en-
+couraging wording for accepting a break or discouraging word-
+ing for declining a break). Despite these design choices, we
+note that Time for Break could change people’s break-taking
+intention and behavior through an act of self-monitoring.
+
+Design for Minimal Distraction
+As information workers are generally busy with their work,
+there are times when they do not want to take any break or
+even do not have time to respond to the prompt. Given that
+the break prompt can be a distraction in itself, we strove to
+minimize distraction. Time for Break shows the break prompt
+at the bottom-right corner of the screen, and automatically
+closes it after two minutes if people have not responded yet.
+Additionally, if people are typing or clicking the mouse, Time
+for Break postpones showing the break prompt by 15 seconds
+to avoid interrupting people’s ﬂow of work.
+
+Time for Break Design
+Time for Break consists of a work duration setting window,
+a break prompt window (Figure 1), a break window (with a
+break timer), and a work timer. People can set their preferred
+work duration (i.e., for how long they want to continuously
+work before being prompted) on the work duration setting
+window once a day every day. People can see how long they
+have been working by hovering over the work timer in a tray
+icon located on the Windows notiﬁcation area. Time for Break
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 3Figure 2. Time for Break interaction ﬂow.
+
+does not provide any other feedback on participants’ break-
+taking activities or responses. Inspired by Experience Sam-
+pling Method [17, 43, 46], Time for Break sends out prompts
+to collect people’s break-taking intention and contexts in-situ.
+
+Experience Sampling Method (ESM)
+Experience Sampling Method (ESM) is a research method that
+asks people to self-report their behavioral and mental aspects
+repeatedly in real time [17, 43]. It is proven to be valid in
+identifying between-subjects differences as well as within-
+subjects differences on people’s intentions and behaviors [31].
+
+Originating from psychology, ESM has been widely used in
+studies conducted in workplaces. For example, Mark and
+colleagues deployed a desktop-based ESM system to examine
+the association between information workers’ attentional states
+and the workplace context [46]. Fullagar and colleagues also
+used ESM to investigate the relationship between ﬂow (i.e., a
+comprehensive measure of optimal experience) and subjective
+well-being of architecture students [26]. Moreover, to support
+ESM studies in the wild, many open-source research tools
+such as PACO [21] and Experience Sampler [63] are available.
+
+In natural settings, ESM has certain limitations such as self-
+selection bias and data quality concerns [58]. Nevertheless,
+researchers can reduce the limitations through recruiting par-
+ticipants with sufﬁcient motivation to complete the study or
+minimizing the response burden [18, 34]. Overall, ESM is a
+powerful approach to link people’s current experience with
+contexts and to surface the rationale behind their overt be-
+havior [58].
+Inspired by the ESM approach, we designed
+Time for Break as a data collection tool that sends out in-situ
+prompts proximal to people’s action, although our study does
+not strictly follow the traditional ESM design. Thus, Time
+for Break can be best described as an exploratory prompting
+
+tool to collect people’s behavioral and attitudinal data in a
+semi-controlled ﬁeld deployment study [59].
+
+Interaction Flow
+A person receives the break prompt after an uninterrupted
+computer active time that equals to the work duration he or
+she set daily. Locking the machine stops and resets the work
+timer. Upon receiving a prompt, the person can respond with
+“Yes, great idea!” to accept taking the break, “No, I can’t right
+now.” to decline, or simply ignore it (i.e., does not interact
+with it) based on his or her current state (Figure 2).
+
+• If the person responds “Yes, great idea!,” Time for Break
+asks for how long the person wants to take the break (Figure
+1b). After entering an intended break duration, the person
+has 10 seconds to wrap up current work (e.g., close a win-
+dow). After the 10 seconds, the break window (with the
+break timer) appears and the break mode begins.
+The person can go back to work whenever he or she wants;
+interacting with the machine (i.e., pressing any keys or
+clicking anywhere on the screen) begins the work mode.
+In addition, the person can begin the work mode using the
+break window; the person can click the “Exit Break Mode”
+button or the “Go Back to Work” button (after the break
+duration is passed, the break window replaces the “Exit
+Break Mode” button with the “Go Back to Work” button).
+Time for Break estimates the break duration based on the
+computer’s inactive time during a break.
+
+• If the person responds “No, I can’t right now.,” Time for
+Break asks the reason why he or she cannot take the break
+at the moment (Figure 1c). The dialogue box disappears
+after two minutes if the person ignores it.
+
+• If the person ignores the break prompt, it automatically
+disappears after two minutes, and a new work cycle begins.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 4Implementation
+We built Time for Break as a Windows desktop application
+in C# with Windows Presentation Foundation (WPF). Time
+for Break transfers the collected data such as people’s work
+duration settings and responses to the prompt to the database
+(MySQL) located in a secure server. To make Time for Break
+run all the time, we automatically launch it when the machine
+starts. To ensure people set only one work duration every
+day, Time for Break pops the work duration setting window by
+keeping track of the date of the latest work duration setting.
+
+METHOD
+We conducted a three-week ﬁeld study with Time for Break
+at a large state university in the U.S. to explore information
+workers’ work and break intentions & practices. Our study
+was approved by the university’s Institutional Review Board.
+
+Participants
+We advertised the study through the university mailing list and
+university research volunteer website. Among the 42 people
+who responded, 26 met the following inclusion criteria: in-
+dividuals who (1) are over 18; (2) use a Windows machine
+(laptop or desktop) more than six hours a day on workdays;
+(3) have administrator rights to install Time for Break on their
+machine; (4) have Internet access; and (5) do not use a sit-
+stand desk. In addition, we purposely recruited people who are
+interested in breaking prolonged sedentary behavior. One par-
+ticipant dropped out of the study because of family emergency.
+Among the 25 participants who completed all the study activi-
+ties, seven were male, and 18 were female. Their age ranges
+from 24 to 60 (M = 39.12, SD = 2.55). Five participants were
+graduate students (4 in Information Sciences, 1 in Aerospace),
+one was a postdoctoral scholar (Statistics), and 19 were uni-
+versity staff members (4 administrators, 3 IT consultants, 3
+ﬁnancial assistants, 2 research staff, 2 data analysts, 1 facili-
+ties coordinator, 1 business manager, 1 corporation relation, 1
+events coordinator, 1 career consultant).
+
+Study Procedure
+The study procedure consists of ﬁve stages: (1) pre-study ques-
+tionnaire, (2) pre-study tutorial, (3) three-week data collection
+with Time for Break, (4) post-study questionnaire, and (5) op-
+tional post-study interview. Each participant received a $30
+Amazon gift card as compensation at the end of the study.
+Those who participated in the optional post-study interview
+received an extra $10 Amazon gift card.
+
+Pre-Study Questionnaire
+The pre-study questionnaire was administered via a web sur-
+vey, which covered the study consent, basic demographic infor-
+mation, motivations to take moving breaks during work hours,
+and self-reported habit strength and self-regulation in taking
+moving breaks1. Habit strength was measured by the 4-item
+automaticity subscale from the Self-Report Habit Index [66].
+This measure has validated psychometric properties from prior
+research, which is widely used for measuring habit strength
+1We note that sedentary behavior is in general a strong habitual
+behavior, which is insensitive to self-reported measures; therefore, re-
+searchers often measure an opposite behavior to the habitual behavior
+[44], that is, “taking moving breaks” in our case.
+
+for behaviors [16, 44, 27]. Self-regulation was measured by a
+6-item subscale from the Self-Regulation Questionnaire (SRQ)
+[10], and was tailored to assess participants’ ability to develop,
+implement, and keep a plan of breaking prolonged sitting. This
+measure has been used to assess various behaviors including
+physical activities and sedentary behavior [11].
+
+Pre-Study Tutorial
+After the pre-study questionnaire, we scheduled a pre-study
+tutorial with each participant in-person (n = 18), over Skype
+(n = 4), and via phone call (n = 3). During the 20-minute
+tutorial, we helped participants install Time for Break on their
+machines, and instructed them in setting up a work duration
+and responding to the break prompt. We emphasized that the
+“breaks” in this study mean breaks that involve standing up or
+moving, and that the study compensation is not tied to their
+responses to the break prompts.
+
+Data Collection with Time for Break
+Right after the pre-study tutorial, participants started to use
+and respond to Time for Break for the next three weeks. Dur-
+ing the three-week data collection period, we did not contact
+the participants. Two participants reached us to seek help in
+reinstalling Time for Break due to system upgrade, and three
+notiﬁed us of their one-day leave off work via email.
+
+Post-Study Questionnaire
+The post-study questionnaire consisted of the same questions
+on participants’ habit strength and self-regulation in taking
+moving breaks during work hours. We also asked participants’
+qualitative feedback on their experience with Time for Break,
+such as new features they would like to see and additional
+information they wanted to share with us.
+
+Optional Post-Study Interview
+After the post-study questionnaire, participants had an option
+to participate in a post-study interview. We interviewed 23
+participants (in-person (n = 18), Skype (n = 3), phone call
+(n = 2)) out of 25. The interview was semi-structured, and
+lasted from 20 to 60 minutes. During the interview, we asked
+participants to talk about their experience with Time for Break,
+such as their work and break preferences, why they accept or
+decline to take breaks upon receiving the break prompt, and
+their perceived productivity during the study period. We also
+asked them what they learned from the study, and what they
+liked and disliked about Time for Break.
+
+Data Analysis
+In this section, we describe the data we collected from each
+study stage and the methods we used to perform data analysis.
+
+Questionnaire Data Analysis
+We used open coding to categorize participants’ motivations
+to take moving breaks during work hours. We also digitized
+participants’ qualitative feedback on Time for Break from the
+post-study questionnaire. We conducted paired-samples t-tests
+to compare participants’ pre- and post-study habit strength and
+self-regulation in taking moving breaks during work hours.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 5Log Data Analyses
+We summarized the descriptive results from the log data of
+Time for Break, including daily work duration, response la-
+tency (i.e., the time span between when participants received
+the break prompt and when they submitted their responses),
+responses to the prompts (i.e., “yes,” “no,” or ignore), intended
+break duration, actual break duration, and reasons for not
+taking breaks. We excluded 17 out of 542 (3.1%) free-form
+text entries because they were unrecognizable (e.g., random
+letters, pure numbers, and symbols). We classiﬁed the remain-
+ing entries into different types of reasons for not take breaks
+using thematic analysis.
+
+To analyze the quantitative data, we ﬁrst conducted a Box-
+Cox transformation [9] on the variables that had a skew value
+> 1.5 (i.e., work duration, response latency, intended break
+duration, and actual break duration). We then calculated
+the Intra-class Correlations (ICC) [69] of work duration, re-
+sponse latency, intended break duration, and actual break
+duration to ﬁnd out how much variation was due to between-
+subjects differences (i.e., how stable versus malleable these
+variables were). We then used linear and logistic multilevel
+modeling [5] to examine what between- and within-subjects
+factors predicted work duration, response latency, intended
+break duration, actual break duration, and changes of habit-
+strength and self-regulation from pre-study to post-study. In
+addition, we set up a linear multilevel model to test whether
+the variability in a person’s work duration, response latency,
+intended break duration, and actual break duration (i.e., person-
+level standard deviations controlled for person-level means
+of each variable) impacted the degree of habit strength and
+self-regulation change across the study.
+
+Interview Data Analysis
+The interview provided more details on participants’ rationales
+of their log data and their break-taking intentions & practices.
+We audio recorded and transcribed all 23 interviews. Based
+on the framework of qualitative analysis [48], two researchers
+used bottom-up thematic analysis to identify emerging themes
+through iterative coding. One of the coders was not involved
+in the interviews, ensuring an independent perspective. The re-
+search team discussed major themes and established recurring
+codes of participants’ motivation to take moving breaks, work
+and break preferences, and experience with Time for Break.
+
+RESULTS
+Over the course of three weeks, Time for Break collected
+374 days of work duration settings and delivered 1,599 break
+prompts, in which there were 642 (40%) responses of “yes”
+and 542 (34%) responses of “no.” The remaining 415 (26%)
+break prompts were ignored by participants. The average re-
+sponse latency to the prompt was 23.57 seconds (SD = 27.91),
+excluding the cases when the prompt was ignored. Here, we
+report our ﬁndings according to the three research questions
+presented earlier. To ensure the conﬁdentiality of participants,
+we assigned a participant identiﬁer (P#) to each participant.
+
+RQ1: Information Workers’ Intended Work & Break Dura-
+
+tion and Their Actual Practices
+In general, participants had different preferences in setting
+their work duration, but similar preferences in setting their
+
+intended break duration. Here, we describe the similarities
+and differences on participants’ intended work duration and
+break duration, as well as their actual practices.
+
+Work Duration
+The log data showed that (1) most variability in work duration
+setting was at the between-subjects level (ICC = .70): par-
+ticipants typically set their work duration with less variance
+each day compared to the variance between participants; and
+(2) in the range of work duration from 20 to 120 minutes, 60
+minutes was most prevalent, as 172 out of 374 (46%) daily
+work duration was set to 60 minutes. On the last day of the
+study, 13 participants set 60 minutes as their work duration,
+and among them, ﬁve participants (P5, P7, P10, P12, P25)
+kept a 60-minute work duration throughout the study.
+
+We found that participants preferred 60-minute work duration
+because it is (1) manageable: “I pushed it to 60 [minutes],
+and that generally speaking became manageable ... at least
+a reasonable starting point and knowing throughout the day
+that some time of the day you need to get up” (P11); (2) easy
+to track: “... it’s easier to keep track on it by hour, kind of in
+my head without tracking the icon” (P19); and (3) neither too
+short nor too long: “I think the longer times were too long.
+The shorter ones were too short, like it was popping up all the
+time. So I was either having to say no or I couldn’t do the way
+with so many pop ups” (P18).
+
+However, it was common for participants to change the work
+duration depending on their schedule. For example, P15 usu-
+ally set the work duration that is longer than her meeting
+duration so that she can avoid receiving a break prompt during
+the meeting: “... if I have meetings for 30 minutes long, I tried
+to set [work duration] for 45 to an hour.” But her meeting
+duration changed from day to day, which made her frequently
+adjust the work duration. Similarly, P13 set her work duration
+based on whether she would be busy during the day: “There
+were days I need to work for a longer time so I set 90 [minutes].
+The other days I set 60 [minutes].”
+
+Break Duration
+With paired-samples t-tests, we found a signiﬁcant difference
+between participants’ average intended break duration (M =
+4.42, SD = 5.42) and actual break duration (M = 5.92, SD =
+11.88) in minutes, t(641) = -3.922, d = .16, p < .001. Using
+linear multilevel modeling, we found the following set of
+trends on participants’ intended and actual break duration with
+their work duration, response latency and the study days.
+
+Intended Break Duration: The log data showed that (1) most
+variability in intended break duration was at within-subjects
+level (ICC = .13): each participant’s intended break duration
+varied more across the study period compared to the variance
+between participants; (2) participants who set longer work du-
+ration on average tended to set longer intended break duration
+(b = .40, p < .001); (3) participants’ intended break duration
+signiﬁcantly decreased over time (b = -.03, p < .001); and (4)
+those who responded slower to the prompt on average tended
+to set longer intended break duration (b = .02, p < .001).
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 6From the interviews, we learned that participants set their
+break duration based on what break activities they were going
+to do: “If I go to restroom or stretch my leg I usually set it
+longer. If I’m just looking around and getting away from my
+desk, it’s usually just 1 minute” (P14). Whereas sometimes
+they decided their break duration based on how much work
+they had done: “If I had accomplished a lot, I would say, okay,
+I would just take a longer break. If I had less accomplished
+than I would like to, I was like I’m going [to] get this done
+and the break can be short” (P1).
+
+The intended break duration ranged from 1 to 60 minutes.
+Seven participants kept the same break duration all the time,
+and among them, ﬁve (P2, P3, P6, P12, P23) kept it at 5
+minutes, one (P7) kept it at 3 minutes, and one (P9) kept it at
+2 minutes. These participants considered the break duration
+they input every time as a minimum duration for break: “I
+think 5 minutes was like something in my head about what I
+should be taking at minimum” (P23), “I wanted to make sure
+I walked away for at least 3 minutes” (P7).
+
+Actual Break Duration: The log data showed that (1) most of
+variability in actual break duration was at within-subjects level
+(ICC = .09): each participant’s actual break duration varied
+more across the study period compared to the variance between
+participants; (2) at the between-subjects level, participants’
+actual break duration was not consistent with their intended
+break duration (b = 37.12, p = .846); (3) at the within-subjects
+level, when participants set longer intended break duration
+than usual, they actually took longer breaks (b = 453.53, p
+< .001); and (4) nine participants took signiﬁcantly longer
+breaks than they intended, and two took signiﬁcantly shorter
+breaks than they intended.
+
+Taking longer break than intended was usually due to inciden-
+tal socializing: “got caught in the hallway talking to somebody”
+(P9). Due to the nature of our study environment where 10
+participants worked in close proximity, we found that social in-
+teraction was common during breaks, and sometimes, they had
+synchronized breaks (e.g., chatting with others and meeting
+with mentors leveraging moving breaks). For those who took
+shorter breaks, they tended to overestimate the break duration
+without much thinking: “It seems 5 minutes is a long time to
+grab a drink. It’s interesting, I didn’t notice that” (P3), and
+would not wait until the end of the break: “When I came back,
+if it says I get 5 more minutes, I’ll just start to work” (P13).
+
+RQ2: The Contexts Around Information Workers’ Break-
+
+Taking Intentions & Practices
+Participants had various reasons to take breaks or not. Here,
+we describe participants’ motivations to take moving breaks,
+and the reasons behind their responses to the break prompt.
+In addition, we describe what participants learned about their
+work and break habits from the study.
+
+Motivations to Take Moving Breaks
+In the pre-study questionnaire, we asked participants their
+motivation to take breaks during work hours. From their
+responses, we found they have the following different mo-
+tivations: (1) lowering stress or being relaxed (32.1%), (2)
+physiological needs (e.g., need to go to restroom or go for
+lunch; 28.6%), (3) getting refreshed from work (23.2%), and
+
+(4) staying healthy (12.5%). Two participants answered that
+they did not have speciﬁc motivation to take moving breaks.
+
+Responses to the Break Prompt
+The log data showed that participants with stronger pre-study
+habit strength in taking moving breaks were more likely to
+respond “yes” to the break prompt (OR = 1.26, p < .001). How-
+ever, the pre-study self-regulation in taking moving breaks did
+not predict participants’ responses to the prompt (OR = .90,
+p = .281). The log data also showed that although the work
+duration did not predict participants’ responses to the prompt
+(OR = .99, p = .903), for the days when participants had longer
+work duration than usual, they responded “yes” more often at
+the within-subjects level (OR = 1.30, p = .029).
+
+During the post-study interview, we asked participants to recall
+the common situations when they responded “yes” to the break
+prompt. We noticed that with the break prompt, participants’
+break-taking intentions were based on their current work and
+mental status rather than their intrinsic motivation in taking
+moving breaks. All the participants mentioned they responded
+“yes” to the break prompt when they had physiological needs.
+Other situations included when they just completed a task,
+worked on an easy or difﬁcult task, had a ﬂexible schedule,
+and felt tired. For example, P20 noted, “Probably only when I
+had to go to the bathroom, grab coffee [or] lunch, or go to a
+meeting. I rarely just get up and stretch.” Similarly, P4 noted
+that he usually took a moving break when he wanted to go to
+restroom, smoke, or get a coffee.
+
+Among the 542 “no” responses, 525 entries (96.9%) provided
+valid reasons for declining to take a moving break. The most
+prevalent reasons for declining to take a break were: busy
+working (40.6%), in a meeting or class (18.9%), and just com-
+ing back from a break (15.2%). Table 1 shows the reasons
+along with example quotes from the participants. We noticed
+that many participants entered “just coming back from a break”
+as the reason for not taking a break, because they could oc-
+casionally leave their desk without locking their machines,
+which could not be captured by Time for Break.
+
+Increased Self-Awareness
+Even though Time for Break did not provide participants with
+any feedback besides how long they had been sitting, partici-
+pants became aware of their work and break routines during
+the study through receiving prompts and responding to them.
+
+While talking about the experience with Time for Break, eight
+participants stated that they were not aware of how long they
+had been sitting until the break prompt popped up: “every
+once in a while, it was kind of a surprise like oh, that much
+time has passed” (P9), “I’m surprised that that much time
+elapsed already” (P20). In addition, through receiving the
+break prompt with a certain frequency, participants were aware
+of their sedentary level. Some participants realized that they
+spent too much time on sitting: “I learned that I don’t get up
+enough. I need to do better, standing up and walking away”
+(P10). While others realized that they were less sedentary than
+they had thought: “I didn’t notice until the study. I didn’t
+notice I got up so frequently. For 120 minutes, I was not
+sedentary at all. But for 60 minutes, maybe I am” (P2).
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 7Reasons
+busy working
+
+in a meeting or class
+
+coming back from a break
+close to ﬁnish something
+
+Percentage
+40.6%
+
+18.9%
+
+15.2%
+8.8%
+
+heading to other place (e.g., home)
+soon
+engaged in a conversation
+engaged in a screen-based activity
+(e.g., video, game)
+having lunch or dinner
+
+7.9%
+
+3.7%
+2.5%
+
+2.4%
+
+Example Quotes
+“It [Time for Break] prompted me to take a break, which I didn’t want to. Because
+I was focused on something and I want to keep doing it.” (P4)
+“They were sometimes in a video conference I was sharing my screen and it pop
+up. I had to say no.” (P14)
+“I just came back to my desk from lunch, it popped up and I had to click no.” (P5)
+“Some of the times I would be prompted to take a break but I was like almost done
+with something, that would take me like ﬁve more minutes, so I would like not to
+take my break when I was prompted.” (P1)
+“Especially towards the end of the day, I’m going home anyway... I know that 30
+minutes tacked on to me being able to go home.” (P11)
+“I was in the middle of a phone call. Sometimes it’s kind of hard to say ’yes’.” (P6)
+“sometimes [I was] working but then [I] switched to a game, and when it popped
+up I would say no.” (P24)
+“I was eating lunch at my desk. I would not take a break during lunch.” (P22)
+
+Table 1. Reasons logged on Time for Break for not taking a break, and example quotes from the post-study interview.
+
+Although we did not measure participants’ work productivity
+or suggest them to improve on their work productivity, ﬁve par-
+ticipants indicated that their productivity improved by taking
+moving breaks with Time for Break. For example, P11 noted
+that “You know it was good to get away from the desk, come
+back and be [sic] refreshing, and my productivity improved.”
+P6 mentioned that he became more productive by trying to
+respond “yes” to the break prompt before it disappeared: “like
+10 minutes before it’s coming up, I’d wrap up work and tried
+to get it done faster, so I’d catch those breaks. Or maybe,
+switch to some easy task like emailing ... If there is [an effect],
+it must be increasing the productivity.” Other participants such
+as P1 noted that Time for Break helped her keep a consistent
+work and break schedule: “I was in a more thoughtful mind,
+maintaining a certain schedule of working, it kind of enabled
+me to implement a midday break, just breaking up 8 hours or
+8 and a half hours of continuous working.”
+
+Participants expressed the desire to receive feedback on their
+responses to the prompt and break-taking behavior so that they
+can better understand their work and break patterns and make
+improvement accordingly: “so if there is like some feedback
+for me to show my progress over time, [it] would help me
+understand how well I’m actually doing, or maybe some graph
+showing what I’m actually doing and what I thought I might
+be doing” (P3), “something like check your progress or see
+how you did surround everything” (P8).
+
+Increased Accountability
+Although we designed the break prompt in a neutral way, seven
+participants mentioned that they felt accountable to respond
+“yes” to the break prompt. For example, P8, who set her work
+duration as 30 minutes every day, said: “it was annoying
+sometimes, but I still felt that 30 minutes was the right amount
+of time. So I felt that I had to comply with the annoyance
+because that’s what it was meant to do.” Some participants
+even felt guilty for responding ‘no’ to the break prompt, such
+as P1: “maybe slightly guilty. I knew that I should be doing
+this, I should not be saying “no” to it so often” and P10: “It’s
+just made me feel bad. It’s like oh god, I should have got up
+but I’m not taking care of myself.”
+
+In addition, four participants tended to wait for the break
+prompt even when they were ready to take a moving break: “I
+would check it [the work duration counter] occasionally just to
+see when my break is. Because I wanted to get a drink of water
+or something and I would see when the window was going to
+come up, and wait to take my break” (P21). Likewise, P14
+liked to mouse over the work duration counter even though
+she was ready for a break: “to check how soon my next break
+would be, I wait like usually 10 or 15 minutes [for the prompt],
+and then I went to the restroom.”
+
+RQ3:
+
+Relationships Between Habit Strength, Self-
+
+Regulation, Break-Taking Intentions & Practices
+We found that participants’ pre-study habit strength and self-
+regulation played different but important roles in their break-
+taking intentions & practices. Moreover, their break-taking
+intentions & practices affected their post-study habit strength
+and self-regulation differently. In this section, we ﬁrst de-
+scribe the results on participants’ response latency to the break
+prompt, and then report the ﬁndings around participants’ habit
+strength and self-regulation.
+
+Response Latency
+The log data showed that (1) participants who set longer work
+duration on average responded slower than those who set
+shorter work duration (b = 4.82, p = .013); (2) participants
+responded to the break prompt faster as the study progressed (b
+= -.74, p = .013); (3) more than half of the responses (50.6%)
+occurred within the ﬁrst 20 seconds upon receiving the prompt;
+and (4) there is no signiﬁcant correlation between response
+latency and responses of “yes” or “no” (OR = 1.00, p = .598).
+
+During the interview, participants stated that if they were
+certain whether to take a break or not, they would respond
+very quickly: “When I responded ‘no,’ I knew for a fact that I
+couldn’t leave my desk ... So I didn’t even give it much thought
+to click the ‘no’ button” (P2). However, when they wanted to
+take a break but were not ready for it, they tried to catch up
+the prompt within 2 minutes before it disappeared. Thus, it
+took them longer to respond to the break prompt: “a couple
+times I would wait like another minute before I would click on
+the ‘yes.’ So I could ﬁnish the work and then click it” (P9).
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 8Habit Strength and Self-Regulation
+The log data showed that participants’ habit strength and self-
+regulation both increased from pre-study to post-study, but the
+increase was signiﬁcant only for pre/post self-regulation (M
+= 4.26, SD = 0.60; M = 3.75, SD = 0.77), t(24) = -3.64, p =
+.010, d = .728. Although self-regulation did not predict par-
+ticipants’ responses to the prompt, participants with stronger
+self-regulation responded faster to the break prompt (b = -6.96,
+p < .001). In addition, we found that participants who set con-
+sistent intended break duration increased their habit strength
+more than participants who set variable intended break dura-
+tion (b = -1.34, p = .04).
+
+DISCUSSION
+Our goal was to inform the design of systems for promoting
+long-term healthy work routines. In designing such systems,
+we should consider both health and productivity as two impor-
+tant design values and devise ways to support both without
+signiﬁcantly compromising one over the other. In the fol-
+lowing, we describe the lessons learned and implications for
+designing effective systems that aim to help people break pro-
+longed sedentary behavior while maintaining productivity. We
+also discuss the limitations of the study and future work.
+
+Consider Long-term Health as an Important Design Value
+Our study results showed that people’s motivations to take
+moving breaks are not well aligned with why they actually take
+moving breaks. Even though many participants recognized
+the importance of taking moving breaks for reasons such as
+lowering stress, being relaxed, getting refreshed from work,
+and staying healthy, their actual breaks were mainly driven
+from physiological needs. This ﬁnding is consistent with
+previous research, which found that people are inclined to
+make efforts to satisfy their physiological needs rather than
+psychological needs [20]. Therefore, future systems should
+link the long-term beneﬁts of breaking prolonged sedentary
+behavior to taking regular moving breaks.
+
+Similarly, prior works on interruptibility tend to optimize peo-
+ple’s near-term work productivity; for example, if people are
+continuously debugging for several hours without a break, this
+would not be considered as a good time to interrupt. However,
+from the perspective of breaking the sedentary behavior to
+account for workers’ long-term health, they should have taken
+a moving break once the working hours have passed a certain
+threshold. To design systems for promoting healthy work rou-
+tines, factors affecting workers’ long-term health should be
+treated as equally important as their productivity goals.
+
+Support Creating Work & Break Rhythm
+Our results showed that participants with stronger pre-study
+habit strength in taking moving breaks responded “yes” to the
+prompt more often than those with weaker pre-study habit
+strength. This ﬁnding reﬂects that it was easy for partici-
+pants to act in line with existing habits but was more difﬁ-
+cult to start a new habit (i.e., change behavior solely rely on
+self-regulation). Participants’ self-regulation signiﬁcantly in-
+creased over the study period, which means that they became
+better at developing and managing their plan to take moving
+breaks. We suspect that the result is partly due to (1) self-
+set work & break duration and (2) prompts’ cyclical nature.
+
+Entering data and receiving prompts could have enhanced
+awareness, and the periodical prompts could have helped par-
+ticipants keep a consistent work & break schedule and develop
+self-accountability, regulating behaviors.
+
+On the other hand, we found no signiﬁcant difference in
+pre/post habit strength, which indicates that simple prompt-
+based systems might not be enough to promote automaticity
+in the target behavior. However, participants who set consis-
+tent intended break duration showed a higher increase in their
+post-study habit strength than those who set variable intended
+break duration. This result corresponds to the prior work that
+suggested promoting habit strength through regular routines
+[61]. As participants’ intended break duration varied a lot
+at the within-subjects level, we suspect that this overall in-
+consistent intended break duration is one of the reasons why
+their post-study habit strength did not signiﬁcantly increase:
+frequently changing the intended break duration might have
+disrupted formation of regular routines.
+
+Moreover, many participants tended to take longer breaks than
+they intended. This might be due to the unique work settings
+of our study participants, where most participants were easy
+to be caught by their co-workers during the break and start
+chatting. Participants did not necessarily try to follow the
+break duration because keeping track of how long a break
+has passed required extra effort, especially when they were
+socializing. Moreover, some participants did not think it is
+important to stick to the intended break duration while others
+felt awkward and impolite to suddenly stop talking and go
+back to work just because their break duration was over.
+
+Prior work [16, 44] showed that habit strength plays an impor-
+tant role in promoting healthy behavior, including breaking
+prolonged sedentary behavior. To increase habit strength, an
+effective way is to support people to routinely perform the
+target behavior [61]. We suggest that future systems support
+routine formation by nudging people not only to set a more
+consistent intended work and break duration but also to abide
+by the intended break duration. We could use smart phone or
+wearable devices, designing a multimodal prompting mech-
+anism to remind people of going back to work. In this way,
+people can regulate their actual break duration to align with
+their intended break duration and maintain their regular work
+schedule. Besides, for those who usually get caught by some-
+one during the break, the “work prompt” can be an excuse of
+absence and avoid social friction.
+
+Promote Moving Breaks in Workplaces
+As workplace is a social environment, participants occasion-
+ally had moving breaks together during which they discussed
+work-related matters, had coffee or lunch together, or just ran
+into each other and started chatting. We envision a new op-
+portunity to promote synchronized breaks among coworkers,
+during which they stand up and move together. Taking break
+together could also help enhance the communication among
+employees, and thus improve organization productivity [67].
+
+In addition, there are meetings that can be done while walking
+or standing up, such as regular one-on-one meetings between
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 9a mentor and mentee, or small-group meetings that do not
+require whiteboards, computers, or projector. Drawn from the
+common social interaction during moving breaks, we suggest
+a break prompting system that encourages people to schedule
+a “walking meeting” rather than “sitting meeting” by recom-
+mending a walking path considering the time and weather.
+
+tems that facilitate visual data exploration could enable more
+mindful reﬂections and help gain rich insights [15]. Lastly, to
+identify appropriate prompting moments, we can build intelli-
+gent systems that take the contextual information into consid-
+eration through connecting with people’s calendar, to-do-list,
+phone status, or application usage.
+
+Meetings commonly last for 30 minutes or for an hour; we
+suspect this is due to people’s preconceived notion of meeting
+duration, and the default settings of calendar systems. In a
+similar vein, our study showed that people’s commonly set 60-
+minute work duration. This leaves not enough room for taking
+moving breaks between meetings especially when another
+meeting or event is scheduled right after a meeting. Given that
+between meetings can be a good time to take moving breaks,
+a possible way to promote moving breaks is to have 25 or 55
+minutes as a default meeting duration in a calendar system.
+
+Limitations and Future Work
+We need to be cautious in generalizing our ﬁndings due to
+the following limitations of this work. First, despite our ef-
+forts to minimize nudging on behavior change, Time for Break
+have changed participants’ break-taking intention and behav-
+ior and their self-awareness. For example, participants could
+have taken more breaks than usual, and could have been more
+mindful about their break duration. Second, we did not cap-
+ture participants’ actual moving breaks and work practices.
+Instead, we relied on machines’ status, which could have af-
+fected our data accuracy (e.g., participants could have left
+their desk without locking their machine). Third, the pool of
+participants was limited to university staff members and grad-
+uate students, and thus, their nature of the work—attending
+meetings, classes, and events in different locations away from
+their computer—might be different from that of other types of
+information workers. Finally, we did not measure participants’
+work productivity. Although participants reported an increase
+in their work productivity during the post-study interview,
+their perception could have been inaccurate.
+
+This work was an exploratory study to understand rich contexts
+affecting participants’ receptiveness to standing or moving
+breaks with an aim to design an intervention to break seden-
+tary behavior. Going forward, we suggest four opportunities
+to extend Time for Break into an effective intervention sys-
+tem. First, to accurately measure work & break duration, we
+can leverage wearable sensors (e.g., accelerometer, GPS) and
+embedded sensors (e.g., web-cam) combined with machine’s
+status to capture actual work and break duration at a more
+granular level. Additional way to improve data accuracy is to
+enable people to edit the automatically collected data using the
+semi-automated approach [14]. Second, we can incorporate
+Time for Break with existing systems designed to measure
+and improve productivity (e.g., RescueTime [22], TimeAware
+[42]). Third, our results suggest important implications for
+feedback design. Incorporating descriptive feedback such as
+total work & break time and work productivity level, while
+highlighting people’s work and break routines, outliers (e.g.,
+out of routines and irregularities), and the adherence to the
+intended break & work duration could motivate people to take
+more consistent moving breaks. Furthermore, interactive sys-
+
+CONCLUSION
+We conducted an exploratory study with Time for Break, a
+desktop-based prompting system built to collect information
+workers’ work & break intentions and behaviors, and the con-
+texts around them. From the three weeks of data collection
+with Time for Break, pre- & post-study questionnaire, and
+post-study interviews, we distilled rich contexts affecting par-
+ticipants’ receptiveness to standing or moving breaks, and
+identiﬁed how their habit strength and self-regulation are re-
+lated to their break-taking intentions & practices. This work
+opens up a new research avenue going beyond existing works
+on productivity and interruptibility. We presented many re-
+search opportunities to promote healthy workplace environ-
+ment. Speciﬁcally, we discussed the importance of “long-term
+health” as an important design value, needs to promote moving
+breaks in workplaces, and ways to help information workers
+form healthy and consistent work & break rhythm. We also
+identiﬁed several ways to extend Time for Break to be an
+effective and sustainable intervention to help people break
+prolonged sedentary behavior in workplaces.
+
+ACKNOWLEDGMENT
+We would like to thank all the study participants for their
+time and effort. We also thank Sravya Valiveti for assisting
+in data analyses, and Chiyoung Oh, Daniel Smolyak, and
+Catherine Plaisant for their helpful comments and feedback.
+In addition, we thank the reviewers for their thoughtful and
+detailed reviews.
+
+REFERENCES
+
+1. Taleb A Alkhajah, Marina M Reeves, Elizabeth G Eakin,
+Elisabeth AH Winkler, Neville Owen, and Genevieve N
+Healy. 2012. Sit–stand workstations: a pilot intervention
+to reduce ofﬁce sitting time. American Journal of
+Preventive Medicine 43, 3 (2012), 298–303.
+http://doi.org/10.1016/j.amepre.2012.05.027
+
+2. Ernesto Arroyo and Ted Selker. 2011. Attention and
+
+intention goals can mediate disruption in
+human-computer interaction. In Proceedings of the 13th
+IFIP TC 13 International Conference on
+Human-Computer Interaction - Volume Part II.
+Springer-Verlag, 454–470.
+http://doi.org/10.1007/978-3-642-23771-3_34
+
+3. Andrea Bankoski, Tamara B Harris, James J McClain,
+
+Robert J Brychta, Paolo Caserotti, Kong Y Chen, David
+Berrigan, Richard P Troiano, and Annemarie Koster.
+2011. Sedentary activity associated with metabolic
+syndrome independent of physical activity. Diabetes Care
+34, 2 (2011), 497–503. http://doi.org/10.2337/dc10-0987
+
+4. Joel Barnes, Timothy K Behrens, Mark E Benden, Stuart
+Biddle, Dale Bond, Patrice Brassard, Helen Brown,
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 10Lucas Carr, Jean-Philippe Chaput, Hayley Christian, and
+others. 2012. Letter to the editor: standardized use of the
+terms “sedentary” and “sedentary behaviours”. Applied
+Physiology Nutrition and Metabolism-Physiologie
+Appliquee Nutrition Et Metabolisme 37, 3 (2012),
+540–542. http://doi.org/10.1139/h2012-024
+
+5. Douglas M Bates. 2010. lme4: Mixed-effects modeling
+
+with R. (2010).
+
+6. Stuart JH Biddle. 2007. Sedentary behavior. American
+Journal of Preventive Medicine 33, 6 (2007), 502–504.
+http://doi.org/10.1016/j.amepre.2007.08.002
+
+7. Aviroop Biswas, Paul I Oh, Guy E Faulkner, Ravi R
+
+Bajaj, Michael A Silver, Marc S Mitchell, and David A
+Alter. 2015. Sedentary time and its association with risk
+for disease incidence, mortality, and hospitalization in
+adults: a systematic review and meta-analysis. Annals of
+Internal Medicine 162, 2 (2015), 123–132.
+http://doi.org/10.7326/M14-1651
+
+8. Dale S Bond, J Graham Thomas, Hollie A Raynor, Jon
+Moon, Jared Sieling, Jennifer Trautvetter, Tiffany
+Leblond, and Rena R Wing. 2014. B-MOBILE - a
+smartphone-based intervention to reduce sedentary time
+in overweight/obese individuals: a within-subjects
+experimental trial. PloS One 9, 6 (2014), e100821.
+http://doi.org/10.1371/journal.pone.0100821
+
+9. George EP Box and David R Cox. 1964. An analysis of
+transformations. Journal of the Royal Statistical Society.
+Series B (Methodological) (1964), 211–252.
+
+10. Janice M Brown, William R Miller, and Lauren A
+
+Lawendowski. 1999. The self-regulation questionnaire.
+(1999).
+
+11. Jude Buckley, Jason D Cohen, Arthur F Kramer, Edward
+McAuley, and Sean P Mullen. 2014. Cognitive control in
+the self-regulation of physical activity and sedentary
+behavior. Frontiers in Human Neuroscience 8 (2014).
+http://doi.org/10.3389/fnhum.2014.00747
+
+12. Scott A Cambo, Daniel Avrahami, and Matthew L Lee.
+
+2017. BreakSense: combining physiological and location
+sensing to promote mobility during work-breaks. In
+Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems (CHI ’17). ACM,
+3595–3607. http://doi.org/10.1145/3025453.3026021
+
+13. Josephine Y Chau, Michelle Daley, Scott Dunn, Anu
+Srinivasan, Anna Do, Adrian E Bauman, and Hidde P
+van der Ploeg. 2014. The effectiveness of sit-stand
+workstations for changing ofﬁce workers’ sitting time:
+results from the Stand@Work randomized controlled trial
+pilot. International Journal of Behavioral Nutrition and
+Physical Activity 11, 1 (2014), 127.
+http://doi.org/10.1186/s12966-014-0127-7
+
+14. Eun Kyoung Choe, Saeed Abdullah, Mashﬁqui Rabbi,
+Edison Thomaz, Daniel A Epstein, Felicia Cordeiro,
+Matthew Kay, Gregory D Abowd, Tanzeem Choudhury,
+James Fogarty, Bongshin Lee, Mark Matthews, and
+Julie A Kientz. 2017a. Semi-automated tracking: a
+
+balanced approach for self-monitoring applications. IEEE
+Pervasive Computing 16, 1 (2017), 74–84.
+http://doi.org/10.1109/MPRV.2017.18
+
+15. Eun Kyoung Choe, Bongshin Lee, Haining Zhu,
+
+Nathalie Henry Riche, and Dominikus Baur. 2017b.
+Understanding self-reﬂection: how people reﬂect on
+personal data through visual data exploration. In
+Proceedings of the 11th EAI International Conference on
+Pervasive Computing Technologies for Healthcare
+(PervasiveHealth ’17).
+
+16. David E Conroy, Jaclyn P Maher, Steriani Elavsky,
+Amanda L Hyde, and Shawna E Doerksen. 2013.
+Sedentary behavior as a daily process regulated by habits
+and intentions. Health Psychology 32, 11 (2013), 1149.
+http://doi.org/10.1037/a0031629
+
+17. Sunny Consolvo and Miriam Walker. 2003. Using the
+experience sampling method to evaluate ubicomp
+applications. IEEE Pervasive Computing 2, 2 (2003),
+24–31. http://doi.org/10.1109/MPRV.2003.1203750
+
+18. Mihaly Csikszentmihalyi and Reed Larson. 2014.
+Validity and reliability of the experience-sampling
+method. In Flow and the Foundations of Positive
+Psychology. Springer, 35–54.
+http://doi.org/10.1007/978-94-017-9088-8_3
+
+19. Mary Czerwinski, Ran Gilad-Bachrach, Shamsi Iqbal,
+and Gloria Mark. 2016. Challenges for designing
+notiﬁcations for affective computing systems. In
+Proceedings of the 2016 ACM International Joint
+Conference on Pervasive and Ubiquitous Computing:
+Adjunct. ACM, 1554–1559.
+http://doi.org/10.1145/2968219.2968548
+
+20. Edward L Deci and Richard M Ryan. 2000. The “what”
+and “why” of goal pursuits: human needs and the
+self-determination of behavior. Psychological Inquiry 11,
+4 (2000), 227–268.
+http://doi.org/10.1207/S15327965PLI1104_01
+
+21. PACO Developers. 2010. PACO.
+
+https://www.pacoapp.com/. (2010). Accessed:
+2018-01-05.
+
+22. RescueTime Developers. 2008. RescueTime.
+
+https://www.rescuetime.com. (2008). Accessed:
+2018-01-05.
+
+23. DW Dunstan, Jo Salmon, Neville Owen, T Armstrong,
+PZ Zimmet, TA Welborn, AJ Cameron, T Dwyer, D
+Jolley, and JE Shaw. 2005. Associations of TV viewing
+and physical activity with the metabolic syndrome in
+Australian adults. Diabetologia 48, 11 (2005),
+2254–2261. http://doi.org/10.1007/s00125-005-1963-4
+
+24. Daniel A Epstein, Daniel Avrahami, and Jacob T Biehl.
+
+2016. Taking 5: work-breaks, productivity, and
+opportunities for personal informatics for knowledge
+workers. In Proceedings of the SIGCHI Conference on
+Human Factors in Computing Systems (CHI ’16). ACM,
+673–684. http://doi.org/10.1145/2858036.2858066
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 1125. Brian J Fogg. 2009. A behavior model for persuasive
+design. In Proceedings of the 4th international
+Conference on Persuasive Technology. ACM, 40.
+http://doi.org/10.1145/1541948.1541999
+
+26. Clive J Fullagar and E Kevin Kelloway. 2009. Flow at
+work: an experience sampling approach. Journal of
+Occupational and Organizational Psychology 82, 3
+(2009), 595–615.
+http://doi.org/10.1348/096317908X357903
+
+27. Benjamin Gardner, Charles Abraham, Phillippa Lally,
+
+and Gert-Jan de Bruijn. 2012. Towards parsimony in
+habit measurement: testing the convergent and predictive
+validity of an automaticity subscale of the self-report
+habit index. International Journal of Behavioral
+Nutrition and Physical Activity 9, 1 (2012), 102.
+http://doi.org/10.1186/1479-5868-9-102
+
+35. Shamsi T Iqbal and Brian P Bailey. 2005. Investigating
+
+the effectiveness of mental workload as a predictor of
+opportune moments for interruption. In CHI’05 Extended
+Abstracts on Human Factors in Computing Systems.
+ACM, 1489–1492.
+http://doi.org/10.1145/1056808.1056948
+
+36. Shamsi T Iqbal and Brian P Bailey. 2008. Effects of
+
+intelligent notiﬁcation management on users and their
+tasks. In Proceedings of the SIGCHI Conference on
+Human Factors in Computing Systems (CHI ’08). ACM,
+93–102. http://doi.org/10.1145/1357054.1357070
+
+37. Quintus R Jett and Jennifer M George. 2003. Work
+
+interrupted: a closer look at the role of interruptions in
+organizational life. Academy of Management Review 28,
+3 (2003), 494–507.
+http://doi.org/10.5465/AMR.2003.10196791
+
+28. Nicholas D Gilson, Alessandro Suppini, Gemma C Ryde,
+Helen E Brown, and Wendy J Brown. 2012. Does the use
+of standing “hot” desks change sedentary work time in an
+open plan ofﬁce? Preventive Medicine 54, 1 (2012),
+65–67. http://doi.org/10.1016/j.ypmed.2011.10.012
+
+38. Jing Jin and Laura A Dabbish. 2009. Self-interruption on
+
+the computer: a typology of discretionary task
+interleaving. In Proceedings of the SIGCHI conference on
+Human Factors in Computing Systems (CHI ’09). ACM,
+1799–1808. http://doi.org/10.1145/1518701.1518979
+
+29. Anders Grøntved and Frank B Hu. 2011. Television
+viewing and risk of type 2 diabetes, cardiovascular
+disease, and all-cause mortality: a meta-analysis. JAMA
+305, 23 (2011), 2448–2455.
+https://doi.org/10.1001/jama.2011.812
+
+30. Genevieve N Healy, David W Dunstan, Jonathan E Shaw,
+Paul Z Zimmet, and Neville Owen. 2006. Beneﬁcial
+associations of physical activity with 2-h but not fasting
+blood glucose in Australian adults. Diabetes Care 29, 12
+(2006), 2598–2604. http://doi.org/10.2337/dc06-0313
+
+31. Joel M Hektner, Jennifer A Schmidt, and Mihaly
+
+Csikszentmihalyi. 2007. Experience sampling method:
+Measuring the quality of everyday life. Sage.
+
+32. Frank B Hu, Tricia Y Li, Graham A Colditz, Walter C
+
+Willett, and JoAnn E Manson. 2003. Television watching
+and other sedentary behaviors in relation to risk of
+obesity and type 2 diabetes mellitus in women. Jama 289,
+14 (2003), 1785–1791.
+http://doi.org/10.1001/jama.289.14.1785
+
+33. Scott Hudson, James Fogarty, Christopher Atkeson,
+
+Daniel Avrahami, Jodi Forlizzi, Sara Kiesler, Johnny Lee,
+and Jie Yang. 2003. Predicting human interruptibility
+with sensors: A wizard of oz feasibility study. In
+Proceedings of the SIGCHI Conference on Human
+factors in Computing Systems (CHI ’03). ACM, 257–264.
+http://doi.org/10.1145/642611.642657
+
+34. Stephen Intille, Caitlin Haynes, Dharam Maniar, Aditya
+
+Ponnada, and Justin Manjourides. 2016. µEMA:
+Microinteraction-based ecological momentary
+assessment (EMA) using a smartwatch. In Proceedings of
+the 2016 ACM International Joint Conference on
+Pervasive and Ubiquitous Computing. ACM, 1124–1128.
+http://doi.org/10.1145/2971648.2971717
+
+39. Dinesh John, Dixie L Thompson, Hollie Raynor, Kenneth
+Bielak, Bob Rider, and David R Bassett. 2011. Treadmill
+workstations: a worksite physical activity intervention in
+overweight and obese ofﬁce workers. Journal of Physical
+Activity and Health 8, 8 (2011), 1034–1043.
+http://doi.org/10.1123/jpah.8.8.1034
+
+40. Peter T Katzmarzyk, Timothy S Church, Cora L Craig,
+and Claude Bouchard. 2009. Sitting time and mortality
+from all causes, cardiovascular disease, and cancer.
+Medicine & Science in Sports & Exercise 41, 5 (2009),
+998–1005.
+https://doi.org/10.1249/MSS.0b013e3181930355
+
+41. Sarah K Keadle, David E Conroy, Matthew P Buman,
+David W Dunstan, and Charles E Matthews. 2017.
+Targeting reductions in sitting time to increase physical
+activity and improve health. Medicine and Science in
+Sports and Exercise (2017).
+http://doi.org/10.1249/MSS.0000000000001257
+
+42. Young-Ho Kim, Jae Ho Jeon, Eun Kyoung Choe,
+
+Bongshin Lee, KwonHyun Kim, and Jinwook Seo. 2016.
+TimeAware: leveraging framing effects to enhance
+personal productivity. In Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems
+(CHI ’16). ACM, 272–283.
+http://doi.org/10.1145/2858036.2858428
+
+43. Reed Larson and Mihaly Csikszentmihalyi. 1983. The
+experience sampling method. New Directions for
+Methodology of Social & Behavioral Science (1983).
+
+44. Jaclyn P Maher and David E Conroy. 2015. Habit
+
+strength moderates the effects of daily action planning
+prompts on physical activity but not sedentary behavior.
+Journal of Sport and Exercise Psychology 37, 1 (2015),
+97–107. http://doi.org/10.1123/jsep.2014-0258
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 1245. Gloria Mark, Victor M Gonzalez, and Justin Harris. 2005.
+No task left behind?: examining the nature of fragmented
+work. In Proceedings of the SIGCHI Conference on
+Human factors in Computing Systems (CHI ’05). ACM,
+321–330. http://doi.org/10.1145/1054972.1055017
+
+46. Gloria Mark, Shamsi T Iqbal, Mary Czerwinski, and Paul
+Johns. 2014. Bored mondays and focused afternoons: the
+rhythm of attention and online activity in the workplace.
+In Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems (CHI ’14). ACM,
+3025–3034. http://doi.org/10.1145/2556288.2557204
+
+47. Shelly K McCrady and James A Levine. 2009.
+
+Sedentariness at work: how much do we really sit?
+Obesity 17, 11 (2009), 2103–2105.
+http://doi.org/10.1038/oby.2009.117
+
+48. Matthew B Miles, A Michael Huberman, and J Saldana.
+1984. Qualitative data analysis: a sourcebook. Beverly
+Hills (1984).
+
+49. Dan Morris, AJ Brush, and Brian R Meyers. 2008.
+
+SuperBreak: using interactivity to enhance ergonomic
+typing breaks. In Proceedings of the SIGCHI Conference
+on Human Factors in Computing Systems (CHI ’08).
+ACM, 1817–1826.
+http://doi.org/10.1145/1357054.1357337
+
+50. U.S. Bureau of Labor Statistics. 2016. Employed persons
+working and time spent working on days worked by full-
+and part-time status and sex, jobholding status,
+educational attainment, and day of week, 2016 annual
+averages.
+https://www.bls.gov/news.release/atus.t04.htm. (2016).
+Accessed: 2018-01-05.
+
+51. Neville Owen, Adrian Bauman, and Wendy Brown. 2009.
+Too much sitting: a novel and important predictor of
+chronic disease risk? British Journal of Sports Medicine
+43, 2 (2009), 81–83.
+http://doi.org/10.1136/bjsm.2008.055269
+
+52. Neville Owen, Geneviève N Healy, Charles E Matthews,
+and David W Dunstan. 2010. Too much sitting: the
+population-health science of sedentary behavior. Exercise
+and Sport Sciences Reviews 38, 3 (2010), 105.
+http://doi.org/10.1097/JES.0b013e3181e373a2
+
+53. Sharon Parry and Leon Straker. 2013. The contribution of
+ofﬁce work to sedentary behaviour associated risk. BMC
+Public Health 13, 1 (2013), 296.
+https://doi.org/10.1186/s12966-017-0525-8
+
+54. Russell R Pate, Jennifer R O’neill, and Felipe Lobelo.
+2008. The evolving deﬁnition of “sedentary”. Exercise
+and Sport Sciences Reviews 36, 4 (2008), 173–178.
+http://doi.org/10.1097/JES.0b013e3181877d1a
+
+55. Christine A Pellegrini, Sara A Hoffman, Elyse R Daly,
+
+56. Ian Renfree and Anna Cox. 2016. Tangibly Reducing
+Sedentariness in Ofﬁce Workers. Association for
+Computing Machinery (ACM).
+
+57. Cormac G Ryan, Philippa M Dall, Malcolm H Granat,
+and P Margaret Grant. 2011. Sitting patterns at work:
+objective measurement of adherence to current
+recommendations. Ergonomics 54, 6 (2011), 531–538.
+http://doi.org/10.1080/00140139.2011.570458
+
+58. Christie Napa Scollon, Chu-Kim Prieto, and Ed Diener.
+2009. Experience sampling: promises and pitfalls,
+strength and weaknesses. In Assessing Well-Being.
+Springer, 157–180.
+http://doi.org/10.1007/978-90-481-2354-4_8
+
+59. Katie A Siek, Gillian R Hayes, Mark W Newman, and
+John C Tang. 2014. Field deployments: knowing from
+using in context. In Ways of Knowing in HCI. Springer,
+119–142. http://doi.org/10.1007/978-1-4939-0378-8_6
+
+60. Richard Spinney, Lee Smith, Marcella Ucci, Abigail
+Fisher, Marina Konstantatou, Alexia Sawyer, Jane
+Wardle, and Alexi Marmot. 2015. Indoor tracking to
+understand physical activity and sedentary behaviour:
+Exploratory study in UK ofﬁce buildings. PloS One 10, 5
+(2015), e0127688.
+http://doi.org/10.1371/journal.pone.0127688
+
+61. Katarzyna Stawarz, Anna L Cox, and Ann Blandford.
+2015. Beyond self-tracking and reminders: designing
+smartphone apps that support habit formation. In
+Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems (CHI ’15). ACM,
+2653–2662. http://doi.org/10.1145/2702123.2702230
+
+62. Dejal System. 2017. Time Out.
+
+http://www.dejal.com/timeout/. (2017). Accessed:
+2018-01-05.
+
+63. Sabrina Thai and Elizabeth Page-Gould. 2017.
+
+Experiencesampler: an open-source scaffold for building
+experience sampling smartphone apps. (2017).
+http://doi.org/10.1037/met0000151
+
+64. Mark S Tremblay, Salomé Aubert, Joel D Barnes,
+
+Travis J Saunders, Valerie Carson, Amy E
+Latimer-Cheung, Sebastien FM Chastin, Teatske M
+Altenburg, and Mai JM Chinapaw. 2017. Sedentary
+behavior research network (SBRN) - terminology
+consensus project process and outcome. International
+Journal of Behavioral Nutrition and Physical Activity 14,
+1 (2017), 75. http://doi.org/10.1186/s12966-017-0525-8
+
+65. Saskia Van Dantzig, Gijs Geleijnse, and Aart Tijmen van
+Halteren. 2013. Toward a persuasive mobile application
+to reduce sedentary behavior. Personal and Ubiquitous
+Computing 17, 6 (2013), 1237–1246.
+http://doi.org/10.1007/s00779-012-0588-0
+
+Manuel Murillo, Gleb Iakovlev, and Bonnie Spring. 2015.
+Acceptability of smartphone technology to interrupt
+sedentary time in adults with diabetes. Translational
+Behavioral Medicine 5, 3 (2015), 307–314.
+http://doi.org/10.1007/s13142-015-0314-3
+
+66. Bas Verplanken and Sheina Orbell. 2003. Reﬂections on
+past behavior: a self-report index of habit strength.
+Journal of Applied Social Psychology 33, 6 (2003),
+1313–1330.
+http://doi.org/10.1111/j.1559-1816.2003.tb01951.x
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 1367. Benjamin N Waber, Daniel Olguin Olguin, Taemie Kim,
+and Alex Pentland. 2010. Productivity through coffee
+breaks: changing social networks by changing break
+structure. (2010). http://doi.org/10.2139/ssrn.1586375
+
+68. Emma G Wilmot, Charlotte L Edwardson, Felix A
+
+Achana, Melanie J Davies, Trish Gorely, Laura J Gray,
+Kamlesh Khunti, Thomas Yates, and Stuart JH Biddle.
+2012. Sedentary time in adults and the association with
+diabetes, cardiovascular disease and death: systematic
+review and meta-analysis. (2012).
+http://doi.org/10.1007/s00125-012-2677-z
+
+69. Sheng Wu, Catherine M Crespi, and Weng Kee Wong.
+2012. Comparison of methods for estimating the
+
+intraclass correlation coefﬁcient for binary responses in
+cancer prevention cluster randomized trials.
+Contemporary Clinical Trials 33, 5 (2012), 869–880.
+http://doi.org/10.1016/j.cct.2012.05.004
+
+70. Manuela Züger, Christopher Corley, André N Meyer,
+Boyang Li, Thomas Fritz, David Shepherd, Vinay
+Augustine, Patrick Francis, Nicholas Kraft, and Will
+Snipes. 2017. Reducing interruptions at work: A
+large-scale ﬁeld study of FlowLight. In Proceedings of
+the SIGCHI Conference on Human Factors in Computing
+Systems (CHI ’17). ACM, 61–72.
+http://doi.org/10.1145/3025453.3025662
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 127Page 14

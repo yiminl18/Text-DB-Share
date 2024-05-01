@@ -1,0 +1,971 @@
+NOTICE OF PROBABLE VIOLATION 
+PROPOSED CIVIL PENALTY 
+and 
+PROPOSED COMPLIANCE ORDER 
+
+VIA ELECTRONIC MAIL to: tom.long@energytransfer.com 
+
+June 15, 2023 
+
+Thomas Long 
+Chief Executive Officer 
+Energy Transfer, LP 
+8111 Westchester Drive 
+Dallas, Texas 75225 
+
+Dear Mr. Long: 
+
+CPF 4-2023-011-NOPV 
+
+On  March  27,  2020,  representatives  of  the  Pipeline  and  Hazardous  Materials  Safety 
+Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 601 of 49 United 
+States Code (U.S.C.) conducted an investigation following an incident that occurred at Panhandle 
+Eastern Pipeline Company’s (PEPL) Borcher Station near Meade, Kansas. 
+
+On March 26, 2020, at approximately 2:00 p.m. Central Daylight Time, a PEPL technician was 
+attempting to retrieve a T.D. Williamson 10-inch PitBoss™ Cleaning Pig that was stuck due to ice 
+accumulation in the receiving barrel which was partially pressurized within the Borcher Station 
+piping.  The technician was attempting to break the ice using a stainless-steel rod causing the pig 
+to become dislodged and travel out of the receiving end of the pig trap striking the technician in 
+the abdomen.  The technician later died at the hospital due to their injuries.  PHMSA’s Accident 
+Investigation Division and the Central Region traveled onsite to investigate the incident. 
+
+As a result of the investigation, it is alleged that PEPL has committed probable violations of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR).  The items investigated 
+and the probable violations are: 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+1. 
+
+§ 192.605 Procedural manual for operations, maintenance, and emergencies. 
+
+(a) General. Each  operator  shall  prepare  and  follow  for  each 
+pipeline, a manual of written procedures for conducting operations and 
+maintenance activities and for emergency response. For transmission 
+lines, the manual must also include procedures for handling abnormal 
+operations. This manual must be reviewed and updated by the operator 
+at intervals not exceeding 15 months, but at least once each calendar 
+year.  This  manual  must  be  prepared  before  operations  of  a  pipeline 
+system  commence.  Appropriate  parts  of  the  manual  must  be  kept  at 
+locations where operations and maintenance activities are conducted. 
+
+PEPL failed to follow its manual of written procedures for conducting operations and maintenance 
+activities and for emergency response in four areas in accordance with § 192.605(a).1  Specifically, 
+PEPL 1) failed to ensure the pipe was de-energized prior to conducting maintenance in accordance 
+with its written procedure, S-230; 2) failed to create a work permit and communicate the potential 
+hazards to relevant personnel in accordance with its written procedure, S-370; 3) failed to follow 
+two  provisions  of  its  pigging  operations  procedures  and;  4)  failed  to  follow  its  procedure  for 
+clearing freezes. 
+
+First,  PEPL  failed  to  follow  its  Safety  Procedure  S-230,  Hazardous  Energy  Control  (Lockout 
+Tagout)  (Effective  08/01/2017),  which  requires  the  operator  to  de-energize  the  pipe  prior  to 
+performance of scheduled activities.  On the day of the incident, PEPL failed to ensure that the 
+piping at the pig receiver was clear of any hazardous energy and de-energized. 
+
+Second,  PEPL  failed  to  follow  its  Safety  Procedure  S-370  Work  Permits  (Effective  8/1/2017), 
+which  requires that a “General Work Permit” be obtained for potentially hazardous work.  Prior 
+to the incident, PEPL failed to obtain a “General Work Permit” that requires identification of all 
+potential hazards and communication of those hazardous to relevant personnel. 
+
+Third, PEPL failed to follow two provisions in its Standard Operating Procedures, Pigging and 
+Pig Trap Operation, Procedure: I.13 (Effective 5/1/2015).  Section 7.2 of the pigging procedures 
+states that personnel cannot “stand in front of the launcher or receiver door in the project path of 
+the line-cleaning tool while opening.”  On the day of the incident a PEPL technician was standing 
+in front of the receiver while trying to dislodge ice. 
+
+In addition, section 7.5 states that PEPL must “[v]erify the trap is depressured and that SOP B.06 
+Hazardous  Energy  Control  and  Safety  Procedure  S-230  Lockout  Tag  out  are  followed  before 
+opening the closure.”  The valves to this receiver were leaking which created pressure in the barrel 
+behind the cleaner pig.  The maintenance personnel stated that it was common for the valves to 
+leak.  The pressure upstream of the 10-inch main valve was over 700 psi.  On the day of the incident 
+a PEPL technician opened the closure without verifying that the trap was depressured. 
+
+Fourth,  PEPL  failed  to  follow  its  Best  Practice  Clearing  Freezes  BP  I.17(Effective  6/1/2013), 
+which requires, in section 7.2, that personnel “[n]otify the operations manager of the freeze and 
+
+1 PEPL uses the procedures of Energy Transfer Company, its parent organization. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+ 
+ 
+discuss  the  procedures  to  handling  freezes.”  PEPL  personnel  failed  to  make  the  requisite 
+notification.  Section 7.3 of this same procedure states that personnel must “[b]lowdown slowly in 
+either side of the freeze using the smallest valve available [ and m]aintain a differential of 50 psi 
+or less across the freeze.”  PEPL failed to maintain a differential of 50 psi or less. 
+
+PEPL’s failure to follow its written procedures was a causal factor in the incident that occurred on 
+March 26, 2020. 
+
+Therefore, PEPL failed to follow its manual of written procedures for conducting operations and 
+maintenance activities and for emergency response in four areas in accordance with § 192.605(a). 
+
+2. 
+
+§ 192.605 Procedural manual for operations, maintenance, and emergencies. 
+
+(a)  General. Each  operator  shall  prepare  and  follow  for  each 
+pipeline, a manual of written procedures for conducting operations and 
+maintenance activities and for emergency response. For transmission 
+lines, the manual must also include procedures for handling abnormal 
+operations. This manual must be reviewed and updated by the operator 
+at intervals not exceeding 15 months, but at least once each calendar 
+year.  This  manual  must  be  prepared  before  operations  of  a  pipeline 
+system  commence.  Appropriate  parts  of  the  manual  must  be  kept  at 
+locations where operations and maintenance activities are conducted. 
+
+(b)  Maintenance  and  normal  operations. The  manual  required  by 
+paragraph (a) of this section must include procedures for the following, 
+if applicable, to provide safety during maintenance and operations. 
+
+(1) . . . . 
+(8) Periodically reviewing the work done by operator personnel to 
+determine  the  effectiveness,  and  adequacy  of  the  procedures  used  in 
+normal  operation  and  maintenance  and  modifying  the  procedures 
+when deficiencies are found. 
+
+PEPL failed to follow its manual of written procedures for conducting operations and maintenance 
+activities and for emergency response in accordance with § 192.605(a).  Specifically, PEPL failed 
+to periodically review the work done by operator personnel to determine the effectiveness, and 
+adequacy of the procedures used in normal operation and maintenance and modify the procedures 
+when  deficiencies  are  found  in  accordance  with  § 192.605(b)(8)  and  Standard  Operating 
+Procedures,  Management  of  Change:  A.03  (Effective  8/1/2017)  section  4.0  Frequency  and 
+Standard  Operating  Procedures,  Guiding  Principles:  A.02  (Effective  5/1/2015)  sections  4.0 
+Frequency, 7.1 Rules and 7.2 Developing an SOP.  PEPL failed to review the work performed 
+under its Standard Operating Procedures, Pigging and Pig Trap Operation, Procedure: I.13, 1.0 
+Procedure Description (Effective 5/1/2015).  As a result, PEPL failed to determine the procedures 
+were deficient and failed to modify the procedures to provide guidance to employees for safely 
+addressing ice accumulation during pigging and pig trap operation. 
+
+PEPL’s written procedures failed to include instructions for employees encountering ice build-up 
+when  launching  and  receiving  pigs.  PEPL  failed  to  conduct  effectiveness  reviews  pursuant  to 
+
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+§ 192.605(b)(8).  Supervisors  at  the  Borchers’  Storage  Facility  did  not  have  knowledge  of  any 
+effectiveness reviews or documentation for clearing freezes.  Employees interviewed as part of 
+PHMSA’s investigation noted that the line would “freeze up often” and that “ice is a problem.”  
+Despite employees’ awareness of the ongoing ice accumulation issue in the line, PEPL failed to 
+review  the  work  done  by  operator  personnel,  failed  to  determine  that  its  pigging  and  pig  trap 
+operation procedures were ineffective, and failed to remediate the deficiency by modifying the 
+procedures to include instructions to address an accumulation of ice inside launchers and receivers. 
+
+PEPL’s failure to follow its written procedures increased the severity of the incident that occurred 
+on March 26, 2020. 
+
+Therefore, PEPL failed to follow its manual of written procedures for conducting operations and 
+maintenance activities and for emergency response in accordance with § 192.605(a). 
+
+3. 
+
+§ 192.805 Qualification program.  
+
+Each  operator  shall  have  and  follow  a  written  qualification 
+
+program.  The program shall include provisions to: 
+
+(a) Identify covered tasks; 
+
+PEPL failed to have and follow a written Operator Qualification (OQ) Program that identified all 
+covered tasks in accordance with § 192.805(a).  Specifically, PEPL’s written Standard Operating 
+Procedures, Operator Qualification Plan (Effective 5/1/2018) failed to include the operation and 
+maintenance task of launching and receiving pigs as a covered task in its plan. 
+
+Therefore, PEPL failed to comply with § 192.805(a). 
+
+Proposed Civil Penalty 
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations. For violation occurring on or after March 21, 2022 and before January 6, 2023, 
+the maximum penalty may not exceed $239,142 per violation per day the violation persists, up to 
+a maximum of $2,391,412 for a related series of violations.  For violation occurring on or after 
+May  3, 2021  and before  March  21, 2022,  the  maximum  penalty  may  not  exceed  $225,134  per 
+violation  per  day the  violation  persists,  up to  a  maximum  of  $2,251,334  for  a related  series  of 
+violations.  For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations. For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day the  violation  persists,  up to  a  maximum  of  $2,186,465  for  a  related  series  of 
+violations. For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679. For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable  violations  and  recommend  that  you  be  preliminarily  assessed  a  civil  penalty  of 
+$2,473,912 as follows: 
+
+Item number 
+1 
+2 
+3 
+
+PENALTY 
+$218,647 
+$2,186,465 
+$68,800 
+
+Proposed Compliance Order 
+With respect to Items 2 and 3 pursuant to 49 U.S.C. § 60118, the Pipeline and Hazardous Materials 
+Safety  Administration  proposes  to  issue  a  Compliance  Order  to  Panhandle  Eastern  Pipeline 
+Company. Please refer to the Proposed Compliance Order, which is enclosed and made a part of 
+this Notice. 
+
+Response to this Notice 
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement Proceedings. Please refer to this document and note the response options. All material 
+you submit in response to this enforcement action may be made publicly available. If you believe 
+that any portion of your responsive material qualifies for confidential treatment under 5 U.S.C. § 
+552(b),  along  with  the  complete  original  document  you  must  provide  a  second  copy  of  the 
+document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options. If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order. If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice. The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  4-2023-011-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Sincerely, 
+
+Bryan Lethcoe 
+Director, Southwest Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Proposed Compliance Order 
+
+Response Options for Pipeline Operators in Enforcement Proceedings 
+
+cc: 
+
+Greg McIlwain, Executive Vice President, Operations, Energy Transfer LP, 
+greg.mcilwain@energytransfer.com 
+Eric Amundsen, Senior Vice President, Operations, Energy Transfer LP, 
+Eric.Amundsen@energytransfer.com 
+Todd Stamm, Senior Vice President, Operations, Energy Transfer LP, 
+todd.stamm@energytransfer.com 
+Jennifer Street, Senior Vice President, Operations Services, Energy Transfer LP, 
+jennifer.street@energytransfer.com 
+Heidi Murchison, Chief Counsel, Energy Transfer LP, 
+heidi.murchison@energytransfer.com 
+Leif Jensen, Vice President, Technical Services, Energy Transfer LP, 
+leif.jensen@energytransfer.com 
+Todd Nardozzi, Director, Regulatory Compliance, Energy Transfer LP, 
+todd.nardozzi@energytransfer.com 
+Susie Sjulin, Director – Regulatory Compliance, Energy Transfer LP, 
+susie.sjulin@energytransfer.com 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROPOSED COMPLIANCE ORDER 
+
+Pursuant  to  49  United  States  Code  §  60118,  the  Pipeline  and  Hazardous  Materials  Safety 
+Administration  (PHMSA)  proposes  to  issue  to  Panhandle  Eastern  Pipeline  Company  (PEPL)  a 
+Compliance Order incorporating the following remedial requirements to ensure the compliance of 
+pipeline safety regulations: 
+
+A. 
+
+In  regard  to  Item  2  of  the  Notice  pertaining  to  PEPL’s  failure  to  perform  an 
+effectiveness review of its procedures and to have procedures and guidelines for ice 
+accumulation when launching and receiving pigs, PEPL must: 
+
+1.  Conduct an effectiveness review of its procedures for Pigging and Pig 
+Trap  Operations  and  Clearing  Freezes  Best  Practice  by  reviewing 
+employees’ experiences at each of the PEPL facilities and identifying 
+the facilities where employees may encounter ice in the PEPL system 
+within 60 days of issuance of the Final Order; 
+
+2.  Identify specific locations on the pipeline at each facility where icing 
+
+may occur; 
+
+3.  Create  and  implement  new  procedures  for  each  specific  location  and 
+detailed  guidelines  for  employees  encountering  ice  build-up  when 
+launching  and  receiving  pigs  and  submit  the  new  procedures  to  the 
+Director, Southwest Region, PHMSA within 240 days of issuance of the 
+Final Order; and 
+
+4.  Train  all  PEPL  employees  responsible  for  following  the  site-specific 
+
+procedures within 365 days of issuance of the Final Order. 
+
+B. 
+
+In  regard  to  Item  3  of  the  Notice  pertaining  to  PEPL’s  failure  to  include  the 
+launching and receiving of pigs in its written Operator Qualification (OQ) Program, 
+PEPL must: 
+
+1.  Amend its written operator qualification program to include launching 
+
+and receiving pigs as a covered task; 
+
+2.  Identify and qualify all PEPL employees responsible for performing the 
+
+new covered task; and 
+
+3.  Submit  the  amended  Operation  Qualification  Plan  and  qualification 
+records to the Director, Southwest Region, PHMSA within 210 days of 
+issuance of the Final Order. 
+
+C.  It 
+
+is  requested  (not  mandated)  that  Panhandle  Eastern  Pipeline  Company  maintain 
+documentation of the safety improvement costs associated with fulfilling this Compliance 
+Order  and  submit  the  total to  Bryan Lethcoe,  Director,  Southwest  Region, Pipeline and 
+Hazardous Materials Safety Administration.  It is requested that these costs be reported in 
+two  categories:  1)  total  cost  associated  with  preparation/revision  of  plans,  procedures, 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+studies and analyses, and 2) total cost associated with replacements, additions and other 
+changes to pipeline infrastructure. 
+
+ 
+ 
+ 
+ 
+ 
+

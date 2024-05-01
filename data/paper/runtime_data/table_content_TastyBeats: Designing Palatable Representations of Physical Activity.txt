@@ -1,0 +1,22 @@
+Table of Contents:
+
+1. Introduction
+2. Related Work
+    2.1 Visualization through digital metaphors
+    2.2 Visualization through physical metaphors
+    2.3 Visualization through informative art
+    2.4 Visualization through playful systems
+    2.5 Rethinking physical activity representation
+3. What is TastyBeats?
+    3.1 Mapping heart rate data to different drinks
+    3.2 Dynamics of the fluid spectacle
+    3.3 Design process and considerations
+4. TastyBeats in Action (Field Study)
+    4.1 Recruitment
+    4.2 Setup
+    4.3 Procedure
+    4.4 Data source
+    4.5 Findings
+5. Discussions
+6. Study Limitations
+7. Conclusion

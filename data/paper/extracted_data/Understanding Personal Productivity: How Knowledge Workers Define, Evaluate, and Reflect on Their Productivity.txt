@@ -1,0 +1,1502 @@
+Understanding Personal Productivity
+How Knowledge Workers Define, Evaluate, and Reflect on Their Productivity
+
+Young-Ho Kim†
+yhkim@hcil.snu.ac.kr
+
+Eun Kyoung Choe∥
+choe@umd.edu
+
+Bongshin Lee¶
+bongshin@microsoft.com
+
+Jinwook Seo†‡
+jseo@snu.ac.kr
+
+†Human-Computer Interaction Lab, Dept. of Computer Science & Engineering, Seoul National University, Seoul, Korea
+∥College of Information Studies & HCIL, University of Maryland, College Park, MD, United States
+¶Microsoft Research, Redmond, WA, United States
+‡Institute of Computer Technology, Seoul National University, Seoul, Korea
+
+ABSTRACT
+Productivity tracking tools often determine productivity
+based on the time interacting with work-related applica-
+tions. To deconstruct productivity’s diverse and nebulous
+nature, we investigate how knowledge workers conceptu-
+alize personal productivity and delimit productive tasks in
+both work and non-work contexts. We report a 2-week di-
+ary study followed by a semi-structured interview with 24
+knowledge workers. Participants captured productive activi-
+ties and provided the rationale for why the activities were
+assessed to be productive. They reported a wide range of pro-
+ductive activities beyond typical desk-bound work—ranging
+from having a personal conversation with dad to getting a
+haircut. We found six themes that characterize the produc-
+tivity assessment—work product, time management, worker’s
+state, attitude toward work, impact & benefit, and compound
+task—and identified how participants interleaved multiple
+facets when assessing their productivity. We discuss how
+these findings could inform the design of a comprehensive
+productivity tracking system that covers a wide range of
+productive activities.
+
+CCS CONCEPTS
+• Human-centered computing → Empirical studies in
+HCI.
+
+Permission to make digital or hard copies of all or part of this work for
+personal or classroom use is granted without fee provided that copies
+are not made or distributed for profit or commercial advantage and that
+copies bear this notice and the full citation on the first page. Copyrights
+for components of this work owned by others than the author(s) must
+be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior specific
+permission and/or a fee. Request permissions from permissions@acm.org.
+
+CHI 2019, May 4–9, 2019, Glasgow, Scotland UK
+© 2019 Copyright held by the owner/author(s).
+Publication rights licensed to ACM.
+ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00
+https://doi.org/10.1145/3290605.3300845
+
+KEYWORDS
+Productivity; Knowledge worker; Diary study; Self-tracking;
+Self-monitoring; Personal informatics; Productivity tracking
+
+ACM Reference Format:
+Young-Ho Kim, Eun Kyoung Choe, Bongshin Lee, and Jinwook
+Seo. 2019. Understanding Personal Productivity: How Knowledge
+Workers Define, Evaluate, and Reflect on Their Productivity. In CHI
+Conference on Human Factors in Computing Systems Proceedings
+(CHI 2019), May 4–9, 2019, Glasgow, Scotland UK. ACM, New York,
+NY, USA, 12 pages. https://doi.org/10.1145/3290605.3300845
+
+1 INTRODUCTION
+Boosting productivity is important for creative knowledge
+workers (e.g., software developers, writers, researchers, de-
+signers). Self-tracking of personal productivity is a com-
+mon technique to improve productivity [46] because it helps
+knowledge workers understand and reflect on how they
+spend their time. Productivity tracking technologies have
+become proliferated in our everyday life, supporting to track
+usage patterns at a device level (e.g., Moment [22], Screen-
+Life [44]) as well as an app level (e.g., RescueTime [43],
+TimeAware [27], meTime [52]).
+
+Existing productivity tracking tools are usually not de-
+signed to capture the diverse and nebulous nature of individ-
+ual workers’ activities. Although the specifics of their day-
+to-day activities vary, existing technologies track activities
+that are easy to capture. For example, automated monitoring
+tools such as RescueTime [43] can capture activities that
+involve digital devices only, and thus calculate productivity
+based on software usage duration. Furthermore, prior stud-
+ies often measured productivity (e.g., engagement [27, 55],
+performance [19]) within work contexts.
+
+However, we have little knowledge on how people con-
+ceptualize personal productivity in both work and non-work
+contexts. In understanding personal productivity, consider-
+ing both contexts is important: the distinction between work
+and non-work contexts has become fuzzy, as work slips into
+our lives, and activities in non-work contexts can affect pro-
+ductivity. In this work, we investigate what productivity
+means for individuals: what activities do knowledge workers
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 1consider productive and why? The findings could inform the
+design of productivity tracking tools that capture a compre-
+hensive range of activities that knowledge workers engage
+in, going beyond the traditional measures of device usage
+time and app category.
+
+In this paper, we present a diary study on personal pro-
+ductivity, collecting the activities that are perceived to be
+productive and their subjective productivity level (neutral,
+productive, and very productive), as well as individuals’ ratio-
+nale. We collected diary entries from 24 knowledge workers
+over the course of two weeks (10 weekdays + voluntary
+weekends), and conducted a semi-structured interview with
+them. Our participants recorded the productivity level of a
+wide range of activities, including both work-related and
+non-work related ones. From the analysis of diary entries,
+we identified six themes that characterize the assessment of
+productivity—work product, time management, worker’s state,
+attitude toward work, impact & benefit, and compound task.
+The key contributions of this work are twofold. First,
+we provide an empirical understanding of what knowledge
+workers account for when delimiting productivity-related
+activities and evaluating their productivity. Second, we of-
+fer implications for designing comprehensive productivity
+tracking tools that cover a wide range of productive activities.
+
+2 RELATED WORK
+Productivity has been of interests to diverse research commu-
+nities. We first discuss the characteristics of knowledge work
+and traditional productivity metrics from the perspective of
+organizational psychology and human-computer interaction.
+We then review HCI research on factors influencing produc-
+tivity and technologies designed to enhance productivity.
+
+Measuring Knowledge Workers’ Productivity
+While there is no single definition of productivity that every-
+one agrees upon, productivity is commonly defined as the
+ratio of outputs over inputs [39]. In The Industrial Age, mea-
+suring productivity of a given person was relatively straight-
+forward, as inputs (labor and capital) and outputs (tangible
+products) were easy to identify. In Information Age, measur-
+ing productivity of knowledge workers is more challenging
+than measuring that of traditional factory workers [18] be-
+cause outputs are domain-specific and not easily quantifiable,
+and inputs are hardly standardized among different knowl-
+edge workers [40]. As such, developing performance metrics
+for knowledge work and maximizing knowledge worker’s
+productivity have been an important topic.
+
+Characteristics of knowledge work are different from those
+of traditional factory labor in terms of autonomy, uncertainty,
+and abstractness [1, 14, 17, 18]. For the large part of their job,
+knowledge workers autonomously choose and schedule their
+tasks, which can be assigned at unexpected time. A notion
+
+of creative knowledge work emphasizes the importance of
+creative skill sets—such as problem solving, problem seeking,
+idea generation, and aesthetic sensibilities [31]. In Reich’s
+description, creative workers produce innovative goods in
+the knowledge economy [41].
+
+Organizational productivity research has also examined
+the factors that influence employee productivity (see [20]
+for a review), including organizational factors (e.g., job char-
+acteristics [6], feedback [16], autonomy [16, 47], office envi-
+ronments [10]), as well as individual factors (e.g., intrinsic
+motivation [19], psychological well-being [10, 48, 53], work
+engagement [2, 55]). For example, a work environment pro-
+moting both autonomy and responsibility is likely to moti-
+vate their employees to yield positive work outcomes, such
+as work performance and job satisfaction [19].
+
+The HCI community has studied knowledge workers’ pro-
+ductivity in their computerized work environments. With
+the goal of identifying the source of distraction and inter-
+ruption, researchers examined the nature of distractions and
+their effects on the work process [4, 12, 13, 23, 33, 34]. For
+example, Czerwinski and colleagues examined the nature of
+information workers’ task switching, and identified factors—
+such as task complexity, task duration, length of absence,
+number of interruptions, and task type—that influence the
+perceived difficulty of returning to tasks. In a recent study,
+Mark and colleagues found that those who reported being
+less in control of their work, associated with personality
+traits of lower Conscientiousness and Lack of Perseverance,
+benefited the most from a system that blocks online distrac-
+tions in the workplace [33]. In contrast to the prior approach
+of capturing pre-defined productivity metrics, we take an
+inductive approach to have a deep understanding on how
+knowledge workers conceptualize their productivity in both
+work and non-work contexts.
+
+Enhancing Personal Productivity with Self-Tracking
+We see a growing body of literature on productivity tracking
+technologies designed to help people track their productivity
+to improve self-awareness, which could lead to enhanced
+productivity [21, 27, 37, 38, 44, 52]. Because information de-
+vices (e.g., computers, smartphones) have become an integral
+part of people’s work, as well as a source of distraction, many
+productivity tracking systems enable people to record device
+usage behaviors to provide insights into their usage patterns.
+Some systems consider screen time as distractive, thereby
+restricting specific apps (e.g., [26]) or locking smartphones
+for a specified duration (e.g., [25, 29, 30]) when people need
+to focus on their tasks.
+
+These systems predominantly incorporate automated track-
+ing, and thus rely on the relatively simple measurements that
+can be captured. For example, many of these tools capture the
+usage duration of each application (e.g., [21, 27, 32, 43, 52]) or
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 2the device (e.g., [44]), and some of them calculate a produc-
+tivity score derived from the ratio of productive application
+usage to total computer usage [27, 43]. Commercial tools
+for developers’ productivity usually track a developer’s pro-
+gramming activities such as interactions with the integrated
+development environment (e.g., [11, 51]).
+
+Although automated tracking reduces the capture burden
+and collects behavioral data with high granularity, this ap-
+proach has three main limitations. First, automated tracking
+does not capture productive activities that people do without
+devices (e.g., ad-hoc meeting). Second, automated tracking
+does not always correctly infer a person’s intention of using
+applications, websites, or devices. For example, people can
+use a video chat application (e.g., Skype, Hangout) or visit an
+online shopping site (e.g., Amazon, Ebay) both for work and
+for personal purposes. Most importantly, the duration of the
+app use is not reflective of a person’s perceived productivity.
+For example, working on a Word document for a long time
+may not be an indication of productive writing. In this light,
+we need to understand how people assess their own produc-
+tivity and incorporate them in the design of productivity
+tracking systems. We thus set out to collect self-reported
+data on activities that are perceived to be productive, along
+with contexts and their reasoning through a diary study.
+
+3 DIARY STUDY
+Capturing in-situ data on events and experiences is an eco-
+logically valid way to understand people’s daily lives. One
+commonly used technique is a diary study, a data collection
+method with which researchers ask participants to record
+a log of their receptiveness or circumstantial information
+close to the occurrence of a target situation [3]. To under-
+stand how people perceive and evaluate the productivity of
+their activities, we conducted a 2-week diary study using a
+mobile self-tracking tool followed by an exit interview. The
+study was approved by the institutional review board, and
+conducted in South Korea.
+
+Clerk
+
+Participant Occupation
+46 (M) Professor
+P1
+29 (M) UI designer
+P2
+44 (M) CEO
+P3
+27 (M)
+P4
+27 (M) Developer
+P5
+30 (M) Ph.D. student
+P6
+36 (M) Project manager
+P7
+26 (M) Developer
+P8
+P9
+28 (M) Researcher
+P10 28 (M) Ph.D. student
+P11 23 (M) Ph.D. student
+P12 30 (M) UI designer
+
+Participant Occupation
+P13 37 (F)
+P14 32 (F) Medical writer
+P15 25 (F)
+Interaction designer P16 25 (F)
+P17 29 (F)
+P18 35 (F)
+P19 46 (F)
+P20 25 (F)
+P21 33 (F)
+P22 26 (F)
+P23 35 (F)
+P24 27 (F)
+
+Clerk
+Interaction designer
+Project manager
+Clerk
+Counsellor
+Ph.D. student
+UI designer
+UI designer
+Counsellor
+Interaction designer
+
+Table 1: Demographics of the participants.
+
+Figure 1: Mandatory fields in Productivity Journal. In this
+example, paperwork activity started at 3:20 PM, lasted for 20
+minutes, and was evaluated as productive.
+
+Participants
+We advertised our study on social media and the alumni com-
+munity website of a local university. Our inclusion criteria
+were adults who are: (1) working at least for 30 hours per
+week for their primary job; (2) not currently participating in
+other studies requiring self-reported data collection; (3) not
+an undergraduate student; (4) using an Android smartphone
+(our diary study tool supported Android only); and (5) inter-
+ested in their personal productivity. Of the 48 people who
+filled out the screener, we recruited 28 people who met the
+criteria. As a minimum requirement for study completion,
+we instructed the participants to capture logs for a minimum
+of seven (out of ten) weekdays. During the deployment, one
+participant dropped out due to a health issue. Additional
+three were excluded during the analyses because they did
+not meet the minimum logging requirement.
+
+In the end, 24 participants (12 female and 12 male; referred
+to as P1-P24; Table 1) completed the study. Their ages ranged
+from 23 to 46 (M = 31.20). They reported that they work for
+an average of 43.2 hours per week. Eleven occupations were
+represented among our participants, and three participants
+reported that they had a second job: one was a translator and
+the other two were managing their own online stores. We
+offered 50,000 KRW (about 45 USD) for their participation.
+
+Study Instrument for Data Capture
+We instructed participants to record the activities that they
+considered to be better than “unproductive” (i.e., neutral,
+productive, and very productive) in both work and non-work
+
+Context information fields (optional)CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 3contexts. To identify what constitutes productivity induc-
+tively, We encouraged participants to freely define their own
+productivity, including the activity type and granularity, and
+rate the level of productivity. We did not ask to capture un-
+productive activities because (1) we were mainly interested
+in what activities are considered productive and why, and (2)
+we wanted to lower the capture burden. In addition, logging
+only positive tasks can be rewarding and thus help us further
+ensure adherence [45].
+
+We deployed a mobile diary, called “Productivity Journal”
+(Figure 1). We created the diary app with OmniTrack [28],
+a mobile self-tracking platform that enables the creation
+of a tracking app by configuring an input schema and re-
+minders on a mobile phone. For each productive activity, we
+wanted to capture the time stamp and duration of the activity,
+task details (e.g., paperwork, email, brainstorming, meeting),
+perceived productivity level (i.e., neutral, productive, very
+productive), and rationale for the productivity assessment
+(e.g., why a certain activity was rated “very productive”). We
+also included optional fields to cover contextual information
+such as devices used for the task, location, mood, and photo.
+In the mobile app, participants could review their entries
+through a list and access simple visualizations (e.g., a daily
+entry count). A shortcut button on the smartphone’s notifica-
+tion drawer and lock screen enabled participants to open the
+entry input screen instantly, and served as a visual reminder
+to enhance tracking adherence [8]. Details of the mobile app
+UI are described in [28].
+
+In addition to Productivity Journal, we deployed another
+journal (called “Skip Journal”) so that participants can report
+reasons when they did not capture any productive activities
+during the day (e.g., too busy to capture productive activities,
+did not do any productive activities). At 9:00 p.m. every week-
+day, the Skip Journal app sent a notification to participants
+if they did not log an entry in either of the two journals.
+
+Procedure
+Participants attended an hour-long pre-study session in a
+small group (2–4 participants), during which we explained
+our study goal and protocol. After installing the two diary
+apps (Productivity Journal & Skip Journal) on their smart-
+phones, we gave a short tutorial on how to record and man-
+age the journal entries. We instructed the participants to
+record the journals for two weeks (10 mandatory weekdays
+and 4 voluntary days in weekends). We emphasized that
+the number of journal entries is not tied to the study com-
+pensation. Starting a day after the pre-study session, the
+journal entries were uploaded to our server when partici-
+pants’ smartphones were connected to the network.
+
+After two weeks, we met each participant individually for
+a debriefing session, which comprises a semi-structured in-
+terview and another activity that is outside the scope of this
+
+investigation (we do not report the data from this activity
+here). Each session lasted about one and a half hours, and was
+audio-recorded and transcribed. We asked questions regard-
+ing their logging contexts (e.g., “In what situation did you
+log an entry?”), assessment on productivity perception (e.g.,
+“When did you feel productive?”), and insights gained from
+the tracking (e.g., “What did you learn about your productive
+activities through tracking?”).
+
+Data Analysis
+From Productivity Journals, we first examined journaling
+patterns such as the number of entries and duration of the
+activities. We did not analyze the data from Skip Journals
+because they contained too few entries (only seven entries
+by six participants).
+
+To understand participants’ reasoning of productivity eval-
+uation, we analyzed the open-ended answers in the rationale
+fields. Following the thematic analysis approach [5], three
+authors independently coded a subset of the entries (200
+entries; 24%) to identify emerging themes regarding factors
+involved in the productivity assessment. As rationale can
+include more than one theme, we multi-coded the entries. Af-
+ter reaching an agreement in the coding scheme (Table 3) by
+resolving discrepancies in coding through multiple sessions
+of discussion, one researcher coded the remaining data.
+
+To identify task categories of productive activities, we
+categorized unique task names found in the tasks fields. We
+referred to the answers in the rationale fields and the inter-
+view transcripts to disambiguate what participants actually
+did for tasks with a vague name (e.g., ‘etc.’). We iteratively
+developed task categories and sub-categories. After identi-
+fying all task categories from our dataset, we finalized their
+names so that they are compatible with the task category
+names in Czerwinski and colleagues’ work [12] (e.g., project,
+routine task, email, and personal).
+
+4 RESULTS
+We report the results of our study in three parts: (1) descrip-
+tive summary of diary entries; (2) rationales for productivity
+evaluation; and (3) task types of productive activities.
+
+Descriptive Summary of Diary Entries
+During the 2-week deployment, we collected 830 Productiv-
+ity Journal entries captured by 24 participants. The entries
+contained a total of 1,197 hours of activities. Of the 830 en-
+tries, 104 (12.53%) contained two or more tasks (indicating
+multitasking or multifaceted nature of the activity), and 752
+(90.60%) entries were captured during the weekdays. In Ta-
+ble 2, we summarize the details about the entries captured
+in weekdays and weekends.
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 4Number of entriesa Avg. # of entries Total duration
+
+Total
+
+Weekdays
+
+Weekends
+
+752 (262/312/178)
+78 (22/31/25)
+830 (284/343/203)
+
+1,063 hours
+134 hours
+1,197 hours
+a Inside parenthesis: neural/productive/very productive entry count.
+Table 2: Summary statistics of the Productivity Journal.
+
+31.33 (N = 24)
+4.87 (N = 16)
+34.58 (N = 24)
+
+Figure 2: Total duration of the captured activities for each
+participant (grouped by the productivity levels).
+
+Participants recorded entries for an average of 9.20 week-
+days (SD = 1.10), with 14 participants recording all 10 week-
+days. Although the weekends were optional, four partici-
+pants completed all 14 days. Participants recorded an av-
+erage of 49.88 hours of productive activities in total (SD =
+26.66), and the entries from weekdays occupied 4.42 hours
+per day. However, there was a high interpersonal variation
+in total duration and the proportion of each productivity
+level (Figure 2). The average length of activity duration in
+each entry was 86.53 minutes (SD = 74.62), while 56.63% (470
+entries) of the activities lasted no more than an hour. The
+average length of activity per participant ranged from 43.37
+to 157.15 minutes. The number of unique tasks participants
+captured ranged from 2 to 17 (M = 8.83, SD = 4.15).
+
+We note that participants might not have clearly excluded
+unproductive activities on their entries. Some entries with
+neutral label might have captured both the least productive
+and unproductive activities: we encountered several entries
+which mention the “unproductiveness” in their rationales.
+This might have affected our results to be a bit more inclusive
+
+for unproductive activities. However, given the qualitative
+nature of our study and such entries’ relevance to productiv-
+ity, the small number of such additional entries have minimal
+threats to the validity of our investigation.
+
+Rationales for Productivity Evaluation
+Analyzing the rationale field of the diary, we identified 21
+subthemes of productivity evaluation which are grouped into
+six themes (Table 3). In the following subsections, we discuss
+each theme and contributing subthemes in more detail.
+
+Work Product. Participants considered the output of the
+activities as an important aspect contributing to their pro-
+ductivity. We identified four factors constituting the work
+product: concrete output and progress, conceptual achieve-
+ment, quality of the output, and quantity of the output.
+
+Concrete output & progress and conceptual achieve-
+ment refer to tangible and intangible forms of achievement
+from tasks, respectively. Producing concrete outputs—such
+as implementing a new feature, making a design artifact, or
+documenting a design idea—made participants perceive a
+task productive. It was also considered productive that they
+could resolve an issue or make a concrete progress from a
+meeting (e.g., making decisions on the agenda). In addition,
+conceptual achievement—such as gaining insights, coming
+up with ideas, and acquiring knowledge—contributed to pro-
+ductivity. In the exit interview, P9 remarked, “When I learn
+new concepts I feel somewhat proud of it, although this feeling
+of making progress could be illusory ... I rated many such cases
+highly productive.”
+
+Both quality and quantity were important factors when
+assessing individuals’ work product. Given that the output
+quality matters in knowledge work [18], we found many
+cases in which participants related the output quality to
+“how productive” they were in the task. In this vein, low out-
+put quality made them feel less productive and even stressful
+because it could hinder the progress or require additional
+task. Quantity of the output was usually manifested in mod-
+ifier expressions: many (decisions made), much (inspiration),
+largest (to-do items), or various (ideas). Interestingly, a ma-
+jority of the quantity-based reflection on work product was
+about the conceptual achievement rather than objective and
+quantifiable tasks.
+
+Time Management. Recognizing time as a limited resource
+of life [54], participants reflected on time-related factors
+of their activities. We identified three time-related factors:
+efficiency & intensity, punctuality, and use of spare time.
+
+Efficiency & intensity and punctuality both involve
+the elapsed time of the work, but their focus is different. For
+efficiency & intensity, participants focused on the perceived
+amount of work during a given period, or whether they com-
+pleted a task faster than they expected or planned. A mental
+
+Total Duration (Hours)0102030405060708090100110120130P13P9P11P2P20P24P6P17P23P18P14P10P3P16P19P22P7P21P4P1P8P12P5P15NeutralProductiveVery ProductiveCHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 5Theme
+
+Subtheme
+
+Example Rationale Answers
+
+Concrete output & progress
+
+“Presented future directions to the team and received feedback from them” – very productive [P21]
+
+Work
+product
+
+Conceptual achievement
+
+Quality of the outcome
+
+Quantity of the outcome
+
+“Although it [seminar] was outside of my research area, it inspired me to reflect on my research directions.”
+– productive [P11]
+
+“Because the quality of the design draft was so poor, it was stressful to go through the feedback I received”
+– neutral [P24]
+
+“I had a long conversation with my colleague for three hours. He gave me much advice on how to manage
+my career, how to bear a job, how to protect my work, and so on.” – productive [P22]
+
+Time
+management
+
+Efficiency & intensity
+
+Punctuality
+
+“Prepared for the class efficiently, pressured by a tight schedule” – very productive [P11]
+“Mainly small talks, in a business meeting.” – neutral [P2]
+“Answered all the emails in the inbox before the time to go home!” – very productive [P7]
+
+Use of spare time
+
+“Read a book leveraging the time to commute.” – productive [P4].
+
+Worker’s
+state
+
+Attention & distraction
+
+“Highly focused in the morning; completed the presentation slide” – very productive [P17]
+
+Emotional state
+
+“Grappled with the UI flow ... Ideas from two are better than one, and three are much better than two. I
+felt good!” – productive [P22]
+
+Physical state
+
+“It dragged on as I was dozing” – neutral [P16]
+
+Chores and mundane task
+
+“It was just a Monday weekly meeting, rarely meaningful to me.” – neutral [P21]
+
+Attitude
+toward work
+
+Enjoyment of the task
+
+“Built and tested the app‼ Although I was not in a good condition, I was completely focused on the work
+because it was enjoyable to produce highly concrete output.” – very productive [P17]
+
+Significance of the task
+
+“Focused [on the meeting] because of my role (scribe)” – productive [P23]
+
+Rewarding self-regulation
+
+“Even though I didn’t want [to go to the gym], I did go!” – productive [P20]
+
+Impact
+and benefit
+
+Long-term career benefit
+
+“Talked with my colleague about why I wanted to resign from the company, what was tough for me and
+what I couldn’t resolve here ... I thought I should consider more alternatives including different types of
+startup companies” – very productive [P22]
+
+Social and spiritual benefit
+
+“It is very productive to serve the community [church] I belong to” – very productive [P13]
+
+Self-management & well-being “[Drumming] Not improved much ’cause I didn’t practice hard ... beat is still unstable.” – neutral [P16]
+
+Monetary rewards
+
+“Saved both time and budget, by buying an air ticket in advance” – productive [P18]
+
+Compound
+task
+
+Task switching
+by interruptions
+
+Multitasking
+
+Unexpected issues
+
+“Found a critical issue in the app while improving the design of home screen -> Notified the problem to
+developers [interrupting task] -> Couldn’t complete my original task” – neutral [P16]
+
+“Finished multiple tasks, including email follow-ups and phone calls, at once, which may normally take 3
+hours long.” – very productive [P9]
+
+“The power strip had short-circuited, making me stop working and go home. Totally frustrated especially
+because I was highly productive until then. :( ” – neutral [P1]
+
+Table 3: Six themes of productivity evaluation derived from the rationale field answers.
+
+pressure imposed by a deadline or the next task in a queue
+sometimes led to high efficiency, whereas no urgency led
+some participants to be laid-back. The assessment of a meet-
+ing productivity frequently referred to efficiency & intensity:
+participants perceived a business meeting less productive
+when the conversation derailed. Low proficiency was also
+the cause of low efficiency.
+
+For punctuality, participants focused primarily on whether
+they completed a task on time or met a deadline—either an
+external deadline (e.g., deadline to send a document) or self-
+imposed one (e.g., hoping to finish tasks before the closing
+hour). In some domains (e.g., counseling), punctuality was
+considered an important value. For example, P19 was sensi-
+tive to the punctuality of her counseling session (e.g., “gave
+insights [to the client], finished on time” – very productive). In
+
+the exit interview, she remarked a reason for this: “Counsel-
+ing is conducted under very strict rules so it’s really important
+to be punctual ... everything we do is a promise between the
+client and myself, which gives insights to the client.”
+
+Use of spare time reflects participants’ aspiration that
+they want to use or save their time wisely. Participants com-
+monly used their commute time (e.g., on the bus, on the
+subway) to do personally meaningful tasks.
+
+Worker’s State. Personal states during or after the activity
+affected how participants perceive their performance or pro-
+ductivity. Participants captured three major states: attention
+and distraction, emotional state, and physical state.
+
+Attention refers to the state in which participants were
+able to concentrate on their tasks, while distraction refers
+to diverting the attention by losing the ability to focus on
+their tasks. Participants felt they were productive when they
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 6could stay focused for a while because it affects the quality
+of output and work efficiency. In the entries, participants
+frequently mentioned that they could complete a task or
+produce an output as planned because they concentrated on
+the task. In contrast, participants felt less productive when
+distracted: they captured various distracting behaviors such
+as using social media or a smartphone.
+
+Emotional and physical states also affected productivity.
+Participants recorded various psychological reactions to a
+task—such as feeling accomplished, satisfied, or depressed.
+For exercise and leisure activities, for example, participants
+perceived high productivity when they felt refreshed, re-
+lieved stress, or were pleased. Also, participants’ physical
+condition was associated with other factors, such as atten-
+tion and efficiency. The entries mentioning the physical state
+consistently indicated that a good physical condition yielded
+a high level of focus, and a poor physical condition yielded
+a low level of attention (e.g., dozing). Factors affecting the
+physical condition included sleep, fatigue, and sickness.
+
+Attitude Toward Work. Participants’ attitude toward a
+task influenced their perceived productivity—i.e., differences
+in receptiveness such as personal values, meaningfulness,
+significance, or willingness yielded different perception of
+productivity. We identified four salient types of such recep-
+tiveness: chores and mundane tasks, enjoyment, significance,
+and rewarding self-regulation.
+
+Chores and mundane tasks, not pleasant but necessary
+routines, were what participants were usually unwilling to
+do, marking such activities to be the least productive (i.e.,
+neutral). Participants seemed to distinguish the tasks involv-
+ing their creative knowledge (e.g., design, development) from
+others (e.g., paperwork, data entry). When evaluating chores,
+participants rarely considered the quality, but how quickly
+they could handle the chores. On the other hand, significant
+tasks stimulated participants to be more focused. Dealing
+with a task with a potential to impact the work process or
+being in charge of making a decision were considered sig-
+nificant. Examples from the entries include making a big
+decision for the theme of design, gaining important informa-
+tion for decision making, and resolving a critical logic error
+in source code.
+
+When participants enjoyed the task, they were immersed
+themselves and sometimes outperformed, feeling highly pro-
+ductive. In contrast, participants perceived a task less pro-
+ductive when they did not want to do it. Doing unenjoyable
+tasks, participants were likely to feel themselves distracted
+and inefficient.
+
+Self-regulatory behaviors such as overcoming procras-
+tination and partaking self-disciplinary activities were con-
+sidered productive. For example, managing to go to a gym
+even when tired was considered to be productive regardless
+
+of the intensity of the exercise. Other examples included
+dealing with a postponed paperwork or housework.
+
+Impact and Benefit. Participants valued the activities that
+have potential benefits on their careers, relationships, well-
+being, or finance. We identified four types of impact and
+benefits: long-term career benefit, social and spiritual benefit,
+self-management & well-being, and monetary rewards.
+
+Long-term career benefit reflects participants’ interests
+in personal development and their long-term career path.
+Participants captured activities that were expected to have
+positive effects on their career, such as developing a skill set
+or building a good professional reputation. At the time of
+the diary study, for example, P22 was concerning about a
+job transfer. She captured the productive activities of having
+conversations with colleagues or a family member that con-
+tributed to helping her make a decision (See example quotes
+in Table 3). In the exit interview, she explained the benefit of
+constructive conversation: “Thinking a lot about my future
+and career, I felt I could benefit from talking with someone
+about it ... When I told my colleague that I was considering a
+transfer, he gave me helpful advice. It was interesting that I
+felt productive doing such things.”
+
+Social and spiritual benefit reflects participants’ aware-
+ness of the relationships with others, and their personal faith.
+Participants considered their activities productive when the
+activities had a positive impact on their relationships with
+family or colleagues. In addition, two participants captured
+religious activities such as prayer, worship, and small group
+activities in church. Productivity of these activities were
+evaluated based on the spiritual benefit they delivered (e.g.,
+concentrating on the prayer).
+
+Benefits regarding wellness—self-management & well-
+being and monetary rewards—were connected to produc-
+tivity. Participants aspired to enrich their well-being with
+activities such as exercising, getting a haircut, having a hobby,
+and baking at home. Although such activities were mostly
+considered productive by themselves, participants also con-
+sidered the quality or intensity of activities for exercise or
+practice. Although relatively few cases were recorded, finan-
+cial activities such as refinancing or buying an early-bird
+ticket financially benefited participants, and thus were per-
+ceived productive.
+
+Compound Task. Sometimes, a few tasks were interleaved
+and performed in parallel. We identified three situations that
+involve compound tasks: task switching by interruptions,
+multitasking, and unexpected issues.
+
+Task switching by interruption frequently occurred,
+making participants feel less productive. The interrupting
+tasks included urgent requests from a colleague, answering
+an urgent email or phone call, sporadic microtasks, and an
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 7Category / Subcategory
+
+Description
+
+Entry Count
+
+Example Task Names
+
+Routine Task
+
+Learning
+
+Paperwork, writing and processing documents.
+
+169 (20%) - 20Ps Administration tasks, Handling documents
+
+Information acquirement, learning,
+and knowledge gain.
+
+164 (20%) - 20Ps Attending Seminar, Search, Reading books,
+
+Taking an online course, Group speaking
+
+Commu-
+nication
+
+Project
+
+Face-to-face meeting Communication in person, usually with colleagues. 182 (22%) - 17Ps Project Meeting, Briefing, Counseling
+
+Emails
+
+Dealing with e-mails
+
+57 (7%) - 7Ps Writing emails
+
+Conference Call
+
+Communicating with people remotely.
+
+20 (2%) - 5Ps
+
+Customer comm., Phone call
+
+Documenting &
+Conceptualizing Ideas
+Experiment &
+Development
+
+Activities for planning and organizing ideas
+into a form of document.
+Activities for implementation, experimentation,
+and problem solving through systemic processes.
+
+Producing design artifacts.
+
+118 (14%) - 12Ps Planning service flows, Paper writing,
+
+68 (8%) - 5Ps
+
+46 (6%) - 6Ps
+
+Writing a user scenario
+Programming, Conducting a molecular biologi-
+cal experiment, Data analysis
+
+Design-related, Logo design, Improving home
+screen
+
+Self-care for health and wellness including exercise
+and medical treatments.
+
+Activities which people perform during their free
+time to regenerate.
+
+52 (6%) - 10Ps Corporate fitness center, swimming, yoga,
+
+receiving treatment
+
+31 (4%) - 5Ps Watching Netflix, Home brewing, Team retreat,
+
+[Hobby] drumming
+
+Conversations, interactions, meals, and any other
+social activities with acquaintances or family.
+
+17 (2%) - 6Ps
+
+Personal conversation, With my family, Wor-
+ship, Orchestra practice
+
+Household activities, shopping, and finances.
+
+6 (1%) - 4Ps
+
+Housekeeping, Shopping for groceries
+
+Design
+
+Health
+
+Personal
+
+Leisure
+
+Social
+
+Living
+
+Scheduling &
+Environmental Setups
+
+Coordinating schedules, reviewing past tasks, and
+maintenance activities for work-related facilities.
+
+25 (3%) - 4Ps
+
+Planning, Environmental setup for experiment
+
+Table 4: Task categories with a brief description, entry count with the number of participants (Ps), and example task names.
+Note that a single entry can contain multiple tasks so there are overlaps in entry count.
+
+unexpected roadblock during a task. In other cases, partici-
+pants performed multiple tasks at once—i.e., multitasking.
+Unlike task switching, multitasking yielded mixed percep-
+tions of productivity: simultaneous handling of mundane
+tasks was often perceived as incessant chores, whereas delib-
+erate multitasking yielded a feeling of working intensively.
+Unexpected issues, usually caused by the malfunction
+of facilities or work devices for the task, adversely affected
+the productivity. Participants perceived such cases less pro-
+ductive because they were unable to complete the task as
+planned or had to resolve that unexpected issues.
+
+Task Types of Productive Activities
+From the analysis of the 183 unique task names found in the
+entries’ tasks field, we identified 13 prominent task categories
+(Table 4). Ten of them are grouped under three high-level
+categories—communication, project, and personal—based on
+their relevance. Some of the task categories are consistent
+with prior works regarding the capture of common activities
+of knowledge workers. For example, routine tasks, emails,
+conference call, project, and personal categories were also
+prevalent in Czerwinski and colleagues’ work [12]. Reinhardt
+and colleagues [42] identifies a set of 12 actions in knowledge
+work, which roughly overlaps our categories in terms of
+learning, project, and communication. In this section, we
+highlight notable categories.
+
+Learning. As information is an important capital for knowl-
+edge workers, learning activities covered both the work and
+non-work contexts. In workplace, participants took seminars
+or online courses mandatory for employee education. Some-
+times they gathered references or case studies to inform the
+design of user interfaces. In the non-work context, partici-
+pants read books or participated in a study group to learn or
+improve skills (e.g., learn how to speak English).
+
+Communication. Communication was an essential activity
+of participants’ work. Specifically, the in-person communi-
+cation was very prevalent; Participants had frequent ad-hoc
+meetings for decision making, supervisor briefings, etc. In
+contrast to the prior works that considered emails as a promi-
+nent task of knowledge workers [12, 36], only seven partic-
+ipants treated handling emails as an explicit task. Instead,
+we found cases where participants considered emails as a
+part of a higher-level task, typically project-related; 12 diary
+entries described the email-related behaviors only in the ra-
+tionale field. For example, P16 reported, “App design renewal”
+as a task and “Finalized the design and sent it via email and
+messenger” as a rationale.
+
+Personal. Thirteen percentage of the diary entries (n = 106)
+contained personal activities submitted by 15 participants.
+Specifically, ten participants included health-related activ-
+ities such as exercise and getting a medical treatment; five
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 8included their leisure activities such as hobbies; six included
+social activities such as hanging out with friends and partic-
+ipating in a religious group; and four included household-
+related activities such as a grocery shopping and cleaning
+the house.
+
+5 DISCUSSION
+Our study extends prior productivity research in two ways.
+First, we characterized what constitute productive activities.
+Second, we identified the productive activities beyond work-
+related tasks that people perceived to be important. Here,
+we discuss implications for designing technologies that can
+help individuals capture and improve their productivity.
+
+Productivity as a Multifaceted Concept
+In designing our diary study, we assumed that the target of
+productivity evaluation was task types and the time block.
+This decision was in accordance with existing productiv-
+ity tools (e.g., [43]), where a person or a system assesses
+whether the time spent on a certain task was productive.
+However, our results drawn from people’s productivity ra-
+tionale showed that how people assess productivity is more
+complex than our assumption. Sometimes, a predisposition
+to a task—whether a task is significant or trivial—had a strong
+effect on people’s productivity perceptions. In some occa-
+sions, people’s emotional and physical states and their level
+of attention directly corresponded to the productivity. Other
+times, the result (i.e., work product, impact of the work) of
+the time spent was analogous to the level of productivity.
+
+We note that many of the productivity attributes that we
+identified are largely missing from the current productivity
+tool design. For example, existing productivity tools rarely
+capture work product, even though this is one of the two
+defining factors of productivity (i.e., “output”) according to
+the traditional term. Although we do not assert that all at-
+tributes we identified should be captured by the productivity
+monitoring tools, our results suggest that productivity be
+treated as a multifaceted concept rather than a homogeneous
+concept. As such, we should rethink how productivity tools
+should be designed to incorporate the level of sophistication.
+
+Diverse Productive Activities in Work Contexts
+As computing devices such as laptops, desktops, and mobile
+devices have been commonly used in knowledge work [24],
+prior productivity tracking tools and research studies have
+focused primarily on the work involving such devices. How-
+ever, we observed many cases where work-related activities
+seemed to be performed without using computing devices.
+These activities included face-to-face meetings and offline
+learning activities (e.g., reading books and research papers).
+Also, prior studies show that people consciously do not use
+devices (e.g., lock them out of their phone when they need
+
+to focus), as well as move outside of the office environment
+(e.g., have walking meetings to avoid prolonged sitting and
+to increase in creative thinking [9]) to be productive.
+
+The omnipresence of computing devices made the distinc-
+tion between work and life fuzzy, which was also manifested
+in our study results. Although we did not report in depth,
+many of the work-related activities were performed outside
+the “typical” work hours of 9 a.m. to 6 p.m., which indicates
+that work can take place anytime and anywhere. When pro-
+ductivity tracking tools only account for the activities that
+involve computers or that take place in the traditional office
+setting—as in the case of many current productivity tools,
+we miss out important aspects of work. Thus, we should
+consider a broad range of tasks and work environments to
+be the focus of productivity.
+
+Productive Activities in Personal Contexts
+Although we did not restrict participants to capture only
+work-related activities for productivity evaluation, we had
+assumed that the majority of the tasks would be work-related,
+specifically regarding their primary job. However, we were
+surprised to find that a wide range of activities in personal
+contexts were perceived productive. The results implied that
+personal matters related to health, leisure, social, and house-
+hold are as important as work-related ones and are subject
+to productivity evaluation.
+
+During the study, one participant (P22) was thinking about
+switching jobs, which means that the activities that she did
+outside of her current job (e.g., updating resume and portfolio,
+having a conversation about job prospects) were considered
+as important as, or even more important than the activities
+for her current job. In general, activities that count toward
+participants’ long-term career benefits were considered im-
+portant and productive. For some, personal productivity may
+be achieved at the expense of organizational productivity;
+for others, organizational productivity has precedence over
+personal, or personally meaningful productivity. We see a
+growing number of workplace productivity monitoring tools
+(e.g., Desk Time [15], Time Doctor [49], Veriato [50]) de-
+signed to improve the overall organizational productivity.
+However, our investigation calls for a different kind of pro-
+ductivity tools that prioritize individual values and their
+long-term career, while having a symbiotic relationship with
+organizational productivity.
+
+Factors Affecting Productivity
+Rationales for productivity evaluation were highly related to
+one another, which was also the reason why we multi-coded.
+For example, chores and mundane tasks were frequently con-
+nected to attention and distraction, and the low attention
+was in turn connected to efficiency and intensity, leading to
+low perceived productivity. This connection is supported by
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 9other studies (e.g., Bored and partly Rote in [35], and Chores
+in [18]). Although confirming these observations in a quanti-
+tative way is beyond the scope of our investigation, it would
+be interesting to explore the relationship among some of the
+themes (e.g., between attitude toward work and efficiency).
+Furthermore, examining the causal relationship between
+productivity themes and productivity evaluation (e.g., rela-
+tionship between the worker’s state and the productivity)
+warrants future work.
+
+Opportunities for Tracking Tool Customization
+Although our study participants entered a large number of
+tasks (183 unique task names), individual participants en-
+gaged in only a handful of tasks (8.8 unique task names on
+average). In other words, there were large individual differ-
+ences in participants’ tasks, but each participant repeated
+a small set of tasks. This finding indicates the need and
+opportunity for customizing productivity trackers to fit an
+individual’s context and preference.
+
+In our study, manual tracking allowed participants to cap-
+ture productive context and activities beyond the comput-
+erized environment (e.g., reading a printed research paper,
+having informal conversations). We, however, note that some
+tasks might be easy to track automatically, whereas others
+might require a person to manually register. For example,
+distracted behaviors involving computing devices such as
+visiting social media and activating or unlocking a smart-
+phone can be easily captured automatically, but not manually.
+Moreover, they can also be classified as “unproductive” ac-
+tivities automatically, although such automatic classification
+is vulnerable to false-positive prediction.
+
+Resolving this tension between the manual and automated
+productivity tracking is still a challenge for the design of com-
+prehensive productivity monitoring tools. Recently, Choe
+and colleagues [7] introduced the notion of Semi-Automated
+Tracking in designing self-tracking tools by balancing both
+manual and automated capture methods. We envision that
+this semi-automated tracking approach is a promising direc-
+tion for designing comprehensive and personalized produc-
+tivity monitoring tools. In addition to the division of labor
+between manual and automated capture methods, the semi-
+automated tracking approach allows people to confirm or
+correct the measure of automated capture, which improves
+tracking tools’ overall accuracy.
+
+Our findings showed a broad range of evaluation met-
+rics (e.g., importance, outcome, worker’s state) and activity
+categories. Given the diversity of possible tracking items,
+having a tracker preparation phase for a week or so could
+help people identify personally meaningful tracking items
+and evaluation metrics. People then can leverage a flexible
+tracker creation platform such as OmniTrack [28] to create a
+custom tracker. Moreover, as people’s tracking practice tend
+
+to change over time [28], it is important to allow them to
+refine the tracker design on the go.
+
+Study Limitations
+Although we aimed to recruit participants from diverse back-
+grounds (11 types of occupations), our study participants
+may not be representative of overall knowledge workers. For
+example, clinicians, writers, or journalists are a few examples
+who engage in the different nature of the work compared to
+our participants. Studying with a broader range of people
+would likely provide more diverse results (e.g., identifying
+new themes of productivity evaluation).
+
+We also note that participants’ cultural background might
+have affected our dataset: due to the long work hours in
+South Korea, our participants might have collected more
+entries or more work-related entries even though long work
+hours do not necessarily imply high productivity.
+
+Our method could have oversampled less productive (i.e.,
+neutral) activities and undersampled productive activities.
+However, prior studies have shown that people like to cap-
+ture positive behaviors because it feels rewarding and good,
+whereas capturing negative behaviors can serve as negative
+reinforcement (e.g., [27]). In addition, 20.6% of productivity
+journal entries were captured at 9 p.m. or after, indicating
+“backlogging” or late work. We thus believe that our data
+capture protocol did not likely bias the dataset.
+
+6 CONCLUSION
+In this paper, we reported a diary study (N = 24) conducted
+to understand how knowledge workers conceptualize their
+personal productivity. Over the course of two weeks, we
+collected self-report data on activities that were perceived
+to be productive and the rationales for the assessment. From
+the diary and semi-structured interview data, we distilled
+rich contexts and various aspects affecting the perception
+of productivity, which are broad and highly personalized.
+As we rethink the design of productivity tracking tools, we
+envision leveraging the semi-automated tracking approach
+by combining both manual and automated ways to capture
+comprehensive and personally meaningful tasks. Our work
+contributes to the growing body of literature on personal
+informatics with a focus on personal productivity, providing
+implications for designing a comprehensive productivity
+tracking tools. We hope this study can help others working
+in the field gain insight regarding ways to better support
+tracking of personal productivity.
+
+ACKNOWLEDGMENTS
+We thank our study participants for their time and efforts.
+We also thank Junhoe Kim and Valérie Erb for improving
+the OmniTrack platform. This work was supported in part
+by NSF award 1753452 and a gift from Microsoft Research.
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 10REFERENCES
+[1] David Allen. 2001. Getting Things Done : The Art of Stress-free Produc-
+
+tivity. Viking, New York.
+
+[2] Arnold B. Bakker and Matthijs P. Bal. 2010. Weekly Work Engagement
+and Performance: A Study Among Starting Teachers. Journal of Oc-
+cupational and Organizational Psychology 83, 1 (mar 2010), 189–206.
+https://doi.org/10.1348/096317909X402596
+
+[3] Niall Bolger, Angelina Davis, and Eshkol Rafaeli. 2003. Diary Methods:
+Capturing Life as It Is Lived. Annual Review of Psychology 54, 1 (2003),
+579–616. https://doi.org/10.1146/annurev.psych.54.101601.145030
+[4] Jelmer P. Borst, Niels A. Taatgen, and Hedderik van Rijn. 2015. What
+Makes Interruptions Disruptive?: A Process-Model Account of the
+Effects of the Problem State Bottleneck on Task Interruption and Re-
+sumption. In Proceedings of the 33rd Annual ACM Conference on Human
+Factors in Computing Systems (CHI ’15). ACM, New York, NY, USA,
+2971–2980. https://doi.org/10.1145/2702123.2702156
+
+[5] Virginia Braun and Victoria Clarke. 2006. Using Thematic Analysis
+in Psychology. Qualitative Research in Psychology 3, 2 (2006), 77–101.
+https://doi.org/10.1191/1478088706qp063oa
+
+[6] Arthur P. Brief and Ramon J. Aldag. 1975. Employee Reactions to
+Job Characteristics: A Constructive Replication. Journal of Applied
+Psychology 60, 2 (1975), 182–186. https://doi.org/10.1037/h0076548
+[7] Eun Kyoung Choe, Saeed Abdullah, Mashfiqui Rabbi, Edison Thomaz,
+Daniel A Epstein, Felicia Cordeiro, Matthew Kay, Gregory D Abowd,
+Tanzeem Choudhury, James Fogarty, Bongshin Lee, Mark Matthews,
+and Julie A Kientz. 2017. Semi-Automated Tracking: A Balanced
+Approach for Self-Monitoring Applications. IEEE Pervasive Computing
+16, 1 (Jan 2017), 74–84. https://doi.org/10.1109/MPRV.2017.18
+
+[8] Eun Kyoung Choe, Bongshin Lee, Matthew Kay, Wanda Pratt, and
+Julie A. Kientz. 2015. SleepTight: Low-burden, Self-monitoring Tech-
+nology for Capturing and Reflecting on Sleep Behaviors. In Proceedings
+of the 2015 ACM International Joint Conference on Pervasive and Ubiq-
+uitous Computing (UbiComp ’15). ACM, New York, NY, USA, 121–132.
+https://doi.org/10.1145/2750858.2804266
+
+[9] Russell Clayton, Christopher Thomas, and Jack Smothers. 2015. How
+to do walking meetings right. Harvard Business Review (2015). https:
+//hbr.org/2015/08/how-to-do-walking-meetings-right
+
+[10] Derek Clements-Croome and Yamuna Kaluarachchi. 2000. Assessment
+and measurement of productivity. In Creating the Productive Work
+Place. E & FN Spon, Chapter 10, 129–166.
+
+[11] Codealike. 2018. Codealike: Powerful Metrics for High Performance
+
+Developers. (2018). https://codealike.com/
+
+[12] Mary Czerwinski, Eric Horvitz, and Susan Wilhite. 2004. A Diary
+Study of Task Switching and Interruptions. In Proceedings of the 2004
+conference on Human factors in computing systems (CHI ’04). ACM Press,
+New York, NY, USA, 175–182. https://doi.org/10.1145/985692.985715
+[13] Laura Dabbish, Gloria Mark, and Víctor M. González. 2011. Why Do I
+Keep Interrupting Myself?: Environment, Habit and Self-interruption.
+In Proceedings of the SIGCHI Conference on Human Factors in Computing
+Systems (CHI ’11). ACM, New York, NY, USA, 3127–3130. https://doi.
+org/10.1145/1978942.1979405
+
+[14] Thomas H Davenport. 2005. Thinking for A Living: How to Get Better
+Performance and Results from Knowledge Workers. Notes 18, 4 (2005),
+599–603. https://doi.org/10.1002/hrdq.1221
+
+[15] DeskTime. 2018. Automatic Business Time-Tracking Software | Desk-
+
+Time. (2018). https://desktime.com
+
+[16] Nancy G. Dodd and Daniel C. Ganster. 1996. The Interactive Effects of
+Variety, Autonomy, and Feedback on Attitudes and Performance. Jour-
+nal of Organizational Behavior 17, 4 (jul 1996), 329–347. https://doi.org/
+10.1002/(SICI)1099-1379(199607)17:4<329::AID-JOB754>3.0.CO;2-B
+
+[17] Peter F. Drucker. 1991. The new productivity challenge. Harvard
+business review 69, 6 (1991), 69–69. http://www.ncbi.nlm.nih.gov/
+
+pubmed/10114929
+
+[18] Peter F Drucker. 1999. Knowledge-Worker Productivity: The Biggest
+Challenge. California Management Review 41, 2 (jan 1999), 79–94.
+https://doi.org/10.2307/41165987
+
+[19] J. Richard Hackman and Greg R. Oldham. 1976. Motivation through
+the Design of Work: Test of a Theory. Organizational Behavior and
+Human Performance 16, 2 (1976), 250–279. https://doi.org/10.1016/
+0030-5073(76)90016-7 arXiv:arXiv:1011.1669v3
+
+[20] Barry P. Haynes. 2007. An evaluation of office productivity mea-
+surement. Journal of Corporate Real Estate 9, 3 (jul 2007), 144–155.
+https://doi.org/10.1108/14630010710845730
+
+[21] Alexis Hiniker, Sungsoo Ray Hong, Tadayoshi Kohno, and Julie A
+Kientz. 2016. MyTime: Designing and Evaluating an Intervention for
+Smartphone Non-Use. In Proceedings of the 2016 CHI Conference on
+Human Factors in Computing Systems (CHI ’16). ACM Press, New York,
+NY, USA, 4746–4757. https://doi.org/10.1145/2858036.2858403
+[22] Kevin Holesh. 2018. Moment – Automatically track your and your
+family’s daily iPhone and iPad use. (2018). https://inthemoment.io/
+[23] Jing Jin and Laura A. Dabbish. 2009. Self-interruption on the Computer:
+A Typology of Discretionary Task Interleaving. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing Systems (CHI ’09).
+ACM, New York, NY, USA, 1799–1808. https://doi.org/10.1145/1518701.
+1518979
+
+[24] Tero Jokela, Jarno Ojala, and Thomas Olsson. 2015. A Diary Study on
+Combining Multiple Information Devices in Everyday Activities and
+Tasks. In Proceedings of the 33rd Annual ACM Conference on Human
+Factors in Computing Systems (CHI ’15). ACM Press, New York, NY,
+USA, 3903–3912. https://doi.org/10.1145/2702123.2702211
+
+[25] Inyeop Kim, Gyuwon Jung, Hayoung Jung, Minsam Ko, and Uichin Lee.
+2017. Let&Rsquo;s FOCUS: Mitigating Mobile Phone Use in College
+Classrooms. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 1,
+3, Article 63 (Sept. 2017), 29 pages. https://doi.org/10.1145/3130928
+
+[26] Jaejeung Kim, Chiwoo Cho, and Uichin Lee. 2017. Technology Sup-
+ported Behavior Restriction for Mitigating Self-Interruptions in Multi-
+device Environments. Proc. ACM Interact. Mob. Wearable Ubiquitous
+Technol. 1, 3, Article 64 (Sept. 2017), 21 pages. https://doi.org/10.1145/
+3130932
+
+[27] Young-Ho Kim, Jae Ho Jeon, Eun Kyoung Choe, Bongshin Lee, Kwon-
+Hyun Kim, and Jinwook Seo. 2016. TimeAware: Leveraging Framing
+Effects to Enhance Personal Productivity. In Proceedings of the 2016 CHI
+Conference on Human Factors in Computing Systems (CHI ’16). ACM,
+New York, NY, USA, 272–283. https://doi.org/10.1145/2858036.2858428
+[28] Young-Ho Kim, Jae Ho Jeon, Bongshin Lee, Eun Kyoung Choe, and
+Jinwook Seo. 2017. OmniTrack: A Flexible Self-Tracking Approach
+Leveraging Semi-Automated Tracking.
+Proc. ACM Interact. Mob.
+Wearable Ubiquitous Technol. 1, 3, Article 67 (Sept. 2017), 28 pages.
+https://doi.org/10.1145/3130930
+
+[29] Minsam Ko, Seungwoo Choi, Koji Yatani, and Uichin Lee. 2016. Lock
+n’ LoL: Group-based Limiting Assistance App to Mitigate Smart-
+phone Distractions in Group Activities. In Proceedings of the 2016
+CHI Conference on Human Factors in Computing Systems (CHI ’16).
+ACM Press, New York, NY, USA, 998–1010. https://doi.org/10.1145/
+2858036.2858568
+
+[30] Minsam Ko, Kyong-Mee Chung, Subin Yang, Joonwon Lee, Christian
+Heizmann, Jinyoung Jeong, Uichin Lee, Daehee Shin, Koji Yatani, and
+Junehwa Song. 2015. NUGU: A Group-based Intervention App for
+Improving Self-Regulation of Limiting Smartphone Use. In Proceedings
+of the 18th ACM Conference on Computer Supported Cooperative Work
+& Social Computing (CSCW ’15). ACM Press, New York, NY, USA,
+1235–1245. https://doi.org/10.1145/2675133.2675244
+
+[31] Sai Loo. 2017. Creative Working in the Knowledge Economy. Routledge,
+
+London, UK. 178 pages.
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 11[32] ManicTime. 2018. Time Tracker Management Tracking Software.
+
+https://www.rescuetime.com
+
+(2018). https://www.manictime.com/
+
+[33] Gloria Mark, Mary Czerwinski, and Shamsi T Iqbal. 2018. Effects
+of Individual Differences in Blocking Workplace Distractions. In
+Proceedings of the 2018 CHI Conference on Human Factors in Com-
+puting Systems (CHI ’18). ACM Press, New York, NY, USA, 1–12.
+https://doi.org/10.1145/3173574.3173666
+
+[34] Gloria Mark, Victor M. Gonzalez, and Justin Harris. 2005. No Task Left
+Behind?: Examining the Nature of Fragmented Work. In Proceedings of
+the SIGCHI Conference on Human Factors in Computing Systems (CHI
+’05). ACM, New York, NY, USA, 321–330. https://doi.org/10.1145/
+1054972.1055017
+
+[35] Gloria Mark, Shamsi T. Iqbal, Mary Czerwinski, and Paul Johns. 2014.
+Bored Mondays and Focused Afternoons. In Proceedings of the 32nd
+annual ACM conference on Human factors in computing systems (CHI
+’14). ACM Press, New York, NY, USA, 3025–3034. https://doi.org/10.
+1145/2556288.2557204
+
+[36] Gloria Mark, Shamsi T. Iqbal, Mary Czerwinski, Paul Johns, Akane
+Sano, and Yuliya Lutchyn. 2016. Email Duration, Batching and Self-
+interruption. In Proceedings of the 2016 CHI Conference on Human
+Factors in Computing Systems (CHI ’16). ACM Press, New York, NY,
+USA, 1717–1728. https://doi.org/10.1145/2858036.2858262
+
+[37] Andre N. Meyer, Gail C. Murphy, Thomas Zimmermann, and Thomas
+Fritz. 2017. Retrospecting on Work and Productivity: A Study on Self-
+Monitoring Software Developers’ Work. Proc. ACM Hum.-Comput.
+Interact. 1, CSCW, Article 79 (Dec. 2017), 24 pages. https://doi.org/10.
+1145/3134714
+
+[38] Viktoria Pammer, Stefan Edler, and Hermann Stern. 2012. Visualising
+the Fragmentation of Knowledge Work. In Proceedings of the 7th Nordic
+Conference on Human-Computer Interaction: Making Sense Through
+Design (NordiCHI ’12). ACM, New York, NY, USA, 779–780. https:
+//doi.org/10.1145/2399016.2399143
+
+[39] Robert D Pritchard. 1995. Productivity measurement and improvement:
+Organizational case studies. Greenwood Publishing Group, Santa Bar-
+bara, CA, USA.
+
+[40] Yuri W. Ramírez and David a. Nembhard. 2004. Measuring knowl-
+Journal of Intellectual Capital 5, 4
+https://doi.org/10.1108/14691930410567040
+
+edge worker productivity.
+(dec 2004), 602–628.
+arXiv:http://dx.doi.org/10.1108/BIJ-10-2012-0068
+
+[41] Robert B Reich. 2002. The Future of Success: Working and Living in the
+
+New Economy. Vintage, New York, NY, USA.
+
+[42] Wolfgang Reinhardt, Benedikt Schmidt, Peter Sloep, and Hendrik
+Drachsler. 2011. Knowledge Worker Roles and Actions—Results of Two
+Empirical Studies. Knowledge and Process Management 18, 3 (jul 2011),
+150–174. https://doi.org/10.1002/kpm.378 arXiv:arXiv:1011.1669v3
+
+[43] RescueTime. 2018. RescueTime: Time management software for
+(2018).
+
+staying productive and happy in the modern workplace.
+
+[44] John Rooksby, Parvin Asadzadeh, Mattias Rost, Alistair Morrison, and
+Matthew Chalmers. 2016. Personal Tracking of Screen Time on Digital
+Devices. In Proceedings of the 2016 CHI Conference on Human Factors in
+Computing Systems (CHI ’16). ACM Press, New York, NY, USA, 284–296.
+https://doi.org/10.1145/2858036.2858055
+
+[45] Anjeli Singh and Sareeka Malhotra. 2013. A Researcher’s Guide to
+Running Diary Studies. In Proceedings of the 11th Asia Pacific Confer-
+ence on Computer Human Interaction - APCHI ’13. ACM Press, New
+York, NY, USA, 296–300. https://doi.org/10.1145/2525194.2525261
+[46] Mark Snyder. 1974. Self-monitoring of Expressive Behavior. Journal
+of Personality and Social Psychology 30, 4 (1974), 526–537.
+https:
+//doi.org/10.1037/h0037039
+
+[47] April J. Spivack and Beth A. Rubin. 2011. Spaces to Control Creative
+Output of the Knowledge Worker: A Managerial Paradox?. In Proceed-
+ings of the 2011 iConference (iConference ’11). ACM, New York, NY,
+USA, 312–318. https://doi.org/10.1145/1940761.1940804
+
+[48] Toon W Taris and Paul J G Schreurs. 2009. Well-being and orga-
+nizational performance: An organizational-level test of the happy-
+productive worker hypothesis. Work & Stress 23, 2 (2009), 120–136.
+https://doi.org/10.1080/02678370903072555
+
+[49] TimeDoctor. 2018. Smart Employee Time Tracking Software with
+Screenshots | Time Doctor. (2018). https://www.timedoctor.com
+[50] Veriato. 2018. Veriato | Insider Threat Detection, Employee Monitoring
+
+Software. (2018). https://www.veriato.com
+
+[51] Wakatime. 2018. WakaTime – Open source plugins, goals, and auto-
+matic time tracking for programmers. (2018). https://wakatime.com/
+[52] Steve Whittaker, Vaiva Kalnikaite, Victoria Hollis, and Andrew Guy-
+dish. 2016. ’Don’t Waste My Time’: Use of Time Information Improves
+Focus. In Proceedings of the 2016 CHI Conference on Human Factors
+in Computing Systems (CHI ’16). ACM Press, New York, NY, USA,
+1729–1738. https://doi.org/10.1145/2858036.2858193
+
+[53] Thomas A. Wright, Russell Cropanzano, and Douglas G. Bonett.
+2007. The Moderating Role of Employee Positive Well Being on
+the Relation Between Job Satisfaction and Job Performance. Jour-
+nal of Occupational Health Psychology 12, 2 (2007), 93–104. https:
+//doi.org/10.1037/1076-8998.12.2.93 arXiv:arXiv:1011.1669v3
+
+[54] Dezhi Wu and Marilyn Tremaine. 2004. Knowledge Worker Adoption
+of Time Management Tools: Satisfaction and Perceived Effectiveness.
+In AMCIS 2004 Proceedings. AISeL, New York, NY, USA, 433. https:
+//aisel.aisnet.org/amcis2004/433
+
+[55] Despoina Xanthopoulou, Arnold B. Bakker, Evangelia Demerouti, and
+Wilmar B. Schaufeli. 2009. Work Engagement and Financial Returns:
+A Diary Study on the Role of Job and Personal Resources. Journal of
+Occupational and Organizational Psychology 82, 1 (mar 2009), 183–200.
+https://doi.org/10.1348/096317908X285633
+
+CHI 2019 Paper CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 615Page 12

@@ -1,0 +1,2178 @@
+Turn to the Self in Human-Computer Interaction: 
+Care of the Self in Negotiating the Human-Technology Relationship
+
+Yubo Kou 
+ School of Information, Florida State University 
+ Tallahassee, FL, United States 
+ ykou@fsu.edu 
+
+Xinning Gui, Yunan Chen, Bonnie Nardi 
+ Department of Informatics, University of California, Irvine 
+ Irvine, CA, United States 
+ {guix; yunanc; nardi}@uci.edu 
+
+ABSTRACT 
+
+1 
+
+INTRODUCTION 
+
+Everyday  life  is  increasingly  mediated  by  technology. 
+Technology  is  rapidly  growing  capacity  and  complexity, 
+especially evident  in developments  in artificial intelligence 
+and  big  data  analytics.  As  human-computer  interaction 
+(HCI)  endeavors  to  examine  and  theorize  how  people  act 
+and 
+interact  with  the  ever-evolving  technology,  an 
+important, emerging concern is how the self—the totality of 
+internal qualities such as consciousness and agency—plays 
+out in relation  to  the technology-mediated external  world. 
+To  analyze  this  question,  we  draw  from  Michel  Foucault’s 
+ethics of “care of the self,” which examines how the self is 
+constituted through  conscious and reflective work on self-
+transformation.  We  present  three  case  studies  to  illustrate 
+how  individuals  carry  out  practices  of  the  self  to  reflect 
+upon and negotiate their relationship with technology. We 
+discuss 
+the  self  and 
+importance  of  examining 
+foreground  the  notion  of  care  of  the  self  in  HCI  research 
+and design. 
+
+the 
+
+CCS Concepts 
+• Human-centered computing → Human computer interaction 
+(HCI); Empirical studies in HCI 
+
+KEYWORDS:  Care  of  the  self;  Foucault;  ethics;  power; 
+existential  HCI;  political  economy;  politics;  neoliberalism; 
+censorship; quantified-self; healthcare 
+
+ACM Reference format: 
+Yubo Kou, Xinning Gui, Yunan Chen, and Bonnie Nardi. 2018. Turn to the 
+Self  in  Human-Computer  Interaction:  Care  of  the  Self  in  Negotiating  the 
+Human-Technology  Relationship.  In 2019 CHI Conference on Human Factors 
+in  Computing  Systems  Proceedings  (CHI  2019),  May  4–9,  2019,  Glasgow, 
+Scotland,  UK.  ACM,  New 
+pages. 
+https://doi.org/10.1145/3290605.3300711 
+
+York,  NY,  USA. 
+
+14 
+
+Permission to make digital or hard copies of all or part of this work for personal or 
+classroom use is granted without fee provided that copies are not made or distributed 
+for  profit  or  commercial  advantage  and  that  copies  bear  this  notice  and  the  full 
+citation on the first page. Copyrights for components of this work owned by others 
+than  the  author(s)  must  be  honored.  Abstracting  with  credit  is  permitted.  To  copy 
+otherwise,  or  republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+specific permission and/or a fee. Request permissions from Permissions@acm.org. 
+CHI 2019, May 4–9, 2019, Glasgow, Scotland UK 
+©  2019 Copyright is held by the owner/author(s). Publication rights licensed to ACM. 
+ACM ISBN 978-1-4503-5970-2/19/05…$15.00  
+https://doi.org/10.1145/3290605.3300711 
+
+technology, 
+
+is  often 
+Technology,  especially  digital 
+envisioned  and  framed  as  enhancing  aspects  of  human 
+beings such as knowledge, health, and wellbeing. However, 
+studies  of  technology  have  long  questioned  the  politics  of 
+and values inscribed in technology design [76,100]. There is 
+increasing  appreciation  that  people  are  experiencing 
+various 
+implications  of  technological  advances,  both 
+individually  and  collectively,  manifested  in  increasing 
+societal  and  academic  concerns  such  as  algorithmic  bias 
+[60], privacy breaches [26], and online disinformation [93].  
+
+Human-computer  interaction  as  a  discipline  is  concerned 
+with these challenges and strives to understand the shifting 
+human-technology  relationship.  Among  these  concerns,  a 
+currently  underexplored  dimension  is  the  self,  concerning 
+the integrity of the individual with internal qualities such as 
+knowledge, agency, and happiness. Self is a term sitting at 
+intersection  of  diverse  relationships  of  selfhood, 
+the 
+identity, agency, power, and governance. In this paper, we 
+explore  how  technology  plays  a  role  with  respect  to  the 
+self,  or  the  constitution  of  the  self.  The  technology  we 
+discuss in this paper is not  constrained to any single form 
+of  digital  technologies.  Rather,  it  leans  towards  a  broader 
+sense  of  “technique,”  what  Jacques  Ellul  described  as 
+“rationally  arrived  at  and  having  absolute  efficiency  (for  a 
+given  stage  of  development)  in  every  field  of  human 
+activity” [23]. Technology can be viewed as a constituent of 
+structure recurrently enacted through social process [81]. 
+
+Several  separate  areas  of  interest  in  HCI  align  with  this 
+question.  Personal  informatics  research  [44,64]  explores 
+how self-tracking systems might provide rich and efficient 
+data analysis so that users acquire better knowledge about, 
+e.g.,  health  and  life.  The  literature  on  online  disclosure 
+[54,62,98]  examines  how  digital  technologies  support 
+presentation of the self, as well as its social utilities such as 
+social  approval  and  social  support.  Empirical  work  and 
+design efforts have explored various self-driven practices in 
+order  to  enhance  knowledge  about  the  self,  such  as  self-
+reflection  [15]  and  introspection  [59].  However,  existing 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 1 
+ 
+research that concerns the self often leans towards stressing 
+the functionalities of technology as a medium for delivering 
+messages,  or  a  tool  with  explicit  affordances.  In  this  view, 
+technology is effectively managed and appropriated at will. 
+
+Critical voices speak against viewing technology and design 
+as  neutral,  emphasizing  power  relations  when  examining 
+technology and design. Power relations in this context refer 
+to relationship in which one exerts control over the conduct 
+of  another  [32].  For  example,  feminist  HCI  concerns  how 
+interaction design  is  imbued  with existing power  relations 
+that  construct  gender  [6,7].  Studies  of  social  justice  in 
+systems  ask  how  design  might  avoid 
+computing 
+perpetuating  issues  such  as  discrimination  and  bias  [21]. 
+Participatory design [77] stresses involving all stakeholders 
+in  the  design  process,  attempting  to  flatten  the  power 
+structure. However, these critical stances tend to highlight 
+the role of social or technical structures in shaping the self, 
+thus  discussion  of  how  agency 
+in  the 
+constitution of the self has been a missed opportunity. 
+
+is  exercised 
+
+In this paper, we turn to Michel Foucault’s ethics of “care of 
+the  self”  to 
+investigate  the  self  in  human-computer 
+interaction.  Care  of  the  self,  as  we  shall  discuss  in  detail 
+later, denotes “an exercise of the self on the self by which 
+one  attempts  to  develop  and  transform  oneself,  and  to 
+attain to a certain mode of being” [32]. The certain mode of 
+being refers to “a certain state of happiness, purity, wisdom, 
+perfection, or immortality” [33]. We suggest that the notion 
+of  care  of  the  self,  by  stressing  self-transformation  in 
+response to external structure, is highly relevant to critical 
+theoretical  development  in  HCI  that  explores  themes  of 
+power relations, exploitation, and oppression, as well as the 
+growing  empirical  evidence  that  reveals  ramifications  of 
+technological innovations over the self. 
+
+Following a case study methodology [101], we present three 
+case  studies  to  demonstrate  how  the  notion  of  care  of  the 
+self could serve as a starting point in rethinking the human-
+technology relationship and providing reflections on design. 
+The  first  case  concerns  how  citizens  construct  self-
+knowledge  in  a  highly  censored  media  environment  in 
+China.  The  second  case  concerns  how  video  game  players 
+deal  with  quantification  technology  that  monitors  and 
+regulates their gameplay. The third case concerns American 
+parents  with  children  under  the  age  of  two  who  are 
+negotiating  a  fragmented  healthcare  system  through 
+constructing situated knowledge.  
+
+Through  these  three  cases,  we  trace  how  large  social, 
+cultural, and technical systems and structures, mediated by 
+technology,  impose  knowledge,  either  popular  or  official, 
+
+onto  individuals.  We  studied  how  individuals  came  to  the 
+realization  that  they  must  manage  care  of  the  self,  either 
+proactively  or  reactively,  and  how  individuals  enacted 
+individualistic,  bottom-up  practices  in  order  to  negotiate 
+relationships  with  technology.  We  highlight  individuals’ 
+constant self-examination and introspection in interactions 
+with structural elements in which technology plays a large 
+part.  Building  upon  these  three  cases,  we  move  on  to 
+discuss  how  the  notion  of  care  of  the  self  invites  critical 
+reflections  upon  the  framing  of  technology  in  relation  to 
+the  self,  agency,  and  human  wellbeing.  Joining  strands  of 
+critical  theories  in  HCI,  we  seek  to  highlight  the  work  of 
+the  self  on  the  self  in  managing  technology  at  different 
+scales  ranging  from  a  single  technological  point  to  larger 
+system thinking. 
+
+2  CARE OF THE SELF AND ITS RELATION TO HCI 
+
+The ethics of care of the self represent a significant turning 
+point in Michel Foucault’s long-term investigation into how 
+the  self  is  constituted  in  relation  to  the  efforts  from  the 
+subjects  and  the  influence  of  the  external  structure,  or 
+power relations [10,20]. Power is a loaded term with many 
+contested  concepts  and  discussions  in  disciplines  such  as 
+philosophy,  sociology,  and  political  science,  and  is  of 
+relevance to  HCI. A 2018 survey of CHI  papers discussing 
+power  or  empowerment  distinguished  between 
+two 
+fundamentally  different  notions  of  power:  power-to, 
+meaning  the  ability  to  act,  and  power-over,  concerning 
+relations between actors [88]. In this paper, the power that 
+we  are  discussing  belongs  to  the  second  category  and  is 
+inherently relational. 
+
+In Foucault’s early, more renowned works such as Madness 
+and Civilization,  The Birth of the Clinic,  and  Discipline and 
+Punish:  The  Birth  of  the  Prison,  Foucault  discussed  how 
+power relations produce subjectivities through institutional 
+regulations, monitoring, and discourses [28,35,36]. Power is 
+as  prevalent  as  human  relationships  in  contexts  ranging 
+from communication to sexual, institutional, and economic 
+occasions.  Power  relations  exist  at  different  levels,  in 
+different  forms.  They  are  mobile,  modifiable,  and  flexible 
+[32]. 
+
+transmits  knowledge,  which 
+
+Power  and  knowledge  are  inherently  inseparable.  Power 
+turn 
+produces  and 
+reproduces  power  [37].  For  example,  prisoners  are 
+controlled through observation and judgments, but also are 
+told  what  they  know  and  whether  they  are  behaving  as 
+expected.  Those  in  control  establish  standards  and  criteria 
+which serve as a basis for knowledge. HCI researchers often 
+
+in 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 2 
+ 
+ 
+ 
+ 
+refer  to  Foucault’s  analysis  of  Bentham’s  Panopticon  as  a 
+mode of power/knowledge [51,83,85]. 
+
+The  proposition  of  care  of  the  self  marked  what  many 
+scholars  considered  as  Foucault’s  ethical  turn  in  the 
+trajectory of his thought [17,49]. Instead of insisting on the 
+totalizing  effect  of  power/knowledge,  he  returned  to  an 
+ancient conception of ethics where a person examines and 
+just  following,  but  also 
+reflects  upon  the  self,  not 
+problematizing, moral rules [47]. From this point, Foucault 
+sought  to  rethink  the  subject,  and  the  constitution  of  the 
+subject.  The  subject  is  still  situated  in  complex  power 
+  not  simply 
+relations  [30].  However,  the  subject  is 
+constructed  by  power,  but  actively  partakes 
+in  the 
+construction  of  power,  and,  thereby,  modifies  himself  or 
+herself  [47].  Foucault  thus  stressed,  in  writings  and 
+interviews,  the  idea  of  self-cultivation,  or  the  constant 
+practice  a  person  carries  out  to  cultivate  the  self.  Such 
+practices  denote  “models  proposed  for  setting  up  and 
+developing  relationships  with  the  self,  for  self-reflection, 
+self-knowledge,  self-examination,  for  the  decipherment  of 
+the self by oneself, for the transformations that one seeks to 
+accomplish with oneself as object” [31]. 
+
+the  self  because  “the 
+
+Foucault  analyzed  classic  practices  of  the  self  throughout 
+history  [33].  For  example,  Socrates  initiated  dialogue  to 
+force  self-examination  on  not  only  himself,  but  also  the 
+citizens of Athens. Foucault considered this  an orientation 
+towards  care  of 
+themes  of 
+contemplation  of  self  and  care  of  self  are  related 
+dialectically  through  dialogue”  [33].  However,  Foucault 
+noticed  the  disappearance  of  the  dialectical  structure  in 
+history, where stoics often practiced three techniques of the 
+self,  including  letters  to  friends  where  a  person  discloses 
+and  reflects  upon  the  self;  examination  of  the  self  and 
+conscience as to what was done and what should have been 
+done;  and  askesis,  through  which  a  person  discovers, 
+absorbs, and transforms truth in order to take actions [33]. 
+Lastly,  Foucault  discussed  how  confession  and  self-
+renunciation in Christianity allow a person to discover the 
+hidden 
+the 
+teacher/master  [33].  Through  these  practices  of  the  self,  a 
+person could know and govern the self. 
+
+examination  by 
+
+thought  under 
+
+the 
+
+While Foucault’s inquiry was focused primarily on Western 
+practices,  he  acknowledge  that  care  of  the  self  exists  in 
+every  civilization,  and  is  “suggested  or  prescribed  to 
+individuals in order to determine their identity, maintain it, 
+or  transform  it  in  terms  of  a  certain  number  of  ends, 
+through relations of self-mastery or self-knowledge” [34]. 
+
+The notion  of  care of  the self is  not new  to HCI  research. 
+Lupton  discussed  how  care  of  the  self  is  pertinent  to 
+understanding  self-tracking  and  quantified  self  practices 
+[70]. She suggested that self-tracking could be viewed as a 
+strategy  and  discourse  that  prescribes  what  the  ideal 
+individual  should  do  and  be  [70],  and  that  care  of  the  self 
+stresses  investigating  the  rationalities  underpinning  the 
+techniques that people use to understand themselves, rather 
+than accepting them at face value [70]. However, this paper 
+concerns technology in a broader sense, including not only 
+computing  devices  but  also  large,  complex  sociotechnical 
+systems.  As  such,  our  analysis  focuses  primarily  on 
+interactions between the self and its external environment. 
+
+Related  to  discussions  of  self-tracking,  and  situated  at  the 
+intersection  of  health  and  HCI,  researchers  have  long 
+studied self-care [11,80]. Here the notion of self-care, much 
+disputed  as  Nunes  and  Fitzpatrick  noted  [80],  stresses 
+mostly  how  people  manage  their  health  conditions.  At  a 
+deeper level, both self-care in health and care of the self are 
+concerned  with  the  neoliberal  rationality  that  expects 
+individuals  to  be  responsible  for  themselves  (which  we 
+discuss  in  Section  3.3).  However,  self-care  has  focused 
+specifically  on  health,  and  the  utilities  of  technologies  in 
+this  practice,  while  care  of  the  self  allows  us  to  critically 
+examine technology’s power acting on us. 
+
+To  analyze  experiences  of  intimacy  in  the  virtual  world 
+Second Life, Bardzell et al. [5] drew upon the notion of care 
+of  the  self’s  dual  perspectives  towards  the  constitution  of 
+the  self,  that  is,  one  person  both  becomes  subjected  to 
+external power relations, and carries out work on his or her 
+self.  They  showed  that  the  way  their  participants  worked 
+within  the  governance  system  of  Second  Life  was  not 
+merely  constraining  but  also  generative,  allowing  them  to 
+emergently  and  reflexively  construct  their  identities.  Our 
+paper 
+the  subject’s  rediscovery  of 
+relationships with technology as a way of constructing self-
+knowledge,  as  well  as  actions 
+to  negotiate  such 
+relationships. 
+
+focused  on 
+
+is 
+
+3  RELATED THEORETICAL WORK 
+
+The application of care of the self in this paper is related to 
+several theoretical or critical strands of work in HCI. 
+
+3.1  Existential HCI 
+
+Existentialism was considered highly relevant in Foucault’s 
+trajectory of thought and later discussions of care of the self 
+[19,27].  From  an  existential  perspective,  Kaptelinin 
+observed that, “human existence is characterized by a quest 
+for authentic being and making one’s life meaningful.  The 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 3 
+quest,  for  which  each  individual  is  ultimately  responsible 
+himself and herself, opens almost limitless opportunities for 
+self-actualization, but is also inherently dramatic” [53]. 
+
+“Existential HCI” was proposed by Light who observed the 
+pervasive  intervention  of  digital  technologies  into  all 
+aspects  and  every  stage  of  ordinary  life.  She  called  for  a 
+phenomenological  inquiry  into  the  meaning  of  particular 
+technologies in use in the context of those seeking to make 
+sense of them  [66]. For Kaptelinin,  existential HCI tries to 
+expand  the  scope  of  HCI  to  understanding  the  most 
+personal  uses  of  technology  [52].  So  Kaptelinin  defined 
+existential HCI as: 
+
+Existential  HCI  is  a  perspective  in  HCI  research,  which  is 
+concerned  with 
+investigating  possible  effects  of  digital 
+technologies on human experience of existential issues, as well 
+as  identifying  potential  uses  of  interactive  technology  to 
+support individuals in dealing with existential questions. [52] 
+
+Light’s  commentary  proposed  to  understand  human-
+technology  relationships  as  defining  humans  as  groups, 
+  Existential  HCI  studies 
+individuals,  and  societies. 
+“redefining  of  human  experience 
+increasingly 
+(digitally) technologized and mediatized environment” [67].  
+
+in  an 
+
+In  discussing  existential  crises  and  design,  Light  et  al. 
+[68,69]  criticized  what  they  considered  as  “institutional 
+humiliation,”  including  prioritizing  system  efficiency  over 
+sensitivity;  techno-paternalism;  collection  and  analysis  of 
+personal data that dominate decision making; and addictive 
+online  content  such  as  gambling  and  shopping  [68].  In 
+many  ways,  discussion  of  such  institutional  humiliation 
+inspires  us  to  explore  possible  actions  and  turn  to 
+Foucault’s care of the self. 
+
+3.2  A Political Economy Perspective in HCI 
+
+In tracing the self in its relation to technologies, we are also 
+concerned  with  how  ordinary  individuals  labor  in  their 
+interactions  with  complex  systems.  Therefore,  we  turn  to 
+the work on the political economy of technologies.  
+
+In  contrast  to  those  framing  the  Internet  as  a  site  of 
+resistance,  Terranova  sees 
+it  as  a  mutation  totally 
+immanent  to  late  capitalism.    For  example,  the  voluntary 
+work  that  people  perform,  such  as  moderating  online 
+forums  and  content  production,  is    “free  labor”  subject  to 
+capitalist  exploitation  [94].  More  recent  approaches 
+examine  how  platforms  harvest  and  commodify  user  data 
+for  the  accumulation  of  capital  [40,89].  The  combined 
+themes  that  “technology  pervades  the  most  intimate  parts 
+of  our  world”  [66]  and  the  capitalist  rationalities  behind 
+
+everyday  life  technology  are  concerns  we  take  on  as  we 
+examine care of the self. 
+
+issues  beyond 
+
+Ekbia  and  Nardi  discussed  how  the  Marxist  political 
+economy  could  engender  critical  reflections  upon  larger 
+socioeconomic 
+self-constrained  HCI 
+problems  [22].  A  political  economy  perspective,  they 
+argued,  is  important  to  understand  specific  issues  such  as 
+changing  labor  relations,  means  of  production,  and  how  a 
+digitalized political economy impacts aspects of life such as 
+health  and  environment  [22].  Specifically,  for  HCI,  such 
+perspectives  mean  that  HCI  researchers  engage  with 
+political economy through 1) historicizing, keeping in mind 
+that  the  capitalist  system  has  re-invented  itself  along 
+technological advances, 2) contextualizing, engaging beyond 
+local  context,  and  3)  politicizing,  acknowledging  that 
+technologies are inherently political. A 2018 CHI workshop 
+critiqued  “the  mainstream  HCI  community[‘s  orientation] 
+around neoliberal capitalist visions of a hi-tech future,” and 
+called  for  a  systematic  approach  to  the  end  of  capitalism 
+and designing to support a post-capitalist world [25]. 
+
+Foucault  was  concerned  with  neoliberalism.  To  him, 
+neoliberalism  differs  from  classic  liberalism  in  privileging 
+market  freedom  over  state  regulation  [63].  As  such, 
+neoliberalism  expects  each  individual  to  be  a  responsible 
+subject, and to assume economic rationality in all aspects of 
+life  such  as  health,  learning,  employment,  and  governance 
+[38].  Therefore,  it  is  even  more  urgent  that  our  analysis 
+examines individuals’ capacity for self-care and how this is 
+linked to forms of technological and social structure [63]. 
+
+3.3  The Politics of Technology 
+
+technology  and 
+
+Winner’s original work on the politics of artifacts [100] has 
+been influential in science and technology studies (STS) and 
+many  other  fields  to  critically  examine  the  so-called 
+“neutrality”  of 
+in 
+technology  design.  For  example,  studies  of  infrastructure 
+pay  attention  to  the  invisible  work  that  often  goes 
+unnoticed  or  not  formally  recognized  [90,91].  Bowker  and 
+Star investigated how classification systems might oppress, 
+misrepresent, and marginalize certain groups [12]. 
+
+inscribed  values 
+
+technology  could  contribute 
+
+Brey  analyzed  how 
+to 
+empowerment  and  disempowerment,  as  well  as  possible 
+resistance  strategies  through  technology  [14].  Monahan’s 
+examination  of 
+technologies  of  deception  such  as 
+untrustworthy  workplace  thermostats  and  governmental 
+collection of mobile phone data warned about “imbalances 
+in  power  and  widespread  acquiescence  to  corporate  and 
+state  efforts  to  control  individuals,  groups,  and  their  data” 
+[76].  
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 4 
+ 
+ 
+ 
+ 
+Recently  researchers  have  started  to  examine  oppression 
+and  politics  within  technologies  at  various  scales.  For 
+example, platforms such as Reddit, Facebook, and YouTube 
+often combine a variety of functions that work together to 
+produce  adverse  effects,  such  as  propagation  of  false 
+rumors  and  disinformation  [92]  and  generation  of  toxic 
+culture  [73].  Others  have  looked  into  algorithms  that 
+perpetuate  discrimination  and  bias  [79].  Still  others  asked 
+questions about oppression in big data analytics [74,95]. 
+
+4  METHODOLOGY 
+
+We  follow  a  case  study  methodology  [101]  to  explore  the 
+notion of care of the self in interactions between people and 
+technology. This methodology denotes an empirical inquiry 
+that investigates a phenomenon within its real-life context 
+especially when the boundaries between phenomenon and 
+context  are  blurry,  combining  heterogeneous  data  sources 
+such  as  observation  and  interview,  and  prior  development 
+of  theoretical  propositions  [101].  Next,  we  explain  the 
+conception  of  the  motivation  of  discussing  the  notion  of 
+care  of  the  self  in  the  context  of  HCI,  data  collection,  and 
+data analysis, in light of reflexivity [87]. 
+
+The idea of writing this paper emerged through discussions 
+of  the  authors  who  led  different  projects  but  shared 
+common  interests  in  empirical  research  on  the  interplay 
+between  agency  and  external  environment.  It  became  our 
+common  recognition  that  care  of  the  self  is  a  theme  that 
+could  be  traced  in  scenarios  where  interactions  take  place 
+and have an effect on people’s inner selves, but we had not 
+systematically examined care of the self in the projects. We 
+selected  three  projects  whose  contexts  could  complement 
+each  other  in  terms  of  populations,  characteristics  of 
+technology-mediated governance, and practices of the self. 
+
+In  the  first  project,  Kou  and  Nardi  investigated  how 
+Chinese  citizens  used  technology  to  seek  information  and 
+develop  political  opinions  in  mainland  China.  Between 
+April  2014  and  January  2016,  Kou,  a  native  speaker  of 
+Chinese,  conducted  32  semi-structured  interviews  with 
+mainland citizens as well as  several months of observation 
+of social media discussions around major political events in 
+China.  While  the  project  has  concerned  primarily  with 
+participants’  attitudes 
+their 
+strategies  to  obtain  quality  information  (see  [57,58]),  an 
+underexplored  angle  was  how  to  theorize  the  complex 
+relationship  participants  formulated  with  censorship  in 
+terms of what constitutes knowledge of political events and 
+knowledge of a censored self. 
+
+towards  censorship  and 
+
+The second project, led by Kou from October 2011 through 
+the  present,  is  a  multi-year  ethnographic  study  of  player 
+culture in League of Legends (LoL), one of the largest video 
+games in the world [84]. LoL is a team-based, session-based 
+game. Play is highly competitive and fosters a game culture 
+where  many  players  strive  for  ever-higer  rankings  [56]. 
+Like other games [1], LoL supports a culture of monitoring 
+and  surveillance:  it  publicizes  all  of  its  players’  gameplay 
+data  through  APIs.  Consequently,  numerous  third-party 
+quantification  tools  emerge  providing  rich  statistics  about 
+player  performance,  allowing  players  to  monitor  each 
+other’s  performance.  Kou  and  Gui’s  interview  study  with 
+LoL players [55] discussed the key role of quantification in 
+informing  players  of  their  own  play  and  providing  them 
+more  information  about  their  teammates.  Participants 
+reported 
+problematic 
+quantification use such as stress and in-team conflict.  
+
+consequences 
+
+negative 
+
+of 
+
+The  third  project  by  Gui  and  Chen  concerns  individuals’ 
+interactions with the U.S. healthcare system. From 2016 to 
+2018  they  conducted  30  narrative  interviews  with  27 
+mothers,  one  father,  and  two  mother  and  father  dyads  to 
+understand how parents of young children interacted with 
+the  healthcare  system.  to  obtain  proper  care  for  their 
+children  under  age  two  (see  [45,46]).  The  project  revealed 
+how  study  participants  encountered  various  breakdowns 
+such as misdiagnosis and unexpectedly large bills, how they 
+figured  out  workarounds  to  problems,  and  improved  their 
+interactions  with  the  healthcare  system.  A 
+skills  in 
+consistent theme was parents’ constant work on improving 
+their own knowledge and expertise. 
+
+With  care  of  the  self  as  our  theoretical  framework,  we 
+conducted deductive thematic analysis [13] upon interview 
+transcripts and field notes from the three projects. The first 
+and  second  authors  each  went  through  data  to  code  for 
+forms of power enacted through technology and the ways it 
+acts  upon  people,  as  well  as  the  concrete  practices  of  the 
+self  and  how  participants  cultivated  these  practices.  The 
+granularity  for  data  analysis  ranged  from  a  few  words  to 
+paragraphs,  depending  upon  when  an  idea  was  fully 
+expressed. After basic codes were assigned, the two coders 
+used several rounds of discussions to consolidate codes and 
+develop  themes.  We  selected  representative  quotes  when 
+presenting findings. 
+
+5 
+
+THREE CASES OF CARE OF THE SELF 
+
+We use these three diverse cases to illustrate the prevalence 
+of  care  of  the  self  in  individuals’  negotiation  with  their 
+technology-mediated surroundings. The first case examines 
+individuals’ critical examination of censorship technologies 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 5 
+and  attempts  at  circumvention.  The  second  concerns  how 
+individuals  negotiate  with  self-tracking  technologies  in  a 
+game  community.  The  third  discusses  struggles  with  a 
+healthcare system based on neoliberal values.  
+
+5.1  Panoptic Technologies and Individual Choice 
+
+The  Chinese  government  closely  monitors  all  traditional 
+media  such  as  newspapers,  film,  radio,  and  television 
+programs.  Internet  censorship,  or  the  “Great  Firewall,”  is 
+widely known to be comprehensive, strict, and advanced. It 
+employs  numerous  means  at  different  levels,  including 
+cyber-attacks targeted at individual activists and dissidents, 
+technical  control built  into household routers  and Internet 
+servers,  surveillance,  content  deletion,  closure  of  websites, 
+paid  commentators,  cyber  security  laws  [72],  and  Internet 
+police [65]. To comply, Internet companies in China enforce 
+even  stricter  censorship  on  their  own  platforms  to  make 
+sure  they  don’t  run  afoul  of  laws  [50,71].  A  social  media 
+user in China commonly encounters censorship techniques 
+such  as  sudden  removal  of  websites  for  no  reason,  and 
+sensitive keywords being forbidden in social media posts or 
+online  searches  [71,86].  Our  analysis  considers  this 
+expansive  censorship  apparatus  as  a  set  of  panoptic 
+technologies, and explores whether and how care of the self 
+is exercised. 
+
+technologies 
+
+5.1.1  Panoptic  Technologies.  The  expansive  censorship  in 
+China  manifests  state  power  domination  over  citizens.  It 
+establishes  and  enforces  rules  and  constraints  for  use  of 
+traditional  media  and  digital 
+to  seek 
+information  about  public  or  political  events.  It  resembles 
+the panopticon in Foucault’s analysis [28] in that it seeks to 
+create a disciplinary society whose members are reminded 
+that  they  are  being  watched.  In  doing  so,  it  sustains  a 
+knowledge  basis  for  establishing  a  version  of  truth  that  it 
+accepts, for propagating values and logics aligning with its 
+own, and for fending off conflicting ideological viewpoints. 
+
+frequently  experienced 
+
+Our  study  participants 
+these 
+measures  of  control.  Most  encountered  keyword  blocking 
+and  content  deletion  on  social  media  on  a  daily  basis, 
+especially  during  political  events  such  as  annual  meetings 
+of  the  legislature,  where  online  discussions  of  particular 
+members  are  strictly  forbidden.  A  participant  expressed  a 
+constant  fear  that  “we  are  mostly  fine  but  who  knows  if 
+someday  you  will  be  reported  for  something  you  write 
+online and a policeperson knocks on your door.” 
+
+The  agenda  of  censorship,  according  to  one  participant,  is 
+to depict a picture that “our country is doing extremely well 
+and  the  party  is  very  responsible  for  its  people.”  Foucault 
+used  “regime  of  truth”  to  stress  that  each  society  has  its 
+
+own game of truth that builds upon acceptable discourses, 
+mechanisms  to  distinguish  what  is  true  or  false,  and 
+techniques  for  according  value  [29].  In  this  regard, 
+censorship  helps  the  government  to  sustain  a  version  of 
+truth  about  itself,  setting  up  expectations  and  perceptions 
+of the citizens. 
+
+5.1.2 Individual Choice. Participants  perceived  the  totalizing 
+effect  of  censorship  and  the  fear  it  engenders.  However, 
+with  awareness  and  tech-savviness,  they  explained  how 
+they  could  make  individual  choices  at  two  interrelated 
+levels:  their  concern  for  truth  and  their  relationship  with 
+digital  technologies.  First,  they  were  cautious  when 
+interacting  with  digital  technologies,  knowing  that  they 
+certainly  contained  a  censorship  component.  Therefore, 
+they knew they could not rely upon one single technology 
+(e.g.,  a  single  social  media  platform),  because  each 
+technology  entailed  a  certain  combination  of  corporate 
+values  and  state  propaganda.  For  example,  one  participant 
+criticized  Weibo,  the  largest  microblogging  service  in 
+China,  for  “heavy  editing”  and  “allowing  purchase  of  a 
+position  in  trending  topics.”  Therefore,  when  participants 
+wanted to better understand a specific political event, they 
+needed  to  examine  and  understand  their  relations  with 
+their surrounding immediately accessible technologies, and 
+use such knowledge to reconfigure their own technological 
+paths to a more comprehensive set of information. 
+
+reconfiguring.  First, 
+
+they  could  diversify 
+
+To achieve this, participants mentioned a number of means 
+their 
+of 
+information  sources  beyond  domestic  ones  to  include  a 
+number  of  foreign  news  websites  and  social  media 
+platforms  to  compare  and  synthesize  different  narratives 
+and  viewpoints.  Second,  they  could  rely  upon  a  specific 
+order  of  technologies  to  circumvent  censorship.  For 
+example, many participants mentioned using virtual private 
+network  software  to  access  Twitter  and  Facebook.  which 
+are blocked in China. Lastly, participants perceived private 
+communication  channels  such  as  instant  messaging  and 
+email  as  more  secure,  and  use  them  to  share  sensitive 
+information with others. One of our participants asked her 
+friend who studied abroad to forward sensitive information 
+through  email.  This  list  of  ways  of  reconfiguration  is  not 
+meant  to  be  exhaustive,  but  to  suggest  that,  while  the 
+panoptic  measures  were  implemented  on  a  number  of 
+individual  platforms  and  tools,  participants  could  still 
+devise  combinations of technologies and people in specific 
+orders  to  obtain  desired  information  for  the  purpose  of 
+cultivating  their  own  knowledge.  Through  this  recurrent 
+reconfiguration, 
+use  of 
+participants grew competence in technology use. 
+
+technologies  and 
+
+creative 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 6 
+ 
+ 
+ 
+ 
+Participants  were  aware  that  all  the  information  that  they 
+had  direct  access  to  was  likely  to  have  been  deliberately 
+tailored  to  sustain  a  certain  truth.  They  had  to  decide 
+whether the endeavor to rediscover truth in line with their 
+own  views  was  worth  the  effort.  The  reconfiguration  of 
+technological  paths  took  a  lot  of  time,  and  participants 
+could  not  spend  all 
+time  pursuing  a  better 
+understanding  of  every  single  event.  For  topics  that  they 
+were  not  interested  in,  they  remained  suspicious  of 
+domestic  narratives  and  acknowledged 
+limited 
+knowledge of them. 
+
+their 
+
+their 
+
+5.1.3 Summary. In  this  case,  care  of  the  self  manifested  as 
+participants’  individual  choices,  where  they  exercised  a 
+degree  of  freedom  even  in  such  THE  stringent  power 
+structure of heavy censorship. Through various practices of 
+the self, participants sought to reject the normalizing effect 
+of the censorship apparatus, and cautiously negotiated their 
+relations  with  censorship  technologies.  They  exerted  their 
+agency to constitute selves as reflexive, careful, and creative 
+individuals who did not simply accept logics of censorship 
+and government narratives. 
+
+5.2  Culture of Quantification and Self-Reflexivity 
+
+In  the  second  case,  we  move  away  from  the  totalizing, 
+inescapable  panoptic  technologies,  to  discuss  an  online 
+culture that is largely constrained to a game community. In 
+this  case  study,  we  analyze  players’  relations  with 
+quantification tools in LoL (Figure 1 shows a screenshot of a 
+player’s quantified performance). 
+
+5.2.1  Culture  of  Quantification.  According 
+to  our 
+participants,  they  relied  upon  quantification  to  track  the 
+performance of their own and their friends’. Because LoL is 
+a  team-based  game,  participants  also  monitored  their 
+teammates’  performance  data  so  as  to  increase  their  win 
+chance. For example, they would ask their teammates to 
+
+select characters1 which they had satisfactory performance 
+data  with,  and  to  avoid  ones  with  poor  data.  In  this  way, 
+LoL,  quantification  tools,  and  the  player  community 
+constitute 
+culture  of  quantification. 
+Governance here refers to all the social and technical means 
+such  as  institutions,  technologies,  norms,  and  regulations, 
+through which the subjects are governed (see [39]). 
+
+a  networked 
+
+Quantification  disciplines  players,  relying  upon  both 
+technical  means,  as  well  as  social  surveillance  to  establish 
+an ideal player with satisfactory performance data. As one 
+participant said, “you are a bad player simply because your 
+KDA2 is  bad.”  The  culture  of  quantification  thus  sustains 
+the discourse of performance that judges each player based 
+on their publicized data.  
+
+Several  other  participants  described  how  they  used 
+quantification tools to scrutinize and evaluate their in-game 
+teammates even before their teamwork started. Participants 
+told us they would attempt to persuade their teammates to 
+adopt  a  certain  playstyle  after  reading  their  quantified 
+profiles, to increase chances of winning. 
+
+the  self.  Participants  embraced 
+
+5.2.2 Self-Reflexivity. We found two general practices of care 
+of 
+the  utilities  of 
+quantification,  and  derived  pride  and  meanings  from 
+quantification.  Bardzell  et  al.  found  the  power  and 
+governance in Second Life was productive in the enactment 
+of care of the self in the sense that users made the informed 
+and  self-conscious  decision  to  enter,  discovered  new 
+feelings  and  experiences,  and 
+initiated  progressive 
+consideration  that  demands  change  on  the  self  [5].  Our 
+participants used quantification to trace their progression in 
+LoL,  and  to  analyze  their  performance  to  inform  future 
+play. As one participant said, “It helps me know my areas to 
+improve…  and  climb  [in]  ranked  [game  mode].”  As  this 
+player  explained,  he  was  not 
+the  subject  of 
+quantification,  being  measured  and  assessed.  He  used 
+language  in  positive  terms  to  stress  how  quantification 
+“helps” and how he  could obtain  knowledge of himself. In 
+this way, he could improve, transform himself into a more 
+skilled player. Climbing ranked, the common goal for many 
+LoL players in this competitive game culture, was narrated 
+as  this  player’s  goal,  manifesting  how  the  player’s 
+discovery of the self also includes active acquisition of the 
+values of the game culture. 
+
+just 
+
+Figure 1. Quantified Performance in LoL. 
+
+However,  participants  grew  wary  about  the  prevalent  use 
+of  quantification  and  the  negative  consequences  it  might 
+
+1 Each  in-game  character  has  a  different  skill  set  and  requires  experiences  and 
+practices to play well. 
+2 KDA is short for kill/death/assist ratio. 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 7 
+ 
+                                                                 
+entail.  Some  participants  expressed  discomfort  with  being 
+under  involuntary  monitoring.  Their  teammates  verbally 
+harassed  them  for  trying  out  new  characters  or  for  poor 
+performance in comparison to their previous match history. 
+Other  participants  talked  about  the  distress  and  anxiety 
+associated with quantification. One participant said that “iI 
+gives me anxiety knowing that my rank will drop.” Anxiety 
+could  be  viewed  as  the  affective  underside  of  power  and 
+discourse  [78].  Quantification  as  a  culture  produced  and 
+reproduced  power  over  players,  some  of  whom  in  turn 
+experienced  a  sense  of  powerlessness,  and  became  acutely 
+aware  of  their  “problematic”  relations  with  quantification, 
+cognitively and emotionally. 
+
+Conscious, reflexive players recognized their own cognitive 
+and  emotional  capacity  in  coping  with  quantification-
+related  pressure,  and  negotiated  their  relations  with 
+quantification. For  example, one  participant told  us that “I 
+had  issues  with  them…I  became  upset  when  a  game  hurt 
+my kda… now I stay away from them to keep my sanity.” A 
+second  participant  mentioned  that  “I  only  use  op.gg  for 
+promos.”  Op.gg  is a popular quantification tool in the LoL 
+community, and promo refers to promotion matches where 
+winning the majority promotes player to a higher rank. 
+
+Participants  had  developed  different  strategies  for  using 
+quantification,  ranging  from  nonuse  to  selective  use  to 
+frequent use. What was unanimous across all of them was 
+their diligence in observing their selves under the influence 
+taking  actions.  Self-
+of 
+transformation in this context denotes individual endeavors 
+in  adjusting  the  perceived  problematic  relations  with 
+quantification, and to attain a better mode of being in terms 
+of happiness and enjoyment of game. 
+
+the  cultural  values  and 
+
+5.2.3 Summary.  To  Foucault,  power  is  neither  positive  nor 
+negative,  but  dangerous  [32].  Therefore,  individuals  must 
+be concerned with and interrogate power, instead of merely 
+being  a  passive  subject. 
+In  the  gaming  culture  of 
+quantification,  participants  took  care  of  themselves  by 
+cautiously adopting quantification and carefully examining 
+their relations with quantification. Their constitution of the 
+self  encompassed  both  appropriation  of  a  culture  that 
+privileges  performance,  rank,  and  competition,  and 
+cultivation  of 
+individualistic  way  of  using 
+quantification. 
+
+their 
+
+5.3  The Neoliberal Healthcare System and Self-
+
+Learning 
+
+In this case, we look at systems that represent a totality of 
+techniques,  people,  practices,  and  institutions.  Healthcare 
+systems  in  the  U.S.  are  fragmented,  lacking  coordination 
+
+between  resources  and  organizations  [24].  Patients  and 
+caregivers must carry out many kinds of invisible work to 
+ensure  proper  healthcare  delivery  [82,97].  This  situation 
+can  be  partially  traced  to  s  neoliberal  paradigm  in  which 
+individual patients  are rational actors responsible for their 
+own health conditions and healthcare [42,70]. Our analysis 
+starts from an examination of the work that patients carried 
+out and the knowledge they sought  to obtain proper care. 
+
+5.3.1 The Neoliberal Healthcare System.  Participants  had  to 
+perform  coordination  work  to  connect  poorly  coordinated 
+organizations, such as their employer, insurance company, 
+pharmacy,  and  hospital.  For  example,  they  need  to 
+coordinate  with  their  employer’s  human  resources  office, 
+insurance  company,  and  hospital  to  make  sure  their 
+employee health benefits could over their newborn babies. 
+They performed negotiation work with service providers to 
+obtain  affordable,  high  quality  services.  They  performed 
+complex informational work to identify a proper course of 
+action in dealing with service providers when breakdowns 
+happened, e.g., when bills were calculated wrong.   
+
+The  healthcare  system  disciplined  our  participants  into 
+acting  as  obedient  workers.  Often  the  bill  was  a  primary 
+instrument  of  coercion.  One  participant  said,  “They  [a 
+medical  group]  were  constantly  sending  us  bills…the  bills 
+are  very  high.  And  the  issue  was  I  had  to  be  the  one 
+constantly calling them, telling them that the insurance that 
+they're billing is incorrect…  for about fifteen months back 
+and  forth.”  In  prison  systems  that  Foucault  studied  [28], 
+rules  and  constraints  are  visible  and  clear,  disciplining 
+people 
+In 
+healthcare, coercion through billing was effected through a 
+web  of  institutions  such  as  debt  collection  and  credit 
+history services which ensured that patients and caregivers 
+were forced to be responsible for errors and mistakes that 
+originated from within the healthcare organizations. 
+
+instructions  and  punishments. 
+
+through 
+
+Acts of coercion have a normalizing effect. One participant 
+said that, “Everything relies on one’s own effort to search, 
+to  understand....  I  guess  that’s  just  how  it  works.”  By 
+accepting their invisible work for the healthcare industry as 
+normal, the participant was subjected to the neoliberal logic 
+and  its  further  developments  that  count  on  patients  and 
+caregivers to take upon more responsibility. 
+
+The  healthcare  system  was  an  opaque  and  dysfunctional 
+one  where  breakdowns  frequently  happened  at  different 
+scales  [45],  with  causes 
+that  were  unknowable  to 
+participants.  Our  participants  observed  that  breakdowns 
+could result from errors of many kinds, miscommunication 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 8 
+ 
+ 
+ 
+ 
+across  multiple  departments  of  one  organization  or  failed 
+coordination across multiple organizations.  
+
+5.3.2  Self-Learning.  Our  participants  faced  tremendous 
+difficulties in making sense of an opaque healthcare system 
+with  invisible  rules  and  practices.  Participants  recognized 
+that they must take initiative in fixing breakdowns, or they 
+would be the ones to suffer.  They thus sought  to discover 
+knowledge  about  the  healthcare  system.  They  would 
+carefully  ask  questions  of  staff  members  regarding 
+procedures  and  policies.  Even  with  this  knowledge,  more 
+was  needed  and  had  to  be  obtained  through  connections 
+with  a  larger  network  of  resources.  For  instance,  our 
+participants mentioned that they compared the websites of 
+various  healthcare  providers’  websites  to  learn  whether 
+their own provider had outdated information. They checked 
+reviews of doctors and facilities on websites like Yelp. They 
+consulted  medical  journals  to  check  a  doctor’s  diagnosis 
+and  medical  suggestions.  They  gathered  experiential 
+knowledge  from  other  parents  on  social  media.  For 
+example,  they  learned  that  certain  bills  were  negotiable  if 
+they told the healthcare providers they did not have health 
+insurance or could not afford the co-pay. 
+
+Participants  discussed  the  importance  of  self-reflection  in 
+learning.  Whenever  breakdown  took  place,  they  reflected 
+upon what  they already  knew, and what else  they needed 
+to know so that such breakdowns would not happen again. 
+For  example,  in  the  U.S.,  in-network  means  healthcare 
+providers  have  contracts  with  insurance  companies,  and 
+consumers  can  pay  much  less.  Out-of-network  means  no 
+contract and consumers have to pay the full amount out of 
+their own pocket. It is common that a medical facility is in-
+network  but  that  certain  specialists,  such  as  pathologists, 
+are  out-of-network.  However,  patients  are  not  necessarily 
+aware  of  this  nuance,  and  because  of  this,  a  substantial 
+portion  of  emergency  room  visits  could  lead  to  high  bills 
+[41].  Our  participants  learned  about  this  knowledge  from 
+their  own  unexpected  bills  as  well  as  others’  experiences 
+shared on social media. They knew they must be attentive 
+to  any  service  or  interaction  that  they  would  have  in 
+medical facilities. One participant mentioned that when her 
+doctor said she would need an ultrasound, she asked, “Is the 
+radiologist in-network?” 
+
+5.3.3  Summary.  In  the  neoliberal  system  of  healthcare, 
+parents  and  caregivers  were  embedded 
+in  a  power 
+arrangement  that they  could  not escape and must manage 
+so  the  system  remained  functional  for  them  and  their 
+families.  Although  parents’  primary  concern  was  their 
+children,  rather  than  themselves,  we  argue  that  their 
+actions are a form of care of the self. Care of the self entails 
+
+care  of  others  as  a  person  recognizes  their  rightful  social 
+role  in  their  family,  community,  and  society,  according  to 
+Foucault  [32].  Taking  actions  on  behalf  of  their  children 
+demonstrated  participants’  continuous  work  on  renewing 
+their knowledge of the healthcare system, or mastery over 
+the self. 
+
+6  DISCUSSION 
+
+We used three cases to illustrate care of the self across the 
+diverse  contexts  of  a  highly  censored  media  environment, 
+gaming culture, and healthcare. The central theme was that 
+people  individually  carried  out  constant  examinations  of 
+the self as well as their relations to their surroundings. Care 
+of the self, as Foucault noted [32], reflects people’s concern 
+for  the  truth,  or  knowledge  of  the  self.  Participants’ 
+practices  of  the  self  reflected  their  acute  awareness  of  the 
+predicaments in a network of power relations and their will 
+to  self-transformation  in  order  to  obtain  a  better  mode  of 
+being. Care of the self could  appear primarily as proactive 
+in  the  case  of  circumventing  censorship,  reflexive  in  the 
+culture of quantification, or reactive, evident in the doings 
+of  patients  and  caregivers  enmeshed 
+in  a  complex 
+healthcare system. 
+
+Building on prior discussion of the literature as well as the 
+three  case  studies,  we  now  move  to  close  examination  of 
+human-technology  relationship,  and  the  implications  of 
+care of the self for HCI research and design. 
+
+6.1  Constitution of the Self through Negotiating 
+
+with Technology 
+
+According  to  Ellul  [23],  digital  technologies,  institutions, 
+and organizations are all forms of technique that represent 
+gradually  revised  and  refined  systematic,  rational,  and 
+efficient  means  of  problem  solving,  very  much  in  a 
+modernist  sense.  In  sustainable  HCI,  researchers  have 
+already  reflected  upon  how  the  modernist  orientation  of 
+persuasive  technologies  reduces  design  possibilities  in 
+terms of scoping problem too narrowly, focusing too much 
+on 
+lived 
+individuals,  assuming  rationality,  neglecting 
+experience,  and  imposing  short-term  time  frames  [16]. 
+Technology  is  not  necessarily  neutral  nor  does  it  always 
+serve human well-being [68]. Our three cases demonstrated 
+how  people  wrestled  with  technologies  exactly  because  of 
+efficiency, 
+technological  developments 
+systematicness,  and  rationality.  In  the  case  of  censorship, 
+technologies  were  used  for  maximizing  efficiency  at 
+control,  and  participants  needed  to  find  workarounds.  In 
+the gaming case, a culture of prioritizing performance and 
+play  efficiency  was  developed,  and  participants  had  to 
+
+centered  on 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 9 
+adjust their own engagements with the game. In healthcare, 
+people  encountered  a  “too-big-to-fail”  neoliberal  system 
+[48,75]  sophisticated  at  self-preservation  and  deflection  of 
+responsibilities onto individual patients and caregivers,. 
+
+What  technology  creates,  in  our  three  cases,  is  a  form  of 
+existential crisis [68]. Participants were entangled with the 
+technologies and it was legitimate for them to question the 
+meaning of such entanglement: Why do I have to spend so 
+much  time  just  to  bypass  censorship?  Why  do  I  care  so 
+much about the numbers provided by quantification? Why 
+do  I  have  to  do  so  much  work  just  to  take  care  of  my 
+children? 
+
+What is technology in relation to the self, then? Ulrich Beck 
+said we are in late modernity now, which means all the old 
+social institutions that create meaning, such as villages and 
+the Church in traditional societies, no longer do so  [9]. To 
+create  meaning,  we  are  “condemned  to  individualization,” 
+taking responsibility, making  choices, and responding  to  a 
+rapidly shifting environment. Digital technologies displaced 
+existing  social  structures  with  networks  and  flows.  Our 
+participants  were  indeed  individualized  into  finding  their 
+own  meanings  through  interactions  with  technologies. 
+However,  they  were  also  compelled  to  generate  meanings 
+about  their  own  selves  with  the  presence  of  powerful 
+entities—government, community, and system. These were 
+all  systems  of  governance  that  our  participants  were 
+subjected  to  and  transformed  by.  To  some  extent,  as 
+modern  individuals,  we  are  condemned  to  take  care  of 
+ourselves,  because  no  other  external  agents  or  structures 
+can or will. 
+
+Technology  does  not  just  mediate  power  relations,  it  is 
+itself a form of power that disciplines the self. Participants 
+ascribed  authority  to  technology,  be  it  the  reliance  on 
+technological  paths  to  circumvent  censorship  or  trust  in 
+quantification to assess the self. Max Weber considered that 
+authority  legitimatized  power  without  either  coercion  or 
+threat  of  violence  [99].  When 
+technology  assumed 
+authority  from  participants,  they  were  subjected  to  and 
+changed  by  the  authority.  Therefore,  wary  participants 
+engaged in constant negotiation with technology, what we 
+considered practices of self. 
+
+The  starting  point  of  practices  of  self  was  participants’ 
+concern  for  truth.  They  first  became  critical  and  reflective 
+on the problematics of the status quo structure. Then they 
+could carry out various actions on rediscovering knowledge 
+about  their  own  selves  and  their  surroundings.  Their 
+actions  varied  along  several  dimensions.  First,  they  could 
+initiate diverse ways and degrees of use and “non-use” [8]. 
+
+For  example,  in  the  censorship  case,  participants  stressed 
+that they prioritized their interest and time, and would not 
+try to do comprehensive information search for any single 
+political  topic.  In  the  quantification  case,  participants 
+wanted to sustain their wellbeing and the actual purpose of 
+playing  games,  and  thus  chose  to  use  quantification  tools 
+selectively.  Second, 
+learn  strengths  and 
+they  could 
+weakness  of  each  technology,  and  skillfully  stitch  them 
+together for a single purpose [57]. In this way, they did not 
+need  to  rely  upon  the  design  of  any  single  technology. 
+Third, care of the self entails care of others in the sense of a 
+person  would  identify  their  proper  relations  with  other 
+people.  Care  for  others  could  be  manifested  as  sharing 
+sensitive  information  with  other  people  in  the  censorship 
+case, or taking care of their children in the healthcare case. 
+
+6.2  Turn to the Self in HCI 
+
+Mainstream  HCI  has  prioritized  technical  transformation, 
+i.e., novel technologies, and social transformation, i.e., how 
+to  effect  positive  social  changes.  Ideas  driving  these 
+transformations  mostly  operate  at  the  structural  level, 
+focusing  intensively  on  the  environment  external  to  the 
+self, while paying little attention to self-transformation. We 
+emphasize  that  any  technology,  even  if  designed  with 
+sound  intentions  and  a  noble  agenda,  is  itself  a  source  of 
+disciplinary  power.  Therefore,  discussions  of  structural 
+transformations  need  to  involve  considerations  of  self-
+transformation, and vice versa. 
+
+Care  of  the  self  must  precede  care  of  others  (i.e.,  other 
+people or technologies) in the sense that a person must be 
+mindful of their own knowledge, strengths and limits, and 
+engage in a constant reexamination of the self, before they 
+can  productively  contribute  to  acts  of  care  of  others  in 
+terms  of  initiating  structural  changes.  HCI  already  has  a 
+few  topical  areas  focused  on  the  self,  such  as  self-
+enhancement  [18,102]  and  self-tracking  [64].  But  it  would 
+be deterministic to assume that designed technology would 
+certainly  empower  self.  Our  study  of  quantification  [55] 
+shows  that  tools  intended  to  measure  player  performance 
+could  discipline  players,  and  in  some  cases,  do  harm.  The 
+focus on self should not be limited to topical areas such as 
+self-tracking and health. A self dimension exists in most, if 
+technology  under 
+not  all,  HCI  projects.  For  any 
+the 
+examination,  researchers  can  always  ask  how 
+technology plays a role in people’s view of and work on the 
+self. 
+
+Foucault  foregrounded  the  importance  of  practice  in 
+constructing  the  self  by  noting  that  when  he  talked  about 
+care  of  the  self,  it’s  always  practices  of  the  self  [32]. 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 10 
+ 
+ 
+ 
+ 
+is  especially 
+
+Therefore, to study the self is to study practices of the self. 
+This  is  similar  to  Kuutti  and  Bannon’s  call  for  the  turn  to 
+practice in HCI, locating the origin of the social in practices 
+[61]. In practical terms, we should examine what practices 
+people  perform  to  cultivate  selves  to  achieve  self-
+transformation.  However,  we  also  share  Kaptelinin’s 
+concern that detailed empirical studies of situated, real-life 
+processes  can  be  insufficient  in  discovering  very  personal 
+choices  and  experiences  such  as  the  meaning  of  one’s  life 
+[52].  This 
+true  when  people  exercise 
+individualistic  practices  of  care  of  the  self  and  thus 
+constantly ask  existential questions about the meanings of 
+their actions and technological engagements. While Kuutti 
+and  Bannon  stressed  that  “practices  are  a  shared  resource 
+among  a  community  of  people”  [61],  what  we  are 
+concerned  with  is  the  individualistic  aspect  of  practices  of 
+the  self  that  pertain  to  different  individuals’  internal 
+properties  such  as  capacity,  mentality,  and  reflexivity.  In 
+certain  ways,  a  few  HCI  research  methods  such  as 
+interviews  allow  the  opportunity  to  engage  in  dialogues 
+with participants, where “contemplation of self and care of 
+self  are  related  dialectically”  [33].  The  goal 
+is  not 
+necessarily  to  discover  a  true,  static  state  of  participants, 
+but  to  work  together,  reflexively  and  introspectively,  to 
+explore critical aspects about the self and meaning-making, 
+such  as  existential  questions  like  “who  am  I?”  and  critical 
+questions such as “do you take care of yourself?” 
+
+6.3  Why Foucault and His Care of the Self? 
+
+Bardzell  encouraged  researchers  to  reflect  upon  why  HCI 
+would  benefit  from  a  particular  theory  they  propose  [3]. 
+We could provide several points to justify the relevance of 
+the  notion  of  care  of  the  self  to  HCI.  Foucault  has  been 
+influential for his writings on power relation and structures 
+that discipline people, which have already taken root in the 
+HCI  literature  [51,83].  Foucault’s  analysis  of  power  is 
+always linked to his central concern on the self [32,33]. This 
+rationale  resonates  with  the  concern  we  expressed  at  the 
+beginning  of  the  paper  about  how  the 
+increasingly 
+powerful  technology  alters the dynamics between self and 
+networks of power relations. 
+
+Foucault  was  concerned  with  how  in  the  modern  world, 
+knowledge  of  oneself,  or  “know  yourself,”  obscures  “take 
+care of yourself” [33]. To him, “take care of yourself” starts 
+with concern for the self, which, in our three cases, meant 
+participants’  awareness  of  the  power  that  permeates 
+technology.  This  awareness  was  the  starting  point  they 
+to  discover  knowledge  and  negotiate  and 
+sought 
+renegotiate  relations  with 
+technology.  Only  paying 
+attention to knowledge of the self would be insufficient to 
+
+articulate,  for  example,  how  mainland  citizens  decided  to 
+forgo  knowledge of some events that  they had no  time or 
+interest to follow up on, how LoL players tried to distance 
+themselves 
+them 
+knowledge, or how patient and caregivers refused to accept 
+consequences incurred by breakdowns. 
+
+from  quantification 
+
+that  supplied 
+
+6.4  Design Implications 
+
+Drawing  from  notions  of  power  relations  and  care  of  the 
+self,  we  could  consider  design  as  fundamentally  an  act  of 
+establishing  a  source  of  power.  Therefore,  pluralism  in 
+design is vital in a design space where only one technology 
+is  available.  When  multiple  technologies  coexist  and 
+compete,  people  do  not  have  to  rely  on  only  one. 
+Technology as a source of power is not inherently positive 
+or negative, but epistemically dangerous. Fundamentally, it 
+structurally alters the external environment of the self, and 
+thus  should  not  go  unnoticed  or  be  taken  for  granted.  In 
+this regard, a few design approaches are fruitful in inspiring 
+reflections, such as critical design [4] and speculative design 
+[2].  These  approaches  seek  to  invite  thoughts  and  incur 
+mental effort from people, which might be valuable to  the 
+rise of concern for the self. 
+
+clickbait 
+
+We  call  for  more  attention  to  self-transformation  even 
+when  the  primary  design  goals  are  social  or  technical 
+transformations.  It  would  be  valuable  for  designers  to 
+critically  engage  with  their  own  work,  asking  how  the 
+intersects  with  self-realization  and  self-
+technology 
+transformation. Engagement, a popular value celebrated in 
+many HCI design efforts, could be hugely problematic. For 
+example, 
+extremified 
+and  polarized 
+recommendation  content  on  social  media  are  designed  to 
+engage people [96]. Dark patterns in user experience design 
+use  knowledge  about  human  behavior  to  manipulate  user 
+actions  [43].  Light  et  al.  criticized  bovine  design  that 
+encouraged  passivity  and  rote  behavior  [68].  These  design 
+patterns could all be successful at engaging  users in terms 
+of longer visit time, more purchase actions, and more user-
+generated data, and structurally alter external environment 
+in ways beyond individuals’ capacity to observe. 
+
+and 
+
+7  CONCLUSION 
+
+We  discussed  Foucault’s  notion  of  care  of  the  self  in 
+relation  to  human-computer  interaction  through  three 
+cases  of  people  negotiating  and  renegotiating  with 
+technology.  This  notion 
+is  particularly  relevant  and 
+provoking  to  technology  researchers  concerned  with 
+the  external  environments,  but 
+transformation  of 
+inattentive  to  self-transformation.  Self  could  be  arguably 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 11 
+more  difficult  to  recognize  or  measure,  compared  to 
+external  factors.  Our  three  cases  have  begun  to  show  that 
+the  self  always  takes  steps,  even  if  they  are  small  and 
+halting, to be unruly and free. Further research is needed to 
+structural 
+contemplate  ways  of  putting 
+transformations into an equilibrium. 
+
+self  and 
+
+ACKNOWLEDGMENTS 
+
+We  thank  our  study  participants  for  their  generosity  in 
+sharing  opinions  and  experiences  with  us.  We  appreciate 
+the  anonymous  reviewers’  constructive  and  insightful 
+feedback.
+
+1: 
+
+[4] 
+
+[3] 
+
+[2] 
+
+24, 
+
+REFERENCES 
+[1]  Anders  Albrechtslund  and  Lynsey  Dubbeld.  2005.  The  Plays  and 
+Arts  of  Surveillance:  Studying  Surveillance  as  Entertainment. 
+Surveillance & Society 3, 2/3: 216–221. 
+James  Auger.  2013.  Speculative  design:  crafting  the  speculation. 
+Digital 
+11–35. 
+Creativity 
+http://doi.org/10.1080/14626268.2013.767276 
+Jeffrey  Bardzell.  2016.  A  Dark  Pattern  in  Humanistic  HCI. 
+INTERACTIONS.  
+Jeffrey  Bardzell  and  Shaowen  Bardzell.  2013.  What  is  “critical” 
+about  critical  design?  Proceedings  of  the  SIGCHI  Conference  on 
+Human Factors in Computing Systems - CHI ’13,  ACM  Press,  3297–
+3306. http://doi.org/10.1145/2470654.2466451 
+Jeffrey  Bardzell,  Shaowen  Bardzell,  Guo  Zhang,  and  Tyler  Pace. 
+2014.  The  lonely  raccoon  at  the  ball:  designing  for  intimacy, 
+sociability,  and  selfhood.  Proceedings  of  the  32nd  annual  ACM 
+conference on Human factors in computing systems  - CHI ’14,  ACM 
+Press, 3943–3952. http://doi.org/10.1145/2556288.2557127 
+Shaowen  Bardzell.  2010.  Feminist  HCI:  taking  stock  and  outlining 
+an  agenda 
+for  design.  Proceedings  of  the  28th  international 
+conference on Human factors in computing systems  - CHI ’10,  ACM 
+Press, 1301–1310. http://doi.org/10.1145/1753326.1753521 
+Shaowen  Bardzell  and  Jeffrey  Bardzell.  2011.  Towards  a  feminist 
+HCI methodology: social science, feminism, and HCI. Proceedings of 
+the 2011 annual conference on Human factors in computing systems - 
+CHI 
+675–684. 
+http://doi.org/10.1145/1978942.1979041 
+
+Press, 
+
+ACM 
+
+’11, 
+
+[6] 
+
+[5] 
+
+[7] 
+
+[8]  Eric  P.S.  Baumer,  Phil  Adams,  Vera  D.  Khovanskaya,  et  al.  2013. 
+Limiting, leaving, and (re) lapsing: an exploration of facebook non-
+use  practices  and  experiences.  Proceedings of the SIGCHI Conference 
+on  Human  Factors  in  Computing  Systems  -  CHI  ’13,  ACM  Press, 
+3257–3266. http://doi.org/10.1145/2470654.2466446 
+
+[9]  Ulrich  Beck.  1992.  Risk  society :  towards  a  new  modernity.  Sage 
+
+Publications. 
+
+[10]  Mark Bevir. 1999. Foucault and Critique: Deploying agency against 
+65–84. 
+
+autonomy. 
+Political 
+http://doi.org/10.1177/0090591799027001004 
+
+Theory 
+
+27, 
+
+1: 
+
+[11]  Timothy  W.  Bickmore,  Laura  M.  Pfeifer,  and  Brian  W.  Jack.  2009. 
+Taking  the  time  to  care:  empowering  low  health  literacy  hospital 
+patients  with  virtual  nurse  agents.  Proceedings  of  the  27th 
+international  conference  on  Human  factors  in  computing  systems  - 
+1265–1274. 
+CHI 
+http://doi.org/10.1145/1518701.1518891 
+
+Press, 
+
+ACM 
+
+09, 
+
+[12]  Geoffrey C. Bowker and Susan Leigh Star. 2000. Sorting Things Out: 
+
+Classification and Its Consequences. MIT Press. 
+
+[13]  Virginia  Braun  and  Victoria  Clarke.  2006.  Using  thematic  analysis 
+in  psychology.  Qualitative  Research  in  Psychology  3,  2:  77–101. 
+http://doi.org/10.1191/1478088706qp063oa 
+
+[14]  Philip Brey. 2008. The Technological Construction of Social Power. 
+71–95. 
+
+22, 
+
+Social 
+Epistemology 
+http://doi.org/10.1080/02691720701773551 
+
+1: 
+
+[15]  Deana  Brown,  Victoria  Ayo,  and  Rebecca  E.  Grinter.  2014. 
+Reflection  through  design:  immigrant  women’s  self-reflection  on 
+managing  health  and  wellness.  Proceedings of the 32nd annual ACM 
+
+conference on Human factors in computing systems  - CHI ’14,  ACM 
+Press, 1605–1614. http://doi.org/10.1145/2556288.2557119 
+
+[16]  Hronn Brynjarsdottir, Maria Håkansson, James Pierce, Eric Baumer, 
+Carl  DiSalvo,  and Phoebe  Sengers.  2012.  Sustainably  unpersuaded: 
+how persuasion narrows our vision of sustainability.  Proceedings of 
+the  2012  ACM  annual  conference  on  Human  Factors  in  Computing 
+Systems 
+947–956. 
+http://doi.org/10.1145/2207676.2208539 
+
+Press, 
+
+ACM 
+
+CHI 
+
+’12, 
+
+- 
+
+[17]  Lawrence  Buell.  1999.  Introduction:  In  Pursuit  of  Ethics.  Papers on 
+
+Language and Literature 114, 1: 7–19. 
+
+[18]  Stefan Parry Carmien and Gerhard Fischer. 2008. Design, adoption, 
+and  assessment  of  a  socio-technical  environment  supporting 
+independence  for  persons  with  cognitive  disabilities.  Proceeding of 
+the  twenty-sixth  annual  CHI  conference  on  Human  factors  in 
+computing 
+597–606. 
+http://doi.org/10.1145/1357054.1357151 
+
+’08,  ACM  Press, 
+
+systems 
+
+-  CHI 
+
+[19]  Steven  Crowell.  2004.  Existentialism.  Stanford  Encyclopedia  of 
+from 
+
+Philosophy. 
+17, 
+https://plato.stanford.edu/entries/existentialism/ 
+
+September 
+
+Retrieved 
+
+2018 
+
+[20]  Andrew Dilts. 2011. From 'Entrepreneur of the Self’ to ‘Care of the 
+Self’:  Neo-liberal  Governmentality  and  Foucault’s  Ethics.  Foucault 
+Studies 0, 12: 130. http://doi.org/10.22439/fs.v0i12.3338 
+
+[21]  Lynn  Dombrowski,  Ellie  Harmon,  and  Sarah  Fox.  2016.  Social 
+Justice-Oriented  Interaction  Design.  Proceedings  of  the  2016  ACM 
+Conference  on Designing  Interactive  Systems  - DIS  ’16,  ACM  Press, 
+656–671. http://doi.org/10.1145/2901790.2901861 
+
+[22]  Hamid  Ekbia  and  Bonnie  Nardi.  2016.  Social  Inequality  and  HCI: 
+The  View  from  Political  Economy.  Proceedings  of  the  2016  CHI 
+Conference on Human Factors in Computing Systems - CHI ’16,  ACM 
+Press, 4997–5002. http://doi.org/10.1145/2858036.2858343 
+[23]  Jacques Ellul. 1964. The Technological Society. Vintage Books. 
+[24]  Alain C. Enthoven. 2009. Integrated Delivery Systems: The Cure for 
+
+Fragmentation. American Journal of Managed Care 15, 12. 
+
+[25]  Tom  Feltwell,  Shaun  Lawson, Enrique  Encinas,  et  al.  2018.  “Grand 
+Visions” for Post-Capitalist Human-Computer Interaction. Extended 
+Abstracts  of  the  2018  CHI  Conference  on  Human  Factors  in 
+Computing 
+1–8. 
+Systems 
+http://doi.org/10.1145/3170427.3170609 
+
+’18,  ACM 
+
+-  CHI 
+
+Press, 
+
+[26]  Casey  Fiesler  and  Blake  Hallinan.  2018.  “We  Are  the  Product”: 
+Public Reactions to Online Data Sharing and Privacy Controversies 
+in  the  Media.  Proceedings  of  the  2018  CHI  Conference  on  Human 
+Factors  in  Computing  Systems  -  CHI  ’18,  ACM  Press,  1–13. 
+http://doi.org/10.1145/3173574.3173627 
+
+[27]  Thomas R. Flynn. 2009. Existentialism. Sterling. 
+[28]  Michel  Foucault.  1977.  Discipline  and  Punish:  The  Birth  of  the 
+
+Prison. Vintage Books. 
+
+[29]  Michel  Foucault.  1980.  Truth  and  Power.  In  Power/Knowledge: 
+Selected Interviews & Other Writings 1972-1977,  Colin  Gordon  (ed.). 
+The Harvester Press. 
+
+[30]  Michel Foucault. 1988. The History of Sexuality, Vol. 3: The Care of 
+
+the Self. Vintage. 
+
+[31]  Michel Foucault. 1990. The History of Sexuality, Vol. 2: The Use of 
+
+Pleasure. Vintage Books. 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 12 
+ 
+ 
+ 
+ 
+ 
+[32]  Michel  Foucault.  1998.  The  Ethics  of  the  Concern  for  Self  as  a 
+Practice  of  Freedom.  In  Ethics:  Subjectivity  and  Truth  (Essential 
+Works of Foucault, 1954-1984, Vol. 1),  Paul  Rabinow  (ed.).  The  New 
+Press, New York, 281–302. 
+
+[33]  Michel  Foucault.  1998.  Technologies  of  the  self.  In  Ethics: 
+Subjectivity  and  Truth  (Essential  Works  of  Foucault,  1954-1984,  Vol. 
+1), Paul Rabinow (ed.). The New Press, New York, 223–252. 
+
+[34]  Michel Foucault. 1998. Subjectivity and Truth. In Ethics: Subjectivity 
+and  Truth  (Essential  Works  of  Foucault,  1954-1984,  Vol.  1),  Paul 
+Rabinow (ed.). The New Press, New York, 87–92. 
+
+[35]  Michel  Foucault.  2001.  Madness  and  Civilization:  A  History  of 
+
+Insanity in the Age of Reason. Psychology Press. 
+
+[36]  Michel Foucault. 2003. The Birth of the Clinic: An Archaeology of 
+
+Medical Perception. Psychology Press. 
+
+[37]  Michel  Foucault.  2003.  Society  must  be  defended :  lectures  at  the 
+
+Collège de France, 1975-76. Picador. 
+
+[38]  Michel  Foucault.  2008.  The birth of biopolitics : lectures at the Collège 
+
+de France, 1978-79. Palgrave Macmillan.  
+
+[39]  Michel  Foucault.  2009.  Security,  territory,  population :  lectures  at 
+
+the Collège de France, 1977-78. Palgrave Macmillan. 
+
+[40]  Christian  Fuchs.  2012.  The  Political  Economy  of  Privacy  on 
+139–159. 
+
+Television  &  New  Media 
+
+13, 
+
+2: 
+
+Facebook. 
+http://doi.org/10.1177/1527476411415699 
+
+[41]  Christopher  Garmon  and  Benjamin  Chartock.  2017.  One  In  Five 
+Inpatient  Emergency  Department  Cases  May  Lead  To  Surprise 
+177–181. 
+Bills. 
+http://doi.org/10.1377/hlthaff.2016.0970 
+
+Affairs 
+
+Health 
+
+36, 
+
+1: 
+
+[42]  Stinne Glasdam, Christine Oeye, and Lars Thrysoee. 2015. Patients’ 
+participation 
+- 
+‘projectification’  of  patients  in  a  neoliberal  framed  healthcare 
+226–238. 
+Nursing 
+system. 
+http://doi.org/10.1111/nup.12092 
+
+in  decision-making 
+
+the  medical 
+
+Philosophy 
+
+field 
+
+16, 
+
+in 
+
+4: 
+
+[43]  Colin  M.  Gray,  Yubo  Kou,  Bryan  Battles,  Joseph  Hoggatt,  and 
+Austin  L.  Toombs.  2018.  The  Dark  (Patterns)  Side  of  UX  Design. 
+Proceedings  of  the  2018  CHI  Conference  on  Human  Factors  in 
+1–14. 
+Computing 
+http://doi.org/10.1145/3173574.3174108 
+
+’18,  ACM 
+
+Systems 
+
+-  CHI 
+
+Press, 
+
+[44]  Xinning Gui, Yu Chen, Clara Caldeira, Dan Xiao, and Yunan Chen. 
+2017.  When  Fitness  Meets  Social  Networks:  Investigating  Fitness 
+Tracking  and  Social  Practices  on  WeRun.  Proceedings of the 2017 
+CHI Conference on Human Factors in Computing Systems  - CHI ’17, 
+ACM Press, 1647–1659. http://doi.org/10.1145/3025453.3025654 
+[45]  Xinning  Gui  and  Yunan  Chen.  2019.  Making  Healthcare 
+Infrastructure  Work:  Unpacking  the  Infrastructuring  Work  of 
+Individuals. CHI’2019. 
+
+[46]  Xinning Gui, Yunan Chen, and Kathleen H. Pine. 2018. Navigating 
+the  Healthcare  Service  “Black  Box”:  Individual  Competence  and 
+Fragmented  System.  Proceedings  of the ACM on  Human-Computer 
+Interaction (CSCW 2018 second cycle) 2, CSCW: Article 61. 
+
+[47]  Gary  Gutting  and  Johanna  Oksala.  2018.  Michel  Foucault.  The 
+(Summer  2018  Edition). 
+from 
+
+Stanford  Encyclopedia  of  Philosophy 
+Retrieved 
+https://plato.stanford.edu/archives/sum2018/entries/foucault/ 
+[48]  Daniel M Hartung, Dennis N Bourdette, Sharia M Ahmed, and Ruth 
+H  Whitham.  2015.  The  cost  of  multiple  sclerosis  drugs  in  the  US 
+and the pharmaceutical industry: Too big to fail? Neurology 84, 21: 
+2185–92. http://doi.org/10.1212/WNL.0000000000001608 
+
+[49]  AB  Hofmeyr.  2015.  The  Ethics  and  Politics  of  Self-Creation  in 
+Foucault.  In  The  Ethics  of  Subjectivity.  Palgrave  Macmillan  UK, 
+London, 126–143. http://doi.org/10.1057/9781137472427_8 
+
+[50]  Human Rights Watch. 2013. China: Nationwide Arrests of Activists, 
+from 
+Critics  Multiply.  Human  Rights  Watch.  Retrieved 
+
+http://www.hrw.org/news/2013/08/30/china-nationwide-arrests-
+activists-critics-multiply 
+
+[51]  Lilly C. Irani and M. Six Silberman. 2013. Turkopticon: Interrupting 
+Worker  Invisibility  in Amazon Mechanical Turk.  Proceedings of the 
+SIGCHI Conference on Human Factors in Computing Systems,  ACM, 
+611–620. http://doi.org/10.1145/2470654.2470742 
+
+[52]  Victor  Kaptelinin.  2016.  Making  the  Case  for  an  Existential 
+Perspective in HCI Research on Mortality and Death. Proceedings of 
+the  2016  CHI  Conference  Extended  Abstracts  on  Human  Factors  in 
+Computing  Systems  -  CHI  EA 
+’16,  ACM  Press,  352–364. 
+http://doi.org/10.1145/2851581.2892585 
+
+[53]  Victor  Kaptelinin.  2018.  Technology  and  the  Givens  of  Existence: 
+Toward  an  Existential  Inquiry  Framework  in  HCI  Research. 
+Proceedings  of  the  2018  CHI  Conference  on  Human  Factors  in 
+Computing 
+1–14. 
+http://doi.org/10.1145/3173574.3173844 
+
+’18,  ACM 
+
+Systems 
+
+-  CHI 
+
+Press, 
+
+[54]  Yubo  Kou  and  Colin  M.  Gray.  2018.  “What  do  you  recommend  a 
+complete  beginner 
+like  me  to  practice?”:  Professional  Self-
+Disclosure  in  an  Online  Community.  Proceedings of  the  ACM  on 
+Human-Computer 
+CSCW. 
+Interaction 
+http://doi.org/10.1145/3274363 
+
+2, 
+
+[55]  Yubo  Kou  and  Xinning  Gui.  2018.  Entangled  with  Numbers: 
+Quantified  Self  and  Others  in  a  Team-Based  Online  Game. 
+Proceedings of the ACM on Human-Computer Interaction  2,  CSCW: 
+1–25. http://doi.org/10.1145/3274362 
+
+[56]  Yubo  Kou,  Xinning  Gui,  and  Yong  Ming  Kow.  2016.  Ranking 
+Practices  and  Distinction  in  League  of  Legends.  Proceedings of the 
+2016  Annual  Symposium  on  Computer-Human  Interaction  in  Play  - 
+CHI 
+4–9. 
+http://doi.org/10.1145/2967934.2968078 
+
+Press, 
+
+PLAY 
+
+ACM 
+
+’16, 
+
+[57]  Yubo  Kou  and  Bonnie  Nardi.  2018.  Complex  Mediation  in  the 
+Formation  of  Political  Opinions.  Proceedings  of  the  2018  CHI 
+Conference  on  Human  Factors  in  Computing  Systems    -  CHI  ’18. 
+http://doi.org/10.1145/3173574.3174210 
+
+[58]  Yubo  Kou,  Bryan  Semaan,  and  Bonnie  Nardi.  2017.  A  Confucian 
+Look at Internet Censorship in China. Human-Computer Interaction 
+- INTERACT 2017. http://doi.org/10.1007/978-3-319-67744-6_25 
+[59]  Yong  Ming  Kow.  2018.  Digital  Introspection  Within  Learning-on-
+my-Own  Rhetoric  Among  Computer  Gamers.  Mind, Culture, and 
+Activity 25, 1: 40–52. http://doi.org/10.1080/10749039.2017.1329319 
+
+[60]  Juhi Kulshrestha, Motahhare Eslami, Johnnatan Messias, et al. 2017. 
+Quantifying Search Bias: Investigating Sources of Bias for Political 
+Searches  in  Social  Media.  Proceedings of the 2017 ACM Conference 
+on  Computer  Supported  Cooperative  Work  and  Social  Computing  - 
+CSCW 
+417–432. 
+http://doi.org/10.1145/2998181.2998321 
+
+Press, 
+
+ACM 
+
+’17, 
+
+[61]  Kari Kuutti and Liam J. Bannon. 2014. The turn to practice in HCI: 
+towards  a  research  agenda.  Proceedings  of  the  32nd  annual  ACM 
+conference on Human factors in computing systems  - CHI ’14,  ACM 
+Press, 3543–3552. http://doi.org/10.1145/2556288.2557111 
+
+[62]  Airi  Lampinen,  Vilma  Lehtinen,  Asko  Lehmuskallio,  and  Sakari 
+Tamminen.  2011.  We’re  in  it  together:  interpersonal  management 
+of  disclosure  in  social  network  services.  Proceedings  of  the  2011 
+annual conference on Human factors in computing systems - CHI ’11, 
+ACM Press, 3217–3226. http://doi.org/10.1145/1978942.1979420 
+[63]  Thomas Lemke. 2001. “The birth of bio-politics”: Michel Foucault’s 
+lecture  at  the  Collège  de  France  on  neo-liberal  governmentality. 
+Economy 
+190–207. 
+http://doi.org/10.1080/03085140120042271 
+
+Society 
+
+and 
+
+30, 
+
+2: 
+
+[64]  Ian  Li, Anind  Dey, and  Jodi  Forlizzi.  2010. A  stage-based  model  of 
+personal  informatics  systems.  Proceedings of the 28th international 
+conference on Human factors in computing systems  - CHI ’10,  ACM 
+Press, 557–566. http://doi.org/10.1145/1753326.1753409 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 13 
+ 
+ 
+[65]  Bin  Liang  and  Hong  Lu.  2010.  Internet  Development,  Censorship, 
+and  Cyber  Crimes  in  China.  Journal  of  Contemporary  Criminal 
+Justice 26, 1: 103–120. 
+
+[66]  Ann  Light.  2008.  Empirical  vernacular  philosophy,  or  towards  an 
+existential  HCI.  HCI  2008 :  British  HCI  Conference :  Workshop  on 
+from 
+Critical 
+https://sites.google.com/site/designcriticism/positi%0Aonstatement
+s 
+
+Interaction  Design. 
+
+Retrieved 
+
+Issues 
+
+in 
+
+[67]  Ann  Light.  2016.  Commentary  For  alt.chi  paper  Making  the  Case 
+for  an  Existential  Perspective  in  HCI  Research  on  Mortality  and 
+Death by Victor Kaptelinin.  
+
+[68]  Ann  Light,  Alison  Powell,  and  Irina  Shklovski.  2017.  Design  for 
+Existential  Crisis  in  the  Anthropocene  Age.  Proceedings of the 8th 
+International  Conference  on  Communities  and  Technologies    -  C&T 
+’17, ACM Press, 270–279. http://doi.org/10.1145/3083671.3083688 
+[69]  Ann  Light,  Irina  Shklovski,  and  Alison  Powell.  2017.  Design  for 
+Existential  Crisis.  Proceedings of the 2017 CHI Conference Extended 
+Abstracts  on  Human  Factors  in  Computing  Systems    -  CHI  EA  ’17, 
+ACM Press, 722–734. http://doi.org/10.1145/3027063.3052760 
+[70]  Deborah  Lupton.  2014.  Self-tracking  cultures:  towards  a  sociology 
+informatics.  Proceedings  of  the  26th  Australian 
+of  personal 
+Computer-Human  Interaction  Conference  on  Designing  Futures  the 
+Future 
+77–86. 
+http://doi.org/10.1145/2686612.2686623 
+
+’14,  ACM 
+
+of  Design 
+
+-  OzCHI 
+
+Press, 
+
+[71]  Rebecca  MacKinnon.  2007.  Flatter  world  and  thicker  walls?  Blogs, 
+censorship and civic discourse in China. Public Choice 134, 1–2: 31–
+46. http://doi.org/10.1007/s11127-007-9199-0 
+
+[72]  Rebecca MacKinnon. 2011. China’s “Networked Authoritarianism.” 
+Journal of Democracy 22, 32–46. http://doi.org/10.1353/jod.2011.0033 
+[73]  Adrienne  Massanari.  2017.  #Gamergate  and  The  Fappening:  How 
+toxic 
+Reddit’s  algorithm,  governance,  and  culture  support 
+technocultures.  New  Media  &  Society 
+329–346. 
+http://doi.org/10.1177/1461444815608807 
+
+19, 
+
+3: 
+
+[74]  Jacob Metcalf, Emily F. Keller, and Danah Boyd. 2016. Perspectives 
+on  Big  Data,  Ethics,  and  Society. The Council for Big Data, Ethics 
+and Society.  
+
+[75]  R. Minhas, C. Wendt, and A. Wierzibicki. 2008. Is healthcare in the 
+United  States  too  big  to  fail?  International  Journal  of  Clinical 
+Practice 
+http://doi.org/10.1111/j.1742-
+1241.2008.01949.x 
+
+1827–1830. 
+
+12: 
+
+62, 
+
+[76]  Torin  Monahan.  2016.  Built  to  lie:  Investigating  technologies  of 
+deception,  surveillance,  and  control.  The Information Society  32,  4: 
+229–240. http://doi.org/10.1080/01972243.2016.1177765 
+
+[77]  Michael  J.  Muller  and  Sarah  Kuhn.  1993.  Participatory  design. 
+24–28. 
+
+ACM 
+
+36, 
+
+6: 
+
+Communications 
+http://doi.org/10.1145/153571.255960 
+
+the 
+
+of 
+
+[78]  Justine  S.  Murison.  2011.  The  Politics  of  Anxiety  in  Nineteenth-
+
+Century American Literature. Cambridge University Press. 
+
+[79]  Safiya Umoja Noble. Algorithms of oppression : how search engines 
+
+reinforce racism. NYU Press. 
+
+[80]  Francisco Nunes and Geraldine Fitzpatrick. 2018. Understanding the 
+Mundane  Nature  of  Self-care:  Ethnographic  Accounts  of  People 
+Living  with  Parkinson’s.  Proceedings of the 2018 CHI Conference on 
+Human Factors in Computing Systems  - CHI ’18,  ACM  Press,  1–15. 
+http://doi.org/10.1145/3173574.3173976 
+
+[81]  Wanda  J.  Orlikowski.  2000.  Using  Technology  and  Constituting 
+in 
+404–428. 
+
+for  Studying  Technology 
+Structures:  A  Practice  Lens 
+Organizations. 
+Science 
+Organization 
+http://doi.org/10.1287/orsc.11.4.404.14600 
+
+11, 
+
+4: 
+
+[82]  Nelly Oudshoorn. 2008. Diagnosis at a distance: the invisible work 
+of  patients  and  healthcare  professionals  in  cardiac  telemonitoring 
+technology.  Sociology  of  Health  & 
+Illness  30,  2:  272–288. 
+http://doi.org/10.1111/j.1467-9566.2007.01032.x 
+
+[83]  Leysia  Palen  and  Paul  Dourish.  2003.  Unpacking  “privacy”  for  a 
+129–136. 
+
+ACM, 
+
+networked 
+http://doi.org/10.1145/642611.642635 
+
+world. 
+
+[84]  Matt  Porter.  2016.  League  of  Legends  Surpasses  100  Million 
+from 
+
+Monthly 
+Retrieved 
+http://www.ign.com/articles/2016/09/14/league-of-legends-
+surpasses-100-million-monthly-active-players 
+
+ign.com. 
+
+Players. 
+
+Active 
+
+[85]  Stephen  Purpura,  Victoria  Schwanda,  Kaiton  Williams,  William 
+Stubler,  and  Phoebe  Sengers.  2011.  Fit4life:  the  design  of  a 
+persuasive  technology  promoting  healthy  behavior  and  ideal 
+weight.  Proceedings of the 2011 annual conference on Human factors 
+in  computing 
+’11,  ACM  Press,  423–432. 
+http://doi.org/10.1145/1978942.1979003 
+
+systems 
+
+-  CHI 
+
+[86]  Adrian  Rauchfleisch  and  Mike  S.  Schäfer.  2014.  Multiple  public 
+spheres  of  Weibo:  a  typology  of  forms  and  potentials  of  online 
+public  spheres  in  China.  Information, Communication & Society:  1–
+17. http://doi.org/10.1080/1369118X.2014.940364 
+
+[87]  Jennifer  A.  Rode.  2011.  Reflexivity 
+
+in  digital  anthropology. 
+Proceedings  of  the  2011  annual  conference  on  Human  factors  in 
+computing 
+123–132. 
+http://doi.org/10.1145/1978942.1978961 
+
+’11,  ACM 
+
+-  CHI 
+
+systems 
+
+Press, 
+
+[88]  Hanna Schneider, Malin Eiband, Daniel Ullrich, and Andreas Butz. 
+2018. Empowerment in HCI - A Survey and Framework. Proceedings 
+of the 2018 CHI Conference on Human Factors in Computing Systems  
+- CHI ’18, ACM Press, 1–14. http://doi.org/10.1145/3173574.3173818 
+
+[89]  Nick Srnicek. 2016. Platform capitalism. John Wiley & Sons. 
+[90]  Susan  Leigh  Star.  1999.  The  Ethnography  of  Infrastructure. 
+377–391. 
+
+43, 
+
+American 
+Behavioral 
+http://doi.org/10.1177/00027649921955326 
+
+Scientist 
+
+3: 
+
+[91]  Susan  Leigh  Star  and  Karen  Ruhleder.  1996.  Steps  Toward  an 
+Ecology of Infrastructure: Design and Access for Large Information 
+Spaces. 
+111–134. 
+Information 
+http://doi.org/10.1287/isre.7.1.111 
+
+Systems  Research 
+
+1: 
+
+7, 
+
+[92]  Kate Starbird, Ahmer Arif, Tom Wilson, Katherine Van Koevering, 
+Katya Yefimova, and Daniel Scarnecchia. 2018. Ecosystem or Echo-
+System?  Exploring  Content  Sharing  across  Alternative  Media 
+Domains. ICWSM. 
+
+[93]  Kate  Starbird,  Emma  Spiro,  Isabelle  Edwards,  Kaitlyn  Zhou,  Jim 
+Maddock,  and  Sindhuja Narasimhan.  2016.  Could  This  Be  True?: I 
+Think  So!  Expressed  Uncertainty  in  Online  Rumoring.  Proceedings 
+of the 2016 CHI Conference on Human Factors in Computing Systems 
+- 
+360–371. 
+ACM 
+http://doi.org/10.1145/2858036.2858551 
+
+Press, 
+
+CHI 
+
+’16, 
+
+[94]  Tiziana  Terranova.  2000.  Free  Labor:  Producing  Culture  for  the 
+
+Digital Economy. Social Text, 63 18, 2: 33–58. 
+
+[95]  Zeynep Tufekci. 2013. Big Data: Pitfalls, Methods and Concepts for 
+Journal. 
+
+Electronic 
+
+Field. 
+
+SSRN 
+
+Emergent 
+
+an 
+http://doi.org/10.2139/ssrn.2229952 
+
+Times. 
+
+[96]  Zeynep  Tufekci.  2018.  YouTube,  the  Great  Radicalizer.  The New 
+from 
+
+York 
+https://www.nytimes.com/2018/03/10/opinion/sunday/youtube-
+politics-radical.html?rref=collection%2Fcolumn%2Fzeynep-
+tufekci&action=click&contentCollection=opinion&region=stream&
+module=stream_unit&version=latest&contentPlacement=6&pgtype
+=collection 
+
+Retrieved 
+
+[97]  Kenton  T.  Unruh  and  Wanda  Pratt.  2008.  The  Invisible  Work  of 
+Being  a  Patient  and  Implications  for  Health  Care:  “[the  doctor  is] 
+my  business  partner  in  the  most  important  business  in  my  life, 
+Industry  Conference 
+staying  alive.”  Ethnographic  Praxis 
+Proceedings 
+http://doi.org/10.1111/j.1559-
+2008, 
+8918.2008.tb00093.x 
+
+40–50. 
+
+in 
+
+1: 
+
+[98]  Jessica  Vitak  and  Jinyoung  Kim.  2014.  “You  can’t  block  people 
+the 
+
+facebook’s  affordances  shape 
+
+offline”:  examining  how 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 14 
+ 
+ 
+ 
+ 
+disclosure  process.  Proceedings  of  the  17th  ACM  conference  on 
+Computer  supported  cooperative  work  &  social  computing  -  CSCW 
+’14, ACM Press, 461–474. http://doi.org/10.1145/2531602.2531672 
+[99]  Max Weber. 1978. Economy and society : an outline of interpretive 
+
+sociology. University of California Press. 
+
+[100]  Langdon  Winner.  1980.  Do  Artifacts  Have  Politics?  Modern 
+
+Technology: Problem or Opportunity 109, 1: 121–136. 
+
+[101]  Robert  K.  Yin.  2009.  Case study research : design and methods.  SAGE 
+
+Publications. 
+
+[102]  John  Zimmerman.  2009.  Designing  for  the  self:  making  products 
+that help people become the person they desire to be. Proceedings of 
+the  27th  international  conference  on  Human  factors  in  computing 
+395–404. 
+systems 
+http://doi.org/10.1145/1518701.1518765 
+
+Press, 
+
+ACM 
+
+CHI 
+
+09, 
+
+- 
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 481Page 15 
+ 
+

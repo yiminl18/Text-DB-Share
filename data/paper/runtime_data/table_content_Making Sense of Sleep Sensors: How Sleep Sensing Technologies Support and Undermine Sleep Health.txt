@@ -1,0 +1,32 @@
+1. Introduction
+2. Related Work
+    2.1 Designing for Sleep Tracking and Sensing
+    2.2 Making Sense of Health Data
+3. Data Collection & Analysis Methods
+    3.1 Interviews with Sleep Experts
+    3.2 Reviews of Sleep Sensing Products
+    3.3 Online Survey
+    3.4 Semi-Structured Interviews
+    3.5 Analysis
+4. Background on Sleep
+    4.1 What is Sleep?
+    4.2 Sensing Sleep
+    4.3 Defining Sleep Quality
+5. Sleep Sensors as Facilitators
+    5.1 Promoting Awareness about Sleep Health
+    5.2 Facilitating Adoption of Healthy Sleep Habits
+    5.3 Managing Sleep Disorders or Chronic Conditions that Affect Sleep
+6. Sleep Sensors as Barriers
+    6.1 Inconsistency in Sleep Quality Inference
+    6.2 Mismatch between score and user perception
+    6.3 Placing Undue Emphasis on Sleep Stages
+    6.4 Making unscientific correlations based on sleep stages
+7. Discussion and Design Recommendations
+    7.1 Include Subjective Sleep Quality Assessment
+    7.2 Contextualize Sleep Quality with Journaling
+    7.3 Focus on Actionable Feedback
+    7.4 Give Feedback in Ranges, not Single Point Values
+    7.5 Increase Transparency in Formulae and Algorithms
+8. Conclusion & Future Work
+9. Acknowledgements
+10. References

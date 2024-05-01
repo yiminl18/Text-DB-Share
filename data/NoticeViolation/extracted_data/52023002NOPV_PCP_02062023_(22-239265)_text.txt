@@ -1,0 +1,241 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+VIA ELECTRONIC MAIL TO MR. WARREN CHRISTIAN: 
+
+February 6, 2023 
+
+Mr. Warren Christian 
+President 
+Mid-Alaska Pipeline, LLC 
+615 Bidwell Ave., Suite 100 
+Fairbanks, AK 99701 
+
+Dear Mr. Christian: 
+
+CPF 5-2023-002-NOPV 
+
+From September 12 through September 16, 2022, a representative of the Pipeline and Hazardous 
+Materials Safety Administration (PHMSA), Office of Pipeline Safety (OPS),  pursuant to Chapter 
+601 of 49 United States Code (U.S.C.), inspected your hazardous liquids pipeline system in North 
+Pole and Fairbanks, Alaska. 
+
+As a result of the inspection, it is alleged that you have committed probable violations of the Pipeline 
+Safety Regulations, Title 49, Code of Federal Regulations (CFR).  The items inspected and the 
+probable violations are: 
+
+1. 
+
+§ 195.452   Pipeline integrity management in high consequence areas.  
+
+(a)  . . . . 
+(h)  What actions must an operator take to address integrity issues? - 
+(4)  Special requirements for scheduling remediation— 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(i) Immediate repair conditions. An operator's evaluation and remediation schedule must 
+provide for immediate repair conditions. To maintain safety, an operator must 
+temporarily reduce the operating pressure or shut down the pipeline until the operator 
+completes the repair of these conditions. An operator must calculate the temporary 
+reduction in operating pressure using the formulas referenced in paragraph (h)(4)(i)(B) 
+of this section. If no suitable remaining strength calculation method can be identified, 
+an operator must implement a minimum 20 percent or greater operating pressure 
+reduction, based on actual operating pressure for two months prior to the date of 
+inspection, until the anomaly is repaired. An operator must treat the following 
+conditions as immediate repair conditions: 
+(C)  A dent located on the top of the pipeline (above the 4 and 8 o'clock positions) that 
+has any indication of metal loss, cracking or a stress riser. 
+
+Mid-Alaska Pipeline, LLC (Mid-Alaska) failed to reduce pipeline operating pressure or shut down 
+the pipeline after identifying an immediate repair condition. Mid-Alaska’s 14-inch crude oil pipeline 
+system is located in a high consequence area and therefore subject to integrity management 
+regulations including the specific requirements for scheduling remediation. Per operator records, an 
+inline inspection of the 14-inch crude section of the Mid-Alaska Pipeline system was performed on 
+May 19, 2022. A report of this inline inspection, dated June 22, 2022, was issued to Mid-Alaska and 
+outlined a preliminary finding of a 1.00% depth dent with metal loss located at the 1:00 o’clock 
+position. Records indicated that Mid-Alaska directly inspected and repaired the condition on June 25, 
+2022. Mid-Alaska pressure records and statements made by operator personnel during the inspection 
+revealed that no operating pressure reduction occurred between the time of discovery of the 
+immediate repair condition (June 22, 2022), and the time of repair (June 25, 2022). 
+
+2. 
+
+§ 195.579  What must I do to mitigate internal corrosion? 
+
+(a)  . . . .  
+(c)  Removing pipe.  Whenever you remove pipe from a pipeline, you must inspect the 
+internal surface of the pipe for evidence of corrosion.  If you find internal corrosion 
+requiring corrective action under § 195.585, you must investigate circumferentially and 
+longitudinally beyond the removed pipe (by visual examination, indirect method, or 
+both) to determine whether additional corrosion requiring remedial action exists in the 
+vicinity of the removed pipe. 
+
+Mid-Alaska failed to inspect the internal surface of the exposed pipe for evidence of corrosion. The 
+operator removed and subsequently replaced four valves at the North Pole Metering section of the 
+pipeline in 2020. The valve removal created the opportunity to inspect the internal surface of the pipe 
+adjacent to the valve locations for evidence of corrosion. The operator stated that the internal 
+condition of the pipe was likely observed during the valve replacement work; however, the operator 
+failed to record the inspection of the internal surface of the pipe for corrosion adjacent to the 
+locations of the removed valves.  
+
+3. 
+
+§ 195.583   What must I do to monitor atmospheric corrosion control? 
+
+(a)  You must inspect each pipeline or portion of pipeline that is exposed to the  
+atmosphere for evidence of atmospheric corrosion, as follows: 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+___________________________________________________________________ 
+
+If the pipeline is located 
+
+Then the frequency of inspections is 
+
+___________________________________________________________________ 
+
+Onshore: 
+
+Offshore: 
+
+At least once every 3 calendar years, 
+but with intervals not exceeding 39 
+months. 
+
+At least once each calendar year, but 
+with intervals not exceeding 15 months. 
+
+_____________________________________________________________________ 
+
+Mid-Alaska failed to inspect the PetroStar Metering Inc. Station (PSIMS) portion of their pipeline 
+system for atmospheric corrosion at the required intervals.  According to the operator’s inspection 
+worksheets, they inspected the PSIMS piping on September 7, 2022, but the operator was unable to 
+find a record showing an inspection of the same section of pipe within the prior 39 months. 
+
+The operator presented a 2021 cathodic protection report that stated, “… the above-ground portions 
+of the pipeline were visually examined for atmospheric corrosion.” The report gave no additional 
+information or results regarding the referenced atmospheric corrosion inspection at PSIMS. The 
+report did include the results of visual inspection for atmospheric corrosion of pipe exposed to the 
+atmosphere at other locations on the pipeline system. 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed  
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 2023, 
+the maximum penalty may not exceed $239,142 per violation per day the violation persists, up to a 
+maximum of $2,391,412 for a related series of violations.  For violation occurring on or after May 3, 
+2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 per violation per 
+day the violation persists, up to a maximum of $2,251,334 for a related series of violations.  For 
+violation occurring on or after January 11, 2021 and before May 3, 2021, the maximum penalty may 
+not exceed $222,504 per violation per day the violation persists, up to a maximum of $2,225,034 for 
+a related series of violations.  For violation occurring on or after July 31, 2019 and before January 11, 
+2021, the maximum penalty may not exceed $218,647 per violation per day the violation persists, up 
+to a maximum of $2,186,465 for a related series of violations.   For violation occurring on or after 
+November 27, 2018 and before July 31, 2019, the maximum penalty may not exceed $213,268 per 
+violation per day, with a maximum penalty not to exceed $2,132,679.  For violation occurring on or 
+after November 2, 2015 and before November 27, 2018, the maximum penalty may not exceed 
+$209,002 per violation per day, with a maximum penalty not to exceed $2,090,022. 
+
+We have reviewed the circumstances and supporting documentation involved for the above probable 
+violations and recommend that you be preliminarily assessed a civil penalty of $ 50,200 as follows: 
+
+Item number 
+1 
+
+PENALTY 
+$50,200 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Warning Items 
+
+With respect to items 2 and 3, we have reviewed the circumstances and supporting documents 
+involved in this case and have decided not to conduct additional enforcement action or penalty 
+assessment proceedings at this time.  We advise you to promptly correct these items.  Failure to do so 
+may result in additional enforcement action. 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement Proceedings.  Please refer to this document and note the response options. All material 
+you submit in response to this enforcement action may be made publicly available.  If you believe 
+that any portion of your responsive material qualifies for confidential treatment under 5 U.S.C. § 
+552(b), along with the complete original document you must provide a second copy of the document 
+with the portions you believe qualify for confidential treatment redacted and an explanation of why 
+you believe the redacted information qualifies for confidential treatment under 5 U.S.C. § 552(b). 
+
+Following the receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes a 
+waiver of your right to contest the allegations in this Notice and authorizes the Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to you 
+and to issue a Final Order.  If you are responding to this Notice, we propose that you submit your 
+correspondence to my office within 30 days from the receipt of this Notice.  The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+In your correspondence on this matter, please refer to CPF 5-2023-002-NOPV, and for each  
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Dustin Hubbard 
+Director, Western Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosure:  Response Options for Pipeline Operators in Enforcement Proceedings 
+
+cc:  
+
+PHP-60 Compliance Registry 
+PHP-500 J. Gano (#22-239265) 
+Levi Frampton, Mid-Alaska Pipeline LLC. – DOT Primary Compliance, (by email) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

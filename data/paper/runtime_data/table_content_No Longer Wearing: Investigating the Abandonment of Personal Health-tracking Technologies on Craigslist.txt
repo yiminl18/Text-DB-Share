@@ -1,0 +1,30 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work
+    5.1 Health trackers and quantified self
+    5.2 Abandoning technology
+    5.3 Health behavior change theory
+6. Methodology
+    6.1 Technology selection
+    6.2 Data Collection
+    6.3 Code Book
+7. Results
+    7.1 Health-tracking technologies for sale
+    7.2 Initial Technology Acquisition
+    7.3 Technology Condition
+    7.4 Abandonment point
+    7.5 Abandonment Rationale
+    7.6 Assessing Health Motivation
+8. Discussion
+    8.1 Successful Abandonment
+    8.2 Celebrating “Happy” Abandonment
+    8.3 Exploring Social Switching
+    8.4 Designing for Messy Practices
+    8.5 Understanding Evolving Use
+    8.6 Enriching the Theoretical Landscape
+    8.7 Designing for Evolving Adoption and Continuous Use
+9. Conclusion
+10. Acknowledgments
+11. References

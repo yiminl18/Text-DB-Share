@@ -1,0 +1,20 @@
+1. Abstract
+2. Introduction
+3. Related Work
+    3.1 Benefits of Food Journaling
+    3.2 Traditional Food Journaling Methods
+    3.3 Challenges of Food Journaling
+    3.4 Automating Food Journals
+    3.5 Photos and Alternative Representations in Food Journals
+    3.6 Alternative Views on Journaling
+4. Food Journaling Survey
+    4.1 Survey Results
+5. Field Study of a Lightweight Food Journal
+    5.1 The DECAF Food Journal
+    5.2 Procedure
+    5.3 Participants
+    5.4 Field Study Results
+6. Discussion
+7. Conclusion
+8. Acknowledgements
+9. References

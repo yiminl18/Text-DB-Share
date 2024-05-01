@@ -1,0 +1,28 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Background
+    5.1 PGHD and Observations of Daily Living
+    5.2 PGHD and Teens
+    5.3 The Need for Co-Design
+6. Two-Phase Study
+    6.1 Study Setting and Participants
+    6.2 Clinicians Interviews
+    6.3 Clinician Interview Findings
+    6.4 Co-Design Sessions with Patients and Parents
+7. Visual ODL Library
+8. Co-Design Sessions with Semi-Structured Interviews
+9. Analysis
+10. Findings
+    10.1 Scenario I: Personal Review
+    10.2 Scenario II & III: Communication with Family Members
+    10.3 Scenario IV: Communication with Clinicians
+11. Discussion
+    11.1 Personal Informatics: Activities as a Scaffold for Semi-Automated Tracking
+    11.2 Family Informatics: Collaborative Re-construction of the Patient’s Illness Experience
+    11.3 Visual ODLs in Clinical Care
+12. Limitations and Future Work
+13. Conclusion
+14. Acknowledgments
+15. References

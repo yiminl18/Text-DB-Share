@@ -1,0 +1,23 @@
+Table of Contents:
+
+1. Notice of Probable Violation and Proposed Compliance Order
+2. Inspection of Menzies Aviation Jet Fuel Crosstown Pipeline
+3. Alleged Violations of the Pipeline Safety Regulations
+    3.1. § 195.402 Procedural manual for operations, maintenance, and emergencies
+    3.2. § 195.404 Maps and records
+    3.3. § 195.410 Line markers
+    3.4. § 195.420 Valve maintenance
+    3.5. § 195.428 Overpressure safety devices and overfill protection systems
+    3.6. § 195.446 Control room management
+    3.7. § 195.452 Pipeline integrity management in high consequence areas
+4. Proposed Compliance Order
+5. Response to this Notice
+6. Proposed Compliance Order Remedial Requirements
+    6.1. Item 1: Liaison with fire, police, and other public entities
+    6.2. Item 2: Pressure safety valve identification on P&IDs
+    6.3. Item 3: ROW markers
+    6.4. Item 4: Biannual valve inspection
+    6.5. Item 5: Inspection and testing of pressure safety valves
+    6.6. Item 6: Internal communication plan
+    6.7. Item 7: Measuring the integrity management plan’s effectiveness
+    6.8. Documentation of safety improvement costs

@@ -1,0 +1,38 @@
+1. Abstract
+2. Introduction
+3. Reflective Approaches in HCI
+4. Exploring the Personalization Strategies of Human Service Providers
+    4.1 Method
+    4.2 Interview protocol
+    4.3 Analysis
+    4.4 Results
+5. Designing Reflective Personalization
+    5.1 How questions facilitate reflective personalization
+    5.2 Why “why” works
+    5.3 How to ask “why” to elicit reflection
+    5.4 Goal-setting and planning in personal health tracking
+    5.5 The domain of personal health tracking
+    5.6 Fitbit Plan Website
+6. Evaluating Reflective Personalization
+    6.1 Hypotheses
+    6.2 Participants
+    6.3 Experimental conditions
+    6.4 Procedure
+    6.5 Data sources and measures
+7. Results
+    7.1 Manipulation check
+    7.2 Effects of reflective personalization on thinking about goals
+    7.3 Effects of reflective personalization on the experience of plan creation
+    7.4 Effects of reflective personalization on plan creation
+    7.5 Effects of reflective personalization on plan completion
+    7.6 Effects of reflective personalization on the experience of carrying out the plan
+8. Discussion
+    8.1 How reflective personalization worked
+    8.2 No effect of user vs. system-driven personalization
+    8.3 Reflecting with technology vs. with human service providers
+9. Limitations
+10. Implications
+11. Future Work
+12. Conclusion
+13. Acknowledgement
+14. References

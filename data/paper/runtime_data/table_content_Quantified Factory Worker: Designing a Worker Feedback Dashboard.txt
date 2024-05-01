@@ -1,0 +1,16 @@
+1. Introduction
+2. Related Research
+   2.1 Quantified Self: From Meaningful Insights to Positive Changes
+   2.2 Operator 4.0
+3. Design Process, Methods and Participants
+   3.1 Participatory Design Process
+   3.2 Data Collection Methods and Participants
+   3.3 Data Analysis
+4. Results
+   4.1 Workers’ Initial Reactions towards Tracking Personal Metrics at Work
+   4.2 Designing the First Prototype of the Worker Feedback Dashboard
+   4.3 Feedback and Revisions to the First Prototype
+5. Discussion
+6. Conclusion
+7. Acknowledgments
+8. References

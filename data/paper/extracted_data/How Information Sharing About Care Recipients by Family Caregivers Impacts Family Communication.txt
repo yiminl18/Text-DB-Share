@@ -1,0 +1,2106 @@
+How Information Sharing about Care Recipients by Family 
+Caregivers Impacts Family Communication 
+Naomi Yamashita1, Hideaki Kuzuoka2, Takashi Kudo3, Keiji Hirata4,                                             
+
+Eiji Aramaki5, Kazuki Hattori2 
+
+1 NTT 
+Communication 
+Science Labs. 
+
+2 University of 
+Tsukuba. 
+
+3 Osaka 
+University 
+Department of 
+Psychiatry. 
+
+4 Future 
+University 
+Hakodate. 
+
+5 Nara Institute of 
+Science and 
+Technology. 
+
+ABSTRACT 
+Previous  research  has  shown  that  tracking  technologies 
+have  the  potential  to  help  family  caregivers  optimize  their 
+coping  strategies  and  improve  their relationships  with  care 
+recipients.  In  this  paper,  we  explore  how  sharing  the 
+journals  and  patient’s 
+tracked  data  (i.e.,  caregiving 
+conditions)  with  other  family  caregivers  affects  home  care 
+and  family  communication.  Although  previous  works 
+suggested  that  family  caregivers  may  benefit  from  reading 
+the  records  of  others,  sharing  patients’  private  information 
+might fuel negative feelings of surveillance and violation of 
+trust  for  care  recipients.  To  address  this  research  question, 
+we  added  a  sharing  feature  to  the  previously  developed 
+tracking tool and deployed it for six weeks in the homes of 
+15  family  caregivers  who  were  caring  for  a  depressed 
+family member. Our findings show how the sharing feature 
+attracted  the  attention  of  care  recipients  and  helped  the 
+family  caregivers  discuss  sensitive 
+issues  with  care 
+recipients. 
+
+Author Keywords 
+Caregiving; 
+family 
+communication; healthcare technology; tracking technology 
+
+caregiver;  depression; 
+
+informal 
+
+ACM Classification Keywords 
+J.3.  Life  and  Medical  Sciences,  Health,  Medical 
+Information Systems 
+
+INTRODUCTION 
+Recent  changes  in  the  demographics  is  placing  excessive 
+demand  on  the  healthcare  systems,  causing  a  shift  from 
+clinician-centered  professional  service  to  informal  home-
+centered  care  [12].  Such  changes  are  increasing  societal 
+awareness of the importance of informal home care. 
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are not 
+made or distributed for profit or commercial advantage and that copies bear 
+this notice and the full citation on the first page. Copyrights for components 
+of this work owned by others than the author(s) must be honored. 
+Abstracting with credit is permitted. To copy otherwise, or republish, to post 
+on servers or to redistribute to lists, requires prior specific permission and/or 
+a fee. Request permissions from Permissions@acm.org. 
+CHI 2018, April 21–26, 2018, Montreal, QC, Canada 
+© 2018 Copyright is held by the owner/author(s). Publication rights licensed 
+to ACM. 
+ACM 978-1-4503-5620-6/18/04…$15.00 
+https://doi.org/10.1145/3173574.3173796 
+
+the 
+
+such  circumstances, 
+
+Under 
+role  of  computer 
+technologies  to  support  informal  care  (including  self-care) 
+is becoming increasingly important [12]. For example, self-
+tracking  technologies  allow  individuals  to  take  a  proactive 
+role in caring for themselves [28,31]. Health-related online 
+support groups provide a place for individuals to learn from 
+others and receive emotional support [9,13]. While research 
+shows  promising  results  suggesting  these  technologies 
+compensate  for  the  scarcity  of  professional  care,  most 
+design efforts have so far focused on supporting either the 
+patient  or  the  caregiver  [5,15,46].  Although  recent  works 
+have  emphasized  the  need  to  consider  caregiving  in 
+“relational  terms”  [2,18,41],  little  work  has  focused  on 
+designing technology that supports the relationship between 
+caregivers and care recipients in the context of homecare. 
+
+Our  goal  is  to  design  a  tool  that  helps  family  caregivers 
+improve  their  care  and  communication  with  their  care 
+recipients at home. We specifically focus on helping family 
+caregivers cope better with a depressed family member. We 
+are  particularly  interested  in  studying  this  population 
+because depressed sufferers typically seclude themselves at 
+home  during  depressive  episodes  [1,25],  which  makes 
+informal  care  by  family  caregivers  particularly  critical 
+[26,27].  Research  associates  patients  who 
+receive 
+compassionate  care  from  family  caregivers  with  lower 
+hospital readmission rates [42].  
+
+To reach our goal, we developed a tracking tool that allows 
+family  caregivers  to  record  patient’s  conditions  such  as 
+mood  and  behavior  based  on  their  observations  as  well  as 
+their  own  caregiving  activities.  The  tracking  tool  helps 
+family  caregivers  experiment  and  optimize  their  coping 
+strategies  with  care  recipients,  especially  when 
+they 
+manifest unexpected behaviors, including extreme negative, 
+agitated,  or  lethargic  attitudes.  The  tool  was  deployed  for 
+six  weeks  in  the  homes  of  14  family  caregivers  who  were 
+caring  for  a  depressed  family  member  [51].  The  findings 
+showed  that  the  tool  helped  the  family  caregivers  better 
+family  members.  Furthermore, 
+cope  with  depressed 
+although  previous  works  have  warned 
+family 
+caregivers’ use of tracking technologies to monitor patient’s 
+health  may  create  patient-caregiver  conflicts,  this  work’s 
+findings  showed  that  family  communication  was  actually 
+
+that 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 1 
+ 
+improved. This previous study differed from other previous 
+works  in  that  family  caregivers  in  [51]  recorded  patient 
+conditions  to  promote  their  own  behavioral  changes  while 
+family  caregivers  (mostly  parents)  in  previous  works 
+monitored  the  health  condition  of  the  patient  (child)  to 
+promote the patient’s behavioral changes. 
+
+Building  on 
+this  previous  work,  our  current  study 
+investigates  whether  (how)  family  caregivers  sharing 
+tracked  data  with  other  family  caregivers  affect  the  caring 
+and  patient-caregiver  relationships.  A  number  of  health-
+tracking apps allow the users to share data with others who 
+are  working  on  the  same  health  goals  [3,38,44].  Research 
+argues that sharing experience facilitates learning, provides 
+emotional  support,  and  bolsters  competition  [7,28,31]. 
+Individuals  are  also  more  willing  to  reveal  personal  or 
+upsetting  topics  online,  matching  the  needs  of  caregivers 
+looking after a depressed family member [4,40]. Our family 
+caregivers  may  also  receive  the  same  benefits  by  sharing 
+their  data  with  other  family  caregivers.  However,  note  the 
+data  shared  by  family  caregivers  are  not  solely  about 
+themselves; they also include private information about the 
+care  recipients.  Thus,  sharing  such  data  may  fuel  negative 
+feelings in care recipients about surveillance or breeches of 
+trust.  Put  it  all  together,  it  remains  unclear  how  family 
+caregivers’  information  sharing  affects  home  care  and 
+patient-caregiver relationships. 
+
+To  answer  this  research  question,  in  the  current  study,  we 
+added  a  sharing  feature  to  the  previously  developed 
+tracking  tool  and  deployed  it  in  the  homes  of  15  family 
+caregivers who participated in [51]. In both studies, family 
+caregivers recorded their own caregiving activities and their 
+care  recipient’s  behaviors/moods  for  six  weeks.  By 
+comparing  their  log  data  before  and  after  introducing  the 
+sharing  function,  we  analyzed  how  the  sharing  feature 
+affected their tool usage. We also interviewed ten randomly 
+selected  family  caregivers  to  ask  about  the  changes  they 
+noticed  after  sharing  their  data,  emphasizing  the  patient-
+caregiver relationships. Our findings show how information 
+sharing  by  family  caregivers  drew  the  attention  of  care 
+recipients  and  influenced  family  communication.  The 
+findings  will  contribute  to  the  field  of  HCI  by  suggesting 
+new  ways  for  using  health-tracking  technologies  and 
+information sharing. 
+
+BACKGROUND 
+
+Caregiving for a Depressed Family Member 
+Research  shows  that  depression  causes  a  variety  of 
+behavioral  changes  in  its  sufferers.  For  example,  the 
+reactions  of  depressed  sufferers  tend  to  be  negative, 
+lethargic,  and  offensive  [19,34].  Since  sufferers  typically 
+withdraw  from  social  activities  and  seclude  themselves  at 
+home  during  depressive  episodes  [1,25],  family  caregivers 
+who live with depression sufferers are generally exposed to 
+these behaviors. 
+
+Family  caregivers  are  often  confused  by  such  behavioral 
+changes in depressed sufferers because they tend to deviate 
+from  the  sufferer’s  original  personality  [25].  Due  to  the 
+large  variance  in  depressive  symptoms,  family  caregivers 
+often  have  trouble  assessing  their  causes  and  do  not  know 
+how  to  deal  with  them.  Depression’s  recurrent  nature  also 
+creates  anxiety  in  family  caregivers  who  worry  about 
+triggering  relapses  by  their  own  words/behaviors  [19,24]. 
+As  a  result,  many  caregivers  are  confused  about  how  to 
+optimally  cope  with  sufferers,  not  knowing  whether  they 
+should  criticize  the  sufferers  or  suppress  their  reactions  to 
+avoid  exacerbating  depressive  symptoms  when 
+they 
+experience the extreme behaviors of sufferers [51].  
+
+is  not 
+
+Helping  family  caregivers  develop  coping  skills  to  deal 
+trivial. 
+with  such  sufferer  attitudes/behaviors 
+According  to  Keitner  et  al.  [27],  the  course  of  depressive 
+illnesses,  recurrence  rates,  and  the  suicidal  behaviors  of 
+depression  sufferers  are  all  affected  by  the  family  and  its 
+functioning, indicating the importance of the  informal care 
+provided  by  family  caregivers.  Thus,  our  work  supports 
+family  caregivers  and  helps  them  optimize  their  coping 
+skills  to  improve  their  interaction  with  care  recipients  at 
+home. 
+
+Family  Caregivers  and  Tracking  Patient  Health 
+Conditions 
+Health-tracking  technologies  have  the  potential  to  help 
+family  caregivers  develop  and  improve  their  coping  skills 
+with  sufferers  of  depression.  While  most  health-tracking 
+tools  focus  on  individuals  managing  their  own  health 
+[28,31], they possess a number of features that fit the needs 
+of  family  caregivers  who  are  looking  after  a  depressed 
+family  member.  For  example,  tracking  technologies  help 
+users identify the hidden patterns in their life/health that are 
+individuals 
+often 
+[6,31,41].  Since  depression  has  a 
+in 
+symptoms  and  family  situations,  the  flexibility  of  tracking 
+technologies  is  welcomed  for  this  population  [10,33]. 
+Furthermore,  tracking  tools  allow  users  to  try  out  new 
+experiences  as  part  of  experimentation, 
+to 
+opportunistic engagement in desired behaviors [8,29]. This 
+technologies  may  help  family 
+implies 
+caregivers 
+by 
+their 
+experimenting with various coping strategies. 
+
+indiscernible  and  different  among 
+
+tracking 
+optimize 
+
+large  variance 
+
+strategies 
+
+leading 
+
+coping 
+
+that 
+
+Even  though  many  reasons  exist  to  assert  why  tracking 
+technology  might  help  family  caregivers  improve  their 
+coping  skills,  family  caregivers  who  monitor  the  health 
+condition  of  care  recipients  introduces  new  challenges 
+concerning  privacy  issues.  Some  studies  warned  that 
+patient-caregiver  conflicts  might  increase  when  family 
+caregivers  monitor  patient  conditions  [16,21,47].  In  these 
+studies, family caregivers are typically parents who monitor 
+the health condition of their child. The parents’ goals are to 
+improve  the  health  control  of  their  child  and  train  him/her 
+in  self-care.  Toscos  et  al.’s  work  on  children  with  type  I 
+technologies  might 
+diabetes 
+
+showed  how 
+
+tracking 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 2exacerbate  parent-child  conflicts,  especially  with  teenagers 
+[47].  Although  a  parent  might  just  be  checking  a  child’s 
+blood  glucose  level,  which  is  understandable  and  even 
+desirable parent behavior for managing their child’s health, 
+the  parent’s  perspective  might  clash  with  the  child’s 
+perspective,  which  might  place  considerable  value  on  the 
+freedom  to  make  his/her  own  health  decisions.  Other 
+studies  have  shown  that  parents  with  access  to  their 
+children’s  geographical  location  traces  can  cause  family 
+tension 
+the 
+implications  of  collecting  and  sharing  health  information 
+within  family  members,  revealed  conflicting  values  of 
+family  members  to  information  sharing:  parents  value  the 
+openness  of  sharing  information  among  family  members 
+while children express privacy concerns [20]. 
+
+[32,36].  Other  work,  which  explored 
+
+In contrast, some studies report that when family caregivers 
+track  patient  conditions,  family  communication  increased 
+[22,51]. For example, Huber et al. studied the impact of in-
+home  monitoring  technologies  on  family  relationships  and 
+described  how  they  enhanced  communication  between 
+independently-living  older  adults  and 
+informal 
+caregivers  [22].  [51]  showed  that  family  caregivers  who 
+track  patient  condition  (i.e.,  mood  and  behavior)  and  their 
+own  caregiving  activities 
+improved  patient-caregiver 
+relationships. During deployment, asking the care recipients 
+about their health conditions became a daily routine for the 
+caregivers  when 
+tool. 
+Interestingly,  contrary  to  Toscos’s  findings  [47],  care 
+recipients  in  [51]  seemed  pleased  when  family  caregivers 
+asked about their health conditions.  
+
+they  record  with  a 
+
+tracking 
+
+their 
+
+One  factor,  which  may  contribute  to  such  contradictory 
+results, is the difference in the goals of caregivers for using 
+tracking  technology.  In  the  former  case  that  led  to  tension 
+between  patients  and  caregivers,  the  family  caregivers 
+monitored  the  health  condition  (or  location)  of  patients  to 
+promote  patient’s  behavioral  changes.  In  other  words, 
+parents’  ideal  healthy  behavior  of  their  children  often 
+deviated from their children’s actual healthy behavior. Such 
+mismatched values in them often caused caregiver-recipient 
+tension [2]. On the other hand, for the latter case that led to 
+increased  and  healthier  family  communication,  family 
+caregivers  monitored  the  health  condition  of  their  patients 
+for their own sake. For example, Huber et al. reported that a 
+tracking  tool  reduced  the  anxiety  of  family  caregivers  by 
+allowing them to confirm that their parents were doing fine 
+[22].  In  [51],  family  caregivers  used  the  tracking  tool  to 
+promote their own behavioral changes: to develop their own 
+skills to better cope with depressed family members.  
+
+In  the  current  study,  we  extend  [51]  by  adding  a  sharing 
+feature  to  the  tracking  tool  and  examine  whether/how 
+caregivers sharing the care recipients’ personal information 
+affects 
+the  relationship  between  caregivers  and  care 
+recipients.  Although  [51]  showed  that  tracking  technology 
+helped  family  caregivers  improve  their  coping  skills  and 
+family  communication,  they  were  only  allowed  to  track 
+
+data  individually;  they  could  not  share  data  with  other 
+family caregivers.  
+
+Social Features of Tracking Tools 
+Online support groups allow people to receive  information 
+and  social  support  to  cope  with  a  wide  range  of  difficult 
+situations [23,50]. For family caregivers who lack the time/ 
+energy to attend physical meetings or feel barriers related to 
+face management, a dedicated online group may serve as a 
+place to ask for guidance and encouragement [41].  
+
+A number of tracking tools leverage the social influence of 
+online  support  groups  by  forming  or  linking  to  online 
+communities  [3,38,44].  For  example,  UP  Health  allows 
+users  to  share  information  about  their  efforts  to  stop 
+smoking  and  ask  about  the  smoking  habits  of  others  [44]. 
+Such  social  networking  sites  as  PatientsLikeMe  allow 
+patients to self-track their health conditions as well as share 
+their experiences with patients who are working toward the 
+same health goals [3]. Furthermore, social media platforms 
+and sites like the Quantified Self website provide places for 
+self-trackers who use different tracking tools to share their 
+personal data and learn from others [31].  
+
+Research  shows  that  health-tracking  apps  that  leverage 
+social  influence  promote  user  engagement  in  desired 
+behaviors  to  accomplish  their  health  goals  [7,17,28].  For 
+example,  Consolvo  et  al.  examined  the  impact  of  social 
+support on self-trackers by comparing two user groups [7]: 
+mobile  fitness  journal  groups  with  and  without  a  sharing 
+feature. The sharing feature allowed users to see the data of 
+others and exchange messages with them. Results revealed 
+that  participants  who  used 
+the  social  version  were 
+significantly more likely to reach their daily step goals than 
+participants  whose  version  did  not  support  sharing.  Social 
+support  from  others  was  helpful  and  spurred  competition 
+that was also often seen as motivational.  
+
+Our study expands Consolvo et al.’s work [7] by examining 
+the impact of sharing information among family caregivers. 
+Our  study  differs  from  Consolvo’s  study  in  several  ways. 
+First,  the  participants  in  our  study  (i.e.,  family  caregivers) 
+shared  the  information  of  care  recipients  with  other 
+participants. Note that the participants in our study were not 
+allowed  to  exchange  messages  among  themselves  (see 
+“Design”  for  details).  Finally,  our  work  focused  on  the 
+impact  of  a  sharing  feature  on  caregiver-care  recipient 
+relationships. 
+
+TRACKING TOOL: FMCT-S 
+In the current study, we developed FMCT-S (Family Mood 
+and Care Tracker – with Sharing), which is a shared version 
+of  FMCT,  that  allows  family  caregivers  to  not  only  track 
+patient  condition  and  caregiving  data  but  share  them  with 
+other family caregivers. 
+
+Design 
+FMCT-S  consists  of  four  sections:  a  user  profile  section, 
+recording,  reviewing,  and  timeline  sections.  The  recording 
+section  allows  the  family  caregivers  to  record  data.  The 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 3Figure 1. Reviewing section of FMCT-S (translated 
+into English) 
+
+reviewing  section  facilitates  reflective  analysis  of  the  data 
+by  visualizing  them  in  a  single  chart.  The  timeline  section 
+chronologically  displays  the  caregiving  journals  of  all  the 
+family caregivers. 
+
+FMCT-S extends FMCT in a few ways. First, it allows the 
+family  caregivers  to  see  the  data  recorded  by  other 
+caregivers. Family caregivers can view the reviewing charts 
+of other family caregivers (Figure 1) or read the caregiving 
+journals  of  others  in  a  timeline  (Figure  2).  We  also  added 
+user profiles so that family caregivers can better understand 
+the data of other caregivers.  
+
+User Profile (Newly Added for FMCT-S) 
+A  user’s  profile  consists  of  his/her  user  name  and  some 
+optional information: gender, relationship with patient, and 
+social role of self and patient. Family caregivers can decide 
+whether to share this information with others.  
+
+Recording Section (Extended from FMCT) 
+The  recording  section  allowed  the  family  caregivers  to 
+record the patient’s moods (on a scale of 1-10), medications, 
+amount  of  sleep,  amount  of  communication,  outdoor 
+activities,  bathing/grooming,  meals, 
+snacks,  alcohol 
+consumption,  their  subjective  burden  of  caregiving  (on  a 
+scale  of  1-10),  creating  their  own  caregiving  activities 
+(caregiving journals), and any other unexpected events.  
+
+To  minimize  the  input  burden,  most  recording  items 
+consisted of multiple-choice questions. For medication, the 
+their  care  recipient’s  prescribed 
+caregivers  registered 
+medicines  and  doses  and  made  alterations  if  there  was  a 
+change  in  the  daily  intake.  The  weather  information 
+(atmospheric  pressure,  high/low  temperatures,  and  actual 
+weather  conditions)  was  automatically  retrieved  from  the 
+internet.  
+
+Note  that  the  family  caregivers  rated  the  care  recipients’ 
+mood based on their observations. Even though the ratings 
+of the family caregivers might be different from the actual 
+moods of the care recipients, a previous study with FMCT 
+indicated  that  such  subjective  values  remain  useful  for 
+
+Figure 2. Timeline section of FMCT-S (translated 
+into English) 
+developing  coping  strategies  [51].  The  behaviors  of  care 
+recipients  were  also  recorded  based  on  their  observations. 
+Family  caregivers  in  [51]  asked  the  care  recipients  about 
+their  day  (e.g.,  whether  they  had  lunch  or  went  out  for  a 
+walk) when observation was not possible, which seemed to 
+please the care recipients. 
+
+Free-form  text  boxes  were  provided  for  recording  their 
+caregiving  activities  (caregiving  journals)  and  entering 
+details  about  patient’s  outdoor  activities  and  unexpected 
+events. For their own caregiving activities, three text boxes 
+are  provided  to  prompt  input  for  positive  and  negative 
+outcomes of their caregiving activities as well as what was 
+learned.  
+
+Extension  from  FMCT:  To  promote  the  development  of 
+coping  strategies,  FMCT-S  by  default  allowed 
+the 
+caregivers to access all the recorded data of other caregivers. 
+However, since sharing personal information can also raise 
+privacy issues [39], FMCT-S allowed the family caregivers 
+to  control  which  information  to  conceal  by  pressing  the 
+“private”  button  when  they  wanted  to  keep  information 
+private. 
+
+Reviewing Section (Extended from FMCT) 
+The  reviewing  section  displayed  a  chart  of  the  family 
+caregiver’s  recorded  data  to  facilitate  reflection  on  his/her 
+own  caregiving  activities.  All  the  data  recorded  by  the 
+caregiver  were  displayed  in  a  single  chart  so  that  he/she 
+could explore it in a holistic manner (Figure 1) [30]. In the 
+chart,  patient  mood  (red  line)  and  caregiver  burden  (blue 
+line)  were  shown  as  graphs,  and  other  patient  data  were 
+shown  as  icons.  Caregiving  activities  and  unexpected 
+events were shown as pop-ups by clicking on a date.  
+
+Extension  from  FMCT:  In  FMCT-S,  a  pulldown  menu  of 
+other  caregivers’  nickname  was  added  so  that  caregivers 
+can see any other caregiver’s chart (Figure 1).  
+
+Timeline Section (Newly Added for FMCT-S) 
+The  timeline  section  displayed  all  the  family  caregivers’ 
+journals  (i.e.,  positive,  negative,  and  lessons  learned)  and 
+unexpected events in a chronological order (Figure 2). This 
+section  was  automatically  shown  to  the  caregivers  when 
+they  logged  into  the  system.  When  a  caregiver  likes  or 
+empathizes with someone else’s post, he/she can check the 
+post by clicking the empathy button. Note that the empathy 
+button is not designed to provide feedback to the author; it 
+helps  the  caregiver  quickly  identify  the  posts  he/she  liked 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 4ID  Sex  Age 
+
+Relative 
+
+F 
+1 
+F 
+2 
+F 
+3 
+F 
+4 
+F 
+5 
+F 
+6 
+F 
+7 
+F 
+8 
+9  M 
+F 
+10 
+F 
+11 
+F 
+12 
+13  M 
+F 
+14 
+F 
+15 
+
+20's 
+40's 
+30's 
+30's 
+30's 
+40's 
+30's 
+40's 
+50's 
+40's 
+40's 
+20's 
+50's 
+40's 
+50's 
+
+daughter 
+wife 
+daughter 
+sister 
+wife 
+wife 
+wife 
+wife 
+husband 
+wife 
+wife 
+sister 
+father 
+wife 
+mother 
+
+# chars 
+Min-Max (avg.) 
+101-523 (265) 
+54-293 (124) 
+138-1193 (412) 
+0-248 (90) 
+9-192 (58) 
+146-1298 (399) 
+305-1986 (817) 
+0-210 (55) 
+224-1183 (445) 
+0-200 (89) 
+10-301 (142) 
+0-60 (8) 
+15-64 (33) 
+17-161 (67) 
+19-239 (96) 
+
+#acs
+_pat 
+20 
+43 
+2 
+0 
+0 
+20 
+19 
+18 
+75 
+19 
+35 
+7 
+7 
+6 
+4 
+
+#acs
+_jnl 
+148 
+107 
+129 
+44 
+53 
+383 
+216 
+85 
+245 
+45 
+150 
+31 
+47 
+71 
+66 
+
+Intv.  Work 
+
+T1 
+
+T2 
+
+T3 
+
+T4 
+
+T5 
+
+T6 
+
+x 
+
+x 
+x 
+
+x 
+x 
+
+x 
+x 
+x 
+
+x 
+
+x 
+
+FT-out 
+FT-hm 
+FT-out 
+PT 
+FT-out 
+FT-hm 
+FT-out 
+FT-out 
+FT-out 
+FT-hm 
+HM 
+HM 
+FT-hm 
+FT-hm 
+FT-hm 
+
+9 
+-- 
+8 
+1 
+-- 
+3 
+6 
+-- 
+2 
+5 
+2 
+-- 
+4 
+-- 
+1 
+
+4 
+-- 
+1 
+7 
+-- 
+3 
+9 
+-- 
+0 
+0 
+2 
+-- 
+0 
+-- 
+3 
+
+5 
+-- 
+4 
+2 
+-- 
+0 
+8 
+-- 
+3 
+3 
+2 
+-- 
+2 
+-- 
+1 
+
+0 
+-- 
+2 
+0 
+-- 
+1 
+4 
+-- 
+3 
+4 
+1 
+-- 
+2 
+-- 
+2 
+
+0 
+-- 
+3 
+1 
+-- 
+0 
+6 
+-- 
+4 
+1 
+2 
+-- 
+0 
+-- 
+1 
+
+0 
+-- 
+1 
+0 
+-- 
+2 
+6 
+-- 
+3 
+1 
+3 
+-- 
+0 
+-- 
+1 
+
+Table  1  Participant  demographics  and  prevalence  of  each  theme  (#  chars:  average  number  of  characters  entered,  #  acs  pat: 
+number of accesses to other participant’s health records,  # acs jnl: number of accesses to other patients’ caregiving journal, 
+Intv:  Interviewed,  FT-hm:  full-time  homemaker, FT-out:  full-time  jobs  outside  the  home,  PT: work  part  time,  HM: work  at 
+home. T1-T6 indicates the themes emerged from the interview coding. 
+
+from a pile of them. In other words, caregivers can see their 
+own checks, but they cannot see other caregiver’s checks or 
+those  they  have  received.  As  the  number  of  check  for  a 
+particular  caregiver  increase,  all  the  inputs  from  that 
+caregiver  are  highlighted  (i.e.,  background  color  of  his/her 
+input gets darker) on the reader’s screen.  
+
+Note  that  FMCT-S  did  not  allow  the  family  caregivers  to 
+exchange  messages  with  each  other  like  many other social 
+networking  sites.  This  decision  was  made  based  on  the 
+feedback  from  family  caregivers  of  the  FMCT  study  [51]: 
+When asked about exchanging messages with other family 
+caregivers,  many  raised  the  concern  about  the  potential 
+burden for answering to other caregivers' comments. Some 
+were also concerned about other caregivers giving advice to 
+them without fully understanding their family situation. We 
+were  also  concerned  that  stronger  bonding  among  family 
+caregivers may result in increased complaints about the care 
+recipients  which  may  deteriorate  the  caregiver-recipient 
+relationships. 
+
+In sum,  FMCT-S provides  family  caregivers the  chance  to 
+learn  from  others  by  only  seeing  the  information  of  other 
+caregivers.  
+
+identified 
+
+DEPLOYMENT STUDY 
+Fifteen  family  caregivers  (12  females  and  3  males,  mean 
+age  =  43.0)  who 
+themselves  as  primary 
+caregivers  of  a  depressed  family  member  were  recruited 
+through a consumer marketing company. Upon recruitment, 
+we  excluded  family  caregivers  who  were  themselves 
+diagnosed  with  a  major  depression.  The  participants  were 
+informed  at  their  recruitment  that  this  is  a  two-phase 
+deployment  study of  a  tracking  tool  and  that  their posts  in 
+the  first  phase  (i.e.  FMCT  study)  would  be  shared  in  the 
+second  phase  (i.e.  FMCT-S  study).  All  of  the  family 
+
+caregivers  agreed  to  participate  in  both  studies  from  the 
+beginning  of  recruitment.  The  family  caregivers  filled  out 
+surveys about their socio-demographic data and the mental 
+conditions  of  their  care  recipients  and  gave  informed 
+consent  before  the  FMCT  study  began.  We  also  required 
+consent from care recipients for participation. Both studies 
+were  reviewed  and  approved  by  the  ethical  committee  of 
+the first author’s organization (ethics review ID: H27-011). 
+
+Participants: Family Caregivers 
+Two  months  following  the  FMCT  study  [51],  the  family 
+caregivers participated in a six-week follow-up study using 
+FMCT-S.  One  family  caregiver who  dropped out from  the 
+initial  study  with  FMCT  returned  and  participated  for  the 
+current study. The following are the relationships of the 15 
+caregivers,  nine  spouses,  two  parents,  two  daughters,  and 
+two siblings (Table 1). All of the caregivers lived with their 
+care  recipient  and  held  primary  responsibility  for  looking 
+after  them.  Six  caregivers  provided  one-to-one  care  and 
+nine  provided  care  with  other  family  members  living 
+together. Seven caregivers were full-time homemakers (FT-
+hm), six had full-time jobs outside the home (FT-out), one 
+worked part-time (PT), and one worked at home (HM). 
+
+Conditions of Care Recipients 
+The  ages  of  the  care  recipients  ranged  from  24  to  59 
+(mean=43.1). Eight were male, and seven were female. On 
+average,  the  care  recipients  had  their  initial  onset  of 
+depression about eight years earlier (min.=1 year, max.=19 
+years).  Nine  had  experienced  relapses.  All  of  the  care 
+recipients  held  jobs  or  went  to  college  before  getting 
+depressed.  They  were  all  homebound  when  they  were 
+recruited  for  the  FMCT  study,  but  two  (IDs  10  and  13) 
+returned  to  work  during  the  FMCT  deployment  study.  All 
+regularly saw a doctor and took antidepressants daily. 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 5 
+ 
+ 
+ 
+ 
+Procedure 
+During  the  two-month  interval  between  the  FMCT  and 
+FMCT-S deployment studies, we added the sharing feature 
+to  the  tracking  tool.  Before  the  FMCT-S  deployment,  we 
+mailed the details of the sharing feature to the participants’ 
+homes  and  we  also  notified  them  by  telephone.  We  asked 
+the participants to do the following three actions: (1) enter 
+their  profile  before  the  FMCT-S  deployment  study,  (2) 
+remove or privatize their previous posts from the first phase 
+(by pressing the “private” button) if any, and (3) reconfirm 
+with  their  care  recipients  about  sharing  information  with 
+others and obtain consent from them again. 
+
+Once the study started, the family caregivers used FMCT-S 
+for  six  weeks  in  their  homes.  The  family  caregivers  were 
+again asked to use it every single day, if possible. After six 
+weeks  of  deployment,  we  randomly  selected  ten  family 
+caregivers (indicated by “x” in the “Intv.” column of Table 
+1) and individually interviewed them each for 1-1.5 hrs. 
+
+Data Collection 
+We wanted to analyze the family caregiver reactions to the 
+sharing  feature  as  well  as  whether  they  changed  how  they 
+recorded  the  information  and  whether  sharing  practice 
+impacted their relationship with the care recipients.  
+
+Log Data: We gathered the data entries to FMCT-S during 
+the  six-week  study  to see  if  there were  any  changes  in  the 
+participants’ tracking activity. Each entry was stored with a 
+user ID and a timestamp.  
+
+Semi-structured Interviews: Similar to a previous work [51] 
+(i.e., the first phase), we drafted semi-structured interviews 
+through collaboration with our research team’s psychiatrist. 
+The interviews explored the family caregiver’s experiences 
+with FMCT-S by focusing on the sharing feature’s impact. 
+The family  caregivers  were  asked detailed questions  about 
+the impact of sharing their own data and seeing others’ data 
+on their daily lives: their feelings, caregiving activities, and 
+communication with their care recipients.  
+
+The  interview  data  were  all  audio-recorded,  transcribed, 
+and analyzed using inductive qualitative methods [45]. The 
+first author arranged the quotes into an affinity diagram and 
+inductively  generated  high-level  themes  in  the  data.  The 
+themes  were  then  discussed  to  iteratively  refine  the  codes. 
+The  findings  below  emerged  from  this  collaborative 
+analysis.  
+
+RESULTS 
+The  sharing  feature  seemed  to  affect  the  caregivers  and 
+their  communication  with  their  care  recipients  in  multiple 
+ways.  In  this  section,  we  report  the  overall  effects  of  the 
+sharing  feature  by  comparing  the  tool  usage  patterns 
+between  phase  1  (FMCT)  and  phase  2  (FMCT-S)  and 
+present  our  findings  in  detail  based  on  semi-structured 
+interviews. 
+
+General Usage Patterns 
+Family caregivers continued using the same device as in the 
+first  phase  to  record  their  data:  seven  caregivers  used 
+
+phase 1
+
+phase 2
+
+450
+400
+350
+300
+250
+200
+150
+100
+50
+0
+
+s
+r
+e
+t
+c
+a
+r
+a
+h
+c
+
+f
+o
+r
+e
+b
+m
+u
+N
+
+0
+
+10
+
+20
+Days
+
+30
+
+40
+
+Figure 3. Average number of Japanese characters entered  
+per person. 
+
+s
+e
+s
+s
+e
+c
+c
+a
+f
+o
+r
+e
+b
+m
+u
+N
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+timeline
+
+review
+
+0
+
+10
+
+20
+Days
+
+30
+
+40
+
+Figure 4. Average number of accesses to other caregivers’ 
+records per person. 
+
+smartphones,  four  used  personal  computers,  six  used  a 
+family-shared  computer,  and  one  used  a  family-shared 
+tablet  (including  multiple  uses  of  devices).  The  family 
+caregivers  who  provided  care  with  other  family  members 
+talked  about  FMCT-S 
+them.  While  some  family 
+caregivers  seemed  to  share  their  findings  with  other 
+members,  few  showed 
+the  screen  or  collaboratively 
+recorded the data.  
+
+to 
+
+Amount of Text Input 
+To measure the caregivers’ active engagement with the tool, 
+we  counted  the  number  of  characters  entered  in  the  free-
+form  textboxes.  The  frequency  of  access  was  not  used 
+because  some  caregivers  did  not  log  out  and  it  did  not 
+reflect  their  engagement.  Figure  3  shows  the  average 
+number  of  Japanese  characters  per  person  during  phase  1 
+(without  the  sharing  feature)  and  phase  2  (with  it).  The 
+min/max and average number of characters entered by each 
+participant  during  phase  2  is  shown  in  Table  1  (#chars). 
+Overall, the family caregivers tended to enter more data in 
+the  second  phase  than  in  the  first;  on  average,  221 
+characters  were  entered  per  day  per  person  in  the  second 
+phase,  which  exceeds  the  average  of  137  characters  in  the 
+first phase. A paired t-test indicated that the average amount 
+of  caregiver  input  significantly  increased  in  the  second 
+phase  (t[41]=-11.74,  p<.01).  According  to  the  family 
+caregivers they added more contextual information to their 
+descriptions so that others can easily follow the contents.  
+
+Frequency of Seeing Others’ Records 
+Figure  4  shows  the  average  number  of  accesses  to  other 
+patients’  health  records  (“reviewing  section”  of  other 
+participants)  and  caregiving  journals  (“timeline  section”) 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 6 
+ 
+ 
+ 
+per person over time. The total number of accesses to other 
+care  recipients’  health  records  and  caregiving  journals  are 
+provided  in  Table  1  (#acs_pat,  #acs_jnl).  Overall,  the 
+family  caregivers  looked  at  other  caregiving  journals  far 
+more  frequently  than  other  patients’  health  records.  The 
+details  of  how  they  used  the  records  of  others  will  be 
+provided below in the interview findings.  
+
+Interview Findings 
+Six  themes  emerged  from  the  interview  coding.  The 
+prevalence  of  each  theme  is  reported  in  Table  1  (columns 
+T1-T6). 
+
+T1. Learning from Others 
+All  the  participants  we  interviewed  noted  that  they  were 
+inspired  by  reading  the  caregiving  journals.  Although  the 
+caregivers  presumed  that  the  coping  strategies  of  others 
+may  not  work  for  their  case,  they  still  found  useful  tips 
+from  the  caregiving  journals.  For  example,  one  participant 
+said: 
+
+[ID 7, full-time job outside,  wife of care recipient] There are no 
+correct  answers  to  these  things.  The  caregiving  tips  of  other 
+people  may  not  work  for  my  case,  but  it’s  important  to  know 
+how  others  are  dealing  with  this  kind  of  stuff.  I  can  gain  new 
+insights, apply their strategies, and try new things. 
+
+Participants  not  only  learned  from  others’  success  stories 
+(“positive  outcomes”  and  “lessons  learned”)  but  also  from 
+their  failures  (“negative  outcomes”).  One  participant 
+described how she could see things more objectively and be 
+creative in finding ways to resolve others’ problems: 
+
+[ID 1, full-time job outside, daughter of care recipient] ID3 wrote 
+in  her  caregiving  journal  that  she  had  argued  with  her  mother 
+over  food.  Her  mother  gave  her  some  food  that  she  liked  but 
+she  didn’t  take  it.  It  sounds  silly,  but  I’ve  actually  had  similar 
+arguments  with  my  mom,  too.  When  I  read  about  their 
+arguments,  I  thought  ID3  should  depend  on  her  mother  more. 
+At the same time, I realized that I should do the same with my 
+mom.  
+
+Even  though  the  family  caregivers  gained  insights  by 
+reading other caregiving journals, they seemed to learn little 
+from seeing the conditions of other patients. Many said that 
+the  patients’  health  records  (graphs)  were  too  detailed  to 
+gain 
+transferrable  knowledge.  Some  also 
+mentioned that they were reluctant to look at other patients’ 
+data because they felt it was too personal: 
+
+insight  or 
+
+[ID  3,  full-time  job  outside,  daughter  of  care  recipient]  I 
+somehow  felt  uncomfortable  looking  at  other  patients’  health 
+records. I felt like I was stepping into their privacy, like peeking 
+into  their  homes.  I  don’t  think  I  looked  at  other  health  records 
+more  than  just  a  few  times.  (…)  It  was  good  to  see  many 
+different  patterns  in  how  depression  affects  people.  But  other 
+than that, there wasn’t much to learn from other patient graphs. 
+
+T2: Gaining Emotional Support 
+Emotional support was another benefit gained by the family 
+caregivers  from  using  the  shared  feature.  In  line  with 
+previous  works,  for  most  of  our  family  caregivers,  seeing 
+other  caregivers  experiencing  a  similar  situation  everyday 
+served  as  a  type  of  emotional  support  [7,46].  One 
+
+participant explained how sharing a caregiving journal with 
+others was different from other forms of sporadic support: 
+
+[ID 6, work at home, wife of care recipient] I know people who 
+are  caring  for  a  depressed  family  member.  I  can  share  my 
+feelings with them, but we don’t talk every day, just when there 
+is  big  news.  But  with  FMCT-S,  I  felt  like  we  are  living  through 
+the  same  time.  (…)  Just  knowing  that  there  are  people  going 
+through the same difficulties made me feel better.  
+
+Another caregiver echoed that sentiment: 
+
+[ID  4,  work  part  time,  sister  of  care  recipient]  I  learned  that 
+others  are  also  distressed.  They  are  all  worried  and  anxious 
+about the people they are caring for. I didn’t feel alone. We are 
+sharing similar problems. 
+
+As  with  IDs  6  and  4,  although  FMCT-S’s  sharing  feature 
+did not  allow  the family  caregivers  to exchange  messages, 
+they still seemed to gain emotional support by reading other 
+caregiving journals.  
+
+T3: Being Considerate of Others when Writing 
+Gradually,  the  family  caregivers  started  to  see  others  as 
+peer learners who are facing similar challenges.  Such sense 
+of  belonging  changed  their  writing  styles.  For  example, 
+many  caregivers  said  that  they  added  more  contextual 
+information  to  their  journals,  which  increased  the  number 
+of characters in them (Figure 3): 
+
+[ID 7, full-time job outside,  wife of care recipient] I noticed that 
+it’s  easier  to  follow  others’  posts  when  there  was  contextual 
+information. To learn from others’ posts, we need to know why 
+and how something happened. (…) I decided to add contextual 
+information  to  my  posts  too,  so  that  others  can  follow  them 
+more easily. 
+
+In  addition,  the  caregivers  became  more  cautious  about 
+what they write in their caregiving journals. One participant, 
+whose  husband  returned  to  work  during  the  first  phase, 
+explained  how  she  refrained  from  writing  about  joyous 
+events in the presence of other caregivers: 
+
+[ID  10,  work  at  home,  wife  of  care  recipient]  My  husband  got 
+much better, and we finally took a family trip. We had so much 
+fun and I wanted to write about it in my journal, but I chose not 
+to.  Many  are  still  groping  around  in  the  dark,  some  can’t  even 
+leave  their  houses.  If  they  read  my  good  news  in  my  journal, 
+they  may  feel  offended  or  discouraged.  They  might  retaliate 
+against their own sick person. I didn’t want them to feel that way. 
+
+Family caregivers not only avoided writing about extremely 
+good  events  but  they  also  refrained  from  expressing 
+negative  feelings  about  caregiving.  According  to  the 
+participants,  they  were  reluctant  to  express  their  criticism 
+about  their  caring  situations  for  two  reasons.  First,  the 
+family caregivers did not want to lower the moods of others 
+by expressing negative feelings. One participant said: 
+
+[ID  3,  full-time  job  outside,  daughter  of  care  recipient]  We  all 
+want  to  learn  from  others’  posts.  (…)  I  tried  not  to  complain  in 
+my  caregiving  journal  because  I  didn’t  want  to  read  the 
+complaints  of  others.  Complaints  just  make  me  feel  bad,  and 
+they don’t solve anything.  
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 7Second,  the  caregivers  were  concerned  that  the  care 
+recipients  might  read  their posts  and feel  crushed  or  cause 
+an argument. Since the caregivers sometimes used a shared 
+device  (with  a  shared  login  password)  to  access  FMCT-S, 
+the  care  recipients  could  access  it  even  without  the 
+caregivers. One participant who sometimes showed others’ 
+records to her husband said: 
+
+[ID 11, work at home, wife of care recipient] Although I normally 
+enter  the  data  when  my  husband  is  not  around,  I  don’t  write 
+complaints.  (…)  My  husband  might  accidentally  see  them.  I 
+don’t want to argue about them. 
+
+Overall,  the  sharing  feature  of  FMCT-S  appeared  to  make 
+family  caregivers  accountable  for  their  own  writings, 
+making their posts more considerate and thoughtful. 
+
+T4:  Using  Others’  Data  to  Discuss  Sensitive  Matters  with 
+Care Recipients 
+While  family  caregivers  normally  read  others’  records  by 
+themselves, they sometimes shared others’ information with 
+the  care  recipients.  However,  when  they  did,  they  were 
+careful  about  what  information  to  share  and  how  they 
+shared  with  the  recipients.  According  to  the  caregivers, 
+most of them started by talking about others having similar 
+problems.  For  example,  one  participant  described  how  she 
+used others’ data to encourage her daughter when she was 
+impacted by low atmospheric pressure: 
+
+[ID  15,  work  at  home,  mother  of  care  recipient]  I  told  her  that 
+she  isn’t  the  only  one  affected  by  low  atmospheric  pressure. 
+She didn’t really look at the data that closely, but she did seem 
+encouraged by knowing that she wasn’t alone. 
+
+The  caregivers  chose  whether  to  discuss  further  by 
+observing  the  recipient’s  reaction.  They  showed  others’ 
+data and discussed further only when the recipients showed 
+interest.  Some  caregivers  were  successful  in  using  others’ 
+data  to  discuss  sensitive  family  issues  with  their  care 
+recipients.  One  participant  described  how  others’  data 
+helped him discuss a problem with his wife: 
+
+[ID 9, full-time job outside, husband of care recipient] I found a 
+post  describing how  things  could  be  messed  up  and  go  wrong 
+once an argument gets out of hand. We have exactly the same 
+problem, so we looked at it together and discussed how to solve 
+it.  
+
+Another family caregiver used others’ records to explain his 
+coping strategy to his daughter:  
+
+[ID  13,  full-time  homemaker,  father  of  care  recipient]  I  showed 
+the  records  of  others  to  my  daughter  and  explained  how  the 
+patients  and  caregivers  can  easily  fall  into  a  negative  loop.  I 
+explained  why  I  distanced  myself  from  her  during  her  bad 
+periods–it’s not that I’m abandoning her, I just need some space 
+to avoid that negative loop. 
+
+As with IDs 9 and 13, many family caregivers who shared 
+others’  data  with  care  recipients  seemed  to  find  others’ 
+information  useful  for  initiating  conversations  when  they 
+wanted to talk about their own issues.  
+
+T5: Increased Involvement With Care Recipients 
+For  the  care  recipients,  seeing  other  caregivers’  records 
+seemed  to  affect  them  in  multiple  ways.  According  to  the 
+caregivers,  some  care  recipients  showed  interest  in  how 
+other caregivers cared for their depressed family members, 
+and  they  tried to  learn  from  them.  For  example,  ID 9 who 
+had constant arguments with his wife said: 
+
+[ID 9, full-time job outside, husband of care recipient] Previously, 
+she  always  claimed  that  I  should  be  more  considerate  of  her 
+feelings.  But  that’s  so  difficult.  I’ve  always  told  her  that  I  can’t 
+read her thoughts unless she expresses them. (…) After seeing 
+that other caregivers are also struggling with similar problems, I 
+think  she  came  to  understand  that  I’m  not  the  only  one  who 
+cannot  assess  the  feelings  of  their  care  recipients.  (…)  She 
+started to express her feelings more. 
+
+In addition, some care recipients seemed to feel accountable 
+for their own behavior by realizing that their data are being 
+shared with others [11]. For example, one participant whose 
+husband returned to work during the first phase said: 
+
+[ID 10, work at home, wife of care recipient] My husband once 
+asked me what I was going to write about that day. I asked him 
+what  he  wanted  me  to  write.  He  suggested  that  I  write  about 
+him  going  to  the  library.  He  explained  how  difficult  it  is  for  a 
+depressed person to go out and read. (…) He seemed to want 
+to encourage other caregivers by showing his own recovery.  
+
+Such  feeling  of  accountability  sometimes  led  the  care 
+recipients  to  make  more  effort  to  engage  in  positive 
+behaviors  than  they  might  otherwise  have  made.  For 
+instance,  another  participant  who  was  caring  for  her 
+husband explained: 
+
+ [ID 7, full-time job outside, wife of care recipient] In the second 
+phase,  he  did more  work  around  the  house.  (…)  He  started  to 
+say things like “I’m going to hang up the laundry.” I think he was 
+pleased and felt encouraged by reading about other caregivers 
+who  were  working  hard  for  their  care  recipients.  I  think  he 
+wanted me to write about his activities and show others that he 
+too was making a big effort. 
+
+The  positive  behaviors  of  care  recipients  were  generally 
+embraced  by  caregivers.  However,  it  is  important  to  note 
+that they were sometimes perceived as slightly competitive 
+by the care recipients. For example, ID 9 who often read the 
+records of others with his wife said: 
+
+[ID 9, full-time job outside, husband of care recipient] One day 
+we  found  a  post  from  a  caregiver  who  went  to  a  Louvre 
+exhibition with her family. My wife suggested that I should write 
+about us going to a Magritte exhibition.  
+
+T6: Changes in Family Communication 
+As the involvement of care recipients increased, some care 
+recipients  seemed  to  access  the  app  even  without  the 
+caregivers. Indeed, some participants noticed that their care 
+recipients read their caregiving journals while they were out 
+of  the  house.  Interestingly,  such  “spying”  by  the  care 
+recipients  was  perceived  positively  by  the  caregivers.  For 
+example,  ID  11  who  never  showed  her  own  caregiving 
+journal to her husband said:  
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 8[ID 11,  work at  home,  wife of care recipient] I  started to notice 
+that  he  was  actually  reading  the  journal.  (…)  One  day,  I  wrote 
+that  it  was  tough  to  listen  to  his  complaints.  The  next  day,  he 
+explained  why  he  made  them.  Even  though  I  didn’t  directly 
+confront him, it was obvious that he had read my journal. (…) I 
+can directly express my thoughts, but depression makes things 
+complicated.  For  certain  things,  I’m  not  sure  how  I  should 
+express them to my husband. I don’t want to cause a fight, so I 
+suppress  myself,  which  is  probably  not  good  for  either  of  us. 
+(…)  It  was  very  nice  to  have  a  way  to  indirectly  express  my 
+feelings without causing trouble. I think it’s also important for the 
+care recipients to know what the caregivers are thinking.  
+
+As  with  ID  11,  the  sharing  feature  sometimes  served  as  a 
+new  communication  channel 
+family 
+caregivers could reveal their feelings to their care recipients. 
+According  to  the  caregivers,  indirectly  expressing  their 
+feelings  in  the  presence  of  other  caregivers  helped  them 
+reveal their feelings without getting too emotional:  
+
+through  which 
+
+[ID  7,  full-time  job  outside,  wife  of  care  recipient]  When  I 
+revealed my thoughts in the caregiving journal, I often imagined 
+my husband as my reader. (…) I explained my thoughts in detail 
+and  carefully  chose  my  words  so  that  everyone,  including  my 
+husband,  could  understand  them  without  getting  hurt.  (…) 
+FMCT-S  helped  me  convey  feelings  to  my  husband  that  I 
+couldn’t express directly. After a while, my husband also started 
+to convey his true feelings to me. This definitely helped reduce 
+family troubles.  
+
+The  caregivers  noted  that  indirectly  conveying  thoughts  to 
+the care recipients deepened family communication without 
+causing  problems  in  the  family.  Even  though  such  use  of 
+FMCT-S  was  not  very  common  among  the  participants 
+(three  out  of  ten),  many  caregivers  still  mentioned  that 
+communication with their care recipients improved: 
+
+[ID  6,  work  at  home,  wife  of  care  recipient]  Family  trouble  has 
+decreased. Before, he seemed to think that he was the only one 
+who was suffering. But after seeing other caregivers’ records, I 
+think  he  learned  that  it’s  not  just  him  who  was  suffering.  The 
+caregivers  are  also  struggling  to  support  their  care  recipients. 
+He seemed pleased and became more considerate to me.  
+
+According  to  the  caregivers,  the  care  recipients  were 
+pleased  to  read  other  caregivers’  journals  and  appreciated 
+the  efforts  of 
+the  caregivers,  creating  a  positive 
+communication cycle.  
+
+from 
+
+the  caregivers 
+
+DISCUSSION 
+In  summary,  most  participants  in  our  interviews  reported 
+that  the  sharing  feature  was  beneficial  for  improving  their 
+home care and family communication. In line with previous 
+works, 
+the  caregiving 
+learned 
+experiences  of  others  and  gained  emotional  support  by 
+reading their caregiving journals. Unexpectedly, the sharing 
+feature  also  seemed  to  positively  affect  the  care  recipients 
+who gained emotional support by reading other caregivers’ 
+records  and  sometimes  were  even  motivated  to  engage  in 
+feature 
+In  addition, 
+positive  behaviors. 
+family 
+the 
+sometimes  played 
+communication or/and mediating communication within the 
+family.  For  instance,  some  care  recipients  seemed  to 
+their 
+actively  mention 
+
+the  sharing 
+enhancing 
+
+their  conditions/behaviors 
+
+role  of 
+
+to 
+
+caregivers  so  that  their  information  could  be  shared  with 
+initiated  conversation  about 
+others.  Some  caregivers 
+sensitive family issues to the care recipients by alluding to 
+the  records  of  other  caregivers.  Finally,  some  caregivers 
+indirectly revealed their thoughts and feelings to their care 
+recipients by writing them down in their journals.  
+
+Positive Reactions from Care Recipients 
+Despite  our  initial  concerns  that  the  care  recipients  may 
+negatively react to caregivers who shared their information 
+with  other  participants,  none  of  our  participants  reported 
+getting  such  negative  reactions.  Record  anonymity  is  of 
+course  a  contributing  factor.  Another  possible  reason  why 
+FMCT-S’s  sharing  feature  might  have  worked  so  well  is 
+that  the  caregivers  chose  their  words  very  carefully, 
+especially  when  they  wrote  in  their  journals  (ID3,  11). 
+Similar  to  the  findings  in  previous  works  [40,48],  our 
+study’s participants did not want to read the complaints of 
+other caregivers, and this concern compelled them to refrain 
+from writing complaints themselves (ID 3). In addition, the 
+caregivers  were  concerned  about  the  potential  impact  of 
+complaints on the care recipients when they accidently read 
+them (ID 11). Such concerns made their caregiving journals 
+thoughtful.  Consequently,  such 
+more  considerate  and 
+thoughtful  posts  turned  out  to  be  encouraging  for  the  care 
+recipients,  who  seemed  pleased 
+the 
+caregivers  are  working  hard  for  their  depressed  family 
+members and hence showed more appreciation to them (ID 
+6).  We  suspect  that  the  emotional  support  gained  by  the 
+care  recipients  from  the  tool  outweighed  the  negative 
+feelings of surveillance.  
+
+to  realize 
+
+that 
+
+However,  such  positive  effects  on  the  care  recipients  rely 
+on  the  good  intentions  of  family  caregivers.  If  someone 
+wrote  a  thoughtless  journal  entry  or  complained  about  a 
+depressed family member, the care recipients who read that 
+post  would  probably  be  affected.  We  infer  that  the 
+caregivers  were  strongly  self-controlled  to  avoid  writing 
+complaints or rude posts because their care recipients were 
+aware  of  their  tracking  activities:  the  care  recipients  had 
+already given their consent to participate in this study.  
+
+Involvement of Care Recipients 
+Our  findings  show  how  the  sharing  feature  gradually 
+increased the care recipients’ involvement with the tool (ID 
+9, 10, 7). Since increased involvement of the care recipients 
+improved the family support and communication, one might 
+suggest  designing  a  tracking  tool  that  facilitates  the 
+participation of care recipients.  
+
+increase  care 
+
+A  straightforward  way 
+recipients’ 
+to 
+participation  is  to  divide  the  role  of  recording  (i.e.,  care 
+recipients  recording  their  conditions  themselves)  with  the 
+caregivers.  Such  an  approach  has  been  suggested  and 
+studied  elsewhere  [20].  Although  previous  works  show 
+promising results for this approach, we argue that it is less 
+applicable  for  our  case.  First,  the  family  caregivers  in  our 
+study  are  trying  to  optimize  their  own  coping  strategies. 
+Dividing the role of recording with the care recipients may 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 9spark  conflicts.  Indeed,  many  caregivers  seem  skeptical 
+about  the  self-reports  of  the  depressed  family  members 
+because  they  become  forgetful  during  depressive  episodes 
+[39,51].  Thus,  we  believe  that  it  is  best  for  the  family 
+caregivers  to  assume  full  responsibility  for  the  recordings. 
+In addition, note that many of the positive effects found in 
+our  study  were  actually  caused  by  excluding  the  care 
+recipients  from  the  system.  If  the  care  recipients  could 
+directly record their conditions into the system, they may no 
+longer actively tell their condition to the caregivers (ID 10, 
+7).  The  indirect  communication  channel  through  which 
+family caregivers reveal their feelings to the care recipients 
+would also disappear (ID 11, 7).  
+
+the 
+
+that 
+
+findings 
+
+sharing 
+from 
+
+the  social  support 
+
+Facilitating Social Support in the Family 
+feature 
+suggest 
+Our 
+improved/enhanced 
+family 
+caregivers.  While  previous  works  on  health-tracking 
+technologies  have  also  tried  to  facilitate  support  for  care 
+recipients  from  family  (and  friends)  [14,35,37,49],  studies 
+show  that  the  attempts  have  generally  failed.  In  those 
+studies,  care  recipients  are  typically  cast  as  the  primary 
+users  of  the  tracking  technologies.  To  facilitate  support 
+from family and friends, the care recipients are provided a 
+feature that can invite a support person from their personal 
+social  networks 
+interventions.  Unfortunately, 
+findings  have  shown  that  care  recipients  are  generally 
+reluctant to choose a support person [35,37]. They seemed 
+to  perceive  it  as  problematic  or  at  least  unhelpful  to  share 
+their  health  issues  with  a  person  who  is  not  pursuing  the 
+same health goal, even if he/she is a close friend or a family 
+member [14].  
+
+their 
+
+to 
+
+In  contrast  to  previous  works,  family  caregivers  are  the 
+primary users of tracking technologies in our study. While 
+care  recipients  in  previous  works  did  not  feel  the  need  to 
+share their problems with family [14], the family caregivers 
+in  our  study  seemed  to  perceive  it  as  beneficial  to  share 
+their  problems  with  the  care  recipients.  This  makes  sense 
+because  family  caregivers  are  struggling  with  issues 
+associated  with  care  recipients  (while  care  recipients  are 
+normally  struggling  with  their  own  health  issues).  Thus, 
+caregivers  were  more  likely  to  take  the  opportunity  to 
+discuss their problems with care recipients. We suspect that 
+such  discussion  made  the  care  recipients  realize  that  they 
+were  sharing  similar  values  with  the  caregivers  [2],  which 
+involvement  of  care 
+the  active 
+eventually 
+recipients. Such involvement of care recipients led them to 
+healthier  family  communication  and  enhanced  the  social 
+support from family caregivers. Note that our tool does not 
+offer  caregivers  a  direct  link  to  communicate  with  care 
+recipients  as  in  previous  works.  Since  family  caregivers 
+were initially hesitant to discuss family issues with the care 
+recipients due to the fear of starting conflict, we doubt that 
+the  family  caregivers  would  have  used  it,  even  had  we 
+provided it. We argue that other caregivers’ records served 
+as  indirect  ways  to  facilitate  family  communication  and 
+solicit social support from family caregivers.  
+
+increased 
+
+Negative Effects of Sharing 
+Although  the  family  caregivers  in  our  study  generally 
+reported  that  FMCT-S  positively  affected  homecare  and 
+their  relationships  with  the  care  recipients,  the  sharing 
+feature  did  seem  to  import  new  concerns  that  would  not 
+have  emerged  otherwise.  As  reported  in  previous  studies, 
+the  sharing  feature  introduced  competition  among  the  care 
+recipients  (ID  9)  [7,28].  The  caregivers  also  refrained 
+themselves from writing joyous events because they feared 
+offending  other  caregivers  and  causing  envy  (ID  10). 
+However,  some  caregivers  who  did not know  the  situation 
+complained  that  those  people  were  not  committed  enough 
+in their caregiving role and not paying much attention to the 
+care recipients. Another issue we found was that one of the 
+caregivers  who  had  experienced  depression  himself 
+described  that  it  was  sometimes  difficult  to  read  others’ 
+journals  because  it  reminded  him  of  his  hard  time  in  the 
+past. Future work should address these concerns. 
+
+LIMITATIONS 
+One  limitation  of  our  study  is  that  most  of  the  family 
+caregivers were women. Since men and women experience 
+different types of caregiver burden [43], the generalizability 
+of  our  findings  may  be 
+limited.  Family  caregivers’ 
+relationship  with  the  care  recipients  might  also  had  an 
+impact  on  family  communication.  For  example,  siblings 
+and parents of the care recipients rarely showed the app to 
+the  care  recipients  when  talking  about  others  because  they 
+did not want to be preachy and annoy the recipients. Future 
+work  should  investigate  the  impact  of  these  variables  on 
+family communication.  
+
+CONCLUSION 
+This paper showed how information sharing among family 
+caregivers  affected  homecare  and  family  communication. 
+We developed a tracking tool that allows family caregivers 
+to  record  their  caregiving  activities  and  care  recipient’s 
+conditions  and  share  them  with  other  family  caregivers.  A 
+deployment  study  of  our  tool  revealed  that  the  sharing 
+feature not only helped the caregivers improve their coping 
+strategies  but  also  positively  affected  the  care  recipients. 
+Our  most  significant  finding  is  that  the  tool  provided  the 
+caregivers  and  the  care  recipients  with  indirect  ways  to 
+discuss  sensitive  home  issues.  Our  findings  describe  how 
+direct 
+the 
+helped 
+communication/conflict  while  still  allowing 
+to 
+indirectly  discuss  problems.  The  sharing  feature  also 
+provided  care  recipients  indirect  ways  to  learn  and  gain 
+emotional support from other caregivers, which sometimes 
+motivated them to engage in positive behaviors. We believe 
+these  findings  will  contribute  to  the  field  of  HCI  by 
+suggesting  new  ways 
+for  designing  health-tracking 
+technologies and information sharing. 
+
+sharing 
+
+feature 
+
+avoid 
+
+them 
+
+them 
+
+ACKNOWLEDGEMENTS 
+This work is supported by Grant for Scientific Research (A) 
+17H00771 from Japan Society for the Promotion of Science 
+(JSPS). 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 10REFERENCES 
+1. 
+
+Nili R Benazon and James C Coyne. 2000. Living 
+with a depressed spouse. Journal of Family 
+Psychology 14, 1: 71–79. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+Andrew B. L. Berry, Catherine Lim, Andrea L. 
+Hartzler, Tad Hirsch, Edward H. Wagner, Evette 
+Ludman, and James D. Ralston. 2017. How Values 
+Shape Collaboration Between Patients with 
+Multiple Chronic Conditions and Spousal 
+Caregivers. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI ’17), 5257–5270. 
+https://doi.org/10.1145/3025453.3025923 
+
+Jed R Brubaker, Caitlin Lustig, and Gillian R Hayes. 
+2010. PatientsLikeMe: Empowerment and 
+Representation in a Patient-Centered Social 
+Network. In CSCW ’10 Workshop on research in 
+healthcare: past, present, and future. Retrieved 
+September 19, 2017 from 
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=
+10.1.1.460.6665&rep=rep1&type=pdf 
+
+Scott E Caplan and Jacob S Turner. 2007. Bringing 
+theory to research on computer-mediated 
+comforting communication. Computers in Human 
+Behavior 23, 2: 985–998. 
+https://doi.org/10.1016/j.chb.2005.08.003 
+
+Yunan Chen, Victor Ngo, and Park Sun Young. 
+2013. Caring for Caregivers: Designing for 
+Integrality. In Proceedings of the ACM 2013 
+Conference on Computer Supported Cooperative 
+Work (CSCW’13), 91–102. 
+https://doi.org/10.1145/2441776.2441789 
+
+Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, 
+Wanda Pratt, and Julie A. Kientz. 2014. 
+Understanding quantified-selfers’ practices in 
+collecting and exploring personal data. In 
+Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI’14), 1143–
+1152. https://doi.org/10.1145/2556288.2557372 
+
+Sunny Consolvo, Katherine Everitt, Ian Smith, and 
+James A. Landay. 2006. Design requirements for 
+technologies that encourage physical activity. In 
+Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI ’06), 457–466. 
+https://doi.org/10.1145/1124772.1124840 
+
+Sunny Consolvo, Predrag Klasnja, David W. 
+McDonald, Daniel Avrahami, Jon Froehlich, Louis 
+LeGrand, Ryan Libby, Keith Mosher, and James a. 
+Landay. 2008. Flowers or a robot army?: 
+Encouraging awareness & activity with personal, 
+mobile displays. In Proceedings of the ACM 
+Conference on Ubiquitous Computing 
+(UbiComp’08), 54–63. 
+https://doi.org/10.1145/1409635.1409644 
+
+9. 
+
+10. 
+
+11. 
+
+12. 
+
+13. 
+
+14. 
+
+15. 
+
+16. 
+
+17. 
+
+Neil S. Coulson. 2005. Receiving Social Support 
+Online: An Analysis of a Computer-Mediated 
+Support Group for Individuals Living with Irritable 
+Bowel Syndrome. CyberPsychology & Behavior 8, 
+6: 580–584. https://doi.org/10.1089/cpb.2005.8.580 
+
+David Coyle and Gavin Doherty. 2009. Clinical 
+Evaluations and Collaborative Design: Developing 
+New Technologies for Mental Healthcare 
+Interventions. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI’09), 2051–2060. 
+https://doi.org/10.1145/1518701.1519013 
+
+Andy Crabtree, Peter Tolmie, and Will Knight. 
+2017. Repacking “Privacy” for a Networked World. 
+Computer Supported Cooperative Work: CSCW: An 
+International Journal 26, 4–6: 453–488. 
+https://doi.org/10.1007/s10606-017-9276-y 
+
+Karen Donelan, Craig A Hill, Catherine Hoffman, 
+Kimberly Scoles, Penny Hollander Feldman, Carol 
+Levine, and David Gould. 2002. Challenged to 
+care: informal caregivers in a changing health 
+system. Health aff (Millwood) 21, 4: 222–31. 
+https://doi.org/10.1377/HLTHAFF.21.4.222 
+
+Susannah Fox and Joanna Brenner. 2012. Family 
+Caregivers Online. Pew Research Center Internet & 
+Technology. Retrieved September 19, 2017 from 
+http://www.pewinternet.org/2012/07/12/family-
+caregivers-online/ 
+
+Victoria Louise Franklin, Alexandra Greene, 
+Annalu Waller, Stephen Alan Greene, and Claudia 
+Pagliari. 2008. Patients’ engagement with “Sweet 
+Talk” - a text messaging support system for young 
+people with diabetes. Journal of medical Internet 
+research 10, 2. https://doi.org/10.2196/jmir.962 
+
+Carolina Fuentes, Valeria Herskovic, Jurgen 
+Heysen, and Monica Tentori. 2013. Towards a 
+technology for caregivers’ emotional expression 
+and self-reflection. In Proceedings of International 
+Conference on Ubiquitous Computing and Ambient 
+Intelligence (UCAmI ’13), 143–150. 
+https://doi.org/10.1007/978-3-319-03176-7_19 
+
+D Gammon, E Arsand, O A Walseth, N Andersson, 
+M Jenssen, and T Taylor. 2005. Parent-child 
+interaction using a mobile and wireless system for 
+blood glucose monitoring. Journal of Medical 
+Internet Research 7, 5: e57. 
+https://doi.org/10.2196/jmir.7.5.e57 
+
+Roland Gasser, Dominique Brodbeck, Markus 
+Degen, Jürg Luthiger, Remo Wyss, and Serge 
+Reichlin. 2006. Persuasiveness of a Mobile 
+Lifestyle Coaching Application Using Social 
+Facilitation. In Proceedings of International 
+Conference on Persuasive Technology 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 1118. 
+
+19. 
+
+20. 
+
+21. 
+
+22. 
+
+23. 
+
+(Persuasive’06), 27–38. 
+https://doi.org/10.1007/11755494_5 
+
+Rachael Gooberman-Hill and Shah Ebrahim. 2006. 
+Informal care at times of change in health and 
+mobility: A qualitative study. Age and Ageing 35, 
+3: 261–266. https://doi.org/10.1093/ageing/afj065 
+
+Ian H. Gotlib. Interpersonal and Cognitive Aspects 
+of Depression. Current Directions in Psychological 
+Science 1, 149–154. 
+https://doi.org/10.2307/20182162 
+
+Andrea Grimes, Desney Tan, and Dan Morris. 2009. 
+Toward technologies that support family reflections 
+on health. In Proceedinfs of the ACM Conference 
+on Supporting Group Work (GROUP’09), 311–320. 
+https://doi.org/10.1145/1531674.1531721 
+
+Gillian R. Hayes and Gregory D. Abowd. 2006. 
+Tensions in designing capture technologies for an 
+evidence-based care community. In Proceedings of 
+the SIGCHI conference on Human Factors in 
+computing systems (CHI ’06), 937–946. 
+https://doi.org/10.1145/1124772.1124911 
+
+Lesa Lorenzen Huber, Kalpana Shankar, Kelly 
+Caine, Kay Connelly, L. Jean Camp, Beth Ann 
+Walker, and Lisa Borrero. 2013. How In-Home 
+Technologies Mediate Caregiving Relationships in 
+Later Life. International Journal of Human-
+Computer Interaction 29, 7: 441–455. 
+https://doi.org/10.1080/10447318.2012.715990 
+
+Jina Huh and Mark S Ackerman. 2012. 
+Collaborative Help in Chronic Disease 
+Management: Supporting Individualized Problems. 
+In Proceedings of the ACM Conference on 
+Computer Supported Cooperative Work (CSCW’12), 
+853–862. https://doi.org/10.1145/2145204.2145331 
+
+24.  M Jacob, E Frank, D J Kupfer, and L L Carpenter. 
+
+25. 
+
+26. 
+
+1987. Recurrent depression: an assessment of 
+family burden and family attitudes. The Journal of 
+clinical psychiatry 48, 10: 395–400. Retrieved 
+September 18, 2017 from 
+http://www.ncbi.nlm.nih.gov/pubmed/3667537 
+
+Thomas Joiner and James C. Coyne. 1999. The 
+interactional nature of depression: Advances in 
+interpersonal approaches. American Psychological 
+Association. https://doi.org/10.1037/10311-000 
+
+Gabor I. Keitner, Chrisine E. Ryan, I. W. Miller, R. 
+Kohn, D. S. Bishop, and N. B. Epstein. 1995. Role 
+of the family in recovery and major depression. 
+American Journal of Psychiatry 152, 7: 1002–1008. 
+https://doi.org/https://dx.doi.org/10.1176/ajp.152.7.
+1002 
+
+27. 
+
+Gabor I Keitner and Ivan W Miller. 1990. Family 
+functioning and major depression: an overview. 
+
+28. 
+
+29. 
+
+30. 
+
+31. 
+
+32. 
+
+American Journal of Psychiatry 147, 9: 1128–1137. 
+https://doi.org/10.1176/ajp.147.9.1128 
+
+Predrag Klasnja and Wanda Pratt. 2012. Healthcare 
+in the pocket: Mapping the space of mobile-phone 
+health interventions. Journal of Biomedical 
+Informatics 45, 1: 184–198. 
+https://doi.org/10.1016/j.jbi.2011.08.017 
+
+Juddy Kopp. 1988. Self-monitoring: A literature 
+review of research and practice. Social Work 
+Research and Abstracts 24, 4: 8–20. 
+https://doi.org/10.1093/swra/24.4.8 
+
+Ian Li, Anind Dey, and Jodi Forlizzi. 2011. 
+Understanding My Data, Myself: Supporting Self-
+Reflection with Ubicomp Technologies. In 
+Proceedings of the ACM Conference on Ubiquitous 
+Computing (Ubicomp’11), 405–414. 
+https://doi.org/10.1145/2030112.2030166 
+
+Deborah Lupton. 2016. The quantified self : a 
+sociology of self-tracking. Polity. 
+
+Clara Mancini, Yvonne Rogers, Keerthi Thomas, 
+Adam N. Joinson, Blaine A. Price, Arosha K. 
+Bandara, Lukasz Jedrzejczyk, and Bashar Nuseibeh. 
+2011. In the best families: tracking and 
+relationships. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI ’11), 2419–2428. 
+https://doi.org/10.1145/1978942.1979296 
+
+33.  Mark Matthews and Gavin Doherty. 2011. In the 
+
+34. 
+
+35. 
+
+36. 
+
+mood: Engaging teenagers in psychotherapy using 
+mobile phones. In Proceedings of the SIGCHI 
+conference on Human Factors in computing 
+systems (CHI’11), 2947–2956. 
+https://doi.org/10.1145/1978942.1979379 
+
+Jeff Mitchell. 2008. Understanding Depression: A 
+Complete Guide to Its Diagnosis and Treatment, 
+2nd ed. Primary Care Companion to The Journal of 
+Clinical Psychiatry 10, 3: 257. Retrieved 
+September 18, 2017 from 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC24
+46480/ 
+
+Jami L Obermayer, William T Riley, Ofer Asif, and 
+Jersino Jean-Mary. 2004. College smoking-
+cessation using cell phone text messaging. Journal 
+of American College Health 53, 2: 71–8. 
+https://doi.org/10.3200/JACH.53.2.71-78 
+
+Laura R. Pina, Sang-Wha Sien, Teresa Ward, Jason 
+C. Yip, Sean A. Munson, James Fogarty, and Julie 
+A. Kientz. 2017. From Personal Informatics to 
+Family Informatics: Understanding Family 
+Practices around Health Monitoring. In 
+Proceedings of the ACM Conference on Computer 
+Supported Cooperative Work and Social Computing 
+(CSCW ’17), 2300–2315. 
+https://doi.org/10.1145/2998181.2998362 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 1237.  William Riley, Jami Obermayer, and Jersino Jean-
+Mary. 2008. Internet and mobile phone text 
+messaging intervention for college smokers. 
+Journal of American College Health 57, 2: 245–248. 
+https://doi.org/10.3200/JACH.57.2.245-248 
+
+45. 
+
+38. 
+
+John Rooksby, Mattias Rost, Alistair Morrison, 
+Matthew Chalmers Chalmers, John Rooksby, 
+Mattias Rost, Alistair Morrison, and Matthew 
+Chalmers Chalmers. 2014. Personal tracking as 
+lived informatics. In Proceedings of SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI ’14), 1163–1172. 
+https://doi.org/10.1145/2556288.2557039 
+
+39.  Marco de Sá, Luís Carriço, and Pedro Antunes. 
+
+40. 
+
+2007. Defining personalized therapies for handheld 
+devices. In Proceedings of the ACM Symposium on 
+Applied Computing (SAC ’07), 163–164. 
+https://doi.org/10.1145/1244002.1244043 
+
+Deborah A. Salem, G. Anne Bogat, and Christina 
+Reid. 1997. Mutual help goes on-line. Journal of 
+Community Psychology 25, 2: 189–207. 
+https://doi.org/10.1002/(SICI)1520-
+6629(199703)25:2<189::AID-JCOP7>3.0.CO;2-T 
+
+41.  Marén Schorch, Lin Wan, David William Randall, 
+and Volker Wulf. 2016. Designing for Those who 
+are Overlooked - Insider Perspectives on Care 
+Practices and Cooperative Work of Elderly 
+Informal Caregivers. In Proceedings of the ACM 
+Conference on Computer-Supported Cooperative 
+Work & Social Computing (CSCW ’16), 785–797. 
+https://doi.org/10.1145/2818048.2819999 
+
+42. 
+
+43. 
+
+Karen A. Schwarz and Cheryl S. Elman. 2003. 
+Identification of factors predictive of hospital 
+readmissions for patients with heart failure. Heart 
+Lung 32, 2: 88–99. 
+https://doi.org/10.1067/mhl.2003.15 
+
+Nidhi Sharma, Subho Chakrabarti, and Sandeep 
+Grover. 2016. Gender differences in caregiving 
+among family - caregivers of people with mental 
+illnesses. World journal of psychiatry 6, 1: 7–17. 
+https://doi.org/10.5498/wjp.v6.i1.7 
+
+44.  Misook Sohn and Jeunwoo Lee. 2007. UP health: 
+Ubiquitously persuasive health promotion with an 
+instant messaging system. In CHI ’07 Extended 
+Abstracts on Human Factors in Computing Systems 
+(CHI EA ’07), 2663–2668. 
+https://doi.org/10.1145/1240866.1241059 
+
+Strauss AL and Corbin JM. 1998. Basics of 
+Qualitative Research : Techniques and Procedures 
+for Developing Grounded Theory. Sage 
+publications. Retrieved September 18, 2017 from 
+file:///C:/Users/dezel/Downloads/BASIC+OF+QU
+ALITATIVE+RESEARCH-Strauss&Corbin+1998 
+(1).pdf 
+
+46.  Matthieu Tixier and Myriam Lewkowicz. 2016. 
+
+&quot;Counting on the Group&quot;: Reconciling 
+Online and Offline Social Support among Older 
+Informal Caregivers. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI ’16), 3545–3558. 
+https://doi.org/10.1145/2858036.2858477 
+
+Tammy Toscos, Kay Connelly, and Yvonne Rogers. 
+2012. Best Intentions: Health Monitoring 
+Technology and Children. In Proceedings of the 
+SIGCHI conference on Human Factors in 
+Computing Systems (CHI ’12), 1431–1440. 
+https://doi.org/10.1145/2207676.2208603 
+
+Cornelia F. van Uden-Kraan, Constance H. C. 
+Drossaert, Erik Taal, Bret R. Shaw, Erwin R. 
+Seydel, and Mart A. F. J. van de Laar. 2008. 
+Empowering Processes and Outcomes of 
+Participation in Online Support Groups for Patients 
+With Breast Cancer, Arthritis, or Fibromyalgia. 
+Qualitative Health Research 18, 3: 405–417. 
+https://doi.org/10.1177/1049732307313429 
+
+C Y Wang and M M Fenske. 1996. Self-care of 
+adults with non-insulin-dependent diabetes 
+mellitus: influence of family and friends. Diabetes 
+Educ 22, 5: 465–70. Retrieved from 
+http://www.ncbi.nlm.nih.gov/pubmed/8936125 
+
+47. 
+
+48. 
+
+49. 
+
+50.  Marsha White and Steve M Dorman. 2001. 
+
+51. 
+
+Receiving social support online: Implications for 
+health education. Health Education Research: 
+Theory & Practice Pages 16, 6: 693–707. 
+https://doi.org/10.1093/HER/16.6.693 
+
+Naomi Yamashita, Hideaki Kuzuoka, Keiji Hirata, 
+Takashi Kudo, Eiji Aramaki, and Kazuki Hattori. 
+2017. Changing Moods: How Manual Tracking by 
+Family Caregivers Improves Caring and Family 
+Communication. In Proceedings of the SIGCHI 
+Conference on Human Factors in Computing 
+Systems (CHI ’17), 158–169. 
+https://doi.org/10.1145/3025453.3025843 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 222Page 13 
+ 
+ 
+ 
+ 
+ 
+ 
+

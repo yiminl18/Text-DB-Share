@@ -1,0 +1,37 @@
+Table of Contents:
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work
+    5.1 Value Sensitive Design
+    5.2 Sharing Applications
+    5.3 Sharing For Social Support
+    5.4 Sharing In Activity Applications
+    5.5 Location Sharing
+    5.6 Varying Sharing Granularity
+6. Conceptual Investigations
+7. Scenario Development
+    7.1 Scenario 1: Goal Achievement
+    7.2 Scenario 2: Leaving Work Early
+    7.3 Scenario 3: Late Night Activity
+    7.4 Scenario 4: Finding a Running Buddy
+8. Technical Investigations
+    8.1 Detailed Single-Day View
+    8.2 Longitudinal View
+    8.3 Limited Hours View
+    8.4 Interactive Deletion
+    8.5 Interactive Transformation
+9. Enabling Interactive Transformation
+    9.1 Modify Implementation
+    9.2 Offset Implementation
+    9.3 Implementation Details and Extensions
+10. Empirical Investigation
+    10.1 Study Design
+    10.2 Participants
+    10.3 Results and Discussion
+11. Design Considerations
+12. Conclusion
+13. Acknowledgments
+14. References

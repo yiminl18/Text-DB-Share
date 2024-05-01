@@ -1,0 +1,1341 @@
+ConCap: Designing to Empower Individual Reﬂection on
+Chronic Conditions using Mobile Apps
+Harold Thimbleby
+Future Interaction Laboratory
+Swansea University
+harold@thimbleby.net
+
+Tom Owen, Jennifer Pearson
+Future Interaction Laboratory
+Swansea University
+t.owen,j.pearson@swansea.ac.uk
+
+George Buchanan
+Centre for HCI Design
+City University London
+george.buchanan.1@city.ac.uk
+
+ABSTRACT
+The  world  is  faced  with  a  growing  number  of  people  who 
+live  with  chronic  medical  conditions.  There  have  been  nu-
+merous  digital  interventions  into  personal  management  of 
+these  diseases  in  recent  years,  yet  gaps  remain  in  the  HCI 
+literature.  In  particular,  we  lack  a  systematic  understand-
+ing  of  user  requirements  in  tools  that  support  independent 
+management while away from external inﬂuences.  This pa-
+per presents a ﬁrst investigation into low-intervention support 
+for self-management. A mobile application enabled individu-
+als to capture contextual information related to their health in 
+the form of photographs.  Through a month-long user study, 
+we identify four management trends amongst our participants 
+and describe their inﬂuence on mobile application adoption.
+
+Author Keywords
+Health care; chronic disease management; ubiquitous 
+computing; deployment studies; diabetes
+
+ACM Classiﬁcation Keywords
+H.5.m.  Information  Interfaces  and  Presentation  (e.g.  HCI):
+Miscellaneous
+
+INTRODUCTION
+The HCI community is increasingly engaged with investigat-
+ing requirements and designs for digital healthcare. This ﬁeld 
+can directly impact people’s lives,  with tangible beneﬁts for 
+individuals. The existing research in this domain has emerged 
+into three broad strands, which demark different approaches 
+to the role of digital systems in an individual’s health.
+The  ﬁrst,  and  perhaps  predominant  approach  is  the  use  of 
+‘persuasive’  or  ‘nudge’  interactions  that  encourage  patients 
+to adhere to speciﬁc behaviours that contribute to good health 
+(e.g.,  [2,  21]).  This  theme  beneﬁts  from  a  wider  contem-
+porary interest in persuasive interaction and ‘nudge’ in HCI 
+generally. There is also a clear potential beneﬁt in helping in-
+dividuals take speciﬁc actions that are likely to improve their 
+wellbeing. However, there can be concerns that this technique 
+necessarily  imposes  normalised  models  that  may  be  a  poor
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for  personal  or 
+classroom use is granted without fee provided that copies are not made or distributed 
+for proﬁt or commercial advantage and that copies bear this notice and the full cita-
+tion on the ﬁrst page.  Copyrights for components of this work owned by others than 
+ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or re-
+publish, to post on servers or to redistribute to lists, requires prior speciﬁc permission 
+and/or a fee. Request permissions from Permissions@acm.org.
+MobieHCI’15, August 24 - 27, 2015, Copenhagen, Denmark
+Copyright  c(cid:13) 2015 ACM. ISBN 978-1-4503-3652-9/15/08...$15.00
+DOI: http://dx.doi.org/10.1145/2785830.2785881
+
+clinical match to an individual patient, and that in the long-
+term, maintenance of new behaviours can fail. This style of
+research relies on encoding guidance or advice from medical
+experts into tools, games or other interactive experiences that
+encourage adoption of the expert opinion.
+
+A sharply different, but complementary, technique is remote
+monitoring. These place the clinical expert in a central
+role. Records of the patient’s clinical readings, or their be-
+haviour, are ﬁrst gathered via sensors and telecommunication
+(e.g., [16]). Expert(s) then review the data, diagnose prob-
+lems, respond to critical events, or provide tailored guidance.
+This approach brings the patient closer to clinical expertise,
+and enhances treatment by improved information gathering
+and targetted advice. There are countervailing concerns that
+the high level of monitoring can appear intrusive, or increase
+conﬂict between a patient and clinician, if the level of advice
+is found to be overly prescriptive. The scalability of the costs
+inherent in this approach, particularly of the availability of
+sufﬁcient volumes of expertise, is also a key practical issue.
+
+Our own research follows a third tradition, which seeks to en-
+able individual management of a patient’s condition. This po-
+tentially avoids the costly routine involvement of clinicians,
+but can also enable a more detailed discussion between pa-
+tient and clinician when required. The sense of intrusion
+or compulsion in the other two routes can also be avoided.
+However, the technique does not directly address the issue
+of conformance that typically underpin the research in ei-
+ther persuasion or remote monitoring. This setting of health-
+management has been labelled as ‘unanchored’ [13], as it is
+detached from the inﬂuences of external actors.
+
+The smartphone has transformed the research landscape
+across all these approaches, reducing the need for traditional
+PCs. While some substantial research has been undertaken
+in the both persuasive and remote monitoring techniques, the
+third, self-management, ﬁeld lags behind in terms of both re-
+search and practice in the current technological environment.
+
+Diabetes is a chronic condition that affects millions of peo-
+ple worldwide. It has been estimated that in 2000, 2.8% of
+the world’s populace were sufferers [29]. The prevalence of
+diabetes is expected to rise to 4.4% by 2030, due to the in-
+creasing number of older and obese individuals. This equates
+to the worldwide population with diabetes rising from 171
+to 366 million. The increasing impact of chronic conditions
+such as diabetes, makes it timely to further investigate the po-
+tential for mobile devices to support their management.
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark105This paper presents an investigation into effective design
+within the domain of chronic condition management in unan-
+chored settings. The longitudinal deployment of ConCap, a
+mobile app, uncovers the contexts where taking photographs
+proved an effective tool for reﬂection for those with diabetes.
+Participants highlighted the challenges of using mobile inter-
+ventions in everyday social situations, and demonstrated how
+mobile apps ﬁt into existing management strategies.
+
+BACKGROUND
+Chronic conditions are a matter rising concern for many
+health organisations. The World Health Organisation esti-
+mated that in 2008 these conditions accounted for 36 million
+deaths globally [24]. The management of chronic conditions
+is a major societal challenge, and HCI can make a substantial
+contribution. Though the ﬁeld is young, there are already a
+number of diverging approaches to HCI in the domain.
+
+The ‘Patient Empowerment’ [8] movement has seen practi-
+tioners attempt to move patients from being ‘passive recipi-
+ents of services’ to ‘being active and self-determining parts
+of their healthcare’ [23]. The aim is to ensure that patients
+are more prominently involved in their own treatment, from
+decision-making to an increased role in daily maintenance.
+
+Patients with chronic conditions are no longer simply given
+regimes they must follow to manage their condition. Instead,
+clinicians aim to provide individuals with problem-solving
+skills that relate speciﬁcally to their circumstances [3]. By
+enabling patients to solve problems that they encounter, they
+can take more complete control of their condition and become
+a key decision-maker in their treatment. Patient input into
+their own medical records is also being explored [28].
+
+Patients who have been managing chronic conditions are
+likely to have formed their own routines and habits as part of
+their management [20]. These habits then provide individu-
+als with reassurance and predictability, while also potentially
+allowing for tight control over their condition. However dis-
+rupting good routines by introducing technology may cause a
+lack of uptake in their usage due to a break in routine. Adding
+in a large scale tertiary device seems inappropriate and per-
+haps, interventions must be made on a smaller scale.
+
+Chronic Condition Management
+Researchers in mobile interaction have already investigated
+the speciﬁc needs of patients with diabetes. The key research
+is from Mamykina et al. [17]. Their initial research focussed
+on enabling those with diabetes reﬂect on their condition,. In
+later work, they [16] used a mobile intervention to allow for
+people with diabetes to gather data about their condition for
+the purpose of feedback from peers and clinicians.
+
+Their system, MAHI, captured data on mobile phones, lead-
+ing to, separate management tasks using desktop PCs. It was
+well received in use, and the recorded information was in
+keeping with the participants’ existing monitoring. The un-
+derlying interest in patients’ management of their conditions
+presents the closest existing research to our own. However,
+we aim to understand how modern mobile technology can
+
+support self-reﬂection in the management of diabetes, inde-
+pendently of the desktop. MAHI predated the smartphone,
+and used a limited range of mobile interaction. There is a
+vast scope for more sophisticated and usable interventions.
+
+One speciﬁc approach that has been attempted to capture rich
+information in a lightweight form was to use photo imagery
+alongside glucose reading results. Mamykina et al introduced
+the use of photographs, which they only reported in summary
+form (e.g. the number of pictures taken). Smith and Frost [26]
+took a more speciﬁc approach, associating images of food
+with glucose levels. They visualised a timeline of images and
+glucose results, which had been colour-coded based on their
+likely contribution to health. However, Smith et al used desk-
+top PCs, and we [20] have demonstrated that this can lead to
+low levels of capture and reﬂection. The use of photographs
+for reﬂection is thus ripe for further investigation, to iden-
+tify if ‘casual’ photography can genuinely help those with a
+chronic condition understand and manage their disease.
+
+It has been noted that clinical success should not be the
+only measure of an appropriate personal healthcare interven-
+tion [1]. The considerations of how technology may impact
+on a persons everyday life are also critical. Previous HCI
+work has adopted this stance, to allow individuals to share
+experiences that are richer than bare health data. Personal re-
+ﬂections have been added to medical data capture [10, 18].
+Wagner et al. [27] suggest that the management of chronic
+conditions is multi faceted: made up of a variety of stakehold-
+ers who assist in an individuals’ own personal management.
+By providing the capability to capture wider forms of infor-
+mation, a more complete picture of an individuals’ current
+state of management can be determined by the stakeholders.
+
+Previous work has sought to enhance the ability of individu-
+als to collate health information for dissemination to various
+external stakeholders. We believe there is currently an oppor-
+tunity to provide further support when individuals are away
+from external sources, or perhaps do not wish to share partic-
+ular parts of their recorded data. It is in this space where we
+position our research, while additionally considering how to
+provide a platform for sustained engagement from users.
+
+Personal Health Informatics
+The gathering and reﬂection on information to control a
+chronic condition can also be understood as a form of per-
+sonal informatics. When studying those gathering “quanti-
+ﬁed self” data, Choe et al report that 35% of their respondents
+gathered data about their health [6]. While we do not know
+how many of their respondents had a chronic condition, that
+work clearly demonstrates the frequency of the gathering of
+health data generally. Li et al [14] introduce a model that di-
+vides this process into different stages, from preparation to
+reﬂection. One issue with this model from the perspective of
+chronic management is that, in contrast to Mamykina’s [17]
+and our [20] models, it focuses on data gathering, and plays
+less attention to reﬂection: which is addressed in one, rather
+than several steps, of the process.
+
+The use of photographs as a speciﬁc form of capturing data
+about food is also established. Beside’s Mamykina’s work,
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark106Cordiero et al [7] have recently focussed on the topic of
+photo-journaling food as a general phenomenon, often tied
+to attempts to measure healthy eating or general wellbeing.
+However, as we noted previously [20]. and indeed Cordeiro
+reiterates, this is an unreliable method for gathering diagnos-
+tic and speciﬁc data such as calorie intake. Those focussing
+on diabetes research have progressed to analysing not only
+energy intake, but also energy consumption (e.g. exercise),
+personal context (e.g. stress, illness) and environmental is-
+sues (e.g. weather, stress at work).
+
+MOTIVATION
+People with diabetes need to carefully control the level of glu-
+cose in their blood. Patients use one or more glucose-meters
+to identify their current glucose level. Based on this informa-
+tion, adjustments to diet or exercise can ensure that the read-
+ing remains in, or returns to, the ideal range. Effective man-
+agement includes the prediction of future changes, in light of
+anticipated eating and exercise. Patients must therefore anal-
+yse multiple, conﬂicting factors, to predict the response of
+their glucose levels in different contexts.
+
+Our research builds on earlier studies of the monitoring needs
+of people with diabetes. Previous work has been based on
+pre-conceived regimens of ideal monitoriing practices.
+In
+contrast, we wanted to undertake the ﬁrst study that elic-
+its what self-directed behaviours emerge when users work
+“unanchored”, independent of clinical or peer oversight. As
+we shall see, there are a number of different strategies, from
+strict regimens to more ﬂexible, responsive plans.
+
+To represent how a mobile application for diabetes may be
+used in daily life, we developed a potential usage scenario
+based on prior research [17, 16, 20]. The usage scenario was
+used to guide the design of the ConCap application.
+
+Lucy has had type 1 diabetes for 15 years and typically
+checks her glucose value four times a day. She has re-
+cently decided to start attending the gym, in an effort to
+improve her ﬁtness. Unsure of how the increased level
+of exercise will impact on her need for insulin, she be-
+gins to keep a record of her glucose scores and location
+on her mobile phone. Using this data, she can correlate
+the occasions that she was at the gym and how much
+it affects her glucose scores. She can then make more
+accurate future decisions about how much insulin is re-
+quired on days she attends the gym.
+
+While the scenario suggests how applications may be used in
+a real world setting, the expected outcomes are not compre-
+hensive. There are likely to be many individual approaches to
+personal condition management. Therefore, accurately pre-
+dicting how the application may be used is perhaps unfea-
+sible. Yet, the scenarios provide a crucial link back to the
+research conducted previously. The design of the application
+relied heavily on both the previous literature in the area and
+the data gathered from the previous research [17, 20].
+
+We undertook a longitudinal study to obtain concrete data on
+the use of ConCap in real-world settings. Data on long-term
+use of management tools is still sparse, and it is unclear how
+
+an tool such as ConCap will be accepted into the daily habits
+of people with diabetes. The study will reveal if apps like
+ConCap can assist people with diabetes manage their condi-
+tion. Furthermore, unanchored strategies are undocumented:
+how tools for independent management are accepted and used
+is not known. Finally, a mobile, unanchored system may re-
+veal previously unknown behaviours.
+
+Previous work on supporting individual well-being has
+largely focused on systems that require external interventions
+from clinicians or family members. In contrast, we know lit-
+tle of how mobile applications can support self-management
+of personal health information. It is clear that people with dia-
+betes often have to deal with challenging situations outside of
+clinical appointments. In these cases, termed “unanchored”
+settings, individuals have to calculate their own treatment de-
+cisions based on current, and past information.
+
+The motivation behind our research therefore, is twofold.
+Firstly, the primary aim of the research is to approach an un-
+derstanding of how mobile interventions can support man-
+agement of health information. Secondly, the study sets out
+to contribute additional knowledge to the domain of mobile
+well-being support without external intervention.
+
+SYSTEM DESIGN
+ConCap is a mobile app that allows a user to enter glucose
+scores and insulin units, and present the information as a
+graph. ConCap also allows photographs to be taken using
+a phone’s built-in camera, and gather location information
+which is presented as a map snapshot. Rich media such as
+images and location have been shown to be help users in pre-
+vious self-reﬂection systems [9, 22]. However, most systems
+were not focused on chronic disease management.
+
+Within the domain of managing chronic conditions, systems
+that support images have required desktop PCs [26, 15]. Im-
+ages were therefore captured on cameras and phones before
+being collated on a central device. ConCap allows users to
+take photos using their mobile phone’s camera. Even so, in-
+cluding images in diabetes management tools has been been
+positively received by users [26]. ConCap allows the images
+captured by users to be automatically stored and displayed
+alongside the health data entered on one mobile device.
+
+As well as including imagery data, ConCap can also capture
+a user’s location at regular intervals during the day. Location
+data has been seen as a useful tool in pervasive health appli-
+cations [12]. In principle, users can trackl thir location across
+a period of time, which in turn may allow them to recall what
+activities were performed: e.g. if an application indicates that
+a user had been close to a gym address, the user may then be
+able to recall that they had performed an hour of exercise.
+
+The ConCap application was not designed to replace partic-
+ipants’ existing management patterns, or to provide clinical
+assistance.
+Instead, ConCap acts as a platform to capture
+daily activities and to display information relevant to diabetes
+management. The aim of ConCap was to assist in trend-
+spotting, and understanding of causes of glucose scores by
+capturing daily activities through imagery data, and act as a
+supplementary glucose reading logging tool.
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark107database that stored values throughout the application. This
+database, along with images captured, was retrieved at the
+end of the study. This data makes it possible to assess what
+factors participants considered to be important to the manage-
+ment of their condition. Participant consent was sought be-
+fore accessing images taken using the application. To protect
+anonymity, the names that appear below have been changed.
+
+Smartphones, while common, are not used by everyone. To
+avoid learning effects and general unfamiliarity with devices,
+only experienced users of mobile phones were recruited. Al-
+though these technologies afford individuals an opportunity
+to increase their health literacy, a minimum level of proﬁ-
+ciency is necessary before users can effectively use the sys-
+tem resources to manage their illness [11].
+
+To ensure participants remained engaged across the study,
+regular contact ‘checkpoints’ were used. In addition to entry
+(start of week 1) and exit interviews (end of week 4), con-
+tact was made with participants at the end of weeks 1 to 3.
+The weekly contact involved short telephone conversations,
+arranged at a time convenient to the participant and in all ex-
+cept one case, exactly seven days after the previous contact.
+
+Throughout the course of the study, participants were in-
+formed that any subject they are not comfortable with dis-
+cussing would be omitted from the study, and that they was
+no expectation to discuss embarrassing topics. We explained
+that the study was not an evaluation on their ability or knowl-
+edge, instead it was an evaluation of the impact the applica-
+tion may have on the management of their condition.
+
+At the exit interview, we elicited the participants’ general us-
+age of ConCap and the photos they took during the study.
+Throughout the interviews, note-taking and audio recording
+were used to capture data. Permission was requested for au-
+dio recording for the purpose of later analysis.
+
+Participants
+A total of 12 participants were recruited for the study, all
+of whom had had type 1 diabetes for a period of 2 years or
+longer. Type 1 diabetes is a condition where a person’s pan-
+creas does not produce insulin, meaning there is no means to
+break down the glucose in the body.
+
+There were 7 female and 5 male participants, whose ages
+ranged from 21 - 56 (average age of 32.25). They had lived
+with diabetes for a total of 201 years (mean=18.27, sd = 10.4).
+All of the participants were regular users of glucose monitor-
+ing devices, and had regularly used Android for at least one
+year, with current access to an Android phone. A summary
+of the participants, is presented in Table 1.
+
+Analysis
+The interview sessions formed the primary area of analy-
+sis, with each serving different purposes. The entry session
+elicited each individual’s existing attitudes and management
+practices of diabetes. The exit interview sessions were used
+to query participants regarding their usage of the ConCap ap-
+plication during the four-week long study period.
+
+Notes were taken throughout each interview, capturing im-
+portant pieces of information, and recording key moments to
+
+Figure 1. Screenshot ConCap app. The home screen of the app displays
+input information on a timeline. Icons at the top provide navigation to
+functions such as input of information and settings.
+
+The main screen of the application is shown in Figure 1: the
+displayed graph makes use of the achartengine 1 open source
+graphing library for Android. The thumbnail images can be
+made full screen by pressing on thumbnail itself.
+
+DEPLOYMENT STUDY
+The aim of our research is to discover the user behaviours and
+needs with mobile self-management tools. While studies of
+persuasive and remote monitoring systems have increasingly
+captured user behaviour over several weeks, there is a lack of
+comparable data for self-management tools.
+
+As we were primarily concerned with longer-term use, we
+followed the diary study approach reported by Carter and
+Mankoff [5] to achieve extended, indirect, observation of nat-
+ural behaviour. The lack of existing software in common use
+led us to provide a platform for participants to capture their
+own experiences in managing their condition. We used three
+sources of data – interviews, application logs and images – to
+allow for contextualisation of data in our analysis [25].
+
+Study Methodology
+To understand the impact of ConCap on how users managed
+their diabetes, a four-week user study was conducted.
+
+Procedure
+Participants were recruited through an email call to local Di-
+abetes Support groups and sessions were organised either
+through similar correspondence, or through telephone con-
+versations. As incentive for taking part in the study, partici-
+pants were offered a sum of £114 for completion of the whole
+4 weeks. This was broken down into two £7 payments for
+completing the interview sessions, and four payments of £25
+for each week of using the ConCap application.
+
+Participants were asked to use the application to both enter
+data (such as glucose scores and taking pictures) and reﬂect
+on the data presented back to them (e.g. location and images).
+Data collection across the in-situ study was obtained from a
+
+1achartengine available at http://www.achartengine.org/
+
+Photo thumbnailInsulin doseLocation recordedGlucose readingsFunction buttons(GI,Dose,Photo,Loc.)Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark108Insulin
+Pump
+
+Records
+
+Sex Age
+
+Time
+with
+Diabetes
+20 yrs
+27 yrs
+18 yrs
+7 yrs
+21 yrs
+12 yrs
+44 yrs
+22 yrs
+13 yrs
+7 yrs
+15 yrs
+17 yrs
+
+Joe
+No
+Naira
+No
+Sarah
+No
+Paul
+Yes
+John
+Yes
+Hayley
+No
+Matt
+Yes
+Ruth
+No
+Julie
+No
+Holly
+No
+Lauren
+No
+Mark
+No
+Table 1. Details of participants at the start of the study period.
+
+Yes
+No
+No
+No
+Yes
+No
+No
+Yes
+No
+No
+No
+No
+
+37
+28
+44
+37
+34
+27
+56
+25
+23
+21
+28
+27
+
+M
+F
+F
+M
+M
+F
+M
+F
+F
+F
+F
+M
+
+Glucose
+
+Insulin
+
+C a m era
+
+L ocation
+
+Joe
+Naira
+Sarah
+Paul
+John
+Hayley
+Matt
+Ruth
+Julie
+Holly
+Lauren
+Mark
+
+57
+48
+134
+41
+14
+20
+103
+34
+11
+82
+45
+6
+Table 2. Entries into the ConCap application during the study period.
+
+57
+118
+141
+38
+49
+264
+116
+41
+13
+72
+62
+40
+
+6
+2
+33
+35
+9
+5
+4
+28
+0
+7
+10
+5
+
+0
+3
+12
+20
+9
+1
+10
+32
+0
+8
+10
+1
+
+return to with the audio recording. Upon completion of the
+study, the ﬁrst step in processing the data was to return to the
+notes to gain a brief understanding of how each participant
+used the ConCap application. The audio recordings of the in-
+terview sessions were reviewed to gain further insights, and
+double-check of the accuracy of the notes. Exact quotations
+were also transcribed from the relevant audio recordings.
+
+ConCap also logged a variety of information during the study,
+allowing veriﬁcation of participant’s reports. The application
+recorded all of the glucose and insulin information entered,
+the images taken, and locations noted. From this captured
+data, participants’ daily interactions with the application were
+determined. The application also logged instances when par-
+ticipants opened the application without entering any data.
+This provided a database with a set of log data which en-
+abled triangulation with reported incidents and behaviours
+discussed by participants in the interview sessions.
+
+RESULTS
+Over the four-week study, participants entered a signiﬁcant
+amount of data: 1011 glucose and 595 insulin enteries, 106
+photos taken and 144 locations tagged. The daily averages
+were: glucose 36.61, insulin 21.25, images 3.79 and 5.14
+locations. Unfortunately, data from Holly was partially lost
+from their ConCap database: we presented here the remaining
+information from her device, plus her interview responses.
+
+Participant Contexts
+Based on the information gathered in the entry and exit in-
+terviews, the participants were categorised into groups based
+on the current state of their health information management.
+Two main alternatives were ‘Standard’ conditions, where
+the participant’s condition and practices were stable, versus,
+’Change’ conditions where the overall pattern was in the pro-
+cess of adjustment. This further broke down into standard
+(rigid), standard (ﬂuctuating), change (voluntary) and change
+(forced), which we will now describe in further detail:
+
+Standard - Rigid - Participants within this pool were deter-
+mined to be at a phase of their management in which their
+condition was largely stable, due to their own strict control of
+
+factors. These factors include typically; the choice of food,
+times of meals and portion sizes. The participants assigned
+to this category were Joe and Ruth, who both described ex-
+tremely tight glucose control through their planning and mon-
+itoring of a variety of activities.
+
+Standard - Fluctuating - Individuals in this class are satis-
+ﬁed with their health status, yet experience moments of uncer-
+tainty in areas such a special events that disrupt the norm. The
+participants in this category were Sarah, Paul, John, Matt,
+Holly and Mark. Those in this category all expressed being
+largely happy with their control, but still experienced some
+areas of concern, such as Paul who had noticed an increase in
+his glucose levels and was determining what action to take.
+
+Change - Voluntary - Those who are going through a change
+in either their condition or management through a choice that
+they have made. The participants in this category were Naira,
+Hayley and Lauren. Hayley, for example, had recently made
+the decision to try for a baby which required her to increase
+the level of control she had previously been performing.
+
+Change - Forced - Those who are experiencing change which
+is out of their control, such as Julie who had to change treat-
+ment halfway through study and moved onto an insulin pump.
+Change was known before entry into study and likely ex-
+plained low number of interactions early on, before a change
+in medication was required by their clinicians. The only par-
+ticipant included in this category is Julie, due to her change
+of treatment plan during the study.
+
+These groups had distinct approaches to using ConCap, and
+they will be referred to throughout the rest of this paper.
+
+Images Captured
+Participants used the camera feature on the application to de-
+pict several different situations. Understanding the types of
+images taken will help reveal the scenarios where images are
+most helpful in the context of chronic disease management.
+
+All of the images from participants’ devices were collected
+and individually coded for what it depicted (e.g., a plate of
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark109food as seen in Figure 4 was labelled as ‘food and drink’).
+Four primary categories of images emerged: food and drink,
+location, scene and physical artefact.
+
+Food and Drink - Based on previous research [26] partici-
+pants were informed at the start of the study that images of
+food may be helpful. All of the participants recruited for the
+study took at least one picture that ﬁts into this category.
+
+Location - Rather than use the location maps offered on the
+application, several participants took pictures of their sur-
+roundings to represent where they had been during a day. This
+was the most prominent method of capturing location, poten-
+tially due to participants’ ability to contextualise a picture in
+a much more meaningful way than simply a map.
+
+Scene - Scenes were speciﬁc events that happened during the
+study that didn’t simply match the location category. Lauren’s
+barbecue picture (Figure 3a), was not just about place, and
+similarly, Ruth took pictures of her bedsheets in the morning.
+This was so she knew that her tests had been taken at home,
+and the photo represented the time the tests were taken (i.e.,
+on waking or before breakfast).
+
+Physical Artifact - Participants also took pictures of objects
+that they felt were relevant to their condition. For example,
+Figure 2b displays a match ticket, representing a entire day
+of activity. Similarly, Paul captured his own monitor screen
+whilst he was having a hypoglycaemic episode.
+
+Changes in Management
+By using the ConCap application, two participants were able
+to make notable differences to their management. Matt stated
+that his average glucose level had dropped half a point during
+the month. Holly noticed a trend in her daily glucose levels
+that had previously gone unnoticed. When designing the ap-
+plication, tangible impact on participants’ health had not been
+considered achievable. Yet, our low impact intervention ap-
+pears to have increased the ability of participants to manage
+and interpret their information in a meaningful way.
+
+Frequency of Use
+The approach taken to entering information into the applica-
+tion was varied across all of the participants, with the two
+primary methods of entering information being: at the time
+of a reading, and bulk inputs at set periods of time.
+
+For eight participants, their use of ConCap was sustained
+across the four weeks, with no notable or statistically sig-
+niﬁcant changes occurring. In contrast, four participants de-
+scribed how their interactions with the application had de-
+creased over the study period. The reasons given for the de-
+crease appear to correlate with the current behaviours of the
+participants reported in their entry interview.
+
+The “standard-rigid” group all showed declining use. Ruth
+was one example, stating in her exit intervew that she rarely
+recorded her glucose results, and that the novelty of using
+the application had worn off during the study period. How-
+ever, this should not be a surprise, as those with highly struc-
+tured and predictable routines are unlikely to beneﬁt strongly
+
+from self-reﬂection. Even for those with rising use, integra-
+tion could be a problem were routines were highly developed.
+
+John, in the “standard ﬂuctuating” group, had only 13 uses in
+the ﬁrst week, but rose to 42 in the ﬁnal week. His logging
+of glucose increased across the study, while his use of lo-
+cation and photographs remained consistent throughout. He
+reﬂected that he had used paper records for over 13 years, and
+altering that habit over 4 weeks was a challenge.
+
+Those in the standard ﬂuctuating or change groups used Con-
+cap more. When in intensive stages of monitoring, or engag-
+ing in ‘unusual’ activities, more data was captured: e.g. Naira
+and Lauren (Change, voluntary), Matt and Sarah (standard,
+ﬂuctuating) each showed rising use in these contexts.
+
+Occasions of Use
+There were two recurring patterns that related to the moment
+of ConCap’s use. The ﬁrst was almost universal, whereas the
+second occurred most frequently in the change groups.
+
+Almost every participant said that they were more likely to
+use the photograph and location functions during times that
+they were engaging in activities that were beyond their usual
+routine. These events often occurred at weekends. Activities
+such as eating out, alcohol consumption and increased physi-
+cal activities triggered greater use of the application.
+
+More routine events were also captured, particularly when
+control was a concern. During the initial interview, Lau-
+ren highlighted a recurring problem with minor daily hypo-
+glycaemic episodes at mid-morning. The intermittent nature
+of the episodes made arriving at a correct insulin dose each
+day difﬁcult. She speculated that her daily commute into her
+workplace was a key factor. Her work was in two different
+sites which she alternated between on different days. One of-
+ﬁce required her to walk to the workplace, and Lauren felt
+that might be contributing to her recurrent problems in the
+mornings. To capture these instances during the study, Lau-
+ren took pictures of pavements. These images represented the
+days on which she walked into work, allowing her to conﬁrm
+the correlation between days she had walked to work and days
+in which she had low blood sugars.
+
+EMERGING THEMES
+Through our analysis of the ConCap data and feedback re-
+ceived from our participants, similarities emerged between
+individuals. This section describes the key themes that arose.
+
+Exceptions
+All but two participants captured events that broke their regu-
+lar routine. Capturing unusual events was seen as important in
+pre-empting potential unusual readings later in the day. Lau-
+It ﬁrst appeared
+ren photographed a barbecue (Figure 3a).
+that this image had been taken to show that Lauren was eat-
+ing food that was atypical, and might need to be considered in
+later reﬂection. However in interview she explained that the
+image was taken to show the irregular manner in which she
+had eaten. Food at barbecues typically comes in small, infre-
+quent batches. Lauren was capturing her eating in bursts, with
+gaps of 15-30 minutes, rather than a larger amount within
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark110(a)
+
+(b)
+
+(a)
+
+(b)
+
+Figure 2. (a) Matt’s image of home decorating equipment, representing
+increased physical activity (b) Matt took a picture of a Rugby match
+ticket, capturing a day of increased walking, alcohol and fast food.
+
+Figure 3. (a) Lauren captured an image at a barbecue to represent the
+small, irregular intakes of food likely to complicate insulin dosing. (b)
+Lauren usually took public transport to work, but sometimes walked.
+To illustrate these days, she took pictures of street pavements.
+
+a condensed period of time. This pattern makes calculating
+insulin injections challenging, and Lauren had marked this
+event to help her understand her glucose trend that day.
+
+Habits and Routines
+As seen in previous literature ([17, 20]), those engaging in di-
+abetes self-management are likely to form methods to control
+their condition, which they implement recurrently. This was
+seen in the two “standard” groups, for whom a new interven-
+tion interrupted their routine, and consequently part of these
+groups struggled to integrate ConCap into their management.
+
+Paul: “I didn’t use it that often, but occasionally when
+something interesting happened I took a photo.”
+
+John: “I think it takes a bit more time for something like
+this to become part of a routine, I have been using paper
+and an insulin pump since 2001.”
+
+Conversely, Lauren was tring to get into a habit of walking,
+and so was altering her routine. This increased physical ac-
+tivity was not yet routine, and Lauren was experiencing great
+variation in her glucose readings. As noted above, to help
+her analysis, she tagged the occasions she walked to work by
+taking pictures of the pavement on her route. This allowed
+her to correlate between her walking and glucose levels, and
+in turn adjust her insulin dosing. It appears then, that during
+moments of change ConCap was able to assist in the under-
+standing of the impact new factors were likely to have.
+
+Reﬂection
+Support for reﬂection was a common requirement we encoun-
+tered in our earlier research on diabetes self-management.
+Two thirds of the participants, none of whom were in the
+Standard/Stable condition, reported that ConCap was help-
+ful in acquiring some understanding of their condition. The
+underlying reﬂection was helped in several different ways:
+
+Sarah was the only participant who stated that the graph pro-
+vided her with a sense of satisfaction in her diabetes con-
+trol. But, the graph also highlighted points where her glucose
+scores were not so well controlled.
+
+In order to distinguish glucose readings taken before and af-
+ter breakfast, Ruth took several images which represented
+Scenes. She typically captured images of bedsheets illus-
+trated where she was at the time of taking a reading. There-
+fore, the bedsheets were designed to show that she was still
+in bed in the morning and had not yet got out of bed to have
+breakfast. The image had now added an extra layer of con-
+text to the morning glucose results, and allowed to quickly
+distinguish results for the purpose of later understanding.
+
+Ruth typically used the location and the photographs at the
+same time, but felt that the location information provided lit-
+tle insight. Ruth attributed this to the fact that that she was
+usually at her desk or at home, and as such location informa-
+tion didn’t offer any additional insight.
+
+“I generally took pictures of what I ate, or where I was
+so I could look back and remind myself where I was when
+I took a reading.”
+
+Ruth thus appears to have used the application to capture set-
+tings where she had taken a glucose reading, rather than cap-
+turing daily activities when they happened.
+
+Holly highlighted that she took pictures if she went out for
+dinner, or a coffee. These events are outside her routine, and
+typically occurred at weekends, leading to more photography:
+
+“If I can see a picture of what I have eaten it gives me a
+better idea of what my blood sugars are doing and why.”
+
+Sarah: “Sometimes when things are going well, you
+don’t really realise it. When you see it on the graph,
+you are kind of pleased with yourself.”
+
+“I had a couple of hypos and I looked back at the pho-
+tographs and saw that I had a coffee and a mufﬁn and
+had really overestimated the insulin.”
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark111By using the photographs in this manner, Holly was able to
+determine that she had incorrectly calculated a dosage of in-
+sulin. During the exit interview, Holly highlighted this issue
+with little prompting, suggesting that by viewing the glucose
+and insulin values alongside an image of the food, she had a
+distinct memory of the event. It is possible then, that ConCap
+can facilitate reﬂective learning around speciﬁc events.
+
+Environmental Factors in Capture
+During entry interviews, the performing medical tasks in a
+public setting was highlighted as a concern. The process of
+piercing skin for a glucose reading, or carrying out injections
+for insulin, were described as socially awkward. Participants
+expressed similar, if lesser, concerns with mobile phones.
+Mark described not making use of the photo feature while us-
+ing the bathroom (which he used for glucose tests to prevent
+people seeing, as per O’Kane [19]), who dubs this problem
+Unexpected Social Situations. Sarah also commented on the
+challenge of ensuring data entry during social situations:
+
+“I entered results every time, except when it was rude to
+get my phone out then I would retrospectively add them.”
+
+DISCUSSION
+The entry interviews conﬁrmed that few participants regularly
+logged their health information (3 of 14). Those who regu-
+larly logged were the also most frequent users of ConCap.
+
+Previous research has shown the value of “anchored” man-
+agement, supported by analysis from experts [16, 26]. Con-
+tinuous use was associated with superior management, and
+seen as a positive sign of acceptance. However, our study
+shows that when the focus is shifted from anchored, moni-
+tored, compliance, this pattern of behaviour is displaced.
+
+Nearly half of the participants felt that they would struggle
+to use ConCap concurrently over a substantial period of time
+(2 rarely, 4 periodically). They were content in their current
+management and knowledge, and found a personal balance
+between rigorous inspection of results and ‘getting on with
+life’. These respondents were in our “standard” groups, with
+either rigid regimes or limited ﬂuctuation.
+
+In contrast, those facing change or high ﬂuctuation within a
+standard control, found great beneﬁt in ConCap. Matt, who
+had an established regime, but higher ﬂuctuations, credited a
+fall in his weekly averages – by 0.5mmol/L – to new insights
+found through ConCap. Matt’s use of the imagery feature in
+the application was perhaps also the most interesting with his
+ability to capture complex events in a single picture.
+
+Our distinction between current health contexts proved crit-
+ical in understanding the relative utility both of ConCap as
+a whole, and individual features. Neither MAHI [16], nor
+Vera [2] report such distinctions. Each user’s current health
+context drove their adoption or disinterest in ConCap, and it
+appears both plausible and likely that rising concern leads to
+higher use for monitoring interventions more generally.
+
+Capture and Access
+Participants are engaging in capture, following the criteria
+laid out by Brown et al. [4]; to archive, to collect and collate,
+
+Figure 4. Naira captured an image of a Thai takeaway. The image as-
+sisted in the understanding of the impact the type of food had on blood
+glucose levels and insulin requirements.
+
+to read and reﬂect, to re-use and share. Each of these criteria
+were observable in our participants’ interactions with Con-
+Cap. While it was intended that the application was purely
+for self-management, Naira reported using the data gathered
+with her clinician during subsequent appointments. Naira
+also highlighted a point where ConCap gave her new insight:
+
+“For instance, one time I had Thai and took too much
+insulin. The next time I had Thai I knew to take less.
+I’ve got it now, I have sussed it out.”
+
+The participants thus used the information ConCap collected
+for various reasons and in different ways. Our adoption of a
+lightweight tool for information gathering appears to have fa-
+cilitated greater capture in those in both Standard/Fluctuating
+and Change/Voluntary stages. Those who in the other two
+categories felt that even a low-impact intervention was an un-
+necessary additional level of management.
+
+Illustrating Points of Interest
+The MAHI study [16] provided only a limited overview of
+the use of photographs. Vera [2] investigated the social in-
+teractions that arose as a result of sharing photographs with
+others. Neither investigated individual use of photographs,
+and neither assessed the content of the photographs.
+
+The primary aim of the inclusion of location and camera im-
+ages in the application was to provide participants with a
+quick method of capturing a moment they felt was relevant
+to their condition. Location information illustrated a trace of
+where people had been throughout the day, and images visu-
+ally displayed events that a participant had engaged in.
+
+While the camera and location use were similar, The camera
+received more praise in the exit interviews.
+Inherent limi-
+tations in GPS positioning may have been a factor, but the
+ability for participants to capture what they felt was relevant,
+in a fashion they understood, appeared to be a bigger inﬂu-
+ence. Location data was relatively limited, but pictures could
+capture both simple and complex situations. Matt highlighted
+that a day of home improvement is not easily translated into
+corresponding adjustment to medication. His picture of DIY
+tools (Fig. 2a) created a record of a day’s activities as a point
+of reference, which could later explain an unusual set of glu-
+cose results, or act as a guide for similar instances.
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark112The photo and location data captured two distinct types of
+setting. Participants like Ruth and Mark only took pictures
+when they performed a glucose test, contextualising a read-
+ing. However, other participants such as Lauren and Matt
+captured activities as they happened, without measuring their
+GI. Those who had captured images at a reading were able to
+infer why they took the reading and then recall their previous
+activity. However, those actively capturing these activities
+when they happened had a immediate depiction of the events.
+This distinction in timing and utility has not been previously
+reported, and may confuse social commenting (c.f. [2]).
+
+Participants suggested that this “photo-memo”ing is a poten-
+tial likely scenario over a longer period of time. They specu-
+lated that had there been more situations that were out of the
+ordinary, imagery data may have assisted in diagnosing the
+cause of unexplained glucose events.
+
+The study of ConCap has thus shown that mobiles can cap-
+ture images either during an activity or at a later reading, that
+users can utilise photographs in four powerful, varied ways to
+capture relevant information, and that these images have the
+power to provide insights via autonomous reﬂection.
+
+Key Design Considerations
+The ubiquity of smartphones render them more discreet than
+traditional ‘medical’ devices, which as O’Kane notes, so-
+cially expose their users. The unremarkable form of a phone
+and its frequent presence make it a potentially powerful tool.
+ConCap exploits methods of capture that require limited at-
+tention and input from a user at the moment of use. This
+enabled its users to achieve their key short-term objective of
+collecting contextual information, with limited disruption to
+their current primary task (e.g., socialising at a BBQ).
+
+Those with chronic conditions feel that managing their health
+already consumes too much time. Good tools should be
+quick and discreet:
+it is vital to provide lightweight tools
+that capture of information quickly. Focussing on short-term,
+app-style functions made ConCap easier to adopt. Given
+the difﬁculties in changing routine that even our ten positive
+users reported, the cost of adopting a new device needs to
+be extremely low. Lowering such barriers by simple, almost
+simplistic interaction, makes users more likely to engage in
+recording of health information.
+
+In longer term use, the current hope of achieving sustained
+high levels of self-monitoring [17] seems misplaced. Our
+standard, ﬁxed users had rigid regimes that enabled lower
+monitoring, and even those experiencing ﬂuctuations re-
+ported regular periods of similar behaviour. Change, ex-
+pected or unexpected, led to heightened monitoring, and in-
+creased reﬂection, to determine underlying causes and pro-
+cesses. This cycle of rising and falling use is, for 10 of our 12
+participants, central to their experience and need, and every
+one described instances where their monitoring had fallen. It
+would thus be unwise for apps to demand regular and fre-
+quent interaction. Systems which intrude and demand atten-
+tion at periods where management is perceived by the patient
+as good are likely to be met with hostility. Ideally a system
+should sense when to provide support, and when not to. In-
+
+termittent use, driven by external triggers, is also weakly sup-
+ported in the context of PIM, which emphasises linear pro-
+cesses [14]. This is therefore a key issue for future research.
+
+CONCLUSION
+Through our low-impact intervention, it became clear that
+there are several contextual factors that affect the manage-
+ment of chronic conditions.
+For those facing voluntary
+change, or strong ﬂuctuations, there was a higher level of re-
+ﬂection, and a raised frequency of monitoring. Conversely,
+when health was stable and variation low, particularly when
+supported by a ﬁxed regime of diet and exercise, monitoring
+continued at a regular rate and reﬂection was infrequent.
+
+Adopting an unfamiliar
+technology was most difﬁcult
+when routines were highly structured, and long-established.
+Nonetheless, the inherent cost of adapting to a new technol-
+ogy proved valuable to ten of our twelve participants. While
+location sensing provided some utility, it proved subjectively
+less useful than mobile photography, despite an almost iden-
+tical level of use. Even Ruth, one of the four more skeptical
+users, found value in individual images. Photographs were
+used in four different ways, and capture was seldom literal.
+Images that resulted in insights and understanding often had
+meanings that were clear to the participant, but opaque to the
+outside observer. The connection between established tools –
+insulin doses and glucose readings – and the lightweight cap-
+ture proved particularly valuable to those with a heightened
+concern in their condition, be it recent ﬂuctuations or chosen
+life-changes such as raised exercise or pregnancy.
+
+Mobile technology has great potential in managing of chronic
+conditions. The immediate availability of everyday devices
+such as mobile phones makes them a suitable platform for
+logging of personal health information. We have demon-
+strated that mobile lightweight tools can assist individual re-
+ﬂection, without close monitoring by health experts. With
+the rising tide of chronic disease, and increasing costs of spe-
+cialist medical advice, unanchored mobile tools could make
+a powerful contribution to world health.
+
+ACKNOWLEDGEMENTS
+Many thanks to the EPSRC for their support through grant
+EP/G059063/1, and to our participants.
+
+REFERENCES
+
+1. Ballegaard, S. A., Hansen, T. R., and Kyng, M.
+
+Healthcare in everyday life: designing healthcare
+services for daily life. In Proc., CHI ’08, ACM (2008),
+1807–1816.
+
+2. Baumer, E. P., Katz, S. J., Freeman, J. E., Adams, P.,
+
+Gonzales, A. L., Pollak, J., Retelny, D., Niederdeppe, J.,
+Olson, C. M., and Gay, G. K. Prescriptive persuasion
+and open-ended social awareness: Expanding the design
+space of mobile health. In Proc., CSCW ’12, ACM
+(2012), 475–484.
+
+3. Bodenheimer, T., Lorig, K., Holman, H., and Grumbach,
+
+K. Patient self-management of chronic disease in
+primary care. JAMA: the journal of the American
+Medical Association 288, 19 (Nov. 2002), 2469–2475.
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark1134. Brown, B. A. T., Sellen, A. J., and O’Hara, K. P. A diary
+study of information capture in working life. In Proc.,
+CHI ’00, ACM (2000), 438–445.
+
+18. Matthews, M., and Doherty, G. In the mood: engaging
+teenagers in psychotherapy using mobile phones. In
+Proc., CHI ’11, ACM (2011), 2947–2956.
+
+5. Carter, S., and Mankoff, J. When participants do the
+
+capturing: the role of media in diary studies. In Proc.,
+CHI ’05, ACM (2005), 899–908.
+
+6. Choe, E. K., Lee, N. B., Lee, B., Pratt, W., and Kientz,
+J. A. Understanding quantiﬁed-selfers’ practices in
+collecting and exploring personal data. In Procs.
+SIGCHI Conf. on Human Factors in Computing
+Systems, CHI ’14, ACM (New York, NY, USA, 2014),
+1143–1152.
+
+7. Cordeiro, F., Bales, E., Cherry, E., and Fogarty, J.
+Rethinking the mobile food journal: Exploring
+opportunities for lightweight photo-based capture. In
+Procs. ACM, SIGCHI ’15, ACM (2015), 3207–3216.
+
+8. Funnell, M. M., Anderson, R. M., Arnold, M. S., Barr,
+P. A., Donnelly, M., Johnson, P. D., Taylor-Moon, D.,
+and White, N. H. Empowerment: an idea whose time
+has come in diabetes education. The Diabetes educator
+17, 1 (Feb. 1991), 37–41.
+
+9. Guldenpfennig, F., and Fitzpatrick, G. Getting more out
+of your images: augmenting photos for recollection and
+reminiscence. In Proc., BCS-HCI ’11, British Computer
+Society (2011), 467–472.
+
+10. Jacobs, M. L., Clawson, J., and Mynatt, E. D. My
+journey compass: A preliminary investigation of a
+mobile tool for cancer patients. In Proc., CHI ’14, ACM
+(2014), 663–672.
+
+11. Kaufman, D. R., Starren, J., Patel, V. L., Morin, P. C.,
+
+Hilliman, C., Pevzner, J., Weinstock, R. S., Goland, R.,
+and Shea, S. A cognitive framework for understanding
+barriers to the productive use of a diabetes home
+telemedicine system. AMIA Annual Symposium
+Proceedings (2003), 356–360.
+
+12. Kelly, L., Byrne, D., and Jones, G. J. F. The role of
+places and spaces in lifelog retrieval. In Personal
+Information Management (Nov. 2009).
+
+13. Klasnja, P., Civan Hartzler, A., Unruh, K. T., and Pratt,
+
+W. Blowing in the wind: Unanchored patient
+information work during cancer care. In Proc., CHI ’10,
+ACM (2010), 193–202.
+
+14. Li, I., Dey, A., and Forlizzi, J. A stage-based model of
+personal informatics systems. In Procs., SIGCHI ’10,
+ACM (New York, NY, USA, 2010), 557–566.
+
+15. Mamykina, L., Miller, A. D., Mynatt, E. D., and
+Greenblatt, D. Constructing identities through
+storytelling in diabetes management. In Proc., CHI ’10,
+ACM (2010), 1203–1212.
+
+16. Mamykina, L., Mynatt, E., Davidson, P., and Greenblatt,
+
+D. MAHI: investigation of social scaffolding for
+reﬂective thinking in diabetes management. In Proc.,
+CHI ’08, ACM (2008), 477–486.
+
+17. Mamykina, L., Mynatt, E. D., and Kaufman, D. R.
+
+Investigating health management practices of individuals
+with diabetes. In Proc., CHI ’06, ACM (2006), 927–936.
+
+19. O’Kane, A. A., Rogers, Y., and Blandford, A. E.
+
+Gaining empathy for non-routine mobile device use
+through autoethnography. In Proc., CHI ’14, ACM
+(2014), 987–990.
+
+20. Owen, T., Buchanan, G., and Thimbleby, H.
+
+Understanding user requirements in take-home diabetes
+management technologies. In Proc., BCS-HCI ’12,
+British Computer Society (2012), 268–273.
+
+21. Purpura, S., Schwanda, V., Williams, K., Stubler, W.,
+and Sengers, P. Fit4life: The design of a persuasive
+technology promoting healthy behavior and ideal
+weight. In Proc., CHI ’11, ACM (2011), 423–432.
+
+22. Rekimoto, J., Miyaki, T., and Ishizawa, T. Lifetag:
+
+WiFi-based continuous location logging for life pattern
+analysis. In Proc, LoCA’07, Springer (2007), 35–49.
+
+23. The George Institute For Global Health. Realising the
+potential of patient empowerment for tackling chronic
+disease. URL:
+http://www.bupa.com/media/289194/realising_the_
+potential_of_patient_empowerment_-_final.pdf,
+September 2011.
+
+24. The World Health Organisation. Global status report on
+
+noncommunicable diseases. URL:
+http://whqlibdoc.who.int/publications/2011/
+9789240686458_eng.pdf, 2010.
+
+25. Rogers, Y., Connelly, K., Tedesco, L., Hazlewood, W.,
+Kurtz, A., Hall, R. E., Hursey, J., and Toscos, T. Why
+it’s worth the hassle: The value of in-situ studies when
+designing ubicomp. In Proc., UbiComp ’07,
+Springer-Verlag (2007), 336–353.
+
+26. Smith, B. K., Frost, J., Albayrak, M., and Sudhakar, R.
+Integrating glucometers and digital photography as
+experience capture tools to enhance patient
+understanding and communication of diabetes
+self-management practices. Personal and Ubiquitous
+Computing 11, 4 (Aug. 2006), 273–286.
+
+27. Wagner, E. H., Austin, B. T., Davis, C., Hindmarsh, M.,
+Schaefer, J., and Bonomi, A. Improving chronic illness
+care: Translating evidence into action. Health Affairs 20,
+6 (Nov. 2001), 64–78.
+
+28. Wald, J. S., Middleton, B., Bloom, A., Walmsley, D.,
+Gleason, M., Nelson, E., Li, Q., Epstein, M., Volk, L.,
+and Bates, D. W. A patient-controlled journal for an
+electronic medical record: issues and challenges. Studies
+in health technology and informatics 107, Pt 2 (2004),
+1166–1170.
+
+29. Wild, S., Roglic, G., Green, A., Sicree, R., and King, H.
+Global prevalence of diabetes estimates for the year
+2000 and projections for 2030. Diabetes Care 27, 5
+(May 2004), 1047–1053.
+
+Health & SupportMobileHCI'15, August 24–27, Copenhagen, Denmark114

@@ -1,0 +1,23 @@
+Table of Contents:
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work
+    5.1 Trust and Distrust between Children and Parents
+    5.2 Technologies and Surveillance in Families
+6. Study
+    6.1 Participants
+    6.2 Procedure and Data Collection
+7. Findings
+    7.1 Getting Familiar with and Using the Wristband
+    7.2 Data Surveillance versus Activity Surveillance
+    7.3 Being under Surveillance: Action and Response
+    7.4 Trust and Distrust
+8. Discussion
+    8.1 Information Disclosure and Monitoring Technology
+    8.2 Mobility and Monitoring Technology
+9. Conclusion
+10. Acknowledgments
+11. References

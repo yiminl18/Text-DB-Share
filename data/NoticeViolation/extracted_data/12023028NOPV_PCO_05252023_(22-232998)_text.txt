@@ -1,0 +1,487 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED COMPLIANCE ORDER 
+
+OVERNIGHT EXPRESS DELIVERY 
+
+May 25, 2023 
+
+Mr. Paul Ruppert 
+President and Chief Executive Officer 
+Eastern Gas Transmission and Storage, Inc. 
+6603 West Broad Street 
+Richmond, Virginia 23200 
+
+Dear Mr. Ruppert: 
+
+CPF 1-2023-028-NOPV 
+
+From September 7 – November 10, 2022, representatives of the Pipeline and Hazardous Materials 
+Safety Administration (PHMSA), Office of Pipeline Safety (OPS),  pursuant to Chapter 601 of 49 
+United  States  Code  (U.S.C.)  conducted  onsite  inspections  of  Eastern  Gas  Transmission  and 
+Storage, Inc’s (EGT&S) procedures, records, and pipeline facilities in and around Luthersburg, 
+Pennsylvania. 
+
+As  a  result  of  the  inspection,  it  is  alleged  that  you  have  committed  probable  violations  of  the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR). The items inspected 
+and the probable violations are: 
+
+1. 
+
+§ 192.167 Compressor stations: Emergency shutdown. 
+
+(a) Except  for  unattended  field  compressor  stations  of  1,000 
+horsepower (746 kilowatts) or less, each compressor station must have 
+an emergency shutdown system that meets the following: 
+
+(4) It must be operable from at least two locations, each of which is: 
+(i) Outside the gas area of the station; 
+(ii) Near the exit gates, if the station is fenced, or near emergency 
+
+exits, if not fenced; and 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(iii) Not  more  than  500  feet  (153  meters)  from  the  limits  of  the 
+
+station. 
+
+EGT&S failed to have an emergency shutdown system that is operable from at least two locations 
+that are near exit gates for a fenced compressor station. 
+
+EGT&S’ South Bend compressor station is an attended compressor station that is fenced and does 
+not have at least two emergency shutdown system trigger valves that are near the exit gates.  There 
+are no emergency shutdown triggers located near an exit gate at this facility. 
+
+On  October  20,  2022,  the  PHMSA  inspector  conducted  field  observations  at  the  South  Bend 
+compressor station and noted the locations of the emergency shutdown system trigger valves.  The 
+PHMSA inspector did not observe any emergency shutdown system trigger valves at the fence line 
+or near the man gates at the fence.  In post-inspection communication with EGT&S, the PHMSA 
+inspector requested documentation of the emergency shutdown system trigger valve locations at 
+the South Bend compressor station.  EGT&S provided a Google Earth screenshot with annotations 
+indicating  the  locations  of  the  trigger  valves  and  the  closest  exit  gates  on  the  fence  line.  The 
+documentation confirmed that there were no emergency shutdown system trigger valves near the 
+exit gates. 
+
+Therefore, EGT&S failed to have an emergency shutdown system that was operable from at least 
+two locations near exit gates at its South Bend compressor station pursuant to § 192.167(a)(4)(ii). 
+
+Proposed Compliance Order 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 
+2023, the maximum penalty may not exceed $239,142 per violation per day the violation persists, 
+up to a maximum of $2,391,412 for a related series of violations.  For violation occurring on or 
+after May 3, 2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 
+per violation per day the violation persists, up to a maximum of $2,251,334 for a related series of 
+violations.  For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day the  violation  persists,  up to  a  maximum  of  $2,186,465  for  a related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+We have reviewed the circumstances and supporting documents involved in this case, and have 
+decided not to propose a civil penalty assessment at this time. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+With respect to Item 1, pursuant to 49 U.S.C. § 60118, the PHMSA proposes to issue a Compliance 
+Order to EGT&S .  Please refer to the Proposed Compliance Order, which is enclosed and made 
+a part of this Notice. 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.  Please  refer  to  this  document  and  note  the  response  options.  Be 
+advised that all material you submit in response to this enforcement action is subject to being made 
+publicly  available.  If  you  believe  that  any  portion  of  your  responsive  material  qualifies  for 
+confidential treatment under 5 U.S.C. § 552(b), along with the complete original document you 
+must provide a second copy of the document with the portions you believe qualify for confidential 
+treatment redacted and an explanation of why you believe the redacted information qualifies for 
+confidential treatment under 5 U.S.C. § 552(b). 
+
+Following the receipt of this Notice, you have 30 days to  respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  1-2023-028-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Robert Burrough 
+Director, Eastern Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Proposed Compliance Order 
+
+Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROPOSED COMPLIANCE ORDER 
+
+Pursuant to 49 United States Code § 60118, the Pipeline and Hazardous Materials Safety 
+Administration (PHMSA) proposes to issue to Eastern Gas Transmission and Storage, Inc. 
+(EGT&S) a Compliance Order incorporating the following remedial requirements to ensure the 
+compliance of EGT&S with the pipeline safety regulations: 
+
+A. 
+
+B. 
+
+In regard to Item 1 of the Notice, EGT&S shall install emergency shutdown 
+system activation points near the exit gates of the South Bend Compressor station, 
+in accordance with the requirements of § 192.167(a)(4).  EGT&S shall complete 
+this remedial action and submit validating documentation to the Director, Eastern 
+Region within 120 days of receipt of the Final Order. 
+
+It  is requested (not mandated) that EGT&S maintain documentation of the safety 
+improvement costs associated with fulfilling this Compliance Order and submit 
+the total to Robert Burrough, Director, Eastern Region, Pipeline and Hazardous 
+Materials Safety Administration.  It is requested that these costs be reported in 
+two categories: 1) total cost associated with preparation/revision of plans, 
+procedures, studies and analyses, and 2) total cost associated with replacements, 
+additions and other changes to pipeline infrastructure. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

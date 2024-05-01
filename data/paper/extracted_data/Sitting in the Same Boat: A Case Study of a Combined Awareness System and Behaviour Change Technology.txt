@@ -1,0 +1,791 @@
+Sitting in the Same Boat: A Case Study of a Combined 
+Awareness System and Behaviour Change Technology 
+
+Florian Güldenpfennig 
+HCI Group 
+TU Wien, Austria 
+
+Roman Ganhör 
+Multidisciplinary Design Group 
+TU Wien, Austria 
+
+Geraldine Fitzpatrick  
+HCI Group 
+TU Wien, Austria 
+
+{florian.gueldenpfennig | roman.ganhoer | geraldine.fitzpatrick}@tuwien.ac.at 
+
+to 
+
+technology 
+
+ABSTRACT 
+For  several  years,  efforts  have  been  taken  to  create 
+systems  for  mediating  a  feeling  of  connectedness  and 
+affective awareness among separated family  members or 
+friends. At the same time research has been carried out on 
+designing 
+foster  behaviour  change, 
+especially to increase physical activity. Numerous  works 
+on  behaviour  change,  both  in  academia  and  in  the 
+industry,  draw  strongly  on  motivating  by  utilizing 
+interpersonal relationships. However, within this research 
+social  relationships  are  employed  as  a  means  of 
+accomplishing  positive  behaviour.  In  this  paper,  we  aim 
+at  designing  a  system  for  supporting  both  affective 
+awareness  and  behaviour  change  with  equal  emphasis. 
+We  argue  that  such  a  system  can  benefit  from  the 
+synergetic  effects  between  both  research  concerns.  Our 
+prototype 
+concept, 
+establishing connectedness through the shared experience 
+of positive behaviour change (in our case study increased 
+physical activity), enabled by both mutual motivation and 
+a reverse rewarding strategy.  
+
+demonstrates 
+
+application 
+
+the 
+
+system, 
+
+Author Keywords 
+communication, 
+Awareness 
+behaviour  change,  persuasive 
+technology,  physical 
+activity,  television,  playful  elements,  mutual  motivation, 
+reverse rewarding, reciprocity.  
+
+lightweight 
+
+ACM Classification Keywords 
+H5.m.  Information  interfaces  and  presentation  (e.g., 
+HCI): Miscellaneous.  
+
+INTRODUCTION 
+Staying in touch  with family  and friends is  not always a 
+trivial  matter  in  our  here-today-gone-tomorrow  society. 
+Too much work, a general lack of time and long distances 
+can  eat  up  social  relationships  leaving  people  separated 
+from  the  ones  they  care  about.  On  these  grounds 
+researchers  in  HCI  and  CSCW  have  been  working  on 
+developing  awareness  systems  for  several  years  now 
+(Hassenzahl  et  al.,  2012).  Such  awareness  systems 
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that 
+copies bear this notice and the full citation on the first page. Copyrights 
+for components of this work owned by others than ACM must be 
+honored. Abstracting with credit is permitted. To copy otherwise, or 
+republish, to post on servers or to redistribute to lists, requires prior 
+specific permission and/or a fee. Request permissions from 
+Permissions@acm.org.  
+
+OzCHI '15 , December 07 - 10 2015, Melbourne, VIC, Australia 
+Copyright © 2015 ACM 978-1-4503-3673-4/15/12... $15.00 
+http://dx.doi.org/10.1145/2838739.2838823. 
+
+employed  communication  technology  to  foster  social 
+relationships between remote family members and friends 
+by  establishing  a  feeling  of  connectedness  and  helping 
+people to stay in touch.  
+
+At  the  same  time,  modern  fast-pacing  living  conditions 
+often hinder people in fulfilling plans and good intentions 
+concerning  physical  activity.  In  societies  around  the 
+world  people  are  less  and  less  involved  in  physical 
+exercise. Consequently, more and more people deal with 
+obesity, which not only is a considerable problem for the 
+person,  but  for  the  society  in  general  (Lakdawalla  & 
+Philipson, 2009). In recent years, the HCI community and 
+the industry have taken efforts to deal with that challenge 
+by  designing  technology  for  supporting  motivation  and 
+behaviour change such as  “activity trackers” and the like 
+(Hekler,  Klasnja,  Froehlich,  &  Buman,  2013).  Many  of 
+these  works  draw  on  or  investigate  motivation  by 
+involving  interpersonal  relationships  or  social  influence, 
+for  example  (Mueller,  O'Brien,  &  Thorogood,  2007; 
+Parker,  2014;  Zuckerman  &  Gal-Oz,  2014).  It 
+is 
+noticeable that enabling social exchange is a core concern 
+of  both  awareness  systems  and  behaviour  change 
+technology.  
+
+In this paper, we examine the intersection between these 
+two  research  strands  and  their  commonalities.  We  raise 
+questions about what behaviour change can learn or adopt 
+from  successful  awareness  systems,  and  vice  versa.  Is  it 
+possible  to  enhance  friendship  and  support  change  for  a 
+better behaviour at the same time, now that everyone is so 
+busy? And, can both approaches mutually strengthen each 
+other?  We  argue  for  the  worthiness  of  combining  both 
+research  areas  and  propose  chances  for  creating  strong 
+synergetic effects. To investigate this concept, the present 
+work contributes an exploratory case study  for gathering 
+an initial primarily qualitative description of  how  such a 
+system can ‘fit into the life’ of potential users. We do not 
+aim at generalizing to populations since this is case study 
+research  (Baskarada,  2014).  Instead,  we  contribute 
+‘anecdotal  evidence’  to  motivate  extending  the  initial 
+prototype and further empirical studies.  
+
+technology 
+
+The paper is organized as follows. First, the terminology 
+for  affective  awareness/awareness 
+and 
+systems and behaviour change is clarified on the basis of 
+related  research.  Second,  the  intersection  between  both 
+research  areas  is  examined.  Third,  a  pilot  application  is 
+introduced  that  aims  at  motivating  for  more  physical 
+activity as well as establishing awareness between distant 
+living  friends.  Finally,  suggestions  and  opportunities  for 
+further research investigations are proposed. 
+
+309
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+RELATED WORK AND DEFINITIONS 
+Awareness  systems 
+in  personal  settings  constitute 
+computer  mediated  communication  systems  that  allow 
+people 
+to  maintain  awareness  about  each  other’s 
+activities.  The  communication  itself  was  described  as 
+being  lightweight,  emotional,  informal  and  at  low  effort 
+(Markopoulos  et  al.,  2004).  Thus,  affective  awareness 
+systems (cf. also ambient displays) are in contrast to more 
+traditional  forms  of  communication  that  aim  at  the 
+explicit  exchange  of  messages  and  data.  Liechti  and 
+Ichikawa  (2000,  p.  13)    introduced  the  notion  affective 
+awareness  and  defined  it  as  “a  general  sense  of  being 
+close to one’s family and friends”. Another term used in 
+this  context  is  connectedness,  defined  as  a  “positive 
+emotional appraisal, characterized by a feeling of staying 
+in touch within on-going social relationships” (Romero et 
+al., 2007, p. 303).  
+
+Computer mediated awareness in a home setting has been 
+studied  extensively  and  widely.  For  example,  Lindley 
+(2012)  explored  the  usage  of  a  message  device  for 
+supporting  cross-generational  communication.  Octavia, 
+Hoven, and Mondt (2007), on the other hand, conducted 
+an  exploratory  study  to  better  understand  strategies  of 
+people  living  separately  to  stay  in  touch.  A  renowned 
+study  by  Mynatt,  Rowan,  Craighill,  and  Jacobs  (2001) 
+captured  physical  activity  of  smart-home  residents  with 
+sensors and visualized the data in an abstract fashion. The 
+visualization  was  sent  to  a  digital  photography  frame 
+located at the homes of the distant family members. 
+
+Technology  to  support  behaviour  change:  Fogg  (2002) 
+coined  the  term  captology  for  technology  that  persuades 
+the user to adopt a desired behaviour. In many studies this 
+behaviour  was  increased  physical  exercise  (Consolvo, 
+Everitt,  Smith,  &  Landay,  2006;  Consolvo  et  al.,  2008; 
+Lin,  Mamykina,  Lindtner,  Delajoux,  &  Strub,  2006; 
+Maitland  et  al.,  2006).  In  line  with  these  efforts,  the 
+notion of personal informatics was coined by Li, Dey and 
+Forlizzi (2010). 
+
+Technologies  for  behaviour  change  such  as  outlined 
+above  draw  strongly  on  theories  from  psychology. 
+Persuasive  systems  have  employed  classical  behaviour 
+theories such as the Transtheoretical Model, Goal Setting 
+Theory, and Social Cognitive Theory. In HCI, Consolvo, 
+McDonald  and  Landay  (2009)  and  Hekler  et  al.  (2013) 
+have compiled a good overview on these topics. 
+
+COMBINING TECHNOLOGIES FOR AWARENESS AND 
+BEHAVIOUR CHANGE – DESIGN RATIONALE 
+In  this  section,  we  identify  and  describe  conspicuous 
+intersections  between  systems  for  affective  awareness 
+and  behaviour  change.  Consequently,  due 
+their 
+commonalities we will argue for designing for both target 
+areas at the same time. Taking a look at the strengths of 
+each  domain  might  offer  an  opportunity  for  creating 
+strong  synergic  effects.  It 
+that  social 
+relationships  play  a  crucial  role  in  both  awareness 
+
+is  apparent 
+
+to 
+
+to 
+
+leads 
+
+and  mediate 
+
+systems  and  behaviour  change.  This 
+the 
+following  question:  If  we  can  design  appropriate  shared 
+appropriate 
+experiences 
+communication  channels,  will  it  increase  a  desirable 
+behaviour,  and  conversely  create  a  positive  effect  of 
+affective awareness? We go on to discuss this question as 
+exemplified  in  our  own  prototype,  explaining  our  ideas 
+and assumptions in more detail. 
+
+them 
+
+by 
+
+Social  relationships  and  social  influence:  the  aim  of 
+awareness  systems  is  promoting  social  relationships. 
+However,  many  persuasive  or  behaviour  change 
+applications  also  place  great  reliance  upon  interpersonal 
+relationships  and  social  influence  (Chiu  et  al.,  2009; 
+Consolvo  et  al.,  2006;  Consolvo,  McDonald,  &  Landay, 
+2009;  Lin  et  al.,  2006;  Maitland  et  al.,  2006).  In 
+particular, it is argued that activity tracking for leveraging 
+behaviour  change  can  benefit 
+social  and 
+collaborative  components 
+(Rooksby  et  al.,  2014). 
+Mueller,  O'Brien,  and  Thorogood  (2007),  for  example, 
+created  a  jogging  application  that  allowed  runners  to 
+exercise together mediated by spatialised audio, although 
+they were separated by distance. Zuckerman and Gal-Oz 
+(2014)  implemented  a  social  comparison  component  in 
+their  jogging  app  and  found  that  this  was  as  efficient  as 
+visualizing  or  quantifying  progress.  Therefore, 
+the 
+motivating force in our own prototype will draw on social 
+influence.  
+
+from 
+
+Shared experiences have been reported to play a leading 
+role  for  awareness  systems  in  establishing  a  feeling  of 
+connectedness. Affective awareness appears to work best 
+when  people  are  engaged  in  shared  experiences  (Liechti 
+&  Ichikawa,  2000),  as  those  events  ‘act  like  glue’  in 
+friendships  (Octavia  et  al.,  2007,  p.  81).  Sharing 
+experiences  can  also  be  used  as  a  major  strategy  in 
+connecting separate living families (Ballagas et al., 2010; 
+Markopoulos  et  al.,  2004).  We  suggest  taking  those 
+findings  on  by  making  positive  behaviour  change  the 
+shared  experience  and  hence  establish  a  strong  bonding 
+between awareness and behaviour change system. 
+
+Lightweight  exchange  of  messages  is  another  important 
+component of awareness systems for sharing experiences 
+and for fostering social connectedness. The importance of 
+this  component  has  been  described  by  various  authors, 
+and  it  is  part  of  several  multi-participant  persuasive 
+applications  such  as  Playful  Bottle  that  let  users  send 
+social  reminders  to  their  friends  (Chiu  et  al.,  2009). 
+Houston  (Consolvo  et  al.,  2006)  featured  a  commenting 
+component  allowing  social  influence.  The  authors  of 
+Shakra  observed  that  “merely  the  knowledge  that  others 
+can  detect  (track)  one’s  activity  (…)  makes  one  more 
+active”  (Maitland  et  al.,  2006,  p.  7).  We  therefore 
+implemented a lightweight messaging component for our 
+prototype  incorporating  a  chat  module  and  an  ambient 
+lamp (see next section). 
+
+310
+
+ 
+AL 
+
+Figure 1. Left: P1 sitting in front of TV (home PC with TV tuner) with ambient lamp placed below the screen (marked 
+by red arrow AL). Right: Detail of the application’s web interface. Users can review each other’s physical activity and 
+check their television rewards. The crossed arrows indicate that participants mutually accumulated TV minutes. 
+
+Visualization of behaviour: Awareness systems as well as 
+technologies  for  behaviour  change  deal  with  behaviour 
+data  visualization.  Consolvo  et  al.  (2006)  found  that 
+participants  of  the  Houston  study  valued  the  trending 
+information  of  physical  activity.  The  Digital  Family 
+Portrait system displayed a history of past behaviours on 
+a  digital  picture  frame.  The  frame  of  this  renowned 
+affective awareness application was populated with small 
+icons representing current as well as past conditions of a 
+portrayed  person  (Mynatt  et  al.,  2001).  As  in  this 
+example,  behaviour  data  is  often  represented  in  an 
+abstract  fashion.  This  applies  to  both  awareness  and 
+behaviour change systems. Ubifit, for example, employed 
+a metaphoric blooming garden to visualize agile physical 
+activity  (Consolvo  et  al.,  2008;  Consolvo  et  al.,  2009). 
+Fish  ‘n’  Steps  let  the  number  of  fish  in  a  virtual  tank 
+correspond to the step count of study participants (Lin et 
+al.,  2006).  Accordingly,  we  suggest  an  abstract  data 
+visualization  for  designing  combined  connectedness  and 
+temporal 
+behaviour  change  systems.  In  visualizing, 
+course  can  be  motivating  (Lin  et  al.,  2006)  as  it  might 
+help  to  establish  a  more  intense  awareness  of  the  daily 
+routine of a person. (However, at the same time the users’ 
+privacy  should  be  taken  into  account.)  Summarizing,  an 
+ambient  device  can  be  a  strategy  in  terms  of  affective 
+awareness  as  well  as  motivation  (Consolvo  et  al.,  2009; 
+Consolvo  et  al.,  2008;  Mynatt  et  al.,  2001).  Thus,  our 
+prototype  made  use  of  abstract  graphs,  and  we  also 
+offered  an  additional  ambient  mood 
+the 
+participants  to  support  the  lightweight  exchange  of 
+messages  in  form  of  colour-coded  ‘moods’  at  the 
+periphery of attention (Bakker, van den Hoven, & Eggen, 
+2015).  Similar  mood  lamps  have  been  successfully  used 
+before  in  HCI  research  to  convey  emotional  states,  for 
+example (Balaam, Fitzpatrick, Good, & Luckin, 2010). 
+
+lamp 
+
+to 
+
+Playful elements: A  variety of awareness and  motivation 
+technologies as well as applications for behaviour change 
+were  games  or  consisted  of  game-like  elements.  Other 
+applications  employed  playful  metaphors  and 
+fun 
+elements  for  motivation  (Chiu  et  al.,  2009;  Consolvo  et 
+al.,  2008;  Consolvo  et  al.,  2009;  Lin  et  al.,  2006). 
+Awareness systems also requested users to play with each 
+other  (Ballagas  et  al.,  2010)  or  display  information  in 
+humorous  or  amusing  ways  (Gaver,  2002;  Mynatt  et  al., 
+2001). Shared experiences make people feel close to each 
+other,  especially  when  their  experiences  are  associated 
+with positive emotions (Liechti & Ichikawa, 2000, p. 13). 
+We  hence  decided  that  our  prototype  should  utilize 
+
+playful elements to motivate users to continue practicing 
+and to support the users mutual awareness. 
+
+EXPLORATORY PILOT STUDY 
+The  proposed  prototype  was  designed 
+to  support 
+behaviour  change  as  well  as  affective  awareness 
+considering  the  commonalties  identified  in  the  last 
+section.  The  case  study  was  conducted  to  gather  initial 
+feedback  on  our  considerations  and  design  decisions.  In 
+this  context,  we  were  also  interested  in  how  the  concept 
+of joining awareness and behaviour change assisted users 
+to achieve a self-defined goal (e.g., exercising more). 
+
+Description of our exploratory application  
+
+Due to the application’s aim to increase a users’ physical 
+fitness  and  to  connect  two  separately  living  friends, 
+exercising  (physical  fitness)  was  made  the  reason  for 
+users to get in touch (social connectedness).  
+
+reward  stimulus 
+
+Our  application  employed  a 
+for 
+motivating  physical  activity:  the  users  had  to  earn  their 
+privilege to watch TV similar to Telecycle (Fogg, 2002). 
+Allocated  footsteps  paid  off  in  minutes  of  allowed  TV 
+consumption.  In  order  to  preserve  the  playful  and  fun 
+character of the application time  measurements  were  not 
+enforced  or  controlled.  A  special  feature  of 
+the 
+application  was  that  users  (in  test  condition  2)  did  not 
+work  for  their  own  ‘TV  time  account’;  in  contrast,  they 
+accumulated TV minutes for their distant friend. This can 
+be considered as a playful reverse rewarding strategy and 
+might  also 
+interactions  or  a 
+strengthened  social  connection.  Figuratively  speaking, 
+both  participants  were  sitting  in  the  same  boat.  In 
+addition, users could post comments or set the mood lamp 
+to a certain colour to express their approval / disapproval 
+of  their  friends’  performances.  Ambient  coloured  light 
+has  proven  useful  for  emotional  expression  before 
+(Balaam  et  al.,  2010),  and  made  information  or  signals 
+subtly accessible.  
+
+interesting 
+
+lead 
+
+to 
+
+Technically, every user had access to a personalized web 
+page  (Figure  1  right)  allowing  her  to  review  behaviour 
+data,  exchange  text  messages  and  to  control  the  other’s 
+ambient mood lamp (Figure 1 left). Physical activity was 
+tracked with a pedometer and was made accessible on the 
+web  application  updating  every  night  at  8:15  pm.  The 
+pedometer  samplings  were  visualized  as  an  abstract 
+representation  of  a  user’s  physical  activity  over  a  given 
+time  period  (Figure  1  right).  The  resolution  of  the 
+visualization  was  fine  enough  to  establish  awareness  by 
+
+311
+
+conveying  information  about  a  user’s  daily  routine  and 
+coarse enough to protect a user’s privacy.  
+
+(one 
+
+female,  one  male)  with 
+
+CASE STUDY SETUP AND FINDINGS 
+Methods. For the exploratory case study we recruited two 
+participants 
+the 
+characteristics of the intended target group of the system: 
+separate  living  friends  (divided  by  distance)  in  their  20s 
+30s  with  an  affinity  to  self-tracking  technologies  and 
+willingness to exercise  more. They participated in a  first 
+test  run  lasting  8  days  to  study  how  they  would  interact 
+with  the  system  in  their  natural  context.  We  also 
+established  two  test  conditions  in  order  to  get  initial 
+feedback on different reward strategies. Condition 1 was 
+a  four-day  trail  during  which  participants  accumulated 
+their  own  minutes  for  TV  consumption.  More  physical 
+activity resulted in more minutes of TV consumption for 
+oneself.  Condition  2  was  also  a  four-day  trail,  but  it 
+employed  the  strategy  of  reverse  rewarding  mentioned 
+above. In this condition participants ‘worked out’ for their 
+distant friend’s TV consumption. 
+
+To  count 
+the  steps,  commercial  pedometers  were 
+employed and the data was sent to a server. Every night at 
+8:15 pm the amount of TV reward was calculated on the 
+basis  of  the  number  of  steps  and  published  on  the  web 
+interface  (Figure  1  right).  The  usage  of  the  mood  lamp 
+was  logged  on  the  server  as  well.  After  the  study,  the 
+server  data  was  reviewed  and  assessed  manually. 
+Additionally,  semi-structured  interviews  were  conducted 
+after  the  last  day  of  the  trial  and  subsequently  analysed 
+for salient comments and themes in the feedback.   
+
+Findings 
+Behaviour  change:  although  the  short  duration  of  the 
+study  does  not  allow  for  investigating  changes  in 
+behaviour,  there  was  evidence  of  synergy  between 
+awareness  and  motivation.  Condition  2 
+(reverse 
+rewarding)  showed  slightly  more  physical  activity  for 
+both  participants.  The  rewarded  minutes  for  days  1  to  8 
+for  each  participant  are  shown  in  Table  1.  (Note:  the 
+values  of  days  5-8  have  been  swapped  between 
+participants due to the reverse rewarding strategy). 
+
+1 
+
+29 
+
+50 
+
+2 
+
+25 
+
+21 
+
+3 
+
+23 
+
+77 
+
+4 
+
+23 
+
+76 
+
+5 
+
+14 
+
+34 
+
+6 
+
+62 
+
+66 
+
+7 
+
+72 
+
+53 
+
+8 
+
+83 
+
+53 
+
+P1 
+
+P2 
+
+Table 1. Rewarded minutes of TV. Condition 1: Days 
+1 to 4. Condition 2: Days 5 to 8. (Reverse rewarding is 
+indicated by different colours/shades of grey.) 
+
+Rewards  and  reciprocity:  the  chat  logs  indicated  social 
+engagement  and  encouragement  such  as  in  this  quote: 
+“What?  Only  14mins  TV  for  me?  Please  remember  my 
+favourite  episode  tomorrow”  (P1).  Such  a  statement  can 
+be  considered  as  a  custom  tailored  motivation  message, 
+which was suggested to be a beneficial strategy for health 
+behaviour  change  (Chua  et  al.,  2011).  Another  social-
+motivational issue was expressed by P2: “Sometimes I am 
+more  motivated  doing  something  for  a  friend  than  for 
+me”. Furthermore, the participants reported that they felt 
+motivated to exercise and to act responsible, because they 
+
+to  “spoil” 
+
+didn’t  want 
+the  other 
+participant: “It would have felt very bad if he earned me 
+enough TV time at the end of the day, while at the same 
+time I let him down” (P2). 
+
+the  evening  for 
+
+in 
+
+Social  awareness:  reverse  rewarding  was  the  preferred 
+mode  since 
+this  condition  connectedness  was 
+established by the other’s physical activity  in addition to 
+the web interface and the ambient lamp. P2 described it as 
+“you  could  feel  the  friend,  because  he  was  literally 
+shaping  the  day  by  influencing  the  TV  program”.  This 
+corresponds  with  P1,  who  enjoyed  both  rewarding 
+strategies, however, liked condition 2 even better, due to 
+its  more  “suspenseful”  and  motivating  character.  The 
+reaction  towards  the  ambient  lamp  was  positive,  as  “it 
+expresses  one’s  feelings  on  site  at  the  friend’s  house” 
+(P1).  Still,  the  lamp  was  not  considered  the  most 
+important  component  of  the  prototype  and  P2  suggested 
+that it could also be replaced or complemented by “some 
+mobile phone app or background widget”. 
+
+In  summary,  the  participants  enjoyed  both  rewarding 
+strategies, however, both preferred condition 2, due to its 
+“suspenseful”,  connecting  and  motivating  setup.  P2 
+enjoyed  the  system  that  much  that  she  would  like  to 
+continue and would even pay for her own equipment. She 
+was  thankful  for  the  study  or  application  as  “it  was  a 
+chance to revitalize our [the participants’] friendship”. 
+
+LIMITATIONS AND FUTURE WORK 
+This  paper  constitutes  an  initial  investigation  of  the 
+intersection  between  awareness  systems  and  behaviour 
+change  technology.  As  it  is  an  initial  exploratory  case 
+study,  the  findings  cannot  be  generalized,  however, 
+provide promising qualitative indications that the  system 
+can  be  useful  for  the  target  group.  For  future  work,  it  is 
+crucial  to  refine  the  prototype  and  to  run  controlled 
+experiments  with  a  larger  number  of  participants  and  to 
+create  design  guidelines  so  that  the  resulting  system  can 
+move beyond just ‘tracking activity and then posting this’ 
+to get encouraged by friends (such a guideline could, for 
+example,  recommend  reverse  rewarding).  Summarizing, 
+in  this  paper,  our  contribution  is  two-fold:  (1)  We 
+identified  and  elaborated  similarities  and  intersections 
+between  behaviour  change  technologies  and  awareness 
+systems.  (2)  We  contributed  an  exemplary  application 
+that combined both areas and collected data from a pilot 
+to draw out its use in a natural setting. 
+
+When  designing  similar  new  applications  the  targeted 
+behaviour change doesn’t have to be restricted to physical 
+activity. Mutual  monitoring and reverse rewarding could 
+intake,  quitting  cigarettes 
+also  support  medication 
+(Lover’s cups by Chung, Lee, & Selker, 2006) and other 
+important  daily  routines.  Encouraged  by  the  positive 
+feedback  of  the  case  study,  we  will  refine  the  prototype 
+and  investigate  the  different  reward  strategies  of  our 
+application  in  a  long-term  study  to  address  questions  as 
+such: Is it more motivating to keep things up for another 
+person (reverse rewarding) or for one self? Are we more 
+engaged in fulfilling duties, when we want to do favours 
+to  others  or  when  we  want  to  avoid  being  admonished? 
+Do  we  fear  social  disapproval?  Should  rewards  be 
+assigned by the distant friend or automatically? 
+
+312
+
+ 
+ 
+ACKNOWLEDGMENTS 
+We  appreciate  our  participants’  effort  and  valuable 
+feedback. 
+
+Lakdawalla, D. and Philipson, T. The Growth of Obesity 
+and  Technological  Change.  Economics  and  Human 
+Biology, 7, 3 (2009), 283-293.  
+
+REFERENCES 
+Bakker, S.,  van den  Hoven,  E.  and Eggen, B. Peripheral 
+interaction: characteristics and considerations. Personal 
+and Ubiquitous Computing, 19, 1 (2015),, 239-254.  
+
+Balaam,  M.,  Fitzpatrick,  G.,  Good,  J.  and  Luckin,  R. 
+(2010).  Exploring  affective 
+the 
+classroom with the subtle stone. In Proc CHI'10, ACM 
+Press (2010), 1623-32.  
+
+technologies 
+
+for 
+
+Ballagas,  R.,  Raffle,  H.,  Go,  J.,  Revelle,  G.,  Kaye,  J., 
+Ames, M. and Spasojevic, M. Story Time for the 21st 
+Century. Pervasive Comp, IEEE, 9, 3 (2010) , 28-36.  
+
+Baskarada,  S.  Qualitative  case  studies  guidelines.  The 
+
+Qualitative Report, 19, 40 (2014), 1-25.  
+
+Li,  I.,  Dey,  A.  and  Forlizzi,  J.  A  stage-based  model  of 
+Personal  Informatics  systems.  In  Proc  CHI'10,  ACM 
+Press (2010), 557-566. 
+
+Liechti,  O.  and  Ichikawa,  T.  A  digital  photography 
+framework  enabling  affective  awareness  in  home 
+communication. Personal Tech, 4, 1 (2000), 6-24.  
+
+Lin,  J.,  Mamykina,  L.,  Lindtner,  S.,  Delajoux,  G.  and 
+Strub,  H.  Fish’n’Steps:  Encouraging  Physical  Activity 
+with  an 
+In  Proc 
+Interactive  Computer  Game. 
+Ubicomp'06, Springer (2006), 261-278. 
+
+Lindley,  S.  Shades  of  lightweight:  supporting  cross-
+generational  communication  through  home  messaging. 
+Univ Access in the Info Society, 11, 1 (2012), 31-43.  
+
+Chiu,  M.-C.  et  al.    Playful  bottle:  a  mobile  social 
+persuasion system to motivate healthy water intake. In 
+Proc Ubicomp'09, ACM Press (2009), 185-194.  
+
+Maitland,  J.,  et  al.  H.  Increasing  the  awareness  of  daily 
+activity  levels  with  Pervasive  Computing.  In  Proc 
+Pervasive Health'06, IEEE (2006). 
+
+Chua, H. F., Ho, S. S., Jasinska, A. J., Polk, T. A., Welsh, 
+R.  C.,  Liberzon,  I.  and  Strecher,  V.  J.  Self-related 
+neural response to tailored smoking-cessation messages 
+predicts quitting. Nat Neurosci, 14, 4 (2011), 426-427.  
+
+Chung,  H.,  Lee,  C.-H.  J.  and  Selker,  T.  Lover's  cups: 
+drinking  interfaces  as  new  communication  channels. 
+Ext. Abstracts CHI'06, ACM Press (2006), 375-380.  
+
+Consolvo,  S.,  Everitt,  K.,  Smith,  I.  and  Landay,  J.  A. 
+Design  requirements  for  technologies  that  encourage 
+physical  activity.  In  Proc  CHI06,  ACM  Press  (2006), 
+457-66. 
+
+Consolvo,  S.,  McDonald,  D.  W.  and  Landay,  J.  A. 
+Theory-driven  design  strategies  for  technologies  that 
+support  behavior  change  in  everyday  life.  In  Proc 
+CHI'09, ACM Press (2009), 405-414. 
+
+Consolvo,  S.,  et  al.  Activity  sensing  in  the  wild:  a  field 
+trial  of  ubifit  garden.  In  Proc  CHI'08,  ACM  Press 
+(2008), 1797-1806. 
+
+Fogg,  B.  J.  Persuasive  technology:  using  computers  to 
+change  what  we  think  and  do.  Ubiquity,  December 
+Issue (2002).  
+
+Gaver,  B.  Provocative  Awareness.  Computer  Supported 
+
+Cooperative Work 11, 3-4 (2002), 475-493. 
+
+Hassenzahl,  M.,  Heidecker,  S.,  Eckoldt,  K.,  Diefenbach, 
+S.  and  Hillmann,  U.  All  you  need  is  love:  current 
+strategies  of  mediating  intimate  relationships  through 
+technology. ACM TOCHI. 19, 4 (2012), 1-19. 
+
+Hekler, E. B., Klasnja, P., Froehlich, J. E. and Buman, M. 
+P.  Mind  the  theoretical  gap:  interpreting,  using,  and 
+developing behavioral theory  in HCI research. In Proc 
+CHI'13, ACM Press (2013), 3307-3316. 
+
+Markopoulos,  P.,  Romero,  N.,  Baren,  J.  v.,  IJsselsteijn, 
+W., Ruyter, B. d. and Farshchian, B. Keeping in touch 
+with  the  family:  home  and  away  with  the  ASTRA 
+awareness  system.  In  Ext.  Abstracts  CHI'04,  ACM 
+Press (2004), 1351-4. 
+
+Mueller,  F.  F.,  O'Brien,  S.  and  Thorogood,  A.  Jogging 
+together" 
+over  a  distance:  supporting  a  "jogging 
+experience  although  being  apart.  In  Ext.  Abstracts 
+CHI'04, ACM Press (2007), 1998-194. 
+
+Mynatt,  E.  D.,  Rowan,  J.,  Craighill,  S.  and  Jacobs,  A.  
+Digital  family  portraits:  supporting  peace  of  mind  for 
+extended family members. In Proc CHI'01, ACM Press 
+(2001), 333-340. 
+
+Octavia,  J.  R.,  Hoven,  E.  v.  d.  and  Mondt,  H.  D. 
+Overcoming  the  distance  between  friends.  In  Proc 
+BSC-HCI'07, British Computer Society (2007), 79-82. 
+
+Parker,  A.  Reflection-through-performance:  personal 
+implications  of  documenting  health  behaviors  for  the 
+collective.  Personal  and  Ubiquitous  Computing,  18,  7 
+(2014), 1737-1752.  
+
+Romero,  N.,  Markopoulos,  P.,  van  Baren,  J.,  de  Ruyter, 
+B.,  Ijsselsteijn,  W.  and  Farshchian,  B.  Connecting  the 
+systems.  Personal  and 
+family  with  awareness 
+Ubiquitous Computing, 11, 4 (2007), 299-312.  
+
+Rooksby, J., Rost, M., Morrison, A. and Chalmers, M. C. 
+Personal tracking as lived informatics. In Proc CHI'14, 
+ACM Press (2014), 1163-72. 
+
+and  Gal-Oz,  A.  Deconstructing 
+Zuckerman,  O. 
+gamification: 
+of 
+evaluating 
+continuous  measurement,  virtual  rewards,  and  social 
+comparison  for  promoting  physical  activity.  Personal 
+and Ubiquitous Computing, 18, 7 (2014), 1705-1719.  
+
+effectiveness 
+
+the 
+
+313
+
+  
+ 
+ 
+

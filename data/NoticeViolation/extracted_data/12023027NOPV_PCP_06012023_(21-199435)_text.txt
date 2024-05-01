@@ -1,0 +1,471 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+OVERNIGHT EXPRESS DELIVERY 
+
+June 1, 2023 
+
+Mr. Paul Ruppert 
+President and Chief Executive Officer 
+Eastern Gas Transmission and Storage, Inc. 
+6603 West Broad Street 
+Richmond, Virginia 23200 
+
+Dear Mr. Ruppert: 
+
+CPF 1-2023-027-NOPV 
+
+From November 15, 2021, to November 19, 2021, via on-site inspection, representatives of the 
+Pipeline  and  Hazardous  Materials  Safety  Administration  (PHMSA),  Office  of  Pipeline  Safety 
+(OPS),  pursuant  to  Chapter  601  of  49  United  States  Code  (U.S.C.)  inspected  Eastern  Gas 
+Transmission and Storage, Inc.’s (EGT&S) procedures and records for control room management 
+of its control room in Bridgeport, West Virginia. 
+
+As  a  result  of  the  inspection,  it  is  alleged  that  you  have  committed  probable  violations  of  the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR). The items inspected 
+and the probable violations are: 
+
+1. 
+
+§ 192.631 Control Room Management. 
+
+(a) … 
+(j)  Compliance  and  deviations.  An  operator  must  maintain  for 
+
+review during inspection: 
+
+(1)  Records that demonstrate compliance with the requirements of 
+
+this section; and 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+EGT&S failed to maintain records that demonstrate compliance with § 192.631(h)1.  Specifically, 
+EGT&S  failed  to  maintain  documentation  of  a  training  program  for  training  each  controller  to 
+carry out their defined roles and responsibilities. 
+
+During the inspection, PHMSA requested documentation of a training program for each controller 
+to carry out their roles and responsibilities pursuant to the requirements of § 192.631(h).  EGT&S 
+was  unable  to  provide  any  record  of  training  the  controllers  to  carry  out  their  roles  and 
+responsibilities.  Additionally,  no  records  were  provided  to  demonstrate  how  controllers  are 
+operator qualified for the covered tasks associated with being a controller. 
+
+Therefore,  EGT&S  failed  to  maintain  records  demonstrating  compliance  with  § 192.631(h)  as 
+required pursuant to § 192.631(j)(1). 
+
+2. 
+
+§ 192.631 Control Room Management. 
+
+(a) … 
+(j)  Compliance  and  deviations.  An  operator  must  maintain  for 
+
+review during inspection: 
+
+(1)  Records that demonstrate compliance with the requirements of 
+
+this section; and 
+
+EGT&S  failed  to  maintain  records  that  demonstrate  compliance  with  § 192.631(f)(2)2. 
+Specifically,  EGT&S  failed  to  maintain  documentation  demonstrating  that  field  personnel 
+contacted the control room when making field changes that affect control room operations. 
+
+During  the  inspection,  EGT&S  was  asked  to  produce  documentation  of  field  inspections  in 
+accordance with EGT&S’s WP071GL-Inspecting, Maintaining & Lubricating Valves pursuant to 
+the requirements of § 192.631(f)(2).  During review of the records provided, it was noted that the 
+records  did  not  indicate  that  field  personnel  notified  Gas  Control  and  obtained  permission  to 
+operate any valve as required by Step 2 of WP071GL. EGT&S’s inspection forms did not contain 
+a requirement or data field to document the contacting of the control room before operating any 
+valve, which is a field change that affects control room operations pursuant to § 192.631(f)(2). 
+
+Therefore, EGT&S failed to maintain records that demonstrate compliance with § 192.631(f)(2) 
+as required pursuant to § 192.631(j)(1). 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 
+2023, the maximum penalty may not exceed $239,142 per violation per day the violation persists, 
+
+1 Section 192.631(h) requires that an operator's controller training program must provide for training each controller 
+to carry out the roles and responsibilities defined by the operator. 
+
+2 Section 192.631(f)(2) requires that field personnel contact the control room when emergency conditions exist and 
+when making field changes that affect control room operations. 
+
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+ 
+ 
+ 
+ 
+ 
+ 
+up to a maximum of $2,391,412 for a related series of violations.  For violation occurring on or 
+after May 3, 2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 
+per violation per day the violation persists, up to a maximum of $2,251,334 for a related series of 
+violations.  For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day the  violation  persists,  up to  a maximum  of  $2,186,465  for  a related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable violations and recommend that you be preliminarily assessed a civil penalty of $ 26,000 
+as follows: 
+
+Item number 
+1 
+
+PENALTY 
+$ 26,000 
+
+Warning Item 
+
+With respect to Item 2, we have reviewed the circumstances and supporting documents involved 
+in this case and have decided not to conduct additional enforcement action or penalty assessment 
+proceedings at this time.  We advise you to promptly correct this item.  Failure to do so may result 
+in additional enforcement action. 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.  Please  refer  to  this  document  and  note  the  response  options. All 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. § 552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following the receipt of this Notice, you have 30 days to  respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your  correspondence to my office  within  30 days  from the receipt  of this Notice.  The Region 
+Director  may  extend  the  period  for  responding  upon  a  written  request  timely  submitted 
+demonstrating good cause for an extension. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  1-2023-027-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Robert Burrough 
+Director, Eastern Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosure:  Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

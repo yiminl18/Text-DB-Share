@@ -1,0 +1,12 @@
+Table of Contents:
+
+1. Introduction
+2. Personal Informatics
+3. Human-Centered Intelligent Computing
+   3.1 Cooperative Relationship
+   3.2 Augmented Relationship
+   3.3 Ambient Relationship
+4. Cooperative Action Orchestration
+5. Intelligent Computing in Personal Informatics
+6. Conclusions
+7. References

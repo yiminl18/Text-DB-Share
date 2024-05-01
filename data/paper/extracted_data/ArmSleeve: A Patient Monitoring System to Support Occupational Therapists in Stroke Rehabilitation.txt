@@ -1,0 +1,2341 @@
+ArmSleeve: a Patient Monitoring System to Support 
+Occupational Therapists in Stroke Rehabilitation 
+Bernd Ploderer1,2, Justin Fong1,3, Anusha Withana1,4, Marlena Klaic1,5, Siddharth Nair1, 
+Vincent Crocher1,3, Frank Vetere1, Suranga Nanayakkara1,4 
+1Microsoft Research Centre for SocialNUI, The University of Melbourne, Australia 
+2Queensland University of Technology, Brisbane, Australia 
+3Department of Mechanical Engineering, The University of Melbourne, Australia 
+4Augmented Human Lab, Singapore University of Technology and Design, Singapore 
+5The Royal Melbourne Hospital, Australia 
+{ploderer, vincent.crocher, f.vetere}@unimelb.edu.au, {justinf, siddharthn}@student.unimelb.edu.au, 
+{anusha, suranga}@ahlab.org, marlena.klaic@mh.org.au 
+
+through 
+
+ABSTRACT 
+This  paper  describes  the  design  of  “ArmSleeve”,  a  patient 
+monitoring  system  to  support  occupational  therapists  in 
+their  upper  limb  rehabilitation  work  with  stroke  patients. 
+Occupational therapists can provide rehabilitation in clinics, 
+but they have limited insights into how much their patients 
+use  their  affected  arm  and  hand  in  daily  life,  which  is 
+critical for effective recovery to occur. Our work addresses 
+interrelated  studies:  (1) 
+this  problem 
+three 
+interviews  with 
+their  current 
+rehabilitation  practices;  (2)  the  design  of  the  “ArmSleeve 
+Sensor”  to  monitor  a  patient’s  upper  limb  movement;  and 
+(3) 
+the  “ArmSleeve 
+Dashboard” to visualize this information for therapists. The 
+findings show the importance of collecting objective data to 
+assess  exercise  and  activities  outside  therapy,  but  also  a 
+lack  of  contextual  information  to  interpret  this  data.  We 
+discuss considerations for how to address this issue through 
+patient engagement as well as considerations for designing 
+wearable sensor technology that is usable in everyday life. 
+
+the  design  and  evaluation  of 
+
+to  examine 
+
+therapists 
+
+Author Keywords 
+Wearable technology; dashboard; information visualization; 
+stroke rehabilitation; occupational therapy  
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous.  
+
+INTRODUCTION 
+Stroke  is  the  leading  cause  of  disability  in  high-income 
+the  most  common  resulting 
+countries,  with  one  of 
+
+Permission to make digital or hard copies of all or part of this work for personal
+or  classroom  use  is  granted  without  fee  provided  that  copies  are  not  made  or
+distributed for profit or commercial advantage and that copies bear this notice
+and the full citation on the first page. Copyrights for components of this work
+owned by others than the author(s) must be honored. Abstracting with credit is
+permitted. To copy otherwise, or republish, to post on servers or to redistribute
+to  lists,  requires  prior  specific  permission  and/or  a  fee.  Request  permissions
+from Permissions@acm.org. 
+DIS 2016, June 04 - 08, 2016, Brisbane, QLD, Australia 
+Copyright is held by the owner/author(s). Publication rights licensed to ACM. 
+ACM 978-1-4503-4031-1/16/06  $15.00 
+DOI: http://dx.doi.org/10.1145/2901790.2901799 
+
+Figure 1: The ArmSleeve system was designed to support 
+occupational therapists through objective upper limb data 
+captured in the daily life of their patients. The system consists 
+of the (1) ArmSleeve sensor prototype and (2) a dashboard. 
+
+disabilities  being  paralysis  of  an  upper  limb  [25].  People 
+living with stroke often have difficulty producing voluntary 
+movement and experience difficulty in coordinating fingers, 
+hands  and  arms.  They  can  also  experience  deficits  in 
+sensation and proprioception, as well as muscle shortening 
+and  weakness,  which  further  complicate  upper 
+limb 
+movement. It is estimated that 65% of those who live with 
+stroke also live with a resulting disability that affects their 
+ability  to  independently  carry  out  activities  of  daily  living 
+(ADL) such as eating, dressing and washing [13].  
+
+Occupational therapists (OTs) can support stroke patients in 
+re-developing  motor  skills  and  in  learning  to  perform 
+activities  of  daily  living.  During  therapy  sessions  OTs 
+employ  a  variety  of  techniques  to  support  rehabilitation, 
+such as functional electrical stimulation, constraint induced 
+motor  training,  facilitation,  and  virtual  reality  applications 
+[5, 27]. Furthermore, OTs provide patients with exercises to 
+engage  the  affected  arm  in  everyday  activities  that  are 
+context  specific,  such  as  reach  and  grasp  tasks  in  the 
+kitchen  and  bathroom  [31].  This  combination  of  therapy, 
+exercise  and  context  specific  retraining  is  critical  for 
+neuroplasticity  [30].  However,  adherence  to  rehabilitation 
+programs  is  often  low  due  to  the  effort  required  to  use  a 
+paretic  upper  limb,  lack  of  motivation,  musculoskeletal 
+issues,  and  fatigue  [16].  Additionally,  OTs  lack  objective 
+data  about  the  degree  to  which  exercises  have  been 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia700 
+ 
+performed, or about how much patients have engaged their 
+affected upper limb at home. While retrospective recall and 
+exercise  diaries  can  gather  subjective  data,  the  quality  of 
+this data is limited and relies on patients that are motivated 
+and have adequate cognition [33].  
+
+The  aim  of  our  research  is  to  support  occupational 
+therapists (and stroke patients) by providing a collection of 
+objective data about patient upper limb movement in daily 
+life.  In  this  paper  we  firstly  report  on  an  analysis  of  OT's 
+current  practices  and  needs,  such  that  they  able  to  better 
+understand  a  patient’s  upper  limb  movement  in  daily  life. 
+Based  on  these  insights  we  then  report  on  the  design  and 
+evaluation of the ArmSleeve system. The system consists of 
+the  ArmSleeve  Sensor  to  monitor  upper  limb  movement, 
+and  the  ArmSleeve  Dashboard  which  provides  therapists 
+access to upper limb movement information (see Figure 1). 
+Based  on  design  workshops  and  interviews  with  OTs  we 
+show how the dashboard can enhance rehabilitation through 
+ongoing assessment and improved patient engagement.  
+
+RELATED WORK 
+
+interaction 
+
+techniques 
+
+HCI Work on Upper Limb Rehabilitation After a Stroke  
+There  is  a  growing  body  of  HCI  work  on  supporting 
+rehabilitation  after  a  stroke.  The  majority  of  this  work 
+focuses  on  patients,  often  through  interactive  games 
+combined  with  emerging 
+to 
+encourage  upper  limb  exercise.  Boulanger  et  al.  explored 
+the multi-touch capabilities of the Microsoft Surface Table 
+to  design  games  that  encourage  patients  to  exercise  finger 
+and  wrist  extension  movements  [7].  The  CONTRAST 
+system also uses games on a tabletop display to encourage 
+exercise  but  includes  physical  objects,  like  a  cup,  to 
+exercise grasping and moving actions on a tabletop surface 
+[15]. The PhysiCube system utilizes tangible objects (Sifteo 
+Cubes)  and  game  mechanisms  to  encourage  patients  to 
+practice grasp and lift movements [34]. Khademi et al. used 
+the  Leap  Motion  hand  tracking  system  and  a  modified 
+version  of  the  game  of  Fruit  Ninja  to  help  stroke  patients 
+practice  their  finger  individuation  [18].  Peiris  et  al.  built 
+SHRUG,  an  interactive  shoulder  rehabilitation  exerciser, 
+which allows patients to train the affected shoulder together 
+with  the  unaffected  shoulder  by  lifting  a  bar  onto  prongs 
+[26].  All  of  these  systems  are  designed  for  patient  use  in 
+clinical settings to engage in rehabilitative exercises.  
+
+line  of  HCI  work  focuses  on  designing 
+A  second 
+rehabilitative  systems  that  patients  can  use  in  their  own 
+homes.  This research  aims  to  design for  exercise  activities 
+that  are  meaningful  to  the  patient  and  that  fit  into  the 
+routines  of  their  daily  lives.  For  example,  Alankus  et  al. 
+designed  motion-based  games  and  deployed  them  in  the 
+home  of  a  woman  who  was  17  years  post-stroke  [2].  In 
+another example, Balaam et al. used a participatory design 
+approach  to  create  artifacts  for  people  living  with  the 
+effects  of  a  stroke  [3].  In  both  cases,  researchers  faced 
+challenges  in  balancing  the  need  for  activities  that  are 
+the  demands  of 
+meaningful  and  motivating,  with 
+
+rehabilitation  work.  Furthermore,  their  work highlights  the 
+importance of understanding the social context in which an 
+interactive  system  might  be  used,  including  the  role  of 
+family and informal carers. 
+
+There  is  far  less  research  on  the  needs  of  clinicians, 
+especially  the  occupational  therapists  (OTs),  who  care  for 
+patients  during  rehabilitation.  Moraiti  et  al.  worked  with 
+OTs to explore the use of Do-It-Yourself (DIY) toolkits like 
+Arduino and the Skweeze system, which can be embedded 
+into  everyday  objects  like  cushions  and  socks  [23].  By 
+embedding  these  toolkits  into  everyday  objects,  the  OTs 
+learnt  how  to  develop  their  own  smart  therapeutic  aids, 
+tailored for the specific interests and needs of their patients. 
+
+Monitoring Upper Limb Movements in Daily Life  
+HCI offers a wide range of work on monitoring health and 
+wellbeing over extended periods of time in daily life under 
+the  umbrellas  of  personal  informatics  [20]  and  Quantified 
+Self  [9].  This  work  is  often  driven  by  body-worn  sensors 
+(e.g., Fitbit, Jawbone Up) to monitor lower limb movement, 
+i.e., how much (typically healthy) people walk and exercise 
+in daily life [28]. 
+
+Beursgens et al. applied a personal informatics approach to 
+design  Us’em:  a  watch-like  device  worn  on  both  arms  to 
+monitor  upper  limb  movement  of  stroke  patients  in  daily 
+life [6]. Us’em only measures acceleration at the wrist. The 
+system  does  not  isolate  upper  limb  movement  from  torso 
+movements, nor does it precisely measure how a particular 
+part of the upper limb moves. Nevertheless, by providing a 
+comparison  in  activity  levels  between  the  affected  and  the 
+unaffected upper limb it provides a useful starting point to 
+understand  how  much  the  affected  upper  limb  of  a  stroke 
+patient is engaged in daily life. 
+
+Accurate  upper  limb  monitoring  systems  using  body-worn 
+sensors  are  difficult  to  implement  due  to  its  complexity  –
+both  conceptual  and  technological.  The  upper  limb  moves 
+with many degrees of freedom at the shoulder, elbow, wrist 
+and fingers. Unlike walking, where well-established models 
+exist  to  describe  and  quantify  steps  [35],  upper  limb 
+motions  are  difficult  to  quantify  due  to  their  variety  in 
+shape.  Likewise,  while  pedometers  can  monitor  steps  with 
+one  sensor,  accurate  upper  limb  monitoring  requires 
+multiple connected sensors to distinguish between shoulder 
+and elbow movements, and to exclude movements coming 
+from the torso. Despite these difficulties, studies in clinical 
+settings  over  short  timespans  have  shown  that  sensors  can 
+capture  upper  limb  motion  of  healthy  participants  and 
+stroke patients with some success [11, 19, 32].  
+
+In  summary,  there  are  various  strong  efforts  to  engage 
+patients  living  with  the  effects  of  a  stroke  in  upper  limb 
+exercise  and  to  monitor  their  movement.  While  this  focus 
+on 
+little 
+consideration  for  the  needs  of  occupational  therapists  and 
+on creating systems that allow them to benefit from the data 
+collected by upper limb monitoring systems.  
+
+there  has  been 
+
+the  patient 
+
+important, 
+
+is 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia701RESEARCH SETTING AND APPROACH 
+The aim of this research is to design a system that supports 
+the  practices  of  occupational  therapists  (OTs)  in  providing 
+data  about  the  upper  limb  movement  of  stroke  patients  in 
+daily life. In particular, this research aims to (1) understand 
+the current practices and needs of OTs, (2) design a body-
+worn  sensor  system  (ArmSleeve  Sensor)  to  monitor  upper 
+limb  movement,  and  (3)  design  a  web-based  dashboard  to 
+visualize  the  movement  data  to  support  OTs  (ArmSleeve 
+Dashboard).  The 
+is  called 
+“ArmSleeve”,  because  the  team  envisioned  a  system 
+consisting  of  multiple  sensors  along  the  arm  to  monitor 
+movement,  which  could  eventually  be  embedded  in  the 
+sleeve of a shirt. The final system described here consisted 
+of a wearable technology worn on the patient’s arm. 
+
+technology  we  designed 
+
+Research Setting 
+This  research  was  conducted  in  collaboration  with  a  large 
+tertiary  hospital  in  Melbourne.  The  hospital  offers  various 
+rehabilitation programs for stroke patients, including upper 
+limb  programs 
+services. 
+Rehabilitation  of  the  upper  limb  is  a  core  practice  of 
+therapists across both inpatient and outpatient settings.  The 
+primary  goal  of  occupational  therapy  interventions  are  to 
+enable people to participate in their activities of daily living 
+ranging  from  personal  and  domestic  tasks,  through  to 
+community, employment, leisure and recreational activities. 
+
+community 
+
+therapy 
+
+and 
+
+Patients experiencing a stroke are initially managed within 
+the  acute  stroke  unit  by  a  team  of  medical,  nursing  and 
+allied  health  staff.  Patients  receive  occupational  therapy 
+intervention  a  minimum  of  3  times  per  week.  Patients 
+requiring  further  rehabilitation  may  be  transferred  to  the 
+sub-acute  inpatient  setting.  The  length  of  stay  for  a  period 
+of inpatient rehabilitation varies from a couple of weeks up 
+to  many  months.  These  patients  receive  occupational 
+therapy  intervention  on  a  daily  basis.  Chronic  stroke 
+patients who are residing within the community may attend 
+community-based  therapy  where  they  attend  for  up  to  3 
+sessions per week over a 6 – 10 week period.   
+
+The  hospital  recently  established  a  ‘hub’  with  upper  limb 
+workstations  based  on  robotic  and  gaming  technology.  A 
+dedicated movement laboratory has also been developed to 
+assess and study patient progress. While these technologies 
+provide  support  during  rehabilitation  sessions,  the  OTs 
+were  keen  to  explore  how  technology  could  monitor  and 
+support  patients  outside 
+therapy  sessions  and  more 
+specifically in home and community settings. 
+
+Research Approach 
+We conducted this research through a series of research and 
+design  activities  with  10  OTs  at  the  Royal  Melbourne 
+Hospital. These activities involved the following: 
+
+  Study 1 - understand OT practices and needs,  
+  Study 2 - design and evaluate the ArmSleeve Sensor to 
+track arm movement through wearable technology, and  
+
+  Study  3  -  design  and  evaluate 
+
+the  ArmSleeve 
+information 
+dashboard, 
+generated  by  the  sensors  can  be  presented  to  enhance 
+the work of therapists.  
+
+to  understand  how 
+
+the 
+
+STUDY 1: PRACTICES AND NEEDS OF THERAPISTS 
+
+Research Aim and Study Design 
+The  aim  of  study  1  was  to  examine  the  practices  of  OTs, 
+specifically  to  understand  their  needs  for  monitoring 
+patients  in  between  therapy  sessions.  The  first  author 
+conducted  semi-structured  interviews  with  8  OTs  working 
+in  upper  limb  rehabilitation.  One  OT  was  a  student,  all 
+other  OTs  had  at  least  2  years  of  clinical  experience.  The 
+interviews  focused  on  current  practices  of  OTs,  i.e.,  how 
+they assess and treat patients during upper limb therapy and 
+how  they  currently  elicit  information  about  the  patient’s 
+activities in between therapy session.  
+
+We  prepared  a  video  showing  one  of 
+the  authors 
+performing  activities  of  daily  living  (eating,  cleaning, 
+opening doors) in the manner of a stroke patient. This video 
+was  used  as  a  probe  in  the  interview  to  elicit  how  OTs 
+analyze  upper  limb  movements  and  what  information  they 
+would  desire  if  they  could  observe  a  patient  in  daily  life 
+outside the clinic. The interviews lasted 30 minutes and the 
+recordings were transcribed verbatim for later analysis. 
+
+We  analyzed  the  data  qualitatively  following  a  thematic 
+approach  [8]  to  examine  how  OTs  currently  assess  upper 
+limb  movement  and  what  information  they  desire  about 
+their  patients.  Immediately  following  each  interview,  the 
+first author created mind-maps to capture themes emerging 
+in  the  interview.  Authors  1  and  2  listened  to  the  audio 
+recordings  and  read  through  all  interview  transcripts  to 
+familiarize themselves with the data. After generating initial 
+codes  on  paper  about  what  information  OTs  seek  and 
+desire,  Saturate  [1],  was  used  to  code  all  transcripts. 
+Recurring codes and emerging themes were refined through 
+discussion  and  affinity  diagraming  with  the  other  authors, 
+and are presented as findings below. 
+
+the 
+
+to  achieve  for 
+
+Meaningful Goals, Activities and Motions 
+The  role  of  an  Occupational  Therapist  (OT)  is  to  improve 
+their  patient's  ability  to  perform  activities  of  daily  living 
+(ADL). Hence at the start of the rehabilitation process OTs 
+establish  which  activities  are  important  to  the  life  of  a 
+patient  and  define  goals  that  are  meaningful  to  the  patient 
+and  realistic 
+the 
+rehabilitation.  These  goals  often  focus  on  fundamental 
+activities like dressing and feeding, e.g., to “open his hand 
+up  so  he’s  able  to  grasp  the  drink  bottle  and  with  the  two 
+hands,  bring  the  drink  bottle  to  his  mouth.”  (OT5).  Goals 
+also include activities that may seem less essential for daily 
+living,  yet  are  important  and  therefore  motivating  to  the 
+patient, like being able to play a musical instrument again. 
+“I have a patient that has a little bit of shoulder movement, 
+some flickers in his elbow but no movement in his wrist. His 
+goal was to be able to play the ukulele and to strum it with 
+
+timeframe  of 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia702his  hand.  I  guess  it's  around  saying  I  don't  want  to  ruin 
+your hopes but picturing that more as a long term goal … 
+we refined the goal together so the goal is now in the four 
+weeks  that  he's  able  to  independently  position  his  arm  on 
+his ukulele as a pre-cursor to strumming it.” (OT3) 
+
+An important skill of the OT is to break down meaningful 
+activities  (like  playing  the  ukulele)  into  simple  motions 
+(like  lifting  the  arm  from  the  shoulder  and  flexing  the 
+elbow).  OTs  also  compose whole  activities  based on  these 
+simple  motions.  Such  OT  skills  are  critical  to  establish 
+goals that are realistic based on the capabilities of a patient. 
+Identifying  relevant  motions  related  to  activities  is  also 
+critical to set exercises performed during rehabilitation and 
+to correct motions performed in an unhealthy manner.  
+
+through 
+
+is  achieved 
+
+Exercise and Activities Outside Therapy 
+Rehabilitation  progress 
+intensive 
+exercise of the upper limb during a therapy session as well 
+as  outside  therapy.  The  number  of  upper  limb  therapy 
+sessions per week varied from one to five therapy sessions 
+per week, depending on whether patients stayed at the clinic 
+or at home. Regardless of how many therapy sessions they 
+had, 
+time  spent 
+exercising  during  therapy  was  not  sufficient  to  make 
+progress.  Hence  many  patients  received  programs  to 
+exercise their upper limb outside therapy. 
+
+therapists  emphasized 
+
+that 
+
+the 
+
+the 
+
+“I work in community-based rehab, so I see someone for an 
+hour  ...  It's  such  a  small  period  of  time  in  their  weekly 
+schedule … Our patients need to be doing a whole lot more 
+therapy and that therapy needs to be task oriented, it needs 
+to  be  meaningful,  and  it  needs  to  be  mass  practice  and 
+repetition  outside  of  the  hours  that  we  see  them,  which  is 
+why  we  develop  home  exercise  programs  for  people.  They 
+really  need  to  be  doing  an  hour  of  repetitive  upper  limb 
+therapy a day I would say to make progress.” (OT3)  
+
+These exercise programs focused on repetitive sets of either 
+specific  motions  or  functional  activities.  Examples  of 
+motion-based  exercises  include  “practicing  to  do  wrist 
+extension,  and  also  against  gravity”  (OT1)  and  “basic 
+reach and basic shoulder and elbow movements – reaching 
+out  and  looking  at  trying  to  reduce  his  compensatory 
+movements”  (OT3).  Alternatively,  examples  of  functional 
+exercises given by the OTs include: “bringing his left hand 
+up to his mouth to hold a spoon” (OT6), or “practicing to 
+reach for a cup, and repetitions of that as many as they can, 
+over an hour in the afternoons each day” (OT1). 
+
+Additionally,  OTs  encouraged  patients  to  use  their  upper 
+limb  in  activities  of  daily  living  when  opportunities  arise. 
+For  example,  “wash  dishes  with  [the  patient’s]  affected 
+arm” (OT3) or “shaking people’s hands” (OT5). 
+
+Objective Data to Assess Exercise and Activities 
+It is very difficult for an OT to discern whether a patient has 
+adequately completed her exercise program and to know to 
+what  extent  a  patient  is  actually  using  her  upper  limb  in 
+other  activities  of  daily  living.  OTs  typically  discuss  the 
+
+patient’s  activities  and  exercise  programs  at  the  start  of  a 
+rehabilitation session and some patients keep diaries to keep 
+track  of  their  exercise.  This  discussion  works  well  for 
+patients who are motivated, and some therapists pointed out 
+that  they  could  infer  whether  patients  adhered  to  their 
+exercise program based on their progress (or lack thereof). 
+Regardless of the progress, however, the therapists desired 
+more  detailed  information  on  the  activity  levels  of  their 
+patients:  “I  see  them  on  a  Wednesday,  after  giving  them 
+exercises – I still don’t get a real sense of what’s happening 
+for  them  over  that  24  hour  period,  how  much  that  arm  is 
+being moved and engaged [in activities]. I still feel like I’m 
+really  lost  from  that  point  of  view.  And  to  show  that  what 
+we are doing from the therapy point of view is effective, we 
+need this information.” (OT1) 
+
+The  OTs  hence  desired  objective  data  about  the  exercises 
+and other activities of daily living (ADL) that their patients 
+performed with the affected arm. Their key questions were: 
+(1) “Whether they're doing their home exercise program or 
+not.” (OT3), and (2) “How much they’re using their arm in 
+things [ADL] like showering, getting dressed. Is it hanging 
+like a dead weight by their side, and then they’re using their 
+right  arm  to  do  everything,  or  are  they  actually  trying  to 
+use that left hand a little bit?” (OT6) 
+
+Achieving  objective  data  about  upper  limb  movement  is 
+also conceptually difficult. How do we quantify upper limb 
+movements?  Do  we  collect  data  for  each  joint  by  joint  or 
+the  arm  as  a  whole?  And  how  do  we  describe  objectively 
+how much or how well a patient engages the upper limb in 
+an  activity  like  eating  a  meal?  To  understand  these  issues 
+from  an  OT’s  perspective,  we  discussed  with  them  the 
+previously  mentioned  video  of  a  person  performing 
+exercises  and  activities.  We  asked  the  OTs  to  think  aloud 
+what  they  observed  in  this  video  and  how  they  would 
+quantify  their  observations.  Through  these  discussions  we 
+learnt that OTs desire the following data: 
+
+  Number  of  movements,  ideally  based  on  exercises 
+activities,  or  alternatively  as  motions  for  each  joint 
+(shoulder,  elbow,  wrist,  fingers):  “it  would  be  really 
+good to know that the arm is moving in the first place, 
+that they are actually using that arm. If we get down to 
+the  nitty-gritty  it  would  be  really  nice  to  know  if  the 
+shoulder  is  moving  or  the  elbow  is  moving,  or  what 
+joints  they  are  actually  moving  to  assist  them  with 
+doing that task.” (OT1) 
+
+  Time spent moving the arm: “Are they incorporating 
+their  arm  [into  ADL]?  For  how  long?”  (OT1)”;  “it’s 
+good if they’re using their arm to do their exercises for 
+half an hour a day [during therapy], that is important, 
+but  the  more  important  thing  is  that  they’re  using  the 
+other twenty-three-and-a-half hours of the day.” (OT6) 
+  Quality  of  movements  based  on  observations  of 
+unnatural  motions  and  compensatory  movements,  like 
+lifting  the  shoulder  to  reach  forward:  “There's  always 
+that  risk  of  them  doing  a  home  exercise  program  and 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia703they don't 
+physically 
+to  do  norm
+for  the  m
+patterns an
+the whole t
+
+  Range of m
+
+
+like this as
+muffin. But
+active  or 
+what's thei
+  Common 
+
+position th
+
+have a therapi
+able to or mig
+mal  movements
+majority  of  the
+nd they come 
+therapy session
+motion (ROM
+s a whole - how
+t then I'd be th
+passive  range
+ir elbow range 
+postures  of 
+eir arm when n
+
+ist there and th
+ght not be awar
+s.  So  they  mig
+eir  time  abno
+back to therap
+n correcting it 
+M) for each join
+w do they go r
+inking do they 
+e,  of  their  fin
+like.” (OT7) 
+the  upper  lim
+not observed.”
+
+be 
+hey might not b
+re that they ne
+ed 
+ng 
+ght  be  practicin
+ent 
+ormal  moveme
+py and we spen
+nd 
+) 
+again.” (OT3)
+t it 
+nt: “I'd look at
+hat 
+reaching for th
+have good wr
+ist 
+sp, 
+ngers  to  gras
+
+mb:  “how  th
+” (OT2) 
+
+ey 
+
+S
+STUDY 2: DES
+ARMSLEEVE S
+A
+
+SIGN AND EVA
+SENSOR 
+
+ALUATION OF
+
+F THE 
+
+R
+Research Aim 
+I
+In study 2 we e
+monitored  thr
+m
+develop a sens
+d
+th
+he day by stro
+OTs, as identifi
+O
+
+and Study De
+explored how 
+ough  sensor 
+or that can be 
+oke patients an
+ied in study 1. 
+
+esign 
+upper limb mo
+technology. 
+worn comfort
+nd captures the
+
+ovements can b
+We  sought 
+tably througho
+e data desired b
+
+be 
+to 
+out 
+by 
+
+Study  2  led  to
+S
+wearable techn
+w
+th
+he shoulder, el
+d
+developed  and
+nvestigations w
+in
+
+the  developm
+nology prototyp
+lbow and wrist
+d  evaluated  th
+with the follow
+
+ment  the  ArmS
+pe that monitor
+t. The ArmSlee
+hrough  a  serie
+wing aims: 
+
+Sleeve  Sensors,
+rs movements
+eve sensors we
+es  of  design-l
+
+,  a 
+of 
+ere 
+ed 
+
+1.  explore  ho
+1
+monitored 
+2.  evaluate th
+2
+
+ow  the  movem
+based on the n
+he accuracy of 
+
+ment  of  the  upp
+needs identified
+the data collec
+
+per  limb  can  b
+d in study 1,  
+cted 
+
+be 
+
+Design of the A
+D
+T
+To  explore  ho
+m
+monitored, we 
+c
+critical  to  their
+hrough  severa
+th
+sensor  technol
+s
+it
+terations  were
+th
+he  prototypes 
+prototype that w
+p
+
+ArmSleeve Se
+ow  movement
+analyzed the a
+r  practice  (bas
+al  iterations 
+logies  to  capt
+  based  on  info
+on  ourselves 
+we could evalu
+
+ensor 
+t  of  the  uppe
+arm movements
+sed  on  study 
+of  prototypin
+ture  these  mo
+ormal  tests  and
+until  we  arriv
+uate in a labora
+
+er  limb  can  b
+s that OTs foun
+1)  and  we  we
+g  with  vario
+ovements.  The
+d  discussions 
+ved  at  a  matu
+atory setting. 
+
+be 
+nd 
+ent 
+us 
+ese 
+of 
+ure 
+
+B
+Based  on  the  f
+in
+nformation  ab
+in
+nformation  ab
+consists of thre
+c
+These joints co
+T
+a
+as  shown  in  F
+c
+captured  the  fi
+R
+Rotations  θ6  a
+echnical  comp
+t
+person wearing
+p
+
+findings  from 
+bout  the  upper
+bout  each  joi
+ee main joints: 
+ould result in a 
+Figure  2-a,  as 
+irst  five  of  the
+and  θ7  were  o
+plexity  and  in
+g the sensors. 
+
+study  1  we  a
+r  limb  as  a  w
+int.  The  hum
+shoulder, elbo
+total of seven 
+θ1  to  θ7.  The
+ese  motions  (s
+omitted  due  t
+ncreased  intrus
+
+aimed  to  captu
+whole  as  well 
+man  upper  lim
+ow and the wri
+angular motio
+e  final  prototyp
+see  Figure  2-b
+to  the  increas
+siveness  for  th
+
+ure 
+as 
+mb 
+st. 
+ns 
+pe 
+b). 
+ed 
+he 
+
+T
+The  motion 
+M
+Measurement  U
+elbow and at th
+e
+r
+relatively  low 
+consisted  of 
+c
+
+data  was 
+Units  (IMUs) 
+he shoulder (Fi
+in  power  con
+a  magnetom
+
+hrough 
+Inerti
+th
+captured 
+wrist,  above  th
+placed  at  the 
+Us are small an
+igure 2-c). IMU
+e  selected  IMU
+sumption.  The
+oscope  and 
+meter,  a  gyro
+
+ial 
+he 
+nd 
+Us 
+an 
+
+Fig
+motion
+
+gure 2: Analysis
+n in arm joints,
+and c)
+
+s of sensor requ
+ b) selected set 
+) chosen sensor
+
+uirements. a) de
+of motions to b
+r locations. 
+
+grees of 
+be captured 
+
+acceler
+was co
+of  the 
+calcula
+relative
+orienta
+torso a
+degree
+flexion
+elbow 
+(pronat
+
+rometer.  The 
+ombined to pro
+IMU  relative
+ate  the  orientat
+e  to  earth.  A  t
+ation,  and  to  d
+and the arm. Fr
+es  of  freedom 
+n/extension,  in
+(flexion/ext
+tion/supination
+
+information  fr
+oduce a measu
+e  to  earth.  Tw
+tion  of  the  upp
+third  IMU  was
+distinguish  bet
+rom these sens
+in  the  should
+nternal/externa
+tension) 
+and 
+n) can be calcu
+
+ree  sensors 
+from  these  thr
+urement of the 
+orientation 
+be  used  to 
+wo  IMUs  can  b
+he  forearm 
+per  arm  and  th
+s  used  to  sens
+e  the  torso 
+ents  of  the 
+tween  moveme
+of the three 
+sors, motions o
+/adduction, 
+der  (adduction/
+one  in  the 
+al  rotation),  o
+t
+the  wrist 
+2-b). 
+ulated (Figure 2
+
+one 
+
+in 
+
+an 
+
+The  A
+sensor 
+(Inven
+M0+), 
+recharg
+microp
+noise f
+and co
+unit (S
+helps  t
+units,  w
+separat
+Blueto
+units a
+buttons
+sensor 
+To ana
+cards 
+compu
+
+ArmSleeve  prot
+units.  Each
+sense MPU925
+a  real  time  cl
+geable  battery
+processor acqu
+filtering and ca
+ompass data tog
+SD card) along 
+to  keep  the  ti
+which  allows 
+te units to re-c
+ooth is used to 
+and to receive 
+s to set the sen
+status  (such  a
+alyze the recor
+from  each  se
+uter into the Ar
+
+totype  consist
+h  sensor  un
+50), a micropr
+lock  and  a  SD
+y,  LED  and  a 
+uires data from 
+alibration, fuse
+gether and sav
+with a time st
+ime  constant  b
+us  to  combine
+create the com
+synchronize t
+user inputs. E
+nsor into calibra
+as  battery  leve
+rded data, OTs
+ensor  unit  and
+rmSleeve dashb
+
+ted  of  three  in
+it  contained 
+rocessor (nrf51
+D  card  as  data
+power  supply
+the IMU apply
+e the accelerom
+ve data in the d
+tamp. The real 
+between  differ
+e  the  data  reco
+mplete motion o
+the time betwe
+ach sensing un
+ation mode and
+el,  and  function
+s need to remo
+d  import  the 
+board. 
+
+ndependent 
+IMU 
+1822 ARM 
+a  storage,  a 
+y  unit.  The 
+y low level 
+meter, gyro 
+data storage 
+time clock 
+rent  sensor 
+orded  from 
+of the arm. 
+een sensing 
+nit has two 
+d query the 
+nal  status). 
+ove the SD 
+data  on  a 
+
+Accura
+We  ev
+laborat
+particip
+simulta
+Vicon®
+standar
+attache
+medica
+Figure 
+system
+body  m
+movem
+
+acy of the Arm
+valuated  the  ac
+tory  setting. 
+pant  perform
+aneously  throu
+® motion capt
+rd”  technology
+ed  to  a  health
+al  tape  at  the 
+2-c.  Furtherm
+m  were  placed 
+movement.  Th
+ments: (1) simp
+
+mSleeve Sens
+ccuracy  of  the
+We  captured
+ming  a  serie
+ugh  the  Arm
+ture system, w
+y  [36].  The  A
+hy  participant 
+
+shoulder,  elbo
+more,  reflective
+d  on  the  partic
+he  participant 
+ple motions for
+
+or 
+e  ArmSleeve  s
+d  data  from 
+es  of  arm 
+mSleeve  sensor
+which is consid
+ArmSleeve  sen
+using  Velcro 
+ow  and  wrist 
+e  markers  for 
+cipant  to  meas
+performed  tw
+r each degree o
+
+sensor  in  a 
+a  healthy 
+movement 
+rs  and  the 
+dered “gold 
+nsors  were 
+straps  and 
+as  seen  in 
+the  Vicon 
+sure  upper 
+wo  sets  of 
+of freedom 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia704 
+Sh Flex/Ext
+Sh Abd/Add
+Sh Ax Rot
+
+5
+
+10
+
+15
+
+20
+
+25
+
+Elbow Flex/Ext
+Wrist Pro/Sup
+
+200
+
+100
+
+0
+
+-100
+
+0
+
+150
+
+100
+
+50
+
+0
+
+5
+
+10
+
+0
+25
+Figure 3: Comparison of motion data captured from 
+ArmSleeve Sensors (solid lines) and Vicon® Motion Capture 
+System (dashed lines). The graph shows shoulder (top), elbow 
+and wrist motion (bottom) for 5 sets of swinging the right arm.
+
+20
+
+15
+
+(e.g.,  shoulder  abduction)  and  (2)  activities  of  daily  living 
+(e.g., lift a can to the mouth, open a door). Motion data for 
+each  task  and  for  each  degree  of  freedom  at  the  shoulder 
+and elbow was exported from both systems for comparison. 
+
+The  analysis  showed  that  the  ArmSleeve  system  collects 
+data that is comparable to the data generated by the Vicon® 
+system.  Figure  3  shows  motion  data  captured  by  both  the 
+ArmSleeve  and  the  Vicon  system  for  5  sets  of  abduction 
+motions,  where  the participant  was  swinging  the right  arm 
+along the frontal plane and back. It can be observed that the 
+ArmSleeve system was capable of producing similar data to 
+that produced by the Vicon. Particularly, the measurements 
+in  flexion/extension  of  both  the  wrist  (bottom  graph)  and 
+shoulder  (top),  and  abduction/adduction  of  the  shoulder 
+(top)  are  well  represented.  However,  measurements  of 
+shoulder axial rotation, and wrist are less accurate. In other 
+movements,  both 
+those 
+involving activities of daily living, we observed some other 
+differences in the measurements – particularly offsets in the 
+reported  angles.  In  these  instances,  the  overall  changes  in 
+the  degrees  of  motion  are  consistent,  however,  the  sensors 
+report different starting angles.  
+
+the  simple  movements  and 
+
+Differences  in  the  data  generated  by  the  ArmSleeve  and 
+Vicon  systems  are  predominantly  due  to  errors  in  the 
+placement of the sensors on the arm. To address this issue 
+sensors  need  to  be  properly  aligned  through  careful 
+application of the straps, and they need to be secured such 
+that they do not move. Another limitation of the data relates 
+to the accuracy of the Vicon. In some instances, the Vicon 
+reported  angles  that  are  impossible  for  a  human  body  to 
+achieve.  This has obvious  implications on  the  comparison. 
+Furthermore,  the  Vicon  data  is  strongly  filtered  and  hence 
+produces  smoother  graphs,  which  makes  it  difficult  to 
+conduct a statistical comparison with the ArmSleeve data.  
+
+The  ArmSleeve  prototype  shows  that  upper  limb  motions 
+can  be  captured  accurately  in  the  lab,  but  further  work  is 
+required  to  produce  data  on  number  of  movements,  time 
+spent  moving  and  indications  of  quality.  Furthermore, 
+
+significant work is required to develop sensors suitable for 
+patient use in everyday life. In addition to more secure and 
+precise straps, they must also be correctly packaged, so that 
+they are easy to put on and take off, are easily charged, and 
+data can be easily transferred by patients or therapists.  
+
+STUDY  3:  DESIGN  AND  EVALUATION  OF  THE 
+ARMSLEEVE DASHBOARD 
+
+Research Aim and Study Design 
+The  aim  of  study  3  was  to  design  and  evaluate  the 
+ArmSleeve  dashboard.  The  dashboard  was  designed  for 
+OTs to visualize a patient’s arm motions as captured by the 
+ArmSleeve sensors. 
+
+This  dashboard  was  created  through  a  series  of  design 
+workshops.  The  first  workshop  was  conducted  within  the 
+research team, based on brainstorming and sketching ideas 
+in  response  to  the  findings  from  study  1.  A  second 
+workshop  was  conducted  with  two  OTs,  which  also 
+involved  sketching  ideas  followed  by  a  discussion  of  the 
+sketches  from  the  initial  workshops.  This  workshop  led  to 
+the  ideas  for  the  four  main  visualizations  presented  in  the 
+ArmSleeve  dashboard  (see  Figure  4).  The  sketches  were 
+iterated 
+through 
+into  paper  prototypes  and  mockups 
+ongoing discussion with the two OTs and the research team. 
+The  final  prototype  used  for  the  evaluation  was  an 
+interactive HTML prototype created with Axure RP.  
+
+fresh  perspective  on 
+
+We  evaluated  the  dashboard  with  the  same  8  OTs  as  in 
+study  1  to  assess  how  useful  the  information  presented  in 
+the  dashboard  is  for  their  rehabilitation  practices.  These 
+OTs were not involved in the creation of the dashboard and 
+hence  provided  a 
+ideas 
+encapsulated  in  the  design.  We  asked  the  OTs  to  explore 
+the  different  dashboard  visualizations  and  to  think  aloud 
+their first impressions and how they would incorporate this 
+information into their work. We asked them questions about 
+how useful they considered the visualizations presented on 
+the dashboard for their own work and discussed options for 
+revising  the  dashboard  to  enhance  its  usefulness.  The 
+evaluation 
+the 
+lasted  approximately  30  minutes  and 
+recordings were transcribed verbatim for our analysis.  
+
+the 
+
+We analyzed the data through a thematic approach [8] like 
+in  study  1.  Authors  1  and  4  immersed  themselves  into  the 
+data and coded the transcripts using the qualitative analysis 
+tool  Saturate.  The  themes  presented  in  the  findings  show 
+how  useful  different  dashboard  visualizations  were  to 
+enhance the practices of OTs, as well as their limitations. 
+
+ArmSleeve Dashboard Design 
+The ArmSleeve Dashboard was designed in response to the 
+findings of study 1, the constraints of the prototype of study 
+2, and ideas emerging in design workshops.  
+
+We  sought  to  design  a  dashboard  that  OTs  can  use  in  a 
+variety of ways: to get a quick overview before the therapy, 
+to  engage  a  patient  in  conversation  with  the  data  during 
+therapy, and to conduct clinical research on the relationship 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia705b
+between arm u
+needed to prese
+n
+
+use in daily life
+ent the data typ
+
+e and progress
+pes discerned fr
+
+s. The dashboa
+from study 1:  
+
+ard 
+
+  Number of
+
+  Time spent
+
+  Quality of 
+
+  Range of m
+
+  Common p
+
+
+f movements  
+t exercising or 
+movements, on
+motion (ROM) 
+postures of the 
+
+moving the ar
+n a scale from 
+for each degre
+arm 
+
+rm 
+1 to 10 
+ee of freedom
+
+T
+The detail of th
+OTs  in  study 
+O
+available  throu
+a
+2
+2,  metrics  disc
+with OTs to pri
+w
+
+hese data was 
+1  about  data  u
+ugh  the  ArmSl
+cussed  in  relate
+ioritize metrics
+
+based on disc
+used  in  clinica
+eeve  sensor  de
+ed  work  [10], 
+s during the des
+
+ussions with th
+al  practice,  da
+esigned  in  stud
+and  discussio
+sign workshop
+
+he 
+ata 
+dy 
+ns 
+ps.  
+
+For the purpose
+F
+d
+data for a fictit
+2
+2  and  mock  da
+s
+shows  how  thi
+dashboard page
+d
+
+e of our evalua
+ious patient, ba
+ata  generated b
+is  data  was  vi
+es:  
+
+ation, the dash
+ased on data co
+by  the  research
+isualized  acros
+
+hboard contain
+ollected in stud
+h  team.  Figure
+ss  four  differe
+
+ed 
+dy 
+e  4 
+ent 
+
+ew page to prov
+ne  to  get  an  o
+owing  the  tag
+like eating) ba
+sed visualizati
+nd  number  of  m
+
+vide a snapsho
+overview  of  th
+gging  of  exe
+sed on discussi
+on to explore 
+movements  for
+
+t  
+t of the patient
+ity 
+he  daily  activi
+her 
+rcise  and  oth
+nts  
+ion with patien
+on 
+range of motio
+r  each  degree 
+of 
+
+a)  An overvie
+a
+b)  A  time  lin
+b
+levels,  all
+activities (l
+c)  A joint-ba
+c
+(ROM)  an
+freedom  
+d)  Heat maps
+d
+
+s to show comm
+
+mon motions an
+
+nd arm position
+
+ns 
+
+A
+Assess Exerci
+T
+The  main  stre
+w
+work  of  therap
+about  the  activ
+a
+preferred pages
+p
+generally the ov
+g
+
+ises and Activ
+ength  of  the  A
+pists  was  that  i
+vities  of  their 
+s to assess exer
+verview page a
+
+vities Outside 
+ArmSleeve  da
+it  provided  the
+patients  outsi
+rcises and othe
+and the timelin
+
+ashboard  for  th
+em  with  insigh
+de  therapy.  Th
+er activities we
+ne page. 
+
+he 
+hts 
+he 
+ere 
+
+Therapy 
+
+T
+The  overview
+patient’s  activ
+p
+number of mov
+n
+q
+quality  of  thes
+e
+each day. A sim
+o
+over a week pro
+when their pati
+w
+d
+did  not  reach  t
+r
+really hard tod
+th
+hen  the  next 
+between  and  t
+b
+h
+haven’t  done  m
+p
+patient  around
+r
+really valuable
+spent active as 
+s
+he  activities  o
+th
+“
+“it’s  good  if  th
+fo
+for  half  an  ho
+im
+mportant thing
+and-a-half hour
+a
+
+w  page  provid
+vity  levels  th
+vements perfor
+e  movements, 
+mple timeline s
+ovided therapi
+ients performe
+their  target  lev
+day and then to
+day  they  wil
+hen  two  days 
+my  exercises 
+d  that  when  y
+e.” (OT8) Som
+an indicator f
+of  daily  living
+hey’re  using  th
+our  a  day,  tha
+g is that they’r
+rs of the day th
+
+ded  a  quick  s
+hrough  visuali
+rmed over a w
+and  the  time 
+showing movem
+sts with a quic
+d well and wh
+vels:  “a  lot  of 
+omorrow they r
+l  probably  do
+later  they  wi
+very  much’,  a
+ou’ve  got  har
+me therapists pr
+for the amount
+g  performed  o
+heir  arm  to  do
+at  is  importan
+e using the oth
+hat they can.” (
+
+snapshot  of  th
+izations  of  th
+week, the avera
+spent  active  f
+ments perform
+ck glance of da
+hen their patien
+patients  will  t
+really suffer an
+o  somewhere 
+ill  be  like  ‘oh
+and  educating 
+rd  data  spike 
+referred the tim
+t of exercise an
+outside  therap
+o  their  exercis
+nt,  but  the  mo
+her twenty-thre
+(OT6).  
+
+he 
+he 
+ge 
+for 
+ed 
+ays 
+nts 
+try 
+nd 
+in 
+h  I 
+a 
+is 
+me 
+nd 
+py: 
+ses 
+ore 
+ee-
+
+T
+The  timeline  p
+activities patien
+a
+
+page  was  usef
+nts performed,
+
+ful  to  analyze 
+ and to some e
+
+in  detail  whi
+extent, how we
+
+ch 
+ell 
+
+(a) 
+
+(b)
+
+(c) 
+
+(d)
+
+re 4: The ArmS
+Figur
+rview page, (b)
+ove
+po
+oints, (c) visuali
+nt, and (d) heat 
+join
+
+Sleeve dashboar
+ a timeline with
+izations for ran
+maps to show c
+
+rd provides (a) 
+h the ability to t
+nge of motion fo
+common arm po
+
+a patient 
+tag data 
+or each 
+ositions.
+
+they pe
+indicat
+program
+exercis
+eating,
+flat lin
+Some p
+can use
+
+erformed them
+tion  whether 
+ms  at  all:  “if  y
+ses,  or  he’s  n
+, well this wou
+ne or whether t
+patients keep e
+e to make sens
+
+m. The detail in
+patients  per
+you’re  worried
+not  incorporati
+uld somewhat t
+there are mom
+exercise or act
+se of the timeli
+
+n the timeline p
+rformed 
+their
+d  that he’s  no
+ing  his  hand 
+tell you whethe
+ments of activity
+tivity diaries, w
+ine data and to
+
+provided an 
+r  exercise 
+t doing his 
+when  he’s 
+er there’s a 
+ty.” (OT5). 
+which OTs 
+o tag spikes 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia706 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+in  the  data  with  activities  like  eating  or  exercising:  “we 
+could  get  them  to  keep  a  diary  or  something  like  that  and 
+when they come then sit down with their diary.” (OT3) 
+
+The joints section provided a more detailed analysis of the 
+progress  made  by  a  patient  through  the  range  of  motion 
+(ROM)  for  each  degree  of  freedom  at  the  shoulder,  elbow 
+and wrist. Improvements in the ROM are not always visible 
+in therapy sessions, and therapists typically do not have the 
+time to assess it in each therapy session. Seeing progress in 
+ROM  however  is  useful  to  see  how  patients  progress  over 
+the  course  of  a  therapy  and  also  to  detect  discrepancies 
+between  how  patients  perform  in  therapy  and  how  they 
+perform  at  home:  “the  maximum  is  very  useful  to  know 
+because  this  client,  when  we  test  him,  he  can  actually 
+achieve a 130° of shoulder flexion and yet he’s only getting 
+84° when he’s using it outside of therapy.” (OT6).  
+
+Heat  maps  were  useful  to  assess  the  activity  levels  of 
+particular  patients,  i.e.,  patients  with  very  low  levels  of 
+mobility,  and  patients  with  hemispatial  neglect,  who  have 
+difficulty to attend to one side of space. Heat maps showed 
+if  these  patients  predominantly  had  their  affected  arm  in  a 
+resting  position,  or  if  they  were  moving  it  regularly: 
+“‘Cause you want to know when they’re sitting particularly 
+the  ones  that  have  neglect,  do  they  just  leave  it  dangling 
+down here or are they positioning it in an appropriate way? 
+I  like  that.  It’s  good.”  (OT4)  The  heat  maps  also  showed 
+whether the hand of the patient crosses the midline of their 
+body.  This  indicates  attendance  to  the  neglected  side  in 
+neglect  patients,  and  it  shows  an  increased  range  of 
+activities of daily living that a patient can perform: “if you 
+can  cross  midline  and  do  stuff  you  are  getting  better 
+plasticity showing but you’re also functionally significantly 
+more independent than if you can only work here.” (OT8) 
+
+Engage Patients and Other Clinicians 
+A  key  strength  of  ArmSleeve  is  that  OTs  can  use  it  to 
+engage  with patients  and  other  clinicians.  Firstly,  OTs  can 
+use the data presented on the dashboard for discussion with 
+patients  to  get  a  better  understanding  of  their  exercise 
+levels, activities of daily living, and more broadly, how they 
+cope  in  daily  life.  Particularly  the  timeline  data  and  the 
+tagging  feature  invited  opportunities  for  OTs  to  engage 
+their  patients  to  learn  more  about  exercise  and  other 
+activities: “I'd sit down with the patient and ask what they 
+were doing between 8am and 10am on Friday and they say 
+they  went  to  the  gym  so  I  put  in  exercise.”  (OT3). 
+Therapists  can  use  the  data  to  inquire  about  how  well 
+patients  cope  with  the  exercise  programs  that  they  have 
+been given: “are they coping with what I've given them? If 
+they're  not  doing  their  exercises,  why?”  (OT7)  Therapists 
+may also use trends in the timeline data to ask more broadly 
+about how the wellbeing of their patients: “we can actually 
+show them the days that they are doing better, and actually 
+talk about, let’s say ‘Monday wasn’t so good’, maybe they 
+had a lot of scans and investigations. Or maybe they had a 
+really bad day and didn’t want to do their rehab.” (OT1).  
+
+to 
+
+them.”  (OT3).  Some 
+
+The  dashboard  also  provides  opportunities  for  OTs  to 
+engage, educate and empower patients in the rehabilitation 
+process. Patients can use the data to learn more about how 
+the arm works, what their capabilities are, and how they are 
+progressing: “I use that in two senses - to provide patients 
+with motivation and say they've improved a little more this 
+week and the flip side is if they're not improving I provide 
+realistic feedback so in three weeks time when I discharge 
+them from the service and they're ‘my arm hasn't improved’ 
+it's  not  a  shock 
+therapists 
+emphasized that the dashboard provides a useful, additional 
+voice  to  the  therapy  that  motivates  patients:  “I  think  it's 
+quite  motivating  for  patients.  It's  not  just  me  speaking  to 
+them.” (OT7) Some therapists liked the heat map to discuss 
+with  their  patients  which  areas  they  need  to  target  when 
+moving their arm: “if it was all just red by his body [on the 
+heat  map]  I  could  talk  to  him  about  how  it’s  really 
+important to let that arm sit down and extend the elbow to 
+involve it one day in swinging while he’s walking.” (OT2). 
+it  provides  an  opportunity  for  patients  and 
+Finally, 
+therapists  to  collaboratively  inquire  the  data  and  to  adjust 
+the goals of the therapy accordingly: “It would be nice to be 
+able  to  show  patients  visually  how  they  are  doing,  and  be 
+able  to  say  ‘this  is  where  we  want  you  to  be.  This  is  your 
+target for the next 2 weeks’. And then you could be pushing 
+that target out as they improve.” (OT1) 
+
+Finally,  therapists  can  also  use  this  data  to  advocate  for 
+their  patients  in  communication  with  other  clinicians.  The 
+dashboard data is helpful in communicating the progress of 
+a  patient  to  other  team  members:  “other  therapists,  your 
+physio  colleagues,  or  your  doctors,  they  can  actually  see 
+that  the  patient’s  arm  movement  is  improving.”  (OT5) 
+Objective  data  on  the  progress  of  a  patient  can  help 
+therapists to advocate for their patients to receive adequate 
+resources  required  for  rehabilitation:  “often  what  we  are 
+doing is advocate for rehab. And not every patient gets the 
+rehab. If we can show to the team that they made all these 
+improvements in terms of arm function, our case would be 
+so much stronger.”(OT1). 
+
+information  presented  across 
+
+Lack of Contextual Information 
+A major limitation of the ArmSleeve system  is the lack of 
+contextual 
+the  different 
+dashboard  pages.  First  and  foremost  this  was  evident  in 
+discussions  about  what  a  movement  presented  on  the 
+timeline  page  may  mean.  For  instance,  based  on  the 
+dashboard  alone  therapists  cannot  know  if  a  movement 
+constitutes an exercise activity, if the patient is engaging in 
+an activity of daily living like eating, if the arm is swinging 
+while  walking,  or  if  the  arm  is  moved  by  a  caretaker  who 
+helps the patient get dressed: “I find it really hard because 
+you don’t know what they’re doing when they’re doing this 
+movement.  Like  I  could  be  walking,  going  like  this  and 
+that’s  going  to  be  counting  the  movement  of  every  joint 
+whereas  it’s  not  specifically  functional.”  (OT4)  The 
+timeline  presents  some  contextual  information  through  the 
+time of the day when movements are performed, which can 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia707indicate  that  a  patient  is  eating  or  washing.  However,  the 
+precise  nature  of  the  activity  needs  to  be  confirmed  in 
+conversation with a patient.  
+
+Secondly, the lack of contextual information was reflected in 
+discussions  of  the  quality  ratings.  The  quality  rating  was 
+displayed on the overview page as an average value between 
+1 and 10 for all the movements performed over the course of 
+a  day,  thus  allowing  the  OTs  to  see  trends  in  the  data  over 
+several days and weeks. The OTs desired information about 
+the quality of movements outside therapy, but they felt that in 
+order  to  truly  judge  the  quality  of  a  movement,  they  would 
+have  to  see  their  patient:  “quality  is  something  you  really 
+need  to  see.”  (OT4)  This  is  because  the  quality  of  a 
+movement is dependent on its purpose in a particular context. 
+For example, shoulder abduction is often used as an indicator 
+for  low  quality,  because  many  stroke  patients  exhibit 
+excessive  abduction  while  reaching  forward.  However,  in 
+certain  contexts  abduction  can  be  a  normal,  high  quality 
+movement, which cannot be distinguished by the ArmSleeve 
+system:  “I  have  some  questions  about  measuring  quality. 
+This doesn't have any way to determine the movements are of 
+quality and whether they're normal or not, it's just detecting 
+[motion]  -  for  some  tasks  a  quality  movement  would  be  to 
+abduct your arm, like to you bring your hand up to do your 
+hair,  and  for  reaching,  to  abduct  your  arm  isn't  a  normal 
+movement.  So  if  you're  able  to  measure  abduction  but  then 
+you're  not  able  to  know  what  the  task  is,  how  do  you 
+determine whether that's a quality movement for that task?” 
+(OT3) 
+
+DISCUSSION 
+HCI offers a growing body of work technology designed to 
+support patients after a stroke, i.e., in exercising [2, 3, 15, 26] 
+and  monitoring  [6,  11,  19,  32].  While  this  focus  on  the 
+patient is important, the main contribution of this research is 
+a  system  designed  to  support  the  work  of  occupational 
+therapists.    This  research  describes  the  design  of  the 
+ArmSleeve  system,  a  patient  monitoring  system  to  support 
+therapists  in  their  rehabilitation  work  with  stroke  patients. 
+Through  a  design-led 
+investigation  with  occupational 
+therapists  this  research  offers  an  understanding  of  their 
+practices  and  a  set  of  data  that  therapists  desire  about  their 
+patients’ activities outside therapy. 
+
+A  second  contribution  is  offered  through  the  design  of  a 
+wearable technology, the ArmSleeve sensor, which monitors 
+upper  limb  movement  in  daily  life.  Unlike  other  prototypes 
+that  present  the  intensity  of  movement  through unprocessed 
+accelerometer  data  [6],  the  ArmSleeve  sensor  can  measure 
+angular  motion in  three degrees of freedom  at  the  shoulder, 
+as  well  as  elbow  extension  and  wrist  supination  and 
+pronation. 
+
+Finally,  this  research  contributes  a  dashboard  to  visualize 
+upper limb movement for therapists. While recent work has 
+provided visualizations for single arm movements to support 
+exercise  [29],  our  work  offers  insights  into  visualizing  arm 
+movements collected over several weeks in both aggregated 
+
+and  detailed  formats.  Finally,  we  have  shown  how  this 
+information  can  provide  therapists  with  insights  into  how 
+much  their  patients  engage  their  arm  in  activities  of  daily 
+living and exercise.  
+
+Design Implications for Interpreting Sensor Data 
+We began this research aiming to help therapists understand 
+how much patients use their upper limbs in daily life outside 
+therapy.  The  therapists  found  useful  objective  data  on 
+ArmSleeve  on  how  much  patients  use  their  upper  limb. 
+However, the therapists found it difficult to understand how 
+this data relates to the patient’s daily life outside therapy. 
+
+Studies  of  medical  work  show  that  health  data  is  often  not 
+self-evident and additional work is required to make sense of 
+the data and to apply it in practice. For example, related work 
+on  clinicians  interpreting  sensor  data  from  Parkinson’s 
+patients  [22]  and  multiple  sclerosis  patients  23]  highlight 
+similar  challenges  in  interpreting  sensor  data  in  the  absence 
+of  the  patient.  The  work  on  multiple  sclerosis  patients  [24] 
+resolved this issue by presenting physiotherapists with video 
+recordings of assessment tasks performed by their patients in 
+clinical settings alongside with sensor data. This approach is 
+not a practical solution for the ArmSleeve system, as it seeks 
+to collect data over several weeks. Furthermore, occupational 
+therapists are not only interested in clinical assessment tasks, 
+but fundamentally in how patients participate in activities of 
+daily living like eating, washing and dressing in the context 
+of their home or in the community.  
+
+It  is  well  understood  in  HCI  that  contextual  information  is 
+crucial for users to make sense of data, yet that it is difficult 
+to gather through technology [12]. While sensors can provide 
+information  about  the  time  and  place  of  upper  limb 
+movement,  understanding  the  intention,  purpose,  quality  as 
+well as the outcome of a movement typically relies on human 
+intelligence.  In  recent  years  we  have  seen  significant 
+improvements in computational efforts to understand human 
+action in other domains, e.g., in the interpretation of language 
+for  personal  assistants  like  Siri  and  Cortana.  Similar 
+directions  are  pursued  in  the  interpretation  of  human 
+movements. For example, machine learning has been applied 
+to  interpret  upper  limb  motions  of  stroke  patients  to  detect 
+activities  like  drinking  and  brushing  hair.  The  Internet  of 
+Things  can  provide  clues  about  the  activities  of  people 
+through  instrumented  objects  that  people  use  in  their 
+activities of daily living, e.g., to recognize whether a person 
+is lifting a cup or opening a door [4]. 
+
+In future work we seek a more human-oriented approach in 
+our design by engaging patients in the interpretation of sensor 
+data. We see merit in the technological approaches discussed 
+above to provide contextual clues. However, we believe that 
+these  improvements  will  be  partial,  and  understanding  the 
+meaning of upper limb motion and its quality will continue to 
+rely  on  human  intelligence.  The  therapists  in  this  study 
+regarded  the  data  presented  on  the  dashboard  as  an 
+opportunity  to  engage  patients  in  a  dialogue  to  learn  more 
+about  their  daily  lives.  Activity  diaries  kept  by  patients  can 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia708enrich  this  dialogue  and  help  to  make  sense  of  the  data 
+presented on the dashboard. 
+
+Engagement between therapists and patients is not merely a 
+means to interpret sensor data, but it can be an end in itself. 
+The  therapists  found  that  the  dashboard  provides  an 
+for  mutual  understanding  and  empathy. 
+opportunity 
+Therapists  can  use  the  dashboard  data  to  probe  patients  to 
+learn more about their everyday lives and the challenges they 
+may  face.  Conversely,  the  dashboard  provides  patients  with 
+an  opportunity  to  learn  about  their  treatment  and  their 
+progress, and it can help them to stay motivated.  
+
+It  is  important  to  note  that  such  a  participatory  approach  in 
+the interpretation of sensor data is not without its challenges. 
+Patients  can  offer  expertise  through  their  lived  experience 
+with the effects of stroke, but clinicians can overshadow such 
+dialogue due to established hierarchies, clinical expertise and 
+experience  in  interpreting  sensor  data  [22].  It  is  also 
+important  to  keep  in  mind  that  taking  on  responsibility  for 
+self-monitoring  and  interpreting  data  can  be  a  burden  [21], 
+and  not  every  patient  may  be  able  to  or  desire  such 
+involvement.  Hence  in  future  work  we  seek  to  work  with 
+patients  who  wish  to  be  more  actively  engaged  in  their 
+therapy. Through the design of ArmSleeve  we hope to give 
+these  patients  an  opportunity  to  better  understand  their 
+progress  and  to  become  empowered  in  their  collaboration 
+with therapists to achieve their desired therapy outcome. 
+
+Design Implications for Sensors Worn in Daily Life 
+We  also  began  this  research  with  the  ambition  of  designing 
+sensor technology that stroke patients can  wear in  everyday 
+life.  While  we  have  presented  a  working  prototype, 
+considerable work is required to develop the sensors further 
+into a system that these patients can use in daily life.  
+
+A major design issue is the “wearability” [14] of the sensor 
+technology to ensure it is usable and provides comfort. A key 
+question  that  we  need  to  address  is  the  placement  of  the 
+sensor on the body, i.e., to ensure accurate data and comfort 
+when  worn  over  extended  periods  of  time.  Minimizing  the 
+size  and  weight  of  the  device  is  also  critical  to  increase 
+comfort.  Further  critical  issues  are  the  containment  of  the 
+sensor and how it is attached to the body. This is to ensure it 
+fits  the  shape  of  the  different  parts  of  the  upper  limb,  both 
+when a patient is static as well as when she is moving. This is 
+also  important  because  patients  or  their  caretakers  need  to 
+find  it  easy  to  don  and  take  off  the  sensor  for  charging  the 
+device,  or  for  sleeping  and  washing.  These  issues  are 
+particularly important as our intention is for these devices to 
+be  worn  over  several  days  or  weeks  by  people  with 
+impairments to their mobility and sensation. 
+
+A  second  design  issue  is  the  modularity  of  the  sensor 
+technology.  The  current  system  consists  of  three  sensor 
+modules,  which  can  monitor  shoulder  movement  in  three 
+degrees  of  freedom,  as  well  as  elbow  extension  and  wrist 
+
+rotation.  While  this  setup  is  useful  for  patients  working  on 
+improving  upper  arm  movement,  studies  1  and  3  also 
+highlighted  that  there  is  considerable  variability  between 
+patients. For example, a patient with hemispatial neglect may 
+only  require  a  single  sensor  module  at  the  wrist  to  detect  if 
+the  arm  is  moved  at  all  and  if  it  crosses  the  midline.  Other 
+patients,  however,  may  benefit  from  sensors  that  capture 
+wrist  extension  and  finger  movement,  as  these  motions  are 
+critical  to  perform  activities  of  daily  living  [27].  Hence  in 
+future work we seek to extend the range of motions that we 
+can  monitor with ArmSleeve.  At the same  time, we seek to 
+explore  how  we  can  create  modules  of  sensor  units  that 
+collect  data  about  a  particular  joint  and  motion  of  interest, 
+and thereby minimize the amount of technology that needs to 
+be worn. 
+
+issues 
+
+to  develop  an  understanding  of 
+
+We  now  seek  to  engage  with  patients  in  exploring  these 
+design 
+their 
+perspective on ArmSleeve and elaborate its design. It is well 
+known  that  medical  devices  are  often  rejected  due  to  the 
+stigma attached to it [17]. While the therapists  in  this study 
+were confident that many patients would find such a system 
+useful,  we  aim  to  work  with  patients  directly  in  future 
+iterations, to  learn about possible benefits  and any concerns 
+they may have about accountability and privacy. 
+
+CONCLUSION 
+We  have  worked  with  occupational  therapists  to  build  and 
+evaluate  the  ArmSleeve  system,  which  monitors  the  upper 
+limb  movements  of  stroke  patients  outside  therapy.  This 
+design-led  investigation  has  shown  that  in  order  for  therapy 
+to be effective, patients need to engage their arm in exercise 
+and  other  activities  consistently  throughout  their  daily  life. 
+The  ArmSleeve  sensor  prototype  collects  such  patient  data 
+through  a  wearable  technology  worn  on  the  arm.  The 
+ArmSleeve  dashboard  offers  visualizations  of  the  number, 
+quality and range of arm movements over several weeks. 
+
+The  evaluation  of  the  ArmSleeve  system  demonstrated  that 
+therapists benefit from this system through insights into how 
+much  their  patients  use  their  upper  limb  outside  therapy. 
+However,  it  also  highlighted  a  discrepancy  between  the 
+motion  data  presented  by  the  system,  and  the  insights  into 
+activities  of  daily  living  that  therapists  desired.  Based  on 
+ArmSleeve  data  alone,  therapists  were  unsure  whether 
+movement  related  to  exercise,  activities  of  daily  living,  or 
+simply a patient swinging the arm while walking.  
+
+In future work we seek to address this issue through engaging 
+both patients and therapists into a dialogue to collaboratively 
+interpret the data. While the work to date has focused on the 
+therapist,  we  now  also  seek  to  work  with  patients  to  refine 
+the  dashboard  and  the  sensors  into  a  system  that  can  be 
+tailored to the needs of a patient and used seamlessly in daily 
+living. Our vision is a system that fosters dialogue between a 
+patient  and  their  therapist,  and  which  enhances  mutual 
+understanding and empathy. 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia709 
+REFERENCES 
+1.  Saturate. http://www.saturateapp.com/. 
+2.  Gazihan Alankus, Rachel Proffitt, Caitlin Kelleher and Jack 
+Engsberg. Stroke Therapy through Motion-Based Games: 
+A Case Study. ACM Trans. Access. Comput. 4, 1 (2011), 1-
+35. http://dx.doi.org/10.1145/2039339.2039342 
+
+3.  Madeline Balaam, Stefan Rennick Egglestone, Geraldine 
+Fitzpatrick, Tom Rodden, Ann-Marie Hughes, Anna 
+Wilkinson, Thomas Nind, Lesley Axelrod, Eric Harris, Ian 
+Ricketts, Susan Mawson and Jane Burridge. 2011. 
+Motivating Mobility: Designing for Lived Motivation in 
+Stroke Rehabilitation. In Proceedings of Proceedings of the 
+SIGCHI Conference on Human Factors in Computing 
+Systems. ACM, 1979397, 3073-3082. 
+http://dx.doi.org/10.1145/1978942.1979397 
+
+4.  J. Barman, G. Uswatte, N. Sarkar, T. Ghaffari and B. 
+
+Sokal. Sensor-Enabled Rfid System for Monitoring Arm 
+Activity in Daily Life. Conf Proc IEEE Eng Med Biol Soc 
+2011 (2011), 5219-5223. 
+http://dx.doi.org/10.1109/iembs.2011.6091291 
+5.  Angelo  Basteris, Sharon M.  Nijenhuis, Arno H. A.  
+
+Stienen, Jaap H.  Buurke, Gerdienke B. Prange and Farshid 
+Amirabdollahian. Training Modalities in Robot-Mediated 
+Upper Limb Rehabilitation in Stroke: A Framework for 
+Classification Based on a Systematic Review. Journal of 
+Neuroengineering and Rehabilitation 11 (2014). 
+http://dx.doi.org/10.1186/1743-0003-11-111 
+
+6.  Luuk Beursgens, Freek Boesten, Annick Timmermans, 
+Henk Seelen and Panos Markopoulos. 2011. Us'em: 
+Motivating Stroke Survivors to Use Their Impaired Arm 
+and Hand in Daily Life. In Proceedings of CHI '11 
+Extended Abstracts on Human Factors in Computing 
+Systems. ACM, 1979761, 1279-1284. 
+http://dx.doi.org/10.1145/1979742.1979761 
+
+7.  Cati Boulanger, Adam Boulanger, Lilian de Greef, Andy 
+Kearney, Kiley Sobel, Russell Transue, Z Sweedyk, Paul 
+H. Dietz and Steven Bathiche. 2013. Stroke Rehabilitation 
+with a Sensing Surface. In Proceedings of Proceedings of 
+the SIGCHI Conference on Human Factors in Computing 
+Systems. ACM, 2466160, 1243-1246. 
+http://dx.doi.org/10.1145/2470654.2466160 
+
+8.  V. Braun and V. Clarke. Using Thematic Analysis in 
+Psychology. Qualitative research in psychology 3, 2 
+(2006), 77-101.  
+
+9.  Eun Kyoung Choe, Nicole B Lee, Bongshin Lee, Wanda 
+Pratt and Julie A Kientz. 2014. Understanding Quantified-
+Selfers’ Practices in Collecting and Exploring Personal 
+Data. In Proceedings of Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems. 
+ACM, 1143-1152. 
+http://dx.doi.org/10.1145/2556288.2557372 
+
+10. Ana de los Reyes-Guzmán, Iris Dimbwadyo-Terrer, 
+
+Fernando Trincado-Alonso, Félix Monasterio-Huelin, 
+Diego Torricelli and Angel Gil-Agudo. Quantitative 
+Assessment Based on Kinematic Measures of Functional 
+
+Impairments During Upper Extremity Movements: A 
+Review. Clinical Biomechanics 29, 7 (2014), 719-727. 
+http://dx.doi.org/http://dx.doi.org/10.1016/j.clinbiomech.20
+14.06.013 
+
+11. Z. Q. Ding, Z. Q. Luo, A. Causo, I. M. Chen, K. X. Yue, S. 
+H. Yeo and K. V. Ling. Inertia Sensor-Based Guidance 
+System for Upperlimb Posture Correction. Med Eng Phys 
+35, 2 (2013), 269-276. 
+http://dx.doi.org/10.1016/j.medengphy.2011.09.002 
+
+12. Paul Dourish. What We Talk About When We Talk About 
+Context. Personal and Ubiquitous Computing 8, 1 (2004), 
+19-30. http://dx.doi.org/10.1007/s00779-003-0253-8 
+13. Stroke Foundation. 2015. Facts and Figures About Stroke. 
+https://strokefoundation.com.au/about-stroke/facts-and-
+figures-about-stroke. 
+
+14. F. Gemperle, C. Kasabach, J. Stivoric, M. Bauer and R. 
+Martin. 1998. Design for Wearability. In Proceedings of 
+Proceedings of the 2nd IEEE International Symposium on 
+Wearable Computers. IEEE Computer Society, 857998, 
+116.  
+
+15. Ard Jacobs, Annick Timmermans, Marc Michielsen, 
+
+Maaiken Vander Plaetse and Panos Markopoulos. 2013. 
+Contrast: Gamification of Arm-Hand Training for Stroke 
+Survivors. In Proceedings of CHI '13 Extended Abstracts 
+on Human Factors in Computing Systems. ACM, 2468430, 
+415-420. http://dx.doi.org/10.1145/2468356.2468430 
+16. Michael T. Jurkiewicz, Susan Marzolini and Paul Oh. 
+Adherence to a Home-Based Exercise Program for 
+Individuals after Stroke. Topics in Stroke Rehabilitation 18, 
+3 (2011), 277-284. http://dx.doi.org/doi:10.1310/tsr1803-
+277 
+
+17. Hyun Gu Kang, Diane F. Mahoney, Helen Hoenig, Victor 
+A. Hirth, Paolo Bonato, Ihab Hajjar, Lewis A. Lipsitz, 
+Medicine for the Center for Integration of and Aged 
+Innovative Technology Working Group on Advanced 
+Approaches to Physiologic Monitoring for the. In Situ 
+Monitoring of Health in Older Adults: Technologies and 
+Issues. Journal of the American Geriatrics Society 58, 8 
+(2010), 1579-1586. http://dx.doi.org/10.1111/j.1532-
+5415.2010.02959.x 
+
+18. Maryam Khademi, Hossein Mousavi Hondori, Alison 
+
+McKenzie, Lucy Dodakian, Cristina Videira Lopes and 
+Steven C. Cramer. 2014. Free-Hand Interaction with Leap 
+Motion Controller for Stroke Rehabilitation. In 
+Proceedings of Proceedings of the extended abstracts of 
+the 32nd annual ACM conference on Human factors in 
+computing systems. ACM, 2581203, 1663-1668. 
+http://dx.doi.org/10.1145/2559206.2581203 
+
+19. Jihyoung Kim, Sungwon Yang and Mario Gerla. 2011. 
+
+Stroketrack: Wireless Inertial Motion Tracking of Human 
+Arms for Stroke Telerehabilitation. In Proceedings of 
+Proceedings of the First ACM Workshop on Mobile 
+Systems, Applications, and Services for Healthcare. ACM, 
+2064948, 1-6. http://dx.doi.org/10.1145/2064942.2064948 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia71020. Ian Li, Anind Dey and Jodi Forlizzi. 2010. A Stage-Based 
+Model of Personal Informatics Systems. In Proceedings of 
+Proceedings of the SIGCHI Conference on Human Factors 
+in Computing Systems. ACM, 557-566. 
+http://dx.doi.org/10.1145/1753326.1753409 
+
+21. Deborah Lupton. Quantifying the Body: Monitoring and 
+Measuring Health in the Age of Mhealth Technologies. 
+Critical Public Health 23, 4 (2013), 1-11.  
+
+22. Helena M. Mentis, Rita Shewbridge, Sharon Powell, 
+
+Melissa Armstrong, Paul Fishman and Lisa Shulman. Co-
+Interpreting Movement with Sensors: Assessing 
+Parkinson’s Patients’ Deep Brain Stimulation 
+Programming. Human–Computer Interaction (2015), 1-34. 
+http://dx.doi.org/10.1080/07370024.2015.1073592 
+
+23. Argyro Moraiti, Vero Vanden Abeele, Erwin Vanroye and 
+Luc Geurts. 2015. Empowering Occupational Therapists 
+with a Diy-Toolkit for Smart Soft Objects. In Proceedings 
+of Proceedings of the Ninth International Conference on 
+Tangible, Embedded, and Embodied Interaction. ACM, 
+2680598, 387-394. 
+http://dx.doi.org/10.1145/2677199.2680598 
+
+24. Cecily Morrison, Marcus D'Souza, Kit Huckvale, Jonas F 
+Dorn, Jessica Burggraaff, Christian Philipp Kamm, Saskia 
+Marie Steinheimer, Peter Kontschieder, Antonio Criminisi 
+and Bernard Uitdehaag. Usability and Acceptability of 
+Assess Ms: Assessment of Motor Dysfunction in Multiple 
+Sclerosis Using Depth-Sensing Computer Vision. JMIR 
+Human Factors 2, 1 (2015), e11. 
+http://dx.doi.org/10.2196/humanfactors.4129 
+
+25. Dariush Mozaffarian, Emelia J. Benjamin, Alan S. Go, 
+
+Donna K. Arnett, Michael J. Blaha, Mary Cushman, Sarah 
+de Ferranti, Jean-Pierre Després, Heather J. Fullerton, 
+Virginia J. Howard, Mark D. Huffman, Suzanne E. Judd, 
+Brett M. Kissela, Daniel T. Lackland, Judith H. Lichtman, 
+Lynda D. Lisabeth, Simin Liu, Rachel H. Mackey, David 
+B. Matchar, Darren K. McGuire, Emile R. Mohler, Claudia 
+S. Moy, Paul Muntner, Michael E. Mussolino, Khurram 
+Nasir, Robert W. Neumar, Graham Nichol, Latha 
+Palaniappan, Dilip K. Pandey, Mathew J. Reeves, Carlos J. 
+Rodriguez, Paul D. Sorlie, Joel Stein, Amytis Towfighi, 
+Tanya N. Turan, Salim S. Virani, Joshua Z. Willey, Daniel 
+Woo, Robert W. Yeh and Melanie B. Turner. Heart 
+Disease and Stroke Statistics—2015 Update: A Report 
+from the American Heart Association. Circulation (2014). 
+http://dx.doi.org/10.1161/cir.0000000000000152 
+
+26. Roshan Lalintha Peiris, Nuwan Janaka, Deepthika De Silva 
+and Suranga Nanayakkara. 2014. Shrug: Stroke Haptic 
+Rehabilitation Using Gaming. In Proceedings of 
+Proceedings of the 26th Australian Computer-Human 
+Interaction Conference on Designing Futures: the Future 
+of Design. ACM, 2686669, 380-383. 
+http://dx.doi.org/10.1145/2686612.2686669 
+
+27. Alex  Pollock, Sybil E.  Farmer, Marian C.  Brady, Peter  
+
+Langhorne, Gillian E.  Mead, Jan  Mehrholz and Frederike 
+van Wijck. Interventions for Improving Upper Limb 
+
+Function after Stroke. Cochrane Database Syst Rev., 11 
+(2014), 171. 
+http://dx.doi.org/10.1002/14651858.CD010820.pub2 
+
+28. John Rooksby, Mattias Rost, Alistair Morrison and 
+
+Matthew C Chalmers. 2014. Personal Tracking as Lived 
+Informatics. In Proceedings of Proceedings of the SIGCHI 
+Conference on Human Factors in Computing Systems. 
+ACM, 1163-1172 
+http://dx.doi.org/10.1145/2556288.2557039 
+
+29. Richard Tang, Anthony Tang, Xing-Dong Yang, Scott 
+Bateman and Joaquim Jorge. 2015. Physio@ Home: 
+Exploring Visual Guidance and Feedback Techniques for 
+Physiotherapy Exercises. In Proceedings of Proceedings of 
+the SIGCHI Conference on Human Factors in Computing 
+Systems. ACM, 4123-4132.  
+
+30. Edward Taub, Gitendra Uswatte and Victor W. Mark. The 
+Functional Significance of Cortical Reorganization and the 
+Parallel Development of Ci Therapy. Frontiers in Human 
+Neuroscience 8 (2014), 396. 
+http://dx.doi.org/10.3389/fnhum.2014.00396 
+
+31. Edward Taub, Gitendra Uswatte and Rama Pidikiti. 
+
+Constraint-Induced Movement Therapy: A New Family of 
+Techniques with Broad Application to Physical 
+Rehabilitation-a Clinical Review. Journal of rehabilitation 
+research and development 36, 3 (1999), 237-251.  
+32. M. A. Urbin, R. R. Bailey and C. E. Lang. Validity of 
+
+Body-Worn Sensor Acceleration Metrics to Index Upper 
+Extremity Function in Hemiparetic Stroke. J Neurol Phys 
+Ther 39, 2 (2015), 111-118. 
+http://dx.doi.org/10.1097/npt.0000000000000085 
+33. Gitendra Uswatte, Edward Taub, David Morris, Mary 
+
+Vignolo and Karen McCulloch. Reliability and Validity of 
+the Upper-Extremity Motor Activity Log-14 for Measuring 
+Real-World Arm Use. Stroke 36, 11 (2005), 2493-2496.  
+34. Marijke Vandermaesen, Tom de Weyer, Kris Luyten and 
+Karin Coninx. 2014. Physicube: Providing Tangible 
+Interaction in a Pervasive Upper-Limb Rehabilitation 
+System. In Proceedings of Proceedings of the 8th 
+International Conference on Tangible, Embedded and 
+Embodied Interaction. ACM, 2540936, 85-92. 
+http://dx.doi.org/10.1145/2540930.2540936 
+
+35. Michael W Whittle. Gait Analysis: An Introduction. 
+
+Butterworth-Heinemann (Edinburgh), 2014.  
+
+36. Markus Windolf, Nils Götzen and Michael Morlock. 
+
+Systematic Accuracy and Precision Analysis of Video 
+Motion Capturing Systems—Exemplified on the Vicon-
+460 System. Journal of Biomechanics 41, 12 (2008), 2776-
+2780. 
+http://dx.doi.org/http://dx.doi.org/10.1016/j.jbiomech.2008.
+06.024 
+
+Sensing, HealthDIS 2016, June 4–8, 2016, Brisbane, Australia711 
+

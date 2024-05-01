@@ -1,0 +1,1499 @@
+Supporting Meaningful Personal Fitness:
+the Tracker Goal Evolution Model
+
+Jasmin Niess
+LMU Munich
+Munich, Germany
+jasmin.niess@psy.lmu.de
+
+Paweł W. Wo´zniak
+University of Stuttgart
+Stuttgart, Germany
+pawel.wozniak@vis.uni-stuttgart.de
+
+ABSTRACT
+While the number of users sporting ﬁtness trackers is con-
+stantly increasing, little is understood about how tracking
+goals can evolve over time. As recent studies have shown
+that the long-term health effects of trackers are limited, we
+need to readdress how trackers engage users. We conducted
+semi-structured interviews and an online survey to explore
+how users change their tracking goals. Based on our results,
+we created the Tracker Goal Evolution Model. The model de-
+scribes how tracker goals can evolve from internal user needs
+through qualitative goals to quantitative goals that can be used
+with trackers. It also includes trust and reﬂection as key con-
+textual factors contributing to meaningful transitions between
+goals. We postulate showing how tracker goals relate to other
+personal ﬁtness goals as key for long-term engagement with
+trackers. Our model is useful for designers of future trackers
+as a tool to create evolving and meaningful tracking goals.
+
+ACM Classiﬁcation Keywords
+H.5.m Information interfaces and presentation: Miscellaneous
+
+Author Keywords
+wellbeing; well-being; health; ﬁtness trackers; model
+
+INTRODUCTION
+Wearable ﬁtness trackers, available as standalone devices or
+part of smart watches have now established themselves on the
+consumer market. Trackers promise the users opportunities to
+improve ﬁtness and lead a healthier life. The ﬁrst longitudinal
+studies on the health effects of wearing a ﬁtness tracker are
+now available, showing that while an initial health effect was
+observed, ﬁtness trackers failed to offer long-term wellbeing
+support to users [22]. Concurrently, past research reported
+that users ﬁnd it hard to express their expected ﬁtness levels
+through metric-based goals supported by ﬁtness trackers [16].
+As a consequence, there is a need for a new generation of
+ﬁtness trackers that support long-term health goals taking the
+complex facets of how the ﬁtness and motivation of a user
+
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for proﬁt or commercial advantage and that copies bear this notice and the full citation
+on the ﬁrst page. Copyrights for components of this work owned by others than the
+author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior speciﬁc permission
+and/or a fee. Request permissions from permissions@acm.org.
+CHI 2018, April 21–26, 2018, Montreal, QC, Canada
+© 2018 Copyright held by the owner/author(s). Publication rights licensed to ACM.
+ISBN 978-1-4503-5620-6/18/04. . . $15.00
+DOI: https://doi.org/10.1145/3173574.3173745
+
+evolves into account. Research in Human-Computer Interac-
+tion (HCI) is yet to address the next steps in understanding
+tracking in order to build better, long-term supportive trackers.
+
+Recent work in HCI which explored issues such as lapses [12],
+aesthetic appeal [25], adherence [32] and competition [16]
+for using a tracker indicates that goals are a recurrent theme
+when users interact with trackers. However, the ﬁeld is yet to
+explore the intricacies of managing and setting goals. Thus, a
+better understanding of how users choose and use their goals
+is required. We propose readdressing the question of how,
+when and why to set goals in trackers. To this end, we studied
+users’ relationship with goals, how they adapt and plan goals
+and how their goals relate to their data collection practices.
+Through a series of interviews and a survey, we established an
+account of the roles goals may play in ﬁtness tracking. Based
+on our ﬁndings, we propose a new understanding of goals
+for ﬁtness trackers in the form of the Tracker Goal Evolution
+Model. The model uses hedonic and eudaimonic wellbeing as
+underlying concepts that help create more meaningful goals
+for trackers. Hedonic wellbeing focuses on the presence of
+positive affect and the absence of negative affect. Furthermore
+hedonic wellbeing is often associated with pleasure and fun.
+Eudaimonic wellbeing is about self-fulﬁlment, ﬁnding mean-
+ing in life and developing one’s potential [30]. Our model is
+intended to serve as a submodel for existing models of per-
+sonal informatics. Our approach provides new insights for
+designing ﬁtness goals that evolve with the user and support
+long-term tracker usage.
+
+This paper contributes the following: (1) a qualitative study of
+the practices in using tracker goals consisting of 19 interviews
+and a survey with n = 162, (2) an account of the users’ current
+practices with tracker goals and (3) the Tracker Goal Evolution
+Model — a new understanding of goals that uses the lens of
+hedonic and eudaimonic wellbeing.
+
+In this work, we ﬁrst introduce the reader to hedonic and
+eudaimonic wellbeing and review related work in HCI on
+understanding user practices around trackers. Next, we report
+on the details of how we conducted the interviews and the
+survey. We then introduce the Tracker Goal Evolution Model.
+The following section illustrates how the model describes user
+practices around ﬁtness tracker goals. Finally, we propose
+how our results may be operationalised to enable designing
+meaningful goals for personal trackers.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 1RELATED WORK
+In this section, we ﬁrst introduce the reader to the hedonic and
+eudaimonic wellbeing literature to build the understanding
+lens we apply in this paper. We then review past work in the
+HCI ﬁeld in the area of personal informatics and showcase
+how an extended understanding of tracker goals is needed.
+
+Hedonic and Eudaimonic Wellbeing
+In this work, we use the lens of hedonic and eudaimonic
+wellbeing to understand a subset of the user’s internalised
+needs that are manifested through goals. These goals can be
+supported with ﬁtness trackers. These concepts form the theo-
+retical basis of the understanding of current practices in our
+model. Research in Psychology has been using two differ-
+ent conceptualisations of wellbeing for the last two decades,
+hedonic wellbeing and eudaimonic wellbeing [30, 34]. The
+main focus in the ﬁeld of wellbeing research lies in hedonic
+theories. This concept has mainly been associated with the
+presence of positive affect and the absence of negative effect.
+However, recently scholars have begun to recognize the poten-
+tial of eudaimonic wellbeing as a means of gaining a deeper
+understanding of user behaviors and needs. Eudaimonic well-
+being focuses on self-fulﬁlment and meaning [30]. Positive
+psychology (the scientiﬁc study of positive human functioning
+and ﬂourishing [31]), points out that the notion of subjective
+wellbeing is often used for the concept of hedonic wellbeing
+and the notion of psychological wellbeing for the eudaimonic
+approach [10]. Hedonia and eudaimonia are not opposites, nor
+are they mutually exclusive; they are complementary psycho-
+logical functions [19]. As the literature does not agree on a
+single conceptualisation of hedonia and eudaimonia [21], we
+focus on recurrent characteristics of hedonic and eudaimonic
+wellbeing to use them to understand ﬁtness tracker goals.
+
+Four distinct categories of wellbeing deﬁnitions can be
+found [21]: Orientations focus on people’s aspirations, mo-
+tives, goals, values and ideals; Behaviors describe activities
+of individuals; Experiences are constituted through emotions,
+cognitive or affective appraisals; and Functioning addresses
+the individual’s potential of living a healthy, functioning life.
+The concepts of hedonia and eudaimonia have been featured
+in recent HCI research. Notably, Mekler and Hornbæk [27]
+discussed how user experience research can beneﬁt from em-
+bracing the concepts of hedonia and eudaimonia. Our work is
+the ﬁrst, to our knowledge, to apply these concepts to tracking.
+Here, we do not address hedonic and eudaimonic experiences.
+Instead, our work addresses the concepts of hedonic and eu-
+daimonic wellbeing with a focus on orientations.
+
+Hedonic wellbeing
+The philosopher Aristippus introduced the term Hedonism in
+the fourth century BC. He postulated that the search for plea-
+sure was the most desirable good [33]. Hedonic wellbeing is
+often associated with the term ‘happiness’ and its dimensions
+can be positive feeling, pleasure, enjoyment, positive emo-
+tions, painlessness, ease and satisfaction amongst others [10,
+20]. The hedonic concept can include physical pleasure as
+well as feelings of emotional or cognitive comfort. In a he-
+donic mindset people focus on wellbeing as an outcome [14].
+However, the concept of life satisfaction does not fall into the
+classic understanding of hedonic wellbeing [9].
+
+Eudaimonic wellbeing
+The ﬁrst one to deﬁne the concept of eudaimonia was the
+Greek philosopher Aristotle [18]. Aristotle postulated that
+the key to wellbeing was to develop one’s potentials and live
+a meaningful and authentic life. Even though deﬁnitions of
+eudaimonic wellbeing vary widely, some recurring aspects can
+be found [20]. Eudaimonic wellbeing can relate to many as-
+pects of an individual’s life such as: value, relevance, maturity
+ethics or autonomy.
+
+We believe that hedonic and eudaimonic wellbeing, as it offers
+an operationalisation of needs related to oneself, offers a way
+to gain a deep understanding of ﬁtness tracker goals. Fowers
+et al. [14] found that hedonic and eudaimonic wellbeing are
+directly related to goal orientation. That is why, in our inquiry,
+we use the concepts to study and chart how users manage,
+change and deﬁne ﬁtness tracker goals. We noticed that these
+can evolve like the ever-changing wellbeing needs of an indi-
+vidual. Using this analysis lens resulted in the emergence of
+our Tracker Goal Evolution Model.
+
+Personal Informatics
+A large array of past research efforts explored the understand-
+ing of user practices around trackers. As more and more
+users buy ﬁtness-tracking wearables, it remains a challenge
+for HCI to enable designing trackers that offer tangible and
+reproducible beneﬁts to wellbeing. This is a key consideration
+as currently available trackers have been proven to offer lim-
+ited health and wellbeing beneﬁts by studies in the medical
+ﬁeld (e.g. [22, 3, 6]). Consequently, HCI looked for design
+guidelines that understood ﬁtness trackers as instances of per-
+suasive technology. Notably, Consolvo et al. [8] built a mo-
+bile application prototype to establish design requirements for
+health support technologies. They stressed that ﬁtness systems
+‘should give users credit for their activities’ thus recognising
+that building a sense of achievement was key for ﬁtness tech-
+nologies. This indicates the importance of understanding goal
+practices and how systems can support goal setting.
+
+Challenges of Numeric Goals
+As ﬁtness trackers became a mass-market phenomenon, HCI
+scholars began to study different aspects of the tracker expe-
+rience. Particular attention was given to step goals and step
+programs. Gorm and Shklovski [15] found that workspace
+step counting programs affected the users’ privacy concerns.
+They also determined that the competition caused by step
+goals in trackers called for users making moral choices and
+possibly raising social tension while providing no tangible
+health beneﬁt [16]. These examples show potential drawbacks
+to ﬁtness goals that need to be addressed further.
+
+Understanding Lapsing
+Concurrently, understanding why users abandon and return to
+ﬁtness trackers became a major question. Clawson et al. [7]
+studied craigslist users disposing of tracking technology to
+ﬁnd that it could be equally motivated by perceived failure,
+success or social pressure. Further, Epstein et al. [11] found
+that the practicalities connected with maintaining data or the
+practices revealed by tracking may also be reasons for lapses.
+To mitigate possible drawbacks of lapses, Agapie et al. [1]
+proposed a design strategy to enable users to consciously
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 2lapse by using ‘cheat points’ and showed that this approach
+produced positive behavioral effects. Our work is interestingly
+different as, instead of mitigating or ﬁnding reasons for lapses,
+we investigate them as possible manifestations of insufﬁcient
+motivation provided by the tracking system.
+
+Models of Personal Informatics
+Finally, a number of efforts aimed at building a holistic un-
+derstanding of practices around ﬁtness trackers. Notably, Ep-
+stein et al. [13] proposed the lived informatics model of per-
+sonal informatics that inspires designing for data-driven re-
+ﬂection and described cycles of tracker use. They extended
+earlier work by Li et al. [26] by, inter alia, accounting for
+users returning to trackers after lapsing. Epstein et al. model
+personal informatics as consisting of four major phases: (-)
+deciding, (-) selecting, (-) tracking and (-) acting and lapsing.
+The lived informatics model presents the most comprehensive
+view of personal tracking presented so far, yet the authors ex-
+plicitly state that one consequence of applying their model is
+the need to harness goal migration. We aim to extend existing
+models by focusing solely on the tracking and acting. Our
+work aims to take another angle from previous works as it
+looks speciﬁcally at goals related to ﬁtness in order to aid in
+designing more engaging tracking experiences. We strive to
+understand goals better to help users continue what Epstein at
+al. call tracking and acting, thus possibly producing long-term
+beneﬁts. Hence, a need for a model that speciﬁcally addresses
+goals emerges.
+
+Additionally, Rooksby et al. [29] identiﬁed tracking styles
+that characterised different data-driven needs of users. Tang
+and Kay [32] studied data practices of those using trackers
+long-term and found that users appreciate feedback about
+their adherence and can reﬂect upon their own tracker prac-
+In contrast, this work endeavors to understand user
+tices.
+practices speciﬁcally around tracker goals, thus investigating
+how tracker goals can contribute to maintaining and/or im-
+proving the user’s wellbeing. Our work is further motivated
+by the fact that past research has shown a large array of user
+behaviors and attitudes around trackers, yet current devices
+only support a small number of goals.
+
+METHOD
+In order to explore the users’ relationship with tracker goals
+and the ways they choose, manage and interact with goals, we
+conducted a two-part inquiry. First, we conducted exploratory
+interviews with participants who were active users of ﬁtness
+trackers. Based on the interviews, we designed an online
+survey to explore aspects of tracker goals in a larger population
+sample.
+
+Device
+used
+
+Fitbit
+Fitbit
+Xiaomi
+Polar
+
+Xiaomi
+
+Garmin
+
+Xiaomi
+Fitbit
+Apple
+Watch
+Apple
+Watch
+Apple
+Watch
+Xiaomi
+
+Tracking
+Time
+
+Primary
+goal
+
+ID Age Sex
+
+Profession
+
+P1 29 M IT specialist
+P2 30
+F
+P3 21 M
+P4 18 M
+
+Teacher
+Student
+Student
+
+P5 29
+
+F
+
+Researcher
+
+P6 22 M
+
+Engineer
+
+F
+P7 29
+P8 26 M
+
+Researcher
+Engineer
+
+2 yrs.
+2 yrs.
+3 m.
+2 yrs.
+
+2 yrs.
+
+8 m.
+
+1 yr.
+5 yrs.
+
+P9 29 M Programmer
+
+6 m.
+
+Steps
+Steps
+Steps
+Steps
+Body
+mass
+Active
+hrs.
+Steps
+Steps
+Exercise
+sessions
+
+P10 35
+
+F
+
+Researcher
+
+2 yrs.
+
+Calories
+
+P11 28 M Unemployed
+
+P12 27
+
+P13 29
+
+F
+
+F
+
+P14 32 M
+
+F
+P15 41
+P16 20 M
+F
+P17 27
+F
+P18 26
+
+IT specialist
+Data
+specialist
+Car
+mechanic
+Researcher
+Student
+Unemployed
+Student
+
+9 m.
+
+1 yr.
+
+Exercise
+sessions
+Steps
+
+6 yrs.
+
+Steps
+
+Fitbit
+
+1 yr.
+
+6 m.
+2 yrs.
+4 yrs.
+6 yrs.
+
+Exercise
+sessions
+Steps
+Steps
+Steps
+Steps
+
+Pebble
+
+Fitbit
+Xiaomi
+Fitbit
+Fitbit
+
+Table 1. An overview of the interview participants. All participants were
+active tracker users. The duration reported is the time since the partic-
+ipants stated tracking and in some cases includes lapse periods. Partici-
+pant IDs are used throughout the paper to indicate interview quotes.
+
+receiving consent from the participant. Table 3.1 shows an
+overview of the interview participants.
+
+Interview protocol
+In the interview, we ﬁrst obtained demographic data and infor-
+mation about their daily usage of the tracker. We then inquired
+about the goals set, the motivations behind setting the goal(s)
+and the interviewees’ history of changing goals. We paid par-
+ticular attention to whether they planned the evolution of the
+goals and the reasons for changing (or not changing) them.
+In the next part of the interview, we investigated if the way
+users managed goals may have been connected to a history
+of lapses (which might have been key to understanding their
+tracker experience as shown by Epstein et al. [11]). Finally,
+we explored if and how users reviewed and reﬂected upon
+tracker data and how goals may have facilitated that process.
+
+Interviews
+The semi-structured interviews lasted an average of 31 minutes
+(20–65). Each of the interviews was a one-on-one session
+with a single researcher. We recruited N = 18 participants
+through snowball sampling starting with social media posts.
+The participants were aged 18–41 (M = 26.67, SD = 5.42).
+Nine interviewees were male and nine female. Interviews
+were only conducted with participants who identiﬁed as users
+of ﬁtness trackers. All the sessions were audio recorded upon
+
+Analysis
+All audio recordings were transcribed verbatim and imported
+into Atlas.ti analysis software. Two researchers coded a rep-
+resentative sample of 15% of the material using open coding.
+Next, a coding tree was established through iterative discus-
+sion. The remaining transcripts were split between the two
+researchers and coded individually. A ﬁnal discussion session
+was conducted to ﬁnalise the coding tree after the material was
+coded. We then identiﬁed emerging themes in the transcript
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 3Figure 1. Our Tracker Goal Evolution Model. The model describes how qualitative goals emerge from internalised hedonic/eudaimonic needs. It then
+illustrates how qualitative goals are translated to quantitative tracker goals through reﬂection and trust.
+
+used. Further, the majority (109 participants, 67%) of answers
+reported experiencing a lapse in tracking, deﬁned as a break
+from using the tracker longer than a month. Most of the
+respondents (112, 69%) acquired the trackers themselves, but
+50 participants had received a tracker as a gift.
+
+THE TRACKER GOAL EVOLUTION MODEL
+Based on the interviews and survey, we developed a new model
+of how ﬁtness trackers goals evolve. The Tracker Goal Evolu-
+tion Model focuses solely on understanding the needs of the
+users in terms of ﬁtness tracking and meaningfully translating
+them into ﬁtness goals. Further, it enables designing new goals
+and adjusting them as the user’s ﬁtness changes.
+
+Our model is intended to be a subordinate construct to Ep-
+stein et al.’s [13] lived informatics model and, to a lesser
+degree, the stage-based model of personal informatics [26].
+We extend the lived informatics model by addressing goals
+in more detail. We found that assuring that the user’s goals
+can effectively evolve and keeping them engaged may prolong
+the time in which the users stay in what Epstein et al. call the
+tracking and acting stage. Similarly to Epstein et al., we do
+not adopt a behavioral change goal, but attempt to account
+for all motivations for tracking. However, while the lived
+informatics model addresses goals (discussed as motivations
+for deciding to track), it does not include changing goals and
+evolving needs, which we integrate into our model.
+
+The Levels of the Model
+Our model divides the understanding of ﬁtness trackers into
+three levels: hedonic and eudaimonic needs, qualitative goals,
+and quantitative goals. We use the word ‘levels’ to distinguish
+them from Epstein et al.’s ‘stages’ as the constructs in our
+model are simultaneous rather than sequential. Each level
+in our model represents a different level of abstraction with
+regard to a ﬁtness goal. The levels are highly coupled, so that
+success on any of the levels is tightly related to achievement
+
+Figure 2. The quantitative tracker goals set by survey respondents. Note
+that users were able to report multiple goals as setting multiple goals is
+common in current commercial trackers. A free text ﬁeld was provided
+for other goals, but none of the participants used it.
+
+describing the practices around goals to further investigate in
+the survey.
+
+Survey
+Our online survey further investigated tracker goal practices
+identiﬁed in the interviews. The survey contained questions
+about whether the users had a goal set in their tracker and
+what kind of goal it was. Further, we explored how tracker
+goals related to qualitative personal ﬁtness goals. We also
+asked participants whether they had a history of changing
+goals and reasons for (not) changing goals. Finally, we asked
+about the role of goals in their social environment. We used
+promoted social media posts and university mailing lists to
+recruit n = 162 participants (85 male, 77 female, aged 17–66,
+M = 27.96, SD = 8.21). The survey was available over three
+weeks.
+
+All survey respondents were active users of ﬁtness trackers.
+137 participants were based in the European Union and 15
+in the US. 75% (121 participants) of the participants had a
+goal set in their tracker, with the majority using a step goal.
+Figure 2 presents the different tracker goals the respondents
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 4on the other levels, and a lack of satisfaction on one of the
+levels negatively affects the rest of the model.
+
+We deﬁne the most abstract level as hedonic and eudaimonic
+needs. This level refers to the highly internalised needs of a
+user which are often not explicitly verbalised. While these
+needs vary signiﬁcantly between tracker users they form both
+the core of their motivation and the anticipated beneﬁts of
+tracking. In our model, the user primarily evolves on this level
+and the consequences of that evolution are then carried onto
+the following levels.
+
+Qualitative goals form the next level in our model. They con-
+stitute a manifestation of the hedonic and eudaimonic needs.
+Qualitative goals are often verbalised and users consider them
+rational. The verbalisation of needs is often connected with
+social exchange. Users are able to share and discuss their goal
+with their social environment, e.g. their peer group. Further-
+more, they are often regarded as sources of motivation and
+provide a personal reference for ﬁtness achievement.
+
+We deﬁne the most concrete level in our model as quantitative
+goals. These goals are often expressed by numbers and can be
+input in a ﬁtness tracker. Quantitative goals are translations of
+qualitative goals into a form that can be used in a tracker. We
+further deﬁne two supporting factors necessary for this trans-
+lation to be successful. Building trust in the goal and in the
+tracker is required for the goal to be relevant and stay mean-
+ingful for the user. The goal must enable reﬂection so that it
+can evolve and connect to the higher levels of the model. Here
+our model differs signiﬁcantly from Li et al. [26]. While they
+saw reﬂection as a necessary condition, our model suggests
+that reﬂection and trust reinforce a pre-existing connection
+between qualitative and quantitative goals.
+
+UNDERSTANDING THE MODEL
+In this section we show how our model relates to the data we
+gathered in our studies and how it describes the current user
+practices around ﬁtness tracker goals. Here, we present the
+recurring themes from the interview and survey data. As the
+model is closely tied to ﬁtness tracking practice, it can be used
+to support designing meaningful goals.
+
+Hedonic and Eudaimonic Needs
+Through the coding process we found that users often used
+vague descriptions of their needs and motivations in the track-
+ing context. Even though a broad spectrum of needs was
+expressed by the interviewees, they struggled to explicitly de-
+scribe qualitative goals and a desire to transition from hazy
+descriptions to something ‘easier to access’ (P6). They strug-
+gled to specify what they hoped to gain from tracking:
+
+[ . . . ] it is just more gadget for me than something that I
+really need. But I bought another one when the ﬁrst one
+broke, so it means something. (P7)
+
+Another user expressed that she lacked clear goals as obtaining
+a tracker was motivated simply by her curiosity:
+
+I really like playing around with technology and I also
+wanted to get a little more active. (P2)
+
+Another interviewee mentioned that an important goal quality
+is that the goal should make you feel good. Yet they found
+it hard to provide a more detailed description of what ‘feel-
+ing good’ would entail and they questioned the meaning of
+quantitative metrics:
+
+[ . . . ] all the metrics we look at right now are really
+subjective. Everyone has a different stride which is then
+counted as one step [ . . . ] a meaningful goal is when
+you’re satisﬁed with yourself, so with your ﬁtness level
+[ . . . ] on a meta level [ . . . ] When you’re satisﬁed with
+yourself and the metrics are in a way that they feel right
+for you. For example, maybe you’re already ﬁt if you run
+only 6,000 to 7,000 steps but the tracker recommends
+10,000 steps. That’s a really stupid metric because some
+people are also ﬁt even if they run much more or just
+less. I think this is a very, very important factor for this
+[ . . . ] the tracker says for each person 10,000 steps is the
+ultimate goal. That’s probably a stupid metric. (P11)
+
+The interviews showed that many users assessed the meaning
+and value of what they were striving for through their own
+feelings, instead of specifying a goal based on how they would
+like to feel. The following statement of one of the users shows
+that the connection between the user’s feelings and his goal
+remained intangible.
+
+[ . . . ] every time when you realize that it has an effect on
+your life, health and condition. I also saw the difference
+on myself and how do I feel when I was running and when
+I was not. And the general awareness that when you train
+you are feeling better and you are in a better condition
+what affects on your family life in the future. (P8)
+
+Users would often communicate a general need to evolve.
+They outlined their striving to become a ‘better person’. Yet,
+they were still vague when queried about the nature of what
+the goal to achieve that should look like:
+
+Going with the goals helps me achieve more. I’m this
+type of person. It’s simpler to make new habits and just
+be better. (P11)
+
+One user emphasised the desire to regain a former ﬁtness level.
+Interestingly, the means to achieve that were not described in
+detail:
+
+Ah, my idea is just to get back to where I was before
+pregnancy. That’s it. I think I reached a plateau there. I
+couldn’t do more than that. If I wanted to do more than
+that then I should stop working and do sports! (P10)
+
+Our results show that users often ﬁnd it hard to express their
+ﬁtness goals. It becomes especially hard if one tries to for-
+mulate goals using the means available in current commercial
+trackers. On one hand, this is caused by the multitude of moti-
+vations for tracking (here our ﬁnding connect to Epstein et al.’s
+model [13]). On the other, we observed that participants often
+struggled with expressing their fundamental human needs with
+regard to wellbeing. That is why, in our model, we employ
+the theories of hedonic and eudaimonic wellbeing. Our model
+describes current practices as it shows that users need support
+for manifesting basic wellbeing needs (deﬁned through hedo-
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 5nia and eudaimonia) in the form of qualitative goals. Hedonia
+and eudaimonia can manifest goals, needs or both.
+
+Qualitative and Quantitative Goals
+Models of personal informatics list different motivations for
+starting the tracking experience [13], yet they do not discuss
+how these motivations relate to tracker goals. We observed
+that motivations (which stem from hedonic/eudaimonic needs)
+are often manifested through qualitative goals and then trans-
+lated to quantitative goals that can be input into trackers. Thus,
+understanding the relationship between qualitative and quanti-
+tative goals is a key element in our model.
+
+We noted that 97% of the participants in our survey reported
+having a qualitative goal. This was reﬂected in the interviews,
+where most users replied with a qualitative goal when asked
+about ‘a goal’. One participant explicitly stated that she did not
+ﬁnd a quantitative goal meaningful in contrast to her qualitative
+goals:
+
+[ . . . ] since I remember, I did a lot of sports. The numbers
+don’t motivate me. (P17)
+
+Further, when we reﬂect upon perspectives on their desired
+ﬁtness, participants would often refer to mental states and
+a personal perception of being on track as a reference. The
+ultimate goal for ﬁtness was often described in terms of moti-
+vation and perception of progress:
+
+The most important thing is that the goal actually is
+related to some kind known level/range to some extent,
+that we consider ourselves active or advanced and [ . . . ]
+also motivates us to perform better. (P1)
+
+We further observed that the users would set qualitative goals
+for ﬁtness activities that were not explicitly tracked. They
+used quantitative metrics as approximations of their activity,
+but they were concerned primarily with the untracked activity.
+P18 reﬂected how step counting complemented her activity
+in football practice where team expectations were her main
+focus:
+
+[ . . . ] in the past things that have motivated me have been
+being part of a team. Not necessarily for step count but
+I did play soccer for my university and knowing that I
+had a bunch of other team mates who were counting on
+me to be ﬁt really motivated me to make sure that I was
+actually working out and getting steps in. . . well really,
+getting runs in at that point. (P18)
+
+Similarly, users reported making day-to-day decisions using
+qualitative goals. Participants would often aim to keep a per-
+ceived activity level without referring to qualitative measures
+thus prioritising their perception of activity over tracker met-
+rics:
+
+[ . . . ] OK, today I will work in the lab with my computer,
+so the day will be a bit lazy, so it will be good if I will
+take a longer walk and I’m OK with that. (P4)
+
+In contrast, our study also included users who had very well
+manifested hedonic needs which were easily translated into
+quantitative measures. These users would build their entire
+experience around documenting progress in numbers:
+
+Figure 3. 76% of the survey participants reported that they ‘strongly
+agree’ or ‘agree’ with the sentence ‘I would like to understand how my
+tracker works.’.
+
+I’m just obsessed with the weight. I mean I have phases.
+At some point I was really obsessed with the steps, so then
+I would just really walk in the apartment, [ . . . ] so it’s
+kind of claustrophobic. [ . . . ] But now I’m really obsessed
+with the weight. And the scale is really accurate. You
+can really see if there’s 100g on or off. So I feel like I
+document this, I did it. (P7)
+
+While P7 experienced an effective match between her needs
+and the quantitative measures, other users stated that numeric
+metrics posed some challenges. One participant who had
+an active hours goal expressed that the time periods were
+arbitrary and could sometimes be disruptive, which illustrates
+a mismatch between the qualitative goal (‘be active throughout
+the day’) and the quantitative translation in the tracker (‘Make
+250 steps in 9, 60-minute periods starting at the full hour’):
+
+Yeah, I actually sometimes get annoyed, ’cause some-
+times I’m pretty focused and then it interrupts me. I’ve
+never really appreciated that. . . being the middle of a
+thing and be like ‘Yeah get up!’ It’s not really my behav-
+ior. (P18)
+
+It can be observed that the translation from qualitative to quan-
+titative goals is a factor that determines the quality of the
+experience of tracker goals. Our model encourages making
+that translation explicit and empowering users to realise how
+the quantitative goals that their tracker uses relate to their
+perception of ﬁtness. Our results show that the awareness of
+that relationship can lead to increased engagement and foster
+potential for long-term usage. Tracker goal designs should
+make this relationship approachable and ensure the users are
+aware of the purpose of their qualitative goals. We determined
+that two factors, reﬂection and trust, are key to strengthen
+the user’s understanding of how tracker goals relate to their
+personal ﬁtness goals.
+
+Supporting Factors: Reﬂection and Trust
+Our survey has shown that 76% of the participants expressed
+the desire to understand more about their tracker as shown in
+Figure 3. Simultaneously, 48% of the users perceived their
+tracker as accurate (see Figure 4). This illustrates that those
+using ﬁtness trackers have a need for increased knowledge of
+how the tracker works. Further, they do not fully trust the data
+provided by current commercially available ﬁtness trackers.
+These opinions also resonated in our interviews.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 6The limited accuracy of current trackers caused some users to
+wonder how much knowledge about their body their trackers
+should provide. For users who aimed to get a deep understand-
+ing of the metrics, a mismatch potentially caused by lack of
+accuracy was a reason for concern:
+
+For the heart rate it’s very difﬁcult because it’s often very
+different and I’m not sure if this is a measurement error
+or is this my real heart rate? Because sometimes I am
+working really slowly and then I have a heartbeat of 140
+where I usually have a heart rate of 90 or 100. (P7)
+
+Another aspect of trust that we found in our data was trusting
+in the ﬁtness goal being meaningful. Users endeavored to
+understand enough about the goal so that they could ﬁnd it
+actionable and feel in control of their progress. They also
+expressed the desire to trust in their tracker helping them
+manage activity towards their goal. One user was disappointed
+at the notiﬁcations reminding them to move when they have
+already exceeded their goal for the day:
+
+Maybe if I would understand a step goal a little bit more
+I could say ‘OK, I [want to] accomplish 20k steps’. I
+think that I would appreciate it a little bit more [ . . . ] but
+when it tells me to move I’m kinda annoyed, when I’ve
+achieved this step goal [ . . . ] It usually happens when
+I’ve been walking a lot. (P12)
+
+Users also appeared to lose trust in their goal when it did
+not adjust with signiﬁcant changes in their life. Participants
+found that they could not connect tracker goals with changing
+training regimes, nutrition patterns or family situations. One
+interviewee remarked that she found her goal useful before
+her pregnancy, but the goal became confusing after the birth.
+This shows how the user trusts the goal to be meaningful and
+expects to be able to reﬂect upon it.
+
+But before pregnancy I was looking at the green cycle,
+circle, the exercise thing [referring to Apple Watch activ-
+ity visualisation]. But I don’t have really intense exercise
+right now, so doesn’t really tell me more. But before I
+was looking at it, for example to cycle more, faster or
+something like that. [ . . . ] I don’t really understand it,
+I don’t know. Maybe I need an explanation why this is
+useful or not, I don’t know. (P10)
+
+Reﬂecting on Goals
+Several participants reported that they not only expected the
+tracker to reﬂect profound changes in their lives, but also
+respond to slowly changing routines on an everyday basis.
+One reported that the tracker understood their erratic work and
+sleep patterns caused by a medical condition:
+
+Sometimes when I work from home the step counter value
+is much lower. I can tell that I worked from home like
+2 days or something over the weekend. Then I feel like
+[ . . . ] it’s kind of nice to work from home, but then the
+step counter is not really active. So next time, maybe
+next week, I’ll have a full work week, so I won’t work
+from home next week. [ . . . ] My medication is actually
+inﬂuencing my sleeping patterns and I’m actively taking
+medications to avoid this. And I change them according
+to how effective they are. So I just check the sleeping time,
+
+Figure 4. 47% of the survey participants reported that they ‘strongly
+agree’ or ‘agree’ with the sentence ‘I feel that the tracker data precisely
+describes my daily activity.’
+
+Goals and Trust
+We noted that many of the interviewees explicitly requested
+that the tracker suppliers provide more information about the
+inner workings of the device:
+
+[ . . . ] they have to describe precisely, or more or less
+precisely if they don’t to want to show the algorithm,
+how is this calculated or something. Or, just to show a
+description would be enough. Here we take your heart
+rate variability and multiply it by 60. I don’t know. That
+would be enough. (P8)
+
+Further, most interviewees recalled being surprised by tracker
+measurements or thinking that the measurement was incor-
+rect. This often led to confusion or immediate doubt in the
+accuracy of the device. One participant was concerned by the
+discrepancy between their perceived sleep quality and the data
+provided by the tracker:
+
+But when you’re tired and you have the feeling that you’ve
+slept only for three hours and it shows you eight, you
+cannot believe. Or sometimes, I don’t actually know how
+it works, but it shows how many times did you wake up at
+night and sometimes it shows 15 and you don’t remember
+waking up at all. But then I still cannot say that it’s true,
+’cause you move when you sleep and you’re not so sure
+that you woke up. Maybe just the device didn’t recognise
+it. (P16)
+
+In contrast, another user also believed that the tracker provided
+sleep data that was not fully accurate. However, they decided
+to use the offered precision as an acceptable reference metric:
+
+Yes, it’s not 100% trustworthy, but you can get a hint
+of quite well of what was your sleep and how was your
+sleep. (P17)
+
+We also observed that a lack of accuracy and/or trust in the data
+may have led to partial abandonment. One of the interviewees
+reported initially tracking sleep, but then realising that the
+metrics provided did not enable him to understand his sleep
+patterns well enough:
+
+Before I was also using it to track sleeping, but I’m not
+using it anymore, because it was not giving me enough
+data. (P9)
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 7Figure 5. Example of how the Tracker Goal Evolution Model can be used to understand a part of the goal practices of a single user. The user’s goals are
+built around the eudaimonic need to feel well in one’s body. The need is then manifested through the desire to lose weight and lead an active lifestyle.
+The tracker can then help translate those goals into an active hours goal and a step goal. In order for the goals to provide engagement and allow for
+evolution, the user must know the relationship between the numeric metrics and their qualitative perception. They also need to trust and understand
+their goal and tracking technology.
+
+not the quality but the time. So like when I went to sleep
+when I woke up and stuff like this. Yeah, it’s kind of an
+overview of how things were this week. (P5)
+
+We further observed that users wanted to reﬂect upon activities
+that were not explicitly tracked and relate them to tracker
+metrics so that they could have an overview of their ﬁtness.
+One participant tried to compare their car mechanic work with
+running:
+
+If a wheel weighs 120 pounds and I have to move that
+around a lot, granted, it rolls, but you also have to pick it
+up half a meter-ish. The amount of work I do is generally
+in spurts. Translate that to the running side, it would be
+more like sprinting a lot, because I’ll drive for an hour to
+a location, work on a couple trucks and even when I’m
+working on a truck, I’ll work in one spot for 15 minutes
+to an hour. (P15)
+
+Some interviewees reported that they had moments when they
+explicitly decided to reﬂect on their data. To that end, they
+used opportune moments; periods when they had time to spare:
+
+Last time I had some problems with falling asleep, I went
+to the beach, I synchronized my Fitbit with my smart-
+phone and checked some data. It makes more sense to
+check it after a longer time because then the plots are
+showing better data. (P1)
+
+Another participant used the metrics explicitly to calm down
+and maintain a slow walking pace in a stressful situation:
+
+During my master exams I was stressed and I didn’t know
+what to do with myself. I wondered what I could do to just
+free myself from the surroundings and be less stressed
+out and I just started walking with my dog. [ . . . ] I had
+
+a slower pace, so I could chill and think about different
+things. (P16)
+
+Finally, many of our participants expressed the desire that the
+tracker should have provided them with an overall assessment
+of how well they were in general. They wanted an objective
+measure that would go beyond a perception that could be
+gathered from other sources:
+
+I also consider my tracker as a good summary of what
+I do with my body. For example, for running, I do use
+a running app, which tracks my activity while running
+and I have in-depth stuff in it but for other activities I
+don’t use any software or separate device to monitor the
+goal [ . . . ] ’cause this I do more for fun and cause I
+like being active [ . . . ] but the tracking could give me an
+opportunity to sum it up and get a more or less precise
+view [ . . . ] on all these activities. (P4)
+
+Our results show that different dimensions of trust are instru-
+mental in the user’s interactions with a ﬁtness tracker goal. In
+our model, trust must be mediated to maintain engagement
+with a ﬁtness goal. Two aspects of trust are key: trusting the
+accuracy of the tracker and trusting that the ﬁtness goal is
+meaningful. The ﬁrst kind of trust can be built by making
+the operation principles of trackers available to users. We
+observed that participants need more information about how
+trackers store and process ﬁtness data in order to maintain
+a more informed relationship with their ﬁtness goals. Trust
+in the meaningfulness of one’s ﬁtness goals can be through
+providing a clear link between the numerical metrics and their
+envisioned consequences for health and wellbeing. This shows
+how trust is a mediating factor in our model that is necessary
+for users to connect qualitative and quantitative goals.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 8However, we observe that trust cannot exist without the ability
+to reﬂect. In our interviews, users often connected their qual-
+itative achievements to quantitative goals through reﬂection.
+Through using opportune moments to reﬂect users are looking
+to qualitatively assess their progress towards their qualitative
+goals with the help of the measures provided by the tracker.
+Consequently, reﬂection is a necessary mediating factor in our
+model. Together with trust, reﬂection forms two intertwined
+requirements to keep the user engaged and provide a rich ex-
+perience of ﬁtness tracking. Our results suggest that these two
+qualities are necessary for the user’s goals to keep evolving
+and empowering them to adjust their goals according to the
+changes in their life.
+
+USING THE MODEL
+Having illustrated how our model reﬂects current user prac-
+tices around trackers, we now show how it can aid the design
+of tracker goals in a future generation of trackers. In order
+for users to maintain engagement with their tracking experi-
+ence, they need to engage with goals on the three levels of the
+model.
+
+Understanding of whether a goal stems from a hedonic or
+eudaimonic need can help to design how the goal is communi-
+cated and presented, and how progress is reported. However,
+hedonic and eudaimonic needs of users are highly internalised,
+so it may be hard to query the user and obtain explicit ac-
+counts. Thus, we propose that systems begin the interaction
+with goals on the qualitative goals level. This is in contrast
+with current systems, which usually propose an arbitrarily se-
+lected quantitative goal and, in some cases, help adjust it. Our
+model shows that users require an explicit connection be-
+tween the numeric values presented by trackers and their
+qualitative goals. That is why we propose that tracker appli-
+cations should ask users about qualitative goals ﬁrst. Then,
+as the system processes the user’s qualitative goals, it can
+propose a connected set of quantitative goals that would lead
+to their achievement. Figure 5 presents an example of how our
+model can be operationalised to map the goals of a speciﬁc
+user.
+
+We argue that the process of explicitly translating between
+qualitative and quantitative goals is key for meaningful inter-
+action with trackers. Our results show that the translation
+needs to be accompanied by building trust. On one hand,
+trackers should provide information on how goal metrics relate
+to goals. Numeric metrics should be directly linked to antic-
+ipated health and wellbeing beneﬁts. On the other hand, we
+observed that users also desire to understand how the metrics
+involved in their goals are obtained. Consequently, trackers
+should provide information on how progress towards a given
+goal is measured, in a form that is understandable by the user.
+
+Further, our model can also be used to support the constant evo-
+lution of goals that go beyond the current practice of simply in-
+creasing goals by an arbitrary number. Firstly, trackers should
+empower users to reﬂect on their qualitative progress by
+referring back to qualitative goals and showing how daily
+quantitative goals contribute to a larger qualitative meaning.
+This will enable them to understand progress in qualitative
+terms and adjust their qualitative goals in conjunction with
+
+quantitative goals. Secondly, being aware of the user’s qual-
+itative goals will enable designing systems that link them to
+hedonic and eudaimonic needs. This, in turn, will enable
+suggesting meaningful qualitative goals that foster reﬂection.
+
+DISCUSSION
+While we built the Tracker Goal Evolution Model to be as
+descriptive of current practices around ﬁtness trackers as pos-
+sible, it still constitutes a simpliﬁcation. Our model proposes
+a way of thinking about ﬁtness tracker goals that highlights
+the key elements of goal evolution that are needed to keep the
+user engaged. However, our approach is neither exhaustive
+nor fully analytical.
+
+Hedonia and Eudaimonia are a Spectrum
+Mapping a user’s needs into hedonia and eudaimonia is difﬁ-
+cult and a topic of discussion in the ﬁeld of Psychology. Our
+model does not require one to fully analyse a user’s needs as
+this can only be done by the user themselves. Instead, the
+fact that hedonia and eudaimonia are directly linked to qual-
+itative goals in our model stresses the fact that ﬁtness goals
+are manifestations of internalised needs. Remembering about
+hedonic and eudaimonic wellbeing while setting ﬁtness goals
+can assure that the user’s internalised motivations are part of
+the goal setting process. While we recognise that the under-
+standing of how ﬁtness goals relate to hedonia and eudaimonia
+presented in this paper is not complete, our research shows
+that quantitative goals are hard for users to relate to wellbeing.
+
+Emphasising Transitions
+The two transitions in our model (manifestation and transla-
+tion) form an axis of goal evolution that should be strongly
+supported by ﬁtness tracker designs. As our results show that
+users are in need for additional aids in making those transi-
+tions, a challenge for future design emerges. Concurrently,
+users expressed a desire to understand how trackers work and
+how the tracking metrics are obtained. Yet, current ﬁtness
+tracking solutions usually offer a quick questionnaire at the
+beginning of the tracking experience and there is little engage-
+ment with the internals of the tracking system throughout the
+usage period. We believe that future trackers should make the
+infrastructure and the algorithms they use more transparent.
+In line with the concept of seamful design [5] trackers could
+show users parts of the details of their operations. Exposing
+the ways data is gathered in ﬁtness trackers can help users
+understand the metrics they generate and thus build trust in
+the tracker. Showing how trackers decide to suggest goals to
+users and making their anticipated beneﬁts explicit will help
+users understand how their qualitative goals translate to their
+quantitative goals better.
+
+We recognise the possibility that some qualitative goals trans-
+late to quantitative goals better than others. For example, the
+interview data showed that participants concerned with weight
+were more number-driven. This creates on opportunity for
+future systems to offer multifaceted experiences that commu-
+nicate with the user using a mix of qualitative and quantitative
+terms tailored to the user’s personal goal. If future designs can
+chart where the user is on the hedonia-eudaimonia spectrum
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 9and how number-oriented their ﬁtness goal can be, new track-
+ers should be able to offer more effective feedback and more
+personalised experiences.
+
+Relation to Other Models
+In this work, we illustrated how our model is subordinate to
+other models of personal informatics. However, as our work
+also addresses a number of high-level concepts, there are other
+theories and models that can be used to understand elements
+of the Tracker Goal Evolution Model. While reﬂection fea-
+tures prominently in our model and we provided examples
+of how users engage with trackers to reﬂect, we do not offer
+solutions for designing for reﬂection nor does our work de-
+scribe the process of reﬂection. We see an opportunity to apply
+the knowledge and practices in reﬂective informatics (i.e. the
+design and understanding of interactive artefacts that promote
+and support the process of reﬂection [2]) to our model. Our
+model can contribute to understanding technologies for reﬂec-
+tion by helping chart goal evolution that lead to developing
+reﬂective practice by users.
+
+Further, we recognise that a model of trust could also be
+applied to our model. For instance, the trust-theory model
+from Castelfranchi and Falcone [4] provides a socio-cognitive
+computational model that could potentially help unpack the
+concept of trust in the Tracker Goal Evolution Model. This, in
+turn, can enable a deeper understanding of the trust dynamics
+involved in trusting the accuracy of the tracker and ﬁnding
+one’s ﬁtness goal meaningful. Our model shows that future
+tracker designs should embody trust to offer long-term engage-
+ment. Thus, we see that future research on building trust in
+tracker design is required.
+
+Limitations
+While we strived to make our model as comprehensive as pos-
+sible, we are aware that it is prone to some limitations. Firstly,
+our user sample consisted primarily of Western European par-
+ticipants. Past work used primarily US-based populations
+recruited through Mechanical Turk. We recognise that our
+ﬁndings are still constrained within the Western culture. Fit-
+ness trackers are not only prominent in Asia, but they are
+also entering emerging markets and further studies are needed
+to understand the user practices around trackers in these set-
+tings. The user experience of personal informatics is likely
+to be affected by cultural biases. The risks and opportunities
+that come with the ubiquity of ﬁtness trackers may be expe-
+rienced differently based on the sociocultural context of the
+data collected.
+
+Moreover, we decided to focus our inquiry solely on ﬁtness
+tracking, while other models endeavored to cover the entire
+ﬁeld of personal informatics. Our focus enabled us to engage
+with the intricacies connected to ﬁtness, but it also limits the
+applicability of our model. The relationship between quanti-
+tative and qualitative goals in our model is described based
+on user practices with very speciﬁc metrics, e.g. steps and
+calories. Consequently, our model would need to be adjusted
+to scale to other domains of personal informatics.
+
+Future work
+We believe our approach to understanding and designing ﬁt-
+ness goals for trackers offers a more effective operationalisa-
+tion than applying complex motivational theories from psy-
+chology to designing for ﬁtness, in contrast to work by Knav-
+ing et al. [24]. However, we see further improvements to
+understanding ﬁtness tracker goals that can be addressed by
+future research. Firstly, we envision that users can be queried
+about the nature of their goals to identify how their goals are
+placed in the hedonia-eudaimonia spectrum. This would en-
+able designing goals that build on internalised motivations.
+How the tracker could communicate with the user to obtain
+such information is an open question, cf. [28].
+
+Secondly, we wonder how a better understanding of one’s
+goals and the goals of others can enhance social interaction.
+Future research can explore how better ﬁtness goals can help
+use tracking data in communication (much like HeartChat[17])
+and sharing data to build insight, cf. [35]. Our model also
+offers the possibility to understand the social dynamics in
+families or groups behind goals to build situated reﬂection
+systems (like [23]), but this potential must be veriﬁed in further
+studies. Finally, we wonder how our model generalises and if
+it needs to be adapted to domains other then ﬁtness tracking,
+e.g. menstrual cycles, breastfeeding, diet tracking, or sleep.
+While our inquiry was limited to tracking physical activity,
+it may address other personal informatics experiences, much
+like the lived informatics model [13].
+
+CONCLUSION
+In this paper, we introduced the Tracker Goal Evolution Model.
+Our model describes the user practices around ﬁtness tracker
+goals on three levels: Hedonic and eudaimonic needs, Qual-
+itative goals and Quantitative goals. These three levels are
+connected with two transitions: manifestation and translation.
+We based our model on a series of semi-structured interviews
+and an online survey. Our model enables charting an indi-
+vidual’s goals in order to build more engaging and evolving
+tracking experiences. The model can be used as a complement
+to models of personal informatics as it offers a new perspec-
+tive on how a user’s goals evolve through the journey through
+personal tracking.
+
+We hope that our work will help researchers and designers ad-
+dress new challenges with personal tracking and build trackers
+that offer long-term beneﬁts. Our model aims to contribute to
+a new generation of trackers that offer engaging experiences
+and tangible beneﬁts. In future work, we hope to investigate
+how it can help generate alternative designs for ﬁtness trackers
+and ways to communicate its levels and transitions to the user
+in a meaningful way.
+
+Acknowledgements
+We thank Albrecht Schmidt, Sarah Diefenbach, Valentin
+Schwind, and Philippa Beckman for their contributions to
+the manuscript. Parts of this research were supported by the
+European Union’s Horizon 2020 Programme under ERCEA
+grant no. 683008 AMPLIFY and the German Federal Ministry
+of Education and Research as part of the project KoBeLU
+(grant no. 16SV7599K).
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 10REFERENCES
+1. Elena Agapie, Daniel Avrahami, and Jennifer Marlow.
+
+2016. Staying the Course: System-Driven Lapse
+Management for Supporting Behavior Change. ACM
+Press, 1072–1083. DOI:
+http://dx.doi.org/10.1145/2858036.2858142
+
+11. Daniel A. Epstein, Monica Caraway, Chuck Johnston, An
+Ping, James Fogarty, and Sean A. Munson. 2016a.
+Beyond Abandonment to Next Steps: Understanding and
+Designing for Life after Personal Informatics Tool Use.
+ACM Press, 1109–1113. DOI:
+http://dx.doi.org/10.1145/2858036.2858045
+
+2. Eric P.S. Baumer. 2015. Reﬂective Informatics:
+
+12. Daniel A. Epstein, Jennifer H. Kang, Laura R. Pina,
+
+Conceptual Dimensions for Designing Technologies of
+Reﬂection. In Proceedings of the 33rd Annual ACM
+Conference on Human Factors in Computing Systems
+(CHI ’15). ACM, New York, NY, USA, 585–594. DOI:
+http://dx.doi.org/10.1145/2702123.2702234
+
+3. Dena M. Bravata, Crystal Smith-Spangler, Vandana
+
+Sundaram, Allison L. Gienger, Nancy Lin, Robyn Lewis,
+Christopher D. Stave, Ingram Olkin, and John R. Sirard.
+2007. Using pedometers to increase physical activity and
+improve health: a systematic review. Jama 298, 19
+(2007), 2296–2304. http:
+//jamanetwork.com/journals/jama/fullarticle/209526
+
+4. Christiano Castelfranchi and Rino Falcone. 2010. Trust
+theory: A socio-cognitive and computational model.
+Vol. 18. John Wiley & Sons.
+
+5. Matthew Chalmers and Areti Galani. 2004. Seamful
+
+Interweaving: Heterogeneity in the Theory and Design of
+Interactive Systems. In Proceedings of the 5th
+Conference on Designing Interactive Systems: Processes,
+Practices, Methods, and Techniques (DIS ’04). ACM,
+New York, NY, USA, 243–252. DOI:
+http://dx.doi.org/10.1145/1013115.1013149
+
+6. Catherine B. Chan, Daniel A.J. Ryan, and Catrine
+
+Tudor-Locke. 2004. Health beneﬁts of a pedometer-based
+physical activity intervention in sedentary workers.
+Preventive Medicine 39, 6 (Dec. 2004), 1215–1222. DOI:
+http://dx.doi.org/10.1016/j.ypmed.2004.04.053
+
+7. James Clawson, Jessica A. Pater, Andrew D. Miller,
+Elizabeth D. Mynatt, and Lena Mamykina. 2015. No
+longer wearing: investigating the abandonment of
+personal health-tracking technologies on craigslist. ACM
+Press, 647–658. DOI:
+http://dx.doi.org/10.1145/2750858.2807554
+
+8. Sunny Consolvo, Katherine Everitt, Ian Smith, and
+James A. Landay. 2006. Design requirements for
+technologies that encourage physical activity. In
+Proceedings of the SIGCHI conference on Human
+Factors in computing systems. ACM, 457–466.
+http://dl.acm.org/citation.cfm?id=1124840
+
+9. Edward L Deci and Richard M Ryan. 2008. Hedonia,
+
+eudaimonia, and well-being: An introduction. Journal of
+happiness studies 9, 1 (2008), 1–11.
+
+10. Antonella Delle Fave, Ingrid Brdar, Teresa Freire, Dianne
+
+Vella-Brodrick, and Marié P Wissing. 2011. The
+eudaimonic and hedonic components of happiness:
+Qualitative and quantitative ﬁndings. Social Indicators
+Research 100, 2 (2011), 185–207.
+
+James Fogarty, and Sean A. Munson. 2016b.
+Reconsidering the Device in the Drawer: Lapses As a
+Design Opportunity in Personal Informatics. In
+Proceedings of the 2016 ACM International Joint
+Conference on Pervasive and Ubiquitous Computing
+(UbiComp ’16). ACM, New York, NY, USA, 829–840.
+DOI:http://dx.doi.org/10.1145/2971648.2971656
+
+13. Daniel A. Epstein, An Ping, James Fogarty, and Sean A.
+Munson. 2015. A lived informatics model of personal
+informatics. ACM Press, 731–742. DOI:
+http://dx.doi.org/10.1145/2750858.2804250
+
+14. Blaine J. Fowers, Christine O. Mollica, and Erin N.
+Procacci. 2010. Constitutive and instrumental goal
+orientations and their relations with eudaimonic and
+hedonic well-being. The Journal of Positive Psychology 5,
+2 (2010), 139–153. DOI:
+http://dx.doi.org/10.1080/17439761003630045
+
+15. Nanna Gorm and Irina Shklovski. 2016a. Sharing Steps
+
+in the Workplace: Changing Privacy Concerns Over Time.
+In Proceedings of the 2016 CHI Conference on Human
+Factors in Computing Systems (CHI ’16). ACM, New
+York, NY, USA, 4315–4319. DOI:
+http://dx.doi.org/10.1145/2858036.2858352
+
+16. Nanna Gorm and Irina Shklovski. 2016b. Steps, Choices
+
+and Moral Accounting: Observations from a
+Step-Counting Campaign in the Workplace. In
+Proceedings of the 19th ACM Conference on
+Computer-Supported Cooperative Work & Social
+Computing (CSCW ’16). ACM, New York, NY, USA,
+148–159. DOI:
+http://dx.doi.org/10.1145/2818048.2819944
+
+17. Mariam Hassib, Daniel Buschek, Paweł W. Wo´zniak, and
+Florian Alt. 2017. HeartChat: Heart Rate Augmented
+Mobile Chat to Support Empathy and Awareness. In
+Proceedings of the 2017 CHI Conference on Human
+Factors in Computing Systems (CHI ’17). ACM, New
+York, NY, USA, 2239–2251. DOI:
+http://dx.doi.org/10.1145/3025453.3025758
+
+18. Luke Wayne Henderson and Tess Knight. 2012.
+
+Integrating the hedonic and eudaimonic perspectives to
+more comprehensively understand wellbeing and
+pathways to wellbeing. International Journal of
+Wellbeing 2, 3 (2012).
+
+19. Veronika Huta. 2015. The complementary roles of
+
+eudaimonia and hedonia and how they can be pursued in
+practice. Positive Psychology in Practice: Promoting
+Human Flourishing in Work, Health, Education, and
+Everyday Life, (2015), 216–246.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 1120. Veronika Huta. 2016. An overview of hedonic and
+
+eudaimonic well-being concepts. Handbook of media use
+and well-being: International perspectives on theory and
+research on positive media effects (2016), 14–33.
+
+Proceedings of the 2016 CHI Conference on Human
+Factors in Computing Systems (CHI ’16). ACM, New
+York, NY, USA, 4509–4520. DOI:
+http://dx.doi.org/10.1145/2858036.2858225
+
+21. Veronika Huta and Alan S Waterman. 2014. Eudaimonia
+
+28. Jasmin Niess and Sarah Diefenbach. 2016.
+
+and its distinction from hedonia: Developing a
+classiﬁcation and terminology for understanding
+conceptual and operational deﬁnitions. Journal of
+Happiness Studies 15, 6 (2014), 1425–1456.
+
+Communication Styles of Interactive Tools for
+Self-Improvement. Psychology of Well-Being 6, 1 (06 Jun
+2016), 3. DOI:
+http://dx.doi.org/10.1186/s13612-016-0040-8
+
+22. John M Jakicic, Kelliann K Davis, Renee J Rogers,
+
+29. John Rooksby, Mattias Rost, Alistair Morrison, and
+
+Wendy C King, Marsha D Marcus, Diane Helsel, Amy D
+Rickman, Abdus S Wahed, and Steven H Belle. 2016.
+Effect of wearable technology combined with a lifestyle
+intervention on long-term weight loss: the IDEA
+randomized clinical trial. Jama 316, 11 (2016),
+1161–1171.
+
+23. Kristina Knaving and Paweł Wo´zniak. 2016.
+
+TickTockRun: Towards Enhancing Communication in
+Runner Families. In Proceedings of the 19th ACM
+Conference on Computer Supported Cooperative Work
+and Social Computing Companion (CSCW ’16
+Companion). ACM, New York, NY, USA, 309–312. DOI:
+http://dx.doi.org/10.1145/2818052.2869114
+
+24. Kristina Knaving, Paweł Wo´zniak, Morten Fjeld, and
+
+Staffan Björk. 2015. Flow is Not Enough: Understanding
+the Needs of Advanced Amateur Runners to Design
+Motivation Technology. In Proceedings of the 33rd
+Annual ACM Conference on Human Factors in
+Computing Systems (CHI ’15). ACM, New York, NY,
+USA, 2013–2022. DOI:
+http://dx.doi.org/10.1145/2702123.2702542
+
+25. Moon-Hwan Lee, Seijin Cha, and Tek-Jin Nam. 2015.
+
+Patina Engraver: Visualizing Activity Logs As Patina in
+Fashionable Trackers. In Proceedings of the 33rd Annual
+ACM Conference on Human Factors in Computing
+Systems (CHI ’15). ACM, New York, NY, USA,
+1173–1182. DOI:
+http://dx.doi.org/10.1145/2702123.2702213
+
+26. Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A
+
+Stage-based Model of Personal Informatics Systems. In
+Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems (CHI ’10). ACM, New
+York, NY, USA, 557–566. DOI:
+http://dx.doi.org/10.1145/1753326.1753409
+
+27. Elisa D. Mekler and Kasper Hornbæk. 2016. Momentary
+
+Pleasure or Lasting Meaning?: Distinguishing
+Eudaimonic and Hedonic User Experiences. In
+
+Matthew Chalmers Chalmers. 2014. Personal Tracking
+As Lived Informatics. In Proceedings of the 32Nd Annual
+ACM Conference on Human Factors in Computing
+Systems (CHI ’14). ACM, New York, NY, USA,
+1163–1172. DOI:
+http://dx.doi.org/10.1145/2556288.2557039
+
+30. Richard M Ryan and Edward L Deci. 2001. On happiness
+
+and human potentials: A review of research on hedonic
+and eudaimonic well-being. Annual review of psychology
+52, 1 (2001), 141–166.
+
+31. Martin EP Seligman and Mihaly Csikszentmihalyi. 2014.
+Positive psychology: An introduction. In Flow and the
+foundations of positive psychology. Springer, 279–298.
+
+32. Lie Ming Tang and Judy Kay. 2017. Harnessing Long
+Term Physical Activity Data&Mdash;How Long-term
+Trackers Use Data and How an Adherence-based
+Interface Supports New Insights. Proc. ACM Interact.
+Mob. Wearable Ubiquitous Technol. 1, 2, Article 26 (June
+2017), 28 pages. DOI:http://dx.doi.org/10.1145/3090091
+
+33. Elizabeth Telfer. 1980. Happiness: An Examination of a
+Hedonistic and a Eudaemonistic Concept of Happiness
+and of the Relations Between Them, with a Consideration
+of how Far and in what Sense Either Kind of Happiness
+May be Said to be the Goal of Human Life. Macmillan.
+
+34. Alan S Waterman. 1993. Two conceptions of happiness:
+Contrasts of personal expressiveness (eudaimonia) and
+hedonic enjoyment. Journal of personality and social
+psychology 64, 4 (1993), 678.
+
+35. Paweł W. Wozniak, Anton Fedosov, Eleonora Mencarini,
+and Kristina Knaving. 2017. Soil, Rock, and Snow: On
+Designing for Information Sharing in Outdoor Sports. In
+Proceedings of the 2017 Conference on Designing
+Interactive Systems (DIS ’17). ACM, New York, NY,
+USA, 611–623. DOI:
+http://dx.doi.org/10.1145/3064663.3064741
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 171Page 12

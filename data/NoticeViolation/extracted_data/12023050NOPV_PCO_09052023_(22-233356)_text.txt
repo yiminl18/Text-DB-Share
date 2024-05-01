@@ -1,0 +1,1028 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED COMPLIANCE ORDER 
+
+OVERNIGHT EXPRESS DELIVERY 
+
+September 5, 2023 
+
+Mr. Zachary Young 
+Vice President of Ergon Trucking 
+Ergon Terminaling, Inc. 
+P.O. Box 1639 
+Jackson, MS 39215 
+
+Dear Mr. Young: 
+
+CPF 1-2023-050-NOPV 
+
+From May 16, 2022 to May 20, 2022, representatives of the Pipeline and Hazardous Materials 
+Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 601 of 49 
+United States Code (U.S.C.) conducted an on-site inspection of Ergon Terminaling, Inc.’s (Ergon) 
+procedures and records for control room management of its control room in Magnolia, Ohio. 
+
+As  a  result  of  the  inspection,  it  is  alleged  that  you  have  committed  probable  violations  of  the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR). The items inspected 
+and the probable violations are: 
+
+1. 
+
+§ 195.446 Control Room Management. 
+
+(a)  General.  This  section  applies  to  each  operator  of  a  pipeline 
+facility with a controller working in a control room who monitors and 
+controls all or part of a pipeline facility through a SCADA system. Each 
+operator  must  have  and  follow  written  control  room  management 
+procedures that implement the requirements of this section… 
+
+Ergon failed to follow its written control room management procedures.  Specifically, Ergon failed 
+to follow its Control Room Management Plan, November 2014 (CRM Plan), Section 7.8 regarding 
+monitoring  the  content  and  volume  of  general  activity  being  directed  to  and  required  of  each 
+controller at least once each calendar year, but at intervals not exceeding 15 months that will assure 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+controllers have sufficient time to analyze and react to incoming alarms.  Section 195.446(e)(5)1 
+requires that Ergon “[m]onitor the content and volume of general activity being directed to and 
+required  of  each  controller  at  least  once  each  calendar  year,  but  at  intervals  not  exceeding  15 
+months . . .” 
+
+Ergon’s CRM Plan, Section 7.8 stated, in part, “ETI monitors the content and volume of general 
+activity being directed to and required of each controller at least once each calendar year (not to 
+exceed 15 months),  to assure controllers have  sufficient  time  to analyze  and react to incoming 
+alarms.” 
+
+During  the  inspection,  Ergon  was  asked  to  produce  records  indicating  that  they  monitored  the 
+content and volume of general activity being directed to and required of each controller at least 
+once each calendar year but at intervals not exceeding 15 months, to assure that its controllers have 
+sufficient  time  to  analyze  and  react  to  incoming  alarms.  Ergon  produced  a  study  that  was 
+undertaken  in  August  2014.  While  the  CRM  Plan  and  regulations  required  this  task  to  be 
+completed  each  calendar  year,  no  records  or  study  were  presented  for  2019,  2020  and  2021. 
+Section 194.446(j)(1) requires operators to maintain records that demonstrate compliance with the 
+requirements of this section. 
+
+In  addition,  Ergon’s  CRM  Plan,  Section  7.8.2  was  not  fully  consistent  with  Section  7.8  as  it 
+required Ergon to perform this workload analysis “periodically, annually and/or whenever or [sic] 
+significant changes are being made.” 
+
+Therefore, Ergon failed to follow its written control room procedures pursuant to compliance with 
+§§ 195.446(a) and 195.446(e)(5) during 2019 to 2021. 
+
+2. 
+
+§ 195.446 Control Room Management. 
+
+(a)  General.  This  section  applies  to  each  operator  of  a  pipeline 
+facility with a controller working in a control room who monitors and 
+controls all or part of a pipeline facility through a SCADA system. Each 
+operator  must  have  and  follow  written  control  room  management 
+procedures that implement the requirements of this section… 
+
+Ergon failed to follow its written control room management procedures.  Specifically, Ergon failed 
+to follow its Control Room Management Plan, November 2014 (CRM Plan), Section 7.7 regarding 
+reviewing its Alarm Management Plan to determine its effectiveness pursuant to § 195.446(e)(4)2. 
+
+1 § 195.446 Control Room Management. 
+(a) … 
+(e) Alarm management. Each operator using a SCADA system must have a written alarm management plan to 
+provide for effective controller response to alarms. An operator's plan must include provisions to: 
+(1) … 
+(5) Monitor the content and volume of general activity being directed to and required of each controller at least once 
+each calendar year, but at intervals not exceeding 15 months, that will assure controllers have sufficient time to 
+analyze and react to incoming alarms;
+2  § 195.446 Control Room Management. 
+(a) … 
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+Ergon’s CRM Plan, Section 7.7 required, in part, that “ET will review the Alarm Management 
+Plan at least once each calendar year, but at intervals not exceeding 15 months, to determine the 
+effectiveness of the plan.”  Section 7.7 also stated, “[r]eview of the alarm management plan must 
+be documented in the “Record of Plan Revisions”, even if no changes are made.” 
+
+During the inspection, Ergon was asked to produce documentation indicating that a review of the 
+alarm management plan was conducted during 2019 – 2021.  Ergon was unable to provide any 
+records  demonstrating  that  the  annual  reviews  were  conducted  and  documented  pursuant  to  its 
+procedures above. 
+
+Therefore, Ergon failed to follow its written procedures regarding conducting annual reviews of 
+its alarm management plan pursuant to §§ 195.446 (a) and 195.446(e)(4). 
+
+3. 
+
+§ 195.446 Control Room Management. 
+
+(a) … 
+(j)  Compliance  and  deviations.  An  operator  must  maintain  for 
+
+review during inspection: 
+
+(1) Records that demonstrate compliance with the requirements of 
+
+this section; and 
+
+Ergon failed to maintain records as required by § 195.446(j)(1) that demonstrate compliance with 
+§§ 195.446(d)(2) and 195.446(d)(3)3.  Specifically, Ergon failed to maintain records demonstrating 
+that controllers and supervisors were educated in fatigue mitigation strategies and how off-duty 
+activities  contribute  to  fatigue,  and  records  demonstrating  they  were  trained  to  recognize  the 
+effects of fatigue for years 2020 and 2021. 
+
+During the inspection, Ergon was asked to produce records to demonstrate that fatigue education 
+and training was conducted pursuant to §§ 195.446(d)(2) and 195.446(d)(3).  Ergon discussed that 
+they did not have training records for 2020, 2021 and prior years.  In discussions during the verbal 
+exit briefing,  Ergon stated that  all employees  at the  Magnolia  Terminal facility are required to 
+qualify as pipeline operators and do receive Fatigue Mitigation Training via the Empower Human 
+Resource  Management  system  and  electronic  records  are  available  for  review.  However,  the 
+
+(e) Alarm management. Each operator using a SCADA system must have a written alarm management plan to 
+provide for effective controller response to alarms. An operator's plan must include provisions to: 
+(1) … 
+(4) Review the alarm management plan required by this paragraph at least once each calendar year, but at least 
+intervals not exceeding 15 months, to determine the effectiveness of the plan. 
+
+3 § 195.446 Control Room Management. 
+(a) … 
+(d) Fatigue Mitigation. Each operator must implement the following methods to reduce the risk associated with 
+controller fatigue that could inhibit a controller’s ability to carry out the roles and responsibilities the operator has 
+defined: 
+(1)  … 
+(2) Educate controllers and supervisors in fatigue mitigation strategies and how off-duty activities contribute to 
+fatigue; 
+(3) Train controllers and supervisors to recognize the effects of fatigue: and 
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+operator  was  unable  to  produce  records  when  requested.  In  communication  subsequent  to  the 
+inspection,  Ergon  identified  that  required  training  was  added  post-inspection,  and  that  Ergon 
+conducted fatigue mitigation training between May 9, 2022 and June 28, 2022. 
+
+Therefore,  Ergon  failed  to  maintain  records  under  §  195.446(j)(1)  demonstrating  that  the 
+controllers and supervisors were educated and trained regarding fatigue mitigation as required by 
+§§ 195.446(d)(2) and 195.446(d)(3). 
+
+4. 
+
+§ 195.446 Control Room Management. 
+
+(a) … 
+(j)  Compliance  and  deviations.  An  operator  must  maintain  for 
+
+review during inspection: 
+
+(1) Records that demonstrate compliance with the requirements of 
+
+this section; and 
+
+Ergon failed to maintain records as required by § 195.446(j)(1) that demonstrate compliance with 
+§ 195.446(b)(4).  Specifically, Ergon failed to maintain documentation of shift-handover notes to 
+the temporary relief or any other controllers as required by § 195.446(b)(4)4. 
+
+Ergon’s  Pipeline  Control Room Management  Plan,  November  2014, Section 5.1 stated that its 
+controller will document abnormal conditions, if any exist. It also required the conveying of all 
+necessary information if a temporary or impromptu change in controller responsibility occurs. 
+
+During the inspection, Ergon discussed how it has day shifts only and there are no regular shift 
+turnover  meetings  performed.  However,  Ergon  stated  that  they  sometimes  conduct  shift 
+handovers, but did not retain records documenting the shift handover and information exchanged 
+during  the  shift  change.  Therefore,  no  records  were  provided  documenting  hand-over 
+responsibility between controllers. 
+
+Therefore, Ergon failed to maintain records of shift handover of responsibility between controllers 
+pursuant to § 195.446(b)(4), as required by § 195.446(j)(1). 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 
+2023, the maximum penalty may not exceed $239,142 per violation per day the violation persists, 
+up to a maximum of $2,391,412 for a related series of violations.  For violation occurring on or 
+after May 3, 2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 
+
+4 § 195.446 Control Room Management. 
+(a) … 
+(b) Roles and responsibilities. Each operator must define the roles and responsibilities of a controller during normal, 
+abnormal and emergency operating conditions. To provide for a controller’s prompt and appropriate response to 
+operating conditions, an operator must define each of the following: 
+(1) … 
+(4) A method of recording controller shift-changes and any hand-over of responsibility between controllers; and 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+per violation per day the violation persists, up to a maximum of $2,251,334 for a related series of 
+violations.    For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day  the  violation  persists,  up  to  a  maximum  of  $2,186,465  for  a  related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+We have reviewed the circumstances and supporting documents involved in this case, and have 
+decided not to propose a civil penalty assessment at this time. 
+
+Proposed Compliance Order 
+
+With respect to Item 1, pursuant to 49 U.S.C. § 60118, the Pipeline and Hazardous Materials Safety 
+Administration proposes to issue a Compliance Order to Ergon Terminaling, Inc.  Please refer to 
+the Proposed Compliance Order, which is enclosed and made a part of this Notice. 
+
+Warning Items 
+
+With respect to Items 2, 3, and 4, we have reviewed the circumstances and supporting documents 
+involved in this case and have decided not to conduct additional enforcement action or penalty 
+assessment proceedings at this time.  We advise you to promptly correct these items.  Failure to 
+do so may result in additional enforcement action. 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.  Please  refer  to  this  document  and  note  the  response  options.  All 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. §552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  1-2023-050-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Robert Burrough 
+Director, Eastern Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Proposed Compliance Order 
+
+Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROPOSED COMPLIANCE ORDER 
+
+Pursuant to 49 United States Code § 60118, the Pipeline and Hazardous Materials Safety 
+Administration (PHMSA) proposes to issue to Ergon Terminaling, Inc. (Ergon) a Compliance
+Order incorporating the following remedial requirements to ensure the compliance of Ergon with
+the pipeline safety regulations: 
+
+A. 
+
+B. 
+
+In regard to Item 1 of the Notice pertaining to monitoring the content and volume 
+of general activity being directed to and required of each controller, Ergon must 
+revise its CRM Plan, Section 7.8.2 to clarify the interval at which it performs its 
+workload analysis and to ensure consistency with Section 7.8 of the procedure 
+and § 195.446(e)(5). Ergon must submit its revised procedures to the Director, 
+Eastern Region, within 180 days of receipt of the Final Order. 
+
+It  is requested (not mandated) that Ergon Terminaling, Inc. maintain 
+documentation of the safety improvement costs associated with fulfilling this 
+Compliance Order and submit the total to Robert Burrough, Director, Eastern 
+Region, Pipeline and Hazardous Materials Safety Administration.  It is requested 
+that these costs be reported in two categories: 1) total cost associated with 
+preparation/revision of plans, procedures, studies and analyses, and 2) total cost 
+associated with replacements, additions and other changes to pipeline 
+infrastructure. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

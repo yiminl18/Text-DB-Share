@@ -1,0 +1,1572 @@
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Tiny Habits in the Giant Enterprise: Understanding the
+Dynamics of a Quantiﬁed Workplace
+
+Akhil Mathur, Marc Van den Broeck, Geert Vanderhulst, Afra Mashhadi, Fahim Kawsar
+Bell Laboratories, Alcatel-Lucent
+{ﬁrstname.lastname}@alcatel-lucent.com
+
+ABSTRACT
+We offer a reﬂection on the technology usage for workplace
+quantiﬁcation through an in the wild study. Using a prototype
+Quantiﬁed Workplace system equipped with passive and
+participatory sensing modalities, we collected and visualized
+different workplace metrics (noise, color, air quality, self
+reported mood, and self reported activity) in two European
+ofﬁces of a research organization for a period of 4
+months. Next we surveyed 70 employees to understand their
+engagement experience with the system. We then conducted
+semi-structured interviews with 20 employees in which they
+explained which workplace metrics are useful and why, how
+they engage with the system and what privacy concerns they
+have. Our ﬁndings suggest that sense of inclusion acts as the
+initial incentive for engagement which gradually translates
+into a habitual routine. We found that incorporation of an
+anonymous participatory sensing aspect into the system could
+lead to sustained user engagement. Compared to past studies
+we observed a shift in the privacy concerns, due to the trust
+and transparency of our prototype system. We conclude
+by providing a set of design principles for building future
+Quantiﬁed Workplace systems.
+
+Author Keywords
+Quantiﬁed Workplace; Empirical Study; Social Sensing
+
+ACM Classiﬁcation Keywords
+H.5.m. Information Interfaces and Presentation (e.g. HCI):
+Miscellaneous
+
+INTRODUCTION
+The collective behavior of employees within an organization
+shapes the organization culture and has proven to play a
+critical role in an organization’s success [19, 35]. Signiﬁcant
+effort has been put into understanding how the collective
+behavior patterns – energy levels, unspoken and implicit
+signalling, and activity dynamics across employees - can
+directly affect employees’ productivity [6, 36, 37]. Besides,
+there are environmental factors that inﬂuence the productivity
+of the teams in an organization. For instance, by examining
+
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for proﬁt or commercial advantage and that copies bear this notice and the full citation
+on the ﬁrst page. Copyrights for components of this work owned by others than
+ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior speciﬁc permission
+and/or a fee. Request permissions from permissions@acm.org.
+UbiComp ’15, September 7-11, 2015, Osaka, Japan.
+Copyright 2015 c(cid:13) ACM 978-1-4503-3574-4/15/09 ...$15.00.
+http://dx.doi.org/10.1145/2750858.2807528
+
+577
+
+the impact of noise and temperature in the workplace, Mak
+et al. concluded that low productive employees are easily
+inﬂuenced by background noise [30]. Kuller et al. [25]
+and Kwallek et al. [24] explored the role of color and
+light in the workplace and showed how different interior
+colors inﬂuence the mood of the employees, and affect their
+productivity. These past studies clearly demonstrate that by
+quantifying collective behavior and various metrics, a reliable
+and illuminating picture of the hidden workplace dynamics
+can be uncovered, which in turn can be converted into
+actionable insights. Some of these insights can immediately
+be used to change the physical nature of the workplace,
+or to increase the informal communication level within the
+organization. Our investigation continues the tradition of past
+studies examining technology for workplace quantiﬁcation,
+however, by carefully applying non-invasive passive and
+participatory sensing principles.
+
+We had the unique opportunity to deploy a Quantiﬁed
+Workplace (QW) system, as a technology probe to collect
+and visualize various workplace metrics (noise, color, air
+quality, self-reported mood, and self-reported activity) in
+two European ofﬁces of a research organization for a period
+of 4 months, survey 70 employees, and then interview 20
+employees in detail about their experience. We sought to
+understand which workplace metrics are useful and why, how
+employees engage with the system and what privacy or other
+concerns they have. Our research questions were:
+
+1. Which metrics in a workplace should be measured that
+employees would ﬁnd beneﬁcial for their productivity
+and awareness? Prior studies have examined the role of
+environmental factors (noise, temperature, color) [24, 25,
+30] or mental well-being (e.g., mood) [21] on employees’
+productivity. We broaden this focus to understand from
+participants (both employees and management) which
+workplace metrics are useful to them and why?
+
+2. How do employees react to data visualization and two
+different data collection strategies, i.e., passive sensing
+with sensor infrastructure, and participatory sensing with
+wilful engagement in a QW system, and how this behavior
+affect the sustained usage of the system?
+
+3. What privacy concerns do employees have with various
+workplace metrics? Recent studies on people analytics
+in an enterprise setting have raised substantial privacy
+concerns albeit obvious beneﬁts [6, 36].
+Focusing on
+environment factors (noise, color, and air quality) and
+
+anonymous collective behavior (mood, and activity), we
+wanted to re-examine the privacy space for a QW system.
+
+in the workplace and the impact of playful artefacts in
+improving user engagement.
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Our study ﬁndings suggest
+that collective experience of
+inclusion through anonymous participation acts as an initial
+incentive for employees to adopt the QW system, however,
+over time user participation translates into a sustainable tiny
+habit [47]. Our participants showed a preference towards
+quantiﬁcation of metrics which are beyond a human’s natural
+sensing capabilities, and also highlighted the negative effects
+of quantiﬁcation if users are unable to act on its outputs.
+Perhaps the most dramatic change from past studies is the
+shift in privacy concerns – while the idea of the QW strikes
+some people as a big brother, we found that, if approached in
+the right way with trust and transparency through anonymous
+data collection and real time visualization, privacy concerns
+can be addressed in a way that makes everyone comfortable
+with a QW system.
+
+there have been various
+
+RELATED WORK
+Over
+technology
+the years,
+interventions in the workplace with varied focuses including
+improving socialization and collaborations [16], providing
+connectivity and awareness across remote locations [11],
+and
+lighthearted
+promoting
+playfulness [18]. While these studies and others highlight
+interesting aspects of technology use in the workplace,
+most relevant to our study is the research on the rise of the
+Quantiﬁed Self movement and its extension to Quantiﬁed
+Workplace.
+
+conversations
+
+informal
+
+Quantiﬁed Self Movement
+The Quantiﬁed Self [39] is a movement that promotes the
+use of technology for self-tracking various kinds of personal
+information, such as physical activities, emotions, diet, etc.
+Due to the potential of self-tracking in promoting intentional
+behavior change, researchers have looked at incorporating
+both passive and participatory sensing in designing self-
+monitoring technology. Past research works have studied
+many self-tracking technologies in the domain of health
+and wellness for tracking physical ﬁtness [10, 29], diabetes
+care [38], sleep [22], diet [31], stress [34] and smoking
+[2]. Li et al. [28] have characterized self-tracking activity
+in a ﬁve-stage model (preparation, collection, integration,
+reﬂection, action) to better explain the psychology behind
+it.
+In a recent work, Choe et al. [9] analyzed 52 video
+recordings of Quantiﬁed Self Meetup talks to understand
+the common pitfalls of Quantiﬁed-Selfers and concluded that
+over quantiﬁcation (i.e., tracking too many metrics resulting
+in tracking fatigue), ignoring situational context and lack of
+scientiﬁc rigor regarding data interpretation are the primary
+barriers towards successful adoption, and sustained usage of
+these technologies. Taking a critical standpoint, Rooksby
+et al. [44] argued that self-tracking technologies should be
+considered more social and collaborative, and their evaluation
+should also consider hope and playful feelings they generate
+among the users, instead of just evaluating the improvement
+of a certain metric. We build upon these suggestions by
+exploring the social nature of quantiﬁcation technologies
+
+578
+
+Quantiﬁcation at Work
+While the Quantiﬁed Self movement has really taken off,
+the notion of a Quantiﬁed Workplace (QW) is in a relatively
+nascent stage. The technology blog Gigaom [45] envisages
+QW as an extension of Quantiﬁed Self, with the aim of
+promoting health and wellness at the workplace.
+In the
+academic literature, however, there are a number of past
+studies that have investigated physical quantiﬁcation at a
+workplace from a number of different perspectives.
+In
+[12], a sociological survey of 274 knowledge workers in the
+Netherlands shows that the physical and social environment
+at work do have an impact on the creativity of employees.
+Kwallek et al. investigated the impact of color on employees’
+productivity [24]. In that research, 90 workers were treated
+to three identically furnished, but differently colored ofﬁces
+(red, white, blue/green) and it was reported that red interior
+has a strong negative impact on moods, while green has a
+In a survey based study with 259 ofﬁce
+positive impact.
+workers in Hong Kong, Mak et al.
+found that sound
+and temperature were the principal environmental factors
+affecting ofﬁce productivity [30]. Although interesting,
+these studies rely on ethnographic observation and surveys,
+which unfortunately suffer from biased results either because
+participants adapt their behavior during observation [49] or
+they tend to provide socially desirable responses [4].
+
+In the UbiComp literature, Efstratiou et al. [14] have explored
+the beneﬁts and privacy concerns with passive sensing in
+the workplace in a two week study.
+They found that
+comparison of self with others was considered a major beneﬁt
+of the system, and lack of control over the sensor data
+collection was a signiﬁcant privacy concern. A number of
+works also explored different technology probes to increase
+group communication either through active sensing or by
+introducing playful artefacts. Olguin et al. [36] have looked
+at using wearable electronic badges for measuring face-
+to-face interaction, conversations and physical proximity.
+Brown et al.
+took a similar approach of using wearable
+badges to track serendipitous interactions in a workplace
+and evaluate the effect of workers’ cultural backgrounds
+on interaction diversity [6], and to study how the physical
+design of workplaces combines with organizational structure
+to shape contact patterns [7].
+In [18], Gallacher et al.
+make use of multicolored squeezy balls to elicit mood inputs
+from the employees. Arnie [3], a talking beer vending
+machine, was designed to attract employees into common
+areas for an opportunity to chat with colleagues. Other studies
+[23, 43] have looked at deploying persuasive technologies
+in the workplace aimed at behavior change by providing
+live feedback. Finally, Mark et al. [33] explored the affect
+of digital and physical interactions in the workplace on
+employee mood. Most of these works however were short
+research studies, focusing on measuring the impact of a
+particular metric in the workplace. Grounded upon their
+ﬁndings, our work is focused on exploring the design of a
+holistic Quantiﬁed Workplace system through a longitudinal
+deployment, by systematically studying various input and
+
+SESSION: FOR THE BETTER WORKPLACE
+
+output modalities, multiple environment and people metrics,
+and issues of privacy and anonymity.
+
+metrics are further discussed below from a utility and privacy
+standpoint, and summarized in Table 1.
+
+A PROTOTYPE QUANTIFIED WORKPLACE SYSTEM
+The main objective of our technology probe is to explore
+various aspects of workplace quantiﬁcation by taking a
+systematic approach, and to gain deeper insights that would
+inform future design of QW systems. As such, we looked
+at the system design from two aspects, i) Data Dynamics
+– which workplace metrics should the system collect and
+visualize, that would have varying degrees of usefulness,
+and privacy concerns for the employees and ii) Engagement
+Dynamics – what strategies to follow to collect these metrics,
+and with what level of engagement from the employees.
+Our design challenges were to systematically explore these
+options to build a technology probe that would give us
+deeper understanding on the user experience, and concerns
+of workplace quantiﬁcation technology. In the following, we
+discuss these design challenges, followed by the explanation
+of the system implementation and deployment.
+
+Design Challenges
+In this section, we ﬁrst discuss the different workplace
+metrics that we collect, and the rationale behind them. Next
+we discuss how these metrics are collected, i.e., what sensing
+and engagement strategies are used.
+
+at
+
+have
+
+looked
+
+studies
+
+ethnographic
+
+Data Dynamics
+various
+Past
+environmental factors, such as noise and color [24, 25, 30]
+at the workplace and found that these factors do impact
+workplace productivity as well as increase the awareness of
+the employees. Similarly, visualizing indoor air quality in
+the workplace has shown to be useful for the employees [8].
+Looking through the privacy lens, the former metrics are
+comparatively privacy invasive to the latter one due to the
+data modality, e.g., audio and video data. While there
+are other environment metrics such as nature and layout
+that inﬂuence
+of spaces [1], brightness, humidity, etc.
+organization culture, in this study we limit our environment
+data collection to noise, color, and air quality as they provide
+an excellent case study due to the nature of data,
+their
+usefulness and complementary privacy sensitivity.
+
+To understand the collective behavior pattern within an
+organization, past studies have logged face-to-face interaction
+data [6, 36, 37], mood and stress data [18]. While face-
+to-face interaction data has been shown to be valuable
+in understanding organization dynamics, its data collection
+could raise concerns about employee surveillance at the
+workplace, particularly in the context of European countries
+where our study was conducted. On the contrary, a soft metric
+such as mood, when measured collectively has shown to be
+less privacy sensitive [18]. We therefore decided to limit
+the data quantiﬁcation in this study to the collective moods
+of employees – to examine its impact from both usefulness
+In addition, grounded upon the
+and privacy perspectives.
+insight of Efstratiou et al. [14] that employees often prefer
+to compare themselves against others, we decided to gather
+work activity data, again in a collective fashion. These
+
+579
+
+1. Air Quality: We measure the air quality (CO2 levels) in
+the ofﬁce. This information could be considered useful for
+health and wellness reasons. We hypothesize that air quality
+measurement would not be considered privacy invasive by
+employees.
+
+2. Noise: We measure the ambient noise in the workplace.
+Intuitively, we expect that employees can utilize the noise
+information to decide which areas in the workplace are better
+suited for them to work, e.g., if they prefer to work in a
+quieter area, they can look at the real-time noise map and
+choose a suitable area. Noise information could also help
+the management to plan the workspace layout and sitting
+arrangements. In terms of privacy, noise measurements may
+be considered invasive, as employees might fear that the
+system is capturing audio conversations.
+
+3. Color: Past studies were primarily concerned with the
+interior colors [1, 24] of a workplace, which in most cases
+are static. However, studies in color psychology have shown
+evidence that color of clothes [13, 41], and dynamic color
+of surroundings [40] also affect an individual’s emotions in
+various contexts. Therefore, we decided to collect the color
+of clothes worn by the employees, and aggregated them to
+determine a set of dominant colors in the workplace at any
+instance of time.
+In terms of utility for the employees,
+we hypothesize that they would ﬁnd it playful to know the
+dominant color of the workplace, and it may lead to informal
+conversations and higher engagement with the system. From
+a privacy perspective, color measurement could be considered
+highly invasive as it requires capturing a visual image of the
+employees for color analysis.
+
+4. Mood: Mood inputs are collected with a self
+reporting approach (see next section for more discussion on
+engagement). Employees are presented with 8 moods to
+select the one that reﬂects best their mood at a point of
+time. We sampled the moods based on Russell’s Circumplex
+model of affect [20] from the behavior psychology literature.
+Mood could be beneﬁcial for an employee’s self-reﬂection,
+and the quantiﬁcation of mood can provide better workplace
+awareness. The sharing of mood, a highly personal trait, with
+the system may be considered privacy invasive.
+
+5. Activity: Activity inputs are collected with a self
+reporting approach, and employees can select their primary
+work-related activity in the day from a pre-populated
+set of 8 activities1 e.g., meetings, writing, programming,
+administration. Activity inputs can generate awareness of
+what is going on in the workplace, and may be considered
+less privacy invasive.
+
+The ﬁnal aspect of data dynamics for the QW system is the
+output modality. Previous studies have reported, insights
+emerged from workplace quantiﬁcation has implication
+
+1The set of activities selected are hand crafted based on the nature
+of the workplace, a research organization, in which this study was
+conducted, as such they should not be considered either complete or
+generic.
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Metric
+
+Type of Sensing Expected Utility
+
+Expected Privacy Concern
+
+Air Quality Passive
+Passive
+Noise
+Passive
+Color
+Participatory
+Activity
+Participatory
+Mood
+
+Low
+Health, Wellness
+Medium
+Workplace Awareness, Informed Decision
+Playfulness, Mood Inﬂuencer
+High
+Workplace Awareness, Comparison of Self vs. Others Low
+Self Reﬂection, Workplace awareness
+
+Medium
+
+Table 1. Description of the Collected Workplace Metrics
+
+to both employees and management [19]. As such, a
+QW system should explore the preferences of different
+stakeholders towards visualization of quantiﬁed data in a
+workplace. To achieve this, we deployed two different types
+of displays for visualizing the quantiﬁed data: one was a large
+screen dashboard which showed detailed visualizations (e.g.,
+various graphs) of the data, while the other was an ambient
+display inspired by the recent work by Gallacher et al. [18],
+which changed its color corresponding to the dominant mood
+(aggregated over time) of the workplace. For mapping mood
+to a unique color in the RGB spectrum, we followed the
+guidelines from color psychology [48].
+
+Engagement Dynamics
+In the previous section, we described the different workplace
+metrics that we decided to collect in our prototype QW
+system. There are multiple ways to gather these metrics:
+either by passive sensing with dedicated sensor infrastructure
+(e.g., array of microphones, cameras and physical sensors
+to measure noise, color, air quality, mood, activity), or
+by combining infrastructure sensing with explicit user
+participation (e.g., self reporting). Previous works [6, 7,
+14, 36] have mainly looked at passive sensing either using
+infrastructure or distributed wearable sensors (e.g., RFID
+badges) as a data collection methodology in a workplace. In
+this work, we sought to understand employees’ perception
+towards a data collection process that combines both passive
+sensing (for air quality, noise, and color), and participatory
+sensing (e.g., self reported mood and activity). By doing so,
+we could explore if employees have a preference towards a
+certain way of sensing.
+
+The latter modality i.e., participatory sensing with self
+reported mood and activity, raises another design question
+– should participatory inputs from employees be solicited
+through a publicly placed device or through an app installed
+on their phones? To arrive at this decision, we piloted two
+versions of the Quantiﬁed Workplace system (described in the
+following paragraphs) in one of the ofﬁces: one as a tablet
+application deployed on publicly installed Samsung Tablets
+in the workspace, and the other as a personal mobile app.
+A one month pilot study showed high engagement with the
+tablets with 57 daily participatory inputs on average. The
+mobile app, on the contrary, got poor reception with only 4
+users downloading it on their phones. Based on this ﬁnding,
+we decided to use publicly deployed tablets for collection of
+participatory inputs in the rest of the study. As we will discuss
+later, our exit surveys and interviews also conﬁrm this design
+
+decision, with 68% of the users saying that they would not
+install a Quantiﬁed Workplace app on their personal phone.
+
+Figure 1. System Architecture
+
+Implementation
+We now explain the design architecture of the prototype
+Quantiﬁed Workplace system. Instead of dedicated sensing
+infrastructure, we wanted to leverage existing commodity
+hardware in this Quantiﬁed Workplace system to keep the
+deployment costs low with no or minimal maintenance
+from the management. Our entire setup (for each ofﬁce)
+comprising of four commodity Android tablets (used for
+sensing noise, color, and gathering employees mood and
+activity data), 1 air quality sensor, 1 Philips Hue Light2 (used
+as a color changing abstract display) and 1 LED TV (used
+as dashboard display) costs around $2000. Furthermore, no
+maintenance was required from the management, except to
+provide a power inlet to each device. From a software point
+of view, as shown in Figure 1, the system consists of three
+components:
+
+Data Collection: We developed an Android application
+for passive sensing of noise and color of clothes, and
+participatory sensing of moods and activities. Using the
+MediaRecorder class of Android 4.4, we took an audio
+sample every 15 seconds, which contained the maximum
+observed audio amplitude near the tablet
+in the last 15
+seconds. For capturing color we used the front-facing camera
+on the tablet. When we detect a signiﬁcant change in the
+reading of ambient light sensor of the tablet, it is assumed
+that a person was walking by the tablet. At that instant, the
+
+2http://www.meethue.com (Last accessed: July 26, 2015)
+
+580
+
+SESSION: FOR THE BETTER WORKPLACE
+
+Figure 2. Tablet Application, Dashboard Display, and Mood Lamp of the Prototype Quantiﬁed Workplace System
+
+front camera (passively) took an image of the scene, which
+was analyzed to ﬁnd the dominant color in the image while
+ﬁltering out the background. The front-end user interface of
+the Android application is used to collect mood and activity
+inputs (as shown in Figure 2(a)). After each participatory
+input (mood and activity), we also ask the employees to select
+the name of the research division to which they belong, e.g.,
+Wireless, Application, etc. Finally, we used the Netatmo
+weather station3 to measure the air quality in the ofﬁce.
+
+Back-end Server: All
+the collected data (environment
+to
+metrics and participatory inputs) is immediately sent
+The server stored the data
+a Node.js back-end server.
+in a MongoDB database and provided RESTful APIs for
+accessing the aggregated data.
+
+Data Visualization: We employed two display methods to
+visualize the quantiﬁed data. Firstly, a large-screen dashboard
+application (as shown Figure 2(b)) written in HTML5 showed
+various charts representing different workplace metrics in
+real-time – including a noise map of the ofﬁce, a mood
+map showing the overall mood of the ofﬁce, an activity map
+highlighting different activities of the ofﬁce, an air quality
+index, and a color map showing the most popular colors in the
+ofﬁce. We also display the name of the research division with
+the highest number of inputs on a given day. Secondly, we
+installed an ambient display in the form of a multi-color lamp
+(Figure 2(c)), which changes its color as per the dominant
+mood of the workplace. Both the dashboard and mood lamp
+worked on an active polling strategy with a polling frequency
+of 30 and 15 seconds respectively – this was done to ease any
+privacy concerns that users might have with their inputs being
+immediately reﬂected on the display.
+
+Deployment
+We conducted an in-the-wild deployment [42] of the system
+in two European ofﬁces of a research organization. Albeit
+situated in two different countries, these two ofﬁces share
+
+3https://www.netatmo.com (Last accessed: July 26, 2015)
+
+several common interior constructs, e.g., employee lounge,
+coffee area etc. To be consistent, we placed the tablets
+coffee
+in areas that have similar usage in both ofﬁces:
+area, printer area, employee workspace and in the largest
+meeting room. We intentionally placed the tablets close to the
+coffee machine, and the printer assuming that the activities
+that occur in these area offer momentary opportunity (e.g.,
+idle time while waiting for coffee, or print) to interact
+with our system. We have observed interesting facts about
+these placement choices that we will discuss later. The air
+quality meter was placed in the employee cubicles, while the
+dashboard and the mood lamp were located in a common area
+– namely, employee lounge close to the workplace entrance.
+
+STUDY METHODOLOGY
+Our study was conducted from October 2014 to January 2015.
+We collected data in three steps: i) system usage logs ii) a
+survey and iii) semi-structured interviews.
+
+System Logs
+Over the period of four months,
+the system passively
+collected 425,511 noise, 69,159 color, and 46,080 air
+quality values in 80 working days (excluding weekends and
+Christmas vacations).
+It also received 5312 participatory
+inputs from the users, with an average of 66 inputs per
+day in a 120 employee workplace (both ofﬁces together).
+Mood inputs accounted for 73% of the total inputs, while
+activity inputs made up the remaining 27%. Users’ preference
+towards mood inputs was due to the playfulness attached with
+the mood lamp, and also because mood inputs led to self
+reﬂection.
+
+Survey
+Four months into the deployment, we e-mailed an anonymous
+survey to all the employees. The survey comprised of
+33 questions.
+In addition to collecting demographic data,
+the survey aimed at understanding user experience with
+the system, including its perceived beneﬁts, trustworthiness,
+
+581
+
+engagement dynamics, privacy and other concerns.
+In
+total, we received 70 responses to the online survey out of
+120 employees, with 25.7% of the respondents identifying
+themselves as managers.
+In total, 85% respondents
+mentioned that
+they have interacted with the Quantiﬁed
+Workplace system.
+
+Semi-Structured Interview
+After the survey, we conducted a series of in-depth interviews
+with 20 employees (9 females) aged between 28 to 43
+For recruiting, we used stratiﬁed sampling with
+years.
+snowball sampling within each stratum. During the recruiting
+process we identiﬁed two primary groups of participants
+that represent the two main roles in the organization, e.g.,
+employees (including research scientists, research engineers,
+Also, 6 of these
+and admin staff) and management.
+participants were from non-European nationals while 14 were
+European nationals. The interviews were semi-structured,
+involved one interviewer and one note taker, and lasted 1
+hour each. Similar to the survey, interviews also focused
+on questions of perceived utility, engagement, privacy,
+trustworthiness – but with the objective of diving deeper into
+each aspect. To this end, we followed an interview technique
+called laddering [26], a qualitative research technique which
+seeks to understand the core values behind the user reactions
+to any system. Each interview was recorded and later partially
+transcribed to complete the observer’s notes. The participants
+were compensated for their time with an Amazon voucher.
+
+The results of the survey and the interview together with
+the quantitive data we extracted form the system logs are
+presented in the next section.
+
+STUDY RESULTS
+The system logs,
+surveys, and interviews gave us a
+fascinating view on a number of different aspects for the
+workplace quantiﬁcation. We now discuss the study results
+from these aspects.
+
+Understanding Spatio-Temporal Usage
+Figure 3 (left) shows the distribution of participatory inputs
+over time.
+In the ﬁrst week of deployment (excluding
+weekends), a total of 1184 inputs (µ = 236, σ = 165.2)
+were provided on the tablets. This high number could be
+attributed to the novelty effect of deploying the system. In
+the subsequent weeks, the usage became more stable and
+averaged at 294 inputs/week (daily µ = 58.8, σ = 23). For
+the rest of quantitative analysis in the paper, we only consider
+the participatory inputs second week onwards.
+
+Figure 3. Weekly and hourly distribution of participatory inputs
+
+We found no correlation between day of the week and number
+of inputs (Spearman’s ρ = 0.2, p = 0.78).
+Figure 3
+
+582
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Figure 4. CDF of participatory inputs
+(right) shows the hourly average of participatory inputs into
+the system. We analysed the inputs to the system during
+working hours (08:00 to 19:00) and found a weak correlation
+between hour of the day and number of inputs (Kendall’s
+τ = 0.21, p < 0.001). Our exit survey shows that 60%
+employees did not have a ﬁxed time for interacting with
+the system, rather they interacted with the system in an
+opportunistic manner. In the Figure 3 (right), there are peaks
+between 10:00 - 11:00 and 14:00 - 15:00; we speculate
+that these times correspond to breakfast and coffee breaks
+for employees and hence were opportune interaction times.
+Although the individual inputs were anonymous, we collected
+the team/department
+information after each participatory
+input. Based on it, we found that 66% of the participatory
+inputs came from top 4 departments as shown in Figure 4.
+
+tablets had a signiﬁcant
+
+impact on
+The placement of
+usage. Based on placement, we classiﬁed the tablets in
+two categories: A) those placed at locations where users
+may have had some free time (e.g., at coffee area, and at
+printer area) and B) tablets placed in areas such as meeting
+rooms and employee workspaces where employees may be
+busy. With a Welch’s t-test, we found a signiﬁcant effect
+of tablet placement on the number of participatory inputs
+(t(2722) = 20.13, p < 0.0001, Cohen’s d = 0.55) with
+category A tablets receiving 90% of total inputs. Most (n=19)
+participants agreed to this opportunistic interaction in the
+interviews, one remark was: “It’s not like I go consciously
+to the tablet to put my mood. But when I am waiting for
+my coffee, I have spare time so I always enter my mood and
+activity...”
+
+There was another interesting dynamic that inﬂuenced user
+participation – the possibility of seeing the mood lamp from
+a tablet’s location. The tablets from where mood lamp was
+directly visible received signiﬁcantly more inputs (t(4334) =
+9.85, p < 0.0001, Cohen’s d = 0.26). This result has an
+interesting implication about integrating playful artefacts in
+the design of a QW system, which we discuss further in the
+coming sections.
+
+Understanding Data Dynamics
+Of the three environmental metrics we collected, air quality
+was the most preferred (42% participants found it useful),
+while noise (21%) and color (13%) were less preferred.
+Multiple participants commented that while noise and color
+quantiﬁcation is informative, both these metrics can also be
+sensed by bare human senses. On the contrary, air quality
+is an invisible metric and therefore its quantiﬁcation can be
+useful.
+
+SESSION: FOR THE BETTER WORKPLACE
+
+Our qualitative interviews however reveal that none of the
+environment quantiﬁcations had any behavioral inﬂuence on
+the employees. For color, participants (n=15) commented
+that it is a good-to-know metric and may have an indirect
+effect on individual moods, however in a workplace setting,
+completion of professional objectives is a bigger motivation
+than the physical look and feel (e.g., color) of the workplace.
+Some participants (n=13)
+they need to
+collaborate with colleagues in the workplace, so even if
+the quantiﬁcation shows a certain area as noisy or with a
+relatively poor air quality, they would still have to go there for
+collaborations. Few participants (n=4) even highlighted the
+negative effect of such quantiﬁcations: “Even though noise
+in my area is very high as compared to other places, I cannot
+really change my desk ... It is better to not know about the
+higher noise levels in my area...”
+
+remarked that
+
+We believe that this is an interesting ﬁnding as it shows that
+quantiﬁcation can be considered disadvantageous at times, if
+users do not have the capacity to act on it. Therefore, system
+designers should focus on actionable quantiﬁcations in the
+workplace, i.e., quantiﬁcation of those metrics upon which
+users can act.
+
+The management was more open to passive quantiﬁcations,
+with 33% managers ﬁnding color quantiﬁcation, and 58%
+ﬁnding both noise and air quality quantiﬁcations useful.
+Managers were primarily interested in noise data for desk
+management e.g., teams which prefer quiet workplaces can
+for
+be placed in a quieter area of the building (n=3),
+understanding the impact of noise on moods and activities of
+the employees (n=5); air quality data for health and wellness
+reasons (n=3); and color quantiﬁcations to understand if color
+of the surroundings has any inﬂuence on employee’s moods
+and productivity (n=2). As opposed to individual employees,
+management has more authority to act on the quantiﬁed data,
+which increases its usefulness for them.
+
+Our system quantiﬁed two participatory inputs from the users:
+mood and activity, and both were found more useful than
+the passively collected metrics. Quantiﬁcation of mood was
+found useful by 60% employees and 89% managers. Day-
+wise log analysis shows that positive mood inputs were
+signiﬁcantly higher than negative moods (t(191) = 2.54, p
+= 0.01), with positive inputs comprising 59.3% of all mood
+inputs. In the interview, most participants (n=16) highlighted
+that they were entering their real moods to the system, with
+no bias towards projecting a positive mood of the workplace.
+Many participants (n=14) believed that average mood is a
+reﬂection of the vibrancy and long-term performance of
+their workplace. Furthermore, participants (n=13) considered
+mood inputting as an opportunity for self expression and self
+reﬂection, as remarked by one of the participants: “You have
+the feeling that you can communicate your mood and that’s
+a real relief when you are stressed....we should be reﬂecting
+on our moods more often, but do we? When I was near the
+tablets, it gave me a chance to do that...”
+
+Mood quantiﬁcation was also used by some participants
+(n=6) to do a “me vs.
+rest” comparison, i.e., how is an
+individual’s mood comparing to the rest of the workplace.
+
+583
+
+One remark was: “Sometimes I see people are stressed at
+the time of deadlines. But if I am not stressed, I think maybe
+I should also be stressed...”
+
+For the management too, mood quantiﬁcation was highly
+useful. They mentioned that it would help them to ﬁnd
+how different teams are feeling over time, impact of building
+works on employees’ moods, and seasonal impacts on moods.
+They also felt that it gives an opportunity to employees to
+freely convey negative emotions about the workplace, which
+they might not do otherwise, and such openness will lead to a
+better workplace.
+
+Activity analysis shows that Programming (20.1%) and
+Meeting (13.5%) were the top two activities reported to the
+system. A limitation of our study was that all activity options
+were work-related (e.g., programming, paper writing) and
+there were no options for ‘relaxing’ or ‘taking a break’ as
+a result, we cannot answer if employees had a bias for work-
+related activities over leisurely ones.
+
+Activity quantiﬁcation was found useful by 58% employees
+and 63% managers. Employees found it useful to get an
+overview of the various activities happening in the workplace
+and to compare it with their own activities. Furthermore,
+participants considered this input as an effective tool to give
+feedback to the management about the activities happening
+in the workplace. We received a similar feedback from the
+managers that activity quantiﬁcation provides coarse level
+awareness about the workplace on a regular basis.
+
+User reactions on our two data visualization methods revealed
+an interesting picture. Most employees (n=11) did not
+consider the dashboard useful, partly because they had less
+interest in the passively collected data. But more importantly,
+they felt that it takes time and effort to understand the graphs
+on the dashboard, and requires them to purposely stop by
+the display. On the contrary, management (n=4) showed
+more enthusiasm towards the dashboard and various data
+visualizations shown on it. They asked for more details to
+be included such as historic trends of data.
+
+The mood lamp was well received by both employees and
+management (n=19). They found the concept of mood
+lamp easy to understand and liked that its output could be
+interpreted immediately, without requiring users to purposely
+come near it. One participant commented, “The mood lamp
+is easy to explain. Everyone understands it....technical and
+non-technical people....”. Another user comment, although
+negative, reﬂects the potential of the mood lamp to alter user
+behavior. “Yes, I’m concerned about approaching the mood
+lamp with visitors. I was always worried that the it may show
+a negative mood....I want the mood lamp to give our visitors
+a positive feeling about the company.”
+
+These observations advocate that user engagement with a QW
+system could be increased by using a simple, intuitive and
+playful artefact (e.g., a mood lamp) as an output modality.
+
+Understanding User Engagement
+We found that initially user engagement with the system
+In particular, it
+was driven by a collective behavior trait.
+
+was triggered by a feeling of inclusion. Participants (n=14)
+felt that the outputs of the system are a reﬂection on their
+colleagues, and that they should be part of it to get an accurate
+reﬂection of the workplace. One participant said: “I believe
+the outputs are reliable only if everybody is participating in
+the system, else it gets biased. I do my part regularly....”
+
+Some participants (n=4) also highlighted that they want to
+give a positive impression about their work activities, which
+led to their engagement with the system. An interesting
+remark was: “..at times when the mood lamp was showing a
+red color (associated with ‘Stressed’ mood), I purposely went
+and inputted a positive mood, in order to change the color of
+mood lamp to reﬂect a happy mood...”
+
+These ﬁndings suggest that the motivation to contribute to
+such participatory QW systems comes from the desire of
+expressing a positive behavior collectively.
+
+Participants (n=19) mentioned that they engaged with the
+system primarily in an opportunistic manner, i.e., when they
+were near a coffee machine (or a printer), and waiting for a
+coffee (or a printout), they would often provide inputs into
+the tablets. Interestingly, many participants (n=14) reported
+that over time, engaging with the system at such opportune
+places became a habit for them. One participant mentioned:
+“I always do it in the morning. I come to ofﬁce, go for a coffee
+alone or sometimes with others. While I am waiting for my
+coffee, I just put my mood...”. Analysis of the system logs also
+conﬁrms this user behavior: we found that the tablets placed
+near coffee machines, elevators received signiﬁcantly more
+inputs (t(2722) = 20.13, p < 0.0001, Cohen’s d = 0.55)
+than other tablets. We also found a correlation between
+time of the day and user inputs on such tablets (Kendall’s
+τ = 0.1, p < 0.0001) with peaks around 10am, 11:30am,
+1pm, 3pm, and 5pm. These times correspond to usual food
+or coffee breaks for many employees and arguably, became
+their preferred times for interaction with the system.
+
+This is an intriguing ﬁnding – it suggests that opportune
+placement of input terminals and rapid interaction time can
+lead to formation of a tiny habit [47] to engage with the
+system. Fogg’s tiny habit guidelines include three steps: i)
+pick a small task, ii) incorporate it in your daily routine,
+and iii) celebrate task completion immediately. Our results
+clearly suggest that, while in the beginning user engagement
+was informed by a collective sense of inclusion, over time it
+translated into a tiny habit.
+
+[5]
+
+Previous research [18] has shown the presence of honeypot
+effect
+in the technology initiatives deployed in a
+workplace, however our ﬁndings suggest an opposite
+behavior. 92% of the survey respondents mentioned that they
+used the tablet only when they were alone. This behavior
+was attributed to the fact that one’s moods and activity inputs
+are private in nature, and participants did not want to reveal
+it to their colleagues, more so when their mood was on
+extreme negative side. However, they were happy to share
+their true mood with the system as the data was collected
+in an anonymous manner. We believe that the corporate
+setting (the previous study was conducted in an academic
+
+584
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+environment), and its workplace dynamics might have led to
+such a contrasting result in our study.
+
+We also analysed our survey data through a gender lens
+to determine any effect of gender on the data dynamics.
+A Fisher’s Exact test reveal no signiﬁcant effect of gender
+on preferences for noise, air quality, mood or activity (all
+p > 0.05). However, for color quantiﬁcation, there was
+a signiﬁcant effect of gender (p < 0.05) with female
+participants preferring it more than their male counterparts.
+
+Understanding Privacy and Trustworthiness
+Privacy concerns among employees can prove to be a
+showstopper for Quantiﬁed Workplace systems as reported by
+past studies [6, 36]. In our deployment, we collected various
+metrics, some of which may be considered privacy invasive
+as discussed earlier in the paper. In the exit survey, we asked
+the participants to rate their privacy perception of the system
+on a scale of 1-5 (with 1 being not at all concerned and 5
+being very concerned).
+
+We found that 50.5% of the participants had little to no
+concern with the system, 21.5% users were neutral, 24% were
+somewhat concerned, and only 3% were very concerned. The
+primary reason for the low privacy concerns, as mentioned
+by the participants (n=17), was that the system collected data
+in an anonymous manner, and none of the metric could be
+tied to an individual. 68% of the participants remarked that if
+the data collection was carried by a mobile application (using
+on-device sensors for collecting environmental metrics, and
+self reporting for mood and activity) they would not use
+it.
+In the exit interviews, participants (n=12) expressed an
+apprehension that the inputs on personalized devices could
+be tied to their name, and used by the management for
+performance evaluation. One participant mentioned: “On my
+phone, I would be hesitant to give mood and activity inputs.
+It’s a very personal thing and I don’t want the inputs linked
+to my name”. In a similar spirit, another participant said: “If
+management has access to this data I feel I won’t be inputting
+my mood because I want to be judged on the quality of my
+work, not by my feelings...” . This ﬁnding suggests that for
+a QW system to work, designers should focus on anonymous
+collection of workplace metrics so as to instil conﬁdence in
+employees that their inputs will not be misused.
+
+As for the various data we collected, 50.5% users reported
+that none of the data was privacy invasive, while mood
+(26.15% users), color (23.08% users), and activity (21.5%
+users) were found privacy invasive by some users. Noise
+(9.23%) and air quality (1.54%) were perceived as privacy
+invasive by the least number of users. This is counter
+intuitive, in that we initially hypothesized that noise, color
+and mood would be considered privacy invasive due to nature
+of the data, and also the data collection modalities (i.e.,
+use of microphone and camera). However, it turned out to
+be not true, and again users attributed this behavior to the
+anonymity provided by the system. Even the minor privacy
+concerns reported by users were linked to the possible loss
+of anonymity. A participant said: “I work in a very small
+
+SESSION: FOR THE BETTER WORKPLACE
+
+team. Because of the dedicated nature of my activities, it is
+very easy to trace back any inputs from my team to me4...”
+
+This result emphasizes the need to design a QW system
+by incorporating the principles of k-anonymity proposed
+by Sweeney [46],
+to ensure that all users are hidden in
+a sufﬁciently large group of ‘k’ people, and it becomes
+infeasible to link a participatory input to a speciﬁc user.
+
+In addition, participants (n=12) mentioned that the real-
+time feedback and immediate reﬂection of their inputs in
+the dashboard and mood lamp, also helped easing their
+privacy concerns, as they could clearly see what data is
+collected and how it is used visually. We did not see
+any evidence of participants (n=0) being concerned with
+immediate visualization of their inputs, likely due to the 30
+second and 15 second delay in visualization introduced by
+our active polling strategy. Further, the mood lamp worked
+on a majority-voting scheme, wherein the most popular mood
+of the workplace was reﬂected and an individual’s input may
+not have affected it directly.
+
+the
+
+also
+
+their
+
+about
+Do they feel
+
+perceived
+We
+users
+probed
+trustworthiness of the system.
+the
+that
+quantiﬁcation outputs shown by the system are genuine?
+Do they fear that an anonymous participatory system is
+prone to misuse in the workplace? The results are mixed
+in nature. About 53% users felt that the outputs are not
+trustworthy. This mistrust was primarily caused due to the
+initial engagement dynamics of users with the system. At
+the beginning of the deployment, participants observed many
+users playing with the system,
+in some cases they were
+providing repeated mood inputs one after another, to change
+the color of the mood lamp. We conﬁrmed this behavior by
+analysing the system log, and marking inputs as repeated
+if we observe two or more participatory inputs of same
+type (e.g., two mood inputs) on a tablet within a span of 10
+seconds. We found that the number of repeated inputs was
+considerably high in Week 1, with such inputs accounting for
+44.1% of the total inputs – this negatively inﬂuenced the trust
+perception of the system (n=8) – one participant commented:
+‘Sometimes I wonder if there is a guy who plays with the
+system to cheat it, to set a wrong mood. It was a pity that
+people played with the system and misused it initially...”
+
+This behavior however subdued in the coming weeks, with
+repeated inputs falling to 13% of the total inputs in the last
+week of the deployment – and users felt that the system
+became more trustworthy. One manager commented: “Yes,
+in the beginning some people gave false inputs. And as
+management this caused me to worry. But now I think the
+data is levelled out. The system can provide a means for
+anonymous venting, which is a pity. We must be cautious to
+prevent misuse...”
+
+To conclude, while in the beginning the system was partially
+abused, over time participants started using the system more
+honestly.
+In addition, the anonymous data collection with
+transparent realtime reﬂection of data helped in alleviating
+
+4Recall that we asked the users to provide their department name
+after each participatory input
+
+585
+
+any privacy concerns. This can be considered as one of the
+most important ﬁndings of out study, as it clearly advocates
+that if designed with adequate transparency and by preserving
+anonymity, the acceptance of a QW system will increase
+substantially.
+
+IMPLICATIONS
+In this section, we discuss the implications that emerged from
+our study, which we found most compelling.
+
+Design for Participation
+With advancements in our sensing capabilities, it is becoming
+feasible to automatically sense data such as moods and
+physical activities, without relying on user participation. Our
+ﬁndings however caution the designers against this urge of
+automating the entire data collection process. We found that
+the participatory nature of our system interested users the
+most – it gave them an opportunity of self expression, and
+at times led them to reﬂect on their own mood and activity.
+Participatory inputs also led to several conversations about
+the system in the employee community, which increased the
+popularity of the system and drove the initial wave of user
+engagement.
+It is important to emphasize that we are not
+advocating against passive sensing in the workplace. Past
+research has clearly demonstrated its beneﬁts, e.g., Brown et
+al. [6] learned hidden interpersonal dynamics in a workplace
+by analyzing passively collected mobility traces. What we are
+advocating is to have a balance of passive and participatory
+sensing in a Quantiﬁed Workplace system, which will lead to
+a sustained user engagement.
+
+A surprising ﬁnding of our study was that the opportune
+placement of tablets and quick interaction time with the
+system, promoted a tiny habit [47] of providing participatory
+inputs. As such, we advocate that designers of future
+Quantiﬁed Workplace systems should pay particular attention
+to consider such habitual routines while devising their
+data collection strategies to guarantee a sustained usage.
+We also suggest exploring the third step of Tiny Habits,
+namely ‘celebration of task completion’ in more detail.
+In
+our implementation, it was done by showing the winning
+department on the screen, however future studies could look
+at more empathic designs, e.g., if a negative mood is inputted,
+a sound could be played cheering up the user.
+
+Focus on Actionable Quantiﬁcation
+Perhaps the most important consideration in the design of
+a Quantiﬁed Workplace system is to identify the metrics
+to quantify and the associated end-user services. While
+the exact metrics and services will depend on the goals of
+each system, and the potential stakeholders, our results offer
+some general insights in this regard. We found that sensing
+and visualization of raw noise, color and air quality metrics
+was not found useful by the majority of the employees,
+primarily because they felt they had little power to act on
+the results of the quantiﬁcation.
+Some employees even
+highlighted the negative aspects of knowing about non-
+actionable quantiﬁcations. However, to the management,
+these metrics were useful for informed decision making. This
+suggests that a Quantiﬁed Workplace system should focus on
+
+actionable quantiﬁcation such that its stakeholders can act on
+the metrics and the associated services. For example, building
+managers might be interested in viewing raw environment
+metrics (e.g., noise) from a historical perspective to make
+decisions about seating layouts. However, for employees, this
+kind of visualization offers little value and a better approach
+might be to provide them a ‘recommendation service’ which
+guides them to the quietest space in the workplace at any time.
+
+Design with Playfulness
+A workplace has traditionally been perceived as a serious
+setting, and playfulness in the ofﬁce is viewed more as a
+distraction. However, Lamm et al. [27] found that this
+perception is changing: while those born between 1941
+and 1960 often regard fun as counter-productive, the new
+generation of workers (born between 1981 and 2000) view
+it as an important enabler for building social connections
+and trust with colleagues. Our study ﬁndings concur that
+incorporating a playful artifact such as the mood lamp
+can increase user engagement with a Quantiﬁed Workplace
+system. The changing color of mood lamp led to many
+informal conversations about the system in the employee
+community, and had a signiﬁcant effect on user participation.
+Gallacher et al. [18] recently explored the role of playful
+interactions to encourage openness and social interactions in
+a workplace. Similarly, our ﬁndings provide another example
+of how playful artifacts can increase user engagement with a
+technology system in a workplace setting.
+
+Design with Openness
+A system like Quantiﬁed Workplace is geared more towards
+community-level beneﬁts than individual beneﬁts, which is
+often not perceived by the target user group. In our study, we
+observed that a user tried to hide the camera on the tablet
+with a spoon, perhaps due to his privacy concerns. We
+also witnessed a high number of repeated negative inputs
+to inﬂuence the color of the mood lamp, which decreased
+trustworthiness of the system in the beginning. Our key
+suggestion here is that designers should be cognizant of the
+possibility of these phenomena, and attempt to mitigate it by
+building user trust. We suggest three design principles to
+increase user trust: anonymity, transparency and inclusion.
+
+Anonymity: Our prototype system provided team-level
+anonymity to the users, and a vast majority of the users
+felt comfortable with it. On the contrary, 68% of the users
+mentioned that they would be concerned with using the
+system, if it were a personalized app on their phones. Thus,
+we argue that anonymity is a key design element that can
+mitigate users’ privacy concerns with a QW system meant
+to be deployed in a public setting. Although an anonymous
+system may be susceptible to misuse initially, our results
+show that over time, anonymity built user trust and led to
+less misuse. That said, we do recognize that there are use
+cases where anonymous data collection is not feasible (e.g.,
+[7]) – in such cases, we suggest that to promote user trust,
+they should be provided full control over data sharing, e.g.,
+users could prefer to keep their data private, or share with
+immediate colleagues or the entire workplace.
+
+586
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Transparency: Next, we argue that transparency is a very
+important design principle for long term sustainability of the
+system. We visualized the results of quantiﬁcation in near
+real-time on the dashboard and mood lamp, which showed
+the users that the data is not manipulated on the backend
+and gave them conﬁdence in the system. They appreciated
+that negative quantiﬁcations (e.g., bored, stressed, etc.) about
+the workplace are not hidden by the system and this led to
+increased user trust.
+
+Inclusion: Finally, we emphasize the importance of Inclusion
+in designing community-oriented systems. The inclusiveness
+and democratic nature of publicly placed tablets ensured
+that any employee could interact with them, and let his/her
+opinion count. If we had deployed the QW system through
+a personal mobile application, this sense of inclusion might
+not be so prominent as many of the users would hesitate to
+engage due to privacy concerns, which in turn would have
+reduced the trust in outputs of the system.
+
+CONCLUDING REMARKS
+to explore the space of workplace
+This paper aims
+quantiﬁcation.
+Through the deployment of a prototype
+Quantiﬁed Workplace system in two European ofﬁces of a
+research organization, we found that user engagement with
+the system was initially driven by community behavior, and
+over time it translated into a tiny habit due to the participatory
+aspects of the system and opportune placement of input
+terminals. Users showed a preference towards quantiﬁcation
+of those metrics which are beyond human sensing, and also
+stressed the need to focus on actionable quantiﬁcations.
+While the idea of a quantiﬁcation system at workplace may
+strike as a big brother to some people, we found that if
+designed in the right way with trust and transparency through
+anonymous data collection and real-time visualization, such
+a system may have wide acceptance among employees. Our
+results and proposed design implications could drive future
+research in the domain of workplace quantiﬁcation, and also
+assist UbiComp practitioners aiming to design such systems.
+
+Certainly, the results presented here must be interpreted in
+the context of the culture in which they were collected. We
+expect our results to be most appropriate for designers of
+future workplace technology in Europe or countries with
+similar cultures, privacy sensitivies and levels of technology
+adoption. Another limitation of this study is that we did
+not evaluate the effect of variations in spatial arrangement
+of technology artefacts on user participation. It needs to be
+studied whether user participation would have been different
+had the mood lamp or tablets been placed in other locations
+of the workplace.
+
+An exploration on how to systematically incorporate Tiny
+Habits in the design of Quantiﬁed Workplace systems could
+also be a fascinating topic for future work.
+From a
+visualization perspective, use of other kinds of ambient
+displays [32] can be explored for visualizing quantiﬁed
+workplace metrics. While our work was focused primarily
+on quantiﬁcation design, researchers should also investigate
+how to generate and present actionable insights from the
+quantiﬁcation to users in a workplace.
+
+SESSION: FOR THE BETTER WORKPLACE
+
+REFERENCES
+1. Allen, T. J., and Henn, G. The Organization and
+
+Architecture of Innovation: Managing the Flow of
+Technology. Routledge (2006)
+
+12. Dul, J., Canan C., and Ferdinand J. Knowledge workers’
+creativity and the role of the physical work environment
+In Human Resource Management. Volume 50, Issue 6,
+715 – 734
+
+2. Ali A.A., Hossain S., Hovsepian K., Rahman M. M.,
+
+13. Elliot A.J., Maier M.A. Color and Psychological
+
+Plarre K., and Kumar S.. mPuff: automated detection of
+cigarette smoking puffs from respiration measurements.
+In Proceedings of the 11th international conference on
+Information Processing in Sensor Networks (IPSN ’12)
+(2012), 269–280
+
+3. Arnold Worldwide, Arnie the beer vending machine.
+
+http://www.brandingmagazine.com/2011/11/08/arnold-
+worldwide-arnie-the-beer-vending-robot/ (Last accessed
+July 26, 2015)
+
+4. Bradburn, N. M., Sudman, S., Blair, E., and Stocking, C.
+Question Threat and Response Bias. Public Opinion
+Quarterly 42, 2 (1978)
+
+5. Brignull, H., and Rogers, Y. Enticing people to interact
+
+with large public displays in public spaces. In
+Proceedings of INTERACT Vol. 3 (2003), 17–24
+
+6. Brown C., Efstratiou C., Leontiadis I., Quercia D., and
+Mascolo C. Tracking Serendipitous Interactions: How
+Individual Cultures Shape the Ofﬁce. In Proceedings of
+the 17th ACM conference on Computer supported
+cooperative work & social computing (CSCW ’14)
+(2014), 1072–1081
+
+Functioning In Association for Psychological Science
+Volume 16?Number 5 250 – 254
+
+14. Efstratiou C., Leontiadis I., Picone M., Rachuri K.,
+
+Mascolo C., and Crowcroft J. Sense and Sensibility in a
+Pervasive World In Proceedings of the 10th
+international conference on Pervasive Computing
+(Pervasive’12) (2012), 406 – 424
+
+15. Fan C., Forlizzi J., and Dey A. A spark of activity:
+
+exploring informative art as visualization for physical
+activity In Proceedings of the 2012 ACM Conference on
+Ubiquitous Computing (UbiComp ’12) (2012), 81–84
+
+16. Fish, R. S., Kraut, R. E., Chalfonte, B. L. The
+
+VideoWindow system in informal communication In
+Proceedings of the 1990 ACM conference on Computer-
+supported cooperative work (CSCW ’90) (1990), 1 – 11
+
+17. Froehlich, J., Dillahunt T., Klasnja P., Mankoff J.,
+Consolvo S., Harrison B., and Landay J. Ubigreen:
+Investigating a Mobile Tool for Tracking and Supporting
+Green Transportation Habits. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing
+Systems (CHI ’09) (2009), 1043–1052
+
+7. Brown C., Efstratiou C., Leontiadis I., Quercia D.,
+
+18. Gallacher S., O’Connor J., Bird J., Rogers Y., Capra L.,
+
+Mascolo C., Scott J., and Key P. The architecture of
+innovation: Tracking face-to-face interactions with
+ubicomp technologies. In Proceedings of the 2014 ACM
+International Joint Conference on Pervasive and
+Ubiquitous Computing (UbiComp ’14) (2014), 811–822
+
+8. Chen X., Zheng Y., Chen Y., Jin Q., Sun W., Chang E.,
+and Ma W. Indoor Air Quality Monitoring System for
+Smart Buildings. In Proceedings of the 2014 ACM
+International Joint Conference on Pervasive and
+Ubiquitous Computing (UbiComp ’14) (2014)
+
+9. Choe E. K. , Lee N., Lee B., Pratt W., and Kientz J.
+
+Understanding quantiﬁed-selfers practices in collecting
+and exploring personal data. In Proceedings of the 32nd
+annual ACM conference on Human factors in computing
+systems (CHI ’14) (2014), 1143–1152
+
+10. Consolvo, S., McDonald D., Toscos T., Chen M.,
+Froehlich J., Harrison B., Klasnja P., LaMarca A.,
+LeGrand L., Libby R., Smith I., and Landay J. Activity
+sensing in the wild: a ﬁeld trial of Ubiﬁt garden In
+Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems (CHI ’08) (2008),
+1797–1806
+
+11. Dourish,P.,and Bly,S. Portholes : Supporting awareness
+in a distributed work group In Proceedings of the
+SIGCHI Conference on Human Factors in Computing
+Systems (CHI ’92), (1992), 541–547
+
+Harrison D., and Marshall P. Mood Squeezer:
+Lightening up the Workplace through Playful and
+Lightweight Interactions. In Proceedings of the 18th
+ACM Conference on Computer Supported Cooperative
+Work & Social Computing (CSCW ’15) (2015), 891 –
+902
+
+19. Hofstede G. H., Hofstede G. J. , and Minkov M.
+
+Cultures And Organizations: Software For The Mind
+McGraw- Hill USA (2010)
+
+20. James R. A circumplex model of affect. Journal of
+Personality and Social Psychology 39, 1161 – 1178
+
+21. Karl, K., Peluchette, J. How does workplace fun impact
+employee perceptions of customer service quality?
+Journal of Leadership & Organizational Studies, 13, 2
+(2006), 2 – 13
+
+22. Kay, M., Choe E.K., Shepherd J., Greenstein B., Watson
+N., Consolvo S., and Kientz J. Lullaby: a capture &
+access system for understanding the sleep environment
+In Proceedings of the 2012 ACM Conference on
+Ubiquitous Computing (UbiComp ’12). (2012), 226–234
+
+23. Kirkham, R., Mellor, S., Green, D., Lin, J.S., Ladha, K.,
+Ladha, C., Jackson, D., Olivier, P., Wright, P., and Plotz,
+T. The Break-Time Barometer An Exploratory System
+for Workplace Break-time Social Awareness. In
+Proceedings of the 2013 ACM International Joint
+Conference on Pervasive and Ubiquitous Computing
+(Ubicomp’13) (2013), 73–82
+
+587
+
+24. Kwallek N., Woodson H., Lewis C. M. and Sales C.
+
+Impact of three interior color schemes on worker mood
+and performance relative to individual environmental
+sensitivity. Color Research & Application 22, 2 (1997),
+121 – 132
+
+25. Kuller, R. The impact of light and color on
+
+psychological mood: a cross-cultural study of indoor
+work. Ergonomics 49, 14 (2006), 1496–1507
+
+26. Laddering
+
+http://www.uxmatters.com/mt/archives/2009/07/laddering-
+a-research-interview-technique-for-uncovering-core-
+values.php (Last accessed July 26,
+2015)
+
+27. Lamm, E., and Meeks, M.D. Workplace fun: the
+moderating effects of generational differences.
+Employee Relations 31, 6 (2009), 613 – 631
+
+28. Li I., Dey A., and Forlizzi J. A stage-based model of
+personal informatics systems. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing
+Systems (CHI ’10) (2010), 557–566
+
+29. Lin, J.J., Mamykina L., Lindtner S., Delajoux G., and
+
+Strub H.B. Fish’n’Steps: encouraging physical activity
+with an interactive computer game In Proceedings of the
+8th international conference on Ubiquitous Computing
+(UbiComp’06) (2006), 261–278.
+
+30. Mak CM. The effect of sound on ofﬁce productivity. In
+
+Building Services Engineering Research and Technology
+vol 33 (2012), 339–345
+
+31. Mamykina L., Mynatt E., Davidson P., and Greenblatt D.
+
+MAHI: investigation of social scaffolding for reﬂective
+thinking in diabetes management. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing
+Systems (CHI ’08) (2008), 477–486.
+
+32. Mankoff J. and Dey A.K., From Conception to Design:
+A practical guide to designing ambient displays. In
+Public and Situated Displays, Kluwer Academic
+Publishers (2008), 477–486.
+
+33. Mark, G., Iqbal, S., Czerwinski, M., Johns, P. Capturing
+the Mood: Facebook and Face-to-face Encounters in the
+Workplace. In Proceedings of the 17th ACM Conference
+on Computer Supported Cooperative Work & Social
+Computing (CSCW ’14) (2014), 1082–1094
+
+34. Morris M. and Guilak F. Mobile heart health: project
+highlight. In Pervasive Computing 8(2) (2009), 57–61
+
+35. Needle, D. Business in Context: An Introduction to
+Business and Its Environment Cengage Learning
+Business Press
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+behavior. IEEE Transactions on Systems, Man, and
+Cybernetics, Part B: Cybernetics, vol. 39, no. 1 (2009)
+
+37. Pentland, S The New Science of Building Great Teams.
+
+Harvard Business Review 90, 4 (2012)
+
+38. Preuveneers, D., and Berbers Y. Mobile Phones
+
+Assisting With Health Self-Care: a Diabetes Case Study.
+In Proceedings of the 10th international conference on
+Human computer interaction with mobile devices and
+services (MobileHCI ’08) (2008), 2177 – 186
+
+39. Quantiﬁed Self Movement http://quantiﬁedself.com
+
+(Last accessed July 26, 2015)
+
+40. Quercia D., O’Hare N.K., and Cramer H. Aesthetic
+
+capital: what makes london look beautiful, quiet, and
+happy? In Proceedings of the 17th ACM conference on
+Computer supported cooperative work & social
+computing (CSCW ’14) (2014), 945 – 955
+
+41. Roberts SC., Owen RC., Havlicek J. Distinguishing
+between perceiver and wearer effects in clothing
+color-associated attributions. Evol Psychol 8(3) (2010),
+350 – 364
+
+42. Rogers, Y. Interaction design gone wild: striving for
+wild theory. Interactions 18, 4 (2011), 58 – 62
+
+43. Rogers, Y., Hazlewood, W. R., Marshall, P., Dalton, N.,
+Hertrich, S. Ambient Inﬂuence: Can Twinkly Lights
+Lure and Abstract Representations Trigger Behavioral
+Change? In Proceedings of the 12th ACM International
+Conference on Ubiquitous Computing (UbiComp ’10)
+(2010), 261–270
+
+44. Rooksby J., Rost M., Morrison A., and Chalmers M.C.
+
+Personal tracking as lived informatics. In Proceedings of
+the 32nd annual ACM conference on Human factors in
+computing systems (CHI ’14) (2014), 1163 – 1172
+
+45. Tracking health, wellness, and productivity in the
+
+quantiﬁed workplace
+http://research.gigaom.com/report/tracking-health-
+wellness-and-productivity-in-the-quantiﬁed-workplace
+(Last accessed July 26, 2015)
+
+46. Sweeney L. k-anonymity: a model for protecting
+
+privacy. International Journal on Uncertainty, Fuzziness
+and Knowledge-based Systems, 10 (5) (2002), 557–570
+
+47. Tiny Habits. http://tinyhabits.com (Last accessed July
+
+26, 2015)
+
+48. Van Wagner K. Color Psychology: How Colors impact
+Moods, Feelings and Behaviours. Psychology (2009)
+
+49. Whyte W. Street Corner Society: The Social Structure of
+an Italian Slum. University of Chicago Press 1943
+
+36. Olguin D.O., Waber B.N., Kim T., Mohan A., Ara K.,
+
+and Pentland A. Sensible organizations: Technology and
+methodology for automatically measuring organizational
+
+50. Williams R., Pollock N. Software and Organizations.
+
+The Biography of the Enterprise-Wide System, or How
+SAP Conquered the World. Routledge (2008)
+
+588
+
+

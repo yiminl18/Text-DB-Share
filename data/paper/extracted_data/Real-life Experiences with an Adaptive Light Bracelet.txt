@@ -1,0 +1,1263 @@
+Real-Life Experiences with an Adaptive Light Bracelet
+
+Jutta Fortmann
+University of Oldenburg
+Oldenburg, Germany
+jutta.fortmann@uni-
+oldenburg.de
+
+Benjamin Poppinga
+Smarttention Systems
+Oldenburg, Germany
+bp@benjaminpoppinga.de
+
+Wilko Heuten
+OFFIS - Institute for
+Information Technology
+Oldenburg, Germany
+heuten@ofﬁs.de
+
+Susanne Boll
+University of Oldenburg
+Oldenburg, Germany
+susanne.boll@uni-
+oldenburg.de
+
+ABSTRACT
+In the last years, wearable devices have been an emerg-
+ing trend on the market. Today, several wearable devices
+present information through light spots, especially those used
+for self-tracking. In this work we present a ﬁeld evaluation
+of an adaptive light bracelet that serves as a reminder of
+ﬂuid intake. We investigated how users and observers expe-
+rience the bracelet under real-world conditions in compar-
+ison to a non-adaptive bracelet. Context awareness is im-
+plemented in that the LED’s brightness changes according
+to an ongoing event.
+In a 16-participant 2-weeks experi-
+ment we found participants and observers experienced the
+adaptive bracelet more positively. Further, we found ob-
+servers experienced the adaptive bracelet signiﬁcantly more
+attractively and could identify signiﬁcantly better with it.
+Our results will inspire designers and developers of wearable
+light displays.
+
+CCS Concepts
+•Human-centered computing → Empirical studies in
+ubiquitous and mobile computing;
+
+Keywords
+Wearable Computing, Digital Jewellery, Fluid Intake Re-
+minder, Light, Context Awareness, Observer Experience
+
+1.
+
+INTRODUCTION
+
+In recent years wearable devices have been an emerg-
+ing trend on the market. Devices that promote a healthy
+lifestyle have become especially popular. To use all a de-
+vice’s capabilities, a person needs to wear it all the time,
+thus, aesthetics, as well as physical and social comfort, are
+important aspects of the device. Typically, wearables are
+
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for proﬁt or commercial advantage and that copies bear this notice and the full citation
+on the ﬁrst page. Copyrights for components of this work owned by others than the
+author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior speciﬁc permission
+and/or a fee. Request permissions from permissions@acm.org.
+British HCI 2015, July 13 - 17, 2015, Lincoln, United Kingdom
+c(cid:13) 2015 Copyright held by the owner/author(s). Publication rights licensed to ACM.
+ISBN 978-1-4503-3643-7/15/07. . . $15.00
+DOI: http://dx.doi.org/10.1145/2783446.2783572
+
+shaped in a convenient way, such as clips or wristbands.
+To visualise information, many devices use small displays,
+e.g., to show the number of steps taken, such as the Fit-
+bit One1. Other devices, such as the Nike+ FuelBand2, use
+light emitting diodes (LEDs), e.g., to indicate the progress
+towards a set goal. While the information is important for
+the users themselves, it can cause discomfort and can con-
+fuse bystanders when displayed in a conspicuous way. Con-
+sequently, the unobtrusiveness of a persuasive device has
+been identiﬁed as an important design goal [3].
+
+At the same time, it is unclear how this design goal can be
+achieved. Context awareness has generally been proposed as
+a possible solution [10, 15]. However, this has not yet been
+studied for wearable light displays in real contexts, which
+makes its impact questionable. In this paper, we present a
+ﬁeld study, in which we evaluated an adaptive light bracelet
+that serves as a ﬂuid intake reminder. The bracelet consists
+of one permanently illuminated Reminder LED, eight Vol-
+ume LEDs, and a button. We enable users to change the
+bracelet’s appearance, i.e., the brightness of the Reminder
+LED, according to an ongoing calendar event. The ongoing
+calendar event deﬁnes the context to which the brightness of
+the LED adapts. We studied how the adaptive display will
+change the bracelet’s usability, and how users and observers
+perceive the adaptive bracelet with regard to emotions, at-
+tractiveness, and identity in comparison to a non-adaptive
+version of the bracelet.
+
+We found that participants experienced the adaptive brace-
+let as being signiﬁcantly more stylish, presentable, and pleas-
+ant. Observers felt signiﬁcantly happier when looking at
+an adaptive bracelet than when looking at a non-adaptive
+bracelet. Also, observers could identify signiﬁcantly better
+with the adaptive bracelet and found it signiﬁcantly more
+attractive than a non-adaptive bracelet.
+
+The contributions of this paper are as follows:
+
+• We present a wearable adaptive ﬂuid intake reminder
+display, a light bracelet that implements context aware-
+ness by connecting the LED’s brightness level to cal-
+endar events.
+
+• We show that participants and observers experienced
+
+the adaptive bracelet more positively than a non-adaptive
+
+1https://www.fitbit.com/uk/one
+2http://www.nike.com/us/en_us/lp/nikeplus-fuelband
+
+138bracelet, by conducting and analysing a 2-weeks ﬁeld
+study
+
+The paper is structured as follows. After we give insights
+into related papers and key research ﬁndings, we describe
+the adaptive light bracelet. We then present a ﬁeld study,
+in which we investigated the eﬀect of context awareness on
+emotions, attractiveness of the display, and identiﬁcation
+with the bracelet. After discussing our ﬁndings, we conclude
+the paper with a summary of insights, the key contributions
+and ideas for future work.
+
+2. RELATED WORK
+
+In the following we present related work which focuses on
+wrist-worn light displays, and wearable context-aware sys-
+tems.
+
+2.1 Wrist-Worn Light Displays
+
+In previous work diﬀerent applications have been proposed
+for wrist-worn light displays. Hansson et al.
+[7] proposed
+the Reminder Bracelet, a simple black bracelet with three
+red LEDs, which indicated notiﬁcations triggered by a con-
+nected PDA. Its purpose was to notify the user of sched-
+uled events in a subtle and silent way using light, colour
+and blinking patterns. Damage was another, more fash-
+ioned LED bracelet consisting of one white and ﬁve coloured
+LEDs. The author’s vision was to connect it to a messen-
+ger application on a smartphone for that it supports the
+communication in a social group [16]. Ahde and Mikkonen
+[1] describe their vision of communicating spatial proximity
+of friends by using LED-illuminated bracelets. With Activ-
+MON, Burns et al. [2] presented a watch-like device with an
+LED that shows the user’s and the user’s friends’ physical
+activity level. Today’s wearable consumer products such as
+the Fitbit Flex3, the Nike+ FuelBand, or the Misﬁt Shine4
+use single light spots to present information in a simple and
+quickly accessible way.
+
+2.2 Context-Aware Systems
+
+Context awareness is an important feature of a wearable
+
+user interface [10, 5, 15]. Dey [4] deﬁnes context as
+
+“[...] any information that can be used to char-
+acterise the situation of an entity [...], that is
+considered relevant to the interaction between a
+user and an application.”.
+
+Furthermore, he deﬁnes that
+
+“a system is context-aware if it uses context to
+provide relevant information and/or services to
+the user, where relevancy depends on the user’s
+task.”.
+
+Dey lists three categories of features that a context-aware
+application can support, which are:
+
+• presentation of information and services to a user,
+
+• automatic execution of a service for a user, and
+
+• tagging of context to information to support later re-
+
+trieval.
+
+3https://www.fitbit.com/uk/flex
+4http://www.misfitwearables.com/
+
+In his list of four ideal attributes of a wearable device,
+Starner [15] deﬁnes that a wearable device must observe the
+user’s environment to provide the best cognitive support for
+the user. A wearable device should adapt its interaction
+modalities based on the user’s context, and it should aug-
+ment and mediate interactions with the user’s environment.
+In previous work, several context-aware wearable displays
+have been presented. Rhodes [12] introduced the Wearable
+Remembrance Agent, a system with a heads-up display that
+provides notes to the user that might be of relevance at a cer-
+tain moment. The captured context information is e.g. the
+time-stamp, the user’s physical location, and which persons
+are around. Kern and Schiele [10] investigated whether or
+not to notify the user in a speciﬁc context and if so, through
+which modality. They classiﬁed the context according to
+ﬁve factors: the importance of the event that is being no-
+tiﬁed (a), the user’s activity (b), the social activity (c), the
+social situation (d), and the location (e). They present a
+model to classify typical situations with regard to the inter-
+ruptability of the user and that of the environment. Also,
+they map these interruptability classes to appropriate noti-
+ﬁcation modalities, which are vibration, beep, ring, speech
+message, a watch display, and a head mounted display.
+
+Our system uses light to present information. Light as
+a modality to present information can be modiﬁed in vari-
+ous parameters. From the perception oriented colour model
+HSV (Hue, Saturation, Value) we can derive the basic pa-
+rameters of light: colour, saturation and brightness [14].
+These parameters can be extended with regard to time and
+space. Time can be expressed in the duration for which a
+light is presented. Furthermore, when manipulating the pa-
+rameters it is possible to create various rhythms with varying
+colours, saturations and brightness. Space can be expressed
+in the spatial location of a presented light. Previous work on
+wearable light displays found that the light’s brightness has
+a big inﬂuence on the perceived obtrusiveness of the display
+[2, 11]. In this work, we use the light’s brightness to regulate
+the obtrusiveness of the display dependent on the event the
+user is currently taking part in.
+
+Previous work investigated which kind of information should
+
+be presented [12], in which level of detail information should
+be presented [13], and through which modality an informa-
+tion should be presented in a speciﬁc context [10]. As a light
+display has a much higher visibility than a graphical display,
+its presentation design is important. This especially applies
+to wearable displays worn in a mobile context in which other
+people are close by. However, it has not been studied yet
+how information should be presented on a wearable light
+display in a way that ﬁts well into everyday life. From pre-
+vious work, we know that the context in which a wearable
+display is worn changes the degree of comfort a wearer feels
+[6]. Thus, we need to investigate if and how such displays
+should adapt to the context to make the wearer feel more
+comfortable.
+
+3. THE ADAPTIVE LIGHT BRACELET
+
+For the study, we expanded WaterJewel, a ﬂuid intake re-
+minder bracelet [6], by context awareness capabilities. Wa-
+terJewel is implemented on the Arduino platform and uses
+light spots to present information on a user’s ﬂuid intake
+behaviour. The conceptual design is based on a recommen-
+dation of the European Food Safety Authority to drink at
+least 2 litres of ﬂuid a day in 8 evenly distributed servings.
+
+139A continuously illuminated light spot reminds the user to
+drink regularly in that it indicates the time elapsed since
+the last intake (“Reminder LED”). This is presented by a
+gradient from red (user drank two or more hours ago) to
+green (user just drank). Another eight LEDs are arranged
+in a row and show the amount of ﬂuid intake for the day, i.e.
+how many glasses have been drunk (“Volume Display”). The
+ﬁrst seven LEDs are coloured blue. The last one is green to
+highlight that the daily goal of 8 servings of ﬂuid has been
+accomplished. A drink entry is made though a long push of
+a button on the bracelet. The Volume Display is activated
+through a short button push.
+
+For the study, the WaterJewel bracelet was accompanied
+by an Android application that connects to the bracelet via
+Bluetooth. After an initial pairing the application automat-
+ically connects to the bracelet whenever it is in reach. This
+application is able to control the brightness of the Reminder
+LED at three diﬀerent levels, which can be mapped directly
+to certain obtrusiveness levels as follows:
+
+Level #1 switched oﬀ – unobtrusive
+
+Level #2 low brightness – less obtrusive
+
+Level #3 full brightness (default) – obtrusive
+
+Instead of using a custom user interface, we linked the ap-
+plication to the device’s calendar. This allows users to spec-
+ify the brightness (obtrusiveness) of the Reminder LED in
+the title of a calendar entry, e.g., Tea-Time with Granny #2,
+thereby making the bracelet adaptive to individual calendar
+entries. Here, a calendar event deﬁnes the context. When
+a new calendar event starts, the brightness of the Reminder
+LED is updated immediately according to the digit placed
+after the hash mark in the event’s title. When there is no
+calendar event deﬁned in the user’s calendar application,
+the LED’s brightness will be set to the default value, i.e.,
+the brightest level.
+
+4. FIELD EVALUATION METHOD
+
+An earlier study of WaterJewel and related work found
+that a light’s brightness has a major inﬂuence on the per-
+ceived obtrusiveness of a display [6, 5, 11]. However, how
+exactly a display should adapt brightness in practice, and
+how in detail an adaptation changes the human’s percep-
+tion of the display, remains unclear. In this study, we adopt
+the idea to modulate the display’s brightness and study how
+an adaptive Reminder LED changes the overall perception of
+the bracelet. In detail, we investigated how users as well as
+observers experienced the bracelet in everyday situations in
+terms of perceived emotions, identiﬁcation with the bracelet,
+and perceived attractiveness of the bracelet. In detail, we
+investigate the following hypotheses:
+
+H1 An adaptive display positively aﬀects the perceived emo-
+
+tions when confronted with the bracelet.
+
+H2 An adaptive display positively inﬂuences how people
+
+identify with the bracelet.
+
+H3 An adaptive display positively changes the perceived
+
+attractiveness of the bracelet.
+
+Because our goal was to study the adaptation on a wear-
+able device, we studied the hypotheses from two perspec-
+tives. On the one hand, we studied each hypothesis for the
+the wearers of the device,
+participants of our study, i.e.
+
+which we refer to as H1P, H2P, and H3P. On the other
+hand, we investigated the hypotheses for the external ob-
+servers of the system, which we refer to as hypotheses H1O,
+H2O, and H3O.
+
+4.1 Participant Questionnaire
+
+To measure the emotions (H1P), the identity (H2P), and
+the attractiveness (H3P), we decided for subjective feed-
+back through a custom questionnaire. This questionnaire is
+supposed to be answered in-situ and while or just after ac-
+tually using the bracelet. Therefore, it ﬁrst asks for details
+about the situation, i.e., date, time, place, lighting condi-
+tions, and the type of persons who accompany the partici-
+pant, e.g., the public, family members, or nobody. Further,
+the participant was asked if he or she perceived the bright-
+ness of the Reminder LED during the situation as suitable
+on a 7-point Likert scale, ranging from disagree (1) to agree
+(7). As measures for emotions, identity, and attractiveness,
+we integrated parts of two established standard question-
+naires, i.e., Diﬀerential Emotions Scale (DES) [9] and At-
+trakDiﬀ [8], into the questionnaire. The part that was in-
+spired by the DES consists of a set of 8 statements about
+emotions, e.g., “I felt surprised”, and could be rated on a
+7-point Likert scale, ranging from disagree (1) to agree (7).
+We chose the DES because we were especially interested in
+the emotions perceived towards the bracelet, and the DES
+is a validated instrument to assess these. The AttrakDiﬀ
+alone would not have covered emotions extensively. Further,
+the questionnaire comes with 13 contrary word pairs, e.g.,
+isolating/connecting, which were taken from the AttrakDiﬀ
+questionnaire and measure the hedonic quality and attrac-
+tiveness of a used device. In detail, 6 of these pairs measure
+the identity (HQ-I), and 7 of these pairs measure the at-
+tractiveness (ATT). The attributes from the AttrakDiﬀ are
+rated on a 7-point scale ranging from the ﬁrst word (1) to
+the second word (7). A full list statements and word pairs
+can be found in Table 1.
+
+4.2 Observer Questionnaire
+
+With the participant questionnaire we measure how an
+adaptive bracelet changes the emotions of a participant, i.e.
+the wearer of the bracelet, how he or she identiﬁes with
+the bracelet, and how it attracts him or her. However, to
+get a holistic understanding, we also studied how these three
+aspects change for observers. The aspects need to be studied
+to provide answers to hypotheses H1O, H2O, and H3O. An
+observer is a person that stays in the proximity of the wearer
+by accident. The duration of an observation can vary.
+
+Observers completed the same questionnaire as an online
+version with further details, such as a study participant iden-
+tiﬁer and a unique, alphanumeric nickname, which the ob-
+server could freely decide on. These values allowed mapping
+all questionnaire responses. Observers could be made aware
+of the online questionnaire through a study participant, who
+was wearing the bracelet. The awareness could be created
+using a link card, which is a paper card that comes with
+instructions, a written link as well as a QR code to the on-
+line questionnaire, and the unique, numeric identiﬁer of the
+study participant who handed the card (see Figure 1, top).
+
+4.3 Design
+
+We designed the study as a within-subjects, repeated mea-
+sures experiment with two conditions. One condition is the
+
+140Figure 1: Observers were provided with link cards
+that come with a link to an online questionnaire
+(top). These allow to capture the observer’s experi-
+ences and impressions regarding the bracelet. Link
+cards were originally provided in German.
+
+earlier described light bracelet with adaptiveness, i.e., the
+brightness of the Reminder LED can be controlled. The
+other condition is the light bracelet without any adaptation
+features, i.e., the default brightness is used. We counter-
+balanced the conditions. Thus, half of the participants started
+with an adaptive, the other half with a non-adaptive bracelet.
+
+4.4 Participants
+
+We acquired 18 participants, of which 2 stopped their par-
+ticipation after a few days for personal reasons. The remain-
+ing 16 participants had an average age of 26.1 years (SD 3.79
+years), ranging from 20 to 37 years. 8 of the participants
+were male, and 8 were female. They were recruited from the
+local university, and through public announcements. None
+of the participants was related to the research team. Partic-
+ipants had an average daily ﬂuid intake of about 1.5 liters
+(SD 0.50 liter), ranging from less than 1 liter to 3 liters. 12
+participants reported that they want to increase their ﬂuid
+intake, 3 were undecided, and 1 participant reported no in-
+terest in increasing ﬂuid intake.
+
+4.5 Procedure
+
+At the beginning of the study, participants signed an in-
+formed consent and completed a demographic questionnaire.
+We introduced and set up the light bracelet with the corre-
+sponding application on the participantsˆa ˘A¨Y smartphones,
+and they got some time to become familiar with the sys-
+tem. Also, we explained how participants could specify the
+brightness of the Reminder LED when entering a new cal-
+endar event in their favourite calendar application.
+
+Participants were handed 40 of the earlier described paper
+questionnaires and 40 of the link cards. We asked the partic-
+ipants to complete approximately three of the questionnaires
+per day and after varying situations, e.g., after a business
+meeting or after taking the metro. Further, we asked partic-
+ipants to hand out approximately three of the link cards per
+day. These should be handed to observers, i.e. colleagues,
+
+Figure 2: Male participant wearing the light bracelet
+during the study. On his upper arm he wears an ad-
+ditional armlet that contains the controlling hard-
+ware, which is whipped with black felt for aesthetic
+reasons.
+
+friends, or any other persons who experienced any kind of
+situation together with the study participant wearing the
+light bracelet.
+
+Each participant used the light bracelet for a total of two
+weeks during his or her daily routine. Figure 2 shows a male
+participant wearing the light bracelet during the study. Half
+of the participants started with an adaptive bracelet, i.e. the
+brightness of the Reminder LED could be controlled. The
+other half started with a bracelet that had no adaptation
+features, i.e. the default brightness was used. After the ﬁrst
+week, the condition changed for all participants. During
+the study, we conducted two interviews with each partic-
+ipant, one after each week. We asked for overall impres-
+sions and went through the completed questionnaires par-
+ticipants brought with them, so that they could elaborate
+on striking situations. Furthermore, participants completed
+the well-established System Usability Scale (SUS) after each
+week. After the second interview we collected all handed
+materials, supported participants in deleting the app that
+controlled the light bracelet, clariﬁed on remaining ques-
+tions, and thanked the participants. Each participant was
+rewarded with 25 EUR.
+
+5. QUANTITATIVE RESULTS
+
+In the following, we report our key quantitative ﬁndings,
+whereby a full representation of the results can be found in
+Table 1. For both, i.e., participants who wore the bracelet
+and observers, we will report on changes in emotions, iden-
+tity, and attractiveness. We used one-sided Wilcoxon signed
+rank tests for all statistical investigations, because we ex-
+pected only positive eﬀects of the context awareness.
+
+5.1 Participant
+
+Of the 640 handed questionnaires (40 questionnaires for
+each of the 16 users), 416 (65.00 %) were completed and
+returned. Of these, 218 were completed when using the
+bracelet in the control condition and 198 when using it in
+the experimental condition, in which it provided context
+awareness. 97 questionnaires were answered for situations
+in which participants were alone, 62 when they were in pub-
+
+141Participant
+
+Statement
+I felt happy.
+I felt surprised.
+I was annoyed.
+I was ashamed.
+I felt guilty.
+I was feared.
+I was interested.
+I was sad.
+isolating/connective
+tacky/stylish
+cheap/premium
+alienating/integrating
+separates me/brings me closer
+unpresentable/presentable
+average
+unpleasant/pleasant
+ugly/attractive
+disagreeable/likeable
+rejecting/inviting
+bad/good
+repelling/appealing
+discouraging/motivating
+average
+
+Contr.
+3.43
+2.24
+2.13
+1.42
+1.26
+1.12
+3.11
+1.12
+4.03
+3.17
+3.35
+3.99
+4.01
+3.48
+3.67
+3.38
+2.95
+3.73
+3.97
+4.11
+3.77
+4.56
+3.78
+
+Exp.
+3.45
+2.24
+2.13
+1.40
+1.21
+1.08
+2.82
+1.07
+4.13
+3.42
+3.43
+4.06
+4.11
+3.71
+3.81
+3.58
+3.21
+3.90
+4.01
+4.23
+3.86
+4.45
+3.89
+
+e
+l
+a
+c
+S
+
+n
+o
+i
+t
+o
+m
+E
+
+l
+a
+i
+t
+n
+e
+r
+e
+ﬀ
+D
+
+i
+
+,
+
+i
+
+ﬀ
+D
+k
+a
+r
+t
+t
+A
+
+I
+-
+
+Q
+H
+
+,
+
+i
+
+ﬀ
+D
+k
+a
+r
+t
+t
+A
+
+T
+T
+A
+
+Sign.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+0.05
+n.s.
+n.s.
+n.s.
+0.05
+n.s.
+0.05
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+
+Contr.
+3.62
+4.15
+1.54
+1.15
+1.00
+1.00
+5.39
+1.08
+3.92
+2.85
+3.23
+3.92
+3.92
+3.00
+3.47
+3.31
+2.85
+4.08
+3.92
+4.46
+3.85
+4.31
+3.82
+
+Observer
+Exp.
+4.69
+5.31
+1.56
+1.31
+1.44
+1.19
+6.00
+1.31
+5.00
+4.00
+4.25
+4.94
+5.19
+3.75
+4.52
+4.44
+3.63
+5.13
+4.75
+5.38
+4.75
+5.38
+4.77
+
+Sign.
+0.01
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+n.s.
+0.01
+0.05
+0.05
+0.01
+0.01
+n.s.
+0.01
+0.05
+n.s.
+0.05
+0.05
+0.05
+0.05
+0.05
+0.01
+
+Table 1: An overview of all quantitative observations for participants and observers. Ratings on the Diﬀer-
+ential Emotion Scale were given on a 7-point Likert scale, ranging from disagree (1) to agree (7). Responses
+to AttrakDiﬀ pairs ranged from the ﬁrst word (1) to the second word (7).
+
+lic among strangers, 59 when they were with friends, 57
+when they were with family, 9 when they were with col-
+leagues, 4 when supervisors were present, and in 4 cases the
+participants did not provide us with details about the sit-
+uation. The remaining 124 questionnaires were answered
+in combinations of the above-mentioned situations, mostly
+when participants were moving in public, accompanied by
+family or partners. According to the free text answers about
+the place, most participants stated they used the bracelet at
+home or at work.
+
+In the questionnaires, participants were asked to assess
+the appropriateness of the Reminder LED’s brightness. In
+the control condition, i.e., without context awareness, par-
+ticipants rated the appropriateness with 4.82 (SD 1.35). In
+contrast, participants rated the appropriateness with 5.90
+(SD 1.08) in the experimental condition, i.e., about a full
+step better. This diﬀerence is signiﬁcant (p < 0.01).
+
+We asked participants to assess their emotions in the ex-
+perienced situations, using a set of statements which were
+inspired by the Diﬀerential Emotion Scale (DES). Overall,
+they mostly stated similar emotion ratings for both condi-
+tions. The most notable diﬀerence between the conditions
+was observed for the rated interestedness, where the control-
+condition was rated with 3.11 (SD 1.48) and the experimen-
+tal condition with 2.82 (SD 1.64). However, this and none
+of the other emotion statements showed any statistical sig-
+niﬁcance.
+
+The questionnaires further assessed how the participants
+identiﬁed with the bracelet, which was measured with the
+HQ-I part of the AttrakDiﬀ questionnaire. On average, the
+HQ-I was 3.67 (SD 0.86) in the control condition and 3.81
+(SD 0.95) in the experimental condition (see Figure 3). This
+
+diﬀerence is of no statistical signiﬁcance. However, we ob-
+served that participants assessed the display as being more
+stylish in the experimental condition (M 3.42, SD 1.03) than
+in the control condition (M 3.17, SD 0.99). Further, partici-
+pants assessed that the experimental bracelet was more pre-
+sentable (M 3.71, SD 1.36) than the non-adaptive bracelet
+(M 3.48, SD 1.26). Both of these observations are of statis-
+tical signiﬁcance (p < 0.05).
+
+As a third parameter, the questionnaire assessed the per-
+ceived attractiveness of the system, which was measured
+with the ATT part of the AttrakDiﬀ questionnaire. Over-
+all, participants tend to agree that the bracelet is similarly
+attractive in both conditions, i.e., experimental 3.89 (SD
+1.06), control 3.78 (SD 1.05).
+In detail, we found that
+participants rated the experimental system as signiﬁcantly
+(p < 0.05) more pleasant to use (M 3.58, SD 1.60) than the
+non-adaptive system (M 3.38, SD 1.64, see Figure 3).
+
+After each week, participants were asked to complete a
+System Usability Scale (SUS) questionnaire. We observed
+that in the control condition the light bracelet was rated
+with 80.63 (SD 13.65), whereby it was rated with 79.22 (SD
+17.74) in the experimental condition. This diﬀerence is not
+signiﬁcant.
+
+5.2 Observer
+
+Altogether, the study participants issued 152 link cards
+to observers, 82 during the experimental condition and 70
+while using the bracelet in the control condition. On aver-
+age, each participant issued 5.13 (SD 2.78) link cards in the
+experimental and 4.34 (SD 3.48) in the control condition.
+27 observers considered the link cards and completed a to-
+tal of 29 online questionnaires, which results in a 19.08 %
+
+1426. QUALITATIVE INSIGHTS
+
+In the following we describe the qualitative insights that
+we gained from the interviews with the participants. For
+the analysis, interview notes were coded jointly by the in-
+terviewer and the study director.
+
+6.1 Overall Impressions
+
+Overall, most participants liked the idea and the concept
+of the bracelets. Several participants mentioned they re-
+ceived positive feedback from friends, who said they would
+also like to use the bracelet as a ﬂuid intake reminder. In
+general, ten participants would like to use the bracelet in
+future, with some saying it would have to be more sophis-
+ticated (P11, P03), more compact (P02) and pretty (P06).
+Four participants said they would not need it because they
+found they already drink enough. Two participants would
+prefer an app to a bracelet. Three participants stated they
+found the app annoying in the way that they had to check
+if the Bluetooth connection was available once in a while
+and in that they had to interact with the phone to, e.g.,
+enter dates. Five participants mentioned they would have
+preferred to regulate the display’s brightness directly with a
+button on the bracelet instead of with the app.
+
+When we asked the participants for situations in which
+they would not wear the bracelet, they named various situ-
+ations for diﬀerent reasons. They stated situations in which
+the bracelet could be damaged, such as during sport ac-
+tivities, housework, in bed or when sweating due to hot
+temperatures. They also named situations such as festive
+occasions, burials, being onstage, at work and in a job in-
+terview, because in these situations the bracelet would not
+match the clothes and appearance. With regard to the con-
+dition in which the bracelet was not adaptive, a participant
+mentioned he felt uncomfortable wearing the bracelet at the
+dentist because it lighted brightly. Regarding the same con-
+dition, another participant reported that a lecturer wanted
+him to remove the bracelet during a talk.
+
+6.2 Perception of the Different Brightness Lev-
+
+els
+
+Most of the participants said they in general appreciated
+the mapping of the diﬀerent obtrusiveness levels to the dif-
+ferent brightness levels. But, the preferences for particular
+brightness levels varied. In situations in which the bright-
+ness level was set to the brightest level #3, some participants
+complained about the light being too bright, in particular
+in dimmed or dark environments. Participant P06 explicitly
+said that he did not like that he could not switch oﬀ the
+display during the non-adaptive condition. However, with
+respect to brightness level #1, which meant the light was oﬀ,
+two participants said they did use it very rarely or never at
+all, because they disliked that the bracelet did not provide
+any feedback. Participant P10 found that brightness level
+#2 was the best choice in many cases. Another participant
+said he would be ﬁne with brightness level #3 only. Two
+participants wished for one or to more levels, e.g., between
+brightness level #1 and #2 (P08).
+
+6.3 Perceived Difference Between the Condi-
+
+tions
+
+Nine participants stated they did not consciously perceive
+a diﬀerence in the bracelet’s display between the ﬁrst and the
+second study week. Five participants said they consciously
+
+Figure 3: For study participants we were unable to
+observe any signiﬁcant diﬀerences regarding iden-
+tity (HQ-I) and attractiveness (ATT). In contrast,
+we found signiﬁcant eﬀects for the attractiveness
+and identiﬁcation observers perceived towards the
+bracelet. Error bars indicate the standard error.
+
+return rate. Of these observers, 11 classiﬁed themselves as
+friends of the study participant, 5 as strangers, 4 as family
+members, 4 as colleagues, and 3 as professional superiors. 16
+completed questionnaires concerned participants who were
+using the light bracelet in the experimental condition, 13 re-
+sponses were assessing participants who used it in the control
+condition.
+
+We found that observers felt signiﬁcantly happier when
+facing an adaptive bracelet (M 4.69, SD 0.87) than facing
+the regular bracelet (M 3.62, SD 1.50, p < 0.01). Otherwise
+we did not observe any statistically signiﬁcant changes in
+perceived emotions.
+
+Regarding the identiﬁcation of observers with the system,
+i.e., HQ-I, we observed that they overall tend to agree more
+in the experimental condition (M 4.52, SD 0.84) than in the
+control condition (M 3.47, SD 0.96, see Figure 3). This dif-
+ference is statistically signiﬁcant (p < 0.01). In detail, we
+found that observers rated the experimental system to be
+more connective (control 3.92, SD 0.95; experimental 5.00,
+SD 0.73; p < 0.01), more stylish (control 2.85, SD 1.34; ex-
+perimental 4.00, SD 1.51; p < 0.05), more premium (control
+3.23, SD 1.64; experimental 4.25, SD 1.19; p < 0.05), more
+integrating (control 3.92, SD 0.76; experimental 4.94, SD
+0.77; p < 0.01), and less separating (control 3.92, SD 1.04;
+experimental 5.19, SD 0.98; p < 0.01).
+
+We further found that the attractiveness (ATT) of the
+bracelet changes signiﬁcantly, depending on whether it is
+adaptive or not. For the control condition observers agreed
+to the attractiveness with 3.82 (SD 0.86) on average, whereby
+they agreed with 4.77 (SD 1.10) in the experimental condi-
+tion (see Figure 3). This diﬀerence is statistically signiﬁ-
+cant (p < 0.01). In detail, the experimental condition was
+rated to be more pleasant (control 3.31, SD 1.32; experi-
+mental 4.44, SD 1.21, p < 0.05), likeable (control 4.08, SD
+1.32; experimental 5.13, SD 1.45, p < 0.05), inviting (con-
+trol 3.92, SD 0.95; experimental 4.75, SD 1.39, p < 0.05),
+good (control 4.46, SD 1.20; experimental 5.38, SD 1.26,
+p < 0.05), appealing (control 3.85, SD 0.90; experimental
+4.75, SD 1.24, p < 0.05), and motivating (control 4.31, SD
+0.75; experimental 5.38, SD 1.54, p < 0.05).
+
+ParticipantObserver012345ATTHQ−IATTHQ−IParameterValueConditionControlExperimental143perceived a diﬀerence and appreciated that the brightness of
+the display could be adapted in the experimental condition.
+In the experimental condition two participants mentioned
+that, after a while, they got used to the bracelet and did not
+notice that they were wearing it.
+
+6.4 Impact on Fluid Intake Behaviour
+
+After the study, 10 participants stated they drank more
+during the study than before. Two participants said they
+drank much more consciously. Another two participants felt
+conﬁrmed by the bracelet in that it showed them they drink
+enough. During the study, situations occurred in which par-
+ticipants did not feel the display to be necessary. For exam-
+ple, a participant reported that during lunch he did not need
+the display because he drank anyway. However, drinking be-
+haviour was not tracked in the study because it was not in
+the focus of this research. Eﬀects on ﬂuid intake behaviour
+have been investigated in previous work [6].
+
+7. DISCUSSION
+
+The results show that participants, who wore the bracelet,
+and observers diﬀered in their perception of the adaptive
+bracelet. Overall, participants rated the adaptive and the
+non-adaptive bracelet similarly. In the three ratings stylish,
+presentable and pleasant they rated the adaptive bracelet
+slightly higher. The ratings of observers were more marked.
+They rated the adaptive bracelet more positively than the
+non-adaptive bracelet in many aspects. Observers felt hap-
+pier when facing an adaptive bracelet. In general, they could
+identify signiﬁcantly better with the adaptive bracelet and
+found it to be signiﬁcantly more attractive than the non-
+adaptive bracelet.
+
+7.1 Adaptation in General
+
+Overall, participants liked the idea and concept of the
+bracelets. In general, they appreciated the mapping of ob-
+trusiveness levels to brightness levels, but their preferences
+for particular brightness levels varied. Some participants re-
+ported that in the beginning they could hardly estimate how
+they should adjust the brightness levels, but after experienc-
+ing the light in situ it was much easier.
+
+Five participants wished for a manual regulation of the
+bracelet’s brightness directly on the bracelet. This shows
+that it is important that the device can be adapted to dif-
+ferent contexts, but the adaptation does not necessarily need
+to happen automatically. During the study, situations oc-
+curred in which participants felt that the display of infor-
+mation was not necessary, e.g., while having lunch. This
+indicates that adaptation should not only be considered in
+terms of the presentation design, but also in terms of the
+information content that is presented. This implication ﬁts
+in well with Starner’s fourth ideal attribute of a wearable
+device: “Augment and mediate interactions with the user’s
+environment” [15].
+
+7.2 Emotional Responses
+
+We recorded the emotional responses to the bracelet from
+participants, i.e., wearers, and from observers, who were con-
+fronted with the participants and the bracelet in various
+situations. Our observations indicate that context aware-
+ness and the related brightness adaptation do not change
+the emotional responses signiﬁcantly. Therefore, we have
+
+to reject H1P and H1O, and cannot argue that an adap-
+tive light display improves perceived emotions for wearers
+or observers.
+
+In the interviews, ﬁve participants said they appreciated
+that the brightness of the display could be adapted in the
+experimental condition. This indicates a positive emotional
+change towards the adaptive bracelet from the subjective
+view of at least ﬁve participants. We suppose that the set
+of statements we used according to the DES could be the
+reason for why the emotion ratings diﬀered from the personal
+statements of participants. Of the eight emotions asked for,
+six were phrased negatively and only two positively, and the
+emotions were very hard. When comparing user interfaces
+that diﬀer only slightly in particular aspects, the emotions
+asked for might not change signiﬁcantly. Also, assessing the
+DES-oriented emotions in general might be diﬃcult when
+evaluating a product because they focus on emotions we
+typically do not connect to products, such as being “feared”
+or “sad”. Other emotions are not covered at all, e.g., the
+emotion described by “I appreciate that.”, which participants
+stated in the interviews, cannot be mapped to one of the
+emotions we asked for in the DES-oriented questionnaire.
+
+7.3 Identiﬁcation With and Attractiveness of
+
+the Bracelet
+
+The issued questionnaire comes with a section to mea-
+sure to what extent participants identify with the system.
+Further, another section measures the perceived attractive-
+ness of the system while being worn by participants. Both
+sections were taken from the popular and established At-
+trakDiﬀ questionnaire [8]. Our ﬁndings indicate that there
+are no measurable signiﬁcant diﬀerences in the identiﬁcation
+with and attractiveness of the system, therefore we have to
+reject H2P and H3P.
+
+Nevertheless, 5 of 16 study participants stated that they
+clearly noticed the diﬀerence between the default brightness
+and adapted brightness. Consensus was that the adaptation
+is highly appreciated and valued, particularly for sensitive
+situations, where the default brightness could be perceived
+as disturbing or distracting. The quantitative results in-
+dicate that participants found the adaptive bracelet signif-
+icantly more stylish and more presentable. Therefore, we
+suggest to further research the eﬀect of adaptation on the
+perceived attractiveness and identity.
+
+7.4 Observers’ Perception of the Bracelet
+
+In the study we investigated the bracelet from two per-
+spectives: participants, who were actual wearers, and ob-
+servers. We did this because earlier work in related ﬁelds
+showed that the perception of and reaction to wearable, in-
+teractive devices might diﬀer signiﬁcantly between these two
+groups.
+
+We also asked observers to assess their identiﬁcation with
+and the attractiveness of the bracelet with the same ques-
+tionnaire that we handed over to study participants. Our
+results indicate that observers can identify with the bracelet
+signiﬁcantly better in the experimental condition, i.e., when
+the bracelet is adaptive. Further, we found that an adaptive
+bracelet was assessed to be signiﬁcantly more attractive to
+the observers. Consequently, we have to accept hypotheses
+H2O and H3O.
+
+Overall, we can support the ﬁnding that wearers and ob-
+servers of a device can get a diﬀerent impression from a
+
+144wearable device. On average, we did not observe a signif-
+icant diﬀerence in HQ-I, i.e., identity, or ATT, i.e., attrac-
+tiveness, for participants. However, we did ﬁnd a signiﬁcant
+diﬀerence for observers (p < 0.01). While the ratings be-
+tween observers and participants are similar for the control
+condition, the observers seem to perceive the adaptation in
+a much more intense way, leading to a signiﬁcant change in
+the perceived attractiveness and identity (see Figure 3).
+
+We have the impression that observers are much more
+sensitive to minor changes, like the adaptation of an LED’s
+brightness. We further think that their feelings and insights
+notably contribute to the overall acceptance and success of
+wearable technology, and that this aspect has been under-
+evaluated in the last few years. In fact, few details are known
+how exactly the observers’ impressions drive their reactions,
+and how these reactions inﬂuence and change the partici-
+pants’ feelings. We therefore suggest that observers and the
+observer’s perspective should become an essential aspect of
+future design processes and research.
+
+8. CONCLUSION
+
+In the last years wearable devices that present information
+through simple light displays have been an emerging trend
+on the market. Characteristic for these displays is that they
+are worn in varying contexts and clearly visible by wearers
+and bystanders. Thus, while the presented information is
+crucial for a user, it can cause discomfort and confuse by-
+standers when displayed in a conspicuous way. However,
+it has not been researched yet how the displays should be
+designed in order to meet this design challenge.
+
+In this paper, we presented a ﬁeld study of an adap-
+tive light bracelet that serves as a ﬂuid intake reminder.
+The study elaborated on the aspect, that users perceived
+the lights’ brightness as too obtrusive in certain situations,
+which was learned from previous studies. In the study, 16
+participants wore the bracelet in their everyday life for a
+total of two weeks each. In one week the bracelet adapted
+the brightness of the light according to an ongoing event.
+In the other week the bracelet did not provide adaptiveness
+and always presented the light in the same brightness level.
+Our results show that overall, participants liked the brace-
+lets and the possibility to adapt the light’s brightness. We
+found participants did not signiﬁcantly perceive the adaptive
+bracelet diﬀerently with regard to emotions, attractiveness
+and identiﬁcation, apart from single ratings, i.e., they ex-
+perienced the adaptive bracelet as being signiﬁcantly more
+stylish, presentable and pleasant. The ratings of observers
+were more marked. They felt signiﬁcantly happier when
+facing the adaptive bracelet, could in general identify signif-
+icantly better with it and found it to be in general signiﬁ-
+cantly more attractive than the non-adaptive bracelet.
+
+From the study results we conclude, that, in general, inte-
+grating context awareness into wrist-worn light displays is a
+promising way to improve emotions towards the display, per-
+ceived attractiveness of the display, and identiﬁcation with
+it. The adaptation of the lights’ brightness level to user-
+preset values has shown to be experienced as positive by
+participants and in particular by observers. Our results will
+inspire designers and developers of wrist-worn light displays
+and - if implemented - will add to a higher acceptance of
+the displays by users and observers. We assume users will
+feel more comfortable using a light display in everyday life,
+observers will be less confused and less distracted, and that
+
+ﬁnally, this will increase the time lapse for which people use
+the wearable display.
+
+From our experiences we conclude that it is worthwhile
+to include observers in the design process and evaluation
+of wearable user interfaces because they can have diﬀerent
+experiences than the actual users.
+Integrating both per-
+spectives is particularly important when designing wearable
+interfaces as they are pervasive and thus inﬂuence all people
+in proximity.
+
+In future work, we will integrate another button on the
+bracelet that allows to manually regulate the light’s bright-
+ness, independently from the automatic brightness adapta-
+tion. To improve automatic brightness adaptation, we are
+interested in investigating in which situations users tend to
+manually regulate the brightness, e.g., by measuring lighting
+conditions and location information. Furthermore, we want
+to investigate how the brightness level should adapt when
+it depends on both, lighting conditions as well as calendar
+events. Further, we will reduce user input in that we will
+search calendar event titles for certain keywords, so that the
+brightness level mapping can happen automatically.
+
+9. REFERENCES
+[1] Ahde, P., and Mikkonen, J. Hello: Bracelets
+
+communicating nearby presence of friends. In
+Proceedings of PDC ’08, Indiana University (2008),
+324–325.
+
+[2] Burns, P., Lueg, C., and Berkovsky, S. Activmon:
+
+Encouraging physical activity through ambient social
+awareness. In Proceedings of CHI EA ’12, ACM
+(2012), 2363–2368.
+
+[3] Consolvo, S., McDonald, D. W., and Landay, J. A.
+
+Theory-driven design strategies for technologies that
+support behavior change in everyday life. In
+Proceedings of CHI ’09, ACM (2009), 405–414.
+
+[4] Dey, A. K. Understanding and using context. Personal
+
+Ubiquitous Computing 5, 1 (Jan. 2001), 4–7.
+
+[5] Dey, A. K., Salber, D., Abowd, G. D., and Futakawa,
+
+M. The conference assistant: Combining
+context-awareness with wearable computing. In
+Proceedings of ISWC ’99, IEEE Computer Society
+(1999), 21–28.
+
+[6] Fortmann, J., Cobus, V., Heuten, W., and Boll, S.
+Waterjewel: Design and evaluation of a bracelet to
+promote a better drinking behaviour. In Proceedings of
+MUM ’14, ACM (2014), 58–67.
+
+[7] Hansson, R., and Ljungstrand, P. The reminder
+
+bracelet: subtle notiﬁcation cues for mobile devices. In
+Proceedings of CHI EA ’00, ACM (2000), 323–324.
+
+[8] Hassenzahl, M., Burmester, M., and Koller, F.
+AttrakDiﬀ: Ein Fragebogen zur Messung
+wahrgenommener hedonischer und pragmatischer
+Qualit¨at. In Mensch & Computer 2003, vol. 57.
+Vieweg+Teubner Verlag, 2003, 187–196.
+
+[9] Izard, C. E., Dougheny, F. E., Bloxom, B. M., and
+Kotsch, N. E. The diﬀerential emotions scale: A
+method of measuring the subjective experience of
+discrete emotions. Tech. rep., Nashville: Vanderbilt
+University, Department of Psychology, 1974.
+
+[10] Kern, N., and Schiele, B. Context-aware notiﬁcation
+for wearable computing. In Proceedings of ISWC ’03,
+ISWC ’03, IEEE Computer Society (2003), 223–230.
+
+145[11] Lim, B. Y., Shick, A., Harrison, C., and Hudson, S. E.
+Pediluma: Motivating physical activity through
+contextual information and social inﬂuence. In
+Proceedings of TEI ’11, ACM (2011), 173–180.
+
+[12] Rhodes, B. The wearable remembrance agent: A
+
+system for augmented memory. Personal Technologies
+1, 4 (1997), 218–224.
+
+[13] Sawhney, N., and Schmandt, C. Nomadic radio:
+
+Speech and audio interaction for contextual messaging
+
+in nomadic environments. ACM Trans. Comput.-Hum.
+Interact. 7, 3 (Sept. 2000), 353–383.
+
+[14] Smith, A. R. Color gamut transform pairs. In
+
+Proceedings of SIGGRAPH ’78, ACM (1978), 12–19.
+
+[15] Starner, T. The challenges of wearable computing:
+Part 1. IEEE Micro 21, 4 (July 2001), 44–52.
+
+[16] Williams, A., Farnham, S., and Counts, S. Exploring
+wearable ambient displays for social awareness. In
+Proceedings of CHI EA ’06, ACM (2006), 1529–1534.
+
+146

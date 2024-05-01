@@ -1,0 +1,9 @@
+1. Abstract
+2. Introduction
+3. Background and Related Work
+4. Data Collection and Analysis
+5. Why People Stop Tracking
+6. Life After Tracking
+7. Discussion and Conclusion
+8. Acknowledgments
+9. References

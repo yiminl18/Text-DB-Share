@@ -1,0 +1,1780 @@
+Supporting Coping with Parkinson’s Disease Through
+Self-Tracking
+
+Sonali R. Mishra
+University of Washington School of
+Information
+Seattle, Washington
+srmishra@uw.edu
+
+Predrag Klasnja
+University of Michigan
+Ann Arbor, Michigan
+klasnja@umich.edu
+
+John MacDuffie Woodburn
+Sage Bionetworks
+Seattle, Washington
+woody.macduffie@sagebase.org
+
+Eric B. Hekler
+University of California San Diego
+San Diego, California
+ehekler@ucsd.edu
+
+Larsson Omberg
+Sage Bionetworks
+Seattle, Washington
+larsson.omberg@sagebase.org
+
+Michael Kellen
+Sage Bionetworks
+Seattle, Washington
+mike.kellen@sagebase.org
+
+Lara Mangravite
+Sage Bionetworks
+Seattle, Washington
+lara.mangravite@sagebase.org
+
+ABSTRACT
+Self-tracking can help people understand their medical condi-
+tion and the factors that influence their symptoms. However,
+it is unclear how tracking technologies should be tailored to
+help people cope with the progression of a degenerative dis-
+ease. To understand how smartphone apps and other tracking
+technologies can support people in coping with an incurable
+illness, we interviewed both people with Parkinson’s Disease
+(n=17) and care partners (n=6) who help people with Parkin-
+son’s manage their lives. We describe how symptom trackers
+can help people identify and solve problems to improve their
+quality of life, the role symptom trackers can play in helping
+people combat their own tendencies towards avoidance and
+denial, and the complex role of care partners in defining and
+tracking ambiguous symptoms. Our findings yield insights
+that can guide the design of tracking technologies to help
+people with Parkinson’s Disease accept and plan for their
+condition.
+
+CCS CONCEPTS
+• Human-centered computing → Empirical studies in
+HCI.
+
+Permission to make digital or hard copies of part or all of this work for
+personal or classroom use is granted without fee provided that copies are
+not made or distributed for profit or commercial advantage and that copies
+bear this notice and the full citation on the first page. Copyrights for third-
+party components of this work must be honored. For all other uses, contact
+the owner/author(s).
+
+CHI 2019, May 4–9, 2019, Glasgow, Scotland UK
+© 2019 Copyright held by the owner/author(s).
+ACM ISBN 978-1-4503-5970-2/19/05.
+https://doi.org/10.1145/3290605.3300337
+
+KEYWORDS
+Symptom tracking, personal informatics, health informatics,
+Parkinson’s Disease, coping with chronic disease, quality of
+life.
+
+ACM Reference Format:
+Sonali R. Mishra, Predrag Klasnja, John MacDuffie Woodburn, Eric
+B. Hekler, Larsson Omberg, Michael Kellen, and Lara Mangravite.
+2019. Supporting Coping with Parkinson’s Disease Through Self-
+Tracking. In CHI Conference on Human Factors in Computing Sys-
+tems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK.
+ACM, New York, NY, USA, 16 pages. https://doi.org/10.1145/3290605.
+3300337
+
+1 INTRODUCTION
+Parkinson’s disease (PD) is a neurodegenerative disease whose
+prevalence increases with age [70, 75] and reaches 2.6% in
+people 85-89 years old [70]. Within the US, about a half a
+million people live with PD [62], a number which is expected
+to grow to nearly a million by 2030 [49]. PD can be treated
+with a variety of medications, but not cured.
+
+People with PD (PwP) struggle with a variety of symptoms,
+including motor and cognitive impairments that can reduce
+people’s quality of life [62]. The motor symptoms tremor,
+bradykinesia (i.e., slow movement), and rigidity (i.e., stiffness
+around joints) are the cardinal features of PD and perhaps
+what it is best known for, but PwP can also experience a
+large range of other motor symptoms such as speech im-
+pairment, a shuffling gait, and dystonia (a type of muscle
+cramp), as well as non-motor symptoms such as gastroin-
+testinal problems, dementia, psychosis, and sleep disorders
+[12]. The rate of progression of symptoms is highly variable
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 1between individuals [81], and not all individuals develop the
+same symptoms [61]. In addition, symptom severity fluctu-
+ates in the short term and can be impacted by factors like
+stress [44]. As a result, living with PD is characterized by "the
+experience of living with and managing unpredictability,"
+with the knowledge of eventual loss of independence [28].
+
+Although the symptoms of PD can be quite disabling, the
+impact of the disease on people’s quality of life is not fully
+explained by severity of symptoms [8, 25, 44]. Researchers
+have suggested that this is because the types of coping strate-
+gies used affect PwP’s quality of life [8, 25, 44]. Coping is
+the performance of cognitive and behavioral strategies to
+manage stress [80], and individuals can use more than one
+coping strategy in response to a given situation, for example
+by changing from one strategy to another [20]. Researchers
+have used a variety of frameworks to classify and evaluate
+individual coping strategies across populations [80], but in
+the context of PD, coping strategies geared towards problem-
+solving, meaning the application of logical problem-solving
+techniques to improve a situation, have been associated with
+improved quality of life [8] and greater well-being [44]. These
+strategies are called "positive" or "adaptive" coping strate-
+gies, and include behaviors like making and carrying out a
+plan of action, and coming up with solutions to a problem
+[21]. By contrast, coping strategies geared towards avoiding
+or denying the situation have been associated with worse
+quality of life in PwP [8] and worse psychological adjust-
+ment to the disease [44], although other studies suggest that
+denial can sometimes be adaptive [38, 39] and a balanced
+approach with a mix of the two may be best in the context
+of PD [78]. Examples of escape-avoidance coping include
+strategies like refusing to believe that something has hap-
+pened, and fantasizing about how things might be different
+[21]. Coping strategies associated with lower quality of life
+are often called "negative" or "maladaptive."
+
+Although HCI researchers have explored how self-tracking
+supports self-management of chronic illness (e.g. [3, 45, 48]),
+more work is needed to understand the role tracking tech-
+nologies can play in helping people cope with progressive
+decline. In other contexts, researchers have noted that self-
+tracking applications fail to keep up with changes in users’
+lives [18]. Given the constant change of life with PD, and the
+impact that the strategies PwP use to cope with that change
+can have on their quality of life, it is important to understand
+how technologies designed to support people in managing
+their illness can influence PwP’s strategies for coping with
+decline in their condition.
+
+We explored the following research question: how can track-
+ing technologies be designed to help people cope with pro-
+gressive decline? To investigate this question, we interviewed
+both PwP and their care partners (friends and family mem-
+bers who help the PwP manage their disease) about their
+symptom-tracking practices and their attitudes towards symptom-
+tracking. We included care partners because PwP often work
+with care partners to manage their illness [66]. In this pa-
+per, we illustrate how self-tracking technologies can support
+PwP and their care partners cope with disease progression
+by helping them pursue positive coping strategies and com-
+bat their tendencies towards maladaptive avoidance. We also
+describe how ambiguous symptoms in PD can cause tensions
+between PwP and care partner. Finally, we discuss design
+implications for creating tracking technologies for PwP and
+their care partners.
+
+2 BACKGROUND AND RELATED WORK
+To understand how self-tracking can fit into life with PD, it is
+important to understand how PD is currently evaluated and
+treated. We give some general background on the evaluation
+and treatment of PD to contextualize our findings. We also
+summarize some of the related work in HCI on self-tracking
+in the context of chronic disease and on support for PD.
+
+Evaluation and Treatment of Parkinson’s Disease
+PwP see their clinicians (often neurologists and movement
+disorder specialists) in appointments spaced months apart.
+Clinicians typically evaluate patients using a scale called the
+Unified Parkinson’s Disease Rating Scale (UPDRS), a ques-
+tionnaire with items measuring a variety of symptoms of PD
+[24]. Although non-motor symptoms significantly impact
+quality of life [7, 9], neurologists typically focus on evaluat-
+ing and treating motor symptoms [7].
+
+To control their motor symptoms, many PwP take drugs like
+levodopa which are known for being very fast-acting, and
+lasting for anywhere from 2-6 hours [67]. As the drugs wear
+off, symptoms resurface, leading many PwP to experience
+"on" and "off" periods, when the drugs are either working
+or not working [62]. PwP also must balance the benefits
+of the treatment with side effects like dyskinesia, meaning
+involuntary movement related to levodopa [89]. Exercise
+can also give PwP temporary relief from pain and tempo-
+rary improvement in some motor function [90]. PwP also
+sometimes manage their symptoms by taking medication
+in conjunction with Deep Brain Stimulation (DBS), a device
+implanted in the brain that uses electric currents to help PwP
+manage their symptoms, and which can drastically reduce
+the amount of medication needed [88]. However, even with
+appropriate use of these kinds of treatments, PD remains
+incurable, and the symptoms will eventually progress.
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 2Self-Tracking in the Context of Chronic Illness
+HCI researchers have studied self-tracking in the context of
+several chronic illnesses, including diabetes [46, 48], bipo-
+lar disease [4, 50, 51], chronic pain [19], multiple sclerosis
+[3], migraine [82], irritable bowel syndrome [33], and others.
+Much of this work has focused on how tracking tools support
+self-management, for instance by helping people understand
+how different factors affect their illness and gain a sense of
+control [3, 33, 52], as well as gather data to share with clini-
+cians to manage their care [14, 60, 94, 97] or even conduct
+clinical screenings on themselves at home [32]. Researchers
+have also investigated how family members can participate
+in tracking symptoms [74], and how tracking systems can
+better help patients communicate their symptoms with fam-
+ily members [29]. Recently, researchers have also explored
+how tracking technologies can help users contribute knowl-
+edge to shed light on "enigmatic" diseases [54].
+
+Researchers have found that self-tracking supports a variety
+of goals in addition to self-management of health. For in-
+stance, people suffering from migraines use self-tracking in
+part to gain recognition from their clinicians [82]. Mamykina
+et al. found that people self-tracking for diabetes manage-
+ment also used the system to aid in identity construction
+[47], while Matthews et al. found that manual and automated
+tracking could have different impacts on people with bipolar
+disorder’s identity construction [50]. MacLeod et al. found
+that self-tracking enabled people to develop a sense of cu-
+riosity and exploration, and that people valued being able to
+generate data for medical research [45].
+
+However, most of the work on self-tracking has focused
+on conditions where health outcomes can be controlled or
+at least stabilized through behavior (e.g. diabetes), or where
+there is no expected decline (e.g. bipolar disorder). By con-
+trast, degenerative conditions like PD mean that people di-
+agnosed must expect their condition to worsen over time,
+no matter what they do. Although degenerative conditions
+have been studied in the literature [3], more work needs
+to be done to understand how the design of tracking tech-
+nologies can help or hurt people dealing with the inevitable
+progression of a degenerative illness.
+
+HCI Research on Parkinson’s Disease
+Researchers in HCI and health informatics have done much
+work on developing systems to measure and monitor the
+symptoms of PD, including mobile phone systems [2, 40, 63,
+64, 96], image processing of handwriting [73], wireless and
+wearable sensors [27, 30, 42, 43, 53], and many others. Much
+of this work has focused on the development of the systems,
+and has been instrumental in demonstrating the potential of
+
+technology to successfully monitor the symptoms of PD in a
+quantified way. Researchers have also highlighted how mo-
+bile technologies have the potential to improve the quality
+of life of PwP by monitoring non-motor symptoms through
+markers like social interactions [87] and the amount of dis-
+tance a PwP travels in a day [40]. However, these systems
+often do not provide data back to the PwP, although some
+offer data to clinicians [17, 27, 59].
+
+Other work has examined how PwP themselves could or
+do use tracking or other technologies to live with and man-
+age their disease. Researchers have examined how to sup-
+port PwP in staying active and maintaining correct posture
+through exergaming [23, 41, 56, 85], as well as how to help
+PwP communicate with clinicians [60, 65, 72, 95] and conduct
+self-experimentation [79]. McNaney et al. have investigated
+how technologies can help people become more aware of PD
+symptoms like soft speech and drooling [55, 57] and how sys-
+tems like Google Glass can be used to notify PwP when their
+medications are wearing off or when they are experiencing
+freezing symptoms (when a person is temporarily unable to
+move) [58]. Several researchers [58, 68, 92] have also noted
+the need for accessibility in tracking technologies designed
+for PwP. Vega et al. found that PwP preferred paper-based
+diaries for self-report for a variety of reasons, including that
+it was easier for people to physically enter information, and
+that their paper-based diary was designed to reduce user
+burden [92]. However, mobile technologies have also been
+found valuable for self-tracking. In a clinical deployment of
+a self-tracking app designed to be used in conjunction with
+clinicians, Lakshminarayana et al. found use of the app led
+to improved medication compliance and quality of clinician
+consultations [37].
+
+Some researchers have found that PwP desire not just med-
+icalized symptom trackers, but technologies for self-care,
+meaning technologies that help people live their lives be-
+yond merely tracking symptoms [67]. Nunes et al. found
+that PwP desired technologies that could help them focus
+on everyday tasks like medication taking and exercise [67].
+In addition, researchers have stressed the importance of de-
+signing to support active collaboration between PwP and
+care partners in self-care [66, 67, 72], because care partners
+collaborate with PwP in every aspect of self-care [66].
+
+Although researchers have found that technology for PwP
+must adapt to people’s changing condition [85? ], little work
+has been done on how tracking technologies can be designed
+to help people cope with this change. McNaney et al. found
+that PwP can be reluctant to track their decline [56], un-
+derscoring the fact that tracking technologies are not neu-
+tral recorders of a person’s condition, but something that
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 3users interact with actively in changing contexts [67] that
+influence them psychologically. More work must be done to
+investigate how tracking technologies should be designed to
+help people with PD understand and approach the inevitable
+progression of their disease.
+
+3 METHODS
+To understand how symptom trackers could support or hin-
+der PwP in confronting decline, we conducted interviews
+with both PwP and care partners. We included care partners
+in our sample because PD requires work from care partners
+as well as from the person diagnosed [66, 67]. Participants
+were recruited through several channels. First, we recruited
+people from a local PD exercise class by attending the class,
+describing the study, and inviting class members to partici-
+pate. This was done with permission from the class instructor.
+Second, we recruited participants through social media and
+word of mouth. Third, we recruited people by reaching out
+to participants in two separate studies involving PD mobile
+apps, both taking place in the United States. For these partici-
+pants, study organizers reached out to potential participants
+with information about the study, and people interested in
+participating contacted us. Fourth, we recruited new partici-
+pants through snowball sampling by asking people who had
+already agreed to participate if their primary care partner
+would also be willing to participate, or if they knew any
+other PwP or care partner who might be willing to partici-
+pate. Members of the research team discussed themes arising
+from the data as interviews progressed, and recruitment con-
+tinued until we reached saturation. Note that we use the
+term "care partners" rather than the more usual "caregivers"
+because many participants strongly disliked the word "care-
+giver". In total, we interviewed 17 PwP, including 12 men
+and 5 women. PwP participants ranged in age from 48-74
+(mean 61.2, median 61), and had been diagnosed between 1
+and 19 years previously (mean 7.9 years, median 7 years). We
+interviewed 6 care partners, all women, ranging in age from
+26-65 (mean 53.6, median 58, with age for one care partner
+not reported). In some cases, we interviewed care partners
+of interview participants (P01-C, P02-C, P03-C, P08-C); in
+others, we interviewed care partners but did not interview
+the PwP (P12-C, P14-C). Four care partners were the PwP’s
+primary care partner (their spouse in all cases) (P01-C, P02-C,
+P08-C, P14-C); one was the PwP’s granddaughter (P12-C);
+and one was the PwP’s workplace assistant (P03-C). Since
+P03-C chose to participate as part of P03’s interview rather
+than independently, in total we conducted 22 interviews
+rather than 23 interviews.
+
+Interviews were conducted either in person or remotely over
+video conference, based on the participant’s availability and
+preference. Participants were drawn from all over the United
+
+States. We asked participants questions about a variety of top-
+ics, including: their current symptom tracking habits, such as
+what kinds of things they found important to track and why
+tracking these things were important to them; how they pre-
+pared for clinic visits and what kinds of questions they had
+about their symptoms; and what kind of information they
+thought was most important to capture about symptoms,
+such as objective measures (where possible), notes about the
+context, and other data points. As mentioned earlier, mem-
+bers of the research team met regularly to discuss emergent
+themes from the findings. Through discussion of the first few
+interviews (P01, P01-C, P02, P02-C, P03, P03-C), we identified
+four potential use-cases of self-tracking technologies that we
+wanted to explore further: tracking long-term progression,
+sharing tracked data with clinicians to manage medication,
+self-tracking to identify factors that affected symptoms, and
+having a care partner track symptoms for someone with PD.
+
+Figure 1: Excerpt from a storyboard used in interviews. A
+PwP wonders how they have been doing over the last 6
+months, takes a finger tap test, and views a declining trend
+in results from the last 6 months. The last square in the fig-
+ure has an empty thought bubble so that interview partici-
+pants could voice their own reactions.
+
+To help us explore these themes with participants, we
+created four storyboards and added them to the end of the
+interview protocol (see Fig. 1 for an excerpt from a story-
+board and auxiliary materials for all storyboards). Starting
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 4with P04, we began the interview by asking our original in-
+terview questions, but partway through the interview would
+show participants the storyboards and walk them through
+the four use-cases as represented in the storyboards. After
+introducing each storyboard, we asked participants about
+their reactions to the storyboard and what value or chal-
+lenges this use case represented for that participant. Using
+the storyboards enabled us to focus the interview on themes
+relating to long-term tracking, viewing data about decline,
+and involving care partners in symptom tracking. In addi-
+tion, because three of the storyboards prominently featured
+a particular symptom tracking metric—the finger tap test (a
+test in which the user taps on two circles on the screen with
+alternate fingers for a set period of time, yielding metrics
+like total tap count as well as more abstract measurements
+like the user’s accuracy in hitting the circles)—they helped
+us discuss with participants the value of different types of
+symptom tracking measures. Interviews were recorded and
+transcribed. One member of the research team analyzed the
+data using an inductive thematic coding process [71]. Specif-
+ically, one member of the team began by conducting open
+coding [15] on the transcripts, then discussed themes in the
+data with other members of team and iteratively refined
+the codebook. Because our focus was not to understand the
+differences between PwP’s needs and the needs of care part-
+ners, but rather to get a holistic picture of what role symptom
+tracking technologies could play for PwP, we analyzed data
+from PwP and care partners together and present them as
+one participant pool. In the findings, we include both PwP
+and care partners in the term "participants" unless otherwise
+specified. This study was approved by Western Institutional
+Review Board.
+
+4 FINDINGS
+Participants’ current tracking habits were mixed: some cur-
+rently tracked their symptoms, some did not. Most of those
+who did not track cited as a reason the lack of good tools
+for doing so. Overall, our participants were enthusiastic
+about the potential of self-tracking for helping them to ap-
+proach their disease with a problem-solving orientation as it
+changed over time. Moreover, participants saw certain kinds
+of self-tracking technologies as a way to help them combat
+their own tendencies towards avoidance coping strategies
+and to confront their current condition honestly. However,
+participants experienced symptoms they could not track
+themselves, and sometimes struggled to differentiate symp-
+toms that were caused by PD from symptoms that arose
+from other causes or even from everyday life. Participants
+discussed how care partners could aid in tracking ambiguous
+symptoms, but also how such aid could lead to tension in the
+determination of what counted as a symptom of PD. Below
+we give a more detailed report on our findings.
+
+Current Tracking Habits and Attitudes Towards
+Tracking
+Some of our participants currently tracked their symptoms
+or had in the past, and some did not, either because they had
+just been diagnosed or because they simply did not see the
+value. Eight participants currently kept track of their symp-
+toms through some form of journaling on paper or mobile
+apps. Four participants used to keep a formal log of their
+symptoms on paper or digitally, but had stopped because the
+tool was too frustrating to use and did not give them what
+they needed, or because they no longer wanted to. Eleven par-
+ticipants did not formally keep track of the PwP’s symptoms.
+
+Overall, both participants who currently tracked their symp-
+toms and participants who did not were enthusiastic about
+tracking not just symptoms, but also medications and var-
+ious environmental, behavioral, and health-related factors
+that might affect the PwP’s symptoms. For instance, P01-C
+and P11 were interested in tracking how diet affected medi-
+cation efficacy, and P02 was interested in tracking how low
+light conditions and health metrics like his blood pressure
+and weight affected his symptoms. In fact, only a couple
+of participants, like P01 and P10, did not find self-tracking
+valuable. P01 compared tracking the progression of his symp-
+toms to knowing his net worth, saying it "might be interest-
+ing information but it’s also kind of meaningless". P10 had
+stopped tracking because her symptoms were not changing
+very much and because she did not want to think about her
+symptoms every day. Other participants who did not track,
+however, cited the lack of good tools for tracking symptoms.
+Most did not know that mobile apps for tracking PD symp-
+toms existed at all; the few who had tried some out generally
+did not find them satisfactory. For instance, P06 had tried sev-
+eral PD tracking apps, but ultimately rejected them because
+they cost money, were designed for clinicians, and/or did not
+let him retrieve data in a time period useful to him, instead
+restricting his data retrieval to the last week. Some of the
+participants who did not track their symptoms regretted this
+choice, and wished that they had been self-tracking earlier
+in the illness. For instance, P03 said that some of her symp-
+toms had improved and she wished she had data "because
+I would have an idea of what’s going on." However, she was
+concerned that, "because I’m starting so late in the game, and
+there’s no easy way for me to track," it would be impossible
+for her to start now.
+
+Self-Tracking to Support Planful Problem Solving
+Participants saw tracking technologies as tools that could
+help them plan for changes in their condition over the long
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 5and short term. For the long term, participants wanted symp-
+tom trackers to help them monitor their long-term progres-
+sion to help them view decline as something to be planned
+for rather than a black box. For the short term, participants
+wanted tools that could help them work with clinicians be-
+tween visits on changes to their medications. Some partici-
+pants also felt that the framing of data was important for help-
+ing PwP adopt a problem-solving orientation to change in
+condition. These sentiments reflect the need for ’planful prob-
+lem solving’ (i.e., the application of "logical problem-solving
+strategies" to improve a situation), which has been associated
+with higher health-related quality of life in PwP [8]. Partic-
+ipants saw tracking technologies as tools that could help
+them apply planful problem solving strategies to changes in
+their condition.
+
+Self-Tracking Over the Long Term. Participants knew that
+change would happen to them sooner or later: their symp-
+toms would eventually progress. To deal with that change,
+some participants wanted tracking tools that could help them
+identify and plan for problems as soon as they developed.
+As P19 put it, " . . . don’t sit back and let the disease happen
+to you." To "slow the progress of the disease, if possible," P19
+researched and tried out new techniques to control his symp-
+toms, and tracked his symptoms for clinical studies and his
+own purposes.
+
+In the long term, some participants wanted to track their
+progression because in order to plan for it. A few partici-
+pants were not interested in tracking their progression, like
+P01 quoted earlier. However, even though progression in PD
+can be difficult to predict, other participants wanted data
+to offer them guidance in making long-term planning deci-
+sions. For example, P05 commented, "I just happen to be one
+of those that wants to know my state of decline. I’m 61 years
+old. I’ve got a grandson that’s four and another grandson that’s
+20 months. Do I need to make sure and do things with them
+sooner versus later? And [tracking] helps me make lifestyle
+and preparation decisions, probably a little more succinctly
+than I would otherwise." Similarly, P03 wanted to map out her
+progression so that she could predict when "you’re gonna be
+useless. Then there might a point that you wanna intervene
+before you become useless, right?"
+Self-Tracking Over the Short Term. PwP often see their clini-
+cians in appointments months apart or more. Participants
+wanted tracking technologies that could help them track
+their symptoms against their medications so that they could
+work with their clinicians between visits to adjust their med-
+ication as their needs changed. Self-tracking systems were
+tools that could help them take action to solve issues that
+arose with their medication. For example, P18, who tracked
+his symptoms and medication extensively using a variety of
+
+tools, said he had gotten started with self-tracking because
+his neurologist "didn’t know how to tweak things [related to
+medications and DBS] to . . . help with [my] symptoms". Par-
+ticipants also worried that relying solely on their neurology
+visits to resolve problems would leave them helpless to re-
+solve issues for long periods of time. As P15 said, "I think
+that if it’s [limited to] visits, I think that’s too long a period
+of time. . . . there needs to be a shorter feedback period. . . . as a
+patient, I don’t want to be mis-medicated for any longer than I
+need to be." Similarly, P18, who had recently gotten DBS and
+was still trying to find the right medication regimen to fit his
+new situation, wanted to be able to "record stuff either right
+there [in the clinic] or even when you’re not there and be able
+to take that to your doctor and have [your DBS and treatment]
+being able to be changed . . . ."
+
+To make adjustments to their medications, participants needed
+fine-grained data about their symptoms. For instance, P11
+envisioned a tool that would help her measure her on and off
+periods by letting her measure her symptoms several times
+over the course of a few hours, so that she could see exactly
+how long it was before her medications began to work and
+wear off. P08 similarly needed a tool that would measure
+exactly how bad his symptoms were in quantifiable terms:
+"I don’t want it to just be oh are you shaking or not shak-
+ing, I want to know how much". However, participants also
+needed to be able to capture contextual information about
+their symptoms. For example, P04’s notes for his clinician
+contained rich contextual detail. He wrote as a note on his
+phone to share with his doctor, "The tremors when left hand
+is idle but not when [doing] a task, some shoulder or arm pain
+but only when resting on my elbows."
+
+Framing Data to Support a Problem-Solving Orientation. A
+couple of participants suggested that how data was presented
+to the user was important for supporting a problem-solving
+orientation. While many participants, like P18, preferred raw
+data that they could interpret themselves, participants like
+P11 and P12-C stressed the importance of framing data about
+decline in a way that highlighted actionable insights. P11 felt
+that symptoms should only be tracked in context of control-
+lable factors like exercise, saying, " . . . when you do a test like
+[the finger tap test], it needs to be associated with . . . something
+that they’re . . . either choosing to do or choosing not to do. . . . I
+mean at least if they get worse and they’re doing it, you can
+say, well, it would be worser. [sic]" P12-C had found that her
+grandfather, who had PD, was more receptive to her help
+when she helped him solve a problem rather than simply
+pointing it out: ". . . we described it as, ’Here’s some new shoes,
+but you can still be independent with them. I’m not like taking
+away your independence. . . . I got you better shoes.’" P12-C felt
+that framing bad news in terms of actionable insights was
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 6more conducive to problem-solving than simply presenting
+data showing a "downward spiral".
+
+In summary, participants saw self-tracking technologies as
+tools that could help them plan for changes in their health
+over the long and short term, reflecting a desire to use self-
+tracking to support planful problem-solving type coping
+strategies to respond to changes in their condition. In ad-
+dition, some participants thought the framing of data was
+important for nudging people towards positive coping strate-
+gies in the face of changes in their health.
+
+Self-Tracking to Escape ’Escape-Avoidance’ Coping
+Several participants in our study spoke of the need for data
+that they could not game or override. They worried that they
+would unconsciously try to portray themselves as better
+than they actually were when tracking their symptoms, and
+wanted self-tracking systems that could objectively record
+their symptoms. Some participants also hoped that self-tracking
+data could help them convince someone close to them (a care
+partner or the PwP themselves) to accept the reality of PD.
+Participants’ desire for objective data about their symptoms
+spoke to a desire to combat unconscious tendencies towards
+denying the reality of their symptoms, or ’escape-avoidance
+coping,’ which has been linked to lower quality of life in peo-
+ple with PD [8]. Participants wanted objective self-tracking
+systems to help them accept the reality of their current state.
+
+Self-Tracking to Combat Tendencies Towards Denial. Symp-
+toms like tremor can be captured meaningfully in three differ-
+ent ways. One way is objective metrics, like accelerometer
+data from a phone, or the results of a finger tap test. Another
+way is with subjective metrics like a rating of how bad
+the tremor is from mild to severe, and a third is with func-
+tionalist metrics like a description of how specific tasks
+and activities of daily life are impacted by the tremor. Some
+participants worried that they would not accurately track
+symptoms without an objective tracking system because
+they would try to appear better than they were. Participants
+did not always trust themselves to be able to offer represen-
+tative behavior to their clinicians during the periodic clinical
+exam. As P15 put it, "God bless my movement disorder neurol-
+ogist, but she knows that I can game her. I just come in there
+and I can just be perfect. . . . I will outperform what I normally
+would." This concern, however, extended beyond clinic visits
+to self-tracking systems. P08, concerned about "all kinds of
+placebo effects in Parkinson’s research," wanted data "that I
+couldn’t override". He wanted to be able to test tracking tools
+to make sure he could not "game" them before he was willing
+to trust them. P15 went further, rejecting any kind of metric
+other than wearable sensors because, "Us PD patients, the
+Parkies, we compensate all the time. That’s how you learn to
+
+live, maintain a good lifestyle. So you know, you’re fighting
+against human nature by doing" periodic, explicit data collec-
+tion instead of using continuous sensor data. P16 felt that his
+evaluations of not just a subjective symptom like pain but
+even an outwardly measurable symptom like tremor would
+be impacted by his surroundings. He said, ". . . my problem
+is if it’s the dead of winter, I’m sitting in here and I’m in pain
+and having a tremor, I’ll bet you that if you compare that same
+tremor to the spring time when the birds are singing . . . I’ll bet
+you my response is different." These statements suggest that
+participants felt they could not rely on themselves to accu-
+rately report their current condition, either to themselves or
+to clinicians.
+
+Some symptoms could not be tracked with objective metrics.
+For instance, P09 experienced a symptom she called "tippi-
+ness" that was different from her actual unsteadiness, but
+rather "a strange perceptual thing that makes me feel unsteady,
+even though I’m not actually unsteady." Several participants
+also experienced cognitive symptoms like forgetfulness or a
+sense of someone standing behind them, which one partici-
+pant called "the presence" (P16). For these kinds of symptoms,
+P01-C expressed concern that people’s willingness to track a
+symptom would depend on how they were asked. P01-C wor-
+ried that PwP’s reports of the symptoms they experienced
+would be greatly impacted by context. Thinking about clinic
+visits with her husband, she voiced concern that PwP would
+not give clinicians accurate information if they perceived
+their symptoms to be "bad":
+
+". . . our doctor, who’s really good, she first asked, ’Are you hav-
+ing hallucinations?’, and then after that, she said, ’Do you ever
+feel like you just see something out of the corner of your eye,
+but you don’t quite know what it is?’ And of course, if you
+ask that question second, the person is gonna say, ’Oh, that’s
+a precursor to hallucinations, hallucinations are bad. I don’t
+have them, I’m going to say no to that question.’ Even if they
+maybe have felt like there’s this weird sense of something on
+the edge of the field of vision."—P01-C
+
+In addition, participants were concerned that they would not
+always be able to take the time to take objective measures
+of their symptoms, even if the symptom could theoretically
+be measured objectively. P15 gave the example of being "in
+a meeting. . . I’m feeling unsteady. Am I going to stop and log
+in the app and indicate—the answer of course is no. . . ". Partici-
+pants were also not always aware of their symptoms: as P04
+said, "sometimes I don’t even know, I look down and I see [the
+tremor]. I don’t even know that it’s happening."
+
+Because of the difficulty of logging symptoms at any time,
+P11 wanted to be able to correlate her subjective sense of
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 7her symptoms with objective measures. As she described it:
+
+". . . I think what would be an interesting thing to know is . . . do
+they correlate. . . . So let’s say today I’m having a real big prob-
+lem with tremor. So that I open up the app to a point where
+every hour on the hour I get a prompt that says tremor, one,
+two or three. . . . at the end of the day you could then pull that
+up and put over it, you know, superimposed on it, what the
+[objective] tremor measurement was."—P11
+
+Dealing with Denial in Others. A couple of participants strug-
+gled not just with forcing themselves to accept PD, but with
+getting other people close to them to accept it. One partici-
+pant, P04, hoped that symptom tracking systems could help
+him get his spouse to accept his condition. P04 wanted his
+spouse to complete the same finger tap test that P04 himself
+performed so that he could compare his own data to that of
+his spouse. P04 felt that his spouse was "still trying to ignore
+it and he hasn’t gotten on board with this is a life changing
+thing and we’re just going to have to accept it and move on."
+He wanted to be able to record his data side by side with
+his spouse’sâĂŤdata that could help him demonstrate to his
+spouse the difference his symptoms made. From the other
+side, P14-C wanted her husband, who had PD, to accept his
+condition. She wanted data to prove to him that his medica-
+tions made a difference to help him accept that he needed
+treatment:
+
+". . . he can’t see that there’s a difference when he takes his
+meds. And so if I get him to take his meds and then, say, 20
+minutes later do the test again, maybe he can see that there
+is a change in the tremor test or the tap test. . . . And so maybe
+I can actually show him with that, that he’s actually doing
+better on the meds, which would be a huge help for me. . . . He
+wouldn’t be quite so resistant to taking the meds."—P14-C
+
+On the opposite end of the spectrum, participants did not
+always want to admit to symptoms that they experienced,
+and felt betrayed when their care partners kept track of those
+symptoms and reported them to clinicians. P11 and P04 both
+complained that their care partners liked to "tattle" (P11)
+or "rat [them] out" (P04) at clinic visits. Anticipating this
+reaction, other participants felt that care partners should be
+able to track PwP’s symptoms independently of the PwP
+themselves. P12-C, for instance, took care of her grandfather
+with PD in conjunction with her whole family. She needed
+a way for care partners to share notes with each other so
+that their collective picture could help them all decide how
+best to take care of the PwP, without his involvement at all.
+P13, herself a PwP, likewise felt that care partners needed
+tracking systems independent of PwP because sometimes
+
+PwP "tend to get really belligerent and defensive" when con-
+fronted with their symptoms.
+
+In summary, some participants worried that they would cheat
+their own self-tracking systems and present their symptoms
+as better than they were if they did not have objective metrics
+that they could not beat. Concerned that they could not take
+the time to log objective metrics whenever they were experi-
+encing symptoms, participants suggested that self-tracking
+systems could help them learn to associate their subjective
+feelings with objective metrics. Participants also saw value
+in self-tracking systems for convincing others close to them
+to accept the reality of PD, but some participants with PD
+wanted the ability to escape tracking symptoms they did
+not wish to admit to. As a result, some participants felt care
+partners needed tools to track PwP’s symptoms completely
+independently of the PwP themselves.
+
+Ambiguous Symptoms and the Role of Care Partners
+Participants were interested in using self-tracking technolo-
+gies to help them cope with changes in their condition, but
+they often struggled with symptoms that were unobservable
+(in that PwP could not observe them themselves) or were
+ambiguous in nature. In the first case, care partners could
+play a clear role. However, in the last case, tensions some-
+times arose between participants with PD and care partners,
+because they could not always agree on whether change was
+happening or what it meant. As P01-C put it, "I’d like to think
+that it would be possible to be graceful about changes. But if
+you’re confused about what changes are, that’s harder." We
+describe each of these types of symptoms and the role of
+care partners in tracking them.
+
+Care Partners and Unobservable Symptoms. Participants some-
+times wanted to track symptoms that they could not actually
+observe themselves, such as sleep and soft speech. PwP some-
+times speak very quietly without realizing it, as a result of
+PD. As P07 put it, "When I think I’m talking normal . . . it’s not
+the right normal." In these cases, some participants felt that
+care partners could help track symptoms. For instance, par-
+ticipants like P02 thought care partners were instrumental
+in reporting sleep symptoms—he himself relied on his wife
+to notice when he fell asleep while reading the newspaper,
+and how long he had been asleep.
+
+Care Partners and Ambiguous Symptoms. Participants fre-
+quently wondered whether what they were experiencing
+resulted from PD or from another cause. For instance, P02,
+who had recently been hospitalized for a knee surgery, had
+been experiencing increased tremor in his leg, and was un-
+sure if his condition was changing or if his increased tremor
+was temporary and related to his hospitalization. Partici-
+pants determined if this type of symptom was due to PD
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 8either by waiting to see if it lasted (like P02) or by testing if
+medication improved the symptom.
+
+However, participants also sometimes struggled with distin-
+guishing symptoms from everyday experience. For instance,
+P02 explained how knowing that swallowing issues were a
+symptom of PD would get ". . . in the back of your mind, and
+at any time you have a difficulty swallowing or, say, you get
+a coughing spell after drinking or something like that, you’re
+gonna attribute it to the Parkinson’s when that may not be the
+case at all."
+
+Some participants felt care partners had a role to play in
+identifying these ambiguous symptoms. For instance, P15
+cared a great deal about data validity in tracking his symp-
+toms, and saw his care partner as a way to validate data that
+could not be gathered objectively. He said, ". . . I think if you
+. . . say ’I felt forgetful today’ and the caregiver can say yes or
+no, it validates the data." However, asking care partners to
+track symptoms was not straightforward, in part because
+PwP and care partners sometimes disputed whether some-
+thing was a symptom at all. As P11 put it, "Here’s the thing.
+My husband will say to me that he thinks that I am forgetful
+or whatever, and I looked at him and I’m like, are you kidding
+me? You say that because I have Parkinson’s. Am I allowed to
+tell him that because he’s older?" Care partners also worried
+about sorting symptoms out from everyday life. P01-C, for
+instance, observed that her husband had been having occa-
+sional difficulty parking, and could not tell if it was from
+PD or just his usual parking style. "Then from the outside,
+then I think, ’Well, maybe that’s a symptom.’ Or maybe that’s
+just his personality. . . . How would I know? I’m not inside his
+skin. . . . You can always come up with rational explanations
+for slightly odd stuff, so when does it become a symptom?"
+
+Care Partners in a Self-Tracking System
+Participants had mixed views on whether care partners should
+be users of self-tracking systems for PD. Some participants
+wanted care partner participation within the self-tracking
+system, like P04, whose desire to compare his finger tap test
+data with his spouse’s was discussed earlier, and P11, who
+thought it was valuable to be able to invite her care partner to
+help her track specific symptoms like sleep. However, other
+participants felt that care partner involvement should hap-
+pen through face-to-face conversations rather than through
+a "machine cold" (P18) self-tracking system. Even P15, who
+thought care partners could act as guarantors of data valid-
+ity, felt that he would "not necessarily be happy" to find that
+his care partner was tracking his symptoms without talk-
+ing to him about it face to face. As described earlier, some
+participants (P13, P12-C) also hoped for symptom tracking
+systems just for care partners. Finally, some care partners
+
+did not want to involve themselves in symptom tracking at
+all, like P08-C, who said tracking her husband’s symptoms
+"feels really mommyish".
+
+In summary, participants struggled with how to understand
+changes in their condition and symptoms when they were
+not sure exactly what the symptoms were. Participants were
+open to the involvement of care partners in tracking symp-
+toms that PwP could not observe themselves, and to go by
+the test of time to determine whether symptoms of unclear
+cause were attributable to PD. However, when it came to am-
+biguous symptoms that were hard to distinguish from every-
+day experience, tension arose between participants with PD
+and care partners over what constituted a symptom. Perhaps
+relatedly, participants generally felt that care partner involve-
+ment should happen interpersonally rather than through a
+symptom tracker, or that care partners should have their
+own independent systems to track the PwP’s symptoms.
+
+5 DISCUSSION
+Our findings illustrate how self-tracking technologies can
+play a central role in helping people with PD, a progressive
+disease, cope with changes in their condition. Self-tracking
+tools can help people plan for their decline and approach
+it with positive coping strategies. In addition, by including
+objective measures of symptoms, self-tracking tools can help
+people combat their own unconscious tendencies towards
+avoidance and face the reality of their condition. While other
+work has examined how to instruct users in positive coping
+strategies [84], our goal is not to prescribe any particular
+coping strategy to PwP, especially since strategies like avoid-
+ance and denial can at times be adaptive [38, 39], and people
+may need to adapt their coping strategies over time and
+changing contexts [22, 38]. Instead, our findings shed light
+on how self-tracking technologies can be designed to help
+people face changes in their condition with problem-solving
+strategies and regulate their own unconscious attempts at
+avoidance. In addition, our findings highlight the tension
+that can arise between PwP and their care partners over the
+ambiguous symptoms that are part of life with PD. Other
+work has discussed the need for self-care technologies to
+support mundane activities like medication taking, exercise,
+and collaboration between PwP and care partners [66, 67].
+Our findings build on this literature and yield several insights
+for the design of self-tracking tools for PD.
+
+Designing to Support Planful Problem-Solving
+Although the rate of PD progression is highly unpredictable,
+participants saw self-tracking systems as tools to help them
+plan as best as they were able, and to resolve issues with their
+medications as their condition changed. These sentiments
+reflected a desire for self-tracking tools that would support
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 9planful problem-solving coping strategies. To support these
+uses, PwP need self-tracking systems that allow them to
+flexibly track different types of data and review it for highly
+customized timeframes. Since PD progression can happen
+over a long term, PwP need systems that impose a low user
+burden. Because PwP wanted to use tracking technologies
+to plan for decline, researchers should also explore to what
+extent tracking technologies for PD and other progressive
+diseases should support prediction of decline, as well as
+how the framing of self-tracking data can help people adopt
+positive coping strategies to face changes in their condition.
+
+Create flexible tracking systems. Participants set out to study
+their condition not just in terms of the symptoms they expe-
+rienced, but in terms of the contextual factors which affected
+those symptoms, such as treatment and behavioral and envi-
+ronmental factors. To identify factors that affect their symp-
+toms, PwP and care partners need systems that allow them
+to define and track a variety of symptoms and contextual
+factors. In this respect, self-tracking systems for PD should
+resemble other self-tracking systems in the literature, such
+as OmniTrack [36] and Health Mashups [5], which allow
+users to track whatever is meaningful to them and identify
+correlations.
+
+Participants needed systems that could help them track over
+both the very short term (e.g., a matter of hours to track
+medication effect) and the very long term (e.g., over years
+to track progression). This finding implies that self-tracking
+systems must allow data retrieval over customizable time-
+frames. Since participants wanted to communicate with clini-
+cians about their medication schedules, self-tracking systems
+should also be designed to facilitate patient-clinician commu-
+nication, as has been examined in other work [60, 83, 93, 94,
+97]. Researchers should additionally explore ways to make
+the burden of self-tracking bearable over the long term. Past
+work has found that self-trackers in other contexts abandon
+self-tracking when it is too burdensome [11], and that PwP
+in particular need low-burden self-tracking systems where
+data is easy to enter at any convenient time [92]. Researchers
+have also found that self-tracking can have the unintended
+effect of forcing people to dwell on the depressing fact of
+their illness [1], a finding voiced by one of our participants as
+well (P10), as described earlier. One approach researchers can
+explore to make self-tracking manageable over the long term
+is to establish the minimum amount of data needed to mean-
+ingfully track progression, either in terms of the amount of
+data collected or the time interval at which it is collected,
+and ask users to meet only this minimum standard over the
+long term (e.g., asking users to check in intermittently every
+few months), to reduce the burden of self-tracking over time.
+However, this approach comes with several open questions,
+
+including how often people must measure their symptoms
+for progression to be detectable and how the design of inter-
+mittent tracking systems can help people stay engaged over
+the long term. Additionally, since PwP may need changing
+support over time [67] and the pace of PD progression is not
+easy to predict, the minimum meaningful tracking interval
+may change over time. More work must be done to under-
+stand how to design systems to best support intermittent
+tracking.
+
+Explore Design for Predicting Decline. Participants wanted to
+track their symptoms in part to predict when their condition
+would worsen. This finding yields several implications. First,
+since PD symptoms vary a great deal over time and pro-
+gression can be difficult to predict, PD self-tracking systems
+should communicate to users the limitations of their ability
+to detect trends. This is especially important because the high
+level of noise and variability in PD symptoms may contradict
+general assumptions about the ability of self-tracking sys-
+tems to reliably detect trends. If knowledge about PD symp-
+tom progression advances to the point where systems can
+accurately predict decline, researchers must consider when
+and how to present this information to users. Since framing
+of self-tracking data can influence users’ self-perception [10],
+presentation of information about disease progression must
+be thoughtfully designed so as not to foster a sense of help-
+lessness and depression. In addition, our findings suggest
+that the optimal design will vary based on individual’s val-
+ues, disease stage, and family situation. For instance, some
+PwP are likely to prefer getting actionable recommenda-
+tions alongside or instead of a prediction about decline. For
+these users, researchers must carefully consider how to pre-
+vent contradictory or unhelpful recommendations [5, 77],
+especially as symptoms can fluctuate rapidly, and a recom-
+mendation based on symptom intensity one day may not
+apply the following day. Additionally, users might reject
+system-generated suggestions if they do not agree with the
+system’s assessment of their current state and abilities. As an
+alternative approach, some users might prefer that systems
+alert family members or clinicians to changes in the PwP’s
+condition, especially if the PwP is highly dependent on care
+partners, while other users might find this function intrusive.
+Researchers must find ways to design systems congruent
+with PwP’s individual values.
+
+Designing to Help Avoid Escape-Avoidance Coping
+Researchers have found in other health contexts that track-
+ing can arouse feelings of anxiety [35, 76, 91]. Our findings
+show that people living with progressive diseases like PD
+can feel reluctance to log progression in symptoms. However,
+rather than simply avoiding tracking, participants feared that
+they might intentionally log data that misrepresented their
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 10condition. Participants valued objective symptom measures
+to help them honestly confront PD progression.
+
+The nature of data has been shown to matter for ease of
+logging and interpretation in other health contexts (e.g.,
+[13, 16, 29, 86]). Our findings suggest that data type also
+matters in the context of progressive diseases like PD, where
+people grapple with their own unconscious desires to por-
+tray themselves in the rosiest light, both to clinicians and
+to themselves. Since facing up to current disease state is
+an important part of what PwP see as successful life with
+the disease [31], it is important to design self-tracking tech-
+nologies to help people confront the inevitable decline in
+their condition. To help PwP and care partners combat their
+own tendencies towards avoidance, self-tracking technolo-
+gies for PD should incorporate objective metrics wherever
+possible. However, even the most dedicated self-trackers will
+sometimes encounter situations where they are not able to
+take objective measures of their symptoms, either because
+the time is not convenient or because there is no possible
+objective metric (e.g., for symptoms like hallucinations or
+P09’s "tippiness"). For the first case, tracking systems may be
+able to help PwP log symptoms accurately by helping them
+understand the connection between their subjective sense of
+a symptom and the objective measurement of a symptom, as
+suggested by P11 in our findings. This finding underscores
+the importance of ongoing research in HCI and health infor-
+matics to develop methods for passive, continuous capture
+of different symptoms through mobile phones and wearable
+technologies (e.g., [2, 27, 42, 43, 53, 64], and others), so that
+users can capture data about their symptoms without inter-
+rupting their day. For the second case, researchers should
+explore ways to help people achieve consistency in subjective
+symptom tracking. One direction researchers can explore is
+to investigate how to assist users in creating scale anchors
+that make sense to them. Work in self-experimentation has
+found that users worry about their ability to be consistent
+in evaluating symptoms [34], and desire highly customized
+ways to record symptoms in ways that make sense to them
+[33]. Our findings suggest that helping users find ways to
+record symptoms in ways they feel they can use consistently
+is important in the context of progressive disease as well, so
+that users can hold themselves to an internally consistent rat-
+ing system as their symptoms change over time. Additionally,
+some symptoms, like tremor, can be recorded in different
+ways, and users might find it more valuable or convenient
+to log symptoms in different ways at different times. For
+instance, users might find it more convenient to log a subjec-
+tive rating of a tremor at work, and more valuable to log an
+objective metric at home. Alternatively, users may want to
+capture additional contextual detail about their symptoms,
+
+beyond a simple objective marker, to communicate with clin-
+icians about their health. Accordingly, researchers should
+explore ways of accommodating multiple types of data for
+the same symptom. Different data types can pose challenges
+not just for system designers, but also for users in reflecting
+back over their data. More work must be done to under-
+stand if different data types for the same symptom should be
+merged, for example, or if they should be separated within
+the interface of a self-tracking system.
+
+Designing for Ambiguous Symptoms and Care
+Partners
+Although care partners are important in any health context,
+they are especially important in the context of progressive,
+debilitating conditions like PD [66], where people know that
+their condition will deteriorate and they will become increas-
+ingly dependent on others. We found that while PwP and
+care partners were aware of this reality, there was no con-
+sensus on exactly what role care partners should assume
+in symptom tracking. Building on findings that care part-
+ners and patients sometimes experience conflict in managing
+chronic disease [6, 91] and recommendations that systems
+for self-care be designed to maximize the patientâĂŹs auton-
+omy [69], we suggest that self-tracking systems for PD be
+designed to give PwP choice over how to involve their care
+partners in their self-tracking. PwP should be able to choose
+whether care partners have any access to their self-tracking
+systems at all, whether they have viewing access, or whether
+they can add data themselves. If the latter, PwP should be
+able to choose exactly what kinds of data care partners can
+enter. If care partners are permitted to jointly track symp-
+toms with PwP, then designers must explore ways to support
+merged data streams, as discussed by Pina et al. in the context
+of family tracking of chronic disease [74]. Researchers and
+designers of self-tracking systems for PD must also explore
+how the role of the caregiver may evolve over time, as the
+PwP’s condition changes [66, 69].
+
+Our findings also illustrated how PwPs and care partners
+struggled to disambiguate symptoms from normal occur-
+rences. To help PwP and caregivers resolve ambiguity over
+what constitutes a symptom, researchers should explore
+ways to facilitate shared reflection over tracked data between
+PwP and care partners to help them jointly determine what
+part of their experience is due to the disease and what part
+of their experience is just everyday life. Shared reflection
+has been found to help people glean new insights from data
+[26] and been recommended as a way for care partners and
+patients to manage asymmetric values [6].
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 11However, when symptoms are hard to differentiate from
+noise, researchers and designers must recognize that en-
+couraging PwP and care partners to track ambiguous symp-
+toms might lead people to track things they would not oth-
+erwise consider symptoms. This may especially be the case
+in the context of a progressive disease, where users are al-
+ready on the lookout for new and worse symptoms. In addi-
+tion, simple awareness of symptoms could make symptoms
+worse [69, 92]. Researchers must explore how to design self-
+tracking symptoms for progressive diseases so that they do
+not make chance occurrences seem like symptoms, thereby
+inadvertently creating the symptoms they seek to merely
+record. Both intermittent tracking, suggested earlier as a
+strategy to minimize user burden, and objective metrics may
+help PwP and care partners differentiate signal from noise.
+If tracking check-ins are spaced far enough apart, users have
+time to forget possible symptoms that do not recur, helping
+them identify patterns and distinguish disease symptoms
+from chance occurrences. Passive continuous monitoring,
+where available, may also help users distinguish symptoms
+from noise if they feel that the system is gathering data they
+cannot influence.
+
+6 LIMITATIONS AND FUTURE WORK
+Our study has three important limitations. First is the repre-
+sentativeness of our sample, which was largely made up of
+people in earlier stages of PD. In addition, we recruited in
+part from populations already participating in self-tracking
+research. Consequently, our sample population was likely
+biased in favor of self-tracking. Although it is unclear exactly
+how representative of the general PD population our sample
+is, it is important to understand that some PwP see self-
+tracking technologies as useful and valuable tools for coping
+with changing health. Future work must be done to gain a
+more representative picture of how self-tracking fits into
+the needs of the PD population at large, and especially how
+it supports people in more advanced stages of the disease.
+Future work must also investigate how individual character-
+istics like socio-economic status impact PwP’s self-tracking
+needs, and should include the development and deployment
+of self-tracking tools to gain further insight into the needs
+of PwP. Second, care partners’ roles evolve over time, as
+the PwP’s condition changes [66]. Because our study was
+not longitudinal, we were unable to examine how people’s
+attitudes towards the role of care partners in self-tracking
+systems might change as the PwP’s condition changed. Fu-
+ture work must be done to understand this evolution. Third,
+we interviewed PwP and their care partners, but not clini-
+cians in this study. Since our findings suggested that PwP
+want self-tracking technologies to facilitate communication
+with clinicians, future work should include research done
+
+with clinicians to understand their communication needs
+and perspectives.
+
+7 CONCLUSION
+As PD progresses, PwP and the care partners who share their
+lives must learn to cope with the PwP’s changing condi-
+tion. However, not all coping strategies are created equal,
+and positive coping strategies yield a better quality of life
+than avoidance coping strategies [8]. We illustrate how self-
+tracking technologies can help people with PD and their care
+partners pursue positive coping strategies, and combat their
+own tendencies towards denial as the disease progresses. We
+also show that care partners can be instrumental in symp-
+tom tracking, but that tensions can arise between PwP and
+care partners when symptoms are ambiguous. Accordingly,
+researchers and designers should create flexible self-tracking
+systems for PD that incorporate objective metrics of symp-
+toms wherever possible, and allow PwP to determine for
+themselves the role of their care partners in helping them
+track their symptoms. Thoughtful design of self-tracking
+systems for PD has the potential to help PwP better manage
+their illness and achieve higher quality of life.
+
+8 ACKNOWLEDGMENTS
+We thank our participants and participants in the mPower
+study. Thanks also to our partners at the Michael J. Fox
+Foundation and the members and organizers of the boxing
+class who for their help in recruiting participants, and the
+Robert Wood Johnson Foundation for funding this work. We
+thank others at Sage Bionetworks who helped with this work:
+Vanessa Barone, Christine Suver, Thanneer Perumal, Dan
+Webster, Stockard Simone, and others who helped make this
+work possible.
+
+REFERENCES
+[1] Jessica S. Ancker, Holly O. Witteman, Baria Hafeez, Thierry
+Provencher, Mary Van De Graaf, and Esther Wei. 2015.
+"You get
+reminded you’re a sick person": Personal data tracking and patients
+with multiple chronic conditions. Journal of Medical Internet Research
+17, 8 (2015). https://doi.org/10.2196/jmir.4209
+
+[2] Siddharth Arora, Vinayak Venkataraman, Andong Zhan, S. Donohue,
+K. M. Biglan, E. Ray Dorsey, and M. A. Little. 2015. Detecting and
+monitoring the symptoms of Parkinson’s disease using smartphones:
+A pilot study. Parkinsonism and Related Disorders 21 (2015), 650–653.
+https://doi.org/10.1016/j.parkreldis.2015.02.026
+
+[3] Amid Ayobi, Paul Marshall, Anna Cox, and Yunan Chen. 2017. Quanti-
+fying the body and caring for the mind: Understanding self-tracking in
+multiple sclerosis. In Proceedings of the 2017 CHI Conference on Human
+Factors in Computing Systems (CHI ’17). ACM, New York, NY, USA,
+6889–6901. https://doi.org/10.1145/3025453.3025869
+
+[4] Jakob E. Bardram, Mads Frost, Károly Szántó, and Gabriela Marcu.
+2012. The MONARCA self-assessment system. In Proceedings of the
+2nd ACM SIGHIT symposium on International health informatics - IHI
+’12. 21. https://doi.org/10.1145/2110363.2110370
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 12[5] Frank Bentley, Konrad Tollmar, Peter Stephenson, Laura Levy, Brian
+Jones, Scott Robertson, Ed Price, Richard Catrambone, and Jeff Wil-
+son. 2013. Health Mashups: Presenting Statistical Patterns between
+Wellbeing Data and Context in Natural Language to Promote Behav-
+ior Change. ACM Transactions on Computer-Human Interaction 20, 5
+(2013), 1–27. https://doi.org/10.1145/2503823
+
+[6] Andrew B. L. Berry, Catherine Lim, Andrea L. Hartzler, Tad Hirsch,
+Edward H. Wagner, Evette Ludman, and James D. Ralston. 2017. How
+Values Shape Collaboration Between Patients with Multiple Chronic
+Conditions and Spousal Caregivers. In Proceedings of the 2017 CHI
+Conference on Human Factors in Computing Systems - CHI ’17. 5257–
+5270. https://doi.org/10.1145/3025453.3025923
+
+[7] S. Bostantjopoulou, Zoe Katsarou, C. Karakasis, E. Peitsidou, D. Milioni,
+and N. Rossopoulos. 2013. Evaluation of non-motor symptoms in
+Parkinson’s Disease: An underestimated necessity. Hippokratia 17, 3
+(2013), 214–219.
+
+[8] R. S. Bucks, K. E. Cruise, T. C. Skinner, A. M. Loftus, R. A. Barker, and
+M. G. Thomas. 2011. Coping processes and health-related quality of
+life in Parkinson’s disease. International Journal of Geriatric Psychiatry
+26, 3 (2011), 247–255. https://doi.org/10.1002/gps.2520
+
+[9] K. Ray Chaudhuri, Per Odin, Angelo Antonini, and Pablo Martinez-
+Martin. 2011. Parkinson’s disease: The non-motor issues. Parkinsonism
+and Related Disorders 17, 10 (2011), 717–723. https://doi.org/10.1016/j.
+parkreldis.2011.02.018
+
+[10] Eun Kyoung Choe, Bongshin Lee, Sean Munson, Wanda Pratt, and
+Julie A Kientz. 2013.
+Persuasive performance feedback: the ef-
+fect of framing on self-efficacy.. In American Medical Informat-
+ics Association Annual Symposium proceedings, Vol. 2013. 825–
+33.
+http://www.ncbi.nlm.nih.gov/pubmed/24551378{%}5Cnhttp://
+www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC3900219
+
+[11] Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, Wanda Pratt, and
+Julie A. Kientz. 2014. Understanding quantified-selfers’ practices in
+collecting and exploring personal data. In Proceedings of the 32nd
+annual ACM conference on Human factors in computing systems (CHI
+’14). ACM, New York, NY, USA, 1143–1152. https://doi.org/10.1145/
+2556288.2557372
+
+[12] Kelvin L. Chou. 2018. Clinical Manifestations of Parkinson Disease. In
+UpToDate, Howard I. Hurtig and April F. Eichler (Eds.). Wolters Kluwer,
+Waltham, MA. https://doi.org/10.1128/JCM.01360-10
+
+[13] Chia-Fang Chung, Elena Agapie, Jessica Schroeder, Sonali R. Mishra,
+James Fogarty, and Sean A Munson. 2017. When personal tracking
+becomes social: Examining the use of Instagram for healthy eating. In
+Proceedings of the 2017 CHI Conference on Human Factors in Computing
+Systems (CHI ’17). ACM, New York, NY, USA, 1674–1687. https://doi.
+org/10.1145/3025453.3025747
+
+[14] Chia-Fang Chung, Kristin Dew, Allison Cole, Jasmine Zia, James
+Fogarty, Julie A. Kientz, and Sean A. Munson. 2016. Boundary ne-
+gotiating artifacts in personal informatics: Patient-provider collabo-
+ration with Patient-generated data. In Proceedings of the 19th ACM
+Conference on Computer-Supported Cooperative Work & Social Com-
+puting (CSCW ’16). ACM, New York, NY, USA, 770–786.
+https:
+//doi.org/10.1145/2818048.2819926
+
+[15] Juliet Corbin and Anselm Strauss. 1990. Grounded Theory Research:
+Procedures, Canons and Evaluative Criteria. Qualitative Sociology 13,
+1 (1990), 3–21. https://doi.org/10.1007/BF00988593
+
+[16] Felicia Cordeiro, Elizabeth Bales, Erin Cherry, and James Fogarty. 2015.
+Rethinking the Mobile Food Journal. In Proceedings of the 33rd Annual
+ACM Conference on Human Factors in Computing Systems - CHI ’15.
+3207–3216. https://doi.org/10.1145/2702123.2702154
+
+[17] Ana Correia de Barros, João Cevada, Àngels Bayés, Sheila Alcaine, and
+Berta Mestre. 2013. User-centred Design of a Mobile Self-management
+
+Solution for Parkinson’s Disease. In International Conference on Mobile
+and Ubiquitous Multimedia (MUM). 23:1–23:10. https://doi.org/10.
+1145/2541831.2541839
+
+[18] Daniel A. Epstein, Nicole B. Lee, Jennifer H. Kang, Elena Agapie, Jessica
+Schroeder, Laura R. Pina, James Fogarty, Julie A. Kientz, and Sean A.
+Munson. 2017. Examining Menstrual Tracking to Inform the Design
+of Personal Informatics Tools. In Proceedings of the SIGCHI Conference
+on Human Factors in Computing Systems (CHI 2017). ACM, New York,
+NY, USA. https://doi.org/10.1145/3025453.3025635
+
+[19] Sergio Felipe, Aneesha Singh, Caroline Bradley, Amanda Cdec
+Williams, and Nadia Bianchi-Berthouze. 2015. Roles for personal
+informatics in chronic pain. In 9th International Conference on Perva-
+sive Computing Technologies for Healthcare. 161–168. https://doi.org/
+10.4108/icst.pervasivehealth.2015.259501
+
+[20] S Folkman and R S Lazarus. 1985. If it changes it must be a process.
+Journal of personality and social psychology 48, 1 (1985), 150–170.
+[21] Susan Folkman and Richard S. Lazarus. 1988. The ways of coping ques-
+tionnaire: Manual, Instrument, Scoring Guide. Consulting Psychologists
+Press, Inc.
+
+[22] Leslie D. Frazier. 2002. Stability and Change in Patterns of Coping with
+Parkinson’s Disease. The international journal of aging and human
+development 55, 3 (2002), 207–231. https://doi.org/10.1166/jnn.20
+[23] Brook Galna, Dan Jackson, Guy Schofield, Roisin McNaney, Mary
+Webster, Gillian Barry, Dadirayi Mhiripiri, Madeline Balaam, Patrick
+Olivier, and Lynn Rochester. 2014. Retraining function in people with
+Parkinson’s disease using the Microsoft kinect: Game design and pilot
+testing. Journal of NeuroEngineering and Rehabilitation 11, 1 (2014),
+no pagination. https://doi.org/10.1186/1743-0003-11-60
+
+[24] Christopher G. Goetz, Stanley Fahn, Pablo Martinez-Martin, Werner
+Poewe, Cristina Sampaio, Glenn T. Stebbins, Matthew B. Stern, Bar-
+bara C. Tilley, Richard Dodel, Bruno Dubois, Robert Holloway, Joseph
+Jankovic, Jaime Kulisevsky, Anthony E. Lang, Andrew Lees, Sue Leur-
+gans, Peter A. LeWitt, David Nyenhuis, C. Warren Olanow, Olivier
+Rascol, Anette Schrag, Jeanne A. Teresi, Jacobus J. Van Hilten, and
+Nancy LaPelle. 2007. Movement disorder society-sponsored revision
+of the unified Parkinson’s disease rating scale (MDS-UPDRS): Process,
+format, and clinimetric testing plan. Movement Disorders 22, 1 (2007),
+41–47. https://doi.org/10.1002/mds.21198
+
+[25] A. M. Gotham, R. G. Brown, and C. D. Marsden. 1986. Depression in
+Parkinson’s disease: A quantitative and qualitative analysis. Journal
+of Neurology Neurosurgery and Psychiatry 49, 4 (1986), 381–389. https:
+//doi.org/10.1136/jnnp.49.4.381
+
+[26] Lisa Graham, Anthony Tang, and Carman Neustaedter. 2016. Help me
+help you: Shared reflection for personal data. In Proceedings of the 19th
+International Conference on Supporting Group Work (GROUP ’16). ACM,
+New York, NY, USA, 99–109. https://doi.org/10.1145/2957276.2957293
+arXiv:arXiv:1011.1669v3
+
+[27] K. Grandez, P. Bustamante, G. Solas, I. Gurutzeaga, and A. García-
+Alonso. 2009. Wearable wireless sensor for the gait monitorization
+of Parkinsonian patients. In 2009 16th IEEE International Conference
+on Electronics, Circuits and Systems, ICECS 2009. 215–218. https://doi.
+org/10.1109/ICECS.2009.5410974
+
+[28] Anita Haahr, Marit Kirkevold, Elisabeth O.C. Hall, and Karen Øster-
+gaard. 2011. Living with advanced Parkinson’s disease: A constant
+struggle with unpredictability. Journal of Advanced Nursing 67, 2
+(2011), 408–417. https://doi.org/10.1111/j.1365-2648.2010.05459.x
+[29] Matthew K. Hong, Udaya Lakshmi, Thomas A. Olson, and Lauren
+Wilcox. 2018. Visual ODLs: Co-Designing Patient-Generated Observa-
+tions of Daily Living to Support Data-Driven Conversations in Pedi-
+atric Care. In Proceedings of the 2018 CHI Conference on Human Factors
+in Computing Systems - CHI ’18. 1–13. https://doi.org/10.1145/3173574.
+3174050
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 13[30] Abdelilah Jilbab, Achraf Benba, and Ahmed Hammouch. 2017. Quan-
+International Journal of
+https://doi.org/10.1007/
+
+tification system of Parkinson’s disease.
+Speech Technology 20, 1 (2017), 143–150.
+s10772-016-9394-9
+
+[31] Mi Young Kang and Caroline Ellis-Hill. 2015. How do people live life
+successfully with Parkinson’s disease? Journal of Clinical Nursing 24,
+15-16 (2015), 2314–2322. https://doi.org/10.1111/jocn.12819
+
+[32] Ravi Karkar, Rafal Kocielnik, Xiaoyi Zhang, James Fogarty, George N
+Ioannou, Sean A Munson, and Jasmine Zia. 2018. Beacon: Designing a
+Portable Device for Self-Administering a Measure of Critical Flicker
+Frequency. Interactive, Mobile, Wearable and Ubiquitous Technologies
+2, 3 (2018).
+
+[33] Ravi Karkar, Jessica Schroeder, Daniel A Epstein, Laura R Pina, Jef-
+frey Scofield, James Fogarty, Julie A Kientz, Sean A Munson, Roger
+Vilardaga, and Jasmine Zia. 2017. TummyTrials: A Feasibility Study of
+Using Self-Experimentation to Detect Individualized Food Triggers. In
+Proceedings of the ACM Conference on Human Factors in Computing Sys-
+tems (CHI 2017). 6850–6863. https://doi.org/10.1145/3025453.3025480
+[34] Ravi Karkar, Jasmine Zia, Roger Vilardaga, Sonali R. Mishra, James
+Fogarty, Sean A. Munson, and Julie A. Kientz. 2016. A framework for
+self-experimentation in personalized health. Journal of the American
+Medical Informatics Association 23, 3 (2016), 440–448. https://doi.org/
+10.1093/jamia/ocv150
+
+[35] Julie A Kientz, Rosa I Arriaga, Marshini Chetty, Gillian R Hayes, Jah-
+meilah Richardson, Shwetak N Patel, Gregory D Abowd, and Street
+Nw. 2007. Grow and Know : Understanding Record-Keeping Needs
+for Tracking the Development of Young Children. In Proceedings of
+the SIGCHI Conference on Human Factors in Computing Systems (CHI
+’07). ACM, New York, NY, USA, 1351–1360. https://doi.org/10.1016/j.
+urology.2010.11.034
+
+[36] Young-Ho Kim, Jae Ho Jeon, Bongshin Lee, Eun Kyoung Choe, and
+Jinwook Seo. 2017. OmniTrack: A Flexible Self-Tracking Approach
+Leveraging Semi-Automated Tracking. Proceedings of the ACM on
+Interactive, Mobile, Wearable and Ubiquitous Technologies 1, 3 (2017),
+1–28. https://doi.org/10.1145/3130930
+
+[37] Rashmi Lakshminarayana, Duolao Wang, David Burn, K Ray Chaud-
+huri, Clare Galtrey, Natalie Valle Guzman, Bruce Hellman, Ben James,
+Suvankar Pal, Jon Stamford, Malcolm Steiger, R W Stott, James Teo,
+Roger A Barker, and Emma Wang. 2016. Using a smartphone-based
+self-management platform to support medication adherence and
+clinical consultation in Parkinson’s disease. Nature Partner Jour-
+nals: Parkinson’s Disease May (2016), 1–8. https://doi.org/10.1038/
+s41531-016-0003-z
+
+[38] Richard S. Lazarus. 1993. Coping Theory and Research: Past, Present,
+
+and Future. Psychosomatic Medicine 55, 3 (1993), 234–247.
+
+[39] James L. Levenson, Asha Mishra, Robert M. Hamer, and Andrea
+Hastillo. 1989. Denial and medical outcome in unstable angina. Psy-
+chosomatic Medicine 51, 1 (1989), 27–35.
+
+[40] Jacki Liddle, David Ireland, Simon J. McBride, Sandra G. Brauer,
+Leanne M. Hall, Hang Ding, Mohan Karunanithi, Paul W. Hodges,
+Deborah Theodoros, Peter A. Silburn, and Helen J. Chenery. 2014.
+Measuring the lifespace of people with parkinson’s disease using smart-
+phones: Proof of principle. Journal of Medical Internet Research 16, 3
+(2014). https://doi.org/10.2196/mhealth.2799
+
+[41] Ting-Yang Lin, Chung-Hung Hsieh, and Jiann-Der Lee. 2013. A Kinect-
+Based System for Physical Rehabilitation: Utilizing Tai Chi Exercises
+to Improve Movement Disorders in Patients with Balance Ability.. In
+Proceedings of the 2013 7th Asia Modelling Symposium (AMS ’13). IEEE
+Computer Society, Washington, DC, 149–153. https://doi.org/DOI=
+http://dx.doi.org.offcampus.lib.washington.edu/10.1109/AMS.2013.29
+[42] Michael A. Lones, Jane E. Alty, Jeremy Cosgrove, Philippa Duggan-
+Carter, Stuart Jamieson, Rebecca F. Naylor, Andrew J. Turner, and
+
+Stephen L. Smith. 2017. A New Evolutionary Algorithm-Based Home
+Monitoring Device for Parkinson’s Dyskinesia. Journal of Medical
+Systems 41, 176 (2017). https://doi.org/10.1007/s10916-017-0811-7
+[43] Jiaxin Ma, Kenichi Kameyama, and Makoto Nakagawa. 2017. Opti-
+mizing Gait Parameters and Insole Sensor Positioning for Parkinson’s
+Disease Assessment. In Proceedings of the 2017 4th International Confer-
+ence on Biomedical and Bioinformatics Engineering (ICBBE 2017). ACM,
+New York, NY, USA, 1–5. https://doi.org/10.1145/3168776.3168780
+
+[44] Brigid MacCarthy and Richard Brown. 1989. Psychosocial Factors in
+Parkinson’s Disease. British Journal of Clinical Psychology 28, 1 (1989),
+41–52. https://doi.org/10.1166/jnn.20
+
+[45] Haley MacLeod, Anthony Tang, and Sheelagh Carpendale. 2013. Per-
+sonal informatics in chronic illness management. In Proceedings of
+Graphics Interface 2013 (GI ’13). Canadian Information Processing So-
+ciety, Toronto, Ontario, Canada, 149–156. http://hcitang.org/papers/
+2013-gi2013-personal-informatics.pdf
+
+[46] Lena Mamykina, Elizabeth M Heitkemper, Arlene M Smaldone, Rita
+Kukafka, Patricia G Davidson, Elizabeth D Mynatt, Andrea Cassells, N
+Jonathan, George Hripcsak, United States, United States, West Chester,
+United States, United States, and United States. 2017. Personal discov-
+ery in diabetes self-management: Discovering cause and effect using
+self-monitoring data. Journal of Biomedical Informatics 76 (2017), 1–8.
+https://doi.org/10.1016/j.jbi.2017.09.013.Personal
+
+[47] Lena Mamykina and Andrew D. Miller. 2010. Constructing identities
+through storytelling in diabetes management. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing Systems (CHI ’10).
+ACM, New York, NY, USA, 1203–1212. https://doi.org/10.1145/1753326.
+1753507
+
+[48] Lena Mamykina, Elizabeth Mynatt, Patricia Davidson, and David
+Greenblatt. 2008. MAHI: Investigation of social scaffolding for re-
+flective thinking in diabetes management. In Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems (CHI ’08). ACM,
+New York, NY, USA, 477–486. https://doi.org/10.1145/1357054.1357131
+[49] C. Marras, J. C. Beck, J. H. Bower, E. Roberts, B Ritz, G. W. Ross, R. D. Ab-
+bott, R. Savica, S. K. Van Den Eeden, A. W. Willis, and CM Tanner. 2018.
+Prevalence of Parkinson’s disease across North America. npj Parkin-
+son’s Disease 4, 1 (2018), 21. https://doi.org/10.1038/s41531-018-0058-0
+[50] Mark Matthews, Elizabeth Murnane, and Jaime Snyder. 2017. Quantify-
+ing the Changeable Self: The Role of Self-Tracking in Coming to Terms
+With and Managing Bipolar Disorder. Human-Computer Interaction 32,
+5-6 (2017), 413–446. https://doi.org/10.1080/07370024.2017.1294983
+
+[51] Mark Matthews, Elizabeth Murnane, Jaime Snyder, Shion Guha, Pa-
+mara Chang, Gavin Doherty, and Geri Gay. 2017. The double-edged
+sword: A mixed methods study of the interplay between bipolar dis-
+order and technology use. Computers in Human Behavior 75 (2017),
+288–300. https://doi.org/10.1016/j.chb.2017.05.009
+
+[52] Elina Mattila, Ilkka Korhonen, Jukka H. Salminen, Aino Ahtinen, Esa
+Koskinen, Antti Särelä, Juha Pärkkä, and Raimo Lappalainen. 2010.
+Empowering citizens for well-being and chronic disease management
+with wellness diary. IEEE Transactions on Information Technology in
+Biomedicine 14, 2 (2010), 456–463. https://doi.org/10.1109/TITB.2009.
+2037751
+
+[53] Sinziana Mazilu, Ulf Blanke, Daniel Roggen, Gerhard Tr, Eran Gazit,
+and Jeffrey H Hausdorff. 2013. Engineers Meet Clinicians: Aug-
+mented Parkinson’s Disease Patients to Gather Information for Gait
+Rehabilitation. In 4th Augmented Human International Conference. 4.
+https://doi.org/10.1145/2459236.2459257
+
+[54] Mollie McKillop, Lena Mamykina, and Noémie Elhadad. 2018. Design-
+ing in the Dark. In Proceedings of the 2018 CHI Conference on Human
+Factors in Computing Systems - CHI ’18. 1–15. https://doi.org/10.1145/
+3173574.3174139
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 14[55] Roisin McNaney, Nick Miller, Patrick Olivier, Stephen Lindsay, Karim
+Ladha, Cassim Ladha, Guy Schofield, Thomas Ploetz, Nils Hammerla,
+Daniel Jackson, and Richard Walker. 2011. Cueing for drooling in
+Parkinson’s disease. In Proceedings of the 2011 annual conference on
+Human factors in computing systems - CHI ’11. 619. https://doi.org/10.
+1145/1978942.1979030
+
+[56] Roisin McNaney, Patrick Olivier, Madeline Balaam, Amey Holden,
+Guy Schofield, Daniel Jackson, Mary Webster, Brook Galna, Gillian
+Barry, and Lynn Rochester. 2015. Designing for and with People
+with Parkinson’s. In Proceedings of the 33rd Annual ACM Conference
+on Human Factors in Computing Systems - CHI ’15. 501–510. https:
+//doi.org/10.1145/2702123.2702310
+
+[57] Roisin McNaney, Mohammad Othman, Dan Richardson, Paul Dunphy,
+Telmo Amaral, Nick Miller, Helen Stringer, Patrick Olivier, and John
+Vines. 2016. Speeching: Mobile Crowdsourced Speech Assessment to
+Support Self-Monitoring and Management for People with Parkinson’s.
+In Proceedings of the 2016 CHI Conference on Human Factors in Com-
+puting Systems. 4464–4476. https://doi.org/10.1145/2858036.2858321
+[58] Roisin McNaney, John Vines, Daniel Roggen, Madeline Balaam, Pengfei
+Zhang, Ivan Poliakov, and Patrick Olivier. 2014. Exploring the ac-
+ceptability of google glass as an everyday assistive device for peo-
+ple with parkinson’s. In Proceedings of the 32nd annual ACM confer-
+ence on Human factors in computing systems - CHI ’14. 2551–2554.
+https://doi.org/10.1145/2556288.2557092
+
+[59] Mevludin Memedi, Jerker Westin, Dag Nyholm, Mark Dougherty, and
+Torgny Groth. 2011. A web application for follow-up of results from a
+mobile device test battery for Parkinson’s disease patients. Computer
+Methods and Programs in Biomedicine 104, 2 (2011), 219–226. https:
+//doi.org/10.1016/j.cmpb.2011.07.017
+
+[60] Helena M. Mentis, Anita Komlodi, Katrina Schrader, Michael Phipps,
+Ann Gruber-Baldini, Karen Yarbrough, and Lisa Shulman. 2017. Craft-
+ing a view of self-tracking data in the clinical visit. In Proceedings of
+the 2017 CHI Conference on Human Factors in Computing Systems (CHI
+’17). ACM, New York, NY, USA, 5800–5812. https://doi.org/10.1145/
+3025453.3025589
+
+[61] National Health Service. 2016. Symptoms: Parkinson’s Disease.
+[62] National Institutes of Health. 2010. Parkinson’s Disease Fact Sheet.
+October (2010), 1–2. https://doi.org/10.1016/S0140-6736(14)61393-3
+[63] Elias Chaibub Neto, Brian M. Bot, Thanneer Perumal, Larsson Omberg,
+Justin Guinney, Mike Kellen, Arno Klein, Stephen H. Friend, and
+Andrew D. Trister. 2016. Personalized Hypothesis Tests for De-
+tecting Medication Response in Parkinson Disease Patients Using
+iPhone Sensor Data. Biocomputing 2016 21 (2016), 273–284. https:
+//doi.org/10.1142/9789814749411_0026
+
+[64] Elias Chaibub Neto, Thanneer M Perumal, Abhishek Pratap, Brian M
+Bot, Lara Mangravite, and Larsson Omberg. 2017. On the analysis of
+personalized medication response and classification of case vs control
+patients in mobile health studies: the mPower case study. arXiv preprint
+June (2017). arXiv:1706.09574 http://arxiv.org/abs/1706.09574
+[65] Francisco Nunes, Tariq Andersen, and Geraldine Fitzpatrick. 2017. The
+agency of patients and carers in medical care and self-care technolo-
+gies for interacting with doctors. Health Informatics Journal (2017),
+146045821771205. https://doi.org/10.1177/1460458217712054
+
+[66] Francisco Nunes and Geraldine Fitzpatrick. 2015. Self-Care Technolo-
+gies and Collaboration.
+International Journal of Human-Computer
+Interaction 31, 12 (2015), 869–881. https://doi.org/10.1080/10447318.
+2015.1067498
+
+[67] Francisco Nunes and Geraldine Fitzpatrick. 2018. Understanding the
+Mundane Nature of Self-care : Ethnographic Accounts of People Living
+with Parkinson’s. In Proceedings of the 2018 CHI Conference on Human
+Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA.
+https://doi.org/10.1145/3173574.3173976
+
+[68] Francisco Nunes, Paula Alexandra Silva, João Cevada, Ana Correia
+Barros, and Luís Teixeira. 2016. User interface design guidelines for
+smartphone applications for people with Parkinson’s disease. Universal
+Access in the Information Society 15, 4 (2016), 659–679. https://doi.org/
+10.1007/s10209-015-0440-1
+
+[69] Francisco Nunes, Nervo Verdezoto, Geraldine Fitzpatrick, Morten Kyng,
+Erik Grönvall, and Cristiano Storni. 2015. Self-Care Technologies in
+HCI. ACM Transactions on Computer-Human Interaction 22, 6 (2015),
+1–45. https://doi.org/10.1145/2803173
+
+[70] Gennaro Pagano, Nicola Ferrara, and David J Brooks. 2016. Age at
+onset and Parkinson disease phenotype. Neurology 86, 15 (2016), 1–8.
+https://doi.org/10.1212/WNL.0000000000002461
+
+[71] Michael Quinn Patton. 2015. Qualitative Research and Evaluation
+Methods (4th ed.). Sage Publications, Inc., Los Angeles. 519–556 pages.
+[72] Carla Pereira, Patrícia Macedo, and Rui Neves Madeira. 2015. Mo-
+bile Integrated Assistance to Empower People Coping with Parkin-
+son’s Disease. In Proceedings of the 17th International ACM SIGAC-
+CESS Conference on Computers & Accessibility - ASSETS. 409–410.
+https://doi.org/10.1145/2700648.2811394
+
+[73] Clayton R. Pereira, Danilo R. Pereira, Francisco A. Silva, João P.
+Masieiro, Silke A.T. Weber, Christian Hook, and João P. Papa. 2016. A
+new computer vision-based approach to aid the diagnosis of Parkin-
+son’s disease. Computer Methods and Programs in Biomedicine 136
+(2016), 79–88. https://doi.org/10.1016/j.cmpb.2016.08.005
+
+[74] Laura R. Pina, Sang-Wha Sien, Teresa Ward, Jason C. Yip, Sean A.
+Munson, James Fogarty, and Julie A. Kientz. 2017. From personal
+informatics to family informatics. In Proceedings of the 2017 ACM
+Conference on Computer Supported Cooperative Work and Social Com-
+puting (CSCW ’17). ACM, New York, NY, USA, 2300–2315. https:
+//doi.org/10.1145/2998181.2998362
+
+[75] Tamara Pringsheim, Nathalie Jette, Alexandra Frolkis, and Thomas
+D L Steeves. 2014. The prevalence of Parkinson’s disease: A systematic
+review and meta-analysis. Movement Disorders 29, 13 (2014), 1583–1590.
+https://doi.org/10.1002/mds.25945
+
+[76] Stephen Purpura, Victoria Schwanda, Kaiton Williams, William Stubler,
+and Phoebe Sengers. 2011. Fit4life: The design of a persuasive tech-
+nology promoting healthy behavior and ideal weight. In Proceedings
+of the 2011 annual conference on Human factors in computing systems -
+CHI ’11. 423. https://doi.org/10.1145/1978942.1979003
+
+[77] Mashfiqui Rabbi, Min Hane Aung, Mi Zhang, and Tanzeem Choudhury.
+2015. MyBehavior: automatic personalized health feedback from user
+behaviors and preferences using smartphones. In In Proceedings of the
+2015 ACM International Joint Conference on Pervasive and Ubiquitous
+Computing (UbiComp ’15). ACM, New York, NY, USA, 707–718. https:
+//doi.org/10.1145/2750858.2805840
+
+[78] D Ridder, Karlein Schreurs, and Jozien Bensing. 2000. The relative
+benefits of being optimistic: Optimism as a coping resource in multiple
+sclerosis and Parkinson’s disease. British Journal of Health Psychology
+5 (2000), 141–155. https://doi.org/10.1348/135910700168829
+
+[79] Sara Riggare, Kenton T Unruh, Jasmine Sturr, and Josefa Domingos.
+2017. Patient-driven N-of-1 in Parkinson ’ s Disease. Methods of
+Information in Medicine 56, 99 (2017), e123–e128. https://doi.org/10.
+3414/ME16-02-0040
+
+[80] Scott C. Roesch and Bernard Weiner. 2001. A meta-analytic review
+of coping with illness. Journal of Psychosomatic Research 50, 4 (2001),
+205–219. https://doi.org/10.1016/S0022-3999(01)00188-X
+
+[81] Anette Schrag, Richard Dodel, Annika Spottke, Bernhard Bornschein,
+Uwe Siebert, and Niall P. Quinn. 2007. Rate of clinical progression in
+Parkinson’s disease. A prospective study. Movement Disorders 22, 7
+(2007), 938–945. https://doi.org/10.1002/mds.21429
+
+[82] Jessica Schroeder, Chia-Fang Chung, Daniel A. Epstein, Ravi Karkar,
+Adele Parsons, Natalia Murinova, James Fogarty, and Sean A. Munson.
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 152018. Examining Self-Tracking by People with Migraine. Proceedings
+of the 2018 on Designing Interactive Systems Conference 2018 - DIS ’18
+(2018), 135–148. https://doi.org/10.1145/3196709.3196738
+
+[83] Jessica Schroeder, Jane Hoffswell, Chia-fang Chung, James Fogarty,
+Sean Munson, and Jasmine Zia. 2017. Supporting patient-provider
+collaboration to identify individual triggers using food and symptom
+journals. In In Proceedings of the 2017 ACM Conference on Computer Sup-
+ported Cooperative Work and Social Computing (CSCW ’17). ACM, New
+York, NY, USA, 1726–1739. https://doi.org/10.1145/2998181.2998276
+[84] Jessica Schroeder, Chelsey Wilks, Kael Rowan, Arturo Toledo, Ann
+Paradiso, Mary Czerwinski, Gloria Mark, and Marsha M. Linehan.
+2018. Pocket Skills: A Conversational Mobile Web App To Support
+Dialectical Behavioral Therapy. In Proceedings of the SIGCHI Conference
+on Human Factors in Computing Systems (CHI 2018). ACM, New York,
+NY, USA, 1–15. https://doi.org/10.1145/3173574.3173972
+
+[85] Jan Smeddinck, Sandra Siegel, and Marc Herrlich. 2013. Adaptive
+difficulty in exergames for Parkinson’s disease patients. Graphics
+Interface Conference 2013 (2013), 141–148.
+
+[86] Kiley Sobel, Alexander Fiannaca, Jon Campbell, Harish Kulkarni, Ann
+Paradiso, Ed Cutrell, and Meredith Ringel Morris. 2017. Exploring
+the Design Space of AAC Awareness Displays. In Proceedings of the
+2017 CHI Conference on Human Factors in Computing Systems - CHI
+’17. ACM, New York, NY, USA, 2890–2903. https://doi.org/10.1145/
+3025453.3025610
+
+[87] Jonathan Stamford, Peter Schmidt, and Karl Friedl. 2015. What En-
+gineering Technology Could Do for Quality of Life in Parkinson’s
+Disease: a Review of Current Needs and Opportunities. IEEE Jour-
+nal of Biomedical and Health Informatics 19, 6 (2015), 1–1. https:
+//doi.org/10.1109/JBHI.2015.2464354
+
+[88] Daniel Tarsy. 2018. Device-assisted and surgical treatments for Parkin-
+son disease. In UpToDate, Howard I. Hurtig and April F. Eichler (Eds.).
+Wolters Kluwer, Waltham, MA, 1–28.
+
+[89] Daniel Tarsy. 2018. Motor fluctuations and dyskinesia in Parkson
+disease. In UpToDate, Howard I. Hurtig and April F. Eichler (Eds.).
+Wolters Kluwer, Waltham, MA.
+
+[90] Daniel Tarsy. 2018. Nonpharmacologic management of Parkinson’s
+Disease. In UpToDate, Howard I. Hurtig and April F. Eichler (Eds.).
+
+Wolters Kluwer, Waltham, MA.
+
+[91] Tammy Toscos, Kay Connelly, and Yvonne Rogers. 2012. Best inten-
+tions: Health Monitoring Technology and Children. In Proceedings
+of the 2012 ACM annual conference on Human Factors in Computing
+Systems - CHI ’12. 1431–1440. https://doi.org/10.1145/2207676.2208603
+[92] Julio Vega, Samuel Couth, Ellen Poliakoff, Sonja Kotz, Matthew Sulli-
+van, Caroline Jay, Markel Vigo, and Simon Harper. 2018. Back to Ana-
+logue: Self-Reporting for Parkinson’s Disease. In Proceedings of the 2018
+CHI Conference on Human Factors in Computing Systems - CHI ’18. ACM,
+New York, NY, USA, 1–13. https://doi.org/10.1145/3173574.3173648
+[93] Peter West, Richard Giordano, Max Van Kleek, and Nigel Shadbolt.
+2016. The quantified patient in the doctor’s office: Challenges &
+opportunities. In Proceedings of the 2016 CHI Conference on Human
+Factors in Computing Systems (CHI ’16). ACM, New York, NY, USA,
+3066–3078. https://doi.org/10.1145/2858036.2858445
+
+[94] Peter West, Max Van Kleek, Richard Giordano, Mark J Weal, and Nigel
+Shadbolt. 2018. Common Barriers to the Use of Patient-Generated
+Data Across Clinical Settings. In Proceedings of the 2018 CHI Conference
+on Human Factors in Computing Systems - CHI ’18. ACM, New York,
+NY, USA, 1–13. https://doi.org/10.1145/3173574.3174058
+
+[95] Cecilia Winberg, M. Kylberg M., C. Pettersson, T. Harnett, P-O. Hedvall,
+T. Mattsson, and E. Mansson Lexell. 2017. The Use of Apps for Health
+in Persons with Multiple Sclerosis, Parkinson’s Disease and Stroke
+– Barriers and Facilitators. In Harnessing the Power of Technology to
+Improve Lives, P. Cudd and L. de Witte (Eds.). IOS Press, 638–641.
+[96] Andong Zhan, Max A. Little, Denzil A. Harris, Solomon O. Abiola,
+E. Ray Dorsey, Suchi Saria, and Andreas Terzis. 2016. High Frequency
+Remote Monitoring of Parkinson’s Disease via Smartphone: Platform
+Overview and Medication Response Detection. ArXiv e-prints (2016),
+1–12. arXiv:1601.00960 http://arxiv.org/abs/1601.00960
+
+[97] Haining Zhu, Joanna Colgan, Madhu Reddy, and Eun Kyoung
+Sharing patient-generated data in clinical prac-
+Choe. 2017.
+tices: An interview study.
+In American Medical
+Informatics
+Association Annual Symposium proceedings, Vol. 10. 1303–1312.
+http://www.ncbi.nlm.nih.gov/pubmed/28269928{%}5Cnhttp:
+//www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC5333267
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 107Page 16

@@ -1,0 +1,22 @@
+1. Abstract
+2. ACM Classification Keywords
+3. Introduction
+4. Related Work
+    4.1 The Benefits of Group Exercise
+    4.2 Sports Performance Feedback
+    4.3 Tools to Support Running
+    4.4 E-Textiles and Sports
+5. Design Process and Goals
+6. The Three Interactive Prototypes
+    6.1 Prototype 1: Custom Flexible LED Matrix
+    6.2 Prototype 2: Plastic Logic Flexible e-Ink Prototype
+    6.3 Prototype 3: Erogear Flexible LED Matrix
+7. SFF System Overview
+8. Pilot Studies and Final Design
+9. Field Study of Running Groups
+    9.1 Field Study Method
+    9.2 Field Study Results
+10. Case Studies: Two SFF Race Deployments
+11. Discussion and Conclusion
+12. Acknowledgements
+13. References

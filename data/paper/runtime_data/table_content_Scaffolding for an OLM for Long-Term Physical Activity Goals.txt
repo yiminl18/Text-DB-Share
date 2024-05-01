@@ -1,0 +1,17 @@
+Table of Contents:
+
+1. Introduction
+2. Background
+    2.1 Open Learner Modelling
+    2.2 Personal Informatics
+    2.3 Meta-Cognitive Scaffolding for OLMs
+3. Study Design
+    3.1 RQ1: Tutorial Scaffolding
+    3.2 RQ2: Goal Prompts Scaffolding
+4. Results
+    4.1 Participants
+    4.2 RQ1: Tutorial Scaffolding
+    4.3 RQ2: Goal Prompts
+5. Discussion
+    5.1 Limitations
+6. Conclusion

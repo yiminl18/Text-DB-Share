@@ -1,0 +1,18 @@
+Table of Contents
+
+1. Abstract
+2. CCS Concepts
+3. Keywords
+4. Introduction
+5. Data Collection
+   5.1 Online Survey
+   5.2 Survey Design
+   5.3 Participants
+6. Results
+   6.1 Current Wearable Wellness Device Usage
+   6.2 Overall Ratings of Requirements
+   6.3 Gender Aspects
+   6.4 Other User Comments
+7. Discussion
+8. Acknowledgements
+9. References

@@ -1,0 +1,282 @@
+NOTICE OF PROBABLE VIOLATION, 
+PROPOSED CIVIL PENALTY, 
+and 
+PROPOSED COMPLIANCE ORDER 
+
+VIA ELECTRONIC MAIL 
+
+February 22, 2023 
+
+Todd Dunn 
+Vice President Operations – HYCO 
+Linde, Inc. 
+1585 Saw Dust Road 
+Suite 300 
+The Woodlands, TX 77300 
+
+Dear Mr. Dunn: 
+
+CPF 4-2023-005-NOPV 
+
+From March 30 to September 6, 2022, a representative of the Pipeline and Hazardous Materials 
+Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 601 of 49 
+United States Code (U.S.C.), inspected Linde Inc.’s (Linde) hydrogen pipeline system in Louisiana 
+and Texas. 
+
+As  a  result  of  the  inspection,  it  is  alleged  that  Linde  has  committed  probable  violations  of  the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (C.F.R.).  The items inspected 
+and the probable violations are: 
+
+1.   
+
+§ 191.22 National Registry of Operators. 
+
+(a) …. 
+(c) Changes. Each operator of  a gas pipeline, gas  pipeline facility, 
+UNGSF, LNG plant, or LNG facility must notify PHMSA electronically 
+through 
+Operators 
+Registry 
+at https://portal.phmsa.dot.gov of certain events. 
+
+National 
+
+the 
+
+of 
+
+(1) An operator must notify PHMSA of any of the following events 
+
+not later than 60 days before the event occurs: 
+
+(i) …. 
+(ii) Construction of 10 or more miles of a new pipeline; 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Linde  failed  to  notify  PHMSA  of  the  construction  of  10  or  more  miles  of  new  pipeline  in 
+accordance  with  §  191.22(c)(1)(ii).    Specifically,  Linde  failed  to  notify  PHMSA  electronically 
+through  the  National  Registry  of  Operators  of  approximately  17.39  miles  of  a  new  14-inch 
+hydrogen pipeline construction project 60 days before the event occurred. 
+
+During the inspection Linde stated that it began construction on the hydrogen pipeline on March 
+15,  2020  and  completed  the  project  on  July  31,  2021.    Linde  failed  to  notify  PHMSA  of  the 
+construction project 60 days before the event occurred.  Rather, Linde filed the notification for the 
+project on September 9, 2022.  The notification should have been made no later than January 15, 
+2020. 
+
+Therefore, Linde failed to notify PHMSA of the construction of 10 or more miles of new pipeline 
+in accordance with § 191.22(c)(1)(ii). 
+
+2.   
+
+§ 192.459 External corrosion control: Examination of buried pipeline when exposed. 
+
+external 
+
+corrosion 
+
+Whenever an operator has knowledge that any portion of a buried 
+pipeline is exposed, the exposed portion must be examined for evidence 
+of external corrosion if the pipe is bare, or if the coating is deteriorated. 
+remedial  action  under §§ 
+If 
+192.483 through 192.489 is  found,  the  operator  shall 
+investigate 
+circumferentially  and  longitudinally  beyond  the  exposed  portion  (by 
+visual  examination,  indirect  method,  or  both)  to  determine  whether 
+additional corrosion requiring remedial action exists in the vicinity of 
+the exposed portion. 
+
+requiring 
+
+Linde  failed  to  examine  two  exposed  portions  of  buried  pipelines  for  evidence  of  external 
+corrosion in accordance with § 192.459.  Specifically, Linde failed to perform a visual examination 
+on two (2) of the five (5) replacements/repairs of exposed buried pipeline (the LA-TX Hydrogen 
+Pipeline System) for evidence of deteriorated coating and/or external corrosion. 
+
+During the inspection Linde failed to provide Exposure Report Forms SMP-189 or any records 
+showing an internal/external corrosion examination or visual examinations of the coating on the 
+exposed portions of the pipe when exposed for the following two projects: 1) Sens Road Relocation 
+Project in LaPorte, Texas (2019) and 2) Line Lowering project in Texas City, Texas (2020). 
+
+Therefore,  Linde  failed  to  examine  two  exposed  portions  of  buried  pipelines  for  evidence  of 
+external corrosion in accordance with § 192.459. 
+
+3. 
+
+§ 192.937 What is a continual process of evaluation and assessment to maintain a 
+pipeline's integrity? 
+
+(a) . . . . 
+(b) Evaluation. An operator must conduct a periodic evaluation as 
+frequently as needed to assure the integrity of each covered segment. 
+The periodic evaluation must be based on a data integration and risk 
+assessment of the entire pipeline as specified in § 192.917. For plastic 
+transmission pipelines, the  periodic evaluation is  based on the  threat 
+
+ 
+ 
+ 
+  
+ 
+ 
+   
+ 
+analysis  specified  in  192.917(d).  For  all  other  transmission  pipelines, 
+the evaluation must consider the past and present integrity assessment 
+results, data integration and risk assessment information (§ 192.917), 
+and decisions about remediation (§ 192.933) and additional preventive 
+and  mitigative  actions  (§  192.935).  An  operator  must  use  the  results 
+from  this  evaluation  to  identify  the  threats  specific  to  each  covered 
+segment and the risk represented by these threats. 
+
+Linde failed to conduct a periodic evaluation as frequently as needed to assure the integrity of each 
+covered segment in accordance with § 192.937(b).  Specifically, Linde failed to conduct a risk 
+analysis of its pipeline to identify additional preventive and mitigative actions after constructing 
+seventeen  miles  of  covered  segments.    In  addition,  Linde’s  procedures  failed  to  include  a 
+requirement to conduct a periodic evaluation as frequently as needed to assure the integrity of each 
+covered segment in accordance with § 192.937(b). 
+
+Linde has not conducted a risk analysis since 2010.  Therefore, Linde must conduct a risk analysis 
+to determine if additional preventive and mitigative actions, including automatic shut-off valves 
+or  remote  control  valves,  would  mitigate  or  enhance  public  safety  for  its  covered  segments, 
+including  the  newly-constructed  segments.    Linde  must  also  revise  its  procedures  to  include  a 
+requirement to conduct a periodic evaluation, at a specified interval, to assure the integrity of each 
+covered segment in accordance with § 192.937(b).  
+
+Therefore,  Linde  failed  to  conduct  a  periodic  evaluation  as  frequently  as  needed  to  assure  the 
+integrity of each covered segment in accordance with § 192.937(b). 
+
+Proposed Civil Penalty 
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations. For violation occurring on or after March 21, 2022 and before January 6, 2023, 
+the maximum penalty may not exceed $239,142 per violation per day the violation persists, up to 
+a maximum of $2,391,412 for a related series of violations. For violation occurring on or after 
+May  3, 2021  and  before  March 21, 2022,  the  maximum  penalty  may  not  exceed  $225,134  per 
+violation  per  day  the  violation  persists,  up  to  a  maximum  of  $2,251,334  for  a related  series  of 
+violations.  For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations. For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day  the  violation  persists,  up  to  a  maximum  of  $2,186,465  for  a related  series  of 
+violations. For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679. For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable violation(s) and recommend that you be preliminarily assessed a civil penalty of $ 20,400 
+as follows:  
+
+Item number 
+1 
+
+PENALTY 
+$ 20,400 
+
+Proposed Compliance Order 
+With respect to Item 3 pursuant to 49 U.S.C. § 60118, the Pipeline and Hazardous Materials Safety 
+Administration proposes to issue a Compliance Order to Linde, Inc.  Please refer to the Proposed 
+Compliance Order, which is enclosed and made a part of this Notice. 
+
+Warning Item 
+With respect to Item 2, we have reviewed the circumstances and supporting documents involved 
+in this case and have decided not to conduct additional enforcement action or penalty assessment 
+proceedings at this time. We advise you to promptly correct this item. Failure to do so may result 
+in additional enforcement action. 
+
+Response to this Notice 
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.   Please  refer  to  this  document  and  note  the  response  options.   All 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. § 552(b), along with the complete original document, you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following the receipt of this Notice, you have 30 days to  respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  4-2023-005-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Sincerely, 
+
+Bryan Lethcoe 
+Director, Southwest Region 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Proposed Compliance Order 
+
+Response Options for Pipeline Operators in Enforcement Proceedings 
+
+cc: John Maitino, National Pipeline Compliance Mgr., Linde, Inc., john.maitino@linde.com 
+
+ 
+ 
+ 
+ 
+ 
+PROPOSED COMPLIANCE ORDER 
+
+Pursuant  to  49  U.S.C.  §  60118,  the  Pipeline  and  Hazardous  Materials  Safety  Administration 
+(PHMSA)  proposes  to  issue  to  Linde,  Inc.  a  Compliance  Order  incorporating  the  following 
+remedial requirements to ensure compliance with the pipeline safety regulations: 
+
+A. 
+
+In regard to Item 3 of the Notice pertaining to Linde’s failure to conduct a 
+periodic evaluation as frequently as needed to assure the integrity of each 
+covered segment, Linde must conduct a risk analysis and submit the analysis 
+to the Director, Southwest Region within 60 days of issuance of the Final 
+Order.  Linde must also revise its procedures to include a requirement to 
+conduct a periodic evaluation, at a specified interval, to assure the integrity 
+of each covered segment and submit the revised procedures to the Director, 
+Southwest Region within 60 days of issuance of the Final Order. 
+
+It is requested (not mandated) that Linde, Inc. maintain documentation of the safety improvement 
+costs  associated  with  fulfilling  this  Compliance  Order  and  submit  the  total  to  Bryan  Lethcoe, 
+Director,  Southwest  Region,  Pipeline  and  Hazardous  Materials  Safety  Administration.    It  is 
+requested  that  these  costs  be  reported  in  two  categories:  1)  total  cost  associated  with  the 
+preparation/revision of plans, procedures, studies, and analyses, and 2) the total cost associated 
+with replacements, additions, and other changes to pipeline infrastructure. 
+
+ 
+ 
+ 
+ 
+ 
+

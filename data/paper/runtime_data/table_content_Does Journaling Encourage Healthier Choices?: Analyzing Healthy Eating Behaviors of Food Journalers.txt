@@ -1,0 +1,25 @@
+Table of Contents:
+
+1. Introduction
+2. Related Work
+    2.1 Personal informatics and food journaling
+    2.2 Using online data to assess health behaviors
+3. Healthy Eating Behaviors
+    3.1 Fruits and vegetables
+    3.2 Red and processed meat, poultry, and fish
+    3.3 Added sugars and sugary drinks
+4. Data
+    4.1 Collecting and processing MFP data
+    4.2 Normalizing and extracting portion sizes
+    4.3 Caloric intake patterns
+5. Methods
+    5.1 Behavioral measures
+    5.2 Sociodemographic and journaling factors
+6. Results
+    6.1 RQ1: Distributions of the healthy diet intakes
+    6.2 RQ2: Behavioral differences
+    6.3 RQ3: Factors influencing eating behaviors
+7. Discussion
+    7.1 Limitations
+8. Conclusion
+9. Acknowledgement

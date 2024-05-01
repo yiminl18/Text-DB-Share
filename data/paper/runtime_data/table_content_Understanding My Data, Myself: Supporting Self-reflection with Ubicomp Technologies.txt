@@ -1,0 +1,21 @@
+Table of Contents:
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. General Terms
+5. Introduction
+6. Defining Personal Informatics
+7. Related Work
+8. Interviews
+    8.1 Recruitment
+    8.2 Procedure
+9. Results
+    9.1 Participant Information
+    9.2 Reasons
+    9.3 Questions
+    9.4 Phases of Reflection
+10. Features
+11. Conclusions
+12. Acknowledgments
+13. References

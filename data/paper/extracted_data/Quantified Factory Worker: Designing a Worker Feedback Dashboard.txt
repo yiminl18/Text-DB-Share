@@ -1,0 +1,1129 @@
+Quantified Factory Worker: Designing a Worker Feedback 
+Dashboard 
+
+Päivi Heikkilä 
+Technical Research Center of 
+Finland Ltd. 
+Tampere, Finland 
+paivi.heikkila@vtt.fi 
+
+Anita Honka 
+Technical Research Center of 
+Finland Ltd. 
+Tampere, Finland 
+anita.honka@vtt.fi 
+
+Eija Kaasinen 
+Technical Research Center of 
+Finland Ltd. 
+Tampere, Finland 
+eija.kaasinen@vtt.fi 
+
+problem-solving  [4].  Already  now,  operating  a  highly 
+automated  manufacturing  machine  requires  independent 
+problem-solving  skills,  as  a  single  worker  may  be 
+responsible for a whole machine, and has to be able to handle 
+problem situations quickly to avoid or minimise idle time in 
+manufacturing.  
+
+The changing nature of factory work creates a need to receive 
+feedback on one’s performance and consider new aspects of 
+workers’  well-being.  As  one  solution,  we  introduce  the 
+concept  of  a  Worker  Feedback  Dashboard,  which  aims  to 
+empower  workers  by  raising  self-awareness  of 
+their 
+performance and well-being. Worker Feedback Dashboard is 
+envisioned  as  a  personal  digital  application,  which 
+aggregates  and  presents  automatically  tracked  personal 
+metrics regarding work performance and well-being for each 
+to  workers,  and  highlights 
+work  shift  as  feedback 
+improvements in personal performance. The concept of the 
+Worker Feedback Dashboard originates from the Quantified 
+Self  approach,  which  promotes  self-knowledge  and  self-
+improvements  through  numbers  acquired  with  the  help  of 
+technology,  such  as  wearables  and  mobile  devices.  The 
+ideology  aims  at  providing  insightful  personal  data,  which 
+has the potential to lead to positive behavioural changes [3].  
+
+Following  the  Quantified  Self  trend,  wearing  self-tracking 
+devices  for  monitoring  personal  well-being  has  become 
+increasingly common in everyday use [see e.g. 22]. Recently, 
+the  number  of  trials  of  self-tracking  well-being  metrics  at 
+work have also increased, but the impacts have not yet been 
+systematically studied [2, 18]. As self-tracking at work is a 
+relatively  new  concept  and  involves  a  variety  of  ethical 
+issues  [16,  18],  it  is  especially  important  to  involve  the 
+workers themselves in the development of new self-tracking 
+solutions.  In  this  study,  we  first  interviewed  the  factory 
+workers  on  their  initial  reactions  to  our  concept  idea,  and 
+later, we collected their feedback to the designed prototype 
+concretizing  the  concept.  In  addition  to  involving  users, 
+paying attention to the user experience (UX) of work systems 
+is important, as a way the user feels about using a system also 
+shapes the image of oneself as a professional [9]. 
+
+In this paper, the research questions are: 
+1)  What  kind of  user experience should be  targeted  to in 
+solutions  providing  meaningful  self-tracking  and 
+production feedback for factory workers, and what kinds 
+
+skills 
+
+is  changing 
+problem-solving 
+
+ABSTRACT 
+towards  knowledge  work, 
+Factory  work 
+demanding 
+and  managing 
+complexity.  Providing  factory  workers  the  possibility  to 
+receive  meaningful  self-tracking  feedback  at  work,  could 
+empower them to cope better with the increasing complexity 
+of  their  work.  We  apply  the  Quantified  Self  approach  to 
+factory work by introducing the concept and prototype of a 
+Worker  Feedback  Dashboard,  which  presents  various 
+automatically  tracked  well-being  and  work  performance 
+metrics  to  workers.  Based  on  user  interviews,  we  created 
+user experience goals for the Dashboard, and identified the 
+following design implications:  Keep positive (but truthful), 
+Give  personal  feedback,  Enable  reflection,  and  Do  not 
+disturb the worker. After designing the prototype, we studied 
+its  user  acceptance.  Even  though  the  interviewed  factory 
+workers’ first reactions to tracking personal metrics at work 
+were  rather  negative,  the  attitudes  became  more  positive 
+after  presenting  the  prototype.  The  results  encourage 
+implementing the Worker Feedback Dashboard prototype to 
+a functional application. 
+
+Author Keywords 
+well-being; factory workers; Quantified Self; human-
+centred design, Operator 4.0  
+
+ACM Classification Keywords 
+CCS  -  Human-centered  computing  -  Human  computer 
+interaction (HCI). 
+
+INTRODUCTION 
+The  fourth  industrial  revolution,  enabled  by  advanced 
+digitalization and other technologies, is assumed to change 
+work on factory floor to resemble knowledge work, making 
+the work more interesting and meaningful but also creating 
+demands in terms of managing complexity, abstraction and 
+
+Permission to make digital or hard copies of all or part of this 
+work for personal or classroom use is granted without fee 
+provided that copies are not made or distributed for profit or 
+commercial advantage and that copies bear this notice and the full 
+citation on the first page. Copyrights for components of this work 
+owned by others than ACM must be honored. Abstracting with 
+credit is permitted. To copy otherwise, or republish, to post on 
+servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org. 
+
+NordiCHI'18, September 29-October 3, 2018, Oslo, Norway  
+© 2018 Association for Computing Machinery. 
+ACM ISBN 978-1-4503-6437-9/18/09…$15.00  
+https://doi.org/10.1145/3240167.3240187 
+
+Paste the appropriate copyright/license statement here. ACM now supports 
+three different publication options: 
+
+  ACM copyright: ACM holds the copyright on the work. This is the 
+
+historical approach. 
+
+  License:  The  author(s)  retain  copyright,  but  ACM  receives  an 
+
+exclusive publication license. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+of design implications does the targeted user experience 
+have? 
+
+2)  What  is  the  user  acceptance  of  the  Worker  Feedback 
+Dashboard  prototype,  which  provides  feedback  of  the 
+worker’s well-being and work performance in a factory 
+context? 
+
+The  targeted  user  experience  was  concretised  as  UX  goals 
+that  were  created  based  on  the  results  of  user  studies  with 
+factory workers, discussions with our industrial partner and 
+principles  of  the  Quantified  Self  approach.  They  were  the 
+basis  for  design  implications  that  were  utilised  when 
+designing  the  Worker  Feedback  Dashboard  prototype.  The 
+second research question is addressed by examining the user 
+acceptance of the prototype by engaging factory workers and 
+other key stakeholders in a participatory design process. 
+
+This study is a part of a wider research project (Factory2Fit) 
+aiming to create empowering and engaging digital solutions 
+to factory floor workers. The Worker Feedback Dashboard 
+solution specifically aims to empower workers by providing 
+them  with  new  data-based  information  on  their  well-being 
+and work performance.  
+
+The  paper  first  presents  related  research  and  two  key 
+concepts:  Quantified  Self  and  Operator  4.0.  Second,  it 
+describes our design process, methods and participants. The 
+results define the central findings related to factory workers 
+needs  and  concerns  regarding 
+the  Worker  Feedback 
+list  our  UX  goals  and  design 
+Dashboard  concept, 
+implications, and introduce the prototype of the concept. In 
+the  discussion 
+the  practical 
+section,  we  highlight 
+implications and ethical questions related to the topic. 
+
+RELATED RESEARCH 
+
+Quantified  Self:  From  Meaningful  Insights  to  Positive 
+Changes 
+The  term  Quantified  Self  refers  to  self-monitoring  of 
+biological, physical, behavioural, or environmental data [28]. 
+The term became known after Gary Wolf and Kevin Kelly 
+launched  the  Quantifiedself.com  website  for  sharing  self-
+tracking practices in 2007. The term refers to the practice and 
+trend  of  self-tracking  and  to  the  international  community. 
+The website is still in active use, but the trend has expanded. 
+An increasing number of people practice self-tracking, using 
+commercial wearable devices. For example, around 25% of 
+Americans  own  a  wearable  wrist  device  for  tracking  their 
+well-being  and  behaviour  [22].  The  trend  of  recording 
+personal  data  for  gaining  self-knowledge  has  also  been 
+described using other terms such as lifelogging [see more in 
+5, 27], personal informatics [15] and personal analytics [17].  
+
+though 
+
+the  Quantified  Self 
+
+Even 
+trend  has  become 
+increasingly  popular  during  the  last  ten  years  among  both 
+consumers  and  workplaces,  most  of  the  studies  on  self-
+tracking  have  only  focused  on  the  active  members  of  the 
+Quantified  Self  community  [3,  19],  web  forums  related  to 
+self-monitoring  [15]  or  early  adopters,  for  example  sport 
+enthusiasts  or  users  of  several  trackers  [24].  Nevertheless, 
+
+these  studies  have  revealed  some  user  experience-related 
+aspects and usage barriers that are likely to be applicable to 
+a wider group of users. 
+
+Based on the analysis of the video posts of quantified selfers, 
+Choe et al. [3] found that the common pitfalls in self-tracking 
+included  tracking  too  many  things,  which  led  to  tracking 
+fatigue, and not tracking triggers or context, which acted as 
+a barrier to meaningful insights. Oh and Lee [19] studied the 
+user  experience  issues  of  self-tracking  tools  used  by 
+quantified selfers based on the content posted on their web 
+forum.  The  identified  user  experience  issues  included  the 
+controllability and integration of the data, data accuracy, data 
+visualisations  and  simplicity  of  user  input.  Li  et  al.  [15] 
+identified barriers related to self-tracking based on the survey 
+and interview data of self-trackers. These data showed that 
+the  main  barriers  to  self-tracking  were  lack  of  time, 
+insufficient  motivation  and  forgetting  to  self-track.  The 
+barriers to reflection on the data included lack of time, lack 
+of  visualisations,  scattered  data,  and  missing  context 
+information.  
+
+The  studies  of  early  adopters  emphasise  the  need  for 
+visualisations  and  the  data’s  context  information.  Pantzar 
+and  Ruckenstein  [20]  also  found  in  their  study  that  data 
+visualisations made the data more meaningful for the study 
+participants, by proving the impressions they had had before, 
+or  demonstrating  non-anticipated  findings.  Seeing  graphs 
+was motivating and gratifying. For example, the participants 
+felt  that  housework  activities  gained  a  new  value  because 
+they contributed positively to the exercise and heart rate data. 
+Data  visualisations  proved  and  supported  this,  evoking 
+satisfaction and a sense of accomplishment. 
+
+The  goal  of  the  Quantified  Self  movement  is  to  gain 
+meaningful insights based on personal data, which then lead 
+to positive changes in behaviour [3]. Recording everyday life 
+offers ‘a possibility of breaking bad habits and turning one’s 
+life for the better’ [27]. The goal is the same, whether self-
+tracking  is  practised  during  one’s  free  time  or  at  work.  In 
+general,  the  data  tracked  by  wearable  devices  have  the 
+potential  to  provide  personalised,  immediate  and  objective 
+feedback [21]. According to a study by Rooksby et al. [24], 
+the motivations for self-tracking can vary from goal-driven 
+tracking  to  documentary  and  diagnostic  tracking,  or  to 
+collecting  rewards  or  fetishised  tracking.  Even  though  the 
+number of experiments related to self-tracking at work has 
+expanded during the last years [18], long-lasting impacts of 
+the trials have not been reported [2, 18].  
+
+For  gaining  meaningful 
+insights  and  even  positive 
+behavioural changes, the design of the self-tracking devices 
+and applications plays a critical role. In this study, we aim to 
+design an acceptable, interesting and useful solution to self-
+tracking in a factory context. 
+
+Operator 4.0 
+The fourth industrial revolution, often referred to as Industry 
+4.0, is already on its way, enabled by advanced digitalisation, 
+
+ 
+ 
+ 
+ 
+the  industrial  internet  and  novel  interaction  tools  such  as 
+augmented and virtual reality [12]. For factory floor workers 
+the  industrial  change  brings  opportunities  to  make  work 
+more interesting and meaningful but also creates demands in 
+terms  of  managing  complexity,  abstraction  and  problem-
+solving [4]. Operator 4.0 refers to smart and skilled operators 
+of  the  future,  who  are  assisted  by  automated  systems  that 
+provide  sustainable  relief  from  physical  and  mental  stress 
+and  let  the  operators  utilise  and  develop  their  creative, 
+innovative and improvisational skills without compromising 
+production objectives [23].  
+
+Operator 4.0 factory work will be qualitatively enriched and 
+flexible  and  will  require  new  qualifications  to  master  the 
+digital technology invading factories. Future factories should 
+support  current  workers  in  learning  new  skills  as  well  as 
+tempt  new  workers  who  are  already  familiar  with  digital 
+solutions.  Operators’  physical,  sensory  and  cognitive 
+capabilities evolve over time, but these capabilities may also 
+vary  according  to  the  work  context  [23].  According  to 
+Hackman and Oldham [6], one important factor influencing 
+job motivation is keeping employees aware of how well they 
+perform in their work. Thus, for work motivation, it would 
+be  important  to  receive  feedback  on  personal  performance 
+and  competence  development,  but  in  work,  which  is 
+becoming  increasingly  automated,  this  kind  of  feedback  is 
+not readily available.  
+
+DESIGN PROCESS, METHODS AND PARTICIPANTS 
+
+Participatory Design Process 
+Our  design  process  followed  a  human-centred  design 
+approach [8], and the principles of the participatory design 
+process, in which users and possibly other stakeholders are 
+involved in the design [14, 25]. The design process began by 
+gaining  an  understanding  of  factory  work,  the  working 
+context  and  the  workers’  initial  attitudes  towards  self-
+tracking. In addition to the factory workers, the process also 
+involved the  management of  the  factories  in  terms of their 
+expectations, potential concerns and practical issues.  
+
+Based on the knowledge gained, we created the first version 
+of  the  Worker  Feedback  Dashboard  concept.  The  concept 
+design was based on UX goals, that concretise the intended 
+emotions  or  experiences  that  the  solution  is  targeted  to 
+awake. Concrete, focused and shared UX goals help creating 
+and  maintaining  UX  mindset  within  the  design  team  [9]. 
+Kaasinen et al. [9] propose UX goals to guide the design of 
+industrial systems. UX goal setting integrates the viewpoints 
+of  different  stakeholders,  thus  committing  them  to  the 
+defined  UX  goals  and  emphasizing  user  experience  as  a 
+strategic design decision. In  our study,  we defined the  UX 
+goals  based  on  the  results  of  the  user  studies,  discussions 
+with our industrial partner and principles of the Quantified 
+Self approach. UX goals were used to concretise the targeted 
+user  experience,  and  they  were  interpreted  into  design 
+implications  as  suggested  by  Roto  et  al.  [25].  The  derived 
+design  implications  guided  our  design  of  the  Dashboard 
+prototype.  
+
+The user acceptance of the Worker Feedback Dashboard was 
+studied  by  introducing  the  designed  prototype  to  factory 
+workers,  who  could  express  their  feedback  and  further 
+improvement ideas to it. After this, the prototype was revised 
+according to the feedback.   
+
+Data Collection Methods and Participants 
+The  first  part  of  the  study  was  conducted  as  individual 
+factory  worker  interviews  including  several  themes.  The 
+relevant  theme  for  this  paper  was  the  workers’  initial 
+attitudes towards wearing a self-tracking fitness device and 
+receiving  well-being  and  performance  metrics  as  feedback 
+during the workday. In addition, we asked the interviewees 
+what kind of feedback they currently receive of their work. 
+The  1–1.5  hours  of  semi-structured 
+interviews  were 
+conducted  in  a  meeting  room  at  the  factory  by  two 
+researchers; one mainly led the interview and the other made 
+notes  and  posed  additional  questions.  The  interviews  were 
+audio  recorded.  The  interviews  were  complemented  with 
+observations,  where  the  researchers  visited  the  actual 
+workplace  of  the  interviewees  and  observed  their  work,  to 
+obtain  a  contextual  understanding  of  their  tasks,  work 
+practices, the problem situations that occur, and the factory 
+environment [see more about the context information in 10]. 
+
+In this first part of the study,  we interviewed altogether 13 
+factory  workers  from  two  factories  of  metal  industry 
+(referred to Factory A and Factory B). The interviewees were 
+working  in  different  roles:  6  as  machine  operators,  4  in 
+managerial positions and 3 as development engineers. All the 
+machine  operators  used  a  modern,  highly  automated, 
+multipurpose  manufacturing  machine,  which  required 
+problem-solving 
+the  complex 
+skills  and  managing 
+production process. The two factories were customers of our 
+industrial partner, and this partner proposed these factories 
+to the study. The interviewees were chosen to the interview 
+based on their availability during our factory visits.  
+
+The  involved  factory  workers  can  be  seen  as  early 
+representatives of the Operator 4.0 vision [23]. Even though 
+also  the  managerial  personnel  were  interviewed  to  gain  an 
+overall  picture  of  the  manufacturing  process  and  factory 
+work, the interviews of the machine operators provided the 
+main material for the user requirements related to the concept 
+development. 
+
+In  the  second  part  of  the  study,  after  creating  the  first 
+prototype  of  the  Worker  Feedback  Dashboard  concept,  we 
+introduced  the  first  draft  to  five  machine  operators  of  the 
+same  two  factories  who  worked  with  the  same  machinery 
+(one was also interviewed in the earlier theme interview). To 
+three operators, the concept was explained as part of a wider 
+1.5-hour interview, and to two operators, it was elaborated in 
+more  detail  in  a  one-hour  feedback/co-design  session 
+dedicated to the concept. We also introduced the draft to a 
+production manager and a development engineer of Factory 
+A, where the management also wanted to participate in the 
+design process.  
+
+ 
+a 
+
+numeric 
+
+The  second  part  of  the  study  focused  on  the  participant’s 
+overall  feelings  towards  the  concept,  their  view  on  the 
+relevant/irrelevant and potentially missing metrics, and their 
+ideas  for  improvements.  In  addition,  we  studied  user 
+acceptance  with 
+feedback 
+five-scale 
+questionnaire.  The  questionnaire  included  five  statements  
+measuring 1) whether the content was easy to understand, 2) 
+whether  it  is  was  interesting,  3)  whether  the  data  seemed 
+personally valuable, 4) whether the appearance of the views 
+was pleasant, and 5) whether the use of this kind of app raised 
+any  doubts.  The  evaluated  aspects  were  based  on  the 
+dimensions of the Technology Acceptance Model for Mobile 
+Services 
+indicating 
+acceptability were ease of adoption and use (S1), value (S2-
+3) and trust (S5).In addition, we had a UX question about the 
+pleasantness of the appearance of the main view, as it is easy 
+to evaluate already before using the solution. 
+
+[11].  The  dimensions 
+
+(TAMM) 
+
+In both phases of the study, the participants were emphasized 
+that the participation is truly voluntary, and they signed the 
+informed  consent  form.  The  personal  data  was  treated 
+confidentially in all research  phases, and anonymised after 
+the data collection. 
+
+Data Analysis 
+The  data  from  the  first  interviews  and  observations  were 
+analysed qualitatively. To form a common understanding of 
+the findings, two researchers first separately read through the 
+interview data, and then jointly analysed them. The relevant 
+pieces  of  data  were  identified  and  organised  to  form  data-
+driven themes. The analysis of the wider interviews followed 
+the  principles  of  creating  an  affinity  diagram,  an  analysis 
+phase  of  the  contextual  design  method  [1].  The  initial 
+attitudes  towards  self-tracking  at  work  and  receiving 
+feedback on it, as well as the comments on current feedback 
+of one’s work were analysed. In the second part of the study, 
+the findings of the feedback/co-design sessions were jointly 
+analysed  by  two  researchers.  The  quantitative  data  of 
+feedback  questionnaires  were  used  to  complement  the 
+qualitative analysis. 
+
+RESULTS 
+In the following, we first describe the factory workers’ initial 
+reactions to the idea of practising self-tracking at work and 
+receiving feedback on it. Then, we present the identified UX 
+goals  and  design  implications,  the  design  of  the  Worker 
+Feedback  Dashboard  concept,  the  feedback  received  from 
+the factory workers, and the revisions made to the design on 
+the basis of the feedback.   
+
+Workers’  Initial  Reactions  towards  Tracking  Personal 
+Metrics at Work 
+When the interviewed factory workers were introduced to the 
+idea  of  self-tracking  at  work,  they  had  mixed,  but  mainly 
+negative  initial  reactions  towards  it.  They  associated  the 
+personal 
+the 
+the 
+workplace’s 
+effectiveness  of  their  manufacturing  work.  In  their  work, 
+performance is typically reported in negative measures, such 
+
+feedback  based  on  self-tracking  with 
+to 
+
+current  measurements 
+
+related 
+
+as the number of errors or the waiting time of the machine, 
+and  thus  they  associated  also  self-tracking  with  receiving 
+negative feedback. The first comment of one operator was: 
+‘Uhh. You get enough [negative] feedback already now’. 
+
+Despite the mainly negative first impressions, obtaining data 
+on one’s stress level at work (e.g. based on heart rate) was 
+seen as a  somewhat  interesting. However,  the  majority did 
+not  see  the  value  of  self-monitoring  for  themselves,  and 
+seemed to be worried about why the data was to be collected. 
+One of the workers pointed out that the form of the feedback 
+is also important: ‘If you are frustrated and get a notification 
+that you need to relax, you’ll get even more frustrated’.   
+
+When  the  workers  told  about  factors  having  an  impact  on 
+their  job  satisfaction,  the  key  factor  seemed  to  be  high 
+productivity of the work, which was appreciated also by the 
+management. The operators explained that they enjoy their 
+work most when the machinery works without disturbances: 
+‘The  best  thing  is  when  the  machine  rocks’.  This  provides 
+direct feedback on the productivity of work. Even though the 
+workers  made  efforts 
+the 
+to  avoid 
+manufacturing process, they felt that the management did not 
+acknowledge or appreciate their efforts. They remarked that 
+it  was  not  typical  to  receive positive  feedback:  ‘You  never 
+get to hear thanks from others, but when you make a mistake, 
+you hear it right away’.  
+
+interruptions 
+
+to 
+
+Some  of  the  workers  were  in  the  habit  of  checking  the 
+statistics  related  to  machine  usage  time  in  the  reports 
+produced  of  the  machine  flow,  but  these  data  were  not 
+interesting to all workers. It seemed that the information on 
+the  reports  was  more  relevant  for  the  management,  as  it 
+offered  an  overall  picture  of  the  manufacturing  and 
+highlighted  any  problems.  For  workers,  more personal and 
+encouraging  information  would  have  more  potential  to  be 
+beneficial and interesting.  
+
+Designing  the  First  Prototype  of  the  Worker  Feedback 
+Dashboard 
+Based on the understanding of the factory workers’ working 
+context  and  their  initial  reactions  towards  self-tracking  at 
+work,  we  designed  the  first  prototype  of  the  Worker 
+Feedback  Dashboard.  The  ideology  of  Quantified  Self 
+movement and the Operator 4.0 vision were also applied in 
+designing the prototype.   
+
+Based on the results of the user interviews, we first set the 
+following UX goals for the Worker Feedback Dashboard. 
+
+1)  Being  empowered  and  encouraged.  The  workers  felt 
+that  they  did  not  get  much  positive  feedback  on  their 
+efforts, and were afraid that self-tracking would lead to 
+increased  negative 
+feedback.  To  encourage  and 
+empower  workers,  the  dashboard  should  highlight  the 
+positive changes and accomplishments of the workday. 
+To be valuable to the workers, this feedback still needs 
+to be truthful. 
+
+2)  Getting  personal  feedback.  To  enable  striving  for 
+positive  changes  in  one’s  work  practices  or  in  factors 
+
+related  to  one’s  well-being,  the  feedback  needs  to  be 
+based  on  personal  data.  This  offers  the  possibility  to 
+have an impact on the factors tracked and the possibility 
+to  see  one’s  development  in  work  tasks.  Personal 
+feedback  means also that only the  workers themselves 
+can  access  the  data,  which  is  in  accordance  with  the 
+Quantified Self approach. 
+
+We also defined two additional UX goals based on the key 
+principle of the Quantified Self approach and the nature of 
+factory floor work.  
+
+3)  Getting meaningful insight. According to the Quantified 
+Self  approach,  meaningful  insights  require  personal 
+reflection  on  the  data.  Different  types  of  data  may  be 
+valuable  and  interesting  to  different  users.  The  design 
+should offer the possibility to combine different types of 
+data to enable the discovery of meaningful connections 
+and trends. The user should feel making self-discoveries 
+by linking different types of data to each other. 
+
+4)  Being  undisturbed.  The  solution  needs  to  be  quickly 
+interpreted  and  must  not  take  too  much  time  from 
+working or distract from work tasks. This is important 
+for  any  kind  of  work,  but  factory  work  specifically 
+requires  attentive  monitoring  of  machinery  and  quick 
+reaction  to  problems.  This  is  important  for  both 
+productive manufacturing as well as for ensuring safety 
+at the factory. The user should feel being fully able to 
+concentrate on the workflow. 
+
+The UX goals were interpreted to four design implications: 
+1) Keep positive (but truthful), 2) Give personal feedback, 3) 
+Enable personal reflection, and 4) Do not disturb the worker. 
+In  the  next  section,  we  describe  how  these  implications 
+influenced the design.  
+
+Overview of the First Prototype 
+The  Worker  Feedback  Dashboard  was  designed  to  include 
+both well-being and production metrics, and to provide the 
+user  with  the  possibility  to  discover  connections  between 
+these,  such  as  the  relation  between  sleep,  mood  and 
+achievements  at  work.  The  feedback  is  intended  for  the 
+personal  use  of  the  worker,  and  not  to  be  shared  with 
+management or other employees. The feedback is presented 
+visually via various graphs and charts, and it is based on data 
+that  would  be  collected  automatically  by  a  commercial 
+wearable  with  an  open  application  interface,  and  by  the 
+manufacturing production system. Well-being data would be 
+collected  through  a  wearable  fitness  tracker  used  by  the 
+factory worker and the performance metrics would involve 
+manufacturing production data that are collected inside the 
+factory into its ERP (Enterprise Resource Planning) system.   
+
+Figure  1  shows  the  contents  of  the  main  view  of  the  first 
+prototype  of  the  Worker  Feedback  Dashboard.  This  view 
+presents an illustration of the data from one day or work shift, 
+including well-being metrics, production metrics and a time 
+series  graph  that  presents  selected  well-being  metrics 
+together  with  certain  work  performance  outcomes.  By 
+
+selecting a specific metric, the user can see its evolvement as 
+a trend view. 
+
+The  well-being  metrics  include  parameters  that  can  be 
+automatically  tracked  by  commercial  wearable  fitness 
+trackers and the mood during the work day, as a self-reported 
+measure.  The  mood  information  was  included  to  enable  a 
+general  evaluation  of  the  user’s  feelings  and  to  encourage 
+users engage with the Dashboard. Step count at work, sleep 
+duration of the previous sleeping period and the resting heart 
+rate for the day were selected as other well-being metrics to 
+be shown in the Dashboard.  
+
+The production metrics selected include the machine running 
+time (utilisation rate of the machine), the longest continuous 
+running period during the work shift, the recovery time after 
+failures  (the  time  taken  to  resolve  the  error  situation),  and 
+achievements (number of finished orders and manufactured 
+parts) during the shift. The time series graph shows the state 
+of  the  machine  (running,  idle/waiting  or  failure)  together 
+with the data on the user’s heart rate and steps. We selected 
+these production metrics as they mirror the importance of the 
+manufacturing  without  interruptions  and  quick  solving  of 
+problems, which are the key objectives of the operators.  
+
+Figure 1. Main view of the first prototype of Worker Feedback 
+Dashboard. 
+
+The  design  implications  influenced  the  design  in  the 
+following way: 
+
+1)  Keep positive (but truthful). The production metrics of 
+the work are designed to highlight the positive aspects 
+and  achievements  of  the  workday.  Instead  of  the 
+
+ 
+ 
+machine idle time or the number or duration of failures, 
+the  data  highlights  the  periods  of  fluent  work.  The 
+number of finished orders and manufactured parts may 
+enhance  the  worker’s  feeling  of  achievement.  The 
+positive development of the metrics is indicated to the 
+user with small arrows besides the metric.  
+
+the  development 
+
+2)  Give personal feedback. The feedback is intended to be 
+such that the workers can have an impact on it, and see 
+their  development  related  to  their  work  tasks.  Thus,  it 
+demonstrates 
+in  one’s  work 
+competence.  The  feedback  may  also  include  more 
+sensitive  well-being  related  data,  as  they  are  not 
+accessible  by  the  employer  or  managers.  Still,  the 
+employees will be offered a possibility to select which 
+data  is  shown  in  the  Dashboard  and  exclude  data  that 
+they find too sensitive or irrelevant. 
+
+3)  Enable  personal  reflection.  The  Dashboard  shows  the 
+selected data and highlights positive accomplishments, 
+but  the  user  needs  to  discover  the  personally  relevant 
+relations  between  the  metrics.  After  longer  use  of  the 
+Dashboard, the trend data (not visible in the main view) 
+supports  finding  meaningful  relationships  related  to 
+one’s  behaviour  and  the  metrics.  In  addition  to 
+automatically  collected  data,  self-reporting  of  one’s 
+mood  may  drive  the  user  to  think  about  one’s  overall 
+feelings  at  least  once  a  day,  and  thus  foster  personal 
+reflection. 
+
+4)  Do not disturb the worker. The daily data are shown in 
+the main view in such a way that they can be interpreted 
+quickly. The idea is that the worker checks the data after 
+or at the end of each work shift, or alternatively, during 
+breaks  at  work.  The  first  version  shows  only  the 
+summary  of  data,  and  does  not  give  any  real-time 
+notifications of the user’s state or the machine that could 
+disturb  the  worker.  If  the  worker  wants  to  explore  the 
+data  in  more  detail,  it  can  be  done  via  any  device 
+whenever the user wants, as the Dashboard is intended 
+to be accessible as a web service.  
+
+Feedback and Revisions to the First Prototype  
+When the first prototype of the Worker Feedback Dashboard 
+was  introduced  to  the  factory  workers,  most  of  them 
+perceived the idea of wearing a self-monitoring device and 
+receiving feedback through the dashboard rather positively. 
+Four of the five interviewed workers perceived the concept 
+as at least somewhat interesting, especially the data related 
+to  heart  rate  and  step  count.  One  interviewee  was  more 
+critical  towards  the  idea  and  claimed  that  it  is  ‘everyone’s 
+own  business  how  they  live,  sleep  and  eat’,  and  not  the 
+employer’s. This may have related to a desire to keep work 
+and  free  time  apart.  Even  if  it  was  emphasized  that  the 
+measures are for the worker’s personal use only, he seemed 
+to  have  an  impression  that  the  data  was  accessible  for  the 
+employer.  This  emphasized  the  need  to  ensure  data 
+protection and communicate it to the users clearly. The users 
+should  have  a  true  freedom  to  choose  not  to  participate  in 
+self-tracking  and  if  possible,  to  select  which  metrics  are 
+
+tracked. Even though the reactions were not solely positive, 
+the first impressions were clearly more favourable than in the 
+first round of interviews.  
+
+interesting.  Of 
+
+the  well-being  parameters, 
+
+In  the  co-design/feedback  sessions,  the  factory  workers 
+highlighted which parameters they regarded as the most and 
+the 
+least 
+participants were interested in the data related to their heart 
+rate and step count. These users did not perceive the data on 
+sleep and mood as very interesting, as they felt that it offered 
+no  new  information.  Especially,  self-reporting  of  mood 
+information was not seen as being worth the effort. 
+
+Of the production parameters, the participants perceived the 
+machine operating time as the most relevant, as this was the 
+most  important  parameter  in  production  in  these  factories. 
+The  time  for  recovering  from  errors  was  also  seen  as 
+interesting, as the current production reports did not directly 
+give  this  parameter.  The  number  of  produced  orders  and 
+items were not considered very relevant, as the workers felt 
+they  could  not  personally  influence  these  metrics.  The 
+workers  at  Factory  A  also  discussed  the  possibility  of 
+including the utilisation percentage of the metal sheets in the 
+production metrics, as the production manager followed this. 
+However,  it  was  not  a  personally  relevant  metric  for  the 
+workers, as the utilisation percentage realised during one’s 
+work  shift  was  often  determined  during  the  previous  work 
+shift  by  a  fellow  worker.  The  production  manager  also 
+highlighted that including this parameter on the Dashboard 
+might  encourage  workers  to  prioritise  this  issue  over  the 
+machine running time, which should not happen.   
+
+the  Dashboard  prototype 
+
+According to the numerical feedback (Table 1), the factory 
+rather 
+workers  perceived 
+positively.  The  content  was  considered  easy  to  understand 
+and  relatively  interesting,  and  most  of  the  respondents 
+regarded it as personally valuable. The question of whether 
+the use of this kind of solution raised doubts produced mixed 
+responses: two of the five respondents had no doubts about  
+the usage, but three saw its use as not completely indubious.   
+
+Feedback item 
+
+Evaluation 
+median 
+
+Range of 
+evaluations 
+
+Dashboard concept in general 
+
+Clarity of content 
+
+Interestingness of content 
+
+Perceived value of content 
+
+No doubts about usage 
+
+Pleasantness of appearance 
+
+4 
+
+5 
+
+4 
+
+4 
+
+3 
+
+4 
+
+3-4 
+
+4-5 
+
+3-4 
+
+2-5 
+
+2-5 
+
+3-5 
+
+Table 1. Numeric feedback regarding the user acceptance of 
+the Dashboard prototype provided by five factory workers. 
+Evaluation scale: from 1 = negative to  5 = positive. 
+
+Based on the interviews, the idea of the dashboard seemed 
+promising, and we identified no need for major changes in 
+
+the design. However, as the self-reported mood information 
+was  not  considered  interesting,  we  decided  to  change  the 
+question  related  to  the  user’s  mood  to  a  question  on  their 
+attention  (‘How  effortless  did  concentrating  on  your  work 
+tasks feel today?’, see Figure 2). In the factory work context, 
+the workers’ perceived attention may be a relevant parameter 
+to follow, and the users may find reflection on the sleep data, 
+for example, interesting.  Even though sleep data was not felt 
+specifically  interesting,  we  decided  to  include  it  in  the 
+design, as the personal value of it may be revealed later when 
+linking it to other data. Furthermore, as working in a night 
+shift  is  typical  in  factory  work,  the  sleep  information  may 
+prove to be interesting.  
+
+Figure 2. Revised view of well-being metrics. 
+
+Four of  the  five interviewees  were interested in testing the 
+Worker  Feedback  Dashboard as  part  of  their  daily  work  if 
+they  had  the  opportunity  to  participate.  In  Factory  A,  the 
+production management was also willing to participate in the 
+pilot.  In  Factory  B,  the  management  was  not  willing  to 
+participate, as the manufacturing work had urgent problems 
+that  the  company  needed  to  solve  before  undertaking  new 
+development projects.  
+
+DISCUSSION 
+This  study  explored  the  user  acceptance  of  the  Worker 
+Feedback Dashboard concept in a factory context. Through 
+a participatory design process, we first created UX goals and 
+design  implications  and  then  the  design  solutions  for  the 
+concept. The idea of the Worker Feedback Dashboard is in 
+line with the Quantified Self trend, as it provides data-based 
+feedback  to  factory  workers  to  increase  their  awareness  of 
+the  issues  that  influence  their  work  performance  and  well-
+being.  The  study  contributes  to  the  existing  literature  by 
+increasing  the  understanding  of  the  acceptability  of  self-
+tracking at work, especially in a factory floor environment. 
+As  many  studies  have  focused  on  the  early  adopters  and 
+active  members  of  Quantified  Self  community  [3,  15,  19, 
+24], it is important to extend the understanding to less tech-
+savvy users and employees who are offered the opportunity 
+of  self-tracking  without  being  familiar  with  the  idea  in 
+advance. Operator 4.0 factory work [23] offers an interesting 
+context for applying quantification data, as it is assumed that 
+
+the  work  of  factory  operators  will  involve  an  increasing 
+number of problem-solving situations and complexity in the 
+future.  
+
+feedback,  emphasises 
+
+Our first research question  aimed to  identify  the  UX goals 
+and  design  implications  for  a  concept  that  provides 
+meaningful self-tracking and production feedback to factory 
+workers. Based on the user and context requirements as well 
+as the Quantified Self trend, we ended up in four key design 
+implications. The first, Keep positive (but truthful) highlights 
+the  importance  of  positive  feedback.  The  second  design 
+implication,  Give  personal 
+the 
+opportunity  to  offer  personal  feedback,  and  thus  enable 
+workers  to  see  their  development  at  work.  The  third 
+implication,  Enable  reflection,  refers  to  providing  an 
+opportunity  for  the  user  to  find  the  personally  meaningful 
+connections of the data. Finally, the fourth implication, Do 
+not  disturb  the  worker,  reminds  us  of  the  factory  work 
+context, in which it is important that the technical solution 
+does not distract the worker from actual work tasks. These 
+design  implications  complement  the  current  understanding 
+of important user experience issues related to self-tracking, 
+such  as  the  benefit  of  visualisations  [15,  19]  and  context 
+information  [3,  15],  which  foster  obtaining  meaningful 
+insight of the data.   
+
+The second research question focused on the user acceptance 
+of  the  Worker  Feedback  Dashboard.  During  the  design 
+process,  the  factory  workers  first  perceived  the  idea  of 
+measuring  workers  negatively,  but  this  perception  became 
+more positive when they could see the actual design and the 
+purpose  and  content  of  the  concept.  There  may  be  several 
+reasons  for  this.  Generally,  it  is  often  easier  to  accept  less 
+ambiguous and more concrete ideas, and engaging with the 
+idea may make it more acceptable. However, the result also 
+indicates that the design solutions as such were perceived as 
+acceptable,  and  the  workers  also  regarded  most  of  the 
+features  of  the  concept  as  interesting  and  valuable  for 
+themselves.  
+
+Despite  the  rather  positive  feedback,  not  all  the  study 
+participants  considered  using 
+the  Worker  Feedback 
+Dashboard as completely indubious.  As the topic of personal 
+measurements at the workplace is a sensitive one, the ethical 
+aspects will be considered in the design and evaluation of the 
+solution  throughout  the  research  project.  We  will  use  the 
+proactive  Ethics  by  Design  approach  [7,  13]  to  create  an 
+ethically sustainable solution. In addition, the ethical issues 
+and  the  expected  impacts  of  the  solution  will  be  discussed 
+with the ethical advisory board of the project.  
+
+initial  understanding  of 
+
+the 
+This  study  provides  an 
+acceptability of self-tracking concepts in a factory context. 
+In our research project, we will further develop the concept 
+using the identified design implications, to create a prototype 
+with  the  key  features.  The  usage  of  the  prototype  will  be 
+studied  in  a  study  with  approximately  twenty  machine 
+operators  in  several  factories  including  Factory  A  of  this 
+study.  When  recruiting  the  study  participants,  we  will  pay 
+
+ 
+specific  attention  to  the  ethical  issues,  such  as  the  true 
+voluntariness of participation and  protecting the privacy of 
+the user data. 
+
+The limitations of this study derive from its explorative and 
+initial nature and the small number of participants. However, 
+we expect the qualitative data of the thoughts of the factory 
+workers, the identified design implications and the suggested 
+design  solutions  to  provide  value  to  the  HCI  (human-
+computer  interaction)  community.  Even  though  this  study 
+focuses on factory work, the design implications and a part 
+of the design solutions are applicable to other occupations as 
+well.  As  the  quantification  of  the  workers  is  a  new  and 
+significant topic, we hope that in the future, other studies will 
+also focus on the ethical aspects, design alternatives and user 
+perspective of this subject.  
+
+CONCLUSION 
+This study sheds light on the  acceptability of a concept for 
+providing personal production and self-tracking feedback to 
+factory floor  workers. The results  encourage  implementing 
+the introduced Worker Feedback  Dashboard prototype to a 
+functional  application.  In  broader  scope, 
+the  results 
+encourage  the  design  of  self-tracking  systems  for  workers 
+and involving workers in the design process. We hope that 
+the  identified  UX  goals  and  design  implications  provide 
+useful  guidance  for  practitioners  and  inspire  the  HCI 
+community members working on the area of quantification 
+or self-tracking at workplaces. 
+
+ACKNOWLEDGMENTS 
+This project has received funding from the European Union’s 
+Horizon  2020  research  and  innovation  programme  under 
+grant agreement No 723277 (project Factory2Fit). We thank 
+all the factory workers and stakeholders who participated in 
+the participatory design process. 
+
+REFERENCES 
+1.  Hugh Beyer and Karen Holtzblatt. 1997. Contextual 
+
+design: defining customer-centered systems. Elsevier. 
+
+2.  Kathryn Buchanan and Dan Lockton. 2015. 
+
+Understanding human connectivity and the Quantified 
+Self. Working Papers of the Sustainable Society 
+Network+. 
+
+3.  Eun K. Choe, Nicole B. Lee, Bongshin Lee, Wanda 
+Pratt, and Julie A. Kientz. 2014. Understanding 
+quantified-selfers' practices in collecting and exploring 
+personal data. In Proceedings of the 32nd annual ACM 
+conference on Human factors in computing systems, 
+1143-1152. 
+
+4.  Dominic Gorecky, Mathias Schmitt, Matthias Loskyll, 
+and Detlef Zühlke. 2014. Human-machine-interaction 
+in the industry 4.0 era. In Industrial Informatics 
+(INDIN), 2014 12th IEEE International Conference on 
+Industrial Informatics (INDIN), IEEE, 289-294. 
+
+5.  Cathal Gurrin, Alan F. Smeaton, and Aiden R. 
+Doherty. 2014. Lifelogging: Personal big 
+
+data. Foundations and Trends® in Information 
+Retrieval 8, 1: 1-125. 
+
+6.  Richard J. Hackman and Greg R. Oldham. 1975. 
+
+Development of the job diagnostic survey. Journal of 
+Applied psychology 60, 2: 159. 
+
+7.  Veikko Ikonen, Eija Kaasinen, and Marketta Niemelä. 
+
+2009. Defining Ethical Guidelines for Ambient 
+Intelligence Applications on a Mobile Phone. 
+Intelligent Environments (Workshops), 261-268. 
+
+8. 
+
+ISO 9241-210: 2010. Ergonomics of human system 
+interaction-Part 210: Human-centred design for 
+interactive systems. International Standardization 
+Organization (ISO). Switzerland. 
+
+9.  Eija Kaasinen, Virpi Roto, Jaakko Hakulinen, Tomi 
+
+Heimonen, Jussi PP Jokinen, Hannu Karvonen, Tuuli 
+Keskinen et al. 2015. Defining user experience goals to 
+guide the design of industrial systems. Behaviour & 
+Information Technology 34, 10: 976-991. 
+
+10.  Eija Kaasinen, Franziska Schmalfuß, Cemalettin 
+Özturk, Susanna Aromaa, Menouer Boubekeuer, 
+Juhani Heilala, Päivi Heikkilä, Timo Kuula et al. 2018. 
+Empowering industrial workers with engaging factory 
+adaptation solutions. Submitted to Computers & 
+Industrial Engineering.  
+
+11.  Eija Kaasinen. 2009. User Acceptance of Mobile 
+Services. International Journal of Mobile Human 
+Computer Interaction 1, 1: 79–97. 
+
+12.  Henning Kagermann, Wolfgang Wahlster, and 
+
+Johannes Helbig. 2013. Securing the future of German 
+manufacturing industry. Recommendations for 
+implementing the strategic initiative INDUSTRIE 4.0, 
+final report of the Industrie 4.0 Working Group, 
+Forschungsunion. 
+
+13.  Eleni Kosta, Olli Pitkänen, Marketta Niemelä, and Eija 
+Kaasinen. 2010. Mobile-centric ambient intelligence in 
+health- and homecare-anticipating ethical and legal 
+challenges. Science and Engineering Ethics 16, 2: 303-
+323. 
+
+14.  Sarah Kuhn and Michael J. Muller. 1993. Participatory 
+design. Communications of the ACM 36, 6: 24-29. 
+
+15.  Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A stage-
+based model of personal informatics systems. 
+Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems, 557-566. 
+
+16.  Deborah Lupton. 2016. The diverse domains of 
+quantified selves: self-tracking modes and 
+dataveillance. Economy and Society 45, 1: 101-122. 
+
+17.  MIT Technology Review: Stephen Wolfram on 
+
+Personal Analytics. Retrieved June 19, 2017 from 
+https://www.technologyreview.com/s/514356/stephen-
+wolfram-on-personal-analytics/ 
+
+18.  Veronica P. Moore, and Lukasz Piwek. 2016. 
+
+Regulating well-being in the brave new quantified 
+workplace. Employee Relations 39, 3: 308-316. 
+
+20.  Mika Pantzar and Minna Ruckenstein. 2015. The heart 
+of everyday analytics: emotional, material and practical 
+extensions in self-tracking market. Consumption 
+Markets & Culture 18, 1: 92-109. 
+
+21.  Lukasz Piwek, David A. Ellis, Sally Andrews, and 
+Adam Joinson. 2016. The rise of consumer health 
+wearables: promises and barriers. PLoS Medicine 13, 2: 
+1-9. 
+
+22.  Rock Health. 2016. Digital Health Consumer 
+
+Adoption: Report, December, 2016. 
+https://rockhealth.com/reports/digital-health-consumer-
+adoption-2016/ 
+
+23.  David Romero, Peter Bernus, Ovidiu Noran, Johan 
+Stahre, and Åsa Fast-Berglund. 2016. The Operator 
+4.0: human cyber-physical systems & adaptive 
+automation towards human-automation symbiosis work 
+systems. IFIP International Conference on Advances in 
+Production Management Systems, 677-686. Springer, 
+Cham. 
+
+19.  Jeungmin Oh and Uichin Lee. 2015. Exploring UX 
+issues in Quantified Self technologies. Eighth 
+International Conference on Mobile Computing and 
+Ubiquitous Networking (ICMU), 53-59. IEEE. 
+
+24.  John Rooksby, Mattias Rost, Alistair Morrison, and 
+Matthew Chalmers. 2014. Personal tracking as lived 
+informatics. Proceedings of the 32nd annual ACM 
+conference on Human factors in computing systems, 
+1163-1172. 
+
+25.  Virpi Roto, Eija Kaasinen, Tomi Heimonen, Hannu 
+
+Karvonen, Jussi PP Jokinen, Petri Mannonen, Hannu 
+Nousu et al. 2017. Utilizing Experience Goals in 
+Design of Industrial Systems. Proceedings of the 2017 
+CHI Conference on Human Factors in Computing 
+Systems, 6993-7004. ACM. 
+
+26.  Douglas Schuler and Aki Namioka. eds. 1993. 
+
+Participatory design: Principles and practices. CRC 
+Press. 
+
+27.  Stefan Selke, ed. 2016. Lifelogging: Digital self-
+tracking and Lifelogging-between disruptive 
+technology and cultural transformation. Springer. 
+
+28.  Melanie Swan. 2013. The quantified self: fundamental 
+disruption in big data science and biological discovery. 
+Big Data 1, 2: 85-99. 
+
+ 
+ 
+

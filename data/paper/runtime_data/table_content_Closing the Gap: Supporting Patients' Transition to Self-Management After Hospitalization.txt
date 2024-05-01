@@ -1,0 +1,17 @@
+1. Introduction
+2. Background and Related Work
+3. Methods
+    3.1 Study Procedures
+    3.2 Study Sites
+    3.3 Participants
+    3.4 Analysis
+4. Findings
+    4.1 Gaps in System-based Self-Management Support
+    4.2 Elements of Individual Self-Management
+5. Design Opportunities
+    5.1 System Support
+    5.2 Identifying Patients’ Needs to Provide Tailored Individual Support
+6. Limitations and Future Work
+7. Conclusion
+8. Acknowledgments
+9. References

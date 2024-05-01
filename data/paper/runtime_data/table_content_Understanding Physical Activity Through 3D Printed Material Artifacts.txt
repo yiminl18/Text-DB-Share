@@ -1,0 +1,35 @@
+1. Introduction
+2. Related Work
+    2.1 Visualization using numbers and graphs
+    2.2 Visualization using virtual metaphors
+    2.3 Visualization using interactive art displays
+    2.4 Visualization using physical metaphors
+    2.5 Visualization using playful systems
+    2.6 Rethinking visualization of physical activity
+3. SweatAtoms
+    3.1 Design process: Mapping heart rate to 3D design
+    3.2 Representation 1: Graph
+    3.3 Representation 2: Flower
+    3.4 Representation 3: Frog
+    3.5 Representation 4: Die
+    3.6 Representation 5: Ring
+4. SweatAtoms in Action: In the Wild Study
+    4.1 Recruitment
+    4.2 Setup
+    4.3 Procedure
+    4.4 Data source
+5. Findings
+    5.1 Intervention
+    5.2 Lessons learned
+    5.3 Engagement with the process
+    5.4 Engaging with the heart rate monitoring
+    5.5 Engaging with the 3D printing process
+    5.6 Engaging with the artifacts
+    5.7 Cherishing artifacts
+    5.8 Conversations around artifacts
+    5.9 Relating to physical activity
+6. Discussion
+    6.1 Material artifacts as an autotopography
+    6.2 Material artifacts as personalized rewards
+    6.3 Material artifacts for reflection and reminiscence
+7. Conclusion

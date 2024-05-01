@@ -1,0 +1,2147 @@
+Designing in the Dark: Eliciting Self-Tracking Dimensions 
+for Understanding Enigmatic Disease 
+
+Mollie McKillop, MPH, MA 
+Columbia University 
+New York City, USA 
+mm4234@cumc.columbia.edu 
+
+Lena Mamykina, PhD  
+Columbia University 
+New York City, USA 
+om2196@cumc.columbia.edu 
+
+Noémie Elhadad, PhD 
+Columbia University 
+New York City, USA 
+noemie.elhadad@columbia.edu 
+
+ABSTRACT 
+The  design  of  personal  health  informatics  tools  has 
+traditionally been explored in self-monitoring and behavior 
+change.  There  is  an  unmet  opportunity  to  leverage  self-
+tracking  of  individuals  and  study  diseases  and  health 
+conditions to learn patterns across groups. An open research 
+question, however, is how to design engaging self-tracking 
+tools  that  also  facilitate  learning  at  scale.  Furthermore,  for 
+conditions that are not well understood, a critical question is 
+how  to  design  such  tools  when  it  is  unclear  which  data 
+types are relevant to the disease. We outline the process of 
+identifying 
+self-tracking 
+requirements 
+endometriosis,  a  highly  enigmatic  and  prevalent  disease, 
+through  interviews  (N=3),  focus  groups  (N=27),  surveys 
+(N=741),  and  content  analysis  of  an  online  endometriosis 
+community (1500 posts, N=153 posters) and show value in 
+triangulating  across  these  methods.  Finally,  we  discuss 
+tensions  inherent  in  designing  self-tracking  tools  for 
+individual use and population analysis, making suggestions 
+for overcoming these tensions. 
+
+design 
+
+for 
+
+Author Keywords 
+Personal  informatics;  self-tracking;  patient-generated  data; 
+enigmatic disease; endometriosis; participatory design.  
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous   
+
+INTRODUCTION 
+Today,  self-tracking  is  widely  practiced  and  common 
+among  health  consumers.  For  instance,  it  is  estimated  that 
+69%  of  U.S.  adults  keep  track  of  at  least  one  health 
+indicator  [38].  Self-tracking  is  often  performed  passively 
+through  wearable  sensors  and  fitness  trackers,  as  well  as 
+proactively through self-report [7,60]. Individuals are often 
+motivated  to  self-track  to  discover  new  insights  about 
+themselves or to achieve a particular health-related goal [8]. 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  the  author(s)  must  be 
+honored.  Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or 
+republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+specific  permission 
+from 
+Permissions@acm.org. 
+CHI 2018, April 21–26, 2018, Montreal, QC, Canada 
+©  2018  Copyright  is  held  by  the  owner/author(s).  Publication  rights 
+licensed to ACM. 
+ACM 978-1-4503-562-6/18/04…$15.00  
+https://doi.org/10.1145/3173574.3174139 
+
+fee.  Request  permissions 
+
+and/or 
+
+a 
+
+People with chronic conditions, who are often faced with a 
+complex  set  of  decisions  and  environments  to  navigate, 
+have  additional  incentives  to  understand  and  manage  their 
+condition, and thus engage in self-tracking.  
+
+Self-tracking  systems  that  “help  people  collect  personally 
+relevant  information  for  the  purpose  of  self-reflection  and 
+gaining self-knowledge” are part of personal informatics, as 
+defined  by  Li  and  colleagues  [59].  Within  the  health 
+traditionally 
+domain,  personal 
+focused  on  self-monitoring  for  individuals  to  gain  health- 
+related  self-knowledge  or  achieve  a  health-related  goal 
+[26,54].  In  fact,  designs  of  such  tools  have  been  proposed 
+and evaluated for many chronic diseases, including diabetes 
+[5,41,69,80,91],  COPD  [12,102],  cardiovascular  diseases 
+[4,96], and Parkinson’s [11,72,77].  
+
+tools  have 
+
+informatics 
+
+In the context of a chronic disease, there are a large number 
+of data points that may be self-tracked. They fall into a set 
+of  well-known  data  types,  or  dimensions,  which  include 
+signs  and  symptoms  of  the  disease,  biomarkers  and 
+behavioral  markers  like  physical  activity,  treatments,  self-
+management  strategies,  as  well  as  potential  environmental 
+factors  [15,98].  Designers  traditionally  rely  on  current 
+scientific knowledge about the disease to identify which of 
+these data types, and which specific variables among them, 
+to  incorporate  in  their  self-tracking  tools.  For  instance, 
+current  understanding  of  diabetes  shows  that  diet  is  an 
+important  dimension,  with  macronutrients  as  specific 
+variables  of  relevance;  biomarkers  and  blood  glucose 
+measurements in particular are important for individuals to 
+self-manage  successfully.  Similarly,  environmental  factors 
+like  irritants  and  allergens  are  potential  triggers  of  asthma 
+and as such represent important dimensions when building 
+asthma self-management solutions.  
+
+However,  there  are  many  diseases  for  which  it  is  not  well 
+understood which data types are pertinent to self-track, and 
+for  which  specific  relevant  variables  have  not  been  fully 
+enumerated.  This lack of knowledge  has  been  noted  in  the 
+literature for rare diseases [106]. It is also significant when 
+designing  for  enigmatic  diseases.  Across  several  diseases, 
+enigmatic  conditions 
+share  heterogeneous 
+symptoms,  unexplained  differences  in  treatment  responses, 
+and lack of symptom specificity [1,14,36,56,86,92].  Many 
+enigmatic  diseases  are  relatively  prevalent;  in  fact,  the 
+heterogeneity in symptoms may be due to the large number 
+of people affected. Examples of enigmatic diseases include 
+
+seem 
+
+to 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 1 
+ 
+chronic  diseases  like  interstitial  cystitis,  psoriasis,  Crohn’s 
+disease,  and  chronic  fatigue  syndrome.  Irritable  bowel 
+syndrome  is  another  such  chronic  condition,  where  diet  is 
+an  established  data  type  to  monitor,  but  specific  diet 
+triggers  are  unknown  and  in  fact  vary  from  one  patient  to 
+another. Even relatively well understood diseases may have 
+aspects that remain enigmatic: for example, why post-meal 
+blood glucose spikes vary from one individual to another is 
+an active area of research [103].  
+
+Previous HCI research has shown success in designing self-
+experimentation tools and n-of-1 studies to help individual 
+users identify which specific variables are useful to monitor 
+when managing their own health [50,51,105]. In such self-
+experimentation  systems  however, 
+the  emphasis  on 
+supporting  each  user  individually  might  come  at  the 
+expense  of  deriving  insights  across  all  users.  By  letting 
+users  track  and  experiment  with  what  dimensions  and 
+variables they think are relevant to their own experience of 
+their  condition,  these  systems  promote  individual  self-
+discovery, but might make it challenging to standardize and 
+learn  across  individuals.  There  is  an  unmet  opportunity  to 
+broaden  the  current  conceptualization  of  personal  health 
+informatics to include not just self-tracking for the sake of 
+self-knowledge  and  self-discovery  but  self-tracking  for 
+improving  knowledge  of  disease  across  a  group.  This  is 
+particularly true for enigmatic conditions. Self-tracking data 
+of  enigmatic  conditions,  when  taken  in  aggregate  across  a 
+user  group,  can  provide  a  novel  view  of  the  disease,  can 
+help  enhance  scientific  knowledge  about  the  disease,  and 
+can  help  bridge  the  gap  that  exists  between  the  patient 
+experience  of  these  enigmatic  conditions  and  their  current 
+medical understanding.  
+
+Here  we  explore  the  design  of  self-tracking  tools  to 
+characterize  enigmatic  conditions  and  understand  disease 
+across  individuals.  Specifically,  we  aim  to  answer  the 
+following research questions: (1) what data to collect from 
+individuals  that  align  with  their  experience  of  disease,  and 
+as  such  makes  their  self-tracking  relevant  to  them;  and  (2) 
+what data to collect across individuals that may be used to 
+further  capture  and  characterize  the  disease  through  a 
+standard  set  of  variables.  We  focus  on  endometriosis,  a 
+prevalent  yet  enigmatic  systemic  chronic  condition. 
+Specifically, in this paper our goal is to identify and distill 
+the  dimensions  of  disease,  along  with  specific  variables 
+relevant  to  self-tracking  endometriosis.  Such  dimensions 
+must  represent  the  relevant  variables  of  the  disease,  as 
+experienced  by  individuals  and  help  capture  generalizable 
+knowledge and discover patterns about the disease through 
+learning at scale from the data generated by the individuals 
+engaged in self-tracking.  
+
+this  goal,  we  experiment  with  a  set  of 
+Towards 
+complementary  approaches 
+the 
+dimensions  relevant  to  the  experience  of  an  enigmatic 
+disease.  Starting  with  preliminary  interviews  (N=3)  and  a 
+series  of  five  focus  groups  (N=27),  we  elicit  basic  data 
+
+iteratively 
+
+identify 
+
+to 
+
+types,  or  dimensions,  from  people  with  endometriosis.  We 
+further refine these relevant dimensions and identify a pool 
+of  specific  self-tracking  variables  in  a  wider  population 
+through  a  series  of  online,  anonymous  surveys  (N=741). 
+These  dimensions  and  variables  are  further  triangulated 
+with variables identified through the content analysis of an 
+online  public,  anonymous  endometriosis  discussion  board 
+(N=1,900 registered members and 1,500 active members at 
+the time of analysis).  
+
+the 
+
+(1)  a 
+
+following  contributions: 
+
+Our  work  builds  upon  research  in  personal  informatics  to 
+understand design of self-tracking tools. As such, this paper 
+has 
+series  of 
+complementary  approaches  to  elicit  the  data  types  and  the 
+specific  variables  relevant  to  self-tracking  an  enigmatic 
+disease;  and  (2)  an  exploration  of  the  inherent  tensions  in 
+characterizing a condition in a way that is both relevant to 
+individuals’  experience  of  the  disease  and  meaningful  for 
+analysis  at  scale.  It  also  contributes  new  knowledge  about 
+endometriosis, through the elucidation of novel dimensions 
+and variables relevant to the patient experience. 
+
+BACKGROUND AND RELATED WORK 
+In  this  section,  we  review  prior  work  in  two  fields 
+primarily:  personal  informatics,  specifically  technology 
+research  for  self-tracking,  and  informatics  research  on 
+characterizing disease at scale. We also provide background 
+on our condition of interest, endometriosis, in the context of 
+characterizing enigmatic conditions.   
+
+Self-tracking 
+Previous  work  in  personal  informatics  has  focused  on 
+understanding motivations for the use of self-tracking tools 
+and  the  implications  on  the  tools’  designs.  In  particular, 
+research  has  focused  on  understanding  progress  towards 
+achieving  a  particular  personal  goal  through  self-tracking, 
+supporting users by providing data or knowledge that helps 
+individuals  self-monitor  their  progress  [9,28,33,53,82]. 
+Earlier  models  of  personal  informatics  also  helped  to 
+describe  how  people  use  self-tracking  technologies  to  gain 
+self-knowledge  in  the  context  of  self-monitoring  [59,66]. 
+More  recent  human-computer  interaction  (HCI)  research 
+has  focused  on  moving  toward  examining  self-tracking  in 
+the  context  of  self-discovery  and  self-experimentation 
+[32,51,57,84],  and  personal  informatics  models  have  been 
+expanded  to  include  technology  that  is  not  necessarily 
+associated  with  self-improvement  [34,63].  For  example, 
+HCI  researchers  have  begun  exploring  self-tracking  out  of 
+curiosity as part of the quantified-self movement [20,34].  
+
+Within the context of chronic diseases, research has focused 
+on how to support  people with particular health conditions 
+in  self-managing  their  disease.  Self-tracking  applications 
+are a particularly useful design for individuals with chronic 
+disease,  given  these  individuals  dynamically  experience 
+symptoms over time, and self-tracking allows for capturing 
+and  documenting  these  changes  as  well  as  disease-related 
+behaviors  [26].  Because  much  of  the  self-management 
+process can be specific to a given individual, prior research 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 2has  also  examined 
+the  use  of  customization  and 
+personalization to tailor the design of self-tracking tools to 
+users’  specific  needs  [2,35,58,78].  These  needs  may  also 
+vary  from  disease  to  disease  and  may  make  technology 
+development  across  diseases,  such  as  rare  diseases, 
+challenging  [60].  Yet  there  may  be  patient  characteristics 
+that  are  similar  across  users  with  even  different  conditions 
+[61].   
+
+to 
+
+In  contrast  to  prior  work,  our  work  seeks  to  inform  the 
+design of self-tracking tools when the purpose of the system 
+is  not  exclusive 
+individual-level  understanding  of 
+disease. This work follows the trend of broadening notions 
+regarding  the  goals  of  self-tracking  in  personal  health 
+informatics  systems.  In  particular,  we  are  interested  in 
+examining the design of self-tracking tools for people with 
+enigmatic  conditions,  in  which  it  is  not  well  understood 
+how  to  self-manage  symptoms  nor  is  it  clear  which 
+dimensions of the disease are relevant to the disease in the 
+first  place.  Further,  we  seek  to  identify  dimensions  of 
+endometriosis  that  characterize  the  disease  across  many 
+patients.  By  expanding  the  scope  of  design  in  personal 
+informatics  in  this  way,  tension  emerges  between  the  need 
+to personalize interventions to support engagement and the 
+data  necessary  for  understanding  the  experience  of  disease 
+at scale [73].  
+
+Within  HCI  research  the  design  of  self-tracking  tools  for 
+than  a  patient’s  personal 
+purposes  or  needs  other 
+understanding has been explored. For example, people with 
+a  particular  condition  may  share  self-tracking  data  with  a 
+clinical  provider  or  with  one’s  care  team  [47,85,100]. 
+Moreover, data may be shared as part of a community [25], 
+to 
+commonly  as  part  of  gamification-based  features 
+incentivize  engagement  with  the  tool  and  with  behaviors 
+that  support  self-management  [52].  Crowdsourcing  to 
+support 
+self-management  has  also  been 
+examined [71], and social sense-making has been explored 
+as  a  feature  to  help  individuals  make  sense  of  their  own 
+health  data 
+[81].  Quantified  selfers’  collection  and 
+exploration  of  data  is  in  an  individual  context,  but  these 
+personal experiences may be shared with others [23].  
+
+individual 
+
+Yet there remains an opportunity to better understand how 
+self-tracking  data  may  be 
+to  create  new 
+knowledge  about  disease  beyond  personal  discovery,  but 
+rather  for  cohorts  of  people  at  scale.  Such  knowledge  is 
+essential for effective management and treatment of disease 
+and to advance biomedical research.   
+
+leveraged 
+
+The idea of leveraging the self-tracked health data of many 
+individuals  to  discover  new  insights  across  a  group  is  not 
+new.  Recent  research  showed  value  in  examining  a  single 
+variable (e.g., number of steps per day, collected passively) 
+tracked  across  many  individuals  to  learn  about  a  behavior 
+(e.g.,  physical  activity)  at  the  group  level  [6].  In  this  case, 
+like  in  other  recent  examples,  the  data  leveraged  was 
+collected  via  existing  commercial  apps,  with  their  own  set 
+of engagement strategies. However, designing self-tracking 
+
+tools  that  promote  sustained  engagement  among  each  user 
+and at the same time enable researchers to learn at scale and 
+discover new disease insights is an open research question.  
+
+far 
+
+Recent  clinical  research,  aided  by  the  release  of  the  Apple 
+ResearchKit framework, has started leveraging self-tracking 
+towards  understanding  diseases  at  scale.  Studies  deployed 
+thus 
+rely  on  standard  surveys,  such  as  daily 
+questionnaires.  Results  have  shown  promise  in  collecting 
+large amounts of data from a diverse set of participants  in a 
+relatively  short  amount  of  time  as  compared  to  traditional 
+biomedical  research  approaches  [16,21,104].  Yet,  the  lack 
+of engagement among participants of these studies eludes to 
+the  fact  that  the  design  of  these  self-tracking  tools  for 
+population-level disease research is not clearly aligned with 
+the experience of disease. Characterizing the experience of 
+disease is essential to informing the design of tools that can 
+facilitate learning about enigmatic conditions at scale.    
+
+Endometriosis: An Example of Enigmatic Disease 
+Endometriosis is a women’s health disorder. It occurs when 
+endometrial tissue commonly found lining the inside of the 
+uterus  grows  outside  the  uterus  and  forms  lesions.  It  is  a 
+prevalent condition, estimated to affect 10% of women, and 
+is associated with many comorbidities [94]. 
+
+Maybe  because  endometriosis’  primary  description  is 
+pathological  in  nature  (presence  of  endometrial  lesions 
+outside  the  uterus),  diagnosis  is  currently  established 
+through  laparoscopic  surgery  and  histological  analysis  of 
+biopsied  lesions  [13].  There  are  no  known  biomarkers  to 
+help diagnose or monitor the progression of the disease [3]. 
+Furthermore, its characterization is primarily driven by the 
+nature of these lesions: disease stages fall into three stages –  
+deeply 
+and 
+endometrial  cysts  [39].  Outside  of  these  surgical  stages, 
+consensus description of signs and symptoms of the disease 
+are limited to dysmenorrhea (painful periods) and infertility 
+[17]. 
+
+superficial 
+
+infiltrated 
+
+lesions, 
+
+lesions, 
+
+Despite  its  prevalence  and  its  presence  documented  for 
+centuries  in  patients,  endometriosis  is  a  widely  enigmatic 
+condition.  Its  causes  and  etiology  are  unknown.  Further, 
+individuals with the condition present with a wide range of 
+symptoms beyond painful periods and infertility. But there 
+is no consensus neither as to which of these symptoms are 
+specifically related to endometriosis nor how they might be 
+associated with each other and correlate with surgical stages 
+[14,95].  For  instance,  individuals  with  severe  stages  of  the 
+disease  might  be  asymptomatic,  while  those  in  a  lower 
+disease stage might experience debilitating pain during and 
+outside  their  menses.  Further,  patients  can  present  with  all 
+three types of lesions. Patients also show a wide diversity in 
+their  response  to  treatments,  and  it  is  not  currently 
+understood  why  and  who  will  benefit  from  particular 
+treatment [45].  
+
+Similar to the medical body, individuals with endometriosis 
+have  limited  understanding  of  their  own  condition.  People 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 3with  endometriosis  experience  systemic  effects  of  the 
+disease  and  consequently  suffer  a  heavy  disease  burden 
+[76,90].  However,  most  of  the  symptoms  experienced  by 
+people  with  endometriosis  are  not  recognized  by  the 
+medical  body  as  part  of  endometriosis,  and  people  with 
+endometriosis,  do  not  always  know  which  aspects  of  their 
+health relate to the presence of the disease [99].  
+
+The  large  set  of  symptoms,  their  heterogeneity  across 
+individuals,  and  their  non-specific  nature  results  in  a  gap 
+research  professionals 
+and 
+between  how  medical 
+conceptualize  endometriosis  and  how  it  is  experienced  by 
+patients. Such a disconnect is in fact often present in other 
+enigmatic chronic conditions [36,74].   This disconnect has 
+important 
+the  design  of  personal 
+informatics  tools  among  enigmatic  diseases  and  health 
+conditions.  
+
+implications 
+
+for 
+
+Characterizing Diseases Across Groups 
+Historically,  the  process  of  defining  and  characterizing  a 
+disease  has  been  an  ongoing  activity  in  the  biomedical 
+discipline.  First,  as  a  few  similar  case  reports  emerge  that 
+do  not  fit  with  previously  known  phenomena,  hypothesis 
+for  the  existence  of  a  new  disease  arises.  When  more 
+physicians report more cases,  scientific consensus starts to 
+form  as  to  the  existence  of  the  disease  [18].  Once  it  has 
+been  accepted  by  the  biomedical  community  that  a  new 
+disease  exists  and  warrants 
+its  own  characterization, 
+scientific  consensus  is  achieved  to  describe  the  condition 
+from a clinical standpoint [89].  
+
+Many  diseases  that  were  once  considered  enigmatic  have 
+become  better  understood  and  clinically  defined  by 
+identifying  the  dimensions  of  the  disease,  primarily  its  
+signs  and  symptoms,  as  well  as  its  boundaries,  or  the 
+constellation  of  symptoms  specific  to  a  condition  and  not 
+others [18].  For this to happen, collecting a wide range of 
+signs  and  symptoms  across  a  wide  and  diverse  range  of 
+patients, as well as other disease dimensions is the first step 
+towards identifying boundaries.  
+
+More  recent  work  in  biomedical  informatics  has  helped  to 
+facilitate  this  process  on  a  larger  and  faster  scale  through 
+computational  approaches 
+to  characterizing  disease. 
+Disease  phenotyping  helps  answer  questions  about  the 
+characteristics that define a disease and the composition of 
+these  characteristics  among  patients  [83].  A  computable 
+phenotype  is  a  condition,  characteristic,  or  set  of  clinical 
+features  that  are  derived  exclusively  from  digital  data 
+[48,87].  Disease  phenotyping  has  recently  been  primarily 
+explored  in  the  context  of  electronic  health  records,  but 
+other forms of data, such as patient self-reports, have been 
+explored [64]. In the case of enigmatic conditions, precisely 
+because there is no consensus in the clinical body as how to 
+describe  and  define  the  disease,  it  is  unclear  that  patient 
+records are an appropriate data source for phenotyping and 
+advancing  knowledge  of  these  diseases.  It  is  unlikely 
+clinicians  take  the  time  to  document  the  constellation  of 
+non-specific  symptoms  patients  experience  and  explicitly 
+
+discuss it in the context of the disease, given how little time 
+they have for patient interaction [88].  
+
+In our work, our ultimate goal is similar to the research in 
+disease phenotyping, but our approach differs in the type of 
+data  we  propose  to  leverage.  Self-tracking  data,  which 
+contains  the  direct  patient  experience,  and  circumvents 
+clinical  documentation,  we  argue,  might  provide  a  more 
+comprehensive  and  more  granular  characterization  of  an 
+enigmatic  condition.  As  such,  our  work  contributes  to  a 
+largely  unexplored  new  area  of  work,  computational 
+phenotyping of disease from self-tracking data. A first step 
+towards this goal is to elucidate the essential dimensions or 
+facets of the experience of the disease directly from people 
+with the disease.  
+
+from 
+
+about 
+
+directly 
+
+METHODS: DATA COLLECTION AND ANALYSIS 
+To  understand  the  dimensions  of  endometriosis,  data  was 
+gathered through four approaches: interviews, focus groups, 
+online surveys, and content analysis of posts from an online 
+these 
+endometriosis  patient  community.  We  selected 
+methods  to  triangulate  the  experience  of  the  disease. 
+Through  interviews,  surveys,  and  focus  groups,  we  can 
+learn 
+endometriosis 
+patients 
+dimensions,  each  with  varying  number  of  individuals, 
+varying  degree  of  researcher  input,  and  varying  degree  of 
+discussions  about  experience  of  disease  versus  disease-
+tracking.  One-on-one  structured  interviews  have  a  smaller 
+number of participants, but provide greater opportunities for 
+the  researchers  to  interact  with  participants.  Focus  groups 
+enable  for  elicitation  of  information  from  a  slightly  larger 
+number  of  participants  all  the  while  letting  the  researchers 
+redirect the discussions. Online surveys reach a much larger 
+number of participants, but researchers do not interact with 
+them beyond the set of questions they ask. At the opposite 
+end  of  the  spectrum,  content  analysis  of  patient  discourse 
+represents a way to elicit dimensions “in the wild,” without 
+these 
+any  researcher 
+communities, there is also potential to capture experience of 
+a  much  larger  number  of  individuals.  Our  approach  to 
+elicitation  was  sequential  and  followed  standard  mixed-
+methods  approaches  starting  with  a  qualitative-only 
+analysis (interviews and focus groups), which helped design 
+the schema for survey questions and the coding schema for 
+content  analysis  [43,93].  Further,  we  varied  the  mental 
+model of disease from researcher-based, generated through 
+a review of the scientific literature of the disease, to patient-
+based,  especially  in  regards  to  the  content  analysis,  which 
+was  based  on  patients  talking  to  each  other  without  any 
+researcher’s input. This overall approach was used to bridge 
+the gap between patient and researcher.   
+
+involvement.  In 
+
+interaction  or 
+
+In  this  section,  we  describe  each  of  these  methods  in  turn. 
+All  study  procedures  were  approved  under  protocol 
+#AAAP9054  by  our  institution’s  Institutional  Review 
+Board  for  the  Protection  of  Human  Subjects.  Work  was 
+conducted  in  the  US  for  interviews  and  focus  groups; 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 4surveys  and  forum  content  analysis  were  English-speaking 
+only and conducted internationally. 
+
+Method 1: Preliminary Interviews 
+The primary goal of the interviews was to start elucidating 
+the dimensions relevant to the experience of endometriosis 
+according to patients to inform the design of later methods. 
+Rather than specific self-tracking variables, at this stage we 
+were  interested  with  exploring  the  primary  dimensions 
+(e.g.,  signs  and  symptoms,  treatments,  etc.)  in  a  small 
+number of women to get an initial sense of the dimensions 
+quickly. Consent form and interview guide are available in 
+the auxiliary materials. 
+
+Interviews  lasting  approximately  45  minutes  each  were 
+conducted  with  3  women  with  endometriosis.  Participants 
+were  recruited  through  flyers  at  a  medical  center  and 
+distributed  through  social  media  by  endometriosis  patient 
+advocacy  groups.  Participants  were 
+to 
+participate in the interviews with a $25 gift card. Eligibility 
+having 
+criteria 
+endometriosis and being over the age of 18.  In recruitment, 
+diversity  of  participants  by  age  and  length  of  time  with 
+diagnosis  were  prioritized  over 
+representativeness. 
+Participants  were  all  White/non-Hispanic  and  in  their  30s 
+and  40s,  with  diagnosis  of  endometriosis  obtained  in  their 
+mid-20s, late 20s and 30s.  
+
+self-identifying 
+
+incentivized 
+
+consisted 
+
+as 
+
+of 
+
+We  adopted  a  semi-structured  style  for  the  interviews. 
+Topics  discussed  comprised  descriptions  of  signs  and 
+symptoms  and 
+the  disease,  diagnosis,  and  general 
+experience  with  the  disease.  We  also  inquired  about  how 
+much self-knowledge about the disease participants had and 
+their attitude towards research in endometriosis. At the end 
+of each interview, informal checking with participants was 
+done  verbally  and  data  was  collected  until  saturation  was 
+reached. 
+
+Audiotapes  from  the  interviews  were  transcribed  verbatim 
+and  transcripts  were  checked  against  the  audiotapes  for 
+accuracy. Transcripts were then coded and analyzed.  Codes 
+assigned  during  the  initial  coding  were  organized  into 
+second 
+themes  using 
+examination of the data.  All analysis was performed using 
+Excel for Mac 2011 version 14.5.5 software.  
+
+thematic  analysis  during  a 
+
+Method 2: Focus Groups 
+The  results  of  the  preliminary  interviews  informed  the 
+development of a structured guide to explore further disease 
+dimensions in a larger group of people with endometriosis. 
+
+Overall five focus groups lasting approximately 90 minutes 
+each were conducted with 27 adults over the course of three 
+weeks. Focus group participants were recruited via flyers in 
+gynecological offices and advertising in social media from 
+patient  advocacy  groups.  Eligibility  criteria  included  self-
+reporting  diagnosis  of  endometriosis  through  laparoscopic 
+surgery  and  being  over  the  age  of  18.  Individuals  with 
+endometriosis  were  incentivized  to  participate  in  the  focus 
+groups with $25 in gift cards but were ultimately paid $25 
+
+in cash. Those who participated had not interacted with the 
+research  team  before.  They  only  participated  in  one  focus 
+group  each  (i.e.,  no  participants  attended  multiple  focus 
+groups). Age of participants ranged from 27-60 years of age 
+with a mean of 37.5 years, and age at diagnosis ranged from 
+18-40 with a mean of 29.4 years. Participants were mostly 
+White/non-Hispanic  (77.8%),  but  there  were  also  Asian 
+women (7.4%), Hispanic (7.4%) and Black women (7.4%) 
+represented.  Consent  form,  focus  group  guide,  and 
+codebook are available in the auxiliary materials.  
+
+to 
+
+related 
+
+The focus group guide was used to direct the conversation 
+toward  eliciting  the  dimensions  of  the  disease.  Questions 
+were distinguished between those that helped us understand 
+how participants made sense of the disease, such as disease-
+relevant  symptoms,  and  self-tracking  of  signs  and 
+symptoms.  For  questions 
+self-tracking, 
+participants  were  told  of  our  explicit  goal  to  build  a  self-
+tracking  tool,  with  participants  working  towards  self-
+tracking dimensions and prioritizing them. In particular, the 
+group  was  prompted  to  discuss  preferences  for  tracking 
+particular  disease  dimensions  and  ranked  them  in  how 
+relevant  they  are  to  their  experience  of  the  disease  as  well 
+as  to  phenotyping  endometriosis.  Current  approaches  to 
+their  disease  were  also  discussed,  with 
+self-tracking 
+participants  also  discussing  what 
+track  about 
+endometriosis and how [70]. At the end of each focus group 
+and informal checking with participants was done verbally 
+and data was collected until saturation was reached. 
+
+they 
+
+Each  focus  group  was  audio  recorded  and  transcribed 
+verbatim;  transcripts  were  checked  against  the  audiotapes 
+for  accuracy.  Transcripts  were  coded  and  analyzed  by  two 
+independent  coders  using  thematic  analysis  and  Nvivo 
+version  11.  The  two  coders  independently  familiarized 
+themselves  with  the  data  and  identified  initial  codes  that 
+were iteratively refined, named, and defined in a codebook. 
+then  re-coded  by  each 
+The  focus  group  data  was 
+independent  coder  using 
+the  codebook  codes  and 
+corresponding  definitions.  From  the  codes,  major  themes 
+related  to  dimensions  of  the  disease  were  identified.  Inter-
+rater  reliability  was  calculated  for  each  dialogue  turn  and 
+aggregated for each code, and the Cohen’s Kappa scores for 
+each  theme  was  averaged  over  all  codes  [27].    Overall, 
+there  was  strong  inter-annotator  agreement  with  Kappa 
+ranging  from  0.79  to  0.86  across  each  theme,  and  0.85 
+across all identified themes. 
+
+Method 3: Online Surveys 
+Surveys were conducted to refine dimensions and elucidate 
+tracking  variables.  Based  on  the  dimensions  identified  and 
+prioritized  and  the  particular  variables  discussed  by  focus 
+group  participants,  we  developed  questionnaires,  with 
+questions  focusing  on  a  dimension  of  disease.  Participants 
+were also informed of our explicit goal of designing a self-
+tracking tool. We split the questions across two anonymous 
+online  surveys,  and  advertised 
+through  patient 
+advocacy groups and their social media feeds. 
+
+them 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 5Overall, the two anonymous surveys comprised N=741 and 
+N=505 answers, although not every question was answered 
+by all participants. Most respondents were 30-33 years old 
+(Figure  1)  and  over  80%  had  been  diagnosed  officially 
+through  surgery  while  the  rest  were  diagnosed  unofficially 
+or suspected diagnosis (see Table 1 of survey answers in the 
+auxiliary materials).  
+
+Figure 1. Age distribution of survey respondents (N=504). 
+
+Participants  were  not  provided  with  any  incentive  for 
+participating.  Anyone  could  participate  in  the  online 
+surveys, but only the results for those who self-identified as 
+having been diagnosed with endometriosis were included in 
+the analysis of disease dimensions and tracking preferences. 
+Duplicate  responses  were  discarded  (seven  in  the  first 
+survey  and  five  in  the  second).  Two  surveys  were 
+conducted in order to decrease the length of one survey and 
+increase the likelihood of respondents completing an entire 
+survey.  
+
+The surveys comprised of both structured and unstructured 
+questions.  After  basic  demographics  and  diagnosis  status 
+questions, Survey 1 asked about the following dimension of 
+endometriosis: emotions, moods, and affects; pain locations 
+and  descriptions;  medication  use;  and  self-management 
+  Survey  2  asked  about  other  diagnosed 
+strategies. 
+conditions 
+types  of  diets 
+(or  comorbidities);  and 
+experimented  with.  The  survey  also  focused  on  the 
+dimensions  of  endometriosis  around  menstruation  and  the 
+menstrual  cycle.  In  particular,  we  were  interested  in 
+understanding 
+the  experience  of 
+endometriosis  is  linked  to  the  different  phases  of  the 
+menstrual cycle. Thus, Survey 2 asked about the following 
+variables:  absence/presence  of  periods  in  the  last  three 
+months and reasons for not having periods; period duration 
+and  cycle 
+length  when  appropriate;  hormone-induced 
+versus natural cycle; period regularity; and type of feminine 
+hygiene products used.  
+
+to  which  extent 
+
+Survey  data  was  aggregated  and  frequency  counts  were 
+calculated  for  questions  with  structured  survey  responses. 
+Free-text  responses  were  mapped  to  particular  variables  of 
+the  disease,  and  medications  and  hormonal  treatment 
+responses  were  mapped 
+their  medication  classes. 
+to 
+Analysis  was  carried  out  using  RStudio  Software 
+Version 1.0.136  and  Excel  for  Mac  2011  version  14.5.5 
+
+software.  A  full  table  of  all  frequency  counts  of  variables 
+(pain;  moods, 
+across  disease  dimensions 
+and 
+emotions, 
+hormones; 
+triggers; 
+menstruation) are available in the auxiliary materials.     
+
+surveyed 
+comorbidities;  medications 
+
+effects; 
+self-management 
+
+strategies  and 
+
+Method 4: Content Analysis  
+To  identify  dimensions  of  the  disease  without  interference 
+from the potential biases of the researchers, we analyzed the 
+content  of  an  online  health  community.  The  publicly 
+available social platform Reddit was utilized, and the r/endo 
+board in particular. Our goal for the content analysis was to 
+enumerate  and  elucidate  further  the  variables  to  track 
+amongst the dimensions identified in the other approaches. 
+
+The r/endo board comprised 1,900 subscribed members and 
+1,500  posters  at  the  time  of  analysis.  Overall,  the  board 
+contains  18,061  posts,  among  them  1,936  threads  and 
+16,125  comments.  As  testament  to  its  level  of  activity,  the 
+board has grown tremendously in the past year, and to date 
+there are about 3,590 members. As such, it presents a good 
+opportunity  to  observe  and  learn  from  patients  directly 
+about their experience of the disease. Furthermore, in order 
+not  to  bias  our  results  in  any  way,  we  made  sure  never  to 
+advertise our work in this particular forum.   
+
+A  subset  of  80  threads,  corresponding  to  859  posts,  was 
+selected for manual coding. The corpus comprised the first 
+50  threads  in  the  discussion  board  and  30  random 
+subsequent  threads.  Overall  the  subset  represented  posts 
+from 153 unique posters and as a whole a corpus of 95,500 
+words. 
+
+The annotations were carried out in the Brat annotation tool 
+(http://brat.nlplab.org/).  Brat  enables  annotation  of  phrases 
+(and  disjoint  phrases)  according  to  customized  categories 
+(in  our  case  disease  dimensions),  as  well  as  coding 
+additional  customizable  attribute  information  about  each 
+annotated  phrase.  Mentions  of  variables  corresponding  to 
+specific  dimensions  of  endometriosis  were  manually 
+annotated, along with a range of attributes. 
+
+A  detailed  coding  schema  along  with  coding  guidelines 
+were developed. We aimed to annotate any explicit mention 
+of  a  variable  under  the  following  dimensions:  disorders 
+(i.e., mentions of signs, symptoms, findings, and diseases); 
+medications;  supplements;  medical  procedures;  biomarkers 
+and diverse laboratory tests; emotions, moods, and affects; 
+and  activities  of  daily  living.  To  facilitate  subsequent 
+analysis,  each  entity  was  mapped  to  standard  ontologies 
+whenever  possible.    For  instance,  the  mention  “BC”  was 
+manually  mapped  to  the  standard  concept  “birth  control 
+pill.”  We  relied  on  the  standard  terminology  from  the 
+UMLS  (Unified  Medical  Language  System)  for  these 
+mappings.  
+
+Coders  annotated  a  variety  of  attributes  for  each  coded 
+entity.  For  instance,  for  disorders,  in  addition  to  their 
+mention  they  also  had  the  following  information  coded: 
+negation  status,  uncertainty  status,  who  experienced  it  (the 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 6 
+patient, someone else, or no one, i.e., a generic mention of 
+the  disorder),  who  attributed  it  to  the  experiencer  (the 
+patient  or  someone  else),  and  whenever  relevant,  which 
+body  location  was  affected.  For  medications,  supplements, 
+and medical procedures, we also kept track of mentions of 
+efficacy  whenever  discussed  explicitly  by  the  post  author. 
+For instance, in the sentence “my gynecologist thinks I have 
+IBD,”  the  term  IBD  was  coded  as  a  disorder,  experienced 
+by the patient, but attributed to the patient by someone else. 
+In  contrast  in  the  sentence  “at  night,  my  belly  gets  so 
+bloated,”  the  words  “belly”  and  “bloated”  get  coded  and 
+mapped to the concept of “endo belly” (a known symptom 
+of  endometriosis  amongst  patients),  experienced  by  the 
+patient, and attributed by the patient as well.  
+
+Every post in the corpus was annotated by two independent 
+coders, and adjudicated by a third coder. To analyze which 
+specific  variables  within  the  dimensions  of  interest  were 
+discussed by patients on the board, we kept track of coding 
+phrases, along with their attributes. For this study, because 
+of  our  goal  to  elucidate  variables  about  the  patient 
+experience  of  endometriosis,  we  only  kept  track  of  the 
+variables that were experienced by patients specifically, and 
+attributed  to  them  by  patients  as  well.  We  ignored  other 
+variables, like conditions attributed by others to patients, for 
+instance.  
+
+IDENTIFYING  DIMENSIONS  OF  DISEASE 
+
+RESULTS: 
+RELEVANT TO SELF-TRACKING 
+Overall,  a  set  of  specific  self-tracking  dimensions  relevant 
+to the experience of endometriosis were elicited.  
+
+Interviews 
+Several  broad  themes  emerged  from  the  preliminary 
+interviews including pain and other symptoms, activities of 
+daily  life,  treatments,  self-management,  and  emotional 
+burden of the disease. Menstruation was also a topic on its 
+own.  Each  participant’s  experience  of  the  disease  was 
+unique, but all participants experienced pain related to their 
+endometriosis,  and 
+significant  and 
+debilitating.  For  example,  I3  compares  their  pain  to  labor 
+“So, when I was in labor, my earliest stages of labor, it felt 
+a lot like cramps I have during my period.”  
+
+this  pain  was 
+
+Pain  also  had  a  significant  impact  on  each  participant’s 
+daily  life.  Examples  of  variables  related  to  activities  of 
+daily  life  including  missing  work  and  social  occasions 
+because of endometriosis-related pain. I3 states that “When 
+I have periods, when it starts, I have a hard time getting out 
+of  bed  and  doing  my  normal  routine.”  Yet,  the  periodic 
+nature of symptoms meant that participants who understood 
+their patterns could plan for them.  I2 says “You would have 
+to  worry  about  what  you’re  wearing  because  you’re 
+bleeding  so  much  and  so  you  kind  of  have  to  plan 
+accordingly.”  
+
+When participants experienced disease flares, this impacted 
+their  daily  life,  avoiding  intimate  contact  with  their 
+partners. I3 describes symptomatic episodes as feeling like 
+
+“Please  do  not  touch  me  at  all.”  Participants  also  isolated 
+themselves  from  work  and  other  responsibilities  as  I2 
+relates  “Okay,  so,  sometimes  the  pain  was  so  intense  that 
+when you’re in pain like that, you just can’t do what you’re 
+supposed  to  do…I  kind  of  know  when  those  days  or  when 
+you’re  expecting  to  have  pain  and  so…I  think  to  some 
+extent I did plan my life a little bit around that.” 
+
+In treating their disease, a variety of medications were tried. 
+Participant I2 states “I was using a lot of over-the-counter 
+pain  medications,  and  I  was  taking  like  lots  of  Tylenol  at 
+some  point,  like  [a]  small  jar,  in  a  day  or  something.” 
+However, the side effects of different treatments were also 
+problematic and had a significant impact on quality of life. 
+I3  relates  this  sentiment  “I  can  take  normal  birth  control 
+but  I'm  like  a  sexless  zombie  […]  and  then  anything  with 
+Lupron sounds terrible.”  
+
+to 
+
+The  existing  lack  of  effective  medical  treatments  led 
+participants 
+self-management 
+experiment  with 
+techniques:  I3  says  “drinking  very  little  alcohol,  no 
+caffeine,  just  eating  hardly  anything  …  and  being  very 
+careful  about  what  I  was  eating”,  as  well  as  exercise,  as 
+described by I1 “I try to run like two to three times a week 
+and  that  helped”.    While  these  self-management  strategies 
+were  not  a  cure-all  for  symptoms,  they  did  provide 
+psychological  benefits.  For  example,  I3  describes  how  “I 
+can deal with the pain if I can just know what I'm doing and 
+it does not actively contribute to it.”  
+
+Focus Groups 
+From  the  focus  groups,  a  set  of  nine  dimensions  emerged 
+and  were  ranked  by  participants  as  critical  to  self-track. 
+These  included:  pain;  gastro-intestinal  and  genitourinary 
+symptoms;  other  symptoms;  menstruation;  comorbidities; 
+treatments;  self-management  strategies;  life  events;  and 
+moods, emotions, and affects.   
+
+the  disease,  and 
+Pain  remained  a  major  aspect  of 
+participants  vividly  described  their  pain  in  terms  of  its 
+location, severity, and specific qualities, “I had this window 
+of time where I got this same exact burning horrible can’t-
+ This  example  also 
+speak-to-me  abdominal  pain”. 
+highlights  the  temporal  aspect  of  the  disease.  “I'm  in 
+excruciating pain for about five to six days”, yet symptoms 
+also varied throughout the day, “how I'm feeling at 8am is 
+not  necessarily  how  I’m  feeling  at  7pm.”.  The  effects  of 
+pain  on  activities  of  daily  living  were  also  an  issue  “Like 
+pain  during  sex  is  a  big  symptom  for  me  and,  umm,  like  I 
+literally  like  avoid  sex  too  because  of  this”.  A  number  of 
+symptoms  beyond  pain  were  also  identified.    In  particular, 
+gastrointestinal and genitourinary symptoms were described 
+in descriptive terms by quality and location “It’s like all of 
+the bloating is putting pressure on my bladder too”.  
+
+Other symptoms were discussed and were more systemic in 
+nature,  “It’s  like  fatigue  and  then  also  feeling  like  I'm 
+getting a cold”. The systemic nature of symptoms lead to a 
+that  participants 
+discussion  of  comorbid  conditions 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 7experienced,  “I  still  have,  I  think,  some  allergy  issues  or 
+autoimmune  issues”.  These  symptoms  also  occurred  in  a 
+periodic  fashion,  similar 
+to  pain,  as  one  participant 
+describes, “I get fever and a cold every month”.  
+
+The cyclical nature of symptoms highlights the importance 
+of  the  hormonal  cycle  as  one  of  the  dimensions  of  the 
+disease.  Menstruation  is  an  important  aspect  not  just 
+because of its correlation with other symptoms but because 
+excessive bleeding was a symptom on its own “The last few 
+years,  bleeding  was  life  threateningly  excessive  at  times 
+and  [I  had]  anemia”.  Other  menstrual  symptoms  were 
+identified 
+spotting, 
+like  breakthrough  bleeding  and 
+“Spotting  is  –  yeah,  I  mean  the  whole  gamut  [bleeding]  I 
+think  is  very  important”.  There  was  also  consensus  that 
+infertility  and  its  host  of  complications  and  treatments 
+should  be  a  dimension  although  for  most  there  was  no 
+interest in tracking this.  
+
+Day-to-day  activities  were  also  discussed  as  an  important 
+relationships  were 
+self-tracking  dimensions.  Personal 
+affected  “just  casual  sex  is  like  annoying…”,  along  with 
+work  productivity  and  performance,  “I  sweat  and,  you 
+know,  you're  moving  up  the  career  ladder  and  you're  like 
+fearing that you can’t go to work or like meetings”. Due to 
+the  severity  and  impact  of  symptoms  on  quality  of  life, 
+participants  experienced  strong  negative  emotions,  “I  was 
+so  depressed  that  I  felt  sick  every  day  in  some  way,  shape 
+or form”.  
+
+the 
+
+interviews,  self-management 
+
+Like 
+techniques  and 
+medications  were  discussed  at  length  in  the  context  of  a 
+lack  of  effective  options.  Dietary  triggers  emerged  as  an 
+important  self-management  strategy:  “I  look  at  what  and 
+when  I  eat”,  as  well  as  exercise,  “I  take  a  walk  with  my 
+dog”.  
+
+Online Surveys 
+Survey  responses  identified  similar  dimensions  of  the 
+disease as the focus groups, and a wider range of variables 
+was elicited for each dimension. Pain was reported in more 
+than 50 body locations along with over 150 descriptions of 
+pain  (Figure  2  for  the  top  15  and  Table  2  and  Table  3  of 
+survey answers in the auxiliary materials). In comparison to 
+established  symptoms  of  endometriosis,  the  range  of  pains 
+reported by patients is much wider and more granular.  
+
+Participants reported over 60 emotions, moods, and affects 
+related  to  their  experience  of  endometriosis.  Most  were 
+negative  and  similar  to  those  in  the  focus  groups.  The  top 
+emotions  were  frustrated, 
+irritable,  anxious,  stressed, 
+mentally  foggy  and  overwhelmed  (see  Table  4  of  survey 
+answers in the auxiliary materials).  
+
+Over  25  comorbidities  were  reported,  with  prevalent 
+conditions,  such  anxiety  and  depression,  and  reproductive 
+and gastro-intestinal conditions ones like ovarian cysts and 
+irritable bowel syndrome (see Table 5 of survey answers in 
+the auxiliary materials). In addition a heavy disease burden 
+
+of  four  comorbidities  on  average  per  respondent  was 
+reported—more than in the general population [97].   
+
+Figure 2. Top 15 pain locations and descriptions (N=737). 
+Word size indicates frequency. 
+
+y
+c
+n
+e
+u
+q
+e
+r
+F
+
+600
+
+400
+
+200
+
+0
+
+N S AID s
+
+A nalgesics
+C ycle R egulators
+
+C annabinoids
+G N R H A gonist
+A ntidepressants
+O pioids
+
+G A B A-analog
+
+H R T
+
+M uscle R elaxers
+
+Medication
+
+Figure 3. Combined top 10 medications (N=719) and 
+hormones (N=204). 
+
+Figure 4. Top 15 self-management strategies (N=695). 
+
+Congruent with focus groups, participants also used a wide 
+range  of  medications  and  hormones  (Figure  3  and  Table  6 
+of  survey  answers  in  the  auxiliary  materials;  medications 
+had  N=719 
+respondents  and  hormones  had  N=204 
+respondents).  There  was  heavy  use  of  medications    as 
+compared  to  the  general  population  with  about  three 
+medication  classes  reported  per  participant—a  typical 
+finding  for  chronic  disease  patients  [22,42].  The  most 
+prevalent  treatments  included  hormonal  cycle  regulators 
+and  pain  killers,  including  analgesics,  anti-inflammatory, 
+and opioids.  
+
+Participants  experimented  with  a  wide  range  of  self-
+management  approaches  (Figure  4  and  Table  7  of  survey 
+answers in the auxiliary materials). Similar to other chronic 
+conditions,  participants  used  an  average  of  about  three 
+different approaches to manage symptoms [55] . 
+
+The surveys confirmed the findings of the focus groups, but 
+also  described  a  larger  range  and  granularity  of  variables 
+for tracking. A large set of respondents had not menstruated 
+in the past three months (Table 8 of survey answers in the 
+auxiliary  materials),  but  still  experienced  many  of  the 
+symptoms  of  endometriosis,  indicating  that  even  the  most 
+basic  characterization  of  the  disease  according  to  the 
+medical  body  (period  cramps)  might  not  be  an  accurate 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 8 
+ 
+representation of the patient experience (Figure 3 of survey 
+answers in the auxiliary materials).   
+
+of 
+
+coded 
+
+dimensions 
+
+discussions 
+
+Content Analysis 
+The  content  analysis  of  the  Reddit  endometriosis  board 
+confirmed the aspects of the disease identified in the focus 
+groups  and  online  surveys.  Of  note,  out  of  the  6,000 
+manually 
+of 
+endometriosis,  most  variables  were  about  the  patients 
+(rather  than  generic  mentions),  but  a  high  proportion  of 
+them were attributed to them by others and were discussed 
+as  examples  of  misdiagnoses  or  even  stigma  related  to  the 
+disease.  Frequent  such  disorders  for  instance  included 
+“absence 
+and 
+“hypochondria.”    While  these  disorders  should  not  be 
+their  sheer 
+into  self-tracking  variables, 
+incorporated 
+frequency in our corpus was surprising.  
+
+endometriosis,” 
+
+seeker,” 
+
+“drug 
+
+of 
+
+Analysis of the variables mentioned and experienced by the 
+patient  indicated  that  some  dimensions  contain  a  finite  set 
+of variables. For instance, we identified about 20 variables 
+within  the  GI  and  urinary  problems.  Similarly,  there  were 
+about 30 pain locations that were identified under the pain 
+dimension. Some other dimensions, however, did not seem 
+to  converge  across  the  corpus  in  prevalence.  There  were  a 
+very large set of self-management strategies discussed, and 
+diet  and  exercises  became 
+their  own  dimensions, 
+themselves  with  a  wide  range  of  variables  that  could  be 
+self-tracked  by  patients  (e.g.,  dairy-free  diet,  soy-free  diet, 
+gluten-free  diet,  avoiding  red  meat,  etc.).  While  it  is 
+expected to see a large pool of variables for dimensions like 
+treatments, the fact that there is no evidence in the literature 
+for what works makes the pool of variables larger. Patients 
+are left to experiment on their own. 
+
+DISCUSSION 
+Our  findings  confirm  that  different  data  sources  of  patient 
+experience  provide 
+elicit 
+dimensions of endometriosis.  
+
+complementary  ways 
+
+to 
+
+A Holistic, Patient-Aligned View of Endometriosis 
+Our process appears to be particularly useful in the context 
+of an enigmatic disease like endometriosis. As compared to 
+survey-based  methods,  we  confirmed  many  of  the  known 
+dimensions,  such  as  pain  and  menstruation,  but  also 
+identified  a  more  holistic  view  of  the  disease  with  a  wider 
+range  of  dimensions,  each  with  greater  granularity  of 
+variables  [37].  Qualitative  studies  of  endometriosis  put  a 
+heavy 
+focus  on  pain  as  a  primary  symptom  of 
+endometriosis  [31,101].  However,  previous  work  reports 
+intensity of pain, with little exploration of the types of pain, 
+pain location, and how it is experienced [30]. Our methods 
+identified specific body locations affected by endometriosis 
+pain  (e.g.,  sacrum,  abdomen)  and  specific  types  of  pains 
+(e.g., twisting, burning). Similarly, for other dimensions of 
+the  disease,  our  methods  enabled  discovery  of  a  larger 
+range of relevant variables. For instance, Hungtington et al. 
+identify  rectal  and  anal  pain,  along  with  diarrhea  and 
+constipation  as  important  gastro-intestinal  symptoms  [49]. 
+
+Our  analysis  identified  in  addition  nausea,  heartburn,  gas, 
+fullness,  and  vomiting,  as  frequent  symptoms  reported  by 
+patients. Finally, we also identify the dynamic nature of the 
+signs  and  symptoms  experienced  by  patients,  which  vary 
+throughout  the  menstrual  cycle,  day  to  day,  and  for  some 
+moment  to  moment—a  phenomenon  not  described  in  the 
+literature  previously.  The  answers  to  our  online  surveys 
+also  indicated  that  the  relationship  between  symptoms  and 
+phases  of  the  menstrual  cycle  were  not  as  clear  as 
+established in the literature [29]. 
+
+From Patient Experience to Self-Tracking Variables 
+Beyond  identifying  the  dimensions  of  the  disease,  the 
+activities  and  discussions  during  the  focus  groups  helped 
+assess the attitude and motivations for using a self-tracking 
+tool  for  the  sake  of  endometriosis,  as  well  as  prioritizing 
+which self-tracking dimensions and corresponding variables 
+would  be  useful  in  a  self-tracking  app  [70].  The  online 
+surveys  and  content  analysis  helped  extend  the  range  of 
+variables under each dimension.  
+
+Given  the  large  number  of  self-tracking  variables  that  can 
+be  tracked  and  the  current  means  of  tracking  as  described 
+by  participants  in  the  focus  groups,  self-reports  were 
+considered  by  participants  as  a  reliable  way  to  track 
+endometriosis  for  themselves  and  for  learning  about  the 
+disease  at  scale.  Passive  sensing  was  not  considered  an 
+appropriate modality by participants, except potentially for 
+simple physical activity monitoring like step count. 
+
+The  online  surveys  and  the  content  analysis  helped 
+determine which variables would easily be standardized in a 
+self-tracking tool or rather left open for users to customize. 
+For  instance,  the  diet  dimension,  because  of  its  very  large 
+range  of  variables  identified  in  the  content  analysis,  was 
+determined to stay an “open” self-tracking dimension, while 
+the pain dimension was standardized to 30 pain locations.  
+
+understanding 
+
+Characterizing Disease from Self-Tracking Data at Scale 
+Beyond  the  typical  goal  of  self-monitoring  and  self-
+management,  the  identified  dimensions  can  be  used  to 
+inform  the  design  of  a  self-tracking  tool  that  allows  for 
+users.  
+better 
+Specifically,  self-tracking  tools  are  appealing  because  they 
+enable  collection  of  a  large  and  diverse  set  of  people  with 
+endometriosis  as  compared  to  traditional  research  methods 
+and  allow  for  studying  dynamic  variation  in  disease 
+symptoms  over  time.  The  disease  dimensions  identified 
+through the approach presented in this study are well suited 
+to the requirements of computational phenotyping.   
+
+endometriosis 
+
+across 
+
+Although  identification  of  disease  dimensions  is  useful  for 
+the  experience  of  endometriosis,  additional 
+capturing 
+factors  need  to  be  considered  in  characterizing  disease  at 
+scale.  Completeness  and  accuracy  are  important  data 
+characteristics    for  high-quality  phenotyping  [48].  In  the 
+context  of  enigmatic  diseases  this  translates  to  a  need  to 
+collect  a  standard  set  of  data,  namely  variables  of  the 
+disease,  and  do  so  in  a  longitudinal  fashion  in  order  to 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 9capture  the  dynamic  variations  and  accurately  represent 
+disease  experience.  Therefore,  design  of  the  self-tracking 
+tool  needs 
+information  needs  of 
+these 
+researchers,  and  engage  people  with  a  particular  condition 
+in tracking a standard set of disease dimensions over time.  
+
+to  support 
+
+Implications  for  Design  of  Self-Tracking  Apps  for 
+Enigmatic Diseases 
+First, because user engagement is critical to success, design 
+of a self-tracking tool might include dimensions that are not 
+a-priori  important  to  the  ultimate  goal  of  the  tool.  When 
+dealing with an enigmatic disease, it is not clear in advance 
+which  of  these  dimensions  will  in  fact  contribute  to  its 
+phenotyping.  For  instance,  emotions,  affects,  and  moods 
+might  not  end  up  part  of  an  endometriosis  phenotype,  but 
+there is still value to them, because they align with the way 
+patients  experience  the  disease.  If  tracking  emotions  is 
+important  to  patients’  self-management,  then  they  will  be 
+more likely to engage with self-tracking in general.  
+
+[58,78].  For 
+
+role  of  personalization 
+
+Second,  the  choice  of  self-report  in  the  design  of  the  self-
+tracking  app  makes  engagement  even  more  critical.  To 
+engage individuals, previous research has demonstrated the 
+important 
+the 
+dimensions with a too large set of variables, personalization 
+in self-tracking presents a perfect opportunity. Orienting the 
+design  of  self-tracking  tools  around  a  particular  user’s 
+individual  information  needs  and  goals,  such  as  making 
+sense  of  one’s  disease,  is  useful  in  reducing  the  burden  of 
+self-tracking, can make self-tracking more meaningful, and 
+thus  engages  the  individual  self-tracker  further  [65,67,68]. 
+Negative  experiences  can  also  influence  engagement,  and 
+tracking  pain,  for  example,  may  remind  patients  they  are 
+sick and discourage use.  In the case of endometriosis, it is 
+also  known  the  patients’  symptoms  have  historically  been 
+stigmatized  and  ignored.    For  this  reason,  they  may 
+overcome  any  apprehensions  they  have  about  tracking  in 
+order for their symptoms to be recognized [10,46]. 
+
+Third,  some  of  our  identified  self-tracking  dimensions  are 
+complex. For instance, pain may vary in time and location 
+within  an  individual,  as  well  as  across  individuals.  Other 
+(e.g., 
+symptoms  vary  at  different 
+menstruation at the day level, GI symptoms at the moment 
+level).  Thus,  a  self-tracking  tool  that  aligns  with  patient 
+experience  of  endometriosis  needs  to  enable  tracking  at 
+is  not 
+different 
+traditionally accounted for in pain diaries [75]. Further, the 
+analysis  of  the  self-tracked  data  also  needs  to  take  these 
+varying resolutions into account in a longitudinal manner.  
+
+feature  which 
+
+resolutions,  a 
+
+resolutions 
+
+time 
+
+time 
+
+Finally,  some  of  our  identified  self-tracking  dimensions 
+may  influence  each  other.  Associations  between  pain  and 
+other variables, such as mood, have been investigated in the 
+literature,  and  it  is  known  that  low  mood  may  lead  to  less 
+pain  tracking  [19,79].  This  supports  further  the  argument 
+that  a  self-tracking  tool  for  an  enigmatic  condition  should 
+have  a  wide  range  of  variables,  such  that  potential 
+confounders and associated variables can then be identified. 
+
+Few  of  these  associations  are  currently  understood  for 
+endometriosis,  and  a  self-tracking  tool  will  help  towards 
+investigating these relationships.   
+
+application, 
+
+Based  on  the  findings  of  this  study,  we  have  developed  a 
+self-tracking 
+are 
+experimenting  with  engagement  strategies  motivated  by 
+self-determination  theory  and  citizen  science.  To  date, 
+Phendo is used by 3,000 participants from 65 countries.  
+
+called  Phendo, 
+
+and 
+
+Limitations 
+This  study  has  several  limitations.  First,  the  endometriosis 
+diagnoses  of  survey  and  online  community  participants 
+were  self-reported,  without  us  contacting  the  participants 
+for confirmation. However, we did not identify any trolling 
+information in the Reddit posts, and only considered survey 
+responses  posted  within  5  days  of  advertising  in  patient 
+advocacy groups. Second, there might be a selection bias to 
+the participants in our study. Social media users tend to be 
+younger than the general population and those who are part 
+of patient advocacy groups are probably more health literate 
+than  an  average  person  with  endometriosis  [24,40,44]. 
+Third,  patients  who  are  sicker  may  also  be  more  likely  to 
+engage  in  research-related  activities.  In  fact,  there  is 
+evidence  of  this  bias  in  the  data  collected  through  Phendo 
+so far, where our participating population is young and with 
+predominantly  severe  diagnosis  of  endometriosis.  Finally, 
+this study focuses on eliciting information from people with 
+endometriosis,  and  as  such  lacks  a  comparison  group  that 
+represents  healthy  women  with  a  “normal”  menstrual 
+experience. The last two limitations affect in particular our 
+goal  of  learning  at  scale  from  self-tracked  data  and 
+discovering 
+characterize 
+endometriosis.  In  our  current  work,  as  part  of  the  Phendo 
+study,  we  are  exploring  recruitment  that  targets  particular 
+populations  (women  without  endometriosis  diagnosis,  as 
+well  as  women  with  less  severe  endometriosis).  For  these 
+populations,  we  are  exploring  principles  of  citizen  science 
+to engage them in self-tracking for endometriosis research. 
+
+patterns 
+
+help 
+
+that 
+
+can 
+
+CONCLUSION 
+We  contribute  an  understanding  of  the  design  of  personal 
+health  informatics  tools  that  leverage  the  self-tracking  of 
+individuals  to  better  understand  group-level  characteristics 
+of  diseases.  For  diseases  or  health  conditions  where  the 
+relevant dimensions of the disease are not well understood, 
+we outline a process for designing self-tracking tools in this 
+context.  We find there is value in examining different data 
+sources  to  elicit  the  relevant  dimensions  of  a  disease.  
+Triangulation across these sources informs what constitutes 
+the experience of disease, indicating it is feasible to capture 
+the  disease  experience  directly  from  people  with  a 
+particular health condition.   
+
+ACKNOWLEDGMENTS 
+This work was supported by the Endometriosis Foundation 
+of  America  and  the  National  Science  Foundation  award 
+#1344668. We thank the study participants and are grateful 
+to the reviewers for their valuable feedback.  
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 10REFERENCES 
+1.  Pedro Acién and Irene Velasco. 2013. Endometriosis: 
+A Disease That Remains Enigmatic. ISRN Obstetrics 
+and Gynecology 2013. 
+
+2.  Elena Agapie, Lucas Colusso, Sean A. Munson, and 
+
+Gary Hsieh. 2016. PlanSourcing: Generating Behavior 
+Change Plans with Friends and Crowds. In 
+Proceedings of the 19th ACM Conference on 
+Computer-Supported Cooperative Work & Social 
+Computing (CSCW ’16), 119–133. 
+
+3.  Soo Hyun Ahn, Vinay Singh, and Chandrakant 
+Tayade. 2017. Biomarkers in endometriosis: 
+challenges and opportunities. Fertility and Sterility 
+107, 3: 523–532. 
+
+4.  Reem Albaghli and Kenneth M. Anderson. 2016. A 
+Vision for Heart Rate Health Through Wearables. In 
+Proceedings of the 2016 ACM International Joint 
+Conference on Pervasive and Ubiquitous Computing: 
+Adjunct (UbiComp ’16), 1101–1105. 
+
+5.  Sam Alexander. 2015. mHealth Technologies for the 
+
+Self-management of Diabetes in the Older Population. 
+SIGACCESS Access. Comput., 111: 14–18. 
+
+6.  Tim Althoff, Rok Sosič, Jennifer L. Hicks, Abby C. 
+
+King, Scott L. Delp, and Jure Leskovec. 2017. Large-
+scale physical activity data reveal worldwide activity 
+inequality. Nature 547, 7663: 336–339. 
+
+7.  Swamy Ananthanarayan and Katie A. Siek. 2012. 
+
+Persuasive wearable technology design for health and 
+wellness. In 2012 6th International Conference on 
+Pervasive Computing Technologies for Healthcare 
+(PervasiveHealth) and Workshops, 236–240. 
+
+8.  Amid Ayobi, Paul Marshall, and Anna L. Cox. 2016. 
+
+Reflections on 5 Years of Personal Informatics: Rising 
+Concerns and Emerging Directions. In Proceedings of 
+the 2016 CHI Conference Extended Abstracts on 
+Human Factors in Computing Systems (CHI EA ’16), 
+2774–2781. 
+
+9.  Amid Ayobi, Paul Marshall, Anna L. Cox, and Yunan 
+Chen. 2017. Quantifying the Body and Caring for the 
+Mind: Self-Tracking in Multiple Sclerosis. In 
+Proceedings of the 2017 CHI Conference on Human 
+Factors in Computing Systems (CHI ’17), 6889–6901. 
+
+10.  Karen Ballard, Karen Lowton, and Jeremy Wright. 
+2006. What’s the delay? A qualitative study of 
+women’s experiences of reaching a diagnosis of 
+endometriosis. Fertility and Sterility 86, 5: 1296–1301. 
+
+11.  Ana Correia de Barros, João Cevada, Àngels Bayés, 
+
+Sheila Alcaine, and Berta Mestre. 2013. User-centred 
+Design of a Mobile Self-management Solution for 
+Parkinson’s Disease. In Proceedings of the 12th 
+International Conference on Mobile and Ubiquitous 
+Multimedia (MUM ’13), 23:1–23:10. 
+
+12.  Mark Beattie, Huiru Zheng, Chris Nugent, and Paul 
+
+McCullagh. 2014. Self-management of COPD: A 
+Technology Driven Paradigm. In Proceedings of the 
+8th International Conference on Ubiquitous 
+
+Information Management and Communication 
+(ICUIMC ’14), 53:1–53:8. 
+
+13.  Christian Becker. 2015. Diagnosis and management of 
+
+endometriosis. Prescriber 26, 20: 17–21. 
+
+14.  David Bernuit, Andreas D. Ebert, Gülden Halis, Anja 
+Strothmann, Christoph Gerlinger, Katharina Geppert, 
+and Thomas Faustmann. 2011. Female perspectives on 
+endometriosis: findings from the uterine bleeding and 
+pain women’s research study. Journal of 
+Endometriosis 3, 2: 73–85. 
+
+15.  Matthew J. Bietz, Cinnamon S. Bloss, Scout Calvert, 
+Job G. Godino, Judith Gregory, Michael P. Claffey, 
+Jerry Sheehan, and Kevin Patrick. 2015. Opportunities 
+and challenges in the use of personal health data for 
+health research. Journal of the American Medical 
+Informatics Association: ocv118. 
+
+16.  Brian M. Bot, Christine Suver, Elias Chaibub Neto, 
+
+Michael Kellen, Arno Klein, Christopher Bare, Megan 
+Doerr, Abhishek Pratap, John Wilbanks, E. Ray 
+Dorsey, Stephen H. Friend, and Andrew D. Trister. 
+2016. The mPower study, Parkinson disease mobile 
+data collected using ResearchKit. Scientific Data 3: 
+160011. 
+
+17.  Julie Brown and Cindy Farquhar. 2014. Endometriosis: 
+an overview of Cochrane Reviews. The Cochrane 
+Database of Systematic Reviews 3: CD009590. 
+18.  Deborah Brunton. 2006. What is Medical History? 
+
+Social History of Medicine 19, 2: 343–343. 
+19.  Amanda C de C Williams and Phil H. Richardson. 
+1993. What does the BDI measure in chronic pain? 
+Pain 55, 2: 259–266. 
+
+20.  Rafael A. Calvo and Dorian Peters. 2013. The Irony 
+and Re-interpretation of Our Quantified Self. In 
+Proceedings of the 25th Australian Computer-Human 
+Interaction Conference: Augmentation, Application, 
+Innovation, Collaboration (OzCHI ’13), 367–370. 
+21.  Yu-Feng Yvonne Chan, Pei Wang, Linda Rogers, 
+Nicole Tignor, Micol Zweig, Steven G. Hershman, 
+Nicholas Genes, Erick R. Scott, Eric Krock, Marcus 
+Badgeley, Ron Edgar, Samantha Violante, Rosalind 
+Wright, Charles A. Powell, Joel T. Dudley, and Eric E. 
+Schadt. 2017. The Asthma Mobile Health Study, a 
+large-scale clinical observational study using 
+ResearchKit. Nature Biotechnology 35, 4: 354–362. 
+22.  Jianhong Che, Kristen C. Malecki, Matthew C. Walsh, 
+
+Andrew J. Bersch, Vincent Chan, Christine A. 
+McWilliams, and F. Javier Nieto. 2014. Overall 
+prescription medication use among adults: findings 
+from the Survey of the Health of Wisconsin. WMJ: 
+official publication of the State Medical Society of 
+Wisconsin 113, 6: 232–237. 
+
+23.  Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, 
+
+Wanda Pratt, and Julie A. Kientz. 2014. Understanding 
+Quantified-selfers’ Practices in Collecting and 
+Exploring Personal Data. In Proceedings of the 
+SIGCHI Conference on Human Factors in Computing 
+Systems (CHI ’14), 1143–1152. 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 1124.  Shannon M. Christy, Clement K. Gwede, Steven K. 
+Sutton, Enmanuel Chavarria, Stacy N. Davis, Rania 
+Abdulla, Chitra Ravindra, Ida Schultz, Richard 
+Roetzheim, and Cathy D. Meade. 2017. Health 
+Literacy among Medically Underserved: The Role of 
+Demographic Factors, Social Influence, and Religious 
+Beliefs. Journal of Health Communication 22, 11: 
+923–931. 
+
+25.  Chia-Fang Chung, Elena Agapie, Jessica Schroeder, 
+Sonali Mishra, James Fogarty, and Sean A. Munson. 
+2017. When Personal Tracking Becomes Social: 
+Examining the Use of Instagram for Healthy Eating. In 
+Proceedings of the 2017 CHI Conference on Human 
+Factors in Computing Systems (CHI ’17), 1674–1687. 
+26.  Chia-Fang Chung, Kristin Dew, Allison Cole, Jasmine 
+Zia, James Fogarty, Julie A. Kientz, and Sean A. 
+Munson. 2016. Boundary Negotiating Artifacts in 
+Personal Informatics: Patient-Provider Collaboration 
+with Patient-Generated Data. In Proceedings of the 
+19th ACM Conference on Computer-Supported 
+Cooperative Work & Social Computing (CSCW ’16), 
+770–786. 
+
+27.  Jacob Cohen. 1960. A Coefficient of Agreement for 
+Nominal Scales. Educational and Psychological 
+Measurement 20, 1: 37–46. 
+
+28.  Kay Connelly, Anne Faber, Yvonne Rogers, Katie A. 
+Siek, and Tammy Toscos. 2006. Mobile applications 
+that empower people to monitor their personal health. e 
+& i Elektrotechnik und Informationstechnik 123, 4: 
+124–128. 
+
+29.  Lucy-Jane Davis, Stephen S Kennedy, Jane Moore, 
+and Andrew Prentice. 2007. Oral contraceptives for 
+pain associated with endometriosis. In Cochrane 
+Database of Systematic Reviews. John Wiley & Sons, 
+Ltd. 
+
+30.  Elaine Denny. 2004. Women’s experience of 
+
+endometriosis. Journal of Advanced Nursing 46, 6: 
+641–648. 
+
+31.  Elaine Denny. 2009. “I Never Know From One Day to 
+Another How I Will Feel”: Pain and Uncertainty in 
+Women With Endometriosis. Qualitative Health 
+Research 19, 7: 985–995. 
+
+34.  Daniel A. Epstein, An Ping, James Fogarty, and Sean 
+A. Munson. 2015. A Lived Informatics Model of 
+Personal Informatics. In Proceedings of the 2015 ACM 
+International Joint Conference on Pervasive and 
+Ubiquitous Computing (UbiComp ’15), 731–742. 
+35.  Daniel Epstein, Felicia Cordeiro, Elizabeth Bales, 
+
+James Fogarty, and Sean Munson. 2014. Taming Data 
+Complexity in Lifelogs: Exploring Visual Cuts of 
+Personal Informatics Data. In Proceedings of the 2014 
+Conference on Designing Interactive Systems (DIS 
+’14), 667–676. 
+
+36.  Adam Farmer and James Ruffle. 2017. Irritable bowel 
+syndrome: enigmatic for doctors, problematic for 
+patients. Trends in Urology & Men’s Health 8, 2: 13–
+16. 
+
+37.  Jessica Fourquet, Xin Gao, Diego Zavala, Juan C. 
+
+Orengo, Sonia Abac, Abigail Ruiz, Joaquín Laboy, and 
+Idhaliz Flores. 2010. Patients’ report on how 
+endometriosis affects health, work, and daily life. 
+Fertility and Sterility 93, 7: 2424–2428. 
+
+38.  Susannah Fox and Maeve Duggan. 2013. Tracking for 
+Health. Pew Research Center: Internet, Science & 
+Tech. 
+
+39.  Juan A. Garcia-Velasco and Botros RMB Rizk. 2010. 
+Endometriosis: Current Management and Future 
+Trends. Boydell & Brewer Ltd. 
+
+40.  Julie A Gazmararian, Mark V Williams, Jennifer Peel, 
+
+and David W Baker. 2003. Health literacy and 
+knowledge of chronic disease. Patient Education and 
+Counseling 51, 3: 267–275. 
+
+41.  Marie Glasemann, Anne Marie Kanstrup, and Thomas 
+
+Ryberg. 2010. Making Chocolate-covered Broccoli: 
+Designing a Mobile Learning Game About Food for 
+Young People with Diabetes. In Proceedings of the 8th 
+ACM Conference on Designing Interactive Systems 
+(DIS ’10), 262–271. 
+
+42.  Richard W. Grant, Nicole G. Devita, Daniel E. Singer, 
+
+and James B. Meigs. 2003. Polypharmacy and 
+Medication Adherence in Patients With Type 2 
+Diabetes. Diabetes Care 26, 5: 1408–1412. 
+
+43.  Jennifer C. Greene. 2007. Mixed Methods in Social 
+
+Inquiry. John Wiley & Sons. 
+
+32.  Marketa Dolejsova, Denisa Kera, Cristiano Storni, 
+
+44.  Shannon Greenwood, Andrew Perrin, and Maeve 
+
+Rohit Ashok Khot, Ivan John Clement, Inka Pavelka, 
+and Puneet Kishor. 2017. Digital Health & Self-
+experimentation: Design Challenges & Provocations. 
+In Proceedings of the 2016 CHI Conference Extended 
+Abstracts on Human Factors in Computing Systems 
+(CHI EA ’17), 510–517. 
+
+33.  Daniel A. Epstein, Monica Caraway, Chuck Johnston, 
+An Ping, James Fogarty, and Sean A. Munson. 2016. 
+Beyond Abandonment to Next Steps: Understanding 
+and Designing for Life After Personal Informatics Tool 
+Use. In Proceedings of the 2016 CHI Conference on 
+Human Factors in Computing Systems (CHI ’16), 
+1109–1113. 
+
+Duggan. 2016. Social Media Update 2016. Pew 
+Research Center: Internet, Science & Tech. 
+45.  Sajal Gupta, Avi Harlev, Ashok Agarwal, Mitali 
+
+Rakhit, Julia Ellis-Kahana, and Sneha Parikh. 2015. 
+Management of Endometriosis. In Endometriosis. 
+Springer International Publishing, 95–112. 
+
+46.  Kathy K. Hager and Dorothy Brockopp. 2007. Pilot 
+
+project: the chronic pain diary--assessing chronic pain 
+in the nursing home population. Journal of 
+Gerontological Nursing 33, 9: 14–19. 
+
+47.  Matthew K. Hong, Lauren Wilcox, Daniel Machado, 
+Thomas A. Olson, and Stephen F. Simoneaux. 2016. 
+Care Partnerships: Toward Technology to Support 
+Teens’ Participation in Their Health Care. In 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 12Proceedings of the 2016 CHI Conference on Human 
+Factors in Computing Systems (CHI ’16), 5337–5349. 
+
+48.  George Hripcsak and David J Albers. 2013. Next-
+
+generation phenotyping of electronic health records. 
+Journal of the American Medical Informatics 
+Association : JAMIA 20, 1: 117–121. 
+
+49.  Annette Huntington and Jean A Gilmour. 2005. A life 
+shaped by pain: women and endometriosis. Journal of 
+Clinical Nursing 14, 9: 1124–1132. 
+
+50.  Ravi Karkar, Jessica Schroeder, Daniel A. Epstein, 
+
+Laura R. Pina, Jeffrey Scofield, James Fogarty, Julie 
+A. Kientz, Sean A. Munson, Roger Vilardaga, and 
+Jasmine Zia. 2017. TummyTrials: A Feasibility Study 
+of Using Self-Experimentation to Detect 
+Individualized Food Triggers. In Proceedings of the 
+2017 CHI Conference on Human Factors in 
+Computing Systems (CHI ’17), 6850–6863. 
+
+51.  Ravi Karkar, Jasmine Zia, Roger Vilardaga, Sonali R. 
+Mishra, James Fogarty, Sean A. Munson, and Julie A. 
+Kientz. 2015. A framework for self-experimentation in 
+personalized health. Journal of the American Medical 
+Informatics Association: ocv150. 
+
+52.  Ntwa Katule, Ulrike Rivett, and Melissa Densmore. 
+2016. A Family Health App: Engaging Children to 
+Manage Wellness of Adults. In Proceedings of the 7th 
+Annual Symposium on Computing for Development 
+(ACM DEV ’16), 7:1–7:10. 
+
+Formative Evaluation of Two Approaches. In 
+Proceedings of the 2017 CHI Conference on Human 
+Factors in Computing Systems (CHI ’17), 6837–6849. 
+
+59.  Ian Li, Anind Dey, and Jodi Forlizzi. 2010. A Stage-
+based Model of Personal Informatics Systems. In 
+Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI ’10), 557–566. 
+
+60.  Antonio Loureiro. 2012. Sensing, tracking and 
+
+contextualizing entities in ubiquitous computing. In 
+MSWiM ’12 Proceedings of the 15th ACM 
+international conference on Modeling, analysis and 
+simulation of wireless and mobile systems, 3–4. 
+61.  Haley MacLeod, Grace Bastin, Leslie S. Liu, Katie 
+
+Siek, and Kay Connelly. 2017. “Be Grateful You 
+Don’t Have a Real Disease”: Understanding Rare 
+Disease Relationships. In Proceedings of the 2017 CHI 
+Conference on Human Factors in Computing Systems 
+(CHI ’17), 1660–1673. 
+
+62.  Haley MacLeod, Kim Oakes, Danika Geisler, Kay 
+
+Connelly, and Katie Siek. 2015. Rare World: Towards 
+Technology for Rare Diseases. In Proceedings of the 
+33rd Annual ACM Conference on Human Factors in 
+Computing Systems (CHI ’15), 1145–1154. 
+63.  Haley MacLeod, Anthony Tang, and Sheelagh 
+
+Carpendale. 2013. Personal Informatics in Chronic 
+Illness Management. In Proceedings of Graphics 
+Interface 2013 (GI ’13), 149–156. 
+
+53.  Christina Kelley, Bongshin Lee, and Lauren Wilcox. 
+
+64.  Haley MacLeod, Shuo Yang, Kim Oakes, Kay 
+
+2017. Self-tracking for Mental Wellness: 
+Understanding Expert Perspectives and Student 
+Experiences. In Proceedings of the 2017 CHI 
+Conference on Human Factors in Computing Systems 
+(CHI ’17), 629–641. 
+
+54.  Vera Khovanskaya, Eric P.S. Baumer, Dan Cosley, 
+
+Stephen Voida, and Geri Gay. 2013. “Everybody 
+Knows What You’Re Doing”: A Critical Design 
+Approach to Personal Informatics. In Proceedings of 
+the SIGCHI Conference on Human Factors in 
+Computing Systems (CHI ’13), 3403–3412. 
+
+55.  Harry Kotses, I. Leonard Bernstein, David I. Bernstein, 
+Russ V. C. Reynolds, Leslie Korbee, Joan K. Wigal, 
+Ellen Ganson, Cindy Stout, and Thomas L. Creer. 
+1995. A self-management program for adult asthma. 
+Part I: Development and evaluation. Journal of Allergy 
+and Clinical Immunology 95, 2: 529–540. 
+
+56.  P.-M. Lam and N. Raine-Fenning. 2009. Polycystic 
+ovarian syndrome: a misnomer for an enigmatic 
+disease. Ultrasound in Obstetrics and Gynecology 33, 
+6: 621–627. 
+
+57.  Jisoo Lee. 2013. Supporting Self-experimentation of 
+
+Behavior Change Strategies. In Proceedings of the 
+2013 ACM Conference on Pervasive and Ubiquitous 
+Computing Adjunct Publication (UbiComp ’13 
+Adjunct), 361–366. 
+
+58.  Jisoo Lee, Erin Walker, Winslow Burleson, Matthew 
+Kay, Matthew Buman, and Eric B. Hekler. 2017. Self-
+Experimentation for Behavior Change: Design and 
+
+Connelly, and Sriramm Natarajan. 2016. Identifying 
+Rare Diseases from Behavioural Data: A Machine 
+Learning Approach. In 2016 IEEE First International 
+Conference on Connected Health: Applications, 
+Systems and Engineering Technologies (CHASE), 
+130–139. 
+
+65.  Lena Mamykina, Elizabeth M. Heitkemper, Arlene M. 
+Smaldone, Rita Kukafka, Heather Cole-Lewis, Patricia 
+G. Davidson, Elizabeth D. Mynatt, Jonathan N. Tobin, 
+Andrea Cassells, Carrie Goodman, and George 
+Hripcsak. 2016. Structured scaffolding for reflection 
+and problem solving in diabetes self-management: 
+qualitative study of mobile diabetes detective. Journal 
+of the American Medical Informatics Association: 
+JAMIA 23, 1: 129–136. 
+
+66.  Lena Mamykina, Elizabeth M. Heitkemper, Arlene M. 
+Smaldone, Rita Kukafka, Heather J. Cole-Lewis, 
+Patricia G. Davidson, Elizabeth D. Mynatt, Andrea 
+Cassells, Jonathan N. Tobin, and George Hripcsak. 
+2017. Personal discovery in diabetes self-management: 
+Discovering cause and effect using self-monitoring 
+data. Journal of Biomedical Informatics 76: 1–8. 
+67.  Lena Mamykina, Matthew E. Levine, Patricia G. 
+
+Davidson, Arlene M. Smaldone, Noemie Elhadad, and 
+David J. Albers. 2016. Data-driven health 
+management: reasoning about personally generated 
+data in diabetes with information technologies. Journal 
+of the American Medical Informatics Association 23, 
+3: 526–531. 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 1368.  Lena Mamykina, Matthew E. Levine, Patricia G. 
+
+Davidson, Arlene M. Smaldone, Noemie Elhadad, and 
+David J. Albers. 2017. From Personal Informatics to 
+Personal Analytics: Investigating How Clinicians and 
+Patients Reason About Personal Data Generated with 
+Self-Monitoring in Diabetes. In Cognitive Informatics 
+in Health and Biomedicine. Springer, Cham, 301–313. 
+
+69.  Lena Mamykina, Elizabeth D. Mynatt, and David R. 
+
+Kaufman. 2006. Investigating Health Management 
+Practices of Individuals with Diabetes. In Proceedings 
+of the SIGCHI Conference on Human Factors in 
+Computing Systems (CHI ’06), 927–936. 
+
+70.  Mollie McKillop, Natalie Voigt, Rebecca Schnall, and 
+
+Noémie Elhadad. 2016. Exploring Self-Tracking as a 
+Participatory Research Activity Among Women with 
+Endometriosis. Journal of Participatory Medicine. 
+
+71.  Róisín McNaney, Mohammad Othman, Dan 
+
+Richardson, Paul Dunphy, Telmo Amaral, Nick Miller, 
+Helen Stringer, Patrick Olivier, and John Vines. 2016. 
+Speeching: Mobile Crowdsourced Speech Assessment 
+to Support Self-Monitoring and Management for 
+People with Parkinson’s. In Proceedings of the 2016 
+CHI Conference on Human Factors in Computing 
+Systems (CHI ’16), 4464–4476. 
+
+72.  Roisin McNaney, Ivan Poliakov, John Vines, Madeline 
+Balaam, Pengfei Zhang, and Patrick Olivier. 2015. 
+LApp: A Speech Loudness Application for People with 
+Parkinson’s on Google Glass. In Proceedings of the 
+33rd Annual ACM Conference on Human Factors in 
+Computing Systems (CHI ’15), 497–500. 
+
+73.  Helena M. Mentis, Jarmo Laaksolahti, and Kristina 
+
+Höök. 2014. My Self and You: Tension in Bodily 
+Sharing of Experience. ACM Trans. Comput.-Hum. 
+Interact. 21, 4: 20:1–20:26. 
+
+74.  Noel Morgan and Sarah Richardson. 2016. Changing 
+perspectives on the progression of type 1 diabetes. 
+Open Research Exeter. 
+
+75.  Mattijn Morren, Sandra van Dulmen, Jessika 
+
+Ouwerkerk, and Jozien Bensing. 2009. Compliance 
+with momentary pain measurement using electronic 
+diaries: A systematic review. European Journal of 
+Pain 13, 4: 354–365. 
+
+76.  Hanyia Naqvi, Ramanaiah Mamillapalli, Graciela 
+Krikun, and Hugh S. Taylor. 2016. Endometriosis 
+Located Proximal to or Remote From the Uterus 
+Differentially Affects Uterine Gene Expression. 
+Reproductive Sciences 23, 2: 186–191. 
+77.  Francisco Nunes. 2015. Designing Self-care 
+
+Technologies for Everyday Life: A Practice Approach. 
+In Proceedings of the 33rd Annual ACM Conference 
+Extended Abstracts on Human Factors in Computing 
+Systems (CHI EA ’15), 215–218. 
+
+78.  Rita Orji, Lennart E. Nacke, and Chrysanne Di Marco. 
+
+79.  Tamar Pincus and Amanda Williams. 1999. Models 
+and measurements of depression in chronic pain. 
+Journal of Psychosomatic Research 47, 3: 211–219. 
+80.  Davy Preuveneers and Yolande Berbers. 2008. Mobile 
+Phones Assisting with Health Self-care: A Diabetes 
+Case Study. In Proceedings of the 10th International 
+Conference on Human Computer Interaction with 
+Mobile Devices and Services (MobileHCI ’08), 177–
+186. 
+
+81.  Aare Puussaar, Adrian Clear, and Peter Wright. 2017. 
+Enhancing Personal Informatics Through Social 
+Sensemaking. In Proceedings of the 2017 CHI 
+Conference on Human Factors in Computing Systems, 
+6936–6942. 
+
+82.  Ruth Ravichandran, Sang-Wha Sien, Shwetak N. Patel, 
+Julie A. Kientz, and Laura R. Pina. 2017. Making 
+Sense of Sleep Sensors: How Sleep Sensing 
+Technologies Support and Undermine Sleep Health. In 
+Proceedings of the 2017 CHI Conference on Human 
+Factors in Computing Systems (CHI ’17), 6864–6875. 
+
+83.  Rachel L. Richesson, W. Ed Hammond, Meredith 
+
+Nahm, Douglas Wixted, Gregory E. Simon, Jennifer 
+G. Robinson, Alan E. Bauck, Denise Cifelli, Michelle 
+M. Smerek, John Dickerson, Reesa L. Laws, Rosemary 
+A. Madigan, Shelley A. Rusincovitch, Cynthia 
+Kluchar, and Robert M. Califf. 2013. Electronic health 
+records based phenotyping in next-generation clinical 
+trials: a perspective from the NIH Health Care Systems 
+Collaboratory. Journal of the American Medical 
+Informatics Association 20, e2: e226–e231. 
+84.  Herman Saksono and Andrea G. Parker. 2017. 
+
+Reflective Informatics Through Family Storytelling: 
+Self-discovering Physical Activity Predictors. In 
+Proceedings of the 2017 CHI Conference on Human 
+Factors in Computing Systems (CHI ’17), 5232–5244. 
+85.  Jessica Schroeder, Jane Hoffswell, Chia-Fang Chung, 
+James Fogarty, Sean Munson, and Jasmine Zia. 2017. 
+Supporting Patient-Provider Collaboration to Identify 
+Individual Triggers using Food and Symptom Journals. 
+CSCW: proceedings of the Conference on Computer-
+Supported Cooperative Work. Conference on 
+Computer-Supported Cooperative Work 2017: 1726–
+1739. 
+
+86.  Manish A. Shah and Jaffer A. Ajani. 2010. Gastric 
+
+Cancer—An Enigmatic and Heterogeneous Disease. 
+JAMA 303, 17: 1753–1754. 
+
+87.  Chaitanya Shivade, Preethi Raghavan, Eric Fosler-
+
+Lussier, Peter J. Embi, Noemie Elhadad, Stephen B. 
+Johnson, and Albert M. Lai. 2014. A review of 
+approaches to identifying patient phenotype cohorts 
+using electronic health records. Journal of the 
+American Medical Informatics Association 21, 2: 221–
+230. 
+
+2017. Towards Personality-driven Persuasive Health 
+Games and Gamified Systems. In Proceedings of the 
+2017 CHI Conference on Human Factors in 
+Computing Systems (CHI ’17), 1015–1027. 
+
+88.  Christine Sinsky, Lacey Colligan, Ling Li, Mirela 
+
+Prgomet, Sam Reynolds, Lindsey Goeders, Johanna 
+Westbrook, Michael Tutty, and George Blike. 2016. 
+Allocation of Physician Time in Ambulatory Practice: 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 14A Time and Motion Study in 4 Specialties. Annals of 
+Internal Medicine 165, 11: 753. 
+
+89.  Richard Smith. 2002. In search of “non-disease.” 
+
+BMJ : British Medical Journal 324, 7342: 883–885. 
+
+90.  Ahmed M. Soliman, Karin S. Coyne, Erica Zaiser, 
+Jane Castelli-Haley, and Mahesh J. Fuldeore. 2017. 
+The burden of endometriosis symptoms on health-
+related quality of life in women in the United States: a 
+cross-sectional study. Journal of Psychosomatic 
+Obstetrics & Gynecology: 1–11. 
+
+91.  Cristiano Storni. 2014. Diabetes self-care in-the-wild: 
+Design challenges for personal health record systems 
+and self-monitoring technologies. Information 
+Technology & People 27, 4: 397–420. 
+
+92.  Andrew Su, Wendy Shih, Angela P. Presson, and Lin 
+Chang. 2014. Characterization of Symptoms in 
+Irritable Bowel Syndrome with Mixed Bowel Habit 
+Pattern. Neurogastroenterology and motility : the 
+official journal of the European Gastrointestinal 
+Motility Society 26, 1. 
+
+93.  Charles Teddlie and Abbas Tashakkori. 2009. 
+
+Foundations of Mixed Methods Research: Integrating 
+Quantitative and Qualitative Approaches in the Social 
+and Behavioral Sciences. SAGE. 
+
+94.  Sen-Wen Teng, Huann-Cheng Horng, Chi-Hong Ho, 
+Ming-Shyen Yen, Hsiang-Tai Chao, Peng-Hui Wang, 
+and Taiwan Association of Gynecology Systematic 
+Review Group. 2016. Women with endometriosis have 
+higher comorbidities: Analysis of domestic data in 
+Taiwan. Journal of the Chinese Medical Association: 
+JCMA 79, 11: 577–582. 
+
+95.  P. Vercellini, L. Fedele, G. Aimi, G. Pietropaolo, D. 
+Consonni, and P. G. Crosignani. 2007. Association 
+between endometriosis stage, lesion type, patient 
+characteristics and severity of pelvic pain symptoms: a 
+multivariate analysis of over 1000 patients. Human 
+Reproduction 22, 1: 266–271. 
+
+96.  Sandra Vosbergen, Ersen B. Colkesen, Joyca Lacroix, 
+Georgio Mosis, Pieter Jan Stappers, Roderik A. 
+Kraaijenhagen, and Niels Peek. 2010. Assessment of 
+User Needs for Self-management Services in Coronary 
+Heart Disease: A Designerly Approach. In 
+Proceedings of the 28th Annual European Conference 
+on Cognitive Ergonomics (ECCE ’10), 343–344. 
+97.  Brian W. Ward, Jeannine S. Schiller, and Richard A. 
+
+Goodman. 2014. Multiple Chronic Conditions Among 
+US Adults: A 2012 Update. Preventing Chronic 
+Disease 11. 
+
+98.  Griffin M. Weber, Kenneth D. Mandl, and Isaac S. 
+
+Kohane. 2014. Finding the Missing Link for Big 
+Biomedical Data. JAMA 311, 24: 2479–2480. 
+
+99.  Emma Whelan. 2007. “No one agrees except for those 
+of us who have it”: endometriosis patients as an 
+epistemological community. Sociology of Health & 
+Illness 29, 7: 957–982. 
+
+100. Naomi Yamashita, Hideaki Kuzuoka, Keiji Hirata, 
+
+Takashi Kudo, Eiji Aramaki, and Kazuki Hattori. 
+2017. Changing Moods: How Manual Tracking by 
+Family Caregivers Improves Caring and Family 
+Communication. In Proceedings of the 2017 CHI 
+Conference on Human Factors in Computing Systems 
+(CHI ’17), 158–169. 
+
+101. Kate Young, Jane Fisher, and Maggie Kirkman. 2015. 
+Women’s experiences of endometriosis: a systematic 
+review and synthesis of qualitative research. The 
+Journal of Family Planning and Reproductive Health 
+Care 41, 3: 225–234. 
+
+102. Beatrix Zechmann, Jan Bobeth, and Manfred 
+
+Tscheligi. 2016. Towards Successful Self-management 
+and Empowerment for COPD Patients. In Proceedings 
+of the 18th International Conference on Human-
+Computer Interaction with Mobile Devices and 
+Services Adjunct (MobileHCI ’16), 1101–1104. 
+103. David Zeevi, Tal Korem, Niv Zmora, David Israeli, 
+
+Daphna Rothschild, Adina Weinberger, Orly Ben-
+Yacov, Dar Lador, Tali Avnit-Sagi, Maya Lotan-
+Pompan, Jotham Suez, Jemal Ali Mahdi, Elad Matot, 
+Gal Malka, Noa Kosower, Michal Rein, Gili 
+Zilberman-Schapira, Lenka Dohnalová, Meirav 
+Pevsner-Fischer, Rony Bikovsky, Zamir Halpern, Eran 
+Elinav, and Eran Segal. 2015. Personalized Nutrition 
+by Prediction of Glycemic Responses. Cell 163, 5: 
+1079–1094. 
+
+104. Martin Zens, Peter Woias, Norbert P Suedkamp, and 
+Philipp Niemeyer. 2017. “Back on Track”: A Mobile 
+App Observational Study Using Apple’s ResearchKit 
+Framework. JMIR mHealth and uHealth 5, 2. 
+
+105. Jasmine Zia, Jessica Schroeder, Sean Munson, James 
+Fogarty, Linda Nguyen, Pamela Barney, Margaret 
+Heitkemper, and Uri Ladabaum. 2016. Feasibility and 
+Usability Pilot Study of a Novel Irritable Bowel 
+Syndrome Food and Gastrointestinal Symptom Journal 
+Smartphone App. Clinical and Translational 
+Gastroenterology 7, 3: e147. 
+
+106. FAQs About Rare Diseases | Genetic and Rare 
+
+Diseases Information Center (GARD) – an NCATS 
+Program. Retrieved December 18, 2017 from 
+https://rarediseases.info.nih.gov/diseases/pages/31/faqs
+-about-rare-diseases 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 565Page 15 
+ 
+ 
+ 
+ 
+

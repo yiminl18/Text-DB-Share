@@ -1,0 +1,23 @@
+Table of Contents:
+
+1. Introduction
+2. Related Work
+   2.1 Quantified Self, Health Information, and Patient Empowerment
+   2.2 Self-Management Technologies in HCI
+   2.3 Technology appropriation and Non-use
+3. Case Study
+   3.1 System Overview
+   3.2 Human-Centered Design Process
+4. Method
+   4.1 Sample
+   4.2 Procedure
+   4.3 Analysis
+5. Results
+   5.1 Patients’ Expectations
+   5.2 Patients’ Perceptions
+   5.3 The ‘Self’ as Barrier for Self-Management Technologies
+6. Discussion
+   6.1 Summary: Design Recommendations
+7. Conclusion
+8. Acknowledgments
+9. References

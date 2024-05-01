@@ -1,0 +1,1329 @@
+Self-tracking Cultures: Towards a Sociology of Personal 
+Informatics 
+
+Deborah Lupton 
+News & Media Research Centre 
+Faculty of Arts & Design 
+University of Canberra 
+Bruce 2601 ACT 
+deborah.lupton@canberra.edu.au 
+
+in 
+
+terms  of 
+
+ABSTRACT 
+A body of literature on self-tracking has been established 
+in  human-computer  interaction  studies.  Contributors  to 
+this  literature  tend  to  take  a  cognitive  or  behavioural 
+psychology  approach  to  theorising  and  explaining  self-
+tracking.  Such  an  approach  is  limited  to  understanding 
+individual  behaviour.  Yet  self-tracking  is  a  profoundly 
+social  practice,  both 
+the  enculturated 
+meanings  with  which  it  is  invested  and  the  social 
+encounters and social institutions that are part of the self-
+tracking  phenomenon.  In  this  paper  I  contend  that 
+sociological  perspectives  can  contribute  some  intriguing 
+possibilities  for  human-computer  interaction  research, 
+particularly  in  developing  an  understanding  of  the  wider 
+social, cultural and political dimensions of what I refer to 
+as ‘self-tracking cultures’. The discussion focuses on the 
+following topics: self-optimisation and governing the self; 
+entanglements  of  bodies 
+the 
+valorisation of data; data doubles; and social  inequalities 
+and  self-tracking.  The  paper  ends  with  outlining  some 
+directions for future research on self-tracking cultures that 
+goes beyond the individual to the social. 
+
+technologies; 
+
+and 
+
+Author Keywords 
+Self-tracking;  Personal  Informatics:  Sociology;  Culture; 
+Selfhood; Theory 
+
+ACM Classification Keywords 
+K4.2: Social Issues  
+
+INTRODUCTION 
+The concepts of ‘self-tracking’ and the ‘quantified self’
+(also referred to as life-logging, personal analytics and 
+personal informatics) have recently begun to emerge in 
+discussions of how best to optimise one’s life. These
+concepts refer to the practice of gathering data about 
+oneself on a regular basis and then recording and  
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies 
+are not made or distributed for profit or commercial advantage and that 
+copies bear this notice and the full citation on the first page. Copyrights 
+for components of this work owned by others than ACM must be 
+honored. Abstracting with credit is permitted. To copy otherwise, or 
+republish, to post on servers or to redistribute to lists, requires prior 
+specific permission and/or a fee. Request permissions from 
+Permissions@acm.org.
+OzCHI '14 , December 02 - 05 2014, Sydney, NSW, Australia
+Copyright 2014 ACM 978-1-4503-0653-9/14/12…$15.00
+http://dx.doi.org/10.1145/2686612.2686623
+
+77
+
+analysing the data to produce statistics and other data 
+(such as images) relating to regular habits, behaviours and 
+feelings. 
+
+The advent of digital technologies able to assist in the 
+collecting, measuring, computation and display of these 
+data has been vitally important in promoting the cause of 
+self-tracking. Mobile and wearable digital devices 
+connected to the internet have facilitated the ever more 
+detailed measurement and monitoring of the body and 
+everyday life in real time and the analysis, presentation 
+and sharing of these data. Hundreds of apps have been 
+developed for achieving digitised self-tracking. The 
+Quantified Self website lists over 500 self-tracking tools 
+(Quantified Self guide to self-tracking tools, 2014), 
+including in addition to geolocation, health, fitness, 
+weight, sleep, diet and mood or feeling tracking apps, 
+services and devices those that record social interactions, 
+emails, networks and social media status updates and 
+comments as well as meditation practices, television 
+watching, computer use and driving habits, financial 
+expenses, time use, beneficial habits and work 
+productivity and monitor environmental conditions, 
+progress towards learning or the achievement of goals. 
+
+There are an increasing number of specifically designed 
+devices such as the Fitbit, Jawbone’s Up, Nike Fuelband 
+and various brands of adhesive patches that are available 
+for self-tracking. All of these are designed to be worn 
+upon the body to automatically collect data on bodily 
+functions such as physical activity, pulse, heart rate, body 
+temperature, calories burned, brain waves and sleep 
+patterns. Some can be worn 24 hours a day to provide 
+constant readings of body metrics. Digital body weight 
+scales, blood oxygen saturation monitors and blood 
+pressure monitors that link to smartphones are also on the 
+market. Some devices collect environmental conditions 
+such as air temperature, humidity, air quality and UV, 
+while others generate information on home energy use.  
+
+In addition to these technologies are the growing range of 
+‘smart ‘ objects: digitised gadgets, shoes, clothing or 
+furniture embedded with sensors (including forks, 
+toothbrushes and watering cans) and small wearable 
+cameras that are equipped to take hundreds of photos 
+automatically each day. Web platforms and services are 
+available to aggregate data and compare them with 
+
+others’ data. To motivate users, several self-tracking 
+technologies include ‘gamification’ strategies. These use
+built-in reward or docking systems so that points or real 
+money can be collected or paid if various commitments 
+(to regular exercise or weight loss goals, for example) are 
+either met or unmet, as well as websites where users’ data
+can be competitively compared with other self-trackers 
+(for example the cycling platform Strava). Apps are even 
+available that allow people to track their sexual activities, 
+rate their partners and compare their stamina and 
+performance with other users (Lupton, 2014a). 
+
+A growing literature is developing in human-computer 
+interaction (HCI) studies by researchers addressing 
+elements of self-tracking. This research has been valuable 
+in identifying such factors as the personal benefits and 
+rewards that people gain from engaging in self-tracking 
+and the reasons why people take up, discard or continue 
+these practices (Kamal et al., 2010; Li et al., 2010; Li et 
+al., 2011; MacLeod et al., 2013; Rooksby et al., 2014). 
+Some researchers in HCI  have also investigated design 
+features and assessed prototypes of novel self-tracking 
+technologies (Bentley et al., 2013; Epstein et al., 2014; 
+Fan et al., 2012; Khot et al., 2013; Khovanskaya et al., 
+2013). Researchers in persuasive computing focus their 
+studies on the use of self-tracking technologies in 
+persuading people to change their behaviours in the 
+interests of their health or wellbeing. Self-tracking in this 
+literature is represented as a means of motivation, 
+encouraging self-reflection or emotional responses such 
+as fear, guilt or shame that will lead to such changes 
+(MacLeod et al., 2013; Purpura et al., 2011; Thieme et al., 
+2012). 
+
+Most of these researchers take a cognitive or social 
+psychological approach which focuses on the individual’s
+response to self-tracking. In their review of how online 
+social networks for personal informatics can be used to 
+promote health behavioural change, for example, Kamal 
+et al. (2010) draw on psychological models of behaviour 
+such as the uses and gratification theory, organisational 
+commitment theory, social identity theory, the health 
+belief model, the theory of reasoned action and diffusion 
+of innovation. In a well-cited paper in the personal 
+informatics literature, Li et al. (2010) use what they call a 
+‘stage-based model of personal informatics systems’ to
+outline five psychological stages that they identify in the 
+process of engaging in self-tracking: preparation, 
+collection integration, reflection and action.  
+
+While psychological  processes are an integral dimension 
+of how people respond to self-tracking devices, in their 
+focus on the individual they do not explain the wider 
+dimensions of the practice, or what I call ‘self-tracking 
+cultures’. Such a perspective does not elucidate the
+meanings that position the practice of self-tracking in 
+specific ways and explain the particular resonances and 
+power of these meanings. Even at the individual level, the 
+reasons why a person may choose to take up self-tracking 
+and the meanings she or he gives to the practice are 
+socially enculturated. Self-tracking as a phenomenon has 
+no meaning in itself. It is endowed with meaning by 
+
+wider discourses on technology, selfhood, the body and 
+social relations that circulate within the cultural context in 
+which the practice is carried out. 
+
+This paper seeks to offer a different perspective: one from 
+a sociological lens, in which the broader social, cultural 
+and political implications of self-tracking are identified 
+and explored. This juxtaposition of the personal with the 
+sociocultural aspects of computer informatics has yet to 
+be fully explored and articulated in relation to self-
+tracking. While self-tracking, in its very name and focus 
+on the ‘self’ may appear to be an individualistic practice,
+many self-trackers view themselves as part of community 
+of trackers (Boesel, 2013; Lupton, 2013a, 2014b; Nafus 
+and Sherman, 2014). They use social media, platforms 
+designed for comparing and sharing personal data and 
+sites such as the Quantified Self to engage with and learn 
+from other self-trackers. Some attend meetups or 
+conferences to meet face-to-face with other self-trackers 
+and share their data and evaluations of the value of 
+different techniques and devices for self-tracking.  
+
+Self-tracking is moving from purely personal use to 
+becoming incorporated into many areas of social life and 
+social institutions. Educational institutions, medical and 
+health promotion professionals and agencies and some 
+workplaces have begun to encourage people to engage in 
+self-tracking as part of health and fitness and worker 
+productivity enhancement programs. Insurance 
+companies are investigating ways of using the personal 
+data from self-tracking to develop fine-grained risk 
+assessment profiles for their clients and tailor 
+individualised policies. Schools are introducing wearable 
+tech and other self-monitoring devices in physical 
+education lessons. As I have discussed elsewhere (Lupton 
+2014b) five modes of self-tracking can be identified. 
+These include private (for one’s own purposes only);
+communal (sharing data with other self-trackers); pushed 
+(encouraged by others); imposed (foisted upon people); 
+and exploited (where people’s personal data are
+repurposed for the use of others).  
+
+There are many aspects of self-tracking cultures that can 
+be analysed from a sociological perspective. The 
+discussion in this paper draws on the findings of a larger 
+project I am undertaking (culminating in a book) which 
+involves a sociological analysis of self-tracking cultures 
+using accounts of self-tracking in blog posts, websites, 
+social media platforms such as LinkedIn, Facebook and 
+Twitter and news reports and product reviews and 
+descriptions. Rather than undertaking a comprehensive 
+content analysis of such material, I use these sources as 
+illustrative examples. I access this material using such 
+strategies as regularly checking new posts on relevant 
+websites, searching the Factiva international database, 
+Twitter hashtags and conducting Google searches using 
+the terms ‘self-tracking’, ‘quantified self’, ‘life logging’,
+‘personal analytics’ and ‘personal informatics’ and 
+subscribing to the Quantified Self LinkedIn interest group 
+and the ‘What We are Reading’ weekly newsletter from
+the Quantified Self website. 
+
+78
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The current discussion extends my previous work on self-
+tracking cultures (Lupton, 2012a, 2103a, 2013b, 2013c, 
+2014a, 2014b). In what follows I focus on the following 
+dimensions: self-optimisation and governing the self; 
+entanglements of bodies, technologies and selves; the 
+valorisation of data; data doubles; and social inequalities 
+and self-tracking cultures. At this point in my research 
+these dimensions are emerging as among the most 
+integral in understanding self-tracking cultures. 
+
+SELF-OPTIMISATION AND GOVERNING THE SELF 
+The American television program PBS Newshour aired a 
+news story on self-tracking on 28 September 2013 (PBS 
+Newshour, 2013). The reporter begins with an interview 
+with Bob Troia, an enthusiastic self-tracker who measures 
+his sleep patterns, pulse, blood pressure, blood glucose, 
+cognitive performance, heart rate, sweat levels, skin 
+temperature and stress levels using a range of devices 
+including his iPhone and wearable computing 
+technologies. In the interview Troia says that he does all 
+this as part of attempting to achieve a a healthy, enjoyable 
+and productive life: ‘Personally, like, my goal is to
+basically be – an optimal human being in every aspect of 
+my life.’ 
+
+Some further quotes from this news story included the 
+following from another keen self-tracker: David Pogue, 
+technology columnist for The New York Times. 
+
+‘You want to be your best self. You want to put
+your best foot forward.’ 
+
+‘It’s absolutely narcissism. Or more healthfully,
+ego. It’s studying yourself as an interesting topic
+in ways that you couldn’t study yourself before,
+I mean this is just giving you self-awareness into 
+previously invisible aspects of your life.’ 
+
+From the interviews with self-trackers quoted in this brief 
+news report, a number of discourses that give meaning to 
+self-tracking cultures are apparent. These include those 
+about selfhood: the importance of self-awareness and 
+self-improvement (the attempt to be ‘an optimal human
+being’ and ‘your best self’) and also the role played by
+self-interest (‘studying yourself as an interesting topic’).  
+
+While there is constant reference among members of the 
+Quantified Self movement to the ‘Quantified Self
+community’, this community largely refers to sharing
+personal data with each other, or learning from others’
+data or self-tracking or data visualisation methods so that 
+one’s own data project may be improved. According to
+the Quantified Self Institute, a research body that is part 
+of the Hanze University of Applied Sciences in the 
+Netherlands, self-tracking ‘is a functionally “selfish”
+activity, which is a result of a personal motivation. “Me
+and my data”, that is the point of the Quantified Self’ (de 
+Groot, 2014).  
+
+There is a large literature on the ways in which self-
+identity is enacted via digital technologies. However little 
+
+attention has been paid to the ways in which the specific 
+types of hardware and software that are used as part of 
+contemporary self-tracking cultures draw on, reproduce, 
+and in some cases reconfigure concepts of selfhood.  
+
+One perspective that may be adopted uses the philosophy 
+of Michel Foucault. Foucault’s (1988) writings on the 
+practices and care of the self in western societies are 
+pertinent to understanding self-tracking as a particular 
+mode of governing the self. Foucault studied the various 
+ways in which humans develop knowledge about 
+themselves: economics, biology, psychiatry, medicine 
+and penology. His objective was not to accept these 
+knowledges at face value but to investigate the 
+rationalities that underpin the techniques that people use 
+to understand themselves. Foucault argues that one of the 
+principal techniques for self-understanding is that which 
+involves people engaging in the practices of selfhood in 
+pursuit of their own interests. He argues that as a moral 
+and ethical project individuals are required to take up 
+certain practices to achieve happiness, wisdom, health 
+and wellbeing. These practices are directed at their 
+bodies, souls, thoughts, conduct and way of being.  
+
+Several sociologists have taken up Foucauldian 
+perspectives to argue that contemporary political 
+rationales, or neoliberalism, promote self-responsibility as 
+part of a governmental strategy that exerts ‘soft’ rather
+than ‘hard’ authority. Citizens are encouraged to engage
+in certain practices voluntarily as an effective and non-
+coercive way of rendering them manageable and 
+productive, assets rather than burdens to the social polity. 
+Citizens act in their own self-interests but these self-
+interests and outcomes are also aligned to the rationales 
+and interests of the state (Lupton, 1995a; Rose, 1990, 
+2007). 
+
+From the Foucauldian perspective self-tracking may 
+viewed as one of many heterogeneous strategies and 
+discourses that position the ideal individual as a 
+responsible citizen, willing and able to take care of her or 
+his self-interest and welfare. Nikolas Rose refers to 
+‘biological citizenship’ in his influential book The 
+Politics of Life Itself (Rose, 2007). Extending this 
+concept, one could also refer to ‘self-tracking citizenship’
+as part of the panoply of strategies for the government of 
+the self. Part of engaging in data collection as part of 
+practices of selfhood is the idea that the self-knowledge 
+that will eventuate will allow self-trackers to exert greater 
+control over their destinies. The data and the knowledge 
+contained therein will help them achieve better health, 
+higher quality sleep, greater control over mood swings, 
+improved management of chronic conditions, less stress, 
+increased work productivity, better relationships with 
+others and so on. 
+
+This is all achieved voluntarily, as part of the quest for 
+self-optimisation and as an often pleasurable and playful 
+mode of self-surveillance (Lupton, 2012a, 2013a, 2013b, 
+2014a; Nafus and Sherman, 2014; Ruckensein, 2014; 
+Whitson, 2013). This perspective is evident in the words 
+of self-tracking cyclist Andrea Parrish. On her blog 
+
+79
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Parrish observed that she enjoys tracking her rides and 
+her weight and calorie input and output because she views 
+these activities as playful, thus enhancing her motivation: 
+
+Tracking what I am doing and the effects those 
+actions have appeals to the data-loving, game-
+making, goal-oriented part of my brain. Tracking 
+keeps me accountable to myself and allows me 
+to turn what might otherwise be a chore into a 
+challenge. (Parrish, 2012) 
+
+Self-tracking can help people feel more in control of their 
+lives (Li et al. 2010; Choe et al. 2014; Nafus and 
+Sherman, 2014; Ruckenstein 2014). This can be 
+important for people in a world in which fixed social 
+structures and social ties have dissolved and far more 
+choices for conducting one’s life are available. Other 
+sociologists have identified the loss of traditional social 
+structures (rigid gender roles, religion, the nuclear family, 
+the workplace where one stays for a lifetime) as 
+contributing to a sense that people are responsible for 
+maximising their life chances in the context of 
+uncertainty and unpredictability of contemporary life. 
+People must choose among an array of options when 
+deciding how to shape their lives, rather than conforming 
+to established traditions. In doing so their life courses 
+have become much more open, but also much more 
+subject to threats and uncertainties. Their successes and 
+failures are deemed to be their own responsibility as a 
+result of their decisions and behaviours. 
+
+In his work on risk society, Ulrich Beck (1992, 2009) 
+describes the concept of self-reflexivity, which involves 
+actively seeking information and making choices about 
+one’s life. Zygmunt Bauman (2000) employs the term 
+liquid modernity to describe similar aspects of 
+contemporary western societies. According to Elliott 
+(2013a, 2013b) one aspect of late modern societies is a 
+new individualism, which involves the reinvention of the 
+self and the body. He contends that the concept and 
+practices of reinvention have become central to both 
+private lives and organisations, and it is generally 
+accepted that they are important endeavours. Reinvention 
+is about transformation for the sake of personal growth, 
+achievement, career success, health or wellbeing. This 
+new individualism involves concentrating on the self to 
+the exclusion of social groups, organisations or 
+communities. 
+
+Self-tracking, therefore, at least as it is undertaken as a 
+private enterprise, may be understood the apotheosis of 
+self-reflexivity in its intense focus on the self and using 
+data about the self to make choices about future 
+behaviours. As part of the new individualism, self-
+reflection and critical self-examination are encouraged, 
+viewed as ways of improving the self via therapeutic 
+discourses and practices. Self-tracking practices are 
+frequently represented as ways of achieving reinvention. 
+They conform both to the notion of self-work and self-
+improvement that are part of the reinvention paradigm, 
+and to the new individualism in their focus on the self.  
+
+ENTANGLEMENTS OF BODIES, TECHNOLOGIES AND 
+SELVES 
+Perspectives developed in the sociology of science and 
+technology offer a further theoretical approach to think 
+about the ways in which humans interact with their 
+technologies. Such perspectives address such issues as the 
+ontological nature of the human/technology interaction, 
+the ways in which technologies are incorporated into 
+concepts of embodiment and selfhood and how they 
+extend or enhance these and how social relations are 
+configured through, with and by technologies. 
+
+In this literature it has been suggested that the blurring 
+between the online and off-line self has become so 
+advanced that it is now suggested that we can no longer 
+distinguish between the two. Instead we are living in 
+augmented reality (Jurgenson, 2012), and categories of 
+flesh, identity and technology are porous and intermeshed 
+(Elwell, 2014). For many commentators writing on these 
+issues, the notion of the posthuman, or the idea that 
+humans are inextricably intertwined with technologies is 
+articulated. The concept of the cyborg, or the cybernetic 
+organisation that is the human-machine assemblage, is 
+also often used in this literature (Gray, 2002; Haraway, 
+1991, 2008; Lupton, 1995b, 2015). In recent years some 
+scholars have contended that we are living in a post-
+cyborg world and have gone so far as to argue for 
+technogenesis, the idea that humans and technologies 
+such as digital devices are co-evolving (Hayles, 2008, 
+2012). 
+
+Sociologists of science and technology emphasise the 
+multiplicity and constantly changing aspects of the 
+human-technology relationship. They draw attention to 
+the nonhuman actors that contribute to the hybrid 
+assemblages that are configured when humans and 
+technical devices come together. This perspective seeks 
+to identify the large and complex network lies behind the 
+digital devices that people use for such purposes as self-
+tracking. Computer software and hardware developers, 
+manufacturers and retailers, software coders, algorithms, 
+computer servers and archives, the computing cloud, 
+websites, platforms and social media sites are all part of 
+the network of actors that configure and enact the self-
+tracking assemblage. As Williams (2013: no page number 
+given) notes, an analysis of self-tracking should 
+‘incorporate and question how our personhood and our
+work is increasingly being defined not just by ourselves, 
+but by a complex of others … that are building on our
+desire to optimize our selves’. 
+
+Humans have always used material objects as 
+technologies. As these technologies have transmuted into 
+digital forms, particularly into smaller and more easily 
+wearable and even ingestible forms (in the case of digital 
+tablets), it becomes less obvious where the body ends and 
+the technology begins. This blurring of boundaries is 
+most overtly the case of such technologies as heart pace-
+makers, insulin pumps and cochlear implants, all of 
+which are inserted into the body in unobtrusive ways. But 
+it is also now an element of the types of digital 
+technologies that we use for communication, such as 
+
+80
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+smartphones, or for self-tracking of bodily functions and 
+activities, such as armbands, clothing or watches 
+embedded with sensors. We not only wear self-tracking 
+technologies but we move around in spaces, both public 
+and private, that are equipped with sensors for monitoring 
+human bodies. Our bodies’ location is digitised by a
+plethora of sensor-based technologies: either our own or 
+those that are embedded in the built environment. Our 
+knowledges of our bodies, therefore, are increasingly 
+digitised and rendered into data (Lupton, 2015). 
+
+This is not to say, however, that self-trackers necessarily 
+experience monitoring devices as part of themselves, or 
+that they do not find these technologies sometimes 
+annoying or irritating. The use of tracking devices for 
+collecting biometric data can make people even more 
+aware of their fleshly bodies by constantly alerting to 
+their capacities and limitations, and this may be 
+discomforting (Buse, 2010; Freund, 2004; Lupton, 2012a; 
+Ruckenstein, 2014). As Freund (2004) so vividly put it, 
+there may be ‘seams in the cyborg’.  
+
+Some people find wearable self-tracking devices not 
+fashionable enough, or not water-proof enough, or too 
+clunky or heavy, or not comfortable enough to wear, or 
+find that they get destroyed in the washing machine when 
+the user forgets to remove them from their clothing. For 
+example, Ruckenstein’s (2014) interviews with Finnish
+users of heart-rate and physical activity digital monitors 
+found that some remarked on their consciousness of the 
+devices. As one woman commented, ‘Last night, I noticed
+that the measuring equipment suddenly started physically 
+annoying me quite a lot. I would have liked to have 
+ripped if off, even if just for the night’ (2014: 75). 
+
+Designer Jennifer Darmour (2013) has argued that the 
+aesthetic dimensions of wearable technologies have been 
+little addressed. If these technologies remain too obvious, 
+she argues, ‘bolting’ these devices to our bodies (an 
+unlikely Frankenstein metaphor) and therefore obviously 
+proclaiming ourselves as cyborgs will ‘distract, disrupt,
+and ultimately disengage us from others, ultimately 
+degrading our human experience’ (2013: no page number 
+given). Darmour asserts that these objects need to be 
+designed more carefully so that they may be ‘seamlessly’
+integrated into the ‘fabric of our lives’ (2013: no page 
+number given). Her suggested ways of doing this include 
+making self-tracking devices look more beautiful, like 
+jewellery (broaches, necklaces, bracelets, rings), 
+incorporating them into fashionable garments, making 
+them peripheral and making them meaningful: and using 
+colours or vibrations rather than numbers to display data 
+readings from these devices. 
+
+On her blog, Carol Torgan (2012), a health strategist and 
+educator, has remarked upon the emotions that wearing 
+digital self-tracking devices may provoke in people. She 
+notes that putting on a self-tracking device makes some 
+people feel athletic, some fashionable, others fat and self-
+conscious about their bodies. Others feel safer and 
+develop a greater sense of security about having their 
+health monitored by these devices. Here again it was 
+
+observed that the design of the device – its ‘look’, its
+conspicuousness or lack thereof  – may be integral to how 
+people feel when they wear it. Design features, emotions, 
+bodies, selves and data are entangled in the digitised self-
+tracking experience. 
+
+THE VALORISATION OF DATA 
+Data is a keyword in discourses on self-tracking. The aim 
+of the Quantified Self movement, suggest its inventors 
+Gary Wolf and Kevin Kelly on their website, ‘is to help
+people get meaning out of their personal data’ (About the 
+Quantified Self, 2014). In his seminal article on the 
+quantified self for The New York Times, Wolf (2010) 
+asserts that: ‘If you want to replace the vagaries of 
+intuition with something more reliable, you first need to 
+gather data. Once you know the facts, you can live by 
+them.’ He then expounds on the virtues of numbers: 
+
+We tolerate the pathologies of quantification — 
+a dry, abstract, mechanical type of knowledge — 
+because the results are so powerful. Numbering 
+things allows tests, comparisons, experiments. 
+Numbers make problems less resonant 
+emotionally but more tractable intellectually. In 
+science, in business and in the more reasonable 
+sectors of government, numbers have won fair 
+and square. 
+
+Another example of the valorisation of data is the term 
+‘the data-driven lifestyle’. This was used as the headline
+for Wolf’s The New York Times article. It has been 
+employed several times in the popular media since that 
+article was published, including in a recent article about 
+Chris Dancy, an American who has used 700 gadgets, 
+sensors, apps and other software to collect data about his 
+body and his habits (Pullar-Strecker, 2014).  
+
+The statistical aspect of the practice of self-tracking – the 
+ability to produce quantifiable information measuring 
+aspects of one’s life – is integral to the approach. It is 
+assumed that the production of such data is the best way 
+of assessing and representing the value of one’s life and
+that better ‘self-knowledge’ will result. This perspective
+recurs in popular media accounts and posts on websites 
+such as the Quantified Self, where the motto is ‘self
+knowledge through numbers’.  
+
+In an online article, Duncan Watts, a social scientist at 
+Microsoft Research and long-term self-tracker, argues for 
+the importance of collecting personal data by contrasting 
+instinct, tradition and received wisdom with the more 
+reliable evidence provided by self-tracking data: 
+
+“If you had to choose between a world in which
+you do everything based on instinct, tradition or 
+some vague, received wisdom, or you do 
+something based on evidence, I would say the 
+latter is the way to go,” … The challenge is
+coming up with the proper interpretation of the 
+data, he said. (quoted in Feiler, 2014: no page 
+number given) 
+
+81
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+As Watt’s words suggest, the lure of ‘numbers’ is that
+they appear scientifically neutral and exact compared to 
+the less reliable data that one’s instincts or physical
+sensations may generate. The body/self as it is produced 
+through self-tracking, therefore, is both subject and 
+product of scientific measurement and interpretation.  
+
+The ideal for many self-trackers is technologies that 
+automatically sense and collect data on their lives without 
+needing direct intervention from users. Blumtritt (2014: 
+no page number given), for example, has expressed his 
+contemplations on the future of the quanitified self thus: 
+‘Data will become integral with our sensory, biological 
+self. And as we get more and more connected, our feeling 
+of being tied into one body will also fade, as we become 
+data creatures, bodiless, angelized’. 
+
+The notion that digital self-tracking devices render visible 
+elements of one’s self and body that are not otherwise
+perceptible is also expressed in many accounts of self-
+tracking. In the Newshour report referred to earlier, 
+interviewee Bob Troia talks about checking his 
+smartphone app to see how stressed he is: ‘I can look 
+down at my phone at any point in the day and see, kind 
+of, how stressed I am’. Another interviewee for this 
+report, David Pogue, discusses the awareness that may be 
+gained from self-tracking ‘into previously invisible
+aspects of your life’. 
+
+According to Apple’s announcement of its new Health
+app, ‘“How are you?” now has a really accurate answer
+… Heart rate, calories burned, blood sugar, cholesterol — 
+your health and fitness apps are great at collecting all that 
+data. The new Health app puts that data in one place, 
+accessible with a tap, giving you a clear and current 
+overview of your health’. As with many other health-
+related self-tracking apps the Health app provides 
+‘dashboards’ that visualise body data such as sleep
+patterns and calories burned. It is these data, as presented 
+in this way, which are portrayed as denoting what ‘health’
+means. As this description suggests, understanding and 
+articulating how healthy one feels is more accurate if 
+digital data are employed rather than relying on one’s
+subjective sense of wellbeing. 
+
+Related to the concept of the posthuman is the idea that 
+human bodies and selves are now experienced and 
+produced as information systems (Haraway, 1991; 
+Hayles, 2012). The body becomes represented as a 
+repository of identifiable, storable and processable data, 
+constituted by data flows and circulations. Indeed the 
+body and the data it represents become central to concepts 
+of identity. In many accounts of self-tracking the human 
+body is represented as a chaotic producer of masses of 
+data that need to be disciplined by monitoring, measuring 
+and management. It is not until the data are recorded and 
+produced into some kind of visual form that they can be 
+interpreted, and then understood and acted upon. While 
+the body may be represented as a computerised 
+information system, therefore, in these types of 
+discussions such a system is flawed compared with literal 
+computerised technologies. The human computer, in its 
+
+inevitably fleshly humanness, can never achieve the 
+capabilities offered by real digitised technologies. 
+Humans require the assistance of machines to extend their 
+capabilities and provide accuracy and enhanced 
+interpretation and memory of information. 
+
+DATA DOUBLES 
+The concept of data doubles is a useful way to think about 
+these entanglements of bodies, technologies and selves in 
+digital self-tracking. Data doubles are configured when 
+digital data are collected on individuals, serving to 
+configure a certain representation of a person (Haggerty 
+and Ericson, 2000). They have their own social lives and 
+materiality, quite apart from the fleshy bodies from which 
+they are developed.  
+
+Self-trackers are drawing on the capacities of new 
+technologies to generate increasing quantities and diverse 
+forms of information about their bodies and selves. While 
+self-tracking was once achieved via such practices as 
+journal keeping or writing down numbers, it was difficult 
+to analyse these data for their patterns. Digitised data 
+devices and apps and other software provide the 
+opportunity to access and analyse the numbers efficiently 
+and quickly. Different data sets may now be combined to 
+identify patterns in ways that were not achievable in the 
+past.  
+
+The diversity of approaches to self-tracking results in a 
+range of data doubles being configured on the body and 
+self. The physical activity monitor produces some forms 
+of data, as does the productivity app or the mood tracker, 
+for example. Each configures a different and constantly 
+changing data double of the user, and may intersect or 
+not. Indeed the difficulty now faced by self-trackers is the 
+overwhelming mass of data that they may have to deal 
+with, given the infinite number of ways in which data sets 
+may be combined with the aim of generating insights (Li 
+et al., 2011; Choe et al., 2014; Lupton, 2014b).  
+
+Data doubles representing aspects of the body and self are 
+continually re-enacted and reconfigured. The physical 
+activity tracking device produces some forms of data that 
+may or may not be acted on by the user, as does the 
+productivity app or the mood tracker, for example. Each 
+configures a different and constantly changing data 
+double of the user (Lupton, 2013c, 2014b; Ruckenstein, 
+2014). Central to the process of self-tracking, therefore, is 
+the concept of change. Data doubles never stand still. As 
+soon as they are generated they are subject to change 
+when more data are added. Data doubles are constantly 
+open to reconfiguration and hence re-interpretation.  
+
+Data doubles are also recursive and reflexive. Self-
+trackers reflect upon their data and seek to make sense of 
+them. A feedback loop is established, in which personal 
+data are produced from digital technologies which then 
+are used by the individual to assess her or his activities 
+and behaviour and modify them accordingly (Lupton, 
+2012a, 2013a, 2014a, 2014b; Ruckenstein, 2014; 
+Whitson, 2013). Data doubles, therefore, are both 
+
+82
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+constituted by the body and self and in turn serve to re-
+constitute the body and self.  
+
+One of the most interesting accounts of self-tracking 
+using digital devices is an autoethnographic account by 
+Kaiton Williams, a technologist and designer. Williams 
+notes that he found that self-tracking using digital devices 
+was effective. He employed smartphone apps to track his 
+weight loss, diet and exercise. However while he was 
+pleased to lose weight, he found that non-weight-related 
+aspects of his life began to be re-interpreted through the 
+lens of these devices. He disliked the perspective on his 
+body that the data derived from self-tracking gave him: 
+
+I do not enjoy contemplating my self as blood 
+and sinews and electrical signals … I might have
+preferred to accomplish my self transformation 
+within broader measures, and I still long for that; 
+to comprehend my body in longer and longer 
+scales: seasons instead of hours, some other, 
+coarser, property than calories. (Williams, 2013: 
+no page number given) 
+
+Williams goes on to discuss how rendering his life more 
+calculable using tracking apps changed his eating habits 
+to fit the technical requirements of the apps. ‘I prioritized
+certain foods and recipes, and avoided others to work best 
+within the capabilities of the food database’. He notes that
+he began to trust the digital data over his own physical 
+sensations, and that the data also began to shape how he 
+felt: 
+
+We (the Apps and I) had co-constructed a digital 
+model of my self, and here I was, managing 
+myself, it seems, by proxy. The feedback from 
+that digital model often took precedence over 
+how I physically felt. When I didn’t eat ‘enough’
+protein I felt weaker, and when I had too much 
+sugar I felt fatter. These were delayed reactions; 
+a re-reading of my body from the model. I’ve yet
+to decide: is this model pushing me closer in 
+contact or further away from my self and my 
+world?  
+
+Some of the self-tracking interviewees in Nafus and 
+Sherman’s study (2014) also articulated an interesting 
+negotiation between making sense of the data doubles 
+that their devices were producing in the light of their own 
+physical interpretations of their bodies. As these 
+comments suggest, an important dimension of the lived 
+experience of self-tracking is the ambivalence people may 
+feel about investing their trust in the numbers and altering 
+their perceptions to fit the demands of the technologies 
+they use. 
+
+SOCIAL INEQUALITIES AND SELF-TRACKING 
+CULTURES 
+Little attention is paid either in self-tracking cultures or in 
+the human-computer interaction literature to the ways in 
+which such social factors as gender, place of residence, 
+social class, race or ethnicity serve to shape people’s
+opportunities and life chances. Instead the self is 
+
+understood as an atomised individual, shaped by personal 
+life experiences and empowered to manipulate her or his 
+destiny by acquiring self-knowledge and acting rationally 
+upon this knowledge.  
+
+As I noted earlier, educational institutions, healthcare and 
+health promotion professionals and agencies and 
+workplaces have begun to encourage people to engage in 
+self-tracking, and therefore are also participating as actors 
+in self-tracking cultures. There are major social justice 
+issues that are emerging from the enrolment of such 
+agencies and institutions into self-tracking. Failure to 
+participate in wellness programs at work may lead to 
+higher health insurance premiums, as is happening in 
+some workplaces in the United States where employers 
+are responsible for covering healthcare costs for their 
+employees and therefore have a vested interest in their 
+employees’ health (Olson, 2014). Wearable technology 
+manufacturers are brokering deals with employers and 
+insurance companies to sell their fitness and activity 
+trackers and data analytics software as part of these 
+wellness programs. Employees must give their consent to 
+wearing the devices and allowing employers to view their 
+activity data. However when incentives such as lower 
+health insurance premiums are offered, such consent 
+becomes less voluntary. So too, wearing tracking devices 
+may be required as part of workers’ productivity
+monitoring and linked to pay and promotion opportunities 
+(Lohr, 2014).  
+
+Under these types of schemes, surveillance using self-
+tracking devices becomes required of the user by others. 
+While these devices still monitor and measure personal 
+data on an individual basis, they are no longer 
+participating in private self-tracking but rather responding 
+to pushed or imposed self-tracking (Lupton, 2012a, 
+2013b, 2013c; Whitson, 2013). Indeed it can be difficult 
+in some of these instances to distinguish between pushed 
+and imposed self-tracking, particularly when financial 
+incentives or penalties or employment prospects are 
+implicated. 
+
+Self-tracking discourses and cultures can be moralistic 
+and judgemental, building on wider and long-established 
+ideas about personal responsibility for good health, 
+physical fitness and productivity (Lupton, 1995a, 2012a, 
+2012b, 2013b). When notions of health, wellbeing and 
+productivity are produced via data drawn from self-
+monitoring, the social determinants of these attributes are 
+obscured. Illness, emotional distress, lack of happiness or 
+lack of achievement in the workplace become represented 
+primarily as failures of individual self-control or 
+efficiency, and therefore as requiring greater or more 
+effective efforts, including perhaps increased intensity of 
+self-tracking regimens, to produce a ‘better self’.  
+
+This is perhaps most evident in the ways in which self-
+tracking practices have been taken up in the medical and 
+public health domains, where self-management of 
+individuals’ health and an emphasis on personal
+responsibility for taking steps to prevent disease and early 
+death have long featured (Lupton, 1995a). Concepts of 
+
+83
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+‘patient engagement’ now frequently include reference to
+the importance of patients undertaking self-monitoring 
+and self-care, often using digitised devices (Lupton, 
+2013b). Writers in the preventive medicine and health 
+promotion literatures have also begun to refer to the 
+importance of self-tracking bodily activities as a way of 
+preventing disease that is believed to be self-imposed 
+(see, for example, Swan, 2012). Those people who 
+participate as self-tracking citizens are able to 
+demonstrate their adherence to these ideals, while those 
+who do not may be regarded as falling short of achieving 
+their ‘best selves’. 
+
+These positions on self-tracking again position people as 
+ideally self-managing and possessing enough knowledge 
+and self-control to successfully participate in such 
+schemes and gain benefits from them. Little 
+acknowledgement is made of the relative influence of 
+socioeconomic advantage on people’s opportunities to
+engage in self-tracking and the continuing social 
+inequalities that limit people’s digital technology use.
+People who possess socioeconomic privilege are able to 
+exert far more control over their lives than the 
+disadvantaged. Many studies have shown that older 
+people, those with less education, lower incomes, people 
+with disabilities and chronic health problems and people 
+living in rural and remote areas have less access to and 
+skills in using digital technologies (Broadbent and 
+Papadopoulos, 2013; Hargittai and Hinnant, 2008; 
+Olphert and Damodaran, 2013). Yet in the overwhelming 
+focus on the atomised, self-autonomous individual that 
+pervades self-tracking cultures, the issues of 
+socioeconomic disadvantage and the social determinants 
+that shape people’s willingness or capacity to engage in
+self-tracking are ignored. 
+
+CONCLUSIONS 
+In this paper I have discussed the discourses that have 
+come together to give meaning to self-tracking cultures. I 
+have argued that self-tracking cultures have emerged in 
+the context of the current cultural moment of the belief 
+that data are superior forms of knowledge, combined with 
+the affordances of contemporary digital technologies that 
+allow individuals to produce large masses of data about 
+themselves. These discourses and practices intersect with 
+others concerning individualisation, reinvention, the 
+neoliberalist privileging of self-responsibility and the 
+importance of attaining knowledge about the self as part 
+of working upon and improving the self.  
+
+I have also highlighted the importance of identifying the 
+complexity of the multitude of human and nonhuman 
+actors that work together to configure self-tracking 
+assemblages. Further investigation is required of how 
+these interactions operate and the ways in which people 
+construct, make sense of and negotiate the data doubles 
+that are generated by self-tracking assemblages. So too 
+the ways in which the incorporation of the self-tracking 
+ethos and practices into commercial and governmental 
+enterprises is operating is a topic worthy of more detailed 
+examination. 
+
+Finally, I have contended that despite the focus on the 
+individual that is commonly articulated in self-tracking 
+cultures, there are wider political and social justice 
+implications. The self-impelled and voluntary aspects of 
+self-tracking (what I term ‘private self-tracking’) are 
+becoming harnessed to broader collective commercial, 
+economic or social imperatives. While some elements of 
+self-interest may still operate, people may not always 
+have full choice over whether or not they engage in self-
+tracking and may be coerced into taking part.  
+
+In a social context in which self-management for 
+optimising one’s life is idealised and rewarded, those who
+fail to do so are disadvantaged both in terms of financial 
+costs and in attracting moral judgements from others. 
+Acknowledging the role of cultural meanings and social 
+structural factors in shaping human lives and fortunes is a 
+key sociological perspective that could be productively 
+incorporated into further research on self-tracking and the 
+design of future prototypes of self-tracking devices. 
+
+REFERENCES 
+About the Quantified Self. Quantified Self. Available at  
+http://quantifiedself.com/about,  accessed 16 June 2014. 
+
+Bauman, Z. Liquid Modernity. Cambridge: Polity Press, 
+2000. 
+
+Beck, U. Risk Society: Towards a New Modernity. 
+London: Sage, 1992. 
+
+Beck, U. World at Risk Cambridge: Polity, 2009. 
+
+Bentley, F., Tollmar, K., Stephenson, P., Levy, L., Jones, 
+B., Robertson, S., Price, E., Catrambone, R. and Wilson, 
+J. Health Mashups: presenting statistical patterns between 
+wellbeing data and context in natural language to promote 
+behavior change. ACM Transactions on Computer-
+Human Interaction 20, 5 (2013), 1-27. 
+
+Blumtritt, J. Organizing a system of 10 billion people. 
+Datarella. Published 29 April 2014. Available at 
+http://datarella.com/organizing-a-system-of-10-billion-
+people, accessed 10 May 2014. 
+
+Boesel, W.E. What is the quantified self now? 
+Cyborgology. Published 22 May 2013. Available at 
+http://thesocietypages.org/cyborgology/2013/05/22/what-
+is-the-quantified-self-now/#more-15717, accessed 11 
+August 2013. 
+
+Broadbent, R. and Papadopoulos, T. Bridging the digital 
+divide - an Australian story.  Behaviour & Information 
+Technology 32, 1 (2013), 4-13. 
+
+Buse, C.E. E-scaping the ageing body? Computer 
+technologies and embodiment in later life. Ageing & 
+Society, 30, 6 (2010), 987-1009. 
+
+Choe, E.K., Lee, N.B., Lee, B., Pratt, W. and Kientz, J.A. 
+Understanding  quantified-selfers'  practices  in  collecting 
+and  exploring  personal  data.  In  Proc.  CHI  2014,  ACM 
+Press (2014), 1143-1152. 
+
+Darmour,  J.  3  ways  to  make  wearable  tech  actually 
+wearable.  Co.Design.  Published  15  March  2013. 
+
+84
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Available  at  http://www fastcodesign.com/1672107/3-
+ways-to-make-wearable-tech-actually-
+wearable?goback=%2Egde 2181454 member 22344923
+4, accessed 20 March 2013. 
+
+de  Groot,  M.  Quantified  Self,  Quantified  Us,  Quantified 
+Other.  Quantified  Self  Institute.  Published  15  January 
+2014.  Available  at  http://www.qsinstitute.org/?p=2048, 
+accessed 12 June 2014. 
+
+Elliott, A. The theory of new individualism', in R. 
+Tafarodi (ed.), Subjectivity in the Twenty-First Century: 
+Psychological, Sociological, and Political Perspectives, 
+Cambridge: Cambridge University Press (2013a), 190-
+209. 
+
+Elliott, A. Reinvention. London: Routledge, 2013b. 
+
+Elwell, J.S. The transmediated self: Life between the 
+digital and the analog', Convergence, 20, 2 (2014), 233-
+49. 
+
+Epstein, D.A., Cordeiro, F., Bales, E., Fogarty, J. and 
+Munson, S.A. (2014) Taming data complexity in lifelogs: 
+Exploring visual cuts of personal informatics data. Proc. 
+DIS 2014, ACM Press (2014). 
+
+Fan, C., Forlizzi, J. and Dey, A. A spark of activity: 
+exploring informative art as visualization for physical 
+activity. Ubicomp 2012, ACM Press (2012), 81-84. 
+
+Feiler, B. The united states of metrics. The New York 
+Times. Published 16 May 2014. Available at 
+http://www.nytimes.com/2014/05/18/fashion/the-united-
+states-of-metrics.html? r=3, accessed 16 June 2014. 
+
+Fichman, P. & Rosenbaum, H. (eds.) Social Informatics: 
+Past, Present and Future. Newcastle upon Tyne: 
+Cambridge Scholars Publishing, 2014. 
+
+Foucault, M. Technologies of the self, in L. Martin, H. 
+Gutman, & P. Hutton (eds), Technologies of the Self: A 
+Seminar with Michel Foucault, London: Tavistock 
+(1988), 16-49. 
+
+Freund, P. Civilised bodies redux: seams in the cyborg. 
+Social Theory & Health, 2, 3 (2004),  273-289. 
+
+Hayles, N.K.  How We Think: Digital Media and 
+Contemporary Technogenesis. Chicago, IL: University of 
+Chicago Press, 2012. 
+
+Jurgenson, N. When atoms meet bits: social media, the 
+mobile web and augmented revolution. Future Internet, 4, 
+1 (2012), 83-91. 
+
+Kamal, N., Fels, S. and Ho, K. Online social networks for 
+personal informatics to promote positive health behavior. 
+In Proc. SIGMM Workshop on Social Media 2010, ACM 
+Press (2010), 47-52. 
+
+Khot, R., Mueller, F. and Hjorth, L. SweatAtoms: 
+materializing physical activity. In Proc. IE 2013, ACM 
+Press (2013), 1-7. 
+
+Khovanskaya, V., Baumer, E.P., Cosley, D., Voida, S. 
+and Gay, G. Everybody knows what you're doing: a 
+critical design approach to personal informatics. In Proc. 
+SIGCHI 2013, ACM Press (2013), 3403-3412. 
+
+Li, I., Dey, A., and Forlizzi, J. A stage-based model of 
+personal informatics systems. In  Proc. SIGCHI 2010, 
+ACM Press (2010), 557-66. 
+
+Li, I., Dey, A.K., and Forlizzi, J. Understanding my data, 
+myself: supporting self-reflection with ubicomp 
+technologies. In Proc. UbiComp 2011, ACM Press 
+(2011), 405-14. 
+
+Lohr, S. Unblinking eyes track employees. The New York 
+Times. Published 21 June 2014. Available at 
+http://www nytimes.com/2014/06/22/technology/workpla
+ce-surveillance-sees-good-and-
+bad html?module=Search&mabReward=relbias%3Ar& r
+=1, accessed 23 June 2014. 
+
+Lupton, D. The Imperative of Health: Public Health and 
+the Regulated Body. London: Sage, 1995a. 
+
+Lupton, D. The embodied computer/user.  Body & 
+Society, 1, 3-4 (1995b), 97-112. 
+
+Lupton, D. M-health and health promotion: the digital 
+cyborg and surveillance society. Social Theory & Health 
+10, 3 (2012a), 229-44. 
+
+Gray, C. Cyborg Citizen: Politics in the Posthuman Age 
+New York: Routledge, 2002. 
+
+Lupton, D.  Medicine as Culture: Illness, Disease and the 
+Body, 3rd edition. London: Sage, 2012b. 
+
+Haggerty, K. & Ericson, R. The surveillant assemblage. 
+British Journal of Sociology 51, 4 (2000), 605-22. 
+
+Lupton, D. Understanding the human machine. IEEE 
+Technology & Society Magazine 32, 4 (2013a), 25-30. 
+
+Haraway, D.  Simians, Cyborgs and Women: the 
+Reinvention of Nature. London: Free Association Press, 
+1991. 
+
+Lupton, D. The digitally engaged patient: Self-monitoring 
+and self-care in the digital health era. Social Theory & 
+Health 11, 3 (2013b), 256-70. 
+
+Haraway, D. When Species Meet. Minneapolis: The 
+University of Minnesota Press, 2008. 
+
+Hargittai, E. & Hinnant, A. Digital inequality: differences 
+in young adults' use of the Internet. Communication 
+Research 35, 5, (2008), 602-621. 
+
+Hayles, N.K. How We Became Posthuman: Virtual 
+Bodies in Cybernetics, Literature, and Informatics. 
+Chicago, IL: University of Chicago Press, 2008. 
+
+Lupton, D. Quantifying the body: Monitoring and 
+measuring health in the age of mHealth technologies. 
+Critical Public Health 23, 4 (2013c), 393-403. 
+
+Lupton, D. Quantified sex: a critical analysis of sexual 
+and reproductive self-tracking using apps. Culture, 
+Health & Sexuality, online first (2014a), doi: 
+10.1080/13691058.2014.920528. 
+
+Lupton, D. Self-tracking modes: reflexive self-monitoring 
+Imminent 
+and  data  practices.  Paper  presented  at 
+
+85
+
+Citizenships:  Personhood  and  Identity  Politics  in  the 
+Informatic  Age,  Canberra,  27  August  2014.  Available  at 
+http://ssrn.com/abstract=2483549, accessed 28 September 
+2014.  
+
+Purpura, S., Schwanda, V., Williams, K., Stubler, W. and 
+Sengers, P. Fit4life: the design of a persuasive technology 
+promoting healthy behavior and ideal weight. In Proc. 
+SIGCHI 2011, ACM Press (2011), 423-32. 
+
+Lupton, D. Digital Sociology. London: Routledge, 2015. 
+
+MacLeod, H., Tang, A., and Carpendale, S. Personal 
+informatics in chronic illness management.  In Proc. GI 
+2013, 149-56. 
+
+Nafus, D. and Sherman, J. This one does not go up to 11: 
+the Quantified Self movement as an alternative data 
+practice. International Journal of Communication, 8 
+(2014), 1784-1794. 
+
+Olphert, W. and Damodaran, L. Older people and digital 
+disengagement: a fourth digital divide?’ Gerontology, 59, 
+6 (2013), 564-570. 
+
+Olson, P. Get ready for wearable tech to plug into health 
+insurance. Forbes. Published 19 June 2014. Available at 
+http://www.forbes.com/sites/parmyolson/2014/06/19/wea
+rable-tech-health-insurance/, accessed 21 June 2014. 
+
+PBS Newshour. The quantified self: data gone wild? PBS 
+Newshour. Published 13 October 2013. Available at 
+http://www.pbs.org/newshour/bb/science/july-
+dec13/quantifiedself 09-28 html, accessed 6 January 
+2014. 
+
+Parrish, A. (2012) Gamification keeps me going (aka I'm 
+the self-tracking type). Bikestyle. No publication date 
+provided. Available at 
+http://bikestylespokane.com/2012/06/09/gamification-
+keeps-me-going-aka-im-the-self-tracking-type-an-andrea-
+post/, accessed 28 June 2014. 
+
+Personal informatics tools. Personal Informatics. 
+Available at http://www.personalinformatics.org/tools/, 
+accessed 14 June 2014. 
+
+Pullar-Strecker, T.  Personal informatics trends tracked. 
+Stuff.co.nz. Published 17 April 2014. Available at 
+http://www.stuff.co.nz/business/industries/9950896/Perso
+nal-informatics-trends-tracked, accessed 15 June 2014. 
+
+Quantified Self guide to self-tracking tools. Quantified 
+Self. Available at 
+http://quantifiedself.com/guide/tools?sort=reviews&pg=1, 
+accessed 10 June 2014. 
+
+Rooksby, J., Rost, M., Morrison, A., and Chalmers, M.C. 
+Personal tracking as lived informatics. In Proc. CHI 2014. 
+ACM Press (2014), 1163-1172. 
+
+Rose, N. Governing the Soul: The Shaping of the Private 
+Self. London: Routledge, 1990. 
+
+Rose, N. The Politics of Life Itself. Biomedicine, Power, 
+and Subjectivity in the Twenty-First Century. Princeton, 
+NJ: Princeton University Press, 2007. 
+
+Ruckenstein, M. Visualized and interacted life: Personal 
+analytics and engagements with data doubles. Societies, 
+4, 1 (2014), 68-84. 
+
+Thieme, A., Comber, R., Miebach, J., Weeden, J., 
+Kraemer, N., Lawson, S. and Olivier, P. We've bin 
+watching you: designing for reflection and social 
+persuasion to promote sustainable lifestyles. In Proc. 
+SIGCHI 2012, ACM Press (2012), 2337-2346. 
+
+Torgan, C. A shiny new activity tracker: technology as 
+talisman? Kinetics. Available at 
+http://www.caroltorgan.com/shine-activity-tracker/, 
+accessed 20 April 2013. 
+
+Whitson, J. (2013) Gaming the quantified self. 
+Surveillance & Society 11, 1/2 (2013), 163-176. 
+
+Williams, K. The weight of things lost: self-knowledge 
+and personal informatics. Paper presented at CHI 2013. 
+
+Wolf, G. The data-driven life. The New York Times. 
+Published 28 April 2010. Available at 
+http://www nytimes.com/2010/05/02/magazine/02self-
+measurement-t html?pagewanted=all& r=0, accessed 22 
+February 2013. 
+
+86
+
+ 
+ 
+ 
+ 
+ 
+

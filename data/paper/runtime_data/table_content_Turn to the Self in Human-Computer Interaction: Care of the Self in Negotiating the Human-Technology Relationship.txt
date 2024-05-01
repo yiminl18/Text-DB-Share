@@ -1,0 +1,19 @@
+1. Introduction
+2. Care of the Self and Its Relation to HCI
+3. Related Theoretical Work
+   3.1 Existential HCI
+   3.2 A Political Economy Perspective in HCI
+   3.3 The Politics of Technology
+4. Methodology
+5. Three Cases of Care of the Self
+   5.1 Panoptic Technologies and Individual Choice
+   5.2 Culture of Quantification and Self-Reflexivity
+   5.3 The Neoliberal Healthcare System and Self-Learning
+6. Discussion
+   6.1 Constitution of the Self through Negotiating with Technology
+   6.2 Turn to the Self in HCI
+   6.3 Why Foucault and His Care of the Self?
+   6.4 Design Implications
+7. Conclusion
+8. Acknowledgments
+9. References

@@ -1,0 +1,28 @@
+Table of Contents:
+
+1. Introduction
+2. Related Work
+    2.1 Personal Informatics and Patient-Generated Data
+    2.2 E-Coaching-, Behavior Change- and Persuasive Technologies
+    2.3 The Coach’s Perspective in e-Coaching Systems
+3. Focus of the Present Paper
+4. Study 1: Exploration of the Coaching Process
+    4.1 Method
+    4.2 Results
+    4.3 Conclusion: Coaches’ Reflections on Successful Coaching
+5. Study 2: Potential Role of Technology in Health Coaching
+    5.1 Method
+    5.2 Results
+    5.3 Conclusion: Coaches’ Perspectives on Technology
+6. Study 3: Coaches Interacting with Data and Clients
+    6.1 Method
+    6.2 Results
+    6.3 Conclusion: Coaches Interacting with Technology
+7. Discussion
+    7.1 Technology Provides More Information on Behavior
+    7.2 Coaching Beyond Behavior
+    7.3 Synergy between Behavioral and Experiential Information
+    7.4 The Value of Ambiguity
+    7.5 Conclusion: Technology Supporting the Collaborative Coaching Process
+8. Acknowledgments
+9. References

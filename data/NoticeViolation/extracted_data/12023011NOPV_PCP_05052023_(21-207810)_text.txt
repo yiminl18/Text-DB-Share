@@ -1,0 +1,774 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+VIA ELECTRONIC MAIL TO: jsauger@buckeye.com 
+
+May 5, 2023 
+
+Mr. Joseph Sauger 
+Senior Vice President of Operations and Engineering 
+Buckeye Partners, LP 
+One Greenway Plaza, Suite 600 
+Houston, Texas 77046 
+
+CPF 1-2023-011-NOPV 
+
+Dear Mr. Sauger: 
+
+From  March  16,  2021  through  May  30,  2021,  a  representative  of  the  Pipeline  and  Hazardous 
+Materials Safety Administration (PHMSA), Office of Pipeline Safety (OPS),  pursuant to Chapter 
+601 of 49 United States Code (U.S.C.) investigated Buckeye Partners, LP’s (Buckeye) in-service, 
+rupture in Linden, NJ. 
+
+On  March  16,  2021,  at  5:26  am  Eastern  Standard  Time  (EST),  Buckeye  Line  602  ruptured 
+releasing 353 barrels (bbls) of unleaded gasoline into a marsh in Linden, New Jersey. 
+
+As a result of the investigation, it is alleged that you have committed probable violations of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR). The items investigated 
+and the probable violations are: 
+
+1. 
+
+§ 195.452 Pipeline integrity management in high consequence areas. 
+
+(a) … 
+(b) What  program  and  practices  must  operators  use  to  manage 
+pipeline integrity? Each operator of a pipeline covered by this section 
+must: 
+
+(1) … 
+(5) Implement and follow the program. 
+
+Buckeye failed to follow its manual of written integrity management procedures. Specifically, 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Buckeye  failed  to  follow  its  Integrity  Management  Program  Manual  –  Appendix  G-11  –  Data 
+Integration  Procedure,  dated  05/11/17  (IMP),  regarding  reviews  and  integration  of  data  from 
+current and previous ILI results. 
+
+The IMP Section 5.2 stated in part, “Information obtained as a result of the most recent ILI survey 
+is correlated with that obtained as a result of the previous ILI survey. Features identified by the 
+most recent ILI survey are matched, as best as possible, to those identified  by the previous ILI 
+survey. Feature information from the previous ILI survey is incorporated into the pipeline listing 
+for the features that were able to be matched…The Event Type, Depth, Length, and Orientation 
+are compared for the matched features. Significant changes in depth, length, and orientation are 
+identified for further review.” 
+
+The IMP Section 5.3 stated in part, “Joints of pipe with a high density of metal loss features, as 
+identified by the most recent ILI survey, are reviewed for the purpose of identifying high density 
+areas with a significant change in metal loss density from the previous ILI survey.” 
+
+During the investigation, PHMSA requested ILI records for the 2019 and 2014 runs on line 602. 
+Buckeye provided its Baker Hughes Final Inspection Report, dated 11/03/2014 (2014 ILI) and its 
+Baker Hughes CPIG In-Line Inspection Final Report, dated 10/28/2019 (2019 ILI). A review of 
+the 2014 ILI and 2019 ILI for the joint associated with the Line 602 release revealed that fewer 
+anomalies  were  boxed  in  the  2019  ILI  run  than  in  the  2014  ILI  run.  According  to  the  IMP 
+procedures,  feature  information  from  the  previous  ILI  survey  is  incorporated  into  the  pipeline 
+listing, and significant changes in event type, depth, length, and orientation are identified and noted 
+for  further  review.  Thus,  a  reduction  in  boxed  anomalies  should  have  been  noted  for  further 
+review1. 
+
+Therefore, Buckeye failed to follow its procedures for reviewing and integrating data from current 
+and previous ILI results in accordance with § 195.452(b)(5). 
+
+2. 
+
+§ 195.446 Control room management. 
+
+(a)  General.  This  section  applies  to  each  operator  of  a  pipeline 
+facility with a controller working in a control room who monitors and 
+controls all or part of a pipeline facility through a SCADA system. Each 
+operator  must  have  and  follow  written  control  room  management 
+procedures  that  implement  the  requirements  of  this  section.  The 
+procedure required by this section must be integrated, as appropriate 
+with the operator’s written procedures required by §195.402… 
+
+Buckeye failed to follow its written control room management procedures. Specifically, Buckeye 
+failed to follow its Control Room Operating Manual, dated 12/18/19 (CROM) regarding shift change 
+documentation in accordance with § 195.446. 
+
+The CROM Section 2.3.1.2 stated in part, “Shared information between Outgoing Controllers and 
+Incoming Controllers includes, but is not limited to, the following: Notable incidents, events, or 
+
+1 See also Root Cause Failure Analysis of Line 602 Release (3/16/21) (July 16, 2021) recommendations at 22. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+ 
+ 
+ 
+ 
+ 
+ 
+safety concerns occurring during the shift (information shared via Shift Notes in STAR), Current 
+abnormal or emergency situations (information shared via the Pipeline Status in STAR), An Alarm 
+review to include active, inhibited, nuisance, off-scan, and recurring/persistent alarms (information 
+shared via Desk Log issues in STAR)” 
+
+During  the  investigation,  PHMSA  requested  records  related  to  shift  changes  during  the  event. 
+Buckeye provided its Release Shift Change Log, dated 03/16/2021 (Change Log), identified by 
+Buckeye as from its STAR system, which documented a 6:00 AM shift change on 3/16/21 for the 
+controller responsible for Line 602.  The Change Log failed to demonstrate that any emergencies 
+and/or abnormal operating events were communicated as part of the shift change.  The Change 
+Log also lacked a ‘Pipeline Status’ field where current abnormal or emergency situations were 
+required to be documented per the Section 2.3.1.2 procedure. 
+
+Therefore, Buckeye failed to follow its procedures for shift change documentation in accordance 
+with § 195.446. 
+
+3. 
+
+§ 195.446 Control room management. 
+
+(a)  General.  This  section  applies  to  each  operator  of  a  pipeline 
+facility with a controller working in a control room who monitors and 
+controls all or part of a pipeline facility through a SCADA system. Each 
+operator  must  have  and  follow  written  control  room  management 
+procedures  that  implement  the  requirements  of  this  section.  The 
+procedure required by this section must be integrated, as appropriate 
+with the operator’s written procedures required by §195.402… 
+
+Buckeye failed to follow its written control management room procedures. Specifically, Buckeye 
+failed  to  follow  its  Operations  and  Maintenance  Manual  Appendix  A  –  Automated  Abnormal 
+Operating  Event  Workflow, dated  01/16/17  (O&M),  and  Control  Room  Operating  Manual,  dated 
+12/18/19  (CROM),  regarding  investigating  SCADA  indications  of  a  leak  in  accordance  with  § 
+195.446. 
+
+The CROM Section 3.2 stated in part, “An AOC is a condition requiring an immediate response 
+from  the  Controller  to  prevent  the  shutdown  of  the  pipeline  system.  If  an  abnormal  operating 
+condition  is  not  responded  to  and  eliminated  promptly  by  a  Controller,  it  could  result  in  an 
+emergency condition…. If one or more of the preceding conditions exist, the Controller should 
+take action to identify the cause of the issue(s) and correct the issue(s) in an expedient manner.” 
+
+The CROM Section 3.4.5.2 stated in part, “The procedure following the Unexpected Imbalance 
+workflow below provides the steps required by a Controller to address unexpected imbalances. If 
+the cause of a leak signature combined with an imbalance alarm cannot be determined within ten 
+minutes or less, the Controller takes action to secure the pipeline until an investigation into the 
+cause of the alarm is completed.” 
+
+The O&M Section 1 stated in part, “Controllers and Field Operators shall initiate a new Abnormal 
+Operating Event (AOE) Workflow for every abnormal operating event that occurs on a Pipeline 
+System or Local Facility that is under his/her control. The link to initiate an AOE Workflow is 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+accessible  from  the  Breinigsville  and  Mont  Belvieu  Control  Center  SharePoint  pages.  Field 
+Locations can access the link from their respective Asset Team SharePoint Page.” 
+
+During  its  investigation,  PHMSA  requested  the  Supervisory  Control  and  Data  Acquisition 
+(SCADA)  event  logs  for  the  day  of  the  event.  Buckeye  provided  its  SCADA  Event  Log,  dated 
+03/15/2021  (Event  Log).  Based  on  a  review  of  the  Event  Log  and  additional  investigation, 
+Buckeye failed to properly investigate SCADA indications of the leak. The Event Log showed that 
+the SCADA provided the controller a high-high flow alarm and then a leak alarm, both of which 
+were acknowledged by the controller. The controller’s actions indicate that they believed this was 
+a control valve issue and 11 minutes later restarted a small booster pump for about 30 seconds. 
+Pressure and flow rates did not appear as they should have for a typical restart and technicians at 
+the Linden Station proceeded to investigate a possible control valve issue.  Upon the Control Room 
+change over at 6:00 am, the new controller recognized an issue and began providing notifications 
+of a possible release. The AOE workflow was not followed until the changeover occurred. 
+
+Following the incident and pursuant to the Corrective Action Order 1-2021-034-CAO, Buckeye 
+conducted  a  root  cause  failure  analysis  (RCFA)  of  the  incident.  Based  on  the  determinations 
+contained  within  the  RCFA  report,  the  written  control  room  management  procedures  for 
+investigating SCADA indications were not followed2. 
+
+Therefore,  Buckeye  failed  to  follow  its  written  control  room  management  procedures  for 
+investigating SCADA indications of a leak in accordance with § 195.446(a). 
+
+Proposed Civil Penalty 
+
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 
+2023, the maximum penalty may not exceed $239,142 per violation per day the violation persists, 
+up to a maximum of $2,391,412 for a related series of violations.  For violation occurring on or 
+after May 3, 2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 
+per violation per day the violation persists, up to a maximum of $2,251,334 for a related series of 
+violations.  For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day the  violation  persists,  up to  a maximum  of  $2,186,465  for  a related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+2 See RCFA at 26. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+ 
+ 
+ 
+ 
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable violations and recommend that you be preliminarily assessed a civil penalty of $441,151 
+as follows: 
+
+Item number 
+1 
+3 
+
+PENALTY 
+$ 218,647 
+$ 222,504 
+
+Warning Item 
+
+With respect to Item 2, we have reviewed the circumstances and supporting documents involved 
+in this case and have decided not to conduct additional enforcement action or penalty assessment 
+proceedings at this time.  We advise you to promptly correct this item.  Failure to do so may result 
+in additional enforcement action. 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.  Please  refer  to  this  document  and  note  the  response  options. All 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. § 552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following the receipt of this Notice, you have 30 days to  respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your  correspondence to my office  within  30 days  from the receipt  of this Notice.  The Region 
+Director  may  extend  the  period  for  responding  upon  a  written  request  timely  submitted 
+demonstrating good cause for an extension. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  1-2023-011-NOPV,  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Robert Burrough 
+Director, Eastern Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosure:  Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

@@ -1,0 +1,999 @@
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+Technologies for Everyday Life Reflection: Illustrating a 
+Design Space 
+Elise van den Hoven 2,1,3,4 
+elise.vandenhoven@uts.edu.au 
+2University of Technology 
+Sydney  
+Faculty of Design Architecture 
+and Building 
+Ultimo NSW 2007, Australia 
+
+Ine Mols 1,2 
+i.mols@tue.nl 
+1Eindhoven University of 
+Technology  
+Dept. of Industrial Design 
+P.O. Box 513, 5600 RM  
+Eindhoven, the Netherlands 
+
+Berry Eggen 1,2 
+j.h.eggen@tue.nl 
+3ARC Centre of Excellence in 
+Cognition and its Disorders 
+
+4DJAD, University of Dundee 
+Dundee, UK 
+
+ABSTRACT 
+Reflection  gives  insight,  supports  action  and  can  improve 
+wellbeing. People might want to reflect more often for these 
+benefits,  but  find  it  difficult  to  do  so  in  everyday  life. 
+Research  in  HCI  has  shown  the  potential  of  systems  to 
+support  reflection  in  different  contexts.  In  this  paper  we 
+present  a  design  space  for  supporting  everyday 
+life 
+reflection.  We  produced  a  workbook  with  a  selection  of 
+conceptual design proposals, which show how systems can 
+take  different  roles  in  the  process  of  reflection:  triggering, 
+supporting and capturing. We describe a design space with 
+two  dimensions  by  combining  these  roles  with  strategies 
+found in literature. We  contribute  to  the  extensive  body of 
+work  on  reflection  by  outlining  how  design  for  everyday 
+life  reflection  requires  a  focus  on  more  holistic  reflection, 
+design with openness and integration in everyday life.  
+
+Author Keywords 
+Design Research, Reflection, Conceptual Design 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous;  
+
+INTRODUCTION 
+We  go  about  our  everyday  life  and  many  activities,  often 
+without thinking about it. This normality and self-evidence 
+is also what makes our everyday life so everyday. However, 
+from  time  to  time,  we  might  think  about  our  lives,  our 
+actions, thoughts, habits and choices. Through reflection we 
+gain 
+lessons.  Reflection  has  been 
+extensively  discussed  in  the  context  of  learning  and 
+professional  development  [18,  21,  25].  Within  healthcare 
+and  design,  reflection  often  gives  insight  [3].  Rather  than 
+‘only’  insight,  the  foreseen  benefit  in  much  work  on 
+
+insight  and 
+
+learn 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for 
+components  of  this  work  owned  by  others  than  ACM  must  be  honored. 
+Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or  republish,  to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org.  
+TEI  '16,  February  14-17,  2016,  Eindhoven,  Netherlands   ©  2016  ACM. 
+ISBN 978-1-4503-3582-9/16/02…$15.00   
+DOI: http://dx.doi.org/10.1145/2839462.2839466 
+
+53
+
+personal  informatics  is  action.  The  line  of  reasoning 
+suggests that showing users data about themselves will lead 
+them  to  do  something,  presumably  something  different 
+from  and  better  than  what  they  are  already  doing  [15]. 
+Rather than reflection for these specific goals, we focus on 
+what  we  call  everyday  life  reflection,  referring  to  all 
+deliberate and critical thought processes concerning our day 
+to day activities. This includes themes such as work, health, 
+relationships, leisure time and personality. We see value in 
+engaging  in  everyday  life  reflection  regularly,  as  a  way  to 
+gain self insight and improve overall wellbeing. A moment 
+of reflection can bring the mind at ease, provide a feeling of 
+confidence or help solve problems.  
+
+However,  engaging  in  reflection  is  far  from  straight 
+forward.  It  is  a  complex  process  with  many  contextual 
+factors  involved.  Design  to  support  reflection  is  therefor  a 
+challenging,  but  worthwhile  ambition.  In  this  paper  we 
+build upon the conceptual grounding by Baumer [3] and the 
+landscape  described  by  Fleck  &  Fitzpatrick  [8],  aiming  to 
+make  their  dimensions  more  specific  and  applied  to  the 
+domain  of  everyday  life  reflection.  As  part  of  a  research 
+through  design  process,  we  have  developed  a  set  of  thirty 
+ideas  to  support  reflection.  Through  the  multiplicity  of 
+ideas,  a  design  space  emerges  [9].  We  provide  a  set  of 
+alternatives;  alternative  design  concepts 
+that  support 
+reflection  in  different  ways.  We  use  the  process  of 
+designing these alternatives and the resulting set as a way to 
+reflect on design for reflection in general. In this paper we 
+describe  this  design  space  by  presenting  concepts  and  the 
+roles  we  see  support  systems  can  take  in  the  process  of 
+reflection. Before doing so, we will discuss related work to 
+defining  reflection  and  discuss  common  strategies  to 
+support  reflection.  In  line  with  Sengers  [22]  we  end  the 
+paper  by  reflecting  on  our  own  work  and  process  as  well, 
+providing  suggestions  for  designing  for  everyday  life 
+reflection focusing on holistic reflection, openness in design 
+and the integration in everyday life.  
+
+DEFINING REFLECTION 
+Despite its widespread use, the term reflection often lacks a 
+thorough  definition  in  HCI  work  [3,7].  Here,  we  discuss 
+some definitions of reflection to better ground our work and 
+explain  our  perspective.  Baumer  [3]  explicitly  provides  a 
+very inclusive definition of reflection as “reviewing a series 
+
+ 
+ 
+ 
+ 
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+of previous experiences, […] putting them together in such 
+a way as to come to a better understanding or to gain some 
+sort  of  insight.”  [p.  94]  This  broad  definition  gives  a  good 
+starting  point  for  the  types  of  processes  we  focus  on  but 
+provides  little  insight  in  how  this  reviewing  leads  to 
+insights.  This  process  is  described  in  more  detail  in  the 
+model  presented  in  [24]  in  which  reflection  is  reviewed 
+within  a  psychological  view  on  autobiographical  memory. 
+Here,  reflection  is  seen  as  “remembering  plus  further 
+analysis”  [p.  150].  This  analysis  is  divided  in  multiple 
+layers, first of all split in either evaluation or explanation of 
+the  remembered  experience.  On  a  third  layer,  the  model 
+describes the underlying processes that can lead to provides 
+more  grip  on 
+in  reflection: 
+abstraction,  comparison,  categorization  etc.  We  combine 
+these  process  aspects  with  the  type  of  insight  we  strive 
+from,  inspired  by  Mezirows  theory  [18].  Specifically  we 
+build  upon  his  definition  of  critical  self-reflection  as 
+“reassessing  our  own  orientation  to  perceiving,  knowing, 
+believing,  feeling  and  acting.”[p  13].  From  a  memory  and 
+HCI  perspective  we  are  interested  in  the  role  external 
+triggers play in this process. Together, these bring us to our 
+definition of everyday life reflection as: “Remembering and 
+analyzing  past,  present  and  future  experiences  in  order  to 
+reassess  our  perceptions,  beliefs,  feelings  and  actions 
+regarding our everyday life.” This definition is the basis for 
+our  concept  development,  however,  first  we  will  discuss 
+related  work  on  reflection  support  with  a  more  inclusive 
+perspective on reflection.    
+
+the  processes 
+
+involved 
+
+REFLECTION SUPPORT 
+Reflection takes time and for many people it does not  come 
+naturally,  they  usually  need  a  reason  to  reflect  or  at  least 
+encouragement to do so [8]. An overview of different ways 
+of  supporting  reflection  can  be  given  by  domain  [3]  or 
+sorted  by  level  of  reflection  [8].  In  stead,  we  provide  an 
+overview  based  on 
+to  support 
+reflection.  We  were  interested  in  strategies  currently 
+adopted, both within and outside of HCI. Based on a broad 
+review  of  methods  and  tools  in  different  fields  including 
+personal  informatics,  HCI,  therapy  and  education  we 
+describe  three  main  strategies  to  stimulate  reflection.  We 
+emphasize  that  this  is  not  a  complete  overview  of  all 
+possible  strategies,  but  a  summary  of  the  most  recurring 
+strategies in our literature review.   
+
+the  adopted  strategy 
+
+Dialogue driven reflection  
+Reflection often occurs in dialogue, this is most evident in 
+therapists dialogues or teacher-students dialogues. We refer 
+here specifically to verbalized dialogue, either in writing or 
+spoken,  rather  than  the  more  abstract  notion  of  reflective 
+conversation  with  ‘material’  as  Schön  introduced  [21].  In 
+dialogue driven reflection, questions or explicit prompts are 
+used  to  encourage  reflection.  Within  therapy  or  education 
+such a dialogue is often done between “uneven partners” in 
+which one takes the lead but people also reflect with friends 
+or peers in group sessions [20]. In relation to HCI, dialogue 
+driven reflection can be about a design [2] or mediated by a 
+
+54
+
+system.  A  combination  of  both  is  seen  in  the  design  of 
+Loversbox  [26].  In  this  design  people  can  create  messages 
+for their partner (dialogue mediate by the system), talk with 
+an  artist  to  create  these  message  (reflection  about  the 
+system) and can reflect together triggered by the system.  
+
+Examples  in  which  the  system  takes  the  leading  role  by 
+asking  questions  can  be  seen  in  Echo  [11]  and  the  use  of 
+experience tags in photos with Storytellr [14] in which the 
+system poses questions such as “how do you feel?” “What 
+theme  do  you  associate  with  this  event?”.    Such  questions 
+create  a  dialogue  between  system  and  user,  however, 
+dialogue often holds after an initial question, an intelligent 
+system  would  engage  further  in  dialogue  driven  reflection 
+by posing follow-up questions.   
+
+Information driven reflection  
+Presenting data can be a trigger for reflection, at least it is a 
+premises  often  seen  in  personal  informatics  and  quantified 
+self movement. Data can be very helpful when reflection is 
+aimed  at  uncovering  patterns  or  for  reflection  aimed  at 
+behavior  change.  Different  characteristics  of  information 
+are  used  to  stimulate  reflection:  invisibility,  comparison, 
+ambiguity  or  multiple  views.  Information  driven  reflection 
+is  effective  when  revealing  information  that  is  otherwise 
+invisible or cannot be directly observed, such as steps taken 
+during  the  day  [e.g.  7].  Data  Souvernirs  [1]  for  instance, 
+reveals  ‘hidden’  digital  data  in  the  physical  world  to 
+stimulate reflection. Sometimes data is presented in specific 
+way,  for  instance  to  allow  for  comparison  (cf.  comparing 
+neighborhood  energy  consumption  in  RevealIt,  [28])  For 
+these  types  of  applications  clarity  of  information  is 
+important. The opposite effect is seen in other cases, where 
+the  ambiguity  of  the  data  triggers  reflection  (cf.  History 
+tablecloth  [10]).  Finally,  information  driven  reflection  can 
+be  supported  by  providing  multiple  views  on  the  data  to 
+enable  exploration,  for  instance  of  personal  memory 
+artifacts in MemoryLane [12] or the design process in Freed 
+[17].  These  examples  show  the  diversity  of  potential 
+applications  of  information  driven  reflection  and  the 
+important  role  the  systems  and  interactions  play  in  this. 
+Many  of  these  are  more  goal-oriented  types  of  reflection, 
+with  the  use  of  Sensecam  images  [16]  explored  reflection 
+with  a  more  open  approach.  When  reviewing  Sensecam 
+images,  participants  for  instance  reflected  on  their  social 
+interactions or on incremental change over a long period of 
+time.  
+
+Expression driven reflection 
+Reflection can be an internal process, but can also be based 
+on  externalizing  thoughts  and  feelings.  In  diaries  and  in 
+reflective  writing  the  reflection  occurs  while  striving  to 
+express oneself. Expression driven reflection is traditionally 
+seen  in  personal  diary  writing,  which  Travers  [27]  even 
+considers  as 
+in 
+therapeutic writing [29] or in more creative areas such as art 
+therapy  [6].  Orland-Barak  [20]  have  explored  expression 
+driven reflection as part of a portfolio in teacher education, 
+
+form  of  self-reflection, 
+
+the  purest 
+
+ 
+ 
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+however  portfolios  were  dominantly  descriptive  and 
+emotional rather than showing critical reflection. Additional 
+guidance  on  what  to  reflect  upon  could  help.  Such  a  more 
+guided  approach  to  expression  driven  reflection  was 
+explored  by  Andre  et  al.  [2].  They  designed  expressive 
+avatars,  in  which  busyness,  stress,  health  and  engagement 
+can  be  expressed.  These  choices  require  reflections  and  as 
+such stimulates to reflect on our well-being.  
+
+DESIGN PROCESS   
+By  looking  at  this  variety  of  examples  of  supporting 
+reflection  we  see  a  gap  in  concepts  that  support  everyday 
+life reflection. In many existing concepts  we see that a very 
+specific subject is reflected upon, for instance energy usage 
+[28],  movement  or  professional  development  [20].  In  our 
+definition  of  everyday  life  reflection  we  focus  on  a  broad 
+set  of  past,  present  and  future  experiences,  leading  to  a 
+more holistic type of reflection. Based on Staudinger’s [24] 
+view  of  life  reflection  we  see  everyday  life  reflection  as  a 
+process of looking for connections across domains with the 
+possibility  to  reflect  on  deeper  beliefs  or  presuppositions 
+[18]. This is a highly individual and personal process and to 
+allow for this requires a certain openness in our designs.  
+
+Inspired by the work by Gaver [9] we set out to develop a 
+set  of  alternatives  to  describe  this  design  space.  These 
+concepts  were  developed  iteratively.  First  ideas  were 
+individually  generated  by  the  first  author  and  coded  for 
+their  potential  values.  After  that  a  brainstorm  with  three 
+colleagues  aimed  at  maximizing  and  minimalizing  these 
+concepts,  looking  for  the  boundaries  of  their  potential. 
+Because  these  concepts  were  highly  influence  by  the 
+researchers  original  ideas  and  direction,  a  third  brainstorm 
+was a set up to more broadly generate ideas. A definition or 
+goal  of  reflection  was  deliberately  not  discussed  with  the 
+four  researchers  involved  in  this  brainstorm.  Together, 
+these  workshops  resulted  in  a  set  of  48  ideas.  The  results 
+were analyzed in a group discussion by comparing them to 
+the strategies found in literature, consequently also refining 
+these  strategies  (resulting  in  the  three  presented  before). 
+Through  these  brainstorms  and  discussions  a  set  of  25 
+concepts  was  developed.  In  this  paper  we  present  a 
+selection of these to illustrate what insights we gained from 
+this  process.  Specifically,  reflection  on  our  concepts  gave 
+insight in the roles we see systems can take. We hope that 
+both the emerging design space and the individual concepts 
+can inspire to look at design for reflection differently.  
+
+DESIGN SPACE 
+Reflection  is  often  done  with  someone  else,  who  takes  a 
+supporting  role  (a  tutor,  psychologist  or  peer).  In  the 
+personal  context  of  everyday  life  reflection,  systems  can 
+take  this  role  of  a  “reflection  partner”  in  various  ways. 
+Systems  can  trigger  reflection,  support  the  process  of 
+reflection  or  enable  capturing  reflections.  These  roles  can 
+not  be  completely  separated  and  a  systems  can  adopt 
+different roles at different moments in the process.    
+
+Datazen 
+A small zen-inspired garden used as an ambient display. Through 
+vibration  in  the  bottom,  patterns  in  the  sand  are  created  that  are 
+based on measurements of activity, stress and wellbeing (based on 
+wearables). You can choose to edit, disturb or change the display 
+which is done through the relaxing strength of a zen garden.  
+
+Balance  
+A wooden balance that functions as a subtle display of the balance 
+in your life as it stores your thoughts on its positive and negative 
+sides. You can tap to record on either side, adding weight to that 
+side. A physical trigger, an abstract representation of state and an 
+achieve of previous thoughts.  
+
+MirrorMirror 
+The bathroom is a typical place to start and end a day. In a 
+moment that we look at ourselves, MirrorMirror stimulates to look 
+at our selves in a more reflective way. To take a moment to 
+consider the day, the week or ourselves. Contours of hands trigger 
+to stand still a moment. When hands are placed on plaque, the 
+mirror slowly starts to draw an outline around you. Takes 3 
+minutes to make outline, take time to reflect during this time. 
+
+Figure 1. Concepts with (a) content triggers, (b) direction 
+triggers and (c) opportunity triggers 
+
+55
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+Triggering Role 
+Similar  to  how  a  comment  or  question  from  a  friend  gets 
+you  thinking,  an  interactive  system  can  take  a  triggering 
+role.  Based  on  our  concepts,  we  identity  different  types  of 
+triggers that a system can provide. Content triggers provide 
+direction  for  what  to  reflection  on,  for  instance  by 
+presenting  data  or  media.  To  stimulate  everyday  life 
+reflection we focus on presenting data from a broad range. 
+However,  peoples  self-image  can  be  conflicting  with  the 
+image presented through data. The concept DataZen (Figure 
+1a)  therefor  allows  people  to  adjust  the  pattern  presented 
+based  on  their  personal  view  on  how  the  data  should 
+represent  their  present  or  preferred  future.  The  notion  of 
+breakdown [4] or the ambiguous visualization of data (e.g. 
+[8]) can also be seen as content triggers.  Being more open 
+than  content  triggers,  direction  triggers  give  a  suggestion 
+for the type of reflection without limiting the content of the 
+reflection.  The  Balance  concept  (Figure  1b)  for  instance 
+suggest  to  reflect  on  two  sides  of  a  situation  (e.g.  positive 
+and negative) without prescribing what this situation should 
+be.  The  most  openness 
+that 
+provide opportunity trigger. Concepts such as MirrorMirror 
+(Figure  1c)  indicate  that  there  is  (or  could  be)  time  and 
+space for reflection, without giving any further direction.   
+
+in  systems 
+
+is  seen 
+
+OddOneOut  
+A  short  moment  on  the  couch  playing  a  nice  little  game  you’re 
+your  pictures.  The  game  of  “odd  one  out”  stimulates  looking  at 
+hidden  similarities  and  differences  between  random  photos  from 
+your personal past. With all associations, a growing web of related 
+photos is created which can be reviewed and explored. 
+
+Supporting Role 
+Technologies for everyday life reflection can be designed to 
+provide  support  in  the  process  of  reflection.  This  can  be 
+done both after a person has been triggered by the system, 
+or  if  reflection  is  initiated  by  the  person.  Support  can  for 
+instance  be  given  by  exploring  layers  in  system-collected 
+data,  step  by  step  (lifeTree  concept  Figure  2)  or  exploring 
+user  generated  media  in  a  more  playful  way  (oddOneOut, 
+Figure  3a).  Rather  than  free  exploration  MixedEmotions 
+(Figure  3b)  stimulate  reflection  by  supporting  a  process  of 
+guided choices. The process of MixedEmotions can be seen 
+as an example of embodied questions.  
+
+MixedEmotions  
+Every  day  is  a  mix  of  experiences  and  emotions,  but  at  night  we 
+need to let them go. MixedEmotions creates a night time ritual that 
+is relaxing and supports a good night sleep. Mixing a herbal mix 
+every  night,  stimulates  reflection  each  bottle  representing  an 
+emotion.  How  did  your  day  taste?  Which  bottle  empties  the 
+quickest? 
+
+Life Tree  
+A beautiful piece of art on the wall in your house, with a hidden 
+meaning. As the patterns represent patterns in your live visualizing 
+activity, social engagement, stress and health. The interactive art 
+piece allows to explore aspects of the data to find peaks, patterns 
+or surprises. At the same time it functions as a more peripheral 
+trigger for reflection without invading your privacy. 
+
+Figure 2. Concept that support exploration of system 
+generated data 
+
+PeelAway 
+Getting to the core of a problem can help us gain insight. On each 
+segment  of  PeelAway  an  aspect  or  thought  can  be  written  and 
+peeled  off,  stimulating  to  write  down  underalying  aspects  and 
+explore  underlying  thoughts  or  assumptions,  resulting  in  more 
+critical reflection.  
+
+Figure 3. Systems that take a supporting role  
+
+56
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+Very few of our concepts use explicit, verbalized questions, 
+in  contrast  to  some  of  the  dialogue  driven  reflection 
+systems  discussed  before  [11,  14].  In  stead,  we  see 
+opportunity  for  concepts  that  use  more  subtle  prompt  and 
+embodied  questions.  This  can  be  seen  in  the  concept 
+‘PeelAway’  (Figure  3c)  which  uses  the  embodiment  of 
+layers to dig deeper into underlying aspects of a thought or 
+problem. PeelAway supports reflection not only through an 
+embodied  question  but  also  through  physical  action.  The 
+action  of  peeling  away,  or  in  the  Fragile  Worries  (Figure 
+4a)  concept  breaking  figures  is  supportive  of  the  cognitive 
+an ungraspable process of reflection. 
+
+Finally,  the  most  subtle  form  of  support,  is  seen  in 
+providing environment support. After being initiated by the 
+user,  PastScape  (Figure  4b)  creates  en  environment  for 
+reflection by creating a metaphorical distance from current 
+activities to allow for reflection. After being initiated by the 
+user,  PastScape  creates  en  environment  for  reflection  by 
+creating  a  metaphorical  distance  from  current  activities  to 
+allow for reflection. ungraspable process of reflection.  
+
+our 
+
+Capturing Role 
+Rather  than  triggering  to  start  reflection,  systems  can 
+support  closing  the  process  of  reflection  by  supporting 
+externalization.  Capturing 
+through 
+externalization  has  two  important  benefits.  First  of  all, 
+externalizing  thoughts  can  help  to  bring  peace  of  mind,  a 
+focus  in  FragileWorries  (Figure  4a).  Secondly,  capturing 
+reflections  can  serve  as  content  triggers  in  the  future.  The 
+Trail Concept (Figure 4c), allows people to leave reflective 
+messages  in  specific  locations.  Similar  to  Echoes  [11]  a 
+collection of responses to earlier reflections could emerge. 
+
+reflections 
+
+the 
+
+Dimensions of a Design Space 
+In 
+introduction  we  presented  multiple  strategies: 
+expression, information or dialogue driven reflection. From 
+our  open  brainstorm  multiple  roles  emerged.  Some  roles 
+map  easily  to  certain  strategies,  see  Figure  6:  information 
+often  takes  a  triggering  role,  systems  supporting  capturing 
+can  rely  on  expression  driven  reflection  and  dialogue  is  a 
+strong  form  of  support.  However,  all  other  combinations 
+spark  useful  insight  as  well,  in  Figure  5  we  have  mapped 
+our  concepts  to  this  design  space,  this  shows  how  several 
+concepts change roles during the process: the visual aspects 
+of LifeTree provide content triggers, but the opportunity to 
+explore the layers of data behind this provide support. The 
+Balance  concept  shifts  through  all  roles:  the  physical  form 
+and  current  status  trigger  to  reflect,  the  interactivity  that 
+changes 
+from  multiple 
+perspectives and finally the recorded messages are captured 
+and  can  be  later  reviewed.  Mapping  our  concepts  to  these 
+dimensions,  also  lead  to  defining  a  fourth  dimension: 
+environment  driven  reflection  (see  Figure  6).  This  strategy 
+focuses  on  creating  contextual  elements  that  are  beneficial 
+for  reflection,  which  could  draw  on  notions  of  restorative 
+environments [1].  
+
+the  scale  support 
+
+reflecting 
+
+FragileWorries 
+A  set  of  abstract  ceramic  figures  in  which  can  be  written  upon. 
+Write  worries  down  and  break  them  to  let  go  or  show  how 
+vulnerable worries are. Shards can be saved as a reminder of past 
+struggles or disposed of to truly get rid of the past. 
+
+PastScape 
+Hear a soundscape from the past, connected to the location you are 
+in. Scroll through the decades,  was there a city here? Do you here 
+cars or horses? Provides opportunity to get away from the present, 
+get to a different place, see things in a different perspective 
+
+Trail  
+Reflection  often  requires  getting  away  from  everyday  life 
+activites, for instance with a small stroll. With Trail you can save 
+thoughts  or  reflection  on  specific  locations,  creating  your  own 
+garden of thought to which you can return for future deliberation. 
+Creating not only an environment, but personal messages to your 
+future self. 
+
+Figure 4: System that support capturing reflection (a, c) or 
+provide an environment for reflection (b, c)  
+
+57
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+approach.  We  have  build  upon  work  by  [3,  4,  8,  25]  to 
+provide  specific  dimensions  aiming  to  give  more  direct 
+suggestions for design. Although these dimensions might be 
+useful  for  any  type  of  reflection,  we  specifically  aim  at 
+everyday  life  reflection  focusing  on  insight  (rather  than 
+behavior change or skill-development). Based on our work 
+we discuss three other elements that are import specifically 
+for  this  type  of  reflection:  holistic  reflection,  openness  in 
+design and embedding in everyday life. 
+
+Holistic reflection 
+Most of our concepts do not focus on a specific behavior or 
+domain.  We  see  the  biggest  benefit  for  everyday  life 
+reflection  if  different  experiences,  life  aspects  or  domains 
+can  be  combined.  Systems  that  use  content-triggers  often 
+provide  focus,  but  therefor  also  limit  our  reflections.  The 
+OddOneOut  concept  uses  a  very  diverse  set  of  input,  by 
+reflecting  on  the  similarities  and  differences  between 
+media, more abstract insights can be generated.  
+
+Openness in Design 
+Because of the personal and holistic nature of everyday life 
+reflections,  designing  for  it  should  be  approached  with  a 
+high  degree  of  openness.  In  our  concept  openness  is  seen 
+for  instance  in  the  use  of  direction  or  opportunity  triggers. 
+We focus on designs that allow to be appropriated and that 
+allow for interpretation, making meaning through use [23]. 
+The game of OddOneOut for instance, has no specific goal 
+and its meaning or benefits can only be interpreted through 
+use.  The  Balance  concept  is  an  example  that  can  be  easily 
+appropriated  to  use  for  different  types  of  life  balances 
+(positive & negative, work & leisure).  
+
+Integrating Reflection in Everyday life  
+Reflection  requires  time,  structure  and  encouragement  [8]. 
+For systems to contribute to these elements, they need to be 
+integrated  in  everyday  life.  For  everyday  life  reflection  to 
+truly improve reflection it needs to become a habit adopted 
+over  a  long  period  of  time.  Integrating  systems  for 
+reflection  in  everyday  life  in  a  meaningful  way  is  very 
+challenging.  Echo  [11]  for  example  is  a  concept  strong  in 
+all roles of triggering, supporting and capturing, however it 
+is less integrated in everyday life. Echo triggers at random 
+moments, which leads to surprising entries, but can also be 
+very  disturbing.  There  are  many  moments  during  the  day 
+when  the  resources  for  reflection  (time,  mental  effort, 
+isolation)  are  not  available.  Allowing  for  better  integration 
+into everyday life can be done in several ways.   
+
+Everyday Life Rituals  
+Reflection requires time and attention and the skill to reflect 
+develops  over  time.  Concepts  such  as  Balance  recognize 
+this and aim to create a new ritual for daily reflection, with 
+a  fixed  location  and  timing,  for  instance  when  coming 
+home.  Other  concepts 
+in  current 
+everyday  life  rituals  (MirrorMirror),  reducing  the  effort 
+required  to  adopt  the  new  habit.  In  OddOneOut,  we  we 
+adopt  a  more  flexible  approach  and  aim  to  “lighten”  the 
+process of reflection by game elements.  
+
+integrate  reflection 
+
+Figure 5: Mapping conceptual reflection systems in emerging 
+design space 
+
+Defining  the  space  across  these  two  dimensions  has 
+contributed  to  our  design  process  and  understanding  in 
+several ways. First, we can use the space to analyze current 
+strategies  and  can  use  this  to  compare  concepts  in  a 
+structured  way.  Secondly,  it  allows  to  redesign  reflection 
+systems: for example a regular diary is based on capturing 
+expression  driven  reflection  (top  right  corner),  but  can  be 
+redesigned  to  include  dialogue  driven  triggers,  see  for 
+example  the  physical  diary  by  Mols  &  Markopoulos  [19], 
+the  redesign  is  indicated  in  Figure  6.  Thirdly,  the  two 
+dimensions illustrate opportunities within the design space. 
+The visual for instance triggered the question how we might 
+design  for  expression  driven  triggering.  This  lead  to  the 
+idea of a “ThoughtsCanvas”: an empty canvas that triggers 
+to express, but fades after a night sleep, leaving no trace. In 
+this  way,  the  entry  can  not  be  revisited  and  the  trigger 
+remains  open,  which  positions  the  concept  in  the  top  left 
+corner.  
+
+DISCUSSION  
+We  have  presented  this  design  space  as  inspiration  and 
+to  potential  future  work  on 
+guide,  giving  direction 
+supporting reflection with a more holistic and open  
+
+Figure 6: Design spaced used to define opportunities for 
+design, redesign and new strategies  
+
+58
+
+ 
+ 
+ 
+ 
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+Layers 
+Enabling  embedding  reflection  in  everyday  life  is  also 
+achieved  by  designing  for 
+the  different  ‘layers’  of 
+reflection. As described by Fleck, R., & Fitzpatrick [8] and 
+Kember  et  al.  [13]  reflection  on  the  deepest  layers  are  not 
+always  necessary.  In  stead,  concepts  can  support  multiple 
+laywers,  by  allowing  for  both  reflective  descriptions  or 
+comparison  (first  layers)  as  well  as  more  critical  or 
+transformative  reflection  on  a  deeper  layer  [8].  Such 
+designs will allow for short moments of interaction as well 
+as  for  more  time-consuming  and  deliberate  reflection  (for 
+critical  or  transformative  reflection).  E.g.  adding  a  note  to 
+the  Balance  concept  is  a  small  moment  of  insight,  but 
+reviewing  past  balances  and  their  potential  pattern  over 
+time  is  on  a  deeper  layer.  Although  interactive  systems 
+might be most suitable to stimulate more descriptive levels 
+of reflection [8], we can combine these layers with different 
+interaction styles to support more critical reflection.  
+
+Social Roles 
+In  our  design  space  we  focused  on  systems  that  take  the 
+role of a reflective partner, allowing users to engage with a 
+dialogue  with  themselves  [5].  However  we  could  also 
+imagine  systems  that  mediate  or  support  reflection  with  a 
+partner.  Although  not  explicitly  designed  for  this  purpose, 
+several  concept  can  stimulate  reflective  conversation 
+through  their  presence  in  the  home  environment.  The 
+abstract  representation  in  concepts  such  as  LifeTree  or 
+Balance allow for responses from close ones when meaning 
+is  shared.  E.g.  partners 
+together  can  start  a 
+conversation  if  they  see  much  has  been  added  to  the 
+Balance. One could even use such a system together rather 
+than  individually.  At  the  same  time,  Balance  takes  the 
+privacy  of  reflection  into  account,  for  people  not  informed 
+about  the  meaning,  it  remains  an  abstract  sculpture. 
+Including  intimate  others  in  the  process  of  reflection  can 
+support integrating reflection in everyday life.  
+
+living 
+
+Reflecting on the process 
+Concepts  were  generated  iteratively,  with  different  people 
+involved  in  different  phases.  Iterations  have  shaped  the 
+design space, as have our discussions and analysis. From a 
+critical  perspective  we  should  recognize  that  most  of  the 
+involved  researchers  have  been  …  in  a  reflection-driven 
+educational  system  and  therefor  all  have  quite  a  reflective 
+attitude. Therefore, similar to [3] our work is based on the 
+premises that people benefit from reflection and focused on 
+people willing to engage in reflection. We do not focus on a 
+persuasive  approach  but  rather  focus  on  empower  people 
+with  the  desire  to  reflect  more  often  but  who  can  use 
+support.  
+
+Although  we  have  strived  to  make  both  dimensions  of 
+strategies  and  roles  as  specific  as  possible,  they  still  on  a 
+conceptual  level.  The  see  the  design  space  “not  as  a 
+problem space, but as a complex situation in which we pose 
+interventions  [4],  which  can  help  us  to  better  understand 
+reflection  itself.  The  value  of  these  concepts  can  only 
+
+become clear in use, through a process of meaning making, 
+the  concepts  have  been  designed  to  allow  for  multiple 
+meanings. [23]. However this also means that, in use, they 
+might be used more pragmatically or functional rather than 
+reflective.  Only  long  term  evaluations  in  real  can  uncover 
+the reflective potential of these concepts.   
+
+CONCLUSION 
+Reflection  can  have  many  benefits  and  is  a  topic  of  great 
+interest  within  HCI  and  personal  informatics.  However, 
+most  current  work  is  focused  on  supporting  reflection  on 
+specific aspects. Instead, in this paper we have illustrated a 
+direction  focusing  on  everyday  life  reflection  with  more 
+holistic  and  open  approach.  We  presented  a  design  space 
+illustrated  with  several  concepts.  By  combining 
+the 
+supporting  roles  a  system  can  take  and  different  strategies 
+to drive reflection we hope to inspire future work everyday 
+life reflection.  
+
+ACKNOWLEDGMENTS 
+We  would  like  to  thank  our  colleagues  at  the  UCE  group 
+(TU/e)  and  the  MM  team  for  their  participation  in  the 
+brainstorms  and  discussions  presented  in  this  paper.  This 
+research  was  supported  by  STW  VIDI  grant  number 
+for 
+016.128.303  of  The  Netherlands  Organization 
+ScienticResearch (NWO), awarded to Elise van den Hoven. 
+All images modified by first authors, the following images 
+are  used  under  CC0  license:  Figures  1a,  1b,  3a,  3b,  4a,  4b 
+and 4c. 
+
+REFERENCES 
+1.  Ryan Aipperspach, Ben Hooker, and Allison 
+
+Woodruff. 2011. Data Souvenirs: Environmental 
+psychology and reflective design. International 
+Journal of Human-Computer Studies 69, 5: 338-349. 
+
+2.  Paul André, M.C. Schraefel, Alan Dix, and Ryen W.  
+White. 2011. Expressing well-being online: towards 
+self-reflection and social awareness. In Proceedings of 
+the 2011 iConference, 114-121 
+http://dx.doi.org/10.1145/1940761.1940777 
+
+3.  Eric P.S. Baumer, Vera Khovanskaya, Mark Matthews, 
+
+Lindsay Reynolds, Victoria Schwanda Sosik and Geri 
+Gay. 2014. Reviewing reflection: On the use of 
+reflection in interactive system design. In Proceedings 
+of the 2014 conference on Designing interactive 
+systems (DIS’14) 93-102. 
+http://dx.doi.org/10.1145/2598510.2598598 
+
+4.  Eris P.S. Baumer. 2015. Reflective Informatics: 
+
+Conceptual Dimensions for Designing Technologies of 
+Reflection. In Proceedings of the 33rd Annual ACM 
+Conference on Human Factors in Computing Systems 
+(CHI’15) 585-594 
+http://dx.doi.org/10.1145/2598510.2598598 
+
+5.  Travis J. Brown. 2009. Self informatics: considerations 
+
+for designing technology which supports user 
+reflection. Published as part of CHI’09 workshop 
+Designing for reflection on experience 
+
+59
+
+ 
+ 
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+6.  Kate Collie, Joan L. Bottorff, and Bonita C. Long. 
+
+2006. A narrative view of art therapy and art making 
+by women with breast cancer. Journal of Health 
+Psychology 11, 5: 761-775. 
+
+7.  Sunny Consolvo, Katherine Everitt, Ian Smith and 
+
+James A. Landay. 2006. Design requirements for 
+technologies that encourage physical activity. 
+In Proceedings of the SIGCHI conference on Human 
+Factors in computing systems (CHI’06) 457-466. 
+http://dx.doi.org/10.1145/1124772.1124840 
+
+8.  Rowanne Fleck and Gerladine Fitzpatrick. 2010. 
+
+Reflecting on reflection: framing a design landscape. In 
+Proc. Of the 22nd Conference of the Computer-Human 
+Interaction Special Interest Group of Australia on 
+Computer-Human Interaction (OZCHI’10) 216-223 
+http://dx.doi.org/10.1145/1952222.1952269 
+
+Factors in Computing Systems (CHI’10) 557-566. 
+http://dx.doi.org/10.1145/1753326.1753409 
+
+16.  Sian E. Lindley, Maxine Glancy, Richard Harper, Dave  
+Randall and Nicola Smyth. 2011. “Oh and how things 
+just don't change, the more things stay the same”: 
+Reflections on SenseCam images 18 months after 
+capture. International Journal of Human-Computer 
+Studies, 69, 5: 311-323. 
+http://dx.doi.org/10.1016/j.ijhcs.2010.12.010 
+
+17.  Phillip Mendels, Joep Frens and Kees Overbeeke. 
+
+2011. Freed: a system for creating multiple views of a 
+digital collection during the design process. In 
+Proceedings of the SIGCHI Conference on Human 
+Factors in Computing Systems (CHI’11) 1481-1490. 
+http://dx.doi.org/10.1145/1978942.1979160 
+
+18.  Jack Mezirow. 1991. Transformative dimensions of 
+
+9.  Bill Gaver and Heather Martin. 2000 Alternatives: 
+
+adult learning. Jossey-Bass, San Francisco 
+
+exploring information appliances through conceptual 
+design proposals. In Proceedings of the SIGCHI 
+conference on Human Factors in Computing Systems 
+(CHI’00) 209-216 
+http://dx.doi.org/10.1145/332040.332433 
+
+10.  William Gaver, John Bowers, Andy Boucher, Andy 
+
+Law, Sarah Pennington, and Nicholas Villar. 2006. The 
+history tablecloth: illuminating domestic activity. 
+In Proceedings of the 6th conference on Designing 
+Interactive Systems (DIS’06) 199-208 
+http://dx.doi.org/10.1145/1142405.1142437 
+
+11.  Ellen Isaacs, Artie Konrad, Alan Walendowski, 
+
+Thomas Lennig, Victoria Hollis and Steve Whittaker. 
+2013. Echoes from the past: how technology mediated 
+reflection improves well-being. In Proceedings of the 
+SIGCHI Conference on Human Factors in Computing 
+Systems (CHI’13) 1071-1080 
+http://dx.doi.org/10.1145/2470654.2466137 
+
+12.  Vaiva Kalnikaitė and Steve Whittaker. 2011. A saunter 
+down memory lane: Digital reflection on personal 
+mementos. International Journal of Human-Computer 
+Studies, 69, 5: 298-310 
+http://dx.doi.org/10.1016/j.ijhcs.2010.12.004 
+
+13.  David Kember, Doris Y. P. Leung, Alice Jones, Alice 
+Yuen Loke, Jan McKay, Kit Sinclair, Harrison Tse, 
+Celia Webb, Frances Kam Yuet Wong, Marian Wong 
+and Ella Yeung. 2000. Development of a questionnaire 
+to measure the level of reflective thinking. Assessment 
+& evaluation in higher education, 25, 4: 381-395. 
+http://dx.doi.org/10.1080/713611442 
+
+14.  Brian M. Landry. 2009 Designing for Personal 
+
+Reflection: The Role of Reflection in Photo-Based 
+Communication Published as part of CHI’09 workshop 
+Designing for reflection on experience 
+
+15.  Ian Li, Anind Dey and Jodi Forlizzi. 2010. A stage-
+based model of personal informatics systems. In 
+Procedings of the SIGCHI Conference on Human 
+
+19.  Ine Mols and Panos Markopoulos. 2012. Dear Diary: A 
+Design Exploration on Motivating Reflective Diary 
+Writing. Persuasive Technology, 29. 
+
+20.  Lily Orland-Barak. 2005. Portfolios as evidence of 
+
+reflective practice: What remains ‘untold’. Educational 
+research. 47, 1: 25-44. 
+http://dx.doi.org/10.1080/0013188042000337541  
+
+21.  Donald A. Schön. 1983. The Reflective Practitioner: 
+
+How Professionals Think in Action. New York: Basic 
+Books 
+
+22.  Phoebe Sengers, Kirsten Boehner, Shay David and 
+
+Joseph ‘Jofish’ Kaye. 2005. Reflective design. In 
+Proceedings of the 4th decennial conference on 
+Critical computing: between sense and sensibility. 49-
+58. 
+http://dx.doi.org/10.1145/1094562.1094569 
+
+23.  Phoebe Sengers and Bill Gaver. 2006. Staying open to 
+
+interpretation: engaging multiple meanings in design 
+and evaluation. In Proceedings of the 6th conference 
+on Designing Interactive systems (DIS’06) 99-108 
+http://dx.doi.org/10.1145/1142405.1142422 
+
+24.  Ursula M. Staudinger. 2001. Life reflection: A social–
+
+cognitive analysis of life review. Review of General 
+Psychology, 5, 2: 148-160. 
+http://psycnet.apa.org/doi/10.1037/1089-2680.5.2.148 
+
+25.  Josephine Tchetagni, Roger Nkambou and Jacqueline  
+Bourdeau. 2007. Explicit reflection in prolog-tutor. 
+International Journal of Artificial Intelligence in 
+Education (IJAIED). 17: 169-215. 
+
+26.  Anja Thieme, Jayne Wallace, James Thomas, Ko Le 
+Chen, Nicole Krämer and Patrick Olivier. 2011. 
+Lovers' box: Designing for reflection within romantic 
+relationships. International Journal of Human-
+Computer Studies. 69, 5: 283-297. 
+http://dx.doi.org/10.1016/j.ijhcs.2010.12.006 
+
+60
+
+ 
+ 
+Share, Show And Tell
+
+TEI 2016, February 14-17, 2016, Eindhoven, the Netherlands
+
+27.  Cheryl Travers. 2011. Unveiling a reflective diary 
+
+methodology for exploring the lived experiences of 
+stress and coping. Journal of Vocational Behavior. 79, 
+1: 204-216. 
+
+28.  Nina Valkanova, Sergi Jorda, Martin Tomitsch and 
+
+Andrew Vande Moere. 2013. Reveal-it!: the impact of 
+a social visualization projection on public awareness 
+and discourse. In Proceedings of the SIGCHI 
+
+Conference on Human Factors in Computing 
+Systems (CHI’13) 3461-3470 
+http://dx.doi.org/10.1145/2470654.2466476 
+
+29.  Jeannie Wright and Man Chung. 2001. Mastery or 
+mystery? Therapeutic writing: A review of the 
+literature. British Journal of Guidance and 
+Counselling. 29, 3: 277-291
+
+61
+
+ 
+ 
+ 
+

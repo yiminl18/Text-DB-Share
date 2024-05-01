@@ -1,0 +1,1399 @@
+Understanding My Data, Myself:  
+Supporting Self-Reflection with Ubicomp Technologies 
+Ian Li1, Anind K. Dey1, Jodi Forlizzi1,2 
+1Human Computer Interaction Institute, 2School of Design 
+Carnegie Mellon University, Pittsburgh, PA 15213 
+ianli@cmu.edu, {anind, forlizzi}@cs.cmu.edu 
+
+ABSTRACT 
+We live in a world where many kinds of data about us can 
+be  collected  and  more  will  be  collected  as  Ubicomp 
+technologies  mature.  People  reflect  on  this  data  using 
+different  tools  for  personal  informatics.  However,  current 
+tools  do  not  have  sufficient  understanding  of  users’  self-
+reflection  needs 
+leverage  Ubicomp 
+to  appropriately 
+technologies.  To  design  tools  that  effectively  assist  self-
+reflection,  we  need  to  comprehensively  understand  what 
+kinds  of  questions  people  have  about  their  data,  why  they 
+ask  these  questions,  how  they  answer  them  with  current 
+tools,  and  what  kinds  of  problems  they  encounter.  To 
+explore this, we conducted interviews with people who use 
+various  kinds  of  tools  for  personal  informatics.  We  found 
+six  kinds  of  questions  that  people  asked  about  their  data. 
+We  also  found  that  certain  kinds  of  questions  are  more 
+important  at  certain  times,  which  we  call  phases.  We 
+reflection:  Discovery  and 
+identified 
+Maintenance.  We  discuss  the  kinds  of  questions  and  the 
+phases  in  detail  and  identify  features  that  should  be 
+supported in personal informatics tools for which Ubicomp 
+technologies can play an important role. 
+
+two  phases  of 
+
+Author Keywords 
+Personal  informatics,  reflection,  phases,  discovery,  design 
+features, visualizations 
+
+ACM Classification Keywords 
+H5.m.  Information  interfaces  and  presentation  (e.g.,  HCI): 
+Miscellaneous. 
+
+General Terms 
+Design, Human Factors 
+
+INTRODUCTION 
+The abundance of computers, mobile devices, sensors, and 
+access to information via the Internet enables the recording 
+of  a  myriad  of  personal  data  (e.g.,  physiological  data, 
+behaviors,  habits,  and  thoughts).  All  of  this  data  can  be 
+used  for  self-reflection  to  help  people  become  more  aware 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. To copy otherwise, 
+or  republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+specific permission and/or a fee. 
+UbiComp’11, September 17–21, 2011, Beijing, China. 
+Copyright 2011 ACM  978-1-4503-0630-0/11/09...$10.00. 
+
+of  their  own  behavior  [5],  make  better  decisions  [8],  and 
+change behavior in domains ranging from health to energy 
+conservation  [7,28].  More  tools  are  being  developed  that 
+people  use  for  personal  informatics,  which  help  people 
+collect  and  reflect  on  personally  relevant  data  for  the 
+purpose of self-knowledge [17]. Many Ubicomp tools have 
+been  created  for  personal  informatics,  such  as  Fish'n'Steps 
+[18], Ubigreen [10], and mobile apps for diabetes [24]. 
+
+However, we believe current tools for personal informatics 
+were  not  designed  with  sufficient  understanding  of  users’ 
+self-reflection  needs.  For  example,  a  tool  might  show  the 
+user’s  current  step  counts,  but  the  user  might  prefer  a 
+historical view of her average step counts to inform her how 
+to  increase  her  steps.  To  appropriately  design  these  tools, 
+we  need  a  comprehensive  understanding  of  what  kinds  of 
+questions people want to answer about their data, why they 
+ask  these  questions,  how  they  answer  them  with  current 
+tools, and what kinds of problems they encounter. By doing 
+so,  developers  and  designers  can  better  take  advantage  of 
+Ubicomp technologies to help users self-reflect. 
+
+To explore these issues, we conducted a study in which we 
+interviewed people who used tools for personal informatics. 
+We identified six kinds of questions that people asked about 
+their  data:  Status,  History,  Goals,  Discrepancies,  Context, 
+and  Factors.  We  discuss  the  tools  that  people  used  to 
+answer these kinds of questions and the problems that they 
+encountered. We also discovered that people’s information 
+needs  change,  which  we  called  phases  of  reflection: 
+Discovery  and M aintenance.  These  phases  differ  by  how 
+frequently people asked the different kinds of questions. An 
+important  aspect  of  the  phases  is  that  people  transitioned 
+between  them.  People  transitioned  from  Maintenance  to 
+Discovery  when  they  were  unable  to  reach  their  goals  or 
+when  they  had  to  redefine  their  goals  because  they 
+experienced  a  new  set  of  problems.  On  the  other  hand, 
+people  transitioned  from  Discovery  to  Maintenance  when 
+they had identified their goal and had learned the steps they 
+needed to take to achieve their goal. 
+
+The importance of this work to Ubicomp is threefold. First, 
+this  work  describes  the  kinds  of  questions  that  people  ask 
+about  their  data,  which  suggests  how  data  should  be 
+presented  to  inform  users  of  proper  actions  towards 
+behavior  change.  Second,  this  work  identifies  features  that 
+Ubicomp  tools  should  have,  so  that  users  can  get  the 
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China405 
+ 
+ 
+information  they  need  to  make  better  decisions  towards 
+behavior change. Lastly, this work describes how Ubicomp 
+technologies can appropriately support people to answer the 
+questions  they  ask  within  the  phases  and  help  them 
+transition  between  the  phases.  This  work  shows  that 
+Ubicomp technologies can play an important role in helping 
+people  become  more  self-aware,  which  is  valuable  in 
+making good decisions and changing behavior. 
+
+This  paper  is  organized  in  the  following  manner.  First,  we 
+discuss what we mean by personal informatics and discuss 
+related  work  in  personal  informatics.  Second,  we  describe 
+our  interviews,  which  explore  what  questions  people  ask 
+about their data and how they answer these questions with 
+current  tools.  We  then  discuss  our  findings:  the  six  main 
+questions people asked about their data and the two phases 
+of  reflection  that  they  transitioned  between.  We  present  a 
+list  of  features  that  Ubicomp  tools  should  support  to  help 
+users with reflection, and discuss their implications. 
+
+Defining Personal Informatics 
+We extend the definition of personal informatics [17] from 
+a  class  of  tools  to  an  activity  where  people  collect  and 
+reflect  on  personal  data  to  gain  a  better  understanding  of 
+their own behavior. People can and will use almost any tool 
+for  personal  informatics.  Tools  can  vary  by  form  factor 
+(paper,  web  sites,  devices,  etc.)  and  level  of  support 
+(manual  vs.  automated).  However,  the  limitations  of  tools 
+the  activity  of  personal 
+that  people  use  can  make 
+[17]. 
+informatics 
+Therefore,  Ubicomp  technologies  have  an  opportunity  to 
+assist the people in their personal informatics activity. 
+
+time-consuming 
+
+cumbersome 
+
+and 
+
+Data  for  personal  informatics  include  data  about  behavior 
+(e.g.,  frequency  of  exercise)  and  physiology  (e.g.,  heart 
+rate). They may include current and historical data and may 
+be  quantitative  or  qualitative  (e.g.,  step  counts  vs.  moods). 
+In  addition  to  personal  information,  external  data  can  be 
+used when it is personally relevant, e.g., weather data might 
+be  personally  relevant  if  the  user  is  interested  in  knowing 
+how the weather affects her physical activity. 
+
+As we will discuss later, our exploration found that people 
+collected personal data for other reasons other than personal 
+informatics, such as reminiscing about the past [21], aiding 
+memory  [14],  and  personal  information  management  [16]. 
+In this paper, we focus on collection of personal data for the 
+purpose  of  gaining  insights  and  understanding  oneself. 
+There  is  much  research  that  shows  that  reflection  plays  an 
+important role in changing behaviors [see 7 for a review]. 
+
+RELATED WORK 
+This  work  builds  on  top  of  other  research  that  has  looked 
+into investigating appropriate feedback for users. This paper 
+focuses on supporting users' reflection needs, which is one 
+of  the  stages  of  the  model  of  personal  informatics  systems 
+[17]:  Preparation,  Collection,  Integration,  Reflection,  and 
+Action.  The  model  describes  the  different  types  of  support 
+that tools must provide to assist users through their personal 
+informatics  activity.  The  model  also  highlights  that  the 
+
+stages  are  inter-related,  i.e.,  problems  from  the  earlier 
+stages affect the later stages. This implies that the person's 
+ability to reflect on her data and the value of the reflection 
+are  affected  by  how  and  what  data  she  collects.  Thus,  the 
+support 
+in 
+improving how data is collected and in increasing the types 
+of data that can be collected can help with self-reflection. 
+
+technologies  can  provide 
+
+that  Ubicomp 
+
+Related  to  the  PI  model  is  the  Transtheoretical  Model  of 
+Behavior  Change  (TTM)  [25],  which  also  consists  of  five 
+stages:  Precontemplation,  Contemplation,  Preparation, 
+Action,  and  Maintenance.  Unlike  the  PI  model,  which 
+describes  the  different  types  of  support  needed  to  assist 
+personal informatics activities, the TTM describes people’s 
+different 
+to  change 
+levels  of  motivation  and  ability 
+behavior. The TTM is used to classify people’s readiness to 
+change behavior, which is useful for tailoring interventions, 
+such  as,  designing  feedback  to  encourage  environmentally 
+friendly  behavior  [13].  Others  have  also  explored  other 
+behavioral  theories.  Consolvo  and  colleagues  used  various 
+psychological theories to describe eight design strategies to 
+support  behavior  change  [6].  Froehlich  and  colleagues 
+described  different  ways  of  designing  eco-feedback 
+technologies [10]. While these models suggest the need for 
+Ubicomp technologies, they do not define how tools should 
+be designed based on people’s changing information needs 
+when engaging in personal informatics activities. 
+
+There  is  plenty  of  research  on  effective  information 
+visualization  techniques  to  explore  data  for  insights  [see  4 
+for  an  extensive  review],  but  they  are  not  all  focused  on 
+personal  data.    Some  projects  have  applied  exploration 
+techniques on personal data. For example, Frost and Smith 
+used  visualizations  to  help  diabetic  patients  explore  the 
+relationship between their blood glucose level and the types 
+of food they consumed [11]. Commercial products, such as 
+Mint (expenditures), Nike+ (physical activity), and Wattson 
+(electricity), use information visualizations to assist users in 
+trends.  Some 
+exploring 
+information  visualizations,  such  as  ambient  displays  [22], 
+glanceable  displays  [19],  and  information  art  [20],  are  less 
+focused  on  exploration  of  historical  information.  Instead, 
+they increase awareness of one’s current status (e.g., you’ve 
+got  mail,  your  stock  portfolio  is  currently  up,  your  bus  is 
+arriving)  while  minimizing  cognitive  load.  This  work 
+explores how people use these existing tools to answer their 
+they 
+questions  about 
+encounter. We use this exploration to define users’ specific 
+information  needs  and 
+to  describe  how  Ubicomp 
+technologies can provide support. 
+
+themselves  and  what  problems 
+
+their  data  for  patterns  and 
+
+In  the  next  section,  we  describe  our  interviews  of  people 
+who  used  tools  for  personal  informatics.  We  analyzed  the 
+responses  for  the  kinds  of  questions  they  asked  and  how 
+they used existing tools to answer them. 
+
+INTERVIEWS 
+The goal of the interviews was to study how people explore 
+and reflect on the data they collect for personal informatics. 
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China406 
+We  conducted  interviews  with  people  who  were  already 
+self-tracking  and  reflecting  on  collected  data.  This  helped 
+us see behavior in a natural setting where people’s routines 
+around  tracking  and  reflecting  were  focused  on  their  own 
+needs,  rather  than  forcing  people  to  use  a  system  we 
+designed.  In  the  following  sections,  we  describe  how  we 
+recruited participants and conducted the interviews. 
+
+Recruitment 
+We  advertised  the  study  on  Craigslist,  the  Quantified  Self 
+blog,  and  a  campus  recruiting  web  site.  The  recruitment 
+letter  stated  that  we  were  looking  for  users  of  self-
+tracking/personal  informatics  tools,  such  as  Mint,  Nike+, 
+MoodJam,  etc.  People  interested  in  the  study  completed  a 
+pre-questionnaire that asked what type of data they collect, 
+for  how  long,  and  contact  information.  They  had  to  be 
+currently  using  a  tool  for  personal  informatics  and  must 
+have  used  it  for  a  month  or  more.  We  recruited  a  diverse 
+group of people from around the nation and our city. Given 
+that  we  were  only  going  to  be  able  to  talk  to  a  limited 
+number  of  people,  the  pre-questionnaire  helped  us  ensure 
+that we recruited a set of participants using a range of tools 
+for a range of types of data. 
+
+91  people  responded  to  the  pre-questionnaire  (local:  76, 
+remote:  15).  We  selected  15  people  (P1-P15)  from  all  the 
+respondents  to  participate  in  the  study.  Ten  lived  locally 
+within the city limits and five lived remotely. A third were 
+male (5 vs. 10 females). The age ranges and their respective 
+counts  were  20-25  (6),  25-30  (4),  30-35  (1),  and  over  50 
+(4).  Additionally,  half  were  professionals  (8)  and  the  rest 
+were students (graduate: 4, undergraduate: 3). 
+
+Procedure 
+We  invited  participants  for  a  one-hour  interview  in  either 
+our  lab  or  over  Skype,  depending  on  whether  they  lived 
+locally  or  remotely.  Local  participants  were  required  to 
+bring  the  tools  they  used  for  personal  informatics  (e.g., 
+laptop,  devices,  notebooks)  to  the  interview.  Remote 
+participants  used  Skype's  Screen  Sharing  and  Video 
+features to show us the tools they used. 
+
+the 
+
+interview,  we 
+
+the  beginning  of 
+
+their  general  personal 
+
+At 
+introduced 
+participants  to  the  study.  Participants  signed  the  study 
+consent  form  and  completed  an  online  survey  that  asked 
+informatics  usage.  The 
+about 
+questionnaire 
+the  survey 
+is  a  condensed  version  of 
+described  in  [17].  We  sat  with  the  participants  in  front  of 
+their  laptop  or  mobile  phone  and  asked  them  to  describe 
+their  general  usage.  We  observed  participants  as  they  used 
+their tools. We asked them how they reflected on their data 
+and  to  show  us  how  they  reviewed  their  data:  What  were 
+they  looking  for?  What  questions  did  they  have?  Why  did 
+they  ask  these  questions?  How  did  they  answer  their 
+questions  using  their  tools?  What  problems  did  they 
+experience while trying to answer their questions? 
+
+Participants  were  compensated  $10  (in  cash  or  as  Amazon 
+gift  certificates)  for  the  one  hour  they  spent  with  us.  The 
+interviews were videotaped. 
+
+RESULTS 
+We  transcribed  the  interview  recordings.  We  analyzed  the 
+interviews by coding the responses line by line. We did not 
+have  a  pre-determined  coding  scheme  before  the  analysis. 
+Instead, we identified themes from the data as we processed 
+the  responses.  The  themes  emerged  after  we  organized  the 
+codes  using  affinity  diagrams.  During  the  analysis,  we 
+focused on the reasons people reflected on their data, what 
+questions people were trying to answer when reflecting on 
+their  data,  how  the  tools  they  used  supported  or  prevented 
+finding  answers  to  their  questions),  and  what  design 
+features  in  the  tools  they  used  supported  their  personal 
+informatics activity. 
+
+they  collected.  The  primary  data 
+
+Participant Information 
+To  help  focus  our  interviews,  we  asked  participants  to 
+describe  the  primary  data  about  themselves  that  they 
+collected  [Table  1].  The  participants  varied  in  the  types  of 
+information 
+that 
+participants collected were: financial expenditures (3), sleep 
+(3),  weight  (2),  blood  glucose  level  (2),  exercise  (1), 
+productivity  (1),  web  history  (1),  books  read  (1),  and  life 
+events  (1).  Half  of  the  participants  collected  one  or  more 
+types  of  data.  For  example,  P7,  who  collected  the  widest 
+variety of data, used Daytum and your.flowingdata to track 
+television  shows  and  movies  that  she  watched,  restaurants 
+she dined at, and places she visited. She recorded her eating 
+habits with DailyBurn. Because of periods of insomnia, she 
+used Fitbit to record her sleep patterns and physical activity 
+levels. She also complemented her sleep tracking by taking 
+notes about the quality of her sleep in YawnLog. There was 
+also  a  diversity  of  experiences  in  self-tracking.  Four 
+participants  had  been  self-tracking  for  a  month  or  two; 
+seven participants, for a year or two; and three participants, 
+for  more  than  three  years.  P3,  who  has  diabetes,  had  been 
+tracking  her  blood  glucose  level  for  15  years.  For  several 
+years,  she  used  a  fingerstick  blood  glucose  meter  that 
+required  piercing  the  skin  to  draw  blood  3  to  10  times  a 
+day.  In  the  past  year,  she  started  using  a  Dexcom  device, 
+which  has  a  sensor 
+the  body  and 
+continuously takes blood glucose readings very 5 minutes. 
+
+that  adheres 
+
+to 
+
+ID 
+P1 
+P2 
+P3 
+P4 
+P5 
+P6 
+P7 
+P8 
+P9 
+P10 
+P11 
+P12 
+P13 
+P14 
+P15 
+
+Primary Data 
+expenses 
+weight 
+blood glucose 
+exercise 
+expenses 
+blood glucose 
+sleep 
+sleep 
+sleep 
+life events 
+weight 
+expenses 
+productivity 
+web history 
+books 
+
+Multiple Types?  Reason 
+No 
+Yes 
+Was 
+Was 
+Yes 
+Was 
+Was 
+Yes 
+Yes 
+No 
+Was 
+No 
+No 
+No 
+No 
+
+Behavior Change 
+Behavior Change 
+Behavior Change 
+Behavior Change 
+Behavior Change 
+Behavior Change 
+Behavior Change 
+Behavior Change 
+Behavior Change 
+Reminiscence 
+Behavior Change 
+Coordination 
+Behavior Change 
+Retrieval 
+Sharing 
+
+Table 1. The participants, their primary data, whether they 
+collected multiple types of data, and their reasons for collection.  
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China407Reasons 
+Participants  cited  different  reasons  for  collecting  personal 
+data. Many participants (11 out of 15) self-tracked to reflect 
+on  the  data,  because  they  wanted  to  change  or  maintain  a 
+behavior. For example, P1 used Mint to maintain a budget 
+after  moving  to  a  new  city.  P8  tracked  her  sleep  patterns 
+and various factors that might affect the quality of her sleep 
+using  the  Sleeptracker  watch  and  laptop  application.  Four 
+participants collected data for other uses. P14 collected his 
+web  history  with  Google  Web  History  for  later  retrieval. 
+P15 collected book information in GoodReads to share with 
+other  people.  P12  recorded  his  grocery  and  utility 
+expenditures  in  Buxfer  to  easily  coordinate  expenses  with 
+his  roommates.  P10  wrote  about  life  events  in  online 
+journals 
+four 
+participants'  usage  of  personal  informatics  tools  is  more 
+closely  in  line  with  other  types  of  applications  (in  order): 
+personal 
+information  management,  social  networking, 
+coordination,  and  reminiscence.  In  the  following  section, 
+we focus our discussion on the 11 participants who wanted 
+to  change  or  maintain  their  behavior,  because  personal 
+informatics  tools  are  useful  when  they  help  people  gain 
+self-knowledge  that  improves  decision-making  and  assists 
+in behavior change.  
+
+to  better  remember  her  past.  These 
+
+QUESTIONS 
+In  this  section,  we  discuss  the  6  kinds  of  questions  that 
+people  asked  about  their  personal  information:  Status, 
+History,  Goals,  Discrepancies,  Context,  and  Factors.  We 
+describe  in  detail  what  participants  were  looking  for  and 
+how they answered their questions. 
+
+Status 
+People  were  interested  in  data  that  revealed  their  current 
+status.  For  example,  P7  checked  her  Fitbit  device  several 
+times a day to determine her current physical activity level. 
+Checking one’s status doesn’t have to happen several times 
+a  day;  P5  checked  her  finances  using  Mint  and  her  bank 
+web site at the end of each day. 
+
+People  also  checked  their  current  status  to  determine 
+whether  they  were  meeting  their  goal  and  whether  they 
+should  act  to  correct  their  behavior.  For  example,  P7 
+checked  her  step  count  to  determine  whether  she  took 
+enough  steps  for  the  day.  If  not,  she  would  go  out  for  a 
+walk.  P5  checked  her  finances  to  make  sure  that  she  is 
+staying  within  her  daily  budget.  If  not,  she  tried  to  spend 
+less the subsequent days. 
+
+How often people checked their status is dependent on what 
+kind of data they were tracking and how they were tracking 
+it.  For  example,  P3  and  P6  have  diabetes,  and  used  blood 
+glucose  meters  to  measure  their  current  blood  sugar  level. 
+P3 wore a Dexcom continuous blood glucose meter, which 
+measured  her  blood  glucose 
+level  every  5  minutes. 
+However,  P6  used  a  fingerstick  device,  so  he  could  only 
+check 3 to 6 times a day. 
+
+For some kinds of data, participants did not use a device to 
+measure  their  current  status;  instead,  they  used  their  own 
+
+senses.  For  example,  P9  who  was  interested  in  her  sleep 
+quality  recorded  the  quality  of  her  sleep  and  whether  leg 
+cramps  occurred.  P8  used  the  SleepTracker  watch  to 
+measure  her  sleep,  but  she  used  her  senses  to  record 
+information related to sleep, such as mood and stress. 
+
+History 
+Beyond  looking  at  one’s  current  status,  participants  were 
+also  interested  in  seeing  their  data  over  the  long  term. 
+Instead  of  looking  at  one  piece  of  data  or  a  short  time’s 
+worth of data (an hour to a day), people wanted to see their 
+data  over  a  long  range  to  find  trends  and  patterns.  Trends 
+(whether  the  data  is  going  up,  going  down,  or  remaining 
+steady) are especially important to figure out whether they 
+are making progress towards a particular goal. For example, 
+P4  looked  for  trends  in  her  physical  activity  data  to  make 
+sure  that  she  was  maintaining  her  goal  of  regular  physical 
+activity over a long period of time. P5 also looked at trends 
+to  make  sure 
+that  she  was  reducing  her  monthly 
+expenditures to save for a trip abroad. 
+
+People  experienced  different  kinds  of  problems 
+in 
+understanding their history. One problem is that the ability 
+to  see  trends  and  patterns  largely  depends  on  having 
+collected data over a long period of time. Thus, the person 
+has  to  first  put  in  the  effort  of  collecting  data  before  the 
+value of the data becomes evident. For example, P5 started 
+using  Mint  when  her  mom  introduced  her  to  the  site.  She 
+could  not  make  any  significant  conclusions  regarding  her 
+spending  trends  because  she  had  only  been  collecting  data 
+for a month prior to the interview. Another problem is that 
+tools  do  not  provide  adequate  support  to  allow  reflection 
+over  the  long  term.    P8  experienced  this  problem  with  the 
+SleepTracker  watch,  which  she  had  been  using  for  several 
+months.  The  watch  had  a  desktop  interface  to  review  her 
+past  history.  However,  the  software  just  listed  her  sleep 
+quantity  on  a  spreadsheet-like  interface,  which  made  it 
+difficult  to  see  trends.  She  said  a  simple  bar  graph  would 
+have been helpful.  
+
+A  related  question  is:  how  does  data  from  one  time  range 
+compare  with  another?  Viewing  one's  data  over  a  long 
+period  of  time  allows  the  person  to  answer  this  question. 
+For  example,  P1  compared  her  spending  between  two 
+different  months.  She  was  particularly  interested  in  seeing 
+how her recent move affected her spending. 
+
+Goal 
+In addition to wanting to know their status and their history, 
+people  also  wanted  to  figure  out  what  goals  would  be 
+appropriate  to  pursue.  Sometimes,  people  started  self-
+tracking  without  knowing  their  goal  and  they  used  self-
+tracking  as  way  to  1)  determine  what  actions  they  should 
+take  to  fix  a  problem  or  2)  establish  a  “baseline”  of  their 
+activities to determine whether they have a problem.  
+
+Before  we  go  into  detail  about  this  question,  we  need  to 
+define what kind of goals we are talking about, because the 
+distinction  between 
+is 
+important.  Powers  [23]  described  goals  as  a  hierarchical 
+
+the  different  kinds  of  goals 
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China408 
+structure  ranging  from  abstract  to  more  specific.  The  four 
+levels  are  system  concept,  principle,  program,  and 
+sequence. The system-concept goal refers to the sense of an 
+idealized  self,  an  idealized  relationship,  or  an  idealized 
+society,  and,  as  such,  is  very  abstract.  The  next  level  of 
+goals is the principle level, which refers to the set of goals 
+(or guiding principles) that one tries to achieve to reach an 
+ideal.  Some  examples  of  principle-level  goals  are:  be 
+physically  fit,  be  thrifty,  and  be  productive.  This  level  is 
+still quite abstract; a person does not just become physically 
+fit or thrifty or productive, one has to exhibit such qualities 
+by  doing  specific  activities  or  programs  [26].  Some 
+example of program-level goals are: 1) running three times 
+a week to become physically fit; 2) spending money within 
+a  budget  to  become  thrifty;  and  3)  minimizing  the  amount 
+of  time  spent  browsing  social  media  websites  to  become 
+productive. To perform a program-level goal, a person does 
+sequences  of  specific  actions.  For  example,  the  sequence-
+level  goals  to  complete  the  goal  of  running  three  times  a 
+week  may  consist  of  putting  on  shoes,  going  outside, 
+running a specified route, etc. 
+
+In  the  rest  of  this  paper,  we  are  talking  about  “program-
+level goals” when we refer to “goals”. Program-level goals 
+are  more  specific  than  principle-  or  system-concept  level 
+goals, so they are more actionable or more ready to be acted 
+upon.  We  found  that  people  use  personal  informatics  tools 
+to  help  them  set  and  complete  program-level  goals.  For 
+example,  P4  used  SparkPeople  because  she  wanted  to 
+become physically fit (principle-level goal), but the value of 
+the 
+in 
+accomplishing her program-level goals: running three times 
+per week and eating within a specified amount of calories. 
+
+track  her  progress 
+
+in  helping  her 
+
+tool  was 
+
+Knowing one’s goals had an effect on the number of kinds 
+of  data  the  participants  collected.  For  example,  P9  had 
+problems sleeping because of her leg cramps. She wanted to 
+address  the  problem  to  improve  her  sleep  (principle-level 
+goal),  but  she  did  not  know  what  caused  her  leg  cramps. 
+She tracked what she ate and her physical activity to see if 
+these  were  causing  the  leg  cramps,  so  she  could  make 
+program-level  goals,  such  as  “avoid  X  kind  of  food”  or 
+“don’t do physical activity X hours before sleeping.” 
+
+Once participants identified their program-level goals, they 
+changed their data collection habits. For example, when P3 
+was  diagnosed  with  diabetes,  she  did  not  know  the 
+appropriate  program-level  goals  to  manage  her  diabetes, 
+such as what specific foods to avoid, how active she could 
+be, etc. To figure out her goals, she collected multiple kinds 
+of data: what she ate, what physical activity she did, as well 
+as  her  blood  sugar  level.  She  is  a  “brittle  diabetic”  (her 
+blood  sugar  fluctuates  to  dangerous  levels  quickly),  so 
+figuring  out  the  effects  of  food  and  physical  activity  was 
+critical, but difficult to do. She did this for two years until 
+she  understood  her  blood  sugar  fluctuations  better  and  she 
+was able to set appropriate food and physical activity goals. 
+When this happened, she stopped collecting the other pieces 
+of  data  because  she  already  knew  their  effects.  She  still 
+
+tracks her blood sugar level, but she just takes mental notes 
+of the meal, physical activity, and sleep quality prior to her 
+blood sugar level measurement. 
+
+Discrepancies 
+Once  people  know  their  goal,  they  compare  their  current 
+status  with  their  goal  [5].  We  also  observed  this  in  our 
+interviews.  Participants  checked  their  current  status  then 
+compared  it  with  their  goal:  Is  there  a  difference  between 
+my current status and my goal? How big is the difference? 
+And  what  should  I  do  to  reduce  the  difference?  For 
+example,  P4  wanted  to  become  more  physically  active,  so 
+she  set  a  goal  of  exercising  every  other  day  or  about  three 
+times  a  week.  She  looked  at  her  weekly  physical  activity 
+using  SparkPeople.    She  checked  how  much  her  current 
+status differed from the goal. When she found a difference, 
+she  modified  her  schedule  to  compensate  for  her  missed 
+physical  activity.  Also,  how  participants  addressed 
+discrepancies changed over time. At the beginning, P4 was 
+very  strict  at  meeting  her  goals,  so  she  immediately 
+addressed  missing  her  goal  by  exercising  the  same  day.  A 
+year  after  her  physical  activity  tracking  she  became  less 
+strict  about  meeting  her  goal.  She  allowed  herself  to  miss 
+days, and instead of exercising immediately, she postponed 
+physical  activity  until  the  end  of  the  week  when  she  had 
+more  time.  Another  example  is  P11  who  compared  her 
+daily food consumption with a range of calories, a goal that 
+she  had  set  in  the  DailyPlate  tool.  Every  day  she  checked 
+whether  she  was  within  the  range  of  her  allotted  daily 
+consumption.  When  her  consumption  was  below  her  goal, 
+she  increased  her  consumption  for  that  day.  If  she  was 
+within range, she made sure that she did not go over. Both 
+P4  and  P11  found  that  comparing  their  current  status  with 
+their goal helped them make immediate decisions to address 
+any differences. If they were meeting their goal, they could 
+focus on maintaining it. 
+
+A problem with this question is that it is largely dependent 
+on  knowing  what  the  program-level  goal  is.  If  the  goal  is 
+undefined,  the  person  cannot  act  on  fixing  their  problem. 
+This  is  what  happened  with  P9.  She  knew  her  principle-
+level  goal:  fix  her  leg  cramps  when  she  goes  to  sleep. 
+Unfortunately, she did not understand the causes of her leg 
+cramps well enough to set appropriate program-level goals, 
+such as avoiding certain foods or certain physical activity. 
+
+Context 
+things  were 
+Participants  also  wondered  what  other 
+happening  at  or  near  the  same  time  as  their  current 
+information-seeking context. They were curious about how 
+other  events  may  explain  what  was  happening  to  them  in 
+the present. For example, P3 kept in mind other events at or 
+near the time she checked her blood sugar level (e.g., what 
+she ate, what physical activity she did), so she could act on 
+problems  appropriately.  P6  noted  his  current  mood  and 
+stress  level  along  with  his  blood  sugar  level.  He  thought 
+that his blood sugar level might explain how he was feeling. 
+
+How participants answered this question was dependent on 
+their  access  to  additional  data.  Some  people  depended  on 
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China409other  devices.  For  example,  P6  used  Fitbit  and  Zeo  to 
+automatically record his physical activity and sleep quality. 
+He  used  the  data  from  these  devices  to  figure  out  the 
+relationship of his physical activity and sleep with his blood 
+sugar level. Some people used written notes (on paper or a 
+web  site)  to  remind  themselves  of  other  events  that 
+happened  at  a  particular  time.  P8  used  the  annotation 
+feature  in  the  SleepTracker  software  to  record  her  mood, 
+stress  level,  and  caffeine  intake,  which  may  be  related  to 
+her  sleep  quality.  P5  kept  a  journal  of  her  activities  to 
+remind  her  of  what  she  did  when  she  spent  her  money. 
+Sometimes,  people  just  depended  on  their  memory  to 
+remind them of what happened. For example, P4 diligently 
+recorded her data at the start of her self-tracking, but after a 
+while  she  just  used  her  memory.  She  explained,  “I  just 
+depend  on  my  memory…I  didn’t  want  to  become,  like, 
+OCD  (obsessive-compulsive)  about  it.”  However,  one 
+problem with dependence on memory is that one's memory 
+of events can be unreliable and degrades over time. 
+
+Factors 
+Unlike the previous question, which asks what influences a 
+person’s  current  status,  this  question  asks  what  influences 
+behavior over a long period of time. Factors collected over 
+time  help  to  identify  and  monitor  trends.  For  example,  P4 
+was curious how her physical activity and nutrition affected 
+her overall health over a long period of time.  
+
+this  goal,  she 
+
+tracked  several 
+
+Participants  were  interested  in  how  other  factors  may  be 
+affecting their behavior. For example, it is not sufficient to 
+say  that  one  wants  to  lose  weight;  it  is  important  to  know 
+how  one’s  physical  activity  level  and  food  consumption 
+affect one’s weight. By knowing the factors, people can act 
+on those factors to change their behavior. This is especially 
+important  when  other  things  could  cause  the  behavior.  For 
+example,  P2  was  interested  in  losing  weight.  To  help  her 
+accomplish 
+types  of 
+information  in  addition  to  her  weight:  exercises  she  did, 
+what  she  ate,  total  calories,  and  water  drank.  She  used  the 
+CalorieTracker  Android  app  to  help  her  compute  the 
+calories  of  her  food  and  DailyPlate  to  store  all  the  data 
+online. She used the DailyPlate graphs and charts to see the 
+trends  in  her  weight  and  how  they  were  affected  by  other 
+factors.  When  her  weight  went  up,  she  reduced  her  food 
+intake  and  increased  her  physical  activity.  She  also  made 
+sure  that  her  weight  went  down  at  a  “healthy  rate  of 
+decline”,  so  that  she  lost  weight  in  a  healthy  way.  P2  also 
+wrote in a journal to record her goals and how she felt about 
+her  progress.  She  said,  “I  look  for  things  that  I  have  done 
+well. Places where I might have made a misstep, either I’ve 
+done  too  much  exercise  in  one  day  or  I’ve  done  too  little. 
+Or maybe I didn’t meet all of my exchanges or maybe I met 
+all of my exchanges, calorie-wise.” 
+
+One problem with this kind of question is that a tool did not 
+exist  that  could  help  users  explore  their  data  holistically. 
+Instead,  they  had  to  look  at  their  data  one  at  a  time.  Even 
+when data was stored in the same tool, they had to look at 
+different  graphs  separately  (e.g.,  Daytum).  Using  different 
+
+tools  for  different  types  of  data  exacerbated  this  problem. 
+For  example,  P6  used  Fitbit  for  physical  activity  and  Zeo 
+for  sleep  and  there  was  not  an  easy  way  to  look  at  these 
+data  together.  P7  used  Fitbit  for  both  sleep  and  physical 
+activity  tracking,  so  she  was  able  to  explore  both  types  of 
+data  together.  However,  she  also  collected  other  types  of 
+data  using  Daytum  and  your.flowingdata,  which  she  could 
+not  easily  review  along  with  her  Fitbit  data.  Some 
+participants managed to explore their data together by using 
+paper  graphs  (P9  and  P6)  or  by  painstakingly  reviewing 
+logs  of  their  data  (P2  and  P8).  However,  participants 
+experienced other setbacks: exploring multiple types of data 
+was  confusing  and  understanding  the  influences  of  the 
+factors on their behavior was difficult. 
+
+PHASES OF REFLECTION 
+We  noticed  that  participants  asked  some  questions  more 
+often  than  others  at  different  times.  We  analyzed  our  data 
+further  by  looking  at  when  participants  asked  certain 
+questions.  We 
+two  distinct  phases  when 
+participants  asked  different  sets  of  questions:  Maintenance 
+and  Discovery.  We  also  found  that  participants  did  not 
+remain in one phase; instead they transitioned between the 
+two.  We  discuss  the  properties  of  each  phase  and  the 
+transitions between the phases in the next sections. 
+
+identified 
+
+Maintenance Phase 
+The Maintenance phase is marked with participants mostly 
+asking  Status  and  Discrepancy  questions.  In  this  phase, 
+participants used their collected data to maintain awareness 
+of  their  status  relative  to  a  goal  and  to  maintain  their 
+behavior. When in the Maintenance phase, participants can 
+be characterized in the following way: 1) they already knew 
+the  goal  they  were  trying  to  meet  and  2)  they  have 
+identified how different factors affected their behavior. We 
+describe each of these characteristics below. 
+
+in 
+
+Participants 
+the  Maintenance  phase  have  already 
+identified their program-level goals. In this phase, they self-
+track  to  determine  whether  their  current  actions  are  in  line 
+with  their  goals.  P13  wanted  to  be  more  productive 
+(principle-level  goal),  and  had  already  determined  his 
+program-level goal: limit his visits to social media websites 
+to 20 minutes a day. While his StayFocusd Chrome browser 
+extension  stored  his  total  web  site  visit  times  over  a  week 
+and  a  month,  he  did  not  look  at  those  numbers;  he  just 
+needed  the  tool  to  alert  him  when  he  went  above  his  goal. 
+P1 used Mint to keep track of her expenditures to make sure 
+that she is meeting several budgets that she had already set 
+for  various  categories  of  expenditures  (program-level 
+goals). When she showed us her Mint account, she had set 
+budgets for 14 categories!  
+
+Also,  participants  in  the  Maintenance  phase  already  knew 
+the  relationships  between  their  behavior  and  factors  that 
+affect their behavior. They collected information about their 
+behavior; they did not collect other types of data that might 
+affect their behavior because they were not useful anymore. 
+For example, P13 just tracked the minutes that he spent on 
+Facebook, Twitter, and other social media sites, because he 
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China410 
+already  knew  how  browsing  such  web  sites  affected  his 
+productivity. He did not track other factors that might affect 
+his  productivity  (e.g.,  sleep  quality,  interruptions).  P1  did 
+not use the exploratory tools within Mint to see how much 
+she  had  spent  on  different  categories  and  what  she 
+purchased.  Instead,  she  primarily  used  the main  screen  
+where  her  budget  was  prominently  displayed  to  check 
+whether she was within her monthly budget. 
+
+During  the  Maintenance  phase,  participants  only  tracked 
+one or a few types of data. They have already defined their 
+goal  and  were  collecting  just  enough  information  that 
+would  allow  them  to  tell  whether  they  were  meeting  their 
+goal.  For  example,  P1  and  P5  only  reflected  on  their 
+expenses and P13, on his productivity. 
+
+in 
+
+Discovery Phase 
+The  Discovery  phase  is  marked  with  participants  mostly 
+asking  History,  Goals,  Context,  and  Factors  questions. 
+When 
+the  Discovery  phase,  participants  can  be 
+characterized  in  the  following  way:  1)  they  did  not  know 
+the  goal  they  were  trying  to  meet  and/or  2)  they  have  not 
+identified  the  factors  that  influenced  their  behavior.  We 
+describe each of these characteristics below. 
+
+Participants  in  the  Discovery  phase  were  still  trying  to 
+figure  out  what  their  program-level  goals  were.  When  P3 
+was newly diagnosed with diabetes, she knew that she had 
+to  manage  her  blood  sugar  level  (principle-level  goal),  but 
+she did not know specifically what kinds of foods to avoid 
+or how much physical activity she could perform (program-
+level goals). P8 tracked the quality of her sleep so that she 
+feels  better  rested  (principle-level  goal).  She  explored  her 
+sleep  data  to  “spot  trends  for  which  I  can  take  corrective 
+action.” She wanted to figure out the specific program-level 
+goals  that  would  improve  her  sleep  quality,  such  as  eating 
+dinner earlier or refraining from coffee or alcohol. She also 
+added  that  she  was  “trying  to  take  a  long-term  view”,  so 
+that the solution is “not a quick-fix approach.” 
+
+Also, participants in the Discovery phase did not know how 
+different  factors  affected  their  behavior.  Because  of  this 
+lack of knowledge, participants collected different types of 
+data,  so  they  could  figure  out  the  correlations  between 
+them.  P3  tracked  food  consumption  and  physical  activity 
+along with her blood glucose levels because she wanted to 
+figure  out  how  her  eating  and  exercise  habits  affected  the 
+fluctuations  in  her  blood  glucose  level.  P9  had  leg  cramps 
+while  sleeping.  She  had  several  hypotheses  about  what 
+caused  her  leg  cramps.  She  talked  to  her  doctor  who  said 
+the leg cramps might be due to an electrolyte imbalance, so 
+she tracked the types of food she ate. She also used FitBit to 
+see  if  her  amount  of  physical  activity  had  an  effect  on  the 
+occurrence of her leg cramps. 
+
+Transitions Between Phases 
+We found in our interviews that people did not stay in one 
+phase;  instead,  they  transitioned  between  the  two  phases. 
+Several participants who were in the Maintenance phase at 
+the  time  of  the  interviews  were  in  the  Discovery  phase 
+
+earlier in their self-tracking regimen. P6 initially tracked his 
+blood sugar level, his food consumption, and mood until he 
+found  that  “it  turns  out  one  of  the  things  I  do  to  manage 
+stress is eat something, because blood sugar feels good. So 
+if  things  are  unsettled  or  high  pressure,  eating  something 
+feels good.” P6 described his transition to gaining control of 
+his diabetes, “In the initial phase, three and a half years ago, 
+over about six months, I learned to control my blood sugar 
+down  to  a  level  from  300  to  about  180.  Then  I  escaped 
+there  and  measurement  became  less  interesting  because 
+there was no progress to be made; it was steady state stuff.” 
+P3  had  a  similar  experience  in  dealing  with  her  diabetes. 
+She  said,  “When  I  first  became  diabetic,  I  needed  to  keep 
+track  of  everything.  At  this  point  in  my  life,  I've  had 
+diabetes for about 15 years, and I no longer write anything 
+down.”  Now,  she  just  wears  a  continuous  blood  glucose 
+monitoring device to alert her whether her blood glucose is 
+too  high  or  too  low.  Her  reason  for  transitioning  was  two-
+fold:  1)  tracking  all  the  information  “would  be  onerous” 
+and 2) “it wasn’t helping me anymore. I was remembering. 
+Not the exact numbers, but I was remembering trends.” 
+
+P4  tracked  her  physical  activity  and  food  consumption 
+diligently  at  the  beginning,  but  became  more  lax  later  and 
+did not track her food consumption. She said, “I feel like I 
+have  a  handle  on  it.  I  have  accomplished  the  goals  of 
+creating a healthy lifestyle for myself. As long as I stay like 
+this I'm good. It's more maintenance.” She still kept track of 
+her  physical  activity,  but  for  her  food  tracking,  she  just 
+“keeps  a  mental  note  of  it  and  just  overall  have  become 
+more self aware of what I eat and stuff.” 
+
+Sometimes  people  have  difficulty  transitioning  to  the 
+they  could  not  find  an 
+Maintenance  phase  because 
+actionable  goal.  P9  described  that  she  still  did  not  know 
+what  caused  the  leg  cramps  when  she  sleeps.  She  said, 
+“They’re  not  completely  gone,  but  they’re  not  as  bad  as 
+they  were.  But  I  still  don’t  know  exactly  what’s  caused 
+them.”  She  added  that  she  still  recorded  the  recurrence  of 
+the leg cramps, “It may always be sort of a mystery, and so 
+I still have data for every night I’ve had leg cramps.” 
+
+All  the  participants  who  were  in  the  Maintenance  phase  at 
+the time of the study described anecdotes when they might 
+go back to the Discovery phase. For example, while looking 
+at her budget, P1 saw that she made a purchase of $24 for a 
+gift and she asked herself, “What was that?” She said since 
+she  did  not  remember,  she  explored  her  data  to  find  an 
+explanation.  Since  Mint  provided  enough  detail  about  her 
+purchases,  she  easily  found  that  the  gifts  were  bought  at  a 
+local mall, which reminded her that she recently purchased 
+a  gift  for  a  friend  there.  Sometimes  the  explanatory  data 
+was  not  immediately  available,  so  the  participant  had  to 
+restart  data  collection  of  influencing  factors.  For  example, 
+P7  who  had  recurrent  insomnia  tracked  her  sleep  using 
+FitBit. Patterns of insomnia or weird dreams would appear 
+intermittently  and  she  would  again  note  factors  that  may 
+have caused the problem.  
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China411FEATURES 
+We have identified the questions that people asked and the 
+phases  in  which  people  asked  these  different  questions. 
+Now,  we  discuss  the  features  that  should  be  supported  in 
+building  personal  informatics  tools  and  how  Ubicomp 
+technologies  can  help.  We  also  describe  opportunities  for 
+Ubicomp to explore. 
+
+Supporting the Maintenance Phase 
+Supporting the Maintenance Phase is not as difficult as the 
+Discovery  phase  because  many  personal  informatics  tools 
+the  user’s  current  status. 
+already  support  collecting 
+Additionally,  if  a  Ubicomp  technology  can  sense  simple 
+things  about  a  user’s  behavior,  it  is  not  difficult  to  display 
+the  information  back  to  the  user.  However,  there  are  some 
+opportunities to better support the Maintenance phase. 
+
+Alert the user when they are not meeting their goal 
+During  the  Maintenance  phase,  it  is  possible  for  a  user  to 
+know how to fix their problem, but still not fix the problem. 
+For example, a pedometer user may know that they can get 
+plenty of steps while walking their dog at the park, but the 
+user may still not consistently walk their dog. In cases like 
+this,  feedback  about  progress  towards  goals  can  have  a 
+positive  effect  on  self-efficacy  and  achievement	  [27]. 
+Additionally, Ubicomp technologies can help by identifying 
+whether  the  user  is  meeting  their  goal.  Because  alerts  can 
+sometimes  be  unwelcome,  Ubicomp  technologies,  such  as 
+just-in-time 
+the 
+opportune time to alert the user of discrepancies. 
+
+[15],  can  help  determine 
+
+feedback 
+
+Participants  were  more  interested  in  their  current  status 
+during  the  Maintenance  phase  compared  to  during  the 
+Discovery  phase.  Most  tools  for  personal  informatics  have 
+daily  reminders  of  the  user’s  current  status,  but  this  may 
+become  bothersome  if  the  status  is  the  same  as  the  past 
+several  days.  Instead,  tools  should  reserve  alerts  for  when 
+special  circumstances  arise  (e.g.,  the  user’s  step  counts 
+changed  significantly).  Tools  can  better  support  this  by 
+giving users control of when they are alerted. 
+
+Assist the user when they don't meet their goal 
+The phases of reflection do not address the question of how 
+users  could  act  on  their  newfound  insights  to  change  their 
+behavior. Thus, it is possible for a user in the Maintenance 
+phase  to  still  not  meet  their  goal.	  When  the  user  does  not 
+meet  her  goal,  the  tool  can  be  proactive  in  assisting  her  in 
+resolving  the  problem.  One  idea  is  to  analyze  the  user’s 
+history to create suggestions for resolution. For example, an 
+automated  analysis  can  reveal  the  causes  of  the  problem. 
+The tool can say “when you drink coffee at 6pm, you have 
+a  hard  time  sleeping,  so  avoid  drinking  coffee  at  6pm”. 
+Automated analysis can also remind users of what they did 
+before to resolve the problem. For example, “last time when 
+you  weren’t  being  active  you  were  sitting  on  the  couch 
+watching TV. During the other times you were active, you 
+decided to walk your dog around the neighborhood.” 
+
+Supporting the Discovery Phase 
+There  are  many  opportunities  for  support  in  the  Discovery 
+phase  because  1)  there  are  many  questions  that  are  asked 
+during this phase; 2) some questions require data collected 
+over  a  long  time;  and  3)  some  questions  can  be  answered 
+using multiple types of data. 
+
+Collect data anytime, anywhere, and often 
+People in the Discovery phase try to better understand their 
+behavior  by  collecting  sufficient  data  to  yield  insights 
+during  reflection.  Getting  sufficient  data  may  require 
+tracking over a long period of time, over different contexts, 
+and with great frequency. For example, understanding how 
+one’s  environment  affects  physical  activity  may  require 
+tracking  over  a  couple  of  weeks,  at  multiple  locations, 
+throughout  the  day.  Many  barriers  to  personal  informatics 
+[17]. 
+are  associated 
+Automated  data  capture  as  exemplified  by  many  Ubicomp 
+technologies  (e.g.,  [1,12])  can  reduce  this  burden  by 
+automating the data collection and storing large amounts of 
+data  about  the  user.  By  reducing  the  burden  of  data 
+collection, users can focus on exploring their data. 
+
+the  burden  of  collecting  data 
+
+There  is  a  caveat  about  user  involvement  in  reflection  that 
+is  important.  In  the  Discovery  phase,  user  involvement  is 
+critical.  People  want  to  discover  the  relationships  between 
+data.  Automation  can  diminish  users’  engagement  with 
+their  data.  This  does  not  mean  that  automation  should  not 
+be  supported.  It  just  means  that  automation  should  be 
+balanced  with  ways  to  keep  users  engaged  with  their  data. 
+One  way  to  do  this  is  to  force  users  to  interact  with  their 
+data daily, either by sending reports or alerts. On the other 
+hand, user involvement in the Maintenance phase is not as  
+critical.  Users  are  just  trying  to  maintain  their  behavior. 
+Telling  people  that  they  are  doing  well  can  become 
+annoying.  Instead,  the  Ubicomp  tool  should  be  there  to 
+notify the user if anything unusual happens. 
+
+Support different kinds of collection tools 
+Corollary  to  the  previously  discussed  need,  understanding 
+behavior  may  require  exploring  the  relationships  between 
+multiple  types  of  data.  For  example,  understanding  how 
+one’s  environment  affects  physical  activity  may  require 
+collection  of  multiple  types  of  data,  such  as  location,  type 
+of  activity,  and  weather. However,  most  tools  for  personal 
+informatics only support collection of one or a few types of 
+data.  One  thing  to  do  is  to  wait  for  an  “ultimate”  data 
+collection  tool  that  can  collect  any  kind  of  the  data  that  a 
+user  wants  to  collect.  However,  this  might  just  be  a  pipe 
+dream  or  could  be  too  far  off  into  the  future.  More 
+realistically, users should be allowed to use different kinds 
+of collection tools, and then a system or a service can help 
+users  integrate  data  from  the  different  collection  tools. 
+There is a proliferation of APIs available, and we can take 
+advantage  of  this.  Recently,  Fitbit  and  Zeo  partnered  with 
+RunKeeper  to  share  data  with  each  other.  This  is  a  good 
+development because people can now use different tools to 
+collect data. However, this is still incomplete because there 
+is  a  plethora  of  tools  that  are  not  interoperable.  Device 
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China412 
+interoperability  has  been  part  of  Ubicomp  since  Weiser 
+started the field [29], so the expertise exists in Ubicomp to 
+help  develop  and  establish  standards  for  interoperation 
+between self-tracking devices and systems.  
+
+Data should be presented together 
+One of the consequences of needing multiple types of data 
+during  the  Discovery  phase  is  that  people  have  to  use 
+different  kinds  of  tools.  Unfortunately,  the  current  state  of 
+personal informatics systems is that they tend to be silos of 
+data,  that  is,  they  do  not  share  data  with  other  systems. 
+When  they  do  share  data,  they  do  so  in  a  limited  fashion, 
+only  supporting  a  few  tools.  One  of  the  many  complaints 
+that  people  had  was  that  they  had  to  go  to  different 
+applications/web  sites  to  answer  their  questions.  They 
+wished  that  they  could  explore  their  data  in  a  single 
+interface.  Again,  Ubicomp  technologies  can  help  here. 
+There  has  been  plenty  of  research  in  Ubicomp  on  how  to 
+integrate  data  together  [9,12].  The  technology  is  already 
+available  to  help  people  collect  and  see  their  data  from 
+multiple sources at once. 
+
+Reduce the upfront cost of data collection  
+People in the Discovery phase are interested in relationships 
+between different kinds of personal data. This presents two 
+kinds  of  problems.  First,  users  have  to  spend  a  significant 
+amount  of  time  collecting  data.  One  solution  is  to  support 
+lifelong  automated  data  collection  of  personal  data,  which 
+many Ubicomp research projects are exploring [12,14]. The 
+second  problem  is  that  users  cannot  predict  whether  they 
+are  collecting  all  of  the  data  they  need.  This  problem  is 
+called the relevance paradox [2]. For example, people often 
+do not decide to self-track because the data is not important 
+to them. However, when the data becomes important (e.g., 
+they get sick or they want to develop new habits), they do 
+not have the necessary data to start reflecting immediately. 
+Thus, they have to invest plenty of upfront cost to bootstrap 
+their data collection. With lifelong data collection, once the 
+user  needs  the  data,  Ubicomp  tools  can  provide  the 
+necessary  data  for  the  user  to  figure  out  what  their  goal 
+should be or what factors are influencing their behavior. 
+
+Supporting Transitions between Phases 
+Since  people  transition  between  the  two  phases,  personal 
+informatics tools should not be designed for just one phase, 
+but  should  be  flexible  to  support  both.  This  is  important 
+because  it  prevents  a  potential  problem  with  any  personal 
+informatics  tool:  people  may  stop  using  the  tool  because 
+their information needs are not appropriately supported. 
+
+Identify which phase the user is in  
+Personal  informatics  tools  should  identify  what  phase  the 
+user  is  in  and  change  its  reflection  features  appropriately. 
+Without  this  support,  people  might  find  the  tool  useless 
+because  of  too  little  information  during  the  Discovery 
+too  much 
+phase,  or  people  may  be  burdened  with 
+is  an 
+information  during 
+interesting  Ubicomp  research  challenge  to  automatically 
+determine what phase the user is in, based on sensed data. 
+
+the  Maintenance  phase.  It 
+
+Help users transition from Discovery to Maintenance quickly 
+The  Discovery  phase 
+intensive  and  can  be 
+is  data 
+burdensome to users. Personal informatics tools should help 
+users  who  are  in  the  Discovery  phase  to  identify  program-
+level  goals  and  how  different  factors  affect  their  behavior, 
+so  users  can  transition  quickly  to  the  Maintenance  phase. 
+This  would  be  interesting  future  work  to  explore  how 
+Ubicomp technologies help users understand their data.  
+
+Continuous data collection throughout the phases 
+The  amount  of  data  that  users  need  decreases  when  users 
+transition  from  the  Discovery  phase  to  the  Maintenance 
+phase.  However,  this  does  not  mean  that  tools  should 
+collect  less  data  during  the  Maintenance  phase.  Instead, 
+only  the  amount  of  data  presented  to  the  user  should 
+decrease.  We  suggest  tools  should  continue  collecting  as 
+much  data  in  the  Maintenance  phase  as  during  the 
+Discovery  phase.  This  ensures  that  if  a  user  who  is  in  the 
+Maintenance  has  to  transition  to  the  Discovery  phase 
+because of a new problem, the user can immediately reflect 
+on her data. 
+
+CONCLUSIONS 
+This  paper  explores  the  different  questions  that  people  ask 
+about  their  data  and  why  they  ask  these  questions.  We 
+identified  six  types  of  questions:  Status,  History,  Goals, 
+Discrepancies,  Context,  and  Factors.  We  discuss  how 
+people  answered  these  questions  using  existing  tools  and 
+the  problems  that  they  encountered.  Identifying  these 
+questions  is  important  because  they  require  different 
+answers  and  different  kinds  of  data,  which  have 
+implications  on  how  tools  should  support  them.  Ubicomp 
+technologies  play  a  big  role  in  addressing  these  needs 
+because  what  data  is  collected  and  how  data  is  collected 
+affect how people reflect on their data. 
+
+We also discovered that these questions are not asked at the 
+same  time.  We  identified  two  distinct  phases  in  which 
+people  ask  certain  questions  more  often  than  others: 
+Discovery  and  Maintenance.  The  distinction  between  the 
+phases  is  important  because  it  highlights  the  need  for 
+personal  informatics  tools  to  support  different  information 
+needs,  and  to  be  better  tailored  to  users'  current  needs, 
+instead  of  providing  them  all  the  tools  to  answer  all  six 
+questions  at  once  (when  they  do  not  need  all  of  them). 
+Additionally, the phases are not static; people's information 
+needs  change.  They 
+to 
+transition 
+Maintenance,  and  vice  versa.  Again,  Ubicomp  can  play  a 
+big role here supporting the different information demands 
+of the two phases and the transitions between them. 
+
+from  Discovery 
+
+Though  we  did  not  conduct  a  controlled  study  to  observe 
+how  the  questions  differ  between  the  phases  because  it  is 
+out  of  the  scope  of  this  research,  the  identification  of  the 
+questions  and  the  phases  is  an  important  first  step  towards 
+the development of future controlled studies. For example, 
+we could create visualizations for each of the questions then 
+observe  whether  people  use  certain  visualizations  more 
+often  than  others  based  on  what  phase  they  are  in.  We 
+expect  that  people  in  the  Discovery  phase  will  heavily  use 
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China413visualizations  that  answer  History,  Goals,  Context,  and 
+Factors  questions,  while  people  who  are 
+the 
+Maintenance  phase  will  use  visualizations  that  answer 
+Status and Discrepancy questions. 
+
+in 
+
+As evidenced by articles on personal informatics [3,30] and 
+the  growing  Quantified  Self  community  around  the  world 
+(http://quantifiedself.com/),  more  and  more  people  are 
+using personal informatics tools. However, current personal 
+informatics 
+tools  are  not  designed  with  a  sufficient 
+understanding  of  users’  self-reflection  needs.  This  study 
+takes one step towards an understanding of these needs. We 
+identified  six  main  questions,  which  people  ask  in  varying 
+frequency  between  two  phases.  We  presented  features  that 
+should  be  supported  in  personal  informatics  tools  and 
+discussed  ways  that  Ubicomp  can  provide  the  necessary 
+support. We believe that this work will help developers and 
+designers  more  appropriately  build  personal  informatics 
+tools and take better advantage of Ubicomp technologies to 
+help users self-reflect. 
+
+ACKNOWLEDGMENTS 
+This  work  is  based  on  research  supported  by  the  National 
+Science  Foundation  under  Grant  No.  IIS-0325351  and 
+EEEC-0540865. 
+
+REFERENCES 
+1.  Abowd, G.D. & Mynatt, E.D. Charting Past, Present, 
+and Future Research in Ubiquitous Computing. 
+TOCHI, 2000, pp. 29-58. 
+
+2.  Andrews, D. The IRG Solution - Hierarchical 
+
+Incompetence and How to Overcome It. Souvenir 
+Press: London, 1984. 
+
+3.  Brophy-Warren, J. “The New Examined Life.” Wall 
+
+Street Journal, 6 Dec 2008. 
+
+4.  Card, S.K., Mackinlay, J.D., & Shneiderman, B. 
+
+Readings in information visualization: using vision to 
+think. Morgan Kaufman: 1999. 
+
+5.  Carver, C. & Scheier, M.F. On the self-regulation of 
+
+behavior. Cambridge University Press, 2001. 
+
+6.  Consolvo, S., McDonald, D.W., & Landay, J. Theory-
+
+Driven Design Strategies for Technologies that Support 
+Behavior Change in Everyday Life. CHI’09, pp. 405-
+414. 
+
+7.  DiClemente, C.C., Marinilli, A.S., Singh, B., & 
+
+Bellino, E. The Role of Feedback in the Process of 
+Health Behavior Change. American Journal of Health 
+Behavior, 25(3), 2000, pp. 217-227. 
+
+8.  Endsley, M.R. The Role of Situation Awareness in 
+
+Naturalistic Decision Making. Naturalistic Decision 
+Making, 1997, pp. 269-282. 
+
+9.  Freeman, E. & Gelernter, D. Lifestreams: A Storage 
+
+Model for Personal Data. SIGMOD Record, 25(1), 
+1996, pp. 80-86. 
+
+10.  Froehlich, J., Dillahunt, T., Klasnja, P., Mankoff, J., 
+
+Consolvo, S., Harrison, B., & Landay, J.A. Ubigreen: 
+Investigating a Mobile Tool for Tracking and 
+Supporting Green Transportation Habits. CHI’09, pp. 
+1043-1052. 
+
+11.  Frost, J. and Smith, B.K. Visualizing Health: imagery 
+
+in diabetes education. DUX’03, pp. 1-14. 
+
+12.  Gemmell, J., Bell, G., and Lueder, R. MyLifeBits: a 
+
+personal database for everything. Communications of 
+the ACM, 2006, pp. 88-95. 
+
+13.  He, A.H., Greenberg, S., & Huang, E.M. One Size 
+
+Does Not Fit All: Applying the Transtheoretical Model 
+to Energy Feedback Technology Design. CHI’10, pp. 
+927-936. 
+
+14.  Hodges, S., Williams, L., Berry, E., et al. SenseCam: A 
+Retrospective Memory Aid. Ubicomp'06, pp. 177-193. 
+15.  Intille, S.S., Rondoni, J., Kukla, C., Ancona, I., & Bao, 
+L. A Context-Aware Experience Sampling Tool. 
+CHI'03, pp. 972-973. 
+
+16.  Jones, W., & Teevan, J. Personal Information 
+
+Management. UW Press, 2007. 
+
+17.  Li, I., Dey, A.K., & Forlizzi, J. A Stage-Based Model 
+
+of Personal Informatics Systems. CHI'10, pp. 557-566. 
+18.  Lin, J.J., Mamykina, L., Lindtner, S., Delajoux, G., & 
+Strub, H.B. Fish’n’Steps: Encouraging Physical 
+Activity with an Interactive Computer Game. 
+Ubicomp'06, pp. 261-278. 
+
+19.  Matthews, T., Rattenbury, T., & Carter, S. Defining, 
+designing, and evaluating peripheral displays: an 
+analysis using Activity Theory. Human-Computer 
+Interaction Journal, 22(1), 2007. 
+
+20.  Miller, T. & Stasko, J. Artistically Conveying 
+
+Information with the InfoCanvas: A Highly, 
+Personalized, Elegant Awareness Display. AVI'02. 
+21.  Peesapati, S.T., Schwanda, V., Schultz, J., Lepage, M., 
+Jeong, S., & Cosley, D. Pensieve: Supporting Everyday 
+Reminiscence. CHI'10, pp. 2027-2036. 
+
+22.  Pousman, Z. & Stasko, J. A Taxonomy of Ambient 
+
+Information Systems: Four Patterns of Design. AVI’06, 
+pp. 67-74. 
+
+23.  Powers, W.T. Behavior: The control of perception. 
+
+Chicago: Alidine, 1973. 
+
+24.  Preuveneers, D. & Berbers, Y. Mobile Phones 
+
+Assisting With Health Self-Care: a Diabetes Case 
+Study. MobileHCI’08,  pp. 177-186. 
+
+25.  Prochaska, J.O., Velicer, W.F. The Transtheoretical 
+
+Model of health behavior change. American Journal of 
+Health Promotion, 12(1), 1997, pp. 38-48. 
+
+26.  Schank, R.C. & Abelson, R.P. Scripts, plans, goals, 
+
+and understanding. Hillsdale, NJ: Erlbaum, 1977. 
+
+27.  Schunk, D. H., & Swartz, C. W. Goals and progress 
+feedback: Effects on self-efficacy and writing 
+achievement. Contemporary Educational Psychology, 
+18(3), 1993, pp. 337-354. 
+
+28.  Seligman, C., & Delay, J.M. Feedback as a Means of 
+Decreasing Residential Energy Consumption. Journal 
+of Applied Psychology, 62(4), 1977, pp. 363-368. 
+
+29.  Weiser, M. The Computer for the 21st Century. 
+
+SIGMOBILE, 3(3), July 1991, pp. 3-11. 
+
+30.  Wolf, G. “The Data-Driven Life.” The New York 
+
+Times, 28 April 2010. 
+
+Paper Session: How Healthy?UbiComp'11 / Beijing, China414 
+  
+

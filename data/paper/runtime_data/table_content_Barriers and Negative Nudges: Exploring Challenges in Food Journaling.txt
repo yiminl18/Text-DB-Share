@@ -1,0 +1,16 @@
+Table of Contents
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work
+6. Data Collection
+7. Results and Themes
+   7.1 Goals Drive Journaling
+   7.2 Barriers to Reliable Food Entry
+   7.3 Negative Nudges in Current Food Journals
+   7.4 Challenges in Social Features
+8. Discussion and Conclusion
+9. Acknowledgments
+10. References

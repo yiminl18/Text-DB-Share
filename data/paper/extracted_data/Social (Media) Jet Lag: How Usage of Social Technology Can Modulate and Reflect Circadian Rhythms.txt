@@ -1,0 +1,1602 @@
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+Social (Media) Jet Lag: How Usage of Social Technology
+Can Modulate and Reﬂect Circadian Rhythms
+
+Elizabeth L. Murnane, Saeed Abdullah, Mark Matthews, Tanzeem Choudhury, Geri Gay
+{elm236, sma249, mark.matthews, tanzeem.choudhury, gkg1} @ cornell.edu
+Information Science, Cornell University
+
+ABSTRACT
+By nature, we are circadian creatures whose bodies’ biologi-
+cal clocks drive numerous physiological, mental, and behav-
+ioral rhythms. Simultaneously, we are social beings. Accord-
+ingly, our internal circadian timings experience interference
+from externally determined factors such as work schedules
+and social engagements, and digital connectivity imports ad-
+ditional social constraints that can further misalign our indi-
+vidual body clocks. Misalignment between biological and so-
+cial time causes social jet lag [50], which has serious physical
+and mental health consequences. It particularly impacts our
+sleep processes and neurobehavioral functioning. Examin-
+ing the interplay between biological rhythms and technology-
+mediated social interactions, we ﬁnd that technology may
+both modulate and reﬂect circadian rhythms. We also lever-
+age such social-sensor data to infer sleep-related behaviors
+and disruptions and to analyze variations in attention, cog-
+nitive performance, and mood following (in)adequate sleep.
+We conclude with recommendations for designing technolo-
+gies attuned to our innate biological traits.
+
+Author Keywords
+Circadian Rhythms, Sleep, Social Computing
+
+ACM Classiﬁcation Keywords
+J.3 Life and Medical Sciences: Health
+
+INTRODUCTION
+Within our bodies there are hundreds of biological clocks co-
+ordinated by a “master clock” in our brain. These body clocks
+drive our circadian rhythms – biological processes that follow
+a roughly 24-hour cycle – and inﬂuence mental and physi-
+cal functioning such as our mood, concentration, digestion,
+and sleep-wake patterns [25]. The biochemical processes re-
+sponsible for sleep speciﬁcally are inﬂuenced by two oppos-
+ing mechanisms: a circadian oscillator that promotes wake-
+fulness during the day and the body’s homeostatic system
+that increases sleep need the longer one is awake [7]. How-
+ever, socially determined factors can disrupt internal rhythms,
+
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for proﬁt or commercial advantage and that copies bear this notice and the full citation
+on the ﬁrst page. Copyrights for components of this work owned by others than the
+author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior speciﬁc permission
+and/or a fee. Request permissions from permissions@acm.org.
+UbiComp ’15, September 7–11, 2015, Osaka, Japan.
+Copyright is held by the owner/author(s). Publication rights licensed to ACM.
+ACM 978-1-4503-3574-4/15/09...$15.00.
+http://dx.doi.org/10.1145/2750858.2807522
+
+843
+
+leading to considerable disparity between our internal and ex-
+ternal timing systems. For instance, an early type (“early
+bird”) may stay up later than she would naturally due to
+evening social schedules shaped by late types but then be
+driven by her biological clock to wake up early, while stan-
+dard work schedules may cause a late type (“night owl”) who
+falls asleep later to be woken too early during her biological
+night [42]. The result for many people is markedly different
+sleep and activity patterns on work days versus free days [45].
+
+Given that these demands manifest in sleep and wake ﬂuctu-
+ations that are comparable to jet lag, this discrepancy is re-
+ferred to as social jet lag since the causes are social in na-
+ture [50]. Unlike the transient misalignments of jet lag from
+travel, however, social jet lag can be chronic throughout adult
+life.
+It can also lead to a number of serious illnesses such
+as cardiovascular disease, diabetes, obesity, and cancer [25];
+and circadian disruption has a strong association with mental
+health conditions including bipolar disorder and depression
+[16]. For younger individuals, social jet lag can also increase
+the risk of using drugs and alcohol [46, 50] as well as result
+in cognitive impairments and learning deﬁcits [9].
+
+Practically speaking, sleep pathologies indicative of circadian
+misalignment are reaching epidemic levels. According to the
+U.S. Centers for Disease Control (CDC), sleep disorders af-
+fect 50-70 million people in the U.S. alone, and the annual di-
+rect and indirect costs of treating sleep-related problems are
+estimated at $14 billion and $150 billion, respectively [32].
+Shift work and school schedules have been the commonly
+studied main culprits of social jet lag [21, 36]. Recently, so-
+cial demands have also begun emanating from the increas-
+ingly widespread use of digital technologies. The large scale
+personal and societal level disruptions may therefore also be
+explained by this ever increasing adoption of personal devices
+and information technologies that implant an ethos of con-
+stant connectivity and expected availability. Younger genera-
+tions (including undergraduate-aged individuals that we focus
+on in our study) are particularly heavy and habituated users;
+of 18-29 year olds, 83% own a smartphone, 90% sleep with
+their phones on or next to their bed, and 93% hold at least one
+account on social media platforms such as Facebook [38].
+
+While technology may therefore be a source of circadian dis-
+ruption, it simultaneously offers an opportunity for sleep-
+related sensing and intervention given that it mediates behav-
+ior and as such offers a window into daily rhythms and the so-
+cial factors impacting them. Pertinently, HCI researchers are
+
+increasingly studying sleep-related behaviors, and commer-
+cial sleep-tracking technology is appearing. However, neither
+consider circadian patterns nor address and accommodate in-
+dividual circadian differences. Similarly, technological solu-
+tions often focus on treating the symptoms of a misaligned
+biological clock rather than having awareness to work in tune
+with a user’s underlying circadian rhythms in the ﬁrst place.
+
+Such grounding in chronobiology separates our research from
+related work on sleep, behavior, and technology. In this pa-
+per, we demonstrate analyses that consider individual circa-
+dian variations, and we offer design visions for circadian-
+aware monitoring and intervention systems. Undertaking a
+97 day study, we explore links between technology usage and
+circadian rhythms using quantitative and qualitative meth-
+ods. Speciﬁcally, we uncover ways in which technology and
+sleep are related, with a focus on how sleep patterns, quality,
+and misalignment are reﬂected through features of technol-
+ogy use. Beyond analyzing sleep, we investigate its relation-
+ship with waking behaviors and daily functioning, offering
+methods for assessing attention, cognition, and mood.
+
+RELATED WORK
+
+Chronobiology and Sleep
+Chronobiology is the ﬁeld of study concerned with the
+rhythms that guide biological functioning. The biological cy-
+cles of all living organisms, humans included, are coordinated
+by endogenous body clocks that maintain a circadian period
+[45]. Individual differences exist in these functions (such as
+the timing of sleep-promoting hormone secretions [43]), are
+reﬂected by a person’s chronotype, and result in individual
+variations in the preferred timing and duration of sleep [25].
+
+A common distinction is made between early and late chrono-
+types – people who prefer to wake earlier or sleep later.
+Chronotype is a phenotype, meaning that it results from a
+person’s genetics interacting with features of her environ-
+ment such as light exposure [45]. Chronotype also depends
+on gender and age [43]. Men tend to be later chronotypes
+than women during most of adulthood until coinciding after
+menopause around age 50. Children and people over 60 are
+typically earlier chronotypes, adolescents are later types, and
+maximum lateness occurs around age 20, which is the same
+or very close to the ages of the participants in our study.
+
+Finally, social demands such as those from work or re-
+lationships further impact sleep patterns [39]. Sleep and
+wake behaviors are thus inﬂuenced by three complex and
+individually-variable factors: an internal circadian oscillator
+that promotes wakefulness during the day and manages ex-
+ternal cues to remain synchronized (“entrained”) with the en-
+vironment, a homeostatic system that promotes the need to
+sleep the longer we remain awake, and a social clock based
+on social responsibilities and commitments [45].
+
+Social Computing for Health Assessment
+As just mentioned, circadian disruptions often stem from fac-
+tors that are social in nature. Our study therefore examines
+the efﬁcacy of leveraging socially-sensed data for sleep mea-
+surement. Social sensing for the assessment of health-related
+
+844
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+behaviors is desirable for a number of reasons, including
+that collection is less obtrusive and can be done on a larger
+scale than standard survey or body-sensor based approaches.
+Speaking to the reach of social media, 90% of 18-29 year
+olds regularly use social media, 82% of 30-49 year olds, 65%
+of 50-64, and 49% of 65+ with ﬁgures for all age groups
+steadily rising [14]. A growing body of research has indeed
+had success in leveraging social media and communication
+data to model various health-related traits and behaviors, par-
+ticularly relevant examples of which include emotional well-
+being, sleep, and physical health (e.g., [30, 32, 34]).
+
+Sleep Sensing
+A growing number of HCI and ubiquitous computing re-
+searchers are bringing their attention to the study of sleep-
+related behaviors and disorders as well as to the develop-
+ment of systems for measurement and intervention. On the
+measurement side, iSleep [15] and wakeNsmile [26] utilize
+smartphone microphones to detect sleep-related motion and
+sounds and predict sleep events. SleepMiner [2], BES [11],
+Toss’n’Turn [31] have similarly used ambient sound and light
+together with phone usage data such as screen unlock events,
+battery status, app use, and communication logs to predict
+sleep state, quality, and duration. On the assessment and
+intervention side, Lullaby [23] records temperature, sound,
+light, motion, and pictures in order to help users identify envi-
+ronmental factors responsible for interrupted sleep. ShutEye
+[3] also aims to give users insight into how activities such as
+caffeine intake and exercise may subsequently impact sleep,
+in this case via a glanceable wallpaper display.
+
+Such efforts towards sensing and intervention are encourag-
+ing steps toward supporting users in monitoring and improv-
+ing their sleep-related behaviors as well as increasing our sci-
+entiﬁc knowledge surrounding sleep. However, they still have
+shortcomings. First, they tend to be intrusive or burdensome
+to use as they require users to wear equipment or manually
+log sleep and wake events, plus sensing is not yet sophis-
+ticated enough to handle complex sleep environments (e.g.,
+with partners or pets). Systems also tend to present generic
+recommendations rather than provide personalized support
+that accounts for individual variability, both contextually and
+biologically speaking; for instance, consider the blanket rec-
+ommendation “End caffeine consumption 8-14 hours before
+bedtime” [3], even though caffeine does not affect everyone
+equally [51]. As another example, variants in the per3 clock
+gene can signiﬁcantly inﬂuence aspects of a person’s daily
+functioning such as the response to sleep deprivation [48].
+
+This relates to the crux of our motivation – these systems do
+not take circadian rhythms into consideration nor incorporate
+key endogenous and exogenous factors such as chronotype,
+daytime light exposure, and social constraints into the assess-
+ment of sleep. The aforesaid research on technology use and
+health (including sleep) similarly lacks the chronobiological
+underpinnings necessary to more holistically interpret obser-
+vations in a way that bears in mind latent biological aspects.
+Guided by a theoretical understanding of the biology behind
+sleep and wake behaviors, we aim ﬁrstly to better understand
+the interplay between external factors and internal rhythms
+
+SESSION: SOCIAL LIFE
+
+and to secondly develop novel sensing techniques that lever-
+age awareness of circadian variables to more accurately as-
+sess neurobehavioral functions and misalignments.
+
+Preliminary work towards applying a circadian perspective
+to sleep sensing [1] is promising in its ability to infer
+sleep timing, duration, and disruption using computationally
+lightweight techniques based on mobile screen on/off events.
+However, it does not dig into how or why such technology
+use interacts with sleep, and it does not study a broader set of
+circadian processes beyond sleep. Going deeper, we explore
+potential links between technology use and sleep as well as
+how sleep disruption may relate to a wider range of neurobe-
+havioral variables that display circadian rhythmicity – specif-
+ically attention, cognition, and mood. We also incorporate
+a fuller set of usage data from both mobile and web tech-
+nologies as well as linguistic features of content generated via
+those systems. Given the inﬂuence the aforementioned “so-
+cial clock” can have on modulating (including misaligning)
+our internal circadian rhythms, this study focuses on socially-
+sensed data: social media and communication data.
+
+We note the relationships we observe are complex and multi-
+faceted. For example, poor sleep may manifest in technology
+use, technology use may result in poor sleep, and/or both may
+reﬂect some third factor. The same applies for the neurobe-
+havioral variables we study (e.g. negative mood may both re-
+ﬂect and cause poor sleep, and both negative mood and poor
+sleep may be indicative of other factors such as depression
+and stress). While it is beyond the scope of this paper to fully
+disentangle such intricacies, we are able to demonstrate how
+technology use can be used to infer sleep onset, duration, and
+disruption; how disruption may manifest through subsequent
+usage patterns; and how the impact of disruption on attention,
+cognition and mood can be quantiﬁed using these patterns.
+
+METHOD
+Our social sensing methodology is apt for young adults and
+undergraduate students, a compelling population to spotlight
+since they tend to be on the later end of the chronotype scale
+and therefore experience the most severe symptoms and con-
+sequences of social jet lag (the sleep-schedule instability that
+stems from social schedules interfering with biological sleep
+preferences) [43]. Studies also ﬁnd undergraduates suffer
+from chronic lost and interrupted sleep, which can lead to
+poorer academic performance, increased stress, mental health
+problems, and increased drug and alcohol consumption [46].
+
+To explore college students’ sleep-related behaviors along
+with how their technology-mediated social interactions not
+only impact these behaviors but may also enable the com-
+putational assessment of circadian patterns and disorders, we
+captured a combination of qualitative and quantitative data
+through survey instruments, sleep diaries, phone and social
+media logs, and periodic in-person interviews. All data were
+anonymized, encrypted, and stored locally on a drive to which
+only the authors had access. Participants were compensated
+based on the number of completed sleep diary entries and the
+amount of phone-sensed data successfully logged. The Cor-
+nell Institutional Review Board approved all procedures.
+
+845
+
+Gender Study Diary
+
+Participant
+ID
+P1
+P2
+P3
+P4
+P5
+P6
+P7
+P8
+P9
+
+Age
+Range
+20-21
+20-21
+18-19
+18-19
+18-19
+18-19
+22-24
+18-19
+20-21
+
+M
+M
+M
+M
+M
+F
+M
+F
+M
+
+CMC
+Days Entries Data
+1771
+93
+2904
+94
+1511
+28
+1117
+66
+2739
+78
+2243
+66
+1420
+80
+752
+46
+3187
+74
+
+97
+96
+95
+93
+93
+91
+87
+92
+76
+
+Table 1. Study demographics
+
+Participants
+We recruited undergraduates using public mailing lists and
+snowball sampling to obtain a sample of 9 participants (7
+males, 2 females) aged 19-25 years old. All had been us-
+ing smartphones for at least 6 months prior to beginning our
+study. Participant characteristics are summarized in Table 1.
+
+Given that we are interested in how social interactions and
+socially-deﬁned demands impact circadian patterns, our study
+spans three key phases in undergraduate life: end of Fall
+semester (34 days), Winter break (24 days), and start of
+Spring semester (39 days). All participants had standard class
+schedules during the Fall and Spring semesters, except for
+one who had an internship during the Fall and attended no
+classes then. Our extended period of study allowed us to cap-
+ture across participants more than 600 data points of sleep
+information and over 17,000 socially-sensed usage events –
+measures we describe further in the subsections that follow.
+
+Survey Measures
+
+Chronotype
+As described earlier, a person’s chronotype indicates his or
+her unique circadian rhythms across a range of physiological,
+cognitive, and behavioral traits and functions. To measure
+individual chronotype, we administered the Munich Chrono-
+Type Questionnaire (MCTQ) [45]. The MCTQ asks about
+sleep and wake timings on work and free days as well as
+about work and lifestyle details in order to classify respon-
+dents from extreme early to extreme late types. It has been
+clinically validated in controlled settings against sleep-logs,
+actigraphy-data, and blood parameters [44]. To provide a
+comparable representation of chronotype, the MCTQ uses
+sleep midpoint on free days (M SFsc) [50], a corrected mea-
+sure of the halfway point between sleep time and wake time:
+
+M SFsc = M SF − 0.5 (SDF − (5 ∗ SDW + 2 ∗ SDF )/7)
+
+where SDF and SDW are sleep duration on free days and
+work days, respectively, and (5 ∗ SDW + 2 ∗ SDF )/7 pro-
+vides the average sleep duration across a week. The correc-
+tion of M SF is necessary to account for oversleep on free
+days. That is, most people (except for extreme early chrono-
+types) accumulate sleep debt during work days and then com-
+pensate (if possible) by oversleeping on free days [45].
+
+Figure 1 shows chronotype according to M SFSC for each
+participant; the ﬁgure’s early-late key is based on a MCTQ-
+deﬁned spectrum. We can see that our sample provides access
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+logs of status updates, posted comments and Likes, location
+checkins, asked Questions, and outgoing private messages.
+We refer to all these Facebook data as “posts”. Since we are
+interested in participants’ Facebook interactions with other
+users, we ﬁlter out system-generated posts (e.g. tagged photo
+alerts). We focus on Facebook since it is the most popular
+social network used by all of our participants but note that it
+would be desirable in future work to incorporate data from ad-
+ditional social media platforms to further verify and compare
+results. Table 1 provides the number of days for which valid
+phone data was captured as well as the total number of col-
+lected technology-mediated interactions (altogether referred
+to as “CMC” for Computer-Mediated Communication).
+
+Interviews
+We conducted periodic interviews with participants through-
+out the study – one upon initial recruitment, a second inter-
+view at the end of the Fall semester prior to the start of Win-
+ter break, and a third concluding interview at the end of the
+study. These interviews provide the opportunity to verify as-
+sumptions and seek explanations about participants’ observed
+behaviors as well as to validate our circadian analyses and in-
+ferences against a self-report ground truth. To contextualize
+quantitative results with relevant qualitative details, we in-
+clude insights from these interviews throughout the paper.
+
+FINDINGS
+
+Daily Technological and Biological Rhythms
+To begin, we analyze phone probes, social media logs, and
+sleep diaries to gain a sense of typical trends in participants’
+technology use and sleep-wake behaviors as well as poten-
+tial links between them. To support the assumption that our
+small scale participant pool is representative of college stu-
+dents more generally, we also compare these observations to
+those from prior studies, consistently ﬁnding close alignment.
+
+First, we observe the daily usage trends shown in Figure 2.
+We see usage is heaviest in late evening, until about 11pm.
+Levels of social media app usage and Facebook posting activ-
+ity in particular continue slightly later until around 1am. Our
+observations align well with prior studies on CMC use, which
+ﬁnd that Facebook usage increases through the evening until
+around midnight [30], that social mobile applications have the
+highest probability of being used from 9pm to 1am [6], and
+that text messaging frequently occurs late at night and causes
+later bedtimes [47]. Following this CMC use, sleep journal
+entries indicate participants go to sleep within an average of
+49 minutes; prior research similarly ﬁnds sleep occurs within
+60 minutes of computer use for 60% of 19-29 year olds [35].
+
+Figure 2. Daily trends in participants’ average CMC-based usage
+
+846
+
+Figure 1. Participant chronotypes (corrected mid-sleep on free days)
+
+to a range of chronotypes, allowing comparison of the effects
+of social jet lag for different types. Though our sample size
+works for exploratory study and as described below enabled
+us to conduct multiple interviews in order to augment our
+analyses with rich qualitative data, we also administered the
+MCTQ to over 200 additional students for comparison. Most
+of our participants tend toward the later end of the spectrum
+as expected given their ages, though P4 actually has quite an
+early chronotype for that age (sample mean M SFSC=05:53
+not including P4; sample mean M SFSC=05:34 including
+P4). Generating an age and sex matched random sample from
+the N=281 large survey returns a mean M SFSC=05:46 and
+helps assure that our sample is representative of late-type col-
+lege students who regularly use social media.
+
+Personality
+Psychological differences can affect circadian timings and
+sleep-related behaviors. In particular, studies have found Big
+Five personality dimensions [12] may be signiﬁcant predic-
+tors of early vs. late timing. As a personality assessment, we
+administered the Big Five Inventory (BFI) [20]. All personal-
+ity factors show good internal consistency within participants
+(Cronbach Alpha between 0.74 - 0.89). We also ﬁnd expected
+correlations between our participants’ chronotype and per-
+sonality – in particular, earlier types show signiﬁcantly higher
+levels of Conscientiousness (r = 0.71, p < 0.05).
+
+Sleep Diary
+Throughout the study, each participant maintained a daily on-
+line sleep journal to record bedtime, number of minutes to
+fall asleep, and wake time as well as any sleep disturbances
+and perceived feelings upon waking. Participants received a
+reminder email each morning to complete the journal entry
+for the prior night’s sleep. To ensure data quality, we discard
+any retrospective entries and retain only those that record the
+previous day’s sleep. Prior studies validate the reliability of
+such self-report for per-night sleep [37].
+
+Phone Probes and Social Media Logs
+Participants also installed a smartphone application we devel-
+oped to run in the background and collect usage data. In this
+study, we focus on the probes for technology-mediated so-
+cial interactions: phone calls, text messages, and social me-
+dia app usage. In addition, we requested participants’ permis-
+sion to download their Facebook friend data along with their
+
+Extreme EarlyModerate EarlyAverageModerate LateExtreme LateP1P2P3P4P5P6P7P8P99 am876543 amP1 (6:59)P2 (6:41)P5   (6:38)P3 (6:12)P9 (5:43)P6 (5:18)P7 (4:54)P8 (4:41)P4 (3:02)89101112123456789101112345OverallPhone CallsText MessagesSocial Media AppsFacebook Posts147ampm12am12108462Mean # per daySESSION: SOCIAL LIFE
+
+Individuals in this 19-29 age group are known to go to sleep
+later than any other age group, and adolescents in particu-
+lar tend to delay their bed and wake times as well as suf-
+fer from decreased sleep length and increased sleep irregu-
+larity [13, 30]. Indeed, our participants’ average sleep onset
+ranges from 1:36-2:14am (depending on weekday or week-
+end, semester or vacation) – quite late timings, likely since
+they are on the younger side of this age range. Additionally,
+we ﬁnd less than half (49.1%) of reported sleep durations to
+be 7 or 8 hours, and 23.3% of reported durations are 6 hours
+or less. Our ﬁndings are close to those observed in prior stud-
+ies [32] and indicate a concerningly high incidence of insuf-
+ﬁcient sleep among our participants. We also ﬁnd 15.2% of
+sleep durations to be 10 hours or more, which is further trou-
+bling given that exceedingly long as well as short sleep du-
+rations are detrimental to mental and physical health and are
+associated with a range of problems related to academic per-
+formance, reckless behavior, and substance abuse [17].
+
+Researchers have suggested that such sleep inadequacy may
+in part be due to increased usage of the internet and social
+media [24]. Our own study ﬁnds similar results – that social
+media may not only reﬂect but also modulate delayed sleep
+onsets. Speciﬁcally, on nights when participants use social
+media apps and post to Facebook after 12am, they report an
+average of 34 minutes less sleep. From participants’ sleep
+logs about how many times they wake up during the night,
+we can also compare each night’s number of sleep interrup-
+tions to the timing and amount of social media use the prior
+day. We ﬁnd that for nights during which participants ex-
+perienced one or more sleep interruptions, they used social
+media nearly twice as much the day before (1.8 times more
+on average; Wilcoxon sign-rank test, p < .001). Journal en-
+tries suggest such behavior produces feelings of tiredness,
+as analysis shows late night social media use is associated
+with reports of feeling “fatigued” as opposed to “refreshed”
+(χ2 = 10.21, df = 1, p < .05). Facebook updates from the
+following day sometimes express similar exhaustion – as ex-
+amples, “Super sleepy”, “I woke up at eight. I am exhausted”,
+and “So tired and really want another hour to sleep”.
+
+Interviews reveal ways CMC is part of bedtime habits. For
+example, “I do my before-sleep routine, get into bed with
+my phone, spend about 15 minutes on Facebook, then set my
+alarm, put the phone under my pillow, and am asleep”. All
+participants in relationships report using CMC to communi-
+cate with partners just before bed. Late types note using so-
+cial media as something to do when unable to fall asleep (due
+to their late biological clock), while as expected our early type
+disagrees, “people usually keep me up not technology”, re-
+ferring to evening social schedules, which are shaped more
+by late types [43]. Participants also express that social media
+keeps them up longer than planned, for common reasons such
+as “endless scrolling” social feeds that make them “feel like
+an addict, obligated” to “need to know what’s going on”.
+
+Based on these ﬁndings that social media use relates to sleep
+characteristics such as length and quality, we next explore
+leveraging usage data for unobtrusive sleep sensing, includ-
+ing of misalignments related to social jet lag.
+
+Leveraging Social Data for Sleep Sensing
+We ﬁrst attempt to infer sleep events from CMC patterns by
+implementing the sleep-inference algorithm built on screen
+on/off patterns presented in [1]. We instantiate our algorithm
+using phone probe data, social media app use logs, and Face-
+book posts to model sleep events according to the longest
+nightly gaps in usage. We pre-process these social-sensor in-
+puts to ﬁlter usage events before 10pm or after 7am, which
+do not normally coincide with sleep periods since our partic-
+ipants are not shift workers [21]. Following a recommended
+threshold, we also eliminate any usage events with a duration
+of less than 30 seconds, which are likely due to automated
+phone notiﬁcations rather than active user interactions [1].
+
+Table 2 presents the accuracy of our sleep duration inference
+compared with the screen on/off approach and with partic-
+ipants’ ground truth sleep journals. Results show our tech-
+nique’s reliability, which achieves an average difference of
+only 23 minutes between socially-sensed and self-reported
+sleep duration. This prediction is more accurate than from
+screen on/off alone [1]; and we also manage to outperform
+more complex algorithms based on environmental factors
+such as light, movement, and sound as well as phone lock-
+ing and charging events [11]. Our approach is thus desirable
+for a few key reasons. First, our technique is as reliable yet
+more unobtrusive and computationally lightweight than those
+built upon frequent momentary assessments (EMAs), heavy
+instrumentation, or the use of wearable sensors. In addition,
+by leveraging web data, we are able (unlike approaches based
+solely on mobile sensor data) to continue capturing signals
+about a user’s behavior even if she is interacting through a
+device other than her personal phone such as a tablet, desktop
+PC, friend’s device, or public computer.
+
+Our approach overestimates sleep when the stop and start of
+CMC use do not precisely adjoin sleep onset and wake, re-
+spectively. By incorporating an error term to the calculation
+of sleep duration per participant (based on chronotype and in-
+dividual differences in pre-bed and post-wakeup CMC usage
+learned from the study’s ﬁrst week of data), we are some-
+what able to correct for this non-usage gap, and more com-
+plex learning can further improve accuracy. Conversely, we
+sometimes underestimate sleep duration when notiﬁcations
+are mistaken as active usage. By incorporating a threshold for
+minimum usage duration, we attempt to ﬁlter out such device-
+
+Screen Ground Truth
+
+Social
+Data On-Off
+8.54*
+8.44*
+8.09
+7.64*
+8.33*
+8.21*
+8.02*
+7.53*
+5.44*
+6.11*
+7.17*
+7.15*
+7.16*
+7.63
+7.30*
+7.38*
+5.42
+7.48
+
+P1
+P2
+P3
+P4
+P5
+P6
+P7
+P8
+P9
+
+Diary
+8.13
+7.45
+8.15
+7.25
+6.12
+7.13
+7.14
+8.14
+6.25
+
+Table 2. Average sleep duration for each participant according to social-
+sensor and self-reported ground-truth data. (* denotes inferences that
+fall within 95% conﬁdence interval based on diary self-reports, p < .01)
+
+847
+
+generated events, but more sophisticated instrumentation can
+further help eliminate such misinterpretation of phone events
+not indicative of genuine user activity.
+
+Our interview data allow us to uncover other points of fail-
+ure and opportunities for improvement. For instance, P9 de-
+scribed pre-bed phone use as a common tendency, identifying
+watching movies and using Twitter as typical nightly activi-
+ties, and she also noted normally checking email and texts
+upon waking. Similarly, P7 told us that morning phone use
+involved weather and calendar checking, and he discussed us-
+ing Facebook and playing video games before bed but ex-
+plained that he does so on a desktop computer rather than the
+phone. Thus incorporating into our sensing both additional
+forms of social data (e.g., Twitter, email) as well as broader
+non-CMC usage data (e.g., app logs, web histories) and from
+across multiple devices would be straightforward next steps
+towards more precise sleep-event estimations.
+
+Assessing Circadian Disruption
+As previously discussed, social constraints can result in later
+sleep onsets and earlier required wake times that are in oppo-
+sition to our own internal timings. Alarmingly, it is estimated
+that over 80% of the population suffers from social jet lag
+[41], and we unfortunately observe it impacting each of our
+participants as well. Figure 3 shows the average social-sensed
+sleep duration on work days and free days for each participant
+and illustrates the discrepancy between the two. (Note that
+for our participants work days are Monday through Friday
+and free days correspond to Saturday and Sunday, but gen-
+erally speaking, work and free days do not necessarily have
+to coincide with the standard workweek and weekend days).
+Duration is calculated as the amount of time between sleep
+onset and wake [36]. Our results compare well to those from
+prior analyses of the MCTQ database, which similarly ﬁnd
+social jet lag ranging from approximately 1-2 hours [42].
+
+First, these results demonstrate how our later chronotypes’
+sleep duration is systematically shortened on work days,
+which leads to accumulated sleep debt that is then compen-
+sated for by sleeping more on the weekend. This same ef-
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+fect has been observed in extant research [45]. Excluding our
+early chronotype (P4), participants sleep an average of 67.8
+minutes more on weekends. In contrast, P4 exhibits precisely
+the opposite pattern. For this individual, longer durations of
+sleep happen on weekdays while sleep is shortened on the
+weekend. This is likely because P4’s work week schedule ﬁts
+better with his internal timing preferences while his weekend
+sleep is forced to shift due to social engagements with later-
+type peers.
+Indeed, sleep onset for P4 is 93 minutes later
+on weekends than during the week, plus sleep duration is re-
+duced (by an average of 54 minutes) since the natural circa-
+dian drive prompts an early wake up even after a later-than-
+preferred sleep onset following a night of socializing [43].
+Altogether, these ﬁndings about the reversed sleep patterns of
+early and late chronotypes on work and free days thus show
+how our sensing is able to reveal a well-known chronobiolog-
+ical phenomenon called the “scissors of sleep” [39].
+
+To next quantify social jet lag and assess its severity across
+our participants, we compute the difference between mid-
+sleep (the halfway point between sleep onset and waking) on
+free days (MSF) and on work days (MSW) per [50]:
+
+∆M S = |M SF − M SW |
+
+Figure 4 shows the results of this calculation according to the
+social-sensed data, presented according to participant chrono-
+type. Our ﬁndings are similar to those from prior work [1].
+Speciﬁcally, we see increased social jet lag on the extreme
+ends of the chronotype spectrum, and as expected it is most
+severe for our later types since their socially-constrained days
+(work days) outnumber their free days (weekends) [50].
+
+We also compare social jet lag across our study phases (Fall
+semester, Winter break, and Spring semester) since academic
+responsibilities, employment schedules, and social expecta-
+tions vary across these periods. Figure 5 illustrates results.
+During the Fall and Spring semesters, sleep midpoint is much
+earlier on weekdays vs. weekends since imposed class sched-
+ules force earlier wake up times during the week. Further,
+we see that more sleep debt accumulates during work days
+in the Fall compared to the Spring semester, as reﬂected by
+a considerable shift in weekend sleep midpoint during Fall
+weekends in order to compensate. We believe this is due to
+the fact that our Fall study phase overlapped with the highly
+demanding end-of-semester exam period whereas our Spring
+study phase was during the (slightly) less intensive start of the
+
+Figure 3. Average sleep duration on work days and free days reveal the
+“scissors of sleep”
+
+Figure 4. Socially-sensed average social jet lag (discrepancy between
+mid-sleep on free days and work days) across chronotypes
+
+848
+
+98765Sleep Duration (hours)Work daysWeekends43210P1P2P3P4P5P6P7P8P9Chronotype (MSF)Social Jet Lag (minutes)80706050403020103:00-4:00am4:00-5:005:00-6:006:00-7:00SESSION: SOCIAL LIFE
+
+Figure 5. Shifts in sleep midpoint across study phases
+
+semester. A number of Facebook posts from our dataset sug-
+gest this to be the case as well, for example: “lab exam. how
+much should i stay up to study tonight??” (Fall) compared to
+“still just shopping for classes” (Spring).
+
+On the other hand, when these external academic pressures
+somewhat subside during the Winter break and participants
+can more freely choose their sleep timings, we ﬁnd far less
+ﬂuctuation between sleep midpoint on weekdays vs. week-
+ends, which differ by less than 10 minutes. Still, individual
+differences can exist in terms of social dynamics during va-
+cation periods. From interviews, we learned that some partic-
+ipants’ main social groups were located in the place to where
+they were travelling, resulting in a substantially reduced need
+to use CMC technology to maintain contact as compared to
+while away at school. On the other hand, other participants
+told us that their online networks were mainly comprised of
+schoolmates, which meant leaving during the break instead
+resulted in increased CMC usage to maintain contact. The
+same set of assumptions regarding technology usage patterns
+thus should not be generically applied without considering
+idiosyncrasies and individual circumstances.
+
+Sleep Disruption and Inertia
+A number of potential factors can contribute to sleep disrup-
+tion. To name a few, caffeine, napping, exercise, and alcohol
+are commonly studied by ubiquitous computing researchers,
+sometimes with an eye to developing tracking technology de-
+signed to help users maintain sleep hygiene (e.g., [3, 28]).
+Regardless of its culprit, the detrimental cognitive, psycho-
+logical, and physical effects of poor sleep are numerous [9,
+36]; and such deﬁciencies that follow a night of inadequate
+sleep can be initially observed during the wake up process.
+Speciﬁcally, the term sleep inertia is used to describe the
+time a person takes to become fully awake and functional,
+and prolonged sleep inertia is a symptom of social jet lag
+[45]. Given that the duration of morning technology usage
+has been shown to be a reasonable proxy of sleep inertia [1],
+we investigate what speciﬁc technology-mediated activities
+typically comprise morning usage, along with the feasibility
+of using social sensing to model this sleep-wake transition.
+
+Analyzing rise time usage, we ﬁnd that all participants report
+using their smartphones within 5 or 10 minutes after wak-
+ing up for activities such as browsing the internet, checking
+email, and interacting with social media or communication
+apps. Note that this usage is separate from alarm-related us-
+age (7 of 9 participants report using their smartphones as their
+
+849
+
+daily alarms). This duration of morning phone use is consis-
+tent with prior large-scale studies on college students’ mo-
+bile device habits [27], which also ﬁnd that communication
+applications are nearly always the ﬁrst apps used upon wak-
+ing from sleep [6]. Our phone probe and social media data
+conﬁrm these tendencies as well – on average, some form of
+technology-mediated social interaction is detected within an
+hour of waking, with text messaging being the predominant
+form of social technology use (compared with phone calls and
+social media) on more than two thirds of mornings.
+
+We attempt to operationalize sleep inertia according to the
+duration of morning CMC activity but do not see the same
+strong association found in prior work that bases usage on
+screen on/off events [1]. This suggests CMC-based activities
+are a viable option for assessing wake events since they are
+frequently a user’s ﬁrst form of usage upon waking but that
+attention soon turns to other phone-based interactions that are
+more apt for measuring sleep inertia speciﬁcally. Our inter-
+views reveal such interactions often involve browsing news,
+weather, and videos – usage events that can be taken into con-
+sideration when building models to predict morning inertia
+and transitional states out of sleep.
+
+Monitoring Neurobehavioral Functioning
+As mentioned previously, social jet lag has numerous detri-
+mental consequences, with symptoms manifesting as cog-
+nitive difﬁculties and emotional problems. Moving beyond
+morning circadian rhythms, we therefore next explore the im-
+pacts of sleep on such neurobehavioral functioning through-
+out the following day, speciﬁcally focusing on attention, cog-
+nitive performance, and mood. These characteristics are
+known to exhibit strong circadian patterns, suffer substan-
+tially after sleep loss and interruption, and are considered es-
+pecially important attributes to evaluate for individuals in our
+participants’ age group [36].
+
+We explore utilizing a number of socially-sensed variables
+in order to operationalize activity levels, social interactions,
+cognition, and emotions, all of which prior research and our
+own experimentation suggest as highly relevant to perform-
+ing such circadian assessments. Here we present our analyses
+that reveal meaningful differences in these variables on days
+following nights of varying sleep quality. Comparisons are
+performed on medians using Wilcoxon sign-rank tests. Fol-
+lowing established guidelines, we treat sleep durations last-
+ing 7 - 9 hours as “adequate” and durations outside this range
+as “inadequate” [10] – though just as our internal biological
+clocks direct our preferred sleep timings, there are individual
+differences in sleep need as well [45].
+
+Attention and Cyberloaﬁng. Cyberloaﬁng is a term used
+to refer to idling and procrastination behaviors [29]. Such
+tendencies to postpone tasks may be explained by a lack of
+attention and an inability to focus that stem from insufﬁcient
+self-regulatory resources, which drain over the course of a
+day and require adequate sleep to become restored [4]. Both
+sleep quantity and quality are important to this restoration
+[18], and an individual’s failure to obtain both can result in
+increased levels of cyberloaﬁng [33].
+
+Work daysWeekendsFallWinterSpringSleep Midpoint 6:306:005:305:004:304:00amVolume **
+Burstiness ***
+Frequency ***
+
+Adequate
+18
+6.12
+0.71
+
+Inadequate
+34
+9.54
+0.43
+
+Table 3. Median values of CMC-based activity levels following nights
+of Adequate vs. Inadequate sleep. Signiﬁcant differences in medians
+marked on variable name (**p < .001, ***p < .0001)
+
+To capture cyberloaﬁng behaviors, we therefore compute the
+following interactivity-based measures:
+
+• Volume: The total number of technology-mediated social
+interactions a participant performs in a given day between
+initially waking and eventually going to sleep.
+
+• Burstiness: The maximum number of interactions of a par-
+
+ticipant in any single hour between wake and sleep.
+
+• Frequency: The number of hours between a participant’s
+
+successive interactions.
+
+As presented in Table 3, our analysis of these variables ﬁnds
+that individuals who report inadequate levels of sleep are far
+heavier users of technology the following day. Speciﬁcally,
+nights of insufﬁcient sleep are associated with more CMC-
+based interactions the following day, which are made more
+frequently and in tighter temporal bursts. Correlating hours of
+sleep with the amount of next-day cyberloaﬁng activity shows
+the same negative relationship (r = −.52, p < .01). During
+interviews, participants all mentioned checking social media
+when having trouble focusing or concentrating, which they
+expressed often happens when tired – e.g., “If I’m more tired,
+I’m less able to pay attention in class and more likely to use
+phone to avoid falling asleep or get bored more easily”.
+
+Prior research shows individuals with higher levels of con-
+scientiousness may naturally possess more self-regulatory re-
+sources [12] and be less susceptible to cyberloaﬁng follow-
+ing lost or disrupted sleep. We therefore perform linear re-
+gression between sleep duration and the amount of subse-
+quent CMC activity while controlling for personality. We ﬁnd
+sleep duration (β = −.39, p < .001) and conscientiousness
+(β = −.16, p < .01) to be signiﬁcant predictors of subse-
+quent CMC usage, and the negative direction of the partial
+slopes again indicates that the less sleep an individual gets,
+the more she uses CMC technologies the following day.
+
+Cognitive Performance.
+Impairment on academic perfor-
+mance results from sleep deprivation. Sleep loss makes cir-
+cadian variation in performance most evident, and the impair-
+ment effects of fatigue coupled with endogenous changes in
+daily brain function have even been equated to alcohol intox-
+ication. Conversely, adequate sleep duration improves learn-
+ing and problem solving [49].
+
+As a proxy for daily cognitive performance, we utilize par-
+ticipants’ Facebook posts. We ﬁrst perform standard pre-
+processing on the text-based content of posts (e.g., removing
+punctuation and URLs, handling spelling errors, and so on)
+and then calculate the following cognitive-based measures,
+which represent the sophistication of a participant’s posts and
+the cognitive complexity the writing required:
+
+• LIX: A readability measure that indicates the difﬁculty of
+reading a piece of text, computed as the percentage of
+
+850
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+LIX *
+TReDIX **
+
+Adequate
+0.3592
+0.2738
+Table 4. Median values of cognitive performance following nights of Ad-
+equate vs. Inadequate sleep. Signiﬁcant differences in medians marked
+on variable name (*p < .05, **p < .01)
+
+Inadequate
+0.3003
+0.2144
+
+words having 7 or more letters plus the average number
+of words per post [5].
+
+• TReDIX: A LIX-based measure adapted for use with social
+media content, computed as a ratio of the total count of
+words having 7 or more letters that appear in all posts made
+within a time period over the total number of posts made
+in that time period [19].
+
+As summarized in Table 4, we ﬁnd that an adequate num-
+ber of hours of sleep relate to higher levels of complex
+thought according to both cognitive performance measures.
+The greatest difference is seen in the TReDIX measure, and
+linear regression conﬁrms a positive relationship – that is,
+the fewer hours of sleep, the lower the subsequently demon-
+strated cognitive ability according to social-sensor based as-
+sessment (β = 2.17, r2 = 0.12, p < .001).
+
+Mood. Consequences of sleep reduction include tension,
+nervousness, negative emotions, and irritability [36]. Con-
+versely, extending sleep improves alertness, reaction time,
+and mood [22]. To evaluate whether socially-sensed data
+can be used to reﬂect circadian patterns in mood, we again
+turn to Facebook post data and this time apply psycholinguis-
+tic analysis techniques to compute the following sentiment-
+based measure:
+
+• Sentiment Intensity Rate: A measure of how intensely pos-
+itive or negative emotions are, computed as the ratio of the
+sum of valence intensity of positive or negative language
+in posts to the total number of posts in a period [19].
+
+To avoid skewed results due to participants with many more
+Facebook posts than others, we normalize values of our senti-
+ment variables to be between 0 and 1 (where values closer to
+1 indicate levels of the sentiment variable are nearer to the
+maximum value ever observed for that individual and val-
+ues closer to 0 indicate levels nearer the minimum). Table
+5 shows the differences in positive and negative emotions ex-
+pressed after adequate and inadequate sleep.
+
+We ﬁnd that positive affect following nights with adequate
+sleep is 1.75 times higher than following nights with inad-
+equate sleep, after which negative sentiment is instead over
+twice as high. Figure 6 illustrates the difference in negative
+sentiment on days following nights of varying sleep duration.
+A similar relationship between insufﬁcient sleep and negative
+affect has been observed in prior studies that required partici-
+pants to take daily EMA-based mood assessments [32]. In in-
+terviews, participants consistently noted their usage is higher
+
+Positive Sentiment Intensity ***
+Negative Sentiment Intensity ***
+
+Adequate
+0.5373
+0.4176
+
+Inadequate
+0.3057
+0.8388
+
+Table 5. Median values of sentiment expressed in Facebook posts fol-
+lowing nights of Adequate vs. Inadequate sleep. Signiﬁcant differences
+in medians marked on variable name (***p < .0001)
+
+SESSION: SOCIAL LIFE
+
+Figure 6. Sleep duration and sentiment the following day
+
+when energy and mood are lower (e.g., feeling “more down”
+or “down and frustrated”) and also described using social me-
+dia to “vent” or seek social support when tired and irritated.
+
+It appears the timing of sleep onset also relates to the sub-
+sequent day’s mood, as we additionally ﬁnd that participants
+whose ﬁnal CMC activity happens after 3am have the lowest
+levels of measured sentiment the following day, while posts
+from individuals who go to sleep at an earlier time are 2.2
+times more positive the following day. More obtrusive stud-
+ies administering end-of-day mood surveys and employing
+a wide array of sensors (e.g., computer logging, heart-rate
+monitors) have similarly found that people who go to bed the
+earliest are also the happiest [30], and our observation also
+aligns with prior work associating late night social media us-
+age with depression and stress, though the cause vs. effect
+remains unknown [34]. Our results thus complement prior
+ﬁndings about a connection between sleep and affect as well
+as demonstrate how social media can reveal this relationship.
+
+DISCUSSION
+Our overall motivation in undertaking this research was to ex-
+plore how technology-mediated social interactions and com-
+munication patterns can be leveraged to provide an unobtru-
+sive and scalable technique for the robust monitoring and as-
+sessment of circadian rhythms. In particular, we focused in
+this study on examining sleep along with its relationship to
+attention, cognition, and emotion. Our ﬁndings suggest that
+socially-sensed data can serve as a proxy to measure circadian
+sleep timing and related neurobehavioral variability as well as
+the extent of circadian misalignment and social jet lag.
+
+Technology Modulates and Reﬂects Circadian Patterns
+We ﬁrst explored temporal trends in technology-use and sleep
+and the potential impact of the former on the latter. Our
+ﬁndings align with prior research while providing more ﬁne-
+grained views into how technology use may be related to
+lost and interrupted sleep. Speciﬁcally, we saw that use of
+computer-mediated communication technologies is heaviest
+at night and that the later the technology use, the fewer subse-
+quent hours of sleep obtained. We also found increased levels
+of social media use to be associated with signiﬁcantly more
+sleep disruptions and increased reports of tiredness the fol-
+lowing day. We further observed a chronic pattern of under-
+sleep across all our participants, and our interviews corrobo-
+rated that social media plays into lost and interrupted sleep.
+
+Having found usage of social technology to be coupled with
+sleep behaviors, we next harnessed this social-sensor data as
+
+851
+
+a means of assessing sleep events and quality. Our algorithm
+was able to infer sleep events to within 23 minutes on average,
+a level of accuracy comparable to more complicated and in-
+trusive techniques. The fact that our approach enables reliable
+and real-time sleep assessment could thus directly beneﬁt the
+research of chronobiologists who express a pressing need to
+capture in-situ data from large populations spread across di-
+verse locations and time zones [40].
+
+The ability of our approach to passively detect sleep events
+next allowed us to assess circadian disruption. In doing so,
+we found evidence of substantial sleep debt and social jet lag
+across all participants as well as considerable ﬂuctuations in
+sleep during periods when school was in or out of session.
+We next examined the impacts of such insufﬁcient sleep on
+prominent neurobehavioral processes – attention, cognition,
+and mood. It is beyond the scope of this paper to fully un-
+ravel the chicken-and-egg uncertainty regarding underlying
+factors behind technology use and other possible explanations
+for circadian disruption and its neurobehavioral consequences
+(there is fertile ground for future research to shed light on the
+impact of attention, cognition, and mood on sleep, as well
+as the potential role of third factors on all four). Still, our
+ﬁndings do indicate that lack of quality sleep manifests it-
+self in cyberloaﬁng behaviors according to increased amount,
+frequency, and burstiness of technology usage the following
+day. Then looking to the effects of sleep on cognitive per-
+formance according to the expression of complex thought in
+text-based social media content, we found an adequate num-
+ber of hours of sleep was related to increased performance
+while fewer hours of sleep was associated with lower demon-
+stration of cognitive ability. Lastly, we performed sentiment
+analysis on this same text-based content in order to evalu-
+ate sleep’s relationship to mood and found signiﬁcantly more
+positive emotion being expressed following adequate sleep
+and the same holding true for expression of negative emotion
+after poor sleep.
+
+From a mix of quantitative and qualitative analyses, we alto-
+gether observed a cycle of disruption wherein students get in-
+sufﬁcient sleep; cyberloaf the next day due to problems with
+attention, cognition, or mood; are consequently unproduc-
+tive; and ultimately again lose sleep staying up to compen-
+sate for misused time. Though this theme emerged across
+participants, multiple other factors – both short-term or more
+permanent – can of course inﬂuence levels of technology use
+and behaviors related to sleep, and broader work is needed
+to identify such individual circumstances, some of which our
+interviews glimpsed. Nonetheless, we emphasize the impor-
+tance of designing technology that strikes a balance between
+affording social connection while encouraging moderate us-
+age as to not introduce biological disruption.
+
+Overall, our ﬁndings relate to the larger notion of the compli-
+cated interplay between technology use, sleep, and circadian
+traits. For instance, we saw sleep behaviors and incidence of
+social jet lag varying by chronotype; and we observed that
+increased levels of social media use were associated with sig-
+niﬁcantly more lost sleep, which in turn was related to fatigue,
+cognition, and emotion.
+
+PositiveNegativeSleep Duration (hours)-100.51Sentiment-0.5Over 9Under 5678Implications for Sleep Assessment and Intervention
+A key motivation underlying our work is the development of
+future generations of circadian intervention and stabilization
+tools. As mentioned earlier, current technologies generally
+fail to consider circadian rhythms in their monitoring and in-
+tervention strategies. In response, our research provides com-
+putational techniques and design recommendations that can
+contribute to the creation of novel systems that may consid-
+erably enhance such interventions. Two directions stand out.
+
+First, technologies can capitalize on patterns of interaction in
+order to diagnose current circadian misalignments as well as
+to detect whether or not behavioral trends are likely to lead
+to future disruptions. For instance, a key ﬁrst step is provid-
+ing feedback to increase users’ awareness about how certain
+patterns of technology use may act as a gateway to lost sleep,
+procrastination, or depressed mood.
+
+Second, we envision circadian-aware systems that can sense
+and respond to individual variations in order to more accu-
+rately model daily functioning and supply interventions in
+line with innate biological preferences. As examples, systems
+offering sleep advice could be tailored to each user’s genetic
+and environmental conditions. A circadian-attuned calen-
+dar could schedule different types of activities such as meet-
+ings and exercise based on individual chronotypes. Home-
+based light therapy could automatically cue light exposure at
+optimal times, while patients undergoing treatment for pain
+could receive reminder notiﬁcations to administer medication
+at times ideal for delivery.
+
+Limitations and Future Work
+As discussed previously, individual differences in circadian
+variables can vary dramatically. A larger-scale study would
+therefore be desirable in order to see how well our ﬁndings
+hold and to study a wider sample of participants – for in-
+stance, of more diverse age groups, genders, and chronotypes
+as well as individuals living with affective illnesses such as
+bipolar disorder, who could beneﬁt immensely from tech-
+nologies designed to support circadian rhythm stabilization.
+Similarly, extending our study to a longer time frame and to
+additional geographical regions would allow measurement of
+circadian variations over the course of seasonal and yearly
+cycles and across multiple time zones and latitudes.
+
+The types of data and analyses performed can also be ex-
+panded going forward. Qualitative analysis of more fre-
+quently conducted interviews could help to further unpack
+and explain our quantitative observations regarding relation-
+ships among technology use, sleep, and neurobehavioral
+functioning. Such data might also enable the identiﬁcation
+of additional edge cases in order to incorporate more infor-
+mative features and make sensing more robust. Similarly,
+future iterations of our sleep sensing algorithm can incorpo-
+rate additional forms of socially-computable signals, for in-
+stance from emails or from social media platforms beyond
+Facebook. Such enhancement may not only improve sleep
+inference accuracy through increased amounts of behavioral
+data but could also allow the examination of why and how in-
+dividuals exhibit different behaviors in different technology-
+
+852
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+mediated social contexts and whether such variations relate
+to circadian factors.
+
+It would also be desirable to examine the effects of light –
+including light emitted from devices, especially given our
+ﬁndings regarding the use of technology at night. Light is
+known to impact alertness, and light also plays a central role
+in setting the biological clock and the timing of sleep, al-
+though current empirical evidence suggests that the amount
+of light required to have an impact is far more than that emit-
+ted from electronic devices [8]. While the MCTQ contains
+a question about daylight exposure on average, measurement
+of daily sunlight as well as artiﬁcial light could be incorpo-
+rated into analyses by including a question in participants’
+self-reported sleep logs or by using data from phone sensing
+toolkits’ light sensors. Such consideration of light could be
+particularly valuable across study phases (e.g., Fall, Winter,
+Spring), when differences in light-dark patterns may impact
+our studied measures. Finally, though more burdensome for
+participants, comparison with actigraphy measures as well as
+exploring the use of body or environment based sensors could
+also contribute to a more holistic representation of rhythms.
+
+CONCLUSION
+In this study, we explored the opportunity of social sensor
+data to better understand, model, and predict patterns and
+events related to sleep behaviors and disruptions. Using
+phone probes, social media data, surveys, and interviews, we
+analyzed daily trends in the usage of social technologies and
+how such usage may both impact and reﬂect aspects of sleep
+and its relation to other circadian processes. Bringing a con-
+sideration of biological rhythms to bear enables the potential
+for such research to go beyond simply describing how people
+are using technology to get closer to why.
+
+Pursuing this aim, we discovered daily usage patterns that
+have not been previously examined, and we leveraged such
+insights to develop lightweight computational techniques that
+can predict sleep events and interruptions with an accuracy
+comparable to approaches that are more obtrusive on users
+and less feasible to deploy on a mass scale. In applying our
+novel methods for sleep sensing, we revealed signiﬁcant dif-
+ferences in neurobehavioral functioning following nights of
+adequate vs. inadequate sleep – speciﬁcally, ﬁnding that lack
+of quality sleep is associated with subsequently increased
+cyberloaﬁng activity, diminished cognitive throughput, and
+more negative mood.
+
+Finally, we presented a vision of circadian-aware systems that
+can take individual circadian variations into account when
+modeling sleep and other chronobiological processes, and we
+provided design recommendations that can be put into prac-
+tice to develop more personalized technologies that are better
+attuned to our individual circadian preferences and inherent
+biological traits.
+
+ACKNOWLEDGMENTS
+This material is based upon work supported by the Na-
+tional Science Foundation Graduate Research Fellowship un-
+der Grant No. DGE 1144153.
+
+SESSION: SOCIAL LIFE
+
+REFERENCES
+1. Abdullah, S., Matthews, M., Murnane, E. L., Gay, G.,
+
+and Choudhury, T. Towards circadian computing: early
+to bed and early to rise makes some of us unhealthy and
+sleep deprived. In Proceedings of the 2014 ACM
+International Joint Conference on Pervasive and
+Ubiquitous Computing, ACM (2014), 673–684.
+
+2. Bai, Y., Xu, B., Ma, Y., Sun, G., and Zhao, Y. Will you
+
+have a good sleep tonight?: sleep quality prediction with
+mobile phone. In Proceedings of the 7th International
+Conference on Body Area Networks, ICST (2012),
+124–130.
+
+3. Bauer, J. S., Consolvo, S., Greenstein, B., Schooler, J.,
+
+Wu, E., Watson, N. F., and Kientz, J. Shuteye:
+encouraging awareness of healthy sleep
+recommendations with a mobile, peripheral display. In
+Proceedings of the SIGCHI conference on Human
+factors in computing systems, ACM (2012), 1401–1410.
+
+4. Baumeister, R., Muraven, M., and Tice, D. Ego
+
+depletion: A resource model of volition, self-regulation,
+and controlled processing. Social cognition 18, 2 (2000),
+130–150.
+
+5. Bj¨ornsson, C. L¨asbarhet (readability) liber, 1968.
+
+6. B¨ohmer, M., Hecht, B., Sch¨oning, J., Kr¨uger, A., and
+
+Bauer, G. Falling asleep with angry birds, facebook and
+kindle: a large scale study on mobile application usage.
+In Proceedings of the 13th international conference on
+Human computer interaction with mobile devices and
+services, ACM (2011), 47–56.
+
+7. Borb´ely, A. A. A two process model of sleep regulation.
+
+Human neurobiology (1982).
+
+8. Cajochen, C. Alerting effects of light. Sleep medicine
+
+reviews 11, 6 (2007), 453–464.
+
+9. Carskadon, M. A., Acebo, C., and Jenni, O. G.
+
+Regulation of adolescent sleep: implications for
+behavior. Annals of the New York Academy of Sciences
+1021, 1 (2004), 276–291.
+
+10. Chen, M.-Y., Wang, E. K., and Jeng, Y.-J. Adequate
+
+sleep among adolescents is positively associated with
+health status and health-related behaviors. BMC Public
+Health 6, 1 (2006), 59.
+
+11. Chen, Z., Lin, M., Chen, F., Lane, N. D., Cardone, G.,
+
+Wang, R., Li, T., Chen, Y., Choudhury, T., and
+Campbell, A. T. Unobtrusive sleep monitoring using
+smartphones. In Pervasive Computing Technologies for
+Healthcare (PervasiveHealth), 2013 7th International
+Conference on, IEEE (2013), 145–152.
+
+12. Costa, P. T., and McCrae, R. R. Revised Neo Personality
+
+Inventory (NEO-PI-R) and NEO Five-Factor Inventory
+(NEO-FFI). Psychological Assesment Resources, 1992.
+
+13. Crowley, S. J., Acebo, C., and Carskadon, M. A. Sleep,
+circadian rhythms, and delayed phase in adolescence.
+Sleep medicine 8, 6 (2007), 602–612.
+
+853
+
+14. Duggan, M., Ellison, N., Lampe, C., Lenhart, A., and
+Madden, M. Social media update 2014. Pew Research
+Center (2015).
+
+15. Hao, T., Xing, G., and Zhou, G. isleep: unobtrusive
+sleep quality monitoring using smartphones. In
+Proceedings of the 11th ACM Conference on Embedded
+Networked Sensor Systems, ACM (2013), 4.
+
+16. Harvey, A. G. Sleep and circadian rhythms in bipolar
+disorder: seeking synchrony, harmony, and regulation.
+American journal of psychiatry 165, 7 (2008), 820–829.
+
+17. Heslop, P., Smith, G. D., Metcalfe, C., Macleod, J., and
+Hart, C. Sleep duration and mortality: the effect of short
+or long sleep duration on cardiovascular and all-cause
+mortality in working men and women. Sleep medicine 3,
+4 (2002), 305–314.
+
+18. Hursh, S. R., Redmond, D. P., Johnson, M. L., Thorne,
+D. R., Belenky, G., Balkin, T. J., Storm, W. F., Miller,
+J. C., and Eddy, D. R. Fatigue models for applied
+research in warﬁghting. Aviation, space, and
+environmental medicine 75, Supplement 1 (2004),
+A44–A53.
+
+19. Hutto, C., Yardi, S., and Gilbert, E. A longitudinal study
+of follow predictors on twitter. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing
+Systems, ACM (2013), 821–830.
+
+20. John, O. P., Donahue, E. M., and Kentle, R. L. The big
+
+ﬁve inventory: Versions 4a and 54, institute of
+personality and social research. University of California,
+Berkeley, CA (1991).
+
+21. Juda, M., Vetter, C., and Roenneberg, T. The munich
+
+chronotype questionnaire for shift-workers (mctqshift).
+Journal of biological rhythms 28, 2 (2013), 130–140.
+
+22. Kamdar, B. B., Kaplan, K. A., Kezirian, E. J., and
+
+Dement, W. C. The impact of extended sleep on daytime
+alertness, vigilance, and mood. Sleep medicine 5, 5
+(2004), 441–448.
+
+23. Kay, M., Choe, E. K., Shepherd, J., Greenstein, B.,
+
+Watson, N., Consolvo, S., and Kientz, J. A. Lullaby: a
+capture & access system for understanding the sleep
+environment. In Proceedings of the 2012 Conference on
+Ubiquitous Computing, ACM (2012), 226–234.
+
+24. Keyes, K. M., Maslowsky, J., Hamilton, A., and
+
+Schulenberg, J. The great sleep recession: Changes in
+sleep duration among us adolescents, 1991–2012.
+Pediatrics (2015), 460–468.
+
+25. Kreitzman, L., and Foster, R. The Rhythms Of Life: The
+Biological Clocks That Control the Daily Lives of Every
+Living Thing. Proﬁle Books, 2011.
+
+26. Krejcar, O., Jirka, J., and Janckulik, D. Use of mobile
+phones as intelligent sensors for sound input analysis
+and sleep state detection. Sensors 11, 6 (2011),
+6037–6055.
+
+27. Lee, U., Lee, J., Ko, M., Lee, C., Kim, Y., Yang, S.,
+Yatani, K., Gweon, G., Chung, K.-M., and Song, J.
+Hooked on smartphones: an exploratory study on
+smartphone overuse among college students. In
+Proceedings of the 32nd annual conference on Human
+factors in computing systems, ACM (2014), 2327–2336.
+
+28. Li, I., Dey, A., and Forlizzi, J. A stage-based model of
+personal informatics systems. In Proceedings of the
+SIGCHI Conference on Human Factors in Computing
+Systems, ACM (2010), 557–566.
+
+29. Lim, V. The it way of loaﬁng on the job: cyberloaﬁng,
+neutralizing and organizational justice. Journal of
+Organizational Behavior 23, 5 (2002), 675–694.
+
+30. Mark, G., Wang, Y., and Niiya, M. Stress and
+
+multitasking in everyday college life: an empirical study
+of online activity. In Proceedings of the 32nd annual
+ACM conference on Human factors in computing
+systems, ACM (2014), 41–50.
+
+31. Min, J.-K., Doryab, A., Wiese, J., Amini, S.,
+
+Zimmerman, J., and Hong, J. I. Toss’n’turn: smartphone
+as sleep and sleep quality detector. In Proceedings of the
+32nd annual ACM conference on Human factors in
+computing systems, ACM (2014), 477–486.
+
+32. Moturu, S. T., Khayal, I., Aharony, N., Pan, W., and
+
+Pentland, A. S. Using social sensing to understand the
+links between sleep, mood, and sociability. In Privacy,
+Security, Risk and Trust (PASSAT) and 2011 IEEE Third
+International Conference on Social Computing
+(SocialCom), IEEE (2011), 208–214.
+
+33. Muraven, M., Baumeister, R. F., and Tice, D. M.
+
+Longitudinal improvement of self-regulation through
+practice: Building self-control strength through repeated
+exercise. The Journal of social psychology 139, 4
+(1999), 446–457.
+
+34. Murnane, E. L., and Counts, S. Unraveling abstinence
+
+and relapse: smoking cessation reﬂected in social media.
+In Proceedings of the 32nd annual ACM conference on
+Human factors in computing systems, ACM (2014),
+1345–1354.
+
+35. National Sleep Foundation. Technology use and sleep.
+
+http://www.sleepfoundation.org, 2011.
+
+36. Oginska, H., and Pokorski, J. Fatigue and mood
+
+correlates of sleep length in three age-social groups:
+School children, students, and employees.
+Chronobiology international 23, 6 (2006), 1317–1328.
+
+37. Patel, S., Ayas, N., Malhotra, M., White, D.,
+
+Schernhammer, E., Speizer, F., Stampfer, M., and Hu, F.
+A prospective study of sleep duration and mortality risk
+in women. SLEEP 27, 3 (2004), 440–444.
+
+UBICOMP '15, SEPTEMBER 7–11, 2015, OSAKA, JAPAN
+
+38. Pew Research Internet Project. Cell phones and
+
+American adults, 2010.
+
+39. Roenneberg, T. Internal time: Chronotypes, social jet
+
+lag, and why you’re so tired. Harvard Univ. Press, 2012.
+
+40. Roenneberg, T. Chronobiology: The human sleep
+project. Nature 498, 7455 (2013), 427–428.
+
+41. Roenneberg, T., Allebrandt, K. V., Merrow, M., and
+
+Vetter, C. Social jetlag and obesity. Current Biology 22,
+10 (2012), 939–943.
+
+42. Roenneberg, T., Keller, L. K., Fischer, D., Matera, J. L.,
+Vetter, C., and Winnebeck, E. C. Human activity and
+rest in situ. Methods in Enzymology (2015).
+
+43. Roenneberg, T., Kuehnle, T., Juda, M., Kantermann, T.,
+
+Allebrandt, K., Gordijn, M., and Merrow, M.
+Epidemiology of the human circadian clock. Sleep
+medicine reviews 11, 6 (2007), 429–438.
+
+44. Roenneberg, T., Kuehnle, T., Pramstaller, P. P., Ricken,
+J., Havel, M., Guth, A., and Merrow, M. A marker for
+the end of adolescence. Current Biology 14, 24 (2004),
+R1038–R1039.
+
+45. Roenneberg, T., Wirz-Justice, A., and Merrow, M. Life
+between clocks: daily temporal patterns of human
+chronotypes. Journal of biological rhythms 18, 1 (2003),
+80–90.
+
+46. Taylor, D. J., and Bramoweth, A. D. Patterns and
+
+consequences of inadequate sleep in college students:
+substance use and motor vehicle accidents. Journal of
+Adolescent Health 46, 6 (2010), 610–612.
+
+47. Van den Bulck, J. Text messaging as a cause of sleep
+
+interruption in adolescents, evidence from a
+cross-sectional study. Journal of Sleep Research 12, 3
+(2003), 263–263.
+
+48. Viola, A. U., Archer, S. N., James, L. M., Groeger, J. A.,
+Lo, J. C., Skene, D. J., von Schantz, M., and Dijk, D.-J.
+Per3 polymorphism predicts sleep structure and waking
+performance. Current Biology 17, 7 (2007), 613–618.
+
+49. Wagner, D. T., Barnes, C. M., Lim, V. K., and Ferris,
+D. L. Lost sleep and cyberloaﬁng: Evidence from the
+laboratory and a daylight saving time quasi-experiment.
+Journal of Applied Psychology 97, 5 (2012), 1068.
+
+50. Wittmann, M., Dinich, J., Merrow, M., and Roenneberg,
+T. Social jetlag: misalignment of biological and social
+time. Chronobiology international 23, 1-2 (2006),
+497–509.
+
+51. Yang, A., Palmer, A. A., and de Wit, H. Genetics of
+caffeine consumption and responses to caffeine.
+Psychopharmacology 211, 3 (2010), 245–257.
+
+854
+
+

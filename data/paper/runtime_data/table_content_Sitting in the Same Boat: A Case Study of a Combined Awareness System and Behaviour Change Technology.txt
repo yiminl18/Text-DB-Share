@@ -1,0 +1,24 @@
+Table of Contents
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work and Definitions
+    5.1 Awareness Systems in Personal Settings
+    5.2 Technology to Support Behaviour Change
+6. Combining Technologies for Awareness and Behaviour Change – Design Rationale
+    6.1 Social Relationships and Social Influence
+    6.2 Shared Experiences
+    6.3 Lightweight Exchange of Messages
+    6.4 Visualization of Behaviour
+    6.5 Playful Elements
+7. Exploratory Pilot Study
+    7.1 Description of Our Exploratory Application
+8. Case Study Setup and Findings
+    8.1 Behaviour Change
+    8.2 Rewards and Reciprocity
+    8.3 Social Awareness
+9. Limitations and Future Work
+10. Acknowledgments
+11. References

@@ -1,0 +1,1293 @@
+Reviewing Reflection: On the Use of Reflection in
+Interactive System Design
+
+Eric P. S. Baumer1,2, Vera Khovanskaya2, Mark Matthews2, Lindsay Reynolds1,
+Victoria Schwanda Sosik2, Geri Gay1,2
+
+1 Communication Department
+
+2 Information Science Department
+
+Cornell University
+Ithaca, NY USA
+{ericpsb, vdk9, mark.matthews, llr48, vls48, gkg1} @ cornell.edu
+
+ABSTRACT
+Designers  have  demonstrated  an  increased  interest  in
+designing  for  reflection.  However,  that  work  currently
+occurs under a variety of diverse auspices. To help organize
+and investigate this literature, this paper present a review of
+research  on  systems  designed  to  support  reflection.  Key
+findings  include  that  most  work  in  this  area  does  not
+actually  define  the  concept of reflection. We also  find  that
+most evaluations do not focus on reflection per se rather but
+on  some  other  outcome  arguably  linked  to  reflection.  Our
+review  also  describes  the  relationship  between  reflection
+and  persuasion  evidenced  implicitly  by  both  rhetorical
+motivations  for  and  implementation  details  of  system
+design. After discussing the significance of our findings, we
+conclude  with  a  series  of  recommendations  for  improving
+research on and design for reflection.
+
+Author Keywords
+Reflection; review; reflective HCI.
+
+ACM Classification Keywords
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous.
+
+INTRODUCTION
+Interaction  design  originally  focused  largely  on  workplace
+and  task-based  settings  [32]  where  productivity  was  the
+primary goal. Later work developed from “human factors to
+human actors” [3], considering the human not as a portion
+of  a  larger  cognitive  mechanism  but  rather  acknowledging
+and incorporating many of the psychosocial dimensions of
+technology  use.  Third-wave  HCI  [11,35]  then  argued  for
+considering  how  other  aspects  of  human  experience—
+emotion  [82],  domestic  life  [89],  sexuality  [46],  culture
+[41], religion [7,101]—might factor into technology design.
+
+During  this  third  wave  shift,  the  theme  of  designing  for
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for
+personal or classroom use is granted without fee provided that copies are
+not made or distributed for profit or commercial advantage and that copies
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for
+components  of  this  work  owned  by  others  than ACM  must  be  honored.
+Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or  republish,  to
+post on servers or to redistribute to lists, requires prior specific permission
+and/or a fee. Request permissions from Permissions@acm.org.
+DIS '14, June 07 - 11 2014, Vancouver, BC, Canada
+Copyright 2014 ACM 978-1-4503-2902-6/14/06…$15.00.
+http://dx.doi.org/10.1145/2598510.2598598 
+
+reflection  has  emerged.  That  is,  designers  have  become
+interested  in  the  ways  that  technology  might  be  able  to
+support  human  reflection  on  experience  [23,75].  While
+reflective  thought  has  arguably  existed  as  a  locus  of
+interaction  design  for  years  [cf. 20],  explicit  focus  on
+supporting  reflection  is  relatively  nascent,  though  with  an
+already  emerging  body  of  literature  [23,75].  For  work  in
+this  area  to  move  forward  and  mature  into  a  developed
+subfield,  it  would  be  valuable  to  consider  how  such  work
+approaches reflection. How is reflection defined? Where is
+reflection  expected  to  be  most  helpful,  and  in  what  ways?
+What  techniques  and  design  strategies  are  used  to
+encourage  and  support  reflection?  When  do  we  know  that
+reflection has occurred, i.e., how is reflection evaluated?
+
+This  paper  reviews  literature  in  the  emerging  area  of
+designing for reflection. First we describe the process of our
+literature review, resembling in many ways that of [21]. The
+subsequent  section  presents  a  number  of  trends,  patterns,
+and  themes  we  identified  in  our  analysis,  followed  by  an
+interpretation  of  these  findings  and  their  implications,  as
+well  as  suggested  directions  for  future  work  on  designing
+for reflection.
+
+We  find  that  little  work  actually  explicitly  defines  what
+reflection  is,  and  even  less  grounds  the  definition  in  a
+conceptual or theoretical framework. The rareness of a clear
+definition  leads  to  a  majority  of  work  using  colloquial  or
+implicit  definitions  of  reflection  and  as  a  result  presenting
+the  concept  as  fairly  limited  in  its  scope.  Similarly,
+relatively few evaluations focus on reflection per se, instead
+assessing  outcomes  supposedly  resulting  from  reflection.
+Finally,  while  reflection  is  purported  as  a  benefit  in  a
+variety  of  areas—from  education  to  design  to  personal
+informatics—almost no work considers potential downsides
+of reflecting.
+
+Reflection  is  considered  central  to  many  fields  including
+healthcare,  education,  and  design.  If  interactive  systems
+design is to contribute meaningfully to supporting reflection
+in these and other areas, it will be essential to have a more
+nuanced  understanding  of  reflection  itself,  means  of
+assessing it, and strategies to support it.
+
+OUR PROCESS
+Before  beginning  our  literature  review,  we  sought  to
+achieve at least partial consensus among the authors about
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada93what constituted reflection. The goal was not to articulate a
+highly specific definition, but rather to provide some set of
+criteria  for  whether  a  paper  should  or  should  not  be
+included in our review. Drawing on ideas from Dewey [20],
+Schön  [76],  Moon  [67],  and  others,  we  see  reflection  as
+reviewing  a  series of  previous  experiences, events, stories,
+etc., and putting them together in such a way as to come to
+a better understanding or to gain some sort of insight. This
+broad,  general  conceptualization  was  intentional,  as  this
+review is meant to be inclusive rather than exclusive. These
+basic ideas were used to guide our literature search.
+
+Building the Corpus
+Due  to  our  specific  interest  in  how  reflection  has  been
+conceptualized  and  deployed  in  interactive  system  design,
+we  used  a  search  of  the  ACM  Digital  Library  to  collect
+papers.  Specifically,  we  collected  all  papers  published
+under  the  H.5  ACM  classification  (Information  Interfaces
+and  Presentation)  that  used  “reflect,”  “reflecting,”  or
+“reflection” as a keyword. We chose not to use the keyword
+“reflective”  as  such  papers  often  focused  more  on
+designers’,  researchers’,  and  practitioners’  reflection  on
+their own work (discussed further below). We used the H.5
+designation  to  capture  as  much  relevant  literature  as
+possible  (noting  that  the  template  for  many  human-
+computer  interaction  venues  uses  H.5.m  as  the  default
+classification).  This  keyword-based  approach  could  omit
+some  papers  that  arguably  pertain  to  reflection  as  defined
+above. However, our goal was not to find every paper that
+fit  this  definition  but  to  identify  those  papers  that  the
+authors  viewed  as  being about  reflection.   These were the
+papers  that  we  wanted  to  include  in  the  review,  those  that
+explicitly purported to engage with the concept.
+
+This  initial  search  generated  100  results.  Of  those,  we
+sought  papers  that  involved  studies  of  some  person  or
+persons  (often  users  though  not  always)  who  were
+reflecting.  We  excluded  papers  where  the  keyword
+“reflection”  was  used  to  refer  to  the  optical  phenomenon,
+e.g.,  “frustrated  total  internal  reflection”  as  a  technique  in
+touch-based  interfaces. We  also  excluded  papers  that  were
+reflections on the field of HCI where the  authors were the
+primary people doing the reflecting. This process resulted in
+76 papers being included in our review.
+
+Reading and Analysis
+We began our analysis by developing a series of questions
+intended  to  provide  a  sense  for  how  reflection  was
+conceptualized and deployed.
+
+1. What definition of reflection does the paper offer?
+2. To what application domain does the paper pertain?
+3. Who  are  the  people  doing  the  reflecting  (e.g.,  system
+
+users, designers, students, the elderly)?
+Is  reflection  the  desired  result  of  an  intervention
+described  in  the  paper  (as  opposed  to,  say,  a  paper
+studying reflection in some specific context)?
+If  the  paper  describes  an  interactive  system,  what
+
+4.
+
+5.
+
+design  features  or  strategies  are  used  to  support
+reflection?
+
+6. What are the stated benefits of reflection?
+
+These questions were not meant to be restrictive, i.e., these
+were not the only aspects of these papers in which we were
+interested.  Rather,  they  were  meant  to  provide  generative
+guidance—what patterns, trends, or themes might be noted
+by  attending  to  these  questions? After  formulating  our  list
+of  questions,  the  papers  were  evenly  divided  among  the
+authors. Each author read her or his papers, both answering
+our  list  of  questions  and  noting  other  trends.  The  authors
+also  met  periodically  throughout  the  reading  process  to
+discuss both observations and questions.
+
+After reading all the papers in our corpus, we conducted an
+analysis  based  on  a  grounded  theory  approach  [27].
+Combining  our  answers  to  the  above  questions  with  other
+notes  and  observations,  we  developed  a  list  of  salient
+themes emerging from our discussions of the papers. These
+themes became the  basis for  a  series  of  memos,  with each
+memo both describing one theme or pattern and indicating
+the reason for its interest or significance. The memos were
+then  circulated  among  the  authors,  who  discussed  them
+further,  refined  them,  and  considered  relationships  among
+them. These memos, and the themes they describe, form the
+basis for the following sections.
+
+RESULTS – THEMES AND PATTERNS
+In  total,  our  corpus  included  76  papers,  all  published
+between 2000 and 2013. The average publication year was
+2010 and the median 2011. A plurality of papers come from
+the  ACM  SIGCHI  conference,  either  the  full  proceedings
+(13 papers) or the extended abstracts (16). The later include
+a mix of workshop descriptions, works in progress, posters,
+etc. The next largest contingent appears in the Creativity &
+Cognition  conference  (8).  The  remainder  occurred  in  such
+venues  as  Designing  Interactive  Systems  (3),  Artificial
+Intelligence  and  Education  (3),  iConference  (2),  Tangible
+and  Embedded  Computing  (2),  and  other  similar  venues.
+The  papers  themselves  describe  a  variety  of  endeavors,
+including  interactive  systems  to  support  reflection  [e.g.,
+12], methods intended to incorporate reflection into design
+processes  [e.g., 19],  techniques  for  user  studies  [e.g.,
+39,40],  empirical  studies  of  reflective  practitioners  [e.g.,
+73,68], and others.
+
+This  section  describes  a  number  of  trends  and  patterns
+observed in the corpus during our analysis. The subsequent
+section  turns  to  the  interpretation  of  these  patterns,  their
+significance, and their implications for future work.
+
+Reflection and its Definition
+As  described  above,  this  review  sought  to  explore  the
+definitions  of  reflection  used  in  the  HCI  literature.
+However,  the  papers  we  reviewed  rarely  actually  defined
+reflection.  Of  the  76  papers,  only  30  included  an  explicit
+definition.  Often,  this  definition  consisted  of  a  brief,
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada94surface-level  description  without  grounding  in  extant
+theory, e.g.: “conscious, purposeful thought that is directed
+at  a  problem  in  order  to  understand  it  and  form  integrated
+conceptual  structures”  [79:49];  “inform  the  users  about
+their  own  behavior”  [62:322];  a  process  “in  which  people
+recapture  their  experience,  think  about  it  mull  it  over  and
+evaluate  it”  [6:1786];  or  “looking  at  lists  of  collected
+personal  information  or  exploring  or  interacting  with
+information  visualizations”  [55:562].Of  those  30  with  a
+definition, only 22 papers provided a citation on which their
+definition  was  based.  Interestingly,  six  more  papers
+referenced  such  a  citation  but  did  not  include  a  clear
+definition  of  reflection,  presumably  expecting  the  reader
+either  to  be  familiar  with  the  concept  or  to  reference  the
+citation.  Of  those  28  papers  that  did  cite  a  reference  for
+reflection,  a  large  majority  (20)  drew  on  Schön’s  [76]
+concept  of  reflection-in-action.  The  remainder  cite  work
+from a variety of areas, such as creativity [100].
+
+Reflection and its Evaluation
+We  also  examined  how  evaluations  of  reflection  were
+conducted.  The  overwhelming  majority  of  papers  we
+reviewed treated reflection as the means to an end, such as
+improved  education  [30,48,78],  better  design  [66,83],  a
+greater understanding of one’s illness or cognitive abilities
+[25,52], etc.
+
+As  such,  quantitative  assessments  in  these  studies  rarely
+measured  reflection per  se.  Instead,  either  they  measured
+other outcome variables, suggesting that an improvement in
+those  outcomes  indicated  increased  levels  of  reflection,  or
+the  evaluation  was  less  concerned  with  whether  reflection
+happened, using it primarily as a justification rather than an
+outcome  [30,62].  In  several  studies,  individuals  were
+considered  to  have  reflected  on  their  behaviors  or  patterns
+after  being  presented  with  their  data,  but  little  evidence  is
+provided to suggest that these people engaged in some kind
+of  reflective  thought  [cf. 67,76]  beyond  simply  looking  at
+the data [56,94].
+
+Qualitative  assessments  of  reflection  often  occurred  in  the
+context  of  interview  studies  [53,90].  This  approach,
+however,  encounters  similar  difficulties  noted  above,
+namely,  lacking  a  clear  definition  of  reflection  and  not
+asking directly about reflection. For instance, Leijen et al.’s
+[53] interviews dealt with self-assessment and use of video
+recordings in dance instruction. While reflection comprised
+a part of that dialogue, the interview questions appear  less
+directly  focused  on  reflection,  instead  focusing  on  “the
+streaming  video  usage  in  the  course:  video  editing  and
+viewing  to  support  the  describing  of  experiences,  use  of
+video,  evaluation  questions  and  criteria  for  online  self-
+assessment, and online peer feedback activities for learning
+from multiple perspectives” [53:172].
+
+A few exceptions to this trend either explored reflection for
+its  own  sake  or  measured  reflection  as  a  contribution  to
+another  outcome.  For  example,  Isaacs  et  al.  [42]  asked
+
+study  participants  to  revisit  old  entries  posted  in  a
+journaling system and re-rate their feelings about the event
+in  question.  Doing  so  not  only  made  the  reflection  visible
+and thus enabled direct analysis thereof, but it also allowed
+investigation  of  the  effects  of  that  reflection  on  overall
+wellbeing. Indeed, Isaacs et al. [42] provide one of the more
+methodologically rigorous evaluations in our corpus.
+
+In light of the above noted vagueness with which reflection
+is  often  defined,  this  trend  of  not  measuring  or  exploring
+reflection  directly  might  be  expected.  Indeed,  the  lack  of
+clarity  resulting  from  using  either  no  definition  or  a
+colloquial definition of reflection would likely make direct
+assessment challenging at best. Thus, many studies instead
+investigated  outcomes  or  aspects  of  experiences  that
+purportedly  would  benefit  from  increased  reflection.  The
+following  sections  detail  three  specific  types  of  benefits
+these papers suggest reflection can or should provide.
+
+Reflection and Education
+First, of the papers we reviewed, 15 dealt with education in
+some  way  [14,15,16,17,30,43,48,50,51,53,70,77,78,79,90,
+93,98].  Specific  foci  ranged  from  reflection  as  a  means  of
+educating  working  professionals  [16]  to  music  [14,43]  or
+dance [53] instruction, to teaching programming [90].
+
+This  prevalence  does  not  come  as  entirely  surprising.
+Dewey’s  [20]  philosophical  investigations  on  the  value  of
+reflective  thought  links  it  explicitly  with  education,  and
+others  have  similarly  argued  for  the  value  and  importance
+of  reflection  in  education  [e.g. 67].  Indeed,  some  form  of
+learning (through reflection) occurred in many papers, both
+those that deal with formal education and those that do not.
+Furthermore,  Schön’s  [76]  work  on  the  reflective
+practitioner is often cited in professional education. Indeed,
+of the five education-oriented papers that cited a definition
+of  reflection,  three  [14,51,90]  cite  Schön  [76]  and  two
+[53,90] cite Dewey [20], while others [79] cite Moon [53]
+and Norman [71].
+
+In  contrast  to  the  general  trend  described  above,  many  of
+the  papers  on  reflection  in  education  focused  their
+evaluations  specifically  on  reflection.  Lamberty  and
+Kolodner  [51]  describe  how  camera  talk—having  students
+speak  directly  to  a  camera  when  describing  their  work—
+enabled  a  variety  of  activities  labeled  as  reflective,
+particularly  those  in  which  the  student  was  explaining
+aspects of their mathematical understanding. Leijen et al.’s
+[53] use of video to support dance education was evaluated
+in  terms  of  how  the  processes  and  experiences  it  afforded
+resembled  reflection,  particularly  the  ability  to  draw  on
+multiple perspectives from peers. Tchetagni et al. [90] go so
+far as to develop an analytic scheme based on Dewey’s [20]
+stages  of  reflection  that  they  used  to  assess  the  degree  of
+reflectiveness evidenced among students using their system.
+Rather than focusing solely on outcomes, this work dealing
+with  reflection  in  education  generally  tended  to  include
+more consideration of process in addition to product.
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada95Reflection and Design
+Second, 17 of the papers we reviewed related to reflection
+in  and  on  the  design  process  [2,19,28,29,33,34,37,61,
+66,69,80,83,84,86,92,95,102].  These  pape rs  focuse d
+overwhelmingly  on  designers  working  alone  or  in  groups
+(13) and secondarily designers and users reflecting together
+a la co-design or participatory design (4). About half of the
+papers focus on reflection that takes place during the design
+process,  spanning  from  problem  formulation  [95],  to
+reflecting  on  design  outputs  [33],  to  comparing  multiple
+design solutions [86]. In the works that cover reflection on
+the  design  process  focus  generally  on  improving  design
+ability  by  reflecting  on  prior  design  processes  “to  extract
+lessons  and  insights  that  can  be  applied  to  future  design
+situations” [84:84].
+
+Most  of  these  papers  do  not  provide  such  an  explicit
+definition  of  reflection,  but  many  make  reference  to
+Schön’s [76] concepts of reflection-in-action and reflection-
+on-action.  This  prevalence  is  perhaps  not  surprising,
+considering  Schön’s  description  of  design  as  a  reflective
+conversation  with  materials  and  process.  In  these  papers,
+reflection is  overwhelmingly  considered a positive  activity
+that  can  lead  to  better  design,  including  both  improved
+design  outputs  [19,34,61,69,86]  and  an  improved  design
+process or creative process [37,66,84,102].
+
+These  studies  suggest  a  range  of  specific  benefits.
+Reflection can create a deeper understanding of the design
+space [92] or deeper insight into the problem at hand [95].
+Reflection  leads  to  improved  or  increased  communication,
+such as the sharing of viewpoints or understanding between
+designers,  or  between  designers  and  stakeholders  [2,95].
+Reflection itself leads to increased creativity [28,29], or the
+more  effective  communication  and  coordination  that
+reflection enables can improve creativity [33].
+
+Yoo  et  al.  [102],  however,  consider  that  in  some  cases
+reflection  might  inhibit  creative  thinking  and  explore  how
+to  “prompt  stakeholders  to  reflect  on  action  without
+undermining  exploration  and  creative  thinking”  [102:420].
+This was one of the few examples in our corpus where the
+authors  acknowledged  that  reflection  might  not  provide
+universal benefit or value.
+
+Reflection and Self Knowledge
+Third,  reflection  is  often  described  as  providing  increased
+self  knowledge,  a  benefit  cited  in  15  of  the  papers  we
+reviewed  [1,13,25,26,31,52,55,56,57,58,59,63,72,97,103].
+Such  knowledge  is  often  cited  as  motivation  for  work  in
+both  health  and,  moreover,  in  personal  informatics.  The
+latter involves collection of data about the self followed by
+presentation  of  that  data  back  to  the  self.  Closely  linked
+with  the  quantified  self  movement  [56,58],  the  value  of
+knowledge  gained  by  this  data-driven  introspection  comes
+from a long-standing tradition in Western thought. Li et al.
+[55]  open  their  paper  with  a  narrative  of  how  ancient
+Greeks,  who  would  pilgrimage  to  the Temple  of Apollo  at
+
+Delphi  to  find  answers,  were  there  greeted  with  the
+inscription  “Gnothi  seauton”  or  “Know  thyself.”  Knowing
+thyself,  this  literature  suggests,  is  non-trivial.  We  “often
+have  incomplete  knowledge  of  ourselves,  we  cannot
+monitor  our  behaviors  all  the  time,  and  we  cannot  easily
+find  patterns  in  our  behaviors”  [57:4490].  Personal
+informatics systems fill this gap, thereby “fostering insight,
+increasing  self-control,  and  promoting  positive  behaviors”
+[57:4490]. Reflection, in this model, consists of the process
+of examining one’s own data.
+
+While  this  rhetorical  positioning  comes  across  clearly  in
+personal informatics, many papers in our review that were
+not identified by the authors under that umbrella still cited
+similar  motivations.  For  example, Mathur  and  Karahalios
+describe  a  visualization  system  based  on  bookmarks  in  a
+web  browser  wherein  “the  user  is  able  to  notice  things
+about  oneself  that  he  or  she  did  not  notice  before”
+[65:4657].
+
+Interestingly,  although  reflection  plays  a  prominent  role  in
+personal informatics and related work, the final stage of Li
+et  al.’s  [55]  model,  and  the  goal  of  much  similar  work,  is
+action. Their line of reasoning suggests that showing users
+data  about  themselves  will  lead  them  to do  something,
+presumably  something  different  from  and  better  than  what
+they  are  already  doing.  For  example,  showing  diabetics
+blood sugar levels will increase their ability to manage their
+condition  [25];  showing  frequency  of  shortcut  key  usage
+will increase their usage [62]; showing mouse accuracy will
+reduce  exaggerated  movements  and  improve  future
+performance  [44].  Indeed,  the  idea  of  inciting  behavioral
+change occurred implicitly in much of the papers reviewed
+here.  However,  these  papers  also  varied  in  the  degree  of
+prescribing  exactly  of  what  that  behavioral  change  should
+consist, raising comparisons with persuasion.
+
+Reflection and Persuasion
+As indicated above, sometimes the goal of reflection is not
+only to increase self knowledge but to take action based on
+this  increased  awareness.  Systems  of  reflection  vary  as  to
+the  extent  that  they  support  taking  such  action.  Some
+suggest  specific  actions  that  users  should  take,  such  as
+using hotkeys more often [62], and others leave the decision
+making up to the user.  Li et al. [55] refer to these properties
+as  system-driven  and  user-driven  in  personal  informatics
+systems,  respectively.  They  found  that  one  barrier  during
+the  action  stage  was  a  lack  of  specific,  actionable
+suggestions  of  what  to  do  next  to  help  the  user  apply  the
+outcome of their reflection to action.
+
+Similarly, the vast majority of systems we reviewed did not
+recommend particular  actions  after  reflection.  Fifty-five  of
+the  papers  in  this  review  described  some  type  of
+intervention to support reflection, whether it be a mobile or
+desktop  system  [e.g., 29,31]  or  public  installation  [36,94].
+Of  these  55,  only  3  (5%)  of  the  interventions  suggested
+specific action [9,62,91]. This is not to say that designers of
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada96the remaining 52 did not have particular goals in mind for
+users of the interventions, just that the resulting systems did
+not command users to take specific actions to achieve them.
+For example, Frost and Smith’s intervention seeks “to help
+diabetics  develop  better  understanding  of  how  daily
+activities impact fluctuations in their blood sugar” [25:2] so
+that  they  can  better  learn  how  to  control  their  disease.
+However  the  specific  actions  that  users  take  based  on  this
+understanding are not prescribed through the system.
+
+On  the  other  end  of  the  spectrum,  a  few  papers  in  our
+review  explicitly,  both  in  the  paper  and  through  their
+design,  sought  to  be  open-ended  about  the  upshots  of
+reflection.  For  example,  A  Diary  Built  for  Two  [13]  used
+selectively shared digital diaries among romantic couples to
+emphasize  “re-storying,”  i.e.,  developing  alternative
+understandings  of  shared  experiences,  but  without  specific
+prompts  directing  the  kinds  of  diary  entries  users  should
+make  or  share.  Similarly,  the  designers  of  GoSlow  aim  to
+“promote  discourse  on  one’s  actions  and  values  in  one’s
+every  pursuits”  but  without  prescribing  “how  and  to  what
+extent  they  should  cut  back,  slow  down,  and  reflect”
+[18:431].
+
+Even  in  situations  where  designerly  intent  is  made
+expressly clear, reflection may not always take the form or
+have  the  results  intended.  For  example,  experienced
+patients using the MAHI [64] system employed it less as a
+problem-solving  tool,  instead  leveraging  a  commenting
+feature to craft stories that allowed them to construct their
+identity as diabetics [63]. Similarly, a visualization of email
+and  phone  activity  intended  to  support  reflection  on  long
+term, higher level patterns was consistently used instead to
+reminisce about specific events [103]. While these systems
+can  end  up  reappropriated  in  ways  not  necessarily
+accounted  for  by  designerly  intent,  such  alternative  uses
+may still constitute some manner of reflection.
+
+Ultimately,  we  do  not  pass  judgment  on  whether
+prescribing specific action in systems of reflection is good,
+bad, practical, necessary, or desirable. We instead note that
+these  systems  of  reflection  exist  on  a  spectrum  when  it
+comes to prescribing action, creating a nuanced relationship
+with persuasive technology [24]. Some systems, such as the
+3  interventions  noted  above,  are  very  prescriptive  in  the
+action their users should take, and these would fall into the
+persuasive  class  defined  by  Fogg  [24].  Others  still  have
+general  outcome  goals  for  their  users  but  do  less  to  guide
+them  toward  a  specific  action  [e.g., 25].  Finally,  some
+systems support the process of reflection itself without any
+pre-conceived goal for action or behavior change [e.g., 36].
+
+DISCUSSION
+This  section  turns  from  describing  what  we  found  during
+our  literature  review  to  considering  the  implications  of
+these  patterns,  as  well  as  what  they  suggest  as  valuable
+directions for future work in this area.
+
+The Definition(s) of Reflection
+As mentioned above, few papers in our survey included an
+explicit definition of reflection, and of those that did many
+cited Schön [76]. This finding raises three important points.
+First, it might be seen as somewhat disconcerting that over
+half  of  the  papers  using  reflection  as  a  keyword  never
+define  the  concept.  One  could  interpret  this  absence  of  a
+definition  as  indicating  a  clear  consensus  about  what
+reflection is; since everyone knows what reflection means it
+needs  no  definition.  Alternatively,  and  we  suggest  more
+likely, this lack of definitions indicates relatively little deep
+consideration  of  or  engagement  with  the  phenomenon  of
+reflection, how it should be defined, what might constitute
+it, and how best to design for it.
+
+Second,  the  preponderance  of  Schön’s  work  in  papers  that
+do  cite  a  reference  for  their  definition  of  reflection  might
+again  suggest  a  sort  of  consensus,  that  those  who  do  seek
+conceptual  or  theoretical  grounding  agree  to  draw  on
+reflection-in-action  [76].  However,  this  Schönian  majority
+might  also  suggest  some  limitations  or  constraints  in  how
+HCI  approaches  reflection.  Indeed,  a  variety  of
+conceptualizations of and definitions for reflection could be
+used  to  inform  design,  from  education  [e.g., 67]  to
+aesthetics  and  design  [10]  to  philosophy  [20,47].  We
+suggest that there may be rich possibilities for considering
+other  conceptualizations  of  reflection  or,  perhaps,  for
+comparing  or  synthesizing  from  among  them  [cf. 23].
+Doing  so  would,  we  suggest,  help  tease  apart  the
+relationships  among  reflection,  reminiscence  (see  further
+below), reflexivity [REF], and other related concepts.
+
+Third,  without  a  clear  explicit  definition,  many  of  the
+papers  we  reviewed  implicitly  conflated  reflection  with
+feedback.  For  example,  dancers  who  observe  video
+recordings  of  their  performances  are  said  to  be  reflecting
+[53].  In  personal  informatics,  “looking  at  lists  of  collected
+personal  information”  [55:562]  constitutes  the  reflection
+stage. Both the content and repercussions of these implicit
+definitions  about  what  constitutes  reflection  can  be  seen
+more clearly by examining details of the techniques used in
+interventions intended to support reflection.
+
+The Constitution of Reflection
+Many  of  the  papers  in  this  review  described  interventions
+designed  to  support  or  encourage  reflection  in  some  way.
+However, the lack of definition or deeper engagement with
+the  concept  of  reflection  poses  challenges  for  design.  For
+example,  what  does  it  take  to  reflect?  How  can
+interventions  provide  spaces  that  are  conducive  to
+reflection?  As  mentioned  above,  the  Personal  Informatics
+model  described  reflection as “looking at lists  of  collected
+personal  information  or  exploring  or  interacting  with
+information  visualizations,”  [55:562].  This  definition
+carries  an  implicit  assumption  that  by  providing  access  to
+data  that  has  been  “prepared,  combined,  and  transformed”
+[55:561] for the purpose of reflection, reflection will occur.
+The majority of the interventions in our review held similar
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada97assumptions  [e.g., 94].  In  these  papers,  reflection  was
+implicitly  defined  as  something  that  would  happen  by
+providing  the  user  with  some  type  of  information  about  a
+particular  situation,  and  as  a  result  the  user  would  have  a
+newfound  awareness  in  the  intervention’s  domain  of
+interest.
+
+Prior  work  has  made  certain  recommendations  for
+supporting  reflection  through  designed  interventions,  such
+as  providing  encouragement  and  allowing  time  for
+reflection  to  occur  [23,60].  Li  et  al.’s  [55]  model  also
+presents  barriers  to  reflection  that  should  be  addressed  in
+systems,  including  lack  of  time  and  effective  visualization
+of  personal  data.  However,  we  believe  that  as  designers
+there is much to be gained from being explicit in what we
+mean  by  reflection  and  engaging  with  it  as  an  important
+part of a larger set of processes and practices, and not just
+as  a  natural  consequence  or  byproduct  of  presenting
+information  to  users.  By  making  the  reflective  process  of
+our systems the focus of inquiry, we can better learn what it
+takes to reflect and how to support both reflective processes
+and other system goals in our designs.
+
+The Evaluation of Reflection
+Perhaps as a consequence of the lack of a clear definition of
+reflection, the majority of the papers do not provide a direct
+assessment  or  evaluation  of  reflection per se. It is difficult
+to observe what you cannot define. However, such indirect
+evaluation  may  also  arise  from  a  focus  on  the  utility  of
+reflection,  i.e.,  reflection  as  a  means  to  an  end. A  greater
+shift  toward  viewing  reflection  itself  as  a  meaningful
+activity  may  lead  to  more  focused  evaluations  of  the
+process thereof.
+
+A  few  evaluations  in  the  papers  we  reviewed  did  focus
+specifically on reflection. As mentioned above, Isaacs et al.
+[42]  directly  analyzed  participants’  reflections  by  asking
+them to add notes to already recorded journal entries and re-
+rate  their  feelings  about  the  event  on  a  Likert  scale.
+Similarly,  a  Diary  Built  For  Two  [13]  focuses  on  the
+reflection  and  “re-storying”  that  can  occur  by  romantic
+couples  selectively  sharing  diary  entries  with  one  another.
+In  another  example  [described  in 23],  teachers  and  their
+mentors  used  SenseCam,  a  lifelogging  technology,  to
+enable  reviews  by  mentors  and  to  help  facilitate  social
+reflection [22], to which we return below.
+
+This  is  not  meant  as  a  blanket  methodological  critique  of
+evaluative  approaches  taken  in  the  papers  we  reviewed.
+Reflection  is  a  complex,  potentially  nebulous  concept  [cf.
+20,76], making evaluation thereof that much more difficult.
+Indeed, some  in education have  suggested  that meaningful
+direct  assessment  of  reflection  can  become  intractably
+difficult  [88].  We  suggest  that  this  gap  presents  an
+opportunity  for  future  research  to  consider  how,  if  at  all,
+evaluations might directly focus on reflection itself.
+
+The Sociality of Reflection
+Most of the papers we reviewed described reflection as an
+individual,  largely  mental  or  cognitive  activity,  e.g.,
+reflecting  on  one’s  performance  as  a  given  task  [44,62] or
+observing data about one’s self [25,55,56].
+
+A few papers did acknowledge the possibility of reflection
+as a social activity. For example, Prilla et al. [73] describe
+both a study of and a system to support hospital workers in
+collectively reflecting on their conversations with patients’
+family  members.  Also,  by  focusing  on  collaborative  co-
+design [e.g., 2,9] or political engagement [49,74], a number
+of the papers oriented similarly towards group reflection.
+
+We  suggest  this  gap  represents  an  opportunity  in  at  least
+two  ways.  First,  the  area  is  ripe  for  work  on  both
+understanding and designing to  support reflection not only
+as  an  individual,  cognitive  activity  but  also  as  a  social
+process.  Second,  examining  situations  of  social  reflection
+may  help  address  some  of  the  difficulties  noted  above  in
+evaluating reflection per se. We see this benefit as similar to
+that  provided  by  distributed  cognition’s  [38]  analytic
+orientation.  Generally,  cognition  is  seen  as  an  internal
+process  that,  as  such,  is  not  readily  visible  to  researchers
+and, thus, is not readily accessible for analysis. By focusing
+on  the  ways  that  cognition  is  distributed  among  multiple
+people,  devices,  and  artifacts,  distributed  cognition  makes
+more  visible,  and  thus  more  accessible  for  analysis,
+cognitive  processes.  We  argue  a  similar  approach  might
+provide  benefits  in  terms  of  studying  reflection.  Situations
+of social reflection require externalization [cf. 96], i.e., that
+individuals explicate their thinking and engage with that of
+others.  While  activities  such  as  camera  talk  [51]  and
+responding  to  reflective  prompts  [93]  could  provide
+opportunities  for  externalization,  we  suggest  that  the
+dialogical  aspects  of  externalization  in  social  situations
+likely  may  them  an  even  more  interesting  case.  Studying
+such  situations  may  provide  a  beneficial  means  of
+understanding a phenomenon otherwise difficult to observe
+directly [cf. 13,22,42].
+
+The Dark Side of Reflection
+With  rare  exception  [42,102],  the  papers  we  reviewed
+treated reflection as almost universally beneficial. Whether
+for  behavior  change  [91],  increased  self-awareness  [56],
+improved  design  processes  [83],  or  better  educational
+outcomes  [17],  reflection  was  nearly  always  positioned  as
+wholly  good.  However,  some  research  has  suggested  that
+such reflectiveness may bring with it associated, sometimes
+unintended, costs.
+
+First,  related  literature  on  reminiscence  [8,45]  and  privacy
+[4]  has  at  times  described  the  value  of  forgetting.  Human
+memory  naturally  and  selectively  fades  over  time,  in
+contrast  with  the  eternally  perfect  recall  [cf. 55]  provided
+by  many  computational  systems.  Such  perfect  recall,
+though, can have negative repercussions. For example, one
+of  the  functions  of  reminiscing  is bitterness  revival,  or
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada98continually focusing on negative life events and using them
+to  justify  current  behavior  [99].While  the  pieces  we
+reviewed  that  discussed  reminiscence  at  times  seemed  to
+conflated it with reflection [e.g., 42,97], the authors of this
+paper  suggest  the  two  as  distinct  processes.  Reminiscence
+focuses on the recall of a specific event or events in one’s
+past.  Reflection,  on  the  other  hand,  involves  synthesizing
+across events to arrive at some greater understanding. While
+the  two  are  almost  certainly  related,  it  might  be  beneficial
+for  research  on  reminiscence  to  discuss  explicitly  the
+perceived relationship with reflection.
+
+Second,  computational  systems  by  their  nature  focus  on
+things  they  can  observe  and  tend  to  omit  (intentionally  or
+unintentionally)  those  things  not  easily  observable  or
+measurable.  A  system  might  have  access  to,  say,  your
+accuracy with a mouse pointer [44] but not your frustration
+at  the  time  with  having  to  use  a  technology  you  may
+already  dislike  [cf. 60].  Similarly,  as  described  above,  a
+system can track a diabetic’s blood sugar levels [25] but has
+a  difficult  time  representing  how  changes  in  use  of  the
+system  may  enact  changes  in  performed  identity  or  self
+presentation  [63].  We  do  not  suggest  that  such  “missing
+factors”  should  be  included  and  tracked  in  the  design  of
+reflective systems. Rather, we want to draw attention to the
+potential commodification of experience [cf. 85] embedded
+in  a  focus  on  automatically  observable,  quantifiable
+metrics. Such a focus can not only unnecessarily constrain
+the  kinds  of  reflective  activities  a  system  affords,  as  [87]
+found  when  asking  people  to  reflect  on  their  friendships
+using  their  Facebook  “See  Friendship”  pages,  but  it  also
+may  have  significant  ramifications  on  the  impacts  that
+reflection might have.
+
+At  the  risk  meta-discussion,  it  might  be  valuable  for
+designers  of  reflective  systems  to  explicate  the  supposed
+value  of  reflection.  Such  an  endeavor  likely  resembles
+reflective  design  [81],  critical  design  [5],  or  other
+approaches  that involve  a  designer  interrogating  her or  his
+own assumptions. Potential considerations include not only
+the  good  of  reflection  but  also  the  kinds  of  sociocultural
+practices in which reflection is embedded, as well as who is
+presumed  to  be  in  a  position  privileged  enough  to  reflect
+and, conversely, who is not.
+
+CONCLUSION
+While  the  literature  on  reflection  and  reflective  thought  is
+decades  old  [e.g., 20], reflection has only recently come to
+focus  in  HCI.  While  the  oldest  paper  in  our  corpus  was
+published in 2000, most papers in the review presented here
+were  published  in  the  years  since  2009.  We  suggest  this
+recency  as  evidence  of  increasing  interest  in  designing  for
+reflection. Indeed, an increased interest in reflection aligns
+closely  with  many  concerns  concomitant  with  third  wave
+HCI [11,35]. As research progresses in this area, we believe
+that  the  directions  described  in  our  discussion  section  will
+be  helpful  in  shaping  research  trajectory.  Specifically,  we
+reiterate three main implications here.
+
+First,  relatively  few  papers  clearly  define  the  concept  of
+reflection.  We  present  this  finding  less  as  a  critique  and
+more  as  an  opportunity.  Rather  than  prescribing  one  or
+another  framework,  we  suggest  that  work  in  interactive
+systems design would benefit from engaging with the rich,
+diverse  theoretical  literature  on  reflection  [e.g.,
+10,20,47,67]. Doing so may help clarify some of the current
+“fuzziness”  [23]  in  our  discourse  around  reflection  and
+related concepts [cf. 54]. Engagement with these definitions
+may also move reflective systems beyond simply presenting
+the  user  with  data  to  develop  other  techniques  for
+supporting reflection.
+
+Second,  of  those  papers  that  involved  an  evaluation,  very
+few  focused  specifically  on  reflection  itself.  Given  the
+vague  or  at  times  nonexistent  definitions  of  reflection
+provided,  this  finding  should  perhaps  not  come  as  a
+surprise. Again, though, we offer this less as a critique and
+more as an opportunity for future work to engage with how
+(if at all) [88] we might best assess or evaluate reflection.
+
+Finally, we identified three main types of benefits reflection
+was described to provide: better education, improved design
+processes, and increased self knowledge. Future work could
+make  valuable  contributions  by  exploring  situations  in
+which  reflection  may  be  detrimental  or  even  harmful.
+Furthermore,  the  techniques  used  to  encourage  reflection
+across these and other areas evidence implicit assumptions,
+particularly  that  feedback  constitutes  reflection.  To
+reiterate, we suggest that engaging with the conceptual and
+theoretical  literature  may  provide  valuable  grounding  and
+inspiration  for  more  sophisticated,  subtle,  or  nuanced
+designs for reflection.
+
+ACKNOWLEDGEMENTS
+This  material  is based in  part upon  work  supported  by the
+NSF under Grant No. IIS-1110932.
+
+REFERENCES
+1. André, P., Schraefel, M.C., Dix, A., and White, R.W. 
+(2011). Expressing well-being online: towards self-
+reflection and social awareness. Proc iConference, 114-
+121.
+
+2. Arias, E., Eden, H., Fischer, G., Gorman, A., and 
+
+Scharff, E. (2000). Transcending the individual human 
+mind—creating shared understanding through 
+collaborative design. ToCHI, 84-113.
+
+3. Bannon, L. J. (1991). From Human Factors to Human 
+Actors. In J. Greenbaum & M. Kyng (Eds.), Design at 
+Work, 25–44. Mahwah, NJ: Lawrence Earlbaum Assoc.
+
+4. Bannon, L. (2006). Forgetting as a feature, not a bug. 
+
+CoDesign, 2(1), 3–15.
+
+5. Bardzell, J., & Bardzell, S. (2013). What is “critical” 
+
+about critical design? Proc CHI, 3297–3306.
+
+6. Bateman, S., Teevan, J., and White, R.W. (2012). The 
+search dashboard: how reflection and comparison 
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada99impact search behavior. Proc CHI, 1785-1794.
+
+7. Bell, G. (2006). No More SMS From Jesus: Ubicomp, 
+
+Religion and Techno-Spiritual Practices. Proc Ubicomp, 
+141–158.
+
+8. Bjork, R. A. (1998). Intentional forgetting in 
+
+perspective. In J. M. Golding & C. MacLeod (Eds.), 
+Intentional forgetting: Interdisciplinary approaches, 
+453–481. Hillsdale, NJ: Erlbaum.
+
+9. Bohøj, M., Borchorst, N.G., Bødker, S., Korn, M., and 
+Zander, P.-O. (2011). Public deliberation in municipal 
+planning: supporting action and reflection with mobile 
+technology. Proc C&T, 88-97.
+
+10.Bolter, J., and Gromala, D. (2006). Transparency and 
+Reflectivity: Digital art and the aesthetics of interface 
+Design. In: Fishwick, P. (ed.). Aesthetic Computing. 
+Cambridge, MA: MIT Press.
+
+11. Bødker, S. (2006). When second wave HCI meets third 
+
+wave challenges. Proc NordiCHI, 1–8.
+
+12.Brade, M., Schneider, F., Salmen, A., and Groh, R. 
+
+(2013). OntoSketch: Towards Digital Sketching as a 
+Tool for Creating and Extending Ontologies for Non-
+Experts. Proc i-Know, Article 9.
+
+13.Branham, S.M, Harrison, S.H., and Hirsch, T. (2012). 
+Expanding the design space for intimacy: supporting 
+mutual reflection for local partners. Proc DIS, 220-223.
+
+14.Brown, A.R. (2010). Visualizing digital media 
+
+interactions. Proc OZCHI, 196-199.
+
+15.Bull, S., Mabbott, A., and Abu Issa, A.S. (2007). 
+
+UMPTEEN: Named and Anonymous Learner Model 
+Access for Instructors and Peers. Int. J. Artif. Intell. Ed., 
+17(3), 227-253.
+
+16.Carr, N. and Chambers, D.P. (2006). Cultural and 
+
+organisational issues facing online learning communities
+of teachers. Education and Information Technologies, 
+11(3-4), 269-282.
+
+17.Chen, Z.-H., Chou, C.-Y., Deng, Y.-C., and Chan, T.-K. 
+
+(2007). Active Open Learner Models as Animal 
+Companions. Int. J. Artif. Intell. Ed., 17(2), 145-167.
+
+18.Cheng, J, Bapat, A., Thomas, G., Tse, K., Nawathe, N., 
+Crockett, J., and Leshed, G. (2011). GoSlow: designing 
+for slowness, reflection and solitude. Proc CHI Ext. 
+Abst., 429-438.
+
+19.Dalsgaard, P, Halskov, K., and Harrison, S. (2012). 
+
+Supporting reflection in and on design processes. Proc 
+DIS, 803-804.
+
+20.Dewey, J. (1933). How We Think. A restatement of the 
+relation of reflective thinking to the educative process. 
+Boston: D. C. Heath.
+
+21.DiSalvo, C., Sengers, P., & Brynjarsdóttir, H. (2010). 
+Mapping the landscape of sustainable HCI. Proc CHI, 
+1975–1984.
+
+22.Fleck R. and Fitzpatrick G. (2009). Teachers' and tutors' 
+social reflection around SenseCam images. Int. J. Hum.-
+Comput. Stud., 67,  1024-1036.
+
+23.Fleck, R., & Fitzpatrick, G. (2010). Reflecting on 
+
+Reflection: Framing a Design Landscape. Proc OZCHI, 
+216–223.
+
+24.Fogg, B. J. (2003). Persuasive technology. San 
+
+Francisco: Morgan Kaufmann.
+
+25.Frost, J. and Smith, B.K. (2003). Visualizing health: 
+imagery in diabetes education. Proc DUX, 1-14.
+
+26.Gao, F. (2012). Design for reflection on health behavior 
+
+change. Proc IUI Doct. Cons., 379-382.
+
+27.Glaser, B. G., & Strauss, A. L. (1967). The discovery of 
+grounded theory: Strategies for qualitative research. 
+New York: Aldine De Gruyter.
+
+28.Gongora, L. (2011). Exploring the body and mind 
+
+connection via improvisation in the design process. 
+Proc DESIRE, 427-428.
+
+29.Gongora, L. (2012). RePlay: a workshop exploring 
+
+creativity in action. Proc TEI, 355-358.
+
+30.Govaerts, S., Verbert, K., Duval, E., and Pardo, A. 
+
+(2012). The student activity meter for awareness and 
+self-reflection. Proc CHI Ext. Abst., 869-884.
+
+31.Grimes, A., Landry, B.M., and Grinter, R.E. (2010). 
+Characteristics of shared health reflections in a local 
+community. Proc CSCW, 435-444.
+
+32.Grudin, J. (1990). The Computer Reaches Out: the 
+
+Historical Continuity of Interface Design. Proc CHI, 
+261–268.
+
+33.Hailpern, J., Hinterbichler, E., Leppert, C., Cook, D., 
+
+and Bailey, B.P. (2007). TEAM STORM: demonstrating 
+an interaction model for working with multiple ideas 
+during creative group work. Proc C&C, 193-202.
+
+34.Hansen, N.B. and Dalsgaard, P. (2012). The productive 
+role of material design artefacts in participatory design 
+events. Proc NordiCHI, 665-674.
+
+35.Harrison, S., Sengers, P., & Tatar, D. (2011). Making 
+epistemological trouble: Third-paradigm HCI as 
+successor science. Interacting with Computers, 23(5), 
+385–392.
+
+36.Hebert, M.G. (2009). Vehicle #3: heliotropic furniture - 
+
+an autonomous installation. Proc C&C, 465-466.
+
+37.Hummels, C. and Frens, J. (2009). The reflective 
+
+transformative design process. Proc CHI Ext. Abst., 
+2655-2658.
+
+38.Hutchins, E. (1995). Cognition in the Wild. Cambridge, 
+
+MA: MIT Press.
+
+39.Intille, S., Kukla, C., and Ma, X. (2002). Eliciting user 
+
+preferences using image-based experience sampling and 
+reflection. Proc CHI Ext. Abst., 738-739.
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada10040.Intille, S.S., Rondoni, J., Kukla, C., Ancona, I., and Bao,
+L. (2003). A context-aware experience sampling tool. 
+Proc CHI Ext. Abst., 972-973.
+
+41.Irani, L., Vertesi, J., Dourish, P., Philip, K., & Grinter, R.
+E. (2010). Postcolonial computing: a lens on design and 
+development. Proc CHI, 1311–1320.
+
+42.Isaacs, E., Konrad, A., Walendowski, A., Lennig, T, 
+Hollis, V, and Whittaker, S. (2013). Echoes from the 
+past: how technology mediated reflection improves 
+well-being. Proc CHI, 1071-1080.
+
+43.Johnston, A., Amitani, S., and Edmonds, E. (2005). 
+
+Amplifying reflective thinking in musical performance. 
+Proc C&C, 166-175.
+
+44.Jones, J., Hall, S., Gentis, M., Reynolds, C., Gadwal, C.,
+
+Hurst, A., Ronch, J., and Neylan, C. (2012). 
+Visualizations for self-reflection on mouse pointer 
+performance for older adults. Proc ASSETS, 287-288.
+
+45.Joslyn, S. L., & Oakes, M. A. (2005). Directed 
+
+forgetting of autobiographical events. Memory & 
+Cognition, 33(4), 577–587.
+
+46.Kannabiran, G., Bardzell, J., & Bardzell, S. (2011). How
+
+HCI Talks about Sexuality. Proc CHI, 695–704.
+
+47.Kant, I. (1790). Critique of the Power of Judgment. (P. 
+Guyer, Ed.). Cambridge: Cambridge University Press.
+
+48.Kharrufa, A., Leat, D., and Olivier, P. (2010). Digital 
+mysteries: designing for learning at the tabletop. Proc 
+ITS, 197-206.
+
+49.Kriplean, T., Morgan, J., Freelon, D., Borning, A., and 
+
+Bennett, L. (2012). Supporting reflective public thought 
+with ConsiderIt. Proc CSCW, 265-274.
+
+50.Lamberty, K.K., Adams, S., Biatek, J., Froiland, K., and 
+
+Lapham, J. (2011). Using a large display in the 
+periphery to support children learning through design. 
+Proc IDC, 62-71.
+
+51.Lamberty, K.K. and Kolodner, J.L. (2005). Camera talk: 
+making the camera a partial participant. Proc CHI, 839-
+848.
+
+52.Lee, M.L. and Dey, A.K. (2011). Reflecting on pills and 
+
+phone use. Proc CHI, 2095-2104.
+
+53.Leijen, Í., Lam, I., Wildschut, L., Simons, P.R-J., and 
+Admiraal, W. (2009). Streaming video to enhance 
+students' reflection in dance education. Comput. Educ., 
+52(1), 169-176.
+
+ubicomp technologies. Proc UbiComp, 405-414.
+
+57.Li, I., Forlizzi, J., and Dey, A.K. (2010). Know thyself: 
+monitoring and reflecting on facets of one's life. Proc 
+CHI Ext. Abst., 4489-4492.
+
+58.Li, I., Froehlich, J., Larsen, J.E., Grevet, C., and 
+
+Ramirez, E. (2013). Personal informatics in the wild. 
+Proc CHI Ext. Abst., 3179-3182.
+
+59.Li, I., Medynskiy, Y., Froehlich, J., and Larsen, J.E. 
+
+(2012). Personal informatics in practice. Proc CHI Ext. 
+Abst., 2799-2802.
+
+60.Lindley, S.E., Harper, R., and Sellen, A. (2009). 
+
+Desiring to be in touch in a changing communications 
+landscape. Proc CHI, 1693-1702.
+
+61.Loke, L. and Robertson, T. (2009). Design 
+
+representations of moving bodies for interactive, 
+motion-sensing spaces. Int. J. Hum.-Comput. Stud., 
+67(4), 394-410.
+
+62.Malacria, S., Scarr, J., Cockburn, A., Gutwin, C., and 
+Grossman, T. (2013). Skillometers: reflective widgets 
+that motivate and help users to improve performance. 
+Proc UIST, 321-330.
+
+63.Mamykina, L., Miller, A.D., Mynatt, E.D., and 
+
+Greenblatt, D. (2010). Constructing identities through 
+storytelling in diabetes management. Proc CHI, 1203-
+1212.
+
+64.Mamykina, L., Mynatt, E.D., Davidson, P.R., and 
+
+Greenblatt, D. (2008). MAHI: Investigation of Social 
+Scaffolding for Reflective Thinking in Diabetes 
+Management. Proc CHI, 477–486.
+
+65.Mathur P. and Karahalios, K. (2009). Using bookmark 
+visualizations for self-reflection and navigation. Proc 
+CHI Ext. Abst., 4657-4662.
+
+66.Mendels, P., Frens, J., and Overbeeke, K. (2011). Freed: 
+
+a system for creating multiple views of a digital 
+collection during the design process. Proc CHI, 1481-
+1490.
+
+67.Moon, J. (1999). Reflection in Learning & Professional 
+Development. Abingdon, Oxon: RoutledgeFalmer.
+
+68.Müller, L. 2013. Pervasive monitoring to support 
+
+reflective learning. Proc UbiComp Adjunct, 349-354.
+
+69.Nakakoji, K., Yamamoto, Y., Takada, S., and Reeves, 
+B.N. (2000). Two-dimensional spatial positioning as a 
+means for reflection in design. Proc DIS, 145-154.
+
+54.Leong, T. W., & Brynskov, M. (2009). CO2nfession: 
+Engaging with values through urban conversations. 
+Proc OZCHI (pp. 209–216). Melbourne, Australia.
+
+70.Nelson, E.J. and Freier, N.G. (2008). Push-me, pull-me: 
+describing and designing technologies for varying 
+degrees of reflection and invention. Proc IDC, 129-132.
+
+55.Li, I., Dey, A.K., & Forlizzi, J. (2010). A Stage-Based 
+
+71.Norman, D. A. (1993). Things That Make Us Smart. 
+
+Model of Personal Informatics Systems. Proc CHI, 557–
+566.
+
+56.Li, I., Dey, A.K., & Forlizzi, J. (2011). Understanding 
+
+my data, myself: supporting self-reflection with 
+
+New York: Perseus Group.
+
+72.Pirzadeh, A., He, L., and Stolterman, E. (2013). Personal
+informatics and reflection: a critical examination of the 
+nature of reflection. Proc CHI Ext. Abst., 1979-1988.
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada10173.Prilla, M., Degeling, M., and Herrmann, T.. (2012). 
+
+Collaborative reflection at work. Proc GROUP, 55-64.
+
+74.Rojas, I. and Ju, W. (2009). Visualization and 
+
+empowerment. Proc C&C, 401-402.
+
+75.Sas, C., & Dix, A. (2009). Designing for reflection on 
+experience. Proc CHI Ext. Abst., 4741–4744. Boston, 
+MA.
+
+76.Schön, D. A. (1983). The Reflective Practitioner: How 
+Professionals Think in Action. New York: Basic Books.
+
+77.Santos, J.L, Govaerts, S., Verbert, K., and Duval, E. 
+
+(2012). Goal-oriented visualizations of activity tracking.
+Proc LAK, 143-152.
+
+78.Santos, J.L., Verbert, K., Govaerts, S., and Duval, E. 
+(2013). Addressing learner issues with StepUp!: an 
+evaluation. Proc LAK, 14-22.
+
+79.Sedig, K, Klawe, M., and Westrom, M.. (2001). Role of 
+
+interface manipulation style and scaffolding on 
+cognition and concept learning in learnware. ToCHI, 
+8(1), 34-59.
+
+80.Seevinck, J., Candy, L., and Edmonds, E.A. (2006). 
+
+Exploration and reflection in interactive art: glass pond. 
+Proc OZCHI, 143-150.
+
+81.Sengers, P., Boehner, K., David, S., & Kaye, J. “Jofish.” 
+(2005). Reflective Design. Proc Critical Computing, 
+49–58. Aarhus, Denmark.
+
+82.Sengers, P., Boehner, K., Mateas, M., & Gay, G. (2007). 
+The disenchantment of affect. Personal and Ubiquitous 
+Computing, 12(5), 347–358.
+
+83.Sharmin, M. and Bailey, B.P. (2011). "I reflect to 
+
+improve my design": investigating the role and process 
+of reflection in creative design. Proc C&C, 389-390.
+
+84.Sharmin, M. and Bailey, B.P. (2013). ReflectionSpace: 
+
+an interactive visualization tool for supporting 
+reflection-on-action in design. Proc C&C, 83-92.
+
+85.Shklovski, I., Vertesi, J., Troshynski, E., & Dourish, P. 
+
+(2009). The Commodification of Location: Dynamics of
+Power in Location-Based Systems. Proc Ubicomp, 11–
+20). Orlando, FL.
+
+86.Smith, B.N., Xu, A., and Bailey, B.P. (2010). Improving 
+
+interaction models for generating and managing 
+alternative ideas during early design work. Proc GI, 
+121-128.
+
+87.Sosik, V. S., Zhao, X., & Cosley, D. (2012). See 
+
+Friendship, Sort of: How Conversation and Digital 
+Traces Might Support Reflection on Friendships. Proc 
+CSCW, 1145–1154. Bellevue, WA.
+
+88.Sumison, J. and Fleet, A. (1996). Reflection: Can we 
+
+assess it? Should we assess it? Assessment and 
+evaluation in higher education, 21, 121-130.
+
+89.Taylor, A. S., & Swan, L. (2005). Artful systems in the 
+
+home. Proc CHI, 641–650.
+
+90.Tchetagni, J., Nkambou, R., and Bourdeau, J. (2007). 
+Explicit Reflection in Prolog-Tutor. Int. J. Artif. Intell. 
+Ed., (17)2, 169-215.
+
+91.Thieme, A., Comber, R., Miebach, J., Weeden, J., 
+
+Kraemer, N., Lawson, S., and Olivier, P. (2012). "We've 
+bin watching you": designing for reflection and social 
+persuasion to promote sustainable lifestyles. Proc CHI, 
+2337-2346.
+
+92.Tomico, O., Frens, J.W., and Overbeeke, K.C.J. (2009). 
+Co-reflection: user involvement for highly dynamic 
+design processes. Proc CHI Ext. Abst., 2695-2698.
+
+93.Tseng, T. and Bryant, C. (2013). Design, reflect, 
+explore: encouraging children's reflections with 
+mechanix. Proc CHI Ext. Abst., 619-624.
+
+94.Valkanova, N., Jorda, S., Tomitsch, M., and Moere, A.V.
+(2013). Reveal-it!: the impact of a social visualization 
+projection on public awareness and discourse. Proc CHI,
+3461-3470.
+
+95.van Dijk, J., van der Roest, J., van der Lugt, R., and 
+Overbeeke, K.C.J. 2011. NOOT: a tool for sharing 
+moments of reflection during creative meetings. Proc 
+C&C, 157-164.
+
+96.Vygotsky, L. S. (1978). Mind and Society. Cambridge, 
+
+MA: Harvard University Press.
+
+97.Wallace, J., Wright, P.C., McCarthy, J., Green, D.P., 
+
+Thomas, J., and Olivier, P. (2013). A design-led inquiry 
+into personhood in dementia. Proc CHI, 2617-2626.
+
+98.Webb, A.M., Linder, R., Kerne, A., Lupfer, N., Qu, Y., 
+Poffenberger, B., and Revia, C. (2013). Promoting 
+reflection and interpretation in education: curating rich 
+bookmarks as information composition. Proc C&C, 53-
+62.
+
+99.Webster, J. D. (1993). Construction and Validation of the
+Reminiscence Functions Scale. Journals of Gerontology,
+48, 256–262.
+
+100. Wiggins, G. (2006). A preliminary framework for 
+
+description, analysis and comparison of creative 
+systems. Journal of Knowledge Based Systems, 19(7), 
+449-458.
+
+101. Wyche, S. P., Aoki, P. M., & Grinter, R. E. (2008). 
+Re-placing faith: reconsidering the secular-religious use 
+divide in the United States and Kenya. Proc CHI, 11–20.
+
+102.
+
+Yoo, D., Huldtgren, A., Woelfer, J.P., Hendry, 
+D.G., and Friedman, B. (2013). A value sensitive action-
+reflection model: evolving a co-design space with 
+stakeholder and designer prompts. Proc CHI, 419-428.
+
+103.
+
+Zhao, O.J., Ng, T., and Cosley, D. (2012). No 
+
+forests without trees: particulars and patterns in 
+visualizing personal communication. Proc iConference, 
+25-32.
+
+ReflectionDIS 2014, June 21–25, 2014, Vancouver, BC, Canada102

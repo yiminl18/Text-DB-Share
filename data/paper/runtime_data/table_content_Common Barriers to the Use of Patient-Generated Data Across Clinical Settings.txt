@@ -1,0 +1,25 @@
+1. Introduction
+2. Background
+    2.1 Patient-Generated Data within Clinical Settings
+    2.2 Workflows for Using Patient-Generated Data
+3. Methods
+    3.1 Literature Review
+    3.2 Clinician Interviews
+4. Results
+    4.1 Literature Review
+    4.2 Semi-Structured Interviews
+5. Common Workflows and Barriers
+    5.1 Stage 1: Aligning Patient and Clinician Objectives
+    5.2 Stage 2: Evaluating Data Quality
+    5.3 Stage 3: Judging Data Utility
+    5.4 Stage 4: Rearranging the Data
+    5.5 Stage 5: Interpreting the Data
+    5.6 Stage 6: Deciding on a Plan or Action
+6. Discussion
+    6.1 Implications for Design: Data Collection
+    6.2 Implications for Design: Data Use & Interpretation
+    6.3 Implications for Clinical Practice
+7. Limitations
+8. Conclusion
+9. Acknowledgements
+10. References

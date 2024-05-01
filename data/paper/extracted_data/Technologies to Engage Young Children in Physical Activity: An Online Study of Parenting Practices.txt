@@ -1,0 +1,879 @@
+Technologies to Engage Young Children in Physical Activity: 
+An Online Study of Parenting Practices 
+
+Bernd Ploderer, Yaman Mazyed S. Alsahﬁ, Stewart G. Trost† 
+Queensland University of Technology (QUT), Brisbane, Australia 
+b.ploderer@qut.edu.au, yamanmazyeds.alsahﬁ@connect.qut.edu.au, s.trost@qut.edu.au 
+
+ABSTRACT 
+
+This paper explores how parents use interactive technologies to 
+encourage young  children  (under  the  age  of 5)  to  be physically 
+active,  as  well  as  how  technologies  might  undermine  physical 
+activity. Based on an analysis of 1528 posts made online on Reddit 
+and Quora, we found that many parents regard time spent with 
+technologies as time taken away from physical activity. However, 
+we  also  identified  how  parents  appropriated  technology  to 
+promote  physical  activity,  i.e.,  through  rewarding,  modelling, 
+facilitating,  participating,  tracking  and  documenting.  We  hope 
+these  practices  will  inspire  design  work  with  families  to  create 
+new exertion  interfaces,  games,  and  persuasive technologies.  In 
+framing our findings as practices, we hope to expand the focus of 
+future  design  activities  from  narrow  concerns  with  health, 
+tracking, and competition, towards broader concerns with what 
+families  do  in  everyday  life,  how  they  socialize,  and  what 
+resources and technologies they have available to flourish. 
+
+CCS CONCEPTS 
+• Human-centered computing~Empirical studies in HCI 
+
+KEYWORDS 
+Physical activity; exercise; parenting; online community; Reddit. 
+
+ACM Reference format: 
+
+Bernd  Ploderer,  Yaman  Mazyed  S.  Alsahﬁ,  and  Stewart  G.  Trost.  2018. 
+Technologies to Engage Young Children in Physical Activity: An Online 
+Study  of  Parenting  Practices.  In  Proceedings  of  the  30th  Australian 
+Computer-Human Interaction Conference (OzCHI '18). ACM, New York, NY, 
+USA, 6 pages. https://doi.org/10.1145/3292147.3292180 
+
+1  INTRODUCTION 
+Being  physically  active,  restricting  sedentary  behaviours,  and 
+getting  enough  sleep  is  important  for  the  healthy  growth  and 
+development of young children (defined as 0-5 years of age). To 
+
+Permission to make digital or hard copies of all or part of this work for personal or 
+classroom use is granted without fee provided that copies are not made or 
+distributed for profit or commercial advantage and that copies bear this notice and 
+the full citation on the first page. Copyrights for components of this work owned 
+by others than the author(s) must be honored. Abstracting with credit is permitted. 
+To copy otherwise, or republish, to post on servers or to redistribute to lists, 
+requires prior specific permission and/or a fee. Request permissions 
+from Permissions@acm.org. 
+OzCHI '18, December 4–7, 2018, Melbourne, VIC, Australia 
+© 2018 Copyright is held by the owner/author(s). Publication rights licensed to 
+ACM. ACM 978-1-4503-6188-0/18/12…$15.00  
+https://doi.org/10.1145/3292147.3292180 
+
+. 
+WOODSTOCK’18, June, 2018, El Paso, Texas USA 
+© 2018 Copyright held by the owner/author(s). 978-1-4503-0000-0/18/06...$15.00 
+https://doi.org/10.1145/1234567890 
+
+support  parents  in  creating  healthy  and  safe  routines  for  their 
+children,  the  Australian  Government  recently  released  the 
+“Australian  24-Hour  Movement  Guidelines  for  the  Early  Years 
+(Birth  to  5  years)”  [25].  According  to  the  guidelines,  young 
+children should not be restrained for more than 1 hour at a time 
+(e.g.,  in  a  stroller).  Infants  should  be  physically  active  several 
+times a day, e.g., through crawling or tummy time, and get 14 to 
+17 hours of sleep. Toddlers (1-2 years) should get at least 3 hours 
+of physical activity and 11 to 14 hours of sleep. Pre-schoolers (3-5 
+years)  should  be  active  for  at  least  3  hours,  with  1  hour  of 
+energetic play, and get 10 to 13 hours of sleep. Activities should 
+be spread throughout the day; more physical activity is better [25]. 
+Parents and interactive technology exert strong influence on 
+children’s  lifestyles.  Parents  can  promote  physical  activity  in 
+children by supporting activity and creating an environment free 
+from  barriers,  by  encouraging  and  reinforcing  children  for 
+physical  activity,  and  by being  an  active  role model  themselves 
+[22,  39].  Preschool  children  who  receive  both  maternal  and 
+paternal support are more physically active and eat more healthily 
+than  other  children  [36].  Regarding  technology,  the  Australian 
+movement  guidelines  recommend  no  screen  time  for  children 
+under  the  age  of  2  years.  For  children  above  the  age  of  2  it  is 
+recommended  to  replace  screen  time  with  other  activities  like 
+reading,  singing  and puzzles [25].  However,  the  guidelines  also 
+acknowledge  a  lack  of  research  on  sedentary  behaviour  and 
+screen  time:  “No studies  examined newer/evolving  technologies 
+that  contribute  to  sedentary  time  (e.g.,  tablets,  FaceTime/Skype, 
+small screens)” [25, p. 182] 
+
+To start addressing this issue, this paper presents a qualitative 
+study of parenting practices and the influence of technologies on 
+physical activity in children. Based on an analysis of 1528 online 
+discussion  forum  posts  on  Reddit  and  Quora,  this  paper  shows 
+how  parents  often  regard  time  spent  with  technologies  as  time 
+taken  from  physical  activity.  However,  the  findings  also  show 
+how  parents  employ  technologies  to  promote  physical  activity: 
+parents used technology to reward children, to model and inspire 
+active lifestyles, to facilitate playful activity, to encourage whole-
+family participation, and to track and document physical activity. 
+We  seek  to  offer  two  contributions  to  the  HCI  community. 
+Firstly,  inspired  by  the  turn  to  practices  in  HCI  [17,  26]  and  a 
+theory  of  parents’ physical  activity  practices  [22],  this research 
+offers 
+into  how  technologies  permeate  parenting 
+practices.  Secondly,  we  hope  that  other  researchers  will  draw 
+inspiration  from  these  practices  to  design  technologies  that  go 
+beyond the commonly used design strategy of competition. 
+
+insights 
+
+326 
+ 
+Technologies to Engage Young Children in Physical Activity 
+
+OzCHI’18, December, 2018, Melbourne, VIC, Australia 
+
+2  RELATED WORK 
+Several areas of HCI research focus on the design of technology 
+to promote physical activity, often by motivating people through 
+competition.  Exertion  interfaces  encourage  intense  physical 
+activity through digitally enhanced sports where people compete 
+in jogging, table tennis, and soccer [23, 24]. Persuasive technology 
+focuses on behaviour change through strategies like nudges, self-
+monitoring,  simulations,  social  support,  and  competition  [6,  12, 
+29, 31]. Location-based games like Pokémon Go [1]  and Woody 
+[38]  have  shown  potential  for  short-term  increases  in  physical 
+activity. Gamification through badges, scoreboards, and rewards 
+is common to many designs that promote exercise, which again 
+encourages  competition  [7,  15,  19,  35,  41].  Finally,  under  the 
+umbrella  of  personal  informatics,  HCI  researchers  explore  how 
+physical  activity  tracking  with  mobile  and  wearable  devices 
+promotes knowledge and self-optimisation [18, 21, 32]. 
+
+Some of these research areas have also investigated physical 
+activity in family settings. Personal informatics has been explored 
+in families with school-aged children [14, 27]. These studies show 
+that family members can benefit from collaborating to track and 
+manage  health  conditions  [27].  However,  these  studies  also 
+highlight privacy tensions and the risk of potentially undermining 
+the development of trust between children and parents [14, 27]. 
+Video games like Kinect and Wii use the body as game controller. 
+Studies in family homes show that these games can support rich 
+social  experiences  and  exertion  [9].  Research  into  outdoor  play 
+has examined how to enhance objects like sticks for throwing as 
+well as enhancing playground equipment with technology [3, 13]. 
+Focussing  specifically  on  preschool-children,  Saksono  et  al. 
+[33, 34] have started to explore ways of encouraging interaction 
+and  reflection  on  physical  activity  between  parents  and  young 
+children. The design of Spaceship Launch [34] encouraged parents 
+and  children  to  track  physical  activity  together  with  a  Fitbit 
+device, and a game provided virtual rewards and encouragement. 
+In  another  study  [33],  they  created  a  digital  storybook  that 
+brought  reflection  on  physical  activity  into  stories  read  at 
+bedtime. They found that some children were indeed reflecting on 
+family  activities  and  personal  experiences.  However,  some 
+children  found  it  hard  to  reflect  due  to  their  young  age  and 
+developmental stage, while other children had limited experiences 
+to  reflect  on,  or  they  brought  up  negative  experiences  which 
+undermined their parents’ efforts to promote physical activity. 
+
+HCI  research  is  also  exploring  how  parents  use  online 
+information and social media for support. Many parents go online 
+to  find  information  about  birth,  health  questions,  disciplining 
+children,  purchase  suggestions,  and  education  [2,  28].  Finding 
+information  online  allows  parents  to  access  a  wider  audience. 
+Online  communities  like  Reddit  also  allow  parents  to  remain 
+anonymous, which makes it easier to find answers to potentially 
+embarrassing  questions  [2].  Social  network  sites  like  Facebook 
+allow parents to ask for information and support from people they 
+know,  or  with  whom  they  have  some  connection,  which  can 
+enhance the credibility of information received [8]. Finally, social 
+network  sites  are  also  a  place  for  parents  to  share  photos  and 
+experiences and to exchange emotional support [10, 16] 
+
+In  summary,  HCI  offers  a  large  body  of  research  on 
+technologies  to  promote  physical  activity  or  to  find  relevant 
+information,  but  research  focussed  on  families  with  young 
+children is scarce. What is also missing from these studies, is an 
+understanding  of  how  parents  employ  existing  technologies  in 
+their  parenting  practices  to  engage  their  children  in  physical 
+activity, as well as the possible adverse effects of technology. 
+
+3  RESEARCH APPROACH 
+The  aim  of  this  study  was  to  understand  how  parents  use 
+technologies to encourage their children to be physically active, 
+as well as how technologies might undermine physical activity. 
+
+The study  was  based on  an  analysis  of 1528  posts  from two 
+popular online discussion forums for parents: Reddit and Quora. 
+Like  previous  studies  [2,  5,  20,  40],  we  found  that  these  online 
+discussion forums provide a variety of perspectives on technology 
+practices  related  to  parenting  and  wellbeing,  without  requiring 
+additional input from participants. These forums are also openly 
+accessible and easy to search. After receiving ethics approval from 
+our  university,  the  first  author  browsed  through  all  parenting 
+discussions  on  these  sites,  reaching  back  to  2012,  to  identify 
+relevant posts. Keywords like exercise, sports, fitness, technology, 
+apps, and video games were used to find further posts. A total of 
+1528 relevant posts was retrieved and copied into Saturate [37], 
+an online tool for data management and analysis. The length of 
+posts varied from 3 to 921 words, with an average of 122 words. 
+
+The  dataset  of  1528  online  discussion  forum  posts  was 
+analysed based on the principles of a thematic analysis [4]. Initial 
+codes  on  technology  influence  on  physical  activity  were 
+generated  by  the  first  two  authors,  who  read  through  some 
+discussions on paper, made annotations, and discussed emerging 
+codes. The first author then applied these codes to the analysis in 
+Saturate and continued with open coding. Themes were generated 
+through an affinity diagram: codes were written on post-it notes 
+and  clustered  on  a  whiteboard  to  identify  how  technology  was 
+used to promote physical activity, barriers, and values. Guided by 
+related literature on parenting [22, 39] and practice theory [11, 17, 
+30],  we  refined  the  themes  to  highlight  different  sets  of 
+technology-mediated  parenting practices:  rewarding,  modelling, 
+facilitating, participating, tracking and documenting, which will 
+be presented in the next section. 
+
+We acknowledge that this sort of analysis is limited. We do not 
+have interview data to provide contextual information about each 
+family  who  posted  online,  or  to  check  that  the  discussion  only 
+related to children under the age of 5. While this analysis aimed 
+to present a variety of views, we do not suggest that the findings 
+offer  a  representative  and  comprehensive  account  of  parenting 
+practices. The number of posts coded is presented in each findings 
+section  to  provide  context  about  the  prevalence  of  discussion 
+topics  to  this  qualitative  analysis,  but  these  numbers  do  not 
+indicate  actual  prevalence  of  practices.  Information  about  the 
+source of a quote (R for Reddit or Q for Quora, and the discussion 
+topic)  is  presented  in  brackets  after  each  quote  to  add  context 
+about the online discussion. Places and names in quotes have been 
+modified to protect the anonymity of online community members.  
+
+327 
+ 
+ 
+OzCHI’18, December, 2018, Melbourne, VIC, Australia 
+
+B. Ploderer et al. 
+
+4  FINDINGS 
+
+4.1  Technology as Displacement and Reward 
+Technology  as  displacement  and  as  reward  can  be  seen  as  two 
+sides of the same proverbial coin. On one side, technology creates 
+the  challenge  of  time  displacement.  23  posts  featured  concerns 
+that  time  spent  using  technology  is  time  taken  from  physical 
+activity.  These  concerns  focussed  on  Internet,  TV,  and  video 
+games, which were seen as a source of instant gratification that 
+uniquely  draw  the  attention  of  children.  Some  discussions  also 
+referred to the parents’ own childhood, comparing their relatively 
+technology-free childhood with their own children’s situation. 
+
+“Video  games  offer  a  sense  of  accomplishment, 
+exploration, excitation,  etc. It  gives  a  rush  that  offline 
+activities don't.” (R, video game addiction) 
+
+On  the  other  side,  technology  provided  an  opportunity  for 
+parents  to  reward  children  for  physical  activity  (8  posts). 
+According to parents, access to TV, Internet, and video games (as 
+well as new toys or praise) provided an incentive for their children 
+to by physically active, play outside, or do household chores.  
+
+“One  thing  I've  found  that  works  is  'buy  in'  for  video 
+games.  For  every  hour  of  physical  work/play  you  do 
+away from a screen, you get 15 minutes of video games.” 
+(R, addiction to video games) 
+“We're  avid  geocachers.  We  don't  plan  a  hike  unless 
+there's a geocache that I’ve researched to make sure it's 
+likely to have a toy inside for them.” (R, hiking) 
+
+4.2  Modelling and Inspiring Active Lifestyles 
+Parents  can  encourage  physical  activity  in  their  children  by 
+modelling  a  healthy,  active  lifestyle.  We  found  41  posts  where 
+parents reported that they sought to encourage their children to 
+be active by setting a good example themselves, e.g., by walking, 
+jogging,  and  working  out  in  the  gym.  Two  further  posts 
+mentioned that friends and relatives can also be role models. 
+
+“We model  a healthy  lifestyle  as much  as  we  can…. A 
+onetime  conversation  about  healthy  living most  likely 
+will have little effect but modelling will help to instil it.” 
+(R, right time to teach kids about healthy lifestyle) 
+
+Similar to modelling, parents used technologies to inspire their 
+children to engage in physical activity (7 posts). Parents reported 
+that videos of other children being active, documentaries of sports 
+stars, and videos educating about healthy lifestyles were effective 
+in getting their children more active. 
+
+“I started showing her YouTube videos of kids around 
+her age riding balance bikes. And that kind of got her 
+started. The thing that was most effective in getting her 
+to try  it for  a  longer  period  of  time  was her watching 
+her dad to leave on a bike ride.” (R, exercise for toddlers) 
+
+4.3  Facilitating Playful Activity 
+Parents highlighted that physical activity needs to be playful (40 
+posts). Rather than framing physical activity as exercise regimes 
+or  as  a  health  need,  activities  for  children  need  to  framed  as 
+
+playful  and  fun.  Parents  discussed  how  they  facilitated  playful 
+activity  by  employing  games  like hide  and seek,  playing  with  a 
+ball, rolling down a grassy hill, and dressing up as superheroes. 
+
+“It has to be 'active play' and not 'exercise activity'. The 
+most important thing you can do is get the 2-year-old to 
+enjoy moving. Grown-ups often shun 'activity' because 
+having been forced into it. When something becomes a 
+'must'  it  tends  to  drain  out  the  'fun'.”  (Q,  exercise 
+activities for toddlers) 
+
+Technologies  were  often  discussed  by  parents  as  a  way  of 
+facilitating playful activities for their children (28 posts). Several 
+parents suggested game consoles like the Nintendo Wii system to 
+encourage indoor exercise. Some parents had downloaded mobile 
+apps and YouTube videos that engaged their children in exercise, 
+yoga,  and dance. One parent  added  a  shelf  with  a  laptop to her 
+treadmill so that her children can walk and play video games. 
+
+“My 4yo daughter loves the Super Stretch Yoga app. She 
+will pull it up and do it on her own.” (R, fitness apps) 
+“There's  a  show  on  the  CBeebies  (preschool  BBC 
+channel) called Waybuloo where they do ‘yoga’ with the 
+kids. My sons love it and roll around on the floor trying 
+to do the stretches.” (R, fitness apps for children) 
+
+4.4  Participating in Activity as a Family 
+The most direct form of encouraging physical activity in children 
+is  to  be  active  together  as  a  family.  We  found  15  posts  where 
+parents  reported  on  activities  that  worked  for  them  or  on  their 
+intentions to get the whole family to go for a walk, a bicycle ride, 
+or a swim. Some parents involved their children in choosing and 
+planning these activities to ensure their interest. 
+
+“We hike every weekend with our 4 and 2.5 years old.” 
+(R, hiking with young children) 
+
+A  range  of  technology  options  were  discussed  that  allow 
+parents  and  children  to  participate  in  physical  activity  together 
+(14  posts).  A  common  theme  was  playing  video  games  that 
+encourage exercise or dance as a family. Some parents had mobile 
+apps  for  exercise  or  yoga  that  they  used  together  with  their 
+children. A final theme was that parents and children use mobile 
+phones to enhance walks, e.g., through location-based games like 
+Pokémon Go that invite them to catch virtual creatures. 
+
+“Do you have a video game system? [Kinect] Just Dance 
+makes  all  of  us  sweat  and  gasp  for  air  after  a  while.”  
+(R, exercise inside the house) 
+“My  two  boys  and  I  went  on  a  Pokémon hunt on  our 
+way  to  the park. My  oldest  (4yo)  caught  a  ratatta  and 
+my youngest (3yo) caught a spearow. My observations: 
+… Watch where you are going! This is a great exercise 
+to teach kids young to be aware of their surroundings 
+when they are looking at their phone. The park we were 
+playing  in  is nice  and  open  with  lots of  room  for safe 
+walking and exploring. I would give little reminders of, 
+"Hey!  What's  to  your  right?"  And  make  them 
+acknowledge something.” (R, Pokémon Go) 
+
+328 
+ 
+Technologies to Engage Young Children in Physical Activity 
+
+OzCHI’18, December, 2018, Melbourne, VIC, Australia 
+
+Safety  concerns  were  commonly  raised  online  (25  posts). 
+Technologies  can  introduce  risks  for  children’s  safety.  For 
+example, the Pokémon Go example above highlights that mobile 
+phones  introduce  the  risk  of  diverting  attention  from  the 
+environment to the phone. However, the example also shows that 
+parental  participation  provides  an  opportunity  to  help  children 
+become  more  mindful  of  where  they  are  walking.  Beyond that, 
+parents often raised concerns that their children lacked access to 
+safe  environments  for  physical  activity,  because  they  lacked 
+access  to  gardens  and  parks,  or  because  the  roads  and 
+neighbourhoods were not deemed safe. 
+
+“As  winter  approaches,  I  am  growing  nervous  about 
+how  to  ensure  my  almost-2-year-old  gets  enough 
+physical activity in our small home. There aren't a lot of 
+places I can take her in our community to run and play, 
+so  I'm  interested  in  hearing  what  others  do  in  your 
+homes  to get  your  toddlers  active  and moving.  I have 
+tried "dance party" time with her, but so far, she is not 
+really into it.” (R, indoor toddler activities) 
+
+4.5  Tracking and Documenting Activity 
+Technology was discussed by parents to track and document their 
+children’s  physical  activity.  Discussions  of  tracking  (3  posts) 
+focussed on the ability of technology to quantify exercise, e.g., by 
+counting steps through  wearable  technology  like  Fitbit.  Parents 
+were not necessarily interested in monitoring their children but 
+rather suggested that children could use technology to set goals 
+and to compete with others. It is important to note that all these 
+posts were suggestions, rather than accounts of parents who had 
+actually used tracking with their children.  
+
+“Get them Fitbits and make it a contest to see who can 
+get the most steps.” (Q, encourage children to exercise) 
+
+Documenting is similar to tracking in that technology is used 
+to  capture  physical  activity  (4  posts).  Unlike  with  tracking,  the 
+focus  is  not  on  quantifying  and  analysing  activity.  Instead 
+children  or  parents  capture  activities,  people,  and  environment 
+through  photos  and  video  recordings.  Engagement  in  this  way 
+goes beyond the exercise activity itself, allowing children to role-
+play, edit photos and videos, and to share them with others.  
+
+“I get them to run around in circles chasing and having 
+a laugh under the pretence of turning it into some kind 
+of action game for them to watch and participate in the 
+editing  of.  They  always  come  back  from  the  park 
+exhausted and have a lot of fun, every time one is done 
+they are eager to start the next and have begun to start 
+climbing  things  and  doing  random  gymnastics  while 
+asking  me  to  film  it.”  (R,  inspire  children  to  exercise 
+rather than play video games) 
+“See if she wants to go on a walk or pick flowers or get 
+her see if she'd like to photograph some new things. I 
+feel like 95% of girls dig photography.” (R, weight loss) 
+
+5  DISCUSSION 
+This  study  provides 
+into  how  technologies  are 
+incorporated  into  parenting  practices,  as  well  how  technologies 
+
+insights 
+
+undermine efforts to encourage children to be physically active. 
+Based  on  online  discussions  by  parents,  we  found  that 
+technologies,  especially  video  games  and  TV,  can  displace 
+physical  activity  time.  However,  the  findings  also  highlighted 
+how parents have harnessed technologies to engage their children 
+in  physical  activity:  as  a  reward  for  physical  activity,  to  model 
+active lifestyles, to provide inspiration, to facilitate playful and fun 
+activities, to encourage participation from the whole family, and 
+to  track  and  document  physical  activity.  These  findings  extend 
+previous  work  on  physical  activity  parenting  practices  [22],  by 
+like 
+showing  how 
+encouragement  and  modelling.  Furthermore,  our 
+findings 
+highlight  how  mobile  technologies  enable  new  practices  where 
+children document activities through photos and videos. 
+
+enrich  practices 
+
+technologies 
+
+can 
+
+In framing our findings as practices, we also sought to shift the 
+focus of physical activity away from pure concerns about health 
+towards  a  more  holistic  understanding  of  what  families  do  in 
+everyday  life,  how  they  interact,  the  recourses  they  have 
+available, and how technologies are appropriated [17, 26]. From 
+this perspective, it was encouraging to see that digital games like 
+Pokémon  Go  were  appropriated  for  family  outings  and  nature 
+exploration. Likewise, the findings highlighted that documenting 
+and  tracking  was  less  focussed  on  the  personal  informatics 
+approach of counting steps [18], but rather on how outdoor and 
+play activities provide opportunities for creative engagement with 
+visual media to document and share experiences. 
+
+The  findings  also highlight  that  technologies  that  encourage 
+physical  activity  do  not  have  to  be  limited  just  to  competition, 
+which  appears  to  be  central  to  many  persuasive  technologies, 
+gamified designs, and exertion games [6, 23, 24, 41]. Competition 
+played  only  a  minor  part  in  our  findings.  Parents  suggested 
+competition in combination with activity tracking, but they had 
+not tried it out with their own children. Furthermore, competition 
+may  have  been  part  playing  physical  video  games  like  Kinect. 
+Similar  to  prior  research  [9],  we  found  that  even  in  these 
+instances, parents viewed game play primarily as an opportunity 
+to be active together and to socialize, rather than as a competition. 
+This is not to say that competition may not be a motivating factor. 
+However,  there  are  many  other  practices  that  parents  employ: 
+encouragement,  co-participation,  and  free  play,  which  provide 
+opportunities for designing technology.  
+
+6  CONCLUSIONS 
+This  article  started  with  the  premise  that  less  time  spent  with 
+digital  technology  and more  time spent being  physical  active  is 
+best  for  the  health  and  development  of  young  children.  In 
+analysing the online discussions of parents, we have indeed found 
+that  time  with  technology  is  often  seen  as  time  taken  from 
+that  parents 
+physical  activity.  However,  we  also 
+appropriated  technology  to  promote  physical  activity,  ranging 
+from using it as a reward to co-participation to documentation. 
+
+found 
+
+Online  discussions  have  provided  a  good  starting  point  to 
+understand the practices and concerns of parents. However, more 
+work is needed to engage with families in situ, both to understand 
+their practices and contexts, as well as to design technologies that 
+allow children and parents to flourish. 
+
+329 
+ 
+ 
+OzCHI’18, December, 2018, Melbourne, VIC, Australia 
+
+B. Ploderer et al. 
+
+REFERENCES 
+[1]  Tim  Althoff,  Ryen  W  White  and  Eric  Horvitz.  2016.  Influence  of 
+Pokémon Go on Physical Activity: Study and Implications. Journal of 
+Medical Internet Research 18, 12. http://dx.doi.org/10.2196/jmir.6759 
+[2]  Tawfiq  Ammari,  Sarita  Schoenebeck  and  Daniel  M.  Romero.  2018. 
+Pseudonymous Parents: Comparing Parenting Roles and Identities on 
+the Mommit and  Daddit  Subreddits. In Proceedings of Proceedings of 
+the  2018  CHI  Conference  on  Human  Factors  in  Computing  Systems. 
+ACM, 
+1-13. 
+QC, 
+Montreal 
+http://dx.doi.org/10.1145/3173574.3174063 
+
+Canada, 
+
+[3]  Jon Back, Caspar Heeffer, Susan Paget, Andreas Rau, Eva Lotta Sallnäs 
+Pysander and Annika Waern. 2016. Designing for Children's Outdoor 
+Play.  In  Proceedings  of  Proceedings  of  the  2016  ACM  Conference  on 
+Designing Interactive Systems. ACM, Brisbane, QLD, Australia, 28-38. 
+http://dx.doi.org/10.1145/2901790.2901875 
+
+[4]  Virginia Braun and Victoria Clarke. 2006. Using Thematic Analysis in 
+in  Psychology  3,  2,  77-101. 
+
+Psychology.  Qualitative  Research 
+http://dx.doi.org/10.1191/1478088706qp063oa 
+
+[5]  Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, Wanda Pratt and Julie 
+A.  Kientz.  2014.  Understanding  Quantified-Selfers'  Practices  in 
+Collecting and Exploring Personal Data. In Proceedings of  CHI 2014. 
+1143-1152. 
+ACM, 
+http://dx.doi.org/10.1145/2556288.2557372 
+
+Toronto, 
+
+Ontario, 
+
+Canada, 
+
+[6]  Sunny Consolvo, Katherine Everitt, Ian Smith and James A. Landay. 
+2006. Design Requirements for Technologies That Encourage Physical 
+Activity.  In  Proceedings  of  Proceedings  of  the  SIGCHI  Conference  on 
+Human  Factors  in  Computing  Systems.  ACM,  Montreal,  Quebec, 
+Canada, 457-466. http://dx.doi.org/10.1145/1124772.1124840 
+
+[7]  Sebastian  Deterding,  Dan  Dixon,  Rilla  Khaled  and  Lennart  Nacke. 
+2011.  From  Game  Design  Elements  to  Gamefulness:  Defining 
+"Gamification".  In  Proceedings  of  the  15th  International  Academic 
+Mindtrek  Conference:  Envisioning  Future  Media  Environments,  ACM, 
+Tampere, Finland, 9-15. http://dx.doi.org/10.1145/2181037.2181040 
+[8]  Betsy DiSalvo, Parisa Khanipour Roshan and Briana Morrison. 2016. 
+Information  Seeking  Practices  of  Parents:  Exploring  Skills,  Face 
+Threats and Social Networks. In Proceedings of Proceedings of the 2016 
+CHI Conference on Human Factors in  Computing Systems. ACM, San 
+Jose, 
+623-634. 
+http://dx.doi.org/10.1145/2858036.2858586 
+
+California, 
+
+USA, 
+
+[9]  John Downs, Frank Vetere, Steve Howard, Steve Loughnan and Wally 
+Smith. 2014. Audience Experience in Social Videogaming: Effects of 
+Turn Expectation and Game Physicality. In Proceedings of Proceedings 
+of  the  SIGCHI  Conference  on  Human  Factors  in  Computing  Systems. 
+3473-3482. 
+ACM, 
+http://dx.doi.org/10.1145/2556288.2556965 
+
+Toronto, 
+
+Ontario, 
+
+Canada, 
+
+[10] Abigail C. Durrant,  David S. Kirk,  Diego Trujillo-Pisanty and Sarah 
+Martindale. 2018. Admixed Portrait: Design to Understand Facebook 
+Portrayals  in  New  Parenthood.  In  Proceedings  of  Proceedings  of  the 
+2018 CHI Conference on Human Factors in Computing Systems. ACM, 
+1-14. 
+Montreal 
+http://dx.doi.org/10.1145/3173574.3173586 
+
+Canada, 
+
+QC, 
+
+[11] Johanne  Mose  Entwistle,  Mia  Kruse  Rasmussen,  Nervo  Verdezoto, 
+Robert  S  Brewer  and  Mads  Schaarup  Andersen.  2015.  Beyond  the 
+Individual:  The  Contextual  Wheel  of  Practice  as  a  Research 
+Framework for Sustainable Hci. Proceedings of ACM CHI 2015.  
+
+[12] BJ Fogg. 2002. Persuasive Technology: Using Computers to Change What 
+
+We Think and Do. Morgan Kaufmann, San Francisco, CA. 
+
+[13] Tom Hitron, Idan David, Netta Ofer, Andrey Grishko, Iddo Yehoshua 
+Wald, Hadas Erel and Oren Zuckerman. 2018. Digital Outdoor Play: 
+Benefits  and  Risks  from  an  Interaction  Design  Perspective.  In 
+Proceedings  of  Proceedings  of  the  2018  CHI  Conference  on  Human 
+Factors  in  Computing  Systems.  ACM,  Montreal  QC,  Canada,  1-13. 
+http://dx.doi.org/10.1145/3173574.3173858 
+
+[14] Mikkel S. Jørgensen, Frederik K. Nissen, Jeni Paay, Jesper Kjeldskov 
+and Mikael B. Skov. 2016. Monitoring Children's Physical Activity and 
+Sleep:  A  Study  of  Surveillance  and  Information  Disclosure.  In 
+Proceedings of Proceedings of OZCHI. ACM, Launceston, Australia, 50-
+58. http://dx.doi.org/10.1145/3010915.3010936 
+
+[15] Rohit Ashok Khot, Ryan Pennings and Florian 'Floyd' Mueller. 2015. 
+Edipulse: Turning Physical Activity into Chocolates. In Proceedings of 
+Proceedings of the 33rd Annual ACM Conference Extended Abstracts on 
+Human Factors in Computing Systems. ACM, Seoul, Republic of Korea, 
+331-334. http://dx.doi.org/10.1145/2702613.2725436 
+
+[16] Priya  Kumar  and  Sarita  Schoenebeck.  2015.  The  Modern  Day  Baby 
+Book:  Enacting  Good  Mothering  and  Stewarding  Privacy  on 
+Facebook. In Proceedings of Proceedings of the 18th ACM Conference on 
+Computer Supported Cooperative Work &#38; Social Computing. ACM, 
+Vancouver, 
+1302-1312. 
+http://dx.doi.org/10.1145/2675133.2675149 
+
+Canada, 
+
+BC, 
+
+[17] Kari  Kuutti and  Liam J. Bannon.  2014. The Turn to Practice in  Hci: 
+Towards a Research Agenda. Proceedings of CHI 2014, 3543-3552.  
+[18] Ian  Li,  Anind  Dey  and  Jodi  Forlizzi.  2010.  A  Stage-Based  Model  of 
+Personal Informatics Systems. In Proceedings of the SIGCHI Conference 
+on Human Factors in Computing Systems (CHI 2010). ACM Press, New 
+York, 557-566. http://dx.doi.org/10.1145/1753326.1753409 
+
+[19] James  Lin,  Lena  Mamykina,  Silvia  Lindtner,  Gregory  Delajoux  and 
+Henry Strub.  2006. Fish’n’steps: Encouraging Physical Activity with 
+an  Interactive  Computer  Game.  In  Proceedings  of  Ubicomp  2006, 
+Springer, Berlin, 261-278. http://dx.doi.org/10.1007/11853565_16 
+[20] Wanyu  Liu,  Bernd  Ploderer  and  Thuong  Hoang.  2015.  In  Bed  with 
+Technology:  Challenges  and  Opportunities  for  Sleep  Tracking.  In 
+Proceedings 
+142-151. 
+2015. 
+http://dx.doi.org/10.1145/2838739.2838742 
+
+OzCHI 
+
+ACM, 
+
+of 
+
+[21] Deborah Lupton. 2014. Self-Tracking Cultures: Towards a Sociology 
+of  Personal  Informatics.  In  Proceedings  of  Proceedings  of  the  26th 
+Australian  Computer-Human  Interaction  Conference  on  Designing 
+Futures:  the  Future  of  Design.  ACM,  Sydney,  New  South  Wales, 
+Australia, 77-86. http://dx.doi.org/10.1145/2686612.2686623 
+
+[22] Louise  C.  Mâsse,  Teresia  M.  O’Connor,  Andrew  W.  Tu,  Sheryl  O. 
+Hughes, Mark R. Beauchamp, Tom Baranowski and Physical Activity 
+Parenting  Expert  Group.  2017.  Conceptualizing  Physical  Activity 
+Parenting  Practices  Using  Expert  Informed  Concept  Mapping 
+Analysis. 
+574. 
+Health 
+http://dx.doi.org/10.1186/s12889-017-4487-1 
+
+Public 
+
+BMC 
+
+17, 
+
+1, 
+
+[23] Florian 'Floyd' Mueller, Stefan Agamanolis and Rosalind  Picard. 2003. 
+Exertion  Interfaces:  Sports  over  a  Distance  for  Social  Bonding  and 
+Fun. In Proceedings of the Conference on Human Factors in Computing 
+561-568. 
+(Chi 
+http://dx.doi.org/10.1145/642611.642709 
+
+ACM, 
+
+2003), 
+
+York, 
+
+New 
+
+[24] Florian Floyd Mueller, Martin R. Gibbs, Frank Vetere and Darren Edge. 
+2017. Designing for Bodily Interplay in Social Exertion Games. ACM 
+Trans. 
+1-41. 
+http://dx.doi.org/10.1145/3064938 
+
+Comput.-Hum. 
+
+Interact. 
+
+24, 
+
+3, 
+
+[25] Anthony  D.  Okely,  Davina  Ghersi,  Kylie  D.  Hesketh,  Rute  Santos, 
+Sarah P. Loughran, Dylan P. Cliff, Trevor Shilton, David Grant, Rachel 
+A. Jones, Rebecca M. Stanley, Julie Sherring, Trina Hinkley, Stewart 
+G.  Trost,  Clare  McHugh,  Simon  Eckermann,  Karen  Thorpe,  Karen 
+Waters, Timothy S. Olds, Tracy Mackey, Rhonda Livingstone, Hayley 
+Christian, Harriette Carr, Adam Verrender, João R. Pereira, Zhiguang 
+Zhang,  Katherine  L.  Downing  and  Mark  S.  Tremblay.  2017.  A 
+Collaborative  Approach  to  Adopting/Adapting  Guidelines  -  the 
+Australian 24-Hour Movement Guidelines for the Early Years (Birth 
+to 5 Years): An Integration of Physical Activity, Sedentary Behavior, 
+869. 
+BMC 
+and 
+http://dx.doi.org/10.1186/s12889-017-4867-6 
+
+Health 
+
+Public 
+
+Sleep. 
+
+17, 
+
+5, 
+
+[26] James Pierce, Yolande Strengers, Phoebe Sengers and Susanne Bødker. 
+2013.  Introduction  to  the  Special  Issue  on  Practice-Oriented 
+Approaches  to  Sustainable  Hci.  ACM  Transactions  on  Computer-
+1-8. 
+Human 
+http://dx.doi.org/10.1145/2494260 
+
+Interaction 
+
+(TOCHI) 
+
+20, 
+
+4, 
+
+[27] Laura  R.  Pina,  Sang-Wha  Sien,  Teresa  Ward,  Jason  C.  Yip,  Sean  A. 
+Munson,  James  Fogarty  and  Julie  A.  Kientz.  2017.  From  Personal 
+Informatics  to  Family  Informatics:  Understanding  Family  Practices 
+around Health Monitoring. In Proceedings of Proceedings of the 2017 
+ACM Conference on Computer Supported Cooperative Work and Social 
+Computing.  ACM, 
+2300-2315. 
+Portland,  Oregon, 
+http://dx.doi.org/10.1145/2998181.2998362 
+
+USA, 
+
+330 
+ 
+Technologies to Engage Young Children in Physical Activity 
+
+OzCHI’18, December, 2018, Melbourne, VIC, Australia 
+
+[28] Lars  Plantin  and  Kristian  Daneback.  2009.  Parenthood,  Information 
+and  Support  on  the  Internet.  A  Literature  Review  of  Research  on 
+Parents  and  Professionals  Online.  BMC  Family  Practice  10,  1,  34. 
+http://dx.doi.org/10.1186/1471-2296-10-34 
+
+[29] Bernd  Ploderer,  Wolfgang  Reitberger,  Harri  Oinas-Kukkonen  and 
+Julia  van  Gemert-Pijnen.  2014.  Social  Interaction  and  Reflection  for 
+Behaviour  Change.  Personal  and  Ubiquitous  Computing  18,  7,  1667-
+1676. http://dx.doi.org/10.1007/s00779-014-0779-y 
+
+[30] Andreas  Reckwitz.  2002.  Toward  a  Theory  of  Social  Practices:  A 
+Development  in  Culturalist  Theorizing.  European  Journal  of  Social 
+Theory 5, 2, 243-263.  
+
+[31] Yvonne  Rogers,  William  R  Hazlewood,  Paul  Marshall,  Nick  Dalton 
+and Susanna Hertrich. 2010. Ambient Influence: Can Twinkly Lights 
+Lure  and  Abstract  Representations  Trigger  Behavioral  Change?  In 
+Proceedings  of  Ubicomp  2010,  ACM,  New  York,  261-270. 
+http://dx.doi.org/10.1145/1864349.1864372 
+
+[32] John  Rooksby,  Mattias  Rost,  Alistair  Morrison  and  Matthew  C 
+In 
+Chalmers.  2014.  Personal  Tracking  as  Lived 
+Proceedings of Proceedings of the SIGCHI Conference on Human Factors 
+in  Computing  Systems.  ACM,  Toronto,  Ontario,  Canada,  1163-1172 
+http://dx.doi.org/10.1145/2556288.2557039 
+
+Informatics. 
+
+[33] Herman Saksono and Andrea G. Parker. 2017. Reflective Informatics 
+through  Family  Storytelling:  Self-Discovering  Physical  Activity 
+Predictors. In Proceedings of Proceedings of the 2017 CHI Conference on 
+Human Factors in Computing Systems. ACM, Denver, Colorado, USA, 
+5232-5244. http://dx.doi.org/10.1145/3025453.3025651 
+
+[34] Herman  Saksono,  Ashwini  Ranade,  Geeta  Kamarthi,  Carmen 
+Castaneda-Sceppa, Jessica A.  Hoffman,  Cathy Wirth  and Andrea G. 
+Parker. 2015. Spaceship Launch: Designing a Collaborative Exergame 
+for Families. In Proceedings of Proceedings of the 18th ACM Conference 
+on Computer Supported Cooperative Work & Social Computing. ACM, 
+Vancouver, 
+1776-1787. 
+http://dx.doi.org/10.1145/2675133.2675159 
+
+Canada, 
+
+BC, 
+
+[35] Hanna  Schäfer,  Joachim  Bachner,  Sebastian  Pretscher,  Georg  Groh 
+and Yolanda Demetriou. 2018. Study on Motivating Physical Activity 
+in  Children  with  Personalized  Gamified  Feedback.  In  Proceedings  of 
+Adjunct  Publication  of  the  26th  Conference  on  User  Modeling, 
+Adaptation and Personalization. ACM, Singapore, Singapore, 221-226. 
+http://dx.doi.org/10.1145/3213586.3225227 
+
+[36] Stephanie Schoeppe and Stewart G. Trost. 2015. Maternal and Paternal 
+Support  for  Physical  Activity  and  Healthy  Eating  in  Preschool 
+Children:  A  Cross-Sectional  Study.  BMC  Public  Health  15,  1,  971. 
+http://dx.doi.org/10.1186/s12889-015-2318-9 
+
+[37] Jonathan  Sillito.  2018.  Saturate:  Simple  Collaborative  Qualitative 
+Analysis.  Retrieved  from  http://www.saturateapp.com/  Archived  at 
+http://www.webcitation.org/6x5a73jF7. 
+
+[38] Paul  Spiesberger,  Florian  Jungwirth,  Christoph  Wöss,  Stefan  Bachl, 
+Johannes Harms and Thomas Grechenig. 2015. Woody: A Location-
+Based Smartphone Game to Increase Children's Outdoor Activities in 
+Urban  Environments.  In  Proceedings  of  Proceedings  of  the  14th 
+International Conference on Mobile and Ubiquitous Multimedia. ACM, 
+Linz, Austria, 368-372. http://dx.doi.org/10.1145/2836041.2841210 
+[39] Stewart G. Trost and Paul D. Loprinzi. 2011. Parental Influences on 
+Physical  Activity  Behavior  in  Children  and  Adolescents:  A  Brief 
+Review.  American  Journal  of  Lifestyle  Medicine  5,  2,  171-181. 
+http://dx.doi.org/10.1177/1559827610387236 
+
+[40] Greg  Wadley,  Wally  Smith,  Bernd  Ploderer,  Jon  Pearce,  Sarah 
+Webber,  Mark  Whooley  and  Ron  Borland.  2014.  What  People  Talk 
+About  When  They  Talk  About  Quitting.  In  Proceedings  of  the 
+Australasian Conference on Computer-Human Interaction (Ozchi 2014), 
+York. 
+Ed. 
+Tuck 
+http://dx.doi.org/10.1145/2207676.2208613 
+
+Leong 
+
+ACM, 
+
+New 
+
+W 
+
+[41] Oren  Zuckerman  and  Ayelet  Gal-Oz.  2014.  Deconstructing 
+Gamification:  Evaluating 
+the  Effectiveness  of  Continuous 
+Measurement, Virtual Rewards and Social Comparison for Promoting 
+Physical Activity. Personal and Ubiquitous Computing 18, 7, 1705-1719. 
+http://dx.doi.org/10.1007/s00779-014-0783-2 
+
+331 
+ 
+ 
+ 
+

@@ -1,0 +1,30 @@
+1. Introduction
+2. Related Work
+   2.1 Self-monitoring and Feedback
+   2.2 Productivity Monitoring Systems
+   2.3 Leveraging Visual Framing
+3. TimeAware
+   3.1 Framing the Productivity Score
+   3.2 Productivity Modeling
+   3.3 Emphasizing the Frames in Feedback Design
+   3.4 Ambient Widget
+   3.5 Information Dashboard
+   3.6 Implementation
+4. Field Deployment Study
+   4.1 Participants
+   4.2 Procedure
+   4.3 Dataset and Analysis
+5. Result
+   5.1 Effects of TimeAware on Productivity
+   5.2 Engagement in TimeAware
+   5.3 Self-Awareness and Self-Reflection
+6. Discussion
+   6.1 Framing Effects in Productivity Monitoring
+   6.2 Backfire: Dark Side of Productivity Monitoring
+   6.3 Challenges in Productivity Editing
+   6.4 Configuring When to Track
+   6.5 Integrating Multiple Devices
+   6.6 Conducting Framing Studies in the HCI Context
+7. Conclusion
+8. Acknowledgments
+9. References

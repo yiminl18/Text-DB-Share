@@ -1,0 +1,23 @@
+1. Introduction
+2. Related Work
+    2.1 Personal Informatics & Self-Monitoring
+    2.2 Casual and Personal Visualization
+    2.3 Visualization Authoring Tools
+3. Analyzing Dear Data
+4. Design Decisions
+5. The DataSelfie Interface Design
+    5.1 Creating a Questionnaire
+    5.2 Drawing Visual Mappings
+    5.3 Sharing & collaboration with others
+6. Usage Scenario
+    6.1 Scenario 1: Self-Tracking
+    6.2 Scenario 2: Community Gathering
+7. Implementation
+8. User Study
+9. Discussion
+    9.1 Limitations and Opportunities
+    9.2 Empowerment through Personalized Visuals
+    9.3 Beyond visuals and simple mappings
+10. Conclusion & Future Work
+11. Acknowledgments
+12. References

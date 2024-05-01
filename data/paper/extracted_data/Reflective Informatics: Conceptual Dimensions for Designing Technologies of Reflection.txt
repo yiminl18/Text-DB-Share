@@ -1,0 +1,1227 @@
+Reflective Informatics: Conceptual Dimensions for
+Designing Technologies of Reflection
+
+Eric P. S. Baumer
+Communication Department and Information Science Department
+118 Gates Hall, Ithaca, NY 14853, USA
+Cornell University
+ericpsb@cornell.edu
+
+ABSTRACT
+Despite  demonstrated  interest  in  designing  for  reflection,
+relatively little work provides a detailed explication of what
+exactly  is  meant  by  reflection  or  how  to  design  around  it.
+This  paper  fills  that  gap  by  reviewing  and  engaging  with
+conceptual  and  theoretical  models  of  reflection,  organized
+by  the  disciplinary  and  epistemological  perspectives  each
+embodies. Synthesizing across this theoretical background,
+the  paper  identifies  three  dimensions  of  reflection:
+breakdown,  inquiry,  and  transformation.  Together,  these
+dimensions  serve  as  the  foundation  for reflective
+informatics,  a  conceptual  approach  that  helps  bring  clarity
+and  guidance  to  the  discussion  of  designing  for  reflection.
+The  paper  distinguishes  reflective  informatics  by
+demonstrating  how  it  both  differs  from  and  complements
+existing related work. Finally, the paper provides a critically
+reflexive  consideration  of  its  own  latent  assumptions,
+especially about the value of reflection, and how they might
+impact work on designing for reflection.
+
+Author Keywords
+Reflection; reflective informatics; design; reflective HCI.
+
+ACM Classification Keywords
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous.
+
+INTRODUCTION
+“Without  [reflection]  no  judgment  of  experience  would  be
+possible at all.” [25]
+
+Researchers  in  HCI  have  demonstrated  significant  interest
+in designing technologies to support reflection [6,15,31,42].
+While  it  provides  an  exciting  and  challenging  application
+area,  there  persists  a  certain  “fuzziness  in  which  the  term
+‘reflection’  is  used  within  the  HCI  community” [15:221].
+Indeed,  few  of  the  papers  describing  systems  purported  to
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for
+personal or classroom use is granted without fee provided that copies are
+not made or distributed for profit or commercial advantage and that copies
+bear  this  notice  and  the  full  citation  on  the  first  page.  Copyrights  for
+components  of  this  work  owned  by  others  than ACM  must  be  honored.
+Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or  republish,  to
+post on servers or to redistribute to lists, requires prior specific permission
+and/or a fee. Request permissions from Permissions@acm.org.
+
+CHI 2015, April 18 - 23 2015, Seoul, Republic of Korea
+Copyright  is  held  by  the  owner/author(s).  Publication  rights  licensed  to
+ACM.
+ACM 978-1-4503-3145-6/15/04…$15.00
+http://dx.doi.org/10.1145/2702123.2702234
+
+support reflection provide more than a one- or two-sentence
+definition  of  the  concept [6,15].  Work  in  this  area  may
+benefit  from  a  more  explicit  discussion  of  what  we  mean
+when talking about reflection.
+
+Part of the issue may arise from the diverse auspices under
+which prior work has been conducted. As mentioned above,
+substantial  work  has  already  been  undertaken  in  designing
+technologies  of  reflection [6],  so  reflection per  se   is  not
+necessarily  novel.  However,  much  of  this  work  remains
+somewhat  disjoint,  spanning  applications  from  health  to
+education  to  personal  informatics  to  design  support  tools
+[15]. Articulating a larger conceptual umbrella under which
+this  work  operates  may  facilitate  engagement  with
+foundational concepts and theories of reflection.
+
+This  paper,  then,  seeks  to  provide  such  a  conceptual
+grounding,  one  that  can  be  relevant  to  and  shared  by  the
+disparate  strands  of  work  around  designing  for  reflection.
+After reviewing previous approaches to reflection in HCI, it
+considers  several  theoretical  approaches,  organized  under
+the  various  disciplinary  and  epistemological  perspectives
+they  embody,  that  might  prove  useful  in  conceptualizing
+what  exactly  we  mean  by  reflection.  Synthesizing  across
+these  theories,  the  paper  proposes  the  term reflective
+informatics  and  offers  three  dimensions  along  which
+computational  and  information  technologies  may  be
+designed  to  promote,  foster,  encourage,  or  support
+reflection.  These  dimensions  are  explicated  both  through
+grounding  in  the  theoretical  literature  on  reflection  and
+through  comparison  with  prior  instances  of  designing  for
+reflection.  The  paper  concludes  by  taking  a  critical,
+reflexive turn, considering its own underlying commitments
+and latent assumptions about reflection as well as some of
+the  tensions  inherent  in  designing,  and  evaluating,
+technologies of reflection.
+
+Crucially,  it  would  be  deleterious  to  use  “reflective
+informatics” as a keyword or silo to set reflection-oriented
+papers  apart  from  other,  ostensibly  non-reflection-oriented
+work.  Rather,  the  term  represents  a  sensibility  toward  the
+relationship  between  computational  technology  and
+reflective  thought  in  such  a  way  that  highlights  its
+permeation  though  and  relevance  in  numerous  different
+contexts.  Indeed,  reflection  cannot  and  should  not  be
+isolated as its own subfield within HCI. Instead, this paper
+works  toward  providing  underpinning  concepts  and
+unifying  concerns  that  may  be  readily  applied  to  a  variety
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea585of  domains,  from  health  to  education  to  personal
+informatics. Furthermore, it also aims to elucidate both how
+endeavors  to  support  reflection  in  those  disparate  areas
+might  share  commonalities  and  how  they  might  mutually
+benefit from each others’ insights.
+
+The paper thus makes two primary contributions. First, by
+reviewing work on reflection from a variety of disciplines,
+it  provides  needed [6,15]  conceptual  and  theoretical
+grounding  for  reflection  in  HCI.  Second,  by  synthesizing
+across  that  work,  it  suggests  three  specific  dimensions  for
+applying these concepts and theories in technology design.
+
+RELATED WORK
+This  section  both  demonstrates  reflection  as  a  topic  of
+interest  in  HCI  and  considers  some  of  the  ways  in  which
+prior work has engaged with the concept. Such work can be
+grouped into two broad, partially overlapping strands.
+
+The first strand acknowledges the importance of reflection
+in the design process. For example, Schön’s descriptions of
+reflective  practice [43]  and  of  design  as  a  reflective
+conversation  with  materials [44]  have  been  applied  to
+improving  the  quality  of  interaction  design [33].  Value
+sensitive  design [18]  emphasizes  designers’  capacity  for
+reflection  on  the  value  commitments  embedded  in  (a)
+design.  Numerous  approaches  have  been  taken  to
+facilitating  reflection  in  the  design  process,  including
+(perhaps  somewhat  reflexively)  designing  tools  to  help
+designers reflect [see 6 for a review].
+
+A second strand of work, more directly relevant here, deals
+with  reflection  among  users.  This  section  reviews  three
+approaches  that  explicitly  discuss  reflection  among
+technology  users.  For  each,  we  argue  that  the  dimensions
+articulated below help fill a gap by providing the theoretical
+grounding  and  conceptual  language  necessary  to  engage
+with, and design for, reflection [6,15].
+
+Personal Informatics
+Reflection  plays  a  central  role  in  the  conceptualization  of
+personal informatics. Li et al. define personal informatics as
+systems  that  “help  people  collect  personally  relevant
+information  for  the  purpose  of self-reflection  and  gaining
+self-knowledge” [31:558,  emphasis  added].  In  addition  to
+giving reflection a central place in its definition, their model
+of  personal  informatics  includes  reflection  as  one  of  five
+stages. An individual who (1) has the motivation to examine
+her  or  his  personal  information,  (2)  has collected  that
+information,  and  (3)  has integrated  it  into  a  meaningful
+form(at)  can  then  (4) reflect  on  her  or  his  data.  This
+reflection  leads  to  subsequent  (5) action  wherein  the
+individual  changes  her  or  his  behavior  (or  perhaps  not)
+based on reflections about her or his data and the resultant
+increase in self-knowledge.
+
+Reflection,  then,  functions  as  the  impetus  in  personal
+informatics that moves the individual from examinations of
+her  or  his  data  to  action.  Despite  this  central  importance,
+
+work  on  personal  informatics  provides  relatively  little
+detailed  explication  of  what  actually  constitutes  reflection.
+For  Li  et  al.,  “looking  at  lists  of  collected  personal
+information  or  exploring  or  interacting  with  information
+visualizations” [31:562]  is  constitutive  of  reflection.  A
+colloquial  definition  such  as  this,  rather  than  one  based  in
+previous  theoretical  work  on  reflection,  is  not  itself  a
+weakness. However, this definition provides relatively little
+guidance in terms of how we might go about designing for
+reflection.  The  dimensions  of  reflective  informatics
+presented below provide needed conceptual and theoretical
+grounding,  along  with  design  strategies  for  each  identified
+dimension  of  reflection.  Thus,  this  paper  supplies  both  a
+working  definition  of  what  constitutes  reflection  and
+guidance as to how we might design for it.
+
+Reflective Design
+Reflective  Design [45]  applies  Agre’s  notion  of  critical
+technical  practice [1]  to  HCI.  In  so  doing  it  brings
+“unconscious  aspects  of  experience  to  conscious  attention,
+thereby  making  them  available  for  conscious  choice”
+[45:50].  This  approach  involves  designers  identifying
+“attitudes,  practices,  values,  and  identities” [45:50]  on
+which  existing,  norm-reinforcing  designs  are  often
+predicated  and  instead  designing  based  on  alternative
+assumptions.  As  one  of  the  few  lines  of  prior  work  to
+provide  theoretical  grounding,  Sengers  et  al.  define
+reflection  by  drawing  on  “a  Western  tradition  of  critical
+reflection [in] Marxism, feminism, racial and ethnic studies,
+media studies and psychoanalysis” [45:53]. For example, in
+considering  the  design  of  technology  for  a  museum,
+B o e h n e r  e t  a l . [9]  identified  one-way  transfer  of
+information,  from  curators  to  visitors,  as  the  dominant
+paradigm in existing designs. Using reflective design led to
+developing alternative technologies that allowed “visitors to
+add  their  own  voice  to  the  curator’s  voice” [45:53].  The
+influence  of  critical  theory,  and  a  resonance  with  critical
+design [14]  (described  further  below),  can  be  seen  here  in
+how  this  design  challenges  and  shifts  the  power  relations
+between visitors and curators.
+
+While  they  chiefly  emphasize  the  importance  of  reflection
+among  designers,  Sengers  et  al. [45]  also  mention  and
+discuss the importance of promoting reflection among users
+as part of reflective design. However, of the six principles
+of  reflective  design,  only  two  explicitly  focus  on  users:
+“designers should support users in reflecting on their lives”
+and  “dialogic  engagement  between  designers  and  users
+through  technology” [45:55–56].  These  principles
+acknowledge users primarily in terms of their relationships
+with designers. Moreover, they provide little in the way of
+practical  guidance  for  designers.  Thus,  an  approach  that
+provides explicit dimensions of reflection and concomitant
+strategies for designing around those dimensions represents
+an important complement to this previous work.
+
+Slow Technology
+Much  technology  is  designed  in  service  of  enabling
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea586efficient  work,  wherein  speed  and  productivity  are  lauded
+above almost all else. Hallnäs and Redström [20] explore an
+alternative.  Drawing  an  analogy  from  the  distinction
+between  fast  food  and  a  gourmet  meal,  they  suggest
+countering  existing  “fast”  technology  by  designing  “slow”
+technology.  For  example,  consider  “an  electronic  doorbell
+that  plays  short  fragments  of  a  very  long  melody”
+[20:202]  with  each  ring.  The  doorbell  cannot  be  fully
+understood after one use. Doing so takes time, both in terms
+of  repeated  use  and  in  terms  of  pausing  to  consider  the
+relationships  among  the  melodic  pieces. Another  example,
+the  ChatterBox,  is  described  below.  Such  designs,  they
+suggest, help make space for reflection.
+
+Slow  technology  provides  a  certain  design  sensibility  that
+uses  slowness  to  make  space  for  reflection,  making  it
+complementary  to  but  distinct  from  the  dimensions  of
+reflection  articulated  here.  Furthermore,  Hallnäs  and
+Redström [20]  remain  somewhat  vague  as  to  what
+constitutes  reflection.  This  vagueness  is  not  necessarily  a
+limitation;  they  may  have  intentionally  avoided
+constraining  the  possible  design  space  of  slow  technology.
+However,  this  vagueness  also  opens  an  opportunity  to
+articulate more fully what we mean by reflection, as is done
+is this paper.
+
+THEORETICAL BACKGROUND
+To  provide  more  grounded  explication  of  how  we  might
+approach  reflection  in  interaction  design,  this  section
+describes a variety of conceptual and theoretical approaches
+to  reflection.  An  exhaustive  review  of  such  work  far
+exceeds  the  scope  and  space  constraints  of  this  paper [see,
+e.g.,  16,34].  Instead,  this  section  revolves  around  various
+disciplinary-epistemological  approaches  to  reflection.
+Researchers  in  a  range  of  disciplines—from  philosophy  to
+psychology  to  education—have  provided  a  variety  of
+conceptual  and  theoretical  tools  for  thinking  about  and
+analyzing  reflection.  Organizing  this  work  in  terms  of
+discipline  and  epistemology  helps  us  see  not  only
+commonalities  but  also  differences  among  these  various
+approaches.
+
+Note  that  this  paper  does  not  argue  that  any  single
+conceptualization  of,  epistemological  approach  to,  or
+theoretical  framework  for  reflection should  be  used  as  an
+underpinning to designing for reflection. Indeed, each of the
+following have strengths and limitations in terms of guiding
+design. Rather than championing one approach or another,
+this paper instead suggests that greater insight with respect
+to  informing  design  can  be  gleaned  by  identifying
+differences  between  and,  moreover,  commonalities  among
+these theoretical approaches.
+
+Philosophical
+One of the original considerations of reflection in Western
+philosophy  comes  from  Kant [25].  He  begins  his
+philosophical investigations by arguing for the existence of
+two  types  of  mental  faculties.  The  first,  Understanding,
+
+involves comprehension of and reasoning about (or as Kant
+calls  it  "legislating")  the  domain  of  the  natural  world. The
+primary  role  of  understanding  is  the  identification  and
+application  of  natural  laws  that  necessitate  how  the  world
+works.  The  second  mental  faculty,  Reason,  has  the  moral
+world  as  its  legislative  domain.  Reason  involves  the
+identification and application of moral laws based on what
+freedoms of action are and are not possible with respect to
+human  desire.  Later,  Kant  extended  this  framework  to
+include  a  third  faculty  of  Judgment  that  mediates  between
+nature  and  morality,  between  the  natural  world  and  the
+world  of  human  desire.  It  is  our  faculty  of  judgment,  he
+argues,  that  enables  notions  of  aesthetics  and  beauty,  i.e.,
+the application of human desire to the natural world.
+
+“The  power  of  judgment  in  general  is  the  faculty  for
+thinking of the particular as contained under the universal”
+[25:Intro.  IV,  5:179].  Of  this  faculty  of  judgment,  Kant
+describes two kinds. In instances where the universal (e.g.,
+a law) is given, then the judgment that operates to subsume
+particular  instances  under  that  universal  is  referred  to  as
+determining  or  as  “determinant  judgment.”  “If,  however,
+only the particular is given, for which the universal is to be
+found,  then  the  power  of  judgment  is  merely  reflecting”
+[25:Intro.  IV,  5:179]  or  “reflective  judgment.”  Universals
+arising thusly do not derive directly from nature, otherwise
+they  would  be  considered  given.  Rather,  the  reflecting
+power  of  judgment  itself  generates  and  gives  rise  to  such
+universals.  Kant  places  great  significance  on  this  capacity,
+suggesting  at  one  point  that  all  empirical  concepts  derive
+from  it  and  that  “without  [this  reflecting  power]  no
+judgment of experience would be possible at all” [25:FI V
+20:212].
+
+Another  example  comes  from  Dewey’s [12]  discussion  of
+reflective  thought,  which  places  significant  importance  on
+reflection as a fundamentally important type of thinking. He
+defines reflective thought as “active, persistent, and careful
+consideration of any belief or supposed form of knowledge
+in  the  light  of  the  grounds  that  support  it,  and  the  further
+conclusions to which it tends” [12:6].
+
+This  type  of  thought  occurs  through  five  distinct  steps.
+First,  it  begins  with  “the  inherently  doubtful—with  the
+confusing,  obscure,  or  conflictual  situation” [12:121].  The
+second  step,  identifying  and  defining  the  nature  of  the
+perplexing  situation,  may  coincide  with  the  first  step.  The
+third  step  involves  suggestion  of  possible  explanations.  In
+the  fourth  step,  the  implications  or  consequences  of  each
+potential  explanation  are  generated  and  considered.  The
+fifth  and  final  step  compares  these  implications  with  the
+troubling  situation  to  verify  which,  if  any,  of  the  potential
+explanation can account for it.
+
+Dewey  describes  this  puzzle-testing  process  occurring  in
+even the most quotidian of situations, from navigating a city
+in order to arrive at an appointment on time (“I was down
+on 16th St. [at 12:20 and] I had an engagement at 124th St.,
+at one o’clock” [12:69] p. 69), to puzzling out why bubbles
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea587form  on  the  outsides  of  freshly  washed  glass  tumblers
+placed  upside-down  (“Air  from  outside  must  have  been
+expanded  by  the  heat  of  the  tumbler” [12:71]).  Dewey
+devotes  much  focus  to  the  training  of  (reflective)  thought,
+especially  the  conduct  and  goals  of  education,  which
+accounts  for  his  influence  in  scholarship  on  the  role  of
+reflection  in  education [e.g.,  17,36],  to  which  we  return
+below.
+
+Cognitive
+Another  series  of  approaches  to  reflection  comes  from
+cognitive  and  developmental  psychology.  From  this
+perspective,  reflection  is  seen  as  a  particular  type  of
+cognition,  differentiated  from  others  by  its  non-automatic
+character.  Many  dual-process  models [24]  describe  two
+general modes of thought. The first, the automatic system,
+is responsible for quick, instinctive, or reactive decisions in
+our everyday activities. Indeed, drawing on prospect theory
+[23],  Thaler  and  Sunstein [48]  acknowledge  that  much  of
+the  thought  conducted  by  this  system  is  more  likely  to  be
+seen  as  instinct  than  as  “thinking.”  In  contrast,  decisions
+made  by  the  reflective  system  occur  slowly,  with  much
+deliberation  and  conscious  intentionality.  Thaler  and
+Sunstein,  though,  focus  primarily  on  using  “nudges”  to
+influence  decisions  made  by  people’s  automatic  system,
+making their work not as directly relevant here.
+
+In  a  similar  example,  Norman [38]  differentiates  between
+what  he  calls  experiential  cognition  and  reflective
+cognition.  The  former  deals  with  “a  state  in  which  we
+perceive  and  react  to  the  events  around  us  efficiently  and
+effortlessly” [38:16].  Reflective  cognition,  on  the  other
+hand, deals with intentional thought, decision making, and,
+crucially, “new ideas [and] novel responses” [ibid.]. While
+he acknowledges this bipartite treatment of cognition as an
+oversimplification,  Norman  goes  on  to  suggest  that  much
+work  in  technology  design  focuses  too  greatly  on
+experiential  cognition.  Incorporating  a  greater  balance  of
+support  for  reflective  cognition,  he  suggests,  can  facilitate
+the  design  of  technologies  that  better  draw  out  humanity’s
+creative capacity.
+
+Other cognitive approaches are more fine-grained. King and
+Kitchener [26] developed a stage-based model of what they
+call reflective judgment describing how people come to be
+(more) reflective (without explicit invocation of Kant’s [25]
+notion of reflective judgment described above). Rather than
+two  modes,  reflective  and  non-reflective,  their  model
+consists  of  seven  stages.  In  the  pre-reflective  stages,
+“knowledge is assumed to exist absolutely and concretely”
+[26:48]  in  the  world  and  thus  needs  to  justification.  More
+reflective  stages  are  characterized  by  an  acknowledgment
+of the contingency of knowledge. Knowledge is rarely seen
+as  absolutely  right  or  wrong  but  rather  more  or  less
+reasonable,  based  on  the  arguments  made  and  evidence
+available.
+
+problems  involving  significant  uncertainty.  For  such
+problems,  solutions  cannot  be  “described  with  a  high
+degree of completeness,” nor can the problem be “resolved
+with  a  high  degree  of  certainty” [26:11].  For  example,  the
+question  of  whether  or  not  the  ancient  Egyptians  had  the
+mathematical knowledge, the necessary tools, and adequate
+power  sources  to  build  the  pyramids  can  be  seen  as  ill-
+structured.  A  non-reflective  response  would  indicate  that,
+because the pyramids are in Egypt, the Egyptians must have
+built  the  pyramids.  A  more  reflective  response  might
+acknowledge, as one participant did, that “right and wrong
+are  not  comfortable  categories  [here…]  it’s  more  or  less
+likely or reasonable, more or less in keeping with what the
+facts  seem  to  be” [26:72].  Thus,  in  this  view,  reflection
+enables  reasonable,  evidence-based  decision  making,  even
+in the face of uncertainty.
+
+Educational
+The potential relationship between education and reflection
+can  be  seen  in  some  of  the  work  above.  Dewey
+[12]  specifically  describes  the  importance  of  reflective
+thought  in  education.  Norman [38] suggests that education
+functions  best  when  combining  a  balance  of  experiential
+cognition  and  reflective  cognition.  Much  of  King  and
+Kitchener’s [26]  empirical  work  examines  how  reflective
+judgment  develops  as  individuals  move  from  primary  and
+secondary  education  through  university  and  into  post
+graduate education. Indeed, several other scholars articulate
+deep  connections  between  education  and  reflection [e.g.,
+17,27,36,37,43], two of which are described here.
+
+For Moon, “reflection is intimately linked with the process
+of  learning” [37:100]. She describes reflection as a mental
+process  or,  at  times,  a  mental  function,  taking  as  inputs
+things  that  are  already  known  to  the  individual  and
+producing  as  output  greater  understanding.  Thus,
+“reflection  [is]  a  secondary  action  on  already  learnt
+material” [37:159], a reprocessing of knowledge or theories
+that  may  itself  produce  further  knowledge  or  theories.  In
+this  way,  reflection  represents  a  form  of  deeper  learning,
+involved  not  only  in  making  meaning  but  in  what  Moon
+calls “working with meaning.” Thus, reflection is integral to
+what  Kolb [27]  calls  “deep  learning,”  i.e.,  learning  that
+transforms experience into knowledge.
+
+Focusing  more  on  the  informal  education  of  professionals
+and  professionalization,  Schön’s [43]  investigation  of
+reflection  studies  how  professionals  think.  His  interests  lie
+in  what  he  refers  to  as  “the  epistemology  of  practice”
+[43:vii],  that  is,  the  kinds  of  knowing  that  professionals
+evidence  through  the  conduct  of  their  practice.  In  many
+ways, this focus resembles tacit knowledge, when there are
+things  we  know  but  “we  cannot  say  what  it  is  that  we
+know” [43:49].  This  knowledge  is  not  abstract  but  is
+knowledge  in  doing,  or,  as  Schön  puts  it,  “knowing-in-
+action.”
+
+Reflective  judgment,  King  and  Kitchener [26]  suggest,
+provides  greatest  value  in  situations  of  ill-structured
+
+Schön  describes  a  number  of  examples,  ranging  from
+professional  baseball  pitchers  “finding  the  groove  […]
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea588studying  [their]  winning  habits  and  trying  to  repeat  them
+every time [they] perform” [43:54], to an investment banker
+who  acknowledges  that  operating  numbers  “allow  him  to
+calculate ‘only 20 to 30 percent of the risk in investment’”
+[43:63]. Situations of reflection are often precipitated by the
+unexpected,  and  such  “reflection  tends  to  focus
+interactively  on  the  outcomes  of  action,  the  action  itself,
+and  the  intuitive  knowing  implicit  in  the  action” [43:56].
+This  conception  creates  an  inextricable,  dialogic  link
+between reflection and action; reflection is not an abstract,
+heady  activity  but  is  intimately  intertwined  with  the
+performance  of  action.  This  kind  of  reflection-in-action,
+Schön  argues,  moves  beyond  positivist-based  technical
+rationality  to  grapple  with  “situations  of  uncertainty,
+instability, uniqueness, and value conflict” [43:49].
+
+Critical
+Work in a fourth epistemological paradigm does not always
+use the term “reflection” but nonetheless shares many goals
+and  sensibilities  with  other  work  reviewed  here.  Critical
+design “asks carefully crafted questions and makes us think,
+[…]  its  purpose  is  to  stimulate  discussion  and  debate”
+[14:58].  Put  another  way,  “critical  design  [means]  things
+that make you think” [8:501].
+
+The  epistemological  paradigm  underlying  critical  design
+derives largely from critical theory. This perspective neither
+sees  knowledge  as  externally  existent  and  objectively
+knowable in the style of positivist epistemology, nor does it
+see knowledge as a fully intersubjective social construction
+in  the  style  of  interpretivist  epistemology.  Instead,  critical
+approaches consider knowledge as contingent upon, and in
+many  ways  arising  from,  the  particular  historical
+circumstances  and  power  structures  in  which  that
+knowledge  is  created [39]. While  a  detailed  explication  of
+critical theory exceeds this paper's scope, the application of
+critical  perspectives  in  design [cf.  3,4]  bears  relevance  to
+reflection. Specifically, critical design represents a means of
+drawing  attention  to,  and  arguably  encouraging  reflection
+on,  the  power  dynamics  and  historical  contingencies  on
+which knowledge is predicated.
+
+The  influence  of  critical  approaches  can  be  seen  in  recent
+developments in HCI [e.g., 3,4,20,22,45]. However, critical
+designers  do  not  always  use  the  term  “reflection”  to
+describe  the  experiences  they  hope  to  evoke.  Indeed,  a
+recent review of reflection in HCI found few, if any, critical
+design papers that self-identified as pertaining to reflection
+[6].  Nonetheless,  we  include  critical  approaches  here  for
+two  reasons.  First,  they  provide  an  important
+epistemological alternative to other approaches dominant in
+HCI [cf.  39]. Second, they demonstrate that interest in the
+phenomena  of  reflection  exist  in  HCI  beyond  work  that
+self-identifies as being about reflection.
+
+Summary Notes
+Before  moving  on  to  consider  how  these  theoretical
+approaches can be leveraged to inform design, it is valuable
+
+to  note  some  comparisons  and  contrasts  enabled  by  the
+epistemological grouping used here.
+
+First,  in  both  the  philosophical  and  cognitive  approaches,
+reflection  is  seen  as  a  largely  mental,  almost  exclusively
+individual  activity.  Dewey’s [12]  descriptions  in  his
+examples  of  reflective  thought  foreground  vividly  the
+i n d i v i d u a l ,  i n t e r n a l  a s p e c t s.  L i k e w i se ,  K a n t ’s
+[25] discussion of reflection arises during an explicit focus
+on  mental  faculties.  This  focus  also  appears  salient  in
+cognitive  frameworks  that  emphasize  the  role  reflection
+plays  (or  at  times  does  not  play)  in  individual  decision
+making [48].  Similarly,  King  and  Kitchener’s [26]  model
+describes individual cognitive development.
+
+In contrast, educational approaches at least mention, if not
+emphasize,  social  (inter)action.  For  example,  Schön’s
+[43]  case  study  of  town  planners  shows  that  they  do  not
+work  in  isolation;  rather,  their  reflection  is  embedded  in  a
+complex  milieux  of  regulatory  systems,  advocacy  groups,
+etc.  Furthermore,  these  practitioners’  reflection  occurs  not
+primarily through internal mental activities but “in action,”
+in  the  conduct  of  their  work.  For  Freire [17],  the
+sociopolitical contexts give reflection not only its shape but
+also  its  purpose.  Similarly,  “critical  design  takes  as  its
+medium  social,  psychological,  cultural,  technical  and
+economic  values,  in  an  effort  to  push  the  limits  of  lived
+experience” [14:58].
+
+Second, these approaches differ in the value judgments they
+make  about  reflection.  Cognitive  approaches  clearly  imply
+reflective thought as often preferable to or even superior to
+“automatic” [48]  or  “pre-reflective” [26]  thinking.
+Simultaneously,  though,  they  acknowledge  both  the  value
+of  the  rapid  decision  making  that  comes  with  such
+automatic  thought  and  the  impossibility  of  constantly
+engaging  in  reflective  thought [38,48].  Critical  approaches
+also  value  reflection  for  its  potential  to  challenge  existing
+sociocultural norms.
+
+In  contrast,  philosophical  approaches  do  not  make  such
+expressly  clear  value  judgments  about  the  preferability  of
+reflective  thought.  For  Kant [25],  reflective  judgment
+represents one mode of being, one particular way in which
+an individual experiences and interacts with the world that
+accounts  for  the  ability  to  navigate  relationships  between
+abstract  generalizations  and  particular  concrete
+instantiations.  Despite  the  importance  Kant  places  on
+reflective  judgment,  he  does  not  suggest  that  individuals
+should (or perhaps even could) be “more” reflective.
+
+SOME DIMENSIONS OF REFLECTIVE INFORMATICS
+Rather  than  arguing  for  or  against  the  use  of  any  one  of
+these  theoretical  approaches  or  conceptual  models,  this
+section moves from contrasts to consider commonalities. In
+some  ways,  this  strategy  resembles  that  of  Fleck  and
+Fitzpatrick [15],  who  review  literature  on  reflection  to
+enumerate  five  levels  of  increasing  reflectivity.  However,
+rather than suggest means of designing for more reflection,
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea589this  section  synthesizes  across  the  different  perspectives
+reviewed  above  to  distill  several  common  elements. These
+commonalities serve as dimensions that can help guide the
+design of technologies for reflection.
+
+These dimensions are not intended as prescriptive, i.e., they
+do  not  tell  designers  what  to  do.  Nor  do  the  dimensions
+constitute  a  phase-  or  stage-based  model  of  reflection;  the
+reflecting  individual  need  not  necessarily  progress  linearly
+from  each  dimension  to  the  next.  However,  they  are  not
+totally  independent  of  one  another,  either,  as  described
+further  below.  Finally,  this  section  articulates some
+dimensions  of  reflective  informatics.  Future  work,
+especially  both  design  work  and  empirical  studies  of
+reflection,  may  identify  valuable  revisions,  limitations,  or
+alternatives  to  these  dimensions.  Rather,  these  dimensions
+provide a series of generative conceptual tools that can help
+inform  or  perhaps  inspire  design.  In  addition  to  grounding
+each dimension in the theoretical work reviewed above, this
+section  also  provides  examples  of  previous  work  on
+designing  for  reflection. These  examples  both  demonstrate
+how  each  dimension  may  play  out  in  practice  and  provide
+design strategies for addressing each dimension. Ultimately,
+these  dimensions  helps  establish  common  ground,
+advancing the discussion both of what exactly we mean by
+reflection and of how to design for it.
+
+Breakdown
+Instances  of  reflection  are  often  precipitated  by  various
+types  of  breakdowns.  Dewey [12]  emphasizes  doubtful  or
+puzzling  situations.  Schön  considers  situations  of  surprise,
+uncertainty,  or  conflict  where  “there  is  some  puzzling,  or
+troubling,  or  interesting  phenomenon” [43:50].  Making  an
+analogy to Kuhn’s notion of paradigm shifts [29], Mezirow
+[36] focuses on “disturbing anomalies” that do not fit with
+an individual’s current meaning perspectives.
+
+Why  are  breakdowns  important  moments  with  respect  to
+reflection?  The  importance  of  breakdowns  in  other
+intellectual  traditions  provides  some  suggestions.
+Ethnomethodology [19],  for  example,  focuses  on
+breakdown  and  repair  as  moments  when  the  tacit,  implicit
+social  structuring  of  interaction  must  be  explicated  by  its
+interactors.  Similar  resonance  can  be  seen  with  the
+phenomenological  distinction  between  ready-to-hand,
+wherein  a  tool  is  used  so  unconsciously  as  to  feel  like  an
+extension of the self, and present-at-hand, wherein a tool is
+examined  consciously  for  its  own  properties [21].  Such
+changes  from  ready-to-hand  to  present-at-hand  are  often
+precipitated  by  moments  when  the  tool  ceases  to  function
+normally. Such conscious and explicit consideration of that
+which  was  previously  unconscious  and  implicit,  similar  to
+the  reflective  modes  in  dual  process  models  of  cognition
+[23,24,38,48], acts to provide opportunities for reflection.
+
+Taking breakdowns into account when designing may mean
+at  least  two  things.  First,  as  noted  elsewhere  e.g., [13,46],
+providing  support  for  breakdowns  can  help  technological
+tools better align with human practices. In some instances,
+
+such  support  may  also  help  facilitate  reflection.  Second,
+perhaps somewhat more provocatively, drawing attention to
+or even inducing breakdowns may provide opportunities for
+moments of reflection. “Unless there is something doubtful,
+the  situation  is  read  off  at  a  glance” [12:102].  Critical
+design  takes  a  similar,  if  more  measured,  approach  to
+breakdown  by  striving  for  a  “slight  strangeness  […]  too
+weird  and  [designs]  are  instantly  dismissed,  not  strange
+enough and they're absorbed into everyday reality” [14:63].
+Thus,  drawing  attention  to  or  even  creating  moments  of
+perplexity and doubt may prove a useful design strategy.
+
+Examples
+While breakdown plays a central role in several conceptual
+and  theoretical  approaches  to  HCI  design [e.g.,  13],
+designing explicitly for breakdown in support of reflection
+occurs  less  often.  As  one  example,  some  of  the  work  in
+personal  informatics [31]  is  predicated  on  breakdowns,
+often  via  comparison  either  with  a  user's  own  past  data,
+such  as  task  performance [e.g.,  35],  or  data  from  other
+users,  such  as  related  search  queries [e.g.,  5].  Such
+breakdowns  resonate  primarily  with  the  cognitive  and
+educational perspectives reviewed above. Another example,
+ShoddyPop [32],  randomly  delays  the  delivery  of  email
+messages. Doing so arguably alleviates the onus to respond
+quickly,  since  the  recipient  will  not  receive  the  reply
+immediately, thus making time and space for reflection [cf.
+20]  on  the  content  of  the  exchange.  This  example  aligns
+more closely with philosophical and, to some extent, critical
+accounts of reflection.
+
+All these examples work by violating expectations. That is,
+the  designer  identifies  an  expectation  the  user  is  likely  to
+hold.  The  system  then  renders  that  expectation  inaccurate,
+either by suggesting that the expectation does not hold or by
+intentionally  violating  the  expectation.  Doing  so  implicitly
+suggests that the expectation warrants closer examination.
+
+Inquiry
+Another important aspect in many frameworks of reflection
+is  the  process  of  conscious,  intentional  inquiry.  Such
+processes  figure  prominently  in  both  Kant’s [25] notion of
+reflective  judgment  and  Dewey’s [12]  description  of
+reflective  thought.  The  whole  process  he  describes  of
+examining why fog forms on freshly washed glass tumblers
+[12:71]  exemplifies  a  process  of  inquiry,  of  generating,
+testing,  revising,  and  further  testing  hypotheses.  Indeed,
+Dewey at times refers to his conceptualization of reflection
+as a process of inquiry.
+
+Inquiry  plays  a  similarly  important  role  in  educational
+approaches  to  reflection.  In  Moon’s [37]  description,
+reflection  involves  re-examination  of  things—concepts,
+ideas,  theories,  etc.—already  learned,  i.e.,  inquiry  on
+existing  knowledge.  Inquiry  also  takes  a  central  place  for
+Freire [17], though for him inquiry focuses on the political,
+social, and cultural contexts of learning.
+
+Among  cognitive  approaches,  this  idea  of  inquiry  occurs
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea590most  saliently  in  King  and  Kitchener’s [26]  work.  In
+particular,  their  emphasis  on  the  nature  of  knowledge  and
+the  basis  of  justification  for  that  knowledge  essentially
+represents a particular type of inquiry. In contrast to Thaler
+and  Sunstein’s [48]  reflective  mode  or  Norman’s
+[38]  reflective  cognition,  inquiry  for  King  and  Kitchener
+examines not knowledge itself but the origins thereof, i.e.,
+epistemological inquiry.
+
+Critical  approaches  often  spur  inquiry  into  the  values
+underlying  design.  Indeed,  critical  design  often  employs
+“value fictions” wherein dominant values are subverted, for
+example,  challenging  the  masculine-dominant  gender
+norms  of  a  gym [4].  Such  subversions  can  (though  not
+always do) provoke inquiry into the normative values being
+challenged.
+
+Thus, designing for reflection means creating opportunities
+for,  as  well  as  supporting,  inquiry.  Doing  so  could  take
+many  forms.  Taking  after  Dewey [12],  a  design  could
+enable  and  encourage  a  process  of  iterative  hypothesis
+testing  and  refinement.  Resembling  Moon [37],  a  design
+might focus on the explication of what a user already knows
+to  encourage  reflective  re-examination  of  that  knowledge.
+Bardzell et al. [4] suggest that inquiry may result less from
+the  design per  se  and  more  from  dialog  between
+participants  and  researchers.  Drawing  on  King  and
+Kitchener [26],  a  design  could  emphasize  inquiry  into  the
+origins  of  knowledge  and  the  evidence  provided  therefor.
+Keeping  in  mind  Schön’s  notion  of  reflection-in-action
+[43], such inquiry need not be entirely abstract or cognitive
+but may occur tacitly in the process of interacting with the
+system.
+
+Examples
+Prior approaches to inquiry become most apparent in work
+that  focuses  on  reviewing  (and  reflecting  on)  past
+experience(s). For example, Wandering Mind [40] attempts
+to  promote  reflection  by  encouraging  exploration  of  old
+journal entries. The personal informatics systems mentioned
+above as triggering breakdown often subsequently allow or
+encourage  users’  inquiry  into  their  data,  demonstrating  the
+interdependence  among  dimensions.  Inquiry  becomes
+especially notable in work involving group discussion. For
+example,  Prilla  et  al. [41]  describe  a  system  that  supports
+stroke ward staff in reflecting on conversations with family
+members  of  patients.  The  design  focuses  on  users
+(re)examining  notes  about  their  experiences,  as  well  as
+subsequent group discussion. Arias et al. describe a system
+for  collaborative  civic  design  that  explicitly  includes  a
+reflection space for “present[ing] information related to the
+problem  at  hand  for  exploration  and  extension” [2:95].
+Thus, the design designates a separate space specifically for
+inquiry.  ConsiderIt [28]  similarly  distinguishes  between
+statements  either  supporting  or  opposing  state  ballot
+measures  and  the  arguments  to  support  those  statements.
+Doing so allows for further investigation or examination of
+the arguments and the statements they support.
+
+From  these,  we  can  draw  out  three  design  strategies  for
+supporting  inquiry.  First,  a  design  may  incorporate  review
+of  past  experiences.  Second,  a  design  can  designate  a
+particular  space  for  inquiry  separate  from  the  primary
+activities  to  which  that  inquiry  pertains.  Third,  group
+discussions  may  prove  an  effective  means  of  promoting
+reflective inquiry.
+
+Transformation
+Reflection  ultimately  involves  change.  It  is  not  only  about
+examining  the  current  state  of  the  world  or  one’s  self  but
+also about envisioning alternatives.
+
+For  educational  scholars [10,27,37],  reflection  transforms
+experience into learning. Especially for Moon, reflection is
+a process of refining previous learning, that is, transforming
+understanding. For Kant, reflective judgment is that which
+reorders our conceptual schema. Reflection occurs precisely
+when  our  existing  conceptual  schema  do  not  apply  (or  do
+not apply well) and thus we need to reschematize nature in
+order to come to a (better) understanding of it.
+
+Schön's  reflective  practitioners  often  transform  their
+understanding  of  a  situation.  For  example,  an  investment
+banker  found  himself  leery  of  an  opportunity  with  a  large
+Latin American bank where “the bank's operating numbers
+seemed satisfactory” [43:63] but he still felt an unease. The
+investor realized that “he had been treated with a degree of
+deference  out  of  all  proportion  with  his  actual  position”
+[43:64].  This  reflection  altered  his  understanding  of  the
+situation, and he chose to forgo any new investments with
+that  bank.  “Some  months  later,  the  bank  went  through  the
+biggest bankruptcy ever in Latin America” [43:64].
+
+Cognitive  approaches  that  contrast  reflection  with  more
+automatic  thought  processes  grant  reflection  the  ability  to
+change  the  rules  by  which  the  automatic  systems  act.  For
+example,  heuristic  decisions  often  function  based  on  loss
+aversion [23], a preference for avoiding losses over seeking
+gains.  Reflective  decision  making,  however,  enables
+decision making that is not subject to such biases [24].
+
+Critical  approaches  involve  not  only  questioning
+fundamental  assumptions  but  exploring  alternatives.  Value
+fictions [14]  represent  one  type  of  transformation  enabled
+by  critical  design.  Transformational  products  “attempt  to
+actively  shape  their  users’  attitudes” [30]. An  emphasis  on
+transformation  is  also  evident  in  Freire’s [17]  arguments
+about social change based on critical reflection.
+
+Examples
+Of  the  dimensions  described  here,  transformation  likely
+poses  the  most  difficult  challenge  to  designers.
+Transformation  involves  change  to  the  fundamental,  basic
+conceptualization  of  a  situation,  such  as  in  Kant's
+reschamitization [25] or critical design's value fictions [14].
+A design, however, often embodies a particular (i.e., single)
+stance  or  conceptualization  of  a  situation.  Designing  for
+transformation,  then,  requires  that  the  design  be  at  least
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea591comprehensible  (and  perhaps  usable  and/or  useful)  when
+approached with different conceptualizations.
+
+Consider  Hallnäs  and  Redström's  ChatterBox [20].  The
+system randomly concatenates snippets of text mined from
+office emails and displays them as isolated statements, e.g.,
+“To participate in the burglar it will be necessary to register
+for  the  i3 Annual,”  or,  somewhat  more  intriguingly,  “Who
+else  is  to?”  If  approached  as  a  tool  to  increase  efficiency
+and  productivity,  i.e.,  as  “fast”  technology,  the  ChatterBox
+seems  nearly  incomprehensible.  Instead,  the  system
+requires  a  transformation  of  the  user's  perspective  to  one
+that  allows  for  slow  technologies,  that  is,  it  requires
+“slowness in learning, understanding and presence [giving]
+people  time  to  think  and  reflect” [20:203].  Importantly,
+such  transformation  could  not  occur  without  breakdowns
+triggered  by  the  system’s  inscrutable  sentences,  again
+illustrating  interconnections  among  the  dimensions.  In  a
+related vein, Cheng et al. apply a similar stance on slowness
+and  reflection  in  the  design  of  GoSlow [11],  mobile
+application  that  encourages  moments  of  solitary
+contemplation.  Their  evaluation  of  the  system,  however,
+suggests that a gap may exist between simply pausing, i.e.,
+going slow, and fundamental transformation.
+
+Similarly,  the  lens  of  transformation  provides  for  multiple
+interpretations  of  ChatterBox.  On  the  one  hand,  one  could
+see  ChatterBox  as  designed  for  transformation  in  that  in
+requires  a  transformation  from  the  normative  approach  to
+technology in order to make sense of it. On the other, one
+could  argue  that  ChatterBox  does  not  support
+transformation  in  that  it  requires  users  take  one  particular
+approach  rather  than  supporting  the  user  as  s/he  moves
+through the experience of transformation.
+
+DISCUSSION AND FUTURE
+In the spirit of reflection, this section takes a reflexive turn
+on  the  paper  itself.  That  is,  it  calls  out  some  of  the
+assumptions  underlying  the  paper  (i.e.,  it  incites
+breakdown),  examines  the  implications  thereof  (i.e.,  it
+conducts  inquiries),  and  considers  potential  alternatives
+(i.e.,  it  proposes  transformation).  Doing  so  does  not  cause
+the paper to undermine itself; rather it ensures that the ideas
+herein  are  presented  with  a  degree  of  humility,
+acknowledges  the  paper’s  underlying  value  commitments,
+and suggests important areas for future investigation.
+
+Reflection  as  Valuable  –  First  and  foremost,  this  paper  is
+predicated on the assumption that reflection is valuable and
+that engaging in it is desirable. Given the extent of work on
+reflection  in  both  interaction  design [6,15,42]  and  other
+areas [16,34],  this  assumption  seems  hardly  exceptional.
+However,  considering  its  ramifications  and  alternative
+guiding  assumptions  may  be  illuminating.  Situations  may
+exist  in  which  reflection  is  less  valuable  or  perhaps  even
+harmful. A doctor at the operating table, for example, might
+benefit  from  reflection-in-action [43]  related  to  the
+procedures  s/he  is  conducting,  but  s/he  may  become
+distracted  from  the  task  at  hand  by  reflection  on  the
+
+economic and sociopolitical inequalities perpetuated by her
+or his country’s health care system. One could even imagine
+a  sort  of  “paralysis  by  analysis”  in  which  an  individual  or
+group  becomes  so  consumed  by  reflecting—on  their
+assumptions,  value  commitments,  biases,  etc.—that  it
+becomes  difficult  if  not  impossible  for  them  to  come  to  a
+meaningful  resolution.  Granted,  given  the  close  linkages
+between  reflection  and  action  argued  for  by  some [17,43],
+such situations may be unlikely. Other conceptualizations of
+reflection [e.g.,  12]  may  certainly  allow  such  paralysis  by
+analysis as a possibility.
+
+Power  and  Privilege  – This  paper  also  does  not  explicitly
+address  questions  about  the  potentially  privileged  position
+of reflection. Who is granted the opportunity to reflect, by
+whom, and under what conditions? The critical approaches
+reviewed here speak to some of these concerns [14,17,45].
+For  Freire [17],  the  capacity  for  reflection  does  not
+necessarily  derive  solely  from  positions  of  power.  Rather,
+given  an  appropriate  pedagogical  approach,  reflection,
+particularly  critical  reflection  on  the  power  dynamics
+between  oppressors  and  the  oppressed,  can  become  a  tool
+for  and  means  of  empowerment.  While  fully  addressing
+these issues exceeds this paper’s scope, such sociopolitical
+concerns  should  remain  central  to  work  on  designing  for
+reflection.
+
+Evaluation  –  Finally,  evaluation  poses  a  highly  complex
+challenge.  How  does  one  evaluate  technologies  of
+reflection?  Trying  to  determine  when  an  individual  (or
+group)  is  being  “more  reflective”  seems  at  best  a
+misconstrual  of  the  value  of  reflection  and  at  worst  a
+harmful and deleterious reduction of an incredibly intricate
+phenomenon [cf.  47].  Instead,  this  paper  suggests  three
+approaches that may prove more suitable.
+
+First, rather than trying to determine how much reflection a
+person is demonstrating, we might instead ask in what ways
+an  individual  (or  group)  is  reflecting  (or  not  reflecting).
+Aspects  of  either  King  and  Kitchener’s [26]  or  Fleck  and
+Fitzpatrick’s [15]  frameworks  could  be  used  to  describe
+which types of reflective thought occur in what contexts. In
+both  cases,  though,  it  would  be  difficult  to  avoid  the
+temptation  of  seeing  a  technology  of  reflection  as  more
+effective  because  users  engaged  in  styles  of  reflection
+associated  with  higher  stages  in  the  model.  Alternatively,
+one  could  hinge  such  an  evaluation  on  the  dimensions
+articulated  here.  Perhaps,  for  example,  experiences  with  a
+technology  provide  strong  evidence  for  acknowledging
+breakdowns  but  less  evidence  of  inquiry.  Moving  thusly
+from  quantification  to  qualification  may  help  grapple  with
+reflection’s complexity. Furthermore, doing so may provide
+valuable  revisions  to  or  extensions  of  the  dimensions
+articulated here.
+
+Second,  rather  than  attempting  to  assess  reflection per  se,
+one  could  instead  ask  what  role  reflection  plays  in  the
+broader  contexts  in  which  it  occurs.  The  question,  then,
+may  become  what  benefits  reflection  provides.  Carrying
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea592this  approach  too  far,  however,  risks  a  displacement,
+wherein  reflection  is  linked  with  some  desired  outcome
+(e.g.,  increased  learning,  improved  performance),  and
+assessment  of  that  outcome  is  taken  as  evidence  that
+reflection  occurred [6].  Making  a  comparison  between
+evaluating  reflection  and  evaluating  art,  Hallnäs  and
+Redström  suggest  that  “one  cannot  explain  what  a
+symphony  by  Beethoven  is  […]  by  empirical  studies  of  a
+collection  of  concert  visitors” [20:209].  Similarly,  formal
+methods  and  traditional  user  studies  of  people  interacting
+with  technologies  of  reflection  may  provide  poor  accounts
+of  that  reflection.  Instead,  novel  evaluation  methods  may
+need  be  necessary  to  grapple  with  the  broader  contextual
+ramifications of reflection.
+
+Finally,  HCI  evaluation  generally  attempts  to  ascertain  the
+impacts of design, often asking the question, “Did it work?”
+In the context of reflection, focusing on this question may
+limit  the  potential  impact  our  studies  of  such  technologies
+can have. Instead, we might considering using the design as
+a means of deepening our understanding of reflection itself.
+Rather than trying to design systems to make people more
+reflective,  we  can  seek  to  understand  how  different
+interventions  alter  the  nature  of  reflective  thought.  This
+approach  suggests  a  move  from  seeing  reflection  as  a
+problem area in need of a solution to seeing reflection as a
+complex  situation  in  which  we  can  pose  various  design
+interventions [cf.  7].  Thus,  avoiding  an  insistence  on
+demonstrating  that  our  design  “works”  may  open  up
+opportunities  to  understand  more  fully  both  the  nature  of
+reflection and the potential impacts of our interventions.
+
+CONCLUSION
+Designing for reflection does not represent an entirely novel
+endeavor [6,15,31,42].  While  important  prior  work  has
+pioneered  this  area,  it  lacks  a  strong  conceptual  and
+theoretical  grounding [6,15]. Designers of technologies for
+reflection need a common vocabulary for talking about (1)
+what  reflection  is  (and,  implicitly,  what  it  is  not)  and  (2)
+how we might go about designing for reflection.
+
+This  paper  addresses  that  gap, reviewing  a  range  of
+literature  on  reflection  from  a  variety  of  disciplinary  and
+epistemological  perspectives.  Focusing  on  commonalities
+among these theories, the paper proposes three dimensions
+o f reflective  informatics, which  help  articulate  how  design
+may support reflection. To help ground the discussion, each
+dimension  is  explicated  with  examples  from  existing
+systems  and  design  interventions.  These  examples
+demonstrate that the dimensions map well onto and help us
+understand  better  existing  design  practice.  Furthermore,
+comparisons  with  related  approaches  show  how  these
+dimensions fill a gap in our existing approaches. Thus, this
+paper  provides  an  important  contribution  toward  drawing
+work on designing for reflection under a shared conceptual
+umbrella, as well as giving that work a common conceptual
+language to discuss the unique challenges in designing for
+reflection.
+
+Ultimately,  this  paper  not  only  to  provides  a  scaffold  for
+designing  for  reflection,  it  also  seeks  to  provoke
+conversation  about  and  deeper  engagement  with  the
+conceptual  definition  and  theoretical  grounding  of
+reflection  in  technology  design.  That  is,  the  theoretical
+grounding  of  reflection  should  not  be  seen  as  a  “solved”
+problem. Indeed, future work should explicitly engage with
+multiple  definitions  of,  theories  of,  and  frameworks  for
+reflection in design. Only through such practical application
+can  we  hope  to  understand  how  best  to  design  for
+reflection.
+
+ACKNOWLEDGMENTS
+This material is based in part upon work supported by the
+NSF  under  Grant  No.  IIS-1110932.  Thanks  to  Vera
+Khovanskaya,  Phoebe  Sengers,  Geri  Gay,  and  the
+anonymous reviewers for comments on earlier drafts.
+
+REFERENCES
+1.  Agre,  P.E. Computation  and  Human  Experience.
+
+Cambridge University Press, Cambridge, 1997.
+
+2. Arias, E., Eden, H., Fischer, G., Gorman, A., and Scharff,
+E. Transcending the Individual Human Mind - Creating
+Shared  Understanding  through  Collaborative  Design.
+ACM ToCHI 7, 1 (2000), 84–113.
+
+3.  Bardzell,  J.  and  Bardzell,  S.  What  is  “critical”  about
+critical  design?. Proc  CHI,  ACM  Press  (2013),  3297–
+3306.
+
+4. Bardzell, S., Bardzell, J., Forlizzi, J., Zimmerman, J., and
+Antanitis,  J.  Critical  Design  and  Critical  Theory:  The
+Challenge  of  Designing  for  Provocation. Proc  DIS,
+(2012), 288–297.
+
+5.  Bateman,  S.,  Teevan,  J.,  and  White,  R.W.  The  Search
+Dashboard:  How  Reflection  and  Comparison  Impact
+Search Behavior. Proc CHI, (2012), 1785–1794.
+
+6.  Baumer,  E.P.S.,  Khovanskaya,  V.,  Matthews,  M.,
+Reynolds,  L.,  Sosik,  V.S.,  and  Gay,  G.  Reviewing
+Reflection:  On  the  Use  of  Reflection  in  Interactive
+System Design. Proc DIS, (2014), 93–102.
+
+7.  Baumer,  E.P.S.  and  Silberman,  M.S.  When  the
+Implication  Is  Not  to  Design  (Technology). Proc  CHI,
+(2011), 2271–2274.
+
+8. Blevis, E. Stillness and Motion, Meaning and Form. Proc
+
+DIS, (2014), 493–502.
+
+9. Boehner, K., Gay, G., and Larkin, C. Drawing evaluation
+into  design  for  mobile  computing:  a  case  study  of  the
+Renwick  Gallery’s  Hand  Held  Education  Project. J  of
+Digital Libraries 5, 3 (2005), 219–230.
+
+10.  Boud,  D.,  Keogh,  R.,  and  Walker,  D.,  eds. Reflection:
+Turning  Experience  into  Learning.  Kogan  Page,
+London, 1985.
+
+11.  Cheng,  J.,  Bapat,  A.,  Thomas,  G.,  et  al.  GoSlow:
+Designing  for  Slowness,  Reflection  and  Solitude. Proc
+CHI Ext. Abst., (2011), 429–438.
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea59312. Dewey, J. How We Think. A restatement of the relation
+of  reflective  thinking  to  the  educative  process.  D.  C.
+Heath, Boston, 1933.
+
+13.  Dourish,  P.  and  Button,  G.  On  Technomethodology:
+Foundational Relationships between Ethnomethodology
+and System Design. Human-Computer Interaction 13, 4
+(1998), 395 – 432.
+
+14. Dunne, T. and Raby, F. Design Noir: The Secret Life of
+
+Electronic Objects. Birkhäuser, Berlin, 2001.
+
+15.  Fleck,  R.  and  Fitzpatrick,  G.  Reflecting  on  Reflection:
+Framing  a  Design  Landscape. Proc  OZCHI,  (2010),
+216–223.
+
+16. Fook, J., White, S., and Gardner, F. Critical reflection: a
+review  of  contemporary  literature  and  understandings.
+In  S.  White,  J.  Fook  and  F.  Gardner,  eds., Critical
+reflection  in  health  and  social  care.  Open  University
+Press, Maidenhead, 2006, 3–20.
+
+17.  Freire,  P. The  Pedagogy  of  the  Oppressed.  Seabury,
+
+New York, 1970.
+
+18.  Friedman,  B.,  Kahn,  P.H.,  and  Borning,  A.  Value
+Sensitive Design and Information Systems. In P. Zhang
+and D. Galletta, eds., Human-Comput Interact in Mgmt
+Info Sys. M. E. Sharpe, London, 2003, 348–372.
+
+19.  Garfinkel,  H. Studies  in  Ethnomethodology.  Prentice-
+
+Hall, Englewood-Cliffs, NJ, 1967.
+
+20.  Hallnäs,  L.  and  Redström,  J.  Slow  Technology  –
+Designing  for  Reflection. Personal  and  Ubiquitous
+Computing 5, 3 (2001), 201–212.
+
+21. Heidegger, M. Being and Time. Harper & Row, 1927.
+
+22. Irani, L., Vertesi, J., Dourish, P., Philip, K., and Grinter,
+R.E.  Postcolonial  computing:  a  lens  on  design  and
+development. Proc CHI, ACM (2010), 1311–1320.
+
+23.  Kahneman,  D.  and  Tversky,  A.  Prospect  Theory:  An
+Analysis  of  Decision  Under  Risk. Econometrica  47,  2
+(1979), 263–292.
+
+24.  Kahneman,  D. Thinking,  Fast  and  Slow.  Farrar,  Straus
+
+and Giroux, New York, 2011.
+
+Symposium, (2011).
+
+31. Li, I., Dey, A., and Forlizzi, J. A Stage-Based Model of
+Personal  Informatics  Systems. Proc  CHI,  (2010),  557–
+566.
+
+32. Lindley, S.E., Harper, R., and Sellen, A. Desiring to be
+in  Touch  in  a  Changing  Communications  Landscape:
+Attitudes  of  Older  Adults. Proc  CHI,  (2009),  1693–
+1702.
+
+33.  Löwgren,  J.  and  Stolterman,  E. Thoughtful  Interaction
+
+Design. MIT Press, Cambridge, MA, 2004.
+
+34.  Lyons,  N.,  ed. Handbook  of  Reflection  and  Reflective
+
+Inquiry. Springer, New York, 2010.
+
+35.  Malacria,  S.,  Scarr,  J.,  Cockburn, A.,  Gutwin,  C.,  and
+Grossman,  T.  Skillometers:  Reflective  Widgets  that
+Motivate and Help Users to Improve Performance. Proc
+UIST, (2013), 321–330.
+
+36.  Mezirow,  J.  How  Critical  Reflection  Triggers
+Transformative  Learning.  In  J.  Mezirow,  ed., Fostering
+Critical  Reflection  in  Adulthood.  Jossey-Bass,  San
+Francisco, 1990, 1–20.
+
+37.  Moon,  J. Reflection  in  Learning  &  Professional
+Development. RoutledgeFalmer, Abingdon, Oxon, 1999.
+
+38.  Norman,  D.A. Things  That  Make  Us  Smart.  Perseus
+
+Group, New York, 1993.
+
+39. Orlikowski, W.J. and Baroudi, J.J. Studying Information
+Technology in Organizations: Research Approaches and
+Assumptions. Info Sys Research 2, 1 (1991), 1–28.
+
+40.  Pirzadeh,  A.,  He,  L.,  and  Stolterman,  E.  Personal
+Informatics  and  Reflection:  A  Critical  Examination  of
+the Nature. Proc CHI Ext. Abst., (2013), 1979–1988.
+
+41.  Prilla,  M.,  Degeling,  M.,  and  Herrmann,  T.
+Collaborative  Reflection  at  Work:  Supporting  Informal
+Learning  at  a  Healthcare  Workplace. Proc  GROUP,
+(2012), 55–64.
+
+42.  Sas,  C.  and  Dix,  A.  Designing  for  reflection  on
+experience. Proc CHI Ext. Abst., (2009), 4741–4744.
+
+43.  Schön,  D.A. The  Reflective  Practitioner.  Basic  Books,
+
+25. Kant, I. Critique of the Power of Judgment. Cambridge
+
+New York, 1983.
+
+University Press, Cambridge, 1790.
+
+26.  King,  P.M.  and  Kitchener,  K.S. Developing  Reflective
+
+Judgment. Jossey-Bass, San Francisco, 1994.
+
+44.  Schön,  D.A.  Designing  as  reflective  conversation  with
+the  materials  of  a  design  situation. Research  in
+Engineering Design 3, 3 (1992), 131–147.
+
+27.  Kolb,  D. Experiential  Learning:  Experience  as  the
+source  of  learning  and  development.  Prentice-Hall,
+Englewood Cliffs, NJ, 1984.
+
+45.  Sengers,  P.,  Boehner,  K.,  David,  S.,  and  Kaye,  J.
+“Jofish.”  Reflective  Design. Proc  Critical  Computing,
+(2005), 49–58.
+
+28. Kriplean, T., Morgan, J., Freelon, D., Borning, A., and
+Bennett,  L.  Supporting  Reflective  Public  Thought  with
+ConsiderIt. Proc CSCW, (2012), 265–274.
+
+29.  Kuhn,  T.S. The  Structure  of  Scientific  Revolutions.
+
+University of Chicago Press, Chicago, 1962.
+
+30.  Laschke,  M.,  Hassenzahl,  M.,  and  Diefenbach,  S.
+Things with attitude: Transformational Products. Create
+
+46.  Suchman,  L.A. Plans and Situated Actions. Cambridge
+
+University Press, Cambridge, 1987.
+
+47. Sumison, J. and Fleet, A. Reflection: can we assess it?
+Should  we  assess  it? Assessment  &  Evaluation  in
+Higher Education 21, 2 (1996), 121–130.
+
+48. Thaler, R.H. and Sunstein, C.R. Nudge. Yale University
+
+Press, New Haven, CT, 2008. 
+
+Reflecting Upon Design ReflectionCHI 2015, Crossings, Seoul, Korea594

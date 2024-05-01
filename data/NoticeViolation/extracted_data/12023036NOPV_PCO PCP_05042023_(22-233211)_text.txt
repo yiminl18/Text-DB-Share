@@ -1,0 +1,932 @@
+NOTICE OF PROBABLE VIOLATION 
+PROPOSED CIVIL PENALTY 
+and 
+PROPOSED COMPLIANCE ORDER 
+
+VIA ELECTRONIC MAIL TO: steve  kean@kindermorgan.com 
+
+May 5, 2023 
+
+Mr. Steve Kean 
+Chief Executive Officer 
+Kinder Morgan Liquid Terminals, LLC 
+1001 Louisiana Street, Suite 1000 
+Houston, Texas 77002 
+
+Dear Mr. Kean: 
+
+CPF 1-2023-036-NOPV 
+
+From June 13, 2022 through November 4, 2022, a representative of the Pipeline and Hazardous 
+Materials Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 
+601  of  49  United  States  Code  (U.S.C.)  conducted  an  integrated  inspection  of  Kinder  Morgan 
+Liquid Terminals, LLC’s (KMLT) pipeline facilities in Carteret and Perth Amboy, New Jersey. 
+
+As  a  result  of  the  inspection,  it  is  alleged  that  you  have  committed  probable  violations  of  the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR). The items inspected 
+and the probable violations are: 
+
+1. 
+
+§  195.264  Impoundment,  protection  against  entry,  normal/emergency  venting  or 
+pressure/vacuum relief for aboveground breakout tanks. 
+
+(a) … 
+(b)  After  October  2,  2000,  compliance  with  paragraph  (a)  of  this 
+section  requires  the  following  for  the  aboveground  breakout  tanks 
+specified: 
+
+(1) For tanks built to API Spec 12F, API Std 620, and others (such 
+as API Std 650 (or its predecessor Standard 12C)), the installation of 
+impoundment  must  be  in  accordance  with  the  following  sections  of 
+NFPA-30 (incorporated by reference, see § 195.3); 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(i)  Impoundment  around  a  breakout  tank  must  be  installed  in 
+
+accordance with section 22.11.2; and 
+
+(ii) Impoundment by drainage to a remote impounding area must 
+
+be installed in accordance with section 22.11.1. 
+
+KMLT failed to provide adequate records for its Carteret and Perth Amboy, New Jersey facility 
+breakout tanks built post October 2, 2000, demonstrating adequate impoundments in accordance 
+with NFPA-30 and § 195.264(b)(1).1 
+
+During  the  inspection,  PHMSA  requested  records  for  the  Perth  Amboy  and  Carteret  facilities 
+related to breakout tanks going into service after 10/02/00 demonstrating they have an adequate 
+impoundment.  KMLT provided the Perth Amboy PHMSA Breakout Tank Form and the Carteret 
+PHMSA Breakout Tank Form, dated 2022 (BOT Form).  The BOT Form indicated there are 26 
+breakout tanks at Carteret and 9 breakout tanks at Perth Amboy that are built in accordance with 
+API  650,  post-10/02/00.  PHMSA  requested  records  demonstrating  these  breakout  tanks  had 
+adequate  tank  impoundment  calculations.  KMLT  provided  the  following  (Tank  Impoundment 
+Records): 
+
+•  Carteret Volosin Associates, LLC Report, dated 2014-2019 
+•  Carteret Volosin Associates, LLC Report, dated 09/30/13 
+•  Aboveground  Storage  Tank  Secondary  Containment  Construction  and  Capacities-
+
+Carteret, dated 10/22 
+
+•  Main Facility Area Containment Summary, dated 03/17/14 
+•  Perth Amboy Tank 27 Dike Containment, dated 02/26/20 
+•  SPCC Section 8.0 – Secondary Containment, dated 01/22 
+•  Table 1- Aboveground Storage Tanks, dated 01/22 
+
+During the inspection, PHMSA requested where the tank impoundment records were located and 
+what  documentation  supported  the  calculations  on  the  various  documents.  KMLT  stated  its 
+Aboveground Storage Tank Secondary Containment Construction and Capacities- Carteret, dated 
+10/22 and its Table 1- Aboveground Storage Tanks, dated 01/22 contained this data, and that the 
+Volosin Reports document the calculations.  The Tank Impoundment Records, however, had many 
+discrepancies  such  as  incorrectly  referenced  breakout  tank  numbers,  incorrect  dike  area 
+containment and tank volumes, dike areas incorrectly labeled as well as unsupported calculations. 
+PHMSA asked how this information is recorded properly and where it is documented. KMLT’s 
+breakout tank subject matter expert discussed how the data does not align properly, the calculations 
+are incorrect, and they are unaware which document contains the updated and correct information. 
+
+1 Section 195.264(b)(1) currently cites the incorporated by reference (IBR) tank impoundment requirements in 
+Sections 22.11.1 and 22.11.2 of the 2012 edition of NFPA-30.  See § 195.3.  Previous iterations of § 195.264(b)(1) 
+cited other sections of NFPA-30, because the relevant tank impoundment requirements in that IBR have been re-
+numbered and updated over time (e.g., the 1999 final rule (64 Fed. Reg. 15,935 (Apr. 2, 1999)) adopting § 
+195.264(b)(1) cited the tank impoundment requirements in Sections  2–3.4.2 and  2–3.4.3 of the 1996 edition of 
+NFPA-30).  The allegations here regarding the lack of demonstration of adequate impoundment involves IBR tank 
+impoundment calculation requirements that are consistent across the editions of NFPA-30 that have been cited in § 
+195.264(b)(1). 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+Subsequent to the inspection via email correspondence, KMLT-PHMSA Email Correspondence, 
+dated  01/19/2023  (Email  Record)  KMLT  discussed  its  plans  to  update  its  records,  including 
+performing aerial fly-over surveys to gather data for updating the dike volume calculations. 
+
+Therefore,  KMLT  failed  to  provide  adequate  records  demonstrating  that  its  Carteret  and  Perth 
+Amboy,  New  Jersey  facility  breakout  tanks  built  post  October  2,  2000  have  adequate 
+impoundments in accordance with NFPA-30 and § 195.264(b)(1). 
+
+2. 
+
+§ 195.402 Procedural manual for operations, maintenance, and emergencies. 
+
+(a)  General.  Each  operator  shall  prepare  and  follow  for  each 
+pipeline system a manual of written procedures for conducting normal 
+operations  and  maintenance  activities  and  handling  abnormal 
+operations and emergencies. This manual shall be reviewed at intervals 
+not  exceeding  15  months,  but  at  least  once  each  calendar  year,  and 
+appropriate  changes  made  as  necessary  to  insure  that  the  manual  is 
+effective. This manual shall be prepared before initial operations of a 
+pipeline  system  commence,  and  appropriate  parts  shall  be  kept  at 
+locations where operations and maintenance activities are conducted. 
+
+KMLT failed to follow its manual of written procedures.  Specifically, KMLT failed to follow its 
+T-O&M  500 – Pump Emergency  Shutdown, dated  09/14/16  and  12/10/20 (ESD Procedure)  for 
+conducting its emergency shutdown tests, in accordance with § 195.402(a). 
+
+Section 3.5 of the ESD Procedure requires, in part, that KMLT must operate its ESD system at 
+least once per calendar year (but not exceeding 15 months) to verify that the system works.  Such 
+operation must also be documented. 
+
+During the inspection, PHMSA requested records related to emergency shutdown test for calendar 
+years 2020 and 2021 across its three facilities – Carteret, Carteret Truck Rack and Perth Amboy. 
+KMLT  provided  its,  Emergency  Shutdown  Test- Carteret,  dated  09/11/20  and  Emergency 
+Shutdown  Test- Perth  Amboy,  dated  03/30/20  (ESD  Records).  KMLT  failed  to  provide  the 
+following  records:  2020 ESD  Record  for  Carteret  Truck  Rack,  2021  ESD Record  for  Carteret, 
+2021 ESD Record for Perth Amboy and 2021 ESD Record for Carteret Truck Rack.  Subsequent 
+to  the  inspection,  PHMSA  re-requested  the  2020  and  2021  records.  KMLT  stated  via  email 
+correspondence on December 2, 2022 that they have shared all of the records that are available 
+and that no additional records for 2020 or 2021 were available. 
+
+Therefore, KMLT failed to follow its manual of written procedures for conducting its emergency 
+shutdown tests for calendar years 2020 and 2021, in accordance with § 195.402(a). 
+
+3. 
+
+§ 195.402 Procedural manual for operations, maintenance, and emergencies. 
+
+(a)  General.  Each  operator  shall  prepare  and  follow  for  each 
+pipeline system a manual of written procedures for conducting normal 
+operations  and  maintenance  activities  and  handling  abnormal 
+operations and emergencies. This manual shall be reviewed at intervals 
+not  exceeding  15  months,  but  at  least  once  each  calendar  year,  and 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+appropriate  changes  made  as  necessary  to  insure  that  the  manual  is 
+effective. This manual shall be prepared before initial operations of a 
+pipeline  system  commence,  and  appropriate  parts  shall  be  kept  at 
+locations where operations and maintenance activities are conducted. 
+
+KMLT failed to follow its manual of written procedures.  Specifically, KMLT failed to follow its 
+Integrity  Management  Program  –  IMPM,  dated  10/05/22  (IMPM)  for  conducting  its  integrity 
+management program effectiveness reviews, in accordance with § 195.402(a). 
+
+Section 10.3.1 of the IMPM requires, in part, the collection of integrity performance measures in 
+an annual integrity management program presentation and review conducted by the integrity team 
+and director. Section 10.3.1 indicates this annual review is to evaluate and track the effectiveness 
+of the IMPM. 
+
+During the inspection, PHMSA requested records related to measuring its integrity management 
+program effectiveness for the annual IMP presentation for calendar years 2019 and 2020.  KMLT 
+provided its Annual IMP Performance Review, dated 05/13/20 and its Annual IMP Performance 
+Review, dated 10/26/22 (IMP Annual Records).  KMLT discussed how the annual review covered 
+the performance metrics for the year prior (in this case for 2019 and 2021).  When PHMSA re-
+requested  the  2020  calendar  year  records,  KMLT  did  not  have  a  response.  Subsequent  to  the 
+inspection, PHMSA re-requested the 2020 records and KMLT stated the 2019 and the 2021 records 
+were uploaded to external SharePoint site. 
+
+Therefore,  KMLT  failed  to  follow  its  manual  of  written  procedures  for  conducting  its  annual 
+integrity management effectiveness presentation review for calendar year 2020, in accordance with 
+§ 195.402(a). 
+
+4. 
+
+§ 195.402 Procedural manual for operations, maintenance, and emergencies. 
+
+(a)  General.  Each  operator  shall  prepare  and  follow  for  each 
+pipeline system a manual of written procedures for conducting normal 
+operations  and  maintenance  activities  and  handling  abnormal 
+operations and emergencies. This manual shall be reviewed at intervals 
+not  exceeding  15  months,  but  at  least  once  each  calendar  year,  and 
+appropriate  changes  made  as  necessary  to  insure  that  the  manual  is 
+effective. This manual shall be prepared before initial operations of a 
+pipeline  system  commence,  and  appropriate  parts  shall  be  kept  at 
+locations where operations and maintenance activities are conducted. 
+
+KMLT failed to conduct its 2020 calendar year annual review of its  emergency manual for the 
+Perth Amboy, New Jersey facility at the required interval in accordance with § 195.402(a).  
+
+During  the  inspection,  PHMSA  requested  the  annual  review  records  for  KMLT’s  emergency 
+manuals for calendar years 2019 and 2020.  KMLT provided the Annual Procedure Review Record 
+–  Perth  Amboy  Terminal,  dated  05/08/19  and  09/16/20  (Annual  ERP  Review).  The  interval 
+between the 2019 and 2020 calendar year Annual ERP Review exceeded the permitted 15-month 
+interval.  When  PHMSA  inquired  further  about  the  emergency  manual  annual  review  being 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+conducted late, KMLT did not provide any further information. 
+
+Therefore, KMLT failed to timely conduct its calendar year 2020 annual review of its Perth Amboy 
+emergency manual at the required interval in accordance with § 195.402(a). 
+
+Proposed Civil Penalty 
+Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations.  For violation occurring on or after March 21, 2022 and before January 6, 
+2023, the maximum penalty may not exceed $239,142 per violation per day the violation persists, 
+up to a maximum of $2,391,412 for a related series of violations.  For violation occurring on or 
+after May 3, 2021 and before March 21, 2022, the maximum penalty may not exceed $225,134 
+per violation per day the violation persists, up to a maximum of $2,251,334 for a related series of 
+violations.  For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day the  violation  persists,  up to  a  maximum  of  $2,186,465  for  a  related  series  of 
+violations.  For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable violation and recommend that you be preliminarily assessed a civil penalty of $75,200 as 
+follows: 
+
+Item number 
+2 
+
+PENALTY 
+$75,200 
+
+Proposed Compliance Order 
+With  respect  to  Item  number  1,  pursuant  to  49  U.S.C.  §  60118,  the  Pipeline  and  Hazardous 
+Materials Safety Administration proposes to issue a Compliance Order to Kinder Morgan Liquid 
+Terminals, LLC.  Please refer to the Proposed Compliance Order, which is enclosed and made a 
+part of this Notice. 
+
+Warning Items 
+With  respect  to  Item  numbers  3  and  4,  we  have  reviewed  the  circumstances  and  supporting 
+documents involved in this case and have decided not to conduct additional enforcement action or 
+penalty  assessment  proceedings  at  this  time.  We  advise  you  to  promptly  correct  these  items. 
+Failure to do so may result in additional enforcement action. 
+
+Response to this Notice 
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings.  Please  refer  to  this  document  and  note  the  response  options.  All 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+  
+ 
+material you submit in response to this enforcement action may be made publicly available.  If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. §552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following your receipt of this Notice, you have 30 days to respond as described in the enclosed 
+Response Options.  If you do not respond within 30 days of receipt of this Notice, this constitutes 
+a  waiver  of  your  right  to  contest  the  allegations  in  this  Notice  and  authorizes  the  Associate 
+Administrator for Pipeline Safety to find facts as alleged in this Notice without further notice to 
+you and to issue a Final Order.  If you are responding to this Notice, we propose that you submit 
+your correspondence to my office within 30 days from receipt of this Notice.  The Region Director 
+may extend the period for responding upon a written request timely submitted demonstrating good 
+cause for an extension. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  1-2023-036-NOPV  and,  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+Sincerely, 
+
+Robert Burrough 
+Director, Eastern Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosures: Proposed Compliance Order 
+
+Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROPOSED COMPLIANCE ORDER 
+
+Pursuant to 49 United States Code § 60118, the Pipeline and Hazardous Materials Safety 
+Administration (PHMSA) proposes to issue to Kinder Morgan Liquid Terminals, LLC (KMLT) 
+a Compliance Order incorporating the following remedial requirements to ensure the compliance 
+of KMLT with the pipeline safety regulations: 
+
+A. 
+
+B. 
+
+In regard to Item 1 of the Notice pertaining to breakout tank impoundment 
+records, within 90 days of receipt of the Final Order, KMLT must gather its prior 
+records and update its tank impoundment calculation records for its Carteret and 
+Perth Amboy, New Jersey facilities. If the tank impoundment records are unable 
+to be validated with sufficient documentation, KMLT must conduct a survey or 
+field verification to support the tank impoundment calculation data within 180 
+days of receipt of the Final Order. 
+
+It  is requested (not mandated) that Kinder Morgan Liquid Terminals, LLC 
+maintain documentation of the safety improvement costs associated with fulfilling 
+this Compliance Order and submit the total to Robert Burrough, Director, Eastern 
+Region, Pipeline and Hazardous Materials Safety Administration.  It is requested 
+that these costs be reported in two categories: 1) total cost associated with 
+preparation/revision of plans, procedures, studies and analyses, and 2) total cost 
+associated with replacements, additions and other changes to pipeline 
+infrastructure. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

@@ -1,0 +1,24 @@
+Table of Contents:
+
+1. Introduction
+2. Background and Motivation
+    2.1 Oral health disparities in the United States
+    2.2 Collaboration with personal informatics
+    2.3 Oral monitoring research in HCI
+3. Research Goals
+4. Methods
+    4.1 Surveys and Interviews about personal use
+    4.2 Interviews with oral health providers
+5. Results
+    5.1 Facilitating patient-provider communication
+    5.2 Providing personalized education and feedback
+    5.3 Monitoring oral health for early diagnostics
+    5.4 Expanding access to oral health care
+6. Discussion
+    6.1 Bridging dental expertise and personal practice
+    6.2 Making better use of patient time and clinical resources
+    6.3 Collective Oral health
+7. Limitations
+8. Conclusion
+9. Acknowledgments
+10. References

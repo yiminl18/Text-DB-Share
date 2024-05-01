@@ -1,0 +1,11 @@
+1. Introduction
+2. Background
+3. Research Overview
+4. Study 1 - Survey: Prioritizing Symptoms for ME/CFS Self-Management
+5. Study 1 Findings
+6. Study 2 - Discussion Groups: Existing Self-Management Practices
+7. Study 2 Findings
+8. Study 3 - User Study: Experiences with Self-Management Apps
+9. Study 3 Findings
+10. Discussion and Design Implications
+11. Conclusion and Future Work

@@ -1,0 +1,17 @@
+1. Introduction
+2. Related Work
+   2.1 Hedonic and Eudaimonic Wellbeing
+   2.2 Personal Informatics
+   2.3 Challenges of Numeric Goals
+   2.4 Understanding Lapsing
+   2.5 Models of Personal Informatics
+3. Method
+   3.1 Interviews
+   3.2 Survey
+4. The Tracker Goal Evolution Model
+5. Understanding the Model
+6. Using the Model
+7. Discussion
+8. Conclusion
+9. Acknowledgements
+10. References

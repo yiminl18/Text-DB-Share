@@ -1,0 +1,32 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Motivation
+6. Related Work
+   6.1 Technology for mindfulness
+   6.2 Self-revelation and automated disclosure
+   6.3 Summary
+7. Design of MoodLight
+   7.1 Design considerations
+   7.2 System description
+   7.3 Measuring arousal
+   7.4 Interactive lighting
+   7.5 Light, color and affect
+8. Method
+   8.1 Setup
+   8.2 Protocol
+   8.3 Participants
+   8.4 Analysis
+9. Results
+   9.1 Engagement with MoodLight
+   9.2 Risks and rewards of technology-mediated self-discovery
+10. Limitations
+11. Discussion
+   11.1 Dialectics of technology-mediated revelation and disclosure
+   11.2 Agency, skepticism and uncertainty
+12. Design Implications
+   12.1 Ephemerality of Ambient Light
+   12.2 Understanding the signals
+   12.3 Individual Control
+13. Conclusion

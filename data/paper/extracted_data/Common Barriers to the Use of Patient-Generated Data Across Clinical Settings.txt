@@ -1,0 +1,2005 @@
+Common Barriers to the Use of Patient-Generated Data
+Across Clinical Settings
+Peter West1, Max Van Kleek2, Richard Giordano1, Mark J. Weal3, Nigel Shadbolt2
+2Dept. of Computer Science
+University of Oxford, UK
+max.van.kleek@cs.ox.ac.uk
+nigel.shadbolt@cs.ox.ac.uk
+
+1Faculty of Health Sciences
+University of Southampton, UK
+p.west@soton.ac.uk
+r.giordano@soton.ac.uk
+
+3Web and Internet Science
+University of Southampton, UK
+mjw@ecs.soton.ac.uk
+
+ABSTRACT
+Patient-generated data, such as data from wearable ﬁtness track-
+ers and smartphone apps, are viewed as a valuable information
+source towards personalised healthcare. However, studies in
+speciﬁc clinical settings have revealed diverse barriers to their
+effective use. In this paper, we address the following question:
+are there barriers prevalent across distinct workﬂows in clinical
+settings to using patient-generated data? We conducted a two-
+part investigation: a literature review of studies identifying such
+barriers; and interviews with clinical specialists across multiple
+roles, including emergency care, cardiology, mental health, and
+general practice. We identify common barriers in a six-stage
+workﬂow model of aligning patient and clinician objectives,
+judging data quality, evaluating data utility, rearranging data
+into a clinical format, interpreting data, and deciding on a plan
+or action. This workﬂow establishes common ground for HCI
+practitioners and researchers to explore solutions to improving
+the use of patient-generated data in clinical practices.
+
+ACM Classiﬁcation Keywords
+H.5.2 Information interfaces and presentation (e.g., HCI): User-
+centered design.; J.3 Life and medical sciences: Health
+
+Author Keywords
+Patient-generated data; personalized medicine; self-tracking;
+workﬂows; clinical decision making; mHealth; quantiﬁed self.
+
+INTRODUCTION
+The widespread adoption of health and wellbeing self-tracking
+practices has made the resulting wealth of patient-generated
+data come to be seen as essential to the delivery of personalised
+medicine [38]. The rise in self-tracking practices, enabled
+by new wearable sensors (such as smartwatches and Fitbits),
+connected home measurement devices (such as scales, blood
+pressure cuffs, and sleep monitors), and easy-to-use smart-
+phone apps, have already motivated many individuals to bring
+patient-generated data with them to clinical consultations [32].
+These new data are seen to hold signiﬁcant potential for
+improving healthcare in at least two ways. First, by capturing
+details of the patient’s life outside the doctor’s ofﬁce, such as
+
+Permission to make digital or hard copies of part or all of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for proﬁt or commercial advantage and that copies bear this notice and the full citation
+on the ﬁrst page. Copyrights for third-party components of this work must be honored.
+For all other uses, contact the owner/author(s).
+CHI 2018 April 21–26, 2018, Montreal, QC, Canada
+© 2018 Copyright held by the owner/author(s).
+
+ACM ISBN 978-1-4503-5620-6/18/04.
+DOI: https://doi.org/10.1145/3173574.3174058
+
+routine activities and symptomatic burden, these data are seen
+to ‘bridge the gap’ between consultations [38]. Second, they
+are seen as key to empowering patients to better improve their
+health and wellbeing, via improved understanding and instru-
+mented interventions [41]. For these reasons, many initiatives
+have been launched towards more integrated use of patient-
+generated data in clinical practice. In the United Kingdom, the
+recent Personalised Health and Care 2020 policy envisions
+that, as a result of patients contributing patient-generated
+data to health records, the quality of care will improve,
+healthcare costs will decrease, and patients will become more
+empowered [37]. In the United States, several patient portals of
+healthcare providers already allow patients to upload data from
+their personal digital devices prior to patient consultations [16].
+
+Despite these developments, studies within speciﬁc clinical
+settings have documented a wide range of barriers towards
+establishing the routine use of patient-generated data at various
+stages in clinical workﬂows [18]. For example, within the
+management of irritable bowel syndrome, one study identiﬁed
+that lack of standardisation within patient-generated data
+makes it difﬁcult for clinicians to interpret the data [13].
+Another study, which focused on using consumer apps for
+managing diet, found that clinicians were concerned that
+data from these apps were unreliable [27]. While these
+studies yield insights about the needs of particular clinical
+settings, identifying barriers common across such clinical
+settings promises to advance designs to improve the use of
+patient-generated data across clinical contexts. If the unmet
+nascent needs of such data across clinical settings could be
+identiﬁed, then HCI researchers or UX designers could identify
+how such barriers might be prioritised and addressed.
+
+This paper therefore investigates the following research
+question: are there barriers to using patient-generated
+data across distinct workﬂows in clinical settings? While
+recent studies provide important insights of patients’ use of
+patient-generated data [14, 32], there is a gap in HCI research
+on clinicians’ perspectives of such data. Understanding
+clinicians’ perspectives could reveal barriers within different
+clinical settings, and therefore forms the grounding for
+our work. Through a literature review and interviews with
+clinicians across diverse clinical settings in the United
+Kingdom, this study provides a new understanding of the
+common barriers and workﬂows for using patient-generated
+data across different clinical settings, with implications for the
+design of self-tracking tools and clinical practice.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 1BACKGROUND
+
+Patient-Generated Data within Clinical Settings
+Wearable ﬁtness trackers and smartphone health apps that pro-
+duce personal health-related data, such as heart rate, physical
+activity, and mood, have become increasingly popular con-
+sumer items, with over half of smartphone users reported to
+have installed a health app [28]. Many studies have focused on
+both the challenges and beneﬁts of self-tracking apps and wear-
+ables from the patient’s perspective. These devices have been
+shown to shorten post-surgical recovery times, improve mobil-
+ity and wellbeing among the elderly, and signiﬁcantly improve
+the conditions of diabetes patients [10]. Self-tracking apps can
+enable patients undergoing multi-stage treatments to monitor
+changes in their health as they progress through each phase, im-
+proving overall patient experience and providing a form of edu-
+cation and feedback [22]. Patient-generated data can provide de-
+tailed and precise information about irritable bowel syndrome
+patients’ routines and enable personalisation of treatment
+plans [13]. Because of such encouraging ﬁndings on the patient
+side, the integration of patient-generated data into care could
+allow tailored treatment to individuals, more informed clinical
+decisions, and a shift from treatment towards prevention [4].
+
+However, comparatively few studies have examined the use of
+patient-generated data from clinical specialists’ perspectives.
+In one such study, clinicians, nurses, and specialists were
+skeptical about the beneﬁts of patient-generated data, and
+time constraints and lack of standardised formats led to
+difﬁculties in their use [13]. Clinicians may lack conﬁdence
+when using patient-generated data because they are seen as
+emotional judgements motivated by a patient’s obsession with
+their health [3], or an indicator of underlying distress or a
+psychiatric disorder [54]. Moreover, clinicians may lack trust
+in patients’ ability to collect reliable and objective data [51].
+As a consequence of these factors, patient-generated data
+may be perceived to be inadequate evidence for use in clinical
+decisions, thereby leading clinicians to base such decisions in
+data that they can trust, namely their own clinical measurements
+and lab tests [51]. We aim to identify how these barriers
+manifest across different clinical settings so that they may be
+addressed and overcome, in turn enabling patient-generated
+data in the service of personalised and data-driven healthcare.
+
+Workﬂows for Using Patient-Generated Data
+Analysing patterns of clinicians’ use of health information, or
+their workﬂows, could help uncover common barriers to using
+patient-generated data. Despite the diverse and distinct tasks
+undertaken in different clinical settings [47], clinicians across
+settings share common goals, such as mitigating risk and harm,
+and engaging patients in their care [8]. In our prior work, we ob-
+served that, when deriving a diagnosis using patient-generated
+data, clinicians across different roles followed a workﬂow com-
+prising steps of information discovery, evaluation, generating
+hypotheses, and then systematically ruling-out hypothetical
+causes of the patient’s condition [51]. Related prior work has
+uncovered barriers in such workﬂows that create challenges for
+using electronic medical records, including time constraints,
+disruption to current practice, and legal consequences [7].
+
+A few studies in prior CHI work have identiﬁed workﬂows
+
+for using patient-generated data in clinical settings. In a study
+evaluating an interface for viewing step-count data from Fitbit
+in clinical settings, a workﬂow was followed by a clinician
+comprising three phases [26]. First, data were ‘skimmed,’
+in which the clinician viewed the provided information and
+interpreted them with respect to prior known information about
+the patient. Second, the clinician asked questions about the
+data, such as what the patient was doing during data collection,
+and goals were set for the patient. Third, the clinician would
+wait until the end of the consultation to enter the goals into
+the interface. The three phases involved conversing with the
+patient, which suggests that successful workﬂows for using
+patient-generated data will encompass collaboration.
+
+Mentis et al. observed doctors using Fitbit data recorded by pa-
+tients, also revealing that use of patient-generated data is a col-
+laborative process, in which doctors and patients work towards a
+mutual understanding of the data [32]. Chung et al. propose that
+such data act as a boundary artefact, where collaboration around
+shared information requires knowledge and expertise from both
+clinicians and patients [14]. However, prior work has demon-
+strated that clinical settings can be challenging environments
+for sharing information, with patients’ separation from informa-
+tion artefacts impeding their ability to interact with information,
+in turn preventing collaboration with clinicians [49]. Drawing
+on the work of Mentis et al. [32], we consider the workﬂow
+of using patient-generated data to be a collaborative process
+between clinician and patient. We frame our investigation in
+the shared characteristics across work settings through eliciting
+the experiences of clinicians to understand their perspectives
+of patient-generated data, and to identify common barriers.
+
+METHODS
+
+Literature Review
+The aim of the literature review was to understand how barriers
+found in prior work may exist across different clinical settings.
+We adapted our method from our prior work [52]: we searched
+seven databases (ACM DL, EBSCOHost, Web of Science,
+SCOPUS, JSTOR, Cochrane, and PubMed) for empirical
+studies of the use of patient-generated data in clinical settings.
+The databases were queried using search terms formed from
+permutations of “patient”, “clinician” (and related terms, such
+as “doctor”), and “self-tracked data” (and related terms, such
+as “quantiﬁed self”), resulting in 1218 results. The inclusion
+criteria were:
+(i) the article needed to represent primary
+research, i.e., summarising one or more empirical studies, and
+(ii) involved some aspect of clinicians’ lived experiences and
+use of patient-generated data. The breadth of search terms
+returned many papers identiﬁed as ineligible based on viewing
+the title alone. Of the remaining papers, 148 abstracts were
+read, to reach a ﬁnal set of 22 papers (a PRISMA ﬂowchart of
+this process is included as supplementary material available
+via the ACM DL). We read each manuscript in full to identify
+challenges and difﬁculties in the use of patient-generated data.
+These were then noted and collated across studies, grouped
+by similarity, and then categorised by workﬂow stage.
+
+Clinician Interviews
+We then conducted interviews with clinicians from a broad
+range of clinical roles to further investigate barriers across clin-
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 2ical settings. By interviewing clinicians directly, we could dis-
+cern their lived experiences, which are crucial to understanding
+how patient-generated data would be used in real clinical set-
+tings [31]. Our recruitment method and procedure, which are de-
+scribed below, were approved by our institutional review board.
+
+To recruit clinicians from diverse clinical roles, snowball sam-
+pling [5] was used, in which an initial sample of ﬁve seed
+participants from a prior study helped to recruit further par-
+ticipants. We drew inspiration from the snowball sampling
+technique used in a similar interview study about self-tracking
+in chronic illness management [30]. Participants were recruited
+according to the following inclusion criteria: (i) they were cer-
+tiﬁed clinicians, and (ii) they regularly worked with patients. A
+ﬁnal sample of thirteen clinicians (listed in Table 1) were inter-
+viewed. While most prior studies of patient-generated data use
+focus on healthcare within the United States [52], clinicians in-
+terviewed in this study all practised within the United Kingdom.
+The clinical contexts of the participants spanned cardiology,
+oncology, mental health, surgery, emergency care, general prac-
+tice, and audiology. Within this paper, the word ‘clinician’ is
+used to collectively describe members of these roles, who are
+all physicians who speciﬁcally work with and treat patients
+[46]. Semi-structured interviews were then carried out either
+face-to-face, by video conference, or by phone. Our aim was
+to elicit perspectives on patient-generated data, so we asked
+questions pertaining to their clinical background and prior ex-
+perience with patient-generated data, how they would evaluate
+and use such data, and their perspectives on how such data could
+affect their practice. Using semi-structured interviews allowed
+discussions of concepts which we had not been anticipated.
+
+Interviews were audio recorded, transcribed, and then analysed
+in four parts. First, we applied iterative open-coding to cate-
+gorise quotes from transcripts into themes around how patient-
+generated data gets used, which were then consolidated with
+themes from the literature review. It emerged that participants
+expressed using patient-generated data as part of several distinct
+stages. Second, we ordered these stages chronologically to con-
+struct a generalised workﬂow for using patient-generated data in
+clinical settings. We chose to construct a new, original common
+workﬂow model rather than adapting existing workﬂow models,
+which largely pertained to speciﬁc clinical settings and types
+of data [32, 14]. Using the Workﬂow Elements Model [48],
+we considered the actors performing actions (i.e., clinician and
+patient), the artefacts used (e.g. patient-generated data), the
+actions taken, the characteristics of these actions, and the out-
+comes of these actions. Third, we thematically analysed each
+quote within each workﬂow stage, and inductively categorised
+each quote into salient themes regarding clinician’s difﬁculties
+in using patient-generated data. We reﬁned and compared
+these themes to reach a ﬁnal set of barriers for each workﬂow
+stage. Finally, we compared how each barrier manifested in
+each clinical setting to identify generalisable challenges and
+workﬂows for using patient-generated data in clinical settings.
+
+RESULTS
+
+Literature Review
+The literature search resulted in 22 studies which covered a
+broad range of clinical contexts for using patient-generated
+
+Table 1. Participants of interviews by clinical role, and years in practice.
+
+Clinical role
+
+Participants
+
+Years in practice
+
+Cardiologist
+Mental health specialist
+Emergency doctor
+Junior surgeon
+Hospital doctor
+General practitioner
+Heart failure nurse
+Oncology nurse
+Audiologist
+
+P1, P2, P3, P4
+P5, P6
+P7
+P8
+P9
+P10
+P11
+P12
+P13
+
+All 20+ years
+10 years, 5 years
+5 years
+5 years
+4 years
+20+ years
+20+ years
+2 years
+3 years
+
+data, such as for identifying triggers of irritable bowel syn-
+drome (IBS) [13, 14], for managing multiple chronic conditions
+(MCC) [2, 3], for monitoring itching conditions [29], for
+managing Parkinson’s [32], for promoting healthy sleeping [44,
+50], and for diagnostics [51]. We identiﬁed 12 distinct
+barriers, listed in Table 2 with respect to the clinical settings
+they were identiﬁed in. These themes exhibit similarities
+with themes we identiﬁed in prior work [51, 52], namely
+in identifying challenges pertaining to information quality.
+However, in this review we looked more broadly at the
+barriers to patient-generated data beyond just information
+quality, including characteristics of work settings, such as time
+constraints and information overload, and clinical practice,
+such as doctor-patient relationship and expertise.
+
+Within clinical contexts, barriers can arise because of charac-
+teristics of patient-generated data. For example, the structure
+and reliability of such data are typically unfamiliar to clinicians,
+who are accustomed to working with data conforming to clinical
+standards. Moreover, the data can be incomplete, possibly be-
+cause the patient forgets to take measurements, or because they
+fail to disclose certain information. Contextual information,
+such as what the patient was doing at the time of measurement,
+is also seldom available, making it difﬁcult to validate the data.
+Studies suggested that self-tracking may be an indication of a pa-
+tient’s obsession with their health or other psychiatric disorder.
+Barriers also related to time and skill constraints: interpreting
+patient-generated data can take too much time, require exper-
+tise which the clinician does not have, and lead to too much
+information to effectively make a decision. Finally, several
+studies identiﬁed potential disruption to workﬂows, including
+how patient-generated data could affect the doctor-patient re-
+lationship in unknown ways, and that healthcare IT systems are
+typically not interoperable with patient-generated data.
+
+Semi-Structured Interviews
+The interviews revealed diverse working patterns to how
+patient-generated data are evaluated and used. With such a
+diversity of clinicians, interview digressions explored the kinds
+of data patients may collect, the willingness to engage patients
+in their care, and the technical capacities of patients (such as
+a patient’s ability to use self-tracking tools). For example, three
+cardiologists spoke about the use of a speciﬁc app for tracking
+atrial ﬁbrillation, a common disease which causes irregular
+heart rhythm [21]. It became clear that their treatment options
+are inﬂuenced by a variety of factors (including caffeine, diet,
+and alcohol use [35]), and self-management can greatly beneﬁt
+outcomes, such as by reducing stroke risk [53]. These factors
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 3Barrier
+
+Description
+
+Data structure is unfamiliar or inconsistent.
+Structure
+Missing measurements or poor patient adherence.
+Completeness
+Inaccuracies in data, or self-tracking practice not clinically validated.
+Reliability
+What the patient was doing at the time of measurement is unknown.
+Context
+Data are irrelevant to the current clinical context.
+Relevance
+Selective disclosure
+Patients may be withholding certain information.
+Underlying condition Self-tracking behaviour may indicate obsession or psychiatric disorder.
+Insufﬁcient time
+Insufﬁcient expertise Clinicians have not received training for using such data.
+Information overload Too much information for the clinician to work with.
+Poor interoperability Data difﬁcult to integrate into clinical systems, can go missing.
+Impact to workﬂow
+
+Clinicians do not have sufﬁcient time to interpret and analyse data.
+
+Negative impact to doctor-patient relationship.
+
+I
+r
+r
+i
+t
+a
+b
+l
+e
+b
+o
+w
+e
+l
+
+s
+y
+n
+d
+r
+o
+m
+e
+[
+1
+3
+
+,
+
+1
+4
+]
+
+G
+e
+n
+e
+r
+a
+l
+
+[
+2
+3
+
+,
+
+2
+6
+
+,
+
+5
+4
+]
+
+C
+h
+r
+o
+n
+i
+c
+i
+l
+l
+n
+e
+s
+s
+
+[
+3
+0
+]
+
+S
+
+l
+e
+e
+p
+[
+4
+4
+
+,
+
+5
+0
+]
+
+D
+i
+a
+g
+n
+o
+s
+i
+s
+
+[
+5
+1
+]
+
+M
+u
+l
+t
+i
+p
+l
+e
+c
+h
+r
+o
+n
+i
+c
+c
+o
+n
+d
+i
+t
+i
+o
+n
+s
+
+[
+2
+
+,
+
+3
+]
+
+(cid:108) (cid:108) (cid:108) (cid:108)
+(cid:108) (cid:108)
+
+(cid:108)
+(cid:108) (cid:108) (cid:108) (cid:108) (cid:108) (cid:108)
+
+(cid:108) (cid:108)
+
+(cid:108) (cid:108)
+(cid:108)
+
+(cid:108)
+(cid:108) (cid:108)
+(cid:108)
+
+(cid:108)
+(cid:108)
+
+(cid:108)
+
+(cid:108)
+(cid:108) (cid:108)
+(cid:108) (cid:108)
+(cid:108)
+
+H
+o
+s
+p
+i
+t
+a
+l
+i
+s
+a
+t
+i
+o
+n
+[
+3
+3
+]
+
+W
+
+e
+i
+g
+h
+t
+
+l
+o
+s
+s
+
+[
+1
+1
+]
+
+I
+t
+c
+h
+i
+n
+g
+[
+2
+9
+]
+
+(cid:108)
+
+D
+i
+a
+b
+e
+t
+e
+s
+
+[
+3
+9
+
+,
+
+4
+2
+]
+
+(cid:108)
+
+(cid:108)
+
+P
+a
+r
+k
+i
+n
+s
+o
+n
+’
+s
+
+[
+3
+2
+]
+
+(cid:108)
+
+(cid:108)
+(cid:108)
+
+(cid:108) (cid:108) (cid:108)
+(cid:108)
+
+(cid:108)
+
+(cid:108)
+
+(cid:108)
+
+(cid:108)
+
+(cid:108)
+(cid:108)
+
+D
+i
+s
+e
+a
+s
+e
+p
+r
+e
+v
+e
+n
+t
+i
+o
+n
+[
+1
+5
+
+,
+
+2
+6
+]
+
+B
+r
+e
+a
+s
+t
+c
+a
+n
+c
+e
+r
+
+[
+2
+4
+
+,
+
+4
+0
+]
+
+(cid:108) (cid:108)
+(cid:108)
+
+M
+e
+n
+t
+a
+l
+h
+e
+a
+l
+t
+h
+[
+2
+5
+]
+
+(cid:108)
+
+(cid:108)
+
+(cid:108)
+
+(cid:108)
+(cid:108)
+
+Table 2. Barriers to using patient-generated data identiﬁed within the literature review, listed with the clinical contexts in which they were observed.
+
+contribute to determining a treatment plan for a patient, so
+asked about how speciﬁc types of information recorded using
+the app, such as symptoms and life events, might form part
+of the clinician’s workﬂow. The cardiologists stressed the
+importance of collaborating with the patient to understand their
+health and decide between treatment options.
+
+During interviews it was helpful to ask questions about speciﬁc
+forms of patient-generated data to understand their nature and
+use cases, and drill down on speciﬁc barriers to their use within
+different clinical settings. For example, a cardiologist, P2, was
+more interested than a surgeon, P8, in a patient’s everyday life
+experiences. This difference was, in part, explained by the
+pertinence of barriers to those contexts; the surgeon perceived
+patient-generated data as too subjective, while the cardiologist
+speciﬁcally wanted subjective data to understand the burden
+of symptoms. Moreover, these clinicians described different
+approaches to working with patients; the cardiologist favoured
+collaboration with the patient while the surgeon described
+a more paternal role over the patient. The differences in the
+challenges for using patient-generated data reﬂect the diverse
+workﬂows used in speciﬁc clinical settings, but the overlap
+of barriers across settings suggests that these barriers may be
+common to clinical practice generally.
+
+COMMON WORKFLOWS AND BARRIERS
+The barriers identiﬁed within the literature and interviews
+generally appeared within six chronological stages (illustrated
+in Figure 1), which comprised a common clinical workﬂow
+for using patient-generated data. Below, each workﬂow stage
+is described with regard to the barriers within them.
+
+Stage 1: Aligning Patient and Clinician Objectives
+The ﬁrst stage of the workﬂow involves crafting mutual
+objectives for the consultation. When a patient presents
+
+patient-generated data to a clinician, one of the ﬁrst questions
+the clinician might ask themselves is why the patient engaged
+in self-tracking. Investigating this question gives clinicians
+an understanding of what the patient hopes to achieve and
+what they expect from the consultation, and their underlying
+reasons for self-tracking. Having aligned motivations was seen
+to facilitate the ability for clinicians and patients to collaborate
+on the management of a patient’s condition, and to engender
+mutual trust. As described by a cardiologist:
+
+Trust of the data would be determined by what the patient’s
+expectations were and drivers for using self-tracking. – P1
+
+While participants tended to perceive a patient’s motivations
+to self-track as a willingness to engage in their health, some
+worried that patients may obsess over aspects of their health or
+have hidden motivations for presenting the data (B1.1: patient
+motivation is not always obvious). A prior study in the context
+of multiple chronic condition management similarly found
+that “patients who tracked data very diligently (e.g., detailed
+exercise logs, which clinicians saw as having little clinical
+relevance) were sometimes referred to as obsessive and
+compulsive or fastidious” [3]. Likewise, a heart failure nurse,
+P11, said that “some patients can go a little bit over the top
+and collect everything.” An emergency doctor said that such
+obsession can be a hindrance:
+
+You do get patients who ﬁxate on it a bit too much. That
+can be a hindrance, because they say look at all this effort
+I’ve put in, and then you glance at it, and say “actually
+that’s not that relevant to what brought you in today.” – P7
+
+Patients may be motivated to mislead clinicians, possibly
+to force a diagnosis [51] or avoid increased insurance
+premiums [2]. A mental health specialist was concerned that
+patients may have motivations to lie about their health:
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 4Figure 1. The six-stage workﬂow for using patient-generated data. Stages take place chronologically, within each several barriers commonly arise.
+
+If you ask about their data, you do start spotting body
+language changes when you say, “you said this, is that
+the case?” You see a certain shiftiness or a quick response
+which is maybe tinged with a bit of irritation or anger,
+tell-tale signs that something isn’t stacking up. – P5
+
+Conversely, a mental health nurse said that her patients are
+unlikely to lie about their health, suggesting that barriers to
+using patient-generated data depend on the context of the
+situation, rather than just the clinical role:
+
+There is a certain complex mental health problem where
+people might want to manipulate it a bit, but I don’t get that
+impression from people generally with what we do. – P6
+
+Where a patient is obsessed or misleading about certain aspects
+of their health, participants reﬂected that the clinician and
+patient had different objectives for the consultation (B1.2: mis-
+aligned objectives). To overcome this barrier, participants
+described a process of “managing the patient’s expectations”
+(P2, a cardiologist) to provide a way for the clinician and patient
+to agree on the objectives of the consultation and inform the
+patient of what can reasonably be expected given the patient’s
+condition. For example, they may discuss self-tracking habits
+with the patient to improve the patient’s understanding and
+expectations of their health. This was the ﬁrst indication that
+use of patient-generated data is an inherently collaborative
+process and that the patient is an important actor within
+the workﬂow towards aligning objectives. Having aligned
+objectives is critical for building a relationship of trust
+between the clinician and patient, and setting up the conditions
+necessary for using patient-generated data.
+
+Stage 2: Evaluating Data Quality
+A second workﬂow stage common across clinical settings was
+judging whether data were of sufﬁcient quality to be admitted as
+clinical evidence. Quality entailed several properties of the data,
+including their accuracy and reliability. In this stage, an imme-
+diate barrier for participants was the difﬁculty in determining
+the accuracy and reliability of patient-generated data (B2.1: un-
+clear accuracy and reliability). For example, a junior surgeon
+questioned the patients’ technique for tracking blood pressure:
+
+There is a question about how precise their equipment
+
+is and if they are doing it right. But if they bring in the
+equipment and show you it, you can see that it’s fairly
+accurate. But I don’t often take things at face value. – P8
+
+Similarly, a general practitioner described a consequence of
+not knowing the reliability of data as a lack of objectivity:
+
+It’s not gone through some objective or analysis of assess-
+ment. It won’t stand up to that kind of scientiﬁc approach.
+It would be more a commentary, it assists the subjective
+kind of discussion, the subjective embellishment of
+what they are feeling. I couldn’t use it in any objective
+way. – P10
+
+The completeness of data was also considered by participants to
+be an important quality of patient-generated data. Incomplete
+data was sometimes a signiﬁcant barrier (B2.2: data is often
+incomplete), where missing data creates ambiguity around
+the patient’s condition during those times. Regarding missing
+heart rate measurements, a cardiologist said:
+
+Is it because they were unwell and therefore didn’t make
+the reading, because they were in bed at home? Or is it
+because they were out partying and having so much fun
+that they didn’t bother to make the reading? – P4
+
+Other participants were more conﬁdent about the meaning
+of gaps in the data. In the context of a patient with a heart
+condition who records their general wellbeing on a scale of one
+to ﬁve, a cardiologist said that a gap in data collection indicates
+the patient was well enough that they didn’t feel the need to
+collect data at that time:
+
+Gaps would make me think that they can’t be highly symp-
+tomatic because they aren’t so bothered as to record it. It’s
+an act of omission, and omission means they’re ﬁne. – P1
+
+This reﬂects an important difference between clinical settings;
+although completeness was a commonly-raised quality issue of
+patient-generated data, its importance depended on the clinical
+setting. In some settings, incomplete data were not a signiﬁcant
+concern, but instead seen as an indicator either of wellness or
+that patients experienced only transient or mild symptoms that
+did not concern them. Patients would be likely to keep track
+of things when they were of most concern to them. In other
+
+1Align patient and clinician objectivesB1.1: Patient motivation is not always obviousB1.2: Misaligned objectivesEvaluate data qualityB2.1: Unclear accuracy and reliabilityB2.2: Data is often incompleteB2.3: Data often lacks contextJudge data utilityDecide on a planor actionInterpret the dataRearrange the data23654B3.1: Insufficient timeB3.2: Data can be irrelevantB3.3: Data can be distractingB3.4: Poor interoperabilityB4.1: Unfamiliar structureB4.2: Unhelpful structureB5.1: Ambiguity in subjective dataB5.2: Unclear meaning of missing dataB5.3: Reliance on patient recallB6.1: Patient-generated data not considered concrete evidenceB6.2: Data use limited by practice or trainingCHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 5settings, missing data was more troubling, provoking questions
+about the patient’s wellbeing during those times.
+
+Relating to information quality, participants also needed to
+understand what the patient was doing during the time of
+data collection (B2.3: data often lacks context). Knowledge
+about such context is crucial for establishing the reliability of
+patient-generated data. For example, in the context of blood
+pressure measurements, an emergency doctor, P7, said that
+high blood pressure may not indicate a medical problem, but
+can instead mean that “you were excited, you’re angry, or
+there was something that was bringing your blood pressure up.”
+Similarly, one study of irritable bowel syndrome management
+documents clinicians’ difﬁculties in using patient diaries
+because clinicians needed “to know more about the context of
+the data in order to trust it, citing possible confounds including
+emotional and physical health, hydration, and exercise” [45].
+
+Prior work has described clinicians’ concerns with the quality
+of patient-generated data. In one study, which focused on
+insulin therapy, a caregiver faked their daughter’s blood glucose
+level to postpone insulin therapy [3]. This study also described
+clinicians as having little conﬁdence in patient-generated
+data due to “perceived lack of diligence, moral valence of
+the data (with patients unwilling to ‘admit’ undesirable
+numbers), and fear of consequences” [3]. Despite concerns that
+patient-generated data could be unreliable, especially where
+measurements were deemed to be incomplete or subjective,
+we found that some clinicians proposed that such deﬁciencies
+may reﬂect the patient’s situation and how concerned they are
+with their condition. For example, one cardiologist said:
+
+People who are anxious often exaggerate a situation, but
+they’re describing their perception of what’s happening to
+their body so it’s difﬁcult to say their data are wrong. – P2
+
+Moreover, many participants viewed patient-generated data
+as reliable where relevant data are otherwise unavailable. A
+cardiologist, P1, described such data as ‘the only way we have
+of judging the success of a procedure.’ Participants described
+several kinds of information which are not currently available
+through clinical means but could be made available through
+self-tracking: quality of life (e.g., the burden of symptoms
+on the patient’s general wellbeing), symptom frequency and
+severity (e.g., palpitations or chest pain), and major life events
+(e.g., death of a family member).
+
+Stage 3: Judging Data Utility
+The third stage of using patient-generated data comprised
+deciding whether data could or should be used in the current
+context. In a prior study, general practitioners described
+having limited time to analyse patient-generated data between
+consultations [13], and within these time limitations it is
+often unrealistic or impossible to use patient-generated data
+(B3.1: insufﬁcient time). Participants across all clinical roles
+described similar barriers to how utilisable data were in their
+clinical settings. As described by one general practitioner, P10,
+clinicians are often working under tighter timetables with an
+increasing workload from managing patients with long-term
+conditions. This is compounded by clinicians needing to take
+the time to judge whether patient-generated data is relevant
+
+to the current clinical setting (B3.2: data can be irrelevant). One
+emergency doctor explained that patient-generated data are not
+always relevant to the problem needing immediate attention:
+
+This data is not necessarily relevant to what’s brought
+you in today. It is of some use, but in the acute setting it’s
+difﬁcult because you want to deal with the problem that
+they’ve got there and then. Why they’ve been brought in,
+rather than looking at their general health. – P7
+
+An oncology nurse said that the relevance of patient-generated
+data depends on the patient and their circumstances:
+
+Everyone is different. It’s all about them and it’s what they
+need and every patient is going to need something differ-
+ent, so the relevance of the data would really depend. – P12
+
+Understanding what data is relevant is important, because
+patient-generated data can be distracting (B3.3: data can be
+distracting). A heart failure nurse raised concern that that
+additional data could be distracting, but the evidence is still
+important to have to hand:
+
+The more information you have, sometimes it might
+detract away from analysing the root cause of the problem.
+But I always think if you’ve got the evidence there then
+it would be quite useful to have it to support your clinical
+judgement or your reasoning for doing something. – P11
+
+A related barrier to data utility was the lack of interoperability
+with healthcare information systems, which limits the clinical
+usefulness of patient-generated data (B3.4: poor interoperabil-
+ity). A general practitioner found this particularly hindering:
+
+It’s a case of ﬁnding devices that interface with the IT sys-
+tem. Otherwise, they’re extremely limited. If they integrate
+with the IT systems so that the data can be summarised in
+smart quick-to-see formats, then it’s a useful tool. – P10
+
+Overall, this stage comprised participants determining how
+utilisable the data were by evaluating the relevance of the data
+to the clinical context, the time it would take to utilise the data,
+whether the data could be distracting, and the feasibility of
+using the data with existing information systems.
+
+Stage 4: Rearranging the Data
+Participants described patients bringing in data in forms
+that were not standard in their clinical settings, such as hand
+written diaries or data from a Fitbit. In prior studies, clinicians
+expressed difﬁculties in using such data because of their
+atypical and unfamiliar structure [51, 13]. Similarly, our
+ﬁndings revealed that clinicians perceived the unfamiliar
+structure as a signiﬁcant barrier to using patient-generated
+data (B4.1: unfamiliar structure). For example, a nurse who
+manages patients with heart failure, P11, explained that she
+often receives data about weight, blood pressure, and heart rate,
+but that the format of these data varies considerably. When
+participants were asked about how they would expect to see
+data presented, answers varied between structures which were
+familiar to the clinician, and structures which were familiar
+to the patient. ‘Tech savvy’ patients are likely to present data
+on a device or as paper charts, whereas elderly patients are
+likely to present information jotted down on pen and paper.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 6A mental health specialist emphasised the importance of the
+patient choosing a format which was suitable for themselves:
+
+They have produced this themselves, which means it’s
+usable to them, rather than me, as a clinician, telling them
+how to record their daily thoughts and feelings. – P5
+
+Conversely, other clinicians described wanting to rearrange
+information into a form that they were familiar with. One
+reason for this is to ensure that trends and correlations in the
+data are made clear. Identifying trends or correlations has
+previously been described an important aspect of investigating
+a patient’s condition: “if their goal is to identify speciﬁc triggers
+for symptoms, they look for correlations between factors,
+whereas if providers are monitoring a symptom or outcome,
+they try to identify trends and outliers in the data” [13]. In the
+context of a patient who provided heart rate measurements
+over time, an oncology nurse, P12, described wanting to draw
+a line graph to identify trends in their heart rate. A general
+practitioner said he would enter data into the patient’s record:
+
+I will get them to leave me a hard copy and then I enter
+the data into their notes. It’s useful within the scope of
+the system, because it aggregates with the data we record
+and you can see if there’s obvious differences between
+home data and clinical data. – P10
+
+A second reason for rearranging information was to ensure the
+efﬁcient use of time. As described by an audiologist:
+
+It would have to be very simply displayed, not overbearing,
+or too much information, but so you can see what’s going
+on and go from there, just in terms of time efﬁciency. – P13
+
+A cardiologist described the importance of reducing large
+quantities of data (B4.2: unhelpful structure) down to visual
+or numerical information:
+
+I wouldn’t want reams of paper to then have to make
+my own mind up as to what it is. I want some objective
+evidence and that could just be visually displayed,
+graphically displayed, or numerically displayed. – P3
+
+A third reason for restructuring data is to form a patient history,
+a chronological story of medical details that has led up to
+the patient’s current condition. This is a familiar format to
+clinicians, forming the basis of medical records [36], and
+gives clinicians a view of signiﬁcant dates in the past [23]. An
+oncology nurse described ﬁltering down the data to ﬁnd just
+the most signiﬁcant parts for contributing to a patient history:
+
+You read through the data when they get admitted.
+Anything of concern you write down for future reference.
+You wouldn’t use it after that because you’ve written
+down everything that you are concerned about. – P12
+
+The process of forming a patient history often involves asking
+the patient about events that took place at certain times. For
+example, in the context of dementia, a mental health specialist
+described collaborating with the patient to form a medical
+history of their life prior to the onset of dementia:
+
+I would do some life history work with them, to un-
+derstand more about them as individual people prior to
+
+becoming mentally unwell. I wouldn’t have a baseline
+of what that person was like before having a diagnosis,
+so having a written record, or some sort of information
+about that person’s life history, really assists me. – P5
+
+This stage was important for data-use because it involved ar-
+ranging unfamiliar data into usable and interpretable structures,
+such as standard clinical representations or a patient history.
+
+Stage 5: Interpreting the Data
+The penultimate stage of the workﬂow involved participants
+reading and making sense of patient-generated data. The most
+prominent barrier we observed in this stage was that ambiguity
+exists in the meaning of patients’ subjective data (B5.1: ambigu-
+ity in subjective data). For example, when discussing a diary of a
+patient’s wellbeing over time, encoded as numbers between one
+(feeling terrible) and ﬁve (feeling great), a mental health spe-
+cialist wanted to know how the patient perceived these values:
+
+What is the patient’s deﬁnition of ‘terrible’? Because if
+one is ‘terrible’, and ﬁve is ‘great’, what exactly does two
+mean? What is three? What is the difference between two
+and three? – P5
+
+Despite the ambiguous meaning of such values, the subjective
+nature of patient-generated data was, in some cases, considered
+to be important. For example, a cardiologist, P1, described
+such subjectivity as important for understanding the patient’s
+perception of quality of life, general wellbeing, and burden of
+symptoms, because these vary “between and within patients
+at different times”. Understanding the subjective meaning of
+the data is particularly crucial for managing chronic illnesses,
+where interventions may be taken to improve the comfort of
+the patient. In the context of atrial ﬁbrillation, a chronic heart
+condition, one cardiologist said:
+
+Most procedures we do for atrial ﬁbrillation are for symp-
+tomatic gain, so the patient’s perception of symptoms is
+more important than what they’re objectively getting. – P3
+
+A related challenge was understanding what happened during
+times where there were missing data. As described in Stage 2,
+some participants found missing data to be ambiguous, either
+as a reﬂection that the patient was well enough to not warrant
+recording a measurement, or that they were so ill that they
+were unable to record a measurement. During interpretation
+of data, it is possible that the ambiguity of missing data could
+present a danger where incorrect assumptions are made about
+the meaning of missing measurements (B5.2: unclear meaning
+of missing data). Many participants described the importance
+of talking with patients to ﬁnd out what happened in those gaps.
+For example, one cardiologist said:
+
+There are conditions where people die, so it’s important to
+know if they’re at risk. You can show them how few diary
+entries they’ve made and say “you haven’t been ﬁlling
+in the diary. Is that because you feel okay?” – P2
+
+A mental health nurse described engaging in conversation with
+patients to understand more about what has been recorded:
+
+You can’t get people to write absolutely everything down,
+but you might notice that at certain times of the day things
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 7are worse. You go through it with them and you see if they
+notice any patterns, and then I might pick up on something
+that they haven’t picked upon. – P6
+
+Another reason that participants described conversing with pa-
+tients was to understand more about what the patient was doing
+during measurements. For example, one cardiologist said:
+
+It’s important to talk to the patient, because I can say:
+“I see your blood pressure was this last Thursday, can
+you remember what you were doing? Had you just been
+exercising? Did you feel faint?” – P4
+
+Clinicians often relied on patient’s recalling memories of past
+events to ﬁll in the blanks, but, as another cardiologist explained,
+recall can be unreliable (B5.3: reliance on patient recall):
+
+Brains aren’t wired to precisely relate what we were
+doing at speciﬁc times. A patient may remember going
+to a football game on Saturday, and had bad palpitations
+during it, because they can link it to an event. – P1
+
+Throughout this workﬂow stage, the patient’s role is crucial
+for co-interpreting, recalling and, contextualising their data.
+
+Stage 6: Deciding on a Plan or Action
+The ﬁnal stage of the workﬂow involved participants taking an
+action as a result of using the patient-generated data. The types
+of actions that participants were prepared to take based on
+patient-generated data varied by clinical context and reﬂected
+their distinct clinical training. Some participants spoke specif-
+ically about using the data to justify an immediate intervention.
+In particular, when working with patients with long-term con-
+ditions, such as diabetes, participants tended to propose using
+patient-generated data as a basis for treatment planning and
+interventions. For example, if a diabetic patient were to provide
+data showing consistent low blood sugar, P7, an emergency
+doctor, said he would immediately change their insulin dose.
+Three cardiologists, P1, P2, and P3, described using such data
+to justify surgical interventions for long-term heart conditions.
+
+However, P9, a hospital doctor, suggested that patient-
+generated data alone is not normally sufﬁcient to deliver an
+intervention, rather it helps decide whether to pursue further
+investigation, such as medical tests, examination, and consul-
+tations with other clinical specialists (B6.1: patient-generated
+data not considered concrete evidence). This may ultimately
+have resulted from earlier barriers, such as limited knowledge
+about the accuracy of the data, thereby affecting the ﬁnal actions
+that could be taken based on them. Our prior research on the
+use of patient-generated data within acute settings found that
+such data can act as evidence towards creating, supporting, and
+eliminating hypotheses for diagnoses, but the quality of the data
+is often unknown so clinicians often seek to gather additional
+forms of clinical information [51]. This process of additional
+data gathering is standard medical practice towards choosing
+the right tests to pursue and ensuring patient safety [17].
+
+The difference in types of actions taken based on patient-
+generated data could be explained by different work patterns
+across these clinical contexts. For example, in acute contexts,
+where decisions must be made quickly, practice may reﬂect
+a paternalistic model of medicine, where the clinician is in
+
+charge and is primarily responsible for making decisions about
+the patient’s health, including the collection of information [9].
+This is in contrast to the more collaborative nature of managing
+long-term conditions, where clinicians aim to engage patients
+in their healthcare decision making. Here, patients form a
+crucial part of the workﬂow by working together with clinicians
+in co-constructing treatment plans. The potential for patient-
+generated data may be thus be limited by the routines and work
+practices of the clinical context (B6.2: data use limited by prac-
+tice or training). This is not necessarily something which should
+be changed, rather it helps us orient patient-generated data
+towards applicable clinical scenarios. However, one hospital
+doctor proposed that practices will change over time, adopting
+patient-generated data in the pursual of patient empowerment:
+
+We’re moving away from a paternalistic model of
+medicine, where the doctor tells the patient what to do,
+towards a partnership approach of empowering the patient
+to be more responsible for their condition. Involving data
+and trying to get patients to understand it will help them
+understand and minimise risks with their condition. – P9
+
+Moreover, the rising demand on health services and the
+increasingly automated consumption of patient-generated data
+may make use of such data a more typical and necessary part
+of a clinical workﬂow. One cardiologist said:
+
+We’ll see more automated care based on data the patients
+capture delivered by algorithms and decision support
+tools. It’s an essential for the future of the health service.
+Without it, the health service is not sustainable because
+we don’t have enough clinicians to keep a safe eye on all
+the patients with complex long term conditions. – P4
+
+DISCUSSION
+The barriers have implications for how self-tracking tools may
+be designed and integrated into clinical care. In this section,
+we suggest implications in three areas: data collection, data
+use and interpretation, and clinical practice. For each of these,
+we suggest design needs for overcoming the barriers, as shown
+in Table 3.
+
+Implications for Design: Data Collection
+There are several potential solutions to barriers during data
+collection. First, the barrier relating to completeness (B2.2: data
+is often incomplete) could be addressed by automating the
+collection of information. Such automation could be by collect-
+ing data continuously and passively by, for example, wearing
+sensor devices. A mental health specialist raised the possibility
+that such automatic data collection could mitigate problems
+arising from a patient forgetting to take measurements:
+
+Fitbit has consistency from start to ﬁnish, without the gaps
+in recording that there are in the other charts because the
+patient forgets. For a Fitbit, why would there be gaps? – P5
+
+While automatic data collection could improve data complete-
+ness, such automation will not completely solve the problem
+and could introduce new challenges. For example, consumer
+devices will naturally have limits to the extent to which they will
+be able to capture data; data from a Fitbit will have gaps where
+the person was not wearing it, or where the battery is drained.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 8Problem space
+
+Barriers
+
+Potential solutions
+
+Table 3. Barriers to using patient-generated data, their cause contexts, and potential solutions
+
+Design of data col-
+lection tools and
+practices
+
+B2.1: Unclear accuracy and reliability
+B2.2: Data is often incomplete
+B2.3: Data often lacks context
+B5.3: Reliance on patient recall
+
+Design of tools
+for data use and
+interpretation
+
+B3.1: Insufﬁcient time
+B3.2: Data can be irrelevant
+B3.3: Data can be distracting
+B3.4: Poor interoperability
+B4.1: Unfamiliar structure
+B4.2: Unhelpful structure
+
+• Automate data collection to improve completeness, reducing need for
+
+recall.
+
+• Collect context and device reliability provenance.
+• Validate self-tracking tools to ensure reliability.
+
+• Draw on clinical standards for displaying information.
+
+• Filter data to only show relevant information.
+
+• Work with healthcare systems to ensure interoperability.
+
+Clinical practice and
+training
+
+B1.1: Patient motivation is not always obvious
+B1.2: Misaligned objectives
+B5.1: Ambiguity in subjective data
+B5.2: Unclear meaning of missing data
+B6.1: Patient-generated data not considered concrete evidence
+B6.2: Data use limited by practice or training
+
+• Increase collaboration with patient so they understand reasons for
+self-tracking, addressing problems of misaligned objectives, ambiguity
+in the data, and improving patients’ awareness of what to track.
+
+• Clinically validate self-tracking tools and practices.
+
+Furthermore, relying on automatic data capture introduces
+potential design challenges; patients would inherently be less
+in control over how and when their data were captured, which
+could translate into a loss of privacy, loss of meaning and
+interpretability, or simply a lack of useful subjectivity.
+
+Another barrier which exists due to data collection techniques
+is the limited knowledge about what the patient was doing
+at the time of the measurements and events close to that time
+(B2.3: data often lacks context). While clinicians did rely on
+patient recall to gather this information, they acknowledged
+that recall can be ﬂawed and yield inaccurate information
+(B5.3: reliance on patient recall). As a solution to these barriers,
+future self-tracking technologies may be able to record certain
+contextual information automatically, such as the device used,
+how the patient took the measurement, and what they had
+been doing. These data could document the provenance of the
+data, that is, the history of the data artefact for use as “a guide
+to authenticity or quality” [1]. Contemporary literature has
+applied provenance to data collection and processing, where the
+authenticity or quality of data is documented and stored [34].
+Provenance documentation could thus provide a basis for
+evaluating data quality based on information not prone to recall
+bias. Moreover, this could document the device’s accuracy and
+reliability (B2.1: unclear accuracy and reliability).
+
+Implications for Design: Data Use & Interpretation
+To address barriers of data use and interpretation, a ﬁrst
+obvious approach may be for self-tracking tools to support
+clinical standards of information structure and representation,
+effectively addressing the problem of structure unfamiliarity
+and interpretability under time constraints (B4.1: unfamiliar
+structure, B4.2: unhelpful structure, and B3.1: insufﬁcient
+time). Prior studies have observed that summarised forms of
+information, such as tables and charts, are most appropriate
+when decisions need to be made quickly, such as in acute set-
+tings [27, 45]. The interview ﬁndings reﬂect this; participants
+preferred data which was presented in a familiar summarised
+structure. For example, an emergency doctor explained that
+if a patient were to present data about their blood sugar, they
+would expect a standard representation:
+
+I expect to see a graph with a line delineating their blood
+
+sugar level, a red line for four, a green line for seven, and
+amber, like a trafﬁc light as the values go up. – P7
+
+This description of an ‘ideal presentation’ of data draws from
+the doctor’s expertise in working with diabetic patients. The
+normal and dangerous values are familiar, and the colours –
+green, amber, and red – are routinely used in emergency clinical
+practice [12]. Indeed, advice by a diabetes clinic [20] includes a
+table with similar qualities to those described by P7: the normal,
+high, and very high values align to what P7 described, and the
+colours green, amber, and red are used to illustrate this. Doctors
+in acute settings draw heavily on their expertise to interpret
+data ‘at a glance’ in a short amount of time, and so work most
+effectively when the data presented to them are familiar.
+
+How do we best address this design need? One option would be
+to have tools simply to adopt clinical measurements, represen-
+tations and forms. However, this would require patients to learn
+how to read, capture and interact with such data, which may be
+challenging or simply infeasible. Another possibility is to sup-
+port multiple styles of information displays to represent data in
+forms most convenient to those using them, such as the patient,
+the doctor, and the triage nurse. A challenge of doing this is
+that it assumes that representations are perfectly equivalent
+and reversible and that transforms exist that can reliably used
+to convert between them without loss or distortion. Another
+drawback of the multiple representations idea is that a lack of a
+shared views means a loss of common ground between patient
+and clinician, thereby complicating shared sense-making.
+
+A second set of opportunities may pertain to supporting more
+effective data ﬁltering and navigation. The potentially large
+volume of patient-generated data (e.g. high resolution time se-
+ries observations), combined with the diversity of information
+forms, means that being able to effectively focus on subsets, and
+summarise and identify trends, may facilitate sense-making
+whilst reducing distraction. Approaches such as multi-
+dimensional faceted ﬁltering and selection, focus-plus-context
+displays, and multi-resolution time series reduction, may ad-
+dress barriers relating to irrelevant data being shown (B3.2: data
+can be irrelevant and B3.3: data can be distracting) [43].
+
+Finally, a third approach is to work with healthcare systems
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 9to ensure interoperability, which can be a barrier when using
+patient-generated data (B3.4: poor interoperability). Parallels
+can be drawn with the integration of electronic medical records
+with health IT systems, for which there have been signiﬁcant
+barriers to their introduction, including cost, training of
+clinicians, and poor support for third-party systems [7].
+Drawing from approaches for integrating electronic medical
+records could reveal solutions for overcoming such difﬁculties.
+Once again, various design challenges pertaining to preserving
+patient privacy and control would need to be addressed.
+
+Implications for Clinical Practice
+Some barriers may be less addressable through design alone.
+For example, some participants were concerned about a move
+away from a paternalistic care model towards a participatory
+one, which reﬂects a need to change practice rather than a design
+need (B6.2: data use limited by practice or training). Prior work
+at CHI has argued that traditional clinical practice must be re-
+vised to a more participatory healthcare to address the problems
+they identify in doctor-patient use of IT systems [49, 6].
+
+Indeed, encouraging collaboration within clinical consultations
+could mitigate several barriers to using patient-generated data.
+Conversation can overcome differences in the clinician’s and
+patient’s objectives (B1.1: patient motivation is not always
+obvious and B1.2: misaligned objectives). Prior work in the spe-
+ciﬁc domain of management of irritable bowel syndrome has
+demonstrated that patient-generated data can foster this conver-
+sation by acting as a boundary artefact, engendering a mutual
+understanding between the doctor and patient and negotiating
+shared expectations [14]. We suggest that such collaboration
+could beneﬁt patient-generated data use across a broad range
+of clinical settings. As described by a hospital doctor:
+
+If a patient can understand their condition better then they
+understand how to manage their condition better, and then
+you’re more likely to empower them to take responsibility
+for their condition. It’s a joint effort. You have to work
+in partnership with the patient to achieve that. – P9
+
+Moreover, such collaboration through use of a boundary
+artefact forms a basis for understanding a patient’s experiences,
+potentially mitigating barriers relating to ambiguity in
+patient-generated data (B5.1: ambiguity in subjective data and
+B5.2: unclear meaning of missing data).
+
+One ﬁnal barrier relating to clinical practice is that patient-
+generated data may not be considered by clinicians to be
+sufﬁcient as medical evidence (B6.1: patient-generated data not
+considered concrete evidence). This is primarily caused by the
+lack of scientiﬁc validation of self-tracking tools and practices,
+highlighting that further research into these tools is critical for
+patient-generated data to be trusted in clinical contexts.
+
+LIMITATIONS
+There are several limitations of this study which have shaped
+our ﬁndings. First, we did not interview patients, so ﬁndings
+around patients’ perspectives of workﬂows and barriers were
+derived only from the analysis of existing literature. This was
+intentionally done because much of the earlier work focused
+on patients’ use of self-tracking tools, and because we wanted
+to identify aspects of patient-generated data use in clinical
+
+workﬂows (rather than in patient workﬂows). However, we
+acknowledge that patients’ perspectives are extremely valuable
+in designing solutions to these problems, as many inevitably
+involve trade-offs. Second, although we sought to interview
+a diverse range of clinicians, the sheer number and diversity
+of roles in modern healthcare meant that we only were able
+to cover a small subset of common roles. Even among these
+roles that we covered, since we were only able to interview
+1-4 members of each, we could only get a sample of the
+perspectives of each. Finally, all of our interviews were with
+healthcare professionals working within the United Kingdom,
+thus ﬁndings may be affected by the standardised practices and
+workﬂows of the National Health Service [19]. There might
+considerable variation in practices and workﬂows between our
+ﬁndings, and those of very differently structured healthcare
+systems, such as the multi-payer healthcare systems of the
+United States. It is our intention in the face of these limitations
+to follow up this work with work that will expand interviews to
+those in other roles and countries, as well as to start to assess the
+feasibility of particular solutions through input from patients.
+
+CONCLUSION
+This paper contributes an understanding of barriers to the use
+of patient-generated data in clinical settings, derived from a
+synthesis of existing literature and interviews conducted with
+thirteen healthcare professionals from several common clinical
+roles. Our ﬁndings suggest that, while the speciﬁc challenges
+pertaining to the use of patient-generated data vary consider-
+ably across clinical settings, these barriers occur along stages
+of a common workﬂow. We thus proposed a six-stage workﬂow
+model of patient-generated data use, which includes stages
+relating to data capture, quality, utility, structure, interpretation,
+and ﬁnally application in a plan of action. Based on this model,
+we discussed potential ways that these barriers might be
+addressed through the design of tools for improved data capture
+(to support later clinical use), improved interpretability by clini-
+cians, and support for joint sense-making with patients. Finally,
+we discussed the role of the increased use of patient-generated
+data in the shift towards participatory care, in particular the
+need to consider changes in clinical workﬂows and IT systems.
+
+An important outcome of the use of patient-generated data in
+clinical settings is the increased collaboration between doctor
+and patient in managing care. This has the twin beneﬁts of
+reducing patient dependence on the clinician, thereby empower-
+ing the patient to improve their health and wellbeing. We do not
+claim that our ﬁndings are sufﬁcient for understanding precise
+workﬂows in individual clinical settings, but the broad range of
+clinical settings does afford an understanding of the broader use
+of patient-generated data. By providing future HCI research
+with pathways to address these barriers, our ﬁndings can
+engender improved collaboration between patient and clinician
+in decision-making, as well as improved clinical outcomes.
+
+ACKNOWLEDGEMENTS
+We thank those who took time to participate in the interviews.
+This work was supported by the University of Southampton
+Web Science Doctoral Training Centre and the SOCIAM
+Project, under Engineering and Physical Sciences Research
+Council grants EP/G036926/1 and EP/J017728/2.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 10REFERENCES
+1. 2008. “provenance, n.”. In Oxford English Dictionary
+
+Online (3rd ed.). Oxford University Press.
+http://www.oed.com/view/Entry/153408 [Accessed 25 Jul.
+2017].
+
+2. Jessica S Ancker, Holly O Witteman, Baria Hafeez,
+
+Thierry Provencher, Mary Van de Graaf, and Esther Wei.
+2015a. The invisible work of personal health information
+management among people with multiple chronic
+conditions: qualitative interview study among patients and
+providers. Journal of Medical Internet Research 17, 6
+(2015), e137. DOI:http://dx.doi.org/10.2196/jmir.4381
+
+3. Jessica S Ancker, Holly O Witteman, Baria Hafeez,
+
+Thierry Provencher, Mary Van de Graaf, and Esther Wei.
+2015b. “You Get Reminded You’re a Sick Person”:
+personal Data Tracking and Patients With Multiple
+Chronic Conditions. Journal of Medical Internet Research
+17, 8 (2015), e202. DOI:
+http://dx.doi.org/10.2196/jmir.4209
+
+4. Geoff Appelboom, Melissa LoPresti, Jean-Yves Reginster,
+E. Sander Connolly, and Emmanuel P. L. Dumont. 2014.
+The quantiﬁed patient: a patient participatory culture.
+Current Medical Research and Opinion 30, 12 (2014),
+2585–2587. DOI:
+http://dx.doi.org/10.1185/03007995.2014.954032
+
+5. Earl R. Babbie. 2012. The Practice of Social Research
+
+(13th ed.). Cengage Learning, Boston.
+
+6. Stinne Aaløkke Ballegaard, Thomas Riisgaard Hansen,
+and Morten Kyng. 2008. Healthcare in Everyday Life:
+Designing Healthcare Services for Daily Life. In
+Proceedings of the 2008 Conference on Human Factors in
+Computing Systems (CHI ’08). Association for Computing
+Machinery, New York, 1807–1816. DOI:
+http://dx.doi.org/10.1145/1357054.1357336
+
+7. Albert Boonstra and Manda Broekhuis. 2010. Barriers to
+the acceptance of electronic medical records by physicians
+from systematic review to taxonomy and interventions.
+BioMed Central: Health Services Research 10, 1 (2010),
+231. DOI:http://dx.doi.org/10.1186/1472-6963-10-231
+
+8. Felicia M. Bowens, Patricia A. Frye, and Warren A. Jones.
+2010. Health Information Technology: Integration of
+Clinical Workﬂow into Meaningful Use of Electronic
+Health Records. Perspectives in Health Information
+Management 7, Fall (2010), 1d.
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2966355/
+
+9. Cathy Charles, Amiram Gafni, and Tim Whelan. 1997.
+Shared decision-making in the medical encounter: what
+does it mean? (Or it takes at least two to tango). Social
+Science & Medicine 44, 5 (1997), 681–692. DOI:
+http://dx.doi.org/10.1016/S0277-9536(96)00221-3
+
+10. Emil Chiauzzi, Carlos Rodarte, and Pronabesh
+
+DasMahapatra. 2015. Patient-centered activity monitoring
+in the self-management of chronic health conditions.
+BioMed Central: Medicine 13, 1 (2015). DOI:
+http://dx.doi.org/10.1186/s12916-015-0319-2
+
+11. Seryung Choo, Ju Young Kim, Se Young Jung, Sarah Kim,
+
+Jeong Eun Kim, Jong Soo Han, Sohye Kim, Jeong Hyun
+Kim, Jeehye Kim, Yongseok Kim, Dongouk Kim, and
+Steve Steinhubl. 2016. Development of a weight loss
+mobile app linked with an accelerometer for use in the
+clinic: usability, acceptability, and early testing of its
+impact on the patient-doctor relationship. Journal of
+Medical Internet Research: mHealth and uHealth 4, 1
+(2016), e24. DOI:
+http://dx.doi.org/10.2196/mhealth.4546
+
+12. Michael Christ, Florian Grossmann, Daniela Winter,
+
+Roland Bingisser, and Elke Platz. 2010. Modern Triage in
+the Emergency Department. Deutsches Ärzteblatt
+International 107, 50 (2010), 892–898. DOI:
+http://dx.doi.org/10.3238/arztebl.2010.0892
+
+13. Chia-Fang Chung, Jonathan Cook, Elizabeth Bales,
+Jasmine Zia, and Sean A. Munson. 2015. More than
+telemonitoring: health provider use and nonuse of life-log
+data in irritable bowel syndrome and weight management.
+Journal of Medical Internet Research 17, 8 (2015), e203.
+DOI:http://dx.doi.org/10.2196/jmir.4364
+
+14. Chia-Fang Chung, Kristin Dew, Allison Cole, Jasmine Zia,
+James Fogarty, Julie A. Kientz, and Sean A. Munson.
+2016. Boundary negotiating artifacts in personal
+informatics: patient-provider collaboration with
+patient-generated data. In Proceedings of the 2016
+Conference on Computer-Supported Cooperative Work &
+Social Computing (CSCW ’16). Association for
+Computing Machinery, New York, 770–786. DOI:
+http://dx.doi.org/10.1145/2818048.2819926
+
+15. Deborah J Cohen, Sara R Keller, Gillian R Hayes, David A
+Dorr, Joan S Ash, and Dean F Sittig. 2016. Integrating
+patient-generated health data into clinical care settings or
+clinical decision-making: lessons learned from Project
+HealthDesign. Journal of Medical Internet Research:
+Human Factors 3, 2 (2016), e26–e26.
+
+16. Jonah Comstock. 2015. Cerner taps Validic to bring
+
+patient-generated data into portal. MobiHealthNews.
+http://www.mobihealthnews.com/41269/
+cerner-taps-validic-to-bring-patient-generated-data-into-portal
+[Accessed 29 Dec. 2017].
+
+17. Pat Croskerry. 2002. Achieving Quality in Clinical
+
+Decision Making: Cognitive Strategies and Detection of
+Bias. Academic Emergency Medicine 9, 11 (2002),
+1184–1204. DOI:
+http://dx.doi.org/10.1197/aemj.9.11.1184
+
+18. Mary Jo Deering, Erin Siminerio, and Scott Weinstein.
+2013. Issue brief: patient-generated health data and
+health IT. Technical Report. Ofﬁce of the National
+Coordinator for Health Information Technology,
+Washington, DC, USA.
+
+19. Department of Health. 2012. NHS Constitution for
+
+England. United Kingdom Department of Health, London.
+https://www.gov.uk/government/publications/
+the-nhs-constitution-for-england [Accessed 29 Nov.
+2017].
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 1120. Edinburgh Centre for Endocrinology and Diabetes. 2016.
+
+Diabetes Information & Common Questions.
+http://www.edinburghdiabetes.com/information-faqs/
+[Accessed 28 Jul. 2017].
+
+21. Alan S Go, Elaine M Hylek, Kathleen A Phillips, YuChiao
+Chang, Lori E Henault, Joe V Selby, and Daniel E Singer.
+2001. Prevalence of diagnosed atrial ﬁbrillation in adults:
+national implications for rhythm management and stroke
+prevention: the anticoagulation and risk factors in atrial
+ﬁbrillation (atria) study. Journal of the American Medical
+Association 285, 18 (2001), 2370–2375. DOI:
+http://dx.doi.org/10.1001/jama.285.18.2370
+
+22. Matthew K. Hong, Lauren Wilcox, Daniel Machado,
+
+Thomas A. Olson, and Stephen F. Simoneaux. 2016. Care
+partnerships: toward technology to support teens’
+participation in their health care. In Proceedings of the
+2016 Conference on Human Factors in Computing
+Systems (CHI ’16). Association for Computing Machinery,
+New York, 5337–5349. DOI:
+http://dx.doi.org/10.1145/2858036.2858508
+
+23. Nicholas Huba and Yan Zhang. 2012. Designing
+
+patient-centered personal health records: health care
+professionals’ perspective on patient-generated data.
+Journal of Medical Systems 36, 6 (2012), 3893–3905. DOI:
+http://dx.doi.org/10.1007/s10916-012-9861-z
+
+24. Maia L. Jacobs, James Clawson, and Elizabeth D. Mynatt.
+2014. My Journey Compass: a preliminary investigation of
+a mobile tool for cancer patients. In Proceedings of the
+2014 Conference on Human Factors in Computing
+Systems (CHI ’14). Association for Computing Machinery,
+New York, 663–672. DOI:
+http://dx.doi.org/10.1145/2556288.2557194
+
+25. Christina Kelley, Bongshin Lee, and Lauren Wilcox. 2017.
+Self-tracking for mental wellness: understanding expert
+perspectives and student experiences. In Proceedings of
+the 2017 Conference on Human Factors in Computing
+Systems (CHI ’17). Association for Computing Machinery,
+New York, 629–641. DOI:
+http://dx.doi.org/10.1145/3025453.3025750
+
+26. Yoojung Kim, Eunyoung Heo, Hyunjeong Lee,
+
+Sookyoung Ji, Jueun Choi, Jeong-Whun Kim, Joongseek
+Lee, and Sooyoung Yoo. 2017. Prescribing 10,000 Steps
+Like Aspirin: Designing a Novel Interface for Data-Driven
+Medical Consultations. In Proceedings of the 2017
+Conference on Human Factors in Computing Systems
+(CHI ’17). Association for Computing Machinery, New
+York, 5787–5799. DOI:
+http://dx.doi.org/10.1145/3025453.3025570
+
+27. Yoojung Kim, Sookyoung Ji, Hyunjeong Lee,
+
+Jeong-Whun Kim, Sooyoung Yoo, and Joongseek Lee.
+2016. “My doctor is keeping an eye on me!”: exploring the
+clinical applicability of a mobile food logger. In
+Proceedings of the 2016 Conference on Human Factors in
+Computing Systems (CHI ’16). Association for Computing
+
+Machinery, New York, 5620–5631. DOI:
+http://dx.doi.org/10.1145/2858036.2858145
+
+28. Paul Krebs and T. Dustin Duncan. 2015. Health App Use
+Among US Mobile Phone Owners: A National Survey.
+JMIR mHealth uHealth 3, 4 (2015), e101. DOI:
+http://dx.doi.org/10.2196/mhealth.4924
+
+29. Jongin Lee, Daeki Cho, Junhong Kim, Eunji Im, JinYeong
+Bak, Kyung ho Lee, Kwan Hong Lee, and John Kim. 2017.
+Itchtector: A Wearable-based Mobile System for
+Managing Itching Conditions. In Proceedings of the 2017
+Conference on Human Factors in Computing Systems
+(CHI ’17). Association for Computing Machinery, New
+York, 893–905. DOI:
+http://dx.doi.org/10.1145/3025453.3025569
+
+30. Haley MacLeod, Anthony Tang, and Sheelagh Carpendale.
+2013. Personal informatics in chronic illness management.
+In Proceedings of Graphics Interface 2013 (GI ’13).
+Canadian Information Processing Society, Toronto,
+149–156.
+http://dl.acm.org/citation.cfm?id=2532129.2532155
+
+31. Max van Manen. 1990. Researching Lived Experience:
+Human Science for an Action Sensitive Pedagogy (2nd
+ed.). State University of New York Press, Albany, USA.
+
+32. Helena M. Mentis, Anita Komlodi, Katrina Schrader,
+
+Michael Phipps, Ann Gruber-Baldini, Karen Yarbrough,
+and Lisa Shulman. 2017. Crafting a View of Self-Tracking
+Data in the Clinical Visit. In Proceedings of the 2017
+Conference on Human Factors in Computing Systems
+(CHI ’17). Association for Computing Machinery, New
+York, 5800–5812. DOI:
+http://dx.doi.org/10.1145/3025453.3025589
+
+33. Sonali R. Mishra, Shefali Haldar, Ari H. Pollack, Logan
+
+Kendall, Andrew D. Miller, Maher Kheliﬁ, and Wanda
+Pratt. 2016. “Not just a receiver”: understanding patient
+behavior in the hospital environment. In Proceedings of
+the 2016 Conference on Human Factors in Computing
+Systems (CHI ’16). Association for Computing Machinery,
+New York, 3103–3114. DOI:
+http://dx.doi.org/10.1145/2858036.2858167
+
+34. Luc Moreau, Paul Groth, Simon Miles, Javier
+
+Vazquez-Salceda, John Ibbotson, Sheng Jiang, Steve
+Munroe, Omer Rana, Andreas Schreiber, Victor Tan, and
+Laszlo Varga. 2008. The provenance of electronic data.
+Communications of the Association for Computing
+Machinery 51, 4 (2008), 52–58. DOI:
+http://dx.doi.org/10.1145/1330311.1330323
+
+35. National Health Service. 2015. Causes of Atrial
+ﬁbrillation. http://www.nhs.uk/Conditions/
+Atrial-fibrillation/Pages/Causes.aspx [Accessed 28 Jul.
+2017].
+
+36. National Health Service England. 2016. Health and care
+records. http://www.nhs.uk/NHSEngland/thenhs/records/
+healthrecords/Pages/overview.aspx [Accessed 28 Jul.
+2017].
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 1237. National Information Board. 2014. Personalised health
+and care 2020: using data and technology to transform
+outcomes for patients and citizens. Department of Health,
+London, UK. https://www.gov.uk/government/
+publications/personalised-health-and-care-2020
+[Accessed 18 Jan. 2015].
+
+38. Gina Neff and Dawn Nafus. 2016. The Self-Tracking. MIT
+
+Press, Cambridge, USA.
+
+39. Shantanu Nundy, Chen-Yuan E Lu, Patrick Hogan, Anjuli
+
+Mishra, and Monica E Peek. 2014. Using
+patient-generated health data from mobile technologies for
+diabetes self-management support: provider perspectives
+from an academic medical center. Journal of Diabetes
+Science And Technology 8, 1 (2014), 74–82. DOI:
+http://dx.doi.org/10.1177/1932296813511727
+
+40. Rupa A. Patel, Predrag Klasnja, Andrea Hartzler,
+
+Kenton T. Unruh, and Wanda Pratt. 2012. Probing the
+beneﬁts of real-time tracking during cancer care. In
+American Medical Informatics Association Annual
+Symposium Proceedings (AMIA ’12), Vol. 2012.
+1340–1349.
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3540467/
+
+41. Chris Paton, M Margaret, L Fernandez-Luque, and
+
+Annie YS Lau. 2012. Self-tracking, social media and
+personal health records for patient empowered self-care.
+International Medical Informatics Association Yearbook
+(2012), 16–24. http://www.schattauer.de/t3page/1214.
+html?manuscript=17937&L=1
+
+42. Enrico Maria Piras and Francesco Miele. 2017. Clinical
+
+self-tracking and monitoring technologies: negotiations in
+the ICT-mediated patient-provider relationship. Health
+Sociology Review 26, 1 (2017), 38–53. DOI:
+http://dx.doi.org/10.1080/14461242.2016.1212316
+
+43. Catherine Plaisant, Brett Milash, Anne Rose, Seth Widoff,
+and Ben Shneiderman. 1996. LifeLines: Visualizing
+Personal Histories. In Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems
+(CHI ’96). ACM, New York, 221–227. DOI:
+http://dx.doi.org/10.1145/238386.238493
+
+44. Ruth Ravichandran, Sang-Wha Sien, Shwetak N. Patel,
+
+Julie A. Kientz, and Laura R. Pina. 2017. Making Sense of
+Sleep Sensors: How Sleep Sensing Technologies Support
+and Undermine Sleep Health. In Proceedings of the 2017
+Conference on Human Factors in Computing Systems
+(CHI ’17). Association for Computing Machinery, New
+York, 6864–6875. DOI:
+http://dx.doi.org/10.1145/3025453.3025557
+
+45. Jessica Schroeder, Jane Hoffswell, Chia-Fang Chung,
+James Fogarty, Sean Munson, and Jasmine Zia. 2017.
+Supporting patient-provider collaboration to identify
+individual triggers using food and symptom journals. In
+Proceedings of the 2017 Conference on Computer
+Supported Cooperative Work and Social Computing
+(CSCW ’17). Association for Computing Machinery, New
+York, 1726–1739. DOI:
+http://dx.doi.org/10.1145/2998181.2998276
+
+46. Philip A. Tumulty. 1970. What Is a Clinician and What
+Does He Do? New England Journal of Medicine 283, 1
+(1970), 20–24. DOI:
+http://dx.doi.org/10.1056/NEJM197007022830105
+
+47. Kim M Unertl, Kevin B Johnson, and Nancy M Lorenzi.
+2012. Health information exchange technology on the
+front lines of healthcare: workﬂow factors and patterns of
+use. Journal of the American Medical Informatics
+Association 19, 3 (2012), 392–400. DOI:
+http://dx.doi.org/10.1136/amiajnl-2011-000432
+
+48. Kim M Unertl, Laurie L Novak, Kevin B Johnson, and
+Nancy M Lorenzi. 2010. Traversing the many paths of
+workﬂow research: developing a conceptual framework of
+workﬂow terminology through a systematic literature
+review. Journal of the American Medical Informatics
+Association 17, 3 (2010), 265–273. DOI:
+http://dx.doi.org/10.1136/jamia.2010.004333
+
+49. Kenton T. Unruh, Meredith Skeels, Andrea Civan-Hartzler,
+
+and Wanda Pratt. 2010. Transforming Clinic
+Environments into Information Workspaces for Patients.
+In Proceedings of the 2008 Conference on Human Factors
+in Computing Systems (CHI ’10). Association for
+Computing Machinery, New York, 183–192. DOI:
+http://dx.doi.org/10.1145/1753326.1753354
+
+50. Bert Vandenberghe and David Geerts. 2015. Sleep
+
+Monitoring Tools at Home and in the Hospital: Bridging
+Quantiﬁed Self and Clinical Sleep Research. In
+Proceedings of the 9th International Conference on
+Pervasive Computing Technologies for Healthcare
+(PervasiveHealth ’15). Institute for Computer Sciences,
+Social-Informatics and Telecommunications Engineering,
+ICST, Brussels, Belgium, 153–160. DOI:http:
+//dx.doi.org/10.4108/icst.pervasivehealth.2015.259267
+
+51. Peter West, Richard Giordano, Max Van Kleek, and Nigel
+Shadbolt. 2016. The Quantiﬁed Patient in the Doctor’s
+Ofﬁce: Challenges & Opportunities. In Proceedings of the
+2016 Conference on Human Factors in Computing
+Systems (CHI ’16). Association for Computing Machinery,
+New York, 3066–3078. DOI:
+http://dx.doi.org/10.1145/2858036.2858445
+
+52. Peter West, Max Van Kleek, Richard Giordano, Mark
+Weal, and Nigel Shadbolt. 2017. Information Quality
+Challenges of Patient-Generated Data in Clinical Practice.
+Frontiers Public Health 5 (2017), 284. DOI:
+http://dx.doi.org/10.3389/fpubh.2017.00284
+
+53. Philip A Wolf, Robert D Abbott, and William B Kannel.
+1991. Atrial ﬁbrillation as an independent risk factor for
+stroke: the Framingham Study. Stroke 22, 8 (1991),
+983–988.
+
+54. H. Zhu, J. Colgan, M. Reddy, and E. K. Choe. 2016.
+
+Sharing patient-generated data in clinical practices: an
+interview study. In American Medical Informatics
+Association Annual Symposium Proceedings (AMIA ’16),
+Vol. 2016. 1303–1312.
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 484Page 13

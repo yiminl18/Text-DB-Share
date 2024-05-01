@@ -1,0 +1,23 @@
+Table of Contents:
+
+1. Abstract
+2. Introduction
+3. Related Work
+4. Task Description
+5. Empirical Observations
+    5.1 Dataset Description
+    5.2 Properties of Real-World Action Sequences
+6. Proposed Model
+    6.1 Background on Temporal Point Processes
+    6.2 Model Definition
+    6.3 Model Inference
+7. Experiments
+    7.1 Datasets
+    7.2 Model Learning
+    7.3 Validating Parametric Assumptions
+    7.4 Predicting the Next Action
+    7.5 Predicting the Time of the Next Action
+    7.6 Model Explainability
+8. Conclusion
+9. Acknowledgments
+10. References

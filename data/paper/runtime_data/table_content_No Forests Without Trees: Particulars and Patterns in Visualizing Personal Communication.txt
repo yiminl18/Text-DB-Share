@@ -1,0 +1,27 @@
+Table of Contents
+
+1. Abstract
+2. Categories and Subject Descriptors
+3. General Terms
+4. Keywords
+5. Introduction
+6. Related Work
+   6.1 Reflective Technologies
+   6.2 Communication Visualization
+   6.3 Temporal Rhythms
+7. System Design
+   7.1 The Pie
+   7.2 Timescales
+   7.3 Data Sources
+   7.4 Keyword extraction
+8. Evaluation
+9. Results
+   9.1 Personal connection was crucial
+   9.2 Sensemaking of the Past, Especially the Unusual
+   9.3 Finding Patterns in Behavior
+   9.4 Comparing Email and Phone
+   9.5 Overall Reactions
+10. Discussion
+11. Conclusion
+12. Acknowledgments
+13. References

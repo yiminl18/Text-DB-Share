@@ -1,0 +1,1530 @@
+Patient Perspectives on Self-Management
+Technologies for Chronic Fatigue Syndrome
+
+Tabby Davies
+University of Bath
+Bath, United Kingdom
+tjpd20@bath.ac.uk
+
+Simon L. Jones
+University of Bath
+Bath, United Kingdom
+s.l.jones@bath.ac.uk
+
+Ryan M. Kelly
+The University of Melbourne
+Melbourne, Australia
+ryan.kelly@unimelb.edu.au
+
+ABSTRACT
+Chronic Fatigue Syndrome (CFS) is a debilitating medical con-
+dition that is characterized by a range of physical, cognitive
+and social impairments. This paper investigates CFS patients’
+perspectives on the potential for technological support for
+self-management of their symptoms. We report findings from
+three studies in which people living with CFS 1) prioritized
+symptoms that they would like technologies to address, 2) ar-
+ticulated their current approaches to self-management along-
+side challenges they face, and 3) reflected on their experiences
+with three commercial smartphone apps related to symptom
+management. We contribute an understanding of the specific
+needs of the ME/CFS population and the ways in which they
+currently engage in self-management using technology. The
+paper ends by describing five high-level design recommen-
+dations for ME/CFS self-management technologies.
+
+CCS CONCEPTS
+• Human-centered computing → Empirical studies in HCI .
+
+KEYWORDS
+Chronic Fatigue Syndrome; Myalgic Encephalomyelitis; self-
+management; self-tracking.
+
+ACM Reference Format:
+Tabby Davies, Simon L. Jones, and Ryan M. Kelly. 2019. Patient Per-
+spectives on Self-Management Technologies for Chronic Fatigue
+Syndrome. In CHI Conference on Human Factors in Computing Sys-
+tems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK.
+ACM, New York, NY, USA, 13 pages. https://doi.org/10.1145/3290605.
+3300452
+
+Permission to make digital or hard copies of all or part of this work for
+personal or classroom use is granted without fee provided that copies
+are not made or distributed for profit or commercial advantage and that
+copies bear this notice and the full citation on the first page. Copyrights
+for components of this work owned by others than the author(s) must
+be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior specific
+permission and/or a fee. Request permissions from permissions@acm.org.
+
+CHI 2019, May 4–9, 2019, Glasgow, Scotland UK
+© 2019 Copyright held by the owner/author(s). Publication rights licensed
+to ACM.
+ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00
+https://doi.org/10.1145/3290605.3300452
+
+1 INTRODUCTION
+Research in HCI has begun to explore the potential for tech-
+nologies to assist with the self-management of chronic health
+conditions. In this context, self-management refers to an indi-
+vidual’s ability to “manage the symptoms, treatment, physical
+and psychosocial consequences and lifestyle changes inher-
+ent to living with a chronic condition” [7, p. 178]. Previous
+work suggests that technology can support self-management
+by promoting reflective thinking [46], helping to monitor
+symptom triggers [10], and by gathering evidence to facilitate
+deeper understanding of a condition [27]. Examples of con-
+ditions studied by HCI researchers include chronic pain [3],
+HIV+ [11], migraine [65] and irritable bowel syndrome [66].
+In this paper we focus on the design of self-management
+technologies for people living with Chronic Fatigue Syn-
+drome, or Myalgic Encephalomyelitis (ME/CFS)1. ME/CFS is
+an example of an enigmatic disease [48] in that it has a range of
+symptoms, little clinical consensus on effective treatment [75],
+and a lack of symptom specificity. While ME/CFS is thought
+to affect 0.2–0.4% of the world’s population [26, 32, 36], re-
+search indicates that up to 90% of cases go undiagnosed [32],
+suggesting that people with ME/CFS are substantially under-
+counted and undertreated [19]. This is problematic because
+the condition has an array of debilitating symptoms, includ-
+ing extreme tiredness following exertion, cognitive fatigue,
+rheumatic pain and disrupted sleep. These symptoms impact
+quality of life [39] and can make the condition very difficult to
+manage for patients. Furthermore, many people with ME/CFS
+report that clinicians do not always provide empathetic sup-
+port [41], which may be due to a lack of clinical consensus
+around proper treatment of the disease [74, 75].
+
+Our work aims to support people with ME/CFS by explor-
+ing the ways in which digital technologies should support
+self-management of the condition. While self-management
+can be achieved through the use of generic solutions (e.g.
+smartphone apps [38]), previous work has demonstrated the
+need to design around the symptoms of a given condition and
+promote self-care in light of those symptoms [11, 56, 58, 59].
+
+1We use the abbreviation ME/CFS as this follows the convention used in
+recent scholarly literature [e.g. 19, 20, 29, 75] and because some patients feel
+that the phrase ‘chronic fatigue syndrome’ is a misnomer that trivializes
+the medical nature of the condition [21].
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 1However, designers may struggle to create tailored support
+for ME/CFS without a clear understanding of patients’ needs
+and goals for self-management. Furthermore, while the preva-
+lence of particular symptoms associated with ME/CFS is well
+understood [28, 71] there is a lack of knowledge about which
+symptoms patients want to manage the most.
+
+Our work addresses these gaps by adopting a patient-centric
+approach in which we engage with ME/CFS patients to learn
+about their perspectives on the potential for self-management
+technologies. We provide three contributions for support-
+ing the design of self-management technologies for ME/CFS.
+First, we provide a list of symptoms prioritized by people
+with ME/CFS, giving immediate direction for the design of
+condition-specific support. Second, we find that people with
+ME/CFS engage in self-management through off-the-shelf
+technologies that do not provide effective support for their
+condition. Finally, participants’ responses to a series of com-
+mercial apps reveal positive and negative experiences with
+specific features. From our studies we derive five recommen-
+dations that can guide the design of future self-management
+technologies for people living with ME/CFS.
+
+2 BACKGROUND
+ME/CFS is a chronic (i.e. long-term) illness with an unknown
+aetiology [31]. The primary clinical feature of the condition
+is a severe disabling fatigue that has been present for at least
+six consecutive months [28]. ME/CFS has a complex array of
+symptoms. The foremost of these is post-exertional malaise
+(PEM), which refers to symptoms that arise following mental
+or physical exertion [19, 35]. These symptoms include a loss
+of stamina and intense tiredness that can only be alleviated
+through long periods of rest [72]. PEM is highly debilitat-
+ing and can occur after even the simplest of tasks, including
+“walking, showering, or having a conversation” [35, p. 20].
+
+ME/CFS is also characterized by neurocognitive impair-
+ment (known as “brain fog” [57]) that impacts memory, con-
+centration and problem-solving ability [67]. Other recognized
+symptoms include rheumatic pain affecting the muscles and
+joints [1, 4]; poor quality of sleep, which typically leaves in-
+dividuals feeling unrefreshed and thus prolongs feelings of
+tiredness [4, 67]; and flu-like symptoms including sore throat
+and headaches [32]. ME/CFS patients can experience these
+symptoms with different degrees of severity. Some are af-
+fected so heavily that they are left bedridden and dependent
+on others for care [4, 72, 76]. Others may lead a relatively nor-
+mal life that is intermittently disrupted by fatigue that lasts
+for several days or weeks before subsiding [39]. Symptoms
+can also vary on a daily basis, with patients reporting both
+“good days and bad days” [39, p. 9].
+
+The highly disabling nature of ME/CFS impacts both physi-
+cal and mental health. Patients’ lack of physical activity can re-
+sult in muscle deconditioning, making movement even harder
+
+[4]. Around 66% of people with ME/CFS meet clinical criteria
+for depression [2] and up to 85% of patients cite depressed
+mood as a major symptom [39, 43]. Other research indicates
+that people with ME/CFS suffer from perpetuating factors
+including mood disturbance, kinesiophobia (a fear of move-
+ment [54]), and low self-efficacy [71]. These factors can lead
+to a perceived lack of independence and a reduction in social
+life [76]. Some patients struggle to accept the realities of the
+condition and exhibit a tendency to imagine the worst (known
+as ‘catastrophizing’) [71].
+
+Self-Management for ME/CFS
+Several formalized programs have been promoted as evidence-
+based treatments for ME/CFS [29]. These include graded exer-
+cise therapy, a form of physical therapy where physical activ-
+ity is gradually increased over time [24], and cognitive behav-
+ioral therapy, which aims to improve mental health by address-
+ing the prevalence of negative thoughts and behaviors [61].
+While early studies indicated that these programs may help
+to alleviate the symptoms of ME/CFS [e.g. 60], recent research
+has argued that there is limited evidence of their effectiveness
+[70, 74, 75]. In addition, participating in these courses can be
+very difficult because they require attendance at in-person
+treatment sessions. This is problematic because instances of
+PEM are associated with changes in routine, prolonged cogni-
+tive effort, and travelling [40]. Individuals with ME/CFS have
+reported that their symptoms worsen as a result of participat-
+ing in such programs [29] and thus many receive no formal
+treatment for their condition [32]. ME support organizations
+such as Emerge [25] consequently provide guidance for pa-
+tients who choose to engage in self-management practices
+and manage the condition by themselves [25].
+
+A primary form of self-management for ME/CFS is activity
+pacing [30]. The goal of activity pacing is to manage one’s
+energy expenditure and avoid PEM by working within one’s
+limits [29]. This is done through the planning and routiniza-
+tion of day-to-day activities [30], maintaining consistency
+in activity levels, accepting current abilities, and gradually
+increasing activities over time [6]. Common approaches to
+activity pacing include staying within an ‘energy envelope’
+[33], which involves balancing energy expenditure so as not
+to under- or over-exert oneself, and ‘spoon management’ [50],
+which involves imagining one’s energy as a limited currency
+that is ‘spent’ on daily tasks. For example, having a shower
+would ‘cost’ one spoon of energy. Other self-management
+activities for ME/CFS include mindfulness techniques [68],
+which help to reduce stress and create inner calm, and the
+setting of meaningful and realistic activity goals in order to
+avoid over-exertion [6]. However, little is known about how
+people with ME/CFS currently use digital technologies to pur-
+sue self-management practices, nor how these technologies
+should be designed in light of what these practices entail.
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 23 RESEARCH OVERVIEW
+The studies we report in this paper shed light on the cur-
+rent technologically-mediated self-management practices of
+people living with ME/CFS, providing knowledge of how
+technologies should be designed to better support those prac-
+tices. We build on the approach of McKillop et al. [48] by
+triangulating multiple sources of data to understand patients’
+current approaches to managing an enigmatic disease. The
+data sources we utilize comprise surveys to identify priorities
+for self-management of ME/CFS (Study 1); online discussions
+of existing ME/CFS self-management practices and technol-
+ogy use (Study 2); and user evaluations of three smartphone
+apps that address some of these priorities (Study 3).
+
+Study 1 shows which symptoms people with ME/CFS wish
+to prioritize, but does not provide insight into how this might
+be done. Study 2 addresses this by investigating how people
+currently self-manage using technologies, and reveals difficul-
+ties they encounter, giving direction for design. Study 3 then
+probes existing apps that enable management of symptoms
+identified in Study 1 and practices highlighted in Study 2,
+revealing additional design-relevant issues. The three studies
+provide complementary perspectives on the research problem
+and contribute to a set of design implications and recommen-
+dations, listed at the end of the paper.
+
+Recruitment and Ethical Considerations
+One of the immediate challenges of conducting research with
+ME/CFS patients is that it is unclear how their involvement
+might exacerbate the symptoms of their condition. As noted
+above, some patients can suffer serious consequences when
+deviating from set routines [40] and thus participation in a
+research study could cause undue harm by inducing PEM, for
+example. This presents major challenges in terms of config-
+uring their involvement, not just from a practical perspective
+(what techniques should be employed to involve patients?)
+but also from an ethical standpoint (how do we involve peo-
+ple with ME/CFS without exacerbating their symptoms?).
+As an example, the use of face-to-face design workshops (a
+well-established method in HCI [22, 51, 52, 64]) would require
+participants to attend sessions in-person, risking exacerbation
+of symptoms. Furthermore, this could rule out participation
+from those experiencing the most severe symptoms.
+
+For this research, we elected to employ remote methods
+for all three of our studies as a way of accommodating the
+needs and challenges faced by people living with ME/CFS.
+Our primary means of recruitment was to approach people
+through support groups on Facebook and an online forum
+dedicated to ME/CFS. One of the researchers has personal
+experience of the condition and was an active contributor
+to these groups for several months before the research be-
+gan. This experience supported the identification of suitable
+
+online communities to approach, allowed the researcher to
+empathize with the concerns of participants, and supported
+interpretation of responses during qualitative analysis.
+
+Data collection and communication for all three studies
+took place via email, Facebook and discussion forums. This en-
+abled participants to read and reply at their own convenience,
+and hence accommodated potential fluctuations in their ill-
+ness while lowering the risk of harm. In addition, we con-
+ducted a full review of the ethical implications of our research
+prior to each study, following the institutional concordat for
+research integrity at the University of Bath. Our ethical re-
+view was approved by the local Departmental Research Ethics
+Officer. No financial incentives were offered to participants.
+Our initial interactions with ME/CFS patients confirmed
+that many anticipated difficulty with participating in any re-
+search activities that might disrupt their typical routines or
+demand significant physical or mental exertion. Many ex-
+pressed these limitations upfront. However, even participants
+with severe symptoms (e.g. being frequently housebound or
+experiencing extreme ‘crashes’) volunteered to take part. We
+made it clear to all participants that their involvement was
+voluntary and that they were free to withdraw or suspend at
+any time without consequence. We also provided flexibility
+of deadlines for completing the activities.
+
+Early data collection suggested that participants would
+benefit from regular reminders to complete the requested
+tasks, with some stating that they often felt so overcome by
+their illness that they have difficulty remembering tasks and
+appointments. For this reason we issued frequent reminders
+to participants throughout each study, e.g. by revisiting mes-
+sage threads to invite further participation, or by sending
+gentle email reminders to people who had already consented
+to participate. We also took extra care in the design of our
+procedures by providing written (rather than verbal) instruc-
+tions together with clear, actionable guidelines. We did this
+because it seemed likely that participants would need to revisit
+these when resuming their involvement, given their reported
+tendency to forget about the research.
+
+While some of these steps may seem trivial and can be taken
+for granted in many research studies, we see them as critical
+for enabling the participation of ME/CFS patients. We found
+that participants appreciated the regular reminders and took
+advantage of the ability to respond flexibly in accordance with
+changes in their symptoms. Many were enthusiastic about
+being able to take part in the research.
+
+4 STUDY 1 - SURVEY: PRIORITIZING
+
+SYMPTOMS FOR ME/CFS SELF-MANAGEMENT
+Our first study seeks to identify the dimensions of ME/CFS
+that are most important for self-management. Previous work
+has established the prevalence of ME/CFS symptoms [39, 71]
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 3but has not focused on prioritizing these symptoms for self-
+management technologies. We utilize a ranking task to in-
+vestigate the self-management priorities that people with
+ME/CFS assign to symptoms associated with the disease.
+
+We compiled a list of 16 primary symptoms associated with
+the disease by combining the items from existing ME/CFS
+symptom surveys with our own literature review [4, 39, 67, 71,
+72]. We then created an online survey that asked participants
+to rank the 16 symptom items provided in the list. Specifically,
+respondents were asked: “Which symptoms of your disease
+would you most like ME/CFS self-management apps to support?”.
+The survey was advertised to members of an international
+ME/CFS online discussion forum and a closed ME/CFS sup-
+port group on Facebook.
+
+We received responses from 39 people, 38 of whom had
+received a formal diagnosis of ME/CFS from a clinician. One
+person was self-diagnosed. Participants’ average age was
+40.3yrs (Range=18–64, SD=9.8yrs). 34 participants identified
+as female and 5 identified as male2. 25 participants were res-
+idents of the United Kingdom; 9 USA; 2 Australia; 2 Canada,
+and 1 Norway. All participants were fluent English speakers.
+
+5 STUDY 1 FINDINGS
+Survey responses were analyzed by calculating the median
+ranking for each symptom using ratings from all 39 partici-
+pants. Figure 1 shows the combined ratings for each of the
+symptoms. The boxplot indicates the median, upper quartile,
+lower quartile, and range of priority scores for the ratings
+received (on a normalized scale from 0–1, where 0 = lowest
+and 1 = highest ranking).
+
+The results of the ranking exercise reveal several groups of
+symptoms that participants believed self-management tech-
+nologies for ME/CFS should support. The highest priority
+scores were assigned to symptoms associated with physical
+fatigue (severe disabling fatigue, post-exertional malaise),
+cognitive fatigue and impairment (impaired memory and con-
+centration), sleep-related symptoms (unrefreshing and dis-
+turbed sleep), and other physical side-effects (such as physical
+deconditioning and aching, weak or stiff muscles). Slightly
+lower priorities are given to managing aspects related to so-
+cial wellbeing (lack of independence, reduction in social life),
+and emotional/affective responses to the disease (mood dis-
+turbance, lack of acceptance, low self-efficacy, introversion,
+catastrophizing).
+
+While previous studies have reported the prevalence of
+these symptoms, our results shed light on the aspects of the dis-
+ease for which ME/CFS patients believe they require support.
+The distribution of scores for each item reveals that there is
+not universal agreement among our respondents about which
+
+2The high number of female participants reflects the fact that women and
+men are affected by ME/CFS at a ratio of approximately 5:1 [32].
+
+Figure 1: Self-management priority scores assigned to
+ME/CFS disease symptoms by survey respondents.
+
+aspects of the disease self-management apps should prioritize.
+However, we observe less variance among the highest and
+lowest rated items, i.e. there is stronger agreement that self-
+management technologies should aim to support physical
+fatigue, and that perpetuating factors such as introversion
+and catastrophizing are lower priority.
+
+6 STUDY 2 - DISCUSSION GROUPS:
+
+EXISTING SELF-MANAGEMENT PRACTICES
+Our second study builds on Study 1 by investigating ME/CFS
+patients’ existing use of technology for self-managing their
+condition. Specifically, we explore the technologies they use
+to support self-management, the benefits and challenges that
+they have encountered, and their emergent needs for enact-
+ing particular practices. To explore these issues we collected
+qualitative data using three online discussion groups. Two of
+these were closed ME/CFS support groups on Facebook and
+one was an online public ME/CFS discussion forum. Previous
+research indicates that initiating discussions using Facebook
+is a valid approach to collecting data from hard-to-reach popu-
+lations [8, 44]. One researcher, who had actively participated
+in all three forums for several months in order to become
+familiar with the community norms and establish rapport
+with members, acted as facilitator for the discussions.
+
+The researcher initiated a new discussion thread in each
+group, providing an overview of the research and the top-
+ics to be discussed, including details regarding anonymity of
+comments for research publication. Each post was vetted by
+community moderators in accordance with their established
+codes of conduct. Participants were invited to introduce them-
+selves to one another and provide some background about
+their condition. The researcher posed the following opening
+questions: “Are there any technologies or applications you have
+used to help you manage your ME/CFS? Do you think that they
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 4help? Do you have any particular issues with these devices or ap-
+plications?”. The researcher reassured participants that they
+were not required to respond quickly and that they could do
+so in their own time, when they felt able to. The researcher fa-
+cilitated ongoing discussions by providing prompts for deeper
+exploration of topics and guiding conversation towards the
+management of symptoms (from Study 1) that were yet to be
+discussed. Conversations remained open for 6 weeks.
+
+52 individuals contributed to the discussions across the
+three groups (Facebook Group 1: N=17, Facebook Group 2:
+N=22, Discussion Forum Group: N=13). This comprised all
+participants from Study 1 and an additional 13 people who did
+not take the Study 1 survey. Participants posted the following
+number of responses in each group - FB Group 1: Mean = 6.41,
+S.D. = 3.55; FB Group 2: Mean = 2.67, S.D. = 2.17; Discussion
+Forum Group: Mean = 3.62, S.D. = 2.05.
+
+All participant comments were analyzed using a general
+inductive approach [69]. Respondent names were replaced
+with random IDs prior to analysis. Two authors engaged in
+close reading of responses and identified data relevant to
+understanding: (1) participants’ reported practices for self-
+management; (2) the technological interventions used to per-
+form self-management; and (3) perceived strengths and weak-
+nesses of these technologies. These authors developed initial
+themes through inductive coding. We then conducted a coding
+consistency check [69] in which the third author applied these
+themes to the data as a test of credibility and dependability,
+and to support theme refinement.
+
+7 STUDY 2 FINDINGS
+Self-Management Practices and Technology Use
+Participants described engaging in data collection to sup-
+port three kinds of self-management relevant to ME/CFS.
+These were activity pacing and understanding healthy limits,
+supporting routinization, and coping and supporting mental
+health. Participants reported using a variety of commercial
+self-tracking devices and smartphone applications to achieve
+these goals. However, only one participant reported using
+an app designed specifically for management of ME/CFS
+(‘ME/CFS Diary’).
+
+The most commonly used technologies were wearable
+tracking devices (e.g. Fitbit, Garmin Vivosmart, Polar heart-
+rate monitors, Apple Watch) and general-purpose (i.e. non-
+ME/CFS specific) health and wellbeing tracking apps such as
+MyFitnessPal, Google Fit and Apple Health. These were used
+to capture data related to: physical activity/exercise, sleep,
+heart rate and HR variability, activity type, duration and inten-
+sity, diet/calorie consumption, menstrual cycles, stress levels,
+blood pressure and other primary symptoms.
+
+Activity Pacing and Understanding Healthy Limits. Partici-
+pants described attempting to use their tracked data to support
+
+activity pacing and energy preservation techniques such as
+spoon management [50] and energy envelope maintenance
+[34]. “Pacing is such a big deal” (P50), “Pacing is a big deal for me
+too” (P15). Some had attempted to assess their energy expendi-
+ture and inform their pacing strategies by combining real-time
+monitoring of their physiological data (e.g. step counts, heart-
+rates) with records of their activities: “I found it [a heart-rate
+monitor] useful in helping me to find and stay within my energy
+window.” (P27). One person had used such data for “choosing
+which self-care acts to use my energy for on any given day. Do
+I shower or eat? Do I take my vitamins or clip my nails?” (P1).
+Many participants described their attempts to prevent PEM
+and severe disabling fatigue through the use of physical activ-
+ity trackers. However, these tools were not used for increasing
+physical activity or exceeding a particular target (e.g. 10,000
+steps per day [45]), but were instead appropriated as a way of
+regulating activity and identifying thresholds to be avoided:
+“I use my steps counter in reverse - to help me set limits on the
+number of steps I take so I am not suffering so much pain and
+fatigue the next day... through experience I have found my op-
+timal number of steps each day is 2,000 to 4,000” (P11), “My
+Apple Watch tracks all of my motion/activity, standing, and
+heart rate. I set a goal (a threshold for me to trigger a crash) and
+watch it during the day” (P30).
+
+Understanding healthy limits was an important goal for
+our participants, and one individual had used the results of
+specialized medical testing to support this goal. He made use
+of a wearable device and smartphone app to monitor how
+close he came to overexertion: “I have cardiopulmonary exer-
+cise test results that objectively show when I go from my aerobic
+to anaerobic threshold, is the point where I need to stop. My HR
+was 100 at that point. So, my goal is to keep my HR from going
+above 100 BPM.” (P49). At the same time, there was a need to
+engage in a baseline level of activity (an amount that can be
+performed without experiencing PEM) so as to avoid the onset
+of muscle weakening and deconditioning. However, one par-
+ticipant reported that it was difficult to identify her ‘baseline’
+activity level, given daily fluctuations in her condition.
+
+Some participants had attempted to monitor their symp-
+toms and record information that might lead to the identifi-
+cation of triggers. This was seen as a way of understanding
+their condition: “I keep a graph of how many hours of activity
+I’ve done (which is great for showing how well I have kept to my
+baseline) and I attempt to monitor how my diet, self-discipline,
+emotional stress, mind and body rests etc affect it” (P21), “I need
+to be able to track my symptoms to figure out the contexts in
+which I’m getting better or worse” (P25).
+Supporting Routinization. Another way of supporting self-
+management of ME/CFS was through activity planning and
+scheduling in pursuit of routinization [6, 40]. This was typi-
+cally done through the use of apps that incorporated calendars,
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 5to-do lists, reminders and alarms. These features were used
+to establish routines according to fluctuations in energy, and
+to balance activities that involved either physical or cognitive
+demands. These features were also used to support memory
+when experiencing impaired cognitive function: “I need re-
+minders as I forget everything” (P23).“I just can’t be without my
+calendar on my phone” (P50), “My iPad and iPhone are booster
+packs for my brain” (P11). One participant (P21) reported us-
+ing a tailored ME/CFS diary app to support scheduling of
+tasks but gave negative feedback about the app because it
+enforced recording of activities in 30-minute timeslots. This
+was problematic because her condition rarely allowed her to
+do any single activity for an entire 30-minute period.
+
+Some people found that routinization was bolstered by gam-
+ification mechanics that helped to form habits. One participant
+reported using an application called ‘Habitica’, which incor-
+porates gamified self-management features: “it has a habits
+list, a daily list and a to-do list. It has an avatar and as you check
+off things or tick the habits you’re trying to establish you level up
+and gain items. This helps me acknowledge how well I’m taking
+care of myself. You also lose health for bad habits and regain it
+when you level up. It’s quite a fun way to gauge what I’m actually
+doing. Plus, I love my purple tiger [avatar] that’s now big enough
+to ride” (P8). P11 thought that gamification could be used ef-
+fectively to help them to stay within their energy envelope:
+“Would love a points system that rewards all self-care initiatives...
+It should also give reward points for setting healthy limits [for]
+the number or length of activities to prevent overexertion.”
+Coping and Supporting Mental Health. Finally, people spoke
+about their practices related to their mental health, including
+accepting their disease and preventing catastrophizing. P34
+felt that an important aspect of her self-management was
+“coming to terms with the illness” and “accepting what has hap-
+pened”. Two participants used mobile app-based meditation
+exercises to manage their worries and stress: “A challenge is
+coping with the sinking feeling that I can’t do any of the things
+I want or need to do. Meditation has really helped and I have
+learnt to not let worry make things worse” (P12). P11 reported
+engaging in audio-guided relaxation exercises, using a Muse
+headband (an EEG-based neurofeedback device) to “deepen
+my daily meditation practice... I’m very grateful for these de-
+vices”. Practices relating to mental wellbeing were sometimes
+interwoven with the management of energy expenditure. P11
+described using mindfulness techniques as a way to “check in
+with my body” and guarantee a moment of mental pause to
+reflect on her physical and cognitive fatigue.
+
+Problems with Self-Management Using Technology
+Participants described a range of issues that they encountered
+when engaging in self-management. We delineated these into
+technology-centered issues, which relate to general usability
+
+difficulties or features that do not accommodate the needs of
+ME/CFS patients, and condition-centered issues, which relate
+to self-management challenges that people with ME/CFS face
+as a result of their condition, rather than as a result of design
+choices.
+
+Technology-Centered Issues. Many participants stated their
+interest in using technologies to support activity pacing and
+described appropriating commercial ‘self-tracking’ solutions
+in pursuit of this. At the same time, participants were quick
+to note the limitations of these technologies for pacing. Spe-
+cific issues included an over-emphasis on increasing physical
+activity, limited ways of capturing different kinds of exertion,
+and a lack of support for alerts about over-activity.
+
+Some participants described how self-management with
+commercial devices such as Fitbit was difficult because these
+devices are not designed around ME/CFS. They desired tai-
+lored solutions and were cautious about using generic health
+applications: “We need devices that are suitable for monitoring
+the signs of CFS and whose data will be properly interpreted in
+terms of what those signs and symptoms mean about our condi-
+tions. It will be important to avoid misdirection when something
+for one condition is used for a very dissimilar one.” (P24).
+
+Participants wanted features that would help them to avoid
+going over their activity threshold: “I’ve wanted a simple way
+of triggering an alarm when you go over your limit. The commer-
+cially available devices are all aimed at healthy people trying to
+improve their fitness and they’re incredibly complicated to pro-
+gram just to get that alarm for an upper limit. As a brainfogged
+person with ME, I found them impossible.” (P9).
+
+A further limitation was that participants found it difficult
+to track ‘fatigue’ as a general concept: “ I’d love [a tracker] more
+directly related to fatigue” (P36), “I discovered FibroMapp, but
+it doesn’t give me many fatigue-related specifics, and doesn’t
+let me enter fatigue more than once a day... Fatigue is kinda
+hard to measure” (P26). They also noted the limited availabil-
+ity of tools to support tracking of the cognitive aspects of
+their disease, such as mental exertion, compared with those
+for tracking and monitoring physical activity. “The cognitive
+burden should really feature.” (P31). “[I need] something that
+lets me keep track of sedentary activities and emotional events
+in terms of energy use.” (P2). “I don’t generally use the steps
+as a guide for when to rest as I get really fatigued from mental
+exertion too - driving, reading etc.” (P15).
+
+Participants were concerned about the accuracy of tech-
+nologies like Fitbit: “I don’t believe the readings are accurate.”
+(P24). While the accuracy of step counters is a common com-
+plaint among users [77], our participants focused more on
+the trackers’ inaccuracy in terms of differentiating the inten-
+sity of activity: “I find the Fitbit largely inaccurate in figuring
+out strenuous versus light activity” (P3). This was seen as a
+concern when attempting to ‘pace’ one’s energy expenditure.
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 6One person described her attempts to stay within her energy
+envelope by using a heart rate monitor: “I guess I don’t bother
+with exactly how high it is, just work to keep it under a level
+where I ‘feel’ it” (P36).
+
+Beyond problems with activity pacing, many participants
+highlighted a need for greater simplicity in the tools they used
+for tracking data. Some participants had felt overwhelmed
+when attempting to capture data related to different facets of
+their condition: “I get overwhelmed by having to track a bunch
+of symptoms every day” (P36), “I have always struggled with
+keeping records/journal for tracking symptoms. I get bogged
+down in it, because there are so many variables” (P21). This gen-
+eral notion of tracking burden has been previously reported
+in the literature on personal informatics [11, 13, 37], but was
+particularly acute for our participants given the specifics of
+their condition.
+
+Condition-Centered Issues. In addition to issues with self-
+management technologies, participants discussed how living
+with ME/CFS made it difficult to maintain self-management
+practices. For example, many identified activity pacing as one
+of the most significant self-management challenges but stated
+that their ability to engage in pacing was often hampered by
+their symptoms: “Pacing is my number one struggle... hindered
+by my mental fatigue and brain fog” (P21), “I agree with ev-
+eryone else here that pacing is the number one challenge. I’m
+trying to establish a habit of checking in with my body three
+or four times a day to see how I’m doing and whether I need to
+reassess my goals with the energy I have left... before overdoing
+it and suffering the consequences” (P11).
+
+Two participants reported that they relied on others to track
+and monitor their symptoms as result of the difficulties they
+faced with self-management applications. Previous work has
+noted that self-care is often a collaborative endeavor [18, 55]
+and this was reflected in some of our participants’ reliance on
+family members for self-management. For example, “I keep
+in touch with my son during the day as he monitors my daily
+ups and downs.” (P41). “I utilize my husband [for monitoring
+energy levels] as much as possible when he’s at home.” (P32).
+
+Incidents of ‘crashing’ (suffering PEM) also posed a signif-
+icant challenge for those engaging in self-management. One
+participant commented “Crashing leaves me feeling particu-
+larly ill and I find it difficult to keep my eyes open even” (P3).
+The consequence of this was that participants would incur
+lapses in recording data that coincided with ‘crash days’. For
+example, P50 reported difficulties with recording data dur-
+ing bouts of severe brain fog and migraines: “When I record
+a migraine my app will lead me to several different pages to
+annotate each and every little thing. That would be good, but
+during a migraine, I simply want to go lay down.” Participants
+discussed wanting to record what was happening in the mo-
+ment to avoid problems with recall and retrospective logging
+
+(exacerbated by disease related memory impairments), but
+revealed that reminders were often too late or were delivered
+when symptoms remained obtrusive.
+
+8 STUDY 3 - USER STUDY:
+
+EXPERIENCES WITH SELF-MANAGEMENT APPS
+Study 2 demonstrated that people with ME/CFS patients lever-
+age self-tracking devices and smartphone apps to support
+self-management of their disease. Our third study provides
+further understanding of ME/CFS patients’ perspectives on
+the use of smartphone applications to support management
+of key disease symptoms (identified in Study 1).
+
+We conducted a user study in which 24 people with ME/CFS
+used a series of self-management apps. All of these individuals
+had also participated in Studies 1 and 2. We selected three apps
+spanning the range of symptoms that participants had previ-
+ously prioritized in Study 1, and the range of self-management
+approaches identified in Study 2 (e.g. self-tracking, scheduling,
+automated and manual data logging, gamification, mindful-
+ness, etc.). These apps were not provided in order to assess
+the efficacy of app-based interventions, but rather to provide
+prompts to elicit further feedback and design requirements
+for ME/CFS self-management technologies.
+
+We compiled a list of all apps that participants had reported
+using in Study 2, combined with additional Google Play and
+Apple App Store self-management apps related to ME/CFS
+disease symptoms. We then applied the PRISMA protocol [5]
+for shortlisting apps for evaluation. This comprised: filtering
+of duplicate apps; eliminating non-English apps; removing
+apps requiring purchase and those not updated within the past
+year; and separation of apps into their core functionality (e.g.
+separating apps designed for diagnosis, and those for ongoing
+self-management). We also conducted literature reviews to
+identify shortlisted apps whose effectiveness had been demon-
+strated for general health and wellbeing management. From
+our final shortlist we selected three self-management apps to
+deploy in our study.
+
+App 1: Sleep-2-Peak (S2P) objectively measures and tracks
+fluctuations in fatigue [9]. S2P incorporates 3-minute Psy-
+chomotor Vigilance Tests (reaction time tests), which ac-
+curately measure fatigue-related changes in physical and
+mental performance [9]. The app then recommends opti-
+mal sleep/wake times to the user based on reaction time pat-
+terns. S2P also enables users to investigate the association
+between fatigue and substances such as caffeine and medica-
+tions, through self-logging features. S2P provided participants
+with features to track a validated measure of fatigue based on
+reaction times [9], to reflect on their physical/mental perfor-
+mance and sleep-cycle, and to identify potential factors that
+may influence their symptoms. We selected S2P because it sup-
+ports the monitoring of fatigue, which was the most important
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 7disease symptom identified in Study 1. In addition, Study 2 re-
+vealed that people with ME/CFS currently try to track fatigue
+with devices like Fitbit, but find these solutions unsuitable.
+
+App 2: SuperBetter (SB) gamifies real-life tasks and behav-
+iors in order to promote the achievement of personal goals,
+referred to as “Power-ups” (e.g. walking a certain distance,
+stretching, taking a moment to rest) and the avoidance of
+barriers to goals, labelled as “Bad Guys” (e.g. over-exerting
+oneself, eating unhealthily) [14]. Users can select predefined
+power-ups and bad-guys to target or avoid, and invite other
+users with similar experiences (“Allies”) to help them define
+their own. SB provided our participants with opportunities
+to gamify existing self-management practices, as well as find
+new activities that may build physical, mental, emotional and
+social resilience. Randomized controlled trials have demon-
+strated that SB is an effective self-management tool for treat-
+ing depressive symptoms [63], but no studies have explored
+its use for managing ME/CFS specifically.
+
+We selected SB because it gives users the opportunity to
+support routinization through habit-formation and gamifi-
+cation, which Study 2 revealed as beneficial for people with
+ME/CFS. The app also enables user customization of goals to
+support aspects of physical and mental wellbeing that matter
+most to individuals.
+
+App 3: Smiling Mind (SM) provides guided meditations and
+exercises based on mindfulness practices [47]. Mindfulness
+has been identified as beneficial for ME/CFS patients in terms
+of managing impairment, depressed mood, and catastrophic
+thinking [62]. Mindfulness was used by some Study 2 partici-
+pants as a technique for pausing to ‘check in’ with their body
+(e.g. for pacing) and to manage mental wellbeing. SM also
+includes a range of additional features, e.g. timers, reminders
+and tracking of time spent on mindfulness activities, which
+may support routinization and scheduling.
+
+All 24 user study participants had received an ME/CFS
+diagnosis from a medical professional. The average age of
+participants was 40.1 yrs (Range = 20–64, S.D. = 11.3yrs). 21
+identified as female and 3 identified as male. 12 were resi-
+dents of the United Kingdom; 7 USA; 3 Australia; 2 Canada.
+Participation involved using up to two of the selected apps
+(randomized selection) at least once per day for a period of two
+weeks, followed by completion of an online feedback form that
+captured details of users’ experiences with each app3. Partici-
+pants were asked to describe how they used the application, if
+there was anything they particularly liked/disliked, and any
+benefits/limitations that the app had for management of their
+condition. In line with our general approach for involving peo-
+ple with ME/CFS in our research, we provided detailed task
+instructions and regular reminders throughout the two-week
+
+312 participants opted to use two apps, the other 12 used a single app.
+N = 12 for each app.
+
+period. Participants were instructed to suspend their use of
+apps if they made their symptoms worse. We also provided
+flexible deadlines for returning feedback. This was important
+as the nature of the participants’ ME/CFS meant that several
+people required additional time, due to adverse health.
+
+As with Study 2, feedback from participants was analyzed
+by the first and second authors using a general inductive
+approach [69], with coding consistency checks and theme
+refinement conducted by the third author.
+
+9 STUDY 3 FINDINGS
+We detail participants’ responses according to positive and
+negative aspects of the apps for self-management of ME/CFS.
+
+Positive App Experiences
+Participants reported that some in-app features for tracking
+data about their symptoms, behaviors and self-management
+activities provided value for supporting pacing and routiniza-
+tion. For example, Participants 8 and 51 reflected on their
+fatigue levels using data visualizations and diary views in S2P.
+Participant 34 used records of her SB activities (i.e. completed
+and outstanding power-ups/bad-guys) “as a tool to see how I
+had done during the day” and to schedule further tasks and
+inform her activity pacing decisions.
+
+Participant 31 explained that her S2P data accurately re-
+flected her fatigue patterns, around which she structured her
+routine: “It shows I am more alert in the mornings and then
+fade throughout the day. By evening, my mind is not very clear”.
+She felt reassurance in seeing these patterns confirmed by her
+data, but believed that more beneficial insights might come
+from exploring how her fatigue changed in response to certain
+events or triggers: “I did not have any sleepless nights during
+this period, but I’d like to test that out”. P27 described the value
+of having digital records of her activities and fatigue, not for
+personal reflection, but for sharing with health professionals:
+“It could serve as proof to doubting doctors”.
+
+Two participants reported that the gamification elements
+of SB raised their enthusiasm for self-management: “I liked the
+game aspect, that approach appeals to me and would encourage
+me to engage” (P44), “Managing my CFS is so much work, mak-
+ing some of that fun is good” (P34). Three people valued the
+ability to define their own behaviors to target or avoid in SB:
+“I liked the simplicity and that I could make my own to person-
+alize it to me” (P7). Participant 24 enjoyed finding power-ups
+contributed by other users, which were appropriate for her
+condition: “I liked the reminder to drink water and some of the
+power-ups like hugging yourself, dancing or being silly”.
+
+Many participants valued opportunities for low-effort in-
+teractions with the apps, for example receiving audio instruc-
+tions for guided relaxation and mindfulness exercises in SM,
+without the need to hold the phone or view the screen: “It
+required less energy expenditure to participate... the voices were
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 8gentle and soothing” (P44). Participant 19 wanted to see this
+approach incorporated into other apps in order to reduce in-
+teraction with the screen: “I’d like an option of having the goals
+read out loud”.
+
+In terms of addressing symptoms, SM’s mindfulness exer-
+cises provided benefits to participants for mental, emotional,
+cognitive and sleep-related disease factors: “I have a lot of anxi-
+ety surrounding my symptoms and I believe this app helped that.
+I do think it is a great tool to have to at least help with anxiety and
+possibly with some cognitive issues.” (P14), “It helped me calm
+my thoughts before I went to sleep... I was less anxious and rest-
+less. I really like the app and am going to continue to use it” (P34).
+
+Negative App Experiences
+Participants using SB reported that the activity goals repre-
+sented by power-ups, which were described within the app as
+being beneficial for physical, mental and social resilience,
+were often at odds with their condition. Some were frus-
+trated when encountering suggestions for physically and
+cognitively demanding activities that were beyond their ca-
+pabilities: “Most of the activities were at odds with having CFS”
+(P44), “There were suggestions to walk around the block etc.
+that are beyond my limitations. There was also a lot to do with
+motivation to do a thing, whereas I need more motivation to
+slow down and rest” (P19).
+
+Only a few participants made use of the ability to create
+their own power-ups and bad guys in SB. This was either due to
+difficulties in setting appropriate goals and barriers, because
+of limited understanding of their own limits, e.g. “I found the
+power-ups and bad guys easy to use, but more difficult to think
+up my own” (P7), or as a result of difficulties with regard to the
+complexity of the app interface: “I need a simpler interface...
+Have everything on one page, make it as easy as possible to add
+own goals on the same page instead of in a menu” (P19).
+
+Some participants reported that cognitive fatigue and im-
+paired concentration made it difficult to use some of the apps.
+Three participants found the app navigation in SB and SM to
+be significant barriers and reduced their use of the apps as a
+result: SB: “It’s too overcomplicated. The layout and function-
+ality was too overwhelming to use with ease, especially if ill or
+experiencing brain fog. ” (P7). “Writing was quite small in some
+areas and I struggled to concentrate on reading it.” (P13), SM:
+“interface too busy...caused brain fog” (P39).
+
+Other symptoms such as muscle weakness and physical
+fatigue also had an effect on app use. Participant 27 reported
+that the recommended posture for holding the phone during
+the S2P reaction time tests was uncomfortable, but was unsure
+whether altering this position would affect the accuracy of
+test results. In contrast, Participant 13 appreciated that each
+of the apps were suitable for brief interactions: “short enough
+that my muscles didn’t seize from holding the phone”.
+
+Finally, one participant described terminology, such as the
+‘Lazy Exercise’ label given to a set of power-ups in SB, as “very
+disheartening and shaming for those with more severe CFS...
+I felt awful after being confronted with this... lazy is so often
+thrown at CFS sufferers as an insult. To not even be capable [of
+these tasks] was horrible. It deterred me so much I stopped using
+the app.” (P44).
+
+10 DISCUSSION AND DESIGN IMPLICATIONS
+This work contributes a deeper understanding of ME/CFS
+patients’ needs for self-management technologies. The stud-
+ies also affirm the results of prior work [11, 56], which has
+highlighted that people with chronic conditions encounter
+significant challenges when self-management tools are not
+tailored to the specifics of their condition. Our studies have
+revealed a set of particular concerns that are relevant to the
+self-management of ME/CFS, from which we propose five
+high-level design recommendations.
+
+1. Help to determine personal thresholds. Our research
+suggests that people with ME/CFS want to self-manage their
+physical and cognitive energy expenditure by determining
+personalized activity thresholds. Specifically, Study 2 showed
+that patients wanted to identify a minimum daily activity
+threshold to avoid problems such as muscle deconditioning,
+and yet also wanted to identify a maximum daily threshold
+to avoid feelings of severe disabling fatigue and instances of
+PEM. Understanding these thresholds is also a key precursor
+to activity pacing and staying within an ‘energy envelope’.
+However, participants reported that their current solutions
+(commercial self-tracking technologies such as step counters
+and heart rate monitors) do not have explicit support for iden-
+tifying and recording these thresholds. This may be because
+these devices are designed with the aim of simply increasing
+physical activity [e.g. 16], which does not adequately reflect
+the self-management goals of people living with ME/CFS.
+
+To address this, future designs should provide features that
+allow people with ME/CFS to determine appropriate thresh-
+olds for both physical and mental activity. This will support
+the recognition of activity levels that cause crashes, help to
+avoid instances of PEM, and can also support the budgeting
+of energy expenditure.
+
+2. Provide support for activity pacing and routiniza-
+tion. Our research suggests that managing symptoms related
+to physical fatigue is a priority for people with ME/CFS (Study
+1) and that this is typically achieved by appropriating com-
+mercial activity trackers in service of activity pacing (Study 2).
+We also found that people with ME/CFS wanted to routinize
+their daily activities by using timers, calendars, and to-do
+lists to manage tasks (Studies 2 and 3). However, participants
+noted that activity trackers (which they used to inform pacing
+decisions) do not typically include these kinds of functionality.
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 9To address this, future self-management applications should
+provide explicit support for activity pacing and should allow
+for routines to be established and maintained. For example,
+an application might include energy budgeting tools that help
+to plan activities, and could issue reminders to ensure that
+these activities are completed on time. The application could
+also set appropriate goals given the user’s previous energy
+expenditure and their remaining budget for the day, and could
+incorporate mechanisms to alert users when they are at risk
+of exceeding their limits.
+
+3. Create tools to support fatigue tracking. All three
+of our studies revealed that people with ME/CFS wanted to
+track and monitor physical and cognitive fatigue as general
+concepts. However, participants in Study 2 reported finding
+this hard with most existing technologies.
+
+To address this, future self-management applications could
+enable tracking of fatigue through self-report mechanisms or
+semi-automated approaches like the reaction time tests used
+in Sleep-2-Peak (Study 3). However, these methods of data
+collection require user effort in order to log data, and Study
+3 showed that this effort may be particularly problematic for
+people with ME/CFS because it can contribute to feelings of
+fatigue. Future work could therefore explore the potential for
+fully automated fatigue logging, such as through wearable and
+‘cognitive personal informatics’ devices like EEG [23], or by us-
+ing patterns of smartphone app use to infer a user’s state [53].
+4. Motivate users to engage in self-management. Study
+3 showed that people with ME/CFS valued features that mo-
+tivated them to continue using a technology, and which en-
+couraged them to track data. Gamification was cited as an
+effective way of achieving continued use because it intro-
+duced an element of fun to self-management. In line with
+prior work, which demonstrates the potential of gamification
+to facilitate self-management in persons with chronic condi-
+tions (e.g. [49]), our findings suggest that self-management
+technologies for ME/CFS should employ lightweight gami-
+fication mechanisms as a way of fostering engagement and
+continued motivation.
+
+However, the nature of ME/CFS means that it may be dif-
+ficult to use self-management technologies during symptom
+flares. Therefore, we suggest that gamification mechanisms
+for ME/CFS should be designed to reward cumulative self-
+management activity, and should avoid penalizing people if
+they incur periods of inactivity (such as resetting progress or
+changing the interface if certain goals are not met [e.g. 17]).
+Additionally, designers should be aware of the terminol-
+ogy they use when trying to support self-management. In
+Study 3, we found that some people with ME/CFS felt that
+self-tracking technologies could ‘shame’ them through ac-
+cusations of laziness and other prompts that highlight their
+inability to perform exercise. Feelings of illness-invalidation
+(such as by associating severe fatigue with laziness) have
+
+been shown to be common amongst ME/CFS patients [73].
+Experiences of delegitimation and shaming can have further
+negative consequences, such as by causing patients to iso-
+late from their social circles [15]. This emphasizes the need
+for a careful and compassionate approach when designing
+self-management technologies for this population.
+
+5. Tailor support according to individual differences
+and disease fluctuations. While our studies have drawn
+attention to key goals and challenges faced by people with
+ME/CFS, it is also important to recognise that the severity of
+particular symptoms can vary from person to person. This
+was partly evidenced by the findings of Study 1, where symp-
+toms such as Cognitive Fatigue, Impaired Concentration, and
+Aching Muscles had high variance in their priority scores.
+This suggests that each individual may be affected by certain
+symptoms more or less severely. Likewise, it is also important
+to note that the severity of ME/CFS for a given person can
+fluctuate on a daily basis. Many of our Study 2 participants
+described a lack of consistency in their symptoms from one
+day to the next, a phenomenon that has been observed in
+other chronic conditions [12, 56].
+
+To address this, designers should ensure that technolo-
+gies can accommodate individual differences between peo-
+ple with ME/CFS. For example, features for activity pacing
+should be tailorable to the specifics of an individual’s condi-
+tion, such as by allowing adjustable energy envelopes [34].
+Self-management technologies should also accommodate
+the differences that can arise as a result of daily fluctua-
+tions in disease activity, perhaps by recognizing ‘good days’
+and ‘bad days’ in their functionality [12]. For example, users
+could explicitly disable motivational prompts on bad days,
+or could receive recommendations for more demanding self-
+management tasks on better days. Similar guidelines have
+been proposed for apps to help people with Parkinson’s Dis-
+ease [56], suggesting that this strategy may benefit a range
+of chronic health conditions.
+
+Finally, we suggest that self-management technologies for
+ME/CFS should be very simple to use. This is particularly
+acute for people with ME/CFS because the app itself could
+act as a symptom trigger if it requires significant cognitive
+or physical effort to use. People in Study 3 experienced tired-
+ness as a result of complicated menus or hard-to-read fonts,
+suggesting that designers should pay extra care to user effort
+when designing technologies for people with ME/CFS.
+
+11 CONCLUSION AND FUTURE WORK
+This paper has explored the design of self-management tech-
+nologies for people living with ME/CFS. Study 1 identified
+a list of symptoms prioritized by people with ME/CFS, giv-
+ing immediate direction for the design of condition-specific
+support. Study 2 identified a need for solutions that assist
+existing self-management practices such as activity pacing
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 10and fatigue monitoring. Study 3 revealed specific positive and
+negative design features through participants’ responses to a
+series of commercial apps. Collectively, our studies illustrate
+the specific needs of people with ME/CFS and provide further
+evidence that chronic conditions bring unique concerns that
+must influence technology design [11, 56].
+
+Based on our study, we see several opportunities for future
+work. First, our recommendations can support the design of
+tailored self-management applications that should be tested
+in conjunction with ME/CFS patients, such that they have
+an ongoing stake in the design process [42]. Second, our de-
+sign recommendations are based on patients’ needs and ex-
+isting practices. However, it is important to recognise that
+our work does not incorporate the perspectives of clinicians,
+and these may be complementary in terms of understanding
+opportunities for self-management [48]. Finally, there may
+be opportunities to explore how technologies could support
+the collaboration that occurs between ME/CFS patients and
+their caregivers [55]. A number of participants in Study 2 ac-
+knowledged that they relied on family members for additional
+support. Future work could explore the design of collabora-
+tive applications that provide caregivers with a stake in the
+condition management process.
+
+REFERENCES
+[1] Leslie A Aaron, Mary M Burke, and Dedra Buchwald. 2000. Over-
+lapping conditions among patients with chronic fatigue syndrome,
+fibromyalgia, and temporomandibular disorder. Archives of internal
+medicine 160, 2 (2000), 221–227.
+
+[2] Susan E Abbey. 1996. Psychiatric diagnostic overlap in chronic fatigue
+syndrome. Chronic Fatigue Syndrome: An Integrated Approach to
+Evaluation and Treatment (1996), 49–71.
+
+[3] Phil Adams, Elizabeth L. Murnane, Michael Elfenbein, Elaine
+Wethington, and Geri Gay. 2017. Supporting the Self-Management of
+Chronic Pain Conditions with Tailored Momentary Self-Assessments.
+In Proceedings of the 2017 CHI Conference on Human Factors in
+Computing Systems (CHI ’17). ACM, New York, NY, USA, 1065–1077.
+https://doi.org/10.1145/3025453.3025832
+
+[4] Niloofar Afari and Dedra Buchwald. 2003. Chronic fatigue syndrome:
+a review. American Journal of Psychiatry 160, 2 (2003), 221–236.
+[5] Kevin Anderson, Oksana Burford, and Lynne Emmerton. 2016. App
+Chronic Disease Checklist: Protocol to Evaluate Mobile Apps for
+Chronic Disease Self-Management. JMIR Res Protoc 5, 4 (04 Nov 2016),
+e204. https://doi.org/10.2196/resprot.6194
+
+[6] Deborah Antcliff, Philip Keeley, Malcolm Campbell, Steve Woby, Anne-
+Maree Keenan, and Linda McGowan. 2018. Activity pacing: moving
+beyond taking breaks and slowing down. Quality of Life Research 27,
+7 (01 Jul 2018), 1933–1935. https://doi.org/10.1007/s11136-018-1794-7
+[7] Julie Barlow, Chris Wright, Janice Sheasby, Andy Turner, and Jenny
+Hainsworth. 2002. Self-management approaches for people with
+chronic conditions: a review. Patient education and counseling 48, 2
+(2002), 177–187.
+
+[8] Narelle Biedermann. 2018. The use of Facebook for virtual asynchro-
+nous focus groups in qualitative research. Contemporary nurse 54, 1
+(2018), 26–34.
+
+[9] Jean-François Brunet, Dominique Dagenais, Marc Therrien, Daniel
+Gartenberg, and Geneviève Forest. 2017. Validation of sleep-2-Peak:
+
+A smartphone application that can detect fatigue-related changes in
+reaction times during sleep deprivation. Behavior Research Methods 49,
+4 (01 Aug 2017), 1460–1469. https://doi.org/10.3758/s13428-016-0802-5
+[10] Davis Buls and John Rooksby. 2017. Technology for Self-Management
+of Rosacea: A Survey and Field Trial. In Proceedings of the 2017
+CHI Conference Extended Abstracts on Human Factors in Comput-
+ing Systems (CHI EA ’17). ACM, New York, NY, USA, 1516–1523.
+https://doi.org/10.1145/3027063.3053080
+
+[11] Adrian Bussone, Simone Stumpf, and George Buchanan. 2016. It Feels
+Like I’m Managing Myself: HIV+ People Tracking Their Personal
+Health Information. In Proceedings of the 9th Nordic Conference on
+Human-Computer Interaction (NordiCHI ’16). ACM, New York, NY, USA,
+Article 55, 10 pages. https://doi.org/10.1145/2971485.2971542
+[12] Kathy Charmaz. 1993. Good days, bad days: The self in chronic illness
+
+and time. Rutgers University Press.
+
+[13] Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, Wanda Pratt, and Julie A.
+Kientz. 2014. Understanding Quantified-selfers’ Practices in Collecting
+and Exploring Personal Data. In Proceedings of the SIGCHI Conference
+on Human Factors in Computing Systems (CHI ’14). ACM, New York,
+NY, USA, 1143–1152. https://doi.org/10.1145/2556288.2557372
+[14] Tommy Chou, Laura J. Bry, and Jonathan S. Comer. 2017. Multimedia
+Field Test: Evaluating the Creative Ambitions of SuperBetter and Its
+Quest to Gamify Mental Health. Cognitive and Behavioral Practice 24,
+1 (2017), 115 – 120. https://doi.org/10.1016/j.cbpra.2016.10.002
+[15] Juanne N Clarke and Susan James. 2003. The radicalized self: the
+impact on the self of the contested nature of the diagnosis of chronic
+fatigue syndrome. Social Science & Medicine 57, 8 (2003), 1387–1395.
+[16] Sunny Consolvo, Katherine Everitt, Ian Smith, and James A. Landay.
+2006. Design Requirements for Technologies That Encourage Physical
+Activity. In Proceedings of the SIGCHI Conference on Human Factors
+in Computing Systems (CHI ’06). ACM, New York, NY, USA, 457–466.
+https://doi.org/10.1145/1124772.1124840
+
+[17] Sunny Consolvo, David W. McDonald, Tammy Toscos, Mike Y.
+Chen, Jon Froehlich, Beverly Harrison, Predrag Klasnja, Anthony
+LaMarca, Louis LeGrand, Ryan Libby, Ian Smith, and James A.
+Landay. 2008. Activity Sensing in the Wild: A Field Trial of Ubifit
+Garden. In Proceedings of the SIGCHI Conference on Human Factors in
+Computing Systems (CHI ’08). ACM, New York, NY, USA, 1797–1806.
+https://doi.org/10.1145/1357054.1357335
+
+[18] Juliet Corbin and Anselm Strauss. 1985. Managing chronic illness at
+home: three lines of work. Qualitative Sociology 8, 3 (1985), 224–247.
+
+[19] Todd E Davenport, Staci R Stevens, J Mark VanNess, Jared Stevens,
+and Christopher R Snell. 2018. Checking our blind spots: current
+status of research evidence summaries in ME/CFS. British Journal of
+Sports Medicine (2018). https://doi.org/10.1136/bjsports-2018-099553
+arXiv:https://bjsm.bmj.com/content/early/2018/07/17/bjsports-2018-
+099553.full.pdf
+
+[20] Wilfred C. de Vega, Santiago Herrera, Suzanne D. Vernon, and
+Patrick O. McGowan. 2017. Epigenetic modifications and gluco-
+corticoid sensitivity in Myalgic Encephalomyelitis/Chronic Fatigue
+Syndrome (ME/CFS). BMC Medical Genomics 10, 1 (23 Feb 2017), 11.
+https://doi.org/10.1186/s12920-017-0248-3
+
+[21] Adrienne. Dellwo. 2018.
+
+Chronic Fatigue Syndrome.
+//www.verywellhealth.com/myalgic-encephalomyelitis-me-715663
+
+Myalgic Encephalomyelitis or
+https:
+
+Available Online.
+
+[22] Carl DiSalvo, Jonathan Lukens, Thomas Lodato, Tom Jenkins, and
+Tanyoung Kim. 2014. Making Public Things: How HCI Design Can
+Express Matters of Concern. In Proceedings of the SIGCHI Conference
+on Human Factors in Computing Systems (CHI ’14). ACM, New York,
+NY, USA, 2397–2406. https://doi.org/10.1145/2556288.2557359
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 11[23] Cillian Dudley and Simon L. Jones. 2018. Fitbit for the Mind?: An
+Exploratory Study of ‘Cognitive Personal Informatics’. In Extended
+Abstracts of the 2018 CHI Conference on Human Factors in Computing
+Systems (CHI EA ’18). ACM, New York, NY, USA, Article LBW542,
+6 pages. https://doi.org/10.1145/3170427.3188530
+
+[24] Melissa Edmonds, Hugh McGuire, and Jonathan R Price. 2004. Exercise
+therapy for chronic fatigue syndrome. Cochrane database of systematic
+reviews 3 (2004).
+
+[25] Emerge Australia. 2019.
+
+(webpage).
+
+Basis
+managing-symptoms-daily-basis/
+
+Managing Symptoms on a Daily
+https://emerge.org.au/diagnosis/
+
+[26] Michael Falk Hvidberg, Louse Schouborg Brinth, Anne V. Olesen,
+Karin D. Petersen, and Lars Ehlers. 2018. The Health-Related Quality
+of Life for Patients with Myalgic Encephalomyelitis / Chronic
+Fatigue Syndrome (ME/CFS).
+PLoS ONE 10, 7 (2018), e0132421.
+https://doi.org/10.1371/journal.pone.0132421
+
+[27] Sergio Felipe, Aneesha Singh, Caroline Bradley, Amanda C. de C.
+Williams, and Nadia Bianchi-Berthouze. 2015. Roles for personal
+informatics in chronic pain. In Pervasive Computing Technologies for
+Healthcare (PervasiveHealth), 2015 9th International Conference on.
+IEEE, 161–168.
+
+[28] Keiji Fukuda, Stephen E Straus, Ian Hickie, Michael C Sharpe, James G
+Dobbins, and Anthony Komaroff. 1994. The chronic fatigue syndrome:
+a comprehensive approach to its definition and study. Annals of Internal
+Medicine 121, 12 (1994), 953–959.
+
+[29] Keith Geraghty, Mark Hann, and Stoyan Kurtev. 2017. Myalgic
+encephalomyelitis/chronic fatigue syndrome patients’ reports of
+symptom changes following cognitive behavioural therapy, graded
+exercise therapy and pacing treatments: Analysis of a primary survey
+compared with secondary surveys. Journal of Health Psychology 0, 0
+(2017), 1359105317726152. https://doi.org/10.1177/1359105317726152
+arXiv:https://doi.org/10.1177/1359105317726152 PMID: 28847166.
+[30] Ellen M Goudsmit, Jo Nijs, Leonard A Jason, and Karen E Wallman.
+2012. Pacing as a strategy to improve energy management in myalgic
+encephalomyelitis/chronic fatigue syndrome: a consensus document.
+Disability and rehabilitation 34, 13 (2012), 1140–1147.
+
+[31] Stephen T Holgate, Anthony L Komaroff, Dennis Mangan, and Simon
+Wessely. 2011. Chronic fatigue syndrome: understanding a complex
+illness. Nature Reviews Neuroscience 12, 9 (2011), 539.
+
+[32] Leonard Jason, Susan Torres-Harding, and Mary Gloria Njoku. 2006.
+The Face of CFS in the U.S. The CIFIDS Chronicle (01 2006), 16–21.
+[33] Leonard A Jason. 2017. The PACE trial missteps on pacing and patient
+selection. Journal of Health Psychology 22, 9 (2017), 1141–1145.
+[34] Leonard A Jason, Molly Brown, Abigail Brown, Meredyth Evans,
+Samantha Flores, Elisa Grant-Holler, and Madison Sunnquist. 2013. En-
+ergy conservation/envelope theory interventions. Fatigue: Biomedicine,
+Health & Behavior 1, 1-2 (2013), 27–42.
+
+[35] Leonard A Jason, Meredyth Evans, Suzanna So, Jilian Scott, and Abigail
+Brown. 2015. Problems in defining post-exertional malaise. Journal
+of Prevention & Intervention in the Community 43, 1 (2015), 20–31.
+[36] Leonard A Jason, Judith A Richman, Alfred W Rademaker, Karen M
+Jordan, Audrius V Plioplys, Renee R Taylor, William McCready,
+Cheng-Fang Huang, and Sigita Plioplys. 1999. A community-based
+study of chronic fatigue syndrome. Archives of Internal Medicine 159,
+18 (1999), 2129–2137.
+
+[37] Simon L. Jones and Ryan Kelly. 2018. Dealing With Information Over-
+load in Multifaceted Personal Informatics Systems. Human-Computer
+Interaction 33, 1 (2018), 1–48. https://doi.org/10.1080/07370024.2017.
+1302334 arXiv:https://doi.org/10.1080/07370024.2017.1302334
+
+[38] Predrag Klasnja and Wanda Pratt. 2012. Healthcare in the pocket:
+mapping the space of mobile-phone health interventions. Journal of
+Biomedical Informatics 45, 1 (2012), 184–198.
+
+[39] Anthony L Komaroff and Dedra Buchwald. 1991. Symptoms and
+signs of chronic fatigue syndrome. Reviews of Infectious Diseases 13,
+Supplement_1 (1991), S8–S11.
+
+[40] Daphne Kos, Inge Van Eupen, Jill Meirte, Deborah Van Cauwenbergh,
+Greta Moorkens, Mira Meeus, and Jo Nijs. 2015. Activity pacing self-
+management in chronic fatigue syndrome: a randomized controlled trial.
+American Journal of Occupational Therapy 69, 5 (2015), 6905290020p1–
+6905290020p11. https://doi.org/10.5014/ajot.2015.016287
+
+[41] Kyriaki Kouyanou, Charles E Pither, and Simon Wessely. 1997.
+Iatrogenic factors and chronic pain. Psychosomatic Medicine 59, 6
+(1997), 597–604.
+
+[42] Eliana M. Lacerda, Caroline C. Kingdon, Erinna W. Bowman, and Luis
+Nacul. 2018. Using a participatory approach to develop and implement
+the UK ME/CFS Biobank. Fatigue: Biomedicine, Health & Behavior
+6, 1 (2018), 1–4.
+https://doi.org/10.1080/21641846.2018.1396021
+arXiv:https://doi.org/10.1080/21641846.2018.1396021
+
+[43] Krupp LB, Sliwinski M, Masur DM, Friedberg F, and Coyle PK. 1994.
+Cognitive functioning and depression in patients with chronic fatigue
+syndrome and multiple sclerosis. Archives of Neurology 51, 7 (1994),
+705–710. https://doi.org/10.1001/archneur.1994.00540190089021
+[44] Anastasia Aldelina Lijadi and Gertina Johanna van Schalkwyk. 2015. On-
+line Facebook focus group research of hard-to-reach participants. Inter-
+national Journal of Qualitative Methods 14, 5 (2015), 1609406915621383.
+[45] James J. Lin, Lena Mamykina, Silvia Lindtner, Gregory Delajoux, and
+Henry B. Strub. 2006. Fish’N’Steps: Encouraging Physical Activity with
+an Interactive Computer Game. In Proceedings of the 8th International
+Conference on Ubiquitous Computing (UbiComp’06). Springer-Verlag,
+Berlin, Heidelberg, 261–278. https://doi.org/10.1007/11853565_16
+[46] Lena Mamykina, Elizabeth Mynatt, Patricia Davidson, and Daniel
+Greenblatt. 2008. MAHI: Investigation of Social Scaffolding for Reflec-
+tive Thinking in Diabetes Management. In Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems (CHI ’08). ACM,
+New York, NY, USA, 477–486. https://doi.org/10.1145/1357054.1357131
+[47] Madhavan Mani, David J Kavanagh, Leanne Hides, and Stoyan R
+Review and Evaluation of Mindfulness-Based
+JMIR mHealth uHealth 3, 3 (19 Aug 2015), e82.
+
+Stoyanov. 2015.
+iPhone Apps.
+https://doi.org/10.2196/mhealth.4328
+
+[48] Mollie McKillop, Lena Mamykina, and Noémie Elhadad. 2018. Design-
+ing in the Dark: Eliciting Self-tracking Dimensions for Understanding
+Enigmatic Disease. In Proceedings of the 2018 CHI Conference on Human
+Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA,
+Article 565, 15 pages. https://doi.org/10.1145/3173574.3174139
+[49] Aaron S Miller, Joseph A Cafazzo, and Emily Seto. 2016. A game
+plan: Gamification design principles in mHealth applications
+for chronic disease management. Health Informatics Journal 22,
+2 (2016), 184–193.
+https://doi.org/10.1177/1460458214537511
+arXiv:https://doi.org/10.1177/1460458214537511 PMID: 24986104.
+[50] Christine Miserandino. 2003. The Spoon Theory. Available Online.
+https://butyoudontlooksick.com/articles/written-by-christine/
+the-spoon-theory/
+
+[51] Florian ‘Floyd’ Mueller, Frank Vetere, Martin R. Gibbs, Jesper
+Kjeldskov, Sonja Pedell, and Steve Howard. 2005. Hug over a
+Distance. In CHI ’05 Extended Abstracts on Human Factors in Com-
+puting Systems (CHI EA ’05). ACM, New York, NY, USA, 1673–1676.
+https://doi.org/10.1145/1056808.1056994
+
+[52] Michael J Muller. 2003. Participatory design: the third space in HCI.
+Human-computer interaction: Development process 4235 (2003), 165–185.
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 12[53] Elizabeth L. Murnane, Saeed Abdullah, Mark Matthews, Matthew
+Kay, Julie A. Kientz, Tanzeem Choudhury, Geri Gay, and Dan Cosley.
+2016. Mobile Manifestations of Alertness: Connecting Biological
+Rhythms with Patterns of Smartphone App Use. In Proceedings of the
+18th International Conference on Human-Computer Interaction with
+Mobile Devices and Services (MobileHCI ’16). ACM, New York, NY, USA,
+465–477. https://doi.org/10.1145/2935334.2935383
+
+[54] Jo Nijs, Kenny De Meirleir, and William Duquet. 2004. Kinesiophobia in
+chronic fatigue syndrome: Assessment and associations with disability1.
+Archives of physical medicine and rehabilitation 85, 10 (2004), 1586–1592.
+Self-
+International Jour-
+Interaction 31, 12 (2015), 869–881.
+
+Care Technologies and Collaboration.
+nal of Human–Computer
+https://doi.org/10.1080/10447318.2015.1067498
+
+[55] Francisco Nunes and Geraldine Fitzpatrick. 2015.
+
+[56] Francisco Nunes, Paula Alexandra Silva, João Cevada, Ana Cor-
+reia Barros, and Luís Teixeira. 2016. User interface design guidelines
+for smartphone applications for people with Parkinson’s disease.
+Universal Access in the Information Society 15, 4 (01 Nov 2016), 659–679.
+https://doi.org/10.1007/s10209-015-0440-1
+
+[57] Anthony Ocon. 2013. Caught in the thickness of brain fog: exploring
+the cognitive symptoms of Chronic Fatigue Syndrome. Frontiers in
+Physiology 4 (2013), 63. https://doi.org/10.3389/fphys.2013.00063
+[58] Tom Owen, Jennifer Pearson, Harold Thimbleby, and George Buchanan.
+2015. ConCap: Designing to Empower Individual Reflection on Chronic
+Conditions Using Mobile Apps. In Proceedings of the 17th International
+Conference on Human-Computer Interaction with Mobile Devices
+and Services (MobileHCI ’15). ACM, New York, NY, USA, 105–114.
+https://doi.org/10.1145/2785830.2785881
+
+[59] Davy Preuveneers and Yolande Berbers. 2008. Mobile Phones Assisting
+with Health Self-care: A Diabetes Case Study. In Proceedings of the
+10th International Conference on Human Computer Interaction with
+Mobile Devices and Services (MobileHCI ’08). ACM, New York, NY, USA,
+177–186. https://doi.org/10.1145/1409240.1409260
+
+[60] Mitchell E Tidy E Price, JR and V Hunot. 2008. Cognitive behaviour ther-
+apy for chronic fatigue syndrome in adults. Cochrane Database of System-
+atic Reviews 3 (2008). https://doi.org/10.1002/14651858.CD001027.pub2
+[61] Judith B Prins, Gijs Bleijenberg, Ellen Bazelmans, Lammy D Elving,
+Theo M de Boo, Johan L Severens, Gert Jan van der Wilt, Philip
+Spinhoven, and Jos WM Van der Meer. 2001. Cognitive behaviour
+therapy for chronic fatigue syndrome: a multicentre randomised
+controlled trial. The Lancet 357, 9259 (2001), 841–847.
+
+[62] Katharine A Rimes and Janet Wingrove. 2013. Mindfulness-based cogni-
+tive therapy for people with chronic fatigue syndrome still experiencing
+excessive fatigue after cognitive behaviour therapy: A pilot randomized
+study. Clinical Psychology & Psychotherapy 20, 2 (2013), 107–117.
+[63] Ann Marie Roepke, Sara R Jaffee, Olivia M Riffle, Jane McGonigal, Rose
+Broome, and Bez Maxwell. 2015. Randomized controlled trial of Su-
+perBetter, a smartphone-based/internet-based self-help tool to reduce
+depressive symptoms. Games for Health Journal 4, 3 (2015), 235–246.
+[64] Daniela K. Rosner, Saba Kawas, Wenqi Li, Nicole Tilly, and Yi-Chen
+Sung. 2016. Out of Time, Out of Place: Reflections on Design
+Workshops As a Research Method. In Proceedings of the 19th ACM
+Conference on Computer-Supported Cooperative Work & Social
+Computing (CSCW ’16). ACM, New York, NY, USA, 1131–1141.
+https://doi.org/10.1145/2818048.2820021
+
+[65] Jessica Schroeder, Chia-Fang Chung, Daniel A. Epstein, Ravi Karkar,
+Adele Parsons, Natalia Murinova, James Fogarty, and Sean A. Munson.
+
+2018. Examining Self-Tracking by People with Migraine: Goals, Needs,
+and Opportunities in a Chronic Health Condition. In Proceedings of
+the 2018 Designing Interactive Systems Conference (DIS ’18). ACM, New
+York, NY, USA, 135–148. https://doi.org/10.1145/3196709.3196738
+[66] Jessica Schroeder, Jane Hoffswell, Chia-Fang Chung, James Fogarty,
+Sean Munson, and Jasmine Zia. 2017. Supporting Patient-Provider
+Collaboration to Identify Individual Triggers Using Food and Symptom
+Journals. In Proceedings of the 2017 ACM Conference on Computer Sup-
+ported Cooperative Work and Social Computing (CSCW ’17). ACM, New
+York, NY, USA, 1726–1739. https://doi.org/10.1145/2998181.2998276
+
+[67] M.C. Sharpe, L.C. Archard, J.E. Banatvala, L.K. Borysiewicz, A.W. Clare,
+A. David, R.H. Edwards, K.E. Hawton, H.P. Lambert, and R.J. Lane. 1991.
+A report–chronic fatigue syndrome: guidelines for research. Journal
+of the Royal Society of Medicine 84, 2 (1991), 118–121.
+
+[68] Christina Surawy, Jill Roberts, and Amy Silver. 2005. The effect of
+mindfulness training on mood and measures of fatigue, activity, and
+quality of life in patients with chronic fatigue syndrome on a hospital
+waiting list: a series of exploratory studies. Behavioural and Cognitive
+Psychotherapy 33, 1 (2005), 103–109.
+
+[69] David R. Thomas. 2006. A general inductive approach for analyzing
+qualitative evaluation data. American Journal of Evaluation 27, 2 (2006),
+237–246.
+
+[70] FN Twisk and Michael Maes. 2009. A review on cognitive behavo-
+rial therapy (CBT) and graded exercise therapy (GET) in myalgic
+encephalomyelitis (ME)/chronic fatigue syndrome (CFS): CBT/GET
+is not only ineffective and not evidence-based, but also potentially
+harmful for many patients with ME/CFS. Neuro Endocrinology Letters
+30, 3 (2009), 284–299.
+
+[71] Boudewijn Van Houdenhove and Patrick Luyten. 2008. Customizing
+treatment of chronic fatigue syndrome and fibromyalgia: the role of
+perpetuating factors. Psychosomatics 49, 6 (2008), 470–477.
+
+[72] Jan H. M. M. Vercoulen, Caroline M. A. Swanink, Jan F. M. Fennis,
+Joep M. D. Galama, Jos W. M. van der Meer, and Gijs Bleijenberg. 1994.
+Dimensional assessment of chronic fatigue syndrome.
+Journal of
+Psychosomatic Research 38, 5 (1994), 383–392.
+
+[73] Norma C Ware. 1992. Suffering and the social construction of illness:
+The delegitimation of illness experience in chronic fatigue syndrome.
+Medical Anthropology Quarterly 6, 4 (1992), 347–361.
+
+[74] Carolyn Wilshire, Tom Kindlon, Alem Matthees, and Simon McGrath.
+2017. Can patients with chronic fatigue syndrome really recover
+after graded exercise or cognitive behavioural therapy? A critical
+commentary and preliminary re-analysis of the PACE trial. Fatigue:
+Biomedicine, Health & Behavior 5, 1 (2017), 43–56.
+
+[75] Carolyn E. Wilshire, Tom Kindlon, Robert Courtney, Alem Matthees,
+David Tuller, Keith Geraghty, and Bruce Levin. 2018. Rethinking the
+treatment of chronic fatigue syndrome—a reanalysis and evaluation of
+findings from a recent major trial of graded exercise and CBT. BMC Psy-
+chology 6, 1 (22 Mar 2018), 6. https://doi.org/10.1186/s40359-018-0218-3
+[76] Anette Winger, Mirjam Ekstedt, Vegard B Wyller, and Sølvi Helseth.
+‘Sometimes it feels as if the world goes on without me’:
+2014.
+Adolescents’ experiences of living with chronic fatigue syndrome.
+Journal of Clinical Nursing 23, 17-18 (2014), 2649–2657.
+
+[77] Rayoung Yang, Eunice Shin, Mark W. Newman, and Mark S. Ackerman.
+2015. When Fitness Trackers Don’t ‘Fit’: End-user Difficulties in the
+Assessment of Personal Tracking Device Accuracy. In Proceedings
+of the 2015 ACM International Joint Conference on Pervasive and
+Ubiquitous Computing (UbiComp ’15). ACM, New York, NY, USA,
+623–634. https://doi.org/10.1145/2750858.2804269
+
+CHI 2019 Paper  CHI 2019, May 4–9, 2019, Glasgow, Scotland, UKPaper 222Page 13

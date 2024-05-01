@@ -1,0 +1,1388 @@
+Pass the Ball: Enforced Turn-Taking in Activity Tracking 
+
+John Rooksby, Mattias Rost, Alistair Morrison, Matthew Chalmers 
+School of Computing Science, 
+University of Glasgow, UK. 
+{firstname.lastname}@glasgow.ac.uk 
+
+ABSTRACT 
+We  have  developed  a  mobile  application  called  Pass  The 
+Ball  that  enables  users  to  track,  reflect  on,  and  discuss 
+physical  activity  with  others.  We  followed  an  iterative 
+design  process,  trialling  a  first  version  of  the  app  with  20 
+people  and  a  second  version  with  31.  The  trials  were 
+conducted  in  the  wild,  on  users’  own  devices.  The  second 
+version of the app enforced a turn-taking system that meant 
+only  one  member  of  a  group  of  users  could  track  their 
+activity  at  any  one  time.  This  constrained  tracking  at  the 
+to 
+individual 
+communicate  and  interact  with  each  other.  We  discuss  the 
+second  trial  with  reference  to  two  concepts:  social-
+relatedness and individual-competence. We discuss six key 
+lessons  from  the  trial,  and  identify  two  high-level  design 
+implications:  attend  to  “practices”  of  tracking;  and  look 
+within and beyond “collaboration” and “competition” in the 
+design of activity trackers.      
+
+level,  but  more  successfully 
+
+led  users 
+
+Author Keywords: 
+Activity Tracking; Mobile Health; Game.  
+
+ACM Classification Keywords  
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous. 
+
+INTRODUCTION 
+The  potential  for  smartphone-based  activity  trackers  to 
+support and encourage health related behaviour change has 
+been  widely  recognised  (see  [14,  16,  18]  for  recent 
+overviews).  We  have  noticed  that  activity  trackers  are 
+commonly  designed  as  individual  trackers  that  then  have 
+social  features  added  to  them.  Typically,  social  features 
+enable users to post an achievement such as a recent run or 
+step-count to a social network site such as Facebook. In this 
+paper  we  explore  a  social-first  approach,  reporting  on  an 
+app we have developed and evaluated that takes interacting 
+with others as prerequisite to tracking an activity. The app, 
+Pass  The  Ball,  is  a  team  game  in  which  players  pass  a 
+virtual ball to each other. Only one user can have the ball at 
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. Copyrights for 
+components of this work owned by others than ACM must be honored. 
+Abstracting with credit is permitted. To copy otherwise, or republish, to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org.  
+
+CHI 2015, April 18 - 23 2015, Seoul, Republic of Korea Copyright is held 
+by the owner/author(s). Publication rights licensed to ACM. 
+ACM 978-1-4503-3145-6/15/04...$15.00  
+http://dx.doi.org/10.1145/2702123.2702577 
+
+any one time, and only this user’s activity can be tracked by 
+the  app  (the  app  awards  activity  points  based  on  a  simple 
+motion  tracking  algorithm).  Teams  compete  against  each 
+other  to  score  the  most  points.  This  creates  a  coordination 
+problem, one that requires users to think about and discuss 
+not just their own activity but also that of others. 
+
+For  this  work  we  adopted  a  “research  through  design” 
+approach  (see  [13,  36]).  We  have  created  a  mobile 
+application and have studied its use in the wild on people’s 
+own  mobile  phones.  We  have  gone  through  this  process 
+iteratively (as is best practice in design [36]), producing and 
+trialling the app for two weeks, then refining it and trialling 
+it  again  for  another  two  weeks.  Gaver  [13]  argues  that 
+research  through  design  is  not  about  creating  artefacts  that 
+embody, confirm or falsify theory, but artefacts that can be 
+“annotated”  by  theory.  In  this  paper  we  use  two  concepts 
+from  behaviour  change  theory  as  annotation:  individual 
+competence  and  social  relatedness.  Our  work  does  not 
+embody, confirm or falsify any particular theory, but treats 
+these  concepts  as  a  way  of  discussing  the  relationship, 
+similarities  and  differences  of  Pass  The  Ball  to  other 
+activity  trackers.  Gaver  views  design  not  as  a  science,  but 
+as  a  process  in  which  “we  may  build  on  one  another’s 
+results, but … also usefully subvert them” (p.946). Our app 
+is  subversive  in  that  it  prioritises  social-relatedness  over 
+individual-competence, where the converse is the norm. 
+
+BACKGROUND 
+Pedometers  have  been  widely  available  for  a  long  time 
+(they  were  introduced,  in  their  modern  form  as  step 
+counters,  by  Yamasa  in  the  1960s).  Recently,  smartphone 
+applications  (apps)  and  networked  hardware  devices  have 
+begun  to  offer  new  possibilities  for  tracking  steps  and 
+myriad  other  activities,  sparking  renewed  interest  in  the 
+relationship  between  tracking  and  health  related  behaviour 
+change.  Pedometers  have  been  shown  to  have  a  positive 
+effect  on  health  related  behaviour  [34],  and  it  seems  a 
+reasonable  expectation  that  apps  and  networked  hardware 
+devices  can  have  similar  if  not  greater  benefits.  Studies 
+such  as  [3,  4]  are  pointing  to  and  cautiously  confirming 
+such benefits. However, with the range of new possibilities 
+comes a large, complex design space; it is only beginning to 
+become  clear  what  the  effects  and  relevancies  of  different 
+designs  are  to  behaviour  change.  In  this  paper  we  discuss 
+our exploration of this design space. 
+
+Over  the  last  few  years,  researchers  and  developers  have 
+been creating apps and devices that augment tracking with 
+social and game features. Apps such as SpyFeet [30] allow 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2417  
+ 
+ 
+to  be  unlocked  and  quests 
+
+stories 
+to  be  achieved. 
+Applications such as Fish n’ Steps [21], and Ubi-Fit Garden 
+[8,  10]  reward  activity  with  badges  or  virtual  animals  and 
+items.  Applications  such  as  Houston  [9]  StepStream  [25] 
+and  Shakra  [1,  24]  allow  users  to  compare  activity  levels 
+with others. Applications such as NEAT-o-Games [12] and 
+American  Horse  Power  Challenge  [35,  26]  focus  more 
+overtly  on  competition  with  users  competing  in  a  virtual 
+race.  Commercial  activity  trackers,  including  smartphone 
+applications such as Moves and Endomondo and hardware 
+devices such as FitBit, Nike Fuelband and Jawbone UP also 
+offer  a  range  of  functionality  including  tracking,  game 
+features, and options to share data with others. In this paper 
+we  will  use  the  term  “activity  tracking”  with  reference  to 
+the quantification of physical movement.  
+
+that 
+
+Individual-Competence and Social-Relatedness 
+There  are  many  theories  relevant  to  behaviour  change  [10, 
+15, 33]. These commonly address the importance of gaining 
+an understanding of one’s own behaviour and any necessary 
+changes,  as  well  as  the  importance  of  social  support.  For 
+example, Self Determination Theory (SDT) [29, 33], states 
+that  persistent  behaviour  change  occurs  readily  when 
+people 
+three 
+internalise  new  skills  and  values.  The 
+internalisation  requires,  are 
+psychological  needs 
+competence,  relatedness  and  autonomy.  We  annotate  our 
+study  with  respect  to  two  of  these.  As  is  common  in 
+research studies, we have asked people to use a tracker (our 
+app) for a short period, and have paid them to do so. SDT 
+and  other  behaviour  change  theories  state  that  it  is 
+important that activity is engaged in with a sense of choice 
+and  personal  endorsement  (i.e.  with  autonomy).  Although 
+we instructed participants to use the app as much or as little 
+as  they  wanted,  there  are  subtle  pressures  involved  in 
+recruiting  and  paying  participants,  and  ultimately  there  is 
+little we can claim about autonomy, internalisation or long-
+term  behaviour  changes.  Our  study  focuses  more  narrowly 
+on individual-competence and social-relatedness over short 
+term. This is a narrow treatment of the concepts, which are 
+articulated  in  the  literature  not  just  with  respect  to  “early 
+action” but also the medium and long term.  
+
+Individual  competence  is  the  ability  to  understand  one’s 
+own behaviour and whether and how to make changes [31]. 
+To  be  competent  is  to  be  able  to  measure  or  otherwise 
+conceptualise  an  activity,  and  to  be  able  to  recognise  and 
+meet  sufficient  targets.  For  example,  pedometers  provide 
+step  count  measurements,  and  can  be  used  in  conjunction 
+with  relevant  goals.  Someone  may  have  little  idea  of  how 
+many  steps  they  take  a  day  before  using  a  pedometer,  and 
+should  they  find  they  are  taking  too  few,  an  appropriate 
+short term goal might be a 10% increase, rather than to aim 
+for  a  potentially  unobtainable  number  such  as  10,000.  In 
+terms  of  competence,  activity  trackers:  enable  diverse 
+activities  to  be  tracked;  provide  more  flexible  ways  to 
+present  and  examine  data;  and  provide  ways  to  develop 
+exercise regimes, set goals and remain motivated. 
+
+Social-relatedness  refers  to  the  extent  to  which  one  feels 
+understood  by,  supported  by,  respected  by  and  connected 
+with others [31]. Social relatedness can manifest in various 
+ways,  including:  going  through  a  change  with  others, 
+having  social  support  from  family,  and  understanding  how 
+you are placed generally within a population. One pertinent 
+issue  to  be  raised  here  is  that  competition  can  be  de-
+motivating,  particularly 
+the 
+competition.  Chen  and  Pu  [7]  have  shown  that  people  are 
+more  motivated  by  a  cooperative  activity  tracker  app  than 
+they are a competitive one. Regarding relatedness, modern 
+activity  trackers  offer  many  opportunities  for  sharing, 
+comparing,  competing  and  collaborating.  Community 
+focused initiatives involving walk-a-thons or online forums 
+in conjunction with tracking hardware (e.g. [30]) have often 
+shown  greater  benefits  to  a  population  than  individualised 
+approaches.  
+
+regularly 
+
+if  one 
+
+loses 
+
+Putting Social-Relatedness before Individual-Competence 
+Social  features  in  activity  trackers  are  often  optional,  and 
+typically  designed  for  sharing  and  comparing  data  about 
+tracked  activity.  As  such,  social  relatedness  is  typically 
+treated  in  design  as  subordinate  to  individual  competence. 
+For example, running apps often enable users to track a run 
+and afterwards to post data about it to a social network site. 
+The  design  of  Pass  The  Ball  reverses  this,  putting  social-
+relatedness before individual-competence; one must engage 
+socially  before  tracking  activity.  This  is  a  re-ordering  of, 
+rather  than  re-specification  of  design  features.  Consolvo  et 
+al  [9]  list  design  requirements  that  include  “provide 
+personal  awareness”  and  “support  social  influence”.  We 
+meet  these  requirements,  but  in  reverse  order  and  with 
+emphasis  on  the  latter  over  the  former.  Clearly  we  are 
+making  generalisations  here  that  lump  together  diverse 
+activity  trackers.  Some  trackers,  notably  StepStream  [24], 
+strongly emphasise relatedness, but the work we present in 
+this  paper  pushes 
+to  an  extreme  by  making  social 
+interaction prerequisite to tracking.  
+
+PASS THE BALL 
+We  have  developed  an  app  for  iOS  and  Android  devices 
+called  Pass  The  Ball.  The  app  uses  the  accelerometers  in 
+these devices in order to quantify a user’s physical activity. 
+It  is  a  team  game  that  enforces  a  turn-taking  mechanism, 
+requiring that only one team member can track their activity 
+at any one time. Teams compete in a league. The Pass The 
+Ball  interface  is  shown  in  figure  1.  It  has  three  tabs,  or 
+views,  that  respectively  show  the  home  (main)  view,  the 
+current  league  standings,  and  tools  to  set  preferences  for 
+notifications and to update profile pictures. The app has the 
+following functionality: 
+
+•  When a user registers, they join a team. Each team has a 
+virtual ball, which only one player on the team can have 
+possession  of  at  any  one  time.  When  a  player  receives 
+the  ball,  the  app  starts  tracking  that  player’s  activity. 
+After  one  hour,  or  if  the  player  passes,  it  ceases 
+tracking. Only the player with the ball has their activity 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2418tracked. The user with the ball can also pass the ball to 
+any  other  user  on  their  team.  Passing  the  ball  switches 
+off  tracking  on  the  passer’s  device  immediately.  When 
+the receiver has accepted the pass, the receiver’s device 
+begins tracking.  
+
+•  The activity tracker is built into the app. It is based upon 
+an  algorithm  defined  by  Libby  [20].  It  quantifies  steps 
+or  any  other  moderate  or  vigorous  physical  movement 
+(the word ‘steps’ is not used in the game, and as we will 
+discuss, the participants scored points from a variety of 
+physical  activities  including  shaking,  jumping,  and 
+cycling).  A  user’s  activity,  as  quantified  by  the  app, 
+contributes  to  the  team’s  overall  score.  Users  can  view 
+their team’s score and the scores of other teams. Teams 
+compete in a weekly league (see the right of figure 1).  
+
+•  When  the  tracker  is  not  active,  players  can  take 
+possession of the ball through interception. Interceptions 
+incur a deduction of 1000 points from the team’s overall 
+score.  This  is  possible  in  two  circumstances:  firstly,  if 
+the  player  with  the  ball  has  used  the  tracker  for  the 
+maximum  one  hour  period,  but  not  passed  the  ball  (in 
+which case, every team member except the one with the 
+ball has the option to intercept it); secondly, if a ball has 
+been passed but the receiving player has not tapped the 
+receive  button  (in  which  case  every  team  member 
+except  the  pair  making  and  receiving  the  pass  has  the 
+option to intercept it).  
+
+•  Users can write comments in the app, which are visible 
+to  all  other  team  members,  appearing  on  the  same 
+timeline  that  shows  passing  and  activity  data.  Players 
+are  able  to  view  the  activity  of  other  teams,  but  cannot 
+view comments made by other teams. 
+
+•  Team  activity  is  presented  in  the  app  on  a  scrollable 
+timeline  (see  ‘The  Home  View’  in  figure  1).  The 
+timeline is updated every time a comment is made, and 
+every  time  the  state  of  the  ball  changes  (for  example 
+when  a  pass  is  made,  when  the  tracker  is  turned  on,  or 
+when  an  interception  is  possible).  When  a  player  turns 
+on  their  tracker,  a  visualisation  of  their  activity  is 
+displayed together with the points they have scored. The 
+visualisations can be seen by all teams.   
+
+•  Users  can  receive  notifications  when  passed  the  ball, 
+when  they  have  used  the  pedometer  for  more  than  one 
+hour,  and  when  comments  and  passes  are  made.  Users 
+can configure the types of notification they receive. 
+
+Pass  The  Ball  runs  on  both  iOS  and  Android,  enabling 
+teams to have members with different devices. Because we 
+wanted the game to be played by existing social groups, it 
+was  important  to  support  a  range  of  popular  devices.  We 
+also  wanted  players  to  be  able  to  use  their  own  personal 
+devices,  as  we  were  interested  in  how  the  game  would  be 
+integrated with everyday smartphone use. The final version 
+of Pass The Ball was implemented as a hybrid mobile web 
+
+Figure 1. Pass The Ball: Home view (left) and League view 
+(right). Names have been changed. Both views are scrollable. 
+
+app, meaning it is run as a native application but content is 
+displayed using HTML5. As much as possible of the app is 
+implemented as a web app hosted by our servers (meaning 
+the  interface  was  standard  across  devices).  For  Pass  The 
+Ball,  counting  and  uploading  steps  is  run  natively  as  it 
+needs to be run in the background—something that cannot 
+be done for a pure web app. Delivery of push notifications 
+also  needed  to  be  handled  natively.  Points  are  uploaded  to 
+the  server  every  minute.  We  sought  to  create  a  feeling  of 
+‘liveness’  in  the  app,  whereby  players  could  observe  their 
+teammates’  activities  in  near  real-time.  We  also  included 
+icons in the league view to show which teams currently had 
+a player ‘on the ball’ whose activity was being tracked.   
+
+The Iterative Design Process and Initial Findings 
+The version of Pass The Ball outlined above was arrived at 
+through  an  iterative  design  process.  We  developed  and 
+trialled  an  earlier  version  where  the  pedometer  was 
+constantly  on  for  every  player.  Each  team  had  a  ball,  and 
+only  the  player  with  the  ball  could  score  points  for  their 
+team.  The  idea  was  that  each  player  could  use  the 
+pedometer 
+the  ball  passing 
+functionality  would  encourage  players  to  examine  and 
+discuss  each  others'  activity,  discussing  good  passes,  as 
+well  as  ‘missed  passes’  (i.e.  times  when  a  player  without 
+the  ball  had  high  levels  of  activity).  Pass  The  Ball  version 
+one was trialled with 20 players, making up five teams, in a 
+two-week competition. It was an ‘interesting failure’.  
+
+individually,  and 
+
+that 
+
+The  primary  reason  that  we  considered  the  first  trial  a 
+failure was that the ball was passed infrequently. The game 
+advantaged players that were already highly active, and we 
+found  that  these  players  would  retain  the  ball  to  the 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2419 
+ 
+exclusion  of  more  sedentary  teammates.  One  team  passed 
+the ball a lot in the first four days. They coordinated passes 
+by  planning  ahead,  announcing  that  they  were  going  to  go 
+for  a  walk  at  a  specific  time,  and  asked  for  the  ball  to  be 
+passed  when  they  knew  they  were  being  active.  However, 
+they  realised  that  the  best  strategy  for  them  in  game  terms 
+was to let the most active person in the team (who worked 
+as  a  bicycle  messenger)  keep  the  ball  indefinitely.  This 
+problem was serious because there soon became no need to 
+communicate  with  others  in  the  game.  Another  team 
+reported  frustration  that  one  of  their  players  just  kept  the 
+ball;  they  requested  a  way  of  intercepting  it.  A  secondary 
+problem concerned battery drain on iOS devices, which was 
+unacceptably high for several users (the drain was no higher 
+than for commercial apps such as Moves, and we note that 
+this issue has been resolved for recent iOS devices with the 
+inclusion of a coprocessor with a dedicated pedometer). 
+
+Following the first trial we decided that only the player with 
+the ball should be able to turn on tracking and that it should 
+switch off after one hour if the ball has not been passed. We 
+added  the  interception  feature  at  this  point,  so  that  if 
+someone  fails  to  pass  the  ball  the  whole  team  does  not 
+become  stuck.  During  the  design  session  in  which  we 
+decided these changes, we recognised that a key issue with 
+this  new  design  is  that  individual  users  cannot  track  and 
+quantify  at  will  or  over  the  course  of  a  full  day.  It  was  at 
+this  point  that  we  became  intrigued  by  the  question  “what 
+is  prioritised  over 
+happens  when  social-relatedness 
+individual competence in tracking?” 
+
+USER TRIAL 
+We report here on our trial of the final version of Pass The 
+Ball (the version as set out with bullet points in the previous 
+section). This was the second formal trial we staged during 
+development and evaluation. This trial was run over a two-
+week period. 
+
+Method 
+Our  trial  followed  the  approach  and  rational  set  out  by 
+Brown  et  al  [5]  for  trialling  applications  in  the  wild. 
+Participants  ran  Pass  The  Ball  on  their  own  devices,  with 
+deployment handled through ad-hoc distribution. Usage and 
+activity data from players’ apps was logged during the trial. 
+This  included  scores,  player  communications  within  the 
+app, as well as timestamped screen changes by each player. 
+All  participants  were  interviewed  following  the  trial.  We 
+analysed  the  interview  transcripts  in  an  iterative  manner 
+alongside the log data. Our analysis is primarily qualitative.  
+
+Participants 
+Thirty-one  participants  were  recruited  (twenty  female, 
+eleven  male,  age  range  ~20  to  ~40).  Participants  were 
+recruited  through  advertising  and  a  snowball  approach. 
+Because  we  wanted  existing  social  groups  to  participate, 
+snowballing  (i.e.  asking  participants  to  invite  friends  and 
+relatives  to  play)  was  important.  None  of  the  participants 
+had participated in the first trial. The participants were each 
+given  an  information  sheet  that  gave  an  overview  of  the 
+
+app,  explained  what  data  we  were  collecting  and  how  this 
+data  would  be  stored  and  used  in  our  research  study.  The 
+sheet  stated  that  participants  could  play  the  game  as  much 
+or  as  little  as  they  wanted  and  that  they  were  free  to 
+withdraw at any time. Participants were paid 10 UK pounds 
+(or a Euro equivalent) at an interview at the end of the trial 
+period.  Participants  were  neither  coached  nor  encouraged 
+during the trial. Participants that did not already know each 
+other were kept separate during deployment and interview. 
+
+The  participants  formed  seven  teams.  In  six  teams,  every 
+player  knew  his/her  teammates,  as  friends,  relatives  or  co-
+workers.  A  seventh  team,  given  the  name  Barbarians,  was 
+formed by us from a group of strangers who did not know 
+each  other.  Participants  were  resident  in  the  UK  and 
+mainland  Europe.  Some  participants  travelled  during  the 
+two-week period, but otherwise all but the Barbarians team 
+consisted of players that saw their teammates on a daily or 
+regular  basis.  The  teams  ranged  in  size  from  two  to  seven 
+people. Not everyone started at exactly the same time, and 
+not everyone participated over the full period, as we detail 
+below.  From  here  on,  abbreviated  team  names  are  given, 
+e.g.  Barbarians  will  be  denoted  as  BAR.  Players  within 
+teams  will  be  referred  to  as  BAR1,  BAR2  etc.  Table  1 
+summarises the team information.  
+
+Four teams remained in the game to the end of the second 
+week. One of these, ROY, entered the game two days late. 
+Three  teams  stopped  scoring  before  the  trial  period  had 
+finished,  (although  our  logs  show  some  players  in  these 
+teams  continued  to  view  the  scores).  Reasons  for  non-
+participation included KUL: players travelling abroad (data 
+would  have  been  charged  at  high  rates)  and  focusing  on  a 
+deadline;  STR:  players  travelling  abroad;  TES:  limited 
+mobile  data  and  Wi-Fi,  and  disinterest  in  tracking.  The 
+design of Pass The Ball meant that players were reliant on 
+other team members, and so the withdrawal of one or more 
+individuals could cause participation problems for others. It 
+should be noted that it was the three smallest teams that did 
+not compete over the full two weeks. 
+
+FINDINGS 
+Our  findings  are  organised  with  respect  to  the  concepts  of 
+social relatedness and individual competence.  
+
+Social Relatedness 
+All  of  the  participants  reflected  at  length  in  the  interviews 
+on the collaborative and competitive aspects of the game. 
+
+Collaboration: Passing and Intercepting 
+To score points, it is essential for teammates to pass to each 
+other  or  to  intercept.  Players  indicated  during  interviews 
+that  the  early  passing  decisions  were  largely  uninformed, 
+and  often  made  as  gestures  of  inclusiveness  (for  example 
+with new members being passed the ball upon entering the 
+game).  Several  teams  developed  more  organised  strategies 
+as  the  trial  developed,  with  later  passes  being  made  either 
+according 
+to 
+knowledge of others’ routines. 
+
+to  requests,  or  prospectively  according 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2420Team 
+
+Team 
+size 
+(m,f) 
+
+Passes / 
+Interceptions / 
+Comments 
+
+Relation 
+
+Score 
+
+Score 
+
+Week 
+1 
+
+Week 
+2 
+
+BAR 
+
+(2,5) 
+
+68 / 4 / 128 
+
+Strangers 
+
+46298 
+
+93678 
+
+WEL 
+
+(3,4) 
+
+50 / 13 / 97 
+
+Colleagues 
+
+43211 
+
+63457 
+
+ENT 
+
+(0,6) 
+
+66 / 2 / 42 
+
+Colleagues 
+
+53125 
+
+33657 
+
+ROY 
+
+(2,2) 
+
+22 / 1 / 6 
+
+2 couples 
+
+16835 
+
+62512 
+
+KUL 
+
+(3,0) 
+
+23 / 0 / 30 
+
+Colleagues 
+
+42494 
+
+533 
+
+STR 
+
+(1,1) 
+
+45 / 0 / 3 
+
+Siblings 
+
+11682 
+
+TES 
+
+(0,2) 
+
+7 / 0 / 0 
+
+Friends 
+
+12237 
+
+0 
+
+0 
+
+Table 1: Team composition and engagement levels 
+(ordered by team size) 
+
+Examples  of  requests  and  planned  passing  appear  in  the 
+comments in figure 1. Some requests were seeking the ball 
+to be passed immediately, but most would book the ball for 
+a specific time. Some bookings involved the negotiation of 
+clashes,  and  tight  coordination  of  passes  (a  problem  being 
+that many teams found they had a similar routine, e.g. they 
+would  walk  to  work  at  similar  times).  Eventually,  passes 
+were  made  prospectively  without  the  receiver  needing  to 
+make  a  request  (we  refer  to  this  as  ‘prospective  passing’). 
+In figure 1, Brian can be seen to pass to Mary prospectively 
+(in  time  for  her  daily  cycle  ride  home).  This  reliance  on 
+knowing others’ routines worked better on some days:  
+
+“Weekends were very problematic because we never knew 
+where  anybody  was  going  to  go  when”  (interview  with 
+KUL1). 
+
+The  reliance  on  routine  also  came  to  favour  some  players 
+more  than  others.  So,  while  several  members  of  the  BAR 
+team  attributed  their  success  in  the  second  week  to  an 
+orderly  scheduling  regime,  BAR7  (who  joined  the  BAR 
+team  late)  noted  that  it  felt  like  the  initial  team  members 
+were already well organised and that she felt it was hard to 
+fit in. BAR7 also complained in interview that the others in 
+her  team  seemed  to  have  a  good  sense  of  what  they  were 
+doing,  but  that  her  own  life  lacked  the  kind  of  structure 
+necessary for prospective passing (this player was a student, 
+whereas several others in this team had regular jobs). 
+
+The  in-app  communication  was  one  of  several  means  by 
+which  teams  coordinated  themselves.  Only  the  TES  team 
+did not use the in-app channel at all. With the exception of 
+the  BAR  team  (who  were  strangers  and  had  no  contact 
+outside  of  the  app)  all  teams  reported  talking  about  the 
+game  face–to–face,  and  through  email  and  social  media. 
+The  ROY  team  informed  us  that  they  had  created  a 
+Facebook  group  chat  through  which  they  arranged  passing 
+schedules. The KUL and WEL teams preferred email to the 
+in-app  comments,  as  this  was  viewed  as  a  more  reliable 
+way of getting through to colleagues: 
+
+“We  started  using  the  comments  …  but  it’s  easier  for  us 
+to  look  at  email  on  the  computer.  I  say,  hey  pass  me  the 
+ball because I’m going out to the office, I’m going out to 
+this place and I’m going to walk” (interview with KUL1) 
+
+Even though the design of the game meant players did not 
+have  to  reveal  their  total  daily  activity  levels,  and  enabled 
+players to ‘stand back’ from tracking if they wished, players 
+reported concerns about how they were being represented to 
+others through the application (even to strangers).  
+
+“It does feel a touch narcissistic. Its like, yeah, I’m going 
+to the gym, aren’t I amazing” (interview with WEL3). 
+
+“I  didn’t  want  to  just  ignore  [the  game]  because  that 
+makes  it  look  like  I  never  do  anything”  (interview  with 
+BAR7). 
+
+We  also  found  from  the  interviews  that  practical  privacy 
+issues  impinged  on  coordination.  Members  of  the  BAR 
+team reported announcing when they expected to be active, 
+but  deliberately  keeping  details  vague  to  avoid  revealing 
+information  on  location  or  activity  to  strangers.  For 
+example,  one  participant  said  she  was  vague  in  reporting 
+where she was going because she did not want to reveal she 
+had  children.  Interestingly,  perhaps  alarmingly,  another 
+BAR speculated in interview that this player was a mother 
+because her activities included shopping and museum visits 
+during  the  day.  The  WEL  and  KUL  teams  were  more 
+concerned  about  work/life  separation,  and  did  not  feel 
+comfortable discussing weekend activities with co-workers: 
+
+“It’s  kind  of  like  down  time,  out  of  work.  You  don’t 
+necessarily  want  your  colleagues  knowing  what  you’re 
+doing,  at  the  weekend,  in  the  evening”  (Interview  with 
+WEL2). 
+
+The  activity  patterns  of  others  were  examined  and 
+interpreted  not 
+in  mind.  Some 
+just  with  passing 
+unanticipated  usages  included  colleagues  or  those  within  a 
+household  looking  at  activity  traces  to  determine  whether 
+someone  was  on  their  way  home,  or  what  time  they  had 
+gone to work (further underscoring the privacy and identity 
+issues raised by the application).  
+
+in 
+
+rare;  only 
+
+the  game  were 
+
+Interceptions 
+twenty 
+interceptions  were  made  (thirteen  of  which  were  in  the 
+WEL  team,  five  by  one  player).  In  the  words  of  BAR2, 
+interceptions “really paid off”, yet most participants did not 
+like to intercept or for others in their team to do so. BAR2 
+spoke  of  needing  “confidence”  to  intercept,  and  said  that 
+this  explained  why  it  was  getting  done  more  often  in  the 
+team  dynamics  were  more 
+second  week  once 
+established.  Players  who  had  not  intercepted  confirmed  in 
+interviews  that  they  had  understood  the  feature,  but  we 
+found  players  were  generally  averse  to  point  deductions, 
+even when the team stood to make overall gains by using an 
+interception to restart activity after the ball became passive. 
+Interceptions were often perceived as socially unacceptable. 
+As  an  example,  one  interception  provoked  the  following 
+
+the 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2421exchange  in  the  in-game  communication,  when  BAR7 
+intercepted a ball left passive by BAR4: 
+
+We  were 
+informed 
+competition could motivate activity: 
+
+that  under  some  circumstances, 
+
+BAR4:  Sorry,  Just  looked  at  my  phone.  I  would  have 
+passed! (In-app comment) 
+
+To which BAR7 responded: 
+
+BAR7:  Yeah  sorry  [BAR4].  Was  heading  out  then  but 
+don’t  leave  the  Internet  on  when  I’m  not  using  it  so 
+thought I’d just take it. (In-app comment) 
+
+This  exchange  (between  two  British  players)  features  two 
+insincere  apologies.  BAR4  apologises  yet  castigates  his 
+teammate.  BAR7  apologises  but  then  states  how  she 
+manages  data  connectivity  on  her  phone.  In  interview, 
+BAR4 singled out this incident as a point of annoyance: 
+
+“[She]  nicked  the  ball  off  me,  I  hadn’t  passed  it  for  an 
+hour cos nobody had said they wanted the ball. [She] took 
+the ball off me to lose 1000 steps of my 1500 I’d put on.” 
+(interview with BAR4). 
+
+The language here is interesting, in that BAR4 felt that the 
+ball was “nicked” (i.e. stolen) from him. He took the points 
+loss  personally,  as  if  the  points  were  taken  off  his  own 
+rather than the team’s overall score (other players reported 
+similar feelings). BAR7, we mentioned earlier, is a student 
+and had reported that she was less able to keep a schedule. 
+She saw the app more as something to use opportunistically 
+when  the  desire  arose.  Therefore  her  perception  of  this 
+interception was different to that of BAR4. 
+
+“So  [BAR4]  was  like  ‘oh  sorry,  I  would  have  passed  it’. 
+But this was 10 or so minutes after I’d intercepted it. And 
+it’s  like,  well  I’m  going  out  NOW,  do  you  know  what  I 
+mean?” (interview with BAR7). 
+
+“When  you  have  the  ball,  and  if  your  team  score  was 
+close  to  that  whoever  you  were  close  to  or  overtaking… 
+it’s  certainly  very  motivating  to  do  those  extra  steps,  if 
+you  could  take  over  a  team,  while  you’ve  got  your  turn 
+then that's quite pleasing” (interview with BAR2). 
+
+“I was on a work day out, and I turned to my group and I 
+was  like  ‘we’re  walking  fast  today!    We  have  an  hour  to 
+get as many steps in as we can!” (interview with BAR3). 
+
+Although  some  players  barely  looked  at  the  league,  they 
+were  kept  informed.  Other  players  would  comment  in  the 
+game  on  their  team’s  position,  and  some  reported  in 
+interview  about  being  driven  by  competitive  teammates. 
+For example ROY1 recounted of his wife ROY2: 
+
+“She  used  to  go  inside  those  teams  and  see  who  is  the 
+active person, and she identified a girl… She said there is 
+a  girl  and  she  scores  most…  She  said  OK,  this  girl 
+probably  took  it  seriously  so  we  have  to  score  more” 
+(interview with ROY1). 
+
+The “girl” in question was BAR6 (also referred to as Mary 
+in figure 1), who cycled to and from work. Figure 1 shows 
+BAR6  scoring  several  thousand  points  over  a  relatively 
+prolonged  and  intensive  period.  She  was  noticed  by  many 
+players, but oriented to in different ways. In her own team, 
+one  of  her  own  teammates  saw  her  as  “hardcore”,  serving 
+less as a motivator and more as a figure with authority and 
+someone  important  to  get  the  ball  to.  In  other  teams  (who 
+could  see  her  activity  but  not  her  comments)  she  inspired 
+competitiveness (e.g. ROY1’s comment above). As we will 
+discuss, in the STR team she was suspected to be “a cheat”. 
+
+This  incident  is  one  of  many  revealing  that  passing  and 
+intercepting  were  seen  as  moral  decisions.  Failures  to  pass 
+were  also  oriented  to  morally,  for  example,  the  following 
+apology is for not accepting a pass at a ‘booked’ time:  
+
+Individual Competence 
+The  participants  all 
+their 
+spoke  at 
+understandings  (and  sometimes  misgivings)  about  the 
+tracker and points system.  
+
+length  about 
+
+BAR6:  Sorry  was  rushing  for  a  meeting  and  forgot!  (In-
+app comment) 
+
+That  there  was  a  moral  order  to  play  does  not  mean  that 
+team members saw eye-to-eye on what was the right thing 
+to  do,  but  does  mean  that  with  collaborative  play  came 
+responsibilities and expectations among team members.  
+
+Competition: Viewing the League and Other Teams 
+It  was  evident  that  all  players  were  working  cooperatively 
+with a view to working their respective teams up the league. 
+However,  differences  in  the  competitiveness  of  individual 
+players were apparent. Some checked the league and drilled 
+down into the activity of other teams frequently. Participant 
+ENT4  said  that  she  “got  a  bit  obsessive”  about  checking 
+league positions, yet others did not take such an interest in 
+the  updating  league  table;  even  within  the  ENT  team,  the 
+usage  logs  reveal  one  participant  checking  once  every  two 
+days, and another checking up to thirty times a day.  
+
+Concepts of Activity 
+Participants  used  the  tracker  for  many  kinds  of  activity. 
+Activities  referred  to  in  in-app  comments  include  walking, 
+running  and  cycling,  but  also  less  specifically  exercise-
+oriented  day-to-day  actions  such  as  “pottering”,  shopping, 
+and housework. For some participants, everything counted: 
+
+“Every time there is motion we tried to utilise that motion 
+to score” (interview with ROY1). 
+
+The  ball  would  rarely  be  booked  for  such  (low  scoring) 
+day-to-day  activities,  particularly  after  a  few  days  of  use, 
+but  rather  it  was  done  opportunistically.  The  tracking  of 
+more  intensive  activity  was  often  preferred  over  less 
+intensive  activity.  Therefore,  in  some  respects  the  app 
+favoured people who were relatively active.  
+
+In  the  interviews,  and  from  a  close  examination  of  the  in-
+app  comments,  it  became  evident  that  the  tracker  was 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2422inspiring  certain  activities  and  changing  how  some  were 
+done. In some cases the game inspired activity: 
+
+“We don’t move that much. Its very good exercise for us.” 
+(interview with ROY1 and ROY2 – a couple). 
+
+The  activities  of  ROY2  and  others  were  not  just  more  of 
+what they ordinarily did, but were activities invented for the 
+app.  ROY2  recounted  spending  a  night  jumping  up  and 
+down  with  ROY1  (in  a  mix  of  excitement  and  points 
+scoring)  to  the  point  that  their  downstairs  neighbour 
+complained.  The  STR  team  initially  experimented  with 
+point-scoring  activities  and  found  a  form  of  upper  body 
+stretching  exercises  they  were  happy  with.  However,  on 
+looking  at  other  teams’  activities,  and  in  particular  that  of 
+the  high  scoring  player  BAR6,  they  were  less  sure  of  the 
+relevancy  of  this.  They  began  to  focus  more  on  walking. 
+They described in interview their experiments with how to 
+score when walking, explaining how they found holding the 
+phone in one hand and swinging it proved a good strategy. 
+
+Whereas  ROY1  had  seen  BAR6  as  an 
+inspiration, 
+motivating  them  to  do  further  exercise,  the  STR  team  was 
+motivated  by  BAR6  to,  in  their  own  words,  “cheat”.  The 
+STR  team  were  suspicious  that  BAR6’s  scores  were  not 
+being  scored  through  legitimate  means,  and  gave  up  their 
+stretching  to  seek  methods  that  would  score  thousands 
+rather  than  hundreds  of  points.  They  explored  forms  of 
+shaking  the  phone.  However,  STR  reported  that  their 
+shaking  efforts  were  themselves  “hard  work”  and  they 
+failed to replicate the levels of activity BAR6 had produced. 
+
+Shaking  appears  to  have  often  occurred  in  the  game  when 
+players examined others’ activity traces. KUL also reported 
+shaking the phone; in this case the team member had tried 
+shaking the phone as he cycled. Again, this was hard work 
+and  the  participant  reported  nearly  dropping  his  phone. 
+Shaking became something of an art for some players: 
+
+“You need to have a special pressure that gives the phone 
+a  feeling  that  a  step  has  been  taken.  I  mean  if  you  just 
+shake like this, probably it doesn’t work, but if you shake 
+like  this  …  you  need  to  have  your  finger  this  way” 
+(interview with ROY1). 
+
+ROY2  responded  to  ROY1  by  saying:  “No.  Not  like  this, 
+you  should  do  it  like  this…”  and  demonstrating  an 
+alternative  shake.  In  general, 
+those  participants  who 
+reported  shaking  were  only  doing  so  on  an  experimental 
+basis, to test the tracker, or as a means of verifying whether 
+others  might  be  cheating.  Most  reported  that  they  would 
+prefer to compete on a ‘fair’ basis, e.g.: 
+
+“It seems more fun like, if you’re actually genuinely doing 
+some  activity  to  see  what  I  was  scoring  rather  than  just 
+trying  to  do  something  to  cheat  it…  if  we’d  won  it  and 
+we’d  all  done  that,  it  would  have  seemed  a  bit  rubbish” 
+(interview with ENT1). 
+
+Only  the  TES  team  appeared  to  have  little  compunction 
+about shaking the phone. They admitted in interview (once 
+
+we had assured them they would be paid no matter what) to 
+have  used  the  app  while  walking  once,  and  after  that  to 
+have simply shaken their phones a few times. They said this 
+was not fun, and we note they used the tracker only a small 
+number of times.  
+
+Understanding the Scores  
+The  representation  and  quantification  of  activity  in  Pass 
+The  Ball  was  deliberately  ambiguous.  The  game  gave  a 
+visualisation  and  a  points  score,  but  did  not  specify  what 
+these  points  meant.  In  our  interviews  we  found  many 
+participants  were  concerned  with  whether  the  activity 
+points  they  and  others  gained  were  reasonable.  Many 
+participants did not have a firm idea of what activity should 
+score  what  points.  As  we  mentioned  earlier,  participants 
+used the tracker for various activities, yet many oriented to 
+points  as  if  they  were  steps.  Activities  all  scored  ‘steps’. 
+Attempts  to  verify  the  tracker  were  with  regard  to  steps. 
+Several spoke of trying (and failing) to count steps as they 
+walked. Several spoke of trying (and failing) to watch their 
+score  increase  when  walking  with  phone  in  hand.  One 
+participant got further by looking up information online: 
+
+“I  did  look  up  one  time  to  see,  there  was  like  a 
+government statistic to say that in 10 minutes you should 
+do x amount of steps … ‘cause I was wondering, is it far 
+too much?” (interview with ENT4). 
+
+The main complaints we received about the meaning of the 
+tracker  concerned  not  any  discrepancy  between  effort  and 
+points scored, or the forms of activity that could be tracked, 
+but  consistency.  Consistency  appears  to  have  become  the 
+main resource for participants in assessing the quality of the 
+tracker.  Participants  were  disconcerted  when  there  were 
+differences in what they considered to be equal activity: 
+
+“[ENT2]  and  I  go  out  for  a  walk  at  lunchtime,  and  we 
+saw two days where once she had the ball, and once I had 
+the ball, and it was totally different results and we knew it 
+was the same walk” (interview with ENT1). 
+
+Most  participants,  however,  noticed  through  playing  the 
+game  that  how  a  phone  is  carried  can  affect  the  score. 
+ENT5 had noticed that carrying her phone in her bag scored 
+twice  as  many  points  as  in  her  pocket,  surmising  that  the 
+bag provides more motion: 
+
+“My bag kind of sits here (points at hip) so it bounces off 
+my leg” (interview with ENT5). 
+
+Some  participants  also  noted  that  some  phones  seemed 
+more  generous  than  others,  putting  this  down  to  variations 
+in hardware. One player with a new iPhone believed he had 
+an  advantage  over  the  others  in  his  team  who  had  older  
+devices. We report this view not because we support it, but 
+because it reveals ways in which users tried to make sense 
+of  the  scores.  Other  forms  of  practice  and  sensemaking 
+concerned  consideration  of  data  plans  and  network  access. 
+For example BAR7’s participation in the game was shaped 
+by  her  wanting  to  minimise  data  use  and  a  desire  to 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2423conserve battery. Different practices of phone use were also 
+made  topical  by  the  game,  for  example  whether  phones 
+were  carried  during  mundane  activities  such  as  housework 
+or vigorous activities such as running, simply when people 
+had  their  phones  on  or  off,  and  how  and  why  it  was  that 
+people attended to notifications or checked the game.  
+
+To summarise, we have seen how an activity tracker can be 
+flexibly interpreted, with interpretation interwoven with the 
+activities  being  tracked,  i.e.  each  being  a  resource  for 
+understanding the other. The phone itself was not simply an 
+abstract  vessel  for  tracking,  but  was  a  practical  part  of  the 
+sensemaking of tracking. 
+
+LESSONS  LEARNED  FROM  PRIORITING  SOCIAL-
+RELATEDNESS OVER INDIVIDUAL-COMPETENCE 
+Our  work  was  not  a  controlled  study,  but  an  explorative 
+design  study  in  which  we  trialled  an  app  in  the  wild. 
+Therefore, our lessons learned are discursive and reflective. 
+
+1)  Players  were  accepting  of  the  turn-taking  constraint  to 
+activity tracking and communicated with each other.  
+Firstly, we have found it is possible to enforce cooperation 
+within  an  activity  tracker  and  for  the  tracker  to  remain 
+playable,  enjoyable  and  acceptable  to  a  majority  of  users 
+over  a  two-week  period.  It  is  interesting  and  somewhat 
+surprising  how  accepting  the  players  were  of  a  design  that 
+inhibits  self-initiated  and  comprehensive  gathering  of 
+personal  activity  data.  This  does  not  mean,  from  a 
+behaviour  change  perspective,  that  the  design  of  Pass  The 
+Ball is in the players’ interests, but does suggest that users 
+are  open  to  novel  designs  in  this  area.  Indeed,  by 
+minimising  battery  consumption,  the  design  of  Pass  The 
+Ball  made  the  game  more  acceptable  than  an  always-on 
+tracker.  The  key  problem  concerning  acceptability  and  use 
+was  not  to  do  with  tracking,  but  that  individual  non-
+participation  could  curtail  the  functioning  of  the  whole 
+team. Players relied on other players remaining active in the 
+game. Smaller teams did not last the full trial period. 
+
+2)  The  app  better  highlighted  and  supported  routine 
+behaviour than it did non-routine behaviour. 
+The  coordination  mechanism  we  have  presented  enabled 
+players  to  discuss  and  otherwise  gain  a  sense  of  others’ 
+routines,  such  as  their  commutes  to  and  from  work,  and  if 
+and when they would go running and cycling. Routine was 
+the  primary  coordinative  resource  (although  some  players 
+did  report  taking  longer  routes  or  jumping  up  and  down 
+purely for game purposes). Players relied heavily on routine 
+to  the  point  that  some  people  that  did  not  follow  a  routine 
+felt excluded. Routine served as a resource for both planned 
+passing,  and  booking  the  ball.  As  such,  the  game  did  see 
+participants getting to know what sorts of activity people do 
+on  a  day-to-day  basis.  Some  players  reported  this  was 
+individually  motivating,  however  we  did  not  see  much 
+explicit  encouragement  among  groups  for  players  to 
+increase their activity levels. 
+
+3)  Players  sought  practical  ways  to  manage  identity  and 
+privacy when using the app. 
+Identity  management  was  an  important  consideration  for 
+players  (confirming  [17,  23]).  Several  players  reported 
+wanting to be seen to be active and feeling good when they 
+scored  highly.  But  we  also  found  that  players  wanted  to 
+maintain  privacy,  and  that  this  manifested  in  contextually 
+specific  ways.  For  example,  among  strangers,  players 
+wanted  to  hide  location  and  family  status,  and  among 
+colleagues,  players  were  sometimes  reluctant  to  reveal 
+weekend  activities.  By  not  having  tracking  always-on, 
+players can stand back from tracking if they do not want to 
+reveal  activity  or 
+the  passing 
+mechanism meant players often had to supply written detail 
+about  what  they  would  be  doing  when.  This  reliance  on 
+language exacerbates and transforms identity issues.  
+
+inactivity.  However, 
+
+in 
+
+the  game.  Some  found 
+
+4)  Players  oriented  to  and  experienced  collaboration  and 
+competition in different but colliding ways. 
+Coordination  and  competition  was  experienced  and 
+interpreted  differently  by  players,  and  these  differences 
+melded  and  clashed 
+the 
+coordination  (i.e.  passing)  mechanism  to  be  enabling  and 
+motivating,  but  as  we  have  mentioned,  it  suited  those  able 
+to  plan  or  follow  a  routine.  Some  participants  were  more 
+concerned with competition elements than others, but those 
+who  were  not  interested  seemingly  could  not  escape  the 
+competitiveness  of  their  teammates.  To  call  the  game 
+‘social’ is to gloss over that it was played and experienced 
+within  a  moral  order.  In  terms  of  coordination,  this 
+manifested as expectations that players would keep to their 
+word  when  booking  a  session,  and  a  preference  for 
+organised 
+opportunistic 
+intercepting). In some respects then, the game was socially 
+awkward  (see  [15]).  In 
+this 
+manifested  as  hopes  and  sometimes  requests  that  others 
+would  push  towards  overtaking  other  teams,  and  as 
+suspicions  as  to  whether  competitors  were  somehow 
+cheating (findings that reflect [12, 21, 24]).  
+
+terms  of  competition, 
+
+opposed 
+
+passing 
+
+(as 
+
+to 
+
+5)  The  practices  by  which  players  made  sense  of  activity 
+tracking evolved during play. 
+Players’  concepts  of  activity,  and  the  relationship  between 
+activity  and  points,  were  not  pre-given  or  static  but 
+unfolded  over  time.  We  are  reminded  of  Barkhuus  et  al’s  
+[2]  simple  but  important  point  that  tactics  develop  and 
+evolve during gameplay. Players discussed with each other 
+and  experimented  with  what  activities  the  game  could 
+quantify  and  by  how  much.  Some  teams  were  forced  to 
+rethink what they were doing when they saw others’ scores. 
+This  was  not  necessarily  to  engage  in  more  vigorous 
+activity, but could be changing how the phone was held or 
+carried when doing an activity. The game also evinced what 
+some  considered  cheating  (we  are  ambivalent  to  cheating, 
+as  [6,  32]  note,  shaking  a  tracker  can  be  hard  work!)  We 
+found that players were not moved by the game to shake the 
+phone on more than one or two occasions. All participants 
+were interested in the accuracy of the tracker. Some decided 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2424that  it  was  accurate,  others  that  it  was  not.  Accuracy  was 
+primarily  considered  with  respect  to  ‘steps’  (even  though 
+this term was not used in the game). 
+
+tracking 
+
+in  activity 
+
+6)  Competency  and  sensemaking 
+concerns the whole device, not just in-app data. 
+Finally, in the light of the discussion above of sensemaking, 
+we  suggest  that  ‘competence’  is  not  limited  to  the 
+interpretation and use of data but extends to its production 
+(somewhat  reflecting  points  in  [23,  32]).  For  example, 
+players  considered  and  discussed  how  scores  could  be 
+affected by the physical handling of a device, and came to 
+consider  other  relevancies 
+to  play  such  as  network 
+connectivity.  Several  participants  were  also  aware  that  an 
+accelerometer-based  game  played  across  varied  Android 
+and iOS devices is inherently problematic. 
+
+GENERAL IMPLICATIONS  
+Above and beyond our immediate lessons learned, through 
+this  work  we  have  come  to  two  general  implications  for 
+designing activity trackers in the context of HCI research. 
+
+1) Attend to people’s “practices” of tracking. 
+By  studying  how  people  use  a  tracker  collaboratively,  we 
+have come to study practices of tracking. By getting people 
+to  communicate  about  tracking  and  to  consider  both  their 
+own  and  others’  data,  we  have  found  that  people  orient  to 
+and develop ways of making sense of data. The data is not a 
+mirror of activity but a medium for understanding it. We do 
+not  think  this  phenomenon  is  unique  to  Pass  The  Ball,  but 
+rather something made visible by our app and our research 
+methods.  The  overriding  design  issue  here  is  that  high-
+level,  user  experience  issues  are  at  stake  in  activity 
+the 
+tracking.  These 
+‘relatedness’  and  UI  aspects  of  design  but  pervade  the 
+‘competence’  and  measurement  aspects  also.  In  sum,  to 
+successfully  design  social  features  in  activity  trackers,  we 
+must  carefully  consider  the  lived  aspect  of  tracking.  The 
+“practice  turn”  in  HCI  [19]  and  Behaviour  Change  [28]  is 
+relevant for understanding activity tracking.  
+
+issues  cannot  be  partitioned 
+
+to 
+
+2) Look within and beyond “collaboration” and “competition” 
+in the design of activity trackers. 
+There are many design alternatives when considering social 
+features  in  activity  tracking.  This  is  often  treated  in  broad 
+terms,  for  example  prior  work  such  as  [9,  7]  talks  broadly 
+of  “competitive”  and  “collaborative”  trackers.  We  see  a 
+need  for  a  more  nuanced  view  of  social-relatedness  in  this 
+domain. By changing the way users cooperate in Pass The 
+Ball  we  found  that  different  practices  emerged.  We  also 
+found  through  examining  use  that  people  had  different  yet 
+colliding experiences of cooperation and competition. Some 
+were interested in  competition  and  others  not,  but  all  were 
+still informed about competition issues by their teammates. 
+Social  interaction  was  not  without  somewhat  negative 
+qualities such as obligation, conflict, and privacy concerns, 
+which  may  or  may  not  influence  motivation.  It  seems 
+important  to  move  to  more  nuanced  understandings  of 
+cooperative  interaction  in  this  area.  This  point  should  be 
+
+seen in the light of the previous one, and our prior study of 
+the  use  of  consumer  activity  trackers  [32]  in  which  we 
+found that the social use of trackers goes beyond the the use 
+of ostensibly ‘social’ functions. 
+
+led 
+
+CONCLUSION 
+We  have  taken  a  research-through  design  approach  to 
+explore  issues  in  activity  tracking.  We  have  followed  a 
+what-if  question.  As  such,  this  work  is  discursive  and  has 
+not set criteria for Pass The Ball to be a success or failure. 
+In several senses the app was both success and failure. Pass 
+The  Ball  was  enjoyable  for  many  players, 
+to 
+communication and team interaction, and generally worked 
+well  over  the  two-week  trial  period.  This  shows  there  is 
+room for creativity and the kind of rule-breaking discussed 
+by  [27]  and  subversion  by  [13]  in  the  area  of  activity 
+tracker  based  games.  However,  we  must  acknowledge  that 
+the  game  relied  on  us  recruiting  teams  and  coordinating  a 
+common  start  time.  From  a  behaviour  change  perspective, 
+Pass  The  Ball  is  also  somewhat  problematic.  Speaking 
+positively,  the  game  mechanic  encouraged  people  to  think 
+about and discuss not only their own activity, but also that 
+of others. However, it did not often lead to players overtly 
+encouraging  others,  it  seemingly  excluded  those  who  did 
+not  have  regular  routines,  and  favoured  those  who  were 
+more  active  over  those  who  perhaps  needed  to  improve 
+their activity levels. This situation might be improved (e.g. 
+by  including  the  tracker  within  a  coach-led  programme), 
+but we can make no clear claim at this point in time that the 
+design we describe has clear advantages over others. 
+
+In  closing,  we  believe  the  activity  tracker  design  space 
+deserves  wide  exploration.  There  are  many  ways  in 
+tracking  and  relatedness  can  come 
+personal  activity 
+together. Design oriented HCI has an important role to play 
+in this investigation. 
+
+ACKNOWLEDGMENTS 
+We  thank  Marek  Bell,  Scott  Sherwood  and  our  colleagues 
+in  the  Populations  Programme  (softwarepopulations.com). 
+We also thank the anonymous reviewers. This research was 
+funded by EPSRC (EP/J007617/1). 
+
+REFERENCES 
+1.  Anderson, I., Barkhuus, L, Brown, B. Shakra: tracking 
+and sharing daily activity levels with unaugmented 
+mobile phones. Mob Netw Appl, 12(2-3) 2007, 185–199. 
+
+2.  Barkhuus, L., Chalmers, M., Hall, M., Tennant, P., Bell, 
+M., Sherwood, S., and Brown, B. Picking pockets on the 
+lawn: the development of tactics and strategies in a 
+mobile game. Proc. Ubicomp 2005, 358-374. 
+
+3.  Bentley, F. et al. Health Mashups: Presenting statistical 
+patterns between wellbeing data and context in natural 
+language to promote behavior change. TOCHI 20(5), 
+2013. 
+
+4.  Bort-Roig, J., Gilson N., Puig-Ribera, A., Contreras, R., 
+Trost S. Measuring and influencing physical activity 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2425with smartphone technology: a systematic review. 
+Sports Medicine, February, 2014. 
+
+5.  Brown, B., Reeves, S., Sherwood, S. Into the wild: 
+
+Challenges and opportunities for field trial methods. 
+Proc CHI 2011, 1657-1666. 
+
+6.  Cercos, R., Mueller, F. Watch your steps: designing a 
+
+semi-public display to promote physical 
+activity. Interactive Entertainment, 2013. 
+
+7.  Chen, Y., Pu, P. HealthyTogether: exploring social 
+
+incentives for mobile fitness applications. Proc Chinese 
+CHI 2014, 25-34. 
+
+8.  Consolvo S, et al. Activity sensing in the wild: a ﬁeld 
+trial of ubiﬁt garden. Proc CHI 2008, 1797–806. 
+
+9.  Consolvo, S., Everitt, K., Smith, I., and Landay, J. A. 
+Design requirements for technologies that encourage 
+physical activity. Proc CHI 2006, 457–466. 
+
+10. Consolvo, S., McDonald, D. W, and Landay, J. Theory-
+driven design strategies for technologies that support 
+behavior change in everyday life. Proc CHI 2009. 
+
+11. Fallman, D. Design oriented Human-Computer 
+
+Interaction. Proc CHI 2003, 225-232.  
+
+12. Fujiki, Y., Kazakos, K., Puri, C., Buddharaju, P., 
+
+Pavlidis, I., and Levine, J. NEAT-o-Games: blending 
+physical activity and fun in the daily routine. Comput. 
+Entertain., 6(2), 21, 2008. 
+
+13. Gaver, W. What should we expect from research 
+
+through design? Proc CHI 2012, 937-946. 
+
+14. Hermawati, S. and Lawson, G. Managing obesity 
+
+through mobile phone applications: a state-of-the-art 
+review from a user-centred design perspective. Personal 
+and Ubiquitous Computing, (2014), 1-21. 
+
+15. Huggard, A., De Mel, A., Garner, J., Toprak, C., 
+
+Chatham, A., Mueller, F.. Understanding a socially 
+awkward digital play journey. Proc DIGRA 2013. 
+
+16. Kennedy CM., Powell J, Payne TH, Ainsworth J, Boyd 
+A,Buchan I. Active assistance technology for health-
+related behavior change: an interdisciplinary review. J 
+Med Intern Res. 14(3), 2012. 
+
+17. Klasnja P, Consolvo S, Choudhury T, Beckwith R, 
+
+Hightower J. Exploring privacy concerns about personal 
+sensing. Proc Pervasive 2009, 176-183.  
+
+18. Klasnja, P., Pratt, W. Healthcare in the Pocket: Mapping 
+
+the space of mobile-phone health interventions. 
+Biomedical Bioinformatics 45 (2012), 184-198. 
+
+19. Kuutti, K., Bannon, L. The turn to practice in HCI: 
+
+Towards a research agenda. Proc. CHI 2014, 3543-3552 
+
+20. Libby, R. A simple method for reliable footstep 
+detection on embedded sensor platforms, 2008 
+http://ubicomp.cs.washington.edu/uwar/libby_peak_dete
+ction.pdf (accessed Sept 2014). 
+
+21. Lin, J., Mamykina L, Lindtner S, Delajoux G, and 
+
+Strub, H. Fish'n'Steps: encouraging physical activity 
+with an interactive computer game. Proc Ubicomp 
+2006, 261–278. 
+
+22. Macvean, A. and Robertson, J. Understanding exergame 
+users' physical activity, motivation and behavior over 
+time. Proc. CHI 2013, 1251–1260. 
+
+23. Maitland, J. and Chalmers, M. Finding a balance: social 
+support v. privacy during weight-management. Proc. 
+CHI 2008, 3015-3020. 
+
+24. Maitland, J., Sherwood, S., Barkhuus, L., Anderson, I., 
+Hall, M., Brown, B., Chalmers, M., and Muller, H. 
+Increasing the awareness of daily activity levels with 
+pervasive computing. Proc Per Health 2006. 
+
+25. Miller, A., and Mynatt, E. StepStream: a school based 
+pervasive social fitness system for everyday adolescent 
+health. Proc CHI 2014, 2823-2832. 
+
+26. Miller, A. et al. The work of play: Supporting a 
+
+pervasive health behaviour change intervention for US 
+middle school students. Proc CSCW 2012, 897-900. 
+
+27. Mueller, F., Isbister, K. 2014. Movement-based game 
+
+guidelines. Proc. CHI 2014. 2191-2200. 
+
+28. Nettleton, S., Green, J. Thinking about changing 
+
+mobility practices: how a social practice approach can 
+help. Sociology of Health and Illness, 36(2), 2014, 239-
+251.  
+
+29. Patrick, H., and Canevello, A. Methodological overview 
+
+of a self determination theory-based computerised 
+intervention to promote leisure-time physical activity. 
+Psychol Sport Exerc. 2011, 12(1) 13-19. 
+
+30. Reed,  A.  et  al.  SpyFeet:  An  Exercise  RPG.  Proc 
+
+Foundations of Digital Games, 2011.  
+
+31. Richardson, C. R., et al An online community improves 
+adherence in an internet-mediated walking program. 
+Part 1: results of a randomized controlled trial. Journal 
+of medical Internet research, 12(4),  2010. 
+
+32. Rooksby, J., Rost, M., Morrison, A., and Chalmers, M. 
+Personal tracking as lived informatics. Proc CHI 2014, 
+1163-1172. 
+
+33. Ryan, R.. Patrick, H., Deci E.L., Williams, G. 
+Facilitating health behaviour change and its 
+maintenance: interventions based on Self Determination 
+Theory. European Health Psychologist 10, 2008, 2-5. 
+
+34. Tudor–Locke, C. Bassett, DR. How many steps are 
+
+enough? Sports Medicine, 34(1), 2004, 1–8. 
+
+35. Xu, Y., et al. Designing pervasive health games for 
+
+sustainability, adaptability and sociability. Proc FDG 
+2012, 49-56.  
+
+36. Zimmerman, J., Forlizzi, J., and Evenson, S. Research 
+through design as a method for interaction design 
+research in HCI. Proc CHI 2007, 493-502. 
+
+Experience Design for GamesCHI 2015, Crossings, Seoul, Korea2426

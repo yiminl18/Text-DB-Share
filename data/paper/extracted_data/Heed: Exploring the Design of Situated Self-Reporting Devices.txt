@@ -1,0 +1,1421 @@
+XX 
+
+132 
+
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+GAURAV PARUTHI, University of Michigan 
+SHRITI RAJ, University of Michigan 
+SEUNGJOO BAEK, University of Michigan 
+CHUYAO WANG, University of Michigan 
+CHUAN-CHE HUANG, University of Michigan 
+YUNG-JU CHANG, National Chiao Tung University 
+MARK W. NEWMAN, University of Michigan 
+
+In-situ self-reporting is a widely used data collection technique for understanding people’s behavior in context. Characteristics 
+of smartphones such as their high proliferation, close proximity to their users, and heavy use have made them a popular choice 
+for applications that require frequent self-reporting. Newer device categories such as wearables and voice assistants offer their 
+own advantages, providing an opportunity to explore a wider range of self-reporting approaches. In this paper, we focus on 
+exploring the design space of Situated Self-Reporting (SSR) devices. We present the Heed system, consisting of simple, low-
+cost, and low-power SSR devices that are distributed in the environment of the user and can be appropriated for reporting 
+measures such as stress, sleepiness, and activities. In two real-world studies with 10 and 7 users, we compared and analyzed 
+the use of smartphone and Heed devices to uncover differences in their use due to the influence of factors such as situational 
+and social context, notification types, and physical design. Our findings show that Heed devices complemented smartphones 
+in the coverage of activities, locations and interaction preferences. While the advantage of Heed was its single-purpose and 
+dedicated location, smartphones provided mobility and flexibility of use. 
+
+CCS Concepts: • Human-centered-computing → Ubiquitous and mobile computing → Empirical studies in mobile and 
+ubiquitous computing; • Human-Computer-Interaction → HCI design and evaluation methods; 
+
+Additional Key Words and Phrases: Context-aware systems, Self-reporting devices, qualitative study, real-world study, 
+Experience Sampling, ESM, EMA 
+ACM Reference Format: 1 
+
+Gaurav Paruthi, Shriti Raj, Seungjoo Baek, Chuyao Wang, Chuan-che Huang, Yung-ju Chang, Mark W. Newman. 2018. Heed: 
+Exploring the  Design of Situated  Self-Reporting  Devices.  Proc. ACM  Interact. Mob. Wearable  Ubiquitous  Technol.  2,  3, 
+Article 132 (September 2018), 21 pages. https://doi.org/10.1145/3264942 
+
+1 
+
+INTRODUCTION 
+
+Social science researchers and ubiquitous computing system designers share the need to understand how particular 
+groups of people behave in their natural environments. The experience sampling method (ESM)[9,15], also known 
+as Ecological Momentary Assessment (EMA) [30], is a well-established technique for eliciting self-report data 
+
+Authors’ addresses: Gaurav Paruthi (gparuthi@umich.edu), Shriti Raj, Seungjoo Baek, Chuyao Wang, Chuan-che Huang, Yung-ju Chang, 
+Mark W. Newman, School of Information, 105 S. State St. Ann Arbor, MI 48109, USA. Yung-ju Chang, 1001 University Rd, Hsinchu City, 
+Taiwan, 300 
+
+Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies 
+are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. 
+Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy 
+otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from 
+Permissions@acm.org. Copyright is held by the owner/author(s). Publication rights licensed to Association for Computing Machinery. 
+2474-9567/2018/9-ART132 $15.00 
+https://doi.org/10.1145/3264942  
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+  
+ 
+ 
+ 
+132:2 
+
+•  G. Paruthi et al. 
+
+from  people  in  a  variety  of  contexts  while introducing  minimal disruptions  that  would  impact  the  phenomena 
+under study. Developing ESM tools that can be deployed in an ever-widening variety of contexts while reducing 
+the intrusiveness of requesting and receiving self-reports has been the subject of much study, particularly within 
+the Ubiquitous Computing research community [16,17,21,27]. 
+
+In  order  to  receive  timely  reports,  the ESM  method  relies on  tools  to  carry on  two  important  functions- a) 
+remind the user to self-report, and b) provide the user with an interface to report the relevant measures. The earliest 
+ESM  studies  used  dedicated,  single-purpose  reporting  devices  such  as  pagers  to  remind  study  participants  to 
+initiate  paper  reports  [11].  As  smartphones  became  ubiquitous,  researchers  began  to  leverage  them  for  ESM, 
+thereby relieving subjects of the need to carry a separate device to participate in a study. Smartphones have been 
+found to be within the same room as their users almost 90% of the time, and within arm’s reach almost 50% of 
+the time [12]. Although smartphones offer significant advantages for ESM studies, they have nevertheless been 
+found to impose a burden on the user [17]. Researchers have thus tried to further improve ESM tools by reducing 
+the interaction burden on the user [37]. Newer device categories such as smartwatches and other wearables can 
+reduce the time required to access the device, thus supporting micro-interactions that lower the interaction burden 
+and increasing  reporting  frequency  [27].  Yet,  smartwatch interfaces come  with their  own  set  of  disadvantages 
+relative to smartphones, such as a high abandonment rate [39], additional effort required to learn their management 
+[24], and relatively limited screen real-estate. 
+
+The  interest  in  exploring  newer  device  categories  is  guided  by  the  goal  of  reducing  the  burden  of  high-
+frequency self-reporting and thus increasing the temporal density of reports. One of the main strategies used is to 
+reduce the time a user spends accessing the device (access time) while aiming for a high compliance rate. Multi-
+device experiences that take advantage of the complementary nature of different device types [13] aim for similar 
+goals by allowing the user to choose the most convenient device to achieve a task. A similar opportunity exists 
+for self-reporting applications, where a wide range of multi-device approaches can make it easier for researchers 
+and designers to choose a multi-device strategy that best fits their intended self-reporting application.  
+
+The Internet of things (IoT) paradigm represents many trends, one of them being the ability to design and build 
+physical computational devices at low cost. This opens up an opportunity to build new forms of self-reporting 
+devices that may come with their own sets of tradeoffs. In this paper, we investigate an emerging class of self-
+reporting devices that are situated in the environments of their users, providing a more convenient way to self-
+report in certain contexts. Existing Situated Self-Reporting (SSR) devices have been shown to be unobtrusive and 
+convenient tools that allow users to log repeating actions [36].  
+
+In the rest of the paper, we first review existing literature and highlight the opportunity in the design space for 
+SSR devices. We then present the design and implementation of Heed, an instantiation of an SSR device that is 
+distributed, low-power, low-cost, supports multiple simple constructs, and has a wooden enclosure with embedded 
+sensors that support touch interactions. To explore the tradeoffs offered by SSR devices, we conducted two studies 
+of one-week duration, one with 10 and the other with 7 users in their natural environments.  
+
+The findings from these studies can inform the future design of situated self-reporting devices. We uncover 
+insights  about  the  use  of  SSR  devices.  Qualitatively  we  show  that  Heed  devices  were  complementary  to 
+smartphones in nuanced ways. While the advantage of Heed was its single-purpose design and dedicated location, 
+smartphones provided mobility and flexibility of use. Finally, we discuss what we learned about the design of 
+SSR devices from the design and evaluation of Heed. The lessons we learned have implications for the design of 
+SSR  devices  that  may  be  deployed  in  future  real-world  studies.  Moreover,  we  present  some  unintended 
+consequences of SSR devices that researchers should be aware of. 
+
+ BACKGROUND 
+
+2 
+Self-reporting approaches are commonly subject to bias due to the limited opportunities available to a person to 
+respond. For instance, if smartphones are used, users can respond only when they are able to engage with them. 
+A user who is away from the smartphone may not wish to or be able to engage. The trigger strategy can also lead 
+to  biases  in  reporting.  Lathia  et  al.  (2013)  demonstrate  that  particular  aspects  of  the  design  of  an  experience 
+sampling study (e.g. random sampling of times, contextual sampling) are linked to bias in the resulting data [21]. 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:3 
+
+Furthermore, it can be argued that infrequently occurring events of interest may occur at times when a subject 
+doesn’t have access to the reporting device, is not prompted to enter a report, doesn’t remember to initiate a report, 
+or perceives the reporting device (e.g., a smartphone) to be intrusive or stress-inducing and decides not to interact 
+with it. 
+
+In addition to the bias, self-reporting involves manual work that may impose a burden on the user. For example, 
+self-reporting fatigue leads users to abandon reporting altogether in some situations [8]. The difficulty in accessing 
+particular  reporting  devices,  such  as  smartphones,  further  contributes  to  the  burden  of  using  them  to  answer 
+questions, especially when the devices are not within arm’s reach [12]. This perceived barrier to self-reporting 
+may result in lower compliance with ESM studies.  
+
+Ubicomp and HCI researchers have explored multiple approaches for reducing the burden of self-reporting. 
+One  such  approach  used  is  to  figure  out  the  optimal  frequency  for  prompts  such  that  the  annoyance  level  is 
+minimized. Although required report frequency depends upon the research setting (required level of recall and 
+time to finish questionnaire) [2], some researchers suggest that “a sampling frequency of five to eight times per 
+day may yield an optimal balance of recall and annoyance” [18]. Intrusiveness is also known to be alleviated by 
+the use of decision theory methods to generate prompts at opportune moments and reduce the overall number of 
+prompts [23].  Other approaches to reduce the burden include utilizing novel user interfaces [32,37], understanding 
+the role that choice of strategy plays in answering research questions [21], and understanding the effects of device 
+characteristics [16]. One approach that is relatively unexplored is the use of single-purpose devices to minimize 
+the access time and thus, reduce burden of self-reporting.  
+
+Single-purpose reporting devices in some ways represents a return to an earlier stage of ESM tool development. 
+As noted, the earliest ESM studies used dedicated reporting devices (pagers) for the single purpose of generating 
+self-reporting reminders (i.e., subjects did not use the devices for any other communication) [11]. Smartphones, 
+in contrast, are  used  for  an  ever-expanding  set of activities  [40]. This generality of  purpose  contributes  to  the 
+complexity and increased access time associated with using smartphones for in situ self-reporting. Dedicated self-
+reporting  devices,  placed  strategically  in  the  environment  of  the  user,  might  be  a  way  to  avoid  some  of  the 
+disadvantages imposed by smartphone-based ESM tools.   
+
+The  design  of  single-purpose  situated  self-reporting  devices  remains  largely  unexplored,  with  the  notable 
+exception  of  SAL  [19].  SAL  is  a  small,  situated,  ambient  logger  designed  for  personal  goal  tracking.  SAL  is 
+inspired  by  Weiser’s  original  vision  for  ambient,  calm,  and  peripheral  computing  [33].  SAL  was  found  to  be 
+unobtrusive  and  convenient  for  logging  progress  towards  behavior  goals  [36].  The  lower  cost  of  IoT  devices 
+provides  an  opportunity  to  design  situated  self-reporting  devices  that  are customized  for  an  intended  user  and 
+application. Inspired by similar comparative studies of self-reporting devices that quantified the trade-offs of using 
+earlier approaches such as PDAs [4], pen-and-paper [3], and more recently smartwatches [17] and head-mounted 
+displays  [16],  we  sought to  explore the  design  space  of  low-cost  self-reporting  devices  that are  situated in  the 
+environment of the user. 
+
+3 
+
+ DESIGN PROCESS AND IMPLEMENTATION 
+
+ Situated Self-Reporting Devices 
+
+3.1 
+A situated device is one that is designed to be used in a particular environment, supporting the activities performed 
+by users in that environment. Such devices need to provide their users with ease of access and use in the relevant 
+context. They also need to fit in with the physical environment in which they are placed, as well as the physical 
+arrangements and concurrent activities of the environment’s occupants. By this definition, situated devices are 
+common  in  contemporary  environments,  and  include  thermostats,  light  switches,  and  clocks.  Less  common 
+situated devices have been explored in the research literature as well (e.g.,[26,28,29]). We expect that the ease of 
+use offered by situated devices can also be leveraged to lower the burden of self-reporting in certain contexts. In 
+the  following  paragraphs,  we  first  define  situated  self-reporting  (SSR)  devices and  briefly  discuss their  design 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+132:4 
+
+•  G. Paruthi et al. 
+
+dimensions. We then present an instantiation of SSR device, that we designed, built, and evaluated in order to 
+explore the design space of SSR devices. 
+
+An SSR Device is a situated device intended to be placed in a location to optimize user’s self-reporting efficacy. 
+With SAL as a starting point, we wish to expand the notion of SSR devices by systematically exploring some of 
+their  key  design dimensions.  In Table  1,  we  propose a  provisional  design  space  for  SSR devices to  initiate an 
+exploration of tradeoffs between self-reporting device use. SSR devices may vary along each of these dimensions 
+as needed to fit into particular situations and self-reporting needs. As an example, the mode of interaction (e.g. 
+touch, gesture) supported by a device depends on context in which the user self-reports and the measure that is 
+intended to be reported using the device. For instance, imagine an ESM study that intends to study the stress level 
+of the user while driving. In the context of a driving a car, a self-reporting device must not distract the user and 
+provide for a quick interaction that fits with other interactions that the driver is used to when driving.  One might 
+
+Table 1. Selected design dimensions of SSR devices and the instantiation of Heed on those dimensions. 
+
+Design 
+Dimension 
+
+Description 
+
+Heed’s characteristics 
+
+Mode of 
+Interaction 
+
+How does the user interact with the device? Possibilities include voice 
+prompts, touch or gestures. 
+
+Touch 
+
+Notification type  How  is  the  user  reminded  to  self-report?  Possibilities  include  haptic, 
+
+Single light notification 
+
+Construct 
+complexity 
+supported 
+
+Context 
+Awareness 
+
+sound and lights 
+What  kinds  of  self-reporting  constructs  are  supported  by  the  device? 
+Device may support a one or more than one simple construct items (e.g. 
+stress level) or may support multi-dimensional constructs (Mood-Affect) 
+or compost constructs. 
+How much does the device adapt to its sensed context? For instance, its 
+notification is triggered by user’s proximity or other contexts.  
+
+Number of users  How many users does the device serve? Possibilities include a single user 
+
+Distributed 
+
+Material 
+
+Cost of device 
+
+device or a multi-user device.  
+How many devices does the user use? A system may consist of one or 
+more than one self-reporting devices 
+What materials were used for the device? Materials affect the durability 
+as  well  as  the  feelings  that  may  evoke  in  participants.  Possibilities 
+include wood, ceramic, and plastics. 
+How much does it cost to make the hardware?  
+
+Multiple 
+constructs 
+
+simple 
+
+Notifications  are  shown 
+when the user was nearby 
+Single user 
+
+Heed  is  a  single  user  - 
+many devices 
+Wood along with a glossy 
+paper  overlay  for 
+the 
+interface. 
+Very low cost (~$5) 
+
+Energy 
+requirements 
+
+How is the device powered? Possibilities include an always connected 
+power source, user is asked to charge, and self-contained power source.  
+
+Runs  without  charging 
+for ~7 days 
+
+Connectivity 
+
+How  does the device send  or receive  data?  Possibilities include  direct 
+Wi-Fi connection, user’s phone, etc. 
+
+Uses 
+connect to phone 
+
+Bluetooth 
+
+to 
+
+Other reporting 
+features 
+
+Purpose 
+
+What  are  the  ways  in  which  the  user  can  report  on  the  device? 
+Possibilities include participatory, in-situ and post-hoc. Does the device 
+provide the ability to edit/ undo reports previously made? 
+What is the purpose of the device? Is it a single-purpose device? Or is it 
+multi-purpose?  If  a  conversational  home-assistant  is  used  for  self-
+reporting, it will be a multi-purpose SSR. SAL had two main purposes 
+of logging and reflecting on one’s progress towards a goal. 
+
+Only in-situ 
+
+Single-purpose 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:5 
+
+imagine the use of a simple device consisting of buttons that mimic the natural interactions with the systems in 
+the car could achieve the goal of minimizing the access time while being less burdensome for the driver.  
+
+Informed by the design space of SSR devices elaborated in Table 1, we developed Heed - a simple, illustrative 
+example of an SSR device. Heed devices are intended to enable general users to report simple constructs, such as 
+activities performed, stress, sleepiness, and social context. They are low-cost SSR devices, distributed in locations 
+chosen by the user to optimize the user’s self-reporting behavior. Table 1 describes Heed’s characteristics, that is 
+the design choices made for Heed along the design dimensions of the design space. We evaluated the use of Heed 
+devices in two real-world studies to investigate the influence of its key characteristics, such as the location and 
+context of its use, on users’ self-reporting behavior. 
+
+3.2 
+
+ Implementation 
+
+The  Heed  system  consists of the  Heed  devices, the  Heed  phone  app,  and a  server. The  user interacts  with  the 
+devices and the phone app to enter self-reports. The phone app regularly pushes the data to the cloud-based server. 
+The self-reports stored on the Heed devices are also regularly synced with the phone app and then to the cloud. 
+The following subsections describe the implementation of the devices and the phone app in more detail. 
+
+3.2.1  Heed Devices 
+To  build  the  Heed  devices,  we  used  a  circular  soft-potentiometer  that  consumed  relatively  less  power  than 
+capacitive touch, thus extending battery life at the expense of expressivity. In addition to this linear touch sensor, 
+the Heed device consists of a microcontroller, a Bluetooth Low Energy (BLE) module, and an LED. We used an 
+off-the-shelf low-power BLE + microcontroller module [41]. Fig 1 shows each of these components laid out on a 
+table. The devices were optimized for low power, going to sleep at night and after a report was made. To minimize 
+the  space  requirements,  we  designed  our own  Printed Circuit  Board,  integrating all  the  components in  a  small 
+form factor. The code was written and uploaded to each device using the Arduino IDE. 
+
+We chose a round shape for the device for aesthetic reasons. The small form factor limits Heed to providing 
+seven touch points, which is adequate for reporting using simple constructs such as a five-point Likert scales. We 
+chose wood as the material for the enclosure for two main reasons. Firstly, wood is reported to inspire a perceived 
+sense of durability [25]. Secondly, we received positive feedback about the aesthetics of the wood enclosure during 
+our iterative design process. The wood enclosure was overlaid with a button map printed on glossy sticker paper, 
+
+Fig 1. (Left) Individual components of each Heed device include a circular touch-sensitive soft-potentiometer, LED, a 
+micro-controller with an integrated BLE module, and a custom designed Printed Circuit Board. (right) The Heed devices 
+used in Study 1. 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+132:6 
+
+•  G. Paruthi et al. 
+
+a) 
+
+b) 
+
+c) 
+
+d) 
+
+Fig 2. (a) Notification from the Heed app. (b and c) The reporting interface of the app for Study 1 and Study 2 respectively. (d) 
+end-of-day diary interface on the mobile app 
+
+allowing it to be easily customized for the intended self-reporting task. A laser cutter was utilized to prepare the 
+wood and paper parts of the enclosure.  
+
+The final design of the Heed device allows the researcher to customize the enclosure to the specific application 
+of  self-reporting  by  printing  a  customized  overlay.  That  said,  within  the  context  of  a  particular  study,  a 
+disadvantage of  Heed’s  design  is  the  lack of  flexibility  offered  by  the  interface  (by  comparison,  a  smartphone 
+screen can dynamically change to offer different self-report options). We note that such constraints are mostly due 
+to the cost and energy requirements of Heed and could be circumvented by other SSR devices that offer dynamic 
+displays (e.g., LCDs). 
+
+Heed devices are meant to be located in the most visited spaces of the user. To provide users with flexibility in 
+where the devices are placed, we designed Heed to be compact and to run continuously, without needing the user 
+to charge it for the duration of the study. In our initial exploration of materials and the physical design of Heed 
+we  sought  a  sweet  spot  where  the  devices  were  neither  too  ambient  (where  they  could  be  ignored)  nor  too 
+distracting  (where they  would  become  an annoyance).  We also  designed  Heed  devices  to  sync  with  the  user’s 
+smartphone via Bluetooth for two reasons: a) it allows the device to trigger notifications only when the user is 
+nearby and b) it allows the device to sync in real time. 
+
+An  envisioned  application  for  Heed  is  its  use  for  self-reporting  over  measures  that  require  a  single  touch 
+interaction,  such  as  those  that  ask  the  user  to  report  on  a  5-point  Likert  scale.  For  instance,  if  the  intended 
+application is eliciting stress levels from users, the touch-point labels on the Heed device may correspond to the 
+value of the stress levels (1-5) that need to be given as response options to the user.  
+
+3.2.2  Heed Phone App 
+The  Heed  app is  designed  to  perform  four  main tasks: a)  allow  self-reports to  be  made on the  smartphone,  b) 
+collect  the  user’s  location,  c)  collect  end-of-day  diary  entries  from  the  user,  and  d)  manage  Heed  devices. 
+Notifications to self-report remain visible for one minute and then disappear (Fig 2). The app tracks the user’s 
+location every five minutes in addition to whenever an action is performed. The app connects with and syncs data 
+with nearby devices. It can trigger or schedule a notification on the Heed device. The app also allows the user to 
+configure  the  time  window  within  which  notifications  can  be  made,  and  researcher  to  configure  other  study-
+relevant parameters. 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:7 
+
+The general flow of the reporting interface of the app is designed to look similar to other self-reporting app 
+interfaces  (e.g.,  [5,16]).  When  the  app  is  opened,  the  interface  presents  the  questions  that  the  participants  are 
+expected to answer for the active study. For example, in Fig 2 (c), participant is asked to report their stress and 
+sleepiness on two 5-point Likert scales.  
+
+The app also has the ability to provide the user with an end-of-day diary interface (Fig 2c). The diary interface 
+can be used by the user to verify the data they provided throughout the day, as well as share any overall comments 
+or feedback with the research team. The tool is always available to the participants and allowed them to remove 
+any invalid responses. The data from the Heed devices is displayed on the diary as soon as the devices finished 
+syncing with the database via the mobile app. In our evaluation studies, the end-of-day diary data helped us to 
+verify if the Heed devices and the smartphone application were working smoothly. 
+
+The mobile app software is written in HTML/JavaScript using Cordova libraries [42]. The software requires 
+Internet connectivity to transmit participants’ reports and other system logs. The app relies on background services 
+to monitor and synchronize with the Heed devices, thus restricting its use to smartphones with Android OS, which 
+allows such background services to run continuously.  
+
+4  EVALUATION 
+To evaluate Heed devices, we conducted two one-week-long studies with 10 and 7 participants (Table 2). The 
+rationale for using two studies was to explore the use of devices for reporting different constructs that required 
+different  types  of  responses.  Stress  and  sleepiness  may  be  reported  on  a  Likert  scale,  while  activity  reporting 
+requires  multiple  options.  All  participants  were  selected  for  the  one-week  study  based  on  their  smartphone’s 
+compatibility with our apparatus (any version of Android 4 or later was allowed).   
+
+The incentive for participating in either study was $65 for seven days of reporting. Participants were notified 
+every  45-60  minutes  on  the  phone  and/or  on  all  nearby  Heed  devices  depending  on  the  study  condition. 
+Participants could also choose to initiate a report on either the app or a device at their own discretion. The self-
+reporting interface on the phone and the device was disabled for 30 minutes after each report. At the end of each 
+study day (9pm), participants were notified via email to verify their reports using the end-of-day diary interface 
+on the smartphone app.  
+
+At the end of the study, all participants were asked to return to the lab for a follow-up interview. During this 
+in-depth  semi-structured  interview,  participants  were  asked  about  their  overall  experiences,  their  device 
+preferences, and how their preferences might have changed throughout the study. We also asked participants to 
+answer  a  post-study  questionnaire  that  asked  them  to  evaluate  certain  characteristics  of  the  two  device  types 
+(phone and Heed), including the comfort of use, the effect on social interactions, the effect on their stress levels, 
+and the likelihood of future use. 
+
+Table 2. Details of the two studies 
+
+Study 1 
+
+Study 2 
+
+Self-reporting measures 
+
+Activities and Social 
+
+Stress and Sleepiness levels 
+
+Interaction type 
+
+Study design 
+
+Activities: Select from options 
+Social: Tap if with people 
+
+2 days only Phone 
+2 days only Heed 
+3 days both Phone and Heed 
+
+Likert scale (1-5) 
+
+7 days both Phone and Heed 
+
+Number of Heed devices 
+per participant 
+
+5 
+
+3 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+132:8 
+
+•  G. Paruthi et al. 
+
+4.1  Study 1: Activity and Social Context Reporting 
+For the first study, we recruited 10 participants for a one-week evaluation. The study was conducted between 
+April and May 2017. We asked participants to report on two commonly tracked measures ESM studies (e.g. 
+[20]). : a) the activities they were doing, and b) if they were with other people. Moreover, reported activities 
+provide deeper insights into the context in which a device or smartphone was used.  
+
+During the initial interview, we asked participants to reflect on where they spend most of their time. Each 
+participant was provided with five Heed devices, four to be located in their frequently visited locations and one 
+to be carried with them when possible. We then guided them to choose the locations where they would place the 
+devices (kitchen, bedroom, etc.) and the activity labels on the devices, relevant to those locations (e.g. bedroom-
+> sleep, personal care, entertainment, etc.). We then customized the five devices for each participant by printing 
+the overlay for each device on sticker paper. Each overlay, consisted of seven buttons, 5 buttons were labelled as 
+the activities that user decided for the location of that device, one as “other”, and one as “with people”. In our 
+backend, each device was mapped to a single location and the buttons on the device to the list of activities as 
+printed on the overlay. Participants were asked to report either during an activity or at the end of an activity. If 
+they had begun a new activity and it had been less than 15 minutes, they were asked to report the previous 
+activity. Participants could also report their “Sleep” right after they woke up. 
+
+On Heed, the users reported their activity by pressing the button with the label of their activity (Fig 3). The 
+activity labels were adapted from prior literature [1]. On the phone, participants were instructed to report their 
+location with room-level granularity (e.g. home-bedroom). Fig 4 compares the reporting interface on Heed and 
+Phone. The capabilities offered by the phone interface differed from the Heed device in a few ways. First, it was 
+able to display all possible activity options while Heed devices displayed 6 activities selected by the participant 
+during the initial interview. Second, there was an additional prompt on the app asking for the room-level 
+location of the user. The location prompt was not necessary on the Heed devices as they were situated in one 
+given location. 
+
+We decided to keep the total duration of the study to be 7 days as it allowed the devices to function normally 
+without needing another charge. We divided the study duration into three phases. For the first phase (~2 days), 
+participants reported only via their smartphones. In the second phase (~2 days), participants reported only via the 
+Heed devices. In the third phase (~3 days), participants had the option to choose between the smartphone and the 
+devices  when  reporting.  This  distribution  of  days  was  selected  for  qualitative  purposes  to  help  participants 
+distinguish between the use of smartphone and Heed.  
+
+Fig 3. In Study 1, users reported their activities by pressing the button with the label of their activity. They reported their 
+social context by pressing the button with the label “with people” if they were with other people. 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:9 
+
+Fig 4. Comparison of the self-reporting interfaces used in Study 1, on smartphone (left) and the Heed device (right). 
+Participants reported their recent activity and whether they are with people. 
+
+4.2  Study 2: Stress and Sleepiness Reporting  
+
+In the second study, we recruited 8 participants for a one-week evaluation. The study was conducted between May 
+and June 2017. Each participant was provided with three Heed devices to be placed in three of their most-visited 
+spaces.  We  asked  participants  to  report  on  two  measures:  stress  and  sleepiness.  Stress  and  sleepiness  are 
+commonly tracked in ESM studies [20,35]. We used a five-point Likert scale for the two constructs as suggested 
+in prior works [16,35]. The interfaces for stress and sleepiness reporting on Heed devices and smartphones are 
+shown in Fig 5. The interaction with Heed device involved tapping the measure (stress/sleepy) and a value from 
+1 to 5 (Fig 6). Similar to the first study, we asked participants to reflect on their most visited spaces and guided 
+them to choose locations where they might place the three devices. All participants decided to place one device 
+
+Fig 5. Comparison of the self-reporting interfaces used in Study 2, on smartphone (left) and the Heed device (right). 
+Participants reported their stress and sleepiness levels. 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+132:10 
+
+•  G. Paruthi et al. 
+
+Fig 6. In Study 2, users reported their stress and sleepiness reporting by first pressing the measure and then a number 
+indicating their level 
+
+near their office desk. All except one participant placed two devices in their home (the exception placed one device 
+in his car and one at home).  
+
+5  DATA ANALYSIS 
+In-depth semi-structured interviews were conducted by the first author with all 17 participants. Each interview 
+lasted approximately 45 to 60 minutes. The qualitative data analysis harnessed open coding and thematic analysis 
+techniques  during  the  first  stage  of  reading  the  transcripts  [10,22].  Such  a  strategy  allowed  us  to  construct 
+participants’ daily experience with the Heed devices and the smartphone application on their own ground. Three 
+members of the research team read transcripts while listening to audio-recordings in an effort to reflect the on-site 
+presence  and  participants’  context  in  the  analysis  process.  We  highlighted  meaningful  statements  and  noted 
+spontaneously emerging thoughts in the margins of the transcripts (bracketing [31]). The purpose of this practice 
+was  to  help  us  reflectively  set  aside  our  prejudices  or  preconceptions  regarding  Heed  and  the  smartphone 
+application usage and to attain a certain level of “neutrality” during the analysis process [14].  
+
+During this process, we extracted 156 meaningful statements and created notes for each of them. Each memo 
+contained participants’ feedback, memorable experiences, and thoughts for further improvement, with regard to 
+the Heed device and the smartphone application. In another round of analysis, coded data were grouped under 
+themes using affinity diagrams [34].  
+
+5.1  Participant Overview 
+
+Participants ranged in age 18-35 in Study 1 (7 male, 3 female) and 26-55 in Study 2 (4 male, 3 female). Study 1 
+participants were all graduate students and Study 2 participants varied in their occupation with 2 graduate student 
+interns and 5 working in the administrative department of a university. One participant (not included in the 7) 
+dropped out of Study 2 as she had privacy concerns about leaving her Bluetooth and GPS switched on at all times. 
+Two participants reported having participated in ESM studies before. Five participants reported having done some 
+kind  of  self-reporting  in  the  past  for  personal  reasons.  Almost  all  participants  reported  that  they  kept  their 
+smartphones  in  silent  or  do-not-disturb  mode  in  their  natural  use.  One  participant  reported  changing  the 
+notification mode for the study so that she could report more. Most participants in Study 1 mentioned that they 
+would like to decrease the time they spent on the phone and would not like to use it while working.  
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:11 
+
+Table 3. Overall Report frequency and Compliance rates in the two studies 
+
+Report Frequency 
+(reports/day) 
+SD 
+M 
+
+Study 1 
+
+Study 2 
+
+Study 1 (Heed) 
+
+11.53 
+
+9.79 
+
+7.63 
+
+Study 1 (Phone) 
+
+3.9 
+
+Study 2 (Heed) 
+
+Study 2 (Phone) 
+
+4.17 
+
+5.62 
+
+5.35 
+
+6.68 
+
+5.24 
+
+2.22 
+
+2.8 
+
+4.31 
+
+Compliance Rate 
+(reports/notifications) 
+
+M 
+
+19.36% 
+
+28.93% 
+
+11.05% 
+
+8.30% 
+
+15.52% 
+
+13.40% 
+
+SD 
+
+0.13 
+
+0.15 
+
+0.06 
+
+0.07 
+
+0.13 
+
+0.1 
+
+6  RESULTS 
+ In this section, we first provide an overview of the number of reports obtained in the two studies, and the report 
+frequency  and  compliance  rate.  This  is  followed  by  the  themes  that  emerged  in  our  qualitative  analysis. 
+Specifically, we found that Heed was preferred by users for self-initiated reports. Additionally, Heed’s attributes 
+and proximity to the user affected response from Heed. We also describe how location affected self-reporting from 
+both phone and Heed. Lastly, we report cases of unexpected use of Heed. Each theme is supported by participant 
+quotes. The participant identifiers are in the order of their participation, so P1-10 were in Study 1 and P11 to P17 
+were in Study 2. 
+
+6.1  Overview of Participants’ Reports  
+
+Participants reported 346 (229 Heed and 117 Phone) times in Study 1 and 411 (175 Heed and 236 Phone) times 
+in Study 2. There were 78 prompted and 268 self-initiated reports for Study 1, and 265 prompted and 146 self-
+initiated reports for Study 2.  
+
+We calculated the report frequency for each participant as the average number of reports made per day of the 
+study condition and the compliance rate as the ratio of reports made to the notifications received (Table 3). The 
+total duration of the analyzed data (conditions where both Heed and phone were used simultaneously) was 3 
+days for Study 1 and 6 days for Study 2. For Study 1, the average reporting frequency was 11.53 (SD=5.35) and 
+the compliance rate was 19.36%. (SD=0.13). For Study 2, the study lasted 6 days over which the average 
+reporting frequency was 9.79 (SD=6.68) and the compliance rate was 28.93%. (SD=0.15). 
+
+In the post-study questionnaire, we compared participants’ scores for Heed and smartphone for the following 
+
+characteristics: the comfort of use, the effect on social interactions, the effect on their stress levels, and the 
+likelihood of future use. We received much feedback on the physical form factor and choice of materials of 
+Heed. The overall feedback was positive, with a few exceptions. The choice of LED light for notification 
+elicited feedback from participants, with many of them suggesting the use of sound in the future. We do not go 
+into detail regarding such findings as we wanted to focus on findings that are the most relevant to a broader set 
+of SSR devices. 
+
+6.2  Preference of Heed for Self-Initiated Reports  
+
+One of our motivations was to know if physically situated Heed devices would elicit more responses because their 
+physical  presence  would  act  as  a  trigger  for  users to report.  In  Fig 7,  we  compare  the report  frequency  of the 
+respective  devices  when  they  self-initiated  their  reports.  Although,  the  differences  between  the  two  studies 
+(duration, number of Heed devices, self-reporting measures) make it difficult to make any generalizable claim that 
+one device was more preferred than the other, we highlight some important findings. In Study 1, we suspect two 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+132:12 
+
+•  G. Paruthi et al. 
+
+Fig 7. Comparison of report-frequency between devices when the user reported at their own discretion in the two 
+studies. In Study 1, the report frequency from Heed devices was higher than the report frequency from smartphone. 
+
+main reasons for a higher report frequency via the Heed devices when users self-initiated reports, that is without 
+being prompted. We describe them next. 
+
+Heed devices serve as physical reminders 
+Qualitatively, we found that the Heed device served as a physical reminder. Several participants mentioned that 
+they self-initiated from Heed devices because the physical presence of Heed reminded them to report. For instance, 
+P15 noticed the devices while going from one room to another and that prompted him to report, “I might have 
+been doing laundry. On Friday I worked from home, so I might have been on my way to let the dog out or something 
+like that. But I would notice it right away and go, "Oh, okay. I should touch it."” P7 explicitly mentioned, “I see 
+them around the house, which is, I guess, a more physical reminder [as compared to phone].” Many such instances 
+strengthen our claim that SSR devices can act as triggers for users to self-initiate reporting. 
+
+Attitudes towards phone use affected Heed use 
+The  report  frequency  of  Heed  devices  was  greater  than  that  of  smartphones  in  Study  1,  but  similar  to  that  of 
+smartphones in Study 2. There could be two reasons for this. First, this may be explained by the difference in 
+participants’ attitude towards each device. We observed their attitudes by looking at their responses in the pre-
+study and post-study questionnaires when asked about their preference on the future use of each device. In the 
+post-study questionnaire, participants in Study 1 (M=2.9, SD=1.1) scored smartphones lower than participants in 
+Study  2  (M=4,  SD=0.82).  Moreover,  in  the  pre-study  questionnaire,  many  Study  1  participants  qualitatively 
+reported that the use of smartphones was something that they would like to reduce in their daily life. For instance, 
+P6 said, "Yes. I try to stay away from it[phone] during office hours: 8 am - 5 pm, Monday - Friday." This attitude 
+towards  smartphone  use  was  absent  from  participant  responses  in  the  Study  2  pre-study  questionnaire,  where 
+participants reported using their phones quite frequently without wanting to reduce usage. For instance, P13 said, 
+"I  look  at  my  phone  at  least  every  15  minutes,  except  for  during  some  blocks  of  time  at  work  when  I  am  in 
+meetings." We suspect that because Study 1 participants were trying to reduce phone use, their tendency to report 
+from Heed was higher. Second, the difference could potentially be attributed to the fact that the number of Heed 
+devices given to each participant in Study 2 was less than the number of devices given in Study 1. 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:13 
+
+6.2  Influence of the Attributes of Heed on Self-Reporting 
+Our  participants  noted  two  attributes  of  Heed  that  affected  self-reporting.  These  attributes  include  micro-
+interactions afforded  by  Heed  and the  single-purpose nature  of  Heed  compared to  the  multi-purpose  nature  of 
+smartphones. In what follows, we describe how these two attributes affected the use of Heed. 
+
+We found that the design of Heed was favorable for brief non-disruptive interactions (a.k.a. micro-interactions 
+[17])  which  lowered  the  interaction  burden.  While  the  smartphone  app  required  the  participants  to  tap  the 
+notification first and then initiate the report, Heed only required the participants to tap once to report. As expected, 
+many participants noted this difference in the interaction as Heed required less time to self-report with and was 
+thus, considered to cause lower interaction burden. For instance, P7 noted that Heed devices offered a smoother 
+interaction as time and effort involved in accessing the interface was less when compared to the phone, “On the 
+phone, I had to physically open the app. I had to navigate through the screen to get there. With this device, it's 
+just there.” On the other hand, P7 also noted that the phone interface is burdensome because it required the user 
+to move between applications or open the app: “if I'm using my phone and I need to report... that means I have to 
+leave whatever I'm doing. Or if I'm not using it to do the whole motion of opening it up and everything again.”  
+
+The presence of micro-interactions also lowered the access time on Heed as compared to a phone, which made 
+Heed  more  preferable  when  participants  wanted  to  report  when  they  were  engaged  in  focused  work.  Several 
+participants pointed this out and gave different reasons related to Heed’s attributes. For example, P17 mentioned 
+that interaction with phone was more complex than Heed, which makes him not want to report using phone when 
+he is working: “(Heed device) is always turned on and on your face. It's just asking for you to do reports. Just 
+click it, done. A phone is a much more complex device compared to that. On a phone probably, I will not do it… 
+I think for work this (Heed device) is amazing.”  
+
+Another attribute of Heed that participants noted was its single-purpose nature. For instance, P2 highlighted 
+how the single-purpose nature of Heed made it less disruptive for use during work: “I really like entering on the 
+device like this… (Heed device) is already on my desk, I can see the light flashing sometimes, and if I'm focused 
+on work, it doesn't distract my attention by leading me to check other activities on my phone.” On the other hand, 
+she described the multi-purpose nature of the smartphone as distracting when she was trying to focus on her work 
+“You know, once you check on the phone, or once your interest is on the phone, you end up checking other stuff 
+on the phone as well.” The multi-purpose nature of smartphone also resulted in situations when user’s current 
+activity  was  too  important  to  be  distracted  from.  For  instance,  P15  reported  ignoring  notifications  on  the 
+smartphone when he was trying to reach his partner or get some work done: “On the phone it was usually like, 
+"Oh, I see this notification, but I have another thing I need to use my phone for right now so I'm going to ignore 
+it." I'm trying to do something at work or I'm trying to get ahold of my partner or something like that. I would just 
+ignore it, blaze past it and go into whatever task I was doing.” 
+
+The  social  context  which  showed  a  greater  use  of  Heed  was  when  participants  were  alone  (Fig  8b).  Some 
+participants noted that when they were with friends, they were likely to “zone out” and forget about the existence 
+of the Heed devices. For example, P17 stated that he preferred to use the smartphone when he was with his friends, 
+but he reported much less often in such situations, while he reported using Heed a lot more at work when alone. 
+Moreover, we observed that activities that were reported to be done alone such as “Food” (eating) and “Personal 
+Care” were also reported mostly using the Heed devices (Fig 8a). This further suggests that perceived burden to 
+report on devices may vary based on the activity of the user. While such skewing of self-reports may not be desired 
+by researchers using ESM, the uneven distribution of self-reports across activities also exists for smartphones [6]. 
+
+6.3  Influence of Device Proximity on Self-Reporting 
+Situations  when  users  preferred  Heed  included  those  when  the  phone  was  not  available  nearby.  Several 
+participants pointed out cases when their phone was charging, and Heed happened to be nearby. In P14’s case he 
+had to choose between going downstairs or choosing the nearby device: “I was [watching some TV] on my couch, 
+and the device was on the coffee table and I saw it blinking. And my phone was downstairs. This walking distance 
+is less than going down. I took this device and just recorded from there.” Similar instances of the smartphone not 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+132:14 
+
+•  G. Paruthi et al. 
+
+Fig 8. a) (Left) Distribution of reports in Study 1 for each activity. b) (Right) Distribution of reports for the social context 
+reported as being with other people. Reports from Heed devices were found to be higher when participants were alone 
+
+being around may also occur when a participant has moved from one place to another: “Like when I'm at my desk, 
+my phone might be on the bed. But, I tended not to move the [Heed] device around then. So, the device was good 
+then, in such situations.” 
+
+In Study 1, we expected that participants, even while moving around, might find using Heed devices to be more 
+convenient than using smartphones because of the shorter access time. Although we found this to be true in some 
+cases  where  participants  noticed  the  device  in  their  pocket  and  were  reminded  to  report,  we  found  that  most 
+participants found carrying an extra device for self-reporting to be redundant. For instance, P5 said, “what makes 
+the device redundant is [that] I'm always having my phone when I'm outside my room, so I just find it like painful 
+to, like, report on a separate thing as opposed to a phone, but then, like, in the bedroom, I'm almost like, I don't 
+sit with the phone in my pocket, so like the [Heed] device is more convenient.” Such anecdotes strengthen our 
+claim that Heed devices were advantageous in certain situations, while Phone is preferred more in other situations. 
+The majority of the participants preferred Heed when they were in one place and smartphones when they were 
+moving.  P15  stated  this  in  her  own  words: “I think  they're really complementary in  [the  Heed  devices]  being 
+stationary somewhere and then the phone being the piece if I'm like away for an extended period of time. They're 
+extremely complementary. Where I would probably be less prone to use [the Heed device] is if this was to travel 
+around with me.” 
+
+6.4   Influence of Location on Self-Reporting  
+To  be  useful,  self-reporting  devices  must  have  good  coverage  of  contexts  such  as  location.  Our  quantitative 
+analysis showed a noticeable difference in reports made in the bedroom and bathroom with the report frequency 
+via  Heed  being  higher  than  via  smartphone  (Fig  9).  There was  high variability  in the  report  frequency among 
+participants across indoor locations. Qualitatively, we found that the visibility of the Heed devices, the size of 
+room, and the space use patterns of the user can be attributed to the variance in the reporting behavior in different 
+indoor locations. 
+
+Certain  locations  favored  the  use  of  Heed  devices  due  the  relationship  between  user’s  space  use  and  the 
+arrangement of artifacts (furniture, appliances, etc.) within that location. For instance, P4 reported that the Heed 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+ 
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:15 
+
+Fig 9. The distribution of reports in Study 1 across different locations. Locations that were not in one of the above categories 
+were categorized as Other. 
+
+devices were easy to find when they were in the line of sight: “The one on my desk is right in front of me just 
+below the monitor, I’m always seeing it. The one in the bedroom is right next to the bed, next to the mirror and I 
+use the mirror … It was in an ideal location, so I always saw it.” In another instance, P2 mentioned that devices 
+were also likely to be found when they were within the peripheral vision:  “Basically I will see it out of the corner 
+of my eye, if I'm looking at my second screen. (I have two screens at home.)”  
+
+On the other hand, the smartphone was reported as sometimes being out of the field of view, which increased 
+reliance  on  Heed.  For instance,  P7 found  Heed  devices  more  accessible  than  her  smartphone  when  she  was  at 
+work, as she would often forget her smartphone in her jacket pocket in another corner of the room: “Oh, I guess 
+the phone is more often out of the field of view. Sometimes I will leave it in my pocket, in my jacket just leaving it 
+hanging there, not near me but at the corner of the room. Yeah, but the device, the BLE device is always there at 
+the corner of my desk.”  
+
+Heed devices were also used more when placed in a frequently accessed space. For instance, P14 mentioned 
+using his device at his desk more as it was placed in an area that was accessed a lot and also had good visibility: 
+“[Heed device] was on my table… I keep my laptop here, and on the left, these are my snacks and everything 
+else… Having the device in an area where I would generally go to control stuff or probably do something, as I 
+thought  that  would  the  most  obvious  place  that  I  would  take  notice  of  the  notification,  so  I  kept  it  there.” 
+Furthermore, spaces that were visited frequently, especially during the transition from one room to another, also 
+made good locations for Heed devices. For instance, P15 said, “Essentially, I have a little ledge that separates our 
+living room from the hall, but we still have our bedrooms. That ledge also has a staircase next to it, which leads 
+down to my maker space. So, I pass that ledge when I'm at home like 50 times every day, not every hour. So, I'm 
+always walking by it so it's really easy to just always log everything from that.”  
+
+A characteristic of the room that was found to influence device preference was the size of the room. It was 
+noted by some participants that it was easier to use Heed in smaller rooms than in larger rooms. For example, P5 
+noted: “…especially my living room and kitchen were just much bigger. So, it's hard to have a stationary device 
+[that] I won’t remember to see in which case the phone worked better… But then in my bedroom, because it's 
+much smaller and I could see the device from almost any angle and the green light. So, the device worked better 
+in the bedroom.”  
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+132:16 
+
+•  G. Paruthi et al. 
+
+We found that users decided to move the Heed device to a more suitable location after having experienced its 
+use in their daily context. For instance, P4 initially decided to move the device to a new place after realizing that 
+the initial placement was not in line of sight “Actually, it was originally here because I thought if I’m standing 
+here like microwaving something I can see it. [I thought] if I’m sitting here I can see it but it turns out I can’t. I 
+moved it here because this is the sink and I can still see it from [where I’m sitting].” 
+
+6.6  Unexpected Social Consequences 
+In  describing  their  experiences  of  using  Heed,  participants  noted  its  social  consequences.  Several  participants 
+mentioned that Heed devices attracted the attention of their friends, family and officemates. In some cases, others 
+would remind the participant to report or reporting on participant’s behalf. For instance, P13, who lived with her 
+family, mentioned that the blinking notification on the Heed device turned into a family event: “One of the times 
+I was outside doing yard work over the weekend, and my partner ran outside with one and was like, "The light is 
+flashing." It was so funny. So the whole family got involved. So I pressed the button and the device was brought 
+back inside.” In another instance, participants’ acquaintances reported on behalf of the participants. For instance, 
+P15’s partner noticed the device notification and then reported on her behalf “Oh, yeah. Actually, one time my 
+boyfriend was in the bathroom and he was like, "Your device beeping." So I actually told him, "Why don't you just 
+report for me so it stop beeping." Yeah. So I just told him, "Why don't you hit the ...," So I basically I told him to 
+choose this option, the one that I was doing.” Here, the participant referred to the “blinking” notification light as 
+“beeping.” 
+
+In  some  cases,  having  novel  physical  devices  created  unintended  tension  and  added  stress  to  participants, 
+mainly due to concern about how the devices might be perceived by others. This concern was shared by three 
+participants, all of whom were international students. P11 was hesitant to place the device where everyone could 
+see and instead placed it to the side where it was less noticeable to others: “[It’s an] electronic device. You would 
+see people putting tapes on their webcams these days. People are so conscious of their privacy and all that, so I 
+didn't want them to suspect that I have some device capturing anything in the office.” A similar issue seemed to 
+cause a severe reaction from P6, who was nervous about carrying or using Heed devices in public spaces due to 
+the fear created by the socio-political climate at that time: “Completely unreasonable, I guess, but I had this panic 
+attack. I just want to remember when was it. I can't remember if it was when I was on the bus, or when I was in 
+the workshop, but I had this moment of a sort of a panic attack. It was me thinking, "I am basically using this 
+conspicuous device and pressing it in the middle of a crowded room, and I am a brown man. Are people going to 
+think I am trying to set off a bomb here? I hope not." A similar sentiment was shared by another foreign student 
+from South Asia (P5): “I was being very conscious about was like especially yesterday, I was initially going to 
+take the device on the train, but then like because this is like this handmade device, and like you know, considering 
+that someone freaked out about a bomb scare with like the university professor solving a math equation, I was 
+kind of like a bit worried about carrying it with me.” P5 was worried about openly using the device in the train 
+because of the apprehension that the appearance of the device might lead to it being mistaken for an undesirable 
+and unsafe gadget. 
+
+7  DISCUSSION 
+Our findings show that Heed devices are a viable tool to have in a toolbox of self-reporting approaches as they 
+complemented the use of smartphones for self-reporting in nuanced ways. Such nuances were governed by the 
+context of use of both these tools. While the smartphone was preferred in situations where the user was moving 
+around or already engaged in certain smartphone activities, Heed devices were preferred when the user was at one 
+place for a longer duration of time, and also when the user was engaged in focus work. User’s engagement levels 
+indicated they didn’t want to be distracted by email or other social communication, which is inevitable on phone 
+but possible on Heed devices. 
+Additionally, the findings of our study highlighted the effect of certain design choices (Table 1) on the overall use 
+of Heed devices. For example, the minimal form factor and the low-power design of Heed devices allowed users 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:17 
+
+to  place  them  in  their  surroundings  with  ease,  allowing  for  the  Heed  system  to  be  distributed.  This  revealed 
+participants’ preferences for location of Heed devices that could be generalized to many SSR devices; that is, SSR 
+devices are preferable to smartphones when they are in the field of view, within arm’s reach, in infrequently visited 
+spaces, and in small spaces. 
+
+Similarly, the situated and physical presence of the devices affected the use of Heed devices. Their visibility 
+often triggered users to self-initiate reports via Heed leading to a much higher report frequency in Study 1. That 
+is, the placement of Heed devices affected how aware the users were of the devices and this awareness reminded 
+users to initiate self-reports. The physical visibility of Heed devices also meant that they were visible to user’s 
+acquaintances and thus, led to incidents of shared use when friends reported on behalf of the primary user. While 
+such shared use may be considered positive for shared reporting tasks (e.g., family-related tracking), it has the 
+potential to cause privacy-related issues. For example, if the reporting task is related to chronic health conditions, 
+their use of such a device might reveal their health issues when they might not want to. 
+
+Our findings have implications for SSR devices, multi-device environments, and lessons for researcher using 
+
+SSR devices for data collection, which we discuss next. 
+
+7.1  Implications for Design of Situated Self-Report Devices 
+Many themes emerged after characterizing how our participants used the Heed devices and their smartphones to 
+complete the self-reporting tasks. The ways in which they used these devices are indicative of how self-reporting 
+devices should be designed, keeping in mind the actual practices of users. We present these themes as four key 
+lessons to guide the design of SSR devices. 
+
+Design or choose self-reporting tools that are suited for your participants 
+
+We saw that the patterns and preferences of smartphone use affected when users may choose to respond or 
+ignore notifications or may choose Heed devices over smartphone and vice versa. Such patterns and preferences 
+affect self-reporting and the data that is generated. For instance, if a researcher wants to study the relationship 
+between anxiety and social media using a smartphone-based ESM tool, the self-reporting behavior may be subject 
+to the level of engagement they have in social-media consumption, thus affecting their likelihood of ignoring or 
+attending to the ESM notification. Ignored notifications may be programmed to return, but such behavior of the 
+app may annoy a user, affecting future participation in the study. It is during such situations that SSR devices 
+might complement smartphone use. That is, if the user is deeply engaged in a task on the phone, the low interaction 
+burden and single purpose nature of SSR devices could incentivize the user to report using Heed device without 
+excessively  disrupting  their  task  on  the  phone.  Similarly,  one  may  imagine  the  use  of  SSR  devices  in  this 
+hypothetical situation - assuming children spend a significant amount of time in their bedrooms, they may be less 
+likely to ignore a particular ambient light on a device soliciting them to touch one of the buttons. 
+
+A user’s perception of a self-reporting device and constraints to use these significantly affects the preference 
+for that device for self-reporting. For example, in this study, we saw that a disinclination to use phone resulted in 
+using Heed devices more in Study 1. Similarly, mobility constrained the use of Heed devices and participants 
+preferred using smartphone when moving. ESM studies focusing on special populations such as children and 
+elders could consider such preferences and constraints before deploying their tools for ESM studies. For 
+example, doing a study with children may be impossible with smartphones given that smartphone use is often 
+restricted during school hours. However, using an SSR device would allow researchers to solicit information 
+from children on simple constructs in a relatively less intrusive way. 
+
+Leverage multi-device strategies for relevant measures 
+Given the ways in which phone and Heed devices were complementary for self-reporting, in many cases a multi-
+platform approach may be more desirable for ESM studies. For example, an activity-labeling study, similar to our 
+Study 1, may leverage phones or smartwatches for activities during movement, while it could use SSR devices for 
+indoor activities, especially when the devices are likely to be in the field of view of the user (e.g. on the desk at 
+work,  in the  bedroom  or  in the  bathroom). These kinds  of multi-device  self-reporting approaches  complement 
+each other.  
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+132:18 
+
+•  G. Paruthi et al. 
+
+Multi-platform experiences intend to provide users with the most convenient way to accomplish a task within 
+their current context [13]. For instance, smartwatches work best for people who wear them in situations where 
+taking out a smartphone and navigating through its interface is too much of a burden. The notion of SSR devices 
+intends to build on the multi-platform paradigm, imagining their use specifically for self-reporting tasks. Home 
+assistant devices such as Alexa and Google Assistant are increasingly being adopted in users’ homes, and such 
+situated devices may be used as effective SSR devices, offering an avenue for further study. 
+
+Allow for flexible placement and re-placement of devices 
+The  use  of  SSR  devices  for  real-world  studies  depends  greatly  on  where  they  are  placed  in  the  physical 
+environments  of  users.  SSR  devices  may  be  well  used  when  participants  expect  to  spend  time  in  a  stationary 
+environment and the devices can be found in frequently accessed or frequently visited spaces. Such placement of 
+the  devices can leverage  an  important advantage  of  such  devices  over  smartphone; that  is, their  physical  form 
+serving  as  a  reminder  to  initiate  a  self-report.  Moreover,  our  findings  suggest  that  users  learnt  their  device 
+placement  preferences  as  the  study  progressed.  SSR  device  placement  may  not  be  perfect  initially  and  hence 
+researchers  may allow “pilot” time  for  their  users to  better understand  their  preferences  for  device  placement. 
+Although such constraints may add some burden on the researchers, understanding such constraints for any self-
+reporting  tool  can  greatly  benefit  ESM  researchers  in  improving  the  quality  of  self-reports.  Allowing  for  the 
+relocation of SSR devices during the course of a study may have methodological implications that would have to 
+be addressed in future studies. 
+
+Unintended consequences may or may not have a positive impact on the reporting behavior 
+The physical presence of SSR devices makes them visible to anyone in the space of the user. This may lead to 
+unintended consequences for the user’s reporting behavior. Certain social situations may have positive impacts, 
+as occurred in our study; for instance, the partner of a user may notice a notification on an SSR device and then, 
+in turn, remind the user. A user’s acquaintance may even report for the user. Although we mainly saw such positive 
+incidents in our study, it is possible that some of the reports may have been made unintentionally by acquaintances. 
+The ability to know if the user is nearby, using the proximity of a smartphone, is a useful feature in such situations 
+to verify who reported from the device.  
+
+The social use of SSR devices is also affected by the socio-political climate around the user and may hinder 
+
+its intended use. The look and feel of a device may then affect how SSR devices are perceived by users and 
+others around them. Systems could pay specific attention to the form of devices, such as making the look of the 
+device more polished under such circumstances.  
+
+7.2  Future Directions 
+
+We saw a higher use of Heed devices among participants who made an effort to decrease their smartphone use in 
+their daily life. Our findings strengthen our claim that SSR devices are more suitable for people who are inclined 
+to  reduce  their  smartphone  use,  such as  parents on  behalf  of  their  children, or elders.  However,  we cannot be 
+conclusive  about  such  claims  without  providing  empirical  evidence.  Future  studies  exploring  the  use  of  SSR 
+devices may be used to understand self-reporting behavior of specific populations.  
+
+We also note that Heed devices only hint at the potential of creating personalized self-reporting devices. We 
+can imagine many possibilities that are worth exploring; for instance, a plate may be augmented with low-cost 
+touch  sensors  [38]  to  conveniently  track  what  is  being  eaten.  We  imagine  that  creating  a  wide  range  of  self-
+reporting tools would make it easier for ESM researchers to choose appropriate ones. Such a toolkit will continue 
+to evolve  with  new  technologies  and  new  opportunities  to embed  sensors in customized  objects.  Most  studies 
+exploring  the  use  of  self-reporting  tools  focus  on  quantitative  results.  We  recommend  that  researchers  further 
+delve into qualitative data to extract nuanced user perceptions of self-reporting devices. 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:19 
+
+7.3  Limitations 
+Our  evaluation  of  Heed  devices  with  the  goal  of  illuminating  the  design  space  for  SSR  devices  has  several 
+limitations that may be addressed in future work. A one-week study cannot assess the impact of device novelty. 
+A longer duration is necessary to study the use of Heed once the novelty wears off. 
+
+Our emphasis on qualitative analysis allowed us to gain deep insights into the use of Heed devices. Our findings 
+also  include  results  from  some  basic  quantitative  analysis.  Such  results  provide  us  with  better  insight  but  are 
+limited due to the small number of participants and the short duration of the study. 
+
+We also wish to note some limitations of using Heed for other ESM studies. At present, Heed places an extra 
+burden  on  researchers to  build  and  maintain  the  devices, thus  requiring  extra effort  from  researchers.  Another 
+downside of Heed worth noting is the additional effort required in placing the devices for the participants, as it 
+requires thought and effort to understand participants’ spatial patterns. We hope that future studies can develop 
+tools and best practices to accomplish this in an easier way. 
+
+We also note that we do not claim an overall lower burden of Heed devices in comparison to smartphones. The 
+app did not take advantage of designs that could have reduced reporting time, such as lock-screen widgets [7] or 
+unlock-gestures [32], which could have decreased the access time. Future studies may further unpack the situated 
+nature of SSR devices separately from the interface elements that lower the burden on users to report. 
+
+8  CONCLUSION 
+In this paper, we presented a design exploration of situated self-reporting (SSR) devices. We designed and built 
+the Heed system, an instantiation of SSR devices that are low-cost, low-power, and have a simple form factor. 
+Overall,  we  show  that  Heed  devices  complemented  smartphones  in  their  coverage  of  activities,  locations  and 
+interaction  preferences.  Our  findings  have  implications  for  the  design  and  use  of  SSR  in  self-reporting 
+applications. 
+
+REFERENCES 
+[1]  Barbara E. Ainsworth, William L. Haskell, Melicia C. Whitt, Melinda L. Irwin, Ann M. Swartz, Scott J. Strath, William 
+L. O’Brien, David R. Bassett, Kathryn H. Schmitz, Patricia O. Emplaincourt, David R. Jacobs, and Arthur S. Leon. 
+2000. Compendium of Physical Activities: an update of activity codes and MET intensities: Med. Sci. Sports Exerc. 32, 
+Supplement (September 2000), S498–S516. DOI:https://doi.org/10.1097/00005768-200009001-00009 
+
+[2]  Niels Van Berkel, Denzil Ferreira, and Vassilis Kostakos. 2017. The Experience Sampling Method on Mobile Devices. 
+
+[3] 
+
+ACM Comput. Surv. CSUR 50, 6 (2017), 93. 
+Elliot T. Berkman, Nicole R. Giuliani, and Alicia K. Pruitt. 2014. Comparison of text messaging and paper-and-pencil 
+for ecological momentary assessment of food craving and intake. Appetite 81, (2014), 131–137. 
+
+[4]  Chris J. Burgin, Paul J. Silvia, Kari M. Eddington, and Thomas R. Kwapil. 2013. Palm or cell? Comparing personal 
+digital assistants and cell phones for experience sampling research. Soc. Sci. Comput. Rev. 31, 2 (2013), 244–251. 
+[5]  Yung-Ju Chang, Gaurav Paruthi, and Mark W. Newman. 2015. A Field Study Comparing Approaches to Collecting 
+Annotated Activity Data in Real-world Settings. In Proceedings of the 2015 ACM International Joint Conference on 
+Pervasive and Ubiquitous Computing (UbiComp ’15), 671–682. DOI:https://doi.org/10.1145/2750858.2807524 
+[6]  Yung-Ju Chang, Gaurav Paruthi, Hsin-Ying Wu, Hsin-Yu Lin, and Mark W. Newman. 2017. An investigation of using 
+mobile and situated crowdsourcing to collect annotated travel activity data in real-word settings. Int. J. Hum.-Comput. 
+Stud. 102, (2017), 81–102. 
+Eun Kyoung Choe, Bongshin Lee, Matthew Kay, Wanda Pratt, and Julie A. Kientz. 2015. SleepTight: Low-burden, 
+Self-monitoring  Technology  for  Capturing  and  Reflecting  on  Sleep  Behaviors.  In  Proceedings  of  the  2015  ACM 
+International  Joint  Conference  on  Pervasive  and  Ubiquitous  Computing 
+’15),  121–132. 
+DOI:https://doi.org/10.1145/2750858.2804266 
+Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, Wanda Pratt, and Julie A. Kientz. 2014. Understanding quantified-
+selfers’ practices in collecting and exploring personal data. 1143–1152. DOI:https://doi.org/10.1145/2556288.2557372 
+Tamlin S. Conner, Howard Tennen, William Fleeson, and Lisa Feldman Barrett. 2009. Experience sampling methods: 
+A modern idiographic approach to personality research. Soc. Personal. Psychol. Compass 3, 3 (2009), 292–313. 
+John W. Creswell. 2013. Qualitative inquiry and research design: Choosing among five approaches. Sage. 
+
+(UbiComp 
+
+[10] 
+
+[8] 
+
+[7] 
+
+[9] 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+  
+132:20 
+
+•  G. Paruthi et al. 
+
+[11]  Mihaly Csikszentmihalyi and Reed Larson. 2014. Validity and reliability of the experience-sampling method. In Flow 
+from 
+
+foundations  of  positive  psychology.  Springer,  35–54.  Retrieved  May  14,  2017 
+
+the 
+
+and 
+http://link.springer.com/10.1007/978-94-017-9088-8_3 
+
+[12]  Anind K. Dey, Katarzyna Wac, Denzil Ferreira, Kevin Tassini, Jin-Hyuk Hong, and Julian Ramos. 2011. Getting Closer: 
+An Empirical Investigation of the Proximity of User to Their Smart Phones. In Proceedings of the 13th International 
+Conference on Ubiquitous Computing (UbiComp ’11), 163–172. DOI:https://doi.org/10.1145/2030112.2030135 
+Jens Grubert, Matthias Kranz, and Aaron Quigley. 2016. Challenges in Mobile Multi-Device Ecosystems. MUX J. Mob. 
+User Exp. 5, 1 (December 2016). DOI:https://doi.org/10.1186/s13678-016-0007-y 
+
+[13] 
+
+[16] 
+
+[14]  E. G. Guba and Y. S. Lincoln. 1985. Naturalistic inquiry (Vol. 75). Beverly Hills CA Sage (1985). 
+[15] 
+
+Joel M. Hektner, Jennifer A. Schmidt, and Mihaly Csikszentmihalyi. 2007. Experience sampling method: Measuring 
+the quality of everyday life. Sage. 
+Javier Hernandez, Daniel McDuff, Christian Infante, Pattie Maes, Karen Quigley, and Rosalind Picard. 2016. Wearable 
+ESM:  Differences  in  the  Experience  Sampling  Method  Across  Wearable  Devices.  In  Proceedings  of  the  18th 
+International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI ’16), 195–
+205. DOI:https://doi.org/10.1145/2935334.2935340 
+
+[17]  Stephen  Intille,  Caitlin  Haynes,  Dharam  Maniar,  Aditya  Ponnada,  and  Justin  Manjourides.  2016.  $\mu$EMA: 
+Microinteraction-based Ecological Momentary Assessment (EMA) Using a Smartwatch. In Proceedings of the 2016 
+ACM  International  Joint  Conference  on  Pervasive  and  Ubiquitous  Computing  (UbiComp  ’16),  1124–1128. 
+DOI:https://doi.org/10.1145/2971648.2971717 
+
+[18]  Predrag Klasnja, Beverly L. Harrison, Louis LeGrand, Anthony LaMarca, Jon Froehlich, and Scott E. Hudson. 2008. 
+Using wearable sensors and real time inference to understand human recall of routine activities. In Proceedings of the 
+10th 
+154–163. 
+on 
+DOI:https://doi.org/10.1145/1409635.1409656 
+
+international 
+
+Ubiquitous 
+
+conference 
+
+(UbiComp 
+
+computing 
+
+’08), 
+
+[19]  Bob Kummerfeld, Lie Ming Tang, Judy Kay, and Farahnaz Yekeh. 2015. SAL: A Small, Simple, Situated, Ambient 
+Logger.  In  Adjunct  Proceedings  of  the  2015  ACM  International  Joint  Conference  on  Pervasive  and  Ubiquitous 
+Computing and Proceedings of the 2015 ACM International Symposium on Wearable Computers (UbiComp/ISWC’15 
+Adjunct), 403–406. DOI:https://doi.org/10.1145/2800835.2800929 
+
+[20]  T. Lataster, D. Collip, M. Lardinois, J. Van Os, and I. Myin-Germeys. 2010. Evidence for a familial correlation between 
+increased reactivity to stress and positive psychotic symptoms. Acta Psychiatr. Scand. 122, 5 (November 2010), 395–
+404. DOI:https://doi.org/10.1111/j.1600-0447.2010.01566.x 
+
+[21]  Neal Lathia, Kiran K. Rachuri, Cecilia Mascolo, and Peter J. Rentfrow. 2013. Contextual Dissonance: Design Bias in 
+Sensor-based  Experience  Sampling  Methods.  In  Proceedings  of  the  2013  ACM  International  Joint  Conference  on 
+Pervasive and Ubiquitous Computing (UbiComp ’13), 183–192. DOI:https://doi.org/10.1145/2493432.2493452 
+[22]  Kay  A.  Lopez  and  Danny  G.  Willis.  2004.  Descriptive  versus  interpretive  phenomenology:  Their  contributions  to 
+
+nursing knowledge. Qual. Health Res. 14, 5 (2004), 726–735. 
+
+[23]  Akhil  Mathur,  Nicholas  D.  Lane,  and  Fahim  Kawsar.  2016.  Engagement-aware  Computing:  Modelling  User 
+Engagement from Mobile Contexts. In Proceedings of the 2016 ACM International Joint Conference on Pervasive and 
+Ubiquitous Computing (UbiComp ’16), 622–633. DOI:https://doi.org/10.1145/2971648.2971760 
+
+[24]  Chulhong Min,  Seungwoo Kang,  Chungkuk  Yoo,  Jeehoon  Cha,  Sangwon  Choi,  Younghan  Oh,  and Junehwa  Song. 
+2015. Exploring current practices for battery use and management of smartwatches. In Proceedings of the 2015 ACM 
+International Symposium on Wearable Computers, 11–18. 
+
+[25]  William Odom, James Pierce, Erik Stolterman, and Eli Blevis. 2009. Understanding why we preserve some things and 
+discard others in the context of interaction design. In Proceedings of the SIGCHI Conference on Human Factors in 
+Computing Systems, 1053–1062. 
+
+[26]  K. O’Hara, M. Perry, and S. Lewis. 2003. Social coordination around a situated display appliance. Proc. SIGCHI Conf. 
+
+Hum. Factors Comput. Syst. (2003), 65–72. 
+
+[27]  Aditya  Ponnada,  Caitlin  Haynes,  Dharam  Maniar,  Justin  Manjourides,  and  Stephen  Intille.  2017.  Microinteraction 
+Ecological Momentary Assessment Response Rates: Effect of Microinteractions or the Smartwatch? Proc ACM Interact 
+Mob Wearable Ubiquitous Technol 1, 3 (September 2017), 92:1–92:16. DOI:https://doi.org/10.1145/3130957 
+[28]  Abigail Sellen, Rachel Eardley, Shahram Izadi, and Richard Harper. 2006. The Whereabouts Clock: Early Testing of a 
+Situated Awareness Device. In CHI ’06 Extended Abstracts on Human Factors in Computing Systems (CHI EA ’06), 
+1307–1312. DOI:https://doi.org/10.1145/1125451.1125694 
+
+[29]  Abigail Sellen, Richard Harper, Rachel Eardley, Shahram Izadi, Tim Regan, Alex S Taylor, and Ken R Wood. 2006. 
+HomeNote:  supporting  situated  messaging  in  the  home.  In  CSCW  ’06:  Proceedings  of  the  2006  20th  anniversary 
+conference on Computer supported cooperative work, 1–10. 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+Heed: Exploring the Design of Situated Self-Reporting Devices 
+
+•  132:21 
+
+[30]  Saul  Shiffman,  Arthur  A.  Stone,  and Michael  R.  Hufford.  2008. Ecological  momentary assessment.  Annu  Rev  Clin 
+
+Psychol 4, (2008), 1–32. 
+
+[31]  Ghada  Abu  Shosha.  2012.  Employment  of  Colaizzi’s  strategy  in  descriptive  phenomenology:  A  reflection  of  a 
+
+researcher. Eur. Sci. J. ESJ 8, 27 (2012). 
+
+[32]  Khai  N.  Truong,  Thariq  Shihipar,  and  Daniel J.  Wigdor.  2014.  Slide to  X:  Unlocking the  Potential  of  Smartphone 
+Unlocking. In Proceedings of the 32Nd Annual ACM Conference on Human Factors in Computing Systems (CHI ’14), 
+3635–3644. DOI:https://doi.org/10.1145/2556288.2557044 
+
+[33]  M. Weiser and J. Seely Brown. The Coming Age of Calm Technology", Xerox PARC October 5, 1996.  
+diagram. 
+[34]  Wikipedia. 
+
+November 
+
+Retrieved 
+
+Affinity 
+
+2017. 
+
+12, 
+
+2017 
+
+from 
+
+[35] 
+
+https://en.wikipedia.org/w/index.php?title=Affinity_diagram&oldid=772829913 
+Jessica A. de Wild-Hartmann, Marieke Wichers, Alex L. van Bemmel, Catherine Derom, Evert Thiery, Nele Jacobs, 
+Jim van Os, and Claudia J. P. Simons. 2013. Day-to-day associations between subjective sleep and affect in regard to 
+future  depression  in  a  female  population-based  sample.  Br.  J.  Psychiatry  202,  6  (June  2013),  407–412. 
+DOI:https://doi.org/10.1192/bjp.bp.112.123794 
+
+[36]  Farahnaz  Yekeh,  Judy Kay,  Bob Kummerfeld,  Lie Ming  Tang, and  Margaret  A.  Allman-Farinelli. 2015.  Can  SAL 
+Support  Self  Reflection  for  Health  and  Nutrition?  In  Proceedings  of  the  Annual  Meeting  of  the  Australian  Special 
+Interest 
+134–141. 
+Computer 
+DOI:https://doi.org/10.1145/2838739.2838752 
+
+Interaction 
+
+(OzCHI 
+
+Human 
+
+Group 
+
+’15), 
+
+for 
+
+[37]  Xiaoyi Zhang, Laura R. Pina, and James Fogarty. 2016. Examining Unlock Journaling with Diaries and Reminders for 
+In  Situ  Self-Report  in  Health  and  Wellness.  In  Proceedings  of  the  2016  CHI  Conference  on  Human  Factors  in 
+Computing Systems (CHI ’16), 5658–5664. DOI:https://doi.org/10.1145/2858036.2858360 
+
+[38]  Yang  Zhang,  Gierad  Laput,  and  Chris  Harrison.  2017.  Electrick:  Low-Cost  Touch  Sensing  Using  Electric  Field 
+
+Tomography. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems, 1–14. 
+
+[39]  Gartner  Survey  Shows  Wearable  Devices  Need  to  Be  More  Useful.  Retrieved  November  7,  2017  from 
+
+https://www.gartner.com/newsroom/id/3537117 
+in 
+
+Countries 
+
+Leading 
+
+the 
+
+[40]  Discover 
+
+App 
+
+Usage. 
+
+Retrieved  May 
+
+13, 
+
+2018 
+
+from 
+
+https://www.appannie.com/en/insights/market-data/global-consumer-app-usage-data/ 
+
+[41]  BLE Nano. RedBear. Retrieved November 13, 2017 from http://redbearlab.com/blenano/ 
+[42]  Apache Cordova. Retrieved November 14, 2017 from https://cordova.apache.org/ 
+
+Received November 2017; revised May 2018; accepted September 2018 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. Vol. 2, No. 3, Article 132. Publication date: September 2018. 
+
+ 
+ 
+ 
+

@@ -1,0 +1,23 @@
+1. Introduction
+2. Related Work
+   2.1 Self-monitoring
+   2.2 Data Capture Mechanisms in Self-monitoring
+   2.3 Sleep-monitoring
+3. SleepTight Design
+   3.1 Design Goals
+   3.2 Leveraging App Widgets
+   3.3 Capturing Target Behaviors and Contributing Factors
+   3.4 Providing Feedback about People’s Sleep Behaviors
+   3.5 SleepTight Implementation
+4. Deployment Study
+   4.1 Study Design
+   4.2 Participants
+   4.3 Study Procedure
+   4.4 Dataset and Analysis
+5. Results
+   5.1 Data Capture Behavior
+   5.2 Information Access
+   5.3 Self-reflection with SleepTight
+6. Discussion
+7. Conclusion
+8. References

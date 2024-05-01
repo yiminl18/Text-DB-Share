@@ -1,0 +1,23 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work
+    5.1 Quantiﬁed Self Movement
+    5.2 Quantiﬁcation at Work
+6. A Prototype Quantiﬁed Workplace System
+    6.1 Design Challenges
+    6.2 Implementation
+    6.3 Deployment
+7. Study Methodology
+    7.1 System Logs
+    7.2 Survey
+    7.3 Semi-Structured Interview
+8. Study Results
+    8.1 Understanding Spatio-Temporal Usage
+    8.2 Understanding Data Dynamics
+    8.3 Understanding User Engagement
+    8.4 Understanding Privacy and Trustworthiness
+9. Implications
+10. Concluding Remarks
+11. References

@@ -1,0 +1,23 @@
+Table of Contents:
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work
+    5.1 Personal Informatics
+    5.2 Reflective Design
+    5.3 Slow Technology
+6. Theoretical Background
+    6.1 Philosophical
+    6.2 Cognitive
+    6.3 Educational
+    6.4 Critical
+7. Some Dimensions of Reflective Informatics
+    7.1 Breakdown
+    7.2 Inquiry
+    7.3 Transformation
+8. Discussion and Future
+9. Conclusion
+10. Acknowledgments
+11. References

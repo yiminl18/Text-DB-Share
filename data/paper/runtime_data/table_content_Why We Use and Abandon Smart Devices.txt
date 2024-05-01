@@ -1,0 +1,25 @@
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Related Work
+    5.1 Routine and Motivation
+    5.2 Studies of Smart Devices
+    5.3 Studies Focused on Those with Acute Health Needs and Users who Have Integrated Devices into their Lives
+    5.4 Studies Exploring Use and Abandonment
+6. Method
+    6.1 Procedure
+    6.2 Participants
+    6.3 Analysis
+7. Results
+    7.1 Participant goals and devices
+    7.2 Why Did Participants Stop Using Devices?
+    7.3 Why Did Participants Use Devices?
+8. Limitations
+9. Discussion and Design Implications
+    9.1 Lowering Barriers for Users
+    9.2 Increasing Motivation for Users
+    9.3 Reconceptualizing Abandonment as Short Term Use
+10. Conclusion
+11. Acknowledgments
+12. References

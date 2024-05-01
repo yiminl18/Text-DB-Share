@@ -1,0 +1,158 @@
+NOTICE OF PROBABLE VIOLATION 
+and 
+PROPOSED CIVIL PENALTY 
+
+CERTIFIED MAIL - RETURN RECEIPT REQUESTED 
+
+March 24, 2023 
+
+Eric Amundsen 
+Senior Vice President, Operations 
+Sea Robin Pipeline Company 
+1300 Main Street 
+Houston, TX 77002 
+
+Dear Mr. Amundsen: 
+
+CPF 4-2023-027-NOPV 
+
+From February 28 through June 23, 2022, a representative of the Pipeline and Hazardous Materials 
+Safety Administration (PHMSA), Office of Pipeline Safety (OPS), pursuant to Chapter 601 of 49 
+United  States  Code  (U.S.C.)  inspected  Sea  Robin  Pipeline  Company’s  (Sea  Robin)  Offshore 
+Pipeline System in the Gulf of Mexico and Louisiana. 
+
+As a result of the inspection, it is alleged that Sea Robin has committed a probable violation of the 
+Pipeline Safety Regulations, Title 49, Code of Federal Regulations (CFR).  The item inspected and 
+the probable violation is: 
+
+1. 
+
+§ 192.605 Procedural manual for operations, maintenance, and emergencies.  
+
+(a)  General.  Each  operator  shall  prepare  and  follow  for  each 
+pipeline, a manual of written procedures for conducting operations and 
+maintenance activities and for emergency response. For transmission 
+lines, the manual must also include procedures for handling abnormal 
+operations. This manual must be reviewed and updated by the operator 
+at intervals not exceeding 15 months, but at least once each calendar 
+year.  This  manual  must  be  prepared  before  operations  of  a  pipeline 
+system  commence.  Appropriate  parts  of  the  manual  must  be  kept  at 
+locations where operations and maintenance activities are conducted. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+§ 192.481 Atmospheric corrosion control: Monitoring. 
+
+(a) …. 
+(c)  If  atmospheric  corrosion  is  found  during  an  inspection,  the 
+operator must provide protection against the corrosion as required by 
+§ 192.479. 
+
+Sea Robin failed to provide protection against atmospheric corrosion found during an inspection 
+in accordance with § 192.481(c) and its procedures.  Specifically, Sea Robin failed to remediate 
+atmospheric  corrosion  found  during  an  inspection  at  the  Vermillion  149  platform  within  one 
+calendar year, not to exceed 15 months, in accordance with its procedures and § 192.605(a). 
+
+Sea Robin’s procedures, D.40 Corrosion Control Remedial Action (D.40), requires remediation 
+“of offshore atmospheric corrosion protection within one calendar year following discovery, not 
+to exceed 15 months from the date deficiencies were discovered.”  During Sea Robin’s inspection 
+on April 15-16, 2019, it discovered several  areas  on the  Vermillion 149 platform  that required 
+remediation  of  atmospheric  corrosion  control.    Specifically,  the  “[g]as  coolers  ha[d]  severe 
+corrosion that need to be blasted and painted,” and “[a]ll 3 [compressor] units and unit piping need 
+to be blasted and painted.” 
+
+On  June  23,  2022,  PHMSA  inspected  the  Vermillion  149  platform  and  observed  that  the 
+remediation had not been completed on compressors 1 and 2 or the gas coolers.  Compressor 3 had 
+been disconnected from service. Additionally, Sea Robin blocked gas flow to the compressor area 
+in November 2021. 
+
+On  August  8,  2022,  after  the  inspection,  Sea  Robin  completed  the  remediation  and  provided 
+records and photographs of the completed remediations. 
+
+Therefore, Sea Robin failed to provide protection against atmospheric corrosion found during an 
+inspection in accordance with § 192.481(c) and its procedures.  
+
+Proposed Civil Penalty 
+
+ Under 49 U.S.C. § 60122 and 49 CFR § 190.223, you are subject to a civil penalty not to exceed 
+$257,664 per violation per day the violation persists, up to a maximum of $2,576,627 for a related 
+series of violations. For violation occurring on or after March 21, 2022 and before January 6, 2023, 
+the maximum penalty may not exceed $239,142 per violation per day the violation persists, up to 
+a maximum of $2,391,412 for a related series of violations.  For violation occurring on or after 
+May  3, 2021  and  before  March 21, 2022,  the  maximum  penalty  may  not  exceed  $225,134  per 
+violation  per  day  the  violation  persists,  up  to  a  maximum  of  $2,251,334  for  a related  series  of 
+violations.    For  violation  occurring  on  or  after  January  11,  2021  and  before  May  3,  2021,  the 
+maximum penalty may not exceed $222,504 per violation per day the violation persists, up to a 
+maximum of $2,225,034 for a related series of violations.  For violation occurring on or after July 
+31,  2019  and  before  January  11,  2021,  the  maximum  penalty  may  not  exceed  $218,647  per 
+violation  per  day  the  violation  persists,  up  to  a  maximum  of  $2,186,465  for  a related  series  of 
+violations.   For violation occurring on or after November 27, 2018 and before July 31, 2019, the 
+maximum penalty may not exceed $213,268 per violation per day, with a maximum penalty not to 
+exceed $2,132,679.  For violation occurring on or after November 2, 2015 and before November 
+27, 2018, the maximum penalty may not exceed $209,002 per violation per day, with a maximum 
+penalty not to exceed $2,090,022. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+We  have  reviewed  the  circumstances  and  supporting  documentation  involved  for  the  above 
+probable violation and recommend that you be preliminarily assessed a civil penalty of $ 39,400 
+as follows: 
+
+Item number 
+1 
+
+PENALTY 
+$ 39,400 
+
+Response to this Notice 
+
+Enclosed as part of this Notice is a document entitled Response Options for Pipeline Operators in 
+Enforcement  Proceedings. Please  refer  to  this  document  and  note  the  response  options. All 
+material you submit in response to this enforcement action may be made publicly available. If you 
+believe that any portion of your responsive material qualifies for confidential treatment under 5 
+U.S.C. § 552(b), along with the complete original document you must provide a second copy of 
+the  document  with  the  portions  you  believe  qualify  for  confidential  treatment  redacted  and  an 
+explanation of why you believe the redacted information qualifies for confidential treatment under 
+5 U.S.C. § 552(b). 
+
+Following the receipt of this Notice, you have 30 days to submit written comments, or request a 
+hearing under 49 CFR § 190.211. If you do not respond within 30 days of receipt of this Notice, 
+this constitutes a waiver of your right to contest the allegations in this Notice and authorizes the 
+Associate Administrator for Pipeline Safety to find facts as alleged in this Notice without further 
+notice to you and to issue a Final Order. If you are responding to this Notice, we propose that you 
+submit your correspondence to my office within 30 days from the receipt of this Notice.  This 
+period may be extended by written request for good cause. 
+
+In  your  correspondence  on  this  matter,  please  refer  to  CPF  4-2023-027-NOPV,  and  for  each 
+document you submit, please provide a copy in electronic format whenever possible. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Sincerely, 
+
+Bryan Lethcoe 
+Director, Southwest Region, Office of Pipeline Safety 
+Pipeline and Hazardous Materials Safety Administration 
+
+Enclosure:  Response Options for Pipeline Operators in Enforcement Proceedings 
+
+ 
+ 
+

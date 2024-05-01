@@ -1,0 +1,716 @@
+Sensor Requirements for Activity Recognition 
+on Smart Watches 
+Marian Haescher 
+University of Rostock 
+Albert-Einstein-Straße 22 
+18059 Rostock, Germany 
+marian.haescher@ 
+uni-rostock.de 
+
+Matthias Vahl 
+Fraunhofer IGD 
+Joachim-Jungius-Str. 11 
+18059 Rostock, Germany 
+matthias.vahl@ 
+igd-r.fraunhofer.de 
+
+Gerald Bieber 
+Fraunhofer IGD 
+Joachim-Jungius-Str. 11 
+18059 Rostock, Germany 
+gerald.bieber@ 
+igd-r.fraunhofer.de 
+
+ABSTRACT 
+The  new  generation  of  watches  is  smart.  Smart  watches  are 
+connected  to  the  internet  and  provide  sensor  functionality  that 
+allows  an  enhanced  human-computer-interaction.  Smart  watches 
+provide  a  gesture  interaction  and  a  permanent  monitoring  of 
+physical  activities.  In  comparison  to  other  electronic  home 
+consumer devices with integrated sensors, Smart watches provide 
+monitoring data for 24h per day, many watches are water resistant 
+and can be worn constantly. The integrated sensors are varying in 
+performance and are not intended to distinguish between different 
+states  of  activity  and  inactivity.  This  paper  reports  on  identified 
+requirements on sensors of smart watches for detection of activity, 
+inactivity as  well as sleep detection. Hereby a new  measurement 
+quantity  is  introduced  and  applications of  heart  beat detection  or 
+wearing situation are presented.   
+
+Categories and Subject Descriptors 
+H.5.2 [User Interfaces]: Information Interfaces and Presentation 
+I.5.2 [Design Methodology]: Pattern Recognition 
+J.3 [Life and Medical Sciences] 
+
+General Terms 
+Mobile  Computing,  algorithms,  smart  watch,  user  interfaces, 
+quantify self. 
+
+Keywords 
+Activity  Monitoring,  inactivity,  acceleration,  sensor,  recognition, 
+wrist, watch, smart, sleep. 
+
+INTRODUCTION 
+
+1. 
+The ongoing trend of not wearing a watch because of an available 
+phone  with  clock  functionality  seems  to  be  stopped.  The  origin 
+functionality of watches, just to display the time, is tremendously 
+smart  watches. 
+the  new  generation  of 
+enhanced  by 
+
+Smart  watches  are  designed  to  display  various  messages  such  as 
+SMS,  RSS-feeds,  Emails,  or  Facebook  messages.  For  interaction 
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not  made  or  distributed  for  profit  or  commercial  advantage  and  that 
+copies bear this notice and the full citation on the first page. Copyrights 
+for  components  of  this  work  owned  by  others  than  ACM  must  be 
+honored.  Abstracting  with  credit  is  permitted.  To  copy  otherwise,  or 
+republish,  to  post  on  servers  or  to  redistribute  to  lists,  requires  prior 
+specific  permission  and/or  a 
+from 
+Permissions@acm.org.  
+PETRA 
+Copyright 
+http://dx.doi.org/10.1145/2504335.2504407 
+
+'13,  May  29  -  31  2013,  Island  of  Rhodes,  Greece 
+978-1-4503-1973-7/13/05…$15.00. 
+
+fee.  Request  permissions 
+
+ACM 
+
+2013 
+
+purposes,  smart  watches  provide  additional  sensor  functionality 
+that  might  be  used  for  third  party  application  providers.  Hereby 
+mainly  sport  or  wellness  applications  are  in  focus  of  the 
+manufactures. Because of the smart watch´s sensor functionality, 
+the  device  enables  new  and  innovative  applications  that  expand 
+the  original  application  field.  The  smart  watches  allow  a 
+permanent  monitoring  of  the  activities  of  the  user.  The  acquired 
+information  on  the  physical  activity  of  a  person  can  be  used  for 
+various purposes, such as wellness, safety,  various psychological 
+identifier (degree of attention), or detection of micro-activities in 
+an overall state of inactivity. 
+
+For  activity  and  inactivity  recognition  by  smart  watches  it  is 
+necessary  to  be  aware  of  capabilities  of  the  sensors.  This  paper 
+introduces the current work of sensor technology and describes a 
+generic  identifier  of  the  performance  of  the  acceleration  sensing 
+functionality  of  the  smart  watches.  The  paper  closes  with  a 
+summary and an outlook of the future work in the area of activity 
+recognition on smart watches. 
+
+RELATED WORK 
+Smart Watch  
+
+2. 
+2.1 
+In  the  90´s,  some  watches  [1]  were  designed  with  an  integrated 
+light sensor that enabled a connection to a PC. Hereby data were 
+transferred  to  optical  information  on  the  monitor  of  the  PC  and 
+could be received by a light sensor of the watch (e.g. Timex data-
+link).  Nowadays,  the  connectivity  has  been  realized  by  wireless 
+communication, e.g. Bluetooth or propriety protocols. The current 
+models  of  smart  watches  are  connected  via  Bluetooth  to  a  smart 
+phone. Because the watch is located at the wrist, a permanent look 
+on  the  micro  display  of  the  watch  is  possible.  The  main 
+application  of  smart  watches  is  to  display  messages  of  services 
+like Facebook, SMS, RSS or incoming calls. One of the most used 
+sensors  of  a  smart  watch  is  an  acceleration  sensor  to  support 
+fitness and wellness applications with pedometer functionality.  
+
+The  smart  watch  idea  provides  two  general  concepts.  The  first 
+concept of smart watches is the autarkical watch. The smart watch 
+provides  computational  power.  Hereby  a  wireless  connection  to 
+the  internet  or  phone  is  only  needed  for  data  synchronization 
+purposes. This concept allows sensor data processing directly on 
+the watch. 
+
+The  second  concept  of  smart  watches  is  the  idea  of  a  dedicated 
+terminal. Each event, e.g. pressing a button, screen touch event, or 
+sensor readout has to be transmitted to a hub, the smart phone. On 
+the phone, the data will be processed and events will be sent back 
+to  the  watch  wirelessly.  Hereby  the  phone  might  transmit  the 
+vibration  event  or  the  screen  content.  The  watch  needs  no  extra 
+computational  power  which  helps  saving  battery  energy.  If 
+
+ 
+ 
+ 
+Activity Recognition  
+
+acceleration data are to be read out permanently (e.g. for activity 
+recognition) the  transmission  needs  significant  more  energy  than 
+an onboard data processing would consume. 
+2.2 
+The  integrated  acceleration  sensor  of  a  smart  watch  enables  the 
+feature of physical activity recognition. Because of the location of 
+the watch, the integrated sensor measures the acceleration force of 
+the wrist.  The  wrist is not the ideal location for physical activity 
+recognition in comparison to the hip. If the user is shaking the hip, 
+the acceleration data are a good indicator that the whole body is in 
+motion.  In  [2],  [3]  is  shown  that  the  pattern  of  a  hip  movement 
+correlates  to  the  basic  activities  such  as  walking,  cycling,  car 
+driving or jogging.  
+
+The  wrist  movements  are  very  complex  and  are  significantly 
+different to the hip movements. Nevertheless Polar could proof by 
+AW200  that  easy  activity  recognition  for  walking  and  different 
+states of running is possible on a commercial product [4]. Hereby 
+an  acceleration  and  air  pressure  sensor  were  integrated  into  the 
+watch.  The  research  project  eWatch  [5]  designed  an  activity 
+monitoring  system  that  uses  additional  sensors,  e.g.  light  and 
+audio.  WristQue  by  MIT,  USA  [6]  is  a  research  prototype  with 
+integrated location sensor, temperature and humidity. The focus of 
+InfoPulse [7] is to act as a handsfree email reading device, perfect 
+to catch a quick glance without distracting too much from a user's 
+primary task. Texas Instrument introduced the Chronos [8], a very 
+inexpensive smart watch, which is based on the embedded system 
+MSP430  that  provides  an  SDK  for  individual  programs.  Newer 
+smart watches are Bluetooth enabled and some are water resistant. 
+These smart watches are designed to be worn 24 hours a day and 
+allow a long shower or a bath in the swimming pool.  
+2.3 
+Inactivity Recognition  
+The  major  difference  in  activity  recognition  between  a  smart 
+phone  and  a  smart  watch  is  the  wearing  behavior.  If  the  user 
+returns to his home, he will put off the phone. A smart watch can 
+be worn constantly at the wearer’s body, no matter if he is doing 
+sports or is at rest or sleeps.  
+
+Acceleration Sensor  
+
+Some systems are available that are detecting sleep or resting by 
+wearing  a  sensor  at  the  wrist.  The  Actiwatch  is  an  actigraphy 
+based  data  logger  designed  for  rest  activity  patterns,  quantify 
+physical  activity  or  sleep  [9].  Another  watch-based  sleep 
+recognition solution is the Sleeptracker [10] that detects sleep and 
+allows  a  wake  up  at  the  estimated  optimum  time.  Some  other 
+solution  for  sleep  detection  exists  whereas  some  other  sensor 
+technology is used, e.g. EEG signals. 
+2.4 
+The  performance  of  acceleration  sensors  can  be  measured  in 
+accuracy,  quantization,  sampling  rate,  sampling  stability,  range, 
+noise,  and  energy  consumption  [11].  Early  types  of  acceleration 
+sensors were metal balls within a coil environment that generated 
+electric  charge  or  an  induction  field  while  it  was  moved.  Other 
+system  concepts  were  piezo  crystal  based;  hereby  a  weight 
+pressures  on  a  piezo  crystal  that  response  to  applied  mechanical 
+stress  by  electric  charge.  Accelerometers  can  also  use  strain 
+gauges.  Earthquake  observatories  were  using  optical  levers  or 
+mechanical linkages to amplify the small motions. Nowadays, the 
+acceleration  sensors  are  using  electronics.  The  most  common 
+sensor  for  home  consumer  products,  e.g.  phones,  cameras,  cars 
+etc. is a  MEMS, micro-electro-mechanical  system,  which is very 
+cheap and low on power consumption. The usage of the MEMS in 
+smart  watches  is  a  tradeoff  between  performance,  energy 
+consumption, size and costs. The MEMS-sensor in itself provides 
+
+usually  a  high  frequency  sampling  rate,  e.g.  more  than  1000 
+Hertz.  Due  to  the  operating  system  and  power  requirements,  the 
+sampling  rate  is  self-adjusting  (Android) or  is  limited  to  a  lower 
+frequency. [2] was using 75 Hz, [14] suggested 100 Hz, [15] was 
+using 36 Hz, [16] only 20 Hz. It is obvious that a high sampling 
+rate provides more data than a lower rate, a good compromise in 
+sampling rate seems to be at 32 Hz [11]. One quality criteria of an 
+acceleration  sensor  is  the  accuracy.  We  assume  that  the  MEMS 
+sensor  show  a  hysteresis  effect 
+the  measured  signal. 
+Furthermore,  the  data  shows  an  offset  and  a  not  linear  gain. 
+Sensor  data  sheets  and  trials  show  a  tremendous  offset  of  each 
+axis.  This  offset  can  be  around  0.5  m/s2,  often  the  amplification 
+factor shows an error of 2-3 percent. The offset is usually too high 
+for physical  way-time calculations.  The following paragraph will 
+discuss what requirements are necessary for activity and inactivity 
+recognition for acceleration sensors.  
+
+to 
+
+Figure 1: Smart Watch with integrated sensor, connectivity 
+and micro matrix display 
+
+CHALLENGES 
+
+3. 
+For  adequate  activity  recognition,  the  sensor  has  to  provide 
+reliably  sensor  information.  Because  the  most  important  sensor 
+for activity monitoring is the acceleration sensor, it is necessary to 
+know what the key features are.  
+
+The sensor requirements are distinguished between the application 
+fields of  
+
+  Activity monitoring for health and wellness applications 
+
+ 
+
+Inactivity recognition 
+
+  Gesture recognition and interaction 
+
+ 
+
+Industrial  monitoring  concerning  health 
+harmful hand or arm vibrations 
+
+issues  of 
+
+In [11],  significant  features  for  activity  monitoring  are  described 
+but some new features for inactivity are to be worked out in order 
+to  detect  a  fall  of  a  person,  and  to  differentiate  states  of 
+unconsciousness,  sleep  or  a  nap.  In  case  of  inactivity,  some  new 
+features and requirements to the sensor are necessary. 
+
+ 
+ 
+Some smart watches provide an integrated light sensor. The light 
+condition which surrounds a person is an important factor for the 
+estimation of his activity state. Some light sensors are measuring 
+the  RGB-light  proportions  which  indicate  if  artificial  light  or 
+sunlight is ambient. This sensor provides important information in 
+hospital environment but in every day live it seems to be different. 
+Here, people do a nap while it is light or sleep in front of the T.V. 
+at night by a full light condition. If the user is wearing a shirt with 
+long  leaves,  the  detected  light  is  different  to  the  real  light 
+condition. Furthermore, often the geometrical constellation of the 
+integrated  light  sensor  of  the  smart  watch  cannot  detect  the 
+ambient light but only the light which shines directly into the light 
+sensor.  
+
+ACTIVITY UNIT  
+
+4. 
+The  acceleration  sensor  is  the  most  important  sensor  for  activity 
+recognition.  The  sensor  detects  three  dimensional  acceleration 
+forces  that  are  typically  measured  in  a  Cartesian  coordinate 
+system. The axes are x,  y, and z and they  are orthogonal to each 
+other.  
+
+If  the  sensor  is  motionless,  only  the  gravity  g  is  affecting  the 
+sensor  data.  The  acceleration  values  are  in  a  specific  relation  to 
+reach other, no matter  which orientation the sensor shows.  If the 
+variables  x,  y,  z  are  the  sensor  values  in  g  (9.81  m/s2),  the 
+motionless sensor shows: 
+
+If  the  sensor  will  be  accelerated,  the  right  term  of  this  equation 
+can’t be used to determine the average acceleration. One reason is 
+that the gravity g is not constant over the world (pole and equator 
+have  different  gravity  influence).  Furthermore,  the  sum  of  the 
+squared  acceleration  values 
+the 
+acceleration,  if  one  average  acceleration  value  of  one  axis  is 
+negative. In addition, the sensor offset of each axis is affecting the 
+equation so a possible error occurs. 
+
+is  not  corresponding 
+
+to 
+
+We developed the algorithm of a new feature. This feature defines 
+the mean acceleration of the sensor in the three dimensional space 
+per  second.  The  feature  is  called  “activity  unit  (AU)”  and 
+describes  the  acceleration  force.  This  feature  is  defined  in  m/s3; 
+hereby meter and seconds are elements of the international system 
+of units [17].  
+
+The  gravity  constantly  influences  every  material  on  earth,  that’s 
+why  the  activity  unit  considers  only  the  additional  acceleration 
+forces.  Furthermore  we  introduce  the  simplification  that  the 
+acceleration  force  of  interest  is  not  vectored.  In  contrast  to  the 
+physical jerk that describes the rate of change of acceleration [18], 
+the  AU  is  a  scalar  magnitude,  normalized  to  the  time  interval  of 
+one second. The jerk represents only the derivative of acceleration 
+with  respect  to  time.  The  jerk  does  not  consider  if  the  present 
+acceleration is zero, low or high; only the change of acceleration 
+is regarded.  
+
+In  contrast  to  the  jerk,  the  AU  is  respecting  the  present  level  of 
+acceleration  while  the  change  of  acceleration  occurs.  To  give  an 
+example,  the  jerk  would  be  the  same  (zero)  in  the  case  that  the 
+sensor  is  motionless  or  in  the  case  that  the  sensor  is  accelerated 
+with  a  constant  value.  The  AU  is  zero  in  case  of  the  motionless 
+sensor  too,  but  in  the  case  of  the  accelerated  sensor  -  it  is 
+different. Hereby the  AU represents the  difference of the current 
+acceleration to the average acceleration condition. 
+
+This  leads  to  the  following  definition  of  the  activity  unit: 
+
+The variables x,  y, z are the sensor  values in m/s2. xn,  yn, zn, are 
+the  sensor  values,  received  by  each  readout  cycle  n.  N  is  the 
+number  of  readout  cycles  per  second.  xmean,  ymean,  zmean  are  the 
+averages of the sensor values of each axis. These values describe 
+the  constant  force  to  the  sensor  and  can  be  determined  by  the 
+inclusion of a moving average.  
+
+For a motionless sensor, only the gravity  forces are  affecting  the 
+measured  values  and  these  forces  are  constant.  Because  of  the 
+moving average, the algorithm will detect no force after a  while, 
+zero AU. If a translation occurs, the acceleration will be detected 
+and  measured.  If  the  sensor  will  be  rotated,  the  sensor  detects 
+different gravity force for each axis.  
+
+If  the  sensor  is  motionless  after  the  turn  again,  the  algorithm 
+should  detect  no  acceleration  force  after  a  defined  time  interval. 
+This  is  performed  by  the  implementation  of  the  moving  average 
+algorithm.  We  assume  that  a  sensor  will  be  read  out  with  32 
+Hertz.  If  the  sensor  is  turned  by  90  degree,  we  require  that  the 
+acceleration  force  of  one  axis,  that  had  no  gravity  influence 
+before,  will  adapt  to  the  gravity  force  of  one  tau  (63.2  percent) 
+within  2  seconds.  The  two  second  period  will  provide  64  data-
+triples  which  is  a  usable  window  frame  length  for  activity 
+recognition [11]. The time requirement leads to the average factor 
+of a=0.95 by the following average algorithm, the given average is 
+analog to ymean and zmean: 
+
+Hereby x(n) is the current sensor value, the factor a is an absolute 
+term and xmean(n) is the calculated average. n describes the readout 
+cycle. xmean(n-1) is the calculated average of the readout cycle n-1. 
+If  parameter  “a”  would be  set  on  a  =  0,  the  algorithm  for  AU  is 
+directly matching the jerk.  
+
+The sensor values of the x, y, and z-axis are represented by the SI-
+unit m/s2, so 1 AU is 1 m/s3 (m/s2 per second). 
+
+Because of the consideration of the mean acceleration of each axis 
+for the AU value, the constant  sensor offset  and constant  gravity 
+influence  can  be  ignored.  This  is  a  very  powerful  feature  of  the 
+equation  because  some  acceleration  sensors  are  charged  with  a 
+high  offset.  AUs  can  be  summed  up  to  estimate  the  physical 
+activity,  hereby  the  sum  of  the  AUs  are  a  rough  indicator  how 
+active  the  wearer  has  been  throughout  the  day.  Furthermore,  the 
+AU can be used to estimate the noise of the sensor. 
+
+The  AU  can  be  used  as  a  very  important  feature  for  physical 
+activity recognition. 
+
+5. 
+APPLICATIONS 
+5.1  Wearing Detection 
+When  smart  watches  detect  no  physical  activity,  there  is  the 
+obvious  assumption  that  the  user  is  not  active.  Even  the  human 
+body  seems  to  be  calm;  the  wrist  sensor  measures  a  significant 
+higher activity than if the sensor would be dismounted. This effect 
+can only be noticed when the sensor noise is very low.  
+
+The  defined  AU  is  a  good  parameter  for  the  estimation  of  the 
+noise level of the sensor. When the smart watch is motionless and 
+
+5,0222)(1zyxgNnmeannmeannmeannzzyyxxNAU121222))()()((11a)-(1x(n)+a1)-(n x= (n)meanmeanx 
+ 
+ 
+ 
+lies on a table, the typical AU-value of a sensor (e.g. Meta Watch 
+Strata [19]) in 6 bit / g – quantization mode) is approx. 0.4 m/s3. If 
+the same watch is in 10 bit / g – quantization mode, the assessed 
+AU value is much lower and is approx. 0.04 m/s3.  
+
+If the smart watch is set in 10 bit / g – quantization mode and the 
+user  is  stretching  the  arm  and  hold  the  watch  motionless,  the 
+system will measure approx. 0.16 AU. In comparison to the value 
+of  0.04  AU  we  received  from  the  watch  on  the  table,  we  can 
+identify the arm stretching condition. The received values are only 
+possible if the sensor is working in the 10 bit / g mode. A 6 bit / g 
+mode would provide a noise of 0.4 AU if the arm is stretched out 
+whereas no difference of the wearing condition is possible. 
+
+The introduced algorithm for activity units is an important feature 
+in  the  time  domain.  For  the  frequency  domain,  it  is  necessary  to 
+analyze  the  spectral  distribution  of  the  movements.  The  Fourier 
+transformation enables the analysis if the signal is overlaid with a 
+white  or  a  colored  noise.  If  the  sensor  is  totally  motionless,  the 
+sensor noise is stochastically distributed (white noise).  Any light 
+micro  movement  is  influencing  the  spectrum,  the  noise  will  be 
+colored.  
+
+Figure 2 (smart  watch is set in 10 bit/g mode, 32 Hz) shows the 
+noise while the smart watch is lying on a table, the figure 3 shows 
+the noise while the watch is worn at the wrist of a user. When the 
+smart watch is on the table, we recognize that noise in the Fourier 
+spectrum is stochastically distributed. 
+
+Figure 2: Frequency spectrum while smart watch 
+ is lying on a table 
+
+to 
+
+little  movements 
+
+the  spectrum.  Depending  on 
+
+In figure 3 we can clearly see a main frequency and the influence 
+the 
+of 
+manufacture and sensor type, the sensor of the smart watch can be 
+configured  into  a  different  modus,  especially  quantization  and 
+sampling rate. Setting the smart watch into the highest sensitivity 
+mode, the effects of  white noise and colored noise become  more 
+visible. 
+
+Figure 3: Frequency spectrum while smart watch is worn 
+ and arm is stretched out 
+
+Usually, when a user is wearing a watch, the arm is not stretched 
+out. The feature AU provides only a slightly higher value that for 
+the  lying  on  a  table.  In  combination  with  the  features  of  the 
+frequency domain and the recognized effects of colored noise we 
+can do to the assumption that we can detect if the smart watch is 
+worn or not.  
+
+On one side we are considering the AU value by using a defined 
+threshold  (depending  on  the  Smart  Watch  model),  to  distinguish 
+between worn or laid down. On the other side we are considering 
+the  frequency  band  of  the  Fourier  spectrum.  We  are  adding  the 
+Fourier  magnitudes  of  each  band  (low  band  and  high  band)  and 
+are  calculating  the  quotient.  Here  we  are  also  considering  a 
+threshold of the quotient as the indicator of worn or laid down. 
+
+Sleep Detection 
+
+5.2 
+When a person sleeps, the smart watch is permanently measuring 
+micro  activity  of  the  body.  Our  algorithm  detects  an  activity  of 
+approx. 0.05 AU while sleeping, depending on the position of the 
+wrist,  mattress  and  physical  condition  (weight,  BMI  etc.).  If  the 
+user turns from side to side while he is sleeping, the smart watch 
+detects  a  very  high  AU  value.  Together  with  other  features,  the 
+AU can be used to detect if the user sleeps or is wake.  
+
+The following figure 4 shows the 24h diagram of a user from 12 
+p.m. to 12.p.m. (x-axis). The y-axis is the degree of inactivity. The 
+red  graph  illustrates  the  automatically  detected  sleep,  the  green 
+graph shows the detected activity period. 
+
+Figure 4: Sleep recognition with a smart watch 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The requirements to the sensor for sleep recognition are low. We 
+identify that a quantization of 6 bit / g and a sampling frequency 
+of less than 1 Hz is sufficient for sleep detection. This requirement 
+leads to very low energy consumption for the smart watch. 
+
+5.3  Heart Rate Detection  
+The  sensitivity  of  the  smart  watch  allows  the  recognition  of  the 
+heart  rate.  We  implemented  an  application  of  an  android  phone 
+that  determines  the  heart  rate  whenever  the  user  holds  the  smart 
+watch to his chest.  
+
+Figure 4: User holds his smart watch to his chest 
+
+The heart rate detection algorithm uses the AU - values. Therefore 
+we performed an autocorrelation, using a set of 640 AU – samples 
+that  took  20  seconds  because  the  sampling  rate  is  32  Hz.  When 
+the  acceleration  sensor  is  in  8  bit  /g  mode,  the  algorithm  is 
+detecting  the  heart  rate;  in  the  6  bit  /  g  mode  the  signal  is  very 
+noisy and  we hardly detect a pulse. (Maybe  we  have to collect a 
+larger data set for the correlation.)  
+
+Figure  5  shows  the  corresponding  signal  with  the  heart  rate. 
+Hereby  the  period  length  is  about  30  samples,  which  relates  to 
+approx. 60 beats per minute. 
+
+Figure 5: Autocorrelation of detected heart rate signal 
+
+Industrial Applications  
+
+5.4 
+Smart  watches  are  mobile  devices  with  a  small  display  and  a 
+vibration feedback to indicate incoming messages. Because of the 
+sensor functionality, smart watches can be used to support indoor 
+navigation  features  in  construction  or  maintenance  work.  In 
+construction  environments,  the  environment  might  be  noisy  and 
+dirty. If a worker needs guidance to a place of interest, he can be 
+guided by vibration signals of the smart watch.  
+
+Within the research project eKon, we are developing new indoor 
+navigation  technologies  in  the  context  of  ship  construction  and 
+maintenance. The research project eKon is funded by the German 
+Federal  Ministry  of  Economics  and  Technology. Hereby,  Smart 
+watches are useful interaction devices for model based navigation, 
+while  the  3D  plans  of  the  environment  are  known.  Smart  watch 
+supports inertial navigation as well because of the capability of a 
+distance measuring functionality (pedometer).   
+
+In  some  working  environments,  machines  are 
+transferring 
+vibrations  to  the  hand  or  arm  of  the  worker.  The  Control  of 
+Vibration at Work Regulations 2005 (the Vibration Regulations), 
+came into force on 6 July 2005 in Great Britain by the HSE [13]. 
+The Control of Vibration is based on a European Union Directive 
+to  protect  workers  from  risks  to  their  health  and  safety  from 
+vibration. Hereby the regulations on hand-arm vibration define a 
+maximum  of  daily  exposure  value  of  5  m/s2  A(8);  and  a  daily 
+exposure  action  value  of  2.5  m/s2  A(8).  The  maximum  vibration 
+force  on  hand  or  arm  might  be  very  high,  common  devices 
+provide  a  measuring  range  of  approx.  +/-500  g,  some  others  +/- 
+1000 g. In comparison, the standard MEMS sensor has a range of 
+max. +/- 16 g.  The direct exposure to the arm or hand  cannot be 
+measured exactly by standard MEMS sensors. However the smart 
+watch  is  able  to  perform  pattern  recognition  of  the  acceleration 
+signals  that  allows  the  identification  of  the  used  tools  and  their 
+using  duration.  We  expect  that  the  smart  watch  will  be  used  for 
+monitoring the hand and arm vibration exposition in combination 
+with the recreation time in the near future. 
+
+CONCLUSIONS AND OUTLOOK 
+
+6. 
+Smart  watches  are  wrist  watches  with  computational  power, 
+sensor  functionality  and  connectivity  to  the  internet.  Smart 
+watches  allow  a  new  mobile  assistance  and  are  affecting  our 
+business and social life.  
+
+Because of the haptic feedback of information by vibration signals 
+or  micro  display  messages,  smart  watches  enable  a  user  support 
+especially  in  home  environments,  construction  or  maintenance 
+environment,  or  indoor  navigation  in  ships  and  submarines.  The 
+smart  watch  with  its  integrated  and  body  worn  sensors  enable  a 
+constant monitoring during day and night. Hereby it is necessary 
+that the sensor is sensitive and reliable for the desired application.  
+
+The paper introduced a gravity free parameter for the acceleration 
+in  the  three  dimensional  space,  the  activity  unit  (AU).  The  AU 
+consists of standardized SI-units and allows a reproducible metric 
+for activity estimation.  
+
+The  work  presents  an  algorithm  to  distinguish  if  the  user  is 
+wearing  the  smart  watch  or  not.  The  smart  watch  is  also  able  to 
+detect  the  heart  rate  if  the  user  holds  it  to  his  chest.  Hereby  the 
+requirement to the acceleration sensor is a sampling rate of 32 Hz 
+and a quantization of 10 bit / g. 
+
+ 
+ 
+ 
+ 
+Other  applications  show  the  ability  of  sleep  detection  by  smart 
+watches. Sleep detection and physical activity recognition require 
+a 6 bit / g quantization.  
+
+Further work will be done in research of micro activity in periods 
+of  physical  inactivity.  We  are  convinced  that  smart  watches  will 
+provide additional mobile assistance to the user that we can´t even 
+imagine today. 
+
+[8]  Texas Instrument Chronos EZ 430, 
+
+http://processors.wiki.ti.com/index.php/EZ430-
+Chronos?DCMP=Chronos&HQS=Other+OT+chronoswiki, 
+last access: 04/21/2013 
+
+[9]  Actiwatch, Philips Respironics, Philips Healthcare, P.O. Box 
+
+10.000, 560 DA best, The Netherlands 
+
+[10] Sleeptracker, Innovative Sleep Solutions, 2870 Peachtree 
+
+ACKNOWLEDGEMENTS 
+
+7. 
+We thank John Trimpop and Sven Berger for their support of the 
+presented work. 
+
+8. 
+[1]  Lloyd C.: Time Comes for the Superwatch, The Times, 
+
+REFERENCES 
+
+Newspaper, 3 Thomas More Square, London, E98 1XY, 13. 
+Jan. 1995 
+
+[2]  Bao, L., Intille, S., Activity recognition from user-annotated 
+acceleration data, Pervasive Computing, Springer, 2004 
+
+[3]  Bieber G., Peter C., Using Physical Activity for User 
+
+Behavior Analysis, 1st International Conference on 
+Pervasive Technologies Related to Assistive Environments - 
+PetraE 2008, ACM, Athens, 2008 
+
+[4]  Brugniaux  J. Niva A., Pulkkinen I., Laukkanen R., Richalet 
+J., Pichon A.: Polar Activity Watch 200: a new device to 
+accurately assess energy expenditure, British journal of 
+sports medicine, BMJ Publishing Group Ltd and British 
+Association of Sport and Exercise Medicine, vol. 44/4, pp. 
+245-249, 2010 
+
+[5]  Maurer, U., Rowe, A., Smailagic, A., Siewiorek, D.P., 
+
+eWatch: a wearable sensor and notification platform, 
+Proceedings of Wearable and Implantable Body Sensor 
+Networks, IEEE, 2006. 
+
+[6]  Mayton, B.: WristQue: A Personal Sensor Wristband, 
+
+Massachusetts Institute of Technology, master thesis, 2012 
+
+[7]  Migicovsky E., InfoPulse: a Wristworn Ambient Display, 
+Proc. of 2nd Workshop on Ambient Information Systems. 
+Colocated with Ubicomp 2008, Seoul, South Korea., CEUR 
+Workshop Proceedings, 2008, ISSN 1613-0073 
+
+Road #140, Atlanta, GA 30305, USA, 
+www.sleeptracker.com 
+
+[11] Bieber G., Voskamp J., Urban B., Activity Recognition for 
+
+Everyday Life on Mobile Phones, Lecture Notes in 
+Computer Science, Volume 5615/2009, pp.289-296, Springer 
+Berlin / Heidelberg, 2009, ISSN 0302-9743 
+
+[12] Kakei S., Hoffman D., Strick P.  et. al.: Muscle and 
+
+movement representations in the primary motor cortex, 
+Science, Vol 285, Num 5436, pp. 2136--2139, Washington, 
+DC, USA, 1999 
+
+[13] Health and Safety Executive, Great Britain, 
+
+http://www.hse.gov.uk/ 
+
+[14] Lee M., Kim J., Kim K., Lee I., Jee S., Yoo S.: Physical 
+activity recognition using a single tri-axis accelerometer, 
+Proceedings of the World Congress on Engineering and 
+Computer, Science 2009 Vol I, WCECS 2009, October 20-
+22, 2009, San Francisco, USA, 2009 
+
+[15] Yang, J.: Toward physical activity diary: Motion recognition 
+using simple acceleration features with mobile phones. In: 
+Proceedings of the 1st international workshop on Interactive 
+multimedia for consumer electronics ACM, pp. 1–10, 2009 
+
+[16] Kwapisz, J.R.: Weiss, G.M. ; Moore, S.A.: Activity 
+
+recognition using cell phone accelerometers. In: ACM 
+SIGKDD Explorations Newsletter 12, Nr. 2, pp. 74–82, 2011 
+
+[17] SI - International Bureau of Weights and Measures, The 
+
+International System of Units (SI), Brochure (8th ed.), 2006,  
+ISBN 92-822-2213-6 
+
+[18] Schot S.: Jerk: the time rate of change of acceleration, 
+
+American Journal of Physics, 46.11, pp. 1090-1094, 1978 
+
+[19] Meta Watch, Meta Watch, Ltd., Dallas, Texas | Espoo, 
+
+Finland, www.metawatch.com 
+
+ 
+ 
+ 
+ 
+

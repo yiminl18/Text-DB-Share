@@ -1,0 +1,1505 @@
+Visual ODLs: Co-Designing Patient-Generated Observations of Daily 
+Living to Support Data-Driven Conversations in Pediatric Care 
+
+Matthew K. Hong1, Udaya Lakshmi1, Thomas A. Olson2, Lauren Wilcox1  
+
+       1School of Interactive Computing 
+Georgia Institute of Technology 
+{mhong, udaya, wilcox}@gatech.edu 
+
+2Aflac Cancer and Blood Disorders Center 
+Children’s Healthcare of Atlanta 
+thomas.olson@choa.org 
+
+ABSTRACT 
+Teens   with   complex   chronic   illnesses   have   difficulty   
+understanding   and articulating symptoms such as pain and 
+emotional  distress.    Yet,  symptom  communication  plays  a 
+central  role  in  clinical  care  and  illness  management.    To 
+understand how design can help overcome these challenges, 
+we  created  a  visual  library  of  72  sketched  illustrations,  in-
+formed  by  the  Observations  of  Daily  Living  framework 
+along  with  insights  from  11  clinician  interviews.  We  uti-
+lized  our  library  with  storyboarding  techniques,  free-form 
+sketching,  and  interviews,  in  co-design  sessions  with  13 
+pairs  of  chronically-ill  teens  and  their  parents.  We  found 
+that  teens  depicted  symptoms  as  being  interwoven  with 
+narratives of personal and social identity. Teens and parents 
+were  enthusiastic  about  collaboratively-generated,  interac-
+tive  storyboards  as  a  tracking  and  communication  mecha-
+nism, and suggested three ways in which they could aid in 
+communication  and  coordination  with  informal  and  formal 
+caregivers. In this paper, we detail these findings, to guide 
+the design of tools for symptom-tracking and incorporation 
+of patient-generated data into pediatric care. 
+
+Author Keywords 
+Observations  of  Daily  Living;  Adolescents;  Family;  Com-
+munication; Patient-Generated Health Data.  
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous; 
+
+INTRODUCTION 
+Many  teens  with  complex  chronic  illnesses  undergo  long-
+term,  multi-phase  treatment  cycles,  such  as  chemotherapy. 
+During  such  cycles,  successful  treatment  depends  in  large 
+part  on  the  careful  balance  between  the  effectiveness  of  a 
+therapy  and  its  toxicity  to  the  patient  [9].  Prior  work  on 
+real-time  symptom-tracking  suggests  that  self-monitoring 
+plays an important role in assessing treatment effectiveness, 
+
+Permission  to  make  digital  or  hard  copies  of  all  or  part  of  this  work  for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. Copyrights for com-
+ponents  of  this  work  owned  by  others  than  ACM  must  be  honored.  Ab-
+stracting with credit is permitted. To copy otherwise, or republish, to post 
+on  servers  or  to  redistribute  to  lists,  requires  prior  specific  permission 
+and/or a fee. Request permissions from Permissions@acm.org.   
+CHI 2018, April 21–26, 2018, Montreal, QC, Canada   
+©  2018 Association for  Computing Machinery. ACM  ISBN 978-1-4503-
+5620-6/18/04…$15.00   
+https://doi.org/10.1145/3173574.3174050 
+
+as  patients  can  experience  a  variety  of  treatment  effects  at 
+home—between visits to the clinic [33]. 
+
+Recognizing,  recording,  and  communicating  about  these 
+effects  is  arduous  for  anyone  experiencing  them:  the  pro-
+cess is often burdensome, unguided, and relies on retrospec-
+tive  accounts  by  the  patient  [33].  These  complexities  are 
+exacerbated for teens: on top of fluctuations in psychologi-
+cal and physical development, already characteristic to their 
+life stage, these young patients often face added emotional 
+distress and cognitive strain resulting from medications and 
+radiation therapy [19]. 
+
+Ideally,  teens’  first-person  experiences  of  their  illness  and 
+responses to therapy are foregrounded in clinical communi-
+cation.  Yet,  given  the  demands  already  placed  on  these 
+young patients, parents often monitor and provide reports of 
+the illness experience: contributing critical perspectives and 
+support  [34].  While  of  great  importance,  the  use  of  proxy 
+reports alone can skew interpretations of the patient’s health 
+while perpetuating communication that is based on approx-
+imations [19]. We do not yet understand how to design col-
+laborative  technology  to  capture  and  communicate  about 
+subjective,  felt  experiences  of  teen  patients,  amid  fatigue, 
+distress, and dynamic shifts in autonomy.  
+
+Motivated  by  this  challenge,  we  turned  to  research  on  Pa-
+tient-Generated  Health  Data  (PGHD)  to  create  a  visual  li-
+brary of 72 sketched illustrations, informed by the Observa-
+tions  of  Daily  Living  framework  [2].  The  framework  pro-
+vides  a  useful  characterization  of  the  language  of  PGHD 
+from  the  patient’s  perspective.  We  used  our  library  of 
+ODLs  (henceforth  called  “Visual  ODLs”)  alongside  story-
+boarding,  free-form  sketching  and  interviews,  to  engage 
+teens as design partners [30,34,38,42] in co-design sessions 
+with patients and their parents, to elicit illness experiences.  
+
+In this paper, we describe how we adapted the ODL frame-
+work to create our visual library. We illustrate how we used 
+Visual  ODLs  in  co-design  sessions  with  13  patient–parent 
+pairs to elicit a rich set of illness experiences to inform pe-
+diatric  PGHD  technology.  Our  paper  further  contributes 
+findings that teens depicted symptoms as being interwoven 
+with  narratives  of  personal  and  social  identity—in  their 
+storyboarding process, aspects of their identity were insepa-
+rably  interwoven  into  their  illness  narratives.  Teens  and 
+parents  were  enthusiastic  about  collaboratively-generated, 
+digital storyboards as a tracking and communication mech-
+anism.  They  suggested  that  visual  narratives  of  this  kind 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 1could aid in communication and coordination with informal 
+and formal caregivers by: 
+
+1.  Scaffolding the process of encoding symptoms through 
+richer representations of context surrounding them and 
+depictions of how they affect engagement in activities.  
+2.  Enabling  coordinated  tracking  through  digital  story-
+boards  in  which  scenes  authored  by  teens  and  family 
+members are coalesced.  
+
+3.  Allowing for fuller expression of important characteris-
+tics  of  symptoms  through  visual  attributes  to  depict 
+timing,  duration,  severity,  and  frequency,  and  through 
+the integration of digital media to vary the representa-
+tion of the experience. 
+
+We complement these findings with 11 clinician interviews, 
+and  subsequently  synthesize  patient,  parent  and  clinicians’ 
+perspectives  to  discuss  opportunities  for  co-designing  col-
+laborative  symptom-tracking  technology  to  support  data-
+driven clinical communication.  
+
+BACKGROUND 
+
+PGHD and Observations of Daily Living 
+Thanks to advances in multi-modal sensing and mobile and 
+ubiquitous computing, research in Patient-Generated Health 
+Data (PGHD) has gained momentum over the recent years, 
+giving rise to new tools that capture patients’ health-related 
+data in everyday (non-clinical) contexts [37]. Despite these 
+advances, several barriers—spanning data capture, transfer, 
+and  review—prevent  seamless  integration  of  PGHD  into 
+clinical communication and practice.  
+
+In  Brennan  and  Casper’s  lessons  learned  from  Project 
+HealthDesign [3], a national PGHD initiative research pro-
+gram,  the  authors  highlight  an  important  problem  that  pa-
+tients faced when managing their health outside of the clin-
+ical context: “not only were the traditional terminologies of 
+health inadequate to express the phenomena of interest, but 
+the very structure of the terms and the purpose they served 
+in  the  individuals’  lives  were  markedly  different  from  the 
+signs and symptoms terminology employed by clinicians to 
+denote meaning in health.”  [2] 
+
+Noting this mismatch between the information and commu-
+nication needs of clinicians and patients, the authors identi-
+fied  two  types  of  PGHD  that  inform  health  care:  1)  clini-
+cian-defined  and  patient-generated,  and  2)  patient-defined 
+and patient-generated health data. In their definition, clini-
+cian-defined  and  patient-generated  data  are  assessments 
+that professionals find important, but that must be gathered 
+by the person experiencing daily life to contribute to those 
+assessments.  An  example  of  clinician-defined and patient-
+generated  data 
+includes  Patient-Reported  Outcomes 
+(PROs),  which  are  gradually  being  integrated  into  clinical 
+workflows  as  standardized  instruments  to  measure  and 
+compare treatment outcomes across multiple patients [10].  
+
+On  the  other  hand,  patient-defined  and  patient-generated 
+data reflect concepts that are uniquely defined and seen as 
+
+important  by  the  patient,  that  can  occur  dynamically  and 
+provide personal indicators of health status [3]. The authors 
+introduce Observations of Daily Living, which is central to 
+this  paper,  to  provide  an  organizing  framework  that  de-
+scribes PGHD reflecting the patient’s perspective.  
+
+Three  distinct  characteristics  of  ODLs  include:  status indi-
+cators  that  describe  how  the  patient  is  feeling  (e.g.,  mood, 
+energy  level,  appetite),  behavioral indicators  that  describe 
+the  behavioral  context  of  the  health  status  or  what  the  pa-
+tient  has  done  in  relation  to  a  particular  feeling,  and  expo-
+sures  that  describe  the  socio-environmental  context.  The 
+authors note that ODLs arise within the person’s life expe-
+rience of health while having the flexibility to complement 
+clinician-defined, patient-generated data.  
+
+We asked how ODLs could be used as  a foundational lan-
+guage  for  communicating  about  experiences,  and  support-
+ing  awareness  of  those  experiences  coherently  across  the 
+domains of both the clinic and everyday life. As such, Vis-
+ual  ODLs  can  serve  as  boundary-negotiating  artifacts 
+[26,39]  by  facilitating  three  kinds  of  boundary-negotiating 
+work found to be important in personal health data contexts 
+[7].  Supporting  self-explanation  of  experience  facilitates 
+personal tracking and review, while the collaborative use of 
+Visual ODLs serve to contribute to compilation artifacts, to 
+facilitate  sharing  and  reconciling  information  among  teens 
+and  family  members.  Finally,  Visual  ODLs  can  serve  as 
+inclusion artifacts  to  facilitate  the  discussion  of  illness  ex-
+periences  with  the  support  of  visual  aids  to  support  data-
+driven medical conversations [7]. 
+
+PGHD and Teens 
+Eliciting  PGHD  effectively  from  individuals  in  everyday, 
+naturalistic contexts is an ongoing area of research [24,33]. 
+Previous  work  explored  real-time  tracking  of  PGHD 
+through active and passive sensing tools as a means to im-
+prove  patient–provider  communication  [7,33,36].  Yet, 
+Hong  et  al.  [19]  found  that  teen  patients  and  their  parents 
+faced significant difficulty tracking symptoms and reporting 
+them to clinical caregivers—not due to a lack of communi-
+cation channels but from an inability to capture and articu-
+late patients’ experiences as they unfolded in daily life.  
+
+However,  eliciting  experiential  data  from  teens  is  a  chal-
+lenging  task:  most  teens  are  still  developing  the  necessary 
+literacy  and  conversational  skills  required  to  articulate  un-
+familiar  physical  sensations  and  emotions  [1].  In  parallel, 
+toxic effects of treatment could compromise cognitive func-
+tion,  which  in  turn  interferes  with  the  patients’  ability  to 
+express these experiences [9]. This has significant implica-
+tions for interaction design researchers employing interview 
+techniques  that  rely  on  verbal  cues  and  patients’  recall  of 
+illness  experiences.  Poole  and  Peyton  stated  that  many  re-
+searchers  experience  difficulty  extracting  insights  from 
+teens  through  qualitative  open-ended  questions,  in  part  be-
+cause they have difficulty articulating responses [35]. 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 2The Need for Co-Design 
+Teens’  participation  in  formative  studies  for  requirements 
+gathering  can  be  aided  by  visual  artifacts  to  scaffold  their 
+articulation  of  their  experiences  [12,17].  Co-design  tech-
+niques  such  as  storyboarding  can  facilitate  the  process  of 
+eliciting child-led narratives and design feedback [13,28].  
+
+Comic-boarding  [32]  and  fictional  inquiry  [11]  have  been 
+used with children to scaffold the ideation process, through 
+visual  illustrations  that  provide  context  and  ideas  from 
+which  children  can  extrapolate  [18].  We  similarly  aim  to 
+establish  this  scaffold  through  visual  representations  of 
+ODLs and scenarios to frame the storyboard narratives.  
+
+TWO-PHASE STUDY 
+
+Study Setting and Participants 
+With IRB approval, we conducted our study at a large ter-
+tiary pediatric hospital, at Children’s Healthcare of Atlanta 
+(CHOA), in two Cancer and Blood Disorders Centers (one 
+urban, one suburban) from March–September 2017.   
+
+Clinicians Interviews 
+We  conducted  individual  semi-structured  interviews  with 
+11  clinicians  (9  oncologists  and  2  nurse  practitioners)  to 
+understand how to design symptom monitoring technology 
+for  complex  chronic  illness  treatment  in  ways  that  support 
+the  pediatric  care  workflow.  Clinical  experience  ranged 
+from 3 to 27 years (median=20).  
+
+To  elicit  as  much  domain  knowledge  as  possible  about 
+symptoms  relevant  to  their  practice,  we  used  the  Pediatric 
+Memorial Symptom Assessment Scale (pMSAS) [8], a 30-
+item  patient-rated  and  validated  instrument  developed  for 
+teen  cancer  patients  aged  10–18,  to  elicit  clinician  expert 
+knowledge  and  their  relevant  experiences  treating  cancer 
+patients.  pMSAS  measures  multidimensional  aspects  of 
+cancer-related  symptoms  ranging  from  physical  to  psycho-
+logical and global symptom distress.  
+
+We used pMSAS to draw out clinician perspectives on their 
+communication with patients, with the most common symp-
+toms  to  track  for  our  target  patient  population  (e.g.,  solid 
+tumor,  leukemia  and  lymphoma  patients).  In  addition  to 
+symptoms, we also inquired about seven behaviors (ranging 
+from  physical  activity  to  sexual  activity)  that  clinicians 
+would like to track in their patients. 
+
+Questions  covered  times  that  clinicians  encouraged  symp-
+tom  tracking,  types  of  symptoms  and  behaviors  that  are 
+considered  important,  how  symptoms  are  currently  self-
+reported in practice, appropriate timing for symptom track-
+ing during the illness and care trajectory, and strategies for 
+reconciling conflicting reports.  
+
+Interviews  lasted  20–30  minutes  and  each  was  audio  rec-
+orded  and  transcribed  for  analysis.  Two  researchers  con-
+ducted analysis using inductive coding to iteratively gener-
+ate themes until no new themes emerged. 
+
+Clinician Interview Findings 
+Patient experiences of interest to clinicians  
+From  the  list  of  30  symptoms  presented  in  pMSAS,  we 
+found  that  the  symptoms  most  important  for  decision-
+making included: physical (lack of appetite, lack of energy, 
+pain,  constipation,  vomiting,  mouth  sores,  nausea,  numb-
+ness  in  hands/feet)  and  psychological  (sadness,  worry,  dif-
+ficulty  sleeping)  symptoms,  as  well  as  behaviors  (physical 
+activity, nutrition, medication tracking, and sleep duration).  
+
+When  asked  about  specifics  of  these  symptoms,  clinicians 
+told  us  that  it  is  important  to  know  how  symptoms  affect 
+the  patients’  quality  of  life  [34].  We  also  found  that  most 
+symptoms are evaluated in a descriptive manner.  
+
+“Most of them [symptoms] don't have a scale. I would say 
+pain's  really  the  only  one  we  use  a  scale  consistently  on. 
+The  rest  is  just,  ‘What  do  you  mean  you're  drowsy?  How 
+would  you  describe  that?’  [For]  numbness  of  hands  and 
+feet, what I would say is, ‘How often is that happening? Are 
+you having weakness with it? Can you open a bag of chips? 
+Can you hold your pen?’ Those kinds of things.” –C3  
+
+Role of symptom tracking in complex care 
+When asked about the potential role that symptom tracking 
+could  play  in  complex  chronic  care,  all  clinicians  agreed 
+that patients’ self-reports of symptomatic experience would 
+not  necessarily  impact  major  treatment  decisions  (e.g., 
+chemotherapy  dosage),  but  would  help  them  make  deci-
+sions  for  supportive  care  to  alleviate  secondary  effects  of 
+the  treatment.  Clinicians  are  focused  on  attending  to  acute 
+signs  of  treatment  outcomes  (e.g.,  blood  cell  counts)  and 
+parents  call  in  when  their  child  is  experiencing  critical 
+symptoms  (e.g.,  high  fever).  However,  both  clinicians  and 
+parents  can  overlook  non-critical  factors  usually  occurring 
+between visits that can still have long-term implications for 
+treatment.  
+
+“The critical things that may make them sick acutely, once 
+again,  families  will  let  us  know.  [...]  I  think  it's  more  the 
+dwindling  weight,  the  not  doing  physical  activities,  with-
+drawing from the world, those are the things that are hard-
+er for us to track because they can be more gradual.” –C1 
+
+For  example,  psychological  symptoms  are  often  over-
+looked,  but  very  important  to  track  because  it  interferes 
+with the patients’ propensity to comply with treatment. 
+
+“Sadness, worry, and difficulty sleeping […] are things that 
+if we don't intervene early can become a problem, and lead 
+to not wanting to take your meds, not showing up for your 
+appointments, those kind of things.”–C3  
+
+We  found  that  doctors  sometimes  find  it  difficult  to  get 
+quality  of  life  input  from  patient  families.  Patients  and 
+family  members’  perceive  doctors  in  oncology  clinics  as 
+specialists treating “just the disease.” C2 stated how school 
+attendance and performance is important to know to gauge 
+treatment  effects  on  the  teen’s  attention  and  concentration, 
+but families don’t discuss the subject with them. This could 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 3Figure 1. Co-Design Process. For each step in the co-design process (top-to-bottom) we describe the step, show relevant design artifacts from 
+Visual ODLs and storyboard and the involved participants, and provide example data generated from that step in the co-design activity. 
+Teenage patients are shown in blue, parents in purple. Semi-transparency indicates less involvement in an activity. 
+
+be attributed to the parents’ worry of burdening the doctor 
+with  extraneous  details  away  from  the  clinician’s  focus  on 
+treating their child’s “illness.”  
+
+Reconciling conflicting perspectives 
+When  we  asked  how  clinicians  reconcile  when  teens  and 
+parents  give  discrepant  reports  for  observable  symptoms 
+(e.g., vomiting) two clinicians (C1, C7) told us they would 
+opt  for  the  “worst  case”  to  avoid  misdiagnosis.  C7  men-
+
+tioned that parents over-report and patients under-report, so 
+in the end, parental reports are heard more in the clinic.  
+
+Although  most  clinicians  understand  that  patient  reports 
+should  carry  more  weight,  some  clinicians  (C3,  C4,  C8) 
+told us they have difficulty deciding who to trust and would 
+rely on cues such as mood and personality to make evalua-
+tions on an individual family basis. For example, C3 told us 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 4 
+she would at times trust the parents’ report more when the 
+child seems to be emotionally unstable. 
+
+One  strategy  that  clinicians  use  for  reconciliation  is  to  tri-
+angulate  between  parent  reports,  teen  reports,  and  clinical 
+data. C8 stated that she uses “objective data such as protein 
+scores and weight” obtained under their supervision, to re-
+solve conflicting reports about nutrition intake—a common 
+point of contention. Still, we found that clinicians were re-
+ceptive to the idea of collaborative tracking among patients 
+and  parents.  C10  especially  elaborated  on  what  this  means 
+for tracking nutrition intake.  
+
+“Just as an example, I think that a teen should report lack 
+of  appetite.  But  the  parent  should  help  report  what  they're 
+actually eating because lack of appetite is subjective. But a 
+parent can help provide objective information as an outside 
+source  on  what  somebody's  eating  [...]  More  like  parents 
+for checking, confirming.” -C10 
+
+However, we found that verbal communication did not sat-
+isfy  the  clinicians’  need  to  understand  what  happened  in-
+between  the  visits.  C1  noted,  “There's  plenty  of  kids  [for 
+whom] we'd like to stick a GoPro on their head and just see 
+what happens for the two weeks in between when we don't 
+see them. They come back and we're like: I would like to be 
+in that house and see what's going on!” 
+
+Co-Design Sessions with Patients and Parents 
+Through convenience sampling guided by our inclusion and 
+exclusion criteria and IRB-mandated clinician approval, we 
+recruited 13 patients (M=8; F=5) who were 14–19 years old 
+(mean=16.5).  Diagnoses 
+(3), 
+Ewing’s  Sarcoma  (2),  Rhabdomyosarcoma  (2),  Sickle  Cell 
+Disease (2), and other form of solid tumor (4).  
+
+included  Osteosarcoma 
+
+Patients  were  currently  undergoing  treatment  (n=8)  or  had 
+been treated within the last three months. Further inclusion 
+criteria  included  the  mental  capability  to  participate  in  the 
+study  (as  determined  by  a  supervising  physician),  and  the 
+ability to speak English.  
+
+To  better  understand  teens’  illness  experiences  while  re-
+ceiving treatment, we conducted semi-structured interviews 
+with  all  participants  using  storyboarding  with  scaffolding 
+that included the use of Visual ODLs. The goal for the co-
+design sessions was to understand how a digital storyboard-
+ing  tool  with  Visual  ODLs  could  be  designed  to  enable 
+tracking of symptoms and everyday illness experiences—to 
+support  personal  review  and  communication  between  the 
+patient and their family members as well as with clinicians.  
+
+In  the  next  section,  we  first  introduce  Visual  ODLs  and 
+then  detail  the  use  of  Visual  ODLs  with  storyboarding 
+techniques to build patient narratives of illness experiences. 
+
+Visual ODL Library 
+We  took  guidance  from  Brennan  and  Casper’s  conceptual 
+organization  of  ODLs  [2]  and  technology  probes  [20]  to 
+construct a total of 72 pictograms, or sketched illustrations 
+of  illness-related  experiences,  that  represent  people  (4), 
+
+places  (13),  activities  (22),  symptoms  (13),  mood  (7), 
+tools (8), descriptors (5)⎯all sketches were performed by 
+the first author and appraised for clarity by the co-authors.* 
+In our library, physical symptoms and mood indicate status 
+indicators.  Activities  indicate  behavioral indicators,  while 
+people and places indicate exposures. Our set of symptoms 
+was identified from the pMSAS during clinician interviews.  
+
+We  derived  activities  by  expanding  on  Activities  of  Daily 
+Living (ADL) [22]. These ADLs include: 
+
+•  Six  basic activities  of  daily  living  (e.g.,  eating,  bathing, 
+
+dressing, toileting, locomotion) 
+
+•  Everyday tasks (e.g., house chores, walking the dog) 
+
+•  Self-care activities  (e.g.,  taking  medications,  taking  time 
+
+alone) 
+
+We  expanded  on  this  set  by  incorporating  activities  found 
+to  be  important  through  clinician  interviews,  along  with 
+activities common to the teenage lifestyle. 
+
+•  Quality of life (e.g., sleep quality, socializing) 
+
+•  Lifestyle-related activities (e.g., going to school, listening 
+to music, using social media, playing video games, play-
+ing sports)  
+
+Similarly,  we  included  many  varieties  of  social  (people) 
+(e.g. alone, with parent, with friend, etc.) and environmental 
+contexts  (places)  to  ensure  coverage  (e.g.,  bedroom,  bath-
+room,  classroom,  etc.).  However,  by  using  participant  nar-
+ration along with Visual ODLs, we could (and did) flexibly 
+sketch frames missing from our library. 
+
+Descriptors  indicated  certain  temporal  patterns  (e.g.,  oc-
+curring  overnight,  for  several  days,  etc.)  or  syntax  (e.g., 
+can’t do) that describe how the individual status and behav-
+ioral indicators manifested. Finally, tools described a set of 
+media technologies (e.g., photo, video, chart, seen in Figure 
+1) that the teen could bring into the storyboard, to indicate 
+that they wished to capture or communicate an ODL using 
+the tool. While patients in our study did not use those tools 
+to  produce  content  for  the  design  sessions,  they  marked 
+“placeholders”  in  their  storyboards  to  indicate  where  they 
+would have liked to use them alongside sketched ODLs. 
+
+In  summary,  Visual  ODLs  describe  a  visual  language  of 
+patient  experiences,  encompassing 
+its  vocabulary, 
+grammar, and mechanism of expression that enables the 
+patient’s  comprehension  and  communication  of  cap-
+tured  observations  and  felt  illness  experiences.  By 
+providing a visual language, we leveraged teen’s familiarity 
+and favorable attitude towards using a visual conversational 
+medium  while  capitalizing  on  their  recognition  (thereby 
+lessening  cognitive  burden).  By  creating  design  artifacts 
+with this form of ODLs, researchers can use them to draw 
+out and collaboratively reconstruct illness experiences with 
+family caregivers in co-design sessions.  
+
+*
+
+ http://www.hx.gatech.edu/visualodls 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 5                                                             
+Co-Design Sessions with Semi-Structured Interviews 
+After  obtaining  assent  and  consent  from  patient  families, 
+we explained the storyboarding study procedure and asked 
+patients  to  review  the  full  list  of  Visual  ODLs.  Interviews 
+were conducted in isolated rooms or open spaces depending 
+on the patient’s reason for visit. Some patients participated 
+in the interview while receiving intravenous treatment (e.g., 
+chemotherapy).  For  others,  interviews  were  interrupted  at 
+times when clinicians came in for a physical exam. All in-
+terviews lasted 30-45 minutes and were audio-recorded.  
+
+Using a blank 4 x 3 panel storyboard template as a founda-
+tion, we presented four scenarios to draw out illness-related 
+experiences  and  preferences  regarding  the  imagined  use  of 
+the technology for four scenarios (see Figure 2). Contrary to 
+other  storyboard  scaffolding  approaches  [11,32]  that  start 
+with a few pre-selected image panels to generate ideas, we 
+chose  to  scaffold  the  storytelling  process  from  the  end  by 
+adding the visual illustrations corresponding to each scenar-
+io, in the last panel of the storyboard. End frames were re-
+placed  sequentially with  each  new  scenario.  Providing  this 
+scaffolding  for  the  storytelling  process  focused  on  co-
+designing  the  beginning  and  intermittent  processes,  allow-
+ing flexibility to ideate in-between and within Visual ODLs 
+leading up to the resulting scenario of use. 
+
+While walking through each scenario, we asked participants 
+to  narrate  their  daily  experiences  while  undergoing  treat-
+ment. The researcher quickly generated sketches with guid-
+ance  from  the  patient  when  the  ODL  did  not  exist  in  our 
+library.  We  kept  interview  topics  consistent  across  patient 
+families  while  adapting  question  phrasing  to  each.  Topics 
+addressed 1) challenges communicating illness experiences, 
+2)  preferences  regarding  the  use  of  media  technology  to 
+capture  experiences,  3)  opportune  moments  (researcher 
+placed  circular  stickers  corresponding  to  the  scene)  to  en-
+gage with symptom-tracking technology, and 4) patient and 
+parent  attitudes  regarding  the  imagined  use  of  technology 
+(outlined  in  Figure  1).  At  the  end  of  each  scenario,  the  re-
+searcher used a camera to capture the resulting storyboard.  
+
+Figure 2. Scenario I. Resultant storyboard of T12, an 
+18-year-old osteosarcoma patient in treatment. 
+
+Analysis 
+All audio recordings were transcribed verbatim. Our analy-
+sis  employed  a mixed deductive and inductive coding pro-
+cess  [14].  Starting  with  a  top-down  approach  guided  by 
+Brennan and Casper’s ODL framework [2], two researchers 
+attached  codes  to  instances  of  status  indictors,  behavioral 
+indicators  and  exposures  while  noting  emergent  themes 
+through  bottom-up  coding.  Researchers  reached  consensus 
+on a list of sub-themes through subsequent debriefings, then 
+iteratively  coded  the  transcripts  until  no  new  themes 
+emerged.  Emergent  themes  each  corresponded  to  specific 
+scenarios. 
+
+FINDINGS 
+Below  we  organize  our  findings  by  scenarios:  I,  II  &  III, 
+and  IV.  For  each  scenario,  we  highlight  relevant  excerpts 
+from interviews as well as images of patient-generated sto-
+ryboards with Visual ODLs. We use the labels ‘T’ and ‘P’ 
+to  refer  to  teens  and  parents,  respectively.  Matching  num-
+bers indicate a study pair (e.g., T2 and P2). 
+
+Scenario I: Personal Review 
+To introduce teen patients to ODLs, the first co-design sce-
+nario focused on outlining everyday experiences using Vis-
+ual  ODLs.  Through  this  scenario,  we  established  routine 
+activities  and  learned  how  symptoms  and  other  aspects  of 
+the illness experience unfolded with respect to them.  
+
+Understanding everyday experiences with Visual ODLs 
+For all patients undergoing treatment, we found consistency 
+in  their  day-to-day  experience  in  terms  of  both  structured 
+and unstructured activities that became routines. After con-
+structing one day in a storyboard, T6 remarked, “Truly this 
+is my typical day because after chemo, that's basically what 
+I  do  all  the  time.”  However,  for  these  patients,  symptoms 
+presented  themselves  unpredictably.  T11  illustrated  this 
+when  commenting,  “Sometimes  you'll  be  in  pain.  Some-
+times  you'll  be  nauseous,  sometimes  tired.  Some  days  it'll 
+all hit you at once.”  
+
+Our  most  interesting  insights  came  from  patients’  reflec-
+tions  on  their  narrated  experiences  expressed  as  Visual 
+ODLs  on  the  storyboard.  We  found  that  the  Visual  ODLs 
+enabled  expression  of  symptoms  by  1)  enabling the inclu-
+sion of surrounding context to better articulate them, and 2) 
+scaffolding how they affected the teen’s ability to engage in 
+daily  activities.  For  example,  most  patients  (T2–T13)  de-
+scribed  their  symptoms  first  in  relation  to  activities  and 
+surrounding physical context, drawing attention to how the 
+symptoms  affected  routine  activities  (e.g.,  eating,  locomo-
+tion and sleep).  
+
+Regarding  pain,  T9  told  us,  “with  the  mouth  sores  […]  I 
+was  having  to  spit  a  lot,  and  because  of  the  pain,  I  really 
+couldn't  stay  asleep.”  Regarding  fatigue,  T10  said  that 
+walking  and  climbing  stairs  in  school  made  her  feel  tired, 
+while  T13  described  how  bathing  would  make  him  feel 
+sleepy,  “When I'm taking a bath I get real sleepy for some 
+reason […] and I'll end up laying on the bottom of the tub 
+while taking a shower and being asleep.” Regarding mood, 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 6 
+ 
+ 
+ 
+ 
+T12 associated the need to take pills with sadness: “Feeling 
+sad,  probably,  at  the  same  time  as  the  initial  [pain]—and 
+then during—when I'm taking the pills” (Figure 2). 
+
+We further discovered that teens’ understanding and encod-
+ing of these associations involved noting the timing, such as 
+onset  and  duration,  frequency,  intensity  or  impediment  of 
+specific  activities.  The  visual  cues  denoting  such  de-
+scriptors  aided  this  process,  by  providing  the  grammar  for 
+characterizing how the ODLs manifested in routine actions. 
+For example, T9 mentioned using the “can’t do” descriptor 
+to  indicate  how  the  mouth  sores  disturbed  his  sleep,  “That 
+could add more detail to ‘can't sleep’—the ‘can't do’ part.”  
+
+In  addition,  focusing  on  details  about  how  the  status  and 
+behavioral  indicators  interacted  helped  teens  identify  pat-
+terns of their lived experience (T1, T4, T8-11, T13). T10’s 
+comment  especially  highlighted  this  need  as  she  recently 
+started  school,  “I guess it would be helpful if I started see-
+ing patterns. Like, if I don't sleep well, then I'm more nau-
+seous.  […]  Maybe  how  much  I  ate,  because  some  days  I 
+pack  my  lunch  and  I  won't  be  able  to  eat  as  much  during 
+the day. And like, I have different class schedules on differ-
+ent days, and different symptoms, too.”  
+
+We found that being able to understand these relationships 
+in  better  detail  was  particularly  important  and  motivating 
+for teens as it could help them discover behavioral quirks to 
+alleviate unwanted symptoms. As T8 put it, “I think just to 
+be  able  to  document  when  I'm  not  feeling  good  and  how  I 
+feel, and then be able to relate from past times and then see 
+what I did to make myself feel better, and to be able to do 
+that  again,  and  then  trying  to  I  guess  test  out  things  that 
+will make me happy, even if I'm not feeling good.” 
+
+Opportune moments to contribute ODL data 
+Of  course,  collecting  data  from  chronically  ill  teens  is  not 
+an easy task. To better understand when and how to engage 
+teens  in  entering  their  illness  experience,  we  asked  about 
+opportune moments to log daily ODL data.  
+
+We found that most teens preferred to contribute ODL data 
+in  association  with  an  activity.  They  tied  these  times  to 
+their  daily  routine  indicating  a  time  of  day  such  as  before 
+going  to  bed  (T6–8,  T10,  T12),  upon  waking  up  (T4,  T8, 
+T10,  T11),  while  using  the  phone  (T5,  T10,  T13),  eating 
+lunch (T4), and taking medication (T6).  
+
+On  the  other  hand,  three  teens  (T4,  T9,  T11)  said  they 
+would  enter  data  immediately  after  experiencing  a  symp-
+tom. Qualitative analyses revealed that teens are most likely 
+to be available on their mobile phone or would be reminded 
+to enter their story in the vicinity of said activities. For in-
+stance,  T6  said  that  coupling  moments  of  data  entry  with 
+self-care activities such as taking pills would remind him to 
+use  the  storyboard:  “maybe  when  I  go  to  bed  to  take  my 
+medicine. Yeah. Taking pills and stuff. It would remind me 
+its 8:00pm–time to take meds. Then go to bed.” T5 appreci-
+ated having a visual vocabulary, mentioning that she would 
+choose  an  activity  that  could  provide  more  psychological 
+
+comfort  in  response  to  a  symptom  rather  than  making  an 
+effort to log data about her experience. 
+
+ “If  I  have  energy  to  listen  to  music  and  draw  or  enter  in 
+more  stuff  about  how  shitty  I'm  feeling,  then  I'm  probably 
+going to want to listen to music and draw. So if there were 
+an easy template [referring to Visual ODLs] that I could fill 
+in, [I could] grow accustomed to using [it] rather than hav-
+ing  to  express  it  using  my  brain  power.  Sometimes  words 
+are not so easy to find, I feel scatterbrained. So it would be 
+easier if there were suggestions already there.”  
+
+Scenario II & III: Communication with Family Members 
+Our  second  and  third  scenarios  pursued  insights  into  how 
+family  members  could  work  together  to  contribute  their 
+observations  of  the  patient’s  experience.  In  reporting  the 
+findings, we combine and highlight findings from both co-
+located (II) and remote communication (III) scenarios. 
+
+Conflicting observations 
+Overall,  parents  became  involved  in  the  co-design  process 
+to  contribute  their  own  observations  and  perspectives. 
+When we asked what each teen and parent understand best 
+about  the  patient  experience,  teens  focused  on  describing 
+personally  felt  experiences  (both  physical  and  emotional) 
+along with how they affected activities that they valued. In 
+contrast, parents filled in "meta-level" details such as time, 
+location, or frequency of events. T9 illustrated this point, "I 
+think,  I  believe  she  would  be  able  to  help  out  with  those 
+things. But I was talking about pain or the symptoms; those 
+would be more of a personal thing because only you really 
+know how much it hurts and all that. It would be harder to 
+explain  it  to  someone  else.  I  think  she'd  [P9]  be  better  at 
+tracking [the] time [of the symptom] than me."  
+
+However, these details often led to conflicting views about 
+what  actually  happened—a  consideration  for  co-design  in 
+this domain. For example, T4 and P4 argued over the teens 
+ability  to  recognize  symptoms.  P4:  “I'm  not  a  doctor  or 
+anything,  but  if  she  hasn't  peed  for  like  eight  hours,  okay, 
+something's  wrong,  where  she  may  not  think  …”  with  T4 
+responding,  “If  I  haven't  peed  in  eight  hours,  I'm  going  to 
+say something. I'm sorry, I knew this wasn’t going to work.” 
+
+Through  analyses  of  interviews,  we  found  one  reason  that 
+may contribute to conflicting perspectives. Because parents 
+had  significant  difficulty  understanding  how  their  child  is 
+feeling, they relied on subtext, including visual cues such as 
+body language or the child's ability or intention to engage in 
+everyday mundane activities. For instance, P11 told us that 
+he would be able to gauge T11's experiences by reading his 
+body  language:  “his  demeanor  of  his  body  or  body  lan-
+guage would tell us ... when he's not feeling good or when 
+his counts were low, that we needed to stop watching, when 
+to  start  [keeping]  an  eye  on  him,  and  when  he  was  okay.” 
+P6  took  hints  from  her  son's  social  activity:  “I know when 
+you were bad you didn't talk too much to anybody.”  
+
+While reading body language and behavior helped provide 
+some  context,  this  approach  is  more  applicable  to  symp-
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 7toms  and  activities  that  are  outwardly  observable.  For  in-
+stance, P9 expressed difficulty asking about activities such 
+as  toileting  that  are  deemed  private,  "sometimes  I  have  to 
+ask  him,  like  his  bowel  habits.  He  doesn't  tell  me  when  he 
+goes to the bathroom what's going on, so I usually have to 
+ask him."  
+
+Indeed, inferring emotions was most challenging for parents 
+(P4–6,  P11–13).  As  P13  explained,  “Sometimes  the  kids 
+don't  want  to  talk  to  you.  He'll  get  those  times  where  he's 
+completely  silent.  […]  then  sometimes  he'll  talk  to  some-
+body  else  before  he  talks  with  me.  He  might  need  time  to 
+talk to me.” Teens  too,  had  difficulty  expressing  emotions 
+in  front  of  their  parents,  but  made  use  of  emotions  when 
+storyboarding.  T11  told  us  that  emotions  are  difficult  to 
+communicate  because  his  reason  for  sadness  directly  in-
+volved  the  absence  of  his  family.  “I'd let them know if I'm 
+hurting.  […]  I  usually  don't  let  them  know  if  I'm  sad  or 
+whatever. The sad part, I'm not sad about being in the hos-
+pital. I'm just sad being away from the rest [of the family].”  
+
+Despite such difficulty, we found that visual representations 
+could  provide  an  alternative  means  for  teens  (T6,  T9)  to 
+express  their  emotions.  T6  said,  “it's  a  lot  easier  with  the 
+pictures because it shows you how mad you are. A picture 
+will  explain  how  mad,  visualize  how  mad  you  were,  how 
+sick you were, how tired, dizzy or something.”  P6  also  ap-
+preciated  the  need  for  Visual  ODLs:  “It'd  help  me  under-
+stand if he couldn't express to me. […] Someone not going 
+through it–you don't know how they really feel.” 
+
+Tensions around adherence  
+In addition to understanding physical and emotional experi-
+ences, another point of contention between parent and teens 
+involved  parents  reminding  their  child  to  adhere  to  care 
+activities, such as taking pills. P10 raised her concern, espe-
+cially  drawing  attention  to  her  daughter’s  imminent  return 
+to  college:  “as a parent, and she's away at college, I worry  
+she's not taking her medicine when she should be, her pills 
+[…] And I know she's busy, so to me it would be helpful if I 
+knew,  oh  yeah,  she  just  put  in  that  she  took  it,  so  I  don't 
+have to ask her, you know?”  
+
+Many  teens  also  told  us  they  disliked  being  reminded  to 
+adhere to self-care activities. Interestingly, both parents and 
+teens  saw  value  in  using  digital  storyboarding  as  a  way  to 
+log  and  acknowledge  confirmation  of  self-care  tasks.  Sup-
+porting identification and communication of self-care activ-
+ities is especially important for teens with chronic illnesses. 
+These patients are reconciling the need for support with the 
+rites  of  passage  associated  with  the  transition  to  adulthood 
+[35], such as being responsible for taking their own medica-
+tions.  Their  storyboard  revealed  how  this  reconciliation 
+played  out  in  their  everyday  lives,  and  how  it  interacted 
+with aspects of self-identify beyond their illness. 
+
+We  also  received  positive  responses  toward  the  imagined 
+use of digital storyboarding technology as a way to collabo-
+ratively  contribute  unique  observations  of  the  patient’s  ill-
+
+Figure 3. Scenario II. Storyboard of T13, a 15-year-old 
+osteosarcoma patient in treatment. 
+ness experience. Parental caregivers, who already had prior 
+experience  tracking  for  the  patient,  were  receptive  to  this 
+idea. P4 told us that she could offer to help generate the list 
+of routine activities for her daughter T4. “We could proba-
+bly  make  a  list,  I  mean,  of  her  everyday  routine,  because 
+she's not in school right now, because it's summer … I don't 
+work,  so  our  focus  right  now  is  just  her,  and  getting  her 
+through  this  treatment,  so,  our  life  is  very  boring.  So,  we 
+could easily map a whole day out.”  On  a  related  note,  T13 
+said that his mother (P13) could help him capture everyday 
+patient  experiences  through  media  tools,  “I  would  ask  my 
+mom  to  record  me  after  I'm  done  sitting  down,  how  I  feel 
+when  I'm  brushing  my  teeth  and  how  I  change  and  what 
+music does for me, how I feel.”  
+
+Perhaps the most important lesson we took away from sce-
+narios II and III is that both patients and the parent partici-
+pants  saw  the  value  of  collaborative  construction  of  story-
+boards  as  a  point  of  mediation  to  resolve  conflicting  
+perspectives. T9 posited that tracking ODLs could serve as 
+a point of reference to resolve discrepant recollections of an 
+observed  experience,  “but I think that [storyboard technol-
+ogy]  would  help  clear  it  up.  Like  with  me  a  lot,  my 
+memory's  not  been  the  best  recently,  with  all  the  stuff 
+[chemotherapy] that's going on. So usually it would be me 
+saying something what I believe is correct, and she'll [P9] 
+see  it  some  other  way.  And  if  I  did  record  it  when  it  hap-
+pened, then we could just go back and look at that, and that 
+would help a lot.” 
+
+Scenario IV: Communication with Clinicians 
+Before  starting  the  storyboarding  process,  we  first  asked 
+teens  about  existing  challenges  when  communicating  with 
+their clinician. Several teens (T5, T7–T10, T13) stated hav-
+ing  difficulty  talking  to  clinicians  when  they  needed  to  re-
+call  illness  experiences.  This  included  recalling  the  timing 
+of the onset of symptoms and recalling behavioral triggers. 
+T13  explained,  “I  was  trying  to  tell  her  what  things  that  I 
+do  that  makes  my  energy  go  down  but  I  keep  forgetting.” 
+Other  challenges  related  to  discussing  severity.  T6  men-
+tioned his trouble “communicating with the doctors explain-
+ing it's not excruciating pain—it's just a little bit.”  
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 8 
+Expressing symptoms 
+Although  teens  were  accustomed  to  the  use  of  clinical 
+scales,  they  had  difficulty  translating  felt  experience  into 
+numbers.  Further  analyses  revealed  that  teens  preferred  to 
+express  their  symptoms  in  terms  of  how  they  affected  the 
+ability  to  engage  in  everyday  activities.  When  asked  how 
+he’d  like  to  communicate  his  feelings  to  the  clinician,  T6 
+responded:  “It's  like  how  I'm  doing  something.  […]  Some-
+times  I  have  to  get  up  and  take  the  showerhead  down. 
+That's difficult.”  
+
+For less severe symptoms, T10 suggested combining differ-
+ent representations for concurrent or related symptoms. An 
+example of combining facial expressions with other activi-
+ties helped outline this aspect of such symptom experienc-
+es:  “If  I  was  so  nauseous  that  I  couldn't  eat,  or  if  I  like 
+threw up, I could put that on there, but usually it's not that 
+severe... more like, make different faces, I guess, instead of 
+neutral, I would be sad.” T7  concurred  that, “I would just 
+tell [the doctor], but my facial expression would show it.”  
+
+Overall,  teens  showed  excitement  about  the  potential  for 
+digital  storyboarding  to  support  their  communication  of 
+illness  experiences  with  clinicians.  T8  expressed  this  ex-
+citement enthusiastically: “This would be really awesome to 
+have  to  be  able  to  put  down  even  a  tiny  detail  of  just  like, 
+this is how I felt this day at this time, that kind of stuff. On 
+this day I was feeling great, but then the next day I started 
+feeling worse…then I had a fever. That kind of stuff.” 
+
+Preferences for Integration of Media Technology 
+Going  from  scenarios  I  to  IV,  we  found  that  the  types  of 
+digital  media  technology  teens  preferred  to  use  to  capture 
+and articulate specific ODLs did not change. However, we 
+learned that their choice of technology varied based on the 
+level of expressiveness required to encode how they wanted 
+to capture and communicate the ODLs. Below, we highlight 
+four ways in which they preferred to communicate ODLs. 
+
+Physical symptoms: video 
+Video  was  preferred  in  cases  where  there  was  a  need  to 
+capture the most complex aspect of the teens’ illness expe-
+rience:  ‘how’  ODLs  (e.g.,  symptoms,  activities,  environ-
+ment,  etc.)  interact  with  each  other.  As  mentioned  earlier, 
+teens  (T5,  T7–8,  T13)  wanted  to  capture  the  extent  of  a 
+physical  symptom  by  recording  how  it  affects  a  mundane 
+activity such as eating and dressing: T7 indicated his pref-
+erences, saying “Videos […] to see how I acted. So you can 
+see where I eat, or when I get dressed.”  
+
+Not  only  did  teens  see  video  as  a  tool  for  capturing  and 
+expressing the illness experience, they also anticipated that 
+videos  would  be  more  engaging  for clinicians.  T5 was op-
+timistic  about  the  potential  for  video  to  foster  positive  pa-
+tient–clinician interactions, “Next time I come in, the nurses 
+will be like, ‘that was such a cool video […] of your foot!’”  
+
+Mood: sketches, photos, and charts 
+Preferences  for  capturing  emotion,  a  highly  subjective  and 
+complex  experience,  were  mixed.  Through  storyboarding, 
+
+teens  indicated  that  everyday  visual  depictions  of  facial 
+expressions could be a better way relate their mood to clini-
+cians. Among those who responded, many teens (T3, T5–6, 
+T9) preferred to use sketches from our Visual ODL library, 
+and  photos  (T2,  T7)  to  show  their  own  facial  expressions. 
+Yet we found some teens (T3, T7) also needed to use other 
+tools  in  combination  to  express  different  aspects  of  their 
+mood, such as the use of charts to indicate fluctuating emo-
+tions  over  several  days.  T7  expressed  this  sentiment:  “I 
+mean  probably  a  chart.  Chart  along  with  the  phone.  You 
+see  my  highs  and  lows  […]  mood  swings  happen  almost 
+every day.” 
+
+Reminding and journaling: voice recording 
+Audio or voice recording was seen as a reminder and jour-
+naling tool to aid the patients’ experiencing cognitive diffi-
+culties  and  fatigue.  Some  teens  (T5,  T13)  chose  to  record 
+their voice as a way to make journal entries instead of writ-
+ing  and  to  aid  their  memory  (T1,  T6,  T13).  T13  saw  this 
+tool as a way to seek psychological support outside of face-
+to-face  contact:  “If  I  record  they  [psychologists]  already 
+would  know  and  they  could  come  and  talk  to  me  about 
+those  things  […]  I  don't  like  to  always  have  people  in  my 
+face and talking to people because it's boring. [...] Basical-
+ly I get distracted easily. You can't get distracted from your 
+phone because you're always on it.”  
+
+Diet: photo 
+For  some  teens  (T8–9,  T13),  taking  photos  of  their  meal 
+was the easiest way to keep track of what they ate as well as 
+indicate  their  appetite.  As  T8  noted,  “Probably just to say 
+what I ate and was I too nauseous to eat. Was I really hun-
+gry  so  I  ate  a  lot,  or  just  snacked  all  day?  [...]  I  could 
+probably take a picture of the food before and after and list 
+how much I ate.” 
+
+DISCUSSION 
+Below,  we  first  situate  our  findings  with  respect  to  prior 
+work  in  personal  and  family  informatics.  We  then  discuss 
+the integration of Visual ODLs into clinical care.  
+
+Personal  Informatics:  Activities  as  a  Scaffold  for  Semi-
+Automated Tracking 
+Through  the  first  scenario,  we  learned  that  patients  under-
+going  treatment  have  highly  personal  and  individualized 
+routines  for  everyday  activities.  While  daily  entries  could 
+be  a  burden,  encoding  routines  in  advance  could  scaffold 
+the  capture  of  data  related  to  activities  and  lessen  the  bur-
+den  of  data  collection.  For  example,  T5  suggested  that 
+ODLs could be used to construct a baseline routine. “Like if 
+you give an update and then you went in the next day, there 
+could be a last time option.”  
+
+The frequent placement of symptoms with activities in our 
+design sessions suggests that there are opportunities to lev-
+erage  the  highly-structured,  routine  nature  of  teens’  daily 
+lives  in  storyboarding  technology.  There  is  a  current  em-
+phasis  on  tracking  personal  health  based  on  a  broad  inter-
+pretation  of  activities  (e.g.,  physical  activity,  sleeping)  [6]. 
+We  found  that  patients  were  able  to  relate  better  to  micro-
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 9level  activities  such  as  getting  in-and-out  of  bed,  brushing 
+their teeth or reaching for a showerhead. Micro-level activi-
+ty  routines,  authored  by  the  user  in  advance,  could  reduce 
+the burden of daily logging. These activities can also serve 
+as  triggers  to  help  recognize  unpredictable  symptoms.  Es-
+tablishing daily routines could be used both for manual and 
+semi-automated tracking [5] to elicit data at opportune mo-
+ments. For instance, given prior knowledge that nausea and 
+fatigue  are  both  experienced  as  a  symptom  cluster† when 
+the patient brushes their teeth, a system could prioritize the 
+suggestion of those symptoms when the patient is engaged 
+in that activity. 
+
+Family Informatics: Collaborative Re-construction of the 
+Patient’s Illness Experience 
+The  HCI  and  Health  Informatics  communities  have  con-
+tributed much to the growing body of PGHD research [37]. 
+Yet, work considering the family as a unit for the design of 
+technology  is  still  emerging  [34].  Symptoms  are  highly 
+individual,  often  subjective  experiences  (e.g.,  nausea  and 
+fatigue).  Tracking  the  direct,  felt  experience  is  important, 
+and  tools  should  elicit  input  from  both  patients  and  family 
+caregivers [4,19]. Pina et al. found that families preferred to 
+consider  both  caregivers  and  children  as  trackers,  and  to 
+distribute the burden of tracking among the family [34].  
+
+In  our  study,  family  members  as  well  as  clinicians  found 
+value  in  the  use  of  collaborative  digital  storyboarding  to 
+resolve and reconcile different perspectives. Both teens and 
+parents  in  our  study  were  aware  that  when  accounting  for 
+symptoms,  both  perspectives,  though  different,  are  valua-
+ble. T9’s remark (Scenarios II & III) suggested that patients 
+understand they are  the “experiencer” of their own subjec-
+tive feelings (e.g., pain, emotion, etc.) while parental care-
+givers  mentioned  tracking  “objective”  details  (e.g.,  time, 
+location, frequency, etc.) of symptoms. In this case, digital 
+storyboarding  tools  that  make  use  of  Visual  ODLs  could 
+support  collaborative  work  among  family  members  by 
+providing distinct roles for each stakeholder.  
+
+Visual ODLs in Clinical Care 
+Several  barriers  must  be  overcome  to  integrate  Visual 
+ODLs into clinical care [41]. Recently, several studies have 
+identified and classified factors that contribute to barriers in 
+data-driven  clinical  communication  [7,23,31,36,41].  Com-
+mon themes in these studies include clinicians’ concern for 
+the reliability of patient-captured data and its interoperabil-
+ity with clinicians’ existing practice.  
+
+If primarily used outside of clinical care, symptom-tracking 
+technology can facilitate greater awareness of illness expe-
+riences  and  support  verbal  reports  in  the  clinic  [33].  This 
+ability  alone  is  valuable:  patients  undergoing  complex 
+treatments such as chemotherapy can suffer from cognitive 
+impairments (referred to as having a ‘chemo-brain’ [21]). In 
+the clinic, a tracking tool could support weekly and monthly 
+
+†
+
+Symptom  clusters  describe  the  co-occurrence  of  a  specific  set  of  symp-
+toms for a given illness or effects of treatment [25]. 
+
+reports indicating the most frequent, the most severe, or the 
+most disruptive symptoms, and could be designed to allow 
+for searching by these criteria—a capability that we plan to 
+explore in future work. 
+
+Reviewing  large  amounts  of  patient-generated  data  could 
+place  a  burden  on  clinicians.  Lee  and  Dey’s  study  of  sen-
+sor-based ODLs describes opportunities to leverage nursing 
+triage  assessments  to  leverage  existing  practice  for  data 
+review [27]. Emerging work in sensing, analysis and visual-
+ization  could  also  ease  the  burden  of  review  for  multiple 
+caregivers.  Hartzler  et  al.  demonstrated  the  feasibility  of 
+incorporating PGHD into cancer care through visualization 
+techniques [16].  
+
+LIMITATIONS AND FUTURE WORK 
+Through the co-design process, we learned that using paper 
+to conduct design activities in the clinic was difficult due to 
+limited  space,  especially  when  needing  room  for  design 
+artifacts. We used the hospital bed, carts, and any surfaces 
+wide  enough  to  place  storyboard  materials—our  ability  to 
+fully  capture  the  patient-narrated  experience  was  limited. 
+This  research  is  also  limited  in  our  focus  on  oncology  and 
+hematology-related  conditions,  which  are  categorized  as 
+complex chronic conditions [15]. (See [19] for a description 
+of its relevance to the larger context of our study.) 
+
+Thus,  our  findings  may  not  necessarily  transfer  to  other 
+types  of  chronic  conditions  such  as  obesity  or  diabetes. 
+With  the  introduction  of  PGHD  comes  the  need  to  review 
+and incorporate it into health record systems. However, we 
+did  not  investigate  the  workflow  considerations  or  opera-
+tional  factors  involved  in  data  transmission,  clinical  han-
+dling  or  response  protocols.  Though  these  are  beyond  the 
+scope of our current study, they are important areas that we 
+plan to investigate in subsequent studies. 
+
+CONCLUSION 
+In  this  paper,  we  introduce  Visual  ODLs  and  examine  its 
+use  as  design  artifacts  to  elicit  complexities  of  symptom-
+related communication faced by teens with complex chron-
+ic illnesses. Through co-design activities to envision digital 
+storyboarding technology with Visual ODLs, we generated 
+storyboards  representing  the  teens'  reconstructions  of  their 
+felt  experiences.  The  material  presence  of  Visual  ODLs 
+provided  scaffolds  to  structure  in-depth  discussions  about 
+how to foster communication with both family and clinical 
+caregivers using patient-defined and patient-generated data. 
+Our  future  work  will  examine  approaches 
+to  semi-
+automated  tracking  in  the  space  of  collaborative  construc-
+tion  of  Visual  ODLs  and  storyboarding.  A  central  design 
+tension includes the need to reduce the burden placed on a 
+user  experiencing  illness,  while  enabling  full  expressive 
+capabilities to capture and represent their felt experience.  
+
+ACKNOWLEDGMENTS 
+We  thank  all  study  participants  and  the  clinic  staff.  This 
+work was supported by NSF #1652302.  
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 10                                                             
+REFERENCES 
+1. 
+
+Raewyn Bassett, Brenda L. Beagan, Svetlana 
+Ristovski-Slijepcevic, and Gwen E. Chapman. 
+2008. Tough Teens: The Methodological 
+Challenges of Interviewing Teenagers as Research 
+Participants. Journal of Adolescent Research 23, 2: 
+119–131. 
+http://doi.org/10.1177/0743558407310733 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+Patricia Flatley Brennan and Gail Casper. 2015. 
+Observing health in everyday living: ODLs and the 
+care-between-the-care. Personal and Ubiquitous 
+Computing 19, 1: 3–8. 
+http://doi.org/10.1007/s00779-014-0805-0 
+
+Patricia Flatley Brennan, Stephen Downs, and Gail 
+Casper. 2010. Project HealthDesign: rethinking the 
+power and potential of personal health records. 
+Journal of biomedical informatics 43, 5: S3–S5. 
+
+Yunan Chen, Victor Ngo, and Sun Young Park. 
+2013. Caring for caregivers: designing for 
+integrality. Proceedings of the 2013 conference on 
+Computer Supported Cooperative Work, ACM, 91–
+102. 
+
+Eun Kyoung Choe, Saeed Abdullah, Mashfiqui 
+Rabbi, et al. 2017. Semi-Automated Tracking: A 
+Balanced Approach for Self-Monitoring 
+Applications. IEEE Pervasive Computing 16, 1: 
+74–84. http://doi.org/10.1109/MPRV.2017.18 
+
+Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, et 
+al. 2014. Understanding quantified-selfers’ 
+practices in collecting and exploring personal data. 
+Proceedings of the 32nd annual ACM conference 
+on Human factors in computing systems - CHI ’14, 
+ACM Press, 1143–1152. 
+http://doi.org/10.1145/2556288.2557372 
+
+Chia-Fang Chung, Kristin Dew, Allison M Cole, et 
+al. 2016. Boundary Negotiating Artifacts in 
+Personal Informatics: Patient-Provider 
+Collaboration with Patient-Generated Data. 
+Proceedings of the 19th ACM Conference on 
+Computer-Supported Cooperative Work & Social 
+Computing - CSCW ’16, ACM Press, 768–784. 
+http://doi.org/10.1145/2818048.2819926 
+
+John J. Collins, Maura E. Byrnes, Ira J. Dunkel, et 
+al. 2000. The Measurement of Symptoms in 
+Children with Cancer. Journal of Pain and 
+Symptom Management 19, 5: 363–377. 
+http://doi.org/10.1016/S0885-3924(00)00127-5 
+
+Pippa G. Corrie. 2008. Cytotoxic chemotherapy: 
+clinical aspects. Medicine 36, 1: 24–28. 
+http://doi.org/10.1016/j.mpmed.2007.10.012 
+
+10. 
+
+11. 
+
+12. 
+
+13. 
+
+14. 
+
+15. 
+
+16. 
+
+17. 
+
+18. 
+
+Prasanna R Deshpande, Surulivel Rajan, B Lakshmi 
+Sudeepthi, and C P Abdul Nazir. 2011. Patient-
+reported outcomes: A new era in clinical research. 
+Perspectives in clinical research 2, 4: 137–44. 
+http://doi.org/10.4103/2229-3485.86879 
+
+Christian Dindler and Ole Sejer Iversen. 2007. 
+Fictional Inquiry—design collaboration in a shared 
+narrative space. CoDesign 3, 4: 213–234. 
+http://doi.org/10.1080/15710880701500187 
+
+Sarah E. Drew, Rony E. Duncan, and Susan M. 
+Sawyer. 2010. Visual Storytelling: A Beneficial But 
+Challenging Method for Health Research With 
+Young People. Qualitative Health Research 20, 12: 
+1677–1688. 
+http://doi.org/10.1177/1049732310377455 
+
+Jerry Alan Fails, Mona Leigh Guha, and Allison 
+Druin. 2012. Methods and Techniques for 
+Involving Children in the Design of New 
+Technology for Children. Foundations and 
+Trends® in Human–Computer Interaction 6, 2: 85–
+166. http://doi.org/10.1561/1100000018 
+
+Jennifer Fereday and Eimear Muir-Cochrane. 2006. 
+Demonstrating Rigor Using Thematic Analysis: A 
+Hybrid Approach of Inductive and Deductive 
+Coding and Theme Development. International 
+Journal of Qualitative Methods 5, 1: 80–92. 
+http://doi.org/10.1177/160940690600500107 
+
+Chris Feudtner, Ross M Hays, Gerri Haynes, J 
+Russell Geyer, John M Neff, and Thomas D 
+Koepsell. 2001. Deaths attributed to pediatric 
+complex chronic conditions: national trends and 
+implications for supportive care services. Pediatrics 
+107, 6: e99–e99. 
+
+Andrea L Hartzler, Jason P Izard, Bruce L Dalkin, 
+Sean P Mikles, and John L Gore. 2015. Design and 
+feasibility of integrating personalized PRO 
+dashboards into prostate cancer care. Journal of the 
+American Medical Informatics Association: ocv101. 
+
+Kimberly Hieftje, Lindsay R Duncan, and Lynn E 
+Fiellin. 2014. Novel methods to collect meaningful 
+data from adolescents for the development of health 
+interventions. Health promotion practice 15, 5: 
+714–22. http://doi.org/10.1177/1524839914521211 
+
+Alexis Hiniker, Kiley Sobel, and Bongshin Lee. 
+2017. Co-Designing with Preschoolers Using 
+Fictional Inquiry and Comicboarding. Proceedings 
+of the 2017 CHI Conference on Human Factors in 
+Computing Systems  - CHI ’17, ACM Press, 5767–
+5772. http://doi.org/10.1145/3025453.3025588 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 11 
+ 
+ 
+ 
+ 
+ 
+ 
+19.  Matthew K Hong, Lauren Wilcox, Daniel Machado, 
+Thomas A Olson, and Stephen F Simoneaux. 2016. 
+Care Partnerships: Toward Technology to Support 
+Teens’ Participation in Their Health Care. 
+Proceedings of the 34th annual ACM Conference 
+on Human Factors in Computing Systems. 
+http://doi.org/http://dx.doi.org/10.1145/2858036.28
+58508 
+
+20. 
+
+21. 
+
+22. 
+
+23. 
+
+24. 
+
+25. 
+
+26. 
+
+Hilary Hutchinson, Heiko Hansen, Nicolas Roussel, 
+et al. 2003. Technology probes: inspiring design for 
+and with families. Proceedings of the conference on 
+Human factors in computing systems - CHI ’03, 
+ACM Press, 17. 
+http://doi.org/10.1145/642611.642616 
+
+Catherine E. Jansen, Christine Miaskowski, 
+Marylin Dodd, Glenna Dowling, and Joel Kramer. 
+2005. A metaanalysis of studies of the effects of 
+cancer chemotherapy on various domains of 
+cognitive function. Cancer 104, 10: 2222–2233. 
+http://doi.org/10.1002/cncr.21469 
+
+Sidney Katz, Amasa B Ford, Roland W Moskowitz, 
+Beverly A Jackson, and Marjorie W Jaffe. 1963. 
+Studies of illness in the aged: the index of ADL: a 
+standardized measure of biological and 
+psychosocial function. Jama 185, 12: 914–919. 
+
+Yoojung Kim, Eunyoung Heo, Hyunjeong Lee, et 
+al. 2017. Prescribing 10,000 Steps Like Aspirin: 
+Designing a Novel Interface for Data-Driven 
+Medical Consultations. Proceedings of the 2017 
+CHI Conference on Human Factors in Computing 
+Systems  - CHI ’17, ACM Press, 5787–5799. 
+http://doi.org/10.1145/3025453.3025570 
+
+Predrag Klasnja, Andrea Civan Hartzler, Kent T 
+Unruh, and Wanda Pratt. 2010. Blowing in the 
+wind: unanchored patient information work during 
+cancer care. Proceedings of the SIGCHI Conference 
+on Human Factors in Computing Systems, 193–
+202. 
+
+Kristine L. Kwekkeboom. 2016. Cancer Symptom 
+Cluster Management. Seminars in Oncology 
+Nursing 32, 4: 373–382. 
+http://doi.org/10.1016/j.soncn.2016.08.004 
+
+Charlotte P. Lee. 2007. Boundary Negotiating 
+Artifacts: Unbinding the Routine of Boundary 
+Objects and Embracing Chaos in Collaborative 
+Work. Computer Supported Cooperative Work 
+(CSCW) 16, 3: 307–339. 
+http://doi.org/10.1007/s10606-007-9044-5 
+
+27.  Matthew L. Lee and Anind K. Dey. 2015. Sensor-
+
+based observations of daily living for aging in 
+place. Personal and Ubiquitous Computing 19, 1: 
+27–43. http://doi.org/10.1007/s00779-014-0810-3 
+
+28. 
+
+Susanne Lindberg and Susanne. 2013. Participatory 
+design workshops with children with cancer. 
+
+29. 
+
+30. 
+
+31. 
+
+32. 
+
+33. 
+
+34. 
+
+35. 
+
+Proceedings of the 12th International Conference 
+on Interaction Design and Children - IDC ’13, 
+ACM Press, 332–335. 
+http://doi.org/10.1145/2485760.2485840 
+
+Louis S. Matza, Donald L. Patrick, Anne W. Riley, 
+et al. 2013. Pediatric Patient-Reported Outcome 
+Instruments for Research to Support Medical 
+Product Labeling: Report of the ISPOR PRO Good 
+Research Practices for the Assessment of Children 
+and Adolescents Task Force. Value in Health 16, 4: 
+461–479. http://doi.org/10.1016/j.jval.2013.04.004 
+
+Gillian M. McCarthy, Edgar R. Rodriguez Ramírez, 
+and Brian J. Robinson. 2017. Participatory Design 
+to Address Stigma with Adolescents with Type 1 
+Diabetes. Proceedings of the 2017 Conference on 
+Designing Interactive Systems  - DIS ’17, ACM 
+Press, 83–94. 
+http://doi.org/10.1145/3064663.3064740 
+
+Helena M. Mentis, Anita Komlodi, Katrina 
+Schrader, et al. 2017. Crafting a View of Self-
+Tracking Data in the Clinical Visit. Proceedings of 
+the 2017 CHI Conference on Human Factors in 
+Computing Systems  - CHI ’17, ACM Press, 5800–
+5812. http://doi.org/10.1145/3025453.3025589 
+
+Neema Moraveji, Jason Li, Jiarong Ding, Patrick 
+O’Kelley, and Suze Woolf. 2007. Comicboarding: 
+using comics as proxies for participatory design 
+with children. Proceedings of the SIGCHI 
+conference on Human factors in computing systems 
+- CHI ’07, ACM Press, 1371. 
+http://doi.org/10.1145/1240624.1240832 
+
+Rupa A Patel, Predrag Klasnja, Andrea Hartzler, 
+Kenton T Unruh, and Wanda Pratt. 2012. Probing 
+the benefits of real-time tracking during cancer 
+care. AMIA Annual Symposium Proceedings, 
+American Medical Informatics Association, 1340. 
+
+Laura R. Pina, Sang-Wha Sien, Teresa Ward, et al. 
+2017. From Personal Informatics to Family 
+Informatics: Understanding Family Practices 
+around Health Monitoring. Proceedings of the 2017 
+ACM Conference on Computer Supported 
+Cooperative Work and Social Computing - CSCW 
+’17, ACM Press, 2300–2315. 
+http://doi.org/10.1145/2998181.2998362 
+
+Erika S. Poole and Tamara Peyton. 2013. 
+Interaction design research with adolescents. 
+Proceedings of the 12th International Conference 
+on Interaction Design and Children - IDC ’13, 
+ACM Press, 211–217. 
+http://doi.org/10.1145/2485760.2485766 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 12 
+ 
+ 
+36. 
+
+Jessica Schroeder, Jane Hoffswell, Chia-Fang 
+Chung, James Fogarty, Sean Munson, and Jasmine 
+Zia. 2017. Supporting Patient-Provider 
+Collaboration to Identify Individual Triggers using 
+Food and Symptom Journals. Proceedings of the 
+2017 ACM Conference on Computer Supported 
+Cooperative Work and Social Computing  - CSCW 
+’17, ACM Press, 1726–1739. 
+http://doi.org/10.1145/2998181.2998276 
+
+37.  Michael Shapiro, Douglas Johnston, Jonathan 
+
+Wald, and Donald Mon. 2012. Patient-Generated 
+Health Data White Paper: White Paper Prepared 
+for the Office of the National Coordinator for 
+Health it by RTI International. Retrieved June 29, 
+2017 from 
+http://www.rti.org/pubs/patientgeneratedhealthdata.
+pdf 
+
+AnneLoes Van Staa, Susan Jedeloo, Jos M Latour, 
+and Margo J Trappenburg. 2010. Exciting but 
+exhausting: experiences with participatory research 
+with chronically ill adolescents. Health 
+Expectations 13, 1: 95–107. 
+http://doi.org/10.1111/j.1369-7625.2009.00574.x 
+
+38. 
+
+39. 
+
+40. 
+
+41. 
+
+42. 
+
+S. L. Star and J. R. Griesemer. 1989. Institutional 
+Ecology, `Translations’ and Boundary Objects: 
+Amateurs and Professionals in Berkeley’s Museum 
+of Vertebrate Zoology, 1907-39. Social Studies of 
+Science 19, 3: 387–420. 
+http://doi.org/10.1177/030631289019003001 
+
+James W Varni, Michael Seid, and Paul S Kurtin. 
+2001. PedsQLTM 4.0: Reliability and validity of the 
+Pediatric Quality of Life InventoryTM Version 4.0 
+Generic Core Scales in healthy and patient 
+populations. Medical care 39, 8: 800–812. 
+
+Peter West, Max Van Kleek, Richard Giordano, 
+Mark Weal, and Nigel Shadbolt. 2017. Information 
+Quality Challenges of Patient-Generated Data in 
+Clinical Practice. Frontiers in public health 5: 284. 
+http://doi.org/10.3389/fpubh.2017.00284 
+
+Jason C Yip, Elizabeth Foss, and Mona Leigh 
+Guha. 2012. Co-designing with adolescents. 
+Designing Interactive Technology for Teens 
+Workshop, NordiCHI, Copenhagen, Denmark. 
+Retrieved from: http://www. chici. 
+org/ditt2012/papers. html. 
+
+CHI 2018 Paper CHI 2018, April 21–26, 2018, Montréal, QC, CanadaPaper 476Page 13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

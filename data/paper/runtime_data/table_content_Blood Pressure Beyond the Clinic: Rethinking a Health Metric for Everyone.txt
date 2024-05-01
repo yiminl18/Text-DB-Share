@@ -1,0 +1,22 @@
+Table of Contents:
+
+1. Abstract
+2. Author Keywords
+3. ACM Classification Keywords
+4. Introduction
+5. Background and Related Work
+    5.1 Fundamentals of BP and BP variability
+    5.2 Value of BP measurement outside the clinic
+    5.3 Growth of personal health monitoring
+    5.4 Measurement uncertainty with BP devices
+6. Study Overview
+    6.1 Participants
+    6.2 Study protocol and analysis
+7. Results
+    7.1 Participant response to BP variability
+    7.2 Correlating BP with daily living
+    7.3 Impact on Perceptions of Well-being
+    7.4 Challenges to BP use in everyday contexts
+8. Discussion
+9. Conclusion
+10. References

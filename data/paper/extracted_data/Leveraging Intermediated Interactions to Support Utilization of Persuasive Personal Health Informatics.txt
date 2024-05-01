@@ -1,0 +1,1459 @@
+Leveraging Intermediated Interactions to Support
+Utilization of Persuasive Personal Health Informatics
+
+Ntwa Katule
+University of Cape Town
+Department of Computer
+Science
+Cape Town, South Africa
+katulentwa@gmail.com
+
+Melissa Densmore
+University of Cape Town
+Department of Computer
+Science
+Cape Town, South Africa
+mdensmore@cs.uct.ac.za
+
+Ulrike Rivett
+University of Cape Town
+Department of Information
+Systems
+Cape Town, South Africa
+ulrike.rivett@uct.ac.za
+
+ABSTRACT
+Behavior change support systems (BCSS) and persuasive
+technologies for healthcare often entail users interacting with
+mobile devices. However, especially in developing countries,
+the target community is unfamiliar with and often intimi-
+In this paper we propose the
+dated by new technologies.
+use of intermediaries to facilitate interaction with a mobile
+phone-based application and to motivate ongoing use by the
+target beneﬁciaries. The application incentivizes utilization
+through gamiﬁcation techniques, using badges, scoreboards,
+and other rewards. For example, a young girl might help her
+father keep track of his walking and diet, maintaining par-
+ticipation as much for her father’s health as for the social
+awards given by the app. We explain how intermediaries
+can be leveraged to improve utilization and engagement of
+the beneﬁciaries, and describe factors aﬀecting interaction
+between the participating pairs and interaction with the ap-
+plication. This study highlights the importance of social
+rapport - typically through a familial relationship - as a key
+component of the intervention. Finally, we discuss the impli-
+cations of designing for the motivation of two diﬀerent users:
+gamiﬁcation, personalization and utility play diﬀerent roles
+for the intermediary and the beneﬁciary but ultimately com-
+bine to make a more eﬀective application for the beneﬁciary
+than one targeting the beneﬁciary alone.
+
+CCS Concepts
+•General and reference → General conference pro-
+ceedings; •Human-centered computing → Empirical
+studies in HCI; •Social and professional topics → User
+characteristics;
+
+Keywords
+HCI4D, intermediated interactions, persuasive technologies,
+gamiﬁcation, personal informatics, motivational aﬀordances,
+health
+
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for proﬁt or commercial advantage and that copies bear this notice and the full cita-
+tion on the ﬁrst page. Copyrights for components of this work owned by others than
+ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or re-
+publish, to post on servers or to redistribute to lists, requires prior speciﬁc permission
+and/or a fee. Request permissions from permissions@acm.org.
+ICTD ’16, June 03-06, 2016, Ann Arbor, Michigan, USA
+c(cid:13) 2016 ACM. ISBN 978-1-4503-4306-0/16/06. . . $15.00
+DOI: http://dx.doi.org/10.1145/2909609.2909664
+
+1.
+
+INTRODUCTION
+
+Approximately 1.3 billion people are considered to be ei-
+ther overweight or obese worldwide, of which two-thirds are
+found in low- income or developing countries [34]. While
+this pandemic used to be considered a “ﬁrst world problem”,
+urbanization and changing lifestyles have led to increasing
+problems for the low-income communities of the developing
+world. For example, 60% of South Africans are overweight,
+with four in 10 women that are either overweight or clinically
+obese [24].
+
+A typical intervention from the West might entail develop-
+ment of a persuasive application to encourage healthy eating
+and exercise behaviors [3, 14]. Persuasive applications on
+mobile phones are particularly well-positioned for interven-
+tions that target psychological processes, because they are
+pervasively present for the users [16]. Gamiﬁcation, enabling
+self-reﬂection, or more simple strategies such as SMS-based
+reminders all motivate positive experiences and more fre-
+quent engagement [6, 14]. The subset of these interventions
+that target collection of personal history entry, review and
+analysis is broadly called personal informatics, or personal
+health informatics (PHI) for health interventions.
+
+However these applications fail to replicate well to typical
+populations targeted by information and communications
+technology for development (ICTD) interventions [17]. In
+part this is due to problems of technology access: people do
+not own phones, share phones, or do not know how to use
+them. In the context of obesity, many potential target users
+are older, further exacerbating the problem. As a result,
+more typical ICTD interventions target community health
+workers (CHWs) or other intermediaries as facilitators of
+access to mobile content
+[29, 30, 23]. However, Sambasi-
+van et al suggest another resource - young girls and boys in
+the community can be leveraged as intermediaries for older
+adults seeking to interact with new technologies [32]. Thus,
+we propose that persuasive PHI might be more eﬀective if
+it incorporates intermediaries to motivate participation.
+
+In this paper, we present the results of a series of studies
+conducted in two townships in Cape Town, South Africa.
+In these studies, we have deployed a mobile application to
+support PHI for overweight or pre-diabetic adults. The ap-
+plication primarily incorporates gamiﬁcation strategies such
+as challenges, badges, and leaderboards for motivating on-
+going use. Each adult elects an intermediary to assist with
+use of the application, and is given airtime to use the ap-
+plication for two to six weeks. We identify characteristics
+of eﬀective intermediaries, highlighting social rapport as a
+
+key contributor towards eﬀectiveness of the application. Us-
+ing qualitative feedback from participants, we also discuss
+important aspects of intermediated interaction and implica-
+tions of intermediation on design of persuasive technologies.
+Ultimately we ﬁnd that intermediated persuasive technolo-
+gies are an eﬀective way to improve engagement of adults
+with PHI.
+
+2. RELATED WORK
+
+Persuasive technologies have evolved from prescriptive na-
+ture of information ﬂow in between health care providers and
+health care recipients [5] to behaviour change support sys-
+tems (BCSS) [20]. Oinas-kukkonen [25] deﬁned BCSS as “a
+socio-technical information system with psychological and
+behavioural outcomes designed to form, alter or reinforce
+attitudes, behaviours or an act of complying without using
+coercion or deception”.
+
+In order for a system to be persuasive, the persuasion goal
+in design must be intentional [14]. The persuasive system
+design (PSD) model proposes a set of functionality required
+for a system to be considered a persuasive technology [26].
+The ﬁrst set of functionality falls under primary task sup-
+port, which includes but is not limited to: reduction of com-
+plex behaviours into simple tasks; guiding the user through
+experiences while persuade along the way; tailoring of per-
+suasive information to factors relevant to a user group; per-
+sonalization of content; and self-monitoring for users to keep
+track of their performance in achieving goals. The second
+set of functionality falls under dialogue support, which in-
+cludes praises, rewards, reminders, similarity, liking, and so-
+cial roles. The third set of functionality falls under system
+credibility support, which includes trustworthiness, exper-
+tise, surface credibility etc. The last set of functionalities
+emphasize the role of social support, which includes social
+learning, social comparison, and competition.
+
+Gamiﬁcation is also garnering popularity as a means to
+persuade people because of its ability to invoke users’ in-
+trinsic experiences through gameful experiences [14]. Gam-
+iﬁcation is the use of game design elements in non-game
+contexts [7] with an objective of increasing engagement in
+a particular activity. A systematic review on peer reviewed
+studies found that gamiﬁcation provides positive eﬀects and
+these eﬀects are highly dependent on both the context in
+which gamiﬁcation is implemented and the users using it [15].
+Hamari and Koivisto [13] found out that social motivations
+for use of a gamiﬁed service/system are attributed to so-
+cial inﬂuence, recognition, reciprocal beneﬁt, and network
+exposure. Some of these attributes resonate with the func-
+tionality proposed on the aforementioned PSD model for
+BCSS.
+
+Typically a BCSS will aim at sustaining engagement over
+a long period of time [25], but only considers single users.
+Existing literature does not consider how to design systems
+that include intermediaries as part of the engagement. In
+this work, we seek to understand how can one sustain en-
+gagement in the context of intermediated interactions. We
+explore important human factors in intermediated interac-
+tions that may aﬀect utilization of persuasive personal health
+informatics (PHI) that target health behavior change.
+In
+the next sub-sections, we discuss literature on social rela-
+tionships in the context of intermediated technology use,
+and utilization of human intermediaries in health behavior
+change through ICTs.
+
+2.1
+
+Intermediaries in ICTs for Healthy Behav-
+ior Change
+
+In the context of ICTD, human intermediaries have been
+previously utilized on behavior change interventions. One
+study [29, 30] in India used community health workers (CHWs)
+with help of mobile messages to persuade pregnant and post-
+natal women together with their relatives on maternal health
+issues. Community health workers interacted with mobile
+phones to access persuasive messages to share with their
+clients. Another study by Molapo and Marsden [23] empow-
+ered rural health trainers with a software application that
+allows them to create digital training content for low-literate
+CHWs in Lesotho, using images, voice-over, and video clips.
+While intended only for training, CHWs also chose to save
+those videos with their clients, having the unintentional ef-
+fect of persuading people to get tested for diseases such as
+In this context CHWs were acting as inter-
+tuberculosis.
+mediaries as they provided access to information that had
+persuasive eﬀects. CHWs are an oft-used intermediary for
+communities in which direct access to health resources is dif-
+ﬁcult, and are an eﬀective bridge between communities and
+government-based resources. However, they are ultimately
+limited in reach, typically interacting with potential beneﬁ-
+ciaries only once every few weeks. Furthermore, in this case,
+while CHWs are intermediaries with respect to information,
+facilitating beneﬁciary access to mobile media. However, in
+the case of personal health informatics, we expect that the
+beneﬁciaries would be the primary users of the mobile de-
+vice, and choose to explore how their access might be facili-
+tated by intermediaries. As such, CHW access is ultimately
+too limited for our typically-older and less technology lit-
+erate target beneﬁciaries, and we build upon Sambisavan’s
+example of proximate translation [32] by leveraging younger
+members of the same household to sustain an ongoing use
+of a BCSS even when CHWs are not available.
+
+2.2 Social Relationships in Intermediated In-
+
+teractions
+
+Poole et al. [28], explored extensively the dynamics of
+computer help-seeking and giving behaviors in the context
+of family and social networks settings. One of the factors
+that contributes to help-seeking behaviors is availability of
+unlimited help provided as a part of a longer-term relation-
+ship, while help-givers are motivated by a sense of being
+accountable to their family and friends.
+
+Parikh and Ghosh [27] were early pioneers in bringing
+an HCI (human-computer interaction) perspective towards
+understanding intermediation in the context of developing
+world. Their work emphasized an understanding of a tax-
+onomy of intermediated information tasks of where diﬀerent
+modes of access have their own design requirements such as
+cooperative versus dominated interactions or intermediated
+versus indirect interactions. Sambasivan et al. [32] further
+conducted an ethnographic study in urban slums of Banga-
+lore in India and proposed the following design implications:
+that technology should be reoriented to allow sharing and
+supporting secondary users (beneﬁciary users) through per-
+sistent storage of information for retrieval at later stages;
+that evaluation metrics of use should go beyond ownership
+to measuring the ability to beneﬁt from use; and that de-
+signs should consider and enable asymmetric engagement.
+Their work further emphasizes the critical role of human
+relations, such as interpersonal trust, as the foundation of
+
+intermediated interactions. The concept of social relations
+is also implicitly discussed by Sukumaran et al. [36] who
+report on an experiment carried out to investigate if social
+prominence of an intermediary versus technology aﬀects per-
+ceived information characteristics and attitudes towards an
+interaction by a beneﬁciary user. Their preliminary ﬁndings
+suggest that when the technology was more visible and an
+intermediary did not monopolize access (situation of social
+equality), participants tended to feel more engaged and pos-
+itive. Ramirez et al. [31] studied of how human factors such
+as empathy and technical skills of infomediaries inﬂuence the
+outcomes of the process of infomediation to users at public
+access venues.
+
+In order to sustain frequency of interaction with a par-
+ticular system, aforementioned initiatives rely on innate in-
+trinsic motivation of intermediary and beneﬁciary users. As
+discussed by Sambasivan et al. [32], usually a request for
+interaction is initiated by beneﬁciaries, and intermediaries
+will respond based on existing reciprocal beneﬁts or prior
+social relationships. Therefore, instigation to engage with a
+system is mediated by help-seeking behaviors of beneﬁciary
+users. An intermediary’s decision to help is determined by
+prior social relationships.
+
+In our approach we continue to emphasize strengthening
+of existing social relationships through motivational strate-
+gies that aim to increase user experience of both interme-
+diary and beneﬁciary users. We report on (1) motivational
+factors that increase the frequency of help-seeking behaviors
+of beneﬁciary users and (2) factors that motivate interme-
+diaries to instigate help-giving in interacting with a BCSS
+instead of relying on existing relationships or beneﬁciaries’
+help-seeking behaviors alone. We suggest that designing
+BCSS to enable intermediary engagement will increase sus-
+tained engagement on the part of the beneﬁciary.
+
+3. CONTEXT
+
+Both overweight and obesity are associated with increased
+incidence of multiple co-morbidities including type 2 dia-
+betes, cancer and cardiovascular diseases (CVD) [12]. Obe-
+sity is a development problem since it has both an indi-
+rect implication on health care systems and gross domestic
+product (GDP). Abegunde et al. [1] surveyed a total of 23
+low-income and middle-income countries found out that an
+estimated US$84 billion of economic production was going to
+be lost in between 2006 and 2015 from heart disease, stroke,
+and diabetes alone if there would not be any measures in
+place.
+
+We carried out this work in Cape Town, South Africa.
+South Africa is one of the developing countries having been
+most aﬀected by the current obesity pandemic [2]. Accord-
+ing to data on human development index (HDI) by country,
+South Africa is among countries grouped in medium HDI
+countries. A systematic review by Dinsa et al. [8] revealed
+that in countries in the group of medium HDI, the relation-
+ship between social economic status (SES) and obesity is
+largely mixed for men meaning that both people of high SES
+and low SES are aﬀected, and mainly negative for women;
+women with low SES are more at risk compared to their
+counterparts with high SES. This suggests obesity is also
+aﬀecting the poor in countries like South Africa. Within
+South African context obesity aﬀects diﬀerent age groups
+including old adults [2]. Thus, the focus of our research is
+primarily on adults from low income suburbs who are not
+
+very conversant with technology. We targeted this group
+since most persuasive PHI do not yet target them, despite
+the prevelance of obesity in the population.
+
+In initial testing and evaluation of the software prototype
+we developed, we worked with participants from Philippi
+and Langa in Cape Town, South Africa. The two sub-
+urbs were previously designated for people who were Black
+In 2011 the population of
+Africans during apartheid era.
+Langa was 52,401 with 17,400 households of which 72% of
+households had a monthly income of ZAR3200 ( ˜US$210) or
+less. In the same year the population in Philippi was 191,025
+with 61,797 households of which the monthly income of 78%
+of the households was also ZAR3200 or less. These data are
+available at the website of Cape Town municipality1. The
+ceiling for low income earners in South Africa is ZAR54,344
+per annum ( ˜US$3500 per annum)2.
+
+4. SYSTEM DESCRIPTION
+
+The system is composed of two parts as shown in Fig-
+ure 1. The ﬁrst part is a native pedometer application de-
+veloped using open source code. The second part consists of
+a web application hosted on a server at University of Cape
+Town. The pedometer sends a count of all steps walked
+by the holder of the mobile phone to the web application.
+The web application allows users to view step graphs and to
+record meals eaten by beneﬁciaries. Additional features in-
+clude a reward sub-system in which we implemented gamiﬁ-
+cation motivators such points, badges, leaderboard, a botan-
+ical garden, and ﬁsh tank. Rewards were earned if a user
+uses the application for both viewing of steps and recording
+meals, and if a beneﬁciary user walks a number of steps that
+exceed a certain threshold that has been set for a particu-
+lar level of gamiﬁcation. As a beneﬁciary user walks more
+steps and the application is used more regularly, a pair of
+users that forms a team (a beneﬁciary and an intermediary)
+will gain more advanced badges. An advanced badge gives
+more resources that nurture the garden or ﬁsh tank. Also,
+users can improve upon the quality of their gardens and ﬁsh
+tanks by adopting healthier eating habits and recording the
+consumption of more fruits and vegetables recorded. Users
+receive text messages that update them on their status and
+tips on how to improve on badges, gardens and ﬁsh tanks.
+Text messages are personalized and they are addressed to
+intermediaries. Each message starts with with an informal
+greeting and the name of the person and ﬁnishes with either
+a reminder, a tip of how to win rewards, or a feedback on
+status about rewards. Figure 2 shows screenshots of the web
+interface.
+
+5. METHODS
+
+5.1 Contextual Inquiry
+
+We conducted a contextual inquiry using a series of semi-
+structured interviews with a convenience sample of diabetic
+patients at a diabetes and endocrinology clinic of Groote
+Schuur Hospital in Cape Town. This was conducted in be-
+tween March and May of the year 2013. The objective was
+
+data was
+
+1https://www.capetown.gov.za/
+2This
+retrieved
+ber
+from
+content/uploads/2013/01/Household-
+expenditure-patterns-Press-Release-3Jan2012.pdf
+
+18th
+of Novem-
+http://www.unisa.ac.za/news/wp-
+income-and-
+
+2015
+
+on
+
+Figure 1: Information ﬂow inside the system
+
+Internet-based services (e.g. e-mail, WhatsApp, general In-
+ternet browsing, Facebook). This suggests that majority of
+the aged participants were likely to be less conversant with
+cellphone technology. Only three participants had used their
+cellphones in management of their health, to look for infor-
+mation on the Internet and to participate in social support
+groups on Facebook. Only one participant had used a pe-
+dometer before.
+
+We also found that twenty participants had asked for in-
+formal help from intermediaries before, in tasks such as:
+(1) to setup or conﬁgure services and apps on their phones
+(e.g. Whatsapp, Facebook); (2) to be taught how to oper-
+ate or navigate through certain features (e.g. a phone book
+of a new or unfamiliar cellphone, Whatsapp); and (3) to
+be helped in interacting with certain features such as SMS,
+Internet browsing etc. The level of dependence on inter-
+mediaries varied depending on frequency of tasks at hand.
+Tasks such as conﬁguration of services and apps or teaching
+of individuals occur only at the beginning when there is a
+new application or device. When participants are not capa-
+ble of interacting with applications that they use daily, then
+they seek help more frequently. For either of these tasks,
+participants chose trusted individuals to act as their inter-
+mediaries, typically their children and grandchildren or, less
+frequently, children of relatives, family friends, or someone
+at a cellphone shop. 23 out 30 participants preferred to have
+family members act as their intermediaries.
+
+Apart from utilization of help from intermediaries, we also
+observed that some of the participants share their phones
+with their intermediaries. Children borrow their parents’
+phones to search for school materials on the Internet or to
+use social network services such as Facebook or Mxit. For
+instance one participant who had a Blackberry smartphone
+reported that she does not use Internet on her phone but
+her kids use it to do their assignments. This is an example
+of shared device use.
+
+Our ﬁndings from this contextual enquiry indicate that a
+majority of the aged participants relied on expertise of their
+younger family members in solving problems on both setting
+up of cellphones and interacting with speciﬁc applications.
+The majority of responses show that these participants were
+assisted by their sons, daughters, and grandchildren. Based
+on this observation, we decided to implement a technology
+that can be utilized through young intermediaries in a fam-
+ily. This ﬁnding motivated the use of gamiﬁcation and the
+choice of intermediaries age group in phases of evaluation
+that are explained in the next sub-sections.
+
+Figure 2: Sample screenshots from the system
+
+to understand patterns in utilization of cellphone technology
+among adults obese patients. This study was approved by
+the respective institution’s ethical review body.
+
+We interviewed a total of thirty participants of which 67%
+(20) were females. The average age of these participants was
+53 years old with a standard deviation of 11.8 years. Almost
+86% (26) of participants were above 40 years of age. A ma-
+jority of the participants were either overweight or obese and
+from low income suburbs of Cape Town. Nineteen partici-
+pants were either unemployed or on a disability grant. Par-
+ticipants were approached opportunistically as they waited
+to see their physicians. To ensure conﬁdentiality, interviews
+were conducted in one of the vacant consultation rooms.
+One researcher and a research assistant carried out the in-
+terviews. The main topics in these semi- structured inter-
+views were centred around participants’ general utilization
+of mobile phones, whether they seek help from intermedi-
+aries, and, if so, who their preferred intermediaries are.
+
+Although eighteen participants had access to smartphones,
+utilization of features was not beyond SMS and voice in ma-
+jority of the participants. Out of 26 people whom were forty
+years of age and above, not more than eight had already used
+
+5.2
+
+Iterative Design and Evaluation I
+
+We conducted two iterations of design. The ﬁrst iteration
+started in July 2013. We developed the ﬁrst prototype of
+a web application. This prototype allowed users to self-
+monitor their diet and walking patterns.
+In addition, we
+implemented a reward system that paired a beneﬁciary user
+with an intermediary user in a team that could compete with
+other teams. Scores for each team are presented as points,
+badges, and the appearance of ﬁsh and plants in the tanks
+and botanical gardens. Within each botanical garden and
+ﬁsh tank, there was a Facebook social plug-in that allowed
+users from diﬀerent teams to comment on or like each other.
+We also utilized Facebook groups to remind users to engage
+with the application.
+
+In order to test our application, we recruited participants
+through an NGO based in Cape Town called “Mamelani
+Projects”. This NGO carries out outreach programs on
+health education in less privileged communities. Mamelani
+trains women on issues of HIV/AIDS, nutrition, and gender
+equality. The NGO agreed to help us to recruit participants
+among people they were training. We gave them the fol-
+lowing recruitment criteria: (1) we want participants who
+were aged 35 or above and (2) those participants must have
+an intermediary to help them. The NGO helped in identi-
+fying the targeted participants in Philippi township, where
+the NGO was conducting its own activities. We recruited
+a total of six participants whom were women above middle
+age (>=35 years of age).
+
+After recruitment of the six adults, each one of them
+brought an intermediary to work together with them in a
+pair. Three intermediaries were girls in between 19-23 years
+of age. The remaining three intermediaries were boys aged
+between 14 and 19 years of age. We informed participants
+about the objectives of the study, that logs on their usage
+of the phones would be collected, and about their rights as
+research participants. All participants (intermediaries and
+beneﬁciaries) signed consent forms except for intermediaries
+who were minors. These minors signed assent forms that
+were approved by their respective parents/guardians. Af-
+ter signing of consent and assent forms, intermediaries were
+trained on how to use the app. We deployed the application
+to the ﬁeld from the end of October 2014 to beginning of
+December 2014. In order to control the application environ-
+ment, and limit potential complications from deploying the
+intervention on multiple platforms, each pair of participants
+was given one Android phone (Samsung GT-S5300) running
+the pedometer app. Participants were required to utilize the
+web application hosted in our institution’s server using the
+browser built into the phone. We gave out airtime as an in-
+centive to each participant including intermediaries. Every
+week each participant got ZAR30 ( ˜US$3) worth of airtime.
+In that period of deployment, only two pairs of users en-
+gaged with the system for more than a few days. Both of
+these two pairs consisted of a beneﬁciary and an intermedi-
+ary living in the same house— the pairs consisted of mothers
+working with their sons. One of these two pairs was very mo-
+tivated and enthusiastic about the system. But after some
+time they also got bored because they were not getting any
+competition from other teams and they had attained all the
+challenges within a short period of time. In a third pair, a
+girl was working with her mother but they were not living
+together so it was diﬃcult for her to commit to the appli-
+cation. Intermediaries from the remaining two pairs showed
+
+little enthusiasm in the project. We hypothesized this to
+be due to lack of both motivation to engage with gamiﬁ-
+cation and a lack of a prior social relationship between the
+two users within each pair. Findings from this informative
+evaluation led to another iteration in the design. It also in-
+formed the manner in which we were going to conduct future
+evaluations.
+
+We started another iteration of design in January 2015 to
+address the drawbacks encountered during testing of the ﬁrst
+prototype. In this new version we improved the gamiﬁcation
+part to make it more challenging and we also integrated SMS
+reminders. In the next subsection we discuss the evaluation
+of the improved system.
+
+5.3 Evaluation II
+
+After ﬁxing the bugs, we conducted another round of eval-
+uation. We approached another group of participants who
+resided in another side of Philippi. The recruitment was
+facilitated by the same NGO in Evaluation I. However, be-
+fore the commencement of the study, the NGO advised that
+we withdraw from that area as participants expressed some
+concerns regarding safety issues. The area was not safe,
+hence posession of experimental phones would pose risks to
+both participants and the researcher. In response, we termi-
+nated this study and sought participants in Langa, which as
+a smaller and more central township, is safer than Philippi.
+As an aside, this incident highlights some of the limits
+and dangers of doing smartphone-based interventions in low-
+income areas [22]. However, we still believe that this study
+has relevance, even for residents of Philippi. Intermediated
+usage is not limited to smartphone applications. For ex-
+ample, while SMS campaigns are not speciﬁcally designed
+for intermediated interactions, it is not inconceivable that a
+family member would assist a target beneﬁciary in an infor-
+mal proximate interaction [32].
+
+In Langa, we worked with a research facilitator who is a
+resident of Langa. The research assistant helped with the re-
+cruitment process. This time we adjusted criteria for recruit-
+ment based on lessons learned during the ﬁrst deployment in
+Philippi. The criteria for recruitment were (1) adults aged
+35 and above with (2) school-going relatives living with them
+or living nearby.
+
+Prior to deployment we provided participants with in-
+formation about the study. Participants were made aware
+that the study’s cellphone will be collecting their informa-
+tion related to steps and diet and transfer it to the re-
+searcher’s computer at University of Cape Town. Partici-
+pants who were minors signed assent forms approved by their
+guardians/parents who were also part of the study. All other
+participants signed consent forms. We recruited a total of
+nine adults (3 men and 6 women). Each adult brought one
+kid to act as their intermediary hence they formed a pair.
+There were 3 boys and 6 girls. All adults were relatives
+of the kids except for one adult who was the tenant of the
+grandmother of her intermediary. All intermediaries were
+school-going children but one. We administered a question-
+naire at baseline to collect demographic information such as
+age, number of cellphone applications utilized by each group
+of participants. Only seven beneﬁciary participants com-
+pleted the baseline survey. All nine of the kids completed
+the baseline survey. The mean age for adults was 49.3 years
+old (SD=7.9 years) while the mean age for kids was 14 years
+old (SD=4.3). We compared the average number of applica-
+
+tions on a cellphone utilized by each set of users by using the
+student’s t-test. Intermediary participants had signiﬁcantly
+interacted with more applications (M=5.4; SD=1.7) before
+compared to beneﬁciary participants with (M=3.4; SD=1.5)
+applications (t(14)=2.430; p=0.029; 95% CI=3.765 to 3.795
+applications).
+
+We trained each intermediary on how to use the proto-
+type. Each pair of participants was given one android phone
+installed with a pedometer and a link to access the web
+application. We left the application in the ﬁeld for three
+weeks. We provided airtime as incentives to participants.
+Each adult received ZAR40 worth of airtime four times in
+a period of three weeks. In addition, each pair was given
+300MB of data to use on the Android phone. After three
+weeks we conducted interviews with three intermediary par-
+ticipants and the ﬁve beneﬁciary participants who engaged
+Interviews were
+with the application for more than once.
+conducted in English since all the respondents were com-
+fortable with English.
+
+Out of nine pairs of users, eight attempted to engage with
+the application for at least one day in a period of three weeks.
+The average number of usage days for these eight partici-
+pants was 4.88 days with a standard deviation of 3.4 days.
+Two pairs used the application for only one day. The most
+active pair used it for 11 days in total. While there were
+many problems that contributed to non-use, the primary
+barrier was that the data bundles allocated for the study
+(300MB per phone) were expended earlier than expected.
+In addition to the prescribed study use, they also used the
+data bundle for other apps such as Whatsapp and download-
+ing of games. We elected not to prohibit this since it has
+been shown that allowing non-prescribed use can motivate
+ongoing prescribed usage [33]. Ferreira [9] also emphasizes
+that non-prescribed uses should not be discouraged within
+the context of ICTD as they can be viewed as capabilities
+that foster participation and engagement in ICTD projects.
+Our synthesis on data collected through interviews uncov-
+ered several themes related to social dynamics on usage of
+a persuasive personal health informatics through intermedi-
+aries. We discuss these ﬁndings on the next section.
+
+6. FINDINGS
+
+Reﬂecting upon our observations from both evaluations,
+we uncovered some useful insights on social dynamics that
+inﬂuenced utilization of a BCCS in our context. Usage of
+the app occurred when intermediaries had access to an ex-
+perimental phone. During the day, most beneﬁciaries went
+to work, carrying the phone with them, while intermedi-
+aries went to school. Figure 3 below shows the pattern of
+the times in which there were users’ activities on the app in
+evaluation II. From the graph, the peaks are shown at 5AM,
+5-6PM, and 8PM. These are times when intermediaries and
+beneﬁciaries were together.
+
+When a pair meets, one of them would make a request to
+engage with information on the app. Initiation of the request
+to engage and success or failure in fulﬁlment of that request
+were determined by social rapport within a pair, motiva-
+tional triggers as the result of the app’s features, and social
+interactions among beneﬁciary participants. The mentioned
+factors played a part in inﬂuencing help-seeking by beneﬁcia-
+ries and help-giving by intermediaries. We present in detail
+about these factors on the following sub- sections. In addi-
+tion, we also present perceived health beneﬁts on utilization
+
+Figure 3: Total clicks on each hour of the day
+
+of the application. All the names used in presentation of
+ﬁndings are pseudonyms in order to ensure conﬁdentiality
+of participants’ identities.
+
+6.1 Social Rapport
+
+We clustered each pair in evaluation II on its respec-
+tive relationship type as shown in Figure 4. In the parent-
+intermediary group, there were four pairs. In the relative-
+intermediary group, there were three pairs, and there was
+only one pair of where members didn’t have a familial re-
+lationship. We measured usage on each relationship type
+through three dimensions: (1) the average number of days
+per participant; (2) the average number of sessions per par-
+ticipant; and (3) the average number of clicks per partici-
+pant. We deﬁned the beginning of a new session as when a
+user activity is detected while there was no user activity for
+the past one hour. If delay between activities is less than
+one hour it is then assumed that the last session is still ac-
+tive. If a user comes back after one hour has elapsed since
+the last detected user’s activity then it is assumed they went
+away from the app and now they are coming back for a new
+session.
+
+Once members of a pair are together, interaction between
+them is initiated. The success of this initiation depends on
+the nature of their social rapport within a pair. In existing
+work on intermediaries within the context of ICTD, human
+relationships play a pivotal role in encouraging or discour-
+aging engagement. In our context, we uncovered scenarios
+of how the relationship of users within a pair played a signif-
+icant role in facilitating or discouraging requests for engage-
+ment. For members of a pair with a prior social relationship,
+there was an indication of motivation for the two users to
+work together. Within these pairs, intermediaries showed
+empathy and a sense of ownership on interaction processes,
+and believed that the act of helping was for a good cause as
+it had an instrumental value to the people they care about.
+For instance Lulama (an intermediary from Langa), a 20
+years old girl, mentioned that the app was meaningful to
+her because she was helping the person she cares about, and
+that was her mother. Andile, a 17 years old intermediary
+who was part of the study in Philippi, felt that it was his
+duty to support his mother as she took care of him since the
+
+forms of motivational sources below.
+
+Sources of Motivation in Beneﬁciaries
+
+The most prominent motivational factor that drove beneﬁ-
+ciaries to seek information derived from the app was steps
+comparison. Steps comparison was socially constructed as
+majority of the beneﬁciaries lived not far from each other. In
+cases where beneﬁciaries initiated the negotiation for inter-
+action, it was for the purpose of their health and to compare
+themselves with other beneﬁciaries. This kind of comparison
+is referred to as one form of social comparison in the con-
+text of behavior change support system [26]. This kind of
+comparison was not implemented in the app but it was insti-
+gated by the the existing social network. Some beneﬁciary
+users compared themselves to one another, leading to both
+social support, relatedness, and competition among beneﬁ-
+ciary users. Beneﬁciary users who knew each other before
+organized themselves in informal support groups. Whenever
+beneﬁciary users met in these informal support groups, they
+talked about the steps walked or food they had been eating.
+
+“I used to boss to others in the group like hahaha
+[She would giggle to the people she was interacting
+with] how many steps did you walk today hahaha. I
+am getting there. I tell them I got some encouraging
+messages. They would also say ’I got some too’. I
+tell them that I walked so many kilometres today.”
+
+—Nokhanyo (a beneﬁciary user), 57yrs, woman,
+from Langa
+
+Through these informal discussions, beneﬁciary partici-
+pants were encouraging one another. There was also an
+indication of improved relatedness among participants. Peo-
+ple who were part of those informal support groups felt that
+they were more related to each other compared to before
+using the app.
+
+“We [with other participants] didn’t communicate so
+much before but now we communicate. Most of the
+time, we chat about this and we laugh.”
+
+—Nobantu (a beneﬁciary user), 50yrs, woman,
+from Langa
+
+“I am close to other people because of the steps. They
+would send you messages to ask ‘how many steps did
+you take?’. These are people that I didn’t speak to
+here. Not to speak to, I mean others that I didn’t
+I know them from
+have a really relationship with.
+here. It is just a hello, hello that’s it. They send me
+messages ‘how many steps did you take today? Is this
+app working for you?’. There is this lady next door.
+She would come to me like ooh ‘how did that thing
+work for you and blah blah’. We were communicating
+more than before.”
+
+—Ndileka (beneﬁciary user), 35yrs, woman, from
+Langa
+
+Competition with others was also partially linked to com-
+petition with self of where beneﬁciaries challenged them-
+selves by setting goals implicitly (without writing them down).
+Goal-setting pushed beneﬁciaries to do more in steps so that
+they could beat others. For instance a person would ask her
+intermediary about the number of steps they have walked
+in a particular day. Upon getting a response from their in-
+termediaries they would say that “tomorrow I am going to
+walk this number of steps”. But the main objective of setting
+
+Figure 4: Usage in three groups of relationships
+
+day he was born. These are examples of how intermediaries
+were reciprocating the beneﬁts of a prior social relationship.
+In a pair with no prior social relationship, negotiation for
+interaction may not be successful even if one user within a
+pair is motivated to engage with the system. For instance
+trust and social rapport hindered Anele (a beneﬁciary user
+from Langa), a 47 year old woman, from accessing the sys-
+tem. We learned during the interviews that her intermediary
+was the granddaughter of her landlord, not related to her.
+
+When there was a prior social relationship (i.e. familial re-
+lationship), it played part in mediating the success for nego-
+tiation of interaction. Either an intermediary or beneﬁciary
+user would instigate a conversation that led to interaction
+with the wellness app and exchange of information between
+an intermediary user and a beneﬁciary user. The phone was
+possessed by a beneﬁciary user and if negotiation for inter-
+action is successful, the phone is passed from a beneﬁciary
+to an intermediary. If interaction was instigated by an in-
+termediary, an intermediary would request a beneﬁciary to
+provide some information such as what food has been eaten
+by a beneﬁciary. Also an intermediary might either view in-
+formation inside the app for his or her own consumption or
+share that information with a beneﬁciary user. Interactions
+instigated by a beneﬁciary user often entailed a request to
+the intermediary to help them view certain information. In
+this scenario, there were cases where intermediaries’ auton-
+omy was violated as beneﬁciaries requested assistance at the
+time where intermediaries were either resting or occupied by
+other activities. In these cases, a social relationship still had
+to play a role in convincing intermediaries to fulﬁl requests
+from beneﬁciaries.
+
+Members of a pair with a prior social relationship demon-
+strated improved relatedness within a pair compared to be-
+fore. They mentioned that they were conversing more often
+to talk about what is going on inside the app. The conver-
+sation was fun in some of the participants when they made
+jokes about what was happening inside the app.
+
+6.2 Motivation in Utilization of the app
+
+Motivational strategies that were implemented in the app
+and those that were socially constructed as the result of
+engaging with information from the app, played a vital role
+in persuading both beneﬁciary and intermediary users who
+engaged with the application. These motivational strategies
+led to negotiation of interaction. We discuss in detail these
+
+these goals is to have more steps than others. Goal setting
+is an important aspect in health behavior change [35].
+
+These ﬁndings suggest the role that activity and diet-
+based social comparison can play even in resource constrained
+environments. With typical behavior change support sys-
+tems from the West, this kind of comparison is always pro-
+vided through software functionality. In our system we im-
+plemented activity and diet comparison through gamiﬁca-
+tion design patterns such as points, leader board, badges,
+botanical gardens, and ﬁsh tanks. Through these features,
+each pair of users (a beneﬁciary and an intermediary) were
+able to make comparisons with other teams. But our exist-
+ing gamiﬁcation features appeared to be of less value to ben-
+eﬁciary users as they did not really understand the meaning
+of motivation strategies provided by gamiﬁcation although
+they interacted with those features through intermediaries.
+What they valued most was their relationships with other
+beneﬁciaries within the context of the community they lived
+in.
+
+Motivational Sources in Intermediaries
+
+Each pair of users (an intermediary user and a beneﬁciary
+user) formed a team that competed with other teams. Some
+intermediaries pushed their beneﬁciary users to walk more
+steps or to eat healthy due to two reasons. Firstly, they
+cared for the people they were helping. Secondly, it gave
+them more points to win the game against other teams. In
+cases where intermediaries initiated the interaction, they did
+so to encourage beneﬁciaries to do more, so that their pair
+would win according to gamiﬁed elements of the web app.
+Gamiﬁcation features in combination with a prior social rap-
+port made some intermediary users perceive themselves as
+partial owners of the information and the value derived from
+the system. For instance one participant explained actions
+that were carried out by the beneﬁciary she was helping as
+theirs.
+
+“When I saw the garden I was like yeah, our garden
+is looking beautiful. Lets do more. Lets take more
+steps. Lets eat more veges, because it is the veges
+and fruits that are important. One time she went to
+the clinic in town and she always walks to the clinic.
+It is up in town. That day I was motivated. She
+took more than four thousand steps. But mostly the
+garden. I like the garden. When I see the garden I
+say let’s take more steps. Let’s eat more veges.”
+
+—Lulama, an intermediary
+
+Gamiﬁcation features also led to competition between in-
+termediaries. One intermediary user explained how the badges
+played a role in challenging and making him to compete
+with others. Badges were obtained in an incremental pro-
+cess. Each badge had requirements that were speciﬁed by
+the minimum number of steps that needed to be walked by
+a beneﬁciary user, and the number of days a pair had used
+the system. Two intermediary participants mentioned how
+the badges and competition motivated them to do more with
+their mothers The living metaphors such as botanical gar-
+dens and ﬁsh tanks triggered social responses from some in-
+termediary users. This phenomenon of computing systems
+ability to present social cues to environments that trigger
+social responses is discussed by Fogg [11]. For instance we
+asked one participant what was the size of ﬁsh in his tank
+and his response was as follows, “They were medium sized
+
+because I wasn’t really feeding them.” By feeding he meant
+recording of meals eaten by his beneﬁciary user.
+
+Although beneﬁciaries were not very concerned with gam-
+iﬁcation still intermediaries shared that information with
+them, as shown in the following excerpts:
+
+I told her. She said ‘Aha!
+
+“She saw the garden. The ﬁrst day she saw just the
+house and brownish [Desert]. She is like ‘What is
+this’.
+[Expressing dis-
+satisfaction]. It must look green and healthy’. And
+then she saw the garden again and said ‘It is looking
+good.”’
+
+—Lulama, an intermediary
+
+“She doesn’t understand the app. I just tell her that
+people are having ones twos threes and she laughs.”
+
+—Lwazi (an intermediary),14 years of age
+
+The above ﬁndings suggest that gamiﬁcation resulted into
+a positive user experience for intermediaries.
+It also had
+more value and meaning to them than for beneﬁciary users.
+Most beneﬁciaries did not understand the meaning of gami-
+ﬁcation functionality but upon proximate translation of out-
+put by intermediaries they also responded positively.
+
+6.3 Perceived Beneﬁts from our BCSS
+
+There were reported perceived beneﬁts by beneﬁciary par-
+ticipants. For instance, the process of recording meals led
+to cognitive dissonance in one participant. Cognitive dis-
+sonance is whereby an individual discovers that their be-
+liefs are not consistent to their actions. Oinas-Kukkonen et
+al [26] discussed cognitive dissonance as one of the key is-
+sues behind persuasive systems. People want their beliefs to
+be consistent with their actions. If there is an inconsistency,
+then it is likely for them to become motivated to change their
+attitude or behavior in order to restore that consistency.
+
+“I think I like a bit everything about the app especially
+with food because I used to eat McDonalds. So I have
+to think of what I am going to eat ﬁrst. I will think
+that I am eating big portions of carbohydrates and
+small portions of fruits. So now I have to balance, I
+have to eat fruits more than carbohydrates. With me
+it helps because now I can drink more water. I can
+eat more fruits than I used to.”
+
+—Ndileka, a beneﬁciary
+
+Cognitive dissonance is achieved through self-monitoring
+as users see discrepancy between their beliefs and their ac-
+tions. The purpose of self-monitoring is to trigger individ-
+uals’ consciousness to alter or modify their behavior. This
+consciousness is fostered through behaviour recording and
+observation. Self-monitoring is a very important aspect in
+cognitive behavior therapy. Health self-management pro-
+grams usually ask participants to keep records of their activ-
+ities, physiological variables and other health-related data;
+personal informatics systems can make this process simpler
+and easier. [21]
+
+Some participants became more aware of their eating and
+walking patterns. For instance one participant described
+that she would always try to avoid people’s lifts on her way
+to the bus station so that she can walk more steps. If she
+stays at home for the whole day then she would make an
+eﬀort to go to nearby shops just to buy airtime so that her
+pedometer would record more steps.
+
+In other cases intermediary users explained how their ben-
+eﬁciary users were controlling their eating habits as the re-
+sult of interacting with information derived from the app.
+For instance the meal chart from the app helped Nokhanyo
+to reﬂect on whether she was consuming meals that could
+trigger the spike of her blood sugar level.
+
+“[Nokhanyo] knows that ‘I am eating too much sugar.
+Let me lower my sugar by 500 calories in a week.’
+Yah it helps her that way. And she is diabetic. So
+when she tests herself she sees that she ate too much
+of something so she knows that she has to lower it.
+There is a chart. There is a plate. She looks at the
+plate and says that ‘I have eaten enough veggies but
+I need to eat more of this’. She doesn’t eat meat that
+much.”
+
+—Lulama (an intermediary)
+
+“It [The app] was really good because my mother was
+limiting herself on stuﬀ like pies and fat food. I would
+tell her don’t eat this don’t eat that. She wasn’t eat-
+ing much vegetables but I was encouraging her to eat
+vegetables”
+
+—Lwazi (an intermediary)
+
+The application had a persuasive eﬀect on beneﬁciary par-
+ticipants who engaged with it, thus we conclude that the
+beneﬁciaries derived value from the information presented
+by the BCSS in our context. At the same time, our ob-
+servations indicate that some beneﬁciaries would not have
+necessarily consumed information from our BCSS, and thus
+would not have experienced perceived beneﬁts without the
+promptings and interactions of the intermediaries.
+
+7. DISCUSSION
+
+This work was developed based on existing literature of
+PHI and BCSS which is predominantly conducted in the
+West. Our idea was to test if a PHI works by leveraging ex-
+isting intermediated technology use. As we found out during
+contextual enquiry, intermediated technology use was com-
+mon among aged participants. So our approach attempted
+to utilize an existing practice in the context of PHI.
+
+Our ﬁndings uncover social dynamics that are important
+in understanding how intermediated interactions can be lever-
+aged to foster utilization of behavior change support systems
+within family settings. The two important factors to con-
+sider are (1) social rapport between an intermediary and a
+beneﬁciary as a requirement for persuasion; and (2) diﬀer-
+ences in motivation strategies between intermediaries and
+beneﬁciaries, we refer to this as parallel persuasion. We dis-
+cuss these two factors in detail below.
+
+Social Relationship and Engagement with a BCSS
+
+The motivation strategies may work provided that an inter-
+mediary and a beneﬁciary user have a prior social relation-
+ship. A prior social relationship makes intermediaries value
+the interaction as more meaningful. One of the beneﬁts of
+intermediaries valuing the interaction process as meaning-
+ful is that we can capitalize on intermediaries to play a role
+of persuaders for health behavior change. We observed this
+phenomenon in pairs where an intermediary and a beneﬁ-
+
+ciary had a prior social relationship.
+
+“Sometimes she (Lulama) used to shout at me. ‘No
+no you didn’t eat that thing. Tell me what you ate in
+the morning. I saw you eating this. It seems there is
+nothing for fruits, peanuts. You must remind me to
+check you!”’
+
+—Nokhanyo (a beneﬁciary user)
+
+“I would tell her don’t eat this don’t eat that. She
+wasn’t eating much vegetables but I was encouraging
+her to eat vegetables.”
+
+—Lwazi (an intermediary user)
+
+This is an example of how intermediaries with a prior so-
+cial rapport can nudge their beneﬁciaries to walk more steps
+or eat healthy. Intermediary users can become a source of
+In the work by Fogg [10] mentioned
+intent to persuade.
+in [26], intentions to persuade can come from three sources:
+from the people who create or produce interactive technol-
+ogy; from people who give access to or distribute the inter-
+active technology to others; and from the people themselves
+who use or adopt an interactive technology. Intermediary
+users fall into the last two categories, facilitating access while
+also being adopters of the technology.
+
+Similarly, Ramachandran leverages prior relationships be-
+tween community health workers and expectant mothers for
+persuasion [29, 30]. Just as our BCSS has aided the in-
+termediary in encouraging healthy behaviors on the part of
+the beneﬁciary, Ramachandran ﬁnds that the mobile phone
+gives credibility to the community health workers (CHWs).
+In that case, the prior social rapport is relatively weak, and
+the inﬂuence of the CHWs is limited to infrequent visits,
+and much of the persuasive agency is given to the design of
+the technology. In this case, we leverage familial relation-
+ships within the same household, ﬁnding instead that the
+persuasive eﬃcacy of the technology is ultimately limited
+by the strength of the relationship and frequency of inter-
+action between the intermediary and the beneﬁciary, as was
+the case with Anele and in many pairs that participated
+in evaluation I. Thus, in order to most eﬀectively leverage
+intermediaries, prior social rapport is required.
+
+Parallel Persuasion
+
+Prior social rapport itself may not be suﬃcient for sustain-
+ability of engagement. Motivation strategies are needed in
+conjunction with prior social rapport. Eﬀective persuasion
+strategies are important in sustainability of engagement with
+a BCSS. Unlike existing persuasive approaches that design
+for one user, persuasion in our context is more complex as it
+involves both intermediary and beneﬁciary users. Despite of
+existing relationships between intermediary and beneﬁciary
+users, intermediaries may not always be willing to help reg-
+ularly. This might discourage beneﬁciaries and result in dis-
+continued usage of the BCSS. Kiesler et al. [18] found out
+that some parents became hesitant to seek informal help
+from their children after they had encountered negative ex-
+periences. We encountered this phenomenon during both
+contextual enquiry, and preliminary interviews before eval-
+uation II. Some of our participants shared these negative
+experiences. For instance, one participant mentioned that
+sometimes it is diﬃcult to seek help on using the cellphone
+because their kids sometimes get annoyed when they are
+constantly asked to help, especially if it the same task from
+
+last time. Therefore, it is important to minimize negative
+experiences of beneﬁciaries by increasing engagement of in-
+termediaries.
+
+We have the task of persuading intermediaries to share
+information with beneﬁciaries, and we also have the task
+of persuading beneﬁciaries to change their health behaviors.
+From our ﬁndings, we see how persuasion strategies between
+intermediaries and beneﬁciaries diﬀer. For a beneﬁciary, the
+weight is more on perceived value of the information on
+health beneﬁts and informal social comparison with other
+beneﬁciaries from the same community. Intermediaries in-
+stead put value on game design elements and social com-
+parison is within the context of gamiﬁcation. This suggests
+that persuasive strategies between intermediaries and ben-
+eﬁciaries diﬀer. In our context, intermediaries were young
+and most of them had experiences in games. A previous
+study on application of gamiﬁcation on product advertis-
+ing [4] found out that a prior gaming experience predicts
+higher purchasing intentions. However there is a caveat in
+utilization of gamiﬁcation among young people. A study by
+Koivisto and Hamari [19] found that the usage of a gamiﬁed
+system is highly aﬀected by the novelty eﬀect and this is
+more apparent on younger users compared to the old ones.
+As time passes by younger users tend to get bored with a
+gamiﬁed service. Also ease of use of gamiﬁcation tends to
+decline with age [19] with young users reporting systems to
+be easier to use compared to their older counterparts.
+
+In addition, we have seen from above that intermediaries
+can introduce an intent to persuade apart from these in-
+formal social comparisons. The persuasion strategy to be
+used by each set of user can be examined during analysis of
+persuasion context as suggested in PSD [25] and BCSS [26]
+models. This will determine of whether the persuasive func-
+tionality should be targeted at the intermediary, the beneﬁ-
+ciary, or both. To engage beneﬁciaries we can support direct
+activity and diet comparison among beneﬁciaries through
+the app but implementation of this needs to address issues
+of privacy. An application can be conﬁgured with privacy
+settings to allow aggregated information of beneﬁciaries to
+be kept private or shared with other teams. The aggre-
+gated information that is shared by diﬀerent intermediaries
+can be clustered in a bar chart to facilitate social compar-
+ison. With gamiﬁcation strategies for intermediaries, and
+direct comparison by intermediaries we can have persuasion
+strategies that cater for the two sets of users.
+
+8. CONCLUSIONS AND FUTURE WORK
+
+We have explored the extent to which we can leverage in-
+termediaries within family settings to support utilization of
+behavior change support systems (BCSSs) for health. We
+presented the social dynamics that one needs to consider
+when designing a BCSS for health in the context of inter-
+mediated interactions. We also discussed how persuasive
+functionality might work when targeting two users, a ben-
+eﬁciary and intermediary. Our ﬁndings suggest that it is
+feasible to take advantage of intermediated interactions to
+support utilization of ICTs in health behavior change inter-
+ventions.
+
+This study is limited in generalizability, since we gener-
+ated our insights based on a small number of users and it-
+erative evaluations. A larger and longer qualitative study
+is needed to understand the contextual dynamics of an in-
+termediated BCSS in detail. Secondly, it is not known to
+
+what extent gamiﬁcation mediated the intrinsic motivation
+of both intermediaries and beneﬁciaries. We will expand on
+this in our future work.
+
+9. ACKNOWLEDGMENTS
+
+This work would have not been possible without the gen-
+erous funding of Centre of Excellence (CoE) and HPI Re-
+search School at University of Cape Town. We also thank
+our reviewers and shepherd for valuable feedback on the
+manuscript.
+
+10. REFERENCES
+[1] D. O. Abegunde, C. D. Mathers, T. Adam,
+
+M. Ortegon, and K. Strong. The burden and costs of
+chronic diseases in low-income and middle-income
+countries. The Lancet, 370(960 Burton
+Baraga3):1929–1938, December 2007.
+
+[2] A. T. Ali and N. J. Crowther. Factors predisposing to
+
+obesity: a review of the literature. Journal of
+Endocrinology, Metabolism and Diabetes of South
+Africa, 14(2), 2009.
+
+[3] E. ˚Arsand, N. Tatara, G. Hartvigsen, et al. Mobile
+phone-based self-management tools for type 2
+diabetes: the few touch application. Journal of
+diabetes science and technology, 4(2):328–336, March
+2010.
+
+[4] J. V. Bittner and J. Shipper. Motivational eﬀects and
+age diﬀerences of gamiﬁcation in product advertising.
+Journal of consumer marketing, 31(5):391–400,
+August 2014.
+
+[5] S. Chatterjee and A. Price. Healthy living with
+persuasive technologies: framework, issues, and
+challenges. Journal of the American Medical
+Informatics Association, 16(2):171–178, March 2009.
+[6] H. Cole-Lewis and T. Kershaw. Text messaging as a
+tool for behavior change in disease prevention and
+management. Epidemiologic reviews, 9(1):mxq004,
+2010.
+
+[7] S. Deterding, D. Dixon, R. Khaled, and L. Nacke.
+
+From game design elements to gamefulness: deﬁning
+gamiﬁcation. In Proceedings of the 15th International
+Academic MindTrek Conference: Envisioning Future
+Media Environments, pages 9–15. ACM, September
+2011.
+
+[8] G. D. Dinsa, Y. Goryakin, E. Fumagalli, and
+
+M. Suhrcke. Obesity and socioeconomic status in
+developing countries: a systematic review. Obesity
+reviews, 13(11):1067–1079, November 2012.
+
+[9] P. Ferreira. Why play? examining the roles of play in
+
+ictd. Aarhus Series on Human Centered Computing,
+1(1):12, October 2015.
+
+[10] B. J. Fogg. Persuasive computers: perspectives and
+
+research directions. In Proceedings of the SIGCHI
+conference on Human factors in computing systems,
+pages 225–232. ACM Press/Addison-Wesley
+Publishing Co., January 1998.
+
+[11] B. J. Fogg. Persuasive Technology: Using Computers
+to Change What We Think and Do., chapter 5, pages
+89–120. Morgan Kaufmann, 2003.
+
+[12] D. P. Guh, W. Zhang, N. Bansback, zubin Amarsi,
+
+C. L. Birmingham, and A. H. Anis. The incidence of
+
+co-morbidities related to obesity and overweight: a
+systematic review and meta-analysis. BMC public
+health, 9(1):1, March 2009.
+
+[13] J. Hamari and J. Koivisto. Social motivations to use
+gamiﬁcation: An empirical study of gamifying
+exercise. In ECIS, page 105, June 2013.
+[14] J. Hamari, J. Koivisto, and T. Pakkanen. Do
+persuasive technologies persuade?-a review of
+empirical studies. In Persuasive Technology, pages
+118–136. Springer, May 2014.
+
+[15] J. Hamari, J. Koivisto, and H. Sarsa. Does
+
+gamiﬁcation work?–a literature review of empirical
+studies on gamiﬁcation. In System Sciences (HICSS),
+2014 47th Hawaii International Conference on, pages
+3025–3034. IEEE, January 2014.
+
+[16] A. Hsu, J. Yang, Y. H. Yilmaz, M. S. Haque, C. Can,
+and A. E. Blandford. Persuasive technology for
+overcoming food cravings and improving snack
+choices. In Proceedings of the SIGCHI Conference on
+Human Factors in Computing Systems, pages
+3403–3412. ACM, April 2014.
+
+[17] W. A. Kaplan. Can the ubiquitous power of mobile
+phones be used to improve health outcomes in
+developing countries? Globalization and health, 2(1):1,
+May 2006.
+
+[18] S. Kiesler, B. Zdaniuk, V. Lundmark, and R. Kraut.
+Troubles with the internet: The dynamics of help at
+home. Human-Computer Interaction, 15(4):323–351,
+December 2000.
+
+[19] J. Koivisto and J. Hamari. Demographic diﬀerences in
+perceived beneﬁts from gamiﬁcation. Computers in
+Human Behavior, 35:179–188, June 2014.
+
+[20] S. Langrial. From digital interventions to behavior
+change support systems: Understanding persuasive
+systems’ development and evaluation process. In
+Proceedings of IRIS, pages 1–16, 2012.
+
+[21] Y. Medynskiy and E. Mynatt. Salud!: An open
+
+infrastructure for developing and deploying health
+self-management applications. In Pervasive Computing
+Technologies for Healthcare (PervasiveHealth), 2010
+4th International Conference on-NO PERMISSIONS,
+pages 1–8. IEEE, March 2010.
+
+[22] M. Molapo and M. Densmore. How to choose a mobile
+phone for an ict4d project. In Proceedings of the
+Seventh International Conference on Information and
+Communication Technologies and Development, ICTD
+’15, pages 48:1–48:4, New York, NY, USA, 2015.
+ACM.
+
+[23] M. Molapo and G. Marsden. Software support for
+
+creating digital health training materials in the ﬁeld.
+In Proceedings of the Sixth International Conference
+on Information and Communication Technologies and
+Development: Full Papers-Volume 1, pages 205–214.
+ACM, December 2013.
+
+[24] M. Ng, T. Flemming, M. Robinson, B. Thomson,
+
+N. Graetz, C. Margono, E. C.Mullany, S. Biryukov,
+C. Abbafati, and S. F. Abera. Global, regional, and
+national prevalence of overweight and obesity in
+children and adults during 1980–2013: a systematic
+analysis for the global burden of disease study 2013.
+The Lancet, 384(9945):766–781, September 2014.
+
+[25] H. Oinas-Kukkonen. A foundation for the study of
+
+behavior change support systems. Personal and
+ubiquitous computing, 17(6):1223–1235, August 2013.
+
+[26] H. Oinas-Kukkonen and M. Harjumaa. Persuasive
+
+systems design: Key issues, process model, and system
+features. Communications of the Association for
+Information Systems, 24(1):485ˆa ˘A¸S500, March 2009.
+[27] J. Parikh and K. Ghosh. Understanding and designing
+for intermediated information tasks in india. Pervasive
+Computing, IEEE, 5(2):32–39, April 2006.
+
+[28] E. S. Poole, M. Chetty, T. Morgan, R. E. Grinter, and
+W. K. Edwards. Computer help at home: methods
+and motivations for informal technical support. In
+Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems, pages 739–748. ACM,
+April 2009.
+
+[29] D. Ramachandran, J. Canny, P. D. Das, and
+
+E. Cutrell. Mobile-izing health workers in rural india.
+In Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems, pages 1889–1898.
+ACM, April 2010.
+
+[30] D. Ramachandran, V. Goswami, and J. Canny.
+Research and reality: using mobile messages to
+promote maternal health in rural india. In Proceedings
+of the 4th ACM/IEEE International Conference on
+Information and Communication Technologies and
+Development, page 35. ACM, December 2010.
+
+[31] R. Ram´ırez, B. Parthasarathy, and A. Gordon. From
+
+infomediaries to infomediation at public access venues:
+Lessons from a 3-country study. In Proceedings of the
+Sixth International Conference on Information and
+Communication Technologies and Development: Full
+Papers-Volume 1, pages 124–132. ACM, December
+2013.
+
+[32] N. Sambasivan, E. Cutrell, K. Toyama, and B. Nardi.
+
+Intermediated technology use in developing
+communities. In Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems,
+pages 2583–2592. ACM, April 2010.
+
+[33] A. Schwartz, M. Bhavsar, E. Cutrell, J. Donner, and
+
+M. Densmore. Balancing burden and beneﬁt:
+Non-prescribed use of employer-issued mobile devices.
+In Proceedings of the Sixth International Conference
+on Information and Communications Technologies and
+Development: Notes - Volume 2, ICTD ’13, pages
+140–143, New York, NY, USA, 2013. ACM.
+
+[34] K. Steyn, J. Fourie, and N. Temple. Chronic diseases
+of lifestyle in south africa: 1995-2005. Technical
+report, Cape Town: South African Medical Research
+Council, 2006.
+
+[35] V. J. Strecher, G. H. Seijts, G. J. Kok, G. P. Latham,
+R. Glasgow, B. DeVellis, R. M. Meertens, and D. W.
+Bulger. Goal setting as a strategy for health behavior
+change. Health Education & Behavior, 22(2):190–200,
+July 1995.
+
+[36] A. Sukumaran, S. Ramlal, E. Ophir, V. R. Kumar,
+G. Mishra, V. Evers, V. Balaji, and C. Nass.
+Intermediated technology interaction in rural contexts.
+In CHI’09 Extended Abstracts on Human Factors in
+Computing Systems, pages 3817–3822. ACM, April
+2009.
+
+

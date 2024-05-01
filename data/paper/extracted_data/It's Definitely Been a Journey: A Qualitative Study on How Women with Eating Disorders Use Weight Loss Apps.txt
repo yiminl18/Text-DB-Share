@@ -1,0 +1,1832 @@
+"It's Definitely Been a Journey": A Qualitative Study on 
+How Women with Eating Disorders Use Weight Loss Apps 
+
+Elizabeth V. Eikey 
+The Pennsylvania State University 
+University Park, PA USA 
+eveikey@psu.edu 
+
+Madhu C. Reddy 
+Northwestern University 
+ Evanston, IL USA 
+mreddy@northwestern.edu 
+
+influence  on  users.  From 
+
+ABSTRACT 
+Technology is often viewed as either positive or negative. On 
+one  hand,  in  HCI,  weight  loss  apps  are  usually  seen  as  a 
+positive 
+the  sociocultural 
+perspective,  on  the  other  hand,  media  and  technology 
+negatively impact body satisfaction and contribute to eating 
+disorders; however, these studies fail to include weight loss 
+apps. While these apps can be beneficial to users, they can 
+also  have  negative  effects  on  users  with  eating  disorder 
+behaviors.  Yet  few  research  studies  have  looked  at  weight 
+loss apps in relation to eating disorders. In order to fill this 
+gap, we conducted interviews with 16 women with a history 
+of eating disorders who use(d) weight loss apps. While our 
+findings suggest these apps can contribute to and exacerbate 
+eating disorder behaviors, they also reveal a more complex 
+picture of app usage. Women’s use and perceptions of weight 
+loss apps shift as they experience life and move to and from 
+stages of change. This research troubles the binary view of 
+technology  and  emphasizes  the  importance  of  looking  at 
+technology use as a dynamic process. Our study contributes 
+to our understanding of weight loss app design. 
+
+Author Keywords 
+Weight  loss  apps;  mobile  applications;  eating  disorders; 
+anorexia  nervosa;  bulimia  nervosa;  qualitative;  persuasive; 
+food journal; self-tracking; quantified self 
+
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI): 
+Miscellaneous 
+
+INTRODUCTION 
+Many  young  women  use  mobile  health  applications  for 
+weight loss (weight loss apps). As of January 2014, 51.7% 
+of the 46 million people who used apps from the health and 
+fitness category were women [52]. According to Neilson, the 
+most popular health app during this time was MyFitnessPal, 
+an  app  that  allows  users  to  track  calories,  exercise,  and 
+weight, with 8.7 million users [52]. 
+
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. Copyrights for 
+components of this work owned by others than ACM must be honored. 
+Abstracting with credit is permitted. To copy otherwise, or republish, to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org. 
+CHI 2017, May 06-11, 2017, Denver, CO, USA  
+© 2017 ACM. ISBN 978-1-4503-4655-9/17/05…$15.00  
+DOI: http://dx.doi.org/10.1145/3025453.3025591. 
+
+Women’s  motivation  for  using  these  apps  is  often  to  lose 
+weight even if they are technically at a healthy weight [51]. 
+With the pressure to be thin and beautiful, some women have 
+an unrealistic and distorted view of their bodies. In fact, in 
+North America, there is such a pervasive body dissatisfaction 
+and  preoccupation  with  weight  that  psychologists  have 
+developed the term “normative discontent”, which describes 
+the  “normalcy”  of  being  unhappy  with  one’s  weight  as  a 
+woman [39].  
+
+the 
+
+sociocultural  perspective,  much  of 
+
+this 
+From 
+dissatisfaction  is  driven  by  the  media  and  now  technology 
+[39]. The sociocultural model of eating disorders posits that 
+“disordered eating is a result of internalizing the increasing 
+pressures for women in Western society to achieve an ultra-
+slender  figure/the  thin  ideal,  which  current  cultural  trends 
+emphasize  as  an  essential  component  of  beauty”  (p.1225) 
+[18]. With this obsession with weight and size, women may 
+engage in extreme and even dangerous behaviors to achieve 
+an unattainable idea of beauty – even when losing weight is 
+unnecessary. Some of these women develop eating disorders 
+as a result. In fact, it is estimated that 35% of “typical dieters” 
+develop  eating  disorder  behaviors,  and  of  those,  20-25% 
+develop partial or full eating disorders [37]. 
+
+Few  research  studies  have  looked  at  weight  loss  apps  as  a 
+type  of  new  media  that  may  contribute  to  or  exacerbate 
+eating disorders. Yet weight loss apps often contain the same 
+types of content as other technologies that have been shown 
+to  worsen  body  dissatisfaction  and  disordered  eating.  In 
+Human-Computer  Interaction  (HCI),  weight  loss  apps  are 
+often  viewed  as  positive  influence  on  users.  In  order  to 
+understand if weight loss apps contribute to eating disorders, 
+we  wanted  to  hear  stories  from  women  with  a  history  of 
+eating disorders who use or have used weight loss apps. We 
+used semi-structured interviews with 16 participants in order 
+to get in depth and detailed descriptions of their experiences. 
+One  primary  research  question  guided  our  study:  How  do 
+women  with  a  history  of  eating  disorders  use  weight  loss 
+apps? 
+
+What  emerged  from  this  data  is  a  complex  perspective  of 
+how weight  loss  apps  are used. While  there  is  evidence  to 
+suggest that weight loss apps, like other technologies, may 
+contribute to and exacerbate eating disorder behaviors, how 
+these  apps  are  used  and  users’  perceptions  of  these  apps 
+change over time. This finding “troubles” the typical binary 
+view of technology. That is, instead of technology being seen 
+as only positive or negative, the role of technology can shift 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA642 
+depending on where users are in their health “journey”. This 
+should be of growing interest to the HCI community because 
+viewing technology as just good or bad neglects the larger 
+picture  of  how  technology  use  changes  depending  on  user 
+needs.  Specifically,  our  study  shows  women  with  eating 
+disorders  reflect  on  and  use  apps  differently  as  they  go 
+through  their  eating  disorder  journey.  Our  research  has 
+implications for the design of more health-focused apps. 
+
+BACKGROUND 
+Eating Disorders 
+While  it  is  estimated  that  20  million  women  in  the  United 
+States  have  an  eating disorder,  many  more have  unhealthy 
+eating  behaviors  or  may  be  undiagnosed  [33,48].  It  is 
+estimated  that  8%-17%  of  college-aged  students  have  an 
+eating  disorder,  and  20%  of  college  students  believe  they 
+have had an eating disorder in their lifetime [14,21,34].  
+
+For  the  purposes  of  our  study,  we  focused  on  behaviors 
+associated  with  anorexia  and  bulimia  nervosa  and  other 
+specified  eating  disorder/eating  disorder  not  otherwise 
+specified  because  there  is  some  overlap  between  these 
+disorders  [1].  Eating  disorder  behaviors  related  to  these 
+disorders  include  excessive  calorie  or  food  restriction, 
+intense  fear  of  gaining  weight,  obsession  with  weight  and 
+consistent  behavior  to  prevent  weight  gain,  self-esteem 
+overly related to body image, bingeing, feeling of being out 
+of  control  during  bingeing,  purging,  dramatic  weight  loss, 
+preoccupation  with  weight,  food,  calories,  fat  grams,  and 
+dieting, refusal to eat certain foods, comments about feeling 
+“fat”,  hunger  denial,  excessive  exercise  regimen,  and 
+development of food rituals. 
+
+Some eating disorder behaviors may be viewed as typical to 
+achieve weight loss or not severe enough to warrant medical 
+attention. Research has shown that even women of a healthy 
+weight  may  utilize  “weight  loss  methods”  indicative  of 
+eating disorders [33]. Additionally, research has shown that 
+25% of college women in the United States have engaged in 
+bingeing and purging as a weight loss method [48]. 
+
+Sociocultural Perspective of Eating Disorders 
+While biological and psychological factors play a role in an 
+individual’s  predisposition  and  development  of  eating 
+disorders  [12],  researchers  in  psychology  have  highlighted 
+the sociocultural perspective - that social and cultural factors 
+play a significant role in the development and prevalence of 
+eating disorders [3]. This perspective is used to understand 
+how  social  and  cultural  factors,  such  as  traditional  media, 
+affect an individual’s mental processes and behaviors [36]. 
+For  example,  it  has  been  used  to understand  the  impact  of 
+media  on  body  image  and  eating  behaviors  [3].  For  quite 
+some  time,  research  has  shown  that  media  exposure 
+contributes  to  body  dissatisfaction  and  disordered  eating 
+[31].  However,  much  of  this  research  has  focused  on 
+conventional mass media, such as magazines and television.  
+
+In recent years, researchers have been calling for more work 
+in  understanding  the  impact  of  new  media,  such  as  online 
+
+content, on the thin ideal, body image, and eating disorder 
+symptomology  [31].  From  this  perspective,  technology  is 
+viewed  as  a  negative  influence  on  users.  Recent  work  has 
+shown that online content, such as social media, is associated 
+with poor body image and eating disorders, especially among 
+women [2,16,24,26,42]. Many online weight loss and fitness 
+communities  either  overtly  or  subtly  promote  eating 
+disorders, and this negatively affects users who are trying to 
+address their eating disorder issues [41,45]. Researchers in 
+psychology 
+of 
+understanding  the  effects  of  new  media  on  eating  disorder 
+symptomology.  
+
+importance 
+
+recognized 
+
+have 
+
+the 
+
+However, their focus has largely been on social media. For 
+example,  using  Facebook  is  correlated  with  drive  for 
+thinness  in  women  and  men  [23]  and  body  dissatisfaction 
+[16,17,42].  Mabe  et  al.  [24]  found  that  frequency  of 
+Facebook  use  was  related  to  disordered  eating.  Similarly, 
+Stronge et al. [42] found women and men of all ages are more 
+likely to have poorer body satisfaction if they use Facebook. 
+Kim and Chock [23] conducted an online survey to examine 
+Facebook’s  impact  on  users’  body  image  attitudes.  While 
+they did not find a correlation between time spent on social 
+media  and  body  image  concerns,  they  found  engaging  in 
+particular social media behaviors such as checking friends’ 
+profiles,  leaving  messages,  and  commenting  on  profiles  is 
+correlated  with  a  drive  for  thinness  in  both  females  and 
+males.  
+
+Even  HCI  researchers  who  study  eating  disorders  have 
+primarily  focused  on  social  media  [7,13,30].  Some 
+researchers  have  found  that  social  media  promotes  eating 
+disorder behaviors. For example, Chancellor et al. [7] found 
+that  despite  Instagram’s  strategies  to  reduce  pro-eating 
+disorder content, pro-eating disorder communities still exist 
+and  are  thriving.  Similarly,  Pater  et  al.  [30]  analyzed 
+hashtags on Tumblr, Instagram, and Twitter and found pro-
+eating disorder-related hashtags, images, and text. While this 
+work  is  important  because  many  people  (especially  young 
+females) use social media, research is lacking on the role of 
+weight  loss  apps.  Additionally,  this  perspective  only 
+considers  media  and  technology  as  a  negative  influence; 
+whereas our study looks at weight loss apps as both positive 
+and negative. 
+
+Health Apps for Weight Loss, Diet, and Exercise 
+We  add  to  the  HCI  literature  on  food  journaling,  self-
+tracking,  weight  loss  and  persuasive  technology.  In  HCI, 
+many researchers focus on how weight loss apps are positive 
+influences on users. Specifically, weight loss technology is 
+often  seen  as  a  way  to  help  people  combat  obesity  and 
+obesity-related  health  conditions.  Thus,  the  focus  is  on 
+designing  apps  to  motivate  users  to  eat  less  or  healthier, 
+exercise  more, 
+long-term 
+use 
+[4,6,9,10,20,22,27,35,40,46,47,49] and how this technology 
+contributes to users’ ability or their perception of their ability 
+to achieve health goals, such as weight loss and exercising 
+[8,28].  
+
+and 
+
+app 
+
+the 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA643These apps can be useful weight loss tools [19,38], but they 
+may also trigger unhealthy eating and exercise behaviors by 
+creating a dependence on logging food, exercise, and weight. 
+Tan et al. [44] found that users felt weight loss and fitness 
+apps could be both helpful and harmful for eating disorder 
+recovery but did not elaborate further. Prior to weight loss 
+apps,  some  people  (including  those  with  eating  disorders) 
+tracked their diet and exercise on paper. While this can still 
+negatively  impact  eating  disorder  behaviors,  weight  loss 
+apps are more personalized, discreet, mobile, and quicker to 
+use. They also provide users with precise values for food and 
+exercise  and  visualizations  of  weight  loss  and  calories 
+consumed/burned  with  an  added  component  of  the  app 
+“rewarding” them for eating less, exercising more, and losing 
+weight. 
+
+Recently, some HCI researchers have been challenging the 
+narrative  that  quantifying  behaviors  and  logging  is  always 
+positive  or  appropriate.  For  example,  Cordeiro  et  al.  [11] 
+considered  the  use  and  problematic  aspects  of  food 
+journaling  for  a  general  population,  where  the  focus  is  to 
+encourage logging. Similarly, Cordeiro et al. [10] discussed 
+how in self-tracking, quantifying behaviors are pervasive but 
+not always appropriate because of user goals. Purpura et al.’s 
+[32]  fictional  Fit4Life  is  related  to  our  work  because  they 
+discussed problems of persuasive technology. They call for 
+us to expand our criteria beyond BMI because it is not a good 
+measure of health and explore unintended consequences.  
+
+Our study directly contributes to prior HCI work. Like other 
+researchers, we also believe the quantification of behaviors 
+is not always appropriate but investigate the use of existing 
+self-tracking  tools  to  understand  how  users’  needs  are  not 
+being  met.  Our  study  looks  at  the  issues  of  weight  loss 
+technologies and unintended consequences but in the context 
+of eating disorders. 
+
+METHODS 
+Participants and Recruitment 
+To be eligible for the study, participants (1) Had to use/have 
+used weight loss apps, (2) Be an 18-25 year old woman, and 
+(3)  Have/had  an  eating  disorder  (symptoms  related  to 
+anorexia and/or bulimia nervosa). Although eating disorders 
+are  increasing  among  men  [43],  we  focused  on  women 
+because they are more likely to develop eating disorders [15]. 
+Because  some  people  do  not  meet  the  full  criteria  for  a 
+specific  diagnosis  and  because  many  people  never  seek 
+treatment  for  their  eating  disorder,  we  recruited  both 
+participants  who  were  formally  diagnosed  and  those  who 
+were  not.  We  posted  flyers  at  the  university  and  at  public 
+locations  around  the  local  town.  Each  participant  was 
+compensated $25.  
+
+Data Collection Sessions 
+The first author conducted all data collection sessions. Each 
+session consisted of a survey, a think-aloud exercise, and a 
+semi-structured interview. Through the survey, we obtained 
+demographic  information  as  well  as  history  and  status  of 
+their eating disorders. For the think-aloud exercise, we asked 
+
+participants  to  go  through  3  tasks:  (1)  setting  goals,  (2) 
+viewing  progress  visualizations,  and  (3)  using  social  and 
+community  features.  After  the  think-aloud  exercise,  we 
+moved into the interview portion of the study, which focused 
+more on their perceptions of the app and technology use in 
+general. The think-alouds showed us how users used the app 
+and provided us with concrete examples of goals set, calorie 
+budgets, etc. During the interview, we asked users to reflect 
+on how they have used the app over time, show what made 
+them  feel  negative  and positive  emotions,  explain  how  the 
+app changed their behaviors, and discuss what aspects were 
+helpful to recovery and exacerbated ED symptoms.  
+
+The  think-aloud  exercises  were  video  recorded.  The  entire 
+discussion was audio recorded; thus, transcriptions represent 
+both  think-alouds  and  interviews.  Each  session  took 
+anywhere between 40 minutes and 1 hour and 45 minutes. 
+We  conducted  a  total  of  16  sessions  because  we  saw 
+repetitive  themes  in  participants’  responses  (i.e.,  data 
+saturation) [25].  
+
+Analysis 
+The  audio  files  from  the  data  collection  sessions  were 
+transcribed  into  electronic  format  (approximately  278 
+pages).  This  was  appropriate  because  the  goal  was  “to 
+analyze  the  content  of  communication”  to  understand  the 
+participant’s  experience  (p.  2937)  [50].  Then  we  used 
+thematic analysis to identify themes across the data set [5]. 
+As participants explained their use over time, we noticed a 
+lot  of  discussions  about  “before”  and  “after”,  so  we  first 
+grouped discussions according to users’ descriptions of when 
+they first started to use the app and then after they changed 
+their  use/stopped  using  the  app.  We  then  developed  initial 
+codes, searched for themes, and reviewed and grouped them 
+together, which led to the final themes. 
+
+FINDINGS 
+We first present information about our participants. Then we 
+discuss  how  their  app  use  changed  over  time.  Finally,  we 
+provide  quotations  from  participants  that  exemplify  their 
+experiences. Specifically, we focus on: 
+
+1.  Disordered use of weight loss apps (such as obsessive 
+logging, need to be exact, acute awareness of numbers, 
+restricting,  manipulating  the  app  to  lose  weight, 
+compensatory behaviors, manipulating the app to avoid 
+negative emotions), 
+
+2.  Making  a  change  (such  as  adding  in  calories  and/or 
+focusing on nutrition and taking a break from apps), and 
+
+3.  Falling back into old habits. 
+
+These showcase the participants’ journey of weight loss app 
+use as many reflected on their eating disorder and app usage 
+over time. 
+
+Participants 
+Participants  were  ages  18-23  with  the  mean  being  20.88 
+years. The majority of participants identified as White (non-
+Hispanic)  (n=12)  with  one  from  Israel.  Two  identified  as 
+Asian, Asian American, or Pacific Islander, 1 identified as 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA644multi-racial,  and  1  identified  as  Native  American  or 
+American Indian. As shown in Table 1, most participants had 
+not  been  professionally  diagnosed  with  an  eating  disorder 
+(n=12),  and  most  reported  being  in  recovery  or  recovered 
+(n=13).  Participants  estimated  they  had  an  eating  disorder 
+anywhere from 2 months to 7 years, and their eating disorder 
+behaviors  included  extreme  restriction,  obsession  with 
+“healthy”  foods,  bingeing,  excessive  and  compensatory 
+exercise, purging, and extreme anxiety and concern related 
+to  food  and  weight.  Most  (n=13)  felt  their  eating  disorder 
+began  before  using  weight  loss  apps.  Participants  reported 
+using weight loss apps between 2 months and 8 years (mean 
+of 35.63 months or 2.97 years with a standard deviation of 
+31.92  months  or  approximately  2  years).  The  most 
+commonly used app was MyFitnessPal (n=15). 
+
+Founded in 2005, MyFitnessPal1 has become one of the most 
+popular weight loss apps [52]. It allows users to create a diet 
+plan  by  entering  their  height,  starting  weight,  goal  weight, 
+weekly weight loss/gain goal, and activity level. Users can 
+enter  their  foods  by  searching  the  database  of  foods, 
+manually entering calories, or scanning barcodes, and they 
+can input exercise manually or by synchronizing other apps 
+or  wearables,  such  as  Fitbit.  The  app  also  allows  users  to 
+track nutrients, such as carbohydrates, and set nutrient goals. 
+MyFitnessPal 
+calories 
+consumed/burned, weight loss, and nutrients. Users can also 
+choose to connect with other users through adding friends, 
+messaging  friends,  participating  in  challenges,  and  posting 
+on the MyFitnessPal forums.  
+
+visualizations 
+
+provides 
+
+of 
+
+Patterns of Use 
+Participants  discussed  not  only  their  current  use  of  weight 
+loss apps, but also their past use and how it has changed over 
+time. Because many participants have been using weight loss 
+apps for over a year (and some many years), they shared how 
+their eating disorder influenced their app use and how the app 
+impacted  their  eating  disorder.  Most  participants  also  felt 
+they were in recovery from their eating disorder, which gave 
+them the opportunity to reflect on how they arrived at this 
+point  in  their  health  journey.  In  fact,  some  participants 
+actually referred to their eating disorder and subsequent app 
+experience as a journey. 
+
+In 
+
+In hearing their experiences, a pattern of use began to emerge 
+as  shown  in  Figure  1.  The  lines  in  the  figure  represent 
+the  beginning,  participants’ 
+bidirectional  arrows. 
+intentions were most commonly to lose weight (whether or 
+not  they  were  at  a  healthy  weight).  When  they  first  began 
+using  weight  loss  apps,  they  found  them  helpful  in  losing 
+weight  and  tracking  their foods  even  though  some  of  their 
+behaviors  were  disordered.  A  number  of  participants 
+
+1 https://www.myfitnesspal.com/ 
+
+describe how their diet and tracking sort of  “spiraled out of 
+control”. As time went on, participants began to think that 
+they  may  have  an  eating  disorder  and  that  the  app  was 
+exacerbating  it.  Upon  this  realization,  participants  would 
+either decide to use the app as a tool to eat more or stop using 
+the app altogether. However, participants often began using 
+weight loss apps again and felt they were battling their eating 
+disorder  mindset  even  when  recovery  was  the  focus.  We 
+showcase  their  journey  by  providing  quotations  regarding 
+their experiences of (1) using the app in a disordered way, 
+(2) deciding to make a change, and (3) falling back into old 
+habits.  
+
+Disordered Use of Weight Loss Apps 
+During  the  height  of  their  eating  disorders,  participants 
+talked a lot about the ways they used weight loss apps in an 
+unhealthy manner (even though they did not often recognize 
+their  behaviors  as  disordered  early  on)  and  ways  the  app 
+impacted them.  
+
+Obsessive logging 
+A  number  of  participants  explained  that  they  became 
+obsessed  with  logging  their  food  and  began  using  the  app 
+multiple times a day. One participant talked about how she 
+felt the need to log everything she ate: 
+
+“I got more hung up on tracking everything. Before I could 
+just eat something. I didn’t have to worry about logging it 
+into something. I didn’t really keep track of it throughout the 
+day….  Then  the  ability  to  track  it  only  made  it  [eating 
+disorder behaviors] worse… Definitely before [recovery], it 
+was  really  bad.  Like  I  would  get  on  there  [the  app]  a  few 
+times a day, like more than the 3, and just be very obsessive 
+about it.” [U02] 
+
+Similarly, another participant discussed how obsessive food 
+logging and tracking turned into an eating disorder: 
+
+“I started to diet and that's kind of how my eating disorder 
+manifested  itself,  after  the  diet  became  an  obsession  with 
+tracking  my  food  and  how  low  I  could  get  the  number 
+basically… When I was in the middle of my eating disorder, 
+I would definitely use it [the app] everyday. And it was one 
+of  those  things  where  I  would  pretty  much  try  and  track 
+everything the day before.” [U06] 
+
+These  participants  explained  that  they  used  the  app  many 
+times a day everyday to the point that they felt compelled to 
+log and track their foods and check the app. 
+
+Need to be exact 
+Participants  also  talked  about  how  they  felt  the need  to  be 
+exact with recording their calories and macronutrients. 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA645 
+ 
+                                                           
+ID 
+
+Professionally 
+Diagnosed 
+
+ED2 / ED Behaviors 
+
+Do you think 
+you currently 
+have an ED? 
+
+ED 
+Length 
+
+ED Before 
+or After 
+App 
+
+Apps Used 
+
+App Use 
+Length 
+
+U01 
+
+U02 
+
+U03 
+
+U04 
+
+U05 
+
+U06 
+
+U07 
+
+U08 
+
+U09 
+
+U10 
+
+U11 
+
+U12 
+
+U13 
+
+U14 
+
+U15 
+
+U16 
+
+Yes 
+
+Yes 
+
+No 
+
+No 
+
+No 
+
+No 
+
+No 
+
+No 
+
+No 
+
+No 
+
+No 
+
+Yes 
+
+Yes 
+
+No 
+
+No 
+
+No 
+
+Anorexic behaviors, binge 
+eating 
+Anorexic behaviors, 
+orthorexia3 
+Anorexia nervosa, exercise 
+anorexia 
+Anorexic behaviors, 
+EDNOS/OSFED4, excessive 
+exercise, strict diet 
+Anorexic behaviors, back and 
+forth between eating and not 
+eating 
+Anorexia nervosa, orthorexia, 
+binge eating disorder 
+Anorexic behaviors, 
+restriction, purging 
+Anorexic behaviors, barely 
+ate, some bingeing, 
+EDNOS/OSFED 
+Anorexia nervosa 
+
+Bulimia nervosa 
+
+EDNOS/OSFED, binge 
+eating-exercise/diet-binge 
+eating, had great anxiety 
+related to eating/dieting 
+Bulimia nervosa 
+
+Anorexia nervosa 
+
+EDNOS/OSFED, always 
+thinking about food, need to 
+track everything eaten, 
+concern when not hitting 
+macronutrients, restriction, 
+bingeing 
+Anorexia nervosa 
+
+EDNOS/OSFED, anxiety 
+about food, afraid to eat 
+"unhealthy" in pubic, bingeing 
+in private, compensatory 
+exercise, diet-bingeing cycles 
+
+No 
+
+Yes 
+
+No 
+
+No 
+
+2 months 
+
+After 
+
+MyFitnessPal 
+
+2 months 
+
+1 year 
+
+Before 
+
+6 years 
+
+Before 
+
+1 year 
+
+Before 
+
+MyFitnessPal, 
+Nike+Running 
+MyFitnessPal 
+
+MyFitnessPal, 
+MapMyRun 
+
+1 year 
+
+8 years 
+
+4 years 
+
+No 
+
+2 years 
+
+Before 
+
+MyFitnessPal, Fitbit, 
+Moodnotes 
+
+4 months 
+
+No 
+
+No 
+
+No 
+
+No 
+
+No 
+
+No 
+
+No 
+
+Yes 
+
+Yes 
+
+3 years 
+
+After 
+
+MyFitnessPal, FitBit 
+
+4 years 
+
+1 year 
+
+Before 
+
+MyFitnessPal 
+
+5 months 
+
+1 year 
+
+Before 
+
+2 years 
+
+Before 
+
+Before 
+
+6-7 
+years 
+>4 years 
+
+MyFitnessPal, 
+WeightWatchers, 21 
+Day Fix 
+MyFitnessPal, 
+Calorie Counter 
+MyFitnessPal 
+
+7 years 
+
+7 years 
+
+4 years 
+
+Before 
+
+MyFitnessPal 
+
+8 months 
+
+6 months 
+
+Before 
+
+Cronometer 
+
+3 years 
+
+After 
+
+MyFitnessPal 
+
+1.5 years 
+
+5 months 
+
+7 years 
+
+Before 
+
+MyFitnessPal 
+
+2 years 
+
+No 
+
+No 
+
+1 year 
+
+Before 
+
+4 years 
+
+Before 
+
+2 years 
+
+5 years 
+
+Lose It, Steps, 
+MyFitnessPal 
+MyFitnessPal, FitBit, 
+Nike Running App, 
+Nike Training App, 
+Healthy Out, Eating 
+Well, Spartan Race 
+
+Table 1. Information about participants’ eating disorder and app use 
+
+Figure 1. Patterns of weight loss app use
+
+2 ED = eating disorder 
+3 Orthorexia is an obsession with eating healthy foods. 
+4 EDNOS = eating disorder not otherwise specified; OSFED = other specified feeding or eating disorder  
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA646 
+                                                           
+ 
+ 
+One  participant  explained  how  she  would  log  every  single 
+piece of food even if it were only a portion of a calorie: 
+
+eating disorder, one participant talked about how every food 
+was viewed as its calorie amount: 
+
+“So literally, it [the app] just knew everything… It had the 
+one tiny little morsel of food logged in there… I remember I 
+went to church one day and I got a communion [wafer], and 
+I even found the calories of it, which it’s a half of calorie, 
+that doesn't matter. But I think it was still in there, so I logged 
+it…  Why  would  you  even  have  that  in  there?  So  that  just 
+didn't help.” [U13] 
+
+Another participant described her anxiety around needing to 
+hit  her  calorie  and  macronutrients  exactly  and  how  that 
+affected her ability to spend time with her family: 
+
+“I try to get exactly on [the number]… I like having it exactly 
+on… It [the app] made me more OCD [obsessive compulsive 
+disorder],  'cause  I'm  like,  ‘I  have  to  hit  this  number,’ 
+basically…  It's  made  me  more,  very  stringent  on  what  I'm 
+eating and making sure I hit those numbers… There was one 
+time my parents wanted to go out to dinner… So, I called the 
+[restaurant] so I could already track it and have it as close 
+as possible. And then my parents get here, and they're like, 
+‘Oh, we're going go to [this other restaurant] instead.’ And 
+I was literally having anxiety about going. I didn't want to go 
+to dinner. I was like, ‘No. I already had everything perfectly 
+planned for my day,’ and that was probably a bad moment… 
+I  feel  like  eating  disorders  stem  from  people  trying  to  be 
+perfect,  and  with  this,  you're  hitting  numbers  trying  to  be 
+perfect, so I think that could be kind of bad.” [U14] 
+
+Many participants discussed how they used the app to help 
+them  achieve  exactness  when 
+tracking  calories  and 
+macronutrients. Using the app fueled this desire to be exact 
+and  resulted  in  anxiety  if  they  did  not  know  the  precise 
+amount of calories and macronutrients in the foods they were 
+eating in order to log them accurately.  
+
+Acute awareness of numbers 
+Weight loss apps also tend to put an emphasis on numbers 
+associated  with  foods  and  exercise.  As  participants 
+discussed,  this  focus  on  numbers  worsened  their  eating 
+disorder behaviors. One participant talked about how the app 
+made her more aware of calories, which fed into her need for 
+control: 
+
+“I guess it [the app] has made me more aware of numbers 
+and just trying to meet some you know, calories burned for 
+exercise and stuff like that because it will log it in there. So 
+getting  really  hung  up  on  numbers  has  worsened  things… 
+like you get so fixed on controlling everything because you 
+know it’s at your hands, literally. You can control everything 
+and then act on it. If I want to, the night before, I’ll tell myself 
+what I will eat, like I get very big on planning the meal for 
+the next day when it’s still the day before. So it’s a big control 
+thing...” [U02] 
+
+Similarly, another participant talked about how weight loss 
+apps can change users’ relationship with food so that the food 
+essentially  boils  down  to  its  numbers.  At  the  worst  of  her 
+
+“I think it's [logging food and exercise everyday] definitely 
+very triggering because you become obsessed with food, you 
+look at food differently. Like now when I look at food, I see 
+like that's protein, that's fat, that's carbs instead of like that's 
+a chicken breast, that's peanut butter, that's a piece of bread, 
+and so it's always thinking, how can I eat these things when 
+I only have so many carbs or I have to eat this much protein. 
+And so it's definitely very, very triggering to be tracking it all 
+the  time.  And  especially  back  then  [during  my  eating 
+disorder], it was like, ‘Well, that's 100 calories right there, 
+like I need to eat broccoli instead, that's like 35 calories.’ It's 
+a number game basically.” [U06] 
+
+The  heavy  focus  on  the  numbers  in  weight  loss  apps  was 
+problematic for a number of participants. By providing a way 
+to monitor their diet so closely, the app fueled their need for 
+control. 
+
+Restricting 
+One  way  participants  maintained  control  was  through 
+restricting their calories. Participants described how they felt 
+to  restrict  and 
+encouraged  by 
+accomplished  when  they  ate  under  their  daily  calorie 
+allotment. One participant described how she was almost in 
+competition  with  herself  and  the  app  to  eat  fewer  calories 
+each day: 
+
+to  continue 
+
+the  app 
+
+“I kind of set it [my goal], and then it [the app] gave me a 
+calorie count of maybe 1200 calories. But I never wanted to 
+go above 1000 calories. I remember like coming home from 
+the  gym,  and  if  I  was  around  like  500  calories,  like  I  was 
+happy with that… so I definitely didn't want to be anywhere 
+near the maximum. I wanted to be underneath. So that's like 
+a negative thing, thinking back… But at the time, it was kind 
+of like a game to beat the calories, kind of. So one day I had 
+a  0,  maybe  it  was  like  a  negative  calorie.  I  was  like,  ‘Oh, 
+wow, like look at me, like that's cool!’ But that's not what you 
+should be thinking [laughs]. Or the days where I was eating 
+like above 1000, I was like, ‘Oh, I ate way too much today,’ 
+just because I wanted to be like way under the like 1200… 
+Just because like you can visualize what you're eating, so the 
+more you don't eat, it's like, ‘Oh I beat the app!’… I definitely 
+wanted to beat the calories they gave me. I feel like that kind 
+of does start an eating behavior where you don't want to eat 
+anything.” [U07] 
+
+Similarly, another participant talked about how the app made 
+it seem “good” to eat under the allotted calories and how she 
+felt proud when she did: 
+
+“It [the app] had you put in your weight and stuff. I think 
+that the calories they gave you was the lowest that it would 
+give  you  [laughs].  And  then  it  just  became  this  weird 
+competition thing with it… [I felt] amazing [when I ate under 
+my calorie allotment]… I just felt like I achieved my goal for 
+the day. I just felt a sense of achievement. And then each day 
+I  would  get  lower  and  lower  and  lower…  Because  it  [the 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA647app] taught you that if you went over, you didn't succeed that 
+day.  But  if  you  went  under, then  congrats,  you're  going  to 
+lose weight! You did what you were supposed to do that day... 
+At the end of the night I would look through what I ate, and 
+if it was mostly vegetables or something, I'd be proud, and 
+then if it was strayed from that a little, I would probably freak 
+out.” [U13] 
+
+Participants discussed how the apps could contribute to their 
+restrictive  behaviors  by  making  it  seem  like  a  game  to  eat 
+less than the given amount and less than the prior day. By 
+seeing  that  they  ate  under  their  calorie  budget,  many 
+participants  would  feel  a  sense  of  accomplishment,  which 
+fueled  their  desire  to  continue  and  even  intensify  their 
+restrictive behaviors. 
+
+Manipulating the app to lose weight 
+Some  participants  talked  about  ways  they  manipulated  the 
+app so that they were actually netting less calories than the 
+app stated. This was often achieved by not honestly reporting 
+information about exercise and activity level. For instance, 
+one  participant  talked  about  how  she  reported  her  activity 
+level as “sedentary” even though she was really active so that 
+she would lose more weight quickly: 
+
+It [the app] only takes you as low as 1200 calories because 
+that's a regular diet would recommend, the lowest you can 
+go. So I would adjust my diet… I put in I wasn't active even 
+though I was really active, so my maintenance calories were 
+already lower than they should have been. And then if I put 
+in like lose 2lbs per week, it would be even lower. So I feel 
+like  that  can  be  manipulative…  I  think  it  can  easily  spiral 
+into like disordered eating.” [U03] 
+
+Another  participant  explained  how  she  would  do  a  lot  of 
+calorie-burning activities and then go to the gym but never 
+log calories burned from exercise: 
+
+“I was dancing 4 days a week for like 2-ish hours and then I 
+was  swimming  4-5  days  a  week  for  1-2  hours  as  well  as 
+thinking I needed to start lifting. So I would in between all 
+that,  go  to  the  gym  4  times  a  week  and  lift  up  the  10lb 
+dumbbells,  so  my  calorie  expenditure  was  probably  3000-
+4000 calories a day, and I was eating 1000… I didn't [record 
+my exercise]. I don't think I ever recorded it simply because 
+I knew I was doing so much.” [U06] 
+
+These  participants  manipulated  their  calorie  budgets  and 
+expenditures by not accurately inputting their activity level 
+and exercises. Without exercise, the app told them that they 
+would lose weight, so being more active than reported acted 
+as buffer or a means to more quickly achieve weight loss.   
+
+Compensatory behaviors 
+While participants felt rewarded by staying under their daily 
+calorie  allotment,  sometimes  they  would  exceed  those 
+budgets,  and  the  app  would  reflect  that.  Participants  often 
+purged  through  exercise  but  sometimes  vomited.  Many 
+talked  about  how  they  restricted  their  intake  more  the 
+following  days  to  compensate  for  being  over  budget.  One 
+
+participant  described  how  she  would  use  exercise  to  “get 
+calories back” and would restrict more if she exceeded her 
+allotment:  
+
+“If I see the red, it's pretty much a bad day, and I feel like I 
+have to start all over again. So then you'll probably see the 
+next week [I’ll] be super low in like everything… I used to 
+work at [a doughnut shop], so I would snack on things there, 
+so  you  can  log  having  a  [doughnut  hole]…  and  I  actually 
+had eaten a lot of calories, and I felt like crap… And I logged 
+it,  and  I  think  it  went  into  the  red.  When  I  went  to  gym,  I 
+worked out for so long that day, and I was able to see it go 
+back to green and still say it had remaining calories… Like 
+to see it go back to green made me feel like, ‘Ok, like I'm fine’ 
+even though in retrospect, even if I'm eating a bunch of crap 
+and exercising, that's really not that much healthier… But I 
+liked seeing it go from like red to green. 
+
+Another  participant  discussed  how  she  used  exercise  to 
+“cancel out” calories: 
+
+“So  I  kind  of  used  this  app  to  document  like  every  single 
+thing I did. So if I went for like an hour walk, I would put it 
+in here. And like every little exercise I did to get calories out 
+of the app, I would do that… the exercise part was kind of 
+how I was able to get to my 500 calorie limit. Normally, I 
+would only want to eat around 800 or 900 calories, and then 
+after exercise, it would drop down to, I would normally burn 
+like 300 calories, so it would get pretty low. I remember one 
+day… after exercising, I was at 0 calories. And I was like, 
+‘Look! Look at this! That's kind of cool.’ Like thinking about 
+it, it's like so bad, but the app's kind of designed that way, to 
+kind of want you to cancel out your calories.” [U07] 
+
+The apps are designed in a way that allows users to “remove” 
+calories eaten by adding in exercise. Participants often talked 
+about  how  they  would  utilize  exercise  as  a  way  to 
+compensate for going over their calories for the day. They 
+also  would  eat  less  in  the  days  following  exceeding  their 
+calorie budget. 
+
+Manipulating the app to avoid negative emotions 
+Exceeding  the  calorie  budget  almost  always  resulted  in 
+negative feelings, such as guilt and shame. In order to avoid 
+those feelings, some participants would not log their food if 
+they  knew 
+their  allotment.  One 
+participant  talked  about  how  she  felt  devastated  when  she 
+significantly  exceeded  her  calorie  budget,  so  she  would 
+rather not enter it on the app: 
+
+they  would  exceed 
+
+“Normally on my cheat days, I try not to even enter it in the 
+app because I didn't want to see it on the app [laughs]. But I 
+think  we  went  to  the  [restaurant]  with  my  dad,  and  I 
+remember me and my sister, we split a cheesecake, and she 
+went to enter it in the app and saw that it had 40 saturated 
+fats! And she literally started to almost cry after seeing that 
+'cause like, that's just almost, it's weird to say, but it's kind of 
+devastating just because like visually, once you start losing 
+weight, I started to picture the food I ate on parts of my body. 
+So  I  was  like,  ‘That  cheesecake's  going  to  go  right  to  my 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA648thighs, like right to my stomach.’ I didn't even enter it in the 
+app 'cause I was like, ‘I don't want to see it,’ like I didn't want 
+to know.” [U07] 
+
+Another  participant  also  did  not  want  to  see  how  many 
+calories she consumed on the app: 
+
+“What actually happens is if it's way over, I just don't log it 
+[because] I don't want to see the damage. So I literally won't 
+log  it…  I  avoid  that  negative  emotion  by  just  simply  not 
+logging it.” [U10] 
+
+The act of logging those foods and visualizing the calories 
+on the app made it seem “real”, which resulted in too much 
+guilt and shame. By selectively inputting their calories, some 
+participants  were  able  to  minimize  negative  emotions 
+associated with exceeding their calorie budget. 
+
+Making a change 
+Many participants explained that at some point they began to 
+realize  their  behaviors  and  thoughts  associated  with  food, 
+exercise,  and  body  image  were  unhealthy.  When  they 
+actively  decided  to  try  to  be  healthier,  participants  would 
+either change how they used the app or stop using the app. 
+
+Adding in calories and/or focusing on nutrition 
+One way participants changed their app usage and oriented 
+their  use  towards  recovery  was  by  slowly  adding  more 
+calories to their diet and focusing more on nutrition. Through 
+the  app,  they  logged  additional  calories  as  well  as 
+macronutrients. This essentially taught them that they could 
+eat more, which reduced their fears around weight gain. One 
+participant  talked  about  how  adding  calories  and  tracking 
+macronutrients helped her recover: 
+
+"I  slowly  added  calories,  and  then  that's  when  I  started 
+tracking my macros, like my protein, carbs, and fat, to reach 
+a certain amount to slowly gain weight, and then I guess you 
+could say the way I use the app in recovery, like it kind of 
+taught me how to eat again because when I would eat, it was 
+just so disordered. I would have like 5 crackers. It was just 
+all over the place. So I would say tracking my macros on here 
+[the app] helped me recover because it taught me how to eat 
+again,  like  a  breakfast,  lunch,  dinner,  and  then  snacks.” 
+[U03] 
+
+Another participant explained how seeing that she could eat 
+more without gaining too much weight helped her: 
+
+“It's  [the  app]  helped…  I  can  fit  certain  things  into  my 
+macros  and  not  feel  bad  about  it.  I  was  fitting  an  Oreo 
+everyday  kind  of  thing  and  realized  that  there's  no  bad 
+foods… It helped me eat a lot more. This past off-season I 
+was eating so much. Honestly, I don't want get back up to 
+that point, but it really helped my metabolism get up and so 
+I could track it and realize, ‘Oh, I can eat this much food and 
+still stay pretty lean.’” [U14]  
+
+While participants were still logging their foods, they began 
+to change their perceptions around food, which helped them 
+in their recovery. 
+
+Taking a break from weight loss apps 
+Sometimes participants felt the best course of action for their 
+recovery  was  to  stop  using  the  app.  For  example,  one 
+participant  talked  about  how  ceasing  use  really  helped  her 
+recover: 
+
+“[sigh]  I  took  a  break  from  tracking,  like  the  past  year,  I 
+stopped using the app and just kind of started eating like a 
+normal  person  again,  and  that  was  really  nice  so.  I  think 
+everyone should do that, and I think that's really what has 
+helped me.” [U06] 
+
+Another participant described how she stopped using the app 
+when it consumed too much of her time and she was having 
+anxiety attacks about food: 
+
+“I  went  to  a  psychologist  on  campus…  because  I  was  so 
+anxious. And if I would binge-eat, then it would have been 
+binge-eating of vegetables because I was so anxious about 
+gaining  weight.  Just  something  at  some  point  after  a  long 
+miserable, I think semester at least, I just said no more and 
+this  is  crazy.  Nothing  should  drive  me  nuts,  like  food.  So 
+that's  when  I  said,  ‘I'm  going  to  erase  it  [the  app],  I'll  be 
+fine.’ Then I would cheat a little bit, like I would remember 
+everything. So I would write down on a paper. I had this and 
+this and like add it up and do a calculation in my head. But 
+that's when I erased it [the app], when it was just occupying 
+me and energy-wise and time-wise just to insanity really.” 
+[U12] 
+
+At some point, many of the participants stopped using weight 
+loss  apps  at  least  for  some  period  of  time  because  they 
+thought it would help with recovery. 
+
+Falling Back into Old Habits 
+Although a number of participants took a break from using 
+weight loss apps, many of them began using weight loss apps 
+again. Even when participants had recovery goals in mind, 
+they  wanted  to  use  weight  loss  apps  to  keep  track  of  their 
+foods  or  to  lose  weight.  Some  participants  described 
+pressures to lose weight and be fit as a result of being athletes 
+or  fitness  competitors,  and  they  felt  the  app  in  some  ways 
+was the only way to achieve that: 
+
+ “[I started to use the app again because of] just the desire 
+to  lose  the  weight  because  I  know  that  I  can't  do  it  on  my 
+own. I really enjoyed competing in the body building show, 
+and I really enjoyed that experience of being on stage and 
+it's like this very glamorous day, you've never felt prettier. 
+You get your hair done, your makeup done, it's crazy, it's a 
+great day. But it was the after effects that I struggled with, 
+and so I want to do that again, but I know I'm not ready to 
+do it if I can't lose the weight on my own and like get to a 
+better starting point… I think that I am at a healthy weight, 
+just not where I want to be.” [U06] 
+
+In  addition  to  wanting  to  track  foods,  one  participant 
+explained that deleting the app caused her anxiety, so she felt 
+compelled to use it to manage her diet: 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA649“Last summer, I had to delete it. I deleted it and had to get it 
+back 'cause I was like, ‘Oh, my gosh, I need to know what I'm 
+eating.’ And I'm a very scientific numbers-based person, so 
+I like having everything on point... So, it's hard for someone 
+to  have  an  app  like  that  whenever  you're  like  that.  It 
+consumes  you…  I  literally  got  anxiety,  so  I  had  to  get  it 
+back… I just want to hit everything correctly.” [U14] 
+
+While  participants  were  interested  in  supporting  their 
+recovery, they often felt the need to continue to use weight 
+loss apps either to help them reach athletic and fitness goals 
+or to relieve anxiety around food and weight. 
+
+DISCUSSION 
+Our  findings  highlight  two  sides  to  weight  loss  apps, 
+troubling the binary view of technology. On one hand, they 
+can  exacerbate  and  contribute  to  eating  disorders.  On  the 
+other hand, users use apps for eating disorder recovery. We 
+further discuss how our findings trouble the binary view of 
+technology and then provide insights from our study that are 
+useful  for  designing  more  health-focused  apps  and 
+technologies in the future.  
+
+Troubling the Binary View of Technology 
+Typically, studies talk about technology as either a negative 
+influence  or  a  positive  one.  For  example,  from  the 
+sociocultural  perspective,  technology  negatively  impacts 
+body image and eating disorder behaviors while much HCI 
+research views weight loss apps as beneficial to users. Our 
+findings show that weight loss apps can be both negative and 
+positive. In line with the sociocultural perspective, there are 
+aspects of weight loss apps that contribute to and exacerbate 
+eating  disorder  behaviors,  such  as  the  heavy  focus  on 
+numbers, which fuels obsessive logging, makes users want 
+to be exact, changes the relationship with food, and allows 
+them to manipulate the app to lose more weight; and calorie 
+visualizations,  which  make  users  feel  rewarded  for  eating 
+under and guilty for eating over their budget and contribute 
+to  their  need  to  exercise  to  compensate  for  calorie 
+consumption.  Therefore,  some  users,  especially  those  who 
+are still struggling with eating disorder behaviors and poor 
+body  image,  can  easily  be  triggered  by  using  weight  loss 
+apps. In the right mindset though, users who are trying to add 
+more calories into their diet or focus on nutrition may find it 
+helpful  to  track  their  foods  and  alleviate  anxiety  around 
+weight gain. 
+
+As  this  study  demonstrates,  focusing  on  a  binary  view  of 
+technology  is  problematic  because  technology  is  neither 
+inherently  good  nor  bad.  Thus, 
+the  context  around 
+technology use is crucial in understanding users’ needs and 
+the  effects  of  using  health  technology,  particularly  when 
+talking  about  eating  disorders.  While  many  users  believe 
+weight  loss  apps  can  be  problematic  for  those  with  eating 
+disorders, many stated the effects of the app depend a lot of 
+how users use them and users’ own mentalities, attitudes, and 
+motivations during use.   
+
+Users go through stages of use and report both positive and 
+negative effects of the app at these various stages. As users 
+reflect back on their journey, they talk a great deal about the 
+negative  effects  of  the  app  during  the  early  stages  of  use. 
+However, when they first began using the app, they often did 
+not  realize  their  behaviors  were  indicative  of  an  eating 
+disorder  and  even  found  the  app  helpful.  Users  then  often 
+begin  to  realize  their  behaviors  are  unhealthy.  Sometimes 
+users  continue  using  the  app  to  restrict  calories  or  “erase” 
+calories.  However,  some  decide  to  make  a  change  to  be 
+healthier  or  focus  on  eating  disorder  recovery.  Users  are 
+motivated to make a change due to personal reasons, such as 
+realizing the health implications of their eating disorder (e.g., 
+having  a  low  heart  rate,  infertility).  Sometimes  parents 
+discover  their  daughter  has  an  eating  disorder,  and  they 
+intervene by making her see a professional, ceasing use of 
+the app, or controlling her meals and exercise. Other times, 
+users  make  a  change  because  of  the  social  dynamics  in 
+college, which often center on food (e.g., going out to eat, 
+eating at the dining commons, going to parties, etc.). In order 
+to participate in the “typical” college lifestyle and maintain 
+friendships,  users  decide  to  stop  using  the  app,  use  it  less 
+frequently,  or  use  it  differently  (i.e.,  changing  calorie 
+budget). Unfortunately, because of the way in which weight 
+loss  apps  are  designed  and  the  nature  of  eating  disorders, 
+users sometimes revert to old habits of unhealthy eating and 
+exercising  or  begin  using  the  app  when  they  feel  it  is  not 
+healthy for them. This reflects users’ journey of not only how 
+they used weight loss apps, but also how they perceived them 
+in relation to their eating disorder.  
+
+Weight Loss App Design 
+Although weight loss apps can be used in both positive and 
+negative ways, there are certain aspects of weight loss app 
+design that need to be reconsidered in order to focus more on 
+promoting  health.  This  study  highlights  ways  weight  loss 
+apps may unintentionally promote unhealthy habits or lead 
+to  negative  emotions.  For  instance,  we  found  users 
+manipulate the app to avoid negative emotions, such as guilt, 
+when they exceed their calorie budget, which is in line with 
+Cordeiro  et  al.’s  [11]  findings  about  food  journaling  and 
+negative nudges.  
+
+When users exceed their calorie allotment, that number turns 
+red.  This  happens  regardless  if  the  user  exceeds  their 
+allotment  by  1  or  1000  calories.  Many  participants  talked 
+about how seeing this number displayed and how “seeing the 
+red” made them feel anxious and guilty. In order to alleviate 
+these feelings, participants would either exercise to “get back 
+in the green” or not log when they knew they would exceed 
+their  budget.  As  Cordeiro  et  al.  [11]  suggested,  it  is  not 
+necessary to make users feel so guilty for going over their 
+budget,  especially  by  little  amounts,  as  this  may  actually 
+cause users to feel badly, resort to extreme measures, or not 
+use the app at all. 
+
+When users net fewer calories than they are budgeted, many 
+weight  loss  apps  show  their  calories  remaining  as  a  green 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA650number.  We  found  users  felt  the  remaining  number  in 
+combination with the green color encouraged them to try to 
+eat under their allotted calories or purge (most often through 
+exercise)  to  “remove”  calories  from  the  app.    Consuming 
+fewer  calories  gave  participants  a  sense  of  pride  and 
+achievement, which they felt was intensified because of how 
+the app showed their food and calories. Interestingly, this is 
+in contrast to Cordeiro et al. [11], who found general users 
+did not feel strong positive emotions for eating under their 
+calorie budget and seeing the green did not make them feel 
+rewarded, which highlights how different users are impacted 
+differently,  showcasing  the  interaction  between  eating 
+disorders and app design. Thus, we should reconsider how 
+we  visualize  being  over  or  under  budget  as  red  and  green 
+have strong emotional responses based on how they are used 
+throughout society. These visuals need to be more nuanced, 
+perhaps using different colors. Future work needs to explore 
+different  types  of  feedback  and  visualizations  and  test  for 
+their impact on different types of users, including those with 
+eating disorders. 
+
+Our  findings  also  show  users  often  become  obsessed  with 
+logging, which is in line with Cordeiro et al. [11]. HCI has 
+typically  viewed  breaks  from  logging  as  negative  or  a 
+barrier;  however,  we  should  reconsider  this  viewpoint  as 
+breaks can be healthy for users to eat “normally” and listen 
+to  their  body’s  signals.  For  instance,  users  with  eating 
+disorders often find taking a break from using the app helps 
+them  in  the  process  of  recovery.  However,  contrary  to 
+Cordeiro et al. [11], users with eating disorders do not really 
+“lose the habit” of logging because they feel the need have 
+control  over  their  food,  diet,  weight,  etc.  This  begs  the 
+question of how much and how often we should tell users to 
+log? For some, we should encourage logging breaks, monitor 
+how often they use the app, and recommend less use. 
+
+We found weight loss apps create a need to be exact and an 
+acute  awareness  of  numbers.  While  this  awareness  was 
+mentioned in Cordeiro et al. [11], it was not as extreme. In 
+HCI,  this  awareness  is  often  viewed  as  a  positive,  but  our 
+work  shows  that  it  can  promote  an  unhealthy  relationship 
+with  food.  While  Cordeiro  et  al.  [11]  found  users  were 
+challenged to log because of the variety of foods they eat, for 
+users  with  eating  disorders,  such  an  awareness  is  created 
+around  calories  that  users  eat  the  same  types  of  foods 
+repetitively  because  they  are  “safe”  foods.  To  counteract 
+these  issues,  apps  should  focus  more  on  healthy  behaviors 
+like  eating  nutrient-rich  foods  and  a  variety  of  foods.  This 
+number focus is not necessarily in line with healthy lifestyle 
+promotion, as echoed in Cordeiro et al.’s [11] findings about 
+apps being about ease of tracking (easy to log fast food and 
+pre-made food).  
+
+Contrary to Cordeiro et al. [11] who found the eating context 
+was a barrier to journaling, instead of not logging, users with 
+eating disorders will preplan for or avoid social engagements 
+or scenarios where they might be challenged to log; if they 
+
+cannot preplan or avoid it, they feel anxiety, which helps to 
+perpetuate their eating disorder. 
+
+When we try to discourage users from certain behaviors, we 
+have  to  make  sure  we’re  not  unintentionally  encouraging 
+negative habits. For example, users saw a warning message 
+of  eating  too  little  as  an  accomplishment.  It  may  also  be 
+helpful to eliminate the ability to cancel out calories through 
+exercise and instead allow users to track exercise but do not 
+show a deduction in calories consumed. 
+
+Because users manipulate the app to lose weight, perhaps we 
+can  find  other  ways  to  determine  user  needs  besides  self-
+entering.  For 
+instance,  apps  could  synchronize  with 
+wearables that give users a sense of what they need but do 
+not show the quantifications to users. This falls in line with 
+Purpura  et  al.  [32]  who  cautioned  that  weight  technology 
+focuses too heavily on quantitative measures and “promotes 
+behaviors  based  on  limited  understanding  of  users’  actual 
+personal situations” p429.   
+
+Currently these types of apps do not support recovery goals 
+or weight gain goals, which helps explain why users may fall 
+back  into  old  habits  even  when  they  have  recovery  goals. 
+Some apps do not allow weight gain goals, and if they do, 
+then they are not designed to persuade users to gain (green if 
+under not over even if you have a weight gain goal). More 
+personalization  could  help.  For  instance,  if  users  have  a 
+weight gain goal, then when they exceed their budget, they 
+should feel a sense of accomplishment as they are moving 
+toward their goal. Current apps do not support this nuanced 
+aspect  of  goal  setting.  We  need  to  reconsider  how  we 
+motivate users based on their individual needs. 
+
+There should be a shifting focus away from just weight loss 
+as a marker for health, and we need to find ways to support 
+this  in  apps.  Future  research  needs  to  study  the  effects  of 
+design in more detail on various types of users. 
+
+CONCLUSION 
+We trouble the binary view of technology by showing that as 
+users reflect on their health journey, they report both positive 
+and negative effects and perceptions of weight loss apps. In 
+fact, women go through a journey of weight loss apps use as 
+they change and go through different stages of their eating 
+disorders. While every user’s journey is somewhat different 
+and  the  timeframe  between  disordered  use  and  making  a 
+change varies, there are patterns of use that exist across users 
+with eating disorders. This study demonstrates the dynamic 
+nature  of  weight  loss  app  use,  which  is  important  for 
+designing weight loss apps that promote health. 
+
+ACKNOWLEDGMENTS 
+This  material 
+the  National  Science 
+Foundation under Grant #DGE1255832. Anything expressed 
+in this does not necessarily reflect the views of the NSF. 
+
+is  supported  by 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA651 
+ 
+REFERENCES 
+1. 
+
+American Psychiatric Association (ed.). 2013. Diagnostic 
+and Statistical Manual of Mental Disorders (DSM-5). 
+American Psychiatric Publishing, Washington, D.C. and 
+London, England. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+12. 
+
+Julie L. Andsager. 2014. Research directions in social 
+media and body image. Sex Roles 71: 407–413. 
+https://doi.org/10.1007/s11199-014-0430-4 
+
+Rheanna N Ata, Lauren M Schaefer, and J Kevin 
+Thompson. 2015. Sociocultural Theories of Eating 
+Disorders. In The Wiley Handbook of Eating Disorders. 
+John Wiley & Sons, Ltd, 269–282. 
+https://doi.org/10.1002/9781118574089.ch21 
+
+Shlomo Berkovsky, Jill Freyne, and Mac Coombe. 2012. 
+Physical Activity Motivating Games. ACM Transactions 
+on Computer-Human Interaction 19, 4: 1–41. 
+https://doi.org/10.1145/2395131.2395139 
+
+Virginia Braun and Victoria Clarke. 2006. Using thematic 
+analysis in psychology. Qualitative Research in 
+Psychology 3, 2: 77–101. 
+https://doi.org/10.1191/1478088706qp063oa 
+
+Brandon Brown, Marshini Chetty, Andrea Grimes, and 
+Ellie Harmon. 2006. Reflecting on health. In CHI ’06 
+Extended Abstracts, 1807–1812. 
+https://doi.org/10.1145/1125451.1125794 
+
+S. Chancellor, Jessica Pater, T. Clear, E. Gilber, and 
+Munmun De Choudhury. 2016. #thyghgapp: Instagram 
+Content Moderation and Lexical Variation in Pro-Eating 
+Disorder Communities. In CSCW, 1–13. 
+
+Eun Kyoung Choe, Bongshin Lee, Sean Munson, Wanda 
+Pratt, and Julie A Kientz. 2013. Persuasive performance 
+feedback: The effect of framing on self-efficacy. In 
+AMIA, 1–9. 
+
+Eun Kyoung Choe, Nicole B. Lee, Bongshin Lee, Wanda 
+Pratt, and Julie a. Kientz. 2014. Understanding 
+quantified-selfers’ practices in collecting and exploring 
+personal data. In CHI ’14, 1143–1152. 
+https://doi.org/10.1145/2556288.2557372 
+
+Felicia Cordeiro, Elizabeth Bales, Erin Cherry, and James 
+Fogarty. 2015. Rethinking the mobile food journal: 
+Exploring opportunities for lightweight photo-based 
+capture. In CHI ’15, 1–10. 
+https://doi.org/10.1145/2702123.2702154 
+
+Felicia Cordeiro, Daniel a Epstein, Edison Thomaz, 
+Elizabeth Bales, Arvind K Jagannathan, Gregory D 
+Abowd, and James Fogarty. 2015. Barriers and Negative 
+Nudges: Exploring Challenges in Food Journaling. 
+Proceedings of the 33rd Annual ACM Conference on 
+Human Factors in Computing Systems - CHI ’15: 1159–
+1162. https://doi.org/10.1145/2702123.2702155 
+
+Kristen M. Culbert, Sarah E. Racine, and Kelly L. 
+Klump. 2015. Research Review: What we have learned 
+about the causes of eating disorders - A synthesis of 
+sociocultural, psychological, and biological research. 
+Journal of Child Psychology and Psychiatry and Allied 
+Disciplines 56, 11: 1141–1164. 
+https://doi.org/10.1111/jcpp.12441 
+
+13. 
+
+14. 
+
+15. 
+
+16. 
+
+17. 
+
+18. 
+
+19. 
+
+20. 
+
+21. 
+
+22. 
+
+23. 
+
+24. 
+
+25. 
+
+Elizabeth V Eikey and Kayla M Booth. Recovery and 
+Maintenance: How Women with Eating Disorders Use 
+Instagram. In iConference, 1–12. 
+
+D. Eisenberg, E.J. Nicklett, K. Roeder, and N.E. Kirz. 
+2011. Eating Disorder Symptoms Among College 
+Students: Prevalence, Persistence, Correlates, and 
+Treatment-Seeking. Journal of American College Health 
+59, 8: 70–707. https://doi.org/10.1038/nature13314.A 
+
+Christopher G. Fairburn and Paul J. Harrison. 2003. 
+Eating disorders. Lancet 361, 9355: 407–416. 
+https://doi.org/10.1016/S0140-6736(03)12378-1 
+
+Jasmine Fardouly, Phillippa C Diedrichs, Lenny R 
+Vartanian, and Emma Halliwell. 2015. Social 
+comparisons on social media: The impact of Facebook on 
+young women’s body image concerns and mood. Body 
+Image 13: 38–45. 
+https://doi.org/10.1016/j.bodyim.2014.12.002 
+
+Jasmine Fardouly and Lenny R. Vartanian. 2015. 
+Negative comparisons about one’s appearance mediate 
+the relationship between Facebook usage and body image 
+concerns. Body Image 12: 82–88. 
+https://doi.org/10.1016/j.bodyim.2014.10.004 
+
+Ellen E. Fitzsimmons-Craft. 2011. Social psychological 
+theories of disordered eating in college women: Review 
+and integration. Clinical Psychology Review 31, 7: 1224–
+1237. https://doi.org/10.1016/j.cpr.2011.07.011 
+
+Susannah Fox and Maeve Duggan. 2012. Mobile Health 
+2012. Pew Internet & American Life Project. Retrieved 
+from http://pewinternet.org/Reports/2012/Mobile-
+Health.aspx 
+
+Visda Goudarzi and Stanislav Tomic. 2006. PEDdo: 
+Steps to a healthy lifestyle. In CHI ’06 Extended 
+Abstracts, 1825–1830. 
+https://doi.org/10.1145/1125451.1125797 
+
+Sharon L Hoerr, Ronda Bokram, Brenda Lugo, Tanya 
+Bivins, and Debra R Keast. 2002. Risk for disordered 
+eating relates to both gender and ethnicity for college 
+students. Journal of the American College of Nutrition 
+21, 4: 307–314. 
+https://doi.org/10.1080/07315724.2002.10719228 
+
+Anne Hsu, Jing Yang, Yigit Han Yilmaz, Md Sanaul 
+Haque, Cengiz Can, and Ann E. Blandford. 2014. 
+Persuasive technology for overcoming food cravings and 
+improving snack choices. In CHI ’14, 3403–3412. 
+https://doi.org/10.1145/2556288.2557099 
+
+Ji Won Kim and T Makana Chock. 2015. Body image 
+2.0: Associations between social grooming on Facebook 
+and body image concerns. Computers in Human Behavior 
+48: 331–339. https://doi.org/10.1016/j.chb.2015.01.009 
+
+Annalise G. Mabe, K. Jean Forney, and Pamela K. Keel. 
+2014. Do you “like” my photo? Facebook use maintains 
+eating disorder risk. International Journal of Eating 
+Disorders 47: 516–523. https://doi.org/10.1002/eat.22254 
+
+M N Marshall. 1996. Sampling for qualitative research. 
+Family Practice 13, 6: 522–526. Retrieved from 
+http://www.ncbi.nlm.nih.gov/pubmed/9023528 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA65226. 
+
+27. 
+
+28. 
+
+29. 
+
+30. 
+
+31. 
+
+32. 
+
+33. 
+
+34. 
+
+35. 
+
+36. 
+
+37. 
+
+Evelyn P Meier and James Gray. 2014. Facebook photo 
+activity associated with body image disturbance in 
+adolescent girls. Cyberpsychology, Behavior, and Social 
+Networking 17, 4: 199–206. 
+https://doi.org/10.1089/cyber.2013.0305 
+
+Florian Mueller, Joe Marshall, Rohit Ashok Khot, Stina 
+Nylander, and Jakob Tholander. 2014. Jogging with 
+technology: Interaction design supportging sport 
+activities. CHI ’14 Extended Abstracts: 1131–1134. 
+https://doi.org/10.1145/2559206.2559209 
+
+M Neve, P J Morgan, P R Jones, and C E Collins. 2009. 
+Effectiveness of web-based interventions in achieving 
+weight loss and weight loss maintenance in overweight 
+and obese adults: a systematic review with meta-analysis. 
+Obesity Reviews: International Association for the Study 
+of Obesity 11: 306–321. https://doi.org/10.1111/j.1467-
+789X.2009.00646.x 
+
+Edward Nguyen, Tanmay Modak, Elton Dias, Yang Yu, 
+and Liang Huang. 2014. Fitnamo: Using bodydata to 
+encourage exercise through google glassTM. In CHI ’14 
+Extended Abstracts, 239–244. 
+https://doi.org/10.1145/2559206.2580933 
+
+Jessica Pater, Oliver Haimson, Nazanin Andalibi, and 
+Elizabeth D Mynatt. 2016. “Hunger hurts but starving 
+works:” characterzing the presentation of eating disorders 
+online. In CSCW, 1–16. 
+https://doi.org/10.1145/2818048.2820030 
+
+Richard M. Perloff. 2014. Social media effects on young 
+women’s body image concerns: Theoretical perspectives 
+and an agenda for research. Sex Roles: 363–377. 
+https://doi.org/10.1007/s11199-014-0384-6 
+
+Stephen Purpura, Victoria Schwanda, Kaiton Williams, 
+William Stubler, and Phoebe Sengers. 2011. Fit4life: The 
+design of a persuasive technology promoting healthy 
+behavior and ideal weight. Proceedings of the 2011 
+annual conference on Human factors in computing 
+systems - CHI ’11: 423. 
+https://doi.org/10.1145/1978942.1979003 
+
+L. Reba-Harrelson, A. Von Holle, R. M. Hamer, R. 
+Swann, M. L. Reyes, and Cynthia M. Bulik. 2009. 
+Patterns and prevalence of disordered eating and weight 
+control behaviors in women ages 25-45. Eating and 
+Weight Disorders 14, 4. 
+https://doi.org/10.1007/BF03325116 
+
+Mark F Reinking, Laura E Alexander, and St Louis. 
+2005. Prevalence of Disordered-Eating Behaviors 
+Athletes and Nonathletes. Journal of Athletic Training 
+40, 1: 47–51. 
+
+John Rooksby, Mattias Rost, Alistair Morrison, and 
+Matthew Chalmers. 2015. Pass the ball: Enforced turn-
+taking in activity tracking. In CHI ’15, 2417–2426. 
+https://doi.org/10.1145/2702123.2702577 
+
+Catherine A. Sanderson. 2010. Social Psychology. John 
+Wiley & Sons, Inc. 
+https://doi.org/10.4135/9781446247198 
+
+C M Shisslak, M Crago, and L S Estes. 1995. The 
+spectrum of eating disturbances. The International 
+
+Journal of Eating Disorders 18, 3: 209–219. 
+https://doi.org/10.1002/1098-
+108x(199511)18:3<209::aid-eat2260180303>3.0.co;2-e 
+
+Aaron Smith. 2015. U.S. Smartphone Use in 2015. Pew 
+Research Center, 1–7. Retrieved November 11, 2015 
+from http://www.pewinternet.org/2015/04/01/us-
+smartphone-use-in-2015/ 
+
+Wendy Spettigue and Katherine A Henderson. 2004. 
+Eating disorders and the role of the media. The Canadian 
+Child and Adolescent Psychiatry Review 13, 1: 16–19. 
+
+Katarzyna Stawarz, Anna L Cox, and Ann Blandford. 
+2015. Beyond self-tracking and reminders: Designing 
+smartphone apps that support habit formation. In CHI 
+’15, 2653–2662. 
+https://doi.org/10.1145/2702123.2702230 
+
+Cassandra Marie Stover. 2014. Elements of a Sensibility: 
+Fitness Blogs and Postfeminist Media Culture. The 
+University of Texas at Austin. 
+
+Samantha Stronge, Lara M. Greaves, Petar Milojev, Tim 
+West-Newman, Fiona Kate Barlow, and Chris G. Sibley. 
+2015. Facebook is linked to body dissatisfaction: 
+Comparing users and non-users. Sex Roles 73: 200–213. 
+https://doi.org/10.1007/s11199-015-0517-6 
+
+Eric Strother, Raymond Lemberg, Stevie Chariese 
+Stanford, and Dayton Turberville. 2012. Eating Disorders 
+in Men: Underdiagnosed, Undertreated, and 
+Misunderstood. Eating Disorders 20, 5: 346–355. 
+https://doi.org/10.1080/10640266.2012.715512 
+
+Tina Tan, Angeline Kuek, Shih Ee Goh, Ee Lian Lee, and 
+Victor Kwok. 2016. Internet and smartphone application 
+usage in eating disorders: A descriptive study in 
+Singapore. Asian Journal of Psychiatry 19: 50–55. 
+https://doi.org/10.1016/j.ajp.2015.11.007 
+
+Marika Tiggemann and Mia Zaccardo. 2015. “Exercise to 
+be fit, not skinny”: The effect of fitspiration imagery on 
+women’s body image. Body Image 15: 61–67. 
+https://doi.org/10.1016/j.bodyim.2015.06.003 
+
+Tammy Toscos, Anne Faber, Shunying An, and Mona 
+Praful Gandhi. 2006. Chick clique: Persuasive technology 
+to motivate teenage girls to exercise. In CHI ’06 
+Extended Abstracts, 1873–1878. 
+https://doi.org/10.1145/1125451.1125805 
+
+Dhaval Vyas, Zachary Fitz-walter, Erica Mealy, 
+Alessandro Soro, Jinglan Zhang, and Margot Brereton. 
+2015. Exploring physical activities in an employer-
+sponsored health program. In CHI ’15 Extended 
+Abstracts, 1421–1426. 
+https://doi.org/10.1145/2702613.2732815 
+
+T. D. Wade, A. Keski-Rahkonen, and J. Hudson. 2011. 
+Epidemiology of eating disorders. In Textbook in 
+Psychiatric Epidemiology (3rd ed.) (M. Tsuang). Wiley, 
+New York, 343–360. 
+https://doi.org/10.1002/9780470976739.ch20 
+
+Greg Walsh and Jennifer Golbeck. 2014. StepCity: A 
+preliminary investigation of a personal informatics-based 
+social game on behavior change. In CHI ’14 Extended 
+
+38. 
+
+39. 
+
+40. 
+
+41. 
+
+42. 
+
+43. 
+
+44. 
+
+45. 
+
+46. 
+
+47. 
+
+48. 
+
+49. 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA653Abstracts, 2371–2376. 
+https://doi.org/10.1145/2559206.2581326 
+
+52. 
+
+50. 
+
+51. 
+
+Tz-Li Wang and Ya-Hui Bella Lien. 2013. The power of 
+using video data. Quality & Quantity 47: 2933–2941. 
+https://doi.org/10.1007/s11135-012-9717-0 
+
+Elanor H. Wertheim, Susan J. Paxton, and Simone 
+Blaney. 2009. Body image in girls. In Body image, eating 
+disorders, and obesity in youth: Assessment, prevention, 
+and treatment (2nd ed.). American Psychological 
+Association, Washington, D.C., 47–76. 
+
+2014. Hacking Health: How Consumers Use 
+Smartphones and Wearable Tech To Track Their Health. 
+Nielsen. Retrieved August 8, 2016 from 
+http://www.nielsen.com/us/en/insights/news/2014/hackin
+g-health-how-consumers-use-smartphones-and-wearable-
+tech-to-track-their-health.html 
+
+Self-tracking Mental HealthCHI 2017, May 6–11, 2017, Denver, CO, USA654 
+

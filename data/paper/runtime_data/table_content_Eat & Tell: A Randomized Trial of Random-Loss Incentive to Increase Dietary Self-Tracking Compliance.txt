@@ -1,0 +1,20 @@
+Table of Contents:
+
+1. Introduction
+2. Related Work
+    2.1 Lifestyle Data and The Quantified Self
+    2.2 Incentives for Health Behavior Change
+3. Eat & Tell App
+    3.1 Food Diary Data Integration
+    3.2 Self-Report Surveys
+4. Random-Loss Incentive
+5. Study Design and Procedures
+    5.1 Recruitment
+    5.2 Procedures
+    5.3 Participants
+6. Analysis and Results
+    6.1 Preliminary Analysis
+    6.2 Effectiveness of the random-loss incentive
+    6.3 Post-intervention self-tracking behavior
+7. Concluding Discussion
+8. Acknowledgement

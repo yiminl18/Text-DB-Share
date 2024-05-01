@@ -1,0 +1,16 @@
+1. Introduction
+2. Related Work
+3. Background
+4. Method and Participants
+5. Findings
+   5.1 General effects
+   5.2 Motivation and reflection
+   5.3 Accounting and getting credit
+   5.4 Goals and rewards
+   5.5 Sharing of data and social effects
+6. Discussion
+   6.1 Designing for long-term support
+   6.2 Comparisons with previous research findings
+7. Conclusion
+8. Acknowledgments
+9. References
