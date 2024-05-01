@@ -1,1 +1,5 @@
-1. The GPT API needs to be set in the folder 
+1. The GPT API needs to be set in the folder connection/
+2. The data path needs to be updated based on the local folder. 
+3. The main file is in execution/main.py:
+  3.1: the variable strategy could be set as {GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary} to run the corresponding strategy
+  3.2: the variable data could be set as {NoticeViolation, paper, civic} to run the corresponding datasets.
