@@ -3,7 +3,7 @@ import sys
 import os
 import Levenshtein
 import spacy
-import llama_index_azure
+import llama_index_openai
 import filtering
 import json 
 import pandas as pd
@@ -45,14 +45,14 @@ def evaluate_udf(strategy, model, question, context = None, index = None, block_
     if(strategy == 'textdb_summary'):
         return filtering.tree_search_with_summary(tree, text,1,index,question,k)
     if(strategy == 'LlamaIndex_seq'):
-        response, sz = llama_index_azure.semantic_search(index, question, k)
+        response, sz = llama_index_openai.semantic_search(index, question, k)
         return response, sz
     if(strategy == 'LlamaIndex_tree'):
-        response, sz = llama_index_azure.tree_index_retrieve(index, question)
+        response, sz = llama_index_openai.tree_index_retrieve(index, question)
         return response, sz
     if(strategy == 'LlamaIndex_long'):
-        context, sz = llama_index_azure.context_retrieve(index, k, question)
-        long_context = llama_index_azure.get_llamaindex_long_context(context, text)
+        context, sz = llama_index_openai.context_retrieve(index, k, question)
+        long_context = llama_index_openai.get_llamaindex_long_context(context, text)
         prompt = (question,long_context)
         response = model(model_name,prompt)
         return response, context_size(long_context)

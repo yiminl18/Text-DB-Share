@@ -6,7 +6,7 @@ import sys
 import os
 import Levenshtein
 import json
-import llama_index_azure
+import llama_index_openai
 # Get the directory of the current file
 current_file_directory = os.path.dirname(os.path.abspath(__file__))
 # Get the parent directory

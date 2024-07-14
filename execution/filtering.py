@@ -3,10 +3,10 @@ from nltk.tokenize import sent_tokenize
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import json 
-import llama_index_azure
+import llama_index_openai
 import UDF_registration
 import model_build
-import llama_index_azure
+import llama_index_openai
 import summary
 from nltk.tokenize import word_tokenize
 import os 
@@ -181,7 +181,7 @@ def display_tree(tree, nodes):
 
 def semantic_search_llamaindex(query, blocks_nodes, index, k):#block is a text block, such as parapragh, block_node is the corresponding node id in the tree 
 
-    chunks = llama_index_azure.context_retrieve(index, query, k)#context is a set of text chunks
+    chunks = llama_index_openai.context_retrieve(index, query, k)#context is a set of text chunks
     nodes = find_tree_nodes_from_text_chunks(chunks, blocks_nodes)
     return nodes 
 
@@ -338,7 +338,7 @@ def filter_by_human_label(label, level, tree, nodes):
     return ans 
 
 def get_context_metadata(index, question, k, keyword):
-    response, sz, rag_sentence = llama_index_azure.text_retriever(index, k, question, keyword)
+    response, sz, rag_sentence = llama_index_openai.text_retriever(index, k, question, keyword)
     print(rag_sentence)
 
 def tree_search_with_summary(tree, text, stop_level, index, question, k):
@@ -362,7 +362,7 @@ def tree_search_with_summary(tree, text, stop_level, index, question, k):
         #construct extrasive summary
         #node_context = get_context_for_coarse_node(name, level, tree, paras)
         #node_summary = summary.spacy_summary(node_context,k=0,percent=0.01)
-        response, sz, rag_sentence = llama_index_azure.text_retriever(index, k, question, keyword)
+        response, sz, rag_sentence = llama_index_openai.text_retriever(index, k, question, keyword)
         context +=  rag_sentence + '. '
         context += '\n'
 
@@ -437,12 +437,12 @@ if __name__ == "__main__":
     for text_file in text_files:
         print(text_file)
         text = read_text(text_file)
-        tree_path = llama_index_azure.construct_tree_path(text_file, text_folder, tree_folder)
-        index_path = llama_index_azure.construct_index_path(text_file, text_folder, index_folder, 'sentence')
+        tree_path = llama_index_openai.construct_tree_path(text_file, text_folder, tree_folder)
+        index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'sentence')
         print(index_path)
         tree = read_tree_json(tree_path)
         paras = extract_paragraph_nodes(text)
-        index = llama_index_azure.load_index(index_path)
+        index = llama_index_openai.load_index(index_path)
         tree_search_with_summary(tree, text, 1, index, question, 1)
         #get_context_metadata(index,question,1,(1,"Proposed Civil Penalty"))
         # context = tree_search_with_metadata_summary(tree, paras)
