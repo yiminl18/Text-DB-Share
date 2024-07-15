@@ -1,28 +1,24 @@
 from openai import OpenAI
-
+import openai
+import os 
 client = OpenAI()
 
-path = '/Users/yiminglin/Documents/Codebase/config/openai/config.txt'
 
-def read_key(path):
-    with open(path, 'r') as file:
-    # Iterate over each line in the file
-        content = file.read()
-        lines = content.split('\n')
-    return lines[0], lines[1]
+# Access the API key from the environment variable
+api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = api_key
 
-openai.organization,openai.api_key = read_key(path)
+#print(api_key)
 
 def chatGPT_api(message_content,temperature=0):
     ##message_content is string
-    
     response = client.chat.completions.create(model = "gpt-4",
-    messages = [
-        {"role": "user", "content": message_content}],
-    temperature = temperature)
+        messages = [
+            {"role": "user", "content": message_content}],
+        temperature = temperature)
 
-    # print(response["choices"][0]["message"]["content"])
-    return response["choices"][0]["message"]["content"]
+    return response.choices[0].message.content
+    #return response["choices"][0]["message"]["content"]
 
 def gpt_4(prompt):
     message_content = prompt[0] + prompt[1]
