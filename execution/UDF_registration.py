@@ -96,7 +96,7 @@ def get_combined_prompt(sql, desp, data):
 
         return prompt_civic
     
-    if(data == 'notice'):
+    if(data == 'NoticeViolation'):
         prompt = 'If all the following conditions are satisfied based on the violation document, return "True", otherwise, return "False". If there are no projects satisfying all the conditions, return "None". '
         for left, right in filters.items():
             attr = left

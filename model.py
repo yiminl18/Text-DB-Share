@@ -35,6 +35,9 @@ def model(model_name, prompt):
     if(model_name is 'gpt4_long'):
         from models.gpt_4_long import gpt_4_long
         return gpt_4_long(prompt)
+    if(model_name == 'gpt4o'):
+        from models.gpt_4o import gpt_4o
+        return gpt_4o(prompt)
     return 'input model does not exist'
 
 

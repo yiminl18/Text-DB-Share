@@ -7,7 +7,7 @@ import llama_index_openai
 import UDF_registration
 import model_build
 import llama_index_openai
-import summary
+import summarization
 from nltk.tokenize import word_tokenize
 import os 
 import sys
@@ -18,7 +18,7 @@ current_file_directory = os.path.dirname(os.path.abspath(__file__))
 parent_directory = os.path.dirname(current_file_directory)
 sys.path.append(parent_directory)
 from model import model 
-model_name = 'gpt4_long'
+model_name = 'gpt4o'
 
 def context_size(context):
     return len(word_tokenize(context))
@@ -341,36 +341,87 @@ def get_context_metadata(index, question, k, keyword):
     response, sz, rag_sentence = llama_index_openai.text_retriever(index, k, question, keyword)
     print(rag_sentence)
 
-def tree_search_with_summary(tree, text, stop_level, index, question, k):
+def search_ancestor_names(tree, node, pa):
+    #pa: str -> int
+    names = []
+    names.append(tree[str(node)]['name'])
+    f = True
+    while(f):
+        parent = pa[str(node)]
+        if(parent == node or str(parent) not in pa):#reach the root node
+            break
+        names.append(tree[str(parent)]['name'])
+        node = parent
+    #print('------')
+    #print(names)
+    return names
+
+def get_context_by_node_ID(node, tree, paras):
+    #return context for coarse node in the tree 
+    target = node
+    context = ''
+    pids = []
+
+    children = find_para_chilren(target, tree)
+    #print(children)
+    for child in children:
+        pids.append(tree[str(child)]['pid'])
+
+    #collect context 
+    pids.sort() #make sure the order of paras is correct 
+    #print(pids)
+    for pid in pids:
+        context += paras[pid]
+    return context
+
+def summary_construct_per_node(tree, node, index, k, question, parent, paras):
+    level = tree[str(node)]['level']
+    name = tree[str(node)]['name']
+    #print(name)
+    keyword = (level, name)
+
+    summary = ''
+
+    #names of current node and its ancestors
+    summary += ','.join(search_ancestor_names(tree, node, parent))
+    summary += '. \n' 
+    #print(summary)
+
+    #append extrasive summary 
+    #context = get_context_by_node_ID(node, tree, paras)
+    #summary += summarization.spacy_summary(context, k = 3)
+
+    #sentences that are related with question
+    response, sz, rag_sentence = llama_index_openai.text_retriever(index, k, question, keyword)
+
+    #expand the rag_sentences to its neighbors 
+    summary += rag_sentence
+    summary += '. \n\n'
+
+    return summary
+
+def tree_search_with_summary(tree, text, stop_level, index, question, parent, paras, k):
     nodes = get_node_by_level(tree, stop_level)
-    
-    #print(response, sz)
-    #instruction = 'The following is a list of texts describing each section in a paper document. Each text starts with a ID number. Return the ID of the text that most likely contains the answer to the question: ' + question + ' .' 
+    # print(stop_level)
+    #print(nodes)
     instruction = 'The following is a list of texts describing each section in a paper document. Each text starts with a ID number. ' + question + '. ' 
     context = ''
     id = 1
     mp = {}
-    paras = extract_paragraph_nodes(text)
+    response = ''
+    #paras = extract_paragraph_nodes(text)
     for node in nodes:
-        level = tree[str(node)]['level']
         name = tree[str(node)]['name']
-        keyword = (level, name)
         context += str(id) + ': '
         context += 'Section name is ' + name + '. '
         context += 'Section summary is: '
 
-        #construct extrasive summary
-        #node_context = get_context_for_coarse_node(name, level, tree, paras)
-        #node_summary = summary.spacy_summary(node_context,k=0,percent=0.01)
-        response, sz, rag_sentence = llama_index_openai.text_retriever(index, k, question, keyword)
-        context +=  rag_sentence + '. '
-        context += '\n'
-
-        mp[id] = name
+        summary = summary_construct_per_node(tree, node, index, k, question, parent, paras)
+        context +=  summary
+        context += '\n\n'
         id += 1
-        # print(name)
-        # print(node_summary)
-        # print('----')
+
+        
     #print(instruction, context)
     prompt = (instruction,context)
     response = model(model_name,prompt)

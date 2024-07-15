@@ -17,7 +17,7 @@ current_file_directory = os.path.dirname(os.path.abspath(__file__))
 parent_directory = os.path.dirname(current_file_directory)
 sys.path.append(parent_directory)
 from model import model 
-model_name = 'gpt4_long'
+model_name = 'gpt4o' #gpt35, gpt4o
 
 def evaluate_single_project(context, model, selected_attr, udfs):
     instruction = udfs[selected_attr]
@@ -28,7 +28,7 @@ def evaluate_single_project(context, model, selected_attr, udfs):
 def context_size(context):
     return len(word_tokenize(context))
 
-def evaluate_udf(strategy, model, question, context = None, index = None, block_map = None, text = None, tree = None, k = 5):
+def evaluate_udf(strategy, model, question, context = None, index = None, block_map = None, text = None, tree = None, tuple_level = 1, parent = None, paras = None, k = 5):
     if(strategy == 'GPT_single'):
         prompt = (question,context)
         response = model(model_name,prompt)
@@ -43,7 +43,7 @@ def evaluate_udf(strategy, model, question, context = None, index = None, block_
         response = model(model_name,prompt)
         return response, context_size(context)
     if(strategy == 'textdb_summary'):
-        return filtering.tree_search_with_summary(tree, text,1,index,question,k)
+        return filtering.tree_search_with_summary(tree,text,tuple_level,index,question,parent,paras, k)
     if(strategy == 'LlamaIndex_seq'):
         response, sz = llama_index_openai.semantic_search(index, question, k)
         return response, sz

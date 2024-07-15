@@ -33,7 +33,7 @@ def context_size(context):
     return len(word_tokenize(context))
 
 
-def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder):
+def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_folder):
     text_files = model_build.scan_files(text_folder)
     entity_mention = 'project' #natural language description of an entity 
     desp = UDF_registration.civic_attr_desp()
@@ -57,19 +57,6 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder):
             title = model_build.clean_paper_title(text_file, text_folder)
             print(i,title)
 
-            # index = None
-            # if(strategy == 'LlamaIndex' or strategy == 'textdb' or strategy == 'LlamaIndex-long'):
-            #     index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'paragraph')
-            # if(strategy == 'LlamaIndex-tree'):
-            #     index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'tree')
-
-            # if(llama_index_openai.file_exist(index_path) == False):
-            #     continue
-            # index = llama_index_openai.load_index(index_path)
-            # paras = filtering.extract_paragraph_nodes(text)
-            # tree_path = llama_index_openai.construct_tree_path(text_file, text_folder, tree_folder)
-            # tree = filtering.read_tree_json(tree_path)
-
             st = time.time()
             size = 0
 
@@ -77,7 +64,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder):
 
             if(strategy == 'GPT_single'):
                 for left, right in sql['filters'].items():#for each filter 
-                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals')
+                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals',data)
                     print(left, right, prompt)
                     
                     res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
@@ -104,7 +91,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder):
 
                 filters = sql['filters']
                 for left, right in sql['filters'].items():#for each filter 
-                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals')
+                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals',data)
                     print(left, right, prompt)
 
                     res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index, k=15)
@@ -122,7 +109,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder):
 
                 filters = sql['filters']
                 for left, right in sql['filters'].items():#for each filter 
-                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals')
+                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals',data)
                     print(left, right, prompt)
 
                     res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index)
@@ -130,34 +117,43 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder):
                     print(str(res).lower(), sz)
                     size += sz
 
-            elif(strategy == 'textdb'):
-                bool_filters = sql['bool_filters']
-                #print(bool_filters)
-                context = filtering.tree_search_with_metadata_summary(tree, paras, sql_id)
-                ans = ''
-                for name, cons in context.items():#iterate each project
-                    ssz = 0
-                    yc = 0
-                    for key, prompt in bool_filters.items():#check each filter 
-                        res, sz = evaluation.evaluate_udf('GPT', model, prompt, context = cons)
-                        ssz += sz
-                        if('yes' in res.lower()):
-                            yc += 1
-                    size += ssz
-                    if(yc == 2):
-                        ans = ans + name + ','
-                response.append(ans[:-1])#remove last ','
+            elif(strategy == 'textdb_summary'):
+                text_val = filtering.read_text(text_file)
+                paras = filtering.extract_paragraph_nodes(text_val)
+                tree_path = tree_folder + '/tree_' + title
+                index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'sentence')
+                #print('tree path:')
+                #print(tree_path)
+                if(llama_index_openai.file_exist(tree_path) == False):#check tree existence
+                    #print('yes')
+                    continue
+                tree_val = filtering.read_tree_json(tree_path)
+                parent = filtering.search_parent(tree_val, 1)
+                #print(index_path)
+                if(llama_index_openai.file_exist(index_path) == False):#check index existence
+                    #print('yes')
+                    continue
+                index_val = llama_index_openai.load_index(index_path)
+                
+                for left, right in sql['filters'].items():#for each filter 
+                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals', 'civic')
+                    print(left, right, prompt)
+                    
+                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index_val, text = text_val, tree = tree_val, tuple_level = 2, parent = parent, paras = paras, k=3)#sz: number of tokens used 
+                    print(res.lower(), sz)
+                    size += sz
+                    response.append(res)
                     
                 
             et = time.time()
             print(et-st)
             print(size)
-            result[title] = merge_response(response)
+            result[title] = response
             times[title] = et-st
             sizes[title] = size
             
             i+=1
-            #break
+            break
 
        
         
@@ -172,20 +168,14 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder):
 
         path3 = out_folder + '/ans_' + strategy + '_' + sql_version
         query_interface.write_2_json(result, path3)
-        #break
+        break
 
-def evaluate_SQL_notice(text_files,data,strategy,tree_folder,index_folder,out_folder):
+def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_folder):
     text_files = model_build.scan_files(text_folder)
     entity_mention = 'violation document' #natural language description of an entity 
     
     sqls = UDF_registration.notice_SQLs()#readl sqls
-
-    if(data == 'paper'):
-        desp = UDF_registration.paper_attr_desp()
-    elif(data == 'civic'):
-        desp = UDF_registration.civic_attr_desp()
-    elif(data == 'notice'):
-        desp = UDF_registration.notice_attr_desp()
+    desp = UDF_registration.notice_attr_desp()
     
     for sql_id in range(0, len(sqls)):#scan each query 
         sql = sqls[sql_id]
@@ -231,6 +221,7 @@ def evaluate_SQL_notice(text_files,data,strategy,tree_folder,index_folder,out_fo
                     
             elif(strategy == 'GPT_merge'):
                 #translate sql to a prompt 
+                #print(sql, desp, data)
                 prompt = UDF_registration.get_combined_prompt(sql, desp, data)
                 print(prompt)
                 res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
@@ -289,17 +280,19 @@ def evaluate_SQL_notice(text_files,data,strategy,tree_folder,index_folder,out_fo
                     #print('yes')
                     continue
                 tree_val = filtering.read_tree_json(tree_path)
+                parent = filtering.search_parent(tree_val, 1)
                 #print(index_path)
                 if(llama_index_openai.file_exist(index_path) == False):#check index existence
                     #print('yes')
                     continue
                 index_val = llama_index_openai.load_index(index_path)
+                paras = filtering.extract_paragraph_nodes(text_val)
                 
                 for left, right in sql['filters'].items():#for each filter 
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', 'notice')
                     print(left, right, prompt)
                     
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index_val, text = text_val, tree = tree_val, k=3)#sz: number of tokens used 
+                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index_val, text = text_val, tree = tree_val, parent = parent, paras = paras,k=3)#sz: number of tokens used 
                     print(res.lower(), sz)
                     size += sz
                     if('false' in res.lower() or 'none' in res.lower()):
@@ -320,7 +313,7 @@ def evaluate_SQL_notice(text_files,data,strategy,tree_folder,index_folder,out_fo
             sizes[title] = size
             times[title] = et-st
 
-            #break
+            break
         
         sql_version = 'sql' + str(sql_id+1) +'.txt'
         
@@ -381,7 +374,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
             if(strategy == 'GPT_single'):
                 
                 for left, right in sql['filters'].items():#for each filter 
-                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention)
+                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', data)
                     print(left, right, prompt)
                     
                     res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
@@ -412,7 +405,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
 
                 filters = sql['filters']
                 for left, right in sql['filters'].items():#for each filter 
-                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention)
+                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool',data)
                     print(left, right, prompt)
 
                     res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index, k=5)
@@ -421,7 +414,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     if('false' in str(res).lower() or 'none' in str(res).lower()):
                         ans_flag = 0
                         break
-
+            
             elif(strategy == 'LlamaIndex_tree'):
                 #read index 
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'tree')
@@ -429,39 +422,45 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                 if(llama_index_openai.file_exist(index_path) == False):#check index existence
                     continue
                 index = llama_index_openai.load_index(index_path)
+                
 
                 filters = sql['filters']
-                for key, prompt in filters.items():
-                    #print(prompt)
+                for left, right in sql['filters'].items():#for each filter 
+                    prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, '', 'bool', data)
+                    print(left, right, prompt)
+
                     res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index)
-                    #print(str(res).lower(), sz)
-                    response.append(str(res))
+                    print(str(res).lower(), sz)
                     size += sz
-                    if(res.lower() == 'false'):
+                    if('false' in str(res).lower() or 'none' in str(res).lower()):
                         ans_flag = 0
                         break
 
+
             elif(strategy == 'textdb_summary'):
                 text_val = filtering.read_text(text_file)
+                paras = filtering.extract_paragraph_nodes(text_val)
                 tree_path = tree_folder + '/tree_' + title
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'sentence')
                 #print('tree path:')
-                print(tree_path)
+                #print(tree_path)
                 if(llama_index_openai.file_exist(tree_path) == False):#check index existence
-                    print('yes')
+                    #print('yes')
                     continue
                 tree_val = filtering.read_tree_json(tree_path)
-                print(index_path)
+                parent = filtering.search_parent(tree_val, 1)
+                #print(index_path)
                 if(llama_index_openai.file_exist(index_path) == False):#check index existence
-                    print('yes')
+                    #print('yes')
                     continue
                 index_val = llama_index_openai.load_index(index_path)
+                parent = filtering.search_parent(tree_val, 1)
                 
                 for left, right in sql['filters'].items():#for each filter 
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', 'paper')
                     print(left, right, prompt)
                     
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index_val, text = text_val, tree = tree_val, k=3)#sz: number of tokens used 
+                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index_val, text = text_val, tree = tree_val, parent = parent, paras = paras, k=3)#sz: number of tokens used 
                     print(res.lower(), sz)
                     size += sz
                     if('false' in res.lower() or 'none' in res.lower()):
@@ -542,14 +541,14 @@ def get_root_path():
     return parent_path
 
 if __name__ == "__main__":
-    data = 'paper'
+    data = 'NoticeViolation'
     strategy = 'textdb_summary' #GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary 
 
     root_path = get_root_path()
 
     text_folder = root_path + '/data/' + data + '/extracted_data'
     tree_folder = root_path + '/data/' + data + '/runtime_data'
-    index_folder = root_path + '/index/' + data + '/index'
+    index_folder = root_path + '/index/' + data + '/index/'
     out_folder = root_path + '/out/' + data
 
     if(data == 'paper'):
