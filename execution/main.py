@@ -7,7 +7,6 @@ import query_interface
 import os 
 import sys
 import UDF_registration
-import GPT_baseline
 import time 
 import nltk
 import argparse
