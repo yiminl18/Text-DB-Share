@@ -275,31 +275,6 @@ def tree_retriever(text_file):
     response = query_engine.query('What is the publication year of this paper? Only return a single number. If cannot find, return "None" .')
     print(response)
 
-def udf_gen():
-    #HR udfs 
-    udf = {}
-    # udf['master_degree'] = 'Does this position require master degree? Return yes or no. If the answer is not found, return no. '
-    # udf['knowledge_software'] = 'Does this position require the knowledge of software? Return yes or no. If the answer is not found, return no.' 
-    # udf['knowledge_Educational_Code'] = 'Does this position require the knowledge of educational code? Return yes or no. If the answer is not found, return no.' 
-    # udf['ability_work'] = 'Does this position require to work with private agencies? Return yes or no. If the answer is not found, return no.' 
-    # udf['work_place'] = 'Is this position\' working position in office? Return yes or no. If the answer is not found, return no.'
-    
-    #notice of violation udfs 
-    # udf['company'] = 'What is the name of company having the probable violations? Return name.'
-    # udf['date'] = 'What is the date when this notice is addressed? Return date.'
-    # udf['response_requirement_date'] = 'how many days are given to respond to the notice? Return the number of days.'
-    # udf['penalty_date'] = 'What is the maximum number of penalty if the violatons happened in 2023? Return the number.'
-    # udf['recommend_penalty'] = 'What is the recommend penalty in this notice? Return only the penalty number.'
-    # udf['violation_type'] = 'What are the violation types in this notice?'
-    # udf['violation_type_1'] = 'Does the violation relate with emergency response training? Return yes or no.'
-    # udf['violation_type_2'] = 'Does the violation relate with electrical isolation? Return yes or no.'
-    # udf['violation_type_3'] = 'Does the violation relate with corrosion control? Return yes or no.'
-    # udf['violation_order_1'] = 'Does the violations contain the violation order §195.403(b)(1)? Return yes or no.'
-    # udf['violation_order_2'] = 'Does the violations contain the violation order §195.452(f)? Return yes or no.'
-    # udf['violation_code'] = 'What is violation code in this notice? Return code.' 
-    udf['publication_date'] = 'What is the publication year of this paper? Only return a single number. If cannot find, return "None" .'
-
-    return udf 
 
 def query_pipeline(udf, text_folder, index_folder, type):#run query for a set of files 
     text_files = model_build.scan_files(text_folder)
@@ -357,23 +332,7 @@ def get_root_path():
     #print("Parent path:", parent_path)
     return parent_path
 
-if __name__ == "__main__":
 
-    root_path = get_root_path()
-    text_folder = root_path + '/data/paper/extracted_data'
-    tree_folder = root_path + '/data/paper/runtime_data'
-    index_folder = root_path + '/index/paper/index/'
-
-
-    # #for civic data 
-    # text_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic/extracted_data'
-    # tree_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic/runtime_data'
-    # index_folder = '/Users/yiminglin/Documents/Codebase/Dataset/textdb/civic/index/'
-
-    # #for NoiceViolation data 
-    # text_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/NoticeViolation/extracted_data'
-    # tree_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/NoticeViolation/runtime_data'
-    # index_folder = '/Users/yiminglin/Documents/Codebase/Dataset/textdb/NoticeViolation/index/'
 
 
     

@@ -129,91 +129,6 @@ def find_truth(df, title, tag):
         if(df['title'][i] == title):
             return df[tag][i]
         
-def evaluate_SQL_predicted(results, truths, SQL):
-    #evaluate the SQL, the result is true or false
-    accuracy = 0 
-    precision = 0
-    recall = 0
-    F1 = 0
-    recall_num = 0
-    precision_num = 0
-    udfs, tag_map, cols, keywords = UDF_registration.paper_udfs()
-    evaluated_udf = 0
-
-    for i in range(len(results)):#scan each file 
-        title = results['title'][i]
-        title = title.replace('/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/sys review/extracted_data/', '', 1)
-        title = title.replace('.txt', '')
-        #print(title)
-
-        predicated_result = 1
-        truth_result = 1
-
-        #get predicated_result
-        for udf in SQL:
-            evaluated_udf += 1
-            udf_value = str(results[udf][i]).strip()
-            
-            tag = tag_map[udf][0]
-            value = tag_map[udf][1]
-            
-            truth = find_truth(truths, title, tag) #truth is a list which consists of a set of labels 
-            #print(udf, udf_value, value, tag, truth)
-            if(udf_value == 'False'):
-                predicated_result = 0
-                break
-            if(tag == 'year'):#year is special and need to be compared 
-                if(str(udf_value) not in truth):
-                    predicated_result = 0
-                    break
-
-        #get truth_result
-        for udf in SQL:
-            tag = tag_map[udf][0]
-            value = tag_map[udf][1]
-            truth = find_truth(truths, title, tag)
-            if(value == 'yes'):
-                if('none' in truth.lower() or 'neither' in truth.lower()):
-                    truth_result = 0
-                    break
-            else:
-                if(str(value) not in truth):
-                    truth_result = 0
-                    break
-                # if(tag == 'year'):
-                #     if(str(value) not in str(truth)):
-                #         truth_result = 0
-                #         break
-
-        #print(predicated_result, truth_result)
-
-        if(predicated_result == truth_result):
-            accuracy += 1
-            
-        if(truth_result == 1 and predicated_result == 1):
-            recall += 1
-            precision += 1
-            
-        if(truth_result == 1):
-            recall_num += 1
-
-        if(predicated_result == 1):
-            precision_num += 1
-
-    if(precision_num == 0):
-        precision = 0
-    else:
-        precision = precision/precision_num
-    if(recall_num == 0):
-        recall = 0
-    else:
-        recall = recall/recall_num
-    accuracy /= len(results) 
-    if(precision + recall == 0):
-        F1=0
-    else:
-        F1 = 2*(precision*recall)/(precision+recall)
-    return accuracy, precision, recall, F1, precision_num, recall_num, len(results), evaluated_udf
 
 def get_results(result_path):
     results = read_csv(result_path)
@@ -223,26 +138,5 @@ def get_truths(truth_path):
     truths = read_csv(truth_path)
     return truths
 
-if __name__ == "__main__":
-    result_path = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/runtime/paper/answer_GPT4_single.csv'
-    truth_path = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/runtime/paper/truth_tags.csv'
-    SQL_path = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/runtime/paper/SQLs.txt'
-    results = get_results(result_path)
-    truths = get_truths(truth_path)
-    SQLs = read_json(SQL_path)
-    
-    print('accuracy, precision, recall, F1, number of positive results, number of truth results, total documents, average number of evaluated predicates')
 
-    ans = []
-    for id, sql in SQLs.items():
-        accuracy, precision, recall, F1, precision_num, recall_num, size, evaluated_udf = evaluate_SQL_predicted(results, truths, sql)
-        #print('SQL'+id, accuracy, precision, recall, F1, precision_num, recall_num, size, evaluated_udf)
-        row = ['SQL'+id, precision, recall, F1, precision_num, recall_num, size, evaluated_udf]
-        ans.append(row)
-    
-    cols = ['SQLID', 'precision', 'recall', 'F1', 'number of positive results', 'number of truth results', 'total documents', 'average number of evaluated predicates']
-
-    df = pd.DataFrame(ans, columns = cols)
-    df.to_csv('/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/plot/paper/GPT4_single_SQL_accuracy.csv')
-    print(df)
         

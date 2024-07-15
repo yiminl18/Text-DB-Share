@@ -120,55 +120,6 @@ def get_combined_prompt(sql, desp, data):
         return prompt 
 
 
-def paper_udfs():
-    udfs = {}
-    tag_map = {}#map udf to a tag
-    keywords = {}
-    question_tag = ['venue','source','domain','health_wellness','li','motivation','lived_informatics','privacy&ethics','privacy_ethics_depth','contribution','study','artifact_kind','recruitment','participant_count','study_duration','involved','demographics','expert','expert_description','theory','theory_depth']
-
-    udfs['publication_date'] = 'What is the publication year of this paper? Only return a single number. If cannot find, return "None" .'
-    udfs['contribution_type_empirical'] = 'Is the contribution type of this paper empirical? Return "True" or "False" .  '
-    udfs['domain_health_behavior'] = 'Is the health behavior a proper domain of this paper? Return "True" or "False" . '
-    udfs['study_interview'] = 'Is interview a type of study conducted in this paper? Return "True" or "False" . '
-    udfs['venue_CHI'] = 'Is the venue of this paper CHI? Return "True" or "False" . '
-    udfs['artifact_website'] = 'Is website the kind of artifact created in this paper? Return "True" or "False" . '
-    udfs['theory_schon'] = 'Does the approach proposed in this paper use schon theory? Return "True" or "False" . '
-    udfs['demographics_students'] = 'In the given paper, were students the type of population being studied or designed for? Return "True" or "False" . '
-    udfs['health_wellness'] = 'Does the domain of this paper relate with health or wellness? Return "True" or "False" . '
-    udfs['privacy&ethics'] = 'Does this paper consider privacy and ethics in personal data management? Return "True" or "False" . '
-    
-    keywords['publication_date'] = 'publication date'
-    keywords['contribution_type_empirical'] = 'empirical'
-    keywords['domain_health_behavior'] = 'health behavior'
-    keywords['study_interview'] = 'interview'
-    keywords['artifact_website'] = 'website'
-    keywords['venue_CHI'] = 'CHI'
-
-    tag_map['publication_date'] = ('year','2015')
-    tag_map['study_interview'] = ('study','interview')
-    tag_map['venue_CHI'] = ('venue','CHI')
-    tag_map['artifact_website'] = ('artifact_kind','website')
-    tag_map['contribution_type_empirical'] = ('contribution','empirical')
-    tag_map['domain_health_behavior'] = ('domain','health_behavior')
-    
-
-    
-    tag_map['theory_schon'] = ('theory','schon')
-    tag_map['health_wellness'] = ('health_wellness', 'yes')
-    tag_map['demographics_students'] = ('demographics','students')
-    tag_map['privacy&ethics'] = ('privacy&ethics','yes')
-
-    keywords['theory_schon'] = 'schon'
-    keywords['health_wellness'] = 'wellness'
-    keywords['demographics_students'] = 'student'
-    keywords['privacy&ethics'] = 'privacy'
-    #udf set 3: combined udf 
-
-    udfs['combined'] = 'Given the following paper, answer me the following questions. 1. What is the publication year of this paper? Only return a single number. 2. Is the contribution type of this paper empirical? Return true or false. 3. Is the health behavior a proper domain of this paper? Return true or false. 4.Is interview a type of study conducted in this paper? Return true or false. 5. Is the venue of this paper CHI? Return true or false. 6. Is website the kind of artifact created in this paper? Return true or false. 7. Does the approach proposed in this paper use schon theory? Return true or false. 8. Does the domain of this paper relate with health or wellness? Return true or false. 9. In the given paper, were students the type of population being studied or designed for? Return true or false. 10. Does this paper consider privacy and ethics in personal data management? Return true or false. Seperate the answers using comma. Example: 2017, False, False, True, True, False, False, True, True, False '
-
-    cols = ['publication_date','contribution_type_empirical','domain_health_behavior','study_interview','venue_CHI','artifact_website','theory_schon','health_wellness','demographics_students','privacy&ethics']
-
-    return udfs, tag_map, cols, keywords
 
 def paper_attr_desp():
     desp = {}
@@ -184,14 +135,6 @@ def paper_attr_desp():
     return desp 
 
 def paper_SQLs():
-    # desp['publication_year'] = 'publication year'
-    # desp['contribution'] = 'type of contribution'
-    # desp['domain'] = 'domain'
-    # desp['study'] = 'type of study'
-    # desp['venue'] = 'venue'
-    # desp['artifact'] = 'artifact'
-    # desp['theory'] = 'theory'
-    # desp['demographics'] = 'the type of population being studied or designed for'
     sqls = []
 
     #one predicate sql 
@@ -210,14 +153,6 @@ def paper_SQLs():
     sql['filters'] = filters
 
     sqls.append(sql)
-
-    # sql = {}
-    # sql['project'] = ['paper_name']
-    # filters = {}
-    # filters['domain'] = ('=', 'health_behavior')
-    # sql['filters'] = filters
-
-    # sqls.append(sql)
 
     sql = {}
     sql['project'] = ['paper_name']
@@ -399,23 +334,6 @@ def civic_SQLs():
     sql['filters'] = filters
     sqls.append(sql)
 
-    # sql4 = {}
-    # sql4['project'] = ['project_name']
-    # filters = {}
-    # filters['ad'] = ('>', '2021-01')
-    # filters['type'] = ('=', 'capital')
-    # filters['status'] = ('=', 'design')
-    # sql4['filters'] = filters
-    # sqls.append(sql4)
-
-    # sql5 = {}
-    # sql5['project'] = ['project_name']
-    # filters = {}
-    # filters['et'] = ('<', '2023-01')
-    # filters['topic'] = ('=', 'road')
-    # filters['status'] = ('=', 'design')
-    # sql5['filters'] = filters
-    # sqls.append(sql5)
 
     return sqls
 
@@ -516,13 +434,6 @@ def notice_SQLs():
 def civic_SQLs_prompt():
     sqls = []
 
-    # sql1 = {}
-    # sql1['project'] = ['project_name']
-    # filters = {}
-    # filters['st'] = ('<', '2022-06')
-    # filters['type'] = ('=', 'capital')
-    # filters['status'] = ('=', 'not started')
-    # sql1['filters'] = filters
 
     sql1 = {}
     sql1['project'] = ['project_name']
@@ -535,14 +446,7 @@ def civic_SQLs_prompt():
     sql1['filters'] = filters
     sql1['bool_filters'] = bool_filters
     sqls.append(sql1)
-    # sql2 = {}
-    # sql2['project'] = ['project_name']
-    # filters = {}
-    # filters['et'] = ('>', '2021-07')
-    # filters['type'] = ('=', 'disaster')
-    # filters['status'] = ('=', 'design')
-    # sql2['filters'] = filters
-    # sqls.append(sql2)
+
 
     sql2 = {}
     sql2['project'] = ['project_name']
@@ -557,14 +461,6 @@ def civic_SQLs_prompt():
 
     sqls.append(sql2)
 
-    # sql3 = {}
-    # sql3['project'] = ['project_name']
-    # filters = {}
-    # filters['st'] = ('>', '2021-05')
-    # filters['type'] = ('=', 'capital')
-    # filters['topic'] = ('=', 'road')
-    # sql3['filters'] = filters
-    # sqls.append(sql3)
 
     sql3 = {}
     sql3['project'] = ['project_name']
@@ -580,14 +476,6 @@ def civic_SQLs_prompt():
 
     sqls.append(sql3)
 
-    # sql4 = {}
-    # sql4['project'] = ['project_name']
-    # filters = {}
-    # filters['ad'] = ('>', '2021-01')
-    # filters['type'] = ('=', 'capital')
-    # filters['status'] = ('=', 'design')
-    # sql4['filters'] = filters
-    # sqls.append(sql4)
 
     sql4 = {}
     sql4['project'] = ['project_name']
@@ -602,14 +490,7 @@ def civic_SQLs_prompt():
 
     sqls.append(sql4)
 
-    # sql5 = {}
-    # sql5['project'] = ['project_name']
-    # filters = {}
-    # filters['et'] = ('<', '2023-01')
-    # filters['topic'] = ('=', 'road repair')
-    # filters['status'] = ('=', 'design')
-    # sql5['filters'] = filters
-    # sqls.append(sql5)
+
 
     sql5 = {}
     sql5['project'] = ['project_name']
@@ -626,18 +507,585 @@ def civic_SQLs_prompt():
     sqls.append(sql5)
     return sqls
 
+def paper_SQLs_large():
+    sqls = []
 
-if __name__ == "__main__":
-    #test predicate prompt 
-    sqls = paper_SQLs()
-    desp = paper_attr_desp()
-    i = 1
-    for sql in sqls:
-        
-        print(i)
-        for left, right in sql['filters'].items():
-            print(left, right)
-            print(get_predicate_prompt(left, right[0], right[1], desp, 'paper', 'bool', 'paper'))
-        # prompt = get_combined_prompt(sql, desp, 'notice')
-        # print(prompt)
-        i+=1
+    #one predicate sql 
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['year'] = ('>', '2017')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['venue'] = ('=', 'CHI')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['author_number'] = ('>', '3')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['contribution'] = ('=', 'empirical')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['demographics'] = ('=', 'patients')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['venue'] = ('=', 'CHI')
+    sql['filters'] = filters
+
+    sql = {}
+    sql['agg'] = 'avg'
+    sql['project'] = ['author_number']
+    filters = {}
+    filters['venue'] = ('=', 'CHI')
+    sql['filters'] = filters
+
+    #two predicates sql
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['year'] = ('<', '2018')
+    filters['author_number'] = ('<', '5')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['year'] = ('<', '2017')
+    filters['venue'] = ('=', 'CHI')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['year'] = ('<', '2018')
+    filters['study'] = ('=', 'surveys or interviews')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['author_number'] = ('<', '5')
+    filters['study'] = ('=', 'surveys or interviews')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['author_number'] = ('>', '3')
+    filters['venue'] = ('=', 'CHI')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'avg'
+    sql['project'] = ['author_number']
+    filters = {}
+    filters['year'] = ('<', '2018')
+    filters['study'] = ('=', 'surveys or interviews')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['author_number'] = ('<', '5')
+    filters['study'] = ('=', 'surveys or interviews')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    #three predicates sql
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['author_number'] = ('<', '5')
+    filters['venue'] = ('=', 'CHI')
+    filters['year'] = ('>', '2012')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['study'] = ('=', 'surveys')
+    filters['venue'] = ('=', 'CHI or Ubicomp')
+    filters['year'] = ('>', '2012')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['venue'] = ('=', 'CHI or Ubicomp')
+    filters['year'] = ('>', '2013')
+    filters['author_number'] = ('>', '3')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['study'] = ('=', 'surveys')
+    filters['author_number'] = ('<', '4')
+    filters['year'] = ('>', '2013')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['author_number'] = ('<', '5')
+    filters['venue'] = ('=', 'CHI')
+    filters['year'] = ('<', '2017')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['paper_name']
+    filters = {}
+    filters['venue'] = ('=', 'CHI or Ubicomp')
+    filters['year'] = ('>', '2013')
+    filters['author_number'] = ('>', '3')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'max'
+    sql['project'] = ['author_number']
+    filters = {}
+    filters['study'] = ('=', 'surveys')
+    filters['venue'] = ('=', 'CHI or Ubicomp')
+    filters['year'] = ('>', '2013')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    return sqls
+
+
+def civic_SQLs_large():
+    sqls = []
+    #1 predicate SQL 
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['type'] = ('=', 'capital')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['status'] = ('=', 'not started')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['st'] = ('<', '2022-03')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['et'] = ('>', '2022-01')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['status'] = ('=', 'not started')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'max'
+    sql['project'] = ['st']
+    filters = {}
+    filters['status'] = ('=', 'not started')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['et'] = ('>', '2022-01')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    #2 predicate SQL 
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['st'] = ('<', '2022-01')
+    filters['type'] = ('=', 'capital')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['et'] = ('>', '2021-03')
+    filters['status'] = ('=', 'not started')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['st'] = ('<', '2023-01')
+    filters['type'] = ('=', 'disaster')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['et'] = ('>', '2021-09')
+    filters['type'] = ('=', 'capital')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['st'] = ('<', '2022-06')
+    filters['status'] = ('=', 'design')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['et'] = ('>', '2021-03')
+    filters['status'] = ('=', 'not started')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['et'] = ('>', '2021-09')
+    filters['type'] = ('=', 'capital')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    #3 predicate SQL
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['st'] = ('<', '2022-06')
+    filters['type'] = ('=', 'capital')
+    filters['status'] = ('=', 'not started')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['et'] = ('>', '2021-07')
+    filters['type'] = ('=', 'disaster')
+    filters['status'] = ('=', 'design')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['st'] = ('>', '2021-05')
+    filters['type'] = ('=', 'capital')
+    filters['topic'] = ('=', 'road')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['ad'] = ('>', '2021-01')
+    filters['type'] = ('=', 'capital')
+    filters['status'] = ('=', 'design')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['et'] = ('<', '2023-01')
+    filters['topic'] = ('=', 'road')
+    filters['status'] = ('=', 'design')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['st'] = ('>', '2021-05')
+    filters['type'] = ('=', 'capital')
+    filters['topic'] = ('=', 'road')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['project_name']
+    filters = {}
+    filters['st'] = ('<', '2022-06')
+    filters['type'] = ('=', 'capital')
+    filters['status'] = ('=', 'not started')
+    sql['filters'] = filters
+
+    sqls.append(sql)
+
+    return sqls
+
+def notice_SQLs_large():
+    sqls = []
+    #1 predicate SQL 
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['region'] = ('=', 'western or central')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['penalty'] = ('>', '0')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['item_num'] = ('>', '3')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['compliance_order'] = ('=', 'true')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['date'] = ('<', '03/01/2024')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['company']
+    filters = {}
+    filters['compliance_order'] = ('=', 'true')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['company']
+    filters = {}
+    filters['date'] = ('<', '03/01/2024')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    #2 predicate SQL 
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['region'] = ('=', 'western or central')
+    filters['date'] = ('<', '01/01/2024')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['penalty'] = ('>', '10000')
+    filters['item_num'] = ('>', '1')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['type'] = ('=', 'Corrosion Control')
+    filters['penalty'] = ('<', '10000')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['compliance_order'] = ('=', 'false')
+    filters['penalty'] = ('<', '20000')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['state'] = ('=', 'California')
+    filters['type'] = ('=', 'Corrosion Control')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['company']
+    filters = {}
+    filters['penalty'] = ('>', '10000')
+    filters['item_num'] = ('>', '1')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'max'
+    sql['project'] = ['penalty']
+    filters = {}
+    filters['state'] = ('=', 'California')
+    filters['type'] = ('=', 'Corrosion Control')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    #3 predicate SQL 
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['region'] = ('=', 'western or central')
+    filters['date'] = ('<', '06/01/2024')
+    filters['penalty'] = ('>', '10000')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['penalty'] = ('>', '5000')
+    filters['item_num'] = ('>', '1')
+    filters['type'] = ('=', 'Control Room Management or Corrosion Control')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['penalty'] = ('>', '2000')
+    filters['item_num'] = ('>', '2')
+    filters['type'] = ('=', 'Corrosion Control')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['state'] = ('=', 'California')
+    filters['type'] = ('=', 'Corrosion Control')
+    filters['item_num'] = ('>', '1')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['project'] = ['company']
+    filters = {}
+    filters['region'] = ('=', 'western or central')
+    filters['penalty'] = ('>', '5000')
+    filters['item_num'] = ('>', '1')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'count'
+    sql['project'] = ['company']
+    filters = {}
+    filters['region'] = ('=', 'western or central')
+    filters['date'] = ('<', '06/01/2024')
+    filters['penalty'] = ('>', '10000')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    sql = {}
+    sql['agg'] = 'average'
+    sql['project'] = ['penalty']
+    filters = {}
+    filters['state'] = ('=', 'California')
+    filters['type'] = ('=', 'Corrosion Control')
+    filters['item_num'] = ('>', '1')
+    sql['filters'] = filters
+    sqls.append(sql)
+
+    return sqls 

@@ -21,9 +21,6 @@ current_file_directory = os.path.dirname(os.path.abspath(__file__))
 # Get the parent directory
 parent_directory = os.path.dirname(current_file_directory)
 sys.path.append(parent_directory)
-from model import model 
-#model_name = 'gpt4_long'
-model_name = 'gpt35_azure'
 
 def construct_target(pred, udfs):
     #contruct target for embedding search 
@@ -349,7 +346,6 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
         sql = sqls[sql_id]
         print('sql id:', sql_id+1)
 
-        #for each sql, store the following values 
         result = {}#{document_name: ans_list}
         times = {}#{document_name: total_time}
         sizes = {}#{document_name: total_size}

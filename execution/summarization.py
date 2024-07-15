@@ -88,7 +88,6 @@ def evaluate_extractive_summary(reference_summaries, generated_summary, mode = '
 
     return precision, recall, f1
 
-#if __name__ == "__main__":
 
     
 

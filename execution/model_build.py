@@ -16,8 +16,6 @@ from model import model
 import nltk
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
-
-# Download the necessary NLTK models (only needed once)
 nltk.download('punkt')
 
 
@@ -308,63 +306,6 @@ def parse_response_robust(response, tree, doc):#skip headers which are not prese
     tree[lastSectionID]['parent_edge'] = -1
     tree[lastSectionID]['child_edge'] = children
     return tree
-# def parse_response(response, tree):#any level
-#     text = response.split('\n')
-#     node_id = 1
-#     children = []
-#     parent_node = node_id
-#     loc = 0
-#     lastSectionID = 1
-#     for header in text:
-#         if(header =='' or '.' not in header):
-#             loc += 1
-#             if(loc == len(text)):
-#                 lastSectionID = parent_node
-#             continue
-#         header = header.strip()
-#         words = header.split(' ',1)
-#         node_level = words[0].strip()
-#         node_name = words[1].strip()
-#         labels = node_level.split('.')
-
-#         if(node_level.count('.') == 1): #setion or subsection
-        
-#             if(labels[1].isdigit() is False):#this is the level of section 
-#                 #print(node_id, header)
-#                 node = {}
-#                 node['level'] = 1 #section 
-#                 node['name'] = node_name
-#                 tree[node_id] = node
-#                 #add child edge 
-#                 tree[parent_node]['child_edge'] = children
-#                 tree[parent_node]['parent_edge'] = -1
-#                 if(loc == len(text)-1):
-#                     lastSectionID = node_id
-#                 parent_node = node_id
-#                 node_id = node_id + 1
-#                 children = []
-
-#             else:
-#                 #level of subsection 
-#                 node = {}
-#                 node['level'] = 2
-#                 node['name'] = node_name
-#                 tree[node_id] = node
-#                 children.append(node_id)
-#                 #add parent edge 
-#                 tree[node_id]['parent_edge'] = parent_node
-#                 tree[node_id]['child_edge'] = []
-#                 node_id = node_id + 1
-#         else:
-#             #subsubsection 
-
-#         loc += 1
-
-#     #display_tree(tree)
-#     #handle last section 
-#     tree[lastSectionID]['parent_edge'] = -1
-#     tree[lastSectionID]['child_edge'] = children
-#     return tree
 
 def read_text(file_path):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
@@ -386,9 +327,7 @@ def tree_table_content_by_gpt_civic(file_path):
     text = read_text(file_path)
     instruction = 'Give me table of content for the following document, which includes the header of each section and sub-section.  Make sure the order of section are in the same order in the given document. Example: 1. Section1, 1.1 Section 1.1. Only keep two levels, The first section starts with Capital Improvement Projects (Design). Make sure the name of header are the *original* phrases in the document.'
     prompt = (instruction,text)
-    response = model('gpt4_long',prompt)
-    print(response)
-    write_file('/Users/yiminglin/Desktop/test/table_content/table_content_malibu03222023-2060.txt', response)
+    response = model('gpt4',prompt)
     return parse_response(response, tree, text) 
 
 def write_table_content(file_path, out_path):
@@ -397,8 +336,7 @@ def write_table_content(file_path, out_path):
     # instruction = 'Give me table of content for the following document, which includes the header of each section and sub-section. Make sure the name of header are the original phrases in the document. Make sure the order of section are in the same order in the given document. Example: 1. Section1, 1.1 Section 1.1. '
     instruction = 'Give me table of content for the following document, which includes the header of each section.  Make sure the order of section are in the same order in the given document. Make sure the name of header are the "original" phrases in the document. Do not create new words. Example: 1. Section1.'
     prompt = (instruction,text)
-    response = model('gpt4_long',prompt)
-    #print(response)
+    response = model('gpt4',prompt)
     write_file(out_path, response)
 
 def write_2_json(tree, dict_path):
@@ -615,34 +553,6 @@ def write_file(file_path, content):
     with open(file_path, 'w') as file:
         file.write(content)
 
-def add_nodes_pipeline():
-    path = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/runtime_data/tree_23851408_Regular Meeting.txt'
-    tree = read_tree_json(path)
-    text = read_text('/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/23851408_Regular Meeting.txt')
-    tree = create_fine_nodes(tree, text)
-    write_2_json(tree, path)
-
-def table_content_build_by_example_pipeline():
-    section_loc_civic = [84]#67.5
-    delta = 2
-    section_loc = section_loc_civic
-
-    file = '24118328_Permits & Licensing Committee Meeting.txt'
-    files = []
-    files.append('/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/23851408_Regular Meeting.pdf')
-    files.append('/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/24118328_Permits & Licensing Committee Meeting.pdf')
-    out_path = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/runtime_data/tree_' + file 
-    tree = tree_table_content_by_example(section_loc,delta,files[1])
-    return tree
-
-def table_content_build_by_gpt_pipeline():
-    file = '24118328_Permits & Licensing Committee Meeting.txt'
-    files = []
-    files.append('/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/23851408_Regular Meeting.pdf')
-    files.append('/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/24118328_Permits & Licensing Committee Meeting.pdf')
-    out_path = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/runtime_data/tree_' + file 
-    tree = tree_table_content_by_gpt_civic(files[1])
-    return tree 
 
 def tree_build_by_example_pipeline(pdf_file, text_file):
     section_loc_civic = [64]#67.5
@@ -753,13 +663,6 @@ def get_patterns(pdf_path):
                 res.append(attributes)
     return res
 
-def load_new_files():
-    pdf_folder_paper = '/Users/yiminglin/Documents/Codebase/Dataset/textdb/paper/'
-    text_files = scan_files(pdf_folder_paper)
-    for file in text_files:
-        title = clean_paper_title(file, pdf_folder_paper)
-        print(title)
-        break
 
 def extract_pattern_phrases(headers, words_pattern):
     #extract textual patterns for phrases 
@@ -788,144 +691,5 @@ def extract_pattern_phrase(header, loc, words_pattern):
         if(flag == 0):
             loc += 1
 
-def customize_civic_file_name(s1):
-
-    # Step 1: Insert base URL and replace underscores with slashes
-    base_url = 'https:www.malibucity.org:'
-    s2 = s1.replace('malibucity_agenda__', base_url + 'AgendaCenter:ViewFile:Agenda:_')
-
-    # Step 2: Add '(dragged)' at the end
-    s2 += ' (dragged)'
-    return s2
-
-
-def llm_pattern_pipeline():
-    raw_folder_civic = '/Users/yiminglin/Documents/Codebase/Dataset/textdb/civic/raw_data'
-    text_folder_civic = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic/extracted_data'
-    table_content_civic = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic/runtime_data'
-
-    text_files = scan_files(text_folder_civic)
-
-    for i in range(len(text_files)): 
-        print(i)
-        paper_title = clean_paper_title(text_files[i], text_folder_civic)
-        table_content_path = table_content_civic + '/table_content_' + paper_title
-        print(paper_title)
-        raw_file_path = raw_folder_civic + '/' + customize_civic_file_name(paper_title.replace('.txt', ''))+'.pdf'
-        print(raw_file_path)
-        table_content = read_text(table_content_path)
-        print(table_content)
-        headers = extract_meta(table_content)
-        words_pattern = get_patterns(raw_file_path)
-        #print(words_pattern)
-        extract_pattern_phrases(headers, words_pattern)
-        break
-
-def paper_pipeline():
-    # text_folder_paper = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/paper/extracted_data'
-    # tree_folder_paper = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/paper/runtime_data'
-
-    # text_folder_civic = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic/extracted_data'
-    # tree_folder_civic = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic/runtime_data'
-    # table_content_civic = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic/runtime_data'
-
-    text_folder_notice = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/NoticeViolation/extracted_data'
-    tree_folder_notice = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/NoticeViolation/runtime_data'
-    #table_content_notice = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic/runtime_data'
-    
-    text_files = scan_files(text_folder_notice)
-
-    for i in range(len(text_files)): 
-        print(i)
-        paper_title = clean_paper_title(text_files[i], text_folder_notice)
-        table_content_path = tree_folder_notice + '/table_content_' + paper_title
-        print(paper_title)
-        #print(table_content_path)
-        
-        if('DS_Store' in paper_title):
-            continue
-        #write_table_content(text_files[i], table_content_path)
-        #break
-    
-        out_path = tree_folder_notice + '/tree_' + paper_title
-        
-        tree = tree_build_gpt_pipeline(text_files[i], table_content_path)
-        write_2_json(tree, out_path)
-        # break
-
-        text = read_text(text_files[i])
-        tree = read_tree_json(out_path)
-        add_node_size(tree, text)
-
-        write_2_json(tree, out_path)
-        #break
-
-def single_openai_pipeline():
-    pdf_folder_civic = '/Users/yiminglin/Desktop/test/raw_pdf'
-    text_folder_civic = '/Users/yiminglin/Desktop/test/extracted_text'
-    tree_folder_civic = '/Users/yiminglin/Desktop/test/tree'
-    table_content_path = ''#/Users/yiminglin/Desktop/test/table_content/table_content_malibu03222023-2060.txt'
-
-    text_file = '/Users/yiminglin/Desktop/new/malibu03222023-2060 (dragged).pdf'
-
-    
-    text_path = '/Users/yiminglin/Desktop/test/extracted_text/malibu03222023-2060.txt'
-    title = 'malibu03222023-2060'
-    tree_path = tree_folder_civic + '/tree_' + title + '.txt'
-    pdf_path = pdf_folder_civic + '/' + title + '.pdf'
-
-    ## by LLM
-    tree = tree_build_gpt_pipeline(text_path, table_content_path)
-    # print(len(tree))
-    write_2_json(tree, tree_path)
-
-    text = read_text(text_path)
-    tree = read_tree_json(tree_path)
-    add_node_size(tree, text)
-
-    write_2_json(tree, tree_path)
-
-    ## by example
-    # tree = tree_build_by_example_pipeline(pdf_path, text_path)
-    # write_2_json(tree, tree_path)
-
-    # text = read_text(text_path)
-    # tree = read_tree_json(tree_path)
-    # add_node_size(tree, text)
-
-    # write_2_json(tree, tree_path)
-
-def civic_pipeline():
-    pdf_folder_civic = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/raw_data'
-    text_folder_civic = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/extracted_data'
-    tree_folder_civic = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/civic council/runtime_data'
-
-    text_files = scan_files(text_folder_civic)
-
-    i = 2
-    
-    text_path = text_files[i]
-    title = clean_civic_title(text_files[i], text_folder_civic)
-    tree_path = tree_folder_civic + '/tree_' + title + '.txt'
-    pdf_path = pdf_folder_civic + '/' + title + '.pdf'
-    
-    # print(text_path)
-    # print(pdf_path)
-    # print(tree_path)
-
-    tree = tree_build_by_example_pipeline(pdf_path, text_path)
-    write_2_json(tree, tree_path)
-
-    text = read_text(text_path)
-    tree = read_tree_json(tree_path)
-    add_node_size(tree, text)
-
-    write_2_json(tree, tree_path)
-
-if __name__ == "__main__":
-    #civic_pipeline()
-    paper_pipeline()
-    #llm_pattern_pipeline()
-    #single_openai_pipeline()
     
 

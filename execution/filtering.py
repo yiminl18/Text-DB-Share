@@ -11,8 +11,6 @@ import summarization
 from nltk.tokenize import word_tokenize
 import os 
 import sys
-# Load a pre-trained sentence transformer model
-#model = SentenceTransformer('sentence-transformers/msmarco-distilbert-base-v3')
 current_file_directory = os.path.dirname(os.path.abspath(__file__))
 # Get the parent directory
 parent_directory = os.path.dirname(current_file_directory)
@@ -139,13 +137,6 @@ def window_adaption(tree, units):
                         continue
                 else:
                     continue
-
-                # print('current node:')
-                # print(id, node['level'])
-                # if('name' in node):
-                #     print(node['name'])
-                # print('parent node')
-                # print(parent, tree[parent]['level'], tree[parent]['name'])
                 
                 if(parent in parent_map):#there exist sibling node 
                     #pick parent nodes 
@@ -164,16 +155,6 @@ def window_adaption(tree, units):
 
     return answer_nodes
     
-
-# def keyword_search(keyword, blocks_nodes):
-#     nodes = []
-#     for block, id in blocks_nodes.items():
-#         if(keyword.lower() in block.lower()):
-#             print(block)
-#             print('---')
-#             nodes.append(id)
-#     #print(len(nodes))
-#     return nodes 
 
 def display_tree(tree, nodes):
     for node in nodes:
@@ -470,36 +451,6 @@ def tree_search_with_metadata_summary(tree, paras, sql_id):
     return context 
 
 
-if __name__ == "__main__":
-
-    #paper data 
-    index_folder = '/Users/yiminglin/Documents/Codebase/Dataset/textdb/paper/paper_index_with_metadata_refined/'
-    text_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/paper/extracted_data'
-    tree_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/paper/runtime_data'
-
-    #notice data 
-    # text_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/NoticeViolation/extracted_data'
-    # tree_folder = '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/data/NoticeViolation/runtime_data'
-    # index_folder = '/Users/yiminglin/Documents/Codebase/Dataset/textdb/NoticeViolation/index/'
-
-    text_files = model_build.scan_files(text_folder)
-    question = 'Return the name of company. '
-
-    for text_file in text_files:
-        print(text_file)
-        text = read_text(text_file)
-        tree_path = llama_index_openai.construct_tree_path(text_file, text_folder, tree_folder)
-        index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'sentence')
-        print(index_path)
-        tree = read_tree_json(tree_path)
-        paras = extract_paragraph_nodes(text)
-        index = llama_index_openai.load_index(index_path)
-        tree_search_with_summary(tree, text, 1, index, question, 1)
-        #get_context_metadata(index,question,1,(1,"Proposed Civil Penalty"))
-        # context = tree_search_with_metadata_summary(tree, paras)
-        # for name, cons in context.items():
-        #     print(name, cons)
-        break
 
 
 

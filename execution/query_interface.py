@@ -151,35 +151,5 @@ def generate_single_SQL(pred_num, udfs):
                 break
     return SQL
 
-def generate_SQL():
-    udfs, tag_map, cols, keywords = UDF_registration.paper_udfs()
-    SQLs = {}
-    udfs_list = []
-    for udf, prompt in udfs.items():
-        udfs_list.append(udf)
-    id = 0
-    for i in range(3):#generate 2-perdicate SQL
-        SQLs[id] = generate_single_SQL(2, udfs_list)
-        id+=1
-
-    for i in range(3):#generate 3-perdicate SQL
-        SQLs[id] = generate_single_SQL(3, udfs_list)
-        id+=1
-    for i in range(3):#generate 4-perdicate SQL
-        SQLs[id] = generate_single_SQL(4, udfs_list)
-        id+=1
-
-    write_2_json(SQLs, '/Users/yiminglin/Documents/Codebase/TextDB/Text-DB/runtime/paper/SQLs.txt')
-    return SQLs
 
     
-
-
-if __name__ == "__main__":
-    # SQL = "select topic, count(authors) from papers where country = 'USA' and theory = 'foggy' group by year order by count(authors) ASC"
-    # selected_attrs, from_tables, predicates, groupby, orderby = parse_SQL(0,SQL)
-    # preds = parse_predicates(predicates)
-    # print(preds)
-    SQLs = generate_SQL()
-    for id, sql in SQLs.items():
-        print(id, sql)
