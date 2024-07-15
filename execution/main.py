@@ -10,6 +10,7 @@ import UDF_registration
 import GPT_baseline
 import time 
 import nltk
+import argparse
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
 import pandas as pd
@@ -540,10 +541,10 @@ def get_root_path():
     #print("Parent path:", parent_path)
     return parent_path
 
-if __name__ == "__main__":
-    data = 'NoticeViolation'
-    strategy = 'textdb_summary' #GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary 
 
+def run(args):
+    data = args.data
+    strategy = args.strategy
     root_path = get_root_path()
 
     text_folder = root_path + '/data/' + data + '/extracted_data'
@@ -557,6 +558,18 @@ if __name__ == "__main__":
         evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_folder)
     elif(data == 'NoticeViolation'):
         evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_folder)
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description="A script that accepts command-line parameters.")
+    parser.add_argument('--data', type=str, required=True, help='The type of data can be one of [paper, civic, NoticeViolation].')
+    parser.add_argument('--strategy', type=str, required=True, help='The type of strategy can be one of [GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary].')
+
+    args = parser.parse_args()
+    run(args)
+
+    
     
 
 
