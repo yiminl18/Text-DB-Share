@@ -4,6 +4,6 @@ Store your OpenAI API in by using 'export OPENAI_API_KEY="your-api-key-here"' or
 
 ### Execute command lines the run the code. 
 
-Command: "python main.py --data [data] --strategy [strategy]"
+Command: "python execution/main.py --data [data] --strategy [strategy]"
 [data] is one of [paper, civic, NoticeViolation]
 [strategy] is one of [GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary]

@@ -134,7 +134,7 @@ def paper_attr_desp():
     desp['author_number'] = 'number of authors'
     return desp 
 
-def paper_SQLs():
+def paper_SQLs_small():
     sqls = []
 
     #one predicate sql 
@@ -248,7 +248,7 @@ def civic_attr_desp():
 
     return desp
 
-def civic_SQLs():
+def civic_SQLs_small():
     sqls = []
     #1 predicate SQL 
 
@@ -349,7 +349,7 @@ def notice_attr_desp():
     desp['compliance_order'] = 'compliance order'
     return desp
 
-def notice_SQLs():
+def notice_SQLs_small():
     sqls = []
     #1 predicate SQL 
 
@@ -431,83 +431,7 @@ def notice_SQLs():
 
     return sqls 
 
-def civic_SQLs_prompt():
-    sqls = []
-
-
-    sql1 = {}
-    sql1['project'] = ['project_name']
-    filters = {}
-    filters['st'] = 'Return the names of all projects whose begin construction or begin design time is earlier than 2022 June. Put answers in one line seperate by coma. '
-    filters['type'] = 'Return the names of all projects whose type is capital. Put answers in one line seperate by coma. '
-    filters['status'] = 'Return the names of all projects whose status is not started. Put answers in one line seperate by coma.'
-    bool_filters = {}
-    bool_filters['st'] = 'Is the begin construction or begin design time of this project earlier than 2022 June? return yes or no.'
-    sql1['filters'] = filters
-    sql1['bool_filters'] = bool_filters
-    sqls.append(sql1)
-
-
-    sql2 = {}
-    sql2['project'] = ['project_name']
-    filters = {}
-    filters['et'] = 'Return the names of all projects whose complete design time or completion time is later than 2021 July. Put answers in one line seperate by coma. '
-    filters['type'] = 'Return the names of all projects whose type is disaster. Put answers in one line seperate by coma. '
-    filters['status'] = 'Return the names of all projects whose status is design. Put answers in one line seperate by coma.'
-    bool_filters = {}
-    bool_filters['et'] = 'Is the complete design time or completion time of this project later than 2021 July? return yes or no.'
-    sql2['filters'] = filters
-    sql2['bool_filters'] = bool_filters
-
-    sqls.append(sql2)
-
-
-    sql3 = {}
-    sql3['project'] = ['project_name']
-    filters = {}
-    filters['st'] = 'Return the names of all projects whose begin construction or begin design time is later than 2021 May. Put answers in one line seperate by coma. '
-    filters['type'] = 'Return the names of all projects whose type is capital. Put answers in one line seperate by coma. '
-    filters['topic'] = 'Return the names of all projects whose topic is related with road improvement. Put answers in one line seperate by coma.'
-    bool_filters = {}
-    bool_filters['st'] = 'Is the begin construction or begin design time of this project later than 2021 May? return yes or no.'
-    bool_filters['topic'] = 'Is the project about road improvement? return yes or no.'
-    sql3['filters'] = filters
-    sql3['bool_filters'] = bool_filters
-
-    sqls.append(sql3)
-
-
-    sql4 = {}
-    sql4['project'] = ['project_name']
-    filters = {}
-    filters['ad'] = 'Return the names of all projects whose advertise time is later than 2021 January. Put answers in one line seperate by coma. '
-    filters['type'] = 'Return the names of all projects whose type is capital. Put answers in one line seperate by coma. '
-    filters['status'] = 'Return the names of all projects whose status is design. Put answers in one line seperate by coma.'
-    bool_filters = {}
-    bool_filters['st'] = 'Is the advertise time of this project later than 2021 January? return yes or no.'
-    sql4['filters'] = filters
-    sql4['bool_filters'] = bool_filters
-
-    sqls.append(sql4)
-
-
-
-    sql5 = {}
-    sql5['project'] = ['project_name']
-    filters = {}
-    filters['et'] = 'Return the names of all projects whose complete design time or completion time is earlier than 2023 January. Put answers in one line seperate by coma. '
-    filters['topic'] = 'Return the names of all projects whose topic is related with road repair. Put answers in one line seperate by coma.'
-    filters['status'] = 'Return the names of all projects whose status is design. Put answers in one line seperate by coma.'
-    bool_filters = {}
-    bool_filters['et'] = 'Is the complete design time or completion time of this project earlier than 2023 January? return yes or no.'
-    bool_filters['topic'] = 'Is the project about road repair? return yes or no.'
-    sql5['filters'] = filters
-    sql5['bool_filters'] = bool_filters
-
-    sqls.append(sql5)
-    return sqls
-
-def paper_SQLs_large():
+def paper_SQLs():
     sqls = []
 
     #one predicate sql 
@@ -707,7 +631,7 @@ def paper_SQLs_large():
     return sqls
 
 
-def civic_SQLs_large():
+def civic_SQLs():
     sqls = []
     #1 predicate SQL 
 
@@ -906,7 +830,7 @@ def civic_SQLs_large():
 
     return sqls
 
-def notice_SQLs_large():
+def notice_SQLs():
     sqls = []
     #1 predicate SQL 
 

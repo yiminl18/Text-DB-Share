@@ -20,6 +20,8 @@ current_file_directory = os.path.dirname(os.path.abspath(__file__))
 # Get the parent directory
 parent_directory = os.path.dirname(current_file_directory)
 sys.path.append(parent_directory)
+from model import model 
+model_name = 'gpt4o'
 
 def construct_target(pred, udfs):
     #contruct target for embedding search 
@@ -150,22 +152,18 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
             sizes[title] = size
             
             i+=1
-            break
+            #break
 
        
         
         sql_version = 'sql' + str(sql_id+1) +'.txt'
-        
-        #write result, time and size into local files
-        path1 = out_folder + '/times_' + strategy + '_' + sql_version
-        query_interface.write_2_json(times, path1)
 
         path2 = out_folder + '/sizes_' + strategy + '_' + sql_version
         query_interface.write_2_json(sizes, path2)
 
         path3 = out_folder + '/ans_' + strategy + '_' + sql_version
         query_interface.write_2_json(result, path3)
-        break
+        #break
 
 def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_folder):
     text_files = model_build.scan_files(text_folder)
@@ -310,13 +308,9 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
             sizes[title] = size
             times[title] = et-st
 
-            break
+            #break
         
         sql_version = 'sql' + str(sql_id+1) +'.txt'
-        
-        #write result, time and size into local files
-        path1 = out_folder + '/times_' + strategy + '_' + sql_version
-        query_interface.write_2_json(times, path1)
 
         path2 = out_folder + '/sizes_' + strategy + '_' + sql_version
         query_interface.write_2_json(sizes, path2)
@@ -479,10 +473,6 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
             break
         
         sql_version = 'sql' + str(sql_id+1) +'.txt'
-        
-        #write result, time and size into local files
-        path1 = out_folder + '/times_' + strategy + '_' + sql_version
-        query_interface.write_2_json(times, path1)
 
         path2 = out_folder + '/sizes_' + strategy + '_' + sql_version
         query_interface.write_2_json(sizes, path2)
@@ -490,7 +480,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
         path3 = out_folder + '/ans_' + strategy + '_' + sql_version
         query_interface.write_2_json(result, path3)
 
-        break
+        #break
     
 def merge_response(response):
     #response is a list of strings, where a string contains a list of vals seperate by ','
