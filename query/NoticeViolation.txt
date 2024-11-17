@@ -1,0 +1,62 @@
+#1 
+SELECT company FROM notice WHERE region = 'western or central';
+
+#2 
+SELECT company FROM notice WHERE penalty > 0;
+
+#3 
+SELECT company FROM notice WHERE item_num > 3;
+
+#4 
+SELECT company FROM notice WHERE compliance_order = 'true';
+
+#5 
+SELECT company FROM notice WHERE date < '03/01/2024';
+
+#6 
+SELECT COUNT(company) FROM notice WHERE compliance_order = 'true';
+
+#7 
+SELECT COUNT(company) FROM notice WHERE date < '03/01/2024';
+
+#8 
+SELECT company FROM notice WHERE region = 'western or central' AND date < '01/01/2024';
+
+#9 
+SELECT company FROM notice WHERE penalty > 10000 AND item_num > 1;
+
+#10 
+SELECT company FROM notice WHERE type = 'Corrosion Control' AND penalty < 10000;
+
+#11 
+SELECT company FROM notice WHERE compliance_order = 'false' AND penalty < 20000;
+
+#12 
+SELECT company FROM notice WHERE state = 'California' AND type = 'Corrosion Control';
+
+#13 
+SELECT COUNT(company) FROM notice WHERE penalty > 10000 AND item_num > 1;
+
+#14 
+SELECT MAX(penalty) FROM notice WHERE state = 'California' AND type = 'Corrosion Control';
+
+#15 
+SELECT company FROM notice WHERE region = 'western or central' AND date < '06/01/2024' AND penalty > 10000;
+
+#16 
+SELECT company FROM notice WHERE penalty > 5000 AND item_num > 1 AND type = 'Control Room Management or Corrosion Control';
+
+#17 
+SELECT company FROM notice WHERE penalty > 2000 AND item_num > 2 AND type = 'Corrosion Control';
+
+#18 
+SELECT company FROM notice WHERE state = 'California' AND type = 'Corrosion Control' AND item_num > 1;
+
+#19 
+SELECT company FROM notice WHERE region = 'western or central' AND penalty > 5000 AND item_num > 1;
+
+#20 
+SELECT COUNT(company) FROM notice WHERE region = 'western or central' AND date < '06/01/2024' AND penalty > 10000;
+
+#21 
+SELECT AVG(penalty) FROM notice WHERE state = 'California' AND type = 'Corrosion Control' AND item_num > 1;

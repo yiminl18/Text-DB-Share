@@ -1,0 +1,62 @@
+#1
+SELECT paper_name FROM paper WHERE year > 2017;
+
+#2
+SELECT paper_name FROM paper WHERE venue = 'CHI';
+
+#3
+SELECT paper_name FROM paper WHERE author_number > 3;
+
+#4
+SELECT paper_name FROM paper WHERE contribution = 'empirical';
+
+#5
+SELECT paper_name FROM paper WHERE demographics = 'patients';
+
+#6
+SELECT COUNT(paper_name) FROM paper WHERE venue = 'CHI';
+
+#7
+SELECT AVG(author_number) FROM paper WHERE venue = 'CHI';
+
+#8
+SELECT paper_name FROM paper WHERE year < 2018 AND author_number < 5;
+
+#9
+SELECT paper_name FROM paper WHERE year < 2017 AND venue = 'CHI';
+
+#10
+SELECT paper_name FROM paper WHERE year < 2018 AND study = 'surveys or interviews';
+
+#11
+SELECT paper_name FROM paper WHERE author_number < 5 AND study = 'surveys or interviews';
+
+#12
+SELECT paper_name FROM paper WHERE author_number > 3 AND venue = 'CHI';
+
+#13
+SELECT AVG(author_number) FROM paper WHERE year < 2018 AND study = 'surveys or interviews';
+
+#14
+SELECT COUNT(paper_name) FROM paper WHERE author_number < 5 AND study = 'surveys or interviews';
+
+#15
+SELECT paper_name FROM paper WHERE author_number < 5 AND venue = 'CHI' AND year > 2012;
+
+#16
+SELECT paper_name FROM paper WHERE study = 'surveys' AND venue = 'CHI or Ubicomp' AND year > 2012;
+
+#17
+SELECT paper_name FROM paper WHERE venue = 'CHI or Ubicomp' AND year > 2013 AND author_number > 3;
+
+#18
+SELECT paper_name FROM paper WHERE study = 'surveys' AND author_number < 4 AND year > 2013;
+
+#19
+SELECT paper_name FROM paper WHERE author_number < 5 AND venue = 'CHI' AND year < 2017;
+
+#20
+SELECT COUNT(paper_name) FROM paper WHERE venue = 'CHI or Ubicomp' AND year > 2013 AND author_number > 3;
+
+#21
+SELECT MAX(author_number) FROM paper WHERE study = 'surveys' AND venue = 'CHI or Ubicomp' AND year > 2013;

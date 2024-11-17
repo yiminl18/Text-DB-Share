@@ -1,0 +1,62 @@
+#1 
+SELECT project_name FROM civic WHERE type = 'capital';
+
+#2 
+SELECT project_name FROM civic WHERE status = 'not started';
+
+#3 
+SELECT project_name FROM civic WHERE st < '2022-03';
+
+#4 
+SELECT project_name FROM civic WHERE et > '2022-01';
+
+#5 
+SELECT project_name FROM civic WHERE status = 'not started';
+
+#6 
+SELECT MAX(st) FROM civic WHERE status = 'not started';
+
+#7 
+SELECT COUNT(project_name) FROM civic WHERE et > '2022-01';
+
+#8 
+SELECT project_name FROM civic WHERE st < '2022-01' AND type = 'capital';
+
+#9 
+SELECT project_name FROM civic WHERE et > '2021-03' AND status = 'not started';
+
+#10 
+SELECT project_name FROM civic WHERE st < '2023-01' AND type = 'disaster';
+
+#11 
+SELECT project_name FROM civic WHERE et > '2021-09' AND type = 'capital';
+
+#12 
+SELECT project_name FROM civic WHERE st < '2022-06' AND status = 'design';
+
+#13 
+SELECT COUNT(project_name) FROM civic WHERE et > '2021-03' AND status = 'not started';
+
+#14 
+SELECT COUNT(project_name) FROM civic WHERE et > '2021-09' AND type = 'capital';
+
+#15 
+SELECT project_name FROM civic WHERE st < '2022-06' AND type = 'capital' AND status = 'not started';
+
+#16 
+SELECT project_name FROM civic WHERE et > '2021-07' AND type = 'disaster' AND status = 'design';
+
+#17 
+SELECT project_name FROM civic WHERE st > '2021-05' AND type = 'capital' AND topic = 'road';
+
+#18 
+SELECT project_name FROM civic WHERE ad > '2021-01' AND type = 'capital' AND status = 'design';
+
+#19 
+SELECT project_name FROM civic WHERE et < '2023-01' AND topic = 'road' AND status = 'design';
+
+#20 
+SELECT COUNT(project_name) FROM civic WHERE st > '2021-05' AND type = 'capital' AND topic = 'road';
+
+#21 
+SELECT COUNT(project_name) FROM civic WHERE st < '2022-06' AND type = 'capital' AND status = 'not started';
