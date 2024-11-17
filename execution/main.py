@@ -455,7 +455,6 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     size += sz
                     if('false' in res.lower() or 'none' in res.lower()):
                         ans_flag = 0
-                        #print('determined false')
                         break
 
             et = time.time()
