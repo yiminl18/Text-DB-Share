@@ -14,9 +14,16 @@ from llama_index.legacy import GPTTreeIndex,OpenAIEmbedding
 import os
 import os.path
 import filtering
+import nltk
 from llama_index.legacy.schema import TextNode, IndexNode
 from llama_index.legacy import StorageContext, load_index_from_storage
 from llama_index.legacy.llms import OpenAI
+
+
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+nltk.download('punkt_tab')
 
 from llama_index.legacy import set_global_service_context
 
