@@ -27,7 +27,7 @@ nltk.download('punkt_tab')
 
 from llama_index.legacy import set_global_service_context
 
-llm = OpenAI(model="gpt-4", temperature=0, max_tokens=256)
+llm = OpenAI(model="gpt-4o", temperature=0, max_tokens=256)
 embed_model = OpenAIEmbedding()
 
 service_context = ServiceContext.from_defaults(
