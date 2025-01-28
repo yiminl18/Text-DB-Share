@@ -9,6 +9,7 @@ import sys
 import UDF_registration
 import time 
 import nltk
+import graph_rag
 import argparse
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
@@ -361,6 +362,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
 
             response = [] 
             ans_flag = 1
+
             if(strategy == 'GPT_single'):
                 
                 for left, right in sql['filters'].items():#for each filter 
@@ -481,6 +483,56 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
 
         #break
     
+def evaluate_graph_rag(data, text_folder,out_folder):
+    text_files = model_build.scan_files(text_folder)
+    model = 'gpt-4o'
+
+    entity_mention = 'paper' #natural language description of an entity 
+    
+    sqls = UDF_registration.paper_SQLs()#readl sqls
+
+    if(data == 'paper'):
+        desp = UDF_registration.paper_attr_desp()
+    elif(data == 'civic'):
+        desp = UDF_registration.civic_attr_desp()
+    elif(data == 'NoticeViolation'):
+        desp = UDF_registration.notice_attr_desp()
+
+    for text_file in text_files:#iterate all document 
+        #print(text_file)
+        ans = []
+        if('DS_Store' in text_file):
+            continue
+        text = model_build.read_text(text_file)
+        title = model_build.clean_paper_title(text_file, text_folder)
+        print(title)
+
+        #for each document, build graph 
+        query_engine = graph_rag.build_graph(text, model)
+
+        #scan the query workload for current document 
+        for sql_id in range(0, len(sqls)):#scan each query 
+            sql = sqls[sql_id]
+            print('sql id:', sql_id+1)
+
+            result = {}#{document_name: ans_list}
+            times = {}#{document_name: total_time}
+            sizes = {}#{document_name: total_size}
+
+            #for current SQL, scan all filters 
+            size = 0
+            for left, right in sql['filters'].items():#for each filter 
+                prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', data)
+                print(left, right, prompt)
+                #evaluate a predicate 
+                res, sz = graph_rag.graph_rag_api(query_engine, prompt)
+                print(res.lower(), sz)
+                size += sz
+                if('false' in res.lower() or 'none' in res.lower()):
+                    ans_flag = 0
+                    break
+    
+
 def merge_response(response):
     #response is a list of strings, where a string contains a list of vals seperate by ','
     if(len(response) == 0):
