@@ -345,7 +345,7 @@ def build_graph(document, model):
     Settings.llm = OpenAI(model=model, temperature=0.0)
     Settings.callback_manager = CallbackManager([token_counter])
 
-    llm = OpenAI(model=model)
+    llm = OpenAI(model=model, temperature=0)
 
     # service_context = ServiceContext.from_defaults(
     #     llm=llm,
@@ -358,7 +358,7 @@ def build_graph(document, model):
 
     # Split document into nodes
     splitter = SentenceSplitter(
-        chunk_size=1024,
+        chunk_size=256,
         chunk_overlap=20,
     )
     nodes = splitter.get_nodes_from_documents(documents)
@@ -386,15 +386,28 @@ def build_graph(document, model):
         graph_store=index.property_graph_store, llm=llm
     )
 
-    return query_engine
+    # Print token usage statistics
+    # print("Token Usage Statistics:")
+    # print(
+    #     "Embedding Tokens: ",
+    #     token_counter.total_embedding_token_count,
+    #     "\n",
+    #     "LLM Prompt Tokens: ",
+    #     token_counter.prompt_llm_token_count,
+    #     "\n",
+    #     "LLM Completion Tokens: ",
+    #     token_counter.completion_llm_token_count,
+    #     "\n",
+    #     "Total LLM Token Count: ",
+    #     token_counter.total_llm_token_count,
+    #     "\n",
+    #     )
 
-def graph_rag_api(query_engine, question):
+    return query_engine, token_counter.total_llm_token_count, token_counter
+
+def graph_rag_api(query_engine, question, token_counter):
     # Initialize the TokenCountingHandler
-    token_counter = TokenCountingHandler(
-        tokenizer=tiktoken.encoding_for_model(model).encode
-    )
-    Settings.llm = OpenAI(model=model, temperature=0.0)
-    Settings.callback_manager = CallbackManager([token_counter])
+    token_counter.reset_counts()
 
     # Query the engine
     response = query_engine.query(question)
@@ -402,21 +415,21 @@ def graph_rag_api(query_engine, question):
    
 
     # Print token usage statistics
-    print("Token Usage Statistics:")
-    print(
-        "Embedding Tokens: ",
-        token_counter.total_embedding_token_count,
-        "\n",
-        "LLM Prompt Tokens: ",
-        token_counter.prompt_llm_token_count,
-        "\n",
-        "LLM Completion Tokens: ",
-        token_counter.completion_llm_token_count,
-        "\n",
-        "Total LLM Token Count: ",
-        token_counter.total_llm_token_count,
-        "\n",
-        )
+    # print("Token Usage Statistics:")
+    # print(
+    #     "Embedding Tokens: ",
+    #     token_counter.total_embedding_token_count,
+    #     "\n",
+    #     "LLM Prompt Tokens: ",
+    #     token_counter.prompt_llm_token_count,
+    #     "\n",
+    #     "LLM Completion Tokens: ",
+    #     token_counter.completion_llm_token_count,
+    #     "\n",
+    #     "Total LLM Token Count: ",
+    #     token_counter.total_llm_token_count,
+    #     "\n",
+    #     )
 
     return response.response, token_counter.total_llm_token_count
 

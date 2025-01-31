@@ -33,7 +33,7 @@ def get_predicate_prompt(attr, op, operand, desp, entity, type, data):
                 prompt = 'Return the names of all projects whose ' + nl +  ' is later than ' + operand + '.' + ' Put answers in one line seperate by coma. '
             elif(op == '<'):
                 prompt = 'Return the names of all projects whose ' + nl +  ' is earlier than ' + operand + '.' + ' Put answers in one line seperate by coma. '
-    elif(data == 'notice'):
+    elif(data == 'NoticeViolation'):
         if(type =='bool'):
             if(op == '='):
                 prompt = 'Is the ' + nl  + ' ' + operand + ' in this violation document?' + ' Return "True" or "False" . If answer is not found, return "None".'
@@ -481,6 +481,7 @@ def paper_SQLs():
     filters = {}
     filters['venue'] = ('=', 'CHI')
     sql['filters'] = filters
+    sqls.append(sql)
 
     sql = {}
     sql['agg'] = 'avg'
@@ -488,6 +489,7 @@ def paper_SQLs():
     filters = {}
     filters['venue'] = ('=', 'CHI')
     sql['filters'] = filters
+    sqls.append(sql)
 
     #two predicates sql
     sql = {}

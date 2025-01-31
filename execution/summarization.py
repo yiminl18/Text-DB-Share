@@ -3,7 +3,7 @@
 import spacy
 from heapq import nlargest
 # Load the small English model
-nlp = spacy.load("en_core_web_trf")
+#nlp = spacy.load("en_core_web_trf")
 from collections import Counter
 from string import punctuation
 from transformers import T5Tokenizer, T5ForConditionalGeneration
@@ -14,41 +14,41 @@ from rouge import Rouge
 def context_size(text):
     return len(word_tokenize(text))
 
-def spacy_summary(text,k=0,percent=0.1): #space is extrasive, k is the number of sentences   
-    #if use percent, then k is set to be 0; otherwise, percent is set to be 0
-    # Process the text
-    doc = nlp(text)
-    # Count word frequencies
-    word_frequencies = Counter()
-    for word in doc:
-        if word.text.lower() not in punctuation:
-            word_frequencies[word.text.lower()] += 1
+# def spacy_summary(text,k=0,percent=0.1): #space is extrasive, k is the number of sentences   
+#     #if use percent, then k is set to be 0; otherwise, percent is set to be 0
+#     # Process the text
+#     doc = nlp(text)
+#     # Count word frequencies
+#     word_frequencies = Counter()
+#     for word in doc:
+#         if word.text.lower() not in punctuation:
+#             word_frequencies[word.text.lower()] += 1
 
-    # Normalize frequencies
-    max_frequency = max(word_frequencies.values())
-    for word in word_frequencies.keys():
-        word_frequencies[word] /= max_frequency
+#     # Normalize frequencies
+#     max_frequency = max(word_frequencies.values())
+#     for word in word_frequencies.keys():
+#         word_frequencies[word] /= max_frequency
 
-    # Score sentences based on word frequencies
-    sentence_scores = {}
-    for sent in doc.sents:
-        for word in sent:
-            if word.text.lower() in word_frequencies.keys():
-                if sent not in sentence_scores.keys():
-                    sentence_scores[sent] = word_frequencies[word.text.lower()]
-                else:
-                    sentence_scores[sent] += word_frequencies[word.text.lower()]
+#     # Score sentences based on word frequencies
+#     sentence_scores = {}
+#     for sent in doc.sents:
+#         for word in sent:
+#             if word.text.lower() in word_frequencies.keys():
+#                 if sent not in sentence_scores.keys():
+#                     sentence_scores[sent] = word_frequencies[word.text.lower()]
+#                 else:
+#                     sentence_scores[sent] += word_frequencies[word.text.lower()]
 
-    # Extract top N sentences as the summary
-    if(k > 0):
-        summary_length = k
-    else: 
-        summary_length = int(len(sentence_scores) * percent)  # For example, 30% of original text
-    summary = nlargest(summary_length, sentence_scores, key=sentence_scores.get)
+#     # Extract top N sentences as the summary
+#     if(k > 0):
+#         summary_length = k
+#     else: 
+#         summary_length = int(len(sentence_scores) * percent)  # For example, 30% of original text
+#     summary = nlargest(summary_length, sentence_scores, key=sentence_scores.get)
 
-    # Combine sentences
-    final_summary = ' '.join([sent.text for sent in summary])
-    return final_summary
+#     # Combine sentences
+#     final_summary = ' '.join([sent.text for sent in summary])
+#     return final_summary
 
 def t5_summary(text, k):#t5 is abstractive summary 
     # Load the T5 model and tokenizer

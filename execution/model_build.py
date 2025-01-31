@@ -1,12 +1,9 @@
-from sentence_transformers import SentenceTransformer, util
 import numpy as np
-import time
 import pdfplumber
 import sys
 import os
 import Levenshtein
 import json
-import llama_index_openai
 # Get the directory of the current file
 current_file_directory = os.path.dirname(os.path.abspath(__file__))
 # Get the parent directory
