@@ -1,0 +1,32 @@
+Marie Canyon Green Streets, Spring 2022, January 2022, Not specified, Green infrastructure, Capital Improvement, In progress  
+PCH Median Improvements Project, February 2022, December 2021, Not specified, Roadway improvements, Capital Improvement, In progress  
+PCH Signal Synchronization System Improvements Project, March 2022, January 2022, February 2022, Traffic management, Capital Improvement, In progress  
+Westward Beach Road Improvements Project, TBD, Spring 2022, Not specified, Roadway improvements, Capital Improvement, In progress  
+Civic Center Water Treatment Facility Phase 2, Fall 2022, February 2022, February 2022, Water treatment, Capital Improvement, In progress  
+Bluffs Park Shade Structure, Spring 2022, January 2022, Not specified, Park amenities, Capital Improvement, In progress  
+Permanent Skate Park, To be determined, Winter 2021, Not specified, Recreational facility, Capital Improvement, In progress  
+PCH at Trancas Canyon Road Right Turn Lane, Not specified, Winter 2021, October 7, 2021, Roadway improvements, Capital Improvement, In progress  
+Malibu Park Drainage Improvements, Not specified, Not specified, Not specified, Drainage repairs, Capital Improvement, In progress  
+2021 Annual Street Maintenance, Not specified, Not specified, Not specified, Street maintenance, Capital Improvement, In progress  
+Vehicle Protection Devices, Not specified, Not specified, Not specified, Safety infrastructure, Capital Improvement, Not started  
+Legacy Park Paver Repair Project, Not specified, Not specified, Not specified, Park maintenance, Capital Improvement, Not started  
+Malibu Bluffs Park South Walkway, Not specified, Not specified, Not specified, Park infrastructure, Capital Improvement, Not started  
+Trancas Playground Resurfacing, Not specified, Not specified, Not specified, Playground maintenance, Capital Improvement, Not started  
+PCH Overhead Warning Signs, Not specified, Not specified, Not specified, Traffic safety, Capital Improvement, Not started  
+Civic Center Stormwater Diversion Structure, Not specified, Not specified, Not specified, Stormwater management, Capital Improvement, Completed  
+Civic Center Way Improvements, Not specified, Not specified, Not specified, Roadway improvements, Capital Improvement, Completed  
+Broad Beach Road Water Quality Infrastructure Repairs, February 2022, January 2022, Not specified, Water quality, Disaster Recovery, In progress  
+Latigo Canyon Road Roadway/Retaining Wall Improvements, Spring 2022, January 2022, Not specified, Roadway/retaining wall, Disaster Recovery, In progress  
+Trancas Canyon Park Planting and Irrigation Repairs, Spring 2022, January 2022, Not specified, Park maintenance, Disaster Recovery, In progress  
+Trancas Canyon Park Slope Stabilization Project, Spring 2022, January 2022, Not specified, Slope stabilization, Disaster Recovery, In progress  
+Birdview Avenue Improvements, Not specified, Not specified, Not specified, Roadway improvements, Disaster Recovery, In progress  
+Westward Beach Road Shoulder Repairs, Fall 2022, Spring 2022, Not specified, Roadway repairs, Disaster Recovery, In progress  
+Outdoor Warning Sirens, Not specified, Not specified, November 29, 2021, Emergency warning system, Disaster Recovery, In progress  
+Storm Drain Master Plan, Not specified, Spring 2022, September 2021, Stormwater management, Disaster Recovery, In progress  
+Clover Heights Storm Drain, Summer 2022, Spring 2022, Not specified, Stormwater management, Disaster Recovery, In progress  
+Guardrail Replacement Citywide, Not specified, Not specified, Not specified, Guardrail replacement, Disaster Recovery, Completed  
+Corral Canyon Road Bridge Repairs, Not specified, Not specified, Not specified, Bridge repairs, Disaster Recovery, Completed  
+Corral Canyon Culvert Repairs, Not specified, Not specified, Not specified, Culvert repairs, Disaster Recovery, Cancelled  
+Latigo Canyon Road Culvert Repairs, Spring 2022, Winter 2021/2022, Not specified, Culvert repairs, Disaster Recovery, Not started  
+Encinal Canyon Road Drainage Improvements, Spring 2022, Winter 2021/2022, Not specified, Drainage improvements, Disaster Recovery, Not started  
+Malibu Road Slope Repairs, Fall 2022, Spring 2022, Not specified, Slope repairs, Disaster Recovery, Not started  

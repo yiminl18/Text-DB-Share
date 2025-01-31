@@ -1,0 +1,87 @@
+32023006NOPV_PCP PCO_05042023_(22-235672)_text.txt|Coffeyville Resources Crude Transportation, LLC|central|Not specified|May 4, 2023|$804,300|Corrosion Control|1|true
+12023008NOPV_PCO PCP_06152023_(20-187757)_text.txt|Adelphia Gateway, LLC|Not specified|Not specified|June 15, 2023|$56,600|Not specified|1|true
+42023027NOPV_PCP_03242023_(22-239724)_text.txt|Sea Robin Pipeline Company|central|Not specified|March 24, 2023|$39,400|Corrosion Control|1|Not specified
+52023029NOPV_PCP PCO_06222023_(22-251181)_text.txt|AmeriGas Propane LP|western|Not specified|June 22, 2023|$550,100|Corrosion Control|18|true
+52023016NOPV_PCO_03242023_(21-207466)_text.txt|Norgasco, Inc|western|Not specified|March 24, 2023|Not specified|Not specified|6|true
+12023022NOPV_PCO_04132023_(22-234207)_text.txt|Adelphia Gateway, LLC|Not specified|Not specified|April 13, 2023|Not specified|Corrosion Control|5|true
+32024012NOPV_PCP PCO_02062024_(23-264235)_text.txt|Northern Natural Gas Company|central|Not specified|February 6, 2024|$68,800|Not specified|3|true
+42023034NOPV_PCO PCP_05082023_(22-232741)_text.txt|Energy Transfer Company | Not specified | Not specified | May 8, 2023 | $119,000 | Corrosion Control | 7 | true
+52023048NOPV_PCO_11022023_(22-239215)_text.txt|Clear Creek Storage Company, LLC|western|Not specified|November 2, 2023|Not specified|Control Room Management or Corrosion Control|4|true
+52023002NOPV_PCP_02062023_(22-239265)_text.txt|Mid-Alaska Pipeline, LLC | western | Not specified | February 6, 2023 | $50,200 | Not specified | 3 | Not specified
+32024007NOPV_PCO_01182024_(22-234928)_text.txt|ENBRIDGE INC.|central|Not specified|January 18, 2024|Not specified|Corrosion Control|3|true
+12023011NOPV_PCP_05052023_(21-207810)_text.txt|Buckeye Partners, LP|Not specified|Not specified|May 5, 2023|$441,151|Control Room Management or Corrosion Control|3|Not specified
+52023052NOPV_PCO_10272023_(22-246104)_text.txt|City of Palo Alto|western|California|October 27, 2023|Not specified|Not specified|1|true
+32024016NOPV_PCO_02132024_(23-264316)_text.txt|Enbridge Pipelines (Southern Lights), L.L.C. | central | Not specified | February 13, 2024 | Not specified | Not specified | 1 | true
+12023036NOPV_PCO PCP_05042023_(22-233211)_text.txt|Kinder Morgan Liquid Terminals, LLC|Not specified|Not specified|May 5, 2023|$75,200|Not specified|4|true
+32023009NOPV_PCP_05172023_(22-233968)_text.txt|Northern Natural Gas Company|central|Not specified|May 17, 2023|$75,200|Corrosion Control|5|Not specified
+52023033NOPV_PCO_07192023_(22-239213)_text.txt|Black Hills Shoshone Pipeline, LLC|western|Not specified|July 19, 2023|Not specified|Control Room Management or Corrosion Control|4|true
+52023025NOPV_PCP PCO_04062023_(21-200502)_text.txt|Amplify Energy Corp.|western|California|April 6, 2023|$58,400|Corrosion Control|3|true
+42023041NOPV_PCO PCP_03242023_(22-235634)_text.txt|Holly Energy Partners | Not specified | Not specified | March 24, 2023 | $108,700 | Corrosion Control | 1 | true
+32023003NOPV_PCP_08152023_(21-201326)_text.txt|TC Oil Pipeline Operations, Inc.|central|Not specified|August 15, 2023|$103,800|Not specified|2|Not specified
+52023003NOPV_PCP PCO_04112023_(22-236099)_text.txt|Kinder Morgan, LLC|western|California|April 11, 2023|$81,500|Corrosion Control|1|true
+52023030NOPV_PCO_04172023_(21-200923)_text.txt|Kinder Morgan | western | Not specified | April 17, 2023 | Not specified | Not specified | 1 | true
+42023011NOPV_PCO PCP_06152023_(21-214287)_text.txt|Energy Transfer, LP | Central | Not specified | June 15, 2023 | $2,473,912 | Not specified | 3 | true
+42023049NOPV_PCP_08142023_(22-232767)_text.txt|Dixie Pipeline Company LLC|Not specified|Not specified|August 14, 2023|$21,200|Corrosion Control|1|Not specified
+42023044NOPV_PCO_05042023_(22-234487)_text.txt|Targa Downstream LLC|Not specified|Not specified|May 4, 2023|Not specified|Not specified|2|true
+12023062NOPV_PCP_12282023_(22-234212)_text.txt|Delaware Pipeline Company LLC|Not specified|Not specified|December 28, 2023|$50,200|Corrosion Control|1|Not specified
+42023005NOPV_PCO PCP_02222023_(22-237261)_text.txt|Linde, Inc.|Not specified|Not specified|February 22, 2023|$20,400|Corrosion Control|3|true
+12023047NOPV_PCO_12042023_(22-233293)_text.txt|TC Energy Corporation|Not specified|Not specified|December 4, 2023|Not specified|Not specified|2|true
+32023016NOPV_PCP PCO_09082023_(22-238055)_text.txt|Tallgrass | central | Not specified | September 8, 2023 | $197,300 | Control Room Management | 8 | true
+12023050NOPV_PCO_09052023_(22-233356)_text.txt|Ergon Terminaling, Inc.|Not specified|Not specified|September 5, 2023|Not specified|Control Room Management or Corrosion Control|4|true
+52023019NOPV_PCP PCO_12272023_(22-236528)_text.txt|Eni US Operating Co., Inc. | western | Not specified | December 27, 2023 | $65,900 | Corrosion Control | 9 | true
+32023021NOPV_PCP PCO_09182023_(22-245404)_text.txt|Gary Climate Solutions, LLC|central|Not specified|September 18, 2023|$108,100|Corrosion Control|6|true
+32023007NOPV_PCP_12142023_(22-237870)_text.txt|Name of Company: Enbridge Inc.
+Region of Company: Central
+State of Company: Not specified
+Date of Notice: December 14, 2023
+Proposed Civil Penalty: $223,134
+Type of Violation Item: Not specified
+Number of Violation Items: 1
+Compliance Order: Not specified
+32023033NOPV_PCO_11272023_(22-234926)_text.txt|Enbridge Inc.|central|Not specified|November 27, 2023|Not specified|Not specified|1|true
+52023039NOPV_PCO_11022023_(22-254201)_text.txt|North Slope Borough Energy Management|western|Not specified|November 2, 2023|Not specified|Not specified|8|true
+52024002NOPV_PCP PCO_01292024_(22-258385)_text.txt|Town of Walden|western|Not specified|January 29, 2024|$81,800|Not specified|5|true
+42023042NOPV_PCO_05232023_(22-235632)_text.txt|Enable Mississippi River Transmission LLC | Not specified | Not specified | May 23, 2023 | Not specified | Not specified | 1 | true
+12024004NOPV_PCO_02152024_(22-233363)_text.txt|PBF Energy Inc.|Not specified|Not specified|February 15, 2024|Not specified|Control Room Management or Corrosion Control|3|true
+12023028NOPV_PCO_05252023_(22-232998)_text.txt|Eastern Gas Transmission and Storage, Inc.|Not specified|Not specified|May 25, 2023|Not specified|Not specified|1|true
+52023054NOPV_PCO_08212023_(23-264167)_text.txt|Tres Palacios Holdings LLC|western|Not specified|August 21, 2023|Not specified|Corrosion Control|5|true
+32023026NOPV_PCP PCO_09082023_(22-240208)_text.txt|Magellan Pipeline, LLC|central|Not specified|September 8, 2023|$39,100|Control Room Management|7|true
+22023013NOPV_PCP PCO_11162023_(21-224433)_text.txt|Ferrellgas, L.P. | Not specified | Not specified | November 16, 2023 | $63,900 | Corrosion Control | 9 | true
+42023039NOPV_PCO_05112023_(22-234780)_text.txt|Bravo Pipeline Company|Not specified|Not specified|May 11, 2023|Not specified|Not specified|1|true
+42023047NOPV_PCO_10182023_(22-241127)_text.txt|Energy Transfer Company|Not specified|Not specified|October 18, 2023|Not specified|Not specified|1|true
+12023027NOPV_PCP_06012023_(21-199435)_text.txt|Eastern Gas Transmission and Storage, Inc.|Not specified|Not specified|June 1, 2023|$26,000|Control Room Management|2|Not specified
+22023002NOPV_PCO_07282023_(21-202409)_text.txt|Genesis Pipeline USA, LP|Not specified|Not specified|July 28, 2023|Not specified|Not specified|2|true
+42023031NOPV_PCO_04202023_(22-242818)_text.txt|Valero Terminaling and Distribution Company|Not specified|Not specified|April 20, 2023|Not specified|Corrosion Control|3|true
+52023035NOPV_PCO_10252023_(22-239214)_text.txt|Contango Resources|western|Not specified|October 25, 2023|Not specified|Control Room Management or Corrosion Control|3|true
+42024010NOPV_PCP_02022024_(22-248385)_text.txt|Osage Pipe Line Company, LLC | central | Not specified | February 2, 2024 | $239,142 | Control Room Management or Corrosion Control | 1 | Not specified
+32024011NOPV_PCO_02062024_(23-264235)_text.txt|Northern Natural Gas Company|central|Not specified|February 6, 2024|Not specified|Not specified|1|true
+52023021NOPV_PCO_02062023_(22-239515)_text.txt|Calumet Montana Refining, LLC | western | Not specified | February 6, 2023 | Not specified | Not specified | 2 | true
+22023011NOPV_PCO_07282023_(21-202560)_text.txt|Enmark Energy, Inc.|Not specified|Not specified|July 28, 2023|Not specified|Corrosion Control|9|true
+52023046NOPV_PCP PCO_12272023_(22-257275)_text.txt|Barrow Utilities and Electric Cooperative, Inc. | Not specified | Not specified | December 27, 2023 | $81,800 | Corrosion Control | 7 | true
+42023006NOPV_PCP PCO_05082023_(21-231718)_text.txt|Interior Gas Utility|Not specified|Not specified|May 8, 2023|$342,800|Control Room Management or Corrosion Control|2|true
+42023052NOPV_PCO_10162023_(22-235649)_text.txt|Energy Transfer Company|Not specified|Not specified|October 16, 2023|Not specified|Not specified|3|true
+52023012NOPV_PCO_03012023_(22-251101)_text.txt|Menzies Aviation|western|Not specified|March 1, 2023|Not specified|Control Room Management or Corrosion Control|7|true
+32023014NOPV_PCP PCO_07272023_(22-250434)_text.txt|Boardwalk Petrochemical Pipeline, LLC|central|Not specified|July 27, 2023|$16,700|Control Room Management or Corrosion Control|7|true
+32023001NOPV_PCP_05082023_(20-197236)_text.txt|Magellan Midstream Partners, LP | central | Not specified | May 8, 2023 | $655,941 | Corrosion Control | 3 | Not specified
+52023058NOPV_PCP_12272023_(23-264394)_text.txt|Harvest Alaska, LLC|western|Not specified|December 27, 2023|$63,300|Not specified|4|Not specified
+42023045NOPV_PCO_05112023_(22-232770)_text.txt|Enterprise Products Operating LLC|Not specified|Not specified|May 11, 2023|Not specified|Not specified|2|true
+52023031NOPV_PCP PCO_10112023_(22-232626)_text.txt|Freeport-McMoRan Oil & Gas | Western | California | October 11, 2023 | $87,800 | Corrosion Control | 13 | true
+32023008NOPV_PCP PCO_06022023_(21-207275)_text.txt|Coffeyville Resources Crude Transportation, LLC|central|Not specified|June 2, 2023|$146,900|Corrosion Control|5|true
+52023009NOPV_PCP PCO_03012023_(21-217219)_text.txt|Interior Gas Utility|western|Not specified|March 1, 2023|$107,400|Not specified|7|true
+42023057NOPV_PCO_11162023_(21-209415)_text.txt|Crowley LNG Puerto Rico, LLC|Not specified|Not specified|November 16, 2023|Not specified|Not specified|1|true
+52023043NOPV_PCO_10252023_(22-239216)_text.txt|Par Hawaii Logistics|western|Not specified|October 25, 2023|Not specified|Control Room Management or Corrosion Control|6|true
+52023042NOPV_PCO_12262023_(22-232644)_text.txt|Amplify Energy Corp.|western|California|December 26, 2023|Not specified|Control Room Management or Corrosion Control|4|true
+32023020NOPV_PCP PCO_08112023_(22-237273)_text.txt|Boardwalk Petrochemical Pipeline, LLC|central|Not specified|August 11, 2023|$152,900|Not specified|4|true
+12023013NOPV_PCO PCP_05042023_(22-233209)_text.txt|Kiantone Pipeline Corp|Not specified|Not specified|May 5, 2023|$167,600|Not specified|9|true
+52024010NOPV_PCO_01102024_(23-264168)_text.txt|Phillips 66 Pipeline LLC|western|Not specified|January 10, 2024|Not specified|Corrosion Control|3|true
+42023053NOPV_PCO_06132023_(21-227138)_text.txt|Navigator Borger Express LLC|central|Not specified|June 13, 2023|Not specified|Not specified|1|true
+42023010NOPV_PCP PCO_06022023_(22-232749)_text.txt|Shell Pipeline Company, LP | Not specified | Not specified | June 2, 2023 | $176,000 | Corrosion Control | 4 | true
+52023040NOPV_PCO_07262023_(23-264043)_text.txt|E&B Natural Resources Management Corp | western | California | July 26, 2023 | Not specified | Corrosion Control | 2 | true
+52023011NOPV_PCP PCO_04062023_(21-225379)_text.txt|Amplify Energy Corp.|western|California|April 6, 2023|$3,389,734|Control Room Management or Corrosion Control|10|true
+42023033NOPV_PCO_04212023_(22-249322)_text.txt|Cove Point LNG, LP|Not specified|Not specified|April 21, 2023|Not specified|Corrosion Control|4|true
+52023037NOPV_PCP PCO_09182023_(22-232625)_text.txt|DCOR, LLC|western|California|September 18, 2023|$81,900|Corrosion Control|7|true
+22023016NOPV_PCP_08172023_(21-209691)_text.txt|Natural Gas Pipeline Company of America|Not specified|Not specified|August 17, 2023|$78,500|Not specified|1|Not specified
+52024011NOPV_PCO_02232024_(23-264348)_text.txt|DCOR LLC|western|California|February 23, 2024|Not specified|Corrosion Control|8|true
+32023011NOPV_PCP PCO_09122023_(22-233376)_text.txt|Enbridge Energy, L.P. | Central | Not specified | September 12, 2023 | $18,600 | Corrosion Control | 3 | true
+52023008NOPV_PCP_07052023_(22-243713)_text.txt|Harvest Alaska, LLC | western | Not specified | July 5, 2023 | $33,500 | Not specified | 2 | Not specified
+42024014NOPV_PCO_01302024_(21-217155)_text.txt|Rosefield Operating Company, LLC|Not specified|Not specified|January 30, 2024|Not specified|Not specified|1|true

@@ -1,0 +1,22 @@
+2022 Annual Street Maintenance, 2022-09, 2022-06, Not specified, road, capital, design  
+Marie Canyon Green Streets, 2022-06, Not specified, Not specified, road, capital, not started  
+PCH Median Improvements Project, 2022-09, 2022-06, 2022-06, road, capital, not started  
+PCH Signal Synchronization System Improvements Project, 2022-11, 2022-03, 2022-09, road, capital, not started  
+Westward Beach Road Repair Project, 2022-09, 2022-06, Not specified, road, capital, not started  
+Civic Center Water Treatment Facility Phase 2, 2023-03, 2021-12, 2022-12, road, capital, not started  
+Permanent Skate Park, Not specified, 2022-03, Not specified, road, capital, not started  
+PCH at Trancas Canyon Road Right Turn Lane, Not specified, 2023-03, Not specified, road, capital, not started  
+Michael Landon Center Roof Replacement Project, 2022-12, 2022-09, Not specified, road, capital, not started  
+Bluffs Park Shade Structure, Not specified, Not specified, Not specified, road, capital, not started  
+Michael Landon Center HVAC Replacement Project, Not specified, Not specified, Not specified, road, capital, not started  
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project), 2022-06, 2022-04, 2022-06, road, disaster, design  
+Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project), 2022-06, 2022-06, Not specified, road, disaster, design  
+Trancas Canyon Park Slope Stabilization Project (CalJPIA Project), 2022-06, 2022-06, Not specified, road, disaster, design  
+Storm Drain Master Plan (FEMA Project), Not specified, 2022-06, Not specified, road, disaster, design  
+Clover Heights Storm Drain (FEMA Project), Not specified, Not specified, Not specified, road, disaster, not started  
+Encinal Canyon Road Drainage Improvements (CalOES Project), 2022-09, 2022-06, Not specified, road, disaster, design  
+Malibu Road Slope Repairs (CalOES Project), 2022-09, 2022-06, Not specified, road, disaster, design  
+Westward Beach Road Shoulder Repairs (CalOES Project), 2023-03, 2022-09, Not specified, road, disaster, design  
+Outdoor Warning Sirens - Design (FEMA Project), Not specified, Not specified, Not specified, road, disaster, not started  
+Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project), Not specified, Not specified, Not specified, road, disaster, not started  
+Point Dume Decomposed Granite Walkway Repair Project, Not specified, Not specified, Not specified, road, disaster, not started  

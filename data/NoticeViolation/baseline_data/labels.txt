@@ -1,0 +1,33 @@
+{
+    "region": [
+        "western or central"
+    ],
+    "penalty": [
+        "10000",
+        "5000",
+        "2000",
+        "0",
+        "20000"
+    ],
+    "item_num": [
+        "1",
+        "3",
+        "2"
+    ],
+    "compliance_order": [
+        "false",
+        "true"
+    ],
+    "date": [
+        "06/01/2024",
+        "03/01/2024",
+        "01/01/2024"
+    ],
+    "type": [
+        "Control Room Management or Corrosion Control",
+        "Corrosion Control"
+    ],
+    "state": [
+        "California"
+    ]
+}

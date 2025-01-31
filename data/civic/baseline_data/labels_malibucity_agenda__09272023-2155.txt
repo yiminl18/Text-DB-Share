@@ -1,0 +1,24 @@
+2022 Morning View Resurfacing & Storm Drain Improvements, 2024-05, 2023-09, 2024-03, road, capital, design  
+PCH Median Improvements Project, 2024-03, 2023-12, 2023-12, road, capital, design  
+Westward Beach Road Repair Project, 2023-09, 2023-06, 2023-09, road, capital, design  
+Westward Beach Road Drainage Improvements Project, 2024-03, Not specified, 2024-01, road, capital, design  
+Clover Heights Storm Drainage Improvements, 2024-06, Not specified, 2024-03, road, disaster, design  
+Latigo Canyon Road Retaining Wall Repair Project, Not specified, Not specified, Not specified, road, disaster, design  
+Civic Center Water Treatment Facility Phase 2, Not specified, Not specified, Not specified, Not specified, capital, design  
+Permanent Skate Park, Not specified, Not specified, Not specified, Not specified, capital, design  
+PCH at Trancas Canyon Road Right Turn Lane, Not specified, Not specified, Not specified, road, capital, design  
+Outdoor Warning Sirens, Not specified, Not specified, Not specified, Not specified, capital, design  
+Malibu Bluffs Park South Walkway Repairs, 2023-09, 2023-08, Not specified, Not specified, capital, design  
+Trancas Canyon Park Playground, 2024-01, 2023-12, 2023-12, Not specified, capital, design  
+Malibu Canyon Road Traffic Study, Not specified, Not specified, Not specified, road, capital, design  
+Kanan Dume Biofilter, 2024-09, 2024-06, Not specified, Not specified, capital, design  
+PCH Median Improvements at Paradise Cove and Zuma Beach, Not specified, Not specified, Not specified, road, capital, design  
+City Traffic Signals Backup Power, Not specified, 2023-07, Not specified, road, capital, design  
+Malibu Park Resurfacing Project, 2024-11, 2023-06, 2024-09, road, capital, design  
+City Hall Solar Project, 2024-09, 2024-03, 2024-06, Not specified, capital, design  
+Harbor Vista Curb Return, Not specified, Completed, Not specified, road, capital, design  
+Legacy Park Benches and Arbors Renovation, 2023-11, 2023-06, 2023-10, Not specified, capital, design  
+Citywide Asphalt Concrete Berms Repairs, 2024-09, 2024-03, 2024-06, road, capital, design  
+Malibu Bluffs Park Roof Replacement Project, 2024-06, 2023-12, 2024-03, Not specified, capital, design  
+PCH Signal Synchronization System Improvements Project, 2023-07, 2025-02, Not specified, road, capital, design  
+Trancas Canyon Park Upper and Lower Slopes Repair, 2023-12, 2023-09, Not specified, Not specified, disaster, design

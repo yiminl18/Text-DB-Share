@@ -1,0 +1,24 @@
+Marie Canyon Green Streets,Spring 2022,2022-03,Not specified,Not specified,capital,design  
+PCH Median Improvements Project,Spring/Summer 2022,2022-03,Not specified,road,capital,design  
+PCH Signal Synchronization System Improvements Project,Spring/Summer 2022,Spring 2022,Spring/Summer 2022,road,capital,design  
+Westward Beach Road Improvements Project,Summer/Winter 2022,Spring 2022,Not specified,road,capital,design  
+Civic Center Water Treatment Facility Phase 2,Fall 2022,2021-12,2022-02,Not specified,capital,design  
+Bluffs Park Shade Structure,Spring 2022,Spring 2022,Not specified,Not specified,capital,design  
+Permanent Skate Park,To be determined,Spring 2022,Not specified,Not specified,capital,design  
+PCH at Trancas Canyon Road Right Turn Lane,Not specified,Spring 2022,Not specified,road,capital,design  
+Vehicle Protection Devices,Not specified,Not specified,Not specified,Not specified,capital,not started  
+Legacy Park Paver Repair Project,Not specified,Not specified,Not specified,Not specified,capital,not started  
+Malibu Bluffs Park South Walkway,Not specified,Not specified,Not specified,Not specified,capital,not started  
+Trancas Playground Resurfacing,Not specified,Not specified,Not specified,Not specified,capital,not started  
+PCH Median Improvements at Paradise Cove and Zuma Beach,Not specified,Not specified,Not specified,road,capital,not started  
+Broad Beach Road Water Quality Infrastructure Repairs,Spring 2022,2022-02,Not specified,Not specified,disaster,design  
+Latigo Canyon Road Roadway/Retaining Wall Improvements,April 2022,2022-02,Not specified,Not specified,disaster,design  
+Trancas Canyon Park Planting and Irrigation Repairs,Spring 2022,Spring 2022,Not specified,Not specified,disaster,design  
+Trancas Canyon Park Slope Stabilization Project,Spring 2022,Spring 2022,Not specified,Not specified,disaster,design  
+Storm Drain Master Plan,Not specified,Spring 2022,Not specified,Not specified,disaster,design  
+Clover Heights Storm Drain,Not specified,Not specified,Not specified,Not specified,disaster,design  
+Latigo Canyon Road Culvert Repairs,April 2022,2022-02,Not specified,Not specified,disaster,design  
+Encinal Canyon Road Drainage Improvements,Not specified,Spring 2022,Not specified,Not specified,disaster,design  
+Malibu Road Slope Repairs,Fall 2022,Spring 2022,Not specified,Not specified,disaster,design  
+Westward Beach Road Shoulder Repairs,Fall 2022,2022-07,Not specified,Not specified,disaster,design  
+Outdoor Warning Sirens - Design,Not specified,Not specified,Not specified,Not specified,disaster,design  

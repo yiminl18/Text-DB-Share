@@ -1,0 +1,31 @@
+2022 Annual Street Maintenance, 2023-03, 2022-12, Not specified, road, capital, design  
+Marie Canyon Green Streets, 2022-06, Not specified, Not specified, road, capital, not started  
+PCH Median Improvements Project, Not specified, 2022-03, Not specified, road, capital, design  
+PCH Signal Synchronization System Improvements Project, 2022-12, 2022-03, 2022-09, road, capital, design  
+Westward Beach Road Repair Project, 2023-03, 2022-12, Not specified, road, capital, design  
+Civic Center Water Treatment Facility Phase 2, 2023-09, 2021-12, Not specified, road, capital, design  
+Permanent Skate Park, Not specified, 2023-03, Not specified, road, capital, design  
+PCH at Trancas Canyon Road Right Turn Lane, Not specified, 2023-03, Not specified, road, capital, design  
+Michael Landon Center Roof Replacement Project, 2023-03, 2022-12, Not specified, road, capital, design  
+Bluffs Park Shade Structure, Not specified, Not specified, Not specified, road, capital, design  
+Michael Landon Center HVAC Replacement Project, Not specified, Not specified, Not specified, road, capital, design  
+Vehicle Protection Devices, Not specified, Not specified, Not specified, road, capital, not started  
+Malibu Bluffs Park South Walkway, Not specified, Not specified, Not specified, road, capital, not started  
+Trancas Canyon Park Playground Resurfacing, Not specified, Not specified, Not specified, road, capital, not started  
+PCH Median Improvements at Paradise Cove and Zuma Beach, Not specified, Not specified, Not specified, road, capital, not started  
+PCH Crosswalk Improvements at Big Rock Drive and 20326 PCH, Not specified, Not specified, Not specified, road, capital, not started  
+Kanan Dume Biofilter, Not specified, Not specified, Not specified, road, capital, not started  
+Storm Drain Trash Screens Phase Two, Not specified, Not specified, Not specified, road, capital, not started  
+City Traffic Signals Backup Power, Not specified, Not specified, Not specified, road, capital, not started  
+Malibu Canyon Road Traffic Study, Not specified, Not specified, Not specified, road, capital, not started  
+Latigo Canyon Road Roadway/Retaining Wall Improvements (FEMA Project), 2023-03, 2022-04, 2022-12, road, disaster, design  
+Trancas Canyon Park Planting and Irrigation Repairs (CalJPIA/FEMA Project), 2023-06, 2022-12, Not specified, road, disaster, design  
+Trancas Canyon Park Slope Stabilization Project (CalJPIA Project), 2023-06, 2022-12, Not specified, road, disaster, design  
+Storm Drain Master Plan (FEMA Project), Not specified, 2023-03, Not specified, road, disaster, design  
+Clover Heights Storm Drain (FEMA Project), Not specified, Not specified, Not specified, road, disaster, design  
+Encinal Canyon Road Drainage Improvements (CalOES Project), 2022-12, 2022-06, Not specified, road, disaster, design  
+Malibu Road Slope Repairs (CalOES Project), 2022-12, 2022-06, Not specified, road, disaster, design  
+Westward Beach Road Shoulder Repairs (CalOES Project), 2023-03, 2023-03, Not specified, road, disaster, design  
+Outdoor Warning Sirens - Design (FEMA Project), Not specified, Not specified, Not specified, road, disaster, design  
+Broad Beach Road Water Quality Infrastructure Repairs (CalJPIA Project), Not specified, Not specified, Not specified, road, disaster, design  
+Point Dume Decomposed Granite Walkway Repair Project, Not specified, Not specified, Not specified, road, disaster, design  

@@ -1,0 +1,22 @@
+Marie Canyon Green Streets,2021-12,2021-09,Not specified,Not specified,capital,design  
+PCH Median Improvements Project,2021-12,2021-09,Not specified,Not specified,capital,design  
+PCH Signal Synchronization System Improvements Project,2021-12,2021-08,2021-10,Not specified,capital,design  
+Civic Center Stormwater Diversion Structure,2021-10,Not specified,Not specified,Not specified,capital,design  
+Westward Beach Road Improvements Project,2021-12,2021-09,Not specified,Not specified,capital,design  
+Civic Center Water Treatment Facility Phase 2,2022-09,2021-12,Not specified,Not specified,capital,design  
+Civic Center Way Improvements,Not specified,Not specified,Not specified,Not specified,capital,Not specified  
+Malibu Park Drainage Improvements,2021-10,2021-08,Not specified,Not specified,capital,Not specified  
+2021 Annual Street Maintenance,2021-10,2021-08,Not specified,road,capital,Not specified  
+Bluffs Park Shade Structure,2021-09,2021-06,Not specified,Not specified,capital,not started  
+Vehicle Protection Devices,2021-09,2021-06,Not specified,Not specified,capital,not started  
+Broad Beach Road Water Quality Infrastructure Repairs,2021-09,2021-06,Not specified,Not specified,disaster,design  
+Latigo Canyon Road Roadway/Retaining Wall Improvements,2021-12,2021-09,Not specified,Not specified,disaster,design  
+Trancas Canyon Park Planting and Irrigation Repairs,2021-09,2021-06,Not specified,Not specified,disaster,design  
+Trancas Canyon Park Slope Stabilization Project,2021-09,2021-06,Not specified,Not specified,disaster,design  
+Birdview Avenue Improvements,Not specified,Not specified,Not specified,Not specified,disaster,design  
+Outdoor Warning Sirens,Not specified,Not specified,Not specified,Not specified,disaster,design  
+Storm Drain Master Plan,2022-03,Not specified,Not specified,Not specified,disaster,design  
+Clover Heights Storm Drain,2022-06,2022-03,Not specified,Not specified,disaster,not started  
+Latigo Canyon Road Culvert Repairs,2022-03,2021-12,Not specified,Not specified,disaster,not started  
+Encinal Canyon Road Drainage Improvements,2022-03,2021-12,Not specified,Not specified,disaster,not started  
+Malibu Road Slope Repairs,2021-12,2021-09,Not specified,Not specified,disaster,not started

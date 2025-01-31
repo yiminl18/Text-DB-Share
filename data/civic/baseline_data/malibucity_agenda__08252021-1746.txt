@@ -1,0 +1,22 @@
+Marie Canyon Green Streets, Winter 2021, September 2021, Not specified, Green infrastructure, Capital Improvement, Design  
+PCH Median Improvements Project, Winter 2021/2022, Fall 2021, Not specified, Roadway improvements, Capital Improvement, Design  
+PCH Signal Synchronization System Improvements Project, Winter 2021, August 2021, October 2021, Traffic signal improvements, Capital Improvement, Design  
+Civic Center Stormwater Diversion Structure, October 2021, Completed, Not specified, Stormwater management, Capital Improvement, Design  
+Westward Beach Road Improvements Project, Winter 2021, Fall 2021, Not specified, Roadway improvements, Capital Improvement, Design  
+Civic Center Water Treatment Facility Phase 2, Fall 2022, December 2021, Not specified, Water treatment, Capital Improvement, Design  
+Civic Center Way Improvements, Not specified, Not specified, Not specified, Roadway improvements, Capital Improvement, Construction  
+Malibu Park Drainage Improvements, October 2021, Not specified, Not specified, Drainage improvements, Capital Improvement, Construction  
+2021 Annual Street Maintenance, October 2021, Not specified, Not specified, Street maintenance, Capital Improvement, Construction  
+Bluffs Park Shade Structure, Fall 2021, Summer 2021, Not specified, Park improvements, Capital Improvement, Not Started  
+Vehicle Protection Devices, Fall 2021, Summer 2021, Not specified, Safety improvements, Capital Improvement, Not Started  
+Broad Beach Road Water Quality Infrastructure Repairs, Fall 2021, Summer 2021, Not specified, Water quality improvements, Disaster, Design  
+Latigo Canyon Road Roadway/Retaining Wall Improvements, Winter 2021, Fall 2021, Not specified, Roadway/retaining wall improvements, Disaster, Design  
+Trancas Canyon Park Planting and Irrigation Repairs, Summer/Fall 2021, Summer 2021, Not specified, Park improvements, Disaster, Design  
+Trancas Canyon Park Slope Stabilization Project, Summer/Fall 2021, Summer 2021, Not specified, Slope stabilization, Disaster, Design  
+Birdview Avenue Improvements, Not specified, Not specified, Not specified, Roadway improvements, Disaster, Design  
+Outdoor Warning Sirens, Not specified, Unknown, Not specified, Warning system, Disaster, Design  
+Storm Drain Master Plan, Not specified, Spring 2022, Not specified, Storm drain inventory, Disaster, Design  
+Clover Heights Storm Drain, Summer 2022, Spring 2022, Not specified, Storm drain improvements, Disaster, Not Started  
+Latigo Canyon Road Culvert Repairs, Spring 2022, Winter 2021, Not specified, Culvert repairs, Disaster, Not Started  
+Encinal Canyon Road Drainage Improvements, Spring 2022, Winter 2021, Not specified, Drainage improvements, Disaster, Not Started  
+Malibu Road Slope Repairs, Winter 2021, Fall 2021, Not specified, Slope repairs, Disaster, Not Started

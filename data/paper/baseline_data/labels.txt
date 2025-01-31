@@ -1,0 +1,27 @@
+{
+    "year": [
+        "2013",
+        "2018",
+        "2017",
+        "2012"
+    ],
+    "venue": [
+        "CHI",
+        "CHI or Ubicomp"
+    ],
+    "author_number": [
+        "5",
+        "3",
+        "4"
+    ],
+    "contribution": [
+        "empirical"
+    ],
+    "demographics": [
+        "patients"
+    ],
+    "study": [
+        "surveys or interviews",
+        "surveys"
+    ]
+}
