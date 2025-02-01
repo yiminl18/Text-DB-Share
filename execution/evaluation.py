@@ -11,24 +11,10 @@ import UDF_registration
 from nltk.tokenize import word_tokenize
 
 
-# Get the directory of the current file
-current_file_directory = os.path.dirname(os.path.abspath(__file__))
-# Get the parent directory
-parent_directory = os.path.dirname(current_file_directory)
-sys.path.append(parent_directory)
-from model import model 
-model_name = 'gpt4o' #gpt35, gpt4o
-
-def evaluate_single_project(context, model, selected_attr, udfs):
-    instruction = udfs[selected_attr]
-    prompt = (instruction,context)
-    response = model(model_name,prompt)
-    return response
-
 def context_size(context):
     return len(word_tokenize(context))
 
-def evaluate_udf(strategy, model, question, context = None, index = None, block_map = None, text = None, tree = None, tuple_level = 1, parent = None, paras = None, k = 5):
+def evaluate_udf(strategy, model, model_name, question, context = None, index = None, block_map = None, text = None, tree = None, tuple_level = 1, parent = None, paras = None, k = 5):
     if(strategy == 'GPT_single'):
         prompt = (question,context)
         response = model(model_name,prompt)
@@ -58,7 +44,7 @@ def evaluate_udf(strategy, model, question, context = None, index = None, block_
         return response, context_size(long_context)
     
 
-def evaluate_single_predicate(context, model, pred, udfs):
+def evaluate_single_predicate(context, model, model_name, pred, udfs):
     udf = pred[0]
     operand = pred[2]
     instruction = udfs[udf]
