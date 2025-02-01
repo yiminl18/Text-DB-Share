@@ -67,7 +67,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals',data)
                     print(left, right, prompt)
                     
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                     response.append(str(res))
                     print(res.lower(), sz)
                     size += sz
@@ -75,7 +75,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
             elif(strategy == 'GPT_merge'):
                 prompt = UDF_registration.get_combined_prompt(sql, desp, data)
                 print(prompt)
-                res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
+                res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                 print(res.lower(), sz)
                 if('none' not in str(res).lower()):
                     response.append(str(res))
@@ -94,7 +94,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals',data)
                     print(left, right, prompt)
 
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index, k=15)
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index, k=15)
                     response.append(str(res))
                     print(str(res).lower())
                     print(sz)
@@ -112,7 +112,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals',data)
                     print(left, right, prompt)
 
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index)
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index)
                     response.append(str(res))
                     print(str(res).lower(), sz)
                     size += sz
@@ -139,7 +139,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals', 'civic')
                     print(left, right, prompt)
                     
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index_val, text = text_val, tree = tree_val, tuple_level = 2, parent = parent, paras = paras, k=3)#sz: number of tokens used 
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index_val, text = text_val, tree = tree_val, tuple_level = 2, parent = parent, paras = paras, k=3)#sz: number of tokens used 
                     print(res.lower(), sz)
                     size += sz
                     response.append(res)
@@ -207,7 +207,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, '', 'bool', 'NoticeViolation')
                     print(left, right, prompt)
                     
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                     print(res.lower(), sz)
                     size += sz
                     if('false' in res.lower() or 'none' in res.lower()):
@@ -220,7 +220,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                 #print(sql, desp, data)
                 prompt = UDF_registration.get_combined_prompt(sql, desp, data)
                 print(prompt)
-                res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
+                res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                 print(res.lower(), sz)
                 size += sz
                 if(res.lower() == 'false' or 'none' in res.lower()):
@@ -239,7 +239,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, '', 'bool', 'NoticeViolation')
                     print(left, right, prompt)
 
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index, k=1)
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index, k=1)
                     print(str(res).lower(), sz)
                     size += sz
                     if('false' in str(res).lower() or 'none' in str(res).lower()):
@@ -259,7 +259,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, '', 'bool', 'NoticeViolation')
                     print(left, right, prompt)
 
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index)
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index)
                     print(str(res).lower(), sz)
                     size += sz
                     if('false' in str(res).lower() or 'none' in str(res).lower()):
@@ -288,7 +288,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', 'NoticeViolation')
                     print(left, right, prompt)
                     
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index_val, text = text_val, tree = tree_val, parent = parent, paras = paras,k=3)#sz: number of tokens used 
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index_val, text = text_val, tree = tree_val, parent = parent, paras = paras,k=3)#sz: number of tokens used 
                     print(res.lower(), sz)
                     size += sz
                     if('false' in res.lower() or 'none' in res.lower()):
@@ -369,7 +369,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', data)
                     print(left, right, prompt)
                     
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                     print(res.lower(), sz)
                     size += sz
                     if('false' in res.lower() or 'none' in res.lower()):
@@ -381,7 +381,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                 #translate sql to a prompt 
                 prompt = UDF_registration.get_combined_prompt(sql, desp, data)
                 print(prompt)
-                res, sz = evaluation.evaluate_udf(strategy, model, prompt, context = text)#sz: number of tokens used 
+                res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                 print(res.lower(), sz)
                 size += sz
                 if(res.lower() == 'false' or 'none' in res.lower()):
@@ -400,7 +400,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool',data)
                     print(left, right, prompt)
 
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index, k=5)
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index, k=5)
                     print(str(res).lower(), sz)
                     size += sz
                     if('false' in str(res).lower() or 'none' in str(res).lower()):
@@ -421,7 +421,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, '', 'bool', data)
                     print(left, right, prompt)
 
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index)
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index)
                     print(str(res).lower(), sz)
                     size += sz
                     if('false' in str(res).lower() or 'none' in str(res).lower()):
@@ -452,7 +452,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', 'paper')
                     print(left, right, prompt)
                     
-                    res, sz = evaluation.evaluate_udf(strategy, model, prompt, index = index_val, text = text_val, tree = tree_val, parent = parent, paras = paras, k=3)#sz: number of tokens used 
+                    res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, index = index_val, text = text_val, tree = tree_val, parent = parent, paras = paras, k=3)#sz: number of tokens used 
                     print(res.lower(), sz)
                     size += sz
                     if('false' in res.lower() or 'none' in res.lower()):
@@ -648,6 +648,7 @@ def get_root_path():
 def run(args):
     data = args.data
     strategy = args.strategy
+    model = args.model
     root_path = get_root_path()
 
     text_folder = root_path + '/data/' + data + '/extracted_data'
@@ -671,6 +672,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="A script that accepts command-line parameters.")
     parser.add_argument('--data', type=str, required=True, help='The type of data can be one of [paper, civic, NoticeViolation].')
     parser.add_argument('--strategy', type=str, required=True, help='The type of strategy can be one of [GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary].')
+    parser.add_argument('--model', type=str, required=True, help='The type of supported model can be one of [gpt4o,gpt4omini,llama3.2, deepseekR1-1.5b].')
 
     args = parser.parse_args()
     run(args)
