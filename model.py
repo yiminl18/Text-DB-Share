@@ -10,6 +10,9 @@ def model(model_name, prompt, json = 0):
     if(model_name == 'gpt4o'):
         from models.gpt_4o import gpt_4o
         return gpt_4o(prompt, json)
+    if(model_name == 'gpt4omini'):
+        from models.gpt_4o_mini import gpt_4o_mini
+        return gpt_4o_mini(prompt, json)
     if(model_name == 'deepseekR1-1.5b'):
         from models.deepseek_1_5 import deepseek_1_5
         return deepseek_1_5(prompt)
