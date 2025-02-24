@@ -11,11 +11,11 @@ def get_predicate_prompt(attr, op, operand, desp, entity, type, data):
             return 'In the given paper, were ' + operand + ' the type of population being studied or designed for? Return "True" or "False" . '
         if(type =='bool'):
             if(op == '='):
-                prompt = 'Is the ' + nl + ' of ' + entity + ' ' + operand + '?' + ' Return "True" or "False" . If answer is not found, return "None".'
+                prompt = 'Is the ' + nl + ' of ' + entity + ' ' + operand + ' based on the provided document?' + ' Return "True" or "False" . If answer is not found, return "None".'
             elif(op == '>'):
-                prompt = 'Is the ' + nl + ' of ' + entity + ' larger than ' + operand + '?' + ' Return "True" or "False" . If answer is not found, return "None".'
+                prompt = 'Is the ' + nl + ' of ' + entity + ' larger than ' + operand + ' based on the provided document?' + ' Return "True" or "False" . If answer is not found, return "None".'
             elif(op == '<'):
-                prompt = 'Is the ' + nl + ' of ' + entity + ' smaller than ' + operand +  '?' + ' Return "True" or "False" . If answer is not found, return "None".'
+                prompt = 'Is the ' + nl + ' of ' + entity + ' smaller than ' + operand +  ' based on the provided document?' + ' Return "True" or "False" . If answer is not found, return "None".'
         
     if(data == 'civic'):
         if(type =='bool'):

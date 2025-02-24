@@ -385,7 +385,7 @@ def tree_search_with_summary(tree, text, stop_level, index, question, parent, pa
     nodes = get_node_by_level(tree, stop_level)
     # print(stop_level)
     #print(nodes)
-    instruction = 'The following is a list of texts describing each section in a paper document. Each text starts with a ID number. ' + question + '. ' 
+    instruction = question 
     context = ''
     id = 1
     mp = {}
@@ -402,8 +402,7 @@ def tree_search_with_summary(tree, text, stop_level, index, question, parent, pa
         context += '\n\n'
         id += 1
 
-        
-    #print(instruction, context)
+    #print(context_size(context))
     prompt = (instruction,context)
     response = model(model_name,prompt)
     #print(response)

@@ -57,7 +57,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
             title = model_build.clean_paper_title(text_file, text_folder)
             print(i,title)
 
-            st = time.time()
+            
             size = 0
 
             response = [] 
@@ -66,6 +66,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
                 for left, right in sql['filters'].items():#for each filter 
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals',data)
                     print(left, right, prompt)
+                    st = time.time()
                     
                     res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                     response.append(str(res))
@@ -75,6 +76,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
             elif(strategy == 'GPT_merge'):
                 prompt = UDF_registration.get_combined_prompt(sql, desp, data)
                 print(prompt)
+                st = time.time()
                 res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                 print(res.lower(), sz)
                 if('none' not in str(res).lower()):
@@ -83,6 +85,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
 
             elif(strategy == 'LlamaIndex_seq'):
                 #read index 
+                st = time.time()
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'paragraph')
                 #print(index_path)
                 if(llama_index_openai.file_exist(index_path) == False):#check index existence
@@ -101,6 +104,7 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     size += sz
             elif(strategy == 'LlamaIndex_tree'):
                 #read index 
+                st = time.time()
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'tree')
                 #print(index_path)
                 if(llama_index_openai.file_exist(index_path) == False):#check index existence
@@ -122,18 +126,15 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
                 paras = filtering.extract_paragraph_nodes(text_val)
                 tree_path = tree_folder + '/tree_' + title
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'sentence')
-                #print('tree path:')
-                #print(tree_path)
                 if(llama_index_openai.file_exist(tree_path) == False):#check tree existence
-                    #print('yes')
                     continue
                 tree_val = filtering.read_tree_json(tree_path)
                 parent = filtering.search_parent(tree_val, 1)
-                #print(index_path)
                 if(llama_index_openai.file_exist(index_path) == False):#check index existence
-                    #print('yes')
                     continue
                 index_val = llama_index_openai.load_index(index_path)
+
+                st = time.time()
                 
                 for left, right in sql['filters'].items():#for each filter 
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'vals', 'civic')
@@ -146,8 +147,8 @@ def evaluate_SQL_civic(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     
                 
             et = time.time()
-            print(et-st)
-            print(size)
+            print('Time used: ', et-st)
+            print('Token used: ', size)
             result[title] = response
             times[title] = et-st
             sizes[title] = size
@@ -185,7 +186,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
         i=0
         for text_file in text_files:#iterate all document 
             #print(text_file)
-            ans = []
+            
             if('DS_Store' in text_file):
                 continue
             text = model_build.read_text(text_file)
@@ -196,13 +197,12 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
             index = None
             index_path = ''
 
-            st = time.time()
+            
             size = 0
 
-            response = [] 
             ans_flag = 1
             if(strategy == 'GPT_single'):
-                
+                st = time.time()
                 for left, right in sql['filters'].items():#for each filter 
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, '', 'bool', 'NoticeViolation')
                     print(left, right, prompt)
@@ -216,6 +216,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                         break
                     
             elif(strategy == 'GPT_merge'):
+                st = time.time()
                 #translate sql to a prompt 
                 #print(sql, desp, data)
                 prompt = UDF_registration.get_combined_prompt(sql, desp, data)
@@ -227,6 +228,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                     ans_flag = 0
                     #print('determined false')
             elif(strategy == 'LlamaIndex_seq'):
+                st = time.time()
                 #read index 
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'block')
                 #print(index_path)
@@ -247,6 +249,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                         break
 
             elif(strategy == 'LlamaIndex_tree'):
+                st = time.time()
                 #read index 
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'tree')
                 #print(index_path)
@@ -283,7 +286,7 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
                     continue
                 index_val = llama_index_openai.load_index(index_path)
                 paras = filtering.extract_paragraph_nodes(text_val)
-                
+                st = time.time()
                 for left, right in sql['filters'].items():#for each filter 
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', 'NoticeViolation')
                     print(left, right, prompt)
@@ -300,23 +303,27 @@ def evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_f
             i+=1
             if(ans_flag == 1):
                 print('true')
-                response.append('true')#project = paper name (title)
+                result[title] = True
             else:
-                response.append('false')
                 print('false')
+                result[title] = False
 
-            result[title] = response
+            print('Time used: ', et-st)
+            print('Token used: ', size)
+
             sizes[title] = size
             times[title] = et-st
 
             #break
         
         sql_version = 'sql' + str(sql_id+1) +'.txt'
+        path1 = out_folder + '/times_' + strategy + '_' + model_name + '_' + sql_version
+        query_interface.write_2_json(times, path1)
 
-        path2 = out_folder + '/sizes_' + strategy + '_' + sql_version
+        path2 = out_folder + '/sizes_' + strategy + '_' + model_name + '_' + sql_version
         query_interface.write_2_json(sizes, path2)
 
-        path3 = out_folder + '/ans_' + strategy + '_' + sql_version
+        path3 = out_folder + '/ans_' + strategy + '_' + model_name + '_' + sql_version
         query_interface.write_2_json(result, path3)
 
         #break
@@ -346,7 +353,6 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
         i=0
         for text_file in text_files:#iterate all document 
             #print(text_file)
-            ans = []
             if('DS_Store' in text_file):
                 continue
             text = model_build.read_text(text_file)
@@ -357,27 +363,27 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
             index = None
             index_path = ''
 
-            st = time.time()
+            
             size = 0
 
-            response = [] 
             ans_flag = 1
 
             if(strategy == 'GPT_single'):
-                
+                st = time.time()
                 for left, right in sql['filters'].items():#for each filter 
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', data)
                     print(left, right, prompt)
+                    #print(len(text[:300]))
                     
                     res, sz = evaluation.evaluate_udf(strategy, model, model_name, prompt, context = text)#sz: number of tokens used 
                     print(res.lower(), sz)
                     size += sz
                     if('false' in res.lower() or 'none' in res.lower()):
                         ans_flag = 0
-                        #print('determined false')
                         break
                     
             elif(strategy == 'GPT_merge'):
+                st = time.time()
                 #translate sql to a prompt 
                 prompt = UDF_registration.get_combined_prompt(sql, desp, data)
                 print(prompt)
@@ -388,6 +394,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     ans_flag = 0
                     #print('determined false')
             elif(strategy == 'LlamaIndex_seq'):
+                st = time.time()
                 #read index 
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'block')
                 #print(index_path)
@@ -408,6 +415,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                         break
             
             elif(strategy == 'LlamaIndex_tree'):
+                st = time.time()
                 #read index 
                 index_path = llama_index_openai.construct_index_path(text_file, text_folder, index_folder, 'tree')
                 #print(index_path)
@@ -447,7 +455,7 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
                     continue
                 index_val = llama_index_openai.load_index(index_path)
                 parent = filtering.search_parent(tree_val, 1)
-                
+                st = time.time()
                 for left, right in sql['filters'].items():#for each filter 
                     prompt = UDF_registration.get_predicate_prompt(left, right[0], right[1], desp, entity_mention, 'bool', 'paper')
                     print(left, right, prompt)
@@ -463,22 +471,27 @@ def evaluate_SQL_paper(strategy,data,text_folder,tree_folder,index_folder,out_fo
             i+=1
             if(ans_flag == 1):
                 print('true')
-                response.append(title)#project = paper name (title)
+                result[title] = True
             else:
                 print('false')
+                result[title] = False
 
-            result[title] = response
+            print('Time used: ', et-st)
+            print('Token used: ', size)
+
             sizes[title] = size
             times[title] = et-st
 
             break
         
         sql_version = 'sql' + str(sql_id+1) +'.txt'
+        path1 = out_folder + '/times_' + strategy + '_' + model_name + '_' + sql_version
+        query_interface.write_2_json(times, path1)
 
-        path2 = out_folder + '/sizes_' + strategy + '_' + sql_version
+        path2 = out_folder + '/sizes_' + strategy + '_' + model_name + '_' + sql_version
         query_interface.write_2_json(sizes, path2)
 
-        path3 = out_folder + '/ans_' + strategy + '_' + sql_version
+        path3 = out_folder + '/ans_' + strategy + '_' + model_name + '_' + sql_version
         query_interface.write_2_json(result, path3)
 
         #break
@@ -646,9 +659,10 @@ def get_root_path():
 
 
 def run(args):
-    data = args.data
+    global model_name
+    data = args.data 
     strategy = args.strategy
-    model = args.model
+    model_name = args.model
     root_path = get_root_path()
 
     text_folder = root_path + '/data/' + data + '/extracted_data'
@@ -666,13 +680,12 @@ def run(args):
         elif(data == 'NoticeViolation'):
             evaluate_SQL_notice(strategy,data,text_folder,tree_folder,index_folder,out_folder)
 
-
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="A script that accepts command-line parameters.")
     parser.add_argument('--data', type=str, required=True, help='The type of data can be one of [paper, civic, NoticeViolation].')
-    parser.add_argument('--strategy', type=str, required=True, help='The type of strategy can be one of [GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, textdb_summary].')
-    parser.add_argument('--model', type=str, required=True, help='The type of supported model can be one of [gpt4o,gpt4omini,llama3.2, deepseekR1-1.5b].')
+    parser.add_argument('--strategy', type=str, required=True, help='The type of strategy can be one of [GPT_single, GPT_merge, LlamaIndex_seq, LlamaIndex_tree, Graph_RAG, textdb_summary].')
+    parser.add_argument('--model', type=str, required=True, help='The type of supported model can be one of [gpt4o,gpt4omini, deepseekR1-1.5b].')
 
     args = parser.parse_args()
     run(args)
